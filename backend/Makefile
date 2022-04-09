@@ -35,5 +35,16 @@ dep-install:
 dep-update:
 	$(POETRY) update
 
-run-api:
+docker-build:
+	docker build -t kalkulacka-backend .
+
+docker-run:
+	echo "Running on port $(API_PORT)"
+	docker run -p $(API_PORT):80 kalkulacka-backend:latest
+
+poetry-run:
+	echo "Running on port $(API_PORT)"
 	poetry run uvicorn main:app --host $(API_HOST) --port $(API_PORT)
+
+run-api-docker: docker-run
+run-api-poetry: poetry-run
