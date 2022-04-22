@@ -2,11 +2,11 @@
 
 Our infrastructure is running on AWS. We use Terraform to define it as Infrastructure as Code and Github Actions to deploy and update.
 
-More details about our principles can be found in our [DevTalk](https://cesko.digital/cedu/devtalk-1-infrastruktura). *(In czech)*
+More details about our principles can be found in our [DevTalk](https://cesko.digital/cedu/devtalk-1-infrastruktura). _(In czech)_
 
 ## Deployment
 
-To deploy into new AWS account, you need to create these things  outside of Terraform:
+To deploy into new AWS account, you need to create these things outside of Terraform:
 
 1. Create backend bucket on AWS S3 to hold Terraform state.
 2. Create SSL certificate for your domain (and all domain aliases) on AWS Certificate Manager. This has to be done in region **US East (N. Virginia) us-east-1**
@@ -23,7 +23,7 @@ DOMAIN_CERTIFICATE_ARN
 FRONTEND_BUCKET_NAME
 ```
 
-With this secrets you can manually run the action `terraform-apply.yaml` *(it might take two or more run to complete successfuly, because of default timeouts)*. 
+With this secrets you can manually run the action `terraform-apply.yaml` _(it might take two or more run to complete successfuly, because of default timeouts)_.
 Once completed, add this Github Secrets:
 
 ```
