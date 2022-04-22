@@ -132,3 +132,7 @@ dmypy.json
 .vscode
 out.*
 coverage_html/
+
+# Terraform
+.terraform
+.terraform.lock.hcl
