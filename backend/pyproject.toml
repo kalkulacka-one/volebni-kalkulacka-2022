@@ -10,6 +10,7 @@ python = "~3.10"
 fastapi = "~0.75.1"
 pydantic = "~1.9.0"
 uvicorn = "~0.17.6"
+mangum = "^0.15.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "~7.1.1"

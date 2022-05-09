@@ -1,0 +1,48 @@
+# https://fastapi.tiangolo.com/deployment/docker/
+
+FROM python:3.10-alpine3.15 as builder
+
+WORKDIR /backend
+
+# copy requirement files
+COPY ./poetry.lock /backend/
+COPY ./pyproject.toml /backend/
+
+# install required system packages
+RUN apk add --no-cache \
+    curl \
+    gcc \
+    libressl-dev \
+    musl-dev \
+    libffi-dev
+
+# install and configure poetry
+RUN curl -sSL https://install.python-poetry.org | python3 -
+ENV PATH="/root/.local/bin:${PATH}"
+
+# install dependencies
+RUN poetry config virtualenvs.create false
+RUN poetry export \
+    -o /backend/requirements.txt \
+    -f requirements.txt \
+    --without-hashes
+
+# delete files that are not needed
+RUN rm -rfv \
+    /backend/__pycache__ \
+    /backend/poetry.lock \
+    /backend/pyproject.toml
+
+# copy remaining source code
+COPY ./main.py /backend/
+COPY ./kalkulacka /backend/
+
+# build final image
+FROM public.ecr.aws/lambda/python:3.9
+
+
+COPY --from=builder /backend ./backend
+RUN pip install -r ./backend/requirements.txt
+
+# Run it
+CMD ["backend.main.handler"]
