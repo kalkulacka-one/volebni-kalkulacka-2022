@@ -31,4 +31,8 @@ jobs:
           docker tag ${{ env.serviceName }}:latest ${{ env.repository }}/${{ env.serviceName }}:latest
           docker push ${{ env.repository }}/${{ env.serviceName }}:latest
         working-directory: backend
+      - name: 'Deploy new function'
+        run |
+          aws lambda update-function-code --region=eu-central-1 --image-uri=${{ env.repository }}/${{ env.serviceName }}:latest --publish --function-name Kalkulacka
+
 

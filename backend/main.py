@@ -8,4 +8,8 @@ handler = Mangum(app)
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+    return {"Hello": "World!"}
+
+@app.get("/test")
+def test1():
+    return {"Test": "Test1"}
