@@ -1,10 +1,11 @@
 name: 'Build backend Docker and deploy to ECR'
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
     paths:
-      - backend
+      - "backend/**"
 
 env:
   region: ${{ secrets.AWS_REGION }}
