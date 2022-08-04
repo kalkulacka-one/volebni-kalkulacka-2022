@@ -3,6 +3,7 @@ terraform {
 
   required_providers {
     aws = "~> 4.0"
+    google-beta = "~> 4.31.0"
   }
 
   backend "s3" {
@@ -14,4 +15,10 @@ terraform {
 
 provider "aws" {
   region = var.aws-region
+}
+
+provider "google-beta" {
+  project     = "my-project-id"
+  region      = "us-central"
+  zone        = "us-central-c"
 }
