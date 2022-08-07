@@ -1,4 +1,4 @@
-name: 'Build backend Docker and deploy to ECR'
+name: "Build backend Docker and deploy to ECR"
 on:
   workflow_dispatch:
   push:
@@ -10,32 +10,31 @@ on:
 env:
   region: ${{ secrets.AWS_REGION }}
   repository: ${{ secrets.AWS_REPOSITORY }}
-  serviceName: 'backend'
+  serviceName: "backend"
 jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
-      - name: 'Checkout'
+      - name: "Checkout"
         uses: actions/checkout@v1
-      - name: 'Login to Repository'
+      - name: "Login to Repository"
         run: |
           aws ecr get-login-password --region ${{ env.region }} | docker login --username AWS --password-stdin ${{ env.repository }}/${{ env.serviceName }}
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - name: 'Build Docker image'
+      - name: "Build Docker image"
         run: |
           docker build -t ${{ env.serviceName }} . -f Dockerfile.aws-lambda
         working-directory: backend
-      - name: 'Push Docker image to repository'
+      - name: "Push Docker image to repository"
         run: |
           docker tag ${{ env.serviceName }}:latest ${{ env.repository }}/${{ env.serviceName }}:latest
           docker push ${{ env.repository }}/${{ env.serviceName }}:latest
         working-directory: backend
-      - name: 'Deploy new function'
+      - name: "Deploy new function"
         run: |
           aws lambda update-function-code --region=eu-central-1 --image-uri=${{ env.repository }}/${{ env.serviceName }}:latest --publish --function-name Kalkulacka
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
