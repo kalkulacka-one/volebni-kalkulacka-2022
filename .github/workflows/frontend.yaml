@@ -19,7 +19,8 @@ jobs:
         uses: actions/setup-node@v3
       - name: Get NPM cache folder path
         id: npm-cache-folder
-        run: echo "::set-output name=path::$(npm config get cache)"
+        run: |
+          echo "::set-output name=path::$(npm config get cache)"
       - name: Set up NPM cache
         uses: actions/cache@v3
         id: npm-cache
@@ -31,16 +32,21 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-${{ env.cache-name }}-
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm ci
       - name: Build
-        run: npm run build
+        run: |
+          npm run build
       - run: ls
       - name: Run unit tests
-        run: npm run test:unit
+        run: |
+          npm run test:unit
       - name: Run end-to-end tests
-        run: npm run test:e2e:ci
+        run: |
+          npm run test:e2e:ci
       - name: Lint
-        run: npm run lint
+        run: |
+          npm run lint
       - if: github.ref == 'refs/heads/main'
         uses: actions/upload-artifact@v3
         with:
@@ -66,6 +72,8 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-central-1
       - name: Deploy to S3
-        run: aws s3 sync --sse --delete . s3://${{ env.BUCKET }}
+        run: |
+          aws s3 sync --sse --delete . s3://${{ env.BUCKET }}
       - name: Invalidate CloudFront cache
-        run: aws cloudfront create-invalidation --distribution-id ${{ env.CLOUDFRONT_DEPLOYMENT_ID }} --paths "/*"
+        run: |
+          aws cloudfront create-invalidation --distribution-id ${{ env.CLOUDFRONT_DEPLOYMENT_ID }} --paths "/*"
