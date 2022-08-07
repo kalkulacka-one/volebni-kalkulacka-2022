@@ -63,3 +63,15 @@ Lint and fix:
 ```sh
 npm run lint:fix
 ```
+
+### Prettify other files
+
+```sh
+npx prettier --check .
+```
+
+Check and fix:
+
+```sh
+npx prettier --write .
+```
