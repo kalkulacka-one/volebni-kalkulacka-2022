@@ -1,4 +1,4 @@
-name: Frontend
+name: 'Frontend: build, test, lint & deploy'
 on:
   push:
     branches: [main]
