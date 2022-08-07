@@ -10,9 +10,11 @@ handler = Mangum(app)
 def read_root():
     return {"Hello": "World!!"}
 
+
 @app.get("/api/test")
 def test1():
     return {"Test": "Test1"}
+
 
 @app.get("/api/test2")
 def test2():
