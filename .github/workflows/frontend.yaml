@@ -47,6 +47,7 @@ jobs:
         run: |
           npm run test:e2e:ci
       - if: github.ref == 'refs/heads/main'
+        name: Upload build
         uses: actions/upload-artifact@v3
         with:
           name: frontend-${{ github.sha }}
@@ -61,10 +62,11 @@ jobs:
       BUCKET: ${{ secrets.FRONTEND_BUCKET_NAME }}
       CLOUDFRONT_DEPLOYMENT_ID: ${{ secrets.CLOUDFRONT_DEPLOYMENT_ID }}
     steps:
-      - uses: actions/download-artifact@v3
+      - name: Download build
+        uses: actions/download-artifact@v3
         with:
           name: frontend-${{ github.sha }}
-      - name: Configure AWS Credentials
+      - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
