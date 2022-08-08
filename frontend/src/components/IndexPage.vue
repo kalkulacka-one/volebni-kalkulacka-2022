@@ -15,7 +15,7 @@ const incrementSize = (btnSize: number) => {
 </script>
 
 <template>
-  <h1>This is the index page (duh!)</h1>
+  <h1>This is the index page</h1>
   <div :style="{ display: 'flex', alignItems: 'center' }">
     <IconButton
       :size="btn1Size"
