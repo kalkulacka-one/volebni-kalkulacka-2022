@@ -17,3 +17,8 @@ variable "domain-certificate-arn" {
 variable "data-bucket-name" {
   type = string
 }
+
+variable "newrelic-license-key" {
+  type = string
+  sensitive = true
+}
