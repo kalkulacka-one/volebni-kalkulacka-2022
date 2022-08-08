@@ -19,6 +19,6 @@ variable "data-bucket-name" {
 }
 
 variable "newrelic-license-key" {
-  type = string
+  type      = string
   sensitive = true
 }
