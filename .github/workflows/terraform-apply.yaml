@@ -16,6 +16,7 @@ env:
   TF_VAR_domain: ${{ secrets.DOMAIN }}
   TF_VAR_domain-certificate-arn: ${{ secrets.DOMAIN_CERTIFICATE_ARN }}
   TF_VAR_data-bucket-name: ${{ secrets.DATA_BUCKET_NAME }}
+  TF_VAR_newrelic-license-key: ${{ secrets.NEWRELIC_LICENSE_KEY }}
 
 jobs:
   terraform:
