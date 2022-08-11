@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import ThemeProvider from './components/ThemeProvider.vue';
+
 import HelloWorld from './components/HelloWorld.vue';
 import IndexPageVue from './components/IndexPage.vue';
 </script>
@@ -19,7 +21,11 @@ import IndexPageVue from './components/IndexPage.vue';
   </header>
 
   <main>
-    <IndexPageVue />
+    <Suspense>
+      <ThemeProvider>
+        <IndexPageVue />
+      </ThemeProvider>
+    </Suspense>
   </main>
 </template>
 
