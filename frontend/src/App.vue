@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ThemeProvider from './components/ThemeProvider.vue';
+import ThemeSwitcher from './components/ThemeSwitcher.vue';
 
 import HelloWorld from './components/HelloWorld.vue';
 import IndexPageVue from './components/IndexPage.vue';
@@ -23,6 +24,7 @@ import IndexPageVue from './components/IndexPage.vue';
   <main>
     <Suspense>
       <ThemeProvider>
+        <ThemeSwitcher />
         <IndexPageVue />
       </ThemeProvider>
     </Suspense>
