@@ -1,0 +1,28 @@
+{
+  "$id": "https://kalkulacka.ceskodigital.net/schemas/candidate.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A representation of candidate",
+  "type": "object",
+  "required": ["id", "name", "description", "tags"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "UUID"
+    },
+    "name": {
+      "type": "string",
+      "description": "Candidate's name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Longer description."
+    },
+    "tags": {
+      "type": "array",
+      "description": "Tags for the question",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
