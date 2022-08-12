@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import ThemeProviderWrapper from '@/components/ThemeProviderWrapper.vue';
+import ThemeSwitcher from './components/ThemeSwitcher.vue';
+
 import HelloWorld from './components/HelloWorld.vue';
 import IndexPageVue from './components/IndexPage.vue';
 </script>
@@ -19,7 +22,12 @@ import IndexPageVue from './components/IndexPage.vue';
   </header>
 
   <main>
-    <IndexPageVue />
+    <Suspense>
+      <ThemeProviderWrapper initial-theme="blue-example">
+        <ThemeSwitcher />
+        <IndexPageVue />
+      </ThemeProviderWrapper>
+    </Suspense>
   </main>
 </template>
 
