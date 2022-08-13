@@ -1,2 +1,47 @@
 *:deep() {
+  --typography-family-inter: 'Inter', sans-serif;
+  --typography-family-radio-canada: 'Radio Canada', sans-serif;
+
+  --typography-body-family: var(--typography-family-inter);
+  --typography-body-small-size: 0.812rem;
+  --typography-body-small-line-height: 1.23;
+  --typography-body-small-letter-spacing: default;
+  --typography-body-medium-size: 1rem;
+  --typography-body-medium-line-height: 1.5;
+  --typography-body-medium-letter-spacing: default;
+  --typography-body-large-size: 1.25rem;
+  --typography-body-large-line-height: 1.6;
+  --typography-body-large-letter-spacing: -0.01em;
+
+  --typography-title-family: var(--typography-family-radio-canada);
+  --typography-title-medium-size: 1.562rem;
+  --typography-title-medium-line-height: 1.28;
+  --typography-title-medium-letter-spacing: -0.05em;
+  --typography-title-large-size: 1.938rem;
+  --typography-title-large-line-height: 1.03;
+  --typography-title-large-letter-spacing: -0.06em;
+
+  --typography-headline-family: var(--typography-family-radio-canada);
+  --typography-headline-small-size: 2.438rem;
+  --typography-headline-small-line-height: 1.03;
+  --typography-headline-small-letter-spacing: -0.06em;
+  --typography-headline-medium-size: 3.062rem;
+  --typography-headline-medium-line-height: 1.14;
+  --typography-headline-medium-letter-spacing: -0.07em;
+  --typography-headline-large-size: 3.812rem;
+  --typography-headline-large-line-height: 1.05;
+  --typography-headline-large-letter-spacing: -0.07em;
+
+  --typography-button-family: var(--typography-family-radio-canada);
+  --typography-button-medium-size: 0.812rem;
+  --typography-button-medium-line-height: 1.85;
+  --typography-button-medium-letter-spacing: 0.07em;
+  --typography-button-small-size: 0.625rem;
+  --typography-button-small-line-height: 1.6;
+  --typography-button-small-letter-spacing: 0.04em;
+
+  --typography-label-family: var(--typography-family-inter);
+  --typography-label-size: 0.625rem;
+  --typography-label-line-height: 1.6;
+  --typography-label-letter-spacing: 0.04em;
 }
