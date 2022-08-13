@@ -3,6 +3,7 @@ import BodyText from './design-system/typography/BodyText.vue';
 import TitleText from './design-system/typography/TitleText.vue';
 import HeadlineText from './design-system/typography/HeadlineText.vue';
 import ButtonText from './design-system/typography/ButtonText.vue';
+import LabelText from './design-system/typography/LabelText.vue';
 
 import IconButton from './IconButton.vue';
 import { ButtonSizeEnum } from './IconButton.vue';
@@ -39,6 +40,7 @@ const incrementSize = (btnSize: number) => {
     </BodyText>
     <ButtonText>Button text</ButtonText>
     <ButtonText size="small">Small button text</ButtonText>
+    <LabelText>Label text</LabelText>
   </div>
   <hr />
   <div :style="{ margin: '1rem', display: 'flex', alignItems: 'center' }">
