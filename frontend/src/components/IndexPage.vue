@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import BodyText from './design-system/typography/BodyText.vue';
 import TitleText from './design-system/typography/TitleText.vue';
+import HeadlineText from './design-system/typography/HeadlineText.vue';
 
 import IconButton from './IconButton.vue';
 import { ButtonSizeEnum } from './IconButton.vue';
@@ -21,6 +22,9 @@ const incrementSize = (btnSize: number) => {
   <h1>This is the index page</h1>
   <hr />
   <div :style="{ margin: '1rem' }">
+    <HeadlineText size="large">Headline large</HeadlineText>
+    <HeadlineText size="medium">Headline medium</HeadlineText>
+    <HeadlineText size="small">Headline small</HeadlineText>
     <TitleText size="large">Title large</TitleText>
     <TitleText size="medium">Title medium</TitleText>
     <BodyText size="large">
