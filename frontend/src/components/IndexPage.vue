@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import BodyText from './design-system/typography/BodyText.vue';
+
 import IconButton from './IconButton.vue';
 import { ButtonSizeEnum } from './IconButton.vue';
 import IconStarFilledVue from './icons/IconStarFilled.vue';
@@ -16,7 +18,20 @@ const incrementSize = (btnSize: number) => {
 
 <template>
   <h1>This is the index page</h1>
-  <div :style="{ display: 'flex', alignItems: 'center' }">
+  <hr />
+  <div :style="{ margin: '1rem' }">
+    <BodyText size="large">
+      Large quick brown fox jumps over the lazy dog
+    </BodyText>
+    <BodyText size="medium">
+      Medium quick brown fox jumps over the lazy dog
+    </BodyText>
+    <BodyText size="small">
+      Small quick brown fox jumps over the lazy dog
+    </BodyText>
+  </div>
+  <hr />
+  <div :style="{ margin: '1rem', display: 'flex', alignItems: 'center' }">
     <IconButton
       :size="btn1Size"
       @click="(event: MouseEvent)=>{btn1Size = incrementSize(btn1Size)}"
