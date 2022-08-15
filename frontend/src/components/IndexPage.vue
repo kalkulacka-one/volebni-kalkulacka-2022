@@ -5,6 +5,9 @@ import HeadlineText from './design-system/typography/HeadlineText.vue';
 import ButtonText from './design-system/typography/ButtonText.vue';
 import LabelText from './design-system/typography/LabelText.vue';
 
+import LinkButton from './design-system/buttons/LinkButton.vue';
+import ArrowLeftIcon from 'vue-material-design-icons/ArrowLeft.vue';
+
 import IconButton from './design-system/buttons/IconButton.vue';
 import { ButtonSizeEnum } from './design-system/buttons/IconButton.vue';
 import IconStarFilledVue from './icons/IconStarFilled.vue';
@@ -41,6 +44,27 @@ const incrementSize = (btnSize: number) => {
     <ButtonText>Button text</ButtonText>
     <ButtonText size="small">Small button text</ButtonText>
     <LabelText>Label text</LabelText>
+  </div>
+  <hr />
+  <div :style="{ margin: '1rem', display: 'flex', alignItems: 'center' }">
+    <LinkButton>
+      <template #icon>
+        <ArrowLeftIcon />
+      </template>
+    </LinkButton>
+    <LinkButton>Button</LinkButton>
+    <LinkButton tag="a">
+      Icon before
+      <template #icon>
+        <ArrowLeftIcon />
+      </template>
+    </LinkButton>
+    <LinkButton>
+      Icon after
+      <template #iconAfter>
+        <ArrowLeftIcon />
+      </template>
+    </LinkButton>
   </div>
   <hr />
   <div :style="{ margin: '1rem', display: 'flex', alignItems: 'center' }">
