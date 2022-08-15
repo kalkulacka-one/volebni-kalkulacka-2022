@@ -14,7 +14,8 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
-    "vue": "^3.2.37"
+    "vue": "^3.2.37",
+    "vue-material-design-icons": "^5.1.2"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
