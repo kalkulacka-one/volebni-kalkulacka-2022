@@ -8,7 +8,7 @@ export default {
 
 <script setup lang="ts">
 export interface Props {
-  size?: 'small' | 'medium' | 'large';
+  size?: 'extra-small' | 'small' | 'medium' | 'large';
 }
 
 withDefaults(defineProps<Props>(), {

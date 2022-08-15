@@ -3,6 +3,9 @@
   --typography-family-radio-canada: 'Radio Canada', sans-serif;
 
   --typography-body-family: var(--typography-family-inter);
+  --typography-body-extra-small-size: 0.625rem;
+  --typography-body-extra-small-line-height: 1.6;
+  --typography-body-extra-small-letter-spacing: -0.04;
   --typography-body-small-size: 0.812rem;
   --typography-body-small-line-height: 1.23;
   --typography-body-small-letter-spacing: default;
@@ -14,6 +17,12 @@
   --typography-body-large-letter-spacing: -0.01em;
 
   --typography-title-family: var(--typography-family-radio-canada);
+  --typography-title-extra-small-size: 0.812rem;
+  --typography-title-extra-small-line-height: 1.23;
+  --typography-title-extra-small-letter-spacing: -0.07em;
+  --typography-title-small-size: 1.25rem;
+  --typography-title-small-line-height: 1.2;
+  --typography-title-small-letter-spacing: -0.04em;
   --typography-title-medium-size: 1.562rem;
   --typography-title-medium-line-height: 1.28;
   --typography-title-medium-letter-spacing: -0.05em;
