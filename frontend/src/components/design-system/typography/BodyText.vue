@@ -19,9 +19,9 @@ withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <component :is="tag" :class="[size]">
+  <SimpleText :tag="tag" :class="[size]">
     <slot />
-  </component>
+  </SimpleText>
 </template>
 
 <style lang="scss" scoped>

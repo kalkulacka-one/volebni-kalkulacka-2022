@@ -9,9 +9,9 @@ export default defineComponent({
 </script>
 
 <template>
-  <component :is="tag">
+  <SimpleText :tag="tag">
     <slot />
-  </component>
+  </SimpleText>
 </template>
 
 <style lang="scss" scoped>
