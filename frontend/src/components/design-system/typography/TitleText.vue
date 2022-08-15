@@ -4,6 +4,7 @@ import { defineComponent } from 'vue';
 import SimpleText from './SimpleText.vue';
 
 export default defineComponent({
+  components: { SimpleText },
   extends: SimpleText,
 });
 </script>
