@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ThemeProviderWrapper from '@/components/ThemeProviderWrapper.vue';
+import ThemeProvider from '@/components/ThemeProvider.vue';
 
 import HelloWorld from './components/HelloWorld.vue';
 import IndexPageVue from './components/IndexPage.vue';
@@ -22,9 +22,9 @@ import IndexPageVue from './components/IndexPage.vue';
 
   <main>
     <Suspense>
-      <ThemeProviderWrapper>
+      <ThemeProvider>
         <IndexPageVue />
-      </ThemeProviderWrapper>
+      </ThemeProvider>
     </Suspense>
   </main>
 </template>
