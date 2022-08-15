@@ -12,10 +12,12 @@ export default defineComponent({
 <script setup lang="ts">
 export interface Props {
   size?: 'small' | 'medium';
+  tag?: 'span';
 }
 
 withDefaults(defineProps<Props>(), {
   size: 'medium',
+  tag: 'span',
 });
 </script>
 
