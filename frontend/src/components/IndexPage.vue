@@ -6,6 +6,7 @@ import ButtonText from './design-system/typography/ButtonText.vue';
 import LabelText from './design-system/typography/LabelText.vue';
 
 import LinkButton from './design-system/buttons/LinkButton.vue';
+import OutlinedButton from './design-system/buttons/OutlinedButton.vue';
 import ArrowLeftIcon from 'vue-material-design-icons/ArrowLeft.vue';
 
 import IconButton from './design-system/buttons/IconButton.vue';
@@ -65,6 +66,24 @@ const incrementSize = (btnSize: number) => {
         <ArrowLeftIcon />
       </template>
     </LinkButton>
+    <OutlinedButton>
+      <template #icon>
+        <ArrowLeftIcon />
+      </template>
+    </OutlinedButton>
+    <OutlinedButton>Outlined</OutlinedButton>
+    <OutlinedButton>
+      Outlined icon before
+      <template #icon>
+        <ArrowLeftIcon />
+      </template>
+    </OutlinedButton>
+    <OutlinedButton tag="a">
+      Outlined icon after
+      <template #iconAfter>
+        <ArrowLeftIcon />
+      </template>
+    </OutlinedButton>
   </div>
   <hr />
   <div :style="{ margin: '1rem', display: 'flex', alignItems: 'center' }">
