@@ -1,4 +1,19 @@
 *:deep() {
+  // Spacings
+  // --------
+  --spacing-tiny: 0.25rem;
+  --spacing-extra-small: 0.5rem;
+  --spacing-small: 1rem;
+  --spacing-medium: 1.5rem;
+  --spacing-large: 2rem;
+  --spacing-extra-large: 3rem;
+
+  // Radiuses
+  // --------
+  --radius-small: var(--spacing-small);
+  --radius-medium: var(--spacing-medium);
+  --radius-large: var(--spacing-large);
+
   // Typography
   // ----------
   // Font families
