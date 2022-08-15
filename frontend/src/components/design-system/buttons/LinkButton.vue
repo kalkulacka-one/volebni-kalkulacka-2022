@@ -15,7 +15,7 @@ import ButtonText from '@/components/design-system/typography/ButtonText.vue';
 
 <template>
   <SimpleButton :tag="tag" :href="href">
-    <ButtonText>
+    <ButtonText v-if="$slots.default">
       <slot />
     </ButtonText>
   </SimpleButton>
