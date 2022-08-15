@@ -5,8 +5,8 @@ import HeadlineText from './design-system/typography/HeadlineText.vue';
 import ButtonText from './design-system/typography/ButtonText.vue';
 import LabelText from './design-system/typography/LabelText.vue';
 
-import IconButton from './IconButton.vue';
-import { ButtonSizeEnum } from './IconButton.vue';
+import IconButton from './design-system/buttons/IconButton.vue';
+import { ButtonSizeEnum } from './design-system/buttons/IconButton.vue';
 import IconStarFilledVue from './icons/IconStarFilled.vue';
 import IconStarOutlinedVue from './icons/IconStarOutlined.vue';
 import { ref } from 'vue';
