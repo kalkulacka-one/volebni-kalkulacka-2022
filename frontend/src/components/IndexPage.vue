@@ -6,17 +6,23 @@ import ButtonText from './design-system/typography/ButtonText.vue';
 import LabelText from './design-system/typography/LabelText.vue';
 
 import IconButton from './IconButton.vue';
+import OutlineButton from './OutlineButton.vue';
 import { ButtonSizeEnum } from './IconButton.vue';
 import IconStarFilledVue from './icons/IconStarFilled.vue';
 import IconStarOutlinedVue from './icons/IconStarOutlined.vue';
 import { ref } from 'vue';
+
 const btn1Size = ref(ButtonSizeEnum.Medium);
 const btn2Size = ref(ButtonSizeEnum.Small);
+
 const incrementSize = (btnSize: number) => {
   btnSize =
     btnSize === Object.keys(ButtonSizeEnum).length / 2 - 1 ? 0 : btnSize + 1;
   console.debug(btnSize);
   return btnSize;
+};
+const doSomething = () => {
+  console.log('test');
 };
 </script>
 
@@ -54,6 +60,127 @@ const incrementSize = (btnSize: number) => {
       @click="(event: MouseEvent)=>{btn2Size = incrementSize(btn2Size)}"
       ><IconStarOutlinedVue
     /></IconButton>
+  </div>
+  <hr />
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      flexWrap: 'wrap',
+      gap: '16px',
+    }"
+  >
+    <div
+      :style="{
+        height: '250px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-around',
+      }"
+    >
+      <OutlineButton
+        :icon="'right'"
+        :title="'Button label'"
+        @click="doSomething"
+      />
+      <OutlineButton
+        :icon="'left'"
+        :title="'Button label'"
+        @click="doSomething"
+      />
+      <div>
+        <OutlineButton :title="'Button label'" @click="doSomething" />
+      </div>
+    </div>
+    <div
+      :style="{
+        height: '250px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-around',
+      }"
+    >
+      <OutlineButton
+        :type="'disabled'"
+        :icon="'right'"
+        :title="'Button label'"
+        @click="doSomething"
+      />
+      <OutlineButton
+        :type="'disabled'"
+        :icon="'left'"
+        :title="'Button label'"
+        @click="doSomething"
+      />
+      <div>
+        <OutlineButton
+          type="disabled"
+          :title="'Button label'"
+          @click="doSomething"
+        />
+      </div>
+    </div>
+    <div
+      :style="{
+        height: '250px',
+        display: 'flex',
+        flexDirection: 'column',
+        columnGap: '16px',
+        justifyContent: 'space-around',
+      }"
+    >
+      <OutlineButton
+        :dense="true"
+        :icon="'right'"
+        :title="'Button label'"
+        @click="doSomething"
+      />
+      <OutlineButton
+        :dense="true"
+        :icon="'left'"
+        :title="'Button label'"
+        @click="doSomething"
+      />
+      <div>
+        <OutlineButton
+          :dense="true"
+          :title="'Button label'"
+          @click="doSomething"
+        />
+      </div>
+    </div>
+    <div
+      :style="{
+        height: '250px',
+        display: 'flex',
+        flexDirection: 'column',
+        columnGap: '16px',
+        justifyContent: 'space-around',
+      }"
+    >
+      <OutlineButton
+        :type="'disabled'"
+        :dense="true"
+        :icon="'right'"
+        :title="'Button label'"
+        @click="doSomething"
+      />
+      <OutlineButton
+        :type="'disabled'"
+        :dense="true"
+        :icon="'left'"
+        :title="'Button label'"
+        @click="doSomething"
+      />
+      <div>
+        <OutlineButton
+          :type="'disabled'"
+          :dense="true"
+          :title="'Button label'"
+          @click="doSomething"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
