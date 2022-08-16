@@ -1,9 +1,12 @@
 <script lang="ts">
+import { defineComponent } from 'vue';
+
 import SimpleText from './SimpleText.vue';
 
-export default {
+export default defineComponent({
+  components: { SimpleText },
   extends: SimpleText,
-};
+});
 </script>
 
 <script setup lang="ts">
@@ -17,9 +20,9 @@ withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <component :is="tag" :class="[size]">
+  <SimpleText :tag="tag" :class="[size]">
     <slot />
-  </component>
+  </SimpleText>
 </template>
 
 <style lang="scss" scoped>

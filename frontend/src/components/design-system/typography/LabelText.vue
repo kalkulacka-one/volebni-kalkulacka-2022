@@ -1,15 +1,18 @@
 <script lang="ts">
+import { defineComponent } from 'vue';
+
 import SimpleText from './SimpleText.vue';
 
-export default {
+export default defineComponent({
+  components: { SimpleText },
   extends: SimpleText,
-};
+});
 </script>
 
 <template>
-  <component :is="tag">
+  <SimpleText :tag="tag">
     <slot />
-  </component>
+  </SimpleText>
 </template>
 
 <style lang="scss" scoped>
