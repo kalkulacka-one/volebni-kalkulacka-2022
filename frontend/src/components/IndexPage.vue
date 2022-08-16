@@ -5,16 +5,22 @@ import HeadlineText from './design-system/typography/HeadlineText.vue';
 import ButtonText from './design-system/typography/ButtonText.vue';
 import LabelText from './design-system/typography/LabelText.vue';
 
-import IconButton from './IconButton.vue';
-import { ButtonSizeEnum } from './IconButton.vue';
+import IconButton from './design-system/buttons/IconButton.vue';
+import { IconButtonSizeEnum } from './design-system/buttons/IconButton.vue';
 import IconStarFilledVue from './icons/IconStarFilled.vue';
 import IconStarOutlinedVue from './icons/IconStarOutlined.vue';
 import { ref } from 'vue';
-const btn1Size = ref(ButtonSizeEnum.Medium);
-const btn2Size = ref(ButtonSizeEnum.Small);
+import LinkButton, {
+  LinkButtonSizeEnum,
+  LinkButtonTypeEnum,
+} from './design-system/buttons/LinkButton.vue';
+const btn1Size = ref(IconButtonSizeEnum.Medium);
+const btn2Size = ref(IconButtonSizeEnum.Small);
 const incrementSize = (btnSize: number) => {
   btnSize =
-    btnSize === Object.keys(ButtonSizeEnum).length / 2 - 1 ? 0 : btnSize + 1;
+    btnSize === Object.keys(IconButtonSizeEnum).length / 2 - 1
+      ? 0
+      : btnSize + 1;
   console.debug(btnSize);
   return btnSize;
 };
@@ -44,16 +50,12 @@ const incrementSize = (btnSize: number) => {
   </div>
   <hr />
   <div :style="{ margin: '1rem', display: 'flex', alignItems: 'center' }">
-    <IconButton
-      :size="btn1Size"
-      @click="(event: MouseEvent)=>{btn1Size = incrementSize(btn1Size)}"
+    <LinkButton
+      label="test label"
+      :size="LinkButtonSizeEnum.Default"
+      :type="LinkButtonTypeEnum.Left"
       ><IconStarFilledVue
-    /></IconButton>
-    <IconButton
-      :size="btn2Size"
-      @click="(event: MouseEvent)=>{btn2Size = incrementSize(btn2Size)}"
-      ><IconStarOutlinedVue
-    /></IconButton>
+    /></LinkButton>
   </div>
 </template>
 

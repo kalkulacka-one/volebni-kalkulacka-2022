@@ -1,5 +1,5 @@
 <script lang="ts">
-export enum ButtonSizeEnum {
+export enum IconButtonSizeEnum {
   Small,
   Medium,
   Large,
@@ -10,11 +10,11 @@ export enum ButtonSizeEnum {
 import { computed } from 'vue';
 const elementSize = computed(() => {
   switch (props.size) {
-    case ButtonSizeEnum.Small:
+    case IconButtonSizeEnum.Small:
       return { button: 32, icon: 16 };
-    case ButtonSizeEnum.Medium:
+    case IconButtonSizeEnum.Medium:
       return { button: 40, icon: 24 };
-    case ButtonSizeEnum.Large:
+    case IconButtonSizeEnum.Large:
       return { button: 56, icon: 40 };
     default:
       return { button: 32, icon: 16 };
@@ -22,7 +22,7 @@ const elementSize = computed(() => {
 });
 
 const props = defineProps<{
-  size: ButtonSizeEnum;
+  size: IconButtonSizeEnum;
   testText?: string;
 }>();
 console.debug(elementSize);
