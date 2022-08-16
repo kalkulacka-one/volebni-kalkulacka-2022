@@ -19,6 +19,6 @@ export default defineComponent({
 
 <style scoped lang="scss">
 * {
-  background-color: rgb(var(--color-primary-bg-strong));
+  background-color: rgb(var(--color-primary-fg-inverse));
 }
 </style>

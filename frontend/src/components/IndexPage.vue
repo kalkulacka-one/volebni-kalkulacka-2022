@@ -8,6 +8,7 @@ import LabelText from './design-system/typography/LabelText.vue';
 import LinkButton from './design-system/buttons/LinkButton.vue';
 import OutlinedButton from './design-system/buttons/OutlinedButton.vue';
 import FilledButton from './design-system/buttons/FilledButton.vue';
+import AnswerButton from './design-system/buttons/AnswerButton.vue';
 import ArrowLeftIcon from 'vue-material-design-icons/ArrowLeft.vue';
 
 import IconButton from './design-system/buttons/IconButton.vue';
@@ -107,6 +108,48 @@ const incrementSize = (btnSize: number) => {
         <ArrowLeftIcon />
       </template>
     </FilledButton>
+  </div>
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+  >
+    <AnswerButton inFavour>
+      <template #icon>
+        <ArrowLeftIcon />
+      </template>
+    </AnswerButton>
+    <AnswerButton inFavour>
+      Jsem pro
+      <template #icon>
+        <ArrowLeftIcon />
+      </template>
+    </AnswerButton>
+    <AnswerButton>
+      <template #icon>
+        <ArrowLeftIcon />
+      </template>
+    </AnswerButton>
+    <AnswerButton>
+      Přeskočit
+      <template #icon>
+        <ArrowLeftIcon />
+      </template>
+    </AnswerButton>
+    <AnswerButton against>
+      <template #icon>
+        <ArrowLeftIcon />
+      </template>
+    </AnswerButton>
+    <AnswerButton against>
+      Jsem proti
+      <template #icon>
+        <ArrowLeftIcon />
+      </template>
+    </AnswerButton>
   </div>
   <hr />
   <div :style="{ margin: '1rem', display: 'flex', alignItems: 'center' }">
