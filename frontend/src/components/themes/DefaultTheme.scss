@@ -14,6 +14,105 @@
   --radius-medium: var(--spacing-medium);
   --radius-large: var(--spacing-large);
 
+  // Color palette
+  // -------------
+  // Neutral colors
+  --palette-neutral-00: 0, 0, 0;
+  --palette-neutral-10: 29, 28, 28;
+  --palette-neutral-30: 86, 82, 82;
+  --palette-neutral-50: 173, 166, 166;
+  --palette-neutral-70: 218, 216, 215;
+  --palette-neutral-90: 248, 247, 247;
+  --palette-neutral-100: 255, 255, 255;
+
+  // Primary colors
+  --palette-primary-10: 9, 18, 51;
+  --palette-primary-30: 10, 62, 175;
+  --palette-primary-50: 0, 112, 244;
+  --palette-primary-70: 99, 185, 255;
+  --palette-primary-90: 234, 247, 255;
+
+  // Secondary colors
+  --palette-secondary-10: 46, 10, 10;
+  --palette-secondary-30: 130, 20, 20;
+  --palette-secondary-50: 208, 70, 70;
+  --palette-secondary-70: 246, 133, 133;
+  --palette-secondary-90: 255, 244, 245;
+
+  // Semantic colors
+  // ---------------
+  // Neutral colors
+  // – foreground
+  --color-neutral-fg: var(--palette-neutral-30);
+  --color-neutral-fg-strong: var(--palette-neutral-10);
+  --color-neutral-fg-muted: var(--palette-neutral-50);
+  --color-neutral-fg-disabled: var(--palette-neutral-70);
+  --color-neutral-fg-hover: var(--palette-neutral-10);
+  --color-neutral-fg-active: var(--palette-neutral-00);
+  --color-neutral-fg-inverse: var(--palette-neutral-100);
+  // – background
+  --color-neutral-bg: var(--palette-neutral-90);
+  --color-neutral-bg-strong: var(--palette-neutral-50); // not in Figma
+  --color-neutral-bg-muted: var(--palette-neutral-100); // not in Figma
+  --color-neutral-bg-disabled: var(--palette-neutral-70);
+  --color-neutral-bg-hover: var(--palette-neutral-30);
+  --color-neutral-bg-active: var(--palette-neutral-10);
+  // – border
+  --color-neutral-border: var(--palette-neutral-70);
+  --color-neutral-border-strong: var(--palette-neutral-30);
+  --color-neutral-border-muted: var(--palette-neutral-90);
+  --color-neutral-border-disabled: var(--palette-neutral-70);
+  --color-neutral-border-hover: var(--palette-neutral-50);
+  --color-neutral-border-active: var(--palette-neutral-10);
+
+  // Primary colors
+  // – foreground
+  --color-primary-fg: var(--palette-primary-50);
+  --color-primary-fg-strong: var(--palette-primary-10);
+  --color-primary-fg-muted: var(--palette-primary-70); // not in Figma
+  --color-primary-fg-disabled: var(--palette-neutral-70);
+  --color-primary-fg-hover: var(--palette-primary-30);
+  --color-primary-fg-active: var(--palette-primary-00); // not in Figma
+  --color-primary-fg-inverse: var(--palette-neutral-100);
+  // – background
+  --color-primary-bg: var(--palette-primary-90);
+  --color-primary-bg-strong: var(--palette-primary-50);
+  --color-primary-bg-muted: var(--palette-neutral-90); // not in Figma
+  --color-primary-bg-disabled: var(--palette-neutral-70);
+  --color-primary-bg-active: var(--palette-primary-10);
+  --color-primary-bg-hover: var(--palette-primary-30);
+  // – border
+  --color-primary-border: var(--palette-primary-70);
+  --color-primary-border-strong: var(--palette-primary-50);
+  --color-primary-border-muted: var(--palette-neutral-70); // not in Figma
+  --color-primary-border-disabled: var(--palette-neutral-70);
+  --color-primary-border-hover: var(--palette-primary-30);
+  --color-primary-border-active: var(--palette-primary-10); // not in Figma
+
+  // Secondary colors
+  // – foreground
+  --color-secondary-fg: var(--palette-secondary-50);
+  --color-secondary-fg-strong: var(--palette-secondary-30);
+  --color-secondary-fg-muted: var(--palette-secondary-70); // not in Figma
+  --color-secondary-fg-disabled: var(--palette-neutral-70);
+  --color-secondary-fg-hover: var(--palette-secondary-30);
+  --color-secondary-fg-active: var(--palette-secondary-00); // not in Figma
+  --color-secondary-fg-inverse: var(--palette-neutral-100);
+  // – background
+  --color-secondary-bg: var(--palette-secondary-90);
+  --color-secondary-bg-strong: var(--palette-secondary-50);
+  --color-secondary-bg-muted: var(--palette-neutral-90); // not in Figma
+  --color-secondary-bg-disabled: var(--palette-neutral-70); // not in Figma
+  --color-secondary-bg-hover: var(--palette-secondary-30);
+  --color-secondary-bg-active: var(--palette-secondary-10); // not in Figma
+  // – border
+  --color-secondary-border: var(--palette-secondary-70);
+  --color-secondary-border-strong: var(--palette-secondary-50);
+  --color-secondary-border-muted: var(--palette-neutral-70); // not in Figma
+  --color-secondary-border-disabled: var(--palette-neutral-70); // not in Figma
+  --color-secondary-border-hover: var(--palette-primary-30);
+  --color-secondary-border-active: var(--palette-primary-10); // not in Figma
+
   // Typography
   // ----------
   // Font families
