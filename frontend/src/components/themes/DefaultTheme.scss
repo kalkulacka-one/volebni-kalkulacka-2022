@@ -14,6 +14,31 @@
   --radius-medium: var(--spacing-medium);
   --radius-large: var(--spacing-large);
 
+  // Color palette
+  // -------------
+  // Neutral colors
+  --palette-neutral-00: 0, 0, 0;
+  --palette-neutral-10: 29, 28, 28;
+  --palette-neutral-30: 86, 82, 82;
+  --palette-neutral-50: 173, 166, 166;
+  --palette-neutral-70: 218, 216, 215;
+  --palette-neutral-90: 248, 247, 247;
+  --palette-neutral-100: 255, 255, 255;
+
+  // Primary colors
+  --palette-primary-10: 9, 18, 51;
+  --palette-primary-30: 10, 62, 175;
+  --palette-primary-50: 0, 112, 244;
+  --palette-primary-70: 99, 185, 255;
+  --palette-primary-90: 234, 247, 255;
+
+  // Secondary colors
+  --palette-secondary-10: 46, 10, 10;
+  --palette-secondary-30: 130, 20, 20;
+  --palette-secondary-50: 208, 70, 70;
+  --palette-secondary-70: 246, 133, 133;
+  --palette-secondary-90: 255, 244, 245;
+
   // Typography
   // ----------
   // Font families
