@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router';
 import NavBar from '../../components/NavBar.vue';
-import BottomBar from './BottomBar.vue';
+import GuideBottomBar from './GuideBottomBar.vue';
 import { computed } from 'vue';
 const route = useRoute();
 const subtitle = computed(() => `navod ${route.params.nr}/2`);
@@ -14,9 +14,9 @@ const buttonTitle = computed(() => {
 });
 const buttonRoute = computed(() => {
   if (route.params.nr === '1') {
-    return '/guide/2';
+    return { name: 'guide', params: { ...route.params, nr: '2' } };
   } else {
-    return '/question/1';
+    return { name: 'question', params: { ...route.params, nr: '1' } };
   }
 });
 </script>
@@ -27,11 +27,11 @@ const buttonRoute = computed(() => {
     <button>Zpet na hlavni stranku</button>
   </NavBar>
   <h1>This is guide</h1>
-  <BottomBar
+  <GuideBottomBar
     :button-title="buttonTitle"
     :button-route="buttonRoute"
     :subtitle="subtitle"
-  ></BottomBar>
+  ></GuideBottomBar>
 </template>
 
 <style lang="scss" scoped></style>

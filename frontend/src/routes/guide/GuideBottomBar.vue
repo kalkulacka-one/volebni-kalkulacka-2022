@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router';
+import { useRouter, type RouteLocationRaw } from 'vue-router';
 const router = useRouter();
 defineProps<{
   subtitle: string;
   buttonTitle: string;
-  buttonRoute: string;
+  buttonRoute: string | RouteLocationRaw;
 }>();
 </script>
 

@@ -10,7 +10,9 @@ import HelloWorld from './components/HelloWorld.vue';
       <HelloWorld msg="You did it!" />
     </div>
     <router-link to="/">Go to Index</router-link><br />
-    <router-link to="/guide/1">Go to Calculator</router-link><br />
+    <router-link to="/senatni-2022/19-praha-11/guide/1"
+      >Go to Calculator</router-link
+    ><br />
   </header>
 
   <main>
