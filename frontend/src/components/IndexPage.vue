@@ -7,6 +7,7 @@ import LabelText from './design-system/typography/LabelText.vue';
 
 import LinkButton from './design-system/buttons/LinkButton.vue';
 import OutlinedButton from './design-system/buttons/OutlinedButton.vue';
+import FilledButton from './design-system/buttons/FilledButton.vue';
 import ArrowLeftIcon from 'vue-material-design-icons/ArrowLeft.vue';
 
 import IconButton from './design-system/buttons/IconButton.vue';
@@ -66,6 +67,8 @@ const incrementSize = (btnSize: number) => {
         <ArrowLeftIcon />
       </template>
     </LinkButton>
+  </div>
+  <div :style="{ margin: '1rem', display: 'flex', alignItems: 'center' }">
     <OutlinedButton>
       <template #icon>
         <ArrowLeftIcon />
@@ -84,6 +87,26 @@ const incrementSize = (btnSize: number) => {
         <ArrowLeftIcon />
       </template>
     </OutlinedButton>
+  </div>
+  <div :style="{ margin: '1rem', display: 'flex', alignItems: 'center' }">
+    <FilledButton>
+      <template #icon>
+        <ArrowLeftIcon />
+      </template>
+    </FilledButton>
+    <FilledButton>Filled</FilledButton>
+    <FilledButton>
+      Filled icon before
+      <template #icon>
+        <ArrowLeftIcon />
+      </template>
+    </FilledButton>
+    <FilledButton tag="a">
+      Filled icon after
+      <template #iconAfter>
+        <ArrowLeftIcon />
+      </template>
+    </FilledButton>
   </div>
   <hr />
   <div :style="{ margin: '1rem', display: 'flex', alignItems: 'center' }">
