@@ -49,6 +49,7 @@
   --color-neutral-fg-disabled: var(--palette-neutral-70);
   --color-neutral-fg-hover: var(--palette-neutral-10);
   --color-neutral-fg-active: var(--palette-neutral-00);
+  --color-neutral-fg-inverse: var(--palette-neutral-100);
   // – background
   --color-neutral-bg: var(--palette-neutral-90);
   --color-neutral-bg-strong: var(--palette-neutral-50); // not in Figma
@@ -72,6 +73,7 @@
   --color-primary-fg-disabled: var(--palette-neutral-70);
   --color-primary-fg-hover: var(--palette-primary-30);
   --color-primary-fg-active: var(--palette-primary-00); // not in Figma
+  --color-primary-fg-inverse: var(--palette-neutral-100);
   // – background
   --color-primary-bg: var(--palette-primary-90);
   --color-primary-bg-strong: var(--palette-primary-50);
@@ -95,6 +97,7 @@
   --color-secondary-fg-disabled: var(--palette-neutral-70);
   --color-secondary-fg-hover: var(--palette-secondary-30);
   --color-secondary-fg-active: var(--palette-secondary-00); // not in Figma
+  --color-secondary-fg-inverse: var(--palette-neutral-100);
   // – background
   --color-secondary-bg: var(--palette-secondary-90);
   --color-secondary-bg-strong: var(--palette-secondary-50);
