@@ -50,6 +50,21 @@ const onBtnClick = (event: MouseEvent) => {
     <ButtonText size="small">Small button text</ButtonText>
     <LabelText>Label text</LabelText>
   </div>
+  <!-- ICON BUTTONS -->
+  <hr />
+  <div :style="{ margin: '1rem', display: 'flex', alignItems: 'center' }">
+    <IconButton
+      :size="btn1Size"
+      @click="(event: MouseEvent)=>{btn1Size = incrementSize(btn1Size)}"
+      ><IconStarFilledVue
+    /></IconButton>
+    <IconButton
+      :size="btn2Size"
+      @click="(event: MouseEvent)=>{btn2Size = incrementSize(btn2Size)}"
+      ><IconStarOutlinedVue
+    /></IconButton>
+  </div>
+  <!-- LINK BUTTONS -->
   <hr />
   <div
     :style="{
@@ -62,11 +77,14 @@ const onBtnClick = (event: MouseEvent) => {
     <LinkButton :size="'medium'" :icon-position="'start'" @click="onBtnClick"
       >Medium start</LinkButton
     >
-    <LinkButton :size="'small'" :icon-position="'end'" @click="onBtnClick"
-      >Small end</LinkButton
-    >
     <LinkButton :size="'medium'" :icon-position="'end'" @click="onBtnClick"
       >Medium end</LinkButton
+    >
+    <LinkButton :size="'small'" :icon-position="'start'" @click="onBtnClick"
+      >Small start</LinkButton
+    >
+    <LinkButton :size="'small'" :icon-position="'end'" @click="onBtnClick"
+      >Small end</LinkButton
     >
   </div>
 </template>
