@@ -41,7 +41,7 @@ By default, icons inherits the current text color (`fill: currentColor;`). To ch
 
 #### Title
 
-In case the icon is not only a visual enhancement (for example supplementary to a label) but has a meaning, you should add title for accessiblity:
+In case the icon is not only a visual enhancement (for example supplementary to a label) but has a meaning, you should add title for accessibility:
 
 ```js
 <IconComponent :icon="vkiLogoInFavour" title="I'm in favour" />
