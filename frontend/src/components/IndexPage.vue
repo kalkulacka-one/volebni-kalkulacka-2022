@@ -5,20 +5,7 @@ import HeadlineText from './design-system/typography/HeadlineText.vue';
 import ButtonText from './design-system/typography/ButtonText.vue';
 import LabelText from './design-system/typography/LabelText.vue';
 
-import IconButton from './IconButton.vue';
-import { ButtonSizeEnum } from './IconButton.vue';
-import { ref } from 'vue';
-const btn1Size = ref(ButtonSizeEnum.Medium);
-const btn2Size = ref(ButtonSizeEnum.Small);
-const incrementSize = (btnSize: number) => {
-  btnSize =
-    btnSize === Object.keys(ButtonSizeEnum).length / 2 - 1 ? 0 : btnSize + 1;
-  console.debug(btnSize);
-  return btnSize;
-};
-
 import IconComponent from './design-system/icons/IconComponent.vue';
-
 import {
   vkiCheckbox,
   vkiCheckboxChecked,
@@ -30,6 +17,18 @@ import {
   vkiStarOutlined,
 } from './design-system/icons/main';
 import { mdiArrowLeft } from '@mdi/js';
+
+import IconButton from './IconButton.vue';
+import { ButtonSizeEnum } from './IconButton.vue';
+import { ref } from 'vue';
+const btn1Size = ref(ButtonSizeEnum.Medium);
+const btn2Size = ref(ButtonSizeEnum.Small);
+const incrementSize = (btnSize: number) => {
+  btnSize =
+    btnSize === Object.keys(ButtonSizeEnum).length / 2 - 1 ? 0 : btnSize + 1;
+  console.debug(btnSize);
+  return btnSize;
+};
 </script>
 
 <template>
