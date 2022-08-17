@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+
 import BodyText from './design-system/typography/BodyText.vue';
 import TitleText from './design-system/typography/TitleText.vue';
 import HeadlineText from './design-system/typography/HeadlineText.vue';
@@ -9,7 +11,9 @@ import IconButton from './IconButton.vue';
 import { ButtonSizeEnum } from './IconButton.vue';
 import IconStarFilledVue from './icons/IconStarFilled.vue';
 import IconStarOutlinedVue from './icons/IconStarOutlined.vue';
-import { ref } from 'vue';
+
+import { ESize } from './enums';
+
 const btn1Size = ref(ButtonSizeEnum.Medium);
 const btn2Size = ref(ButtonSizeEnum.Small);
 const incrementSize = (btnSize: number) => {
@@ -24,9 +28,9 @@ const incrementSize = (btnSize: number) => {
   <h1>This is the index page</h1>
   <hr />
   <div :style="{ margin: '1rem' }">
-    <HeadlineText size="large">Headline large</HeadlineText>
-    <HeadlineText size="medium">Headline medium</HeadlineText>
-    <HeadlineText size="small">Headline small</HeadlineText>
+    <HeadlineText :size="ESize.LARGE">Headline large</HeadlineText>
+    <HeadlineText :size="ESize.MEDIUM">Headline medium</HeadlineText>
+    <HeadlineText :size="ESize.SMALL">Headline small</HeadlineText>
     <TitleText size="large">Title large</TitleText>
     <TitleText size="medium">Title medium</TitleText>
     <BodyText size="large">

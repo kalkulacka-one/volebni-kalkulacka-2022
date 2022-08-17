@@ -3,6 +3,8 @@ import { defineComponent } from 'vue';
 
 import SimpleText from './SimpleText.vue';
 
+import { ESize } from '@/components/enums';
+
 export default defineComponent({
   components: { SimpleText },
   extends: SimpleText,
@@ -11,11 +13,11 @@ export default defineComponent({
 
 <script setup lang="ts">
 export interface Props {
-  size?: 'small' | 'medium' | 'large';
+  size?: ESize;
 }
 
 withDefaults(defineProps<Props>(), {
-  size: 'medium',
+  size: ESize.MEDIUM,
 });
 </script>
 
