@@ -17,12 +17,8 @@ const incrementSize = (btnSize: number) => {
   return btnSize;
 };
 
-import IconComponent from '@/components/design-system/icons/IconComponent.vue';
-
-import {
-  vkiStarFilled,
-  vkiStarOutlined,
-} from '@/components/design-system/icons/main';
+import IconComponent from './design-system/icons/IconComponent.vue';
+import { vkiStarFilled, vkiStarOutlined } from './design-system/icons/main';
 </script>
 
 <template>
