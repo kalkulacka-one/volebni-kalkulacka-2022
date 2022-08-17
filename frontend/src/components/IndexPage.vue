@@ -15,7 +15,7 @@ import {
   vkiLogoNeutral,
   vkiStarFilled,
   vkiStarOutlined,
-} from './design-system/icons/main';
+} from './design-system/icons';
 import { mdiArrowLeft } from '@mdi/js';
 
 import IconButton from './IconButton.vue';
