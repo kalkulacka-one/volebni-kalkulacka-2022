@@ -10,7 +10,7 @@ First, you need to import the icons you need. Use camelCased name of the icon pr
 // import Material Design icon
 import { mdiArrowLeft } from '@mdi/js';
 // import custom icon
-import { vkiLogoInFavour } from '@/components/design-system/icons/main';
+import { vkiLogoInFavour } from '@/components/design-system/icons';
 ```
 
 Second, you need to import the icon component and provide it with the icon:
@@ -57,4 +57,4 @@ Then add a new file to `@components/icons/vkiYourNewIcon.ts` with the path strin
 export default 'M3.5 20.5V3.5H20.5V20.5H3.5ZM5 19H19V5H5V19Z';
 ```
 
-and don't forget to add export in `@components/icons/main.ts`.
+and don't forget to add export in `@components/icons/index.ts`.
