@@ -5,15 +5,13 @@ import HeadlineText from './design-system/typography/HeadlineText.vue';
 import ButtonText from './design-system/typography/ButtonText.vue';
 import LabelText from './design-system/typography/LabelText.vue';
 
-import IconButton from './design-system/buttons/IconButton.vue';
-import { IconButtonSizeEnum } from './design-system/buttons/IconButton.vue';
+import IconButton, {
+  IconButtonSizeEnum,
+} from './design-system/buttons/IconButton.vue';
 import IconStarFilledVue from './icons/IconStarFilled.vue';
 import IconStarOutlinedVue from './icons/IconStarOutlined.vue';
 import { ref } from 'vue';
-import LinkButton, {
-  LinkButtonSizeEnum,
-  LinkButtonTypeEnum,
-} from './design-system/buttons/LinkButton.vue';
+import LinkButton from './design-system/buttons/LinkButton.vue';
 const btn1Size = ref(IconButtonSizeEnum.Medium);
 const btn2Size = ref(IconButtonSizeEnum.Small);
 const incrementSize = (btnSize: number) => {
@@ -23,6 +21,10 @@ const incrementSize = (btnSize: number) => {
       : btnSize + 1;
   console.debug(btnSize);
   return btnSize;
+};
+const onBtnClick = (event: MouseEvent) => {
+  const btn = event.target as HTMLButtonElement;
+  console.debug(btn);
 };
 </script>
 
@@ -49,13 +51,23 @@ const incrementSize = (btnSize: number) => {
     <LabelText>Label text</LabelText>
   </div>
   <hr />
-  <div :style="{ margin: '1rem', display: 'flex', alignItems: 'center' }">
-    <LinkButton
-      label="test label"
-      :size="LinkButtonSizeEnum.Default"
-      :type="LinkButtonTypeEnum.Left"
-      ><IconStarFilledVue
-    /></LinkButton>
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '10px',
+    }"
+  >
+    <LinkButton :size="'medium'" :icon-position="'start'" @click="onBtnClick"
+      >Medium start</LinkButton
+    >
+    <LinkButton :size="'small'" :icon-position="'end'" @click="onBtnClick"
+      >Small end</LinkButton
+    >
+    <LinkButton :size="'medium'" :icon-position="'end'" @click="onBtnClick"
+      >Medium end</LinkButton
+    >
   </div>
 </template>
 

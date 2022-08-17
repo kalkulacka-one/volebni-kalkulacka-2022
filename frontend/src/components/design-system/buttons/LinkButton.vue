@@ -1,13 +1,4 @@
-<script lang="ts">
-export enum LinkButtonSizeEnum {
-  Small,
-  Default,
-}
-export enum LinkButtonTypeEnum {
-  Left,
-  Right,
-}
-</script>
+<script lang="ts"></script>
 
 <script setup lang="ts">
 import { computed } from 'vue';
@@ -15,35 +6,29 @@ import IconArrowForward from '../../icons/IconArrowForward.vue';
 import ButtonText from '../typography/ButtonText.vue';
 
 const props = defineProps<{
-  size: LinkButtonSizeEnum;
-  type: LinkButtonTypeEnum;
-  label: string;
+  size: 'small' | 'medium';
+  iconPosition: 'start' | 'end';
 }>();
 
 const labelSize = computed(() => {
-  switch (props.size) {
-    case LinkButtonSizeEnum.Small:
-      return 'small';
-    default:
-      return 'medium';
-  }
+  return props.size;
 });
 
 const buttonClass = computed(() => {
   const c = ['button'];
-  if (props.size === LinkButtonSizeEnum.Small) {
+  if (props.size === 'small') {
     c.push('button__small');
   }
   return c;
 });
 
 const iconClass = computed(() => {
-  const c = new Array('button__icon');
-  if (props.size === LinkButtonSizeEnum.Small) {
-    c.push('button__icon__small');
+  const c = new Array('icon');
+  if (props.size === 'small') {
+    c.push('icon__small');
   }
-  if (props.type === LinkButtonTypeEnum.Left) {
-    c.push('button__icon__left');
+  if (props.iconPosition === 'start') {
+    c.push('icon__start');
   }
   return c;
 });
@@ -52,9 +37,7 @@ const iconClass = computed(() => {
 <template>
   <button :class="buttonClass">
     <IconArrowForward :class="iconClass" />
-    <ButtonText :size="labelSize" class="button__label">{{
-      props.label
-    }}</ButtonText>
+    <ButtonText :size="labelSize" class="label"><slot /></ButtonText>
   </button>
 </template>
 
@@ -71,44 +54,49 @@ const iconClass = computed(() => {
   border-width: 0px;
   background-color: transparent;
   cursor: pointer;
+  > * {
+    color: rgb(var(--color-neutral-fg));
+  }
   &:disabled {
     cursor: default;
     > * {
-      color: var(--color-neutral-fg-disabled);
+      color: rgb(var(--color-neutral-fg-disabled));
     }
   }
   &:hover {
     > * {
-      color: var(--color-neutral-fg-hover);
+      color: rgb(var(--color-neutral-fg-hover));
     }
   }
   &:active {
     > * {
-      color: var(--color-neutral-fg-active);
+      color: rgb(var(--color-neutral-fg-active));
     }
   }
   &__small {
     height: 16px;
   }
-  &__label {
-    order: 2;
-    white-space: nowrap;
+}
+.label {
+  pointer-events: none;
+  order: 2;
+  white-space: nowrap;
+}
+.icon {
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 3;
+  height: 15.25px;
+  width: 15.25px;
+  &__start {
+    order: 1;
+    rotate: 180deg;
   }
-  &__icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    order: 3;
-    height: 15.25px;
-    width: 15.25px;
-    &__left {
-      order: 1;
-      rotate: 180deg;
-    }
-    &__small {
-      height: 10.17px;
-      width: 10.17px;
-    }
+  &__small {
+    height: 10.17px;
+    width: 10.17px;
   }
 }
 </style>

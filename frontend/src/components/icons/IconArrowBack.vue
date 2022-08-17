@@ -1,8 +1,8 @@
 <template>
-  <svg viewBox="0 0 24 24">
+  <svg viewBox="0 0 16 16">
     <path
       fill="currentColor"
-      d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"
+      d="M8 15.625L0.375 8L8 0.375L9.075 1.45L3.25 7.25H15.625V8.75H3.25L9.075 14.55L8 15.625Z"
     />
   </svg>
 </template>

@@ -14,6 +14,87 @@
   --radius-medium: var(--spacing-medium);
   --radius-large: var(--spacing-large);
 
+  // Color palette
+  // -------------
+  // Neutral colors
+  --palette-neutral-00: 0, 0, 0;
+  --palette-neutral-10: 29, 28, 28;
+  --palette-neutral-30: 86, 82, 82;
+  --palette-neutral-50: 173, 166, 166;
+  --palette-neutral-70: 218, 216, 215;
+  --palette-neutral-90: 248, 247, 247;
+  --palette-neutral-100: 255, 255, 255;
+
+  // Primary colors
+  --palette-primary-10: 9, 18, 51;
+  --palette-primary-30: 10, 62, 175;
+  --palette-primary-50: 0, 112, 244;
+  --palette-primary-70: 99, 185, 255;
+  --palette-primary-90: 234, 247, 255;
+
+  // Secondary colors
+  --palette-secondary-10: 46, 10, 10;
+  --palette-secondary-30: 130, 20, 20;
+  --palette-secondary-50: 208, 70, 70;
+  --palette-secondary-70: 246, 133, 133;
+  --palette-secondary-90: 255, 244, 245;
+
+  // Semantic colors
+  // ---------------
+  // Neutral colors
+  // – foreground
+  --color-neutral-fg: var(--palette-neutral-30);
+  --color-neutral-fg-strong: var(--palette-neutral-10);
+  --color-neutral-fg-muted: var(--palette-neutral-50);
+  --color-neutral-fg-disabled: var(--palette-neutral-70);
+  // inverse?
+  --color-neutral-fg-hover: var(--palette-neutral-10);
+  --color-neutral-fg-active: var(--palette-neutral-00);
+  // – background
+  --color-neutral-bg: var(--palette-neutral-90);
+  --color-neutral-bg-strong: var(--palette-neutral-30);
+  //--color-neutral-bg-muted: var(--palette-neutral-50);
+  --color-neutral-bg-disabled: var(--palette-neutral-70);
+  // inverse?
+  --color-neutral-bg-hover: var(--palette-neutral-30);
+  --color-neutral-fg-active: var(--palette-neutral-10);
+
+  // Primary colors
+  // – foreground
+  --color-primary-fg: var(--palette-primary-50);
+  --color-primary-fg-strong: var(--palette-primary-10);
+  --color-primary-fg-muted: var(--palette-primary-50);
+  //--color-primary-fg-disabled: var(--palette-primary-70);
+  // inverse?
+  --color-primary-fg-active: var(--palette-primary-00);
+  --color-primary-fg-hover: var(--palette-primary-30);
+  // – background
+  --color-primary-bg: var(--palette-primary-90);
+  --color-primary-bg-strong: var(--palette-primary-50);
+  //--color-primary-bg-muted: var(--palette-primary-50);
+  //--color-primary-bg-disabled: var(--palette-primary-70);
+  // inverse?
+  --color-primary-fg-active: var(--palette-primary-10);
+  --color-primary-bg-hover: var(--palette-primary-30);
+
+  // Secondary colors
+  // – foreground
+  --color-secondary-fg: var(--palette-secondary-50);
+  --color-secondary-fg-strong: var(--palette-secondary-30);
+  --color-secondary-fg-hover: var(--palette-secondary-30);
+  --color-secondary-fg-muted: var(--palette-secondary-50);
+  --color-secondary-fg-disabled: var(--palette-secondary-70);
+  // inverse?
+  --color-secondary-fg-active: var(--palette-secondary-00);
+  // – background
+  --color-secondary-bg: var(--palette-secondary-90);
+  --color-secondary-bg-strong: var(--palette-secondary-50);
+  --color-secondary-bg-hover: var(--palette-secondary-30);
+  //--color-secondary-bg-muted: var(--palette-secondary-50);
+  --color-secondary-bg-disabled: var(--palette-secondary-70);
+  // inverse?
+  --color-secondary-fg-active: var(--palette-secondary-10);
+
   // Typography
   // ----------
   // Font families
