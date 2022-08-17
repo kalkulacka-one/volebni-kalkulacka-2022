@@ -18,7 +18,18 @@ const incrementSize = (btnSize: number) => {
 };
 
 import IconComponent from './design-system/icons/IconComponent.vue';
-import { vkiStarFilled, vkiStarOutlined } from './design-system/icons/main';
+
+import {
+  vkiCheckbox,
+  vkiCheckboxChecked,
+  vkiCheckboxIndeterminate,
+  vkiLogoAgainst,
+  vkiLogoInFavour,
+  vkiLogoNeutral,
+  vkiStarFilled,
+  vkiStarOutlined,
+} from './design-system/icons/main';
+import { mdiArrowLeft } from '@mdi/js';
 </script>
 
 <template>
@@ -56,6 +67,32 @@ import { vkiStarFilled, vkiStarOutlined } from './design-system/icons/main';
       ><IconComponent :icon="vkiStarOutlined"
     /></IconButton>
   </div>
+  <hr />
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+  >
+    <IconComponent :icon="vkiCheckbox" size="small" />
+    <IconComponent :icon="vkiCheckboxChecked" size="medium" />
+    <IconComponent :icon="vkiCheckboxIndeterminate" size="large" />
+    <IconComponent
+      :icon="vkiLogoInFavour"
+      color="rgb(var(--color-primary-fg))"
+    />
+    <IconComponent :icon="vkiLogoNeutral" />
+    <IconComponent
+      :icon="vkiLogoAgainst"
+      color="rgb(var(--color-secondary-fg))"
+    />
+    <IconComponent :icon="vkiStarFilled" />
+    <IconComponent :icon="vkiStarOutlined" />
+    <IconComponent :icon="mdiArrowLeft" />
+  </div>
+  <hr />
 </template>
 
 <style lang="scss" scoped>
