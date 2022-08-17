@@ -2,9 +2,26 @@
 
 ## How to use themes
 
-To use a theme in your components, just use the CSS variables defined in the [theme](../src/components/themes/DefaultTheme.scss).
+To use a theme in your components, just use the CSS variables defined in the [theme](../src/components/themes/DefaultTheme.scss):
 
-Be cautious to use the semantic variables when appropriate, not the hardcoded values.
+- spacings
+- radiuses
+- color palette, transparency tokens & semantic colors
+- typography tokens (font family, size and line height)
+
+Colors are defined as RGB values, therefore to use it in CSS, you have to wrap it in `rgb()`:
+
+```css
+color: rgb(var(--color-primary-fg));
+```
+
+You can easily combine it with transparency:
+
+```css
+color: rgba(var(--color-primary-fg), var(--transparency-10));
+```
+
+Always use tokens for sizing, colors and typography, never hardcoded values. Also be cautious to use the semantic variables when appropriate, not the palette values.
 
 ## Themes
 
