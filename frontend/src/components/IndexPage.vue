@@ -7,8 +7,6 @@ import LabelText from './design-system/typography/LabelText.vue';
 
 import IconButton from './IconButton.vue';
 import { ButtonSizeEnum } from './IconButton.vue';
-import IconStarFilledVue from './icons/IconStarFilled.vue';
-import IconStarOutlinedVue from './icons/IconStarOutlined.vue';
 import { ref } from 'vue';
 const btn1Size = ref(ButtonSizeEnum.Medium);
 const btn2Size = ref(ButtonSizeEnum.Small);
@@ -18,6 +16,13 @@ const incrementSize = (btnSize: number) => {
   console.debug(btnSize);
   return btnSize;
 };
+
+import IconComponent from '@/components/design-system/icons/IconComponent.vue';
+
+import {
+  vkiStarFilled,
+  vkiStarOutlined,
+} from '@/components/design-system/icons/main';
 </script>
 
 <template>
@@ -47,12 +52,12 @@ const incrementSize = (btnSize: number) => {
     <IconButton
       :size="btn1Size"
       @click="(event: MouseEvent)=>{btn1Size = incrementSize(btn1Size)}"
-      ><IconStarFilledVue
+      ><IconComponent :icon="vkiStarFilled"
     /></IconButton>
     <IconButton
       :size="btn2Size"
       @click="(event: MouseEvent)=>{btn2Size = incrementSize(btn2Size)}"
-      ><IconStarOutlinedVue
+      ><IconComponent :icon="vkiStarOutlined"
     /></IconButton>
   </div>
 </template>
