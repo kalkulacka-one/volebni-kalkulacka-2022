@@ -18,7 +18,8 @@
         "required": ["election_id", "district_code", "label"],
         "properties": {
           "election_id": {
-            "type": "string"
+            "type": "string",
+            "description": "UUID of election"
           },
           "district_code": {
             "type": "string"
@@ -28,6 +29,14 @@
           },
           "description": {
             "type": "string"
+          },
+          "on_hp_from": {
+            "type": "string",
+            "description": "Show on HP start - ISO 8601"
+          },
+          "on_hp_to": {
+            "type": "string",
+            "description": "Show on HP end - ISO 8601"
           }
         }
       }

@@ -24,7 +24,17 @@
       "election_id": "uuid-kom-election-komunalni",
       "district_code": "345678",
       "label": "Mesto 02",
-      "description": "uuid-kom-election-komunalni - 345678"
+      "description": "uuid-kom-election-komunalni - 345678",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "uuid-kom-election-komunalni",
+      "district_code": "999999",
+      "label": "This should not be visible",
+      "description": "uuid-kom-election-komunalni - 999999",
+      "on_hp_from": "2000-01-01",
+      "on_hp_to": "2001-01-01"
     },
     {
       "election_id": "uuid-sen-election-senatni",
