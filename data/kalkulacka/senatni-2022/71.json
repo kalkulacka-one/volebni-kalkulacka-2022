@@ -1,0 +1,169 @@
+{
+  "id": "senatni-2022-71",
+  "name": "Senatni volby 2022 - obvod 71",
+  "description": "Senatni volby - description",
+  "election": {
+    "id": "uuid-sen-senatni-2022",
+    "key": "senatni-2022",
+    "name": "Senatni volby 2022",
+    "description": "Senatni volby - description"
+  },
+  "questions": [
+    {
+      "id": "uuid-sen-question-01",
+      "text": "Question 01 - text",
+      "explanation": "Question 01 - explanation",
+      "yes_argument": "Question 01 - yes_argument",
+      "no_argument": "Question 01 - no_argument",
+      "tags": ["tag01", "tag03"]
+    },
+    {
+      "id": "uuid-sen-question-02",
+      "text": "Question 02 - text",
+      "explanation": "Question 02 - explanation",
+      "yes_argument": "Question 02 - yes_argument",
+      "no_argument": "Question 02 - no_argument",
+      "tags": ["tag02", "tag03"]
+    },
+    {
+      "id": "uuid-sen-question-03",
+      "text": "Question 03 - text",
+      "explanation": "Question 03 - explanation",
+      "yes_argument": "Question 03 - yes_argument",
+      "no_argument": "Question 03 - no_argument",
+      "tags": ["tag03"]
+    }
+  ],
+  "candidates": [
+    {
+      "id": "uuid-sen-candidate-01",
+      "name": "Candidate 01 - 71",
+      "type": "person",
+      "description": "Candidate 01 - description",
+      "img_url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cute-cat-photos-1593441022.jpg",
+      "contact": {
+        "webs": [
+          {
+            "url": "https://example.com/candidate-01-01",
+            "label": "hlavni web - 01"
+          },
+          {
+            "url": "https://example.com/candidate-01-02"
+          }
+        ],
+        "emails": [
+          {
+            "email": "candidate-01@example.com"
+          },
+          {
+            "email": "candidate-01-as@example.com",
+            "label": "asistent - 01"
+          }
+        ],
+        "twitter": "aliceprimes",
+        "facebook": "komentovane.prohlidky.ostravy",
+        "instagram": "provedu.cz"
+      },
+      "parties": [
+        {
+          "id": "uuid-sen-party-01",
+          "name": "Party 01",
+          "description": "Party 01 - description",
+          "abbreviation": "P01",
+          "contact": {
+            "webs": [
+              {
+                "url": "https://example.com/party-01"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "uuid-sen-candidate-02",
+      "name": "Candidate 02 - 71",
+      "type": "person",
+      "description": "Candidate 02 - description",
+      "img_url": "https://thumbs.dreamstime.com/b/cute-puppy-welsh-corgi-pembroke-white-background-studio-cute-puppy-welsh-corgi-pembroke-114974516.jpg",
+      "contact": {
+        "webs": [
+          {
+            "url": "https://example.com/candidate-02-01",
+            "label": "hlavni web - 02"
+          },
+          {
+            "url": "https://example.com/candidate-02-02"
+          }
+        ],
+        "emails": [
+          {
+            "email": "candidate-02@example.com"
+          },
+          {
+            "email": "candidate-02-as@example.com",
+            "label": "asistent - 02"
+          }
+        ],
+        "twitter": "bobprimes",
+        "facebook": "prime.numbers.daily",
+        "instagram": "numbers_prime"
+      },
+      "parties": [
+        {
+          "id": "uuid-sen-party-02",
+          "name": "Party 02",
+          "description": "Party 02 - description",
+          "abbreviation": "P02",
+          "contact": {
+            "webs": [
+              {
+                "url": "https://example.com/party-02"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "answers": [
+    {
+      "id": "uuid-sen-answer-01",
+      "candidate_id": "uuid-sen-candidate-01",
+      "question_id": "uuid-sen-question-01",
+      "answer": "yes",
+      "comment": "yes, yes, yes"
+    },
+    {
+      "id": "uuid-sen-answer-02",
+      "candidate_id": "uuid-sen-candidate-01",
+      "question_id": "uuid-sen-question-02",
+      "comment": "musime to promyslet"
+    },
+    {
+      "id": "uuid-sen-answer-03",
+      "candidate_id": "uuid-sen-candidate-02",
+      "question_id": "uuid-sen-question-01"
+    },
+    {
+      "id": "uuid-sen-answer-04",
+      "candidate_id": "uuid-sen-candidate-01",
+      "question_id": "uuid-sen-question-02",
+      "answer": "no",
+      "comment": "no"
+    },
+    {
+      "id": "uuid-sen-answer-05",
+      "candidate_id": "uuid-sen-candidate-02",
+      "question_id": "uuid-sen-question-03",
+      "answer": "yes"
+    },
+    {
+      "id": "uuid-sen-answer-06",
+      "candidate_id": "uuid-sen-candidate-01",
+      "question_id": "uuid-sen-question-03",
+      "answer": "yes",
+      "comment": "yes"
+    }
+  ]
+}

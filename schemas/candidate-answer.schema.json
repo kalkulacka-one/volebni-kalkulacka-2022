@@ -1,0 +1,30 @@
+{
+  "$id": "https://kalkulacka.ceskodigital.net/schemas/candidate-answer.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "A representation of answers for given candidate to questions",
+  "type": "object",
+  "required": ["id", "candidate_id", "question_id"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "UUID"
+    },
+    "candidate_id": {
+      "type": "string",
+      "description": "Candidate's UUID"
+    },
+    "question_id": {
+      "type": "string",
+      "description": "Question's UUID"
+    },
+    "answer": {
+      "type": "string",
+      "description": "Answer on given question",
+      "enum": ["yes", "no"]
+    },
+    "comment": {
+      "type": "string",
+      "description": "Candidate's comment related to their answer."
+    }
+  }
+}

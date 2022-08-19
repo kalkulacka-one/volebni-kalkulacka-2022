@@ -1,0 +1,38 @@
+{
+  "$id": "https://kalkulacka.ceskodigital.net/schemas/election.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "A representation of election",
+  "type": "object",
+  "required": ["id", "name", "key", "description"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "UUID"
+    },
+    "key": {
+      "type": "string",
+      "description": "Key used in path/url"
+    },
+    "name": {
+      "type": "string",
+      "description": "Election's name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Longer description"
+    },
+    "from": {
+      "type": "string",
+      "description": "Election start - ISO 8601"
+    },
+    "to": {
+      "type": "string",
+      "description": "Election end - ISO 8601"
+    },
+    "type": {
+      "type": "string",
+      "description": "Election type",
+      "enum": ["senatni", "prezidentske", "snemovni", "krajske", "municipalni"]
+    }
+  }
+}

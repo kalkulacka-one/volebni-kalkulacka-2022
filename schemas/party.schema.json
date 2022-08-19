@@ -1,0 +1,32 @@
+{
+  "$id": "https://kalkulacka.ceskodigital.net/schemas/party.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "A representation of party",
+  "type": "object",
+  "required": ["id", "name", "description"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "UUID"
+    },
+    "name": {
+      "type": "string",
+      "description": "Party name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Longer description."
+    },
+    "abbreviation": {
+      "type": "string",
+      "description": "abbreviation"
+    },
+    "img_url": {
+      "type": "string",
+      "description": "Image"
+    },
+    "contact": {
+      "$ref": "https://kalkulacka.ceskodigital.net/schemas/contact.schema.json"
+    }
+  }
+}

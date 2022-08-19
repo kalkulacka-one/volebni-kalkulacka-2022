@@ -1,0 +1,61 @@
+{
+  "$id": "https://kalkulacka.ceskodigital.net/schemas/calculator.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "A representation single calculator",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "description",
+    "election",
+    "questions",
+    "candidates",
+    "answers"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "UUID"
+    },
+    "name": {
+      "type": "string",
+      "description": "Election's name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Longer description"
+    },
+    "on_hp_from": {
+      "type": "string",
+      "description": "Show on HP start - ISO 8601"
+    },
+    "on_hp_to": {
+      "type": "string",
+      "description": "Show on HP end - ISO 8601"
+    },
+    "election": {
+      "$ref": "https://kalkulacka.ceskodigital.net/schemas/election.schema.json"
+    },
+    "questions": {
+      "type": "array",
+      "description": "List of questions",
+      "items": {
+        "$ref": "https://kalkulacka.ceskodigital.net/schemas/question.schema.json"
+      }
+    },
+    "candidates": {
+      "type": "array",
+      "description": "List of candidates",
+      "items": {
+        "$ref": "https://kalkulacka.ceskodigital.net/schemas/candidate.schema.json"
+      }
+    },
+    "answers": {
+      "type": "array",
+      "description": "List of answers",
+      "items": {
+        "$ref": "https://kalkulacka.ceskodigital.net/schemas/candidate-answer.schema.json"
+      }
+    }
+  }
+}

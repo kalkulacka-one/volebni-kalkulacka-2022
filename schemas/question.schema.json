@@ -1,0 +1,36 @@
+{
+  "$id": "https://kalkulacka.ceskodigital.net/schemas/question.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "A representation of single question",
+  "type": "object",
+  "required": ["id", "text", "explanation", "yes_argument", "no_argument"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "UUID"
+    },
+    "text": {
+      "type": "string",
+      "description": "Text of the question"
+    },
+    "explanation": {
+      "type": "string",
+      "description": "Longer explanation of the question"
+    },
+    "yes_argument": {
+      "type": "string",
+      "description": "Arguments for yes"
+    },
+    "no_argument": {
+      "type": "string",
+      "description": "Arguments for no"
+    },
+    "tags": {
+      "type": "array",
+      "description": "Tags for the question",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

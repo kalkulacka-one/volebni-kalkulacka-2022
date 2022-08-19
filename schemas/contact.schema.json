@@ -1,0 +1,61 @@
+{
+  "$id": "https://kalkulacka.ceskodigital.net/schemas/contact.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "A representation of contact",
+  "type": "object",
+  "required": [],
+  "properties": {
+    "webs": {
+      "type": "array",
+      "description": "Websites",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "URL"
+          },
+          "label": {
+            "type": "string",
+            "description": "Label for the URL"
+          }
+        },
+        "required": ["url"]
+      }
+    },
+    "emails": {
+      "type": "array",
+      "description": "Emails",
+      "items": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "description": "email"
+          },
+          "label": {
+            "type": "string",
+            "description": "Label for the email"
+          }
+        },
+        "required": ["email"]
+      }
+    },
+    "twitter": {
+      "type": "string",
+      "description": "Twitter handle"
+    },
+    "instagram": {
+      "type": "string",
+      "description": "Instagram handle"
+    },
+    "facebook": {
+      "type": "string",
+      "description": "Facebook handle"
+    },
+    "tiktok": {
+      "type": "string",
+      "description": "Tiktok handle"
+    }
+  }
+}
