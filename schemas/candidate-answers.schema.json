@@ -23,10 +23,18 @@
             "type": "string",
             "description": "Question's UUID"
           },
+          "question": {
+            "$ref": "https://kalkulacka.ceskodigital.net/schemas/question.schema.json",
+            "description": "Question itself. If it's missing use question_id to lookup the question."
+          },
           "answer": {
             "type": "string",
             "description": "Answer on given question",
             "enum": ["yes", "no"]
+          },
+          "comment": {
+            "type": "string",
+            "description": "Candidate's comment related to their answer."
           }
         }
       }

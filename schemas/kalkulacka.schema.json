@@ -44,7 +44,7 @@
     },
     "answers": {
       "type": "array",
-      "description": "List of candidates",
+      "description": "List of answers",
       "items": {
         "$ref": "https://kalkulacka.ceskodigital.net/schemas/candidate-answers.schema.json"
       }

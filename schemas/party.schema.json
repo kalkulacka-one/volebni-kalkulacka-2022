@@ -1,0 +1,39 @@
+{
+  "$id": "https://kalkulacka.ceskodigital.net/schemas/party.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A representation of party",
+  "type": "object",
+  "required": ["id", "name", "description", "tags"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "UUID"
+    },
+    "name": {
+      "type": "string",
+      "description": "Party name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Longer description."
+    },
+    "abbreviation": {
+      "type": "string",
+      "description": "abbreviation"
+    },
+    "img_url": {
+      "type": "string",
+      "description": "Image"
+    },
+    "contact": {
+      "$ref": "https://kalkulacka.ceskodigital.net/schemas/contact.schema.json"
+    },
+    "tags": {
+      "type": "array",
+      "description": "Tags for the question",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
