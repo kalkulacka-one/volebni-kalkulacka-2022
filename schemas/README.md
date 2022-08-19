@@ -19,4 +19,7 @@ From these files, we can generate a single file that would contain all the quest
 
 - https://github.com/ajv-validator/ajv-cli
   - install - `npm install -g ajv-cli`
-  - run - `ajv validate --verbose -s kalkulacka.schema.json -d example-senatni.json -r candidate-answers.schema.json -r candidate.schema.json -r contact.schema.json -r election.schema.json -r party.schema.json -r question.schema.json`
+  - run - `ajv validate --verbose -s kalkulacka.schema.json -d example-senatni.json -r candidate-answer.schema.json -r candidate.schema.json -r contact.schema.json -r election.schema.json -r party.schema.json -r question.schema.json`
+  - to generate code:
+    - install `npm install js-beautify`
+    - compile - `ajv compile -s kalkulacka.schema.json -r candidate-answer.schema.json -r candidate.schema.json -r contact.schema.json -r election.schema.json -r party.schema.json -r question.schema.json -o | js-beautify > validate.js`

@@ -23,6 +23,14 @@
       "yes_argument": "Question 02 - yes_argument",
       "no_argument": "Question 02 - no_argument",
       "tags": ["tag02", "tag03"]
+    },
+    {
+      "id": "uuid-question-03",
+      "text": "Question 03 - text",
+      "explanation": "Question 03 - explanation",
+      "yes_argument": "Question 03 - yes_argument",
+      "no_argument": "Question 03 - no_argument",
+      "tags": ["tag03"]
     }
   ],
   "candidates": [
@@ -36,7 +44,7 @@
         "webs": [
           {
             "url": "https://example.com/candidate-01-01",
-            "label": "hlavni web"
+            "label": "hlavni web - 01"
           },
           {
             "url": "https://example.com/candidate-01-02"
@@ -48,9 +56,12 @@
           },
           {
             "email": "candidate-01-as@example.com",
-            "label": "asistent"
+            "label": "asistent - 01"
           }
-        ]
+        ],
+        "twitter": "aliceprimes",
+        "facebook": "komentovane.prohlidky.ostravy",
+        "instagram": "provedu.cz"
       },
       "parties": [
         {
@@ -67,24 +78,93 @@
           }
         }
       ]
+    },
+    {
+      "id": "uuid-candidate-02",
+      "name": "Candidate 02",
+      "type": "person",
+      "description": "Candidate 02 - description",
+      "img_url": "https://thumbs.dreamstime.com/b/cute-puppy-welsh-corgi-pembroke-white-background-studio-cute-puppy-welsh-corgi-pembroke-114974516.jpg",
+      "contact": {
+        "webs": [
+          {
+            "url": "https://example.com/candidate-02-01",
+            "label": "hlavni web - 02"
+          },
+          {
+            "url": "https://example.com/candidate-02-02"
+          }
+        ],
+        "emails": [
+          {
+            "email": "candidate-02@example.com"
+          },
+          {
+            "email": "candidate-02-as@example.com",
+            "label": "asistent - 02"
+          }
+        ],
+        "twitter": "bobprimes",
+        "facebook": "prime.numbers.daily",
+        "instagram": "numbers_prime"
+      },
+      "parties": [
+        {
+          "id": "uuid-party-02",
+          "name": "Party 02",
+          "description": "Party 02 - description",
+          "abbreviation": "P02",
+          "contact": {
+            "webs": [
+              {
+                "url": "https://example.com/party-02"
+              }
+            ]
+          }
+        }
+      ]
     }
   ],
   "answers": [
     {
       "id": "uuid-answer-01",
       "candidate_id": "uuid-candidate-01",
-      "questions": [
-        {
-          "question_id": "uuid-question-01",
-          "answer": "yes",
-          "comment": "yes, yes, yes"
-        },
-        {
-          "question_id": "uuid-question-02",
-          "answer": null,
-          "comment": "I do not know"
-        }
-      ]
+      "question_id": "uuid-question-01",
+      "answer": "yes",
+      "comment": "yes, yes, yes"
+    },
+    {
+      "id": "uuid-answer-02",
+      "candidate_id": "uuid-candidate-01",
+      "question_id": "uuid-question-02",
+      "answer": null,
+      "comment": ""
+    },
+    {
+      "id": "uuid-answer-03",
+      "candidate_id": "uuid-candidate-02",
+      "question_id": "uuid-question-01",
+      "answer": null
+    },
+    {
+      "id": "uuid-answer-04",
+      "candidate_id": "uuid-candidate-01",
+      "question_id": "uuid-question-02",
+      "answer": "no",
+      "comment": "no"
+    },
+    {
+      "id": "uuid-answer-05",
+      "candidate_id": "uuid-candidate-02",
+      "question_id": "uuid-question-03",
+      "answer": "yes"
+    },
+    {
+      "id": "uuid-answer-06",
+      "candidate_id": "uuid-candidate-01",
+      "question_id": "uuid-question-03",
+      "answer": "yes",
+      "comment": "yes"
     }
   ]
 }

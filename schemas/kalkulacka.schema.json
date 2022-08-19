@@ -34,7 +34,7 @@
       "description": "Show on HP end - ISO 8601"
     },
     "election": {
-      "$ref": "./election.schema.json"
+      "$ref": "https://kalkulacka.ceskodigital.net/schemas/election.schema.json"
     },
     "questions": {
       "type": "array",
@@ -54,7 +54,7 @@
       "type": "array",
       "description": "List of answers",
       "items": {
-        "$ref": "https://kalkulacka.ceskodigital.net/schemas/candidate-answers.schema.json"
+        "$ref": "https://kalkulacka.ceskodigital.net/schemas/candidate-answer.schema.json"
       }
     }
   }
