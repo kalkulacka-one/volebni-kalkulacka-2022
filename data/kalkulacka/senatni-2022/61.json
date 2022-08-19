@@ -1,9 +1,10 @@
 {
-  "id": "uuid-sen-senatni",
-  "name": "Senatni volby 2022 - obvod 12345",
+  "id": "senatni-2022-61",
+  "name": "Senatni volby 2022 - obvod 61",
   "description": "Senatni volby - description",
   "election": {
-    "id": "uuid-sen-election-senatni",
+    "id": "uuid-sen-senatni-2022",
+    "key": "senatni-2022",
     "name": "Senatni volby 2022",
     "description": "Senatni volby - description"
   },
@@ -36,7 +37,7 @@
   "candidates": [
     {
       "id": "uuid-sen-candidate-01",
-      "name": "Candidate 01",
+      "name": "Candidate 01 - 61",
       "type": "person",
       "description": "Candidate 01 - description",
       "img_url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cute-cat-photos-1593441022.jpg",
@@ -81,7 +82,7 @@
     },
     {
       "id": "uuid-sen-candidate-02",
-      "name": "Candidate 02",
+      "name": "Candidate 02 - 61",
       "type": "person",
       "description": "Candidate 02 - description",
       "img_url": "https://thumbs.dreamstime.com/b/cute-puppy-welsh-corgi-pembroke-white-background-studio-cute-puppy-welsh-corgi-pembroke-114974516.jpg",

@@ -1,9 +1,10 @@
 {
   "id": "uuid-kom-komunalni-01",
-  "name": "Komunalni 2022 - Ostrava",
-  "description": "Komunalni volby - description",
+  "name": "Komunalni 2022 - Mesto 1",
+  "description": "Komunalni volby - description - Mesto 1",
   "election": {
     "id": "uuid-kom-election-komunalni",
+    "key": "komunalni-2022",
     "name": "Komunalni volby 2022",
     "description": "Komunalni volby - description"
   },
@@ -36,7 +37,7 @@
   "candidates": [
     {
       "id": "uuid-kom-candidate-01",
-      "name": "Candidate 01 - Party",
+      "name": "Candidate 01 - Party - 123456",
       "type": "party",
       "description": "Candidate 01 - description",
       "img_url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cute-cat-photos-1593441022.jpg",
@@ -81,7 +82,7 @@
     },
     {
       "id": "uuid-kom-candidate-02",
-      "name": "Candidate 02 - Coalition",
+      "name": "Candidate 02 - Coalition - 123456",
       "type": "coalition",
       "description": "Candidate 02 - description",
       "img_url": "https://thumbs.dreamstime.com/b/cute-puppy-welsh-corgi-pembroke-white-background-studio-cute-puppy-welsh-corgi-pembroke-114974516.jpg",

@@ -1,9 +1,9 @@
 {
-  "$id": "https://kalkulacka.ceskodigital.net/schemas/rozcestnik.schema.json",
+  "$id": "https://kalkulacka.ceskodigital.net/schemas/calculators.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "A representation all elections",
   "type": "object",
-  "required": ["elections", "districts"],
+  "required": ["elections", "calculators"],
   "properties": {
     "elections": {
       "type": "array",
@@ -11,7 +11,7 @@
         "$ref": "https://kalkulacka.ceskodigital.net/schemas/election.schema.json"
       }
     },
-    "districts": {
+    "calculators": {
       "type": "array",
       "items": {
         "type": "object",

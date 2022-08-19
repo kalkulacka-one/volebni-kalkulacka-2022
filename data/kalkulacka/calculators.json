@@ -2,16 +2,18 @@
   "elections": [
     {
       "id": "uuid-kom-election-komunalni",
+      "key": "komunalni-2022",
       "name": "Komunalni volby 2022",
       "description": "Komunalni volby - description"
     },
     {
-      "id": "uuid-sen-election-senatni",
+      "id": "uuid-sen-senatni-2022",
+      "key": "senatni-2022",
       "name": "Senatni volby 2022",
       "description": "Senatni volby - description"
     }
   ],
-  "districts": [
+  "calculators": [
     {
       "election_id": "uuid-kom-election-komunalni",
       "district_code": "123456",
@@ -20,9 +22,9 @@
     },
     {
       "election_id": "uuid-kom-election-komunalni",
-      "district_code": "789012",
+      "district_code": "345678",
       "label": "Mesto 02",
-      "description": "uuid-kom-election-komunalni - 789012"
+      "description": "uuid-kom-election-komunalni - 345678"
     },
     {
       "election_id": "uuid-sen-election-senatni",
