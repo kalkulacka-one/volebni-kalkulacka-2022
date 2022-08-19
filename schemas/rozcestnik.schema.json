@@ -1,0 +1,36 @@
+{
+  "$id": "https://kalkulacka.ceskodigital.net/schemas/rozcestnik.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "A representation all elections",
+  "type": "object",
+  "required": ["elections", "districts"],
+  "properties": {
+    "elections": {
+      "type": "array",
+      "items": {
+        "$ref": "https://kalkulacka.ceskodigital.net/schemas/election.schema.json"
+      }
+    },
+    "districts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["election_id", "district_code", "label"],
+        "properties": {
+          "election_id": {
+            "type": "string"
+          },
+          "district_code": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -24,6 +24,7 @@ From these files, we can generate a single file that would contain all the quest
   - to generate validator:
     - install `npm install js-beautify`
     - compile - `ajv compile -s kalkulacka.schema.json -r candidate-answer.schema.json -r candidate.schema.json -r contact.schema.json -r election.schema.json -r party.schema.json -r question.schema.json -o | js-beautify > validate.js`
+  - run example rozcestnik - `ajv validate --verbose -s rozcestnik.schema.json -d example-rozcestnik.json -r election.schema.json`
 
 ## Code Generation
 
