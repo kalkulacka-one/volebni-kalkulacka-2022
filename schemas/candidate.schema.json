@@ -1,6 +1,6 @@
 {
   "$id": "https://kalkulacka.ceskodigital.net/schemas/candidate.schema.json",
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "A representation of candidate",
   "type": "object",
   "required": ["id", "name", "type", "description"],
@@ -33,7 +33,7 @@
       "type": "array",
       "description": "If the type is party, then this array should have single element. If the type is coalition, then there should be multiple parties. If the type is party, then there should be at most one party.",
       "items": {
-        "$ref": "https://kalkulacka.ceskodigital.net/schemas/contact.schema.json"
+        "$ref": "https://kalkulacka.ceskodigital.net/schemas/party.schema.json"
       }
     }
   }

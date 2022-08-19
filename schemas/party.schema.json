@@ -1,9 +1,9 @@
 {
   "$id": "https://kalkulacka.ceskodigital.net/schemas/party.schema.json",
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "A representation of party",
   "type": "object",
-  "required": ["id", "name", "description", "tags"],
+  "required": ["id", "name", "description"],
   "properties": {
     "id": {
       "type": "string",
@@ -27,13 +27,6 @@
     },
     "contact": {
       "$ref": "https://kalkulacka.ceskodigital.net/schemas/contact.schema.json"
-    },
-    "tags": {
-      "type": "array",
-      "description": "Tags for the question",
-      "items": {
-        "type": "string"
-      }
     }
   }
 }

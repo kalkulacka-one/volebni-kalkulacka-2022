@@ -1,6 +1,6 @@
 {
   "$id": "https://kalkulacka.ceskodigital.net/schemas/contact.schema.json",
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "A representation of contact",
   "type": "object",
   "required": [],
@@ -9,7 +9,7 @@
       "type": "array",
       "description": "Websites",
       "items": {
-        "object": "string",
+        "type": "object",
         "properties": {
           "url": {
             "type": "string",
@@ -27,9 +27,9 @@
       "type": "array",
       "description": "Emails",
       "items": {
-        "object": "string",
+        "type": "object",
         "properties": {
-          "url": {
+          "email": {
             "type": "string",
             "description": "email"
           },
@@ -38,7 +38,7 @@
             "description": "Label for the email"
           }
         },
-        "required": ["url"]
+        "required": ["email"]
       }
     },
     "twitter": {

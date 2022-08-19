@@ -1,6 +1,6 @@
 {
   "$id": "https://kalkulacka.ceskodigital.net/schemas/candidate-answers.schema.json",
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "A representation of answers for given candidate to questions",
   "type": "object",
   "required": ["id", "candidate_id", "questions"],
@@ -18,19 +18,16 @@
       "description": "Candidates' answers on questions",
       "items": {
         "type": "object",
+        "required": ["question_id", "answer", "comment"],
         "properties": {
           "question_id": {
             "type": "string",
             "description": "Question's UUID"
           },
-          "question": {
-            "$ref": "https://kalkulacka.ceskodigital.net/schemas/question.schema.json",
-            "description": "Question itself. If it's missing use question_id to lookup the question."
-          },
           "answer": {
-            "type": "string",
+            "oneOf": [{ "type": "string" }, { "type": "null" }],
             "description": "Answer on given question",
-            "enum": ["yes", "no"]
+            "enum": ["yes", "no", null]
           },
           "comment": {
             "type": "string",

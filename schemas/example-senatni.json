@@ -1,0 +1,90 @@
+{
+  "id": "uuid-senatni",
+  "name": "Senatni volby 2022 - obvod 12345",
+  "description": "Senatni volby - description",
+  "election": {
+    "id": "uuid-election-senatni",
+    "name": "Senatni volby 2022",
+    "description": "Senatni volby - description"
+  },
+  "questions": [
+    {
+      "id": "uuid-question-01",
+      "text": "Question 01 - text",
+      "explanation": "Question 01 - explanation",
+      "yes_argument": "Question 01 - yes_argument",
+      "no_argument": "Question 01 - no_argument",
+      "tags": ["tag01", "tag03"]
+    },
+    {
+      "id": "uuid-question-02",
+      "text": "Question 02 - text",
+      "explanation": "Question 02 - explanation",
+      "yes_argument": "Question 02 - yes_argument",
+      "no_argument": "Question 02 - no_argument",
+      "tags": ["tag02", "tag03"]
+    }
+  ],
+  "candidates": [
+    {
+      "id": "uuid-candidate-01",
+      "name": "Candidate 01",
+      "type": "person",
+      "description": "Candidate 01 - description",
+      "img_url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cute-cat-photos-1593441022.jpg",
+      "contact": {
+        "webs": [
+          {
+            "url": "https://example.com/candidate-01-01",
+            "label": "hlavni web"
+          },
+          {
+            "url": "https://example.com/candidate-01-02"
+          }
+        ],
+        "emails": [
+          {
+            "email": "candidate-01@example.com"
+          },
+          {
+            "email": "candidate-01-as@example.com",
+            "label": "asistent"
+          }
+        ]
+      },
+      "parties": [
+        {
+          "id": "uuid-party-01",
+          "name": "Party 01",
+          "description": "Party 01 - description",
+          "abbreviation": "P01",
+          "contact": {
+            "webs": [
+              {
+                "url": "https://example.com/party-01"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "answers": [
+    {
+      "id": "uuid-answer-01",
+      "candidate_id": "uuid-candidate-01",
+      "questions": [
+        {
+          "question_id": "uuid-question-01",
+          "answer": "yes",
+          "comment": "yes, yes, yes"
+        },
+        {
+          "question_id": "uuid-question-02",
+          "answer": null,
+          "comment": "I do not know"
+        }
+      ]
+    }
+  ]
+}
