@@ -19,7 +19,14 @@ From these files, we can generate a single file that would contain all the quest
 
 - https://github.com/ajv-validator/ajv-cli
   - install - `npm install -g ajv-cli`
-  - run - `ajv validate --verbose -s kalkulacka.schema.json -d example-senatni.json -r candidate-answer.schema.json -r candidate.schema.json -r contact.schema.json -r election.schema.json -r party.schema.json -r question.schema.json`
-  - to generate code:
+  - run example senatni - `ajv validate --verbose -s kalkulacka.schema.json -d example-senatni.json -r candidate-answer.schema.json -r candidate.schema.json -r contact.schema.json -r election.schema.json -r party.schema.json -r question.schema.json`
+  - run example komunalni - `ajv validate --verbose -s kalkulacka.schema.json -d example-komunalni.json -r candidate-answer.schema.json -r candidate.schema.json -r contact.schema.json -r election.schema.json -r party.schema.json -r question.schema.json`
+  - to generate validator:
     - install `npm install js-beautify`
     - compile - `ajv compile -s kalkulacka.schema.json -r candidate-answer.schema.json -r candidate.schema.json -r contact.schema.json -r election.schema.json -r party.schema.json -r question.schema.json -o | js-beautify > validate.js`
+
+## Code Generation
+
+- https://www.npmjs.com/package/json-schema-to-typescript
+  - install - `npm install json-schema-to-typescript`
+  - generate - `json2ts -i '*.schema.json' -o generated` - but it does not work because of references?

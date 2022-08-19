@@ -18,9 +18,9 @@
       "description": "Question's UUID"
     },
     "answer": {
-      "oneOf": [{ "type": "string" }, { "type": "null" }],
+      "type": "string",
       "description": "Answer on given question",
-      "enum": ["yes", "no", null]
+      "enum": ["yes", "no"]
     },
     "comment": {
       "type": "string",

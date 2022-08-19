@@ -1,15 +1,15 @@
 {
-  "id": "uuid-sen-senatni",
-  "name": "Senatni volby 2022 - obvod 12345",
-  "description": "Senatni volby - description",
+  "id": "uuid-komunalni-01",
+  "name": "Komunalni 2022 - Ostrava",
+  "description": "Komunalni volby - description",
   "election": {
-    "id": "uuid-sen-election-senatni",
-    "name": "Senatni volby 2022",
-    "description": "Senatni volby - description"
+    "id": "uuid-election-komunalni",
+    "name": "Komunalni volby 2022",
+    "description": "Komunalni volby - description"
   },
   "questions": [
     {
-      "id": "uuid-sen-question-01",
+      "id": "uuid-kom-question-01",
       "text": "Question 01 - text",
       "explanation": "Question 01 - explanation",
       "yes_argument": "Question 01 - yes_argument",
@@ -17,7 +17,7 @@
       "tags": ["tag01", "tag03"]
     },
     {
-      "id": "uuid-sen-question-02",
+      "id": "uuid-kom-question-02",
       "text": "Question 02 - text",
       "explanation": "Question 02 - explanation",
       "yes_argument": "Question 02 - yes_argument",
@@ -25,7 +25,7 @@
       "tags": ["tag02", "tag03"]
     },
     {
-      "id": "uuid-sen-question-03",
+      "id": "uuid-kom-question-03",
       "text": "Question 03 - text",
       "explanation": "Question 03 - explanation",
       "yes_argument": "Question 03 - yes_argument",
@@ -35,9 +35,9 @@
   ],
   "candidates": [
     {
-      "id": "uuid-sen-candidate-01",
-      "name": "Candidate 01",
-      "type": "person",
+      "id": "uuid-kom-candidate-01",
+      "name": "Candidate 01 - Party",
+      "type": "party",
       "description": "Candidate 01 - description",
       "img_url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cute-cat-photos-1593441022.jpg",
       "contact": {
@@ -65,7 +65,7 @@
       },
       "parties": [
         {
-          "id": "uuid-sen-party-01",
+          "id": "uuid-kom-party-01",
           "name": "Party 01",
           "description": "Party 01 - description",
           "abbreviation": "P01",
@@ -80,9 +80,9 @@
       ]
     },
     {
-      "id": "uuid-sen-candidate-02",
-      "name": "Candidate 02",
-      "type": "person",
+      "id": "uuid-kom-candidate-02",
+      "name": "Candidate 02 - Coalition",
+      "type": "coalition",
       "description": "Candidate 02 - description",
       "img_url": "https://thumbs.dreamstime.com/b/cute-puppy-welsh-corgi-pembroke-white-background-studio-cute-puppy-welsh-corgi-pembroke-114974516.jpg",
       "contact": {
@@ -110,10 +110,23 @@
       },
       "parties": [
         {
-          "id": "uuid-sen-party-02",
+          "id": "uuid-kom-party-02",
           "name": "Party 02",
           "description": "Party 02 - description",
           "abbreviation": "P02",
+          "contact": {
+            "webs": [
+              {
+                "url": "https://example.com/party-02"
+              }
+            ]
+          }
+        },
+        {
+          "id": "uuid-kom-party-03",
+          "name": "Party 03",
+          "description": "Party 03 - description",
+          "abbreviation": "P03",
           "contact": {
             "webs": [
               {
@@ -127,40 +140,40 @@
   ],
   "answers": [
     {
-      "id": "uuid-sen-answer-01",
-      "candidate_id": "uuid-sen-candidate-01",
-      "question_id": "uuid-sen-question-01",
+      "id": "uuid-kom-answer-01",
+      "candidate_id": "uuid-kom-candidate-01",
+      "question_id": "uuid-kom-question-01",
       "answer": "yes",
       "comment": "yes, yes, yes"
     },
     {
-      "id": "uuid-sen-answer-02",
-      "candidate_id": "uuid-sen-candidate-01",
-      "question_id": "uuid-sen-question-02",
-      "comment": "musime to promyslet"
+      "id": "uuid-kom-answer-02",
+      "candidate_id": "uuid-kom-candidate-01",
+      "question_id": "uuid-kom-question-02",
+      "comment": "Nemame to promyslene"
     },
     {
-      "id": "uuid-sen-answer-03",
-      "candidate_id": "uuid-sen-candidate-02",
-      "question_id": "uuid-sen-question-01"
+      "id": "uuid-kom-answer-03",
+      "candidate_id": "uuid-kom-candidate-02",
+      "question_id": "uuid-kom-question-01"
     },
     {
-      "id": "uuid-sen-answer-04",
-      "candidate_id": "uuid-sen-candidate-01",
-      "question_id": "uuid-sen-question-02",
+      "id": "uuid-kom-answer-04",
+      "candidate_id": "uuid-kom-candidate-01",
+      "question_id": "uuid-kom-question-02",
       "answer": "no",
       "comment": "no"
     },
     {
-      "id": "uuid-sen-answer-05",
-      "candidate_id": "uuid-sen-candidate-02",
-      "question_id": "uuid-sen-question-03",
+      "id": "uuid-kom-answer-05",
+      "candidate_id": "uuid-kom-candidate-02",
+      "question_id": "uuid-kom-question-03",
       "answer": "yes"
     },
     {
-      "id": "uuid-sen-answer-06",
-      "candidate_id": "uuid-sen-candidate-01",
-      "question_id": "uuid-sen-question-03",
+      "id": "uuid-kom-answer-06",
+      "candidate_id": "uuid-kom-candidate-01",
+      "question_id": "uuid-kom-question-03",
       "answer": "yes",
       "comment": "yes"
     }
