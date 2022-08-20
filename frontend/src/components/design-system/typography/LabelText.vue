@@ -1,18 +1,17 @@
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script setup lang="ts">
+export interface Props {
+  tag?: string;
+}
 
-import SimpleText from './SimpleText.vue';
-
-export default defineComponent({
-  components: { SimpleText },
-  extends: SimpleText,
+withDefaults(defineProps<Props>(), {
+  tag: 'span',
 });
 </script>
 
 <template>
-  <SimpleText :tag="tag">
+  <component :is="tag">
     <slot />
-  </SimpleText>
+  </component>
 </template>
 
 <style lang="scss" scoped>
