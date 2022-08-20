@@ -5,10 +5,21 @@ import HeadlineText from './design-system/typography/HeadlineText.vue';
 import ButtonText from './design-system/typography/ButtonText.vue';
 import LabelText from './design-system/typography/LabelText.vue';
 
+import IconComponent from './design-system/icons/IconComponent.vue';
+import {
+  vkiCheckbox,
+  vkiCheckboxChecked,
+  vkiCheckboxIndeterminate,
+  vkiLogoAgainst,
+  vkiLogoInFavour,
+  vkiLogoNeutral,
+  vkiStarFilled,
+  vkiStarOutlined,
+} from './design-system/icons';
+import { mdiArrowLeft } from '@mdi/js';
+
 import IconButton from './IconButton.vue';
 import { ButtonSizeEnum } from './IconButton.vue';
-import IconStarFilledVue from './icons/IconStarFilled.vue';
-import IconStarOutlinedVue from './icons/IconStarOutlined.vue';
 import { ref } from 'vue';
 const btn1Size = ref(ButtonSizeEnum.Medium);
 const btn2Size = ref(ButtonSizeEnum.Small);
@@ -47,14 +58,40 @@ const incrementSize = (btnSize: number) => {
     <IconButton
       :size="btn1Size"
       @click="(event: MouseEvent)=>{btn1Size = incrementSize(btn1Size)}"
-      ><IconStarFilledVue
+      ><IconComponent :icon="vkiStarFilled"
     /></IconButton>
     <IconButton
       :size="btn2Size"
       @click="(event: MouseEvent)=>{btn2Size = incrementSize(btn2Size)}"
-      ><IconStarOutlinedVue
+      ><IconComponent :icon="vkiStarOutlined"
     /></IconButton>
   </div>
+  <hr />
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+  >
+    <IconComponent :icon="vkiCheckbox" size="small" />
+    <IconComponent :icon="vkiCheckboxChecked" size="medium" />
+    <IconComponent :icon="vkiCheckboxIndeterminate" size="large" />
+    <IconComponent
+      :icon="vkiLogoInFavour"
+      color="rgb(var(--color-primary-fg))"
+    />
+    <IconComponent :icon="vkiLogoNeutral" />
+    <IconComponent
+      :icon="vkiLogoAgainst"
+      color="rgb(var(--color-secondary-fg))"
+    />
+    <IconComponent :icon="vkiStarFilled" />
+    <IconComponent :icon="vkiStarOutlined" />
+    <IconComponent :icon="mdiArrowLeft" />
+  </div>
+  <hr />
 </template>
 
 <style lang="scss" scoped>

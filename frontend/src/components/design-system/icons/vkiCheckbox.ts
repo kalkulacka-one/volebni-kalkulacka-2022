@@ -1,0 +1,1 @@
+export default 'M3.5 20.5V3.5H20.5V20.5H3.5ZM5 19H19V5H5V19Z';

@@ -14,6 +14,7 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
+    "@mdi/js": "^7.0.96",
     "vue": "^3.2.37"
   },
   "devDependencies": {
