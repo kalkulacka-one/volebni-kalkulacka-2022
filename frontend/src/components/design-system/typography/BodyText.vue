@@ -2,11 +2,13 @@
 export interface Props {
   tag?: string;
   size?: 'extra-small' | 'small' | 'medium' | 'large';
+  color?: string;
 }
 
 withDefaults(defineProps<Props>(), {
   tag: 'p',
   size: 'medium',
+  color: 'rgb(var(--color-neutral-fg))',
 });
 </script>
 
@@ -19,6 +21,7 @@ withDefaults(defineProps<Props>(), {
 <style lang="scss" scoped>
 * {
   font-family: var(--typography-body-family);
+  color: v-bind(color);
 }
 
 .small {

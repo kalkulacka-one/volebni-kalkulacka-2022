@@ -1,10 +1,12 @@
 <script setup lang="ts">
 export interface Props {
   tag?: string;
+  color?: string;
 }
 
 withDefaults(defineProps<Props>(), {
   tag: 'span',
+  color: 'rgb(var(--color-neutral-fg-strong))',
 });
 </script>
 
@@ -22,5 +24,6 @@ withDefaults(defineProps<Props>(), {
   letter-spacing: var(--typography-label-letter-spacing);
   font-weight: 700;
   text-transform: uppercase;
+  color: v-bind(color);
 }
 </style>
