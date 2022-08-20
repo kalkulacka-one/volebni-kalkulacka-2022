@@ -1,13 +1,12 @@
 <script setup lang="ts">
 export interface Props {
-  tag?: string;
-  size?: 'extra-small' | 'small' | 'medium' | 'large';
+  tag?: 'p' | 'span';
+  size: 'extra-small' | 'small' | 'medium' | 'large';
   color?: string;
 }
 
 withDefaults(defineProps<Props>(), {
   tag: 'p',
-  size: 'medium',
   color: 'rgb(var(--color-neutral-fg))',
 });
 </script>

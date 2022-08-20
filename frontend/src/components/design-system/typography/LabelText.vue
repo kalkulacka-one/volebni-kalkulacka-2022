@@ -1,6 +1,6 @@
 <script setup lang="ts">
 export interface Props {
-  tag?: string;
+  tag?: 'span';
   color?: string;
 }
 
