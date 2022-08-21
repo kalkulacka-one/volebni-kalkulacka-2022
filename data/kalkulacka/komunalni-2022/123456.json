@@ -11,21 +11,24 @@
   "questions": [
     {
       "id": "uuid-kom-question-01",
-      "text": "Question 01 - text",
+      "name": "q01 name",
+      "title": "Question 01 - title",
       "gist": "Question 01 - gist",
       "detail": "Question 01 - detail",
       "tags": ["tag01", "tag03"]
     },
     {
       "id": "uuid-kom-question-02",
-      "text": "Question 02 - text",
+      "name": "q02 name",
+      "title": "Question 02 - title",
       "gist": "Question 02 - gist",
       "detail": "Question 02 - detail",
       "tags": ["tag02", "tag03"]
     },
     {
       "id": "uuid-kom-question-03",
-      "text": "Question 03 - text",
+      "name": "q03 name",
+      "title": "Question 03 - title",
       "gist": "Question 03 - gist",
       "detail": "Question 03 - detail",
       "tags": ["tag03"]

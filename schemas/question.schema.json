@@ -3,13 +3,17 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "A representation of single question",
   "type": "object",
-  "required": ["id", "text", "gist", "detail"],
+  "required": ["id", "name", "title", "gist", "detail"],
   "properties": {
     "id": {
       "type": "string",
       "description": "UUID"
     },
-    "text": {
+    "name": {
+      "type": "string",
+      "description": "UUID"
+    },
+    "title": {
       "type": "string",
       "description": "Text of the question"
     },
