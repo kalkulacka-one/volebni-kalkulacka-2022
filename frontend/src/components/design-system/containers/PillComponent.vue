@@ -1,23 +1,17 @@
-<script lang="ts">
-export enum ColorPill {
-  Light,
-  Dark,
-}
-</script>
-
 <script setup lang="ts">
+import LabelText from '../typography/LabelText.vue';
+
 export interface Props {
-  icon: boolean;
-  color?: ColorPill;
-  title: string;
+  active?: boolean;
 }
+
 withDefaults(defineProps<Props>(), {
-  icon: false,
-  color: ColorPill.Light,
-  title: 'Label',
+  active: false,
 });
 </script>
 
 <template>
-  <slot />
+  <LabelText>
+    <slot />
+  </LabelText>
 </template>
