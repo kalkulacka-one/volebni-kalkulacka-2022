@@ -3,7 +3,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "A representation of single question",
   "type": "object",
-  "required": ["id", "text", "explanation", "yes_argument", "no_argument"],
+  "required": ["id", "text", "gist", "detail"],
   "properties": {
     "id": {
       "type": "string",
@@ -13,17 +13,13 @@
       "type": "string",
       "description": "Text of the question"
     },
-    "explanation": {
+    "gist": {
+      "type": "string",
+      "description": "Shorter explanation of the question"
+    },
+    "detail": {
       "type": "string",
       "description": "Longer explanation of the question"
-    },
-    "yes_argument": {
-      "type": "string",
-      "description": "Arguments for yes"
-    },
-    "no_argument": {
-      "type": "string",
-      "description": "Arguments for no"
     },
     "tags": {
       "type": "array",
