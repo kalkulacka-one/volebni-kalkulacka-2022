@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import LabelText from '../typography/LabelText.vue';
+import LabelText from '@/components/design-system/typography/LabelText.vue';
 
 export interface Props {
   active?: boolean;
