@@ -50,6 +50,7 @@ export const appRoutes = {
     path: '/:election/:district/comparison',
     component: ComparisonPageVue,
   },
+  fallback: { path: '/:catchAll(.*)', redirect: '/' },
 };
 
 const router = createRouter({
