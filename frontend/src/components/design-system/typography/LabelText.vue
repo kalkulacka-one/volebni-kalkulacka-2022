@@ -1,18 +1,19 @@
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script setup lang="ts">
+export interface Props {
+  tag?: 'span';
+  color?: string;
+}
 
-import SimpleText from './SimpleText.vue';
-
-export default defineComponent({
-  components: { SimpleText },
-  extends: SimpleText,
+withDefaults(defineProps<Props>(), {
+  tag: 'span',
+  color: 'rgb(var(--color-neutral-fg-strong))',
 });
 </script>
 
 <template>
-  <SimpleText :tag="tag">
+  <component :is="tag">
     <slot />
-  </SimpleText>
+  </component>
 </template>
 
 <style lang="scss" scoped>
@@ -23,5 +24,6 @@ export default defineComponent({
   letter-spacing: var(--typography-label-letter-spacing);
   font-weight: 700;
   text-transform: uppercase;
+  color: v-bind(color);
 }
 </style>

@@ -35,11 +35,11 @@ const incrementSize = (btnSize: number) => {
   <h1>This is the index page</h1>
   <hr />
   <div :style="{ margin: '1rem' }">
-    <HeadlineText size="large">Headline large</HeadlineText>
-    <HeadlineText size="medium">Headline medium</HeadlineText>
-    <HeadlineText size="small">Headline small</HeadlineText>
-    <TitleText size="large">Title large</TitleText>
-    <TitleText size="medium">Title medium</TitleText>
+    <HeadlineText tag="h1" size="large">Headline large</HeadlineText>
+    <HeadlineText tag="h2" size="medium">Headline medium</HeadlineText>
+    <HeadlineText tag="h3" size="small">Headline small</HeadlineText>
+    <TitleText tag="h4" size="large">Title large</TitleText>
+    <TitleText tag="h5" size="medium">Title medium</TitleText>
     <BodyText size="large">
       Large quick brown fox jumps over the lazy dog
     </BodyText>
@@ -49,7 +49,7 @@ const incrementSize = (btnSize: number) => {
     <BodyText size="small">
       Small quick brown fox jumps over the lazy dog
     </BodyText>
-    <ButtonText>Button text</ButtonText>
+    <ButtonText size="medium">Button text</ButtonText>
     <ButtonText size="small">Small button text</ButtonText>
     <LabelText>Label text</LabelText>
   </div>
