@@ -17,7 +17,10 @@ const handleClick = (type: 'yes' | 'no' | 'skip') => {
     name: appRoutes.question.name,
     params: { ...route.params, nr: questionNr + 1 },
   };
-  if (questionProgress.value >= questionTotal) {
+  if (
+    questionProgress.value === questionNr &&
+    questionProgress.value >= questionTotal
+  ) {
     newRoute.name = appRoutes.recap.name;
   }
   console.debug(
