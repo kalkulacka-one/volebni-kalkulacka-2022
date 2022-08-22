@@ -4,6 +4,7 @@ import TitleText from '../../components/design-system/typography/TitleText.vue';
 import HeadlineText from '../../components/design-system/typography/HeadlineText.vue';
 import ButtonText from '../../components/design-system/typography/ButtonText.vue';
 import LabelText from '../../components/design-system/typography/LabelText.vue';
+import AvatarComponent from '../../components/AvatarComponent.vue';
 
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
 import {
@@ -91,6 +92,23 @@ const incrementSize = (btnSize: number) => {
     <IconComponent :icon="mdiArrowLeft" />
   </div>
   <hr />
+  <div style="display: flex">
+    <AvatarComponent
+      size="small"
+      image-url="https://cdn.icon-icons.com/icons2/1736/PNG/512/4043250-avatar-child-girl-kid_113270.png"
+      alt="child girl"
+    />
+    <AvatarComponent
+      size="medium"
+      image-url="https://cdn.icon-icons.com/icons2/1736/PNG/512/4043254-avatar-elderly-grandma-nanny_113280.png"
+      alt="elderly grandma"
+    />
+    <AvatarComponent
+      size="large"
+      image-url="https://cdn.icon-icons.com/icons2/1736/PNG/512/4043232-avatar-batman-comics-hero_113278.png"
+      alt="batman"
+    />
+  </div>
 </template>
 
 <style lang="scss" scoped>
