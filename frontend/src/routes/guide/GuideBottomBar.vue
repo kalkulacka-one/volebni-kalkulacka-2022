@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { useRouter, type RouteLocationRaw } from 'vue-router';
-const router = useRouter();
 defineProps<{
   subtitle: string;
   buttonTitle: string;
-  buttonRoute: string | RouteLocationRaw;
+  onContinue: () => void;
+  onSkip: () => void;
 }>();
 </script>
 
 <template>
   <div class="wrapper">
-    <button @click="router.push(buttonRoute)">{{ buttonTitle }}</button>
+    <button @click="onContinue">{{ buttonTitle }}</button>
+    <button @click="onSkip">Preskocit napovedu</button>
     <p>{{ subtitle }}</p>
   </div>
 </template>

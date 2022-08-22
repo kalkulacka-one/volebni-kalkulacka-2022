@@ -2,6 +2,7 @@
 import ThemeProvider from '@/components/ThemeProvider.vue';
 
 import HelloWorld from './components/HelloWorld.vue';
+import { appRoutes } from './main';
 </script>
 
 <template>
@@ -9,8 +10,13 @@ import HelloWorld from './components/HelloWorld.vue';
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
     </div>
-    <router-link to="/">Go to Index</router-link><br />
-    <router-link to="/senatni-2022/19-praha-11/guide/1"
+    <router-link :to="{ name: appRoutes.index.name }">Go to Index</router-link
+    ><br />
+    <router-link
+      :to="{
+        name: appRoutes.districtSelection.name,
+        params: { election: 'senatni-2022' },
+      }"
       >Go to Calculator</router-link
     ><br />
   </header>

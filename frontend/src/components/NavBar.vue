@@ -1,7 +1,36 @@
 <script setup lang="ts">
+import { appRoutes } from '@/main';
+import { useRoute, useRouter } from 'vue-router';
+
 defineProps<{
-  subtitle: string;
+  help?: boolean;
+  fillAgain?: boolean;
+  quit?: boolean;
 }>();
+const router = useRouter();
+const route = useRoute();
+const subtitle = (route.params.election as string).concat(
+  route.params.district ? ` - ${route.params.district}` : ''
+);
+const handleHelpClicked = () => {
+  alert('This is an excelent help.');
+};
+const handleFillAgainClicked = () => {
+  const answer = window.confirm(
+    'Do you really want to leave? you have unsaved changes!'
+  );
+  // cancel the navigation and stay on the same page
+  if (answer) {
+    router.push({
+      name: appRoutes.districtSelection.name,
+      params: { ...route.params, district: '' },
+    });
+  }
+};
+const handleQuit = () => {
+  //right now this does nothing, should redirect to landing page
+  console.warn('My purpose is to pass butter.');
+};
 </script>
 
 <template>
@@ -11,7 +40,13 @@ defineProps<{
       <p>{{ subtitle }}</p>
     </div>
     <div class="buttons">
-      <slot />
+      <button v-if="help" @click="handleHelpClicked">Napoveda</button>
+      <button v-if="fillAgain === true" @click="handleFillAgainClicked">
+        Vyplnit znovu
+      </button>
+      <button v-if="quit === true" @click="handleQuit">
+        Zpet na hlavni stranku
+      </button>
     </div>
   </div>
 </template>
@@ -21,21 +56,16 @@ defineProps<{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 24px 64px;
+  align-items: center;
 
   position: relative;
   width: 100%;
   height: 72px;
-
-  /* overlayBlur */
-
-  backdrop-filter: blur(72px);
-  /* Note: backdrop-filter has minimal browser support */
 }
 .title {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 10px;
 }
 .buttons {
