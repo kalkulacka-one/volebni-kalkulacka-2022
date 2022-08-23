@@ -25,17 +25,16 @@ const props = withDefaults(defineProps<Props>(), {
 
 <style lang="scss" scoped>
 .pill {
-  border-color: rgba(var(--color-neutral-border), 1);
+  border-color: rgb(var(--color-neutral-border));
   border-radius: var(--radius-medium);
   border-style: solid;
   border-width: var(--spacing-pico);
   background-color: rgb(var(--color-neutral-bg));
   color: rgb(var(--color-neutral-fg));
-  padding-inline: var(--spacing-small);
-  padding-block: var(--spacing-extra-small);
+  padding: var(--spacing-extra-small) var(--spacing-small);
 
   &--active {
-    border-color: rgb(var(--color-neutral-border-strong), 1);
+    border-color: rgb(var(--color-neutral-border-strong));
     background-color: rgb(var(--color-neutral-bg-active));
     color: rgb(var(--color-neutral-fg-inverse));
   }
