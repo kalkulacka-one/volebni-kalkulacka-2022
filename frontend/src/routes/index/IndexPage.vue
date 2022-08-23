@@ -5,6 +5,8 @@ import HeadlineText from '../../components/design-system/typography/HeadlineText
 import ButtonText from '../../components/design-system/typography/ButtonText.vue';
 import LabelText from '../../components/design-system/typography/LabelText.vue';
 
+import ButtonComponent from '../../components/design-system/input/ButtonComponent.vue';
+
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
 import {
   vkiCheckbox,
@@ -91,10 +93,768 @@ const incrementSize = (btnSize: number) => {
     <IconComponent :icon="mdiArrowLeft" />
   </div>
   <hr />
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+  >
+    <ButtonComponent kind="link">
+      <template #icon>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="link">Button</ButtonComponent>
+    <ButtonComponent kind="link">
+      Icon before
+      <template #icon>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="link">
+      Icon after
+      <template #iconAfter>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="link" disabled>
+      Disabled
+      <template #iconAfter>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+  </div>
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+  >
+    <ButtonComponent tag="a" kind="link">
+      <template #icon>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent tag="a" kind="link">Button</ButtonComponent>
+    <ButtonComponent tag="a" kind="link">
+      Icon before
+      <template #icon>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent tag="a" kind="link">
+      Icon after
+      <template #iconAfter>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+  </div>
+  <hr />
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+  >
+    <ButtonComponent kind="link" size="small">
+      <template #icon="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="link" size="small">Button</ButtonComponent>
+    <ButtonComponent kind="link" size="small">
+      Icon before
+      <template #icon="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="link" size="small">
+      Icon after
+      <template #iconAfter="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="link" disabled size="small">
+      Disabled
+      <template #iconAfter>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+  </div>
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+  >
+    <ButtonComponent tag="a" kind="link" size="small">
+      <template #icon="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent tag="a" kind="link" size="small">Button</ButtonComponent>
+    <ButtonComponent tag="a" kind="link" size="small">
+      Icon before
+      <template #icon="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent tag="a" kind="link" size="small">
+      Icon after
+      <template #iconAfter="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+  </div>
+  <hr />
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+  >
+    <ButtonComponent kind="outlined">
+      <template #icon>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="outlined">Button</ButtonComponent>
+    <ButtonComponent kind="outlined">
+      Icon before
+      <template #icon>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="outlined">
+      Icon after
+      <template #iconAfter>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="outlined" disabled>
+      Disabled
+      <template #iconAfter>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+  </div>
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+    class="grow"
+  >
+    <ButtonComponent tag="a" kind="outlined">
+      <template #icon>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent tag="a" kind="outlined">Button</ButtonComponent>
+    <ButtonComponent tag="a" kind="outlined">
+      Icon before
+      <template #icon>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent tag="a" kind="outlined">
+      Icon after
+      <template #iconAfter>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+  </div>
+  <hr />
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+  >
+    <ButtonComponent kind="outlined" size="small">
+      <template #icon="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="outlined" size="small">Button</ButtonComponent>
+    <ButtonComponent kind="outlined" size="small">
+      Icon before
+      <template #icon="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="outlined" size="small">
+      Icon after
+      <template #iconAfter="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="outlined" disabled size="small">
+      Disabled
+      <template #iconAfter>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+  </div>
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+    class="grow"
+  >
+    <ButtonComponent tag="a" kind="outlined" size="small">
+      <template #icon="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent tag="a" kind="outlined" size="small"
+      >Button</ButtonComponent
+    >
+    <ButtonComponent tag="a" kind="outlined" size="small">
+      Icon before
+      <template #icon="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent tag="a" kind="outlined" size="small">
+      Icon after
+      <template #iconAfter="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+  </div>
+  <hr />
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+  >
+    <ButtonComponent kind="filled">
+      <template #icon>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="filled">Button</ButtonComponent>
+    <ButtonComponent kind="filled">
+      Icon before
+      <template #icon>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="filled">
+      Icon after
+      <template #iconAfter>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="filled" disabled>
+      Disabled
+      <template #iconAfter>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+  </div>
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+    class="grow"
+  >
+    <ButtonComponent tag="a" kind="filled">
+      <template #icon>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent tag="a" kind="filled">Button</ButtonComponent>
+    <ButtonComponent tag="a" kind="filled">
+      Icon before
+      <template #icon>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent tag="a" kind="filled">
+      Icon after
+      <template #iconAfter>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+  </div>
+  <hr />
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+  >
+    <ButtonComponent kind="filled" size="small">
+      <template #icon="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="filled" size="small">Button</ButtonComponent>
+    <ButtonComponent kind="filled" size="small">
+      Icon before
+      <template #icon="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="filled" size="small">
+      Icon after
+      <template #iconAfter="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="filled" disabled size="small">
+      Disabled
+      <template #iconAfter>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+  </div>
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+    class="grow"
+  >
+    <ButtonComponent tag="a" kind="filled" size="small">
+      <template #icon="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent tag="a" kind="filled" size="small">Button</ButtonComponent>
+    <ButtonComponent tag="a" kind="filled" size="small">
+      Icon before
+      <template #icon="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent tag="a" kind="filled" size="small">
+      Icon after
+      <template #iconAfter="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+  </div>
+
+  <hr />
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+  >
+    <ButtonComponent kind="answer">
+      <template #icon>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="answer">Button</ButtonComponent>
+    <ButtonComponent kind="answer">
+      Icon before
+      <template #icon>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="answer">
+      Icon after
+      <template #iconAfter>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="answer" disabled>
+      Disabled
+      <template #iconAfter>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+  </div>
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+    class="grow"
+  >
+    <ButtonComponent tag="a" kind="answer">
+      <template #icon>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent tag="a" kind="answer">Button</ButtonComponent>
+    <ButtonComponent tag="a" kind="answer">
+      Icon before
+      <template #icon>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent tag="a" kind="answer">
+      Icon after
+      <template #iconAfter>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+  </div>
+  <hr />
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+  >
+    <ButtonComponent kind="answer" size="small">
+      <template #icon="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="answer" size="small">Button</ButtonComponent>
+    <ButtonComponent kind="answer" size="small">
+      Icon before
+      <template #icon="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="answer" size="small">
+      Icon after
+      <template #iconAfter="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="answer" disabled size="small">
+      Disabled
+      <template #iconAfter>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+  </div>
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+    class="grow"
+  >
+    <ButtonComponent tag="a" kind="answer" size="small">
+      <template #icon="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent tag="a" kind="answer" size="small">Button</ButtonComponent>
+    <ButtonComponent tag="a" kind="answer" size="small">
+      Icon before
+      <template #icon="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent tag="a" kind="answer" size="small">
+      Icon after
+      <template #iconAfter="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+  </div>
+
+  <hr />
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+  >
+    <ButtonComponent kind="answer" color="primary">
+      <template #icon>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="answer" color="primary">Button</ButtonComponent>
+    <ButtonComponent kind="answer" color="primary">
+      Icon before
+      <template #icon>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="answer" color="primary">
+      Icon after
+      <template #iconAfter>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="answer" color="primary" disabled>
+      Disabled
+      <template #iconAfter>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+  </div>
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+    class="grow"
+  >
+    <ButtonComponent tag="a" kind="answer" color="primary">
+      <template #icon>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent tag="a" kind="answer" color="primary"
+      >Button</ButtonComponent
+    >
+    <ButtonComponent tag="a" kind="answer" color="primary">
+      Icon before
+      <template #icon>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent tag="a" kind="answer" color="primary">
+      Icon after
+      <template #iconAfter>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+  </div>
+  <hr />
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+  >
+    <ButtonComponent kind="answer" color="primary" size="small">
+      <template #icon="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="answer" color="primary" size="small"
+      >Button</ButtonComponent
+    >
+    <ButtonComponent kind="answer" color="primary" size="small">
+      Icon before
+      <template #icon="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="answer" color="primary" size="small">
+      Icon after
+      <template #iconAfter="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="answer" color="primary" disabled size="small">
+      Disabled
+      <template #iconAfter>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+  </div>
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+    class="grow"
+  >
+    <ButtonComponent tag="a" kind="answer" color="primary" size="small">
+      <template #icon="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent tag="a" kind="answer" color="primary" size="small"
+      >Button</ButtonComponent
+    >
+    <ButtonComponent tag="a" kind="answer" color="primary" size="small">
+      Icon before
+      <template #icon="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent tag="a" kind="answer" color="primary" size="small">
+      Icon after
+      <template #iconAfter="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+  </div>
+
+  <hr />
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+  >
+    <ButtonComponent kind="answer" color="secondary">
+      <template #icon>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="answer" color="secondary">Button</ButtonComponent>
+    <ButtonComponent kind="answer" color="secondary">
+      Icon before
+      <template #icon>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="answer" color="secondary">
+      Icon after
+      <template #iconAfter>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="answer" color="secondary" disabled>
+      Disabled
+      <template #iconAfter>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+  </div>
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+    class="grow"
+  >
+    <ButtonComponent tag="a" kind="answer" color="secondary">
+      <template #icon>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent tag="a" kind="answer" color="secondary"
+      >Button</ButtonComponent
+    >
+    <ButtonComponent tag="a" kind="answer" color="secondary">
+      Icon before
+      <template #icon>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent tag="a" kind="answer" color="secondary">
+      Icon after
+      <template #iconAfter>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+  </div>
+  <hr />
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+  >
+    <ButtonComponent kind="answer" color="secondary" size="small">
+      <template #icon="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="answer" color="secondary" size="small"
+      >Button</ButtonComponent
+    >
+    <ButtonComponent kind="answer" color="secondary" size="small">
+      Icon before
+      <template #icon="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="answer" color="secondary" size="small">
+      Icon after
+      <template #iconAfter="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent kind="answer" color="secondary" disabled size="small">
+      Disabled
+      <template #iconAfter>
+        <IconComponent :icon="vkiLogoNeutral" />
+      </template>
+    </ButtonComponent>
+  </div>
+  <div
+    :style="{
+      margin: '1rem',
+      display: 'flex',
+      alignItems: 'center',
+      columnGap: '1rem',
+    }"
+    class="grow"
+  >
+    <ButtonComponent tag="a" kind="answer" color="secondary" size="small">
+      <template #icon="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent tag="a" kind="answer" color="secondary" size="small"
+      >Button</ButtonComponent
+    >
+    <ButtonComponent tag="a" kind="answer" color="secondary" size="small">
+      Icon before
+      <template #icon="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+    <ButtonComponent tag="a" kind="answer" color="secondary" size="small">
+      Icon after
+      <template #iconAfter="{ size }">
+        <IconComponent :icon="vkiLogoNeutral" :size="size" />
+      </template>
+    </ButtonComponent>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-h1 {
-  color: var(--example);
+.grow > * {
+  flex: 1;
 }
 </style>
