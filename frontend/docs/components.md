@@ -16,19 +16,21 @@ import { computed } from 'vue';
 
 // Props (interface) definition
 export interface Props {
-  padding?: 'small' | 'large';
+  padding?: boolean;
+  paddingSize?: 'small' | 'large';
   background?: string;
 }
 
 // Default props definition
 const props = withDefaults(defineProps<Props>(), {
-  padding: undefined,
+  padding: false,
+  paddingSize: 'small',
   background: 'rgb(var(--color-neutral-bg-container))',
 });
 
 // Bind props to classes
 const classes = computed(() => ({
-  [`padding--${props.padding}`]: props.padding,
+  [`padding--${props.paddingSize}`]: props.padding,
 }));
 </script>
 
