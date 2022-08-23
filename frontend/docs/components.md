@@ -30,31 +30,28 @@ const props = withDefaults(defineProps<Props>(), {
 
 // Bind props to classes
 const classes = computed(() => ({
-  [`padding--${props.paddingSize}`]: props.padding,
+  [`container--padding-${props.paddingSize}`]: props.padding,
 }));
 </script>
 
 <!-- // Template -->
 <template>
-  <div :class="classes">
+  <div :class="['container', classes]">
     <slot />
   </div>
 </template>
 
 <!-- // Scoped styles in SCSS -->
 <style scoped lang="scss">
-// No need for any special classes as we are using scoped CSS
-div {
+// Top-level element class
+.container {
   background-color: v-bind(background);
-}
-
-// Class name should match prop name
-.padding {
+  
   // BEM-like two hyphen, nested syntax for variants
-  &--small {
+  &--padding-small {
     padding: var(--spacing-small);
   }
-  &--large {
+  &--padding-large {
     padding: var(--spacing-large);
   }
 }
