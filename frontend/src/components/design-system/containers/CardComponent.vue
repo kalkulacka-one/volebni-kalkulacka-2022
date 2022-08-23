@@ -19,77 +19,82 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 const classes = computed(() => ({
-  [`radius--${props.radius}`]: props.radius,
-  [`corner--${props.corner}`]: props.corner,
-  border: props.border,
-  [`border--${props.borderKind}`]: props.border,
-  shadow: props.shadow,
-  [`padding--${props.padding}`]: props.padding,
+  [`card--radius-${props.radius}`]: props.radius,
+  [`card--corner-${props.corner}`]: props.corner,
+  'card--border': props.border,
+  [`card--border-${props.borderKind}`]: props.border,
+  'card--shadow': props.shadow,
+  [`card--padding-${props.padding}`]: props.padding,
 }));
 </script>
 
 <template>
-  <div :class="classes">
+  <div :class="['card', classes]">
     <slot />
   </div>
 </template>
 
 <style scoped lang="scss">
-div {
+.card {
   background-color: rgb(var(--color-neutral-bg-container));
-}
 
-.radius {
-  &--small {
-    border-radius: var(--radius-small);
-  }
-  &--large {
-    border-radius: var(--radius-large);
-  }
-}
+  &--radius {
+    &-small {
+      border-radius: var(--radius-small);
+    }
 
-.corner {
-  &--top-left {
-    border-top-left-radius: 0;
-  }
-  &--top-right {
-    border-top-right-radius: 0;
-  }
-  &--bottom-left {
-    border-bottom-left-radius: 0;
-  }
-  &--bottom-right {
-    border-bottom-right-radius: 0;
-  }
-}
-
-.border {
-  border-style: solid;
-  border-width: var(--spacing-pico);
-
-  &--normal {
-    border-color: rgb(var(--color-neutral-border));
+    &-large {
+      border-radius: var(--radius-large);
+    }
   }
 
-  &--strong {
-    border-color: rgb(var(--color-neutral-border-strong));
-  }
-}
+  &--corner {
+    &-top-left {
+      border-top-left-radius: 0;
+    }
 
-.shadow {
-  box-shadow: 6px 8px 0px 0px
-    rgba(var(--color-neutral-shadow), var(--transparency-20));
-}
+    &-top-right {
+      border-top-right-radius: 0;
+    }
 
-.padding {
-  &--small {
-    padding: var(--spacing-small);
+    &-bottom-left {
+      border-bottom-left-radius: 0;
+    }
+
+    &-bottom-right {
+      border-bottom-right-radius: 0;
+    }
   }
-  &--large {
-    padding-top: var(--spacing-large);
-    padding-bottom: var(--spacing-large);
-    padding-left: calc(2 * var(--spacing-large));
-    padding-right: calc(2 * var(--spacing-large));
+
+  &--border {
+    border-style: solid;
+    border-width: var(--spacing-pico);
+
+    &-normal {
+      border-color: rgb(var(--color-neutral-border));
+    }
+
+    &-strong {
+      border-color: rgb(var(--color-neutral-border-strong));
+    }
+  }
+
+  &--shadow {
+    box-shadow: 6px 8px 0px 0px
+      rgba(var(--color-neutral-shadow), var(--transparency-20));
+  }
+
+  &--padding {
+    &-small {
+      padding: var(--spacing-small);
+    }
+
+    &-large {
+      padding-top: var(--spacing-large);
+      padding-bottom: var(--spacing-large);
+      padding-left: calc(2 * var(--spacing-large));
+      padding-right: calc(2 * var(--spacing-large));
+    }
   }
 }
 </style>
