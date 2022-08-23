@@ -33,6 +33,9 @@ import ResultAvatarComponent from '../../components/ResultAvatarComponent.vue';
 import { avatarsConfiguration } from '../../components/design-system/configurations/avatars-configuration';
 
 import { ref } from 'vue';
+import IconButton, {
+  type IconButtonProps,
+} from '@/components/design-system/input/IconButton.vue';
 const btn1Size = ref('medium' as IconButtonProps['size']);
 const btn2Size = ref('small' as IconButtonProps['size']);
 const incrementSize = (btnSize: IconButtonProps['size']) => {
@@ -98,7 +101,10 @@ const incrementSize = (btnSize: IconButtonProps['size']) => {
       :icon="vkiLogoInFavour"
       color="rgb(var(--color-primary-fg))"
     />
-    <IconComponent :icon="vkiLogoNeutral" />
+    <IconComponent
+      :icon="vkiLogoNeutral"
+      color="rgb(var(--color-neutral-fg))"
+    />
     <IconComponent
       :icon="vkiLogoAgainst"
       color="rgb(var(--color-secondary-fg))"
