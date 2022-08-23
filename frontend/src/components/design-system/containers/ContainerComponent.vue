@@ -1,11 +1,13 @@
 <script setup lang="ts">
 export interface Props {
-  padding?: 'small' | 'large';
+  padding?: boolean;
+  paddingSize?: 'small' | 'large';
   background?: string;
 }
 
-withDefaults(defineProps<Props>(), {
-  padding: undefined,
+const props = withDefaults(defineProps<Props>(), {
+  padding: false,
+  paddingSize: 'small',
   background: 'rgb(var(--color-neutral-bg-container))',
 });
 </script>
