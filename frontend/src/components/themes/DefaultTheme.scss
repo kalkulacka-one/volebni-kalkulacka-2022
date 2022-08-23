@@ -59,7 +59,7 @@
   --color-neutral-fg-strong: var(--palette-neutral-10);
   --color-neutral-fg-muted: var(--palette-neutral-50);
   --color-neutral-fg-disabled: var(--palette-neutral-70);
-  --color-neutral-fg-hover: var(--palette-neutral-10);
+  --color-neutral-fg-hover: var(--palette-neutral-50);
   --color-neutral-fg-active: var(--palette-neutral-00);
   --color-neutral-fg-inverse: var(--palette-neutral-100);
   // – background
@@ -68,7 +68,9 @@
   --color-neutral-bg-muted: var(--palette-neutral-100); // not in Figma
   --color-neutral-bg-disabled: var(--palette-neutral-70);
   --color-neutral-bg-hover: var(--palette-neutral-30);
+  --color-neutral-bg-strong-hover: var(--palette-neutral-30);
   --color-neutral-bg-active: var(--palette-neutral-10);
+  --color-neutral-bg-strong-active: var(--palette-neutral-10);
   --color-neutral-bg-container: var(--palette-neutral-100);
   // – border
   --color-neutral-border: var(--palette-neutral-70);
@@ -93,8 +95,10 @@
   --color-primary-bg-strong: var(--palette-primary-50);
   --color-primary-bg-muted: var(--palette-neutral-90); // not in Figma
   --color-primary-bg-disabled: var(--palette-neutral-70);
-  --color-primary-bg-active: var(--palette-primary-10);
   --color-primary-bg-hover: var(--palette-primary-30);
+  --color-primary-bg-strong-hover: var(--palette-primary-30);
+  --color-primary-bg-active: var(--palette-primary-10);
+  --color-primary-bg-strong-active: var(--palette-primary-10);
   // – border
   --color-primary-border: var(--palette-primary-70);
   --color-primary-border-strong: var(--palette-primary-50);
@@ -117,7 +121,9 @@
   --color-secondary-bg-muted: var(--palette-neutral-90); // not in Figma
   --color-secondary-bg-disabled: var(--palette-neutral-70); // not in Figma
   --color-secondary-bg-hover: var(--palette-secondary-30);
+  --color-secondary-bg-strong-hover: var(--palette-secondary-30);
   --color-secondary-bg-active: var(--palette-secondary-10); // not in Figma
+  --color-secondary-bg-strong-active: var(--palette-secondary-10);
   // – border
   --color-secondary-border: var(--palette-secondary-70);
   --color-secondary-border-strong: var(--palette-secondary-50);
