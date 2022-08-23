@@ -53,4 +53,8 @@ const classes = computed(() => [`icon--${props.size}`]);
     height: var(--spacing-extra-large);
   }
 }
+.extra-large {
+  width: var(--spacing-extra-large);
+  height: var(--spacing-extra-large);
+}
 </style>

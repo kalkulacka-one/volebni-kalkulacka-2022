@@ -33,13 +33,12 @@ import ResultAvatarComponent from '../../components/ResultAvatarComponent.vue';
 import { avatarsConfiguration } from '../../components/design-system/configurations/avatars-configuration';
 
 import { ref } from 'vue';
-const btn1Size = ref(ButtonSizeEnum.Medium);
-const btn2Size = ref(ButtonSizeEnum.Small);
-const incrementSize = (btnSize: number) => {
-  btnSize =
-    btnSize === Object.keys(ButtonSizeEnum).length / 2 - 1 ? 0 : btnSize + 1;
-  console.debug(btnSize);
-  return btnSize;
+const btn1Size = ref('medium' as IconButtonProps['size']);
+const btn2Size = ref('small' as IconButtonProps['size']);
+const incrementSize = (btnSize: IconButtonProps['size']) => {
+  const sizes = ['small', 'medium', 'large'] as IconButtonProps['size'][];
+  const index = sizes.findIndex((x) => x === btnSize);
+  return sizes[index < 2 ? index + 1 : 0];
 };
 </script>
 
@@ -78,11 +77,14 @@ const incrementSize = (btnSize: number) => {
   <StackComponent horizontal>
     <IconButton
       :size="btn1Size"
+      :icon="vkiStarFilled"
+      color="rgb(var(--palette-yellow))"
       @click="(event: MouseEvent)=>{btn1Size = incrementSize(btn1Size)}"
-      ><IconComponent :icon="vkiStarFilled"
-    /></IconButton>
+    />
     <IconButton
       :size="btn2Size"
+      :icon="mdiArrowLeft"
+      color="rgb(var(--color-neutral-fg))"
       @click="(event: MouseEvent)=>{btn2Size = incrementSize(btn2Size)}"
       ><IconComponent :icon="vkiStarOutlined"
     /></IconButton>
