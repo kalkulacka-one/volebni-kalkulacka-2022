@@ -2,28 +2,29 @@
 import ThemeProvider from '@/components/ThemeProvider.vue';
 
 import HelloWorld from './components/HelloWorld.vue';
-import IndexPageVue from './components/IndexPage.vue';
+import { appRoutes } from './main';
 </script>
 
 <template>
   <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="./assets/logo.svg"
-      width="125"
-      height="125"
-    />
-
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
     </div>
+    <router-link :to="{ name: appRoutes.index.name }">Go to Index</router-link
+    ><br />
+    <router-link
+      :to="{
+        name: appRoutes.districtSelection.name,
+        params: { election: 'senatni-2022' },
+      }"
+      >Go to Calculator</router-link
+    ><br />
   </header>
 
   <main>
     <Suspense>
       <ThemeProvider>
-        <IndexPageVue />
+        <router-view></router-view>
       </ThemeProvider>
     </Suspense>
   </main>

@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import BodyText from './design-system/typography/BodyText.vue';
-import TitleText from './design-system/typography/TitleText.vue';
-import HeadlineText from './design-system/typography/HeadlineText.vue';
-import ButtonText from './design-system/typography/ButtonText.vue';
-import LabelText from './design-system/typography/LabelText.vue';
+import BodyText from '../../components/design-system/typography/BodyText.vue';
+import TitleText from '../../components/design-system/typography/TitleText.vue';
+import HeadlineText from '../../components/design-system/typography/HeadlineText.vue';
+import ButtonText from '../../components/design-system/typography/ButtonText.vue';
+import LabelText from '../../components/design-system/typography/LabelText.vue';
 
-import IconComponent from './design-system/icons/IconComponent.vue';
+import IconComponent from '../../components/design-system/icons/IconComponent.vue';
 import {
   vkiCheckbox,
   vkiCheckboxChecked,
@@ -15,11 +15,10 @@ import {
   vkiLogoNeutral,
   vkiStarFilled,
   vkiStarOutlined,
-} from './design-system/icons';
+} from '../../components/design-system/icons';
 import { mdiArrowLeft } from '@mdi/js';
 
-import IconButton from './IconButton.vue';
-import { ButtonSizeEnum } from './IconButton.vue';
+import IconButton, { ButtonSizeEnum } from '../../components/IconButton.vue';
 import { ref } from 'vue';
 const btn1Size = ref(ButtonSizeEnum.Medium);
 const btn2Size = ref(ButtonSizeEnum.Small);
