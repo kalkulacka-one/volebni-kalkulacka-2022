@@ -4,6 +4,7 @@ import TitleText from '../../components/design-system/typography/TitleText.vue';
 import HeadlineText from '../../components/design-system/typography/HeadlineText.vue';
 import ButtonText from '../../components/design-system/typography/ButtonText.vue';
 import LabelText from '../../components/design-system/typography/LabelText.vue';
+import CardComponent from '@/components/design-system/containers/CardComponent.vue';
 
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
 import {
@@ -33,7 +34,14 @@ const incrementSize = (btnSize: number) => {
 <template>
   <h1>This is the index page</h1>
   <hr />
-  <div :style="{ margin: '1rem' }">
+  <CardComponent
+    corner="bottom-left"
+    radius="large"
+    shadow
+    border
+    border-kind="strong"
+    padding="large"
+  >
     <HeadlineText tag="h1" size="large">Headline large</HeadlineText>
     <HeadlineText tag="h2" size="medium">Headline medium</HeadlineText>
     <HeadlineText tag="h3" size="small">Headline small</HeadlineText>
@@ -51,7 +59,7 @@ const incrementSize = (btnSize: number) => {
     <ButtonText size="medium">Button text</ButtonText>
     <ButtonText size="small">Small button text</ButtonText>
     <LabelText>Label text</LabelText>
-  </div>
+  </CardComponent>
   <hr />
   <div :style="{ margin: '1rem', display: 'flex', alignItems: 'center' }">
     <IconButton
