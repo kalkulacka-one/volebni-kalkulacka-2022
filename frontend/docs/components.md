@@ -46,7 +46,7 @@ const classes = computed(() => ({
 // Top-level element class
 .container {
   background-color: v-bind(background);
-  
+
   // BEM-like two hyphen, nested syntax for variants
   &--padding-small {
     padding: var(--spacing-small);
