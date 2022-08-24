@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import StackComponent from '../../components/design-system/layout/StackComponent.vue';
+
 import BodyText from '../../components/design-system/typography/BodyText.vue';
 import TitleText from '../../components/design-system/typography/TitleText.vue';
 import HeadlineText from '../../components/design-system/typography/HeadlineText.vue';
@@ -33,7 +35,7 @@ const incrementSize = (btnSize: number) => {
 <template>
   <h1>This is the index page</h1>
   <hr />
-  <div :style="{ margin: '1rem' }">
+  <StackComponent>
     <HeadlineText tag="h1" size="large">Headline large</HeadlineText>
     <HeadlineText tag="h2" size="medium">Headline medium</HeadlineText>
     <HeadlineText tag="h3" size="small">Headline small</HeadlineText>
@@ -51,7 +53,7 @@ const incrementSize = (btnSize: number) => {
     <ButtonText size="medium">Button text</ButtonText>
     <ButtonText size="small">Small button text</ButtonText>
     <LabelText>Label text</LabelText>
-  </div>
+  </StackComponent>
   <hr />
   <div :style="{ margin: '1rem', display: 'flex', alignItems: 'center' }">
     <IconButton
