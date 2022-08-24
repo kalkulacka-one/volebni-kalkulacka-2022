@@ -8,6 +8,7 @@ import CardComponent from '@/components/design-system/containers/CardComponent.v
 
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
 import PillComponent from '../../components/design-system/containers/PillComponent.vue';
+import TagComponent from '../../components/design-system/containers/TagComponent.vue';
 import {
   vkiCheckbox,
   vkiCheckboxChecked,
@@ -105,6 +106,9 @@ const incrementSize = (btnSize: number) => {
     <PillComponent :active="true">Label</PillComponent>
   </div>
   <hr />
+  <div :style="{ display: 'flex', gap: '0.5rem' }">
+    <TagComponent>Tag text</TagComponent>
+  </div>
 </template>
 
 <style lang="scss" scoped>
