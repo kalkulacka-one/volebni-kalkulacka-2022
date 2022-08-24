@@ -21,6 +21,7 @@ import { mdiArrowLeft } from '@mdi/js';
 import IconButton, { ButtonSizeEnum } from '../../components/IconButton.vue';
 import AvatarComponent from '../../components/AvatarComponent.vue';
 import MatchOrderComponent from '../../components/MatchOrderComponent.vue';
+import ResultAvatarComponent from '../../components/ResultAvatarComponent.vue';
 
 import { avatarsConfiguration } from '../../components/design-system/configurations/avatars-configuration';
 
@@ -113,6 +114,7 @@ const incrementSize = (btnSize: number) => {
       alt="batman"
     />
   </div>
+
   <div style="display: flex">
     <MatchOrderComponent
       :order="1"
@@ -127,6 +129,34 @@ const incrementSize = (btnSize: number) => {
     <MatchOrderComponent
       :order="5"
       :size="5 === 1 ? 'large' : 'small'"
+      :configuration="avatarsConfiguration.medicine"
+    />
+  </div>
+
+  <div style="display: flex">
+    <ResultAvatarComponent
+      size-avatar="large"
+      size-order-match="large"
+      :order="1"
+      image-url="https://www.w3schools.com/w3images/avatar2.png"
+      alt="child girl"
+      :configuration="avatarsConfiguration.general"
+    />
+    <ResultAvatarComponent
+      size-avatar="medium"
+      size-order-match="medium"
+      :order="3"
+      image-url="https://www.w3schools.com/w3images/avatar5.png"
+      alt="elderly grandma"
+      :configuration="avatarsConfiguration.ecology"
+    />
+
+    <ResultAvatarComponent
+      size-avatar="medium"
+      size-order-match="medium"
+      :order="5"
+      image-url="https://www.w3schools.com/w3images/avatar6.png"
+      alt="batman"
       :configuration="avatarsConfiguration.medicine"
     />
   </div>
