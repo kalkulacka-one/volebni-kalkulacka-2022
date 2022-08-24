@@ -123,12 +123,12 @@ const incrementSize = (btnSize: number) => {
     />
     <MatchOrderComponent
       :order="3"
-      :size="3 === 1 ? 'large' : 'small'"
+      :size="false ? 'large' : 'small'"
       :configuration="avatarsConfiguration.ecology"
     />
     <MatchOrderComponent
       :order="5"
-      :size="5 === 1 ? 'large' : 'small'"
+      :size="false ? 'large' : 'small'"
       :configuration="avatarsConfiguration.medicine"
     />
   </div>
