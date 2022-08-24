@@ -18,6 +18,7 @@ withDefaults(defineProps<Props>(), {
 
 <style lang="scss" scoped>
 * {
+  margin: 0;
   font-family: var(--typography-label-family);
   font-size: var(--typography-label-size);
   line-height: var(--typography-label-line-height);

@@ -18,6 +18,7 @@ withDefaults(defineProps<Props>(), {
 
 <style lang="scss" scoped>
 * {
+  margin: 0;
   font-family: var(--typography-title-family);
   font-weight: 700;
   color: v-bind(color);
