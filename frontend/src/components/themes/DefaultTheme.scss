@@ -214,4 +214,28 @@
     --avatar-size-medium: 3rem;
     --avatar-size-large: 4.5rem;
   }
+
+  // Match order
+  --match-order-size-small: 1.5rem;
+  --match-order-size-medium: 2rem;
+  --match-order-size-large: 2rem;
+
+  --match-order-fs-small: 0.8125rem;
+  --match-order-fs-medium: 0.8125rem;
+  --match-order-fs-large: 0.8125rem;
+
+  --match-order-fw: 400;
+
+  // TODO: set correct breakpoint
+  @media (min-width: 700px) {
+    --match-order-size-small: 2rem;
+    --match-order-size-medium: 2.25rem;
+    --match-order-size-large: 2.75rem;
+
+    --match-order-fs-small: 1rem;
+    --match-order-fs-medium: 1.25rem;
+    --match-order-fs-large: 1.25rem;
+
+    --match-order-fw: 700;
+  }
 }

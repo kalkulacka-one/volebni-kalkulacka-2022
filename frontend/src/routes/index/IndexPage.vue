@@ -4,7 +4,6 @@ import TitleText from '../../components/design-system/typography/TitleText.vue';
 import HeadlineText from '../../components/design-system/typography/HeadlineText.vue';
 import ButtonText from '../../components/design-system/typography/ButtonText.vue';
 import LabelText from '../../components/design-system/typography/LabelText.vue';
-import AvatarComponent from '../../components/AvatarComponent.vue';
 
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
 import {
@@ -20,6 +19,11 @@ import {
 import { mdiArrowLeft } from '@mdi/js';
 
 import IconButton, { ButtonSizeEnum } from '../../components/IconButton.vue';
+import AvatarComponent from '../../components/AvatarComponent.vue';
+import MatchOrderComponent from '../../components/MatchOrderComponent.vue';
+
+import { avatarsConfiguration } from '../../components/design-system/configurations/avatars-configuration';
+
 import { ref } from 'vue';
 const btn1Size = ref(ButtonSizeEnum.Medium);
 const btn2Size = ref(ButtonSizeEnum.Small);
@@ -107,6 +111,23 @@ const incrementSize = (btnSize: number) => {
       size="large"
       image-url="https://www.w3schools.com/w3images/avatar6.png"
       alt="batman"
+    />
+  </div>
+  <div style="display: flex">
+    <MatchOrderComponent
+      :order="1"
+      :size="1 === 1 ? 'medium' : 'small'"
+      :configuration="avatarsConfiguration.general"
+    />
+    <MatchOrderComponent
+      :order="3"
+      :size="3 === 1 ? 'large' : 'small'"
+      :configuration="avatarsConfiguration.ecology"
+    />
+    <MatchOrderComponent
+      :order="5"
+      :size="5 === 1 ? 'large' : 'small'"
+      :configuration="avatarsConfiguration.medicine"
     />
   </div>
 </template>
