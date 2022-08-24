@@ -95,17 +95,17 @@ const incrementSize = (btnSize: number) => {
   <div style="display: flex">
     <AvatarComponent
       size="small"
-      image-url="https://cdn.icon-icons.com/icons2/1736/PNG/512/4043250-avatar-child-girl-kid_113270.png"
+      image-url="https://www.w3schools.com/w3images/avatar2.png"
       alt="child girl"
     />
     <AvatarComponent
       size="medium"
-      image-url="https://cdn.icon-icons.com/icons2/1736/PNG/512/4043254-avatar-elderly-grandma-nanny_113280.png"
+      image-url="https://www.w3schools.com/w3images/avatar5.png"
       alt="elderly grandma"
     />
     <AvatarComponent
       size="large"
-      image-url="https://cdn.icon-icons.com/icons2/1736/PNG/512/4043232-avatar-batman-comics-hero_113278.png"
+      image-url="https://www.w3schools.com/w3images/avatar6.png"
       alt="batman"
     />
   </div>
