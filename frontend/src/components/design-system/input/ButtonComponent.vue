@@ -13,7 +13,7 @@ export interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  tag: props.href ? 'a' : 'button',
+  tag: 'button',
   href: undefined,
   size: 'medium',
   color: 'neutral',
@@ -27,13 +27,15 @@ const classes = computed(() => ({
   [`button--${props.selected}`]: props.selected,
 }));
 
+const computedTag = computed(() => (props.href ? 'a' : props.tag));
+
 const computedSize = computed(() =>
   props.kind === 'link' ? props.size : 'medium'
 );
 </script>
 
 <template>
-  <component :is="tag" :href="href" :class="['button', classes]">
+  <component :is="computedTag" :href="href" :class="['button', classes]">
     <span
       v-if="$slots.icon"
       :class="['icon', $slots.default ? 'icon--before' : 'icon--only']"
@@ -59,6 +61,7 @@ const computedSize = computed(() =>
   padding: 0;
   cursor: pointer;
   background-color: transparent;
+  text-decoration: none;
 
   &:disabled {
     cursor: not-allowed;
