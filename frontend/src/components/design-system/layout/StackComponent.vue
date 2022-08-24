@@ -32,19 +32,19 @@ const classes = computed(() => ({
     flex-direction: row;
   }
 
-  &--extra-small:deep() * + * {
+  &--extra-small:deep() > * + * {
     margin-top: var(--spacing-extra-small);
   }
 
-  &--small:deep() * + * {
+  &--small:deep() > * + * {
     margin-top: var(--spacing-small);
   }
 
-  &--medium:deep() * + * {
+  &--medium:deep() > * + * {
     margin-top: var(--spacing-medium);
   }
 
-  &--large:deep() * + * {
+  &--large:deep() > * + * {
     margin-top: var(--spacing-large);
   }
 }
