@@ -139,7 +139,9 @@ const incrementSize = (btnSize: number) => {
         <IconComponent :icon="vkiLogoNeutral" />
       </template>
     </ButtonComponent>
-    <ButtonComponent tag="a" kind="link">Button</ButtonComponent>
+    <ButtonComponent href="https://google.com" kind="link">
+      Google.com
+    </ButtonComponent>
     <ButtonComponent tag="a" kind="link">
       Icon before
       <template #icon>

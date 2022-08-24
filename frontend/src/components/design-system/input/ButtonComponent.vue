@@ -13,7 +13,7 @@ export interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  tag: 'button',
+  tag: props.href ? 'a' : 'button',
   href: undefined,
   size: 'medium',
   color: 'neutral',
