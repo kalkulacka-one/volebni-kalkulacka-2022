@@ -55,7 +55,7 @@ const incrementSize = (btnSize: number) => {
     <LabelText>Label text</LabelText>
   </StackComponent>
   <hr />
-  <div :style="{ margin: '1rem', display: 'flex', alignItems: 'center' }">
+  <StackComponent horizontal>
     <IconButton
       :size="btn1Size"
       @click="(event: MouseEvent)=>{btn1Size = incrementSize(btn1Size)}"
@@ -66,16 +66,9 @@ const incrementSize = (btnSize: number) => {
       @click="(event: MouseEvent)=>{btn2Size = incrementSize(btn2Size)}"
       ><IconComponent :icon="vkiStarOutlined"
     /></IconButton>
-  </div>
+  </StackComponent>
   <hr />
-  <div
-    :style="{
-      margin: '1rem',
-      display: 'flex',
-      alignItems: 'center',
-      columnGap: '1rem',
-    }"
-  >
+  <StackComponent horizontal>
     <IconComponent :icon="vkiCheckbox" size="small" />
     <IconComponent :icon="vkiCheckboxChecked" size="medium" />
     <IconComponent :icon="vkiCheckboxIndeterminate" size="large" />
@@ -91,7 +84,7 @@ const incrementSize = (btnSize: number) => {
     <IconComponent :icon="vkiStarFilled" />
     <IconComponent :icon="vkiStarOutlined" />
     <IconComponent :icon="mdiArrowLeft" />
-  </div>
+  </StackComponent>
   <hr />
 </template>
 

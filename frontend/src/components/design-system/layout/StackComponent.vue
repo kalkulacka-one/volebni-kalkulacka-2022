@@ -12,8 +12,9 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 const classes = computed(() => ({
+  'stack--vertical': !props.horizontal,
   'stack--horizontal': props.horizontal,
-  [`stack--${props.spacing}`]: props.spacing,
+  [`stack--spacing-${props.spacing}`]: props.spacing,
 }));
 </script>
 
@@ -26,26 +27,45 @@ const classes = computed(() => ({
 <style scoped lang="scss">
 .stack {
   display: flex;
-  flex-direction: column;
+
+  &--vertical {
+    flex-direction: column;
+
+    &.stack--spacing-extra-small:deep() > * + * {
+      margin-top: var(--spacing-extra-small);
+    }
+
+    &.stack--spacing-small:deep() > * + * {
+      margin-top: var(--spacing-small);
+    }
+
+    &.stack--spacing-medium:deep() > * + * {
+      margin-top: var(--spacing-medium);
+    }
+
+    &.stack--spacing-large:deep() > * + * {
+      margin-top: var(--spacing-large);
+    }
+  }
 
   &--horizontal {
     flex-direction: row;
-  }
 
-  &--extra-small:deep() > * + * {
-    margin-top: var(--spacing-extra-small);
-  }
+    &.stack--spacing-extra-small:deep() > * + * {
+      margin-left: var(--spacing-extra-small);
+    }
 
-  &--small:deep() > * + * {
-    margin-top: var(--spacing-small);
-  }
+    &.stack--spacing-small:deep() > * + * {
+      margin-left: var(--spacing-small);
+    }
 
-  &--medium:deep() > * + * {
-    margin-top: var(--spacing-medium);
-  }
+    &.stack--spacing-medium:deep() > * + * {
+      margin-left: var(--spacing-medium);
+    }
 
-  &--large:deep() > * + * {
-    margin-top: var(--spacing-large);
+    &.stack--spacing-large:deep() > * + * {
+      margin-left: var(--spacing-large);
+    }
   }
 }
 </style>
