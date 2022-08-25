@@ -261,8 +261,6 @@ const computedSize = computed(() =>
 }
 
 .icon {
-  display: inline-block;
-
   &--only {
     margin: auto;
   }
