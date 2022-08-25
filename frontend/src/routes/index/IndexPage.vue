@@ -7,6 +7,7 @@ import LabelText from '../../components/design-system/typography/LabelText.vue';
 import CardComponent from '@/components/design-system/containers/CardComponent.vue';
 
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
+import PillComponent from '../../components/design-system/containers/PillComponent.vue';
 import {
   vkiCheckbox,
   vkiCheckboxChecked,
@@ -97,6 +98,11 @@ const incrementSize = (btnSize: number) => {
     <IconComponent :icon="vkiStarFilled" />
     <IconComponent :icon="vkiStarOutlined" />
     <IconComponent :icon="mdiArrowLeft" />
+  </div>
+  <hr />
+  <div :style="{ display: 'flex', gap: '0.5rem' }">
+    <PillComponent>Label</PillComponent>
+    <PillComponent :active="true">Label</PillComponent>
   </div>
   <hr />
 </template>
