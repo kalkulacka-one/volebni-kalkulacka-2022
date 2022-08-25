@@ -24,7 +24,7 @@ const classes = computed(() => ({
   [`button--${props.kind}`]: props.kind,
   [`button--${props.size}`]: props.size,
   [`button--${props.color}`]: props.color,
-  [`button--${props.selected}`]: props.selected,
+  'button--selected': props.selected,
 }));
 
 const computedTag = computed(() => (props.href ? 'a' : props.tag));
