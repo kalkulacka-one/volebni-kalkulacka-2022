@@ -107,7 +107,9 @@ const incrementSize = (btnSize: number) => {
   </div>
   <hr />
   <div :style="{ display: 'flex', gap: '0.5rem' }">
-    <TagComponent>Tag text</TagComponent>
+    <TagComponent :kind="'neutral'">Tag text</TagComponent>
+    <TagComponent :kind="'primary'">Tag text</TagComponent>
+    <TagComponent :kind="'secondary'">Tag text</TagComponent>
   </div>
 </template>
 
