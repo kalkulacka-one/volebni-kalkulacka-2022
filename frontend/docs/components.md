@@ -16,14 +16,14 @@ import { computed } from 'vue';
 
 // Props (interface) definition
 export interface Props {
-  padding?: boolean;
+  hasPadding?: boolean;
   paddingSize?: 'small' | 'large';
   background?: string;
 }
 
 // Default props definition
 const props = withDefaults(defineProps<Props>(), {
-  padding: false,
+  hasPadding: false,
   paddingSize: 'small',
   background: 'rgb(var(--color-neutral-bg-container))',
 });
@@ -57,3 +57,7 @@ const classes = computed(() => ({
 }
 </style>
 ```
+
+Props best practices:
+
+- for boolean values, prefix the prop with a verb (is, has, etc.), e.g. `isSelected`
