@@ -18,7 +18,7 @@ const classes = computed(() => [`icon--${props.size}`]);
 </script>
 
 <template>
-  <span :class="['icon', classes]">
+  <div :class="['icon', classes]">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       role="img"
@@ -28,13 +28,11 @@ const classes = computed(() => [`icon--${props.size}`]);
       <title v-if="title">{{ title }}</title>
       <path :d="icon" :fill="color" />
     </svg>
-  </span>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 .icon {
-  display: inline-block;
-
   &--small {
     width: var(--spacing-small);
     height: var(--spacing-small);
