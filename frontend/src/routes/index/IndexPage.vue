@@ -4,8 +4,11 @@ import TitleText from '../../components/design-system/typography/TitleText.vue';
 import HeadlineText from '../../components/design-system/typography/HeadlineText.vue';
 import ButtonText from '../../components/design-system/typography/ButtonText.vue';
 import LabelText from '../../components/design-system/typography/LabelText.vue';
+import CardComponent from '@/components/design-system/containers/CardComponent.vue';
 
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
+import PillComponent from '../../components/design-system/containers/PillComponent.vue';
+import TagComponent from '../../components/design-system/containers/TagComponent.vue';
 import {
   vkiCheckbox,
   vkiCheckboxChecked,
@@ -39,7 +42,14 @@ const incrementSize = (btnSize: number) => {
 <template>
   <h1>This is the index page</h1>
   <hr />
-  <div :style="{ margin: '1rem' }">
+  <CardComponent
+    corner="bottom-left"
+    radius="large"
+    shadow
+    border
+    border-kind="strong"
+    padding="large"
+  >
     <HeadlineText tag="h1" size="large">Headline large</HeadlineText>
     <HeadlineText tag="h2" size="medium">Headline medium</HeadlineText>
     <HeadlineText tag="h3" size="small">Headline small</HeadlineText>
@@ -57,7 +67,7 @@ const incrementSize = (btnSize: number) => {
     <ButtonText size="medium">Button text</ButtonText>
     <ButtonText size="small">Small button text</ButtonText>
     <LabelText>Label text</LabelText>
-  </div>
+  </CardComponent>
   <hr />
   <div :style="{ margin: '1rem', display: 'flex', alignItems: 'center' }">
     <IconButton
@@ -159,6 +169,17 @@ const incrementSize = (btnSize: number) => {
       alt="batman"
       :configuration="avatarsConfiguration.medicine"
     />
+  </div>
+  <hr />
+  <div :style="{ display: 'flex', gap: '0.5rem' }">
+    <PillComponent>Label</PillComponent>
+    <PillComponent :active="true">Label</PillComponent>
+  </div>
+  <hr />
+  <div :style="{ display: 'flex', gap: '0.5rem' }">
+    <TagComponent :kind="'neutral'">Tag text</TagComponent>
+    <TagComponent :kind="'primary'">Tag text</TagComponent>
+    <TagComponent :kind="'secondary'">Tag text</TagComponent>
   </div>
 </template>
 
