@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import StackComponent from '../../components/design-system/layout/StackComponent.vue';
+
 import BodyText from '../../components/design-system/typography/BodyText.vue';
 import TitleText from '../../components/design-system/typography/TitleText.vue';
 import HeadlineText from '../../components/design-system/typography/HeadlineText.vue';
@@ -50,26 +52,28 @@ const incrementSize = (btnSize: number) => {
     border-kind="strong"
     padding="large"
   >
-    <HeadlineText tag="h1" size="large">Headline large</HeadlineText>
-    <HeadlineText tag="h2" size="medium">Headline medium</HeadlineText>
-    <HeadlineText tag="h3" size="small">Headline small</HeadlineText>
-    <TitleText tag="h4" size="large">Title large</TitleText>
-    <TitleText tag="h5" size="medium">Title medium</TitleText>
-    <BodyText size="large">
-      Large quick brown fox jumps over the lazy dog
-    </BodyText>
-    <BodyText size="medium">
-      Medium quick brown fox jumps over the lazy dog
-    </BodyText>
-    <BodyText size="small">
-      Small quick brown fox jumps over the lazy dog
-    </BodyText>
-    <ButtonText size="medium">Button text</ButtonText>
-    <ButtonText size="small">Small button text</ButtonText>
-    <LabelText>Label text</LabelText>
+    <StackComponent>
+      <HeadlineText tag="h1" size="large">Headline large</HeadlineText>
+      <HeadlineText tag="h2" size="medium">Headline medium</HeadlineText>
+      <HeadlineText tag="h3" size="small">Headline small</HeadlineText>
+      <TitleText tag="h4" size="large">Title large</TitleText>
+      <TitleText tag="h5" size="medium">Title medium</TitleText>
+      <BodyText size="large">
+        Large quick brown fox jumps over the lazy dog
+      </BodyText>
+      <BodyText size="medium">
+        Medium quick brown fox jumps over the lazy dog
+      </BodyText>
+      <BodyText size="small">
+        Small quick brown fox jumps over the lazy dog
+      </BodyText>
+      <ButtonText size="medium">Button text</ButtonText>
+      <ButtonText size="small">Small button text</ButtonText>
+      <LabelText>Label text</LabelText>
+    </StackComponent>
   </CardComponent>
   <hr />
-  <div :style="{ margin: '1rem', display: 'flex', alignItems: 'center' }">
+  <StackComponent horizontal>
     <IconButton
       :size="btn1Size"
       @click="(event: MouseEvent)=>{btn1Size = incrementSize(btn1Size)}"
@@ -80,16 +84,9 @@ const incrementSize = (btnSize: number) => {
       @click="(event: MouseEvent)=>{btn2Size = incrementSize(btn2Size)}"
       ><IconComponent :icon="vkiStarOutlined"
     /></IconButton>
-  </div>
+  </StackComponent>
   <hr />
-  <div
-    :style="{
-      margin: '1rem',
-      display: 'flex',
-      alignItems: 'center',
-      columnGap: '1rem',
-    }"
-  >
+  <StackComponent horizontal>
     <IconComponent :icon="vkiCheckbox" size="small" />
     <IconComponent :icon="vkiCheckboxChecked" size="medium" />
     <IconComponent :icon="vkiCheckboxIndeterminate" size="large" />
@@ -105,7 +102,7 @@ const incrementSize = (btnSize: number) => {
     <IconComponent :icon="vkiStarFilled" />
     <IconComponent :icon="vkiStarOutlined" />
     <IconComponent :icon="mdiArrowLeft" />
-  </div>
+  </StackComponent>
   <hr />
   <div style="display: flex">
     <AvatarComponent
