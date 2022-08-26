@@ -1,0 +1,58 @@
+{
+  "elections": [
+    {
+      "id": "uuid-kom-election-komunalni",
+      "key": "komunalni-2022",
+      "name": "Komunalni volby 2022",
+      "description": "Komunalni volby - description"
+    },
+    {
+      "id": "uuid-sen-senatni-2022",
+      "key": "senatni-2022",
+      "name": "Senatni volby 2022",
+      "description": "Senatni volby - description"
+    }
+  ],
+  "calculators": [
+    {
+      "election_id": "uuid-kom-election-komunalni",
+      "district_code": "123456",
+      "label": "Mesto 01",
+      "description": "uuid-kom-election-komunalni - 123456"
+    },
+    {
+      "election_id": "uuid-kom-election-komunalni",
+      "district_code": "345678",
+      "label": "Mesto 02",
+      "description": "uuid-kom-election-komunalni - 345678",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "uuid-kom-election-komunalni",
+      "district_code": "999999",
+      "label": "This should not be visible",
+      "description": "uuid-kom-election-komunalni - 999999",
+      "on_hp_from": "2000-01-01",
+      "on_hp_to": "2001-01-01"
+    },
+    {
+      "election_id": "uuid-sen-senatni-2022",
+      "district_code": "51",
+      "label": "Obvod 51 - Mesto S5",
+      "description": "uuid-sen-election-senatni - 51"
+    },
+    {
+      "election_id": "uuid-sen-senatni-2022",
+      "district_code": "61",
+      "label": "Obvod 61 - Mesto S6",
+      "description": "uuid-sen-election-senatni - 61"
+    },
+    {
+      "election_id": "uuid-sen-senatni-2022",
+      "district_code": "71",
+      "label": "Obvod 71 - Mesto S7",
+      "description": "uuid-sen-election-senatni - 71"
+    }
+  ]
+}
