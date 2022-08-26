@@ -22,6 +22,12 @@ import {
 import { mdiArrowLeft } from '@mdi/js';
 
 import IconButton, { ButtonSizeEnum } from '../../components/IconButton.vue';
+import AvatarComponent from '../../components/AvatarComponent.vue';
+import MatchOrderComponent from '../../components/MatchOrderComponent.vue';
+import ResultAvatarComponent from '../../components/ResultAvatarComponent.vue';
+
+import { avatarsConfiguration } from '../../components/design-system/configurations/avatars-configuration';
+
 import { ref } from 'vue';
 const btn1Size = ref(ButtonSizeEnum.Medium);
 const btn2Size = ref(ButtonSizeEnum.Small);
@@ -99,6 +105,70 @@ const incrementSize = (btnSize: number) => {
     <IconComponent :icon="vkiStarFilled" />
     <IconComponent :icon="vkiStarOutlined" />
     <IconComponent :icon="mdiArrowLeft" />
+  </div>
+  <hr />
+  <div style="display: flex">
+    <AvatarComponent
+      size="small"
+      image-url="https://www.w3schools.com/w3images/avatar2.png"
+      alt="child girl"
+    />
+    <AvatarComponent
+      size="medium"
+      image-url="https://www.w3schools.com/w3images/avatar5.png"
+      alt="elderly grandma"
+    />
+    <AvatarComponent
+      size="large"
+      image-url="https://www.w3schools.com/w3images/avatar6.png"
+      alt="batman"
+    />
+  </div>
+
+  <div style="display: flex">
+    <MatchOrderComponent
+      :order="1"
+      :size="1 === 1 ? 'medium' : 'small'"
+      :configuration="avatarsConfiguration.general"
+    />
+    <MatchOrderComponent
+      :order="3"
+      :size="false ? 'large' : 'small'"
+      :configuration="avatarsConfiguration.ecology"
+    />
+    <MatchOrderComponent
+      :order="5"
+      :size="false ? 'large' : 'small'"
+      :configuration="avatarsConfiguration.medicine"
+    />
+  </div>
+
+  <div style="display: flex">
+    <ResultAvatarComponent
+      size-avatar="large"
+      size-order-match="large"
+      :order="1"
+      image-url="https://www.w3schools.com/w3images/avatar2.png"
+      alt="child girl"
+      :configuration="avatarsConfiguration.general"
+    />
+    <ResultAvatarComponent
+      size-avatar="medium"
+      size-order-match="medium"
+      :order="3"
+      image-url="https://www.w3schools.com/w3images/avatar5.png"
+      alt="elderly grandma"
+      :configuration="avatarsConfiguration.ecology"
+    />
+
+    <ResultAvatarComponent
+      size-avatar="medium"
+      size-order-match="medium"
+      :order="5"
+      image-url="https://www.w3schools.com/w3images/avatar6.png"
+      alt="batman"
+      :configuration="avatarsConfiguration.medicine"
+    />
   </div>
   <hr />
   <div :style="{ display: 'flex', gap: '0.5rem' }">
