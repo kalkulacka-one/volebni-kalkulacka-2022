@@ -12,14 +12,17 @@ export default defineConfig({
       '/data': {
         target: 'https://kalkulacka.ceskodigital.net',
         changeOrigin: true,
-        cookieDomainRewrite: { "*": "" },
-        configure: (proxy) => proxy.on('proxyRes', (proxyRes, req, res) => {
-          if (proxyRes.headers['set-cookie']) {
-            proxyRes.headers['set-cookie'][0] = proxyRes.headers['set-cookie'][0].replace('; Secure', '');
-          }
-        })
+        cookieDomainRewrite: { '*': '' },
+        configure: (proxy) =>
+          proxy.on('proxyRes', (proxyRes, req, res) => {
+            if (proxyRes.headers['set-cookie']) {
+              proxyRes.headers['set-cookie'][0] = proxyRes.headers[
+                'set-cookie'
+              ][0].replace('; Secure', '');
+            }
+          }),
       },
-    }
+    },
   },
   resolve: {
     alias: {
