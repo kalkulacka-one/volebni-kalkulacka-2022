@@ -1,22 +1,23 @@
 <script setup lang="ts">
-defineProps<{
+import type { Question } from '@/types/question';
+
+export interface QuestionCardProps {
   questionNr: number;
   questionTotal: number;
-  name: string;
-  text: string;
-  explanation: string;
-  tags: string[];
-}>();
+  question: Question;
+}
+defineProps<QuestionCardProps>();
 </script>
 
 <template>
   <div>
     <p>
-      {{ questionNr }}/{{ questionTotal }} <strong>{{ name }} </strong>
-      <em v-for="tag in tags" :key="tag"> {{ tag }} | </em>
+      {{ questionNr + 1 }}/{{ questionTotal }}
+      <strong>{{ question.name }} </strong>
+      <em v-for="tag in question.tags" :key="tag"> {{ tag }} | </em>
     </p>
-    <h1>{{ text }}</h1>
-    <p>{{ explanation }}</p>
+    <h1>{{ question.title }}</h1>
+    <p>{{ question.gist }}</p>
   </div>
 </template>
 

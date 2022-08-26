@@ -1,90 +1,79 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
-import { useRouter, useRoute } from 'vue-router';
-import QuestionBottomBar, { type IButton } from './QuestionBottomBar.vue';
+import { computed } from 'vue';
+import { onBeforeRouteUpdate, useRouter, useRoute } from 'vue-router';
+import QuestionBottomBar from './QuestionBottomBar.vue';
 import QuestionCard from './QuestionCard.vue';
 import NavBar from '../../components/NavBar.vue';
-import { appRoutes } from '@/main';
+import { appRoutes, questionGuard } from '@/main';
+import { useElectionStore } from '@/stores/electionStore';
+import type { Question } from '@/types/question';
+
+onBeforeRouteUpdate(questionGuard);
 
 const router = useRouter();
 const route = useRoute();
-const questionNr = computed(() => parseInt(route.params['nr'] as string));
-const questionProgress = ref(questionNr.value);
-const questionTotal = 10;
-const handleClick = (type: 'yes' | 'no' | 'skip') => {
-  const questionNr = parseInt(route.params.nr as string);
+const electionStore = useElectionStore();
+if (electionStore.calculator === undefined) {
+  throw new Error('Calculator is undefined. This should never happen');
+}
+//internally questions start at 0
+const questionNr = computed(() => parseInt(route.params['nr'] as string) - 1);
+const handleAnswerClick = (answer: 'yes' | 'no' | 'skip') => {
+  electionStore.setAnswer(questionNr.value, answer);
+  if (questionNr.value - 1 === electionStore.answerProgress) {
+    electionStore.incrementAnswerProgress();
+  }
   const newRoute = {
     name: appRoutes.question.name,
-    params: { ...route.params, nr: questionNr + 1 },
+    params: { ...route.params, nr: questionNr.value + 2 },
   };
   if (
-    questionProgress.value === questionNr &&
-    questionProgress.value >= questionTotal
+    electionStore.answerProgress === questionNr.value &&
+    electionStore.answerProgress > electionStore.questionCount - 2
   ) {
     newRoute.name = appRoutes.recap.name;
   }
   console.debug(
-    `${type}, current: ${questionNr}, progress: ${questionProgress.value}`
+    `${answer}, current: ${questionNr.value}, progress: ${electionStore.answerProgress}`
   );
-  if (questionNr === questionProgress.value) {
-    questionProgress.value++;
-  }
   router.push(newRoute);
 };
-const starButton: IButton = {
-  onClick: function (): void {
-    //star
-  },
-  isSelected: false,
-};
-const yesButton: IButton = {
-  onClick: function (): void {
-    handleClick('yes');
-  },
-  isSelected: false,
-};
-const noButton: IButton = {
-  onClick: function (): void {
-    handleClick('no');
-  },
-  isSelected: false,
-};
-const skipButton: IButton = {
-  onClick: function (): void {
-    handleClick('skip');
-  },
-  isSelected: false,
-};
+const handleStarClick = () => electionStore.flipAnswerFlag(questionNr.value);
 const handleArrowClicked = (type: 'forward' | 'back') => {
-  const questionNr = parseInt(route.params.nr as string);
   const increment = type === 'back' ? -1 : 1;
   const newRoute = {
     name: appRoutes.question.name,
-    params: { ...route.params, nr: questionNr + increment },
+    params: { ...route.params, nr: questionNr.value + increment + 1 },
   };
+  if (questionNr.value + increment > electionStore.questionCount - 1) {
+    newRoute.name = appRoutes.recap.name;
+  }
   router.push(newRoute);
 };
+const forwardDisabled = computed(() => {
+  return !(
+    questionNr.value < electionStore.answerProgress + 1 ||
+    electionStore.questionCount === electionStore.answerCount
+  );
+});
+const backDisabled = computed(() => {
+  return questionNr.value < 1;
+});
 </script>
 
 <template>
   <NavBar :help="true" :quit="true" :fill-again="true" />
   <div class="question-wrapper">
-    <button
-      :disabled="questionNr === 1"
-      @click="() => handleArrowClicked('back')"
-    >
+    <button :disabled="backDisabled" @click="() => handleArrowClicked('back')">
       ZPET
     </button>
     <QuestionCard
       :question-nr="questionNr"
-      :question-total="questionTotal"
-      :name="`NAME of question ${questionNr}`"
-      :text="`This is a TEXT of question ${questionNr}`"
-      :explanation="`This is an EXPLANATION of question ${questionNr} that is very very long and very very interseting.`"
-      :tags="['tag1', 'tag2']"
+      :question-total="electionStore.questionCount"
+      :question="(electionStore.calculator?.questions[questionNr] as Question)"
     ></QuestionCard>
     <button
-      :disabled="questionNr === questionProgress"
+      :disabled="forwardDisabled"
       @click="() => handleArrowClicked('forward')"
     >
       VPRED
@@ -92,12 +81,13 @@ const handleArrowClicked = (type: 'forward' | 'back') => {
   </div>
   <QuestionBottomBar
     :question-current-nr="questionNr"
-    :question-progress="questionProgress"
-    :question-total="questionTotal"
-    :star-button="starButton"
-    :yes-button="yesButton"
-    :no-button="noButton"
-    :skip-button="skipButton"
+    :question-progress="electionStore.answerProgress"
+    :question-total="electionStore.questionCount"
+    :answer="electionStore.answers[questionNr]"
+    :star-click="handleStarClick"
+    :yes-click="() => handleAnswerClick('yes')"
+    :no-click="() => handleAnswerClick('no')"
+    :skip-click="() => handleAnswerClick('skip')"
   ></QuestionBottomBar>
 </template>
 
