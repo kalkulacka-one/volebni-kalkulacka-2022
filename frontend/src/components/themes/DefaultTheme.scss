@@ -12,6 +12,7 @@
 
   // Radiuses
   // --------
+  --radius-extra-small: var(--spacing-extra-small);
   --radius-small: var(--spacing-small);
   --radius-medium: var(--spacing-medium);
   --radius-large: var(--spacing-large);
@@ -200,4 +201,42 @@
   --typography-label-size: 0.625rem;
   --typography-label-line-height: 1.6;
   --typography-label-letter-spacing: 0.04em;
+
+  // Icon sizes
+  // ----------
+  // Avatars
+  --avatar-size-small: 2rem;
+  --avatar-size-medium: 2.5rem;
+  --avatar-size-large: 3.5rem;
+
+  // TODO: set correct breakpoint
+  @media (min-width: 700px) {
+    --avatar-size-small: 3rem;
+    --avatar-size-medium: 3rem;
+    --avatar-size-large: 4.5rem;
+  }
+
+  // Match order
+  --match-order-size-small: 1.5rem;
+  --match-order-size-medium: 2rem;
+  --match-order-size-large: 2rem;
+
+  --match-order-fs-small: 0.8125rem;
+  --match-order-fs-medium: 0.8125rem;
+  --match-order-fs-large: 0.8125rem;
+
+  --match-order-fw: 400;
+
+  // TODO: set correct breakpoint
+  @media (min-width: 700px) {
+    --match-order-size-small: 2rem;
+    --match-order-size-medium: 2.25rem;
+    --match-order-size-large: 2.75rem;
+
+    --match-order-fs-small: 1rem;
+    --match-order-fs-medium: 1.25rem;
+    --match-order-fs-large: 1.25rem;
+
+    --match-order-fw: 700;
+  }
 }

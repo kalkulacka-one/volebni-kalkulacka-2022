@@ -6,7 +6,7 @@ export interface Props {
 
 withDefaults(defineProps<Props>(), {
   tag: 'span',
-  color: 'rgb(var(--color-neutral-fg-strong))',
+  color: 'currentColor',
 });
 </script>
 
