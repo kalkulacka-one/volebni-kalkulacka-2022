@@ -13,6 +13,7 @@ import ButtonComponent from '../../components/design-system/input/ButtonComponen
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
 import PillComponent from '../../components/design-system/containers/PillComponent.vue';
 import TagComponent from '../../components/design-system/containers/TagComponent.vue';
+import DividerComponent from '../../components/design-system/containers/DividerComponent.vue';
 import {
   vkiCheckbox,
   vkiCheckboxChecked,
@@ -45,7 +46,7 @@ const incrementSize = (btnSize: number) => {
 
 <template>
   <h1>This is the index page</h1>
-  <hr />
+  <DividerComponent />
   <CardComponent
     corner="bottom-left"
     radius="large"
@@ -74,7 +75,7 @@ const incrementSize = (btnSize: number) => {
       <LabelText>Label text</LabelText>
     </StackComponent>
   </CardComponent>
-  <hr />
+  <DividerComponent />
   <StackComponent horizontal>
     <IconButton
       :size="btn1Size"
@@ -87,7 +88,7 @@ const incrementSize = (btnSize: number) => {
       ><IconComponent :icon="vkiStarOutlined"
     /></IconButton>
   </StackComponent>
-  <hr />
+  <DividerComponent />
   <StackComponent horizontal>
     <IconComponent :icon="vkiCheckbox" size="small" />
     <IconComponent :icon="vkiCheckboxChecked" size="medium" />
@@ -105,7 +106,7 @@ const incrementSize = (btnSize: number) => {
     <IconComponent :icon="vkiStarOutlined" />
     <IconComponent :icon="mdiArrowLeft" />
   </StackComponent>
-  <hr />
+  <DividerComponent />
   <div
     :style="{
       margin: '1rem',
@@ -168,7 +169,7 @@ const incrementSize = (btnSize: number) => {
       </template>
     </ButtonComponent>
   </div>
-  <hr />
+  <DividerComponent />
   <div
     :style="{
       margin: '1rem',
@@ -229,7 +230,7 @@ const incrementSize = (btnSize: number) => {
       </template>
     </ButtonComponent>
   </div>
-  <hr />
+  <DividerComponent />
   <div
     :style="{
       margin: '1rem',
@@ -291,7 +292,7 @@ const incrementSize = (btnSize: number) => {
       </template>
     </ButtonComponent>
   </div>
-  <hr />
+  <DividerComponent />
   <div
     :style="{
       margin: '1rem',
@@ -355,7 +356,7 @@ const incrementSize = (btnSize: number) => {
       </template>
     </ButtonComponent>
   </div>
-  <hr />
+  <DividerComponent />
   <div
     :style="{
       margin: '1rem',
@@ -417,7 +418,7 @@ const incrementSize = (btnSize: number) => {
       </template>
     </ButtonComponent>
   </div>
-  <hr />
+  <DividerComponent />
   <div
     :style="{
       margin: '1rem',
@@ -480,7 +481,7 @@ const incrementSize = (btnSize: number) => {
     </ButtonComponent>
   </div>
 
-  <hr />
+  <DividerComponent />
   <div
     :style="{
       margin: '1rem',
@@ -542,7 +543,7 @@ const incrementSize = (btnSize: number) => {
       </template>
     </ButtonComponent>
   </div>
-  <hr />
+  <DividerComponent />
   <div
     :style="{
       margin: '1rem',
@@ -605,7 +606,7 @@ const incrementSize = (btnSize: number) => {
     </ButtonComponent>
   </div>
 
-  <hr />
+  <DividerComponent />
   <div
     :style="{
       margin: '1rem',
@@ -669,7 +670,7 @@ const incrementSize = (btnSize: number) => {
       </template>
     </ButtonComponent>
   </div>
-  <hr />
+  <DividerComponent />
   <div
     :style="{
       margin: '1rem',
@@ -736,7 +737,7 @@ const incrementSize = (btnSize: number) => {
     </ButtonComponent>
   </div>
 
-  <hr />
+  <DividerComponent />
   <div
     :style="{
       margin: '1rem',
@@ -800,7 +801,7 @@ const incrementSize = (btnSize: number) => {
       </template>
     </ButtonComponent>
   </div>
-  <hr />
+  <DividerComponent />
   <div
     :style="{
       margin: '1rem',
@@ -866,7 +867,7 @@ const incrementSize = (btnSize: number) => {
       </template>
     </ButtonComponent>
   </div>
-  <hr />
+  <DividerComponent />
   <div style="display: flex">
     <AvatarComponent
       size="small"
@@ -930,12 +931,12 @@ const incrementSize = (btnSize: number) => {
       :configuration="avatarsConfiguration.medicine"
     />
   </div>
-  <hr />
+  <DividerComponent />
   <div :style="{ display: 'flex', gap: '0.5rem' }">
     <PillComponent>Label</PillComponent>
     <PillComponent :active="true">Label</PillComponent>
   </div>
-  <hr />
+  <DividerComponent />
   <div :style="{ display: 'flex', gap: '0.5rem' }">
     <TagComponent :kind="'neutral'">Tag text</TagComponent>
     <TagComponent :kind="'primary'">Tag text</TagComponent>
