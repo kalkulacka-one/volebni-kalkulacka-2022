@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper.vue';
+
 import { useRoute, useRouter, type RouteLocationNamedRaw } from 'vue-router';
 import NavBar from '../../components/NavBar.vue';
 import GuideBottomBar from './GuideBottomBar.vue';
@@ -39,12 +41,26 @@ const handleSkipClicked = () => {
 <template>
   <NavBar :quit="true" />
   <h1>This is guide</h1>
-  <GuideBottomBar
-    :button-title="buttonTitle"
-    :on-continue="handleContinueClicked"
-    :on-skip="handleSkipClicked"
-    :subtitle="bottomBarSubtitle"
-  ></GuideBottomBar>
+  <BottomBarWrapper>
+    <div
+      :style="{
+        height: '2222px',
+        //justifySelf: 'center',
+        //alignSelf: 'center',
+        backgroundColor: 'rgb(var(--color-primary-bg))',
+      }"
+    >
+      This is a long guide content.
+    </div>
+    <template #bottom-bar>
+      <GuideBottomBar
+        :button-title="buttonTitle"
+        :on-continue="handleContinueClicked"
+        :on-skip="handleSkipClicked"
+        :subtitle="bottomBarSubtitle"
+      />
+    </template>
+  </BottomBarWrapper>
 </template>
 
 <style lang="scss" scoped></style>
