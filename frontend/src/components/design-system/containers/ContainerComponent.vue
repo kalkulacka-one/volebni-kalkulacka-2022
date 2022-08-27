@@ -2,19 +2,17 @@
 import { computed } from 'vue';
 
 export interface Props {
-  padding?: boolean;
-  paddingSize?: 'small' | 'large';
+  padding?: 'small' | 'large';
   background?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  padding: false,
-  paddingSize: 'small',
+  padding: undefined,
   background: 'rgb(var(--color-neutral-bg-container))',
 });
 
 const classes = computed(() => ({
-  [`container--padding-${props.paddingSize}`]: props.padding,
+  [`container--padding-${props.padding}`]: props.padding,
 }));
 </script>
 
@@ -28,11 +26,13 @@ const classes = computed(() => ({
 .container {
   background-color: v-bind(background);
 
-  &--padding-small {
-    padding: var(--spacing-small);
-  }
-  &--padding-large {
-    padding: var(--spacing-large);
+  &--padding {
+    &-small {
+      padding: var(--spacing-small);
+    }
+    &-large {
+      padding: var(--spacing-large);
+    }
   }
 }
 </style>
