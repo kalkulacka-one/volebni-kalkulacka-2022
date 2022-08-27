@@ -16,21 +16,19 @@ import { computed } from 'vue';
 
 // Props (interface) definition
 export interface Props {
-  hasPadding?: boolean;
-  paddingSize?: 'small' | 'large';
+  padding?: 'small' | 'large';
   background?: string;
 }
 
 // Default props definition
 const props = withDefaults(defineProps<Props>(), {
-  hasPadding: false,
-  paddingSize: 'small',
+  padding: undefined,
   background: 'rgb(var(--color-neutral-bg-container))',
 });
 
 // Bind props to classes
 const classes = computed(() => ({
-  [`container--padding-${props.paddingSize}`]: props.padding,
+  [`container--padding-${props.padding}`]: props.padding,
 }));
 </script>
 
@@ -48,11 +46,13 @@ const classes = computed(() => ({
   background-color: v-bind(background);
 
   // BEM-like two hyphen, nested syntax for variants
-  &--padding-small {
-    padding: var(--spacing-small);
-  }
-  &--padding-large {
-    padding: var(--spacing-large);
+  &--padding {
+    &-small {
+      padding: var(--spacing-small);
+    }
+    &-large {
+      padding: var(--spacing-large);
+    }
   }
 }
 </style>
