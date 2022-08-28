@@ -5,9 +5,10 @@ export interface IconButtonProps {
   icon: string;
   color: string;
   size: 'small' | 'medium' | 'large';
+  title?: string;
 }
 const buttonClass = computed(() => {
-  return ['button', `button--${props.size as string}`];
+  return ['button', `button--${props.size}`];
 });
 const iconSize = computed(() => {
   switch (props.size) {
@@ -26,7 +27,12 @@ const props = defineProps<IconButtonProps>();
 
 <template>
   <button :class="buttonClass">
-    <IconComponent :icon="icon" :color="color" :size="iconSize"></IconComponent>
+    <IconComponent
+      :title="title"
+      :icon="icon"
+      :color="color"
+      :size="iconSize"
+    ></IconComponent>
   </button>
 </template>
 
@@ -39,27 +45,30 @@ const props = defineProps<IconButtonProps>();
   padding: var(--spacing-extra-small);
   border-width: 0px;
   background-color: inherit;
+  cursor: pointer;
   &:hover {
     background: rgba(var(--color-neutral-bg-backdrop-hover));
-    cursor: pointer;
   }
   &:active {
     background: rgba(var(--color-neutral-bg-backdrop-active));
   }
+  &:disabled {
+    cursor: not-allowed;
+  }
   &--small {
     width: var(--spacing-large);
     height: var(--spacing-large);
-    border-radius: var(--spacing-large);
+    border-radius: 50%;
   }
   &--medium {
     width: var(--spacing-extra-large);
     height: var(--spacing-extra-large);
-    border-radius: var(--spacing-extra-large);
+    border-radius: 50%;
   }
   &--large {
     width: var(--spacing-extra-huge);
     height: var(--spacing-extra-huge);
-    border-radius: var(--spacing-extra-huge);
+    border-radius: 50%;
   }
 }
 </style>
