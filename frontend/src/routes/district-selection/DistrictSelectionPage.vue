@@ -14,11 +14,13 @@ const options: DistrictSelectionProps['options'] = store.districts.map((x) => {
 });
 const onSubmit = (district: string) => {
   console.debug(district);
-  const guideRoute = {
-    name: appRoutes.guide.name,
-    params: { ...route.params, district: district, nr: 1 },
-  };
-  router.push(guideRoute);
+  if (district !== '') {
+    const guideRoute = {
+      name: appRoutes.guide.name,
+      params: { ...route.params, district: district, nr: 1 },
+    };
+    router.push(guideRoute);
+  }
 };
 </script>
 
