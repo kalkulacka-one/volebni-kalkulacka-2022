@@ -6,7 +6,7 @@ export const fetchCalculator = async (
   districtId: string
 ) => {
   const calculator: Calculator = await fetch(
-    `/testdata/kalkulacka/${electionId}/${districtId}.json`
+    `/data/kalkulacka/${electionId}/${districtId}.json`
   ).then((x) => {
     if (x.status === 200) {
       return x.json();
@@ -17,7 +17,7 @@ export const fetchCalculator = async (
 
 export const fetchElectionData = async (electionId: string) => {
   const data: Calculators = await fetch(
-    `/testdata/kalkulacka/calculators.json`
+    `/data/kalkulacka/calculators.json`
   ).then((x) => {
     if (x.status === 200) {
       return x.json();
