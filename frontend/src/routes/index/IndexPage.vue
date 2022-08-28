@@ -25,7 +25,6 @@ import {
 } from '../../components/design-system/icons';
 import { mdiArrowLeft } from '@mdi/js';
 
-import IconButton, { ButtonSizeEnum } from '../../components/IconButton.vue';
 import AvatarComponent from '../../components/AvatarComponent.vue';
 import MatchOrderComponent from '../../components/MatchOrderComponent.vue';
 import ResultAvatarComponent from '../../components/ResultAvatarComponent.vue';
@@ -39,7 +38,7 @@ import IconButton, {
 const btn1Size = ref('medium' as IconButtonProps['size']);
 const btn2Size = ref('small' as IconButtonProps['size']);
 const incrementSize = (btnSize: IconButtonProps['size']) => {
-  const sizes = ['small', 'medium', 'large'] as IconButtonProps['size'][];
+  const sizes: IconButtonProps['size'][] = ['small', 'medium', 'large'];
   const index = sizes.findIndex((x) => x === btnSize);
   return sizes[index < 2 ? index + 1 : 0];
 };
@@ -82,13 +81,33 @@ const incrementSize = (btnSize: IconButtonProps['size']) => {
       :size="btn1Size"
       :icon="vkiStarFilled"
       color="rgb(var(--palette-yellow))"
-      @click="(event: MouseEvent)=>{btn1Size = incrementSize(btn1Size)}"
+      @click="
+        () => {
+          btn1Size = incrementSize(btn1Size);
+        }
+      "
     />
     <IconButton
       :size="btn2Size"
       :icon="mdiArrowLeft"
       color="rgb(var(--color-neutral-fg))"
-      @click="(event: MouseEvent)=>{btn2Size = incrementSize(btn2Size)}"
+      @click="
+        () => {
+          btn2Size = incrementSize(btn2Size);
+        }
+      "
+      ><IconComponent :icon="vkiStarOutlined"
+    /></IconButton>
+    <IconButton
+      size="medium"
+      :icon="vkiLogoNeutral"
+      color="rgb(var(--color-neutral-fg))"
+      disabled
+      @click="
+        () => {
+          throw 'This should not happen!';
+        }
+      "
       ><IconComponent :icon="vkiStarOutlined"
     /></IconButton>
   </StackComponent>

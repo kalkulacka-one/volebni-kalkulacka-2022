@@ -46,14 +46,15 @@ const props = defineProps<IconButtonProps>();
   border-width: 0px;
   background-color: inherit;
   cursor: pointer;
+  &:disabled {
+    cursor: not-allowed;
+    background: inherit !important;
+  }
   &:hover {
     background: rgba(var(--color-neutral-bg-backdrop-hover));
   }
   &:active {
     background: rgba(var(--color-neutral-bg-backdrop-active));
-  }
-  &:disabled {
-    cursor: not-allowed;
   }
   &--small {
     width: var(--spacing-large);
