@@ -33,6 +33,8 @@ import ResultAvatarComponent from '../../components/ResultAvatarComponent.vue';
 
 import { avatarsConfiguration } from '../../components/design-system/configurations/avatars-configuration';
 
+import StepProgress from '../../components/design-system/other/StepProgress.vue';
+
 import { ref } from 'vue';
 import IconButton, {
   type IconButtonProps,
@@ -970,7 +972,7 @@ const incrementSize = (btnSize: IconButtonProps['size']) => {
     <TagComponent :kind="'primary'">Tag text</TagComponent>
     <TagComponent :kind="'secondary'">Tag text</TagComponent>
   </div>
-  <hr />
+  <DividerComponent />
   <div>
     <HeadingComponent :tag="'h3'" :kind="'headline'" :size="'extra-small'">
       Heading
@@ -980,6 +982,12 @@ const incrementSize = (btnSize: IconButtonProps['size']) => {
       Heading
       <template #secondary>Secondary text</template>
     </HeadingComponent>
+  </div>
+  <DividerComponent />
+  <div :style="{ display: 'flex', flexDirection: 'column', gap: '1rem' }">
+    <template v-for="n in 4" :key="n">
+      <StepProgress :current="n" />
+    </template>
   </div>
 </template>
 
