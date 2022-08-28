@@ -1,5 +1,9 @@
 import { createApp } from 'vue';
-import { createRouter, createWebHashHistory } from 'vue-router';
+import {
+  createRouter,
+  createWebHashHistory,
+  type RouteLocationNormalized,
+} from 'vue-router';
 import App from './App.vue';
 
 import './assets/main.css';
@@ -12,6 +16,29 @@ import ResultPageVue from './routes/result/ResultPage.vue';
 import RecapPageVue from './routes/recap/RecapPage.vue';
 import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
+import { fetchCalculator, fetchElectionData } from './common/dataFetch';
+import { useElectionStore } from './stores/electionStore';
+import { createPinia } from 'pinia';
+import ErrorPageVue from './routes/error/ErrorPage.vue';
+
+export const questionGuard = (
+  to: RouteLocationNormalized,
+  from: RouteLocationNormalized
+) => {
+  const store = useElectionStore();
+  if (to.params.nr === 'first') {
+    to.params.nr = '1';
+    return to;
+  } else if (to.params.nr === 'last') {
+    to.params.nr = `${store.answerProgress + 1}`;
+    return to;
+  }
+  const questionNr = parseInt(to.params.nr as string);
+  if (isNaN(questionNr) || questionNr < 1 || questionNr > store.questionCount) {
+    console.warn(`Wrong question route ${to.path}`);
+    return false;
+  }
+};
 
 export const appRoutes = {
   index: {
@@ -32,9 +59,29 @@ export const appRoutes = {
       ],
     },
   },
+  error: {
+    name: 'error',
+    path: '/error/:case',
+    props: true,
+    component: ErrorPageVue,
+    meta: {
+      title: 'Error - Volebni kalkulacka',
+      metaTags: [
+        {
+          name: 'description',
+          content: 'Error',
+        },
+        {
+          property: 'og:description',
+          content: 'Error',
+        },
+      ],
+    },
+  },
   districtSelection: {
     name: 'district-selection',
-    path: '/:election',
+    path: '/kalkulacka/:election/vyber',
+    alias: '/kalkulacka/:election',
     component: DistrictSelectionPageVue,
     meta: {
       title: 'Volebni kalkulacka',
@@ -52,7 +99,8 @@ export const appRoutes = {
   },
   guide: {
     name: 'guide',
-    path: '/:election/:district/napoveda/:nr?',
+    path: '/kalkulacka/:election/:district/napoveda',
+    alias: '/kalkulacka/:election/:district',
     component: GuidePageVue,
     meta: {
       title: 'Napoveda - Volebni kalkulacka',
@@ -70,7 +118,7 @@ export const appRoutes = {
   },
   question: {
     name: 'question',
-    path: '/:election/:district/otazka/:nr',
+    path: '/kalkulacka/:election/:district/otazka/:nr',
     component: QuestionPageVue,
     meta: {
       title: 'Otazka $$ - Volebni kalkulacka',
@@ -86,10 +134,11 @@ export const appRoutes = {
         },
       ],
     },
+    beforeEnter: questionGuard,
   },
   recap: {
     name: 'recap',
-    path: '/:election/:district/rekapitulace',
+    path: '/kalkulacka/:election/:district/rekapitulace',
     component: RecapPageVue,
     meta: {
       title: 'Rekapitulace - Volebni kalkulacka',
@@ -107,7 +156,7 @@ export const appRoutes = {
   },
   result: {
     name: 'result',
-    path: '/:election/:district/vysledek',
+    path: '/kalkulacka/:election/:district/vysledek',
     component: ResultPageVue,
     meta: {
       title: 'Vysledky - Volebni kalkulacka',
@@ -125,7 +174,7 @@ export const appRoutes = {
   },
   comparison: {
     name: 'comparison',
-    path: '/:election/:district/srovnani',
+    path: '/kalkulacka/:election/:district/srovnani',
     component: ComparisonPageVue,
     meta: {
       title: 'Porovnani - Volebni kalkulacka',
@@ -144,11 +193,17 @@ export const appRoutes = {
   fallback: { path: '/:catchAll(.*)', redirect: '/' },
 };
 
+const app = createApp(App);
+
+const pinia = createPinia();
+app.use(pinia);
+
 const router = createRouter({
   history: createWebHashHistory(),
   routes: Object.values(appRoutes),
 });
 
+//handles title and metadata
 router.beforeEach((to, from, next) => {
   const nearestWithTitle = to.matched
     .slice()
@@ -204,7 +259,80 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
-const app = createApp(App);
+//handles changing of election and district and fetching data
+router.beforeEach(async (to, from) => {
+  //load election if different
+  if (from.params.election !== to.params.election) {
+    if (to.params.election !== undefined) {
+      let electionData = undefined;
+      try {
+        electionData = await fetchElectionData(to.params.election as string);
+      } catch (error) {
+        console.error(error);
+      }
+      if (electionData?.election === undefined) {
+        return {
+          name: appRoutes.error.name,
+          params: { case: 'api-error-election' },
+        };
+      }
+      console.debug('Election fetch complete!');
+      const store = useElectionStore();
+      store.districts = electionData.districts;
+      store.election = electionData.election;
+    }
+  }
+  //load district if different
+  if (from.params.district !== to.params.district) {
+    if (to.params.district !== undefined) {
+      let calculator = undefined;
+      try {
+        calculator = await fetchCalculator(
+          to.params.election as string,
+          to.params.district as string
+        );
+      } catch (error) {
+        console.error(error);
+      }
+      if (calculator === undefined) {
+        return {
+          name: appRoutes.error.name,
+          params: { case: 'api-error-district' },
+        };
+      }
+      console.debug('District fetch complete!');
+      const store = useElectionStore();
+      store.calculator = calculator;
+      store.answers = calculator.questions.map((x) => {
+        return { answer: undefined, flag: false, id: x.id };
+      });
+    }
+  }
+  // route to district selection only if district not specified
+  if (
+    from.params.election !== to.params.election &&
+    to.params.election !== undefined &&
+    to.name !== appRoutes.districtSelection.name &&
+    to.params.district === undefined
+  ) {
+    return {
+      name: appRoutes.districtSelection.name,
+      params: { ...to.params },
+    };
+  } else if (
+    from.params.district !== to.params.district &&
+    to.params.district !== undefined &&
+    to.name !== appRoutes.guide.name
+  ) {
+    return {
+      name: appRoutes.guide.name,
+      params: { ...to.params },
+    };
+  } else {
+    return true;
+  }
+});
+
 app.use(router);
 
 app.mount('#app');
