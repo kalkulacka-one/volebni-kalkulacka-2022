@@ -4,19 +4,26 @@ import HeadlineText from '@/components/design-system/typography/HeadlineText.vue
 export interface Props {
   tag: 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   kind: 'title' | 'headline';
-  size: 'small' | 'medium' | 'large';
+  size: 'extra-small' | 'small' | 'medium' | 'large';
 }
 
-withDefaults(defineProps<Props>(), {});
+const props = withDefaults(defineProps<Props>(), {
+  tag: 'span',
+  kind: 'headline',
+  size: 'extra-small',
+});
 </script>
 
 <template>
-  <component :is="tag" class="heading">
-    {{ size }} {{ kind }}
-    <HeadlineText :tag="'span'" :size="size">
+  <component :is="tag">
+    <HeadlineText :tag="props.tag" :size="props.size">
       <slot />
     </HeadlineText>
-    <HeadlineText :tag="'span'" :size="size">
+    <HeadlineText
+      :tag="props.tag"
+      :size="props.size"
+      :color="'rgb(var(--color-neutral-fg))'"
+    >
       <slot name="secondary" />
     </HeadlineText>
   </component>

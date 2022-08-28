@@ -7,6 +7,7 @@ import HeadlineText from '../../components/design-system/typography/HeadlineText
 import ButtonText from '../../components/design-system/typography/ButtonText.vue';
 import LabelText from '../../components/design-system/typography/LabelText.vue';
 import CardComponent from '@/components/design-system/containers/CardComponent.vue';
+import HeadingComponent from '../../components/design-system/typography/HeadingComponent.vue';
 
 import ButtonComponent from '../../components/design-system/input/ButtonComponent.vue';
 
@@ -968,6 +969,13 @@ const incrementSize = (btnSize: IconButtonProps['size']) => {
     <TagComponent :kind="'neutral'">Tag text</TagComponent>
     <TagComponent :kind="'primary'">Tag text</TagComponent>
     <TagComponent :kind="'secondary'">Tag text</TagComponent>
+  </div>
+  <hr />
+  <div :style="{ display: 'flex', gap: '0.5rem' }">
+    <HeadingComponent :size="'extra-small'">
+      Heading
+      <template #secondary>Secondary text</template>
+    </HeadingComponent>
   </div>
 </template>
 
