@@ -1,18 +1,22 @@
 <script setup lang="ts">
 import StackComponent from '../../components/design-system/layout/StackComponent.vue';
-
 import BodyText from '../../components/design-system/typography/BodyText.vue';
 import TitleText from '../../components/design-system/typography/TitleText.vue';
 import HeadlineText from '../../components/design-system/typography/HeadlineText.vue';
 import ButtonText from '../../components/design-system/typography/ButtonText.vue';
 import LabelText from '../../components/design-system/typography/LabelText.vue';
 import CardComponent from '@/components/design-system/containers/CardComponent.vue';
-
 import ButtonComponent from '../../components/design-system/input/ButtonComponent.vue';
-
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
 import PillComponent from '../../components/design-system/containers/PillComponent.vue';
 import TagComponent from '../../components/design-system/containers/TagComponent.vue';
+import IconButton, {
+  type IconButtonProps,
+} from '@/components/design-system/input/IconButton.vue';
+import AvatarComponent from '../../components/AvatarComponent.vue';
+import MatchOrderComponent from '../../components/MatchOrderComponent.vue';
+import ResultAvatarComponent from '../../components/ResultAvatarComponent.vue';
+import AccordionComponent from '../../components/design-system/containers/AccordionComponent.vue';
 import DividerComponent from '../../components/design-system/containers/DividerComponent.vue';
 import {
   vkiCheckbox,
@@ -24,18 +28,12 @@ import {
   vkiStarFilled,
   vkiStarOutlined,
 } from '../../components/design-system/icons';
-import { mdiArrowLeft } from '@mdi/js';
-
-import AvatarComponent from '../../components/AvatarComponent.vue';
-import MatchOrderComponent from '../../components/MatchOrderComponent.vue';
-import ResultAvatarComponent from '../../components/ResultAvatarComponent.vue';
 
 import { avatarsConfiguration } from '../../components/design-system/configurations/avatars-configuration';
 
+import { mdiArrowLeft } from '@mdi/js';
+
 import { ref } from 'vue';
-import IconButton, {
-  type IconButtonProps,
-} from '@/components/design-system/input/IconButton.vue';
 const btn1Size = ref('medium' as IconButtonProps['size']);
 const btn2Size = ref('small' as IconButtonProps['size']);
 const incrementSize = (btnSize: IconButtonProps['size']) => {
@@ -968,6 +966,12 @@ const incrementSize = (btnSize: IconButtonProps['size']) => {
     <TagComponent :kind="'neutral'">Tag text</TagComponent>
     <TagComponent :kind="'primary'">Tag text</TagComponent>
     <TagComponent :kind="'secondary'">Tag text</TagComponent>
+  </div>
+  <div>
+    <AccordionComponent>
+      <template #title>This is title</template>
+      <template #content>Some content</template>
+    </AccordionComponent>
   </div>
 </template>
 
