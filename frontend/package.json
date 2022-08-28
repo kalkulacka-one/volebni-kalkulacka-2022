@@ -12,7 +12,7 @@
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
-    "parse-schema": "cp ../data ./public -r && node ./parseSchemas.js"
+    "parse-schema": "cp ../data/** ./public/testdata -r && node ./parseSchemas.js"
   },
   "dependencies": {
     "@mdi/js": "^7.0.96",

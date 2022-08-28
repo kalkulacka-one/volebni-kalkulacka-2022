@@ -17,7 +17,7 @@ export const fetchCalculator = async (
 
 export const fetchElectionData = async (electionId: string) => {
   const data: Calculators = await fetch(
-    `/data/kalkulacka/calculators.json`
+    `/testdata/kalkulacka/calculators.json`
   ).then((x) => {
     if (x.status === 200) {
       return x.json();
