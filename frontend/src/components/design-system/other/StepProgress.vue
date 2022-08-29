@@ -3,9 +3,7 @@ export interface Props {
   current: number;
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  current: undefined,
-});
+const props = defineProps<Props>();
 
 const totalSteps = 4;
 </script>
