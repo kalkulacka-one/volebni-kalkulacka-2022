@@ -24,7 +24,7 @@ const classes = computed(() => ({
 </script>
 
 <template>
-  <ContainerComponent :class="['bottom-bar', classes]" padding="medium">
+  <ContainerComponent :class="['bottom-bar', classes]" padding="small">
     <slot />
   </ContainerComponent>
 </template>
