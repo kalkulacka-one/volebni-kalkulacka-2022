@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import {
   createRouter,
   createWebHashHistory,
+  createWebHistory,
   type RouteLocationNormalized,
 } from 'vue-router';
 import App from './App.vue';
@@ -199,7 +200,7 @@ const pinia = createPinia();
 app.use(pinia);
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes: Object.values(appRoutes),
 });
 
@@ -264,6 +265,10 @@ router.beforeEach(async (to, from) => {
   //load election if different
   if (from.params.election !== to.params.election) {
     if (to.params.election !== undefined) {
+      const store = useElectionStore();
+      store.districts = [];
+      store.election = undefined;
+      store.init();
       let electionData = undefined;
       try {
         electionData = await fetchElectionData(to.params.election as string);
@@ -277,7 +282,6 @@ router.beforeEach(async (to, from) => {
         };
       }
       console.debug('Election fetch complete!');
-      const store = useElectionStore();
       store.districts = electionData.districts;
       store.election = electionData.election;
     }
@@ -285,6 +289,9 @@ router.beforeEach(async (to, from) => {
   //load district if different
   if (from.params.district !== to.params.district) {
     if (to.params.district !== undefined) {
+      const store = useElectionStore();
+      store.calculator = undefined;
+      store.init();
       let calculator = undefined;
       try {
         calculator = await fetchCalculator(
@@ -301,7 +308,6 @@ router.beforeEach(async (to, from) => {
         };
       }
       console.debug('District fetch complete!');
-      const store = useElectionStore();
       store.calculator = calculator;
       store.answers = calculator.questions.map((x) => {
         return { answer: undefined, flag: false, id: x.id };
