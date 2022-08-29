@@ -40,6 +40,7 @@ import { ref } from 'vue';
 import IconButton, {
   type IconButtonProps,
 } from '@/components/design-system/input/IconButton.vue';
+import LogoComponent from '../../components/design-system/style/LogoComponent.vue';
 const btn1Size = ref('medium' as IconButtonProps['size']);
 const btn2Size = ref('small' as IconButtonProps['size']);
 const incrementSize = (btnSize: IconButtonProps['size']) => {
@@ -1005,6 +1006,12 @@ const incrementSize = (btnSize: IconButtonProps['size']) => {
     <template v-for="n in 4" :key="n">
       <StepProgress :current="n" />
     </template>
+  </div>
+  <DividerComponent />
+  <div>
+    <LogoComponent :text="false" />
+    <LogoComponent :monochromatic="'rgb(var(--color-neutral-fg))'" />
+    <LogoComponent />
   </div>
 </template>
 
