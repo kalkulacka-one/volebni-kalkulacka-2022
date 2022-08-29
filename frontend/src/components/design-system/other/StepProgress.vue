@@ -1,17 +1,11 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-
 export interface Props {
   current: number;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  current: 1,
+  current: undefined,
 });
-
-const classes = computed(() => ({
-  'step-progress--active': props.current,
-}));
 
 const totalSteps = 4;
 </script>
@@ -21,7 +15,7 @@ const totalSteps = 4;
     <template v-for="n in totalSteps" :key="n">
       <div
         class="step-progress"
-        :class="[n === props.current ? classes : '']"
+        :class="[n === props.current ? 'step-progress--active' : '']"
       />
     </template>
   </div>
