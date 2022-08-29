@@ -971,8 +971,12 @@ const incrementSize = (btnSize: IconButtonProps['size']) => {
     <TagComponent :kind="'secondary'">Tag text</TagComponent>
   </div>
   <hr />
-  <div :style="{ display: 'flex', gap: '0.5rem' }">
-    <HeadingComponent :size="'extra-small'">
+  <div>
+    <HeadingComponent :tag="'h3'" :kind="'headline'" :size="'extra-small'">
+      Heading
+      <template #secondary>Secondary text</template>
+    </HeadingComponent>
+    <HeadingComponent :tag="'h2'" :kind="'title'" :size="'medium'">
       Heading
       <template #secondary>Secondary text</template>
     </HeadingComponent>
