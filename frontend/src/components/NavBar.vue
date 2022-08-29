@@ -23,7 +23,7 @@ const handleFillAgainClicked = () => {
   if (answer) {
     router.push({
       name: appRoutes.districtSelection.name,
-      params: { ...route.params, district: '' },
+      params: { election: route.params.election },
     });
   }
 };

@@ -13,6 +13,7 @@ import ButtonComponent from '../../components/design-system/input/ButtonComponen
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
 import PillComponent from '../../components/design-system/containers/PillComponent.vue';
 import TagComponent from '../../components/design-system/containers/TagComponent.vue';
+import DividerComponent from '../../components/design-system/containers/DividerComponent.vue';
 import {
   vkiCheckbox,
   vkiCheckboxChecked,
@@ -25,7 +26,6 @@ import {
 } from '../../components/design-system/icons';
 import { mdiArrowLeft } from '@mdi/js';
 
-import IconButton, { ButtonSizeEnum } from '../../components/IconButton.vue';
 import AvatarComponent from '../../components/AvatarComponent.vue';
 import MatchOrderComponent from '../../components/MatchOrderComponent.vue';
 import ResultAvatarComponent from '../../components/ResultAvatarComponent.vue';
@@ -33,19 +33,21 @@ import ResultAvatarComponent from '../../components/ResultAvatarComponent.vue';
 import { avatarsConfiguration } from '../../components/design-system/configurations/avatars-configuration';
 
 import { ref } from 'vue';
-const btn1Size = ref(ButtonSizeEnum.Medium);
-const btn2Size = ref(ButtonSizeEnum.Small);
-const incrementSize = (btnSize: number) => {
-  btnSize =
-    btnSize === Object.keys(ButtonSizeEnum).length / 2 - 1 ? 0 : btnSize + 1;
-  console.debug(btnSize);
-  return btnSize;
+import IconButton, {
+  type IconButtonProps,
+} from '@/components/design-system/input/IconButton.vue';
+const btn1Size = ref('medium' as IconButtonProps['size']);
+const btn2Size = ref('small' as IconButtonProps['size']);
+const incrementSize = (btnSize: IconButtonProps['size']) => {
+  const sizes: IconButtonProps['size'][] = ['small', 'medium', 'large'];
+  const index = sizes.findIndex((x) => x === btnSize);
+  return sizes[index < 2 ? index + 1 : 0];
 };
 </script>
 
 <template>
   <h1>This is the index page</h1>
-  <hr />
+  <DividerComponent />
   <CardComponent
     corner="bottom-left"
     radius="large"
@@ -74,20 +76,43 @@ const incrementSize = (btnSize: number) => {
       <LabelText>Label text</LabelText>
     </StackComponent>
   </CardComponent>
-  <hr />
+  <DividerComponent />
   <StackComponent horizontal>
     <IconButton
       :size="btn1Size"
-      @click="(event: MouseEvent)=>{btn1Size = incrementSize(btn1Size)}"
-      ><IconComponent :icon="vkiStarFilled"
-    /></IconButton>
+      :icon="vkiStarFilled"
+      color="rgb(var(--palette-yellow))"
+      @click="
+        () => {
+          btn1Size = incrementSize(btn1Size);
+        }
+      "
+    />
     <IconButton
       :size="btn2Size"
-      @click="(event: MouseEvent)=>{btn2Size = incrementSize(btn2Size)}"
+      :icon="mdiArrowLeft"
+      color="rgb(var(--color-neutral-fg))"
+      @click="
+        () => {
+          btn2Size = incrementSize(btn2Size);
+        }
+      "
+      ><IconComponent :icon="vkiStarOutlined"
+    /></IconButton>
+    <IconButton
+      size="medium"
+      :icon="vkiLogoNeutral"
+      color="rgb(var(--color-neutral-fg))"
+      disabled
+      @click="
+        () => {
+          throw 'This should not happen!';
+        }
+      "
       ><IconComponent :icon="vkiStarOutlined"
     /></IconButton>
   </StackComponent>
-  <hr />
+  <DividerComponent />
   <StackComponent horizontal>
     <IconComponent :icon="vkiCheckbox" size="small" />
     <IconComponent :icon="vkiCheckboxChecked" size="medium" />
@@ -96,7 +121,10 @@ const incrementSize = (btnSize: number) => {
       :icon="vkiLogoInFavour"
       color="rgb(var(--color-primary-fg))"
     />
-    <IconComponent :icon="vkiLogoNeutral" />
+    <IconComponent
+      :icon="vkiLogoNeutral"
+      color="rgb(var(--color-neutral-fg))"
+    />
     <IconComponent
       :icon="vkiLogoAgainst"
       color="rgb(var(--color-secondary-fg))"
@@ -105,7 +133,7 @@ const incrementSize = (btnSize: number) => {
     <IconComponent :icon="vkiStarOutlined" />
     <IconComponent :icon="mdiArrowLeft" />
   </StackComponent>
-  <hr />
+  <DividerComponent />
   <div
     :style="{
       margin: '1rem',
@@ -168,7 +196,7 @@ const incrementSize = (btnSize: number) => {
       </template>
     </ButtonComponent>
   </div>
-  <hr />
+  <DividerComponent />
   <div
     :style="{
       margin: '1rem',
@@ -229,7 +257,7 @@ const incrementSize = (btnSize: number) => {
       </template>
     </ButtonComponent>
   </div>
-  <hr />
+  <DividerComponent />
   <div
     :style="{
       margin: '1rem',
@@ -291,7 +319,7 @@ const incrementSize = (btnSize: number) => {
       </template>
     </ButtonComponent>
   </div>
-  <hr />
+  <DividerComponent />
   <div
     :style="{
       margin: '1rem',
@@ -355,7 +383,7 @@ const incrementSize = (btnSize: number) => {
       </template>
     </ButtonComponent>
   </div>
-  <hr />
+  <DividerComponent />
   <div
     :style="{
       margin: '1rem',
@@ -417,7 +445,7 @@ const incrementSize = (btnSize: number) => {
       </template>
     </ButtonComponent>
   </div>
-  <hr />
+  <DividerComponent />
   <div
     :style="{
       margin: '1rem',
@@ -480,7 +508,7 @@ const incrementSize = (btnSize: number) => {
     </ButtonComponent>
   </div>
 
-  <hr />
+  <DividerComponent />
   <div
     :style="{
       margin: '1rem',
@@ -542,7 +570,7 @@ const incrementSize = (btnSize: number) => {
       </template>
     </ButtonComponent>
   </div>
-  <hr />
+  <DividerComponent />
   <div
     :style="{
       margin: '1rem',
@@ -605,7 +633,7 @@ const incrementSize = (btnSize: number) => {
     </ButtonComponent>
   </div>
 
-  <hr />
+  <DividerComponent />
   <div
     :style="{
       margin: '1rem',
@@ -669,7 +697,7 @@ const incrementSize = (btnSize: number) => {
       </template>
     </ButtonComponent>
   </div>
-  <hr />
+  <DividerComponent />
   <div
     :style="{
       margin: '1rem',
@@ -736,7 +764,7 @@ const incrementSize = (btnSize: number) => {
     </ButtonComponent>
   </div>
 
-  <hr />
+  <DividerComponent />
   <div
     :style="{
       margin: '1rem',
@@ -800,7 +828,7 @@ const incrementSize = (btnSize: number) => {
       </template>
     </ButtonComponent>
   </div>
-  <hr />
+  <DividerComponent />
   <div
     :style="{
       margin: '1rem',
@@ -866,7 +894,7 @@ const incrementSize = (btnSize: number) => {
       </template>
     </ButtonComponent>
   </div>
-  <hr />
+  <DividerComponent />
   <div style="display: flex">
     <AvatarComponent
       size="small"
@@ -930,12 +958,12 @@ const incrementSize = (btnSize: number) => {
       :configuration="avatarsConfiguration.medicine"
     />
   </div>
-  <hr />
+  <DividerComponent />
   <div :style="{ display: 'flex', gap: '0.5rem' }">
     <PillComponent>Label</PillComponent>
     <PillComponent :active="true">Label</PillComponent>
   </div>
-  <hr />
+  <DividerComponent />
   <div :style="{ display: 'flex', gap: '0.5rem' }">
     <TagComponent :kind="'neutral'">Tag text</TagComponent>
     <TagComponent :kind="'primary'">Tag text</TagComponent>

@@ -5,14 +5,17 @@ export interface IButton {
 }
 </script>
 <script setup lang="ts">
+import type { UserAnswer } from '@/stores/electionStore';
+
 defineProps<{
   questionCurrentNr: number;
   questionProgress: number;
   questionTotal: number;
-  starButton: IButton;
-  yesButton: IButton;
-  noButton: IButton;
-  skipButton: IButton;
+  answer: UserAnswer;
+  starClick: () => void;
+  yesClick: () => void;
+  noClick: () => void;
+  skipClick: () => void;
 }>();
 </script>
 
@@ -21,37 +24,34 @@ defineProps<{
     <progress
       id="question-progress"
       class="progress"
-      :value="questionProgress"
+      :value="questionProgress + 1"
       :max="questionTotal"
     ></progress>
     <progress
       id="question-current"
       class="progress"
-      :value="questionCurrentNr"
+      :value="questionCurrentNr + 1"
       :max="questionTotal"
     ></progress>
     <div class="button-wrapper">
-      <button
-        :class="starButton.isSelected ? 'button--active' : ''"
-        @click="starButton.onClick"
-      >
+      <button :class="answer.flag ? 'button--active' : ''" @click="starClick">
         Pro me dulezite
       </button>
       <button
-        :class="yesButton.isSelected ? 'button--active' : ''"
-        @click="yesButton.onClick"
+        :class="answer.answer === 'yes' ? 'button--active' : ''"
+        @click="yesClick"
       >
         Jsem pro
       </button>
       <button
-        :class="noButton.isSelected ? 'button--active' : ''"
-        @click="noButton.onClick"
+        :class="answer.answer === 'no' ? 'button--active' : ''"
+        @click="noClick"
       >
         Jsem proti
       </button>
       <button
-        :class="skipButton.isSelected ? 'button--active' : ''"
-        @click="skipButton.onClick"
+        :class="answer.answer === 'skip' ? 'button--active' : ''"
+        @click="skipClick"
       >
         Preskocit
       </button>

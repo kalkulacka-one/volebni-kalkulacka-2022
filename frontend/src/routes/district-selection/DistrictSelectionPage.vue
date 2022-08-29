@@ -1,31 +1,26 @@
 <script setup lang="ts">
 import { useRoute, useRouter } from 'vue-router';
 import NavBar from '../../components/NavBar.vue';
-import DistrictSelection from './DistrictSelection.vue';
+import DistrictSelection, {
+  type DistrictSelectionProps,
+} from './DistrictSelection.vue';
 import { appRoutes } from '@/main';
+import { useElectionStore } from '@/stores/electionStore';
 const router = useRouter();
 const route = useRoute();
-const options = [
-  {
-    id: '1-karlovy-vary',
-    label: '1 - Karlovy Vary',
-  },
-  {
-    id: '4-most',
-    label: '4 - Most',
-  },
-  {
-    id: '7-plzen-mesto',
-    label: '7 - Plzeň-město',
-  },
-];
+const store = useElectionStore();
+const options: DistrictSelectionProps['options'] = store.districts.map((x) => {
+  return { district_code: x.district_code, label: x.label };
+});
 const onSubmit = (district: string) => {
   console.debug(district);
-  const guideRoute = {
-    name: appRoutes.guide.name,
-    params: { ...route.params, district: district, nr: 1 },
-  };
-  router.push(guideRoute);
+  if (district !== '') {
+    const guideRoute = {
+      name: appRoutes.guide.name,
+      params: { ...route.params, district: district, nr: 1 },
+    };
+    router.push(guideRoute);
+  }
 };
 </script>
 
