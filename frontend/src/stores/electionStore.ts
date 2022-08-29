@@ -49,5 +49,9 @@ export const useElectionStore = defineStore('election', {
         this.answers[questionNr].answer = answer;
       }
     },
+    init() {
+      this.answerProgress = -1;
+      this.answers = [];
+    },
   },
 });
