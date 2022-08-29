@@ -2,8 +2,6 @@
 import { ref } from 'vue';
 
 import CardComponent from './CardComponent.vue';
-import HeadlineText from '../typography/HeadlineText.vue';
-import BodyText from '../typography/BodyText.vue';
 import IconComponent from '../icons/IconComponent.vue';
 
 import { mdiChevronDown } from '@mdi/js';
@@ -42,16 +40,7 @@ const toggleAccordion = () => {
       padding="small-mixed"
       :style="{ marginTop: 'var(--accordion-elements-spacing)' }"
     >
-      <HeadlineText
-        color="rgb(var(--palette-neutral-30))"
-        tag="p"
-        size="xx-small"
-      >
-        <span class="content-title">Více o tématu</span>
-      </HeadlineText>
-      <BodyText tag="p" size="medium">
-        <slot name="content" />
-      </BodyText>
+      <slot name="content" />
     </CardComponent>
   </div>
 </template>
@@ -91,10 +80,5 @@ const toggleAccordion = () => {
 
 .icon {
   margin-right: 0.75rem;
-}
-
-.content-title {
-  font-family: var(--typography-family-inter);
-  padding-bottom: var(--accordion-content-spacing);
 }
 </style>

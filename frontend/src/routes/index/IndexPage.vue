@@ -18,6 +18,7 @@ import MatchOrderComponent from '../../components/MatchOrderComponent.vue';
 import ResultAvatarComponent from '../../components/ResultAvatarComponent.vue';
 import AccordionComponent from '../../components/design-system/containers/AccordionComponent.vue';
 import DividerComponent from '../../components/design-system/containers/DividerComponent.vue';
+import WantToKnowMore from '../../components/WantToKnowMore.vue';
 import {
   vkiCheckbox,
   vkiCheckboxChecked,
@@ -970,7 +971,9 @@ const incrementSize = (btnSize: IconButtonProps['size']) => {
   <div>
     <AccordionComponent>
       <template #title>This is title</template>
-      <template #content>Some content</template>
+      <template #content>
+        <WantToKnowMore>Some content</WantToKnowMore>
+      </template>
     </AccordionComponent>
   </div>
 </template>
