@@ -22,8 +22,6 @@ defineProps<{
   align-items: center;
   padding: 0px;
   gap: 24px;
-  position: fixed;
-  bottom: 25px;
   width: 100%;
 }
 </style>
