@@ -12,6 +12,7 @@ import HeadingComponent from '../../components/design-system/typography/HeadingC
 import ButtonComponent from '../../components/design-system/input/ButtonComponent.vue';
 
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
+import IconBadge from '../../components/design-system/icons/IconBadge.vue';
 import PillComponent from '../../components/design-system/containers/PillComponent.vue';
 import TagComponent from '../../components/design-system/containers/TagComponent.vue';
 import DividerComponent from '../../components/design-system/containers/DividerComponent.vue';
@@ -898,6 +899,22 @@ const incrementSize = (btnSize: IconButtonProps['size']) => {
     </ButtonComponent>
   </div>
   <DividerComponent />
+  <hr />
+  <StackComponent horizontal>
+    <IconBadge
+      :icon="vkiLogoInFavour"
+      background-color="rgb(var(--color-primary-fg))"
+    />
+    <IconBadge
+      background-color="rgb(var(--color-neutral-fg))"
+      :icon="vkiLogoNeutral"
+    />
+    <IconBadge
+      :icon="vkiLogoAgainst"
+      background-color="rgb(var(--color-secondary-fg))"
+    />
+  </StackComponent>
+  <hr />
   <div style="display: flex">
     <AvatarComponent
       size="small"
