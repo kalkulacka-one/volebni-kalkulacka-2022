@@ -4,8 +4,7 @@ import {
   vkiLogoAgainst,
   vkiLogoInFavour,
   vkiLogoNeutral,
-  vkiLogoDotLeft,
-  vkiLogoDotRight,
+  vkiLogoCircle,
 } from '../icons';
 import IconComponent from '../icons/IconComponent.vue';
 
@@ -48,16 +47,16 @@ const classes = computed(() => ({
         :color="props.monochromatic || 'rgb(var(--color-neutral-fg-strong))'"
       />
       <IconComponent
-        :icon="vkiLogoDotLeft"
-        :size="'extra-huge'"
-        :color="props.monochromatic || 'rgb(var(--color-secondary-fg))'"
-        class="iconDot"
+        :icon="vkiLogoCircle"
+        :size="'extra-large'"
+        :color="props.monochromatic || 'rgb(var(--color-primary-fg))'"
+        class="icon-circle-left"
       />
       <IconComponent
-        :icon="vkiLogoDotRight"
-        :size="'extra-huge'"
+        :icon="vkiLogoCircle"
+        :size="'extra-large'"
         :color="props.monochromatic || 'rgb(var(--color-secondary-fg))'"
-        class="iconDot"
+        class="icon-circle-right"
       />
     </div>
     <div v-if="props.text" :class="['logo--text', classes]">
@@ -76,7 +75,8 @@ const classes = computed(() => ({
     text-transform: uppercase;
     font-family: var(--typography-title-family);
     color: rgb(var(--color-neutral-fg-strong));
-    margin-left: 28px;
+    margin-left: calc(var(--spacing-medium) - var(--spacing-tiny));
+    word-wrap: break-word;
   }
 
   &--monochromatic {
@@ -87,11 +87,16 @@ const classes = computed(() => ({
     position: relative;
   }
 
-  .iconDot {
+  .icon-circle-left {
     position: absolute;
-    top: 0;
-    left: 0;
-    align-self: flex-start;
+    top: calc(var(--spacing-extra-small) * -1);
+    left: calc(var(--spacing-extra-small) * -1);
+  }
+
+  .icon-circle-right {
+    position: absolute;
+    bottom: calc(var(--spacing-extra-small) * -1);
+    right: calc(var(--spacing-extra-small) * -1);
   }
 }
 </style>
