@@ -1,15 +1,11 @@
 <script setup lang="ts">
 import ThemeProvider from '@/components/ThemeProvider.vue';
 
-import HelloWorld from './components/HelloWorld.vue';
 import { appRoutes } from './main';
 </script>
 
 <template>
   <header>
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
     <router-link :to="{ name: appRoutes.index.name }">Go to Index</router-link
     ><br />
     <router-link
