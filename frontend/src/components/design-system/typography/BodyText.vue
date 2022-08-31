@@ -24,6 +24,18 @@ withDefaults(defineProps<Props>(), {
   color: v-bind(color);
 }
 
+*:deep() a {
+  color: rgb(var(--color-primary-fg));
+
+  &:hover {
+    color: rgb(var(--color-primary-fg-hover));
+  }
+
+  &:active {
+    color: rgb(var(--color-primary-fg-active));
+  }
+}
+
 .small {
   font-size: var(--typography-body-small-size);
   line-height: var(--typography-body-small-line-height);
