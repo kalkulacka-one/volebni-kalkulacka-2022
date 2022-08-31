@@ -1008,9 +1008,13 @@ const incrementSize = (btnSize: IconButtonProps['size']) => {
     </template>
   </div>
   <DividerComponent />
-  <div>
-    <LogoComponent :text="false" />
-    <LogoComponent :monochromatic="'rgb(var(--color-neutral-fg))'" />
+  <div :style="{ display: 'flex', flexDirection: 'column', gap: '1rem' }">
+    <LogoComponent :size="'small'" :text="false" />
+    <LogoComponent :size="'small'" />
+    <LogoComponent
+      :size="'medium'"
+      :monochromatic="'rgb(var(--color-neutral-fg))'"
+    />
     <LogoComponent />
   </div>
 </template>
