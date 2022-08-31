@@ -66,11 +66,6 @@ defineProps<{
   align-items: center;
   padding: 0px;
   gap: 5px;
-  position: fixed;
-  bottom: 25px;
-  left: 0px;
-  right: 0px;
-  width: 100%;
 }
 .button-wrapper {
   display: flex;

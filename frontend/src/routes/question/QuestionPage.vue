@@ -1,18 +1,33 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { onBeforeRouteUpdate, useRouter, useRoute } from 'vue-router';
-import QuestionBottomBar from './QuestionBottomBar.vue';
-import QuestionCard from './QuestionCard.vue';
-import NavBar from '../../components/NavBar.vue';
+import { mdiCloseCircleOutline } from '@mdi/js';
+
 import { appRoutes, questionGuard } from '@/main';
 import { useElectionStore } from '@/stores/electionStore';
+
 import type { Question } from '@/types/question';
 
-onBeforeRouteUpdate(questionGuard);
+import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
+
+import BottomBar from '@/components/design-system/navigation/BottomBar.vue';
+import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper.vue';
+import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
+import IconComponent from '@/components/design-system/icons/IconComponent.vue';
+import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
+
+import QuestionBottomBar from './QuestionBottomBar.vue';
+import QuestionCard from './QuestionCard.vue';
 
 const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
+
+// TODO: Map route params to text
+const title = `${route.params.election} — ${route.params.district}`;
+
+onBeforeRouteUpdate(questionGuard);
+
 if (electionStore.calculator === undefined) {
   throw new Error('Calculator is undefined. This should never happen');
 }
@@ -62,33 +77,63 @@ const backDisabled = computed(() => {
 </script>
 
 <template>
-  <NavBar :help="true" :quit="true" :fill-again="true" />
-  <div class="question-wrapper">
-    <button :disabled="backDisabled" @click="() => handleArrowClicked('back')">
-      ZPET
-    </button>
-    <QuestionCard
-      :question-nr="questionNr"
-      :question-total="electionStore.questionCount"
-      :question="(electionStore.calculator?.questions[questionNr] as Question)"
-    ></QuestionCard>
-    <button
-      :disabled="forwardDisabled"
-      @click="() => handleArrowClicked('forward')"
-    >
-      VPRED
-    </button>
-  </div>
-  <QuestionBottomBar
-    :question-current-nr="questionNr"
-    :question-progress="electionStore.answerProgress"
-    :question-total="electionStore.questionCount"
-    :answer="electionStore.answers[questionNr]"
-    :star-click="handleStarClick"
-    :yes-click="() => handleAnswerClick('yes')"
-    :no-click="() => handleAnswerClick('no')"
-    :skip-click="() => handleAnswerClick('skip')"
-  ></QuestionBottomBar>
+  <StickyHeaderLayout>
+    <template #header>
+      <NavigationBar transparent>
+        <template #title>{{ title }}</template>
+        <template #right>
+          <ButtonComponent
+            kind="link"
+            :responsive="true"
+            @click="router.push({ name: appRoutes.index.name })"
+          >
+            Zpět na hlavní stránku
+            <template #iconAfter>
+              <IconComponent
+                :icon="mdiCloseCircleOutline"
+                title="Zpět na hlavní stránku"
+              />
+            </template>
+          </ButtonComponent>
+        </template>
+      </NavigationBar>
+    </template>
+    <BottomBarWrapper>
+      <div class="question-wrapper">
+        <button
+          :disabled="backDisabled"
+          @click="() => handleArrowClicked('back')"
+        >
+          ZPET
+        </button>
+        <QuestionCard
+          :question-nr="questionNr"
+          :question-total="electionStore.questionCount"
+          :question="(electionStore.calculator?.questions[questionNr] as Question)"
+        ></QuestionCard>
+        <button
+          :disabled="forwardDisabled"
+          @click="() => handleArrowClicked('forward')"
+        >
+          VPRED
+        </button>
+      </div>
+      <template #bottom-bar>
+        <BottomBar transparent="never">
+          <QuestionBottomBar
+            :question-current-nr="questionNr"
+            :question-progress="electionStore.answerProgress"
+            :question-total="electionStore.questionCount"
+            :answer="electionStore.answers[questionNr]"
+            :star-click="handleStarClick"
+            :yes-click="() => handleAnswerClick('yes')"
+            :no-click="() => handleAnswerClick('no')"
+            :skip-click="() => handleAnswerClick('skip')"
+          />
+        </BottomBar>
+      </template>
+    </BottomBarWrapper>
+  </StickyHeaderLayout>
 </template>
 
 <style lang="scss" scoped>
