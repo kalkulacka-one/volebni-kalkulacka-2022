@@ -1,12 +1,21 @@
 <script setup lang="ts">
 const props = defineProps<{
   groupName: string;
+  value: string;
+
+  // It depends on the implementation, but it should be enough to have just the target.value as the callback parameter
+  onSelect(target: HTMLInputElement): void;
 }>();
 </script>
 
 <template>
   <label class="label">
-    <input type="radio" :name="props.groupName" />
+    <input
+      type="radio"
+      :value="value"
+      :name="props.groupName"
+      @input="(event: Event) => onSelect(event.target as HTMLInputElement)"
+    />
     <span class="radio-checkbox"></span>
     <slot></slot>
   </label>

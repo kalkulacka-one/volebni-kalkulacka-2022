@@ -47,6 +47,10 @@ const incrementSize = (btnSize: IconButtonProps['size']) => {
   const index = sizes.findIndex((x) => x === btnSize);
   return sizes[index < 2 ? index + 1 : 0];
 };
+
+const doSomethingOnRadioSelect = (target: HTMLInputElement): void => {
+  console.log(target.value);
+};
 </script>
 
 <template>
@@ -1007,9 +1011,27 @@ const incrementSize = (btnSize: IconButtonProps['size']) => {
     </template>
   </div>
   <DividerComponent />
-  <RadioButtonComponent group-name="test">Varianta A</RadioButtonComponent>
-  <RadioButtonComponent group-name="test">Varianta B</RadioButtonComponent>
-  <RadioButtonComponent group-name="test">Varianta C</RadioButtonComponent>
+  <RadioButtonComponent
+    group-name="test"
+    :on-select="doSomethingOnRadioSelect"
+    :value="'A'"
+  >
+    Varianta A
+  </RadioButtonComponent>
+  <RadioButtonComponent
+    group-name="test"
+    :on-select="doSomethingOnRadioSelect"
+    :value="'B'"
+  >
+    Varianta B
+  </RadioButtonComponent>
+  <RadioButtonComponent
+    group-name="test"
+    :on-select="doSomethingOnRadioSelect"
+    :value="'C'"
+  >
+    Varianta C
+  </RadioButtonComponent>
 </template>
 
 <style lang="scss" scoped>
