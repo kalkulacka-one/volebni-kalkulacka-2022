@@ -16,7 +16,6 @@
   grid-template-areas: 'main' 'bottom-bar';
 
   .main {
-    display: grid;
     grid-area: main;
   }
 
