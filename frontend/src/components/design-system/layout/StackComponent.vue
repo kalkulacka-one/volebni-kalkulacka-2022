@@ -27,6 +27,7 @@ const classes = computed(() => ({
 <style scoped lang="scss">
 .stack {
   display: flex;
+  align-items: start;
 
   &--vertical {
     flex-direction: column;
