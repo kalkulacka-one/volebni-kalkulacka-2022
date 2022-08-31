@@ -29,6 +29,7 @@ withDefaults(defineProps<Props>(), {
 
   &:hover {
     color: rgb(var(--color-primary-fg-hover));
+    text-decoration: underline;
   }
 
   &:active {
