@@ -21,12 +21,22 @@ const width = computed(() => {
   background-color: rgb(var(--palette-neutral-90));
   border-radius: var(--radius-2x-small);
   width: 100%;
-  height: 0.375rem;
+  height: 0.125rem;
+
+  // TODO: change the breakpoint
+  @media (min-width: 700px) {
+    height: 0.375rem;
+  }
 }
 
 .progress {
   background-color: rgb(var(--palette-primary-50));
   border-radius: var(--radius-2x-small);
-  height: 0.375rem;
+  height: 0.125rem;
+
+  // TODO: change the breakpoint
+  @media (min-width: 700px) {
+    height: 0.375rem;
+  }
 }
 </style>
