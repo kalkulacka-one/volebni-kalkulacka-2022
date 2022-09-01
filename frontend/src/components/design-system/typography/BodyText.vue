@@ -22,6 +22,7 @@ withDefaults(defineProps<Props>(), {
   margin: 0;
   font-family: var(--typography-body-family);
   color: v-bind(color);
+  max-width: 48ch;
 }
 
 .small {
