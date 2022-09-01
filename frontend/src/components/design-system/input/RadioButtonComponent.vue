@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import BodyText from '@/components/design-system/typography/BodyText.vue';
+
 const props = defineProps<{
   groupName: string;
   value: string;
@@ -17,7 +19,9 @@ const props = defineProps<{
       @input="(event: Event) => onSelect(event.target as HTMLInputElement)"
     />
     <span class="radio-checkbox"></span>
-    <slot></slot>
+    <BodyText size="medium">
+      <slot></slot>
+    </BodyText>
   </label>
 </template>
 
