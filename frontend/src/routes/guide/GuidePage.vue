@@ -4,6 +4,9 @@ import { useRoute, useRouter } from 'vue-router';
 import { mdiCloseCircleOutline, mdiArrowRight, mdiFastForward } from '@mdi/js';
 
 import { appRoutes } from '@/main';
+import { useElectionStore } from '@/stores/electionStore';
+
+import type { Election } from '@/types/election';
 
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
@@ -30,9 +33,16 @@ import {
 
 const router = useRouter();
 const route = useRoute();
+const electionStore = useElectionStore();
 
-// TODO: Map route params to text
-const title = `${route.params.election} — ${route.params.district}`;
+const election = electionStore.election as Election;
+const electionName = election.name;
+const electionDescription = election.description;
+const districtName = electionStore.districts.filter(
+  (district) => district.district_code === route.params.district
+)[0].label;
+
+const title = `${electionName} — ${districtName}`;
 
 const currentStep = ref(1);
 const totalSteps = 4;
@@ -99,14 +109,11 @@ const handleNextClick = () => {
       <StepWrapper>
         <StackComponent v-if="currentStep === 1">
           <HeadingComponent kind="title" size="medium">
-            Komunál 2022
-            <template #secondary> Praha </template>
+            {{ electionName }}
+            <template #secondary>{{ districtName }}</template>
           </HeadingComponent>
           <BodyText size="medium">
-            Vítejte ve Volební kalkulačce pro Komunální volby 2022. Čeká vás 40
-            otázek, vyplnění kalkulačky zabere cca 10 minut. Kandidáti
-            odpovídali na stejné otázky, na konci se dozvíte, v kolika jste se
-            shodli.
+            {{ electionDescription }}
           </BodyText>
         </StackComponent>
         <StackComponent v-if="currentStep === 2">
