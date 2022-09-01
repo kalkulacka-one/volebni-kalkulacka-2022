@@ -1,11 +1,13 @@
 <script setup lang="ts">
-export interface Props {
-  progress: number;
-}
+import { computed } from 'vue';
 
-const props = defineProps<Props>();
-const width: number =
-  props.progress > 100 ? 100 : props.progress < 0 ? 0 : props.progress;
+const props = defineProps<{
+  progress: number;
+}>();
+
+const width = computed(() => {
+  return props.progress > 100 ? 100 : props.progress < 0 ? 0 : props.progress;
+});
 </script>
 
 <template>
