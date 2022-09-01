@@ -10,10 +10,23 @@ import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import BottomBar from '@/components/design-system/navigation/BottomBar.vue';
 import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
+import CardComponent from '@/components/design-system/containers/CardComponent.vue';
+import HeadingComponent from '@/components/design-system/typography/HeadingComponent.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import LabelText from '@/components/design-system/typography/LabelText.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
+import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import StepProgress from '@/components/design-system/other/StepProgress.vue';
+import StepWrapper from '@/components/design-system/layout/StepWrapper.vue';
+import BodyText from '@/components/design-system/typography/BodyText.vue';
+
+import {
+  vkiLogoInFavour,
+  vkiLogoAgainst,
+  vkiLogoNeutral,
+  vkiStarOutlined,
+  vkiStarFilled,
+} from '@/components/design-system/icons';
 
 const router = useRouter();
 const route = useRoute();
@@ -83,17 +96,91 @@ const handleNextClick = () => {
       </NavigationBar>
     </template>
     <BottomBarWrapper>
-      <div
-        :style="{
-          height: '2222px',
-          //justifySelf: 'center',
-          //alignSelf: 'center',
-          backgroundColor: 'rgb(var(--color-primary-bg))',
-        }"
-      >
-        <h1>This is guide</h1>
-        <p>This is a long guide content.</p>
-      </div>
+      <StepWrapper>
+        <StackComponent v-if="currentStep === 1">
+          <HeadingComponent kind="title" size="medium">
+            Komunál 2022
+            <template #secondary> Praha </template>
+          </HeadingComponent>
+          <BodyText size="medium">
+            Vítejte ve Volební kalkulačce pro Komunální volby 2022. Čeká vás 40
+            otázek, vyplnění kalkulačky zabere cca 10 minut. Kandidáti
+            odpovídali na stejné otázky, na konci se dozvíte, v kolika jste se
+            shodli.
+          </BodyText>
+        </StackComponent>
+        <StackComponent v-if="currentStep === 2">
+          <BodyText size="medium">Odpovídat můžete pomocí tlačítek:</BodyText>
+          <CardComponent
+            corner="bottom-right"
+            border
+            style="align-self: center"
+          >
+            <StackComponent padding>
+              <StackComponent horizontal>
+                <IconComponent
+                  :icon="vkiLogoInFavour"
+                  color="rgb(var(--color-primary-fg))"
+                />
+                <BodyText size="medium">= souhlasím</BodyText>
+              </StackComponent>
+              <StackComponent horizontal>
+                <IconComponent
+                  :icon="vkiLogoAgainst"
+                  color="rgb(var(--color-secondary-fg))"
+                />
+                <BodyText size="medium">= nesouhlasím</BodyText>
+              </StackComponent>
+            </StackComponent>
+          </CardComponent>
+          <BodyText size="medium">
+            Když se s nějakou stranou v odpovědi shodnete, získá ve výpočtu
+            shody 1 bod.
+          </BodyText>
+        </StackComponent>
+        <StackComponent v-if="currentStep === 3">
+          <BodyText size="medium">
+            Pokud vám na daném tématu zvlášť záleží, označte ho hvězdičkou:
+          </BodyText>
+          <CardComponent
+            corner="bottom-right"
+            border
+            style="align-self: center"
+          >
+            <StackComponent horizontal centered>
+              <IconComponent :icon="vkiStarOutlined" />
+              <IconComponent :icon="mdiArrowRight" size="small" />
+              <IconComponent
+                :icon="vkiStarFilled"
+                color="rgb(var(--palette-yellow))"
+              />
+              <BodyText size="medium">= pro mě důležité</BodyText>
+            </StackComponent>
+          </CardComponent>
+          <BodyText size="medium">
+            Odpověď pak bude mít ve výpočtu shody dvojnásobnou váhu.
+          </BodyText>
+        </StackComponent>
+        <StackComponent v-if="currentStep === 4">
+          <BodyText size="medium">
+            Když nemáte názor, nejste si jistí nebo z jiného nechcete odpovídat,
+            zvolte:
+          </BodyText>
+          <CardComponent
+            corner="bottom-right"
+            border
+            style="align-self: center"
+          >
+            <StackComponent horizontal>
+              <IconComponent :icon="vkiLogoNeutral" />
+              <BodyText size="medium">= přeskočit / bez odpovědi</BodyText>
+            </StackComponent>
+          </CardComponent>
+          <BodyText size="medium">
+            Pokud strana též na otázku neodpověděla, získá 1/2 bodu.
+          </BodyText>
+        </StackComponent>
+      </StepWrapper>
       <template #bottom-bar>
         <BottomBar class="bottom-bar" transparent="desktop">
           <LabelText class="text">
