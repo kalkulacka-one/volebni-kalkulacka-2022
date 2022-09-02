@@ -4,7 +4,7 @@ import { computed } from 'vue';
 export interface Props {
   icon: string;
   color: string;
-  size?: 'small' | 'medium' | 'large' | 'extra-large';
+  size?: 'small' | 'medium' | 'large' | 'extra-large' | 'extra-huge';
   title?: string;
 }
 
@@ -51,6 +51,11 @@ const classes = computed(() => [`icon--${props.size}`]);
   &--extra-large {
     width: var(--spacing-extra-large);
     height: var(--spacing-extra-large);
+  }
+
+  &--extra-huge {
+    width: var(--spacing-extra-huge);
+    height: var(--spacing-extra-huge);
   }
 }
 .extra-large {

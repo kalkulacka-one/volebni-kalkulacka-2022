@@ -9,6 +9,7 @@ import LabelText from '../../components/design-system/typography/LabelText.vue';
 import CardComponent from '@/components/design-system/containers/CardComponent.vue';
 import HeadingComponent from '../../components/design-system/typography/HeadingComponent.vue';
 import ProgressBar from '../../components/design-system/other/ProgressBar.vue';
+import RadioButtonComponent from '../../components/design-system/input/RadioButtonComponent.vue';
 import ButtonComponent from '../../components/design-system/input/ButtonComponent.vue';
 
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
@@ -40,12 +41,17 @@ import { ref } from 'vue';
 import IconButton, {
   type IconButtonProps,
 } from '@/components/design-system/input/IconButton.vue';
+import LogoComponent from '../../components/design-system/style/LogoComponent.vue';
 const btn1Size = ref('medium' as IconButtonProps['size']);
 const btn2Size = ref('small' as IconButtonProps['size']);
 const incrementSize = (btnSize: IconButtonProps['size']) => {
   const sizes: IconButtonProps['size'][] = ['small', 'medium', 'large'];
   const index = sizes.findIndex((x) => x === btnSize);
   return sizes[index < 2 ? index + 1 : 0];
+};
+
+const doSomethingOnRadioSelect = (target: HTMLInputElement): void => {
+  console.log(target.value);
 };
 </script>
 
@@ -1005,9 +1011,7 @@ const incrementSize = (btnSize: IconButtonProps['size']) => {
       <StepProgress :current="n" />
     </template>
   </div>
-
   <DividerComponent />
-
   <div style="margin-top: 2px; margin-bottom: 2px">
     <ProgressBar :progress="-20" />
   </div>
@@ -1019,6 +1023,39 @@ const incrementSize = (btnSize: IconButtonProps['size']) => {
   </div>
   <div style="margin-top: 2px; margin-bottom: 2px">
     <ProgressBar :progress="2000" />
+  </div>
+  <DividerComponent />
+  <RadioButtonComponent
+    group-name="test"
+    :on-select="doSomethingOnRadioSelect"
+    :value="'A'"
+  >
+    Varianta A
+  </RadioButtonComponent>
+  <RadioButtonComponent
+    group-name="test"
+    :on-select="doSomethingOnRadioSelect"
+    :value="'B'"
+  >
+    Varianta B
+  </RadioButtonComponent>
+  <RadioButtonComponent
+    group-name="test"
+    :on-select="doSomethingOnRadioSelect"
+    :value="'C'"
+  >
+    Varianta C
+  </RadioButtonComponent>
+  <DividerComponent />
+  <div :style="{ display: 'flex', flexDirection: 'column', gap: '1rem' }">
+    <LogoComponent :size="'small'" :text="false" />
+    <LogoComponent :size="'small'" />
+    <LogoComponent
+      :size="'medium'"
+      :monochromatic="'rgb(var(--color-neutral-fg))'"
+      :responsive="true"
+    />
+    <LogoComponent :responsive="true" />
   </div>
 </template>
 

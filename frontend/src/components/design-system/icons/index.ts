@@ -6,6 +6,7 @@ import vkiLogoInFavour from './vkiLogoInFavour';
 import vkiLogoNeutral from './vkiLogoNeutral';
 import vkiStarFilled from './vkiStarFilled';
 import vkiStarOutlined from './vkiStarOutlined';
+import vkiLogoCircle from './vkiLogoCircle';
 
 export {
   vkiCheckbox,
@@ -16,4 +17,5 @@ export {
   vkiLogoNeutral,
   vkiStarFilled,
   vkiStarOutlined,
+  vkiLogoCircle,
 };
