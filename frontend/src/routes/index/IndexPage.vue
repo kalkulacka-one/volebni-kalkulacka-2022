@@ -8,6 +8,7 @@ import ButtonText from '../../components/design-system/typography/ButtonText.vue
 import LabelText from '../../components/design-system/typography/LabelText.vue';
 import CardComponent from '@/components/design-system/containers/CardComponent.vue';
 import HeadingComponent from '../../components/design-system/typography/HeadingComponent.vue';
+import ProgressBar from '../../components/design-system/other/ProgressBar.vue';
 import RadioButtonComponent from '../../components/design-system/input/RadioButtonComponent.vue';
 import ButtonComponent from '../../components/design-system/input/ButtonComponent.vue';
 
@@ -1005,11 +1006,23 @@ const doSomethingOnRadioSelect = (target: HTMLInputElement): void => {
       <template #secondary>Secondary text</template>
     </HeadingComponent>
   </div>
-  <DividerComponent />
   <div :style="{ display: 'flex', flexDirection: 'column', gap: '1rem' }">
     <template v-for="n in 4" :key="n">
       <StepProgress :current="n" />
     </template>
+  </div>
+  <DividerComponent />
+  <div style="margin-top: 2px; margin-bottom: 2px">
+    <ProgressBar :progress="-20" />
+  </div>
+  <div style="margin-top: 2px; margin-bottom: 2px">
+    <ProgressBar :progress="20" />
+  </div>
+  <div style="margin-top: 2px; margin-bottom: 2px">
+    <ProgressBar :progress="60" />
+  </div>
+  <div style="margin-top: 2px; margin-bottom: 2px">
+    <ProgressBar :progress="2000" />
   </div>
   <DividerComponent />
   <RadioButtonComponent

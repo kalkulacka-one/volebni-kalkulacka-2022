@@ -4,6 +4,7 @@
   --spacing-pico: 0.0625em;
   --spacing-nano: 0.125rem;
   --spacing-tiny: 0.25rem;
+  --spacing-2x-small: 0.375rem;
   --spacing-extra-small: 0.5rem;
   --spacing-smaller: 0.75rem;
   --spacing-small: 1rem;
@@ -15,6 +16,7 @@
 
   // Radiuses
   // --------
+  --radius-2x-small: var(--spacing-2x-small);
   --radius-extra-small: var(--spacing-extra-small);
   --radius-small: var(--spacing-small);
   --radius-medium: var(--spacing-medium);
