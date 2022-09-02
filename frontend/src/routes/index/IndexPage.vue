@@ -6,8 +6,12 @@ import HeadlineText from '../../components/design-system/typography/HeadlineText
 import ButtonText from '../../components/design-system/typography/ButtonText.vue';
 import LabelText from '../../components/design-system/typography/LabelText.vue';
 import CardComponent from '@/components/design-system/containers/CardComponent.vue';
+import HeadingComponent from '../../components/design-system/typography/HeadingComponent.vue';
+import ProgressBar from '../../components/design-system/other/ProgressBar.vue';
+import RadioButtonComponent from '../../components/design-system/input/RadioButtonComponent.vue';
 import ButtonComponent from '../../components/design-system/input/ButtonComponent.vue';
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
+import IconBadge from '../../components/design-system/icons/IconBadge.vue';
 import PillComponent from '../../components/design-system/containers/PillComponent.vue';
 import TagComponent from '../../components/design-system/containers/TagComponent.vue';
 import IconButton, {
@@ -35,12 +39,23 @@ import { avatarsConfiguration } from '../../components/design-system/configurati
 import { mdiArrowLeft } from '@mdi/js';
 
 import { ref } from 'vue';
+import StepProgress from '../../components/design-system/other/StepProgress.vue';
+
+import { ref } from 'vue';
+import IconButton, {
+  type IconButtonProps,
+} from '@/components/design-system/input/IconButton.vue';
+import LogoComponent from '../../components/design-system/style/LogoComponent.vue';
 const btn1Size = ref('medium' as IconButtonProps['size']);
 const btn2Size = ref('small' as IconButtonProps['size']);
 const incrementSize = (btnSize: IconButtonProps['size']) => {
   const sizes: IconButtonProps['size'][] = ['small', 'medium', 'large'];
   const index = sizes.findIndex((x) => x === btnSize);
   return sizes[index < 2 ? index + 1 : 0];
+};
+
+const doSomethingOnRadioSelect = (target: HTMLInputElement): void => {
+  console.log(target.value);
 };
 </script>
 
@@ -894,6 +909,22 @@ const incrementSize = (btnSize: IconButtonProps['size']) => {
     </ButtonComponent>
   </div>
   <DividerComponent />
+  <hr />
+  <StackComponent horizontal>
+    <IconBadge
+      :icon="vkiLogoInFavour"
+      background-color="rgb(var(--color-primary-fg))"
+    />
+    <IconBadge
+      background-color="rgb(var(--color-neutral-fg))"
+      :icon="vkiLogoNeutral"
+    />
+    <IconBadge
+      :icon="vkiLogoAgainst"
+      background-color="rgb(var(--color-secondary-fg))"
+    />
+  </StackComponent>
+  <hr />
   <div style="display: flex">
     <AvatarComponent
       size="small"
@@ -968,6 +999,7 @@ const incrementSize = (btnSize: IconButtonProps['size']) => {
     <TagComponent :kind="'primary'">Tag text</TagComponent>
     <TagComponent :kind="'secondary'">Tag text</TagComponent>
   </div>
+  <DividerComponent />
   <div>
     <AccordionComponent>
       <template #title>This is title</template>
@@ -975,6 +1007,68 @@ const incrementSize = (btnSize: IconButtonProps['size']) => {
         <WantToKnowMore>Some content</WantToKnowMore>
       </template>
     </AccordionComponent>
+  </div>
+  <DividerComponent />
+  <div>
+    <HeadingComponent :tag="'h3'" :kind="'headline'" :size="'extra-small'">
+      Heading
+      <template #secondary>Secondary text</template>
+    </HeadingComponent>
+    <HeadingComponent :tag="'h2'" :kind="'title'" :size="'medium'">
+      Heading
+      <template #secondary>Secondary text</template>
+    </HeadingComponent>
+  </div>
+  <div :style="{ display: 'flex', flexDirection: 'column', gap: '1rem' }">
+    <template v-for="n in 4" :key="n">
+      <StepProgress :current="n" />
+    </template>
+  </div>
+  <DividerComponent />
+  <div style="margin-top: 2px; margin-bottom: 2px">
+    <ProgressBar :progress="-20" />
+  </div>
+  <div style="margin-top: 2px; margin-bottom: 2px">
+    <ProgressBar :progress="20" />
+  </div>
+  <div style="margin-top: 2px; margin-bottom: 2px">
+    <ProgressBar :progress="60" />
+  </div>
+  <div style="margin-top: 2px; margin-bottom: 2px">
+    <ProgressBar :progress="2000" />
+  </div>
+  <DividerComponent />
+  <RadioButtonComponent
+    group-name="test"
+    :on-select="doSomethingOnRadioSelect"
+    :value="'A'"
+  >
+    Varianta A
+  </RadioButtonComponent>
+  <RadioButtonComponent
+    group-name="test"
+    :on-select="doSomethingOnRadioSelect"
+    :value="'B'"
+  >
+    Varianta B
+  </RadioButtonComponent>
+  <RadioButtonComponent
+    group-name="test"
+    :on-select="doSomethingOnRadioSelect"
+    :value="'C'"
+  >
+    Varianta C
+  </RadioButtonComponent>
+  <DividerComponent />
+  <div :style="{ display: 'flex', flexDirection: 'column', gap: '1rem' }">
+    <LogoComponent :size="'small'" :text="false" />
+    <LogoComponent :size="'small'" />
+    <LogoComponent
+      :size="'medium'"
+      :monochromatic="'rgb(var(--color-neutral-fg))'"
+      :responsive="true"
+    />
+    <LogoComponent :responsive="true" />
   </div>
 </template>
 
