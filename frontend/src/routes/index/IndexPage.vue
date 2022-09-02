@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import StackComponent from '../../components/design-system/layout/StackComponent.vue';
-
 import BodyText from '../../components/design-system/typography/BodyText.vue';
 import TitleText from '../../components/design-system/typography/TitleText.vue';
 import HeadlineText from '../../components/design-system/typography/HeadlineText.vue';
@@ -11,12 +10,12 @@ import HeadingComponent from '../../components/design-system/typography/HeadingC
 import ProgressBar from '../../components/design-system/other/ProgressBar.vue';
 import RadioButtonComponent from '../../components/design-system/input/RadioButtonComponent.vue';
 import ButtonComponent from '../../components/design-system/input/ButtonComponent.vue';
-
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
 import IconBadge from '../../components/design-system/icons/IconBadge.vue';
 import PillComponent from '../../components/design-system/containers/PillComponent.vue';
 import TagComponent from '../../components/design-system/containers/TagComponent.vue';
 import DividerComponent from '../../components/design-system/containers/DividerComponent.vue';
+import Modal from '../../components/design-system/other/ModalComponent.vue';
 import {
   vkiCheckbox,
   vkiCheckboxChecked,
@@ -48,6 +47,11 @@ const incrementSize = (btnSize: IconButtonProps['size']) => {
   const sizes: IconButtonProps['size'][] = ['small', 'medium', 'large'];
   const index = sizes.findIndex((x) => x === btnSize);
   return sizes[index < 2 ? index + 1 : 0];
+};
+
+const isModalOpen = ref(false);
+const closeModal = (): void => {
+  isModalOpen.value = false;
 };
 
 const doSomethingOnRadioSelect = (target: HTMLInputElement): void => {
@@ -994,6 +998,23 @@ const doSomethingOnRadioSelect = (target: HTMLInputElement): void => {
     <TagComponent :kind="'neutral'">Tag text</TagComponent>
     <TagComponent :kind="'primary'">Tag text</TagComponent>
     <TagComponent :kind="'secondary'">Tag text</TagComponent>
+  </div>
+  <DividerComponent />
+  <div>
+    <button @click="isModalOpen = true">Open modal</button>
+    <Modal
+      :close-modal-callback="() => closeModal()"
+      :is-modal-open="isModalOpen"
+    >
+      <template #title>
+        <p>
+          bla bla bla <br />
+          neco neco <br />
+          super truper <br />
+        </p>
+      </template>
+      <template #content>hula hula hula</template>
+    </Modal>
   </div>
   <DividerComponent />
   <div>
