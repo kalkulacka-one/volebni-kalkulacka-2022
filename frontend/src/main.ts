@@ -100,19 +100,19 @@ export const appRoutes = {
   },
   guide: {
     name: 'guide',
-    path: '/kalkulacka/:election/:district/napoveda',
+    path: '/kalkulacka/:election/:district/navod',
     alias: '/kalkulacka/:election/:district',
     component: GuidePageVue,
     meta: {
-      title: 'Napoveda - Volebni kalkulacka',
+      title: 'Návod - Volebni kalkulacka',
       metaTags: [
         {
           name: 'description',
-          content: 'Popis - Napoveda - Volebni kalkulacka.',
+          content: 'Popis - Návod - Volebni kalkulacka.',
         },
         {
           property: 'og:description',
-          content: 'Popis - Napoveda - Volebni kalkulacka.',
+          content: 'Popis - Návod - Volebni kalkulacka.',
         },
       ],
     },

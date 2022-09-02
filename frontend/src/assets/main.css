@@ -8,4 +8,7 @@ html {
 body {
   min-height: 100%;
   display: grid;
+
+  /* Existing theme provider cannot change body styles */
+  background-color: rgb(248, 247, 247);
 }

@@ -10,6 +10,7 @@ export interface Props {
   size?: 'medium' | 'small';
   color?: 'neutral' | 'primary' | 'secondary';
   selected?: boolean;
+  responsive?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -18,6 +19,7 @@ const props = withDefaults(defineProps<Props>(), {
   size: 'medium',
   color: 'neutral',
   selected: false,
+  responsive: false,
 });
 
 const classes = computed(() => ({
@@ -25,6 +27,7 @@ const classes = computed(() => ({
   [`button--${props.size}`]: props.size,
   [`button--${props.color}`]: props.color,
   'button--selected': props.selected,
+  'button--responsive': props.responsive,
 }));
 
 const computedTag = computed(() => (props.href ? 'a' : props.tag));
@@ -42,7 +45,7 @@ const computedSize = computed(() =>
     >
       <slot name="icon" :size="computedSize" />
     </span>
-    <ButtonText v-if="$slots.default" :size="computedSize">
+    <ButtonText v-if="$slots.default" class="text" :size="computedSize">
       <slot />
     </ButtonText>
     <span v-if="$slots.iconAfter" :class="['icon', 'icon--after']">
@@ -255,6 +258,14 @@ const computedSize = computed(() =>
         color: rgb(var(--color-secondary-fg-inverse));
         background-color: rgb(var(--color-secondary-bg-strong));
         border-color: transparent;
+      }
+    }
+  }
+
+  &--responsive {
+    @media (max-width: 700px) {
+      .text {
+        display: none;
       }
     }
   }
