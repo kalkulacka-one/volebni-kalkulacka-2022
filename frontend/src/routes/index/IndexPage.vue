@@ -8,7 +8,7 @@ import ButtonText from '../../components/design-system/typography/ButtonText.vue
 import LabelText from '../../components/design-system/typography/LabelText.vue';
 import CardComponent from '@/components/design-system/containers/CardComponent.vue';
 import HeadingComponent from '../../components/design-system/typography/HeadingComponent.vue';
-
+import RadioButtonComponent from '../../components/design-system/input/RadioButtonComponent.vue';
 import ButtonComponent from '../../components/design-system/input/ButtonComponent.vue';
 
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
@@ -47,6 +47,10 @@ const incrementSize = (btnSize: IconButtonProps['size']) => {
   const sizes: IconButtonProps['size'][] = ['small', 'medium', 'large'];
   const index = sizes.findIndex((x) => x === btnSize);
   return sizes[index < 2 ? index + 1 : 0];
+};
+
+const doSomethingOnRadioSelect = (target: HTMLInputElement): void => {
+  console.log(target.value);
 };
 </script>
 
@@ -1007,6 +1011,28 @@ const incrementSize = (btnSize: IconButtonProps['size']) => {
       <StepProgress :current="n" />
     </template>
   </div>
+  <DividerComponent />
+  <RadioButtonComponent
+    group-name="test"
+    :on-select="doSomethingOnRadioSelect"
+    :value="'A'"
+  >
+    Varianta A
+  </RadioButtonComponent>
+  <RadioButtonComponent
+    group-name="test"
+    :on-select="doSomethingOnRadioSelect"
+    :value="'B'"
+  >
+    Varianta B
+  </RadioButtonComponent>
+  <RadioButtonComponent
+    group-name="test"
+    :on-select="doSomethingOnRadioSelect"
+    :value="'C'"
+  >
+    Varianta C
+  </RadioButtonComponent>
   <DividerComponent />
   <div :style="{ display: 'flex', flexDirection: 'column', gap: '1rem' }">
     <LogoComponent :size="'small'" :text="false" />
