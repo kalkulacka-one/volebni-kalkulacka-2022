@@ -4,7 +4,11 @@ import BodyText from './design-system/typography/BodyText.vue';
 </script>
 
 <template>
-  <HeadlineText color="rgb(var(--palette-neutral-30))" tag="p" size="extra-small">
+  <HeadlineText
+    color="rgb(var(--palette-neutral-30))"
+    tag="p"
+    size="extra-small"
+  >
     <span class="content-title">Více o tématu</span>
   </HeadlineText>
   <BodyText tag="p" size="medium">
