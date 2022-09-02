@@ -11,7 +11,7 @@ export interface Props {
 const props = withDefaults(defineProps<Props>(), {
   monochromatic: undefined,
   text: true,
-  size: 'medium',
+  size: 'small',
   responsive: false,
 });
 
