@@ -7,7 +7,8 @@ export interface Props {
   border?: boolean;
   borderKind?: 'normal' | 'strong';
   shadow?: boolean;
-  padding?: 'small' | 'large';
+  padding?: 'small' | 'small-mixed' | 'large';
+  backgroundColor: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -16,6 +17,7 @@ const props = withDefaults(defineProps<Props>(), {
   borderKind: 'normal',
   shadow: false,
   padding: 'small',
+  backgroundColor: 'rgb(var(--color-neutral-bg-container))',
 });
 
 const classes = computed(() => ({
@@ -29,15 +31,13 @@ const classes = computed(() => ({
 </script>
 
 <template>
-  <div :class="['card', classes]">
+  <div :class="classes" :style="{ 'background-color': backgroundColor }">
     <slot />
   </div>
 </template>
 
 <style scoped lang="scss">
 .card {
-  background-color: rgb(var(--color-neutral-bg-container));
-
   &--radius {
     &-small {
       border-radius: var(--radius-small);
@@ -87,6 +87,14 @@ const classes = computed(() => ({
   &--padding {
     &-small {
       padding: var(--spacing-small);
+    }
+    &-small-mixed {
+      // TODO: fix breakpoint
+      padding: var(--spacing-small) var(--spacing-small);
+
+      @media (min-width: 700px) {
+        padding: var(--spacing-small) var(--spacing-large);
+      }
     }
 
     &-large {

@@ -174,6 +174,9 @@
   --typography-title-extra-small-size: 0.812rem;
   --typography-title-extra-small-line-height: 1.23;
   --typography-title-extra-small-letter-spacing: -0.07em;
+  // – smaller small
+  --typography-title-smaller-small-size: 1rem;
+  --typography-title-smaller-small-line-height: 1.5;
   // – small
   --typography-title-small-size: 1.25rem;
   --typography-title-small-line-height: 1.2;
@@ -223,7 +226,7 @@
   --typography-label-line-height: 1.6;
   --typography-label-letter-spacing: 0.04em;
 
-  // Icon sizes
+  // Components
   // ----------
   // Avatars
   --avatar-size-small: 2rem;
@@ -259,5 +262,20 @@
     --match-order-fs-large: 1.25rem;
 
     --match-order-fw: 700;
+  }
+
+  // Accordion
+  --accordion-elements-spacing: 0.5rem;
+  --accordion-title-height: 1.5rem;
+  --accordion-title-fs: 0.8125rem;
+  --accordion-title-ls: 0.06em;
+  --accordion-content-spacing: 0.625rem;
+
+  // TODO: set correct breakpoint
+  @media (min-width: 700px) {
+    --accordion-elements-spacing: 0.75rem;
+    --accordion-title-height: 2.5rem;
+    --accordion-title-fs: 1rem;
+    --accordion-content-spacing: 0.5rem;
   }
 }

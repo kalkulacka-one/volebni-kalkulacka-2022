@@ -14,7 +14,15 @@ import IconComponent from '../../components/design-system/icons/IconComponent.vu
 import IconBadge from '../../components/design-system/icons/IconBadge.vue';
 import PillComponent from '../../components/design-system/containers/PillComponent.vue';
 import TagComponent from '../../components/design-system/containers/TagComponent.vue';
+import IconButton, {
+  type IconButtonProps,
+} from '@/components/design-system/input/IconButton.vue';
+import AvatarComponent from '../../components/AvatarComponent.vue';
+import MatchOrderComponent from '../../components/MatchOrderComponent.vue';
+import ResultAvatarComponent from '../../components/ResultAvatarComponent.vue';
+import AccordionComponent from '../../components/design-system/containers/AccordionComponent.vue';
 import DividerComponent from '../../components/design-system/containers/DividerComponent.vue';
+import WantToKnowMore from '../../components/WantToKnowMore.vue';
 import Modal from '../../components/design-system/other/ModalComponent.vue';
 import {
   vkiCheckbox,
@@ -26,20 +34,14 @@ import {
   vkiStarFilled,
   vkiStarOutlined,
 } from '../../components/design-system/icons';
-import { mdiArrowLeft } from '@mdi/js';
-
-import AvatarComponent from '../../components/AvatarComponent.vue';
-import MatchOrderComponent from '../../components/MatchOrderComponent.vue';
-import ResultAvatarComponent from '../../components/ResultAvatarComponent.vue';
 
 import { avatarsConfiguration } from '../../components/design-system/configurations/avatars-configuration';
+
+import { mdiArrowLeft } from '@mdi/js';
 
 import StepProgress from '../../components/design-system/other/StepProgress.vue';
 
 import { ref } from 'vue';
-import IconButton, {
-  type IconButtonProps,
-} from '@/components/design-system/input/IconButton.vue';
 import LogoComponent from '../../components/design-system/style/LogoComponent.vue';
 const btn1Size = ref('medium' as IconButtonProps['size']);
 const btn2Size = ref('small' as IconButtonProps['size']);
@@ -998,6 +1000,15 @@ const doSomethingOnRadioSelect = (target: HTMLInputElement): void => {
     <TagComponent :kind="'neutral'">Tag text</TagComponent>
     <TagComponent :kind="'primary'">Tag text</TagComponent>
     <TagComponent :kind="'secondary'">Tag text</TagComponent>
+  </div>
+  <DividerComponent />
+  <div>
+    <AccordionComponent>
+      <template #title>This is title</template>
+      <template #content>
+        <WantToKnowMore>Some content</WantToKnowMore>
+      </template>
+    </AccordionComponent>
   </div>
   <DividerComponent />
   <div>
