@@ -40,6 +40,7 @@ import { ref } from 'vue';
 import IconButton, {
   type IconButtonProps,
 } from '@/components/design-system/input/IconButton.vue';
+import LogoComponent from '../../components/design-system/style/LogoComponent.vue';
 const btn1Size = ref('medium' as IconButtonProps['size']);
 const btn2Size = ref('small' as IconButtonProps['size']);
 const incrementSize = (btnSize: IconButtonProps['size']) => {
@@ -1032,6 +1033,17 @@ const doSomethingOnRadioSelect = (target: HTMLInputElement): void => {
   >
     Varianta C
   </RadioButtonComponent>
+  <DividerComponent />
+  <div :style="{ display: 'flex', flexDirection: 'column', gap: '1rem' }">
+    <LogoComponent :size="'small'" :text="false" />
+    <LogoComponent :size="'small'" />
+    <LogoComponent
+      :size="'medium'"
+      :monochromatic="'rgb(var(--color-neutral-fg))'"
+      :responsive="true"
+    />
+    <LogoComponent :responsive="true" />
+  </div>
 </template>
 
 <style lang="scss" scoped>
