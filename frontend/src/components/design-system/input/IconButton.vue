@@ -42,10 +42,14 @@ const props = defineProps<IconButtonProps>();
   display: flex;
   justify-content: center;
   align-items: center;
+
   padding: var(--spacing-extra-small);
   border-width: 0px;
+  box-sizing: content-box;
+
   background-color: inherit;
   cursor: pointer;
+
   &:disabled {
     cursor: not-allowed;
     background: inherit !important;
@@ -57,18 +61,18 @@ const props = defineProps<IconButtonProps>();
     background: rgba(var(--color-neutral-bg-backdrop-active));
   }
   &--small {
-    width: var(--spacing-large);
-    height: var(--spacing-large);
+    width: var(--spacing-small);
+    height: var(--spacing-small);
     border-radius: 50%;
   }
   &--medium {
-    width: var(--spacing-extra-large);
-    height: var(--spacing-extra-large);
+    width: var(--spacing-medium);
+    height: var(--spacing-medium);
     border-radius: 50%;
   }
   &--large {
-    width: var(--spacing-extra-huge);
-    height: var(--spacing-extra-huge);
+    width: var(--spacing-large);
+    height: var(--spacing-large);
     border-radius: 50%;
   }
 }

@@ -23,6 +23,7 @@ import ResultAvatarComponent from '../../components/ResultAvatarComponent.vue';
 import AccordionComponent from '../../components/design-system/containers/AccordionComponent.vue';
 import DividerComponent from '../../components/design-system/containers/DividerComponent.vue';
 import WantToKnowMore from '../../components/WantToKnowMore.vue';
+import Modal from '../../components/design-system/other/ModalComponent.vue';
 import {
   vkiCheckbox,
   vkiCheckboxChecked,
@@ -48,6 +49,11 @@ const incrementSize = (btnSize: IconButtonProps['size']) => {
   const sizes: IconButtonProps['size'][] = ['small', 'medium', 'large'];
   const index = sizes.findIndex((x) => x === btnSize);
   return sizes[index < 2 ? index + 1 : 0];
+};
+
+const isModalOpen = ref(false);
+const closeModal = (): void => {
+  isModalOpen.value = false;
 };
 
 const doSomethingOnRadioSelect = (target: HTMLInputElement): void => {
@@ -1003,6 +1009,23 @@ const doSomethingOnRadioSelect = (target: HTMLInputElement): void => {
         <WantToKnowMore>Some content</WantToKnowMore>
       </template>
     </AccordionComponent>
+  </div>
+  <DividerComponent />
+  <div>
+    <button @click="isModalOpen = true">Open modal</button>
+    <Modal
+      :close-modal-callback="() => closeModal()"
+      :is-modal-open="isModalOpen"
+    >
+      <template #title>
+        <p>
+          bla bla bla <br />
+          neco neco <br />
+          super truper <br />
+        </p>
+      </template>
+      <template #content>hula hula hula</template>
+    </Modal>
   </div>
   <DividerComponent />
   <div>
