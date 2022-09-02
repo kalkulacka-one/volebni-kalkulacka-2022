@@ -4,7 +4,9 @@
   --spacing-pico: 0.0625em;
   --spacing-nano: 0.125rem;
   --spacing-tiny: 0.25rem;
+  --spacing-2x-small: 0.375rem;
   --spacing-extra-small: 0.5rem;
+  --spacing-smaller: 0.75rem;
   --spacing-small: 1rem;
   --spacing-medium: 1.5rem;
   --spacing-large: 2rem;
@@ -14,6 +16,7 @@
 
   // Radiuses
   // --------
+  --radius-2x-small: var(--spacing-2x-small);
   --radius-extra-small: var(--spacing-extra-small);
   --radius-small: var(--spacing-small);
   --radius-medium: var(--spacing-medium);
@@ -186,6 +189,10 @@
 
   // Headline text
   --typography-headline-family: var(--typography-family-radio-canada);
+  // - extra small
+  --typography-headline-extra-small-size: 1.562rem;
+  --typography-headline-extra-small-line-height: 2;
+  --typography-headline-extra-small-letter-spacing: -0.05em;
   // – small
   --typography-headline-small-size: 2.438rem;
   --typography-headline-small-line-height: 1.03;

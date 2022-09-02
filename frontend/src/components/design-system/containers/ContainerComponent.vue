@@ -2,7 +2,7 @@
 import { computed } from 'vue';
 
 export interface Props {
-  padding?: 'small' | 'large';
+  padding?: 'small' | 'medium' | 'large';
   background?: string;
 }
 
@@ -29,6 +29,9 @@ const classes = computed(() => ({
   &--padding {
     &-small {
       padding: var(--spacing-small);
+    }
+    &-medium {
+      padding: var(--spacing-medium);
     }
     &-large {
       padding: var(--spacing-large);

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 export interface Props {
   tag: 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-  size: 'small' | 'medium' | 'large';
+  size: 'extra-small' | 'small' | 'medium' | 'large';
   color?: string;
 }
 
@@ -22,6 +22,12 @@ withDefaults(defineProps<Props>(), {
   font-family: var(--typography-headline-family);
   font-weight: 700;
   color: v-bind(color);
+}
+
+.extra-small {
+  font-size: var(--typography-headline-extra-small-size);
+  line-height: var(--typography-headline-extra-small-line-height);
+  letter-spacing: var(--typography-headline-extra-small-letter-spacing);
 }
 
 .small {

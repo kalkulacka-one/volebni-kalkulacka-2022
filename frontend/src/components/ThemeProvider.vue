@@ -21,7 +21,13 @@ watchEffect(async () => {
 </script>
 
 <template>
-  <component :is="Theme">
+  <component :is="Theme" class="theme-provider">
     <slot />
   </component>
 </template>
+
+<style scoped lang="scss">
+.theme-provider {
+  display: contents;
+}
+</style>
