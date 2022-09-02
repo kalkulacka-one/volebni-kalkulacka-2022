@@ -5,12 +5,14 @@ export interface Props {
   monochromatic?: string;
   text?: boolean;
   size?: 'small' | 'medium' | 'large' | 'extra-large' | 'extra-huge';
+  responsive?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   monochromatic: undefined,
   text: true,
   size: 'medium',
+  responsive: false,
 });
 
 const classes = computed(() => ({
@@ -20,10 +22,14 @@ const classes = computed(() => ({
 const logoMonochromatic = computed(() => ({
   'logo--monochromatic': props.monochromatic,
 }));
+
+const responsive = computed(() => ({
+  'logo-wrapper--responsive': props.responsive,
+}));
 </script>
 
 <template>
-  <div class="logo-wrapper">
+  <div :class="['logo-wrapper', responsive]">
     <div :class="['logo', classes, logoMonochromatic]">
       <svg viewBox="0 0 300 65" role="img" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -65,11 +71,19 @@ const logoMonochromatic = computed(() => ({
 .logo-wrapper {
   display: flex;
   align-items: center;
+
+  &--responsive {
+    @media (max-width: 700px) {
+      .logo--text {
+        display: none;
+      }
+    }
+  }
 }
 .logo {
   &--small {
-    width: 5.938rem;
-    height: 1.25rem;
+    width: 4.706rem;
+    height: 1rem;
   }
 
   &--medium {
@@ -88,8 +102,8 @@ const logoMonochromatic = computed(() => ({
     }
 
     &-small {
-      font-size: 0.563rem;
-      margin-left: 0.574rem;
+      font-size: 0.5rem;
+      margin-left: 0.454rem;
     }
   }
 

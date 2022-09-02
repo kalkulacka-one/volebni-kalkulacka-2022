@@ -1014,8 +1014,9 @@ const incrementSize = (btnSize: IconButtonProps['size']) => {
     <LogoComponent
       :size="'medium'"
       :monochromatic="'rgb(var(--color-neutral-fg))'"
+      :responsive="true"
     />
-    <LogoComponent />
+    <LogoComponent :responsive="true" />
   </div>
 </template>
 
