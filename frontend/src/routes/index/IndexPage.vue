@@ -38,13 +38,9 @@ import { avatarsConfiguration } from '../../components/design-system/configurati
 
 import { mdiArrowLeft } from '@mdi/js';
 
-import { ref } from 'vue';
 import StepProgress from '../../components/design-system/other/StepProgress.vue';
 
 import { ref } from 'vue';
-import IconButton, {
-  type IconButtonProps,
-} from '@/components/design-system/input/IconButton.vue';
 import LogoComponent from '../../components/design-system/style/LogoComponent.vue';
 const btn1Size = ref('medium' as IconButtonProps['size']);
 const btn2Size = ref('small' as IconButtonProps['size']);
