@@ -3,7 +3,7 @@ import { computed } from 'vue';
 import IconComponent from '../icons/IconComponent.vue';
 export interface IconButtonProps {
   icon: string;
-  color: string;
+  color?: string;
   size: 'small' | 'medium' | 'large';
   title?: string;
 }
