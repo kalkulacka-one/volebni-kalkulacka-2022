@@ -1,15 +1,17 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import IconComponent from '../icons/IconComponent.vue';
+
+import IconComponent from '@/components/design-system/icons/IconComponent.vue';
+
 export interface IconButtonProps {
   icon: string;
   color?: string;
   size: 'small' | 'medium' | 'large';
-  title?: string;
+  title: string;
 }
-const buttonClass = computed(() => {
-  return ['button', `button--${props.size}`];
-});
+
+const props = defineProps<IconButtonProps>();
+
 const iconSize = computed(() => {
   switch (props.size) {
     case 'small':
@@ -22,58 +24,40 @@ const iconSize = computed(() => {
       return 'medium';
   }
 });
-const props = defineProps<IconButtonProps>();
 </script>
 
 <template>
-  <button :class="buttonClass">
+  <button class="icon-button">
     <IconComponent
       :title="title"
       :icon="icon"
       :color="color"
       :size="iconSize"
-    ></IconComponent>
+    />
   </button>
 </template>
 
 <style scoped lang="scss">
 /* Auto layout */
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+.icon-button {
   padding: var(--spacing-extra-small);
-  border-width: 0px;
-  box-sizing: content-box;
-
-  background-color: inherit;
+  background-color: transparent;
+  border-radius: 50%;
+  border: none;
   cursor: pointer;
 
   &:disabled {
+    color: rgb(var(--color-neutral-fg-disabled));
+    background: transparent !important;
     cursor: not-allowed;
-    background: inherit !important;
   }
+
   &:hover {
     background: rgba(var(--color-neutral-bg-backdrop-hover));
   }
+
   &:active {
     background: rgba(var(--color-neutral-bg-backdrop-active));
-  }
-  &--small {
-    width: var(--spacing-small);
-    height: var(--spacing-small);
-    border-radius: 50%;
-  }
-  &--medium {
-    width: var(--spacing-medium);
-    height: var(--spacing-medium);
-    border-radius: 50%;
-  }
-  &--large {
-    width: var(--spacing-large);
-    height: var(--spacing-large);
-    border-radius: 50%;
   }
 }
 </style>
