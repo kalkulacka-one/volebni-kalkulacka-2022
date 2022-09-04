@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { mdiRestore, mdiCloseCircleOutline } from '@mdi/js';
+import {
+  mdiRestore,
+  mdiCloseCircleOutline,
+  mdiArrowLeft,
+  mdiArrowRight,
+} from '@mdi/js';
 
 import { appRoutes } from '@/main';
 import { useElectionStore, type UserAnswer } from '@/stores/electionStore';
@@ -13,10 +18,13 @@ import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import BottomBar from '@/components/design-system/navigation/BottomBar.vue';
 import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
+import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
+import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
 
-import RecapNavBar from './RecapNavBar.vue';
+import { vkiLogoPercent } from '@/components/design-system/icons';
+
 import TabFilter from '../../components/TabFilter.vue';
 import RecapQuestionCard from './RecapQuestionCard.vue';
 
@@ -26,18 +34,6 @@ const electionStore = useElectionStore();
 
 // TODO: Map route params to text
 const title = `${route.params.election} — ${route.params.district}`;
-
-const availableTags: Set<string> = new Set(['All']);
-const selectedTag = ref('All');
-electionStore.calculator?.questions.forEach((q) =>
-  q.tags?.forEach((tag) => availableTags.add(tag))
-);
-const handleBackClicked = () => {
-  router.push({
-    name: appRoutes.question.name,
-    params: { ...route.params, nr: 'last' },
-  });
-};
 
 const handleResetClick = async () => {
   // TODO: Show warning in modal
@@ -49,12 +45,25 @@ const handleResetClick = async () => {
   // electionStore.init();
 };
 
-const handleResultsClicked = () => {
+const handleBackClick = () => {
+  router.push({
+    name: appRoutes.question.name,
+    params: { ...route.params, nr: 'last' },
+  });
+};
+const handleShowResultsClick = () => {
   router.push({
     name: appRoutes.result.name,
     params: { ...route.params },
   });
 };
+
+const availableTags: Set<string> = new Set(['All']);
+const selectedTag = ref('All');
+electionStore.calculator?.questions.forEach((q) =>
+  q.tags?.forEach((tag) => availableTags.add(tag))
+);
+
 const handleFilterChange = (id: string) => {
   console.debug(id);
   selectedTag.value = id;
@@ -105,10 +114,28 @@ const isCardHidden = (index: number) => {
       </NavigationBar>
     </template>
     <template #sticky-header>
-      <RecapNavBar
-        :on-back="handleBackClicked"
-        :on-results="handleResultsClicked"
-      />
+      <SecondaryNavigationBar>
+        <template #before>
+          <IconButton
+            :icon="mdiArrowLeft"
+            size="medium"
+            title="Pro mě důležité"
+            @click="handleBackClick"
+          />
+        </template>
+        Rekapitulace
+        <template #right>
+          <ButtonComponent kind="filled" @click="handleShowResultsClick">
+            <template #icon>
+              <IconComponent :icon="vkiLogoPercent" />
+            </template>
+            Zobrazit výsledky
+            <template #iconAfter>
+              <IconComponent :icon="mdiArrowRight" />
+            </template>
+          </ButtonComponent>
+        </template>
+      </SecondaryNavigationBar>
     </template>
     <BottomBarWrapper>
       <TabFilter
@@ -130,8 +157,24 @@ const isCardHidden = (index: number) => {
         :skip-click="() => handleAnswerClick(i, 'skip')"
       />
       <template #bottom-bar>
-        <BottomBar transparent="never"> bottom bar </BottomBar>
+        <BottomBar transparent="never" :desktop="false">
+          <div class="bottom-bar-grid">
+            <ButtonComponent kind="filled" @click="handleShowResultsClick">
+              Zobrazit výsledky
+              <template #iconAfter>
+                <IconComponent :icon="mdiArrowRight" />
+              </template>
+            </ButtonComponent>
+          </div>
+        </BottomBar>
       </template>
     </BottomBarWrapper>
   </StickyHeaderLayout>
 </template>
+
+<style lang="scss" scoped>
+.bottom-bar-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+</style>
