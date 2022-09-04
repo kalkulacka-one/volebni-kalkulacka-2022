@@ -1,4 +1,4 @@
-type TTopics = 'general' | 'ecology' | 'medicine';
+export type TTopics = 'general' | 'environment' | 'health';
 export type TSingleAvatarOrder = {
   color: string;
   backgroundColorWinner: string;
@@ -11,18 +11,18 @@ export const avatarsConfiguration: TAvatarOrder = {
   general: {
     color: 'rgb(var(--palette-neutral-100))',
     backgroundColorWinner: 'rgb(var(--palette-primary-50))',
-    backgroundColorOther: 'rgb(var(--palette-primary-90))',
+    backgroundColorOther: 'rgb(var(--palette-primary-70))',
   },
-  ecology: {
+  environment: {
     color: 'rgb(var(--palette-neutral-100))',
     // TODO: replace with correct colors
-    backgroundColorWinner: 'rgb(var(--palette-neutral-10))',
-    backgroundColorOther: 'rgb(var(--palette-neutral-50))',
+    backgroundColorWinner: 'rgb(var(--palette-green-50))',
+    backgroundColorOther: 'rgb(var(--palette-green-70))',
   },
-  medicine: {
+  health: {
     color: 'rgb(var(--palette-neutral-100))',
     // TODO: replace with correct colors
-    backgroundColorWinner: 'rgb(var(--palette-secondary-10))',
-    backgroundColorOther: 'rgb(var(--palette-secondary-50))',
+    backgroundColorWinner: 'rgb(var(--palette-red-50))',
+    backgroundColorOther: 'rgb(var(--palette-red-70))',
   },
 };

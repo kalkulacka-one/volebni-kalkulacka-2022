@@ -1,5 +1,7 @@
 import { UserAnswerEnum, type UserAnswer } from '@/stores/electionStore';
 import type { CandidateAnswer } from '@/types/calculator';
+const HEX_VERSIONS = [0];
+
 /*
 Answers are encoded as follows:
 - 1st two bits are answer type as in UserAnswerEnum
@@ -26,6 +28,7 @@ export const decodeResults = (hexString: string) => {
   const answers: UserAnswer[] = [];
   const answerString = hexString.slice(4);
   const answerCount = parseInt(hexString.slice(2, 4), 16);
+  const hexVersion = parseInt(hexString.slice(0, 2), 16);
   for (let i = 0; i < answerString.length; i += 4) {
     //parse the hex and change Int32 to Uint16
     const chunk = parseInt(answerString.slice(i, i + 4), 16) & 0xffff;
@@ -39,6 +42,16 @@ export const decodeResults = (hexString: string) => {
       });
       if (answerCount === answers.length) break;
     }
+  }
+  if (answerCount !== answers.length) {
+    console.warn(
+      `answer count missmatch, expected: ${answerCount}, actual: ${answers.length}`
+    );
+    answers.length = 0;
+  }
+  if (!(hexVersion in HEX_VERSIONS)) {
+    console.warn(`hex version unknown: ${hexVersion}`);
+    answers.length = 0;
   }
   return answers;
 };
@@ -56,7 +69,8 @@ export const calculateAnswerResult = (
   ca: CandidateAnswer,
   weight: number
 ) => {
-  const w = ua.flag ? weight : 1;
+  let w = ua.flag ? weight : 1;
+  let res = 0;
   let caValue = 0;
   switch (ca.answer) {
     case 'yes':
@@ -81,10 +95,17 @@ export const calculateAnswerResult = (
       uaValue = 0;
       break;
   }
-  return [w, caValue * uaValue * w];
+  if (uaValue === 0) {
+    w = 0;
+  } else if (caValue === 0) {
+    //w a res stays same
+  } else {
+    res = caValue * uaValue * w;
+  }
+  return [w, res];
 };
 
-export const getRelativeAgreement = (
+export const calculateRelativeAgreement = (
   candidateAnswers: CandidateAnswer[],
   userAnswers: UserAnswer[],
   weight = 2
@@ -92,7 +113,7 @@ export const getRelativeAgreement = (
   const relativeAgreement = new Map<string, Result>();
   candidateAnswers.forEach((ca) => {
     if (!relativeAgreement.has(ca.candidate_id)) {
-      relativeAgreement.set(ca.question_id, {
+      relativeAgreement.set(ca.candidate_id, {
         count: 0,
         raw_result: 0,
         result: 0,
@@ -119,5 +140,14 @@ export const getRelativeAgreement = (
     ra.result = (1 + ra.raw_result / ra.count) / 2;
     ra.result_percent = Math.round(ra.result * 100);
   });
-  return relativeAgreement;
+  const result: { cId: string; result: Result }[] = [];
+  relativeAgreement.forEach((v, k) => result.push({ cId: k, result: v }));
+  result.sort((a, b) => {
+    if (a.result.result === b.result.result) {
+      return b.result.random - a.result.random;
+    } else {
+      return b.result.result - a.result.result;
+    }
+  });
+  return result;
 };
