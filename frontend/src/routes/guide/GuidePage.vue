@@ -107,7 +107,7 @@ const handleNextClick = () => {
     </template>
     <BottomBarWrapper>
       <StepWrapper>
-        <StackComponent v-if="currentStep === 1">
+        <StackComponent v-if="currentStep === 1" spacing="small">
           <HeadingComponent kind="title" size="medium">
             {{ electionName }}
             <template #secondary>{{ districtName }}</template>
@@ -116,22 +116,22 @@ const handleNextClick = () => {
             {{ electionDescription }}
           </BodyText>
         </StackComponent>
-        <StackComponent v-if="currentStep === 2">
+        <StackComponent v-if="currentStep === 2" spacing="small">
           <BodyText size="medium">Odpovídat můžete pomocí tlačítek:</BodyText>
           <CardComponent
             corner="bottom-right"
             border
             style="align-self: center"
           >
-            <StackComponent padding>
-              <StackComponent horizontal>
+            <StackComponent spacing="small">
+              <StackComponent horizontal spacing="small">
                 <IconComponent
                   :icon="vkiLogoInFavour"
                   color="rgb(var(--color-primary-fg))"
                 />
                 <BodyText size="medium">= souhlasím</BodyText>
               </StackComponent>
-              <StackComponent horizontal>
+              <StackComponent horizontal spacing="small">
                 <IconComponent
                   :icon="vkiLogoAgainst"
                   color="rgb(var(--color-secondary-fg))"
@@ -145,7 +145,7 @@ const handleNextClick = () => {
             shody 1 bod.
           </BodyText>
         </StackComponent>
-        <StackComponent v-if="currentStep === 3">
+        <StackComponent v-if="currentStep === 3" spacing="small">
           <BodyText size="medium">
             Pokud vám na daném tématu zvlášť záleží, označte ho hvězdičkou:
           </BodyText>
@@ -154,7 +154,7 @@ const handleNextClick = () => {
             border
             style="align-self: center"
           >
-            <StackComponent horizontal centered>
+            <StackComponent horizontal centered spacing="small">
               <IconComponent :icon="vkiStarOutlined" />
               <IconComponent :icon="mdiArrowRight" size="small" />
               <IconComponent
@@ -168,7 +168,7 @@ const handleNextClick = () => {
             Odpověď pak bude mít ve výpočtu shody dvojnásobnou váhu.
           </BodyText>
         </StackComponent>
-        <StackComponent v-if="currentStep === 4">
+        <StackComponent v-if="currentStep === 4" spacing="small">
           <BodyText size="medium">
             Když nemáte názor, nejste si jistí nebo z jiného nechcete odpovídat,
             zvolte:
@@ -178,7 +178,7 @@ const handleNextClick = () => {
             border
             style="align-self: center"
           >
-            <StackComponent horizontal>
+            <StackComponent horizontal spacing="small">
               <IconComponent :icon="vkiLogoNeutral" />
               <BodyText size="medium">= přeskočit / bez odpovědi</BodyText>
             </StackComponent>
