@@ -21,6 +21,7 @@ const handleDownloadPng = () => {
     border
     border-kind="normal"
     padding="small"
+    background-color="white"
   >
     <ButtonComponent
       kind="link"

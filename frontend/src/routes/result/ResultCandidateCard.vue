@@ -57,6 +57,7 @@ switch (props.category) {
     border
     :border-kind="strong ? 'strong' : 'normal'"
     padding="small"
+    background-color="white"
   >
     <div class="header">
       <ResultAvatarComponent

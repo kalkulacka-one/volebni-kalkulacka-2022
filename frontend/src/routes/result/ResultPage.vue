@@ -4,19 +4,23 @@ import { appRoutes } from '@/main';
 import { useElectionStore } from '@/stores/electionStore';
 import type { CandidateAnswer } from '@/types/candidate-answer';
 import { useRoute, useRouter } from 'vue-router';
-import NavBar from '../../components/NavBar.vue';
 import ResultNavBar from './ResultNavBar.vue';
 import ResultSideBar from './ResultSideBar.vue';
 import ResultCategory from './ResultCategory.vue';
+import NavigationBar from '../../components/design-system/navigation/NavigationBar.vue';
+import { mdiCloseCircleOutline } from '@mdi/js';
+import ButtonComponent from '../../components/design-system/input/ButtonComponent.vue';
+import IconComponent from '../../components/design-system/icons/IconComponent.vue';
 
 const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
+const title = `${route.params.election} — ${route.params.district}`;
 
 const handleBackClicked = () => {
   router.push({
-    name: appRoutes.question.name,
-    params: { ...route.params, nr: 'last' },
+    name: appRoutes.recap.name,
+    params: { ...route.params },
   });
 };
 
@@ -39,7 +43,25 @@ const resultsMedicine = calculateRelativeAgreement(
 );
 </script>
 <template>
-  <NavBar :help="true" :quit="true" :fill-again="true" />
+  <NavigationBar transparent>
+    <template #title>{{ title }}</template>
+    <template #right>
+      <ButtonComponent
+        kind="link"
+        :responsive="true"
+        @click="router.push({ name: appRoutes.index.name })"
+      >
+        Zpět na hlavní stránku
+        <template #iconAfter>
+          <IconComponent
+            :icon="mdiCloseCircleOutline"
+            title="Zpět na hlavní stránku"
+            color="rgb(var(--color-neutral-fg))"
+          />
+        </template>
+      </ButtonComponent>
+    </template>
+  </NavigationBar>
   <ResultNavBar :on-back="handleBackClicked" />
   <div class="body-wrapper">
     <div class="candidates-wrapper">

@@ -25,10 +25,7 @@ import SecondaryNavigationBar from '@/components/design-system/navigation/Second
 import { vkiLogoPercent } from '@/components/design-system/icons';
 
 import TabFilter from '../../components/TabFilter.vue';
-import {
-  useElectionStore,
-  UserAnswerEnum,
-} from '@/stores/electionStore';
+import { useElectionStore, UserAnswerEnum } from '@/stores/electionStore';
 import RecapQuestionCard from './RecapQuestionCard.vue';
 
 const router = useRouter();
