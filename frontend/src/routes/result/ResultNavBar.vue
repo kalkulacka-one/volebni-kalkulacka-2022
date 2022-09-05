@@ -1,37 +1,42 @@
 <script setup lang="ts">
+import ContainerComponent from '@/components/design-system/containers/ContainerComponent.vue';
+import IconButton from '../../components/design-system/input/IconButton.vue';
+import IconComponent from '../../components/design-system/icons/IconComponent.vue';
+import { mdiArrowLeft } from '@mdi/js';
+import TitleText from '../../components/design-system/typography/TitleText.vue';
 defineProps<{
   onBack: () => void;
 }>();
 </script>
 
 <template>
-  <div class="wrapper">
-    <button class="button-back" @click="onBack">BACK</button>
-    <h3 class="title">Moje shoda</h3>
-  </div>
+  <ContainerComponent class="navigation-bar" padding="medium">
+    <div class="grid">
+      <IconButton class="back-btn" @click="onBack">
+        <IconComponent
+          :icon="mdiArrowLeft"
+          color="rgb(var(--color-neutral-fg))"
+          size="medium"
+          title="back"
+        ></IconComponent>
+      </IconButton>
+      <TitleText class="title" tag="h2" size="large">Moje shoda</TitleText>
+    </div>
+  </ContainerComponent>
 </template>
 
 <style scoped lang="scss">
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  justify-content: space-between;
+.grid {
+  display: grid;
   align-items: center;
-
-  position: relative;
-  width: 100%;
-  height: 72px;
+  grid-template-columns: 1fr 6fr 1fr;
+}
+.back-btn {
+  justify-self: left;
 }
 .title {
-  flex: 10 1 100%;
-}
-.button-results {
-  inline-size: min-content;
-  white-space: nowrap;
-}
-.button-back {
-  inline-size: min-content;
-  white-space: nowrap;
+  justify-self: left;
+  margin-left: var(--spacing-medium);
+  margin-right: var(--spacing-medium);
 }
 </style>

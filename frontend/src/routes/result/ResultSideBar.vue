@@ -14,56 +14,58 @@ const handleDownloadPng = () => {
 };
 </script>
 <template>
-  <CardComponent
-    class="share-wrapper"
-    corner="top-right"
-    radius="small"
-    border
-    border-kind="normal"
-    padding="small"
-    background-color="white"
-  >
-    <ButtonComponent
-      kind="link"
-      size="small"
-      @click="() => handleShareClick('facebook')"
+  <div>
+    <CardComponent
+      class="share-wrapper"
+      corner="top-right"
+      radius="small"
+      border
+      border-kind="normal"
+      padding="small"
+      background-color="white"
     >
-      Sdílet na Facebooku
-      <template #icon>
-        <SocialMediaIcon type="facebook" size="medium"></SocialMediaIcon>
-      </template>
-    </ButtonComponent>
-    <ButtonComponent
-      kind="link"
-      size="small"
-      @click="() => handleShareClick('messenger')"
-    >
-      Sdílet přes messenger
-      <template #icon>
-        <SocialMediaIcon type="messenger" size="medium"></SocialMediaIcon>
-      </template>
-    </ButtonComponent>
-    <ButtonComponent
-      kind="link"
-      size="small"
-      @click="() => handleShareClick('twitter')"
-    >
-      Sdílet přes twitter
-      <template #icon>
-        <SocialMediaIcon type="twitter" size="medium"></SocialMediaIcon>
-      </template>
-    </ButtonComponent>
-    <ButtonComponent kind="link" size="small" @click="handleDownloadPng">
-      stáhnout jako png
-      <template #icon>
-        <IconComponent
-          size="medium"
-          :icon="mdiTrayArrowDown"
-          color="rgb(var(--color-neutral-fg))"
-        />
-      </template>
-    </ButtonComponent>
-  </CardComponent>
+      <ButtonComponent
+        kind="link"
+        size="small"
+        @click="() => handleShareClick('facebook')"
+      >
+        Sdílet na Facebooku
+        <template #icon>
+          <SocialMediaIcon type="facebook" size="medium"></SocialMediaIcon>
+        </template>
+      </ButtonComponent>
+      <ButtonComponent
+        kind="link"
+        size="small"
+        @click="() => handleShareClick('messenger')"
+      >
+        Sdílet přes messenger
+        <template #icon>
+          <SocialMediaIcon type="messenger" size="medium"></SocialMediaIcon>
+        </template>
+      </ButtonComponent>
+      <ButtonComponent
+        kind="link"
+        size="small"
+        @click="() => handleShareClick('twitter')"
+      >
+        Sdílet přes twitter
+        <template #icon>
+          <SocialMediaIcon type="twitter" size="medium"></SocialMediaIcon>
+        </template>
+      </ButtonComponent>
+      <ButtonComponent kind="link" size="small" @click="handleDownloadPng">
+        stáhnout jako png
+        <template #icon>
+          <IconComponent
+            size="medium"
+            :icon="mdiTrayArrowDown"
+            color="rgb(var(--color-neutral-fg))"
+          />
+        </template>
+      </ButtonComponent>
+    </CardComponent>
+  </div>
 </template>
 <style lang="scss" setup>
 .share-wrapper {

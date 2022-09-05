@@ -262,6 +262,7 @@ const classes = computed(() => [`icon--${props.size}`]);
 
 <style lang="scss" scoped>
 .icon {
+  display: block;
   &--small {
     width: var(--spacing-small);
     height: var(--spacing-small);

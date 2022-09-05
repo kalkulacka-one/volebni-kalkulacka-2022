@@ -1,40 +1,55 @@
 <script setup lang="ts">
 import type { Contact } from '@/types/contact';
-import SocialMediaIcon from '../../components/design-system/icons/SocialMediaIcon.vue';
+import SocialMediaIcon, {
+  type SocialMediaProps,
+} from '../../components/design-system/icons/SocialMediaIcon.vue';
 import BodyText from '../../components/design-system/typography/BodyText.vue';
 import ButtonComponent from '../../components/design-system/input/ButtonComponent.vue';
 import { mdiOpenInNew } from '@mdi/js';
 import { mdiEmail } from '@mdi/js';
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
+import IconButton from '../../components/design-system/input/IconButton.vue';
 export interface ResultCandidateContactsProps {
   contact: Contact;
 }
 defineProps<ResultCandidateContactsProps>();
+
+const handleSocialBtnClick = (
+  type: SocialMediaProps['type'],
+  url: string | undefined
+) => {
+  console.debug(`opening ${url}`);
+  window.open(url, '_blank');
+};
 </script>
 <template>
   <div class="wrapper">
     <BodyText size="small"><strong>Kontakty</strong></BodyText>
     <div class="social-wrapper">
-      <SocialMediaIcon
+      <IconButton
         v-if="contact.instagram"
-        type="instagram"
-        size="large"
-      ></SocialMediaIcon>
-      <SocialMediaIcon
+        @click="() => handleSocialBtnClick('instagram', contact.instagram)"
+      >
+        <SocialMediaIcon type="instagram" size="large" />
+      </IconButton>
+      <IconButton
         v-if="contact.facebook"
-        type="facebook"
-        size="large"
-      ></SocialMediaIcon>
-      <SocialMediaIcon
+        @click="() => handleSocialBtnClick('facebook', contact.facebook)"
+      >
+        <SocialMediaIcon type="facebook" size="large"
+      /></IconButton>
+      <IconButton
         v-if="contact.twitter"
-        type="twitter"
-        size="large"
-      ></SocialMediaIcon>
-      <SocialMediaIcon
+        @click="() => handleSocialBtnClick('twitter', contact.twitter)"
+      >
+        <SocialMediaIcon type="twitter" size="large"
+      /></IconButton>
+      <IconButton
         v-if="contact.tiktok"
-        type="tiktok"
-        size="large"
-      ></SocialMediaIcon>
+        @click="() => handleSocialBtnClick('tiktok', contact.tiktok)"
+      >
+        <SocialMediaIcon type="tiktok" size="large"
+      /></IconButton>
     </div>
     <div class="email-web-wrapper">
       <ButtonComponent
@@ -79,7 +94,6 @@ defineProps<ResultCandidateContactsProps>();
   margin-top: var(--spacing-small);
   display: flex;
   flex-direction: row;
-  gap: var(--spacing-small);
   align-items: flex-start;
 }
 .email-web-wrapper {

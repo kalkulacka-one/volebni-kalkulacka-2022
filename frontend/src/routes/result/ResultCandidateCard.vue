@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { useElectionStore, type UserAnswer } from '@/stores/electionStore';
-import type { Candidate, CandidateAnswer } from '@/types/calculator';
-import type { Question } from '@/types/question';
+import { useElectionStore } from '@/stores/electionStore';
 import ResultAvatarComponent from '../../components/ResultAvatarComponent.vue';
 import {
   avatarsConfiguration,
@@ -16,6 +14,7 @@ import { ref } from 'vue';
 import DividerComponent from '../../components/design-system/containers/DividerComponent.vue';
 import ResultCardContacts from './ResultCardContacts.vue';
 import SimpleProgress from '../../components/design-system/indicators/SimpleProgress.vue';
+import IconComponent from '../../components/design-system/icons/IconComponent.vue';
 
 export interface ResultCandidateCardProps {
   order: number;
@@ -81,14 +80,22 @@ switch (props.category) {
           :value="result"
           :max="100"
         ></SimpleProgress>
-        <div v-for="party in candidate?.parties" :key="party.id" class="party">
-          <img
-            v-if="party.img_url"
-            class="party-logo"
-            :src="party.img_url"
-            :alt="party.name"
-          />
-          <BodyText size="medium">{{ party.name }}</BodyText>
+        <div class="party-wrapper">
+          <div
+            v-for="(party, i) in candidate?.parties"
+            :key="party.id"
+            class="party"
+          >
+            <img
+              v-if="party.img_url"
+              class="party-logo"
+              :src="party.img_url"
+              :alt="'nologo'"
+            />
+            <BodyText size="medium"
+              >{{ i !== 0 ? ', ' : '' }}{{ party.name }}</BodyText
+            >
+          </div>
         </div>
       </div>
       <TitleText
@@ -102,11 +109,14 @@ switch (props.category) {
           'header-expand-btn',
           isExpanded ? 'header-expand-btn--active' : '',
         ]"
-        size="medium"
-        :icon="mdiChevronDown"
-        color="rgb(var(--color-neutral-fg))"
         @click="handleExpandClick"
-      />
+      >
+        <IconComponent
+          size="medium"
+          :icon="mdiChevronDown"
+          color="rgb(var(--color-neutral-fg))"
+        />
+      </IconButton>
     </div>
     <div :class="['details', isExpanded ? '' : 'details--collapsed']">
       <BodyText size="small"
@@ -123,6 +133,22 @@ switch (props.category) {
 </template>
 
 <style lang="scss" scoped>
+.party-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  .party {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: var(--spacing-extra-small);
+    .party-logo {
+      height: var(--spacing-medium);
+      width: var(--spacing-medium);
+      object-fit: cover;
+    }
+  }
+}
 .divider {
   margin: 0px;
   margin-top: var(--spacing-small);
@@ -138,7 +164,7 @@ switch (props.category) {
 .header {
   display: flex;
   flex-direction: row;
-  gap: var(--spacing-extra-large);
+  gap: var(--spacing-small);
   align-items: center;
   &-central {
     flex: 2 1 100%;
@@ -150,6 +176,7 @@ switch (props.category) {
   }
   &-percentage {
     white-space: nowrap;
+    margin-left: var(--spacing-large);
   }
   &-expand-btn {
     :deep(svg) {

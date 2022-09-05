@@ -43,7 +43,7 @@ const resultsMedicine = calculateRelativeAgreement(
 );
 </script>
 <template>
-  <NavigationBar transparent>
+  <NavigationBar>
     <template #title>{{ title }}</template>
     <template #right>
       <ButtonComponent
@@ -85,7 +85,7 @@ const resultsMedicine = calculateRelativeAgreement(
         :max-visible-candidates="10"
       />
     </div>
-    <ResultSideBar />
+    <ResultSideBar class="side-bar" />
   </div>
 </template>
 
@@ -104,6 +104,9 @@ const resultsMedicine = calculateRelativeAgreement(
   align-items: stretch;
   justify-content: flex-start;
   gap: var(--spacing-small);
+  padding: var(--spacing-small);
+}
+.side-bar {
   padding: var(--spacing-small);
 }
 </style>

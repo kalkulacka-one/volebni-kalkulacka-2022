@@ -62,7 +62,8 @@
         ],
         "twitter": "aliceprimes",
         "facebook": "komentovane.prohlidky.ostravy",
-        "instagram": "provedu.cz"
+        "instagram": "provedu.cz",
+        "tiktok": "tiktok.com"
       },
       "parties": [
         {
@@ -70,10 +71,24 @@
           "name": "Party 01",
           "description": "Party 01 - description",
           "abbreviation": "P01",
+          "img_url": "https://i0.wp.com/www.myconfinedspace.com/wp-content/uploads/2013/02/space-marine-cat.jpg",
           "contact": {
             "webs": [
               {
                 "url": "https://example.com/party-01"
+              }
+            ]
+          }
+        },
+        {
+          "id": "uuid-sen-party-02",
+          "name": "Party 02",
+          "description": "Party 02 - description",
+          "abbreviation": "P02",
+          "contact": {
+            "webs": [
+              {
+                "url": "https://example.com/party-02"
               }
             ]
           }
@@ -147,7 +162,7 @@
     },
     {
       "id": "uuid-sen-answer-04",
-      "candidate_id": "uuid-sen-candidate-01",
+      "candidate_id": "uuid-sen-candidate-02",
       "question_id": "uuid-sen-question-02",
       "answer": "no",
       "comment": "no"
