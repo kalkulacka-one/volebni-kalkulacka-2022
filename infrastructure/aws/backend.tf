@@ -77,7 +77,7 @@ resource "aws_iam_role_policy" "kalkulacka-cloudwatch" {
 				      "dynamodb:GetItem",
 				      "dynamodb:PutItem"
 			      ],
-			      "Resource": "*"
+			      "Resource": "${aws_dynamodb_table.dynamodb_table_results.arn}"
 		    }
     ]
 }
