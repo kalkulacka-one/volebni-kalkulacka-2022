@@ -11,8 +11,8 @@ export default defineConfig({
     port: 5201,
     proxy: {
       '/data': {
-        //target: 'https://kalkulacka.ceskodigital.net',
-        target: 'http://127.0.0.1:5201/dev',
+        target: 'https://kalkulacka.ceskodigital.net',
+        //target: 'http://127.0.0.1:5201/dev',
         changeOrigin: true,
         cookieDomainRewrite: { '*': '' },
         configure: (proxy) =>
