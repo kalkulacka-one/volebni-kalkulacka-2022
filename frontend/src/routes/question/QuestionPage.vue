@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { onBeforeRouteUpdate, useRouter, useRoute } from 'vue-router';
+import { useRoute, useRouter, onBeforeRouteUpdate } from 'vue-router';
 import { mdiCloseCircleOutline } from '@mdi/js';
 
 import { appRoutes, questionGuard } from '@/main';
@@ -14,6 +14,7 @@ import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
+import StepWrapper from '@/components/design-system/layout/StepWrapper.vue';
 
 import QuestionBottomBar from './QuestionBottomBar.vue';
 import QuestionCard from './QuestionCard.vue';
@@ -98,7 +99,7 @@ const backDisabled = computed(() => {
       </NavigationBar>
     </template>
     <BottomBarWrapper>
-      <div class="question-wrapper">
+      <StepWrapper>
         <button
           :disabled="backDisabled"
           @click="() => handleArrowClicked('back')"
@@ -116,13 +117,10 @@ const backDisabled = computed(() => {
         >
           VPRED
         </button>
-      </div>
+      </StepWrapper>
       <template #bottom-bar>
         <BottomBar transparent="never">
           <QuestionBottomBar
-            :question-current-nr="questionNr"
-            :question-progress="electionStore.answerProgress"
-            :question-total="electionStore.questionCount"
             :answer="electionStore.answers[questionNr]"
             :star-click="handleStarClick"
             :yes-click="() => handleAnswerClick(UserAnswerEnum.yes)"
@@ -134,12 +132,3 @@ const backDisabled = computed(() => {
     </BottomBarWrapper>
   </StickyHeaderLayout>
 </template>
-
-<style lang="scss" scoped>
-.question-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-</style>
