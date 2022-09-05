@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useRoute, useRouter, onBeforeRouteUpdate } from 'vue-router';
-import { mdiCloseCircleOutline } from '@mdi/js';
+import { mdiCloseCircleOutline, mdiArrowRight, mdiArrowLeft } from '@mdi/js';
 
 import { appRoutes, questionGuard } from '@/main';
 import { useElectionStore, UserAnswerEnum } from '@/stores/electionStore';
@@ -12,6 +12,7 @@ import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import BottomBar from '@/components/design-system/navigation/BottomBar.vue';
 import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
+import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 import StepWrapper from '@/components/design-system/layout/StepWrapper.vue';
@@ -31,6 +32,30 @@ onBeforeRouteUpdate(questionGuard);
 if (electionStore.calculator === undefined) {
   throw new Error('Calculator is undefined. This should never happen');
 }
+
+const currentQuestion = computed(() => parseInt(route.params['nr'] as string));
+const questionCount = computed(() => electionStore.questionCount);
+const nextQuestion = computed(
+  () => currentQuestion.value < questionCount.value && currentQuestion.value + 1
+);
+const previousQuestion = computed(
+  () => currentQuestion.value > 1 && currentQuestion.value - 1
+);
+
+const goToQuestion = (number: number) => {
+  console.log(electionStore.answerProgress);
+  console.log(electionStore.questionCount);
+  router.push({
+    name: appRoutes.question.name,
+    params: { ...route.params, nr: number },
+  });
+};
+const goToRecap = () => {
+  router.push({
+    name: appRoutes.recap.name,
+  });
+};
+
 //internally questions start at 0
 const questionNr = computed(() => parseInt(route.params['nr'] as string) - 1);
 const handleAnswerClick = (answer: UserAnswerEnum) => {
@@ -54,26 +79,6 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
   router.push(newRoute);
 };
 const handleStarClick = () => electionStore.flipAnswerFlag(questionNr.value);
-const handleArrowClicked = (type: 'forward' | 'back') => {
-  const increment = type === 'back' ? -1 : 1;
-  const newRoute = {
-    name: appRoutes.question.name,
-    params: { ...route.params, nr: questionNr.value + increment + 1 },
-  };
-  if (questionNr.value + increment > electionStore.questionCount - 1) {
-    newRoute.name = appRoutes.recap.name;
-  }
-  router.push(newRoute);
-};
-const forwardDisabled = computed(() => {
-  return !(
-    questionNr.value < electionStore.answerProgress + 1 ||
-    electionStore.questionCount === electionStore.answerCount
-  );
-});
-const backDisabled = computed(() => {
-  return questionNr.value < 1;
-});
 </script>
 
 <template>
@@ -100,23 +105,27 @@ const backDisabled = computed(() => {
     </template>
     <BottomBarWrapper>
       <StepWrapper>
-        <button
-          :disabled="backDisabled"
-          @click="() => handleArrowClicked('back')"
-        >
-          ZPET
-        </button>
+        <template #before>
+          <IconButton
+            v-if="previousQuestion"
+            @click="previousQuestion && goToQuestion(previousQuestion)"
+          >
+            <IconComponent :icon="mdiArrowLeft" />
+          </IconButton>
+        </template>
         <QuestionCard
           :question-nr="questionNr"
           :question-total="electionStore.questionCount"
           :question="(electionStore.calculator?.questions[questionNr] as Question)"
         ></QuestionCard>
-        <button
-          :disabled="forwardDisabled"
-          @click="() => handleArrowClicked('forward')"
-        >
-          VPRED
-        </button>
+        <template #after>
+          <IconButton
+            v-if="nextQuestion"
+            @click="nextQuestion && goToQuestion(nextQuestion)"
+          >
+            <IconComponent :icon="mdiArrowRight" />
+          </IconButton>
+        </template>
       </StepWrapper>
       <template #bottom-bar>
         <BottomBar transparent="never">
