@@ -43,8 +43,34 @@ docker-run:
 	docker run -p $(API_PORT):80 kalkulacka-backend:latest
 
 poetry-run:
-	echo "Running on port $(API_PORT)"
-	poetry run uvicorn main:app --host $(API_HOST) --port $(API_PORT)
+	echo "Running on port $(API_PORT)"; \
+	export AWS_ACCESS_KEY_ID=foo; \
+	export and AWS_SECRET_ACCESS_KEY=bar; \
+	export AWS_DEFAULT_REGION=us-east-1; \
+	poetry run uvicorn main:app --reload --host $(API_HOST) --port $(API_PORT)
 
 run-api-docker: docker-run
 run-api-poetry: poetry-run
+
+run-localstack:
+	# https://localstack.cloud/
+	docker run --rm -it -p 4566:4566 -p 4510-4559:4510-4559 localstack/localstack
+
+run-table-create:
+	export AWS_ACCESS_KEY_ID=foo; \
+	export and AWS_SECRET_ACCESS_KEY=bar; \
+	export AWS_DEFAULT_REGION=us-east-1; \
+	aws dynamodb --endpoint-url=http://localhost:4566 create-table \
+    --table-name Results \
+    --attribute-definitions \
+        AttributeName=result_id,AttributeType=S \
+    --key-schema \
+        AttributeName=result_id,KeyType=HASH \
+	--billing-mode PAY_PER_REQUEST
+
+run-table-delete:
+	export AWS_ACCESS_KEY_ID=foo; \
+	export and AWS_SECRET_ACCESS_KEY=bar; \
+	export AWS_DEFAULT_REGION=us-east-1; \
+	aws dynamodb --endpoint-url=http://localhost:4566 delete-table \
+    --table-name Results

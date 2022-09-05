@@ -11,12 +11,16 @@ fastapi = "~0.75.1"
 pydantic = "~1.9.0"
 uvicorn = "~0.17.6"
 mangum = "^0.15.0"
+boto3 = "^1.24.66"
+magnum = "^14.0.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "~7.1.1"
 coverage = "~6.3.2"
 mypy = "0.942"
 pytest-cov = "^2.12.1"
+botocore-stubs = "^1.27.66"
+boto3-stubs = "^1.24.66"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
