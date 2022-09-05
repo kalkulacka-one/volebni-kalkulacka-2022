@@ -152,6 +152,7 @@ const handleNextClick = () => {
           <CardComponent
             corner="bottom-right"
             border
+            // TODO: remove inline styles
             style="align-self: center"
           >
             <StackComponent horizontal centered spacing="small">
@@ -227,6 +228,7 @@ const handleNextClick = () => {
   gap: var(--spacing-small);
   justify-content: center;
 
+  /* TODO: update breakpoint */
   @media (max-width: 700px) {
     grid-template-columns: repeat(2, 1fr);
   }
