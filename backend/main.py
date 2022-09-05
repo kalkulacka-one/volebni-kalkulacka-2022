@@ -11,10 +11,18 @@ app = FastAPI()
 
 handler = Mangum(app)
 
-dynamodb = boto3.resource(
-    service_name="dynamodb",
-    endpoint_url=os.environ.get("DYNAMODB_URL"),
-)
+table = None
+
+
+def get_table():
+    global table
+    if table is None:
+        dynamodb = boto3.resource(
+            service_name="dynamodb",
+            endpoint_url=os.environ.get("DYNAMODB_URL"),
+        )
+        table = dynamodb.Table("Results")
+    return table
 
 
 class Answer(BaseModel):
@@ -39,9 +47,8 @@ class ResultAdded(BaseModel):
 @app.post("/api/results/", response_model=ResultAdded)
 def results_add(result: ResultIn):
     # Specify the table
-    results_table = dynamodb.Table("Results")
     result_uuid = str(uuid.uuid4())
-    results_table.put_item(
+    get_table().put_item(
         # Data to be inserted
         Item={
             "result_id": result_uuid,
@@ -54,8 +61,7 @@ def results_add(result: ResultIn):
 
 @app.get("/api/results/{result_id}")
 def results_get(result_id: str):
-    results_table = dynamodb.Table("Results")
-    response = results_table.get_item(Key={"result_id": result_id})
+    response = get_table().get_item(Key={"result_id": result_id})
     item = response["Item"]
     return ResultOut(
         result_id=item["result_id"],
