@@ -49,6 +49,14 @@ resource "aws_iam_role" "kalkulacka" {
       },
       "Effect": "Allow",
       "Sid": ""
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:GetItem",
+        "dynamodb:PutItem"
+      ],
+      "Resource": "${aws_dynamodb_table.dynamodb_table_results.arn}"
     }
   ]
 }
@@ -70,15 +78,7 @@ resource "aws_iam_role_policy" "kalkulacka-cloudwatch" {
                 "logs:PutLogEvents"
             ],
             "Resource": "*"
-        },
-        {
-			      "Effect": "Allow",
-			      "Action": [
-				      "dynamodb:GetItem",
-				      "dynamodb:PutItem"
-			      ],
-			      "Resource": "${aws_dynamodb_table.dynamodb_table_results.arn}"
-		    }
+        }
     ]
 }
 EOF
