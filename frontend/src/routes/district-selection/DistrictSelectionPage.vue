@@ -72,7 +72,7 @@ const onSubmit = (event: Event) => {
     </template>
     <form @submit.prevent="onSubmit">
       <BottomBarWrapper>
-        <StackComponent>
+        <StackComponent spacing="small">
           <HeadingComponent>{{ heading }}</HeadingComponent>
           <select id="district-selection" name="district-selection">
             <option

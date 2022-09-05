@@ -15,7 +15,7 @@ import ButtonComponent from '../../components/design-system/input/ButtonComponen
     </template>
     <div class="wrapper">
       <CardComponent class="card" shadow corner="top-left" padding="large">
-        <StackComponent>
+        <StackComponent spacing="small">
           <HeadingComponent size="medium">
             Volební kalkulačka 2022
             <template #secondary>již brzy</template>
@@ -29,7 +29,7 @@ import ButtonComponent from '../../components/design-system/input/ButtonComponen
             záři. Sledujte Twitter
             <a href="https://twitter/CeskoDigital">@CeskoDigital</a>.
           </BodyText>
-          <StackComponent horizontal>
+          <StackComponent horizontal spacing="small">
             <ButtonComponent
               kind="filled"
               href="https://twitter.com/intent/follow?screen_name=ceskodigital"

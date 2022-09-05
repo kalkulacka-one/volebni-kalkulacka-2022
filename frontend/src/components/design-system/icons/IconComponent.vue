@@ -3,7 +3,7 @@ import { computed } from 'vue';
 
 export interface Props {
   icon: string;
-  color: string;
+  color?: string;
   size?: 'small' | 'medium' | 'large' | 'extra-large' | 'extra-huge';
   title?: string;
 }
