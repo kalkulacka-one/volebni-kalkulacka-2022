@@ -9,3 +9,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
