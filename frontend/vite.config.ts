@@ -23,6 +23,14 @@ export default defineConfig({
             }
           }),
       },
+      '/api': {
+        target: 'https://kalkulacka.ceskodigital.net',
+        changeOrigin: true,
+      },
+      '/js/script.outbound-links.js': {
+        target: 'https://kalkulacka.ceskodigital.net',
+        changeOrigin: true,
+      },
     },
   },
   resolve: {
