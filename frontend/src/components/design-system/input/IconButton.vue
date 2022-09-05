@@ -1,39 +1,10 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-
-import IconComponent from '@/components/design-system/icons/IconComponent.vue';
-
-export interface IconButtonProps {
-  icon: string;
-  color?: string;
-  size: 'small' | 'medium' | 'large';
-  title: string;
-}
-
-const props = defineProps<IconButtonProps>();
-
-const iconSize = computed(() => {
-  switch (props.size) {
-    case 'small':
-      return 'small';
-    case 'medium':
-      return 'medium';
-    case 'large':
-      return 'extra-large';
-    default:
-      return 'medium';
-  }
-});
+//const props = defineProps<{}>();
 </script>
 
 <template>
   <button class="icon-button">
-    <IconComponent
-      :title="title"
-      :icon="icon"
-      :color="color"
-      :size="iconSize"
-    />
+    <slot />
   </button>
 </template>
 
