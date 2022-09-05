@@ -1,7 +1,6 @@
 import { createApp } from 'vue';
 import {
   createRouter,
-  createWebHashHistory,
   createWebHistory,
   type RouteLocationNormalized,
 } from 'vue-router';
@@ -18,13 +17,16 @@ import RecapPageVue from './routes/recap/RecapPage.vue';
 import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
 import { fetchCalculator, fetchElectionData } from './common/dataFetch';
-import { useElectionStore } from './stores/electionStore';
+import { useElectionStore, UserAnswerEnum } from './stores/electionStore';
 import { createPinia } from 'pinia';
 import ErrorPageVue from './routes/error/ErrorPage.vue';
+import { decodeResults, encodeResults } from './common/resultParser';
+
+const RESULT_QUERY_NAME = 'result';
 
 export const questionGuard = (
   to: RouteLocationNormalized,
-  from: RouteLocationNormalized
+  _from: RouteLocationNormalized
 ) => {
   const store = useElectionStore();
   if (to.params.nr === 'first') {
@@ -38,6 +40,18 @@ export const questionGuard = (
   if (isNaN(questionNr) || questionNr < 1 || questionNr > store.questionCount) {
     console.warn(`Wrong question route ${to.path}`);
     return false;
+  }
+};
+
+const resultsProcessor = (
+  to: RouteLocationNormalized,
+  _from: RouteLocationNormalized
+) => {
+  if (to.query[RESULT_QUERY_NAME] === undefined) {
+    const store = useElectionStore();
+    const resultHex = encodeResults(store.answers);
+    to.query[RESULT_QUERY_NAME] = resultHex;
+    return to;
   }
 };
 
@@ -172,6 +186,7 @@ export const appRoutes = {
         },
       ],
     },
+    beforeEnter: resultsProcessor,
   },
   comparison: {
     name: 'comparison',
@@ -310,22 +325,47 @@ router.beforeEach(async (to, from) => {
       console.debug('District fetch complete!');
       store.calculator = calculator;
       store.answers = calculator.questions.map((x) => {
-        return { answer: undefined, flag: false, id: x.id };
+        return {
+          answer: UserAnswerEnum.undefined,
+          flag: false,
+          id: x.id as string,
+        };
       });
     }
   }
-  // route to district selection only if district not specified
+  //load results if hex string present
+  let hasResultQuery = false;
   if (
+    to.query[RESULT_QUERY_NAME] !== undefined &&
+    typeof to.query[RESULT_QUERY_NAME] === 'string'
+  ) {
+    const store = useElectionStore();
+    const answers = decodeResults(to.query[RESULT_QUERY_NAME] as string);
+    if (answers.length === store.calculator?.questions.length) {
+      answers.forEach((x, i) => {
+        x.id = store.calculator?.questions[i].id as string;
+      });
+      store.answers = answers;
+      store.answerProgress = store.answers.length - 1;
+      hasResultQuery = true;
+    }
+  }
+
+  if (hasResultQuery) {
+    return true;
+  } else if (
     from.params.election !== to.params.election &&
     to.params.election !== undefined &&
     to.name !== appRoutes.districtSelection.name &&
     to.params.district === undefined
   ) {
+    // route to district selection only if district not specified
     return {
       name: appRoutes.districtSelection.name,
       params: { ...to.params },
     };
   } else if (
+    // route to guide if district and election specified
     from.params.district !== to.params.district &&
     to.params.district !== undefined &&
     to.name !== appRoutes.guide.name

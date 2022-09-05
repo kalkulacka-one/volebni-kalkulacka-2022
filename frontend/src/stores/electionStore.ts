@@ -3,9 +3,16 @@ import type { Calculators } from '@/types/calculators';
 import type { Election } from '@/types/election';
 import { defineStore } from 'pinia';
 
+export enum UserAnswerEnum {
+  undefined = 0,
+  yes = 1,
+  no = 2,
+  skip = 3,
+}
+
 export interface UserAnswer {
   id: string;
-  answer: 'yes' | 'no' | 'skip' | undefined;
+  answer: UserAnswerEnum;
   flag: boolean;
 }
 

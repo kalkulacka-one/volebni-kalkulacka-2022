@@ -49,7 +49,7 @@ import ButtonComponent from '../../components/design-system/input/ButtonComponen
   </StickyHeaderLayout>
 </template>
 
-<style>
+<style scoped>
 .wrapper {
   display: grid;
   justify-content: center;

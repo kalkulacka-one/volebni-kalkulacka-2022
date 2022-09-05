@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { UserAnswer } from '@/stores/electionStore';
+import { UserAnswerEnum, type UserAnswer } from '@/stores/electionStore';
 import type { Question } from '@/types/question';
 
 export interface QuestionCardProps {
@@ -28,19 +28,19 @@ defineProps<QuestionCardProps>();
         Pro me dulezite
       </button>
       <button
-        :class="answer.answer === 'yes' ? 'button--active' : ''"
+        :class="answer.answer === UserAnswerEnum.yes ? 'button--active' : ''"
         @click="yesClick"
       >
         Jsem pro
       </button>
       <button
-        :class="answer.answer === 'no' ? 'button--active' : ''"
+        :class="answer.answer === UserAnswerEnum.no ? 'button--active' : ''"
         @click="noClick"
       >
         Jsem proti
       </button>
       <button
-        :class="answer.answer === 'skip' ? 'button--active' : ''"
+        :class="answer.answer === UserAnswerEnum.skip ? 'button--active' : ''"
         @click="skipClick"
       >
         Preskocit

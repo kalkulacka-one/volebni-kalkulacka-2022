@@ -9,7 +9,6 @@ import {
 } from '@mdi/js';
 
 import { appRoutes } from '@/main';
-import { useElectionStore, type UserAnswer } from '@/stores/electionStore';
 
 import type { Question } from '@/types/question';
 
@@ -26,6 +25,7 @@ import SecondaryNavigationBar from '@/components/design-system/navigation/Second
 import { vkiLogoPercent } from '@/components/design-system/icons';
 
 import TabFilter from '../../components/TabFilter.vue';
+import { useElectionStore, UserAnswerEnum } from '@/stores/electionStore';
 import RecapQuestionCard from './RecapQuestionCard.vue';
 
 const router = useRouter();
@@ -71,7 +71,7 @@ const handleFilterChange = (id: string) => {
 const handleStarClick = (index: number) => {
   electionStore.flipAnswerFlag(index);
 };
-const handleAnswerClick = (index: number, answer: UserAnswer['answer']) => {
+const handleAnswerClick = (index: number, answer: UserAnswerEnum) => {
   electionStore.setAnswer(index, answer);
 };
 const isCardHidden = (index: number) => {
@@ -152,9 +152,9 @@ const isCardHidden = (index: number) => {
         :question-nr="i"
         :question-total="electionStore.questionCount"
         :star-click="() => handleStarClick(i)"
-        :yes-click="() => handleAnswerClick(i, 'yes')"
-        :no-click="() => handleAnswerClick(i, 'no')"
-        :skip-click="() => handleAnswerClick(i, 'skip')"
+        :yes-click="() => handleAnswerClick(i, UserAnswerEnum.yes)"
+        :no-click="() => handleAnswerClick(i, UserAnswerEnum.no)"
+        :skip-click="() => handleAnswerClick(i, UserAnswerEnum.skip)"
       />
       <template #bottom-bar>
         <BottomBar transparent="never" :desktop="false">

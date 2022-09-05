@@ -4,8 +4,7 @@ import { onBeforeRouteUpdate, useRouter, useRoute } from 'vue-router';
 import { mdiCloseCircleOutline } from '@mdi/js';
 
 import { appRoutes, questionGuard } from '@/main';
-import { useElectionStore } from '@/stores/electionStore';
-
+import { useElectionStore, UserAnswerEnum } from '@/stores/electionStore';
 import type { Question } from '@/types/question';
 
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
@@ -33,7 +32,7 @@ if (electionStore.calculator === undefined) {
 }
 //internally questions start at 0
 const questionNr = computed(() => parseInt(route.params['nr'] as string) - 1);
-const handleAnswerClick = (answer: 'yes' | 'no' | 'skip') => {
+const handleAnswerClick = (answer: UserAnswerEnum) => {
   electionStore.setAnswer(questionNr.value, answer);
   if (questionNr.value - 1 === electionStore.answerProgress) {
     electionStore.incrementAnswerProgress();
@@ -126,9 +125,9 @@ const backDisabled = computed(() => {
             :question-total="electionStore.questionCount"
             :answer="electionStore.answers[questionNr]"
             :star-click="handleStarClick"
-            :yes-click="() => handleAnswerClick('yes')"
-            :no-click="() => handleAnswerClick('no')"
-            :skip-click="() => handleAnswerClick('skip')"
+            :yes-click="() => handleAnswerClick(UserAnswerEnum.yes)"
+            :no-click="() => handleAnswerClick(UserAnswerEnum.no)"
+            :skip-click="() => handleAnswerClick(UserAnswerEnum.skip)"
           />
         </BottomBar>
       </template>
