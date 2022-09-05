@@ -62,15 +62,35 @@ resource "aws_iam_role_policy" "kalkulacka-cloudwatch" {
 {
     "Version": "2012-10-17",
     "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "logs:CreateLogGroup",
-                "logs:CreateLogStream",
-                "logs:PutLogEvents"
-            ],
-            "Resource": "*"
-        }
+      {
+        "Effect": "Allow",
+        "Action": [
+          "logs:CreateLogGroup",
+          "logs:CreateLogStream",
+          "logs:PutLogEvents"
+        ],
+        "Resource": "*"
+      }
+    ]
+}
+EOF
+}
+
+resource "aws_iam_role_policy" "kalkulacka-dynamodb" {
+  name   = "kalkulacka-dynamodb"
+  role   = aws_iam_role.kalkulacka.id
+  policy = <<EOF
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Action": [
+          "dynamodb:GetItem",
+          "dynamodb:PutItem"
+        ],
+        "Resource": "${aws_dynamodb_table.dynamodb_table_results.arn}"
+      }
     ]
 }
 EOF

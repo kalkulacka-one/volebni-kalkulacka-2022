@@ -9,7 +9,7 @@ export interface Props {
 
 const props = withDefaults(defineProps<Props>(), {
   horizontal: false,
-  spacing: 'small',
+  spacing: undefined,
   centered: false,
 });
 

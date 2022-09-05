@@ -32,7 +32,7 @@ const background = computed(() =>
           <slot name="title" />
         </BodyText>
       </div>
-      <StackComponent class="right" horizontal>
+      <StackComponent class="right" horizontal spacing="small">
         <slot name="right" />
       </StackComponent>
     </div>

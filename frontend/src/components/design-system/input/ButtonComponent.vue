@@ -216,7 +216,7 @@ const computedSize = computed(() =>
         border-color: transparent;
       }
 
-      .button--selected,
+      &.button--selected,
       &:active {
         color: rgb(var(--color-neutral-fg-inverse));
         background-color: rgb(var(--color-neutral-bg-strong-active));
@@ -235,7 +235,7 @@ const computedSize = computed(() =>
         border-color: transparent;
       }
 
-      .button--selected,
+      &.button--selected,
       &:active {
         color: rgb(var(--color-primary-fg-inverse));
         background-color: rgb(var(--color-primary-bg-strong));
@@ -254,7 +254,7 @@ const computedSize = computed(() =>
         border-color: transparent;
       }
 
-      .button--selected,
+      &.button--selected,
       &:active {
         color: rgb(var(--color-secondary-fg-inverse));
         background-color: rgb(var(--color-secondary-bg-strong));
@@ -267,6 +267,16 @@ const computedSize = computed(() =>
     @media (max-width: 700px) {
       .text {
         display: none;
+      }
+
+      .icon {
+        &--before {
+          margin-right: 0;
+        }
+
+        &--after {
+          margin-left: 0;
+        }
       }
     }
   }
