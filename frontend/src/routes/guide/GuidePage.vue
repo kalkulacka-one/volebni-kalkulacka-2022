@@ -149,10 +149,10 @@ const handleNextClick = () => {
           <BodyText size="medium">
             Pokud vám na daném tématu zvlášť záleží, označte ho hvězdičkou:
           </BodyText>
+          <!-- TODO: remove inline styles -->
           <CardComponent
             corner="bottom-right"
             border
-            // TODO: remove inline styles
             style="align-self: center"
           >
             <StackComponent horizontal centered spacing="small">
