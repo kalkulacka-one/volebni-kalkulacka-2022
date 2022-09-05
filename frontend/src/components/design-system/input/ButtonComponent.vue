@@ -130,6 +130,7 @@ const computedSize = computed(() =>
   }
 
   &--outlined {
+    color: rgb(var(--color-neutral-fg));
     background-color: transparent;
     border-color: rgb(var(--color-neutral-border-strong));
 

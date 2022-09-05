@@ -17,6 +17,7 @@
 
   .main {
     grid-area: main;
+    min-height: 100%;
   }
 
   .bottom-bar {

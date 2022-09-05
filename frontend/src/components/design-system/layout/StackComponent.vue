@@ -4,17 +4,20 @@ import { computed } from 'vue';
 export interface Props {
   horizontal?: boolean;
   spacing?: 'extra-small' | 'small' | 'medium' | 'large';
+  centered?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   horizontal: false,
   spacing: undefined,
+  centered: false,
 });
 
 const classes = computed(() => ({
   'stack--vertical': !props.horizontal,
   'stack--horizontal': props.horizontal,
   [`stack--spacing-${props.spacing}`]: props.spacing,
+  'stack--centered': props.centered,
 }));
 </script>
 
@@ -67,6 +70,10 @@ const classes = computed(() => ({
     &.stack--spacing-large:deep() > * + * {
       margin-left: var(--spacing-large);
     }
+  }
+
+  &--centered {
+    align-items: center;
   }
 }
 </style>
