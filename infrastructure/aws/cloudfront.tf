@@ -2,6 +2,10 @@ resource "aws_cloudfront_origin_access_identity" "default" {
   comment = "Cloudfront Orgin Identity"
 }
 
+data "aws_cloudfront_cache_policy" "managed-cache-disabled" {
+  name = "Managed-CachingDisabled"
+}
+
 resource "aws_cloudfront_distribution" "distribution" {
   origin {
     domain_name = aws_s3_bucket.frontend.bucket_regional_domain_name
@@ -23,6 +27,20 @@ resource "aws_cloudfront_distribution" "distribution" {
     domain_name = replace(aws_api_gateway_deployment.kalkulacka.invoke_url, "/^https?://([^/]*).*/", "$1")
     origin_id   = "backend"
     origin_path = "/${aws_api_gateway_stage.kalkulacka.stage_name}"
+
+    custom_origin_config {
+      http_port              = 80
+      https_port             = 443
+      origin_protocol_policy = "https-only"
+      origin_ssl_protocols   = [
+        "TLSv1.2"
+      ]
+    }
+  }
+
+  origin {
+    domain_name = "plausible.io"
+    origin_id   = "plausible.io"
 
     custom_origin_config {
       http_port              = 80
@@ -63,6 +81,39 @@ resource "aws_cloudfront_distribution" "distribution" {
     min_ttl                = 0
     default_ttl            = 86400
     max_ttl                = 86400
+    compress               = true
+    viewer_protocol_policy = "redirect-to-https"
+  }
+
+  ordered_cache_behavior {
+    allowed_methods = [
+      "GET",
+      "HEAD"
+    ]
+    cached_methods = [
+      "GET",
+      "HEAD"
+    ]
+    path_pattern     = "/js/script.outbound-links.js"
+    target_origin_id = "plausible.io"
+
+    cache_policy_id        = data.aws_cloudfront_cache_policy.managed-cache-disabled.id
+    compress               = true
+    viewer_protocol_policy = "redirect-to-https"
+  }
+
+  ordered_cache_behavior {
+    allowed_methods = [
+      "GET", "HEAD", "OPTIONS", "PUT", "POST", "PATCH", "DELETE"
+    ]
+    cached_methods = [
+      "GET",
+      "HEAD"
+    ]
+    path_pattern     = "/api/event"
+    target_origin_id = "plausible.io"
+
+    cache_policy_id        = data.aws_cloudfront_cache_policy.managed-cache-disabled.id
     compress               = true
     viewer_protocol_policy = "redirect-to-https"
   }

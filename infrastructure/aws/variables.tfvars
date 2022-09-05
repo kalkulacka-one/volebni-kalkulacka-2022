@@ -1,5 +1,0 @@
-aws-region = "eu-central-1"
-frontend-bucket-name = "cesko-digital-kalkulacka-frontend-2"
-domain = "kalkulacka.ceskodigital.net"
-domain-certificate-arn = "arn:aws:acm:us-east-1:253211736382:certificate/f9de94ce-43c5-425a-a929-8f9af30f7b94"
-data-bucket-name = "cesko-digital-kalkulacka-data"

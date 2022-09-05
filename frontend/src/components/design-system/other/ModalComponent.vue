@@ -3,6 +3,7 @@ import IconButton from '../input/IconButton.vue';
 import ThemeProvider from '@/components/ThemeProvider.vue';
 
 import { mdiClose } from '@mdi/js';
+import IconComponent from '../icons/IconComponent.vue';
 
 export interface Props {
   isModalOpen: boolean;
@@ -24,13 +25,14 @@ const props = withDefaults(defineProps<Props>(), {
       >
         <div class="modal" @click.stop="">
           <div class="title">
-            <IconButton
-              :icon="mdiClose"
-              title="close modal"
-              size="small"
-              color="rgb(var(--palette-neutral-30)"
-              @click="closeModalCallback"
-            />
+            <IconButton @click="closeModalCallback">
+              <IconComponent
+                :icon="mdiClose"
+                title="close modal"
+                size="small"
+                color="rgb(var(--palette-neutral-30)"
+              />
+            </IconButton>
             <slot name="title" />
           </div>
           <slot name="content" />

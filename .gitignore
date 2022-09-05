@@ -136,3 +136,4 @@ coverage_html/
 # Terraform
 .terraform
 .terraform.lock.hcl
+*.tfvars
