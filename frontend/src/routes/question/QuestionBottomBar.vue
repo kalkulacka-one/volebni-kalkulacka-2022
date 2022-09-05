@@ -39,13 +39,14 @@ console.log(props.answer);
 <template>
   <BottomBar class="bottom-bar" transparent="never">
     <StackComponent horizontal centered>
-      <IconButton
-        :icon="starIcon"
-        :color="starColor"
-        size="large"
-        title="Pro mě důležité"
-        @click="starClick"
-      />
+      <IconButton @click="starClick">
+        <IconComponent
+          :icon="starIcon"
+          :color="starColor"
+          size="large"
+          title="Pro mě důležité"
+        />
+      </IconButton>
       <BodyText class="star-text" size="medium"> Pro mě důležité </BodyText>
     </StackComponent>
     <StackComponent horizontal spacing="small">
