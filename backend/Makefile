@@ -7,6 +7,8 @@ POETRY=poetry
 API_HOST=0.0.0.0
 API_PORT=8080
 
+DYNAMODB_URL=http://localhost:4566
+
 checks: mypy test
 
 mypy:
@@ -44,9 +46,10 @@ docker-run:
 
 poetry-run:
 	echo "Running on port $(API_PORT)"; \
-	export AWS_ACCESS_KEY_ID=foo; \
-	export and AWS_SECRET_ACCESS_KEY=bar; \
-	export AWS_DEFAULT_REGION=us-east-1; \
+	export AWS_ACCESS_KEY_ID="foo"; \
+	export and AWS_SECRET_ACCESS_KEY="bar"; \
+	export AWS_DEFAULT_REGION="us-east-1"; \
+	export DYNAMODB_URL="$(DYNAMODB_URL)"; \
 	poetry run uvicorn main:app --reload --host $(API_HOST) --port $(API_PORT)
 
 run-api-docker: docker-run
@@ -57,10 +60,10 @@ run-localstack:
 	docker run --rm -it -p 4566:4566 -p 4510-4559:4510-4559 localstack/localstack
 
 run-table-create:
-	export AWS_ACCESS_KEY_ID=foo; \
-	export and AWS_SECRET_ACCESS_KEY=bar; \
-	export AWS_DEFAULT_REGION=us-east-1; \
-	aws dynamodb --endpoint-url=http://localhost:4566 create-table \
+	export AWS_ACCESS_KEY_ID="foo"; \
+	export and AWS_SECRET_ACCESS_KEY="bar"; \
+	export AWS_DEFAULT_REGION="us-east-1"; \
+	aws dynamodb --endpoint-url=$(DYNAMODB_URL) create-table \
     --table-name Results \
     --attribute-definitions \
         AttributeName=result_id,AttributeType=S \
@@ -69,8 +72,8 @@ run-table-create:
 	--billing-mode PAY_PER_REQUEST
 
 run-table-delete:
-	export AWS_ACCESS_KEY_ID=foo; \
-	export and AWS_SECRET_ACCESS_KEY=bar; \
-	export AWS_DEFAULT_REGION=us-east-1; \
-	aws dynamodb --endpoint-url=http://localhost:4566 delete-table \
+	export AWS_ACCESS_KEY_ID="foo"; \
+	export and AWS_SECRET_ACCESS_KEY="bar"; \
+	export AWS_DEFAULT_REGION="us-east-1"; \
+	aws dynamodb --endpoint-url=$(DYNAMODB_URL) delete-table \
     --table-name Results

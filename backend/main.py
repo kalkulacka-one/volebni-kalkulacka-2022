@@ -1,4 +1,5 @@
 from datetime import datetime
+import os
 import uuid
 
 import boto3
@@ -12,7 +13,7 @@ handler = Mangum(app)
 
 dynamodb = boto3.resource(
     service_name="dynamodb",
-    endpoint_url="http://localhost:4566",
+    endpoint_url=os.environ.get("DYNAMODB_URL"),
 )
 
 
