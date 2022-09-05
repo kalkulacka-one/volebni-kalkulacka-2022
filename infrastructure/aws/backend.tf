@@ -70,7 +70,15 @@ resource "aws_iam_role_policy" "kalkulacka-cloudwatch" {
                 "logs:PutLogEvents"
             ],
             "Resource": "*"
-        }
+        },
+        {
+			      "Effect": "Allow",
+			      "Action": [
+				      "dynamodb:GetItem",
+				      "dynamodb:PutItem",
+			      ],
+			      "Resource": "*"
+		    },
     ]
 }
 EOF

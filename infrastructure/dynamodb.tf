@@ -1,4 +1,4 @@
-resource "aws_dynamodb_table" "dynamodb-table-results" {
+resource "aws_dynamodb_table" "dynamodb_table_results" {
   name           = "Results"
   billing_mode   = "PAY_PER_REQUEST"
   hash_key       = "result_id"
