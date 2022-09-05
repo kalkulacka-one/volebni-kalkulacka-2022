@@ -77,7 +77,7 @@ EOF
 }
 
 resource "aws_iam_role_policy" "kalkulacka-dynamodb" {
-  name   = "kalkulacka-cloudwatch"
+  name   = "kalkulacka-dynamodb"
   role   = aws_iam_role.kalkulacka.id
   policy = <<EOF
 {
