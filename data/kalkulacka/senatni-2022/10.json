@@ -11,33 +11,49 @@
   "questions": [
     {
       "id": "uuid-sen-question-01",
-      "name": "q01 name",
-      "title": "Question 01 - title",
-      "gist": "Question 01 - gist",
-      "detail": "Question 01 - detail",
-      "tags": ["tag01", "tag03"]
+      "name": "Zdanění prázdných bytů",
+      "title": "Dlouhodobě prázdné byty by měly být více zdaněné.",
+      "gist": "Zastánců zdanění poukazují, že investiční byty křiví trh a vyčerpávají bytové zásoby. Zhoršují se tak šance pro lidi s nízkými a středními příjmy pořídit si vlastní bydlení. Kritici namítají, že zdanění zvýší ceny nemovitostí a nájemní bydlení zdraží. ČR má jednotný výpočet daně a nezohledňuje, kolik jich majitel vlastní a zda jsou dlouhodobě obydlené.",
+      "detail": "V Česku je jednotný výpočet daně pro všechny byty bez ohledu na to, kolik bytů majitel vlastní a zda jsou dlouhodobě obydlené. Lidé, kteří nemovitosti pronajímají platí také daň z pronájmu nemovitostí. ",
+      "tags": ["bydlení"]
     },
     {
       "id": "uuid-sen-question-02",
-      "name": "q02 name",
-      "title": "Question 02 - title",
-      "gist": "Question 02 - gist",
-      "detail": "Question 02 - detail",
-      "tags": ["tag02", "tag03"]
+      "name": "Regulace nájemného v bytech",
+      "title": "ČR by měla regulovat ceny nájemného u bytů.",
+      "gist": "Nájemné bylo v ČR regulované do roku 2012, nyní je tržní. Např. v Německu nebo Rakousku různé formy regulovaných nájmů existují. Regulace vycházejí z toho, že bydlení je pro lidi nutné a musí být finančně únosné. Žádná regulace naopak upřednostňuje právo majitele volně nakládat se svým majetkem.",
+      "detail": "",
+      "tags": ["bydlení"]
     },
     {
       "id": "uuid-sen-question-03",
-      "name": "q03 name",
-      "title": "Question 03 - title",
-      "gist": "Question 03 - gist",
-      "detail": "Question 03 - detail",
-      "tags": ["tag03"]
+      "name": "Celostátní referendum",
+      "title": "Měla by se uzákonit možnost celostátního referenda vypisovaného na základě petice.",
+      "gist": "V ČR je možné vyhlásit celostátní referendum pouze tehdy, pokud o něm rozhodne Parlament. Např. na Slovensku je to možné po shromáždění 350 000 podpisů, v „referendovém“ Švýcarsku je třeba 50 000 podpisů.",
+      "detail": "Referendum je formou přímé demokracie, kdy lid může hlasovat. Může být buď závazné nebo doporučující. V České republice se konalo referendum v roce 2003 o vstupu do Evropské unie a volební účast přesáhla 55 %.",
+      "tags": ["demokracie"]
+    },
+    {
+      "id": "uuid-sen-question-04",
+      "name": "Rychlovlaky priorita",
+      "title": "Výstavba infrastruktury pro rychlovlaky má být upřednostňována oproti výstavbě další dopravní infrastruktury.",
+      "gist": "Vysokorychlostní tratě mají výrazně zkrátit jízdní dobu, navýšit kapacity železniční sítě a zrychlit spojení. O výstavbě se v Česku hovoří od 90. let, přípravy začaly v posledních letech. Podle kritiků si to vyžádá rozsáhlé pořizovací náklady. Vyšší rychlost také zvyšuje spotřebu elektřiny a provoz je tak dražší.",
+      "detail": "Rychlovlaky by na plánovaných tratích mohli nabírat rychlost až 320 km/h. Jako výhoda se uvádí nejen rychlejší cestování, ale i udržitelnost pro životní prostředí.",
+      "tags": ["doprava"]
+    },
+    {
+      "id": "uuid-sen-question-05",
+      "name": "Zvýšení věku odchodu do důchodu",
+      "title": "Věk odchodu do důchodu by se měl nadále zvyšovat nad 65 let.",
+      "gist": "V současnosti je v ČR standardní věk odchodu do důchodu více než 64 let a postupně se zvyšuje na cílových 65 let.",
+      "detail": "",
+      "tags": ["důchody"]
     }
   ],
   "candidates": [
     {
       "id": "uuid-sen-candidate-01",
-      "name": "Candidate 01 - 51",
+      "name": "Robert Huneš",
       "type": "person",
       "description": "Candidate 01 - description",
       "img_url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cute-cat-photos-1593441022.jpg",
@@ -68,7 +84,7 @@
       "parties": [
         {
           "id": "uuid-sen-party-01",
-          "name": "Party 01",
+          "name": "KDU-ČSL",
           "description": "Party 01 - description",
           "abbreviation": "P01",
           "img_url": "https://i0.wp.com/www.myconfinedspace.com/wp-content/uploads/2013/02/space-marine-cat.jpg",
@@ -76,19 +92,6 @@
             "webs": [
               {
                 "url": "https://example.com/party-01"
-              }
-            ]
-          }
-        },
-        {
-          "id": "uuid-sen-party-02",
-          "name": "Party 02",
-          "description": "Party 02 - description",
-          "abbreviation": "P02",
-          "contact": {
-            "webs": [
-              {
-                "url": "https://example.com/party-02"
               }
             ]
           }
