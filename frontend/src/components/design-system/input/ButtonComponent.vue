@@ -278,6 +278,16 @@ const computedSize = computed(() =>
           margin-left: 0;
         }
       }
+
+      &.button--answer {
+        &.button--medium {
+          padding: calc(var(--spacing-small) - var(--spacing-nano));
+        }
+
+        &.button--small {
+          padding: calc(var(--spacing-extra-small) - var(--spacing-nano));
+        }
+      }
     }
   }
 }
