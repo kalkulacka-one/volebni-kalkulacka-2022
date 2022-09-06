@@ -122,10 +122,10 @@ const backDisabled = computed(() => {
           </IconButton>
         </template>
         <QuestionCard
-          :question-nr="questionNr"
-          :question-total="electionStore.questionCount"
+          :current-question="currentQuestion"
+          :question-count="electionStore.questionCount"
           :question="(electionStore.calculator?.questions[questionNr] as Question)"
-        ></QuestionCard>
+        />
         <template #after>
           <IconButton
             :hidden="forwardDisabled"
