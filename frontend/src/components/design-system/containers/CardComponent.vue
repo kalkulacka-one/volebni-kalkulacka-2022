@@ -8,7 +8,7 @@ export interface Props {
   borderKind?: 'normal' | 'strong';
   shadow?: boolean;
   padding?: 'small' | 'small-mixed' | 'large';
-  backgroundColor: string;
+  backgroundColor?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
