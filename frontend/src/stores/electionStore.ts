@@ -37,7 +37,7 @@ export const useElectionStore = defineStore('election', {
     answerCount: (state) => {
       let count = 0;
       state.answers.forEach((element) => {
-        if (element.answer !== undefined) count++;
+        if (element.answer !== UserAnswerEnum.undefined) count++;
       });
       return count;
     },

@@ -34,22 +34,21 @@ if (electionStore.calculator === undefined) {
 }
 
 const currentQuestion = computed(() => parseInt(route.params['nr'] as string));
-const questionCount = computed(() => electionStore.questionCount);
-const nextQuestion = computed(
-  () => currentQuestion.value < questionCount.value && currentQuestion.value + 1
-);
-const previousQuestion = computed(
-  () => currentQuestion.value > 1 && currentQuestion.value - 1
-);
 
 const goToQuestion = (number: number) => {
-  console.log(electionStore.answerProgress);
-  console.log(electionStore.questionCount);
-  router.push({
-    name: appRoutes.question.name,
-    params: { ...route.params, nr: number },
-  });
+  console.debug(number, electionStore.questionCount);
+  if (number > electionStore.questionCount) {
+    router.push({
+      name: appRoutes.recap.name,
+    });
+  } else {
+    router.push({
+      name: appRoutes.question.name,
+      params: { ...route.params, nr: number },
+    });
+  }
 };
+
 const goToRecap = () => {
   router.push({
     name: appRoutes.recap.name,
@@ -74,11 +73,20 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
     newRoute.name = appRoutes.recap.name;
   }
   console.debug(
-    `${answer}, current: ${questionNr.value}, progress: ${electionStore.answerProgress}`
+    `answer ${UserAnswerEnum[answer]}, current: ${questionNr.value}, progress: ${electionStore.answerProgress}`
   );
   router.push(newRoute);
 };
 const handleStarClick = () => electionStore.flipAnswerFlag(questionNr.value);
+const forwardDisabled = computed(() => {
+  return !(
+    questionNr.value < electionStore.answerProgress + 1 ||
+    electionStore.questionCount === electionStore.answerCount
+  );
+});
+const backDisabled = computed(() => {
+  return questionNr.value < 1;
+});
 </script>
 
 <template>
@@ -107,8 +115,8 @@ const handleStarClick = () => electionStore.flipAnswerFlag(questionNr.value);
       <StepWrapper>
         <template #before>
           <IconButton
-            v-if="previousQuestion"
-            @click="previousQuestion && goToQuestion(previousQuestion)"
+            :hidden="backDisabled"
+            @click="goToQuestion(currentQuestion - 1)"
           >
             <IconComponent :icon="mdiArrowLeft" />
           </IconButton>
@@ -120,8 +128,8 @@ const handleStarClick = () => electionStore.flipAnswerFlag(questionNr.value);
         ></QuestionCard>
         <template #after>
           <IconButton
-            v-if="nextQuestion"
-            @click="nextQuestion && goToQuestion(nextQuestion)"
+            :hidden="forwardDisabled"
+            @click="goToQuestion(currentQuestion + 1)"
           >
             <IconComponent :icon="mdiArrowRight" />
           </IconButton>

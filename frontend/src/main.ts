@@ -277,10 +277,15 @@ router.beforeEach((to, from, next) => {
 
 //handles changing of election and district and fetching data
 router.beforeEach(async (to, from) => {
+  console.debug(
+    `From: ${String(from.name)} ${Object.values(to.params)}, To: ${String(
+      to.name
+    )} ${Object.values(to.params)}`
+  );
+  const store = useElectionStore();
   //load election if different
   if (from.params.election !== to.params.election) {
     if (to.params.election !== undefined) {
-      const store = useElectionStore();
       store.districts = [];
       store.election = undefined;
       store.init();
@@ -304,7 +309,6 @@ router.beforeEach(async (to, from) => {
   //load district if different
   if (from.params.district !== to.params.district) {
     if (to.params.district !== undefined) {
-      const store = useElectionStore();
       store.calculator = undefined;
       store.init();
       let calculator = undefined;
@@ -339,7 +343,6 @@ router.beforeEach(async (to, from) => {
     to.query[RESULT_QUERY_NAME] !== undefined &&
     typeof to.query[RESULT_QUERY_NAME] === 'string'
   ) {
-    const store = useElectionStore();
     const answers = decodeResults(to.query[RESULT_QUERY_NAME] as string);
     if (answers.length === store.calculator?.questions.length) {
       answers.forEach((x, i) => {
@@ -355,11 +358,14 @@ router.beforeEach(async (to, from) => {
     return true;
   } else if (
     from.params.election !== to.params.election &&
+    to.params.district === undefined &&
     to.params.election !== undefined &&
-    to.name !== appRoutes.districtSelection.name &&
-    to.params.district === undefined
+    to.name !== appRoutes.districtSelection.name
   ) {
     // route to district selection only if district not specified
+    console.debug(
+      `Re-routing to district selection: ${Object.values(to.params)}`
+    );
     return {
       name: appRoutes.districtSelection.name,
       params: { ...to.params },
@@ -367,9 +373,12 @@ router.beforeEach(async (to, from) => {
   } else if (
     // route to guide if district and election specified
     from.params.district !== to.params.district &&
+    to.params.election !== undefined &&
     to.params.district !== undefined &&
+    //to.name !== appRoutes.question.name &&
     to.name !== appRoutes.guide.name
   ) {
+    console.debug(`Re-routing to guide: ${Object.values(to.params)}`);
     return {
       name: appRoutes.guide.name,
       params: { ...to.params },
