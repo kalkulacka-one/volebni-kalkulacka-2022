@@ -44,7 +44,7 @@ docker-run:
 	echo "Running on port $(API_PORT)"
 	docker run -p $(API_PORT):80 kalkulacka-backend:latest
 
-poetry-run:
+poetry-run-api:
 	echo "Running on port $(API_PORT)"; \
 	export AWS_ACCESS_KEY_ID="foo"; \
 	export and AWS_SECRET_ACCESS_KEY="bar"; \
@@ -52,8 +52,12 @@ poetry-run:
 	export DYNAMODB_URL="$(DYNAMODB_URL)"; \
 	poetry run uvicorn main:app --reload --host $(API_HOST) --port $(API_PORT)
 
+poetry-run-converter:
+	poetry run ./converter.py
+
 run-api-docker: docker-run
-run-api-poetry: poetry-run
+run-api-poetry: poetry-run-api
+run-converter: poetry-run-converter
 
 run-localstack:
 	# https://localstack.cloud/
