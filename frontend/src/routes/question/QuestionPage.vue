@@ -136,15 +136,13 @@ const backDisabled = computed(() => {
         </template>
       </StepWrapper>
       <template #bottom-bar>
-        <BottomBar transparent="never">
-          <QuestionBottomBar
-            :answer="electionStore.answers[questionNr]"
-            :star-click="handleStarClick"
-            :yes-click="() => handleAnswerClick(UserAnswerEnum.yes)"
-            :no-click="() => handleAnswerClick(UserAnswerEnum.no)"
-            :skip-click="() => handleAnswerClick(UserAnswerEnum.skip)"
-          />
-        </BottomBar>
+        <QuestionBottomBar
+          :answer="electionStore.answers[questionNr]"
+          :star-click="handleStarClick"
+          :yes-click="() => handleAnswerClick(UserAnswerEnum.yes)"
+          :no-click="() => handleAnswerClick(UserAnswerEnum.no)"
+          :skip-click="() => handleAnswerClick(UserAnswerEnum.skip)"
+        />
       </template>
     </BottomBarWrapper>
   </StickyHeaderLayout>
