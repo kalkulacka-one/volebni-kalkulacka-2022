@@ -3,6 +3,9 @@ terraform {
 
   required_providers {
     aws = "~> 4.0"
+    local = {
+      source = "hashicorp/local"
+    }
   }
 
   backend "s3" {
@@ -14,4 +17,9 @@ terraform {
 
 provider "aws" {
   region = var.aws-region
+}
+
+provider "aws" {
+  region  = "us-east-1"
+  alias   = "global"
 }

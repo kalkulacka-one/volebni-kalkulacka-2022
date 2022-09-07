@@ -94,6 +94,59 @@ resource "aws_cloudfront_distribution" "distribution" {
       "GET",
       "HEAD"
     ]
+
+    target_origin_id = "backend"
+
+    forwarded_values {
+      query_string = false
+      cookies {
+        forward = "none"
+      }
+    }
+
+    min_ttl                = 0
+    default_ttl            = 86400
+    max_ttl                = 86400
+    compress               = true
+    viewer_protocol_policy = "redirect-to-https"
+    path_pattern           = "/image/*"
+  }
+
+  ordered_cache_behavior {
+    allowed_methods = [
+      "GET",
+      "HEAD"
+    ]
+    cached_methods = [
+      "GET",
+      "HEAD"
+    ]
+
+    target_origin_id = "backend"
+
+    forwarded_values {
+      query_string = false
+      cookies {
+        forward = "none"
+      }
+    }
+    min_ttl                = 0
+    default_ttl            = 86400
+    max_ttl                = 86400
+    compress               = true
+    viewer_protocol_policy = "redirect-to-https"
+    path_pattern           = "/test/*"
+  }
+
+  ordered_cache_behavior {
+    allowed_methods = [
+      "GET",
+      "HEAD"
+    ]
+    cached_methods = [
+      "GET",
+      "HEAD"
+    ]
     path_pattern     = "/js/script.outbound-links.js"
     target_origin_id = "plausible.io"
 
