@@ -9,6 +9,7 @@ export interface Props {
   shadow?: boolean;
   padding?: 'small' | 'small-mixed' | 'large';
   backgroundColor?: string;
+  responsive?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -18,6 +19,7 @@ const props = withDefaults(defineProps<Props>(), {
   shadow: false,
   padding: 'small',
   backgroundColor: 'rgb(var(--color-neutral-bg-container))',
+  responsive: false,
 });
 
 const classes = computed(() => ({
@@ -27,6 +29,7 @@ const classes = computed(() => ({
   [`card--border-${props.borderKind}`]: props.border,
   'card--shadow': props.shadow,
   [`card--padding-${props.padding}`]: props.padding,
+  'card--responsive': props.responsive,
 }));
 </script>
 
@@ -102,6 +105,14 @@ const classes = computed(() => ({
       padding-bottom: var(--spacing-large);
       padding-left: calc(2 * var(--spacing-large));
       padding-right: calc(2 * var(--spacing-large));
+    }
+  }
+
+  &--responsive {
+    @media (max-width: 700px) {
+      &.card--padding-large {
+        padding: var(--spacing-small);
+      }
     }
   }
 }

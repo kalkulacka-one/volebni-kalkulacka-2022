@@ -16,28 +16,30 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <component :is="props.tag" v-if="props.kind === 'headline'">
-    <HeadlineText :tag="'span'" :size="props.size">
-      <slot />
-    </HeadlineText>
-    <HeadlineText
-      :tag="'span'"
-      :size="props.size"
-      :color="'rgb(var(--color-neutral-fg))'"
-    >
-      <slot name="secondary" />
-    </HeadlineText>
-  </component>
-  <component :is="props.tag" v-if="props.kind === 'title'">
-    <TitleText :tag="'span'" :size="props.size">
-      <slot />
-    </TitleText>
-    <TitleText
-      :tag="'span'"
-      :size="props.size"
-      :color="'rgb(var(--color-neutral-fg))'"
-    >
-      <slot name="secondary" />
-    </TitleText>
-  </component>
+  <span>
+    <component :is="props.tag" v-if="props.kind === 'headline'">
+      <HeadlineText :tag="'span'" :size="props.size">
+        <slot />
+      </HeadlineText>
+      <HeadlineText
+        :tag="'span'"
+        :size="props.size"
+        :color="'rgb(var(--color-neutral-fg))'"
+      >
+        <slot name="secondary" />
+      </HeadlineText>
+    </component>
+    <component :is="props.tag" v-if="props.kind === 'title'">
+      <TitleText :tag="'span'" :size="props.size">
+        <slot />
+      </TitleText>
+      <TitleText
+        :tag="'span'"
+        :size="props.size"
+        :color="'rgb(var(--color-neutral-fg))'"
+      >
+        <slot name="secondary" />
+      </TitleText>
+    </component>
+  </span>
 </template>

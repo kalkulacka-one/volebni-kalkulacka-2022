@@ -9,7 +9,6 @@ import type { Question } from '@/types/question';
 
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
-import BottomBar from '@/components/design-system/navigation/BottomBar.vue';
 import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
 import IconButton from '@/components/design-system/input/IconButton.vue';
@@ -122,10 +121,10 @@ const backDisabled = computed(() => {
           </IconButton>
         </template>
         <QuestionCard
-          :question-nr="questionNr"
-          :question-total="electionStore.questionCount"
+          :current-question="currentQuestion"
+          :question-count="electionStore.questionCount"
           :question="(electionStore.calculator?.questions[questionNr] as Question)"
-        ></QuestionCard>
+        />
         <template #after>
           <IconButton
             :hidden="forwardDisabled"
@@ -136,15 +135,13 @@ const backDisabled = computed(() => {
         </template>
       </StepWrapper>
       <template #bottom-bar>
-        <BottomBar transparent="never">
-          <QuestionBottomBar
-            :answer="electionStore.answers[questionNr]"
-            :star-click="handleStarClick"
-            :yes-click="() => handleAnswerClick(UserAnswerEnum.yes)"
-            :no-click="() => handleAnswerClick(UserAnswerEnum.no)"
-            :skip-click="() => handleAnswerClick(UserAnswerEnum.skip)"
-          />
-        </BottomBar>
+        <QuestionBottomBar
+          :answer="electionStore.answers[questionNr]"
+          :star-click="handleStarClick"
+          :yes-click="() => handleAnswerClick(UserAnswerEnum.yes)"
+          :no-click="() => handleAnswerClick(UserAnswerEnum.no)"
+          :skip-click="() => handleAnswerClick(UserAnswerEnum.skip)"
+        />
       </template>
     </BottomBarWrapper>
   </StickyHeaderLayout>
