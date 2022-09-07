@@ -33,7 +33,7 @@ const options = electionStore.districts.map((district) => {
   return { value: district.district_code, label: district.name };
 });
 
-const selected = ref(null);
+const selected = ref((route.params.district as string) || null);
 
 const onSubmit = () => {
   if (selected.value) {
