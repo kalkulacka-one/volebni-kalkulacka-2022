@@ -30,14 +30,29 @@ class Answer(BaseModel):
     answer: str
 
 
+class Candidate(BaseModel):
+    candidate_id: str
+    name: str
+    short_name: str
+    abbreviation: str
+    logo: str
+
+
+class Match(BaseModel):
+    candidate: Candidate
+    score: int
+
+
 class ResultIn(BaseModel):
     answers: list[Answer]  # type: ignore  # noqa
+    matches: list[Match]  # type: ignore  # noqa
 
 
 class ResultOut(BaseModel):
     result_id: str
     created_at: datetime
     answers: list[Answer]  # type: ignore  # noqa
+    matches: list[Match]  # type: ignore  # noqa
 
 
 class ResultAdded(BaseModel):
@@ -59,7 +74,7 @@ def results_add(result: ResultIn):
     return ResultAdded(result_id=result_uuid)
 
 
-@app.get("/api/results/{result_id}")
+@app.get("/api/results/{result_id}", response_model=ResultOut)
 def results_get(result_id: str):
     response = get_table().get_item(Key={"result_id": result_id})
     item = response["Item"]
@@ -67,4 +82,8 @@ def results_get(result_id: str):
         result_id=item["result_id"],
         created_at=datetime.fromisoformat(item["created_at"]),
         answers=[Answer(**a) for a in item["result"]["answers"]],
+        matches=[
+            Match(candidate=Candidate(**m["candidate"]), score=m["score"])
+            for m in item["result"]["matches"]
+        ],
     )
