@@ -10,10 +10,10 @@ import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import BottomBar from '@/components/design-system/navigation/BottomBar.vue';
 import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
-import HeadingComponent from '@/components/design-system/typography/HeadingComponent.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
+import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -70,10 +70,14 @@ const onSubmit = (event: Event) => {
         </template>
       </NavigationBar>
     </template>
+    <template #sticky-header>
+      <SecondaryNavigationBar transparent>
+        {{ heading }}
+      </SecondaryNavigationBar>
+    </template>
     <form @submit.prevent="onSubmit">
       <BottomBarWrapper>
         <StackComponent spacing="small">
-          <HeadingComponent>{{ heading }}</HeadingComponent>
           <select id="district-selection" name="district-selection">
             <option
               v-for="x in options"
