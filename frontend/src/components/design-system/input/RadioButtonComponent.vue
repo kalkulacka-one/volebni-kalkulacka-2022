@@ -1,13 +1,23 @@
 <script setup lang="ts">
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 
-const props = defineProps<{
+export interface Props {
   groupName: string;
   value: string;
 
   // It depends on the implementation, but it should be enough to have just the target.value as the callback parameter
-  onSelect(target: HTMLInputElement): void;
-}>();
+  onSelect?(target: HTMLInputElement): void;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  onSelect: undefined,
+});
+
+const onInput = (event: Event) => {
+  if (props.onSelect) {
+    props.onSelect(event.target as HTMLInputElement);
+  }
+};
 </script>
 
 <template>
@@ -16,7 +26,7 @@ const props = defineProps<{
       type="radio"
       :value="value"
       :name="props.groupName"
-      @input="(event: Event) => onSelect(event.target as HTMLInputElement)"
+      @input="onInput"
     />
     <span class="radio-checkbox"></span>
     <BodyText size="medium">
