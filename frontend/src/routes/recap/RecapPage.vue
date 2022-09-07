@@ -27,6 +27,8 @@ import { vkiLogoPercent } from '@/components/design-system/icons';
 import TabFilter from '../../components/TabFilter.vue';
 import { useElectionStore, UserAnswerEnum } from '@/stores/electionStore';
 import RecapQuestionCard from './RecapQuestionCard.vue';
+import StackComponent from '../../components/design-system/layout/StackComponent.vue';
+import BodyText from '../../components/design-system/typography/BodyText.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -138,24 +140,32 @@ const isCardHidden = (index: number) => {
       </SecondaryNavigationBar>
     </template>
     <BottomBarWrapper>
-      <TabFilter
-        :tags="Array.from(availableTags)"
-        :input-change="handleFilterChange"
-        :selected-tag="selectedTag"
-      />
-      <RecapQuestionCard
-        v-for="i in [...Array(electionStore.questionCount).keys()]"
-        :key="i"
-        :hidden="isCardHidden(i)"
-        :question="(electionStore.calculator?.questions[i] as Question)"
-        :answer="electionStore.answers[i]"
-        :question-nr="i"
-        :question-total="electionStore.questionCount"
-        :star-click="() => handleStarClick(i)"
-        :yes-click="() => handleAnswerClick(i, UserAnswerEnum.yes)"
-        :no-click="() => handleAnswerClick(i, UserAnswerEnum.no)"
-        :skip-click="() => handleAnswerClick(i, UserAnswerEnum.skip)"
-      />
+      <StackComponent class="main" spacing="small">
+        <BodyText size="small">
+          Zde si můžete projít svoje odpovědi a důležitosti a případně je ještě
+          upravit.
+        </BodyText>
+        <TabFilter
+          :tags="Array.from(availableTags)"
+          :input-change="handleFilterChange"
+          :selected-tag="selectedTag"
+        />
+        <StackComponent class="list" spacing="small">
+          <RecapQuestionCard
+            v-for="i in [...Array(electionStore.questionCount).keys()]"
+            :key="i"
+            :hidden="isCardHidden(i)"
+            :question="(electionStore.calculator?.questions[i] as Question)"
+            :answer="electionStore.answers[i]"
+            :current-question="i + 1"
+            :question-count="electionStore.questionCount"
+            :star-click="() => handleStarClick(i)"
+            :yes-click="() => handleAnswerClick(i, UserAnswerEnum.yes)"
+            :no-click="() => handleAnswerClick(i, UserAnswerEnum.no)"
+            :skip-click="() => handleAnswerClick(i, UserAnswerEnum.skip)"
+          />
+        </StackComponent>
+      </StackComponent>
       <template #bottom-bar>
         <BottomBar transparent="never" :desktop="false">
           <div class="bottom-bar-grid">
@@ -173,6 +183,24 @@ const isCardHidden = (index: number) => {
 </template>
 
 <style lang="scss" scoped>
+.main {
+  display: grid;
+  grid-template-columns: clamp(32rem, 50vw, 48rem);
+  justify-content: center;
+  padding: var(--spacing-small);
+}
+
+/* TODO: update breakpoint */
+@media (max-width: 700px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+}
+
+.list {
+  display: grid;
+}
+
 .bottom-bar-grid {
   display: grid;
   grid-template-columns: 1fr;
