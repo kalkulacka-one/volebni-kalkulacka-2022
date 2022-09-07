@@ -4,20 +4,14 @@ import BodyText from '@/components/design-system/typography/BodyText.vue';
 export interface Props {
   groupName: string;
   value: string;
-
-  // It depends on the implementation, but it should be enough to have just the target.value as the callback parameter
-  onSelect?(target: HTMLInputElement): void;
+  modelValue: string | null;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  onSelect: undefined,
+  modelValue: null,
 });
 
-const onInput = (event: Event) => {
-  if (props.onSelect) {
-    props.onSelect(event.target as HTMLInputElement);
-  }
-};
+defineEmits(['update:modelValue']);
 </script>
 
 <template>
@@ -26,11 +20,14 @@ const onInput = (event: Event) => {
       type="radio"
       :value="value"
       :name="props.groupName"
-      @input="onInput"
+      :checked="props.modelValue === value"
+      @input="
+        $emit('update:modelValue', ($event.target as HTMLInputElement).value)
+      "
     />
     <span class="radio-checkbox"></span>
     <BodyText size="medium">
-      <slot></slot>
+      <slot />
     </BodyText>
   </label>
 </template>
