@@ -77,7 +77,7 @@ class QuestionAnswer:
 @dataclass
 class CandidateAnswers:
     timestamp: datetime
-    party_name: str
+    candidate: str
     filled_by: str
     secret_code: str
     answers: list[QuestionAnswer]
@@ -101,6 +101,10 @@ class Election:
         self, district: District, definitions: list[QuestionDefinition]
     ) -> None:
         self._definitions[district] = definitions
+
+    @property
+    def definitions(self) -> dict[District, list[QuestionDefinition]]:
+        return self._definitions
 
     def add_candidates(
         self, district: District, candidates: dict[str, Candidate]
@@ -277,7 +281,33 @@ def extract_answers(
         if pos == 0:
             # skip header
             continue
-        print(row)
+        ts = datetime.strptime(str(row[0]), "%m/%d/%Y %H:%M:%S")
+        candidate = str(row[1])
+        filled_by = str(row[2])
+        secret_code = str(row[3])
+        answers: list[QuestionAnswer] = []
+        for i in range(4, len(row), 3):
+            if i + 2 > len(row):
+                continue
+            print(i, row[i])
+            answers.append(
+                QuestionAnswer(
+                    answer=str(row[i]) or None,
+                    comment=str(row[i + 1]) or None,
+                    # TODO: find how it's marked
+                    is_important=False,
+                )
+            )
+
+        candidate_answer = CandidateAnswers(
+            timestamp=ts,
+            candidate=candidate,
+            filled_by=filled_by,
+            secret_code=secret_code,
+            answers=answers,
+        )
+
+        res[secret_code] = candidate_answer
 
     logger.info("Extracted candidates: %d", len(res))
     return res
@@ -393,6 +423,8 @@ if __name__ == "__main__":
                     name,
                     [d.name for d in election.districts.values()],
                 )
+                continue
+            if district not in election.definitions:
                 continue
 
             logger.info("Extracting answers for district: %s", district)
