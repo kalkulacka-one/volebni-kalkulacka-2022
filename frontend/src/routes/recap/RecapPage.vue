@@ -38,12 +38,13 @@ const districtName = electionStore.districts.filter(
 
 const title = `${electionName} — ${districtName} (${districtCode})`;
 
-const handleBackClick = () => {
+const handlePreviousClick = () => {
   router.push({
     name: appRoutes.question.name,
     params: { ...route.params, nr: 'last' },
   });
 };
+
 const handleShowResultsClick = () => {
   router.push({
     name: appRoutes.result.name,
@@ -95,8 +96,8 @@ const isCardHidden = (index: number) => {
     <template #sticky-header>
       <SecondaryNavigationBar>
         <template #before>
-          <IconButton title="Zpět na otázky" @click="handleBackClick">
-            <IconComponent :icon="mdiArrowLeft" size="medium" />
+          <IconButton @click="handlePreviousClick">
+            <IconComponent :icon="mdiArrowLeft" title="Otázky" />
           </IconButton>
         </template>
         Rekapitulace
