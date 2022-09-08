@@ -1,0 +1,955 @@
+{
+  "id": "komunalni-2022-585068",
+  "name": "Zlín",
+  "description": "Zlín - DESCRIPTION",
+  "district_code": "585068",
+  "election": {
+    "id": "komunalni-2022",
+    "key": "komunalni-2022",
+    "name": "komunalni-2022",
+    "description": "komunalni-2022"
+  },
+  "questions": [
+    {
+      "id": "komunalni-2022-585068-question-1",
+      "name": "Gentrifikace",
+      "title": "V žádaných městských částech mají bydlet jen ti, kdo si to mohou finančně dovolit.",
+      "gist": "Kritikům vadí, že ekonomické tlaky na původní obyvatele vedou k jejich postupnému vytlačování. Městské části pak ztrácejí pestrost a uzavírají se jen pro vybrané skupiny lidí. Zastánci tvrdí, že to je přirozený proces a že na bydlení v dobré čtvrti si člověk musí vydělat.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-2",
+      "name": "Poplatek za popelnice",
+      "title": "Má město účtovat poplatek za svoz komunálního odpadu?",
+      "gist": "Odpůrci tento poplatek považují za zbytečný; jedná se podle nich jen o jakousi „skrytou“ daň. Zastánci poplatku odmítají takový zásah do rozpočtu města na úkor důležitějších položek, přenesením zátěže na město.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-3",
+      "name": "Omezení vytápění",
+      "title": "Mělo by město v případě nouze začít omezovat vytápění v domovech pro seniory?",
+      "gist": "Zastánci omezování tvrdí, že nejen domácnosti, ale i samosprávy mohou mít potíže hradit výdaje za teplo kvůli velkému růstu cen energií. Odpůrci namítají, že senioři jsou zranitelná skupina obyvatel a nesmí být vystaveni ohrožení zdraví ani ve stavu nouze.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-4",
+      "name": "Zóny 30 km/h",
+      "title": "Měly by se ve městě rozšířit zóny, kde mají auta povoleno jet max 30 km/h.?",
+      "gist": "Obecně platí, že v obci smí vozidlo jet maximálně rychlostí 50 km/h. Zóny 30 (km/h) jsou podle zastánců levné opatření pro zklidňování dopravy v městské zástavbě a v některých evropských zemích se používají více než 20 let. Odpůrci to považují za brždění provozu a komplikaci dopravy.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-5",
+      "name": "Milostivé léto",
+      "title": "Právě probíhá akce Milostivé léto: Má město individuálně obeslat všechny své dlužníky s potřebnými informacemi?",
+      "gist": "Odpůrci obesílání dlužníků říkají, že se o své dluhy mají starat hlavně sami. Zastánci tvrdí, že by město mělo aktivně usilovat, aby se dlužné peníze vrátily do rozpočtu, a že osobní obeslání je účinné.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-6",
+      "name": "Více kamer",
+      "title": "Měly by být ve městě instalovány další kamery?",
+      "gist": "Zastánci uvádějí zvýšení bezpečnosti problémových lokalit, odpůrci zdůrazňují přílišný zásah do osobních práv a přesun kriminality do jiných míst.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-7",
+      "name": "Hazard zakázán",
+      "title": "Jste pro úplný zákaz hazardu na území města?",
+      "gist": "Příznivci zákazu argumentují sociálními problémy plynoucími z hazardu. Odpůrci zmiňují svobodu podnikání a finance, které město získá na daních.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-8",
+      "name": "MHD zdarma",
+      "title": "Měla by být městská hromadná doprava pro všechny rezidenty zdarma?",
+      "gist": "Zastánci zrušení jízdného argumentují zlepšením životního prostředí, zklidnění dopravy i úsporami za tisk lístků nebo vedení agendy s vymáháním dlužného jízdného. Odpůrci tvrdí, že se jedná o nehospodárné nakládání s veřejnými prostředky. Podle jiných by to příliš zatížilo městský rozpočet.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-9",
+      "name": "Bezbariérové zastávky MHD",
+      "title": "Město by mělo více investovat do zastávek hromadné dopravy, aby byly až na výjimky bezbariérové.",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-10",
+      "name": "Jmenovité výsledky hlasování zastupitelstva",
+      "title": "Hlasování členů zastupitelstva města se má zveřejňovat jmenovitě.",
+      "gist": "Podle zastánců je pro veřejnou kontrolu důležité vidět, jak přesně kdo v zastupitelstvu města hlasuje. Kritici to považují za zbytečné.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-11",
+      "name": "Jmenovité výsledky hlasování rady",
+      "title": "Hlasování členů rady města se má zveřejňovat jmenovitě.",
+      "gist": "Podle zastánců je pro veřejnou kontrolu důležité vidět, jak přesně kdo v radě města hlasuje. Kritici to považují za zbytečné.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-12",
+      "name": "Regulace zábavní pyrotechniky",
+      "title": "Používání zábavní pyrotechniky jindy než na Silvestra má být ve městě zakázané.",
+      "gist": "V případě neregulace bývají problematické hlavně letní měsíce, kdy jsou ohňostroje součástí řady domácích oslav.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-13",
+      "name": "Přístupné veřejné budovy v chladnu",
+      "title": "Město by v topné sezóně mělo zpřístupnit některé veřejné budovy lidem jen pro zahřátí.",
+      "gist": "Některá evropská města zvažují, že veřejnosti zpřístupní knihovny, komunitní centra či umělecké galerie, aby se zde mohli v nadcházející zimě zahřát ti, kdo si nemohou dovolit vytápět své domovy.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-14",
+      "name": "Úspora energií – světelná výzdoba",
+      "title": "Kvůli úspoře energií by město mělo omezovat noční nasvícení kulturních památek.",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-15",
+      "name": "Úspora energií – veřejné osvětlení",
+      "title": "Má město kvůli úspoře energií omezovat veřejné osvětlení?",
+      "gist": "Kvůli energetické krizi řada měst v Rakousku, Německu, Francii a Itálii omezuje pouliční osvětlení, některé obce ho v noci vypnou úplně. Vypnutí světel na tři a půl hodiny každou noc má snížit spotřebu energie cca o čtvrtinu. Kritici namítají, že se zhorší bezpečnost ve městě.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-16",
+      "name": "Úspora energií – omezení vytápění",
+      "title": "V topné sezóně by se mělo omezit vytápění v městských budovách.",
+      "gist": "Např. v sousedním Německu nyní plánují, že veřejné budovy se až na výjimky (např. školy) budou z důvodu úspor energie vytápět max. na 19 C.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-17",
+      "name": "Konec dětských exekucí",
+      "title": "Souhlasím, aby město plošně odpouštělo dluhy dětským dlužníkům a nechalo zastavit jejich exekuce.",
+      "gist": "Jedná se zpravidla o historické dluhy. Dnes již dětem u města obvykle dluhy nevznikají, zodpovídají za ně např. rodiče.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-18",
+      "name": "Městské transparentní účty",
+      "title": "Má mít město transparentní účty, do kterých lze veřejně nahlížet?",
+      "gist": "Zastánci uvádějí nutnost kontroly toho, jak město s penězi nakládá. Odpůrci se domnívají, že je to komplikované a že hrozí únik osobních údajů.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-19",
+      "name": "Participativní rozpočet",
+      "title": "O části rozpočtu města mají mít možnost rozhodovat občané přímo.",
+      "gist": "Jde např. o participativní rozpočet: radnice vymezí část peněz z ročního rozpočtu, občané pak podávají návrhy, co by se za tyto peníze mělo ve městě v následujícím roce vylepšit a vítězné projekty se poté realizují.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-20",
+      "name": "Zvýšení počtu městských bytů",
+      "title": "Město by mělo zvyšovat počty bytů ve svém vlastnictví.",
+      "gist": "Některá města se snaží o odkup nebo výstavbu bytů do svého vlastnictví. Důvodem mj. je, že se jim nedostává bytů pro lékaře a zdravotní sestry, policisty, učitele či seniory a potřebné. Kritici namítají, že údržba městských bytů zatěžuje rozpočet.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-21",
+      "name": "Omezení vánoční výzdoby",
+      "title": "Město by mělo kvůli rostoucím cenám energie omezit veřejné slavnostní osvětlení v době Vánoc.",
+      "gist": "K podobnému kroku přistoupila například rakouská Vídeň. Na hlavním bulváru Ring kolem centra nebude vánoční osvětlení vůbec, na dalších místech se bude rozsvěcet o hodinu později než doposud.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-22",
+      "name": "Obědy zdarma",
+      "title": "Ve všech veřejných základních školách na území města by měly mít děti možnost obědvat zdarma.",
+      "gist": "Podle průzkumů žije 20 procent českých dětí v ohrožení příjmovou chudobou. Některé děti již dostávají obědy zdarma díky několika různým projektům, závisí to ale na vůli školy a města, zda se do takových projektů zapojí.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-23",
+      "name": "Sdílení aut",
+      "title": "Je třeba, aby město podporovalo sdílení aut (tzv. carsharing).",
+      "gist": "Podle zastánců má sdílení vozů pomoci odlehčit dopravu ve městě. Kritici poukazují, že carsharingové společnosti pouze moderním druhem autopůjčovny, která je dostupnější a pohodlnější.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-24",
+      "name": "Žádné parkovací zóny",
+      "title": "Parkování ve městě má být neomezené parkovacími zónami.",
+      "gist": "Zastánci říkají, že zóny placeného státní přinášejí jistotu parkování rezidentům a že odvádějí z města auta, která do něj nezajíždějí, ale zůstávají v okrajových částech. Kritici namítají, že se parkování jen přelévá jinam a auty se zaplňují dříve klidné oblasti města. Vadí také, že zóny rezidentům parkovací místo automaticky nezaručí.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-25",
+      "name": "Privatizace bytů",
+      "title": "Město má privatizovat své byty.",
+      "gist": "Podle zastánců přináší privatizace bytů velké finanční prostředky pro město. Kritici chtějí, aby město mohlo s byty nakládat dle vlastního uvážení a potřeb občanů.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-26",
+      "name": "Podíl developerů na veřejných výdajích",
+      "title": "Soukromí developeři se musí podílet na úhradě veřejných nákladů spojených s výstavbou jejich projektů.",
+      "gist": "Podíl se týká komunikací, sítí, MHD apod. Může být finanční, nebo jako konkrétní plnění v rámci výstavby, např. výstavbou veřejné vybavenosti nebo poskytnutím podílu bytů do obecního vlastnictví.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-27",
+      "name": "Cyklodoprava",
+      "title": "Má město upřednostňovat dopravu pěší, cyklistickou a hromadnou před dopravou automobilovou?",
+      "gist": "Výhody cyklodopravy jsou podle zastánců nízký zábor veřejného prostoru, snižování dopravních zácp, zlepšení ovzduší či kladný vliv na lidské fyzické i mentální zdraví cyklistů. Odpůrci to považují za komplikaci pro autodopravu, za zbytečnost nebo za nedostatečně chráněný způsob dopravy. Cyklisté by měli jezdit po cyklostezkách, kde je neohrožují auta.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-28",
+      "name": "Zdanění prázdných bytů",
+      "title": "Dlouhodobě prázdné byty by měly být více zdaněné.",
+      "gist": "Krok má odrazovat od nákupu investičních bytů. Ty podle zastánců zdanění vyčerpávají bytové zásoby a zhoršují situaci pro lidi s nízkými a středními příjmy, kteří si chtějí zajistit vlastní bydlení. Podle kritiků se zvýší ceny nemovitostí a nájemní bydlení podraží. V ČR je jednotný výpočet daně pro všechny byty bez ohledu na to, kolik bytů majitel vlastní a zda jsou dlouhodobě obydlené.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-29",
+      "name": "Podíl developerů na veřejných výdajích",
+      "title": "Příspěvky developerů na veřejnou vybavenost by se měly zvýšit.",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-30",
+      "name": "Dobíjecí místa pro elektromobily",
+      "title": "Město má podporovat budování dobíjecích míst pro elektromobily.",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-31",
+      "name": "Podpora družstevního bydlení",
+      "title": "Město má podporovat družstevní a spolkové formy bytové výstavby i subjekty, které budou poskytovat bydlení na neziskovém principu.",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-32",
+      "name": "MHD zdarma do 18 let",
+      "title": "Děti do 18 let mají mít MHD zdarma.",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-33",
+      "name": "Fotovoltaika na soukromých střechách",
+      "title": "Město má pomoci vlastníkům bytových domů s instalací fotovoltaických panelů na střeše.",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-34",
+      "name": "Vstupné na kulturu a sport",
+      "title": "V městských muzeích, galeriích a na sportovištích má být pro mládež bezplatné nebo symbolické vstupné.",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-35",
+      "name": "Menstruační pomůcky v městských budovách",
+      "title": "Na všech městských veřejných toaletách (na úřadech, v knihovnách apod.) mají být volně dostupné menstruační pomůcky.",
+      "gist": "Podobně jako bývá dnes na všech toaletách mýdlo nebo toaletní papír.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-36",
+      "name": "Menstruační pomůcky –vydávání zdarma",
+      "title": "Místní úřady mají mít zákonnou povinnost poskytovat vložky či tampony bezplatně každému, kdo je potřebuje.",
+      "gist": "Některé ženy, např. samoživitelky, navíc s dospívajícími dcerami, pro svůj nízký příjem nemají přístup k adekvátním menstruačním pomůckám. Zastánci argumentují rovností a důstojností ve společnosti a tím, že toaletní papír či mýdlo jsou ve veřejných budovách běžně dostupné. Odpůrci to považují za finančně nákladné či nespravedlivé vůči lidem, kteří menstruaci nemají.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-37",
+      "name": "Fotovoltaika na městské budovy",
+      "title": "Město má investovat do fotovoltaických panelů na střechách městských budov.",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-38",
+      "name": "Elektrické koloběžky",
+      "title": "Město má podporovat rozvoj dopravy na elektrických koloběžkách a podobných dopravních prostředcích.",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-39",
+      "name": "Integrace cizinců",
+      "title": "Město by mělo aktivně prosazovat integraci cizinců žijících ve městě.",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-40",
+      "name": "Více strážníků",
+      "title": "Mělo by být více městských strážníků?",
+      "gist": "Zastánci uvádějí zvýšení pocitu bezpečí. Odpůrci namítají, že to jsou nyní pro město zbytečné výdaje navíc.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-41",
+      "name": "Zelené střechy",
+      "title": "Město má prosazovat na nových či rekonstruovaných městských budovách zelené střechy.",
+      "gist": "Oproti klasické střeše je založení zelené střechy nákladnější a složitější a je třeba ji následně udržovat. Kvůli vyššímu zatížení je třeba silnější střešní konstrukce. Zastánci poukazují na to, že zelené střechy izolují a snižují náklady na vytápění či chlazení vnitřních prostor v létě.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-42",
+      "name": "Cyklodoprava",
+      "title": "Město by mělo podporovat dopravu obyvatel do práce či do školy na kole.",
+      "gist": "Výhody cyklodopravy jsou podle zastánců nízký zábor veřejného prostoru, snižování dopravních zácp, zlepšení ovzduší či kladný vliv na lidské fyzické i mentální zdraví cyklistů. Odpůrci to považují za komplikaci pro autodopravu, za zbytečnost nebo za nedostatečně chráněný způsob dopravy. Cyklisté by měli jezdit po cyklostezkách, kde je neohrožují auta.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-43",
+      "name": "Podpora profesionálního sportu",
+      "title": "Souhlasím, aby město finančně podporovalo profesionální sport ve městě.",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-44",
+      "name": "Daň z nemovitosti",
+      "title": "Daň z nemovitosti by se měla snížit.",
+      "gist": "Město má relativně velkou volnost v nastavení výše daně z nemovitostí. Ta je celá příjmem města. Zastánci vyšší daně argumentují tím, že v porovnání s jinými zeměmi jsou české daně spíše nízké. Odpůrci daně často argumentují tím, že dochází ke zdanění již zdaněného.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-45",
+      "name": "Podpora chudých",
+      "title": "Má podle vás město finančně podporovat sociálně slabé občany, aby se nepropadli do chudoby?",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-46",
+      "name": "Bytový fond",
+      "title": "Město má budovat a udržovat vlastní bytový fond",
+      "gist": "Odpůrci tvrdí, že soukromí majitelé se o nemovitosti postarají lépe. Např. ve Vídni je cca čtvrtina bytů přímo v obecním vlastnictví a stejná část patří obecně prospěšným stavebním společnostem. Ty dostávají na výstavbu výhodné půjčky od města a na oplátku se zavazují držet nájmy na přijatelné úrovni i pro další generace. Výnosy musí investovat do výstavby nebo oprav bytů.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-47",
+      "name": "Společné vzdělávání",
+      "title": "Město by mělo zamezovat shromažďování sociálně znevýhodněných dětí v jedné nebo několika málo školách.",
+      "gist": "Zastánci chtějí zajistit všem dětem bez ohledu na jejich původ odpovídající podporu na každé škole. Odpůrci argumentují svobodným výběrem školy.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-585068-question-48",
+      "name": "Sociální pomoc",
+      "title": "Město má podporovat předškolní zařízení pro děti od 2 let věku.",
+      "gist": "Pomocí sítě školek, dětských skupin nebo mateřských klubů má město podle zastánců pomoci rodičům skloubit pracovní povinnosti s péčí o děti. Odpůrci namítají, že děti do tří let mají být v domácí péči a že časnější péči mimo domov nemá město podporovat.",
+      "detail": "",
+      "tags": []
+    }
+  ],
+  "candidates": [
+    {
+      "id": "komunalni-2022-585068-candidate-759713",
+      "name": "Občanská demokratická strana",
+      "type": "party",
+      "description": "Občanská demokratická strana - DESCRIPTION",
+      "contacts": {
+        "web": [],
+        "facebook": "https://facebook.com/golan.tomas",
+        "twitter": "https://twitter.com/golan_tomas",
+        "instagram": "https://www.instagram.com/tomasgolansenator/"
+      },
+      "parties": [
+        {
+          "id": "komunalni-2022-585068-759713-party",
+          "name": "Občanská demokratická strana",
+          "description": "Občanská demokratická strana - DESCRIPTION",
+          "contacts": {
+            "web": [],
+            "facebook": "https://facebook.com/golan.tomas",
+            "twitter": "https://twitter.com/golan_tomas",
+            "instagram": "https://www.instagram.com/tomasgolansenator/"
+          },
+          "abbreviation": "ODS"
+        }
+      ]
+    },
+    {
+      "id": "komunalni-2022-585068-candidate-880254",
+      "name": "ROZHÝBEJME ZLÍN",
+      "type": "party",
+      "description": "ROZHÝBEJME ZLÍN - DESCRIPTION",
+      "contacts": {
+        "web": [
+          {
+            "url": "https://www.rozhybejmezlin.cz/",
+            "label": "web"
+          },
+          {
+            "url": "https://www.rozhybejmezlin.cz/program",
+            "label": "program"
+          }
+        ],
+        "facebook": "https://www.facebook.com/rozhybejmezlin.cz/",
+        "instagram": "https://instagram.com/rozhybejme.zlin?igshid=YmMyMTA2M2Y="
+      },
+      "parties": [
+        {
+          "id": "komunalni-2022-585068-880254-party",
+          "name": "ROZHÝBEJME ZLÍN",
+          "description": "ROZHÝBEJME ZLÍN - DESCRIPTION",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.rozhybejmezlin.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://www.rozhybejmezlin.cz/program",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/rozhybejmezlin.cz/",
+            "instagram": "https://instagram.com/rozhybejme.zlin?igshid=YmMyMTA2M2Y="
+          },
+          "abbreviation": "Trikolora+NK"
+        }
+      ]
+    },
+    {
+      "id": "komunalni-2022-585068-candidate-121027",
+      "name": "Zlín sobě",
+      "type": "party",
+      "description": "Zlín sobě - DESCRIPTION",
+      "contacts": {
+        "web": []
+      },
+      "parties": [
+        {
+          "id": "komunalni-2022-585068-121027-party",
+          "name": "Zlín sobě",
+          "description": "Zlín sobě - DESCRIPTION",
+          "contacts": {
+            "web": []
+          },
+          "abbreviation": "ČSSD+NK"
+        }
+      ]
+    },
+    {
+      "id": "komunalni-2022-585068-candidate-602014",
+      "name": "Česká pirátská strana",
+      "type": "party",
+      "description": "Česká pirátská strana - DESCRIPTION",
+      "contacts": {
+        "web": []
+      },
+      "parties": [
+        {
+          "id": "komunalni-2022-585068-602014-party",
+          "name": "Česká pirátská strana",
+          "description": "Česká pirátská strana - DESCRIPTION",
+          "contacts": {
+            "web": []
+          },
+          "abbreviation": "Piráti"
+        }
+      ]
+    },
+    {
+      "id": "komunalni-2022-585068-candidate-171901",
+      "name": "Zlín 21",
+      "type": "party",
+      "description": "Zlín 21 - DESCRIPTION",
+      "contacts": {
+        "web": [
+          {
+            "url": "https://zlin21.cz/",
+            "label": "web"
+          }
+        ],
+        "facebook": "https://www.facebook.com/zlin21/",
+        "twitter": "https://twitter.com/21Zlin",
+        "instagram": "https://www.instagram.com/hnuti_zlin21"
+      },
+      "parties": [
+        {
+          "id": "komunalni-2022-585068-171901-party",
+          "name": "Zlín 21",
+          "description": "Zlín 21 - DESCRIPTION",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://zlin21.cz/",
+                "label": "web"
+              }
+            ],
+            "facebook": "https://www.facebook.com/zlin21/",
+            "twitter": "https://twitter.com/21Zlin",
+            "instagram": "https://www.instagram.com/hnuti_zlin21"
+          },
+          "abbreviation": "Z21"
+        }
+      ]
+    },
+    {
+      "id": "komunalni-2022-585068-candidate-919562",
+      "name": "STAROSTOVÉ A NEZÁVISLÍ",
+      "type": "party",
+      "description": "STAROSTOVÉ A NEZÁVISLÍ - DESCRIPTION",
+      "contacts": {
+        "web": []
+      },
+      "parties": [
+        {
+          "id": "komunalni-2022-585068-919562-party",
+          "name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "description": "STAROSTOVÉ A NEZÁVISLÍ - DESCRIPTION",
+          "contacts": {
+            "web": []
+          },
+          "abbreviation": "STAN"
+        }
+      ]
+    },
+    {
+      "id": "komunalni-2022-585068-candidate-348037",
+      "name": "Svoboda a přímá demokracie (SPD)",
+      "type": "party",
+      "description": "Svoboda a přímá demokracie (SPD) - DESCRIPTION",
+      "contacts": {
+        "web": []
+      },
+      "parties": [
+        {
+          "id": "komunalni-2022-585068-348037-party",
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "description": "Svoboda a přímá demokracie (SPD) - DESCRIPTION",
+          "contacts": {
+            "web": []
+          },
+          "abbreviation": "SPD"
+        }
+      ]
+    },
+    {
+      "id": "komunalni-2022-585068-candidate-456015",
+      "name": "ANO 2011",
+      "type": "party",
+      "description": "ANO 2011 - DESCRIPTION",
+      "contacts": {
+        "web": []
+      },
+      "parties": [
+        {
+          "id": "komunalni-2022-585068-456015-party",
+          "name": "ANO 2011",
+          "description": "ANO 2011 - DESCRIPTION",
+          "contacts": {
+            "web": []
+          },
+          "abbreviation": "ANO"
+        }
+      ]
+    },
+    {
+      "id": "komunalni-2022-585068-candidate-913309",
+      "name": "KDU-ČSL s podporou TOP 09 a nezávislých kandidátů",
+      "type": "party",
+      "description": "KDU-ČSL s podporou TOP 09 a nezávislých kandidátů - DESCRIPTION",
+      "contacts": {
+        "web": []
+      },
+      "parties": [
+        {
+          "id": "komunalni-2022-585068-913309-party",
+          "name": "KDU-ČSL s podporou TOP 09 a nezávislých kandidátů",
+          "description": "KDU-ČSL s podporou TOP 09 a nezávislých kandidátů - DESCRIPTION",
+          "contacts": {
+            "web": []
+          },
+          "abbreviation": "KDUČSL+TOP09+NK"
+        }
+      ]
+    }
+  ],
+  "answers": [
+    {
+      "id": "komunalni-2022-585068-answer-602014-1",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-1",
+      "answer": "no",
+      "comment": "Není rozumné vytvářet jakákoliv ghetta, ani ghetta bohatých, to vede jen k rozdělení společnosti a to je základ k jakékoli nenávisti."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-2",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-2",
+      "answer": "yes",
+      "comment": "Poplatky musí být ovšem jen velmi nízké, přijatelné pro prakticky všechny sociální skupiny. Ovšem ne zase příliš nízké, aby motivovali občany k třídění odpadu. Nebránil bych se ani tomu, aby se za směsný odpad platilo a naopak za vytříděné druhotné suroviny poskytovala odměna. Kdy by řádně třídil, mohl by si poplatky za směsný odpad vykrýt vytříděným odpadem."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-3",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-3",
+      "answer": "no",
+      "comment": "Takové opatření již není šetřením ale panikou. Dovedu si to představit pouze v případě skutečné války na našem území nebo nějaké živelné katastrofy. Schopnost a ochota postarat se o staré a nemocné je obrazem vyspělosti civilizace."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-4",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-4",
+      "comment": "Byla by nutná delší a hluboká diskuse s lidmi, kteří tomu opravdu rozumí a zhodnotit všechna pro a proti, ať už z hlediska bezpečnosti, plynulosti dopravy ekologie atd. Nicméně diskusi na toto téma vítám."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-5",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-5",
+      "answer": "yes",
+      "comment": "Bohužel část lidí, a většinou jsou to právě dlužníci města, se dostala mimo standardní společnost a je potřeba je malými, ale pravidelnými kroky přitáhnout zpět. Všem se to nakonec vyplatí."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-6",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-6",
+      "answer": "no",
+      "comment": "Z neustálého sledování nemám dobrý pocit.  To je postup spíše totalitních režimů a tam doufám pořád ještě nejsme."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-7",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-7",
+      "answer": "yes",
+      "comment": "Hazard je jako droga. Je to to samé se stejnými dopady. Současné rozdělení drog, včetně hazardu, na ty které jsou povoleny a které ne, již dle mého dávno neodpovídá skutečným dopadům, ale spíše schopnosti jejich provozovatelů, zajistit si politickou a tedy zákonnou podporu. Zkrátka peníze určují, co je možné a co už ne. Hazard je zlo."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-8",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-8",
+      "answer": "no",
+      "comment": "Pro mne osobně je toto klíčové téma, ovšem ukazuje se, že na dopravu zdarma naše společnost ještě dostatečně nevyspěla. Ceny jízdného a formy úhrady musí být ovšem nastaveny tak, aby využití MHD bylo pro všechny první a nejjednodušší volbou. S tím ovšem souvisí řada dalších věcí, jako je právě úroveň této dopravy, tedy její četnost, pohodlí, jednoduchost úhrady, rychlost přepravy a podobně a naopak nevýhody dopravy individuální, která musí být sice možná, ale měla by být oproti hromadné komplikovanější a dražší, tedy volena jen v nutném případě. Cena dopravy je tak jen kamínkem ve složité mozaice, kterou je potřeba poskládat celou."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-9",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-9",
+      "answer": "yes",
+      "comment": "Obdobně jako u bodu 3"
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-10",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-10",
+      "comment": "U některých témat rozhodně, ovšem tam, kde by mohl nastoupit strach z veřejného projevu svého názoru, by bylo třeba zůstat u tajného hlasování. Možným řešením by bylo hlasování smíšené. Kdo chce, hlasuje veřejně a kdo nechce, hlasuje tajně a ať pak vysvětlí svým voličům, proč nechce, aby věděli oni nebo někdo jiný, jak hlasoval."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-11",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-11",
+      "comment": "Stejně jako u 9."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-12",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-12",
+      "answer": "yes",
+      "comment": "Pro tyto účely by mohlo město vyčlenit prostory a podmínky, kde by tyto oslavy nerušily ostatní obyvatele, ať už lidské či zvířecí. "
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-13",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-13",
+      "comment": "Pokud, tak by to měly být budovy vyhrazené právě pro tento účel. Neměly by to být budovy či prostory, které mají sloužit k jiné činnosti, například vyřizování různých dokumentů atd."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-14",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-14",
+      "answer": "yes",
+      "comment": "Dokud nenajdeme a nezavedeme ekologičtější zdroje energie a osvětlení s minimálními nároky. Řešením jsou například osvětlení využívající solární energii - přes den se nabíjí a v noci svítí."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-15",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-15",
+      "answer": "no",
+      "comment": "Otázka bezpečnosti je důležitější než energetické úspory, ovšem bylo by opět ideální využít co nejekologičtější formy, jako je solární energie."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-16",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-16",
+      "comment": "Omezit je příliš nekonkrétní pojem. Mělo by se topit tak, aby se tam lidé mohli provozovat činnost, pro kterou je budova určena. Aby se nepřetápělo, kde to není nutné a naopak lidem, zejména pracujícím v budově, nebylo chladno."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-17",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-17",
+      "comment": "Je to hodně individuální. V tomto směru je potřeba nechat rozhodnutí na konkrétních pracovnících, kteří daný případ dobře znají."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-18",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-18",
+      "answer": "yes",
+      "comment": "Ano, město by mělo umožnit přístup komukoliv do svého účetnictví. Úředníci města pouze hospodaří s penězi, které jim občané svěřili, jsou to tedy peníze daňových poplatníků a není důvod, aby jim bylo cokoliv tajeno."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-19",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-19",
+      "answer": "yes",
+      "comment": "Ano, část rozpočtu by měla být vyčleněna k rozhodování občanům, ovšem může to být jen taková část, a zejména na takové věci, které dokáže řadový občan posoudit a správně rozhodnout. Nelze k tomu přistoupit v neomezené míře."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-20",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-20",
+      "answer": "yes",
+      "comment": "Rozhodně. Rozprodání bytového fondu měst bylo katastrofální chybou, kterou budeme tak 100 až 200 let napravovat. Vlastnictví bytů městem, dává městu, a tedy všem jejím občanům, možnost zasahovat a regulovat cenu bydlení ve městě a tím i ovlivňovat kvalitu života obecně. "
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-21",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-21",
+      "answer": "no",
+      "comment": "V tomto případě nesouhlasím Psychologický dopad na občany by mohl být velmi negativní. Je potřeba občany uklidnit, dodat jim pohodu a důvěru. Když město o Vánocích pohasne, bude to, jako by řeklo, tak a je konec. Už nejsou peníze ani na Vánoce. "
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-22",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-22",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-23",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-23"
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-24",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-24",
+      "answer": "no",
+      "comment": "Parkování je velký problém související s celou koncepcí přepravy ve městě. Je prokázáno, že rozšiřování možnosti parkovat vede pouze ke krátkodobému odlehčení parkoviště, které se velmi brzy opět zaplní. Jakékoliv uvolnění možnosti parkovat povede pouze k větší koncentraci vozidel a tím snížení úrovně kvality života ve městě."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-25",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-25",
+      "answer": "no",
+      "comment": "Rozhodně ne. Přesně naopak. Město musí intenzivně realizovat vlastní výstavbu, aby dosáhlo cca 20 -25 % podílu na bytovém fondu ve městě. To se ukazuje, jako ideální model vlastnictví bytů ve městech."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-26",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-26",
+      "answer": "yes",
+      "comment": "Rozhodně. Naše město je především městem developerů. Jejich napojení na politickou garnituru je do nebe volající. Je potřeba, aby nesly veškeré náklady související s jejich činností."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-27",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-27",
+      "answer": "yes",
+      "comment": "To je jediná možná cesta. Doba automobilová je pryč. Naše město musíme odebrat automobilům a vrátit jej zpět lidem a zvířatům. Individuální automobilová doprava se ukázala ve větším měřítku jako nepoužitelná. Důsledky slepé výry v automobilismus vidíme dnes a denně a žádné nové silnice ani parkoviště to nezmění."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-28",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-28",
+      "answer": "yes",
+      "comment": "K bytům, stejně jako ke všem ostatním nemovitostem, je potřeba přistupovat jinak než k běžnému majetku. Jedná se o omezené statky, které jsou nezbytné pro život. Nesouhlasím ovšem s žádným znárodňováním, či jinou formou porušování daných pravidel. Majitele takovýchto bytů je třeba motivovat právě formou daní či naopak, v případě efektivního využívání bytů, formou podpory. Osobně bych šel tou cestou, že bych na všechny byty uvalil vysoké daně a u těch, které by byl řádně využívány, poskytl vysokou slevu, či odečty. Tím bychom nikoho netrestali za nevyužití bytu, ale naopak odměňovali za využití, což je vždy lepší cesta."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-29",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-29",
+      "answer": "yes",
+      "comment": "Viz odpověď v bodě 26."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-30",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-30",
+      "comment": "Složitější téma. Obecně ano, ale je potřeba získat větší množství aktuálních informací od lidí, kteří se touto problematikou zabývají."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-31",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-31",
+      "answer": "yes",
+      "comment": "Ano. Toto je určitý mezistupeň, či doplněk, k tradiční komerční výstavbě a výstavbě městských bytů."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-32",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-32",
+      "answer": "yes",
+      "comment": "Děti jsou jednou ze skupin, pro kterou je potřeba MHD silně zvýhodnit a naučit je ji využívat. Současně tím podpoříme rodiny s dětmi, protože všichni říkáme, aby rodiny měli děti, protože bez nich není budoucnost. Ovšem nestačí to pouze říkat, ale je potřeba těmto rodinám také pomáhat."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-33",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-33",
+      "answer": "yes",
+      "comment": "Pomoci rozhodně. Otázkou je jak? V prvé řadě zejména jednoduchou administrativou, poradenstvím atd. a teprve po tom i finančně. "
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-34",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-34",
+      "answer": "yes",
+      "comment": "Je potřeba pracovat s mládeží, dokud to ještě jde, dokud si nevytvoří předsudky a zábrany či dokonce nenávist. Otevřít, zpřístupnit a vzdělávat všude, kde to jen jde. Nejvíce zla napáchá nevzdělanost, která se promění v obyčejnou lidskou blbost a to je větší problém pro lidstvo něž nějaký Covid."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-35",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-35",
+      "answer": "yes",
+      "comment": "Je to sice intimní téma, kterému se společnost vyhýbá, ale ženy si to nevybraly. Proč musí nést velkou část života tuto zátěž, nejen ve formě bolesti a nepříjemností, ale navíc ještě i finanční? Je ostuda společnosti, tedy zejména mužů, že nechají ženy trpět, místo aby jim pomáhali, kde to jen jde."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-36",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-36",
+      "answer": "yes",
+      "comment": "Viz otázka 35."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-37",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-37",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-38",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-38",
+      "answer": "yes",
+      "comment": "Jen je potřeba vše řádně legislativně upravit a zabránit nekontrolovatelnému povalování koloběžek po celém městě. Podporovat, ale současně přísně regulovat."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-39",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-39",
+      "answer": "yes",
+      "comment": "Pokud se u nás rozhodně nějaký cizinec žít, je potřeba, aby se z něj stal \"našinec\", jinak si koledujeme o vytváření různých ghett a následně problémů všeho druhu jako v zemích, kde tuto integraci nezvládli."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-40",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-40"
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-41",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-41",
+      "answer": "yes",
+      "comment": "Člověk potřebuje přírodu k životu a město musí být místem k životu a ten bez zeleně není možný."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-42",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-42",
+      "answer": "yes",
+      "comment": "Sám na kole nejezdím, ale jsem přesvědčený, že je to ideální dopravní prostředek v našem městě a je potřeba tuto formu dopravy maximálně podporovat."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-43",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-43",
+      "answer": "no",
+      "comment": "Profesionální sport se musí uživit sám, od toho je to sport profesionální."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-44",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-44",
+      "answer": "no",
+      "comment": "Viz má odpověď výše. Zastávám cestu vysokých daní z nemovitosti spojené s jednoduchým systémem slev a bonusů, za její řádné využívání. Pak by se navýšení daní z nemovitosti dotklo pouze těch, kteří svou nemovitost nevyužívají efektivně nebo dokonce vůbec."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-45",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-45",
+      "answer": "yes",
+      "comment": "Je lepší problémům předcházet, než je pak řešit."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-46",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-46",
+      "answer": "yes",
+      "comment": "Viz mé komentáře výše. Vlastní bytový fond v optimální výši se ukazuje jako nezbytný pro fungování bydlení ve městě. Občané musí mít možnost ovlivňovat život ve městě prostřednictvím radnice a ta prostřednictvím vlastnictví části bytů. Klíčová infrastruktura, jako jsou byty, pozemky, voda, energie a podobně musí být alespoň z části v rukou města, jinak se staneme stáváme závislými na libovůli několika málo jedinců, či společností, které nemají na životě v našem městě či naší zemi žádný zájem. Viz Veolia či dnešní problémy s Ruskem."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-47",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-47",
+      "answer": "yes",
+      "comment": "Naprosto nesmyslné. Být sociálně znevýhodněný není trest, který si má dítě odpykat, ale životní smůla, ze které je potřeba dětem pomoci. Musí zapadnout mezi ostatní a stát se již v dětství součástí běžné společnosti a s ní vyrůst v občana bez dalších sociálních problémů. Sdružování takovýchto dětí do oddělených tříd povede jen k jejich segregaci, k vytváření uzavřených skupin se svou nežádoucí kulturou a návyky. Jakékoliv rozdělování lidí je jen počátkem na jehož konci bývají spory, násilí a genocida."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-48",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-48",
+      "answer": "yes",
+      "comment": "Chceme aby rodiny měly děti? Chceme, aby našem město nevymíralo? Pak musíme rodinám s dětmi pomoct."
+    },
+    {
+      "id": "komunalni-2022-585068-answer-602014-49",
+      "candidate_id": "komunalni-2022-585068-candidate-602014",
+      "question_id": "komunalni-2022-585068-question-49",
+      "comment": "Je to docela dlouhé, ale chápu, že to musí mít nějakou vypovídající hodnotu, ale delší už bych to rozhodně nedělal."
+    }
+  ]
+}

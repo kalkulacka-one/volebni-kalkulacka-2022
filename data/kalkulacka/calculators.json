@@ -1,112 +1,298 @@
 {
   "elections": [
     {
-      "id": "uuid-kom-election-komunalni",
-      "key": "komunalni-2022",
-      "name": "Komunalni volby 2022",
-      "description": "Komunalni volby - description"
+      "id": "senat-2022",
+      "key": "senat-2022",
+      "name": "senat-2022",
+      "description": "senat-2022"
     },
     {
-      "id": "uuid-sen-senatni-2022",
-      "key": "senatni-2022",
-      "name": "Senatni volby 2022",
-      "description": "Senatni volby - description"
+      "id": "komunalni-2022",
+      "key": "komunalni-2022",
+      "name": "komunalni-2022",
+      "description": "komunalni-2022"
     }
   ],
   "calculators": [
     {
-      "election_id": "uuid-kom-election-komunalni",
-      "district_code": "123456",
-      "name": "Mesto 01",
-      "description": "uuid-kom-election-komunalni - 123456"
-    },
-    {
-      "election_id": "uuid-kom-election-komunalni",
-      "district_code": "345678",
-      "name": "Mesto 02",
-      "description": "uuid-kom-election-komunalni - 345678",
+      "election_id": "komunalni-2022",
+      "district_code": "554782",
+      "name": "Praha hl. m.",
+      "description": "Praha hl. m. - DESCRIPTION",
       "on_hp_from": "2021-01-01",
       "on_hp_to": "2031-01-01"
     },
     {
-      "election_id": "uuid-kom-election-komunalni",
-      "district_code": "999999",
-      "name": "This should not be visible",
-      "description": "uuid-kom-election-komunalni - 999999",
-      "on_hp_from": "2000-01-01",
-      "on_hp_to": "2001-01-01"
+      "election_id": "komunalni-2022",
+      "district_code": "582786",
+      "name": "Brno",
+      "description": "Brno - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
     },
     {
-      "election_id": "uuid-sen-senatni-2022",
-      "district_code": "10",
-      "name": "Český Krumlov",
-      "description": "celý okres Český Krumlov, východní část okresu Prachatice, ohraničená na západě obcemi Stožec, Volary, Záblatí, Kratušín, Drslavice, Zábrdí, Prachatice, Žernovice, Nebahovy, Lhenice, Netolice, Malovice, západní část okresu České Budějovice, ohraničená na východě obcemi Týn nad Vltavou, Horní Kněžeklady, Modrá Hůrka, Hluboká nad Vltavou, Dasný, Čejkovice, Branišov, Litvínovice, Planá, Boršov nad Vltavou, Včelná, Roudné, Staré Hodějovice, Nová Ves, Strážkovice, Ostrolovský Újezd, Trhové Sviny, Olešnice, Nové Hrady, Hranice"
+      "election_id": "komunalni-2022",
+      "district_code": "554821",
+      "name": "Ostrava",
+      "description": "Ostrava - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
     },
     {
-      "election_id": "uuid-sen-senatni-2022",
-      "district_code": "13",
+      "election_id": "komunalni-2022",
+      "district_code": "554791",
+      "name": "Plzeň",
+      "description": "Plzeň - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "563889",
+      "name": "Liberec",
+      "description": "Liberec - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "500496",
+      "name": "Olomouc",
+      "description": "Olomouc - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "544256",
+      "name": "České Budějovice",
+      "description": "České Budějovice - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "569810",
+      "name": "Hradec Králové",
+      "description": "Hradec Králové - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "554804",
+      "name": "Ústí nad Labem",
+      "description": "Ústí nad Labem - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "555134",
+      "name": "Pardubice",
+      "description": "Pardubice - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "585068",
+      "name": "Zlín",
+      "description": "Zlín - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "555088",
+      "name": "Havířov",
+      "description": "Havířov - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "532053",
+      "name": "Kladno",
+      "description": "Kladno - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "567027",
+      "name": "Most",
+      "description": "Most - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "505927",
+      "name": "Opava",
+      "description": "Opava - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "598003",
+      "name": "Frýdek-Místek",
+      "description": "Frýdek-Místek - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "586846",
+      "name": "Jihlava",
+      "description": "Jihlava - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "598917",
+      "name": "Karviná",
+      "description": "Karviná - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "567442",
+      "name": "Teplice",
+      "description": "Teplice - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "562971",
+      "name": "Chomutov",
+      "description": "Chomutov - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "554961",
+      "name": "Karlovy Vary",
+      "description": "Karlovy Vary - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "562335",
+      "name": "Děčín",
+      "description": "Děčín - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "563510",
+      "name": "Jablonec nad Nisou",
+      "description": "Jablonec nad Nisou - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "535419",
+      "name": "Mladá Boleslav",
+      "description": "Mladá Boleslav - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "589250",
+      "name": "Prostějov",
+      "description": "Prostějov - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "511382",
+      "name": "Přerov",
+      "description": "Přerov - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "561380",
+      "name": "Česká Lípa",
+      "description": "Česká Lípa - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "590266",
+      "name": "Třebíč",
+      "description": "Třebíč - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "598810",
+      "name": "Třinec",
+      "description": "Třinec - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "552046",
       "name": "Tábor",
-      "description": "celý okres Tábor, východní část okresu Písek, ohraničená na západě obcemi Žďár, Tálín, Paseky, Kluky, Dolní Novosedly, Záhoří, Vrcovice, Vojníkov, Vráž, Ostrovec, Smetanova Lhota, Čimelice, Nerestce, Mirovice, a jižní část okresu Benešov, tvořená obcemi Votice, Neustupov, Miličín, Mezno, Střezimíř, Jankov, Ratměřice, Zvěstov"
+      "description": "Tábor - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
     },
     {
-      "election_id": "uuid-sen-senatni-2022",
-      "district_code": "16",
-      "name": "Beroun",
-      "description": "část okresu Beroun, ohraničená na západě obcemi Hudlice, Svatá, Hředle, Točník, Žebrák, Tlustice, Hořovice, Podluhy, část okresu Praha-západ, ohraničená na severu obcemi Číčovice, Tuchoměřice, na jihu obcemi Řevnice, Dobřichovice, Černolice, Jíloviště, Klínec, Měchenice, Březová-Oleško, Okrouhlo, a na východě obcemi Zvole, Ohrobec, Dolní Břežany, Zlatníky-Hodkovice, Vestec"
+      "election_id": "komunalni-2022",
+      "district_code": "593711",
+      "name": "Znojmo",
+      "description": "Znojmo - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
     },
     {
-      "election_id": "uuid-sen-senatni-2022",
-      "district_code": "9",
-      "name": "Dummy",
-      "description": "část okresu Dummy, ohraničená na západě obcemi Hudlice, Svatá, Hředle, Točník, Žebrák, Tlustice, Hořovice, Podluhy, část okresu Praha-západ, ohraničená na severu obcemi Číčovice, Tuchoměřice, na jihu obcemi Řevnice, Dobřichovice, Černolice, Jíloviště, Klínec, Měchenice, Březová-Oleško, Okrouhlo, a na východě obcemi Zvole, Ohrobec, Dolní Břežany, Zlatníky-Hodkovice, Vestec"
+      "election_id": "komunalni-2022",
+      "district_code": "533165",
+      "name": "Kolín",
+      "description": "Kolín - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
     },
     {
-      "election_id": "uuid-sen-senatni-2022",
-      "district_code": "8",
-      "name": "Dummy",
-      "description": "část okresu Dummy, ohraničená na západě obcemi Hudlice, Svatá, Hředle, Točník, Žebrák, Tlustice, Hořovice, Podluhy, část okresu Praha-západ, ohraničená na severu obcemi Číčovice, Tuchoměřice, na jihu obcemi Řevnice, Dobřichovice, Černolice, Jíloviště, Klínec, Měchenice, Březová-Oleško, Okrouhlo, a na východě obcemi Zvole, Ohrobec, Dolní Břežany, Zlatníky-Hodkovice, Vestec"
+      "election_id": "komunalni-2022",
+      "district_code": "539911",
+      "name": "Příbram",
+      "description": "Příbram - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
     },
     {
-      "election_id": "uuid-sen-senatni-2022",
-      "district_code": "7",
-      "name": "Dummy",
-      "description": "část okresu Dummy, ohraničená na západě obcemi Hudlice, Svatá, Hředle, Točník, Žebrák, Tlustice, Hořovice, Podluhy, část okresu Praha-západ, ohraničená na severu obcemi Číčovice, Tuchoměřice, na jihu obcemi Řevnice, Dobřichovice, Černolice, Jíloviště, Klínec, Měchenice, Březová-Oleško, Okrouhlo, a na východě obcemi Zvole, Ohrobec, Dolní Břežany, Zlatníky-Hodkovice, Vestec"
+      "election_id": "komunalni-2022",
+      "district_code": "554481",
+      "name": "Cheb",
+      "description": "Cheb - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
     },
     {
-      "election_id": "uuid-sen-senatni-2022",
-      "district_code": "6",
-      "name": "Dummy",
-      "description": "část okresu Dummy, ohraničená na západě obcemi Hudlice, Svatá, Hředle, Točník, Žebrák, Tlustice, Hořovice, Podluhy, část okresu Praha-západ, ohraničená na severu obcemi Číčovice, Tuchoměřice, na jihu obcemi Řevnice, Dobřichovice, Černolice, Jíloviště, Klínec, Měchenice, Březová-Oleško, Okrouhlo, a na východě obcemi Zvole, Ohrobec, Dolní Břežany, Zlatníky-Hodkovice, Vestec"
-    },
-    {
-      "election_id": "uuid-sen-senatni-2022",
-      "district_code": "5",
-      "name": "Dummy",
-      "description": "část okresu Dummy, ohraničená na západě obcemi Hudlice, Svatá, Hředle, Točník, Žebrák, Tlustice, Hořovice, Podluhy, část okresu Praha-západ, ohraničená na severu obcemi Číčovice, Tuchoměřice, na jihu obcemi Řevnice, Dobřichovice, Černolice, Jíloviště, Klínec, Měchenice, Březová-Oleško, Okrouhlo, a na východě obcemi Zvole, Ohrobec, Dolní Břežany, Zlatníky-Hodkovice, Vestec"
-    },
-    {
-      "election_id": "uuid-sen-senatni-2022",
-      "district_code": "4",
-      "name": "Dummy",
-      "description": "část okresu Dummy, ohraničená na západě obcemi Hudlice, Svatá, Hředle, Točník, Žebrák, Tlustice, Hořovice, Podluhy, část okresu Praha-západ, ohraničená na severu obcemi Číčovice, Tuchoměřice, na jihu obcemi Řevnice, Dobřichovice, Černolice, Jíloviště, Klínec, Měchenice, Březová-Oleško, Okrouhlo, a na východě obcemi Zvole, Ohrobec, Dolní Břežany, Zlatníky-Hodkovice, Vestec"
-    },
-    {
-      "election_id": "uuid-sen-senatni-2022",
-      "district_code": "3",
-      "name": "Dummy",
-      "description": "část okresu Dummy, ohraničená na západě obcemi Hudlice, Svatá, Hředle, Točník, Žebrák, Tlustice, Hořovice, Podluhy, část okresu Praha-západ, ohraničená na severu obcemi Číčovice, Tuchoměřice, na jihu obcemi Řevnice, Dobřichovice, Černolice, Jíloviště, Klínec, Měchenice, Březová-Oleško, Okrouhlo, a na východě obcemi Zvole, Ohrobec, Dolní Břežany, Zlatníky-Hodkovice, Vestec"
-    },
-    {
-      "election_id": "uuid-sen-senatni-2022",
-      "district_code": "2",
-      "name": "Dummy",
-      "description": "část okresu Dummy, ohraničená na západě obcemi Hudlice, Svatá, Hředle, Točník, Žebrák, Tlustice, Hořovice, Podluhy, část okresu Praha-západ, ohraničená na severu obcemi Číčovice, Tuchoměřice, na jihu obcemi Řevnice, Dobřichovice, Černolice, Jíloviště, Klínec, Měchenice, Březová-Oleško, Okrouhlo, a na východě obcemi Zvole, Ohrobec, Dolní Břežany, Zlatníky-Hodkovice, Vestec"
-    },
-    {
-      "election_id": "uuid-sen-senatni-2022",
-      "district_code": "1",
-      "name": "Dummy",
-      "description": "část okresu Dummy, ohraničená na západě obcemi Hudlice, Svatá, Hředle, Točník, Žebrák, Tlustice, Hořovice, Podluhy, část okresu Praha-západ, ohraničená na severu obcemi Číčovice, Tuchoměřice, na jihu obcemi Řevnice, Dobřichovice, Černolice, Jíloviště, Klínec, Měchenice, Březová-Oleško, Okrouhlo, a na východě obcemi Zvole, Ohrobec, Dolní Břežany, Zlatníky-Hodkovice, Vestec"
+      "election_id": "komunalni-2022",
+      "district_code": "549240",
+      "name": "Písek",
+      "description": "Písek - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
     }
   ]
 }

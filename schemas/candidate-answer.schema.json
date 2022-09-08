@@ -21,7 +21,7 @@
     "answer": {
       "type": "string",
       "description": "Answer on given question",
-      "enum": ["yes", "no"]
+      "enum": ["yes", "no", "dont_know"]
     },
     "comment": {
       "type": "string",

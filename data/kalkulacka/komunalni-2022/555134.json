@@ -1,0 +1,989 @@
+{
+  "id": "komunalni-2022-555134",
+  "name": "Pardubice",
+  "description": "Pardubice - DESCRIPTION",
+  "district_code": "555134",
+  "election": {
+    "id": "komunalni-2022",
+    "key": "komunalni-2022",
+    "name": "komunalni-2022",
+    "description": "komunalni-2022"
+  },
+  "questions": [
+    {
+      "id": "komunalni-2022-555134-question-1",
+      "name": "Gentrifikace",
+      "title": "V žádaných městských částech mají bydlet jen ti, kdo si to mohou finančně dovolit.",
+      "gist": "Kritikům vadí, že ekonomické tlaky na původní obyvatele vedou k jejich postupnému vytlačování. Městské části pak ztrácejí pestrost a uzavírají se jen pro vybrané skupiny lidí. Zastánci tvrdí, že to je přirozený proces a že na bydlení v dobré čtvrti si člověk musí vydělat.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-2",
+      "name": "Poplatek za popelnice",
+      "title": "Má město účtovat poplatek za svoz komunálního odpadu?",
+      "gist": "Odpůrci tento poplatek považují za zbytečný; jedná se podle nich jen o jakousi „skrytou“ daň. Zastánci poplatku odmítají takový zásah do rozpočtu města na úkor důležitějších položek, přenesením zátěže na město.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-3",
+      "name": "Omezení vytápění",
+      "title": "Mělo by město v případě nouze začít omezovat vytápění v domovech pro seniory?",
+      "gist": "Zastánci omezování tvrdí, že nejen domácnosti, ale i samosprávy mohou mít potíže hradit výdaje za teplo kvůli velkému růstu cen energií. Odpůrci namítají, že senioři jsou zranitelná skupina obyvatel a nesmí být vystaveni ohrožení zdraví ani ve stavu nouze.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-4",
+      "name": "Zóny 30 km/h",
+      "title": "Měly by se ve městě rozšířit zóny, kde mají auta povoleno jet max 30 km/h.?",
+      "gist": "Obecně platí, že v obci smí vozidlo jet maximálně rychlostí 50 km/h. Zóny 30 (km/h) jsou podle zastánců levné opatření pro zklidňování dopravy v městské zástavbě a v některých evropských zemích se používají více než 20 let. Odpůrci to považují za brždění provozu a komplikaci dopravy.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-5",
+      "name": "Milostivé léto",
+      "title": "Právě probíhá akce Milostivé léto: Má město individuálně obeslat všechny své dlužníky s potřebnými informacemi?",
+      "gist": "Odpůrci obesílání dlužníků říkají, že se o své dluhy mají starat hlavně sami. Zastánci tvrdí, že by město mělo aktivně usilovat, aby se dlužné peníze vrátily do rozpočtu, a že osobní obeslání je účinné.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-6",
+      "name": "Více kamer",
+      "title": "Měly by být ve městě instalovány další kamery?",
+      "gist": "Zastánci uvádějí zvýšení bezpečnosti problémových lokalit, odpůrci zdůrazňují přílišný zásah do osobních práv a přesun kriminality do jiných míst.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-7",
+      "name": "Hazard zakázán",
+      "title": "Jste pro úplný zákaz hazardu na území města?",
+      "gist": "Příznivci zákazu argumentují sociálními problémy plynoucími z hazardu. Odpůrci zmiňují svobodu podnikání a finance, které město získá na daních.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-8",
+      "name": "MHD zdarma",
+      "title": "Měla by být městská hromadná doprava pro všechny rezidenty zdarma?",
+      "gist": "Zastánci zrušení jízdného argumentují zlepšením životního prostředí, zklidnění dopravy i úsporami za tisk lístků nebo vedení agendy s vymáháním dlužného jízdného. Odpůrci tvrdí, že se jedná o nehospodárné nakládání s veřejnými prostředky. Podle jiných by to příliš zatížilo městský rozpočet.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-9",
+      "name": "Bezbariérové zastávky MHD",
+      "title": "Město by mělo více investovat do zastávek hromadné dopravy, aby byly až na výjimky bezbariérové.",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-10",
+      "name": "Jmenovité výsledky hlasování zastupitelstva",
+      "title": "Hlasování členů zastupitelstva města se má zveřejňovat jmenovitě.",
+      "gist": "Podle zastánců je pro veřejnou kontrolu důležité vidět, jak přesně kdo v zastupitelstvu města hlasuje. Kritici to považují za zbytečné.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-11",
+      "name": "Jmenovité výsledky hlasování rady",
+      "title": "Hlasování členů rady města se má zveřejňovat jmenovitě.",
+      "gist": "Podle zastánců je pro veřejnou kontrolu důležité vidět, jak přesně kdo v radě města hlasuje. Kritici to považují za zbytečné.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-12",
+      "name": "Regulace zábavní pyrotechniky",
+      "title": "Používání zábavní pyrotechniky jindy než na Silvestra má být ve městě zakázané.",
+      "gist": "V případě neregulace bývají problematické hlavně letní měsíce, kdy jsou ohňostroje součástí řady domácích oslav.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-13",
+      "name": "Přístupné veřejné budovy v chladnu",
+      "title": "Město by v topné sezóně mělo zpřístupnit některé veřejné budovy lidem jen pro zahřátí.",
+      "gist": "Některá evropská města zvažují, že veřejnosti zpřístupní knihovny, komunitní centra či umělecké galerie, aby se zde mohli v nadcházející zimě zahřát ti, kdo si nemohou dovolit vytápět své domovy.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-14",
+      "name": "Úspora energií – světelná výzdoba",
+      "title": "Kvůli úspoře energií by město mělo omezovat noční nasvícení kulturních památek.",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-15",
+      "name": "Úspora energií – veřejné osvětlení",
+      "title": "Má město kvůli úspoře energií omezovat veřejné osvětlení?",
+      "gist": "Kvůli energetické krizi řada měst v Rakousku, Německu, Francii a Itálii omezuje pouliční osvětlení, některé obce ho v noci vypnou úplně. Vypnutí světel na tři a půl hodiny každou noc má snížit spotřebu energie cca o čtvrtinu. Kritici namítají, že se zhorší bezpečnost ve městě.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-16",
+      "name": "Úspora energií – omezení vytápění",
+      "title": "V topné sezóně by se mělo omezit vytápění v městských budovách.",
+      "gist": "Např. v sousedním Německu nyní plánují, že veřejné budovy se až na výjimky (např. školy) budou z důvodu úspor energie vytápět max. na 19 C.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-17",
+      "name": "Konec dětských exekucí",
+      "title": "Souhlasím, aby město plošně odpouštělo dluhy dětským dlužníkům a nechalo zastavit jejich exekuce.",
+      "gist": "Jedná se zpravidla o historické dluhy. Dnes již dětem u města obvykle dluhy nevznikají, zodpovídají za ně např. rodiče.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-18",
+      "name": "Městské transparentní účty",
+      "title": "Má mít město transparentní účty, do kterých lze veřejně nahlížet?",
+      "gist": "Zastánci uvádějí nutnost kontroly toho, jak město s penězi nakládá. Odpůrci se domnívají, že je to komplikované a že hrozí únik osobních údajů.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-19",
+      "name": "Participativní rozpočet",
+      "title": "O části rozpočtu města mají mít možnost rozhodovat občané přímo.",
+      "gist": "Jde např. o participativní rozpočet: radnice vymezí část peněz z ročního rozpočtu, občané pak podávají návrhy, co by se za tyto peníze mělo ve městě v následujícím roce vylepšit a vítězné projekty se poté realizují.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-20",
+      "name": "Zvýšení počtu městských bytů",
+      "title": "Město by mělo zvyšovat počty bytů ve svém vlastnictví.",
+      "gist": "Některá města se snaží o odkup nebo výstavbu bytů do svého vlastnictví. Důvodem mj. je, že se jim nedostává bytů pro lékaře a zdravotní sestry, policisty, učitele či seniory a potřebné. Kritici namítají, že údržba městských bytů zatěžuje rozpočet.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-21",
+      "name": "Omezení vánoční výzdoby",
+      "title": "Město by mělo kvůli rostoucím cenám energie omezit veřejné slavnostní osvětlení v době Vánoc.",
+      "gist": "K podobnému kroku přistoupila například rakouská Vídeň. Na hlavním bulváru Ring kolem centra nebude vánoční osvětlení vůbec, na dalších místech se bude rozsvěcet o hodinu později než doposud.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-22",
+      "name": "Obědy zdarma",
+      "title": "Ve všech veřejných základních školách na území města by měly mít děti možnost obědvat zdarma.",
+      "gist": "Podle průzkumů žije 20 procent českých dětí v ohrožení příjmovou chudobou. Některé děti již dostávají obědy zdarma díky několika různým projektům, závisí to ale na vůli školy a města, zda se do takových projektů zapojí.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-23",
+      "name": "Sdílení aut",
+      "title": "Je třeba, aby město podporovalo sdílení aut (tzv. carsharing).",
+      "gist": "Podle zastánců má sdílení vozů pomoci odlehčit dopravu ve městě. Kritici poukazují, že carsharingové společnosti pouze moderním druhem autopůjčovny, která je dostupnější a pohodlnější.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-24",
+      "name": "Žádné parkovací zóny",
+      "title": "Parkování ve městě má být neomezené parkovacími zónami.",
+      "gist": "Zastánci říkají, že zóny placeného státní přinášejí jistotu parkování rezidentům a že odvádějí z města auta, která do něj nezajíždějí, ale zůstávají v okrajových částech. Kritici namítají, že se parkování jen přelévá jinam a auty se zaplňují dříve klidné oblasti města. Vadí také, že zóny rezidentům parkovací místo automaticky nezaručí.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-25",
+      "name": "Privatizace bytů",
+      "title": "Město má privatizovat své byty.",
+      "gist": "Podle zastánců přináší privatizace bytů velké finanční prostředky pro město. Kritici chtějí, aby město mohlo s byty nakládat dle vlastního uvážení a potřeb občanů.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-26",
+      "name": "Podíl developerů na veřejných výdajích",
+      "title": "Soukromí developeři se musí podílet na úhradě veřejných nákladů spojených s výstavbou jejich projektů.",
+      "gist": "Podíl se týká komunikací, sítí, MHD apod. Může být finanční, nebo jako konkrétní plnění v rámci výstavby, např. výstavbou veřejné vybavenosti nebo poskytnutím podílu bytů do obecního vlastnictví.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-27",
+      "name": "Cyklodoprava",
+      "title": "Má město upřednostňovat dopravu pěší, cyklistickou a hromadnou před dopravou automobilovou?",
+      "gist": "Výhody cyklodopravy jsou podle zastánců nízký zábor veřejného prostoru, snižování dopravních zácp, zlepšení ovzduší či kladný vliv na lidské fyzické i mentální zdraví cyklistů. Odpůrci to považují za komplikaci pro autodopravu, za zbytečnost nebo za nedostatečně chráněný způsob dopravy. Cyklisté by měli jezdit po cyklostezkách, kde je neohrožují auta.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-28",
+      "name": "Zdanění prázdných bytů",
+      "title": "Dlouhodobě prázdné byty by měly být více zdaněné.",
+      "gist": "Krok má odrazovat od nákupu investičních bytů. Ty podle zastánců zdanění vyčerpávají bytové zásoby a zhoršují situaci pro lidi s nízkými a středními příjmy, kteří si chtějí zajistit vlastní bydlení. Podle kritiků se zvýší ceny nemovitostí a nájemní bydlení podraží. V ČR je jednotný výpočet daně pro všechny byty bez ohledu na to, kolik bytů majitel vlastní a zda jsou dlouhodobě obydlené.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-29",
+      "name": "Podíl developerů na veřejných výdajích",
+      "title": "Příspěvky developerů na veřejnou vybavenost by se měly zvýšit.",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-30",
+      "name": "Dobíjecí místa pro elektromobily",
+      "title": "Město má podporovat budování dobíjecích míst pro elektromobily.",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-31",
+      "name": "Podpora družstevního bydlení",
+      "title": "Město má podporovat družstevní a spolkové formy bytové výstavby i subjekty, které budou poskytovat bydlení na neziskovém principu.",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-32",
+      "name": "MHD zdarma do 18 let",
+      "title": "Děti do 18 let mají mít MHD zdarma.",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-33",
+      "name": "Fotovoltaika na soukromých střechách",
+      "title": "Město má pomoci vlastníkům bytových domů s instalací fotovoltaických panelů na střeše.",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-34",
+      "name": "Vstupné na kulturu a sport",
+      "title": "V městských muzeích, galeriích a na sportovištích má být pro mládež bezplatné nebo symbolické vstupné.",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-35",
+      "name": "Menstruační pomůcky v městských budovách",
+      "title": "Na všech městských veřejných toaletách (na úřadech, v knihovnách apod.) mají být volně dostupné menstruační pomůcky.",
+      "gist": "Podobně jako bývá dnes na všech toaletách mýdlo nebo toaletní papír.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-36",
+      "name": "Menstruační pomůcky –vydávání zdarma",
+      "title": "Místní úřady mají mít zákonnou povinnost poskytovat vložky či tampony bezplatně každému, kdo je potřebuje.",
+      "gist": "Některé ženy, např. samoživitelky, navíc s dospívajícími dcerami, pro svůj nízký příjem nemají přístup k adekvátním menstruačním pomůckám. Zastánci argumentují rovností a důstojností ve společnosti a tím, že toaletní papír či mýdlo jsou ve veřejných budovách běžně dostupné. Odpůrci to považují za finančně nákladné či nespravedlivé vůči lidem, kteří menstruaci nemají.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-37",
+      "name": "Fotovoltaika na městské budovy",
+      "title": "Město má investovat do fotovoltaických panelů na střechách městských budov.",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-38",
+      "name": "Elektrické koloběžky",
+      "title": "Město má podporovat rozvoj dopravy na elektrických koloběžkách a podobných dopravních prostředcích.",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-39",
+      "name": "Integrace cizinců",
+      "title": "Město by mělo aktivně prosazovat integraci cizinců žijících ve městě.",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-40",
+      "name": "Více strážníků",
+      "title": "Mělo by být více městských strážníků?",
+      "gist": "Zastánci uvádějí zvýšení pocitu bezpečí. Odpůrci namítají, že to jsou nyní pro město zbytečné výdaje navíc.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-41",
+      "name": "Zelené střechy",
+      "title": "Město má prosazovat na nových či rekonstruovaných městských budovách zelené střechy.",
+      "gist": "Oproti klasické střeše je založení zelené střechy nákladnější a složitější a je třeba ji následně udržovat. Kvůli vyššímu zatížení je třeba silnější střešní konstrukce. Zastánci poukazují na to, že zelené střechy izolují a snižují náklady na vytápění či chlazení vnitřních prostor v létě.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-42",
+      "name": "Cyklodoprava",
+      "title": "Město by mělo podporovat dopravu obyvatel do práce či do školy na kole.",
+      "gist": "Výhody cyklodopravy jsou podle zastánců nízký zábor veřejného prostoru, snižování dopravních zácp, zlepšení ovzduší či kladný vliv na lidské fyzické i mentální zdraví cyklistů. Odpůrci to považují za komplikaci pro autodopravu, za zbytečnost nebo za nedostatečně chráněný způsob dopravy. Cyklisté by měli jezdit po cyklostezkách, kde je neohrožují auta.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-43",
+      "name": "Podpora profesionálního sportu",
+      "title": "Souhlasím, aby město finančně podporovalo profesionální sport ve městě.",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-44",
+      "name": "Daň z nemovitosti",
+      "title": "Daň z nemovitosti by se měla snížit.",
+      "gist": "Město má relativně velkou volnost v nastavení výše daně z nemovitostí. Ta je celá příjmem města. Zastánci vyšší daně argumentují tím, že v porovnání s jinými zeměmi jsou české daně spíše nízké. Odpůrci daně často argumentují tím, že dochází ke zdanění již zdaněného.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-45",
+      "name": "Podpora chudých",
+      "title": "Má podle vás město finančně podporovat sociálně slabé občany, aby se nepropadli do chudoby?",
+      "gist": "",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-46",
+      "name": "Bytový fond",
+      "title": "Město má budovat a udržovat vlastní bytový fond",
+      "gist": "Odpůrci tvrdí, že soukromí majitelé se o nemovitosti postarají lépe. Např. ve Vídni je cca čtvrtina bytů přímo v obecním vlastnictví a stejná část patří obecně prospěšným stavebním společnostem. Ty dostávají na výstavbu výhodné půjčky od města a na oplátku se zavazují držet nájmy na přijatelné úrovni i pro další generace. Výnosy musí investovat do výstavby nebo oprav bytů.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-47",
+      "name": "Společné vzdělávání",
+      "title": "Město by mělo zamezovat shromažďování sociálně znevýhodněných dětí v jedné nebo několika málo školách.",
+      "gist": "Zastánci chtějí zajistit všem dětem bez ohledu na jejich původ odpovídající podporu na každé škole. Odpůrci argumentují svobodným výběrem školy.",
+      "detail": "",
+      "tags": []
+    },
+    {
+      "id": "komunalni-2022-555134-question-48",
+      "name": "Sociální pomoc",
+      "title": "Město má podporovat předškolní zařízení pro děti od 2 let věku.",
+      "gist": "Pomocí sítě školek, dětských skupin nebo mateřských klubů má město podle zastánců pomoci rodičům skloubit pracovní povinnosti s péčí o děti. Odpůrci namítají, že děti do tří let mají být v domácí péči a že časnější péči mimo domov nemá město podporovat.",
+      "detail": "",
+      "tags": []
+    }
+  ],
+  "candidates": [
+    {
+      "id": "komunalni-2022-555134-candidate-915355",
+      "name": "SPOLU (ODS, KDU-ČSL, TOP 09)",
+      "type": "party",
+      "description": "SPOLU (ODS, KDU-ČSL, TOP 09) - DESCRIPTION",
+      "contacts": {
+        "web": [
+          {
+            "url": "https://spolu-pardubice.cz/",
+            "label": "web"
+          },
+          {
+            "url": "https://spolu-pardubice.cz/volebni-program",
+            "label": "program"
+          }
+        ],
+        "facebook": "https://www.facebook.com/spoluPardubice",
+        "instagram": "https://www.instagram.com/spolupardubice/"
+      },
+      "parties": [
+        {
+          "id": "komunalni-2022-555134-915355-party",
+          "name": "SPOLU (ODS, KDU-ČSL, TOP 09)",
+          "description": "SPOLU (ODS, KDU-ČSL, TOP 09) - DESCRIPTION",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://spolu-pardubice.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://spolu-pardubice.cz/volebni-program",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/spoluPardubice",
+            "instagram": "https://www.instagram.com/spolupardubice/"
+          },
+          "abbreviation": "KDU+ODS+TOP 09"
+        }
+      ]
+    },
+    {
+      "id": "komunalni-2022-555134-candidate-349076",
+      "name": "Piráti: 42projektu.cz",
+      "type": "party",
+      "description": "Piráti: 42projektu.cz - DESCRIPTION",
+      "contacts": {
+        "web": [
+          {
+            "url": "https://42projektu.cz",
+            "label": "web"
+          },
+          {
+            "url": "https://42projektu.cz",
+            "label": "program"
+          }
+        ],
+        "facebook": "https://www.facebook.com/zeleni.pardubice"
+      },
+      "parties": [
+        {
+          "id": "komunalni-2022-555134-349076-party",
+          "name": "Piráti: 42projektu.cz",
+          "description": "Piráti: 42projektu.cz - DESCRIPTION",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://42projektu.cz",
+                "label": "web"
+              },
+              {
+                "url": "https://42projektu.cz",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/zeleni.pardubice"
+          },
+          "abbreviation": "Zelení+Piráti"
+        }
+      ]
+    },
+    {
+      "id": "komunalni-2022-555134-candidate-280020",
+      "name": "Žijeme Pardubice",
+      "type": "party",
+      "description": "Žijeme Pardubice - DESCRIPTION",
+      "contacts": {
+        "web": [
+          {
+            "url": "https://zijemepardubice.cz/",
+            "label": "web"
+          }
+        ],
+        "facebook": "https://www.facebook.com/zijemepardubice/",
+        "instagram": "https://www.instagram.com/zijemepardubice/"
+      },
+      "parties": [
+        {
+          "id": "komunalni-2022-555134-280020-party",
+          "name": "Žijeme Pardubice",
+          "description": "Žijeme Pardubice - DESCRIPTION",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://zijemepardubice.cz/",
+                "label": "web"
+              }
+            ],
+            "facebook": "https://www.facebook.com/zijemepardubice/",
+            "instagram": "https://www.instagram.com/zijemepardubice/"
+          },
+          "abbreviation": "ČSSD+PP21+NK"
+        }
+      ]
+    },
+    {
+      "id": "komunalni-2022-555134-candidate-343643",
+      "name": "NAŠE PARDUBICE - \"Nechme město rozkvést\"",
+      "type": "party",
+      "description": "NAŠE PARDUBICE - \"Nechme město rozkvést\" - DESCRIPTION",
+      "contacts": {
+        "web": [
+          {
+            "url": "https://www.nasepardubice.cz/",
+            "label": "web"
+          }
+        ],
+        "facebook": "https://www.facebook.com/nasepardubice/"
+      },
+      "parties": [
+        {
+          "id": "komunalni-2022-555134-343643-party",
+          "name": "NAŠE PARDUBICE - \"Nechme město rozkvést\"",
+          "description": "NAŠE PARDUBICE - \"Nechme město rozkvést\" - DESCRIPTION",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.nasepardubice.cz/",
+                "label": "web"
+              }
+            ],
+            "facebook": "https://www.facebook.com/nasepardubice/"
+          },
+          "abbreviation": "SPDV+NK"
+        }
+      ]
+    },
+    {
+      "id": "komunalni-2022-555134-candidate-694313",
+      "name": "ANO 2011",
+      "type": "party",
+      "description": "ANO 2011 - DESCRIPTION",
+      "contacts": {
+        "web": [
+          {
+            "url": "https://www.anopardubice.cz/",
+            "label": "web"
+          }
+        ],
+        "facebook": "https://www.facebook.com/AnoPardubice"
+      },
+      "parties": [
+        {
+          "id": "komunalni-2022-555134-694313-party",
+          "name": "ANO 2011",
+          "description": "ANO 2011 - DESCRIPTION",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.anopardubice.cz/",
+                "label": "web"
+              }
+            ],
+            "facebook": "https://www.facebook.com/AnoPardubice"
+          },
+          "abbreviation": "ANO"
+        }
+      ]
+    },
+    {
+      "id": "komunalni-2022-555134-candidate-193762",
+      "name": "SPD a nezávislí s podporou Trikolory",
+      "type": "party",
+      "description": "SPD a nezávislí s podporou Trikolory - DESCRIPTION",
+      "contacts": {
+        "web": []
+      },
+      "parties": [
+        {
+          "id": "komunalni-2022-555134-193762-party",
+          "name": "SPD a nezávislí s podporou Trikolory",
+          "description": "SPD a nezávislí s podporou Trikolory - DESCRIPTION",
+          "contacts": {
+            "web": []
+          },
+          "abbreviation": "SPD+Trikol+NK"
+        }
+      ]
+    },
+    {
+      "id": "komunalni-2022-555134-candidate-812723",
+      "name": "SPOLEČNĚ PRO PARDUBICE (Pardubáci společně, Sdružení pro Pardubice, Pardubice pro lidi)",
+      "type": "party",
+      "description": "SPOLEČNĚ PRO PARDUBICE (Pardubáci společně, Sdružení pro Pardubice, Pardubice pro lidi) - DESCRIPTION",
+      "contacts": {
+        "web": [
+          {
+            "url": "https://spolecnepropardubice.cz/",
+            "label": "web"
+          },
+          {
+            "url": "https://spolecnepropardubice.cz/program/",
+            "label": "program"
+          }
+        ],
+        "facebook": "https://www.facebook.com/spolecnepropardubice/"
+      },
+      "parties": [
+        {
+          "id": "komunalni-2022-555134-812723-party",
+          "name": "SPOLEČNĚ PRO PARDUBICE (Pardubáci společně, Sdružení pro Pardubice, Pardubice pro lidi)",
+          "description": "SPOLEČNĚ PRO PARDUBICE (Pardubáci společně, Sdružení pro Pardubice, Pardubice pro lidi) - DESCRIPTION",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://spolecnepropardubice.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://spolecnepropardubice.cz/program/",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/spolecnepropardubice/"
+          },
+          "abbreviation": "SNK ED+VČ+PPL"
+        }
+      ]
+    },
+    {
+      "id": "komunalni-2022-555134-candidate-918217",
+      "name": "Komunistická strana Čech a Moravy",
+      "type": "party",
+      "description": "Komunistická strana Čech a Moravy - DESCRIPTION",
+      "contacts": {
+        "web": []
+      },
+      "parties": [
+        {
+          "id": "komunalni-2022-555134-918217-party",
+          "name": "Komunistická strana Čech a Moravy",
+          "description": "Komunistická strana Čech a Moravy - DESCRIPTION",
+          "contacts": {
+            "web": []
+          },
+          "abbreviation": "KSČM"
+        }
+      ]
+    },
+    {
+      "id": "komunalni-2022-555134-candidate-188831",
+      "name": "STAROSTOVÉ A NEZÁVISLÍ",
+      "type": "party",
+      "description": "STAROSTOVÉ A NEZÁVISLÍ - DESCRIPTION",
+      "contacts": {
+        "web": [
+          {
+            "url": "https://www.klickpardubicim.cz/programove-priority/",
+            "label": "web"
+          }
+        ],
+        "facebook": "https://www.facebook.com/klickpardubicim"
+      },
+      "parties": [
+        {
+          "id": "komunalni-2022-555134-188831-party",
+          "name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "description": "STAROSTOVÉ A NEZÁVISLÍ - DESCRIPTION",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.klickpardubicim.cz/programove-priority/",
+                "label": "web"
+              }
+            ],
+            "facebook": "https://www.facebook.com/klickpardubicim"
+          },
+          "abbreviation": "STAN"
+        }
+      ]
+    }
+  ],
+  "answers": [
+    {
+      "id": "komunalni-2022-555134-answer-915355-1",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-1",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-2",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-2",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-3",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-3",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-4",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-4",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-5",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-5",
+      "answer": "no",
+      "comment": "Dlužníky město informuje prostřednictvím Radničního zpravodaje, webu města a dalších médií."
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-6",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-6",
+      "answer": "yes",
+      "comment": "U nových staveb v majetku města."
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-7",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-7",
+      "answer": "no",
+      "comment": "V případě úplného zákazu by začaly vznikat černé herny."
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-8",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-8",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-9",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-9",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-10",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-10",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-11",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-11",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-12",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-12",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-13",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-13",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-14",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-14",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-15",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-15",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-16",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-16",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-17",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-17",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-18",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-18",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-19",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-19",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-20",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-20",
+      "comment": "Město musí především opravit byty, kterými již disponuje, ale nejsou obyvatelné."
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-21",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-21",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-22",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-22",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-23",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-23",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-24",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-24",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-25",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-25",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-26",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-26",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-27",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-27",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-28",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-28",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-29",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-29",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-30",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-30",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-31",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-31",
+      "comment": "Město by mělo podporovat takové formy bydlení, kde je jeho účast nezbytná kvůli podpoře státu."
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-32",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-32",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-33",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-33",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-34",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-34",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-35",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-35",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-36",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-36",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-37",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-37",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-38",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-38",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-39",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-39",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-40",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-40",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-41",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-41",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-42",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-42"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-43",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-43",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-44",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-44",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-45",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-45",
+      "answer": "no",
+      "comment": "Město má vytvářet takové podmínky, aby občanům chudoba nehrozila."
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-46",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-46",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-47",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-47",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-48",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-48"
+    },
+    {
+      "id": "komunalni-2022-555134-answer-915355-49",
+      "candidate_id": "komunalni-2022-555134-candidate-915355",
+      "question_id": "komunalni-2022-555134-question-49"
+    }
+  ]
+}
