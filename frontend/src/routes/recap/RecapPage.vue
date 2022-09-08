@@ -1,12 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import {
-  mdiRestore,
-  mdiCloseCircleOutline,
-  mdiArrowLeft,
-  mdiArrowRight,
-} from '@mdi/js';
+import { mdiCloseCircleOutline, mdiArrowLeft, mdiArrowRight } from '@mdi/js';
 
 import { appRoutes } from '@/main';
 
@@ -36,15 +31,6 @@ const electionStore = useElectionStore();
 // TODO: Map route params to text
 const title = `${route.params.election} — ${route.params.district}`;
 
-const handleResetClick = async () => {
-  // TODO: Show warning in modal
-  await router.push({
-    name: appRoutes.question.name,
-    params: { ...route.params, nr: 'first' },
-  });
-  // TODO: Initialize store
-  // electionStore.init();
-};
 
 const handleBackClick = () => {
   router.push({
@@ -84,16 +70,6 @@ const isCardHidden = (index: number) => {
       <NavigationBar>
         <template #title>{{ title }}</template>
         <template #right>
-          <ButtonComponent
-            kind="link"
-            :responsive="true"
-            @click="handleResetClick"
-          >
-            Vyplnit znovu
-            <template #iconAfter>
-              <IconComponent :icon="mdiRestore" title="Vyplnit znovu" />
-            </template>
-          </ButtonComponent>
           <ButtonComponent
             kind="link"
             :responsive="true"
