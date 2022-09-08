@@ -45,20 +45,26 @@ const districtName = electionStore.districts.filter(
 
 const title = `${electionName} — ${districtName} (${districtCode})`;
 
+const questionCount = computed(() => electionStore.questionCount);
 const currentQuestion = computed(() => parseInt(route.params['nr'] as string));
+const answeredQuestions = computed(() =>
+  electionStore.answers.filter((answer) => answer.answer !== 0)
+);
+const answeredQuestionsCount = computed(() => answeredQuestions.value.length);
+
+const nextButtonTitle = computed(() => {
+  if (currentQuestion.value === questionCount.value) {
+    return 'Rekapitulace';
+  } else {
+    return 'Další';
+  }
+});
 
 const goToQuestion = (number: number) => {
-  console.debug(number, electionStore.questionCount);
-  if (number > electionStore.questionCount) {
-    router.push({
-      name: appRoutes.recap.name,
-    });
-  } else {
-    router.push({
-      name: appRoutes.question.name,
-      params: { ...route.params, nr: number },
-    });
-  }
+  router.push({
+    name: appRoutes.question.name,
+    params: { ...route.params, nr: number },
+  });
 };
 
 const goToRecap = () => {
@@ -73,6 +79,24 @@ const goToGuide = (step = 1) => {
     params: { ...route.params, step: step },
   });
 };
+
+const handleNextClick = () => {
+  if (currentQuestion.value < questionCount.value) {
+    goToQuestion(currentQuestion.value + 1);
+  } else {
+    goToRecap();
+  }
+};
+
+const handlePreviousClick = () => {
+  if (currentQuestion.value < questionCount.value) {
+    goToQuestion(currentQuestion.value - 1);
+  } else {
+    goToRecap();
+  }
+};
+
+const handleStarClick = () => electionStore.flipAnswerFlag(questionNr.value);
 
 //internally questions start at 0
 const questionNr = computed(() => parseInt(route.params['nr'] as string) - 1);
@@ -96,16 +120,6 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
   );
   router.push(newRoute);
 };
-const handleStarClick = () => electionStore.flipAnswerFlag(questionNr.value);
-const forwardDisabled = computed(() => {
-  return !(
-    questionNr.value < electionStore.answerProgress + 1 ||
-    electionStore.questionCount === electionStore.answerCount
-  );
-});
-const backDisabled = computed(() => {
-  return questionNr.value < 1;
-});
 </script>
 
 <template>
@@ -142,11 +156,8 @@ const backDisabled = computed(() => {
     <BottomBarWrapper>
       <StepWrapper>
         <template #before>
-          <IconButton
-            :hidden="backDisabled"
-            @click="goToQuestion(currentQuestion - 1)"
-          >
-            <IconComponent :icon="mdiArrowLeft" />
+          <IconButton v-if="currentQuestion > 1" @click="handlePreviousClick">
+            <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
           </IconButton>
         </template>
         <QuestionCard
@@ -156,10 +167,10 @@ const backDisabled = computed(() => {
         />
         <template #after>
           <IconButton
-            :hidden="forwardDisabled"
-            @click="goToQuestion(currentQuestion + 1)"
+            v-if="answeredQuestionsCount >= currentQuestion"
+            @click="handleNextClick"
           >
-            <IconComponent :icon="mdiArrowRight" />
+            <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
           </IconButton>
         </template>
       </StepWrapper>
