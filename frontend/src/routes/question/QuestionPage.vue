@@ -10,6 +10,8 @@ import {
 
 import { appRoutes, questionGuard } from '@/main';
 import { useElectionStore, UserAnswerEnum } from '@/stores/electionStore';
+
+import type { Election } from '@/types/election';
 import type { Question } from '@/types/question';
 
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
@@ -28,14 +30,20 @@ const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
 
-// TODO: Map route params to text
-const title = `${route.params.election} — ${route.params.district}`;
-
 onBeforeRouteUpdate(questionGuard);
 
 if (electionStore.calculator === undefined) {
   throw new Error('Calculator is undefined. This should never happen');
 }
+
+const election = electionStore.election as Election;
+const electionName = election.name;
+const districtCode = route.params.district;
+const districtName = electionStore.districts.filter(
+  (district) => district.district_code === districtCode
+)[0].name;
+
+const title = `${electionName} — ${districtName} (${districtCode})`;
 
 const currentQuestion = computed(() => parseInt(route.params['nr'] as string));
 
