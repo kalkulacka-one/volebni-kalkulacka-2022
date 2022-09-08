@@ -4,11 +4,14 @@ import { useRoute, useRouter } from 'vue-router';
 import { mdiCloseCircleOutline, mdiArrowLeft, mdiArrowRight } from '@mdi/js';
 
 import { appRoutes } from '@/main';
+import { useElectionStore, UserAnswerEnum } from '@/stores/electionStore';
 
+import type { Election } from '@/types/election';
 import type { Question } from '@/types/question';
 
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
+import BodyText from '@/components/design-system/typography/BodyText.vue';
 import BottomBar from '@/components/design-system/navigation/BottomBar.vue';
 import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
@@ -16,21 +19,24 @@ import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
+import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 
 import { vkiLogoPercent } from '@/components/design-system/icons';
 
-import { useElectionStore, UserAnswerEnum } from '@/stores/electionStore';
 import RecapQuestionCard from './RecapQuestionCard.vue';
-import StackComponent from '../../components/design-system/layout/StackComponent.vue';
-import BodyText from '../../components/design-system/typography/BodyText.vue';
 
 const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
 
-// TODO: Map route params to text
-const title = `${route.params.election} — ${route.params.district}`;
+const election = electionStore.election as Election;
+const electionName = election.name;
+const districtCode = route.params.district;
+const districtName = electionStore.districts.filter(
+  (district) => district.district_code === districtCode
+)[0].name;
 
+const title = `${electionName} — ${districtName} (${districtCode})`;
 
 const handleBackClick = () => {
   router.push({
