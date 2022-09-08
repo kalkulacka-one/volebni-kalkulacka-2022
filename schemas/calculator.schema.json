@@ -8,6 +8,7 @@
     "id",
     "name",
     "description",
+    "district_code",
     "election",
     "questions",
     "candidates",
@@ -25,6 +26,9 @@
     "description": {
       "type": "string",
       "description": "Longer description"
+    },
+    "district_code": {
+      "type": "string"
     },
     "on_hp_from": {
       "type": "string",

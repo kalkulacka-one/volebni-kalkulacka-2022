@@ -21,6 +21,7 @@ export interface Calculator {
    * Longer description
    */
   description: string;
+  district_code: string;
   /**
    * Show on HP start - ISO 8601
    */
@@ -75,7 +76,7 @@ export interface Election {
   /**
    * Election type
    */
-  type?: 'senatni' | 'prezidentske' | 'snemovni' | 'krajske' | 'municipalni';
+  type?: "senatni" | "prezidentske" | "snemovni" | "krajske" | "municipalni";
   [k: string]: unknown;
 }
 /**
@@ -123,7 +124,7 @@ export interface Candidate {
   /**
    * Candidate type
    */
-  type: 'party' | 'coalition' | 'person';
+  type: "party" | "coalition" | "person";
   /**
    * Longer description.
    */
@@ -235,7 +236,7 @@ export interface CandidateAnswer {
   /**
    * Answer on given question
    */
-  answer?: 'yes' | 'no';
+  answer?: "yes" | "no";
   /**
    * Candidate's comment related to their answer.
    */

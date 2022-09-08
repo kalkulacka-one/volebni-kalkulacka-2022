@@ -11,6 +11,7 @@ export interface Props {
   color?: 'neutral' | 'primary' | 'secondary';
   selected?: boolean;
   responsive?: boolean;
+  readOnly?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -20,6 +21,7 @@ const props = withDefaults(defineProps<Props>(), {
   color: 'neutral',
   selected: false,
   responsive: false,
+  readOnly: false,
 });
 
 const classes = computed(() => ({
@@ -28,6 +30,7 @@ const classes = computed(() => ({
   [`button--${props.color}`]: props.color,
   'button--selected': props.selected,
   'button--responsive': props.responsive,
+  'button--read-only': props.readOnly,
 }));
 
 const computedTag = computed(() => (props.href ? 'a' : props.tag));
@@ -70,16 +73,20 @@ const computedSize = computed(() =>
     cursor: not-allowed;
   }
 
+  &.button--read-only {
+    cursor: default;
+  }
+
   &--link {
     color: rgb(var(--color-neutral-fg));
     border: none;
 
-    &:hover {
+    &:not(.button--read-only):hover {
       color: rgb(var(--color-neutral-fg-hover));
     }
 
     .button--selected,
-    &:active {
+    &:not(.button--read-only):active {
       color: rgb(var(--color-neutral-fg-active));
     }
 
@@ -134,7 +141,7 @@ const computedSize = computed(() =>
     background-color: transparent;
     border-color: rgb(var(--color-neutral-border-strong));
 
-    &:hover {
+    &:not(.button--read-only):hover {
       background-color: rgba(
         var(--color-neutral-fg-hover),
         var(--transparency-10)
@@ -142,7 +149,7 @@ const computedSize = computed(() =>
     }
 
     .button--selected,
-    &:active {
+    &:not(.button--read-only):active {
       background-color: rgba(
         var(--color-neutral-fg-active),
         var(--transparency-10)
@@ -170,12 +177,12 @@ const computedSize = computed(() =>
     background-color: rgb(var(--color-primary-bg-strong));
     border-color: transparent;
 
-    &:hover {
+    &:not(.button--read-only):hover {
       background-color: rgb(var(--color-primary-bg-strong-hover));
     }
 
     .button--selected,
-    &:active {
+    &:not(.button--read-only):active {
       background-color: rgb(var(--color-primary-bg-strong-active));
     }
   }
@@ -210,14 +217,14 @@ const computedSize = computed(() =>
       background-color: transparent;
       border-color: rgb(var(--color-neutral-border-strong));
 
-      &:hover {
+      &:not(.button--read-only):hover {
         color: rgb(var(--color-neutral-fg-inverse));
         background-color: rgb(var(--color-neutral-bg-strong-hover));
         border-color: transparent;
       }
 
       &.button--selected,
-      &:active {
+      &:not(.button--read-only):active {
         color: rgb(var(--color-neutral-fg-inverse));
         background-color: rgb(var(--color-neutral-bg-strong-active));
         border-color: transparent;
@@ -229,14 +236,14 @@ const computedSize = computed(() =>
       background-color: transparent;
       border-color: rgb(var(--color-primary-border-strong));
 
-      &:hover {
+      &:not(.button--read-only):hover {
         color: rgb(var(--color-primary-fg-inverse));
         background-color: rgb(var(--color-primary-bg-strong-hover));
         border-color: transparent;
       }
 
       &.button--selected,
-      &:active {
+      &:not(.button--read-only):active {
         color: rgb(var(--color-primary-fg-inverse));
         background-color: rgb(var(--color-primary-bg-strong));
         border-color: transparent;
@@ -248,14 +255,14 @@ const computedSize = computed(() =>
       background-color: transparent;
       border-color: rgb(var(--color-secondary-border-strong));
 
-      &:hover {
+      &:not(.button--read-only):hover {
         color: rgb(var(--color-secondary-fg-inverse));
         background-color: rgb(var(--color-secondary-bg-strong-hover));
         border-color: transparent;
       }
 
       &.button--selected,
-      &:active {
+      &:not(.button--read-only):active {
         color: rgb(var(--color-secondary-fg-inverse));
         background-color: rgb(var(--color-secondary-bg-strong));
         border-color: transparent;
@@ -276,6 +283,16 @@ const computedSize = computed(() =>
 
         &--after {
           margin-left: 0;
+        }
+      }
+
+      &.button--answer {
+        &.button--medium {
+          padding: calc(var(--spacing-small) - var(--spacing-nano));
+        }
+
+        &.button--small {
+          padding: calc(var(--spacing-extra-small) - var(--spacing-nano));
         }
       }
     }

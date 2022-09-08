@@ -82,8 +82,8 @@ const responsive = computed(() => ({
 }
 .logo {
   &--small {
-    width: 4.706rem;
-    height: 1rem;
+    width: 5.953rem;
+    height: 1.25rem;
   }
 
   &--medium {
@@ -102,8 +102,8 @@ const responsive = computed(() => ({
     }
 
     &-small {
-      font-size: 0.5rem;
-      margin-left: 0.454rem;
+      font-size: var(--typography-body-small-size);
+      margin-left: 0.563rem;
     }
   }
 

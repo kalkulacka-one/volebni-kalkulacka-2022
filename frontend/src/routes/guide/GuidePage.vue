@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { mdiCloseCircleOutline, mdiArrowRight, mdiFastForward } from '@mdi/js';
+import {
+  mdiCloseCircleOutline,
+  mdiArrowRight,
+  mdiArrowLeft,
+  mdiFastForward,
+} from '@mdi/js';
 
 import { appRoutes } from '@/main';
 import { useElectionStore } from '@/stores/electionStore';
@@ -10,18 +15,19 @@ import type { Election } from '@/types/election';
 
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
+import BodyText from '@/components/design-system/typography/BodyText.vue';
 import BottomBar from '@/components/design-system/navigation/BottomBar.vue';
 import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
 import CardComponent from '@/components/design-system/containers/CardComponent.vue';
 import HeadingComponent from '@/components/design-system/typography/HeadingComponent.vue';
+import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import LabelText from '@/components/design-system/typography/LabelText.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import StepProgress from '@/components/design-system/other/StepProgress.vue';
 import StepWrapper from '@/components/design-system/layout/StepWrapper.vue';
-import BodyText from '@/components/design-system/typography/BodyText.vue';
 
 import {
   vkiLogoInFavour,
@@ -45,24 +51,24 @@ const districtName = electionStore.districts.filter(
 const title = `${electionName} — ${districtName}`;
 
 const currentStep = ref(1);
-const totalSteps = 4;
+const stepsCount = 4;
 
 const nextButtonTitle = computed(() => {
-  if (currentStep.value < totalSteps) {
+  if (currentStep.value < stepsCount) {
     return 'Další';
   } else {
     return 'První otázka';
   }
 });
 const nextButtonKind = computed(() => {
-  if (currentStep.value < totalSteps) {
+  if (currentStep.value < stepsCount) {
     return 'outlined';
   } else {
     return 'filled';
   }
 });
 const skipButtonVisibility = computed(() => {
-  if (currentStep.value < totalSteps) {
+  if (currentStep.value < stepsCount) {
     return 'initial';
   } else {
     return 'hidden';
@@ -74,12 +80,15 @@ const goToQuestions = () => {
 };
 
 const handleNextClick = () => {
-  if (currentStep.value < totalSteps) {
+  if (currentStep.value < stepsCount) {
     currentStep.value++;
-    console.log(currentStep.value);
   } else {
     goToQuestions();
   }
+};
+
+const handlePreviousClick = () => {
+  currentStep.value--;
 };
 </script>
 
@@ -107,6 +116,11 @@ const handleNextClick = () => {
     </template>
     <BottomBarWrapper>
       <StepWrapper>
+        <template #before>
+          <IconButton v-if="currentStep > 1" @click="handlePreviousClick">
+            <IconComponent :icon="mdiArrowLeft" />
+          </IconButton>
+        </template>
         <StackComponent v-if="currentStep === 1" spacing="small">
           <HeadingComponent kind="title" size="medium">
             {{ electionName }}
@@ -188,11 +202,16 @@ const handleNextClick = () => {
             Pokud strana též na otázku neodpověděla, získá 1/2 bodu.
           </BodyText>
         </StackComponent>
+        <template #after>
+          <IconButton v-if="currentStep < stepsCount" @click="handleNextClick">
+            <IconComponent :icon="mdiArrowRight" />
+          </IconButton>
+        </template>
       </StepWrapper>
       <template #bottom-bar>
         <BottomBar class="bottom-bar" transparent="desktop">
           <LabelText class="text">
-            Návod {{ currentStep }}&hairsp;/&hairsp;{{ totalSteps }}
+            Návod {{ currentStep }}&hairsp;/&hairsp;{{ stepsCount }}
           </LabelText>
           <StepProgress class="progress-indicator" :current="currentStep" />
           <ButtonComponent
