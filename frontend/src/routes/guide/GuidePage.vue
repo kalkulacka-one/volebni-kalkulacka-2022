@@ -44,11 +44,12 @@ const electionStore = useElectionStore();
 const election = electionStore.election as Election;
 const electionName = election.name;
 const electionDescription = election.description;
+const districtCode = route.params.district;
 const districtName = electionStore.districts.filter(
-  (district) => district.district_code === route.params.district
-)[0].label;
+  (district) => district.district_code === districtCode
+)[0].name;
 
-const title = `${electionName} — ${districtName}`;
+const title = `${electionName} — ${districtName} (${districtCode})`;
 
 const currentStep = computed(() => parseInt(route.params.step as string) || 1);
 const stepsCount = 4;
