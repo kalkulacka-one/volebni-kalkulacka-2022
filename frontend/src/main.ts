@@ -23,6 +23,7 @@ import { useElectionStore, UserAnswerEnum } from './stores/electionStore';
 import { createPinia } from 'pinia';
 import ErrorPageVue from './routes/error/ErrorPage.vue';
 import { decodeResults, encodeResults } from './common/resultParser';
+import { ThemeEnum, useThemeStore } from './stores/themeStore';
 
 const RESULT_QUERY_NAME = 'result';
 
@@ -97,8 +98,8 @@ export const appRoutes = {
   },
   districtSelection: {
     name: 'district-selection',
-    path: '/kalkulacka/:election/vyber',
-    alias: '/kalkulacka/:election',
+    path: '/kalkulacka/:theme/:election/vyber',
+    alias: '/kalkulacka/:theme/:election',
     component: DistrictSelectionPageVue,
     meta: {
       title: 'Volebni kalkulacka',
@@ -116,8 +117,8 @@ export const appRoutes = {
   },
   guide: {
     name: 'guide',
-    path: '/kalkulacka/:election/:district/navod/:step?',
-    alias: '/kalkulacka/:election/:district/navod',
+    path: '/kalkulacka/:theme/:election/:district/navod/:step?',
+    alias: '/kalkulacka/:theme/:election/:district/navod',
     component: GuidePageVue,
     meta: {
       title: 'Návod - Volebni kalkulacka',
@@ -135,7 +136,7 @@ export const appRoutes = {
   },
   question: {
     name: 'question',
-    path: '/kalkulacka/:election/:district/otazka/:nr',
+    path: '/kalkulacka/:theme/:election/:district/otazka/:nr',
     component: QuestionPageVue,
     meta: {
       title: 'Otazka $$ - Volebni kalkulacka',
@@ -155,7 +156,7 @@ export const appRoutes = {
   },
   recap: {
     name: 'recap',
-    path: '/kalkulacka/:election/:district/rekapitulace',
+    path: '/kalkulacka/:theme/:election/:district/rekapitulace',
     component: RecapPageVue,
     meta: {
       title: 'Rekapitulace - Volebni kalkulacka',
@@ -173,7 +174,7 @@ export const appRoutes = {
   },
   result: {
     name: 'result',
-    path: '/kalkulacka/:election/:district/vysledek',
+    path: '/kalkulacka/:theme/:election/:district/vysledek',
     component: ResultPageVue,
     meta: {
       title: 'Vysledky - Volebni kalkulacka',
@@ -192,7 +193,7 @@ export const appRoutes = {
   },
   comparison: {
     name: 'comparison',
-    path: '/kalkulacka/:election/:district/srovnani',
+    path: '/kalkulacka/:theme/:election/:district/srovnani',
     component: ComparisonPageVue,
     meta: {
       title: 'Porovnani - Volebni kalkulacka',
