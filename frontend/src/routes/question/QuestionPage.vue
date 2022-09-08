@@ -21,6 +21,7 @@ import ButtonComponent from '@/components/design-system/input/ButtonComponent.vu
 import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
+import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
 import StepWrapper from '@/components/design-system/layout/StepWrapper.vue';
 
 import QuestionBottomBar from './QuestionBottomBar.vue';
@@ -152,6 +153,20 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
           </ButtonComponent>
         </template>
       </NavigationBar>
+    </template>
+    <template #sticky-header>
+      <SecondaryNavigationBar transparent>
+        <template v-if="currentQuestion > 1" #before>
+          <IconButton @click="handlePreviousClick">
+            <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
+          </IconButton>
+        </template>
+        <template v-if="answeredQuestionsCount >= currentQuestion" #after>
+          <IconButton @click="handleNextClick">
+            <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
+          </IconButton>
+        </template>
+      </SecondaryNavigationBar>
     </template>
     <BottomBarWrapper>
       <StepWrapper>
