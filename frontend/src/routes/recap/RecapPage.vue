@@ -118,12 +118,9 @@ const isCardHidden = (index: number) => {
     <template #sticky-header>
       <SecondaryNavigationBar>
         <template #before>
-          <IconButton
-            :icon="mdiArrowLeft"
-            size="medium"
-            title="Pro mě důležité"
-            @click="handleBackClick"
-          />
+          <IconButton title="Zpět na otázky" @click="handleBackClick">
+            <IconComponent :icon="mdiArrowLeft" size="medium" />
+          </IconButton>
         </template>
         Rekapitulace
         <template #right>
