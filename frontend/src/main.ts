@@ -114,8 +114,11 @@ export const appRoutes = {
   },
   guide: {
     name: 'guide',
-    path: '/kalkulacka/:election/:district/navod',
-    alias: '/kalkulacka/:election/:district',
+    path: '/kalkulacka/:election/:district/navod/:step?',
+    alias: [
+      '/kalkulacka/:election/:district',
+      '/kalkulacka/:election/:district/navod',
+    ],
     component: GuidePageVue,
     meta: {
       title: 'Návod - Volebni kalkulacka',
