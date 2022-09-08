@@ -52,7 +52,7 @@ const elections = await fetchElections();
               v-for="election in elections"
               :key="election.id"
               kind="filled"
-              :href="`/kalkulacka/${election.id}`"
+              :href="`/kalkulacka/${election.key}`"
             >
               {{ election.name }}
             </ButtonComponent>
