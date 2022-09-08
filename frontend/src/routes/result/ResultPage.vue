@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRoute, useRouter } from 'vue-router';
-import { mdiCloseCircleOutline } from '@mdi/js';
+import { mdiCloseCircleOutline, mdiArrowLeft } from '@mdi/js';
 
 import { appRoutes } from '@/main';
 import { useElectionStore } from '@/stores/electionStore';
@@ -13,10 +13,11 @@ import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
 import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
+import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
+import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
 
-import ResultNavBar from './ResultNavBar.vue';
 import ResultSideBar from './ResultSideBar.vue';
 import ResultCategory from './ResultCategory.vue';
 
@@ -33,7 +34,7 @@ const districtName = electionStore.districts.filter(
 
 const title = `${electionName} — ${districtName} (${districtCode})`;
 
-const handleBackClicked = () => {
+const handlePreviousClick = () => {
   router.push({
     name: appRoutes.recap.name,
     params: { ...route.params },
@@ -81,7 +82,14 @@ const resultsMedicine = calculateRelativeAgreement(
       </NavigationBar>
     </template>
     <template #sticky-header>
-      <ResultNavBar :on-back="handleBackClicked" />
+      <SecondaryNavigationBar>
+        <template #before>
+          <IconButton @click="handlePreviousClick">
+            <IconComponent :icon="mdiArrowLeft" title="Rekapitulace" />
+          </IconButton>
+        </template>
+        Moje shoda
+      </SecondaryNavigationBar>
     </template>
     <BottomBarWrapper>
       <div class="body-wrapper">
