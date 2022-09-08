@@ -1,12 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useRoute, useRouter, onBeforeRouteUpdate } from 'vue-router';
-import {
-  mdiCloseCircleOutline,
-  mdiHelpCircleOutline,
-  mdiArrowRight,
-  mdiArrowLeft,
-} from '@mdi/js';
+import { mdiCloseCircleOutline, mdiArrowRight, mdiArrowLeft } from '@mdi/js';
 
 import { appRoutes, questionGuard } from '@/main';
 import { useElectionStore, UserAnswerEnum } from '@/stores/electionStore';
@@ -129,15 +124,6 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
       <NavigationBar transparent>
         <template #title>{{ title }}</template>
         <template #right>
-          <ButtonComponent kind="link" :responsive="true" @click="goToGuide(1)">
-            Zpět na návod
-            <template #iconAfter>
-              <IconComponent
-                :icon="mdiHelpCircleOutline"
-                title="Zpět na návod"
-              />
-            </template>
-          </ButtonComponent>
           <ButtonComponent
             kind="link"
             :responsive="true"
