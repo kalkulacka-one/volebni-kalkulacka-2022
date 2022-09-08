@@ -37,8 +37,11 @@ const background = computed(() =>
         <slot />
       </TitleText>
     </div>
-    <div v-if="$slots.right" class="after">
+    <div v-if="$slots.right" class="right">
       <slot name="right" />
+    </div>
+    <div v-if="$slots.after" class="after">
+      <slot name="after" />
     </div>
   </ContainerComponent>
 </template>
@@ -47,9 +50,9 @@ const background = computed(() =>
 .secondary-navigation-bar {
   display: grid;
   align-items: center;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr auto auto;
   grid-template-rows: 1fr;
-  grid-template-areas: 'before title right';
+  grid-template-areas: 'before title right after';
   gap: var(--spacing-large);
 
   .before {
@@ -64,32 +67,8 @@ const background = computed(() =>
     grid-area: right;
   }
 
-  &--centered {
-    justify-self: center;
-    .title {
-      grid-area: 1 / span 2;
-      justify-self: center;
-    }
-
-    .right {
-      display: none;
-    }
-
-    .before {
-      display: none;
-    }
-  }
-
-  @media (max-width: 700px) {
-    grid-template-columns: 1fr auto 1fr;
-
-    .title {
-      justify-self: center;
-    }
-
-    .after {
-      display: none;
-    }
+  .after {
+    grid-area: after;
   }
 }
 </style>

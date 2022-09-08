@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import {
   mdiCloseCircleOutline,
@@ -25,6 +25,7 @@ import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import LabelText from '@/components/design-system/typography/LabelText.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
+import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import StepProgress from '@/components/design-system/other/StepProgress.vue';
 import StepWrapper from '@/components/design-system/layout/StepWrapper.vue';
@@ -44,14 +45,36 @@ const electionStore = useElectionStore();
 const election = electionStore.election as Election;
 const electionName = election.name;
 const electionDescription = election.description;
+const districtCode = route.params.district;
 const districtName = electionStore.districts.filter(
-  (district) => district.district_code === route.params.district
-)[0].label;
+  (district) => district.district_code === districtCode
+)[0].name;
 
-const title = `${electionName} — ${districtName}`;
+const title = `${electionName} — ${districtName} (${districtCode})`;
 
-const currentStep = computed(() => parseInt(route.params.step as string) || 1);
+const forwardRoute = computed(
+  () =>
+    router.options.history.state.forward &&
+    router.resolve(router.options.history.state.forward as string)
+);
+
+const backRoute = computed(
+  () =>
+    router.options.history.state.back &&
+    router.resolve(router.options.history.state.back as string)
+);
+
 const stepsCount = 4;
+const currentStep = computed(() => parseInt(route.params.step as string) || 1);
+const farthestCompletedStep = ref(
+  Math.max(
+    currentStep.value - 1,
+    forwardRoute.value && forwardRoute.value.name === appRoutes.question.name
+      ? 4
+      : 0,
+    backRoute.value && backRoute.value.name === appRoutes.question.name ? 4 : 0
+  )
+);
 
 const nextButtonTitle = computed(() => {
   if (currentStep.value < stepsCount) {
@@ -87,7 +110,11 @@ const goToQuestions = () => {
 };
 
 const handleNextClick = () => {
-  console.log(currentStep.value);
+  farthestCompletedStep.value = Math.max(
+    farthestCompletedStep.value,
+    currentStep.value
+  );
+
   if (currentStep.value < stepsCount) {
     goToStep(currentStep.value + 1);
   } else {
@@ -122,11 +149,25 @@ const handlePreviousClick = () => {
         </template>
       </NavigationBar>
     </template>
+    <template #sticky-header>
+      <SecondaryNavigationBar transparent>
+        <template v-if="currentStep > 1" #before>
+          <IconButton @click="handlePreviousClick">
+            <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
+          </IconButton>
+        </template>
+        <template v-if="farthestCompletedStep >= currentStep" #after>
+          <IconButton @click="handleNextClick">
+            <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
+          </IconButton>
+        </template>
+      </SecondaryNavigationBar>
+    </template>
     <BottomBarWrapper>
       <StepWrapper>
         <template #before>
           <IconButton v-if="currentStep > 1" @click="handlePreviousClick">
-            <IconComponent :icon="mdiArrowLeft" />
+            <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
           </IconButton>
         </template>
         <StackComponent v-if="currentStep === 1" spacing="small">
@@ -211,8 +252,11 @@ const handlePreviousClick = () => {
           </BodyText>
         </StackComponent>
         <template #after>
-          <IconButton v-if="currentStep < stepsCount" @click="handleNextClick">
-            <IconComponent :icon="mdiArrowRight" />
+          <IconButton
+            v-if="farthestCompletedStep >= currentStep"
+            @click="handleNextClick"
+          >
+            <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
           </IconButton>
         </template>
       </StepWrapper>

@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useRoute, useRouter, onBeforeRouteUpdate } from 'vue-router';
+import type { RouteParams } from 'vue-router';
 import { mdiCloseCircleOutline, mdiArrowRight, mdiArrowLeft } from '@mdi/js';
 
 import { appRoutes, questionGuard } from '@/main';
 import { useElectionStore, UserAnswerEnum } from '@/stores/electionStore';
+
+import type { Election } from '@/types/election';
 import type { Question } from '@/types/question';
 
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
@@ -14,6 +17,7 @@ import ButtonComponent from '@/components/design-system/input/ButtonComponent.vu
 import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
+import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
 import StepWrapper from '@/components/design-system/layout/StepWrapper.vue';
 
 import QuestionBottomBar from './QuestionBottomBar.vue';
@@ -23,29 +27,61 @@ const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
 
-// TODO: Map route params to text
-const title = `${route.params.election} — ${route.params.district}`;
-
 onBeforeRouteUpdate(questionGuard);
 
 if (electionStore.calculator === undefined) {
   throw new Error('Calculator is undefined. This should never happen');
 }
 
+const election = electionStore.election as Election;
+const electionName = election.name;
+const districtCode = route.params.district;
+const districtName = electionStore.districts.filter(
+  (district) => district.district_code === districtCode
+)[0].name;
+
+const title = `${electionName} — ${districtName} (${districtCode})`;
+
+const forwardRoute = computed(
+  () =>
+    router.options.history.state.forward &&
+    router.resolve(router.options.history.state.forward as string)
+);
+
+const backRoute = computed(
+  () =>
+    router.options.history.state.back &&
+    router.resolve(router.options.history.state.back as string)
+);
+
+const questionCount = computed(() => electionStore.questionCount);
 const currentQuestion = computed(() => parseInt(route.params['nr'] as string));
+const answeredQuestions = computed(() =>
+  electionStore.answers.filter((answer) => answer.answer !== 0)
+);
+const answeredQuestionsCount = computed(() => answeredQuestions.value.length);
+
+const previousButtonTitle = computed(() => {
+  if (currentQuestion.value === 1) {
+    return 'Návod';
+  } else {
+    return 'Předchozí';
+  }
+});
+
+const nextButtonTitle = computed(() => {
+  if (currentQuestion.value === questionCount.value) {
+    return 'Rekapitulace';
+  } else {
+    return 'Další';
+  }
+});
 
 const goToQuestion = (number: number) => {
-  console.debug(number, electionStore.questionCount);
-  if (number > electionStore.questionCount) {
-    router.push({
-      name: appRoutes.recap.name,
-    });
-  } else {
-    router.push({
-      name: appRoutes.question.name,
-      params: { ...route.params, nr: number },
-    });
-  }
+  router.push({
+    name: appRoutes.question.name,
+    params: { ...route.params, nr: number },
+  });
 };
 
 const goToRecap = () => {
@@ -53,6 +89,34 @@ const goToRecap = () => {
     name: appRoutes.recap.name,
   });
 };
+
+const goToGuide = (params: RouteParams) => {
+  router.push({
+    name: appRoutes.guide.name,
+    params,
+  });
+};
+
+const handleNextClick = () => {
+  if (currentQuestion.value < questionCount.value) {
+    goToQuestion(currentQuestion.value + 1);
+  } else {
+    goToRecap();
+  }
+};
+
+const handlePreviousClick = () => {
+  if (currentQuestion.value === 1) {
+    const params = (backRoute.value && backRoute.value.params) || {};
+    goToGuide(params);
+  } else if (currentQuestion.value < questionCount.value) {
+    goToQuestion(currentQuestion.value - 1);
+  } else {
+    goToRecap();
+  }
+};
+
+const handleStarClick = () => electionStore.flipAnswerFlag(questionNr.value);
 
 //internally questions start at 0
 const questionNr = computed(() => parseInt(route.params['nr'] as string) - 1);
@@ -76,16 +140,6 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
   );
   router.push(newRoute);
 };
-const handleStarClick = () => electionStore.flipAnswerFlag(questionNr.value);
-const forwardDisabled = computed(() => {
-  return !(
-    questionNr.value < electionStore.answerProgress + 1 ||
-    electionStore.questionCount === electionStore.answerCount
-  );
-});
-const backDisabled = computed(() => {
-  return questionNr.value < 1;
-});
 </script>
 
 <template>
@@ -110,14 +164,25 @@ const backDisabled = computed(() => {
         </template>
       </NavigationBar>
     </template>
+    <template #sticky-header>
+      <SecondaryNavigationBar transparent>
+        <template #before>
+          <IconButton @click="handlePreviousClick">
+            <IconComponent :icon="mdiArrowLeft" :title="previousButtonTitle" />
+          </IconButton>
+        </template>
+        <template v-if="answeredQuestionsCount >= currentQuestion" #after>
+          <IconButton @click="handleNextClick">
+            <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
+          </IconButton>
+        </template>
+      </SecondaryNavigationBar>
+    </template>
     <BottomBarWrapper>
       <StepWrapper>
         <template #before>
-          <IconButton
-            :hidden="backDisabled"
-            @click="goToQuestion(currentQuestion - 1)"
-          >
-            <IconComponent :icon="mdiArrowLeft" />
+          <IconButton @click="handlePreviousClick">
+            <IconComponent :icon="mdiArrowLeft" :title="previousButtonTitle" />
           </IconButton>
         </template>
         <QuestionCard
@@ -127,10 +192,10 @@ const backDisabled = computed(() => {
         />
         <template #after>
           <IconButton
-            :hidden="forwardDisabled"
-            @click="goToQuestion(currentQuestion + 1)"
+            v-if="answeredQuestionsCount >= currentQuestion"
+            @click="handleNextClick"
           >
-            <IconComponent :icon="mdiArrowRight" />
+            <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
           </IconButton>
         </template>
       </StepWrapper>

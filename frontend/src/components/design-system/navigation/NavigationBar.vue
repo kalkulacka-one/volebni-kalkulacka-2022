@@ -26,7 +26,7 @@ const background = computed(() =>
     padding="medium"
   >
     <div class="grid">
-      <LogoComponent />
+      <LogoComponent responsive />
       <div class="title">
         <BodyText size="small">
           <slot name="title" />

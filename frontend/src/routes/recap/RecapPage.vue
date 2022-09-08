@@ -1,19 +1,17 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import {
-  mdiRestore,
-  mdiCloseCircleOutline,
-  mdiArrowLeft,
-  mdiArrowRight,
-} from '@mdi/js';
+import { mdiCloseCircleOutline, mdiArrowLeft, mdiArrowRight } from '@mdi/js';
 
 import { appRoutes } from '@/main';
+import { useElectionStore, UserAnswerEnum } from '@/stores/electionStore';
 
+import type { Election } from '@/types/election';
 import type { Question } from '@/types/question';
 
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
+import BodyText from '@/components/design-system/typography/BodyText.vue';
 import BottomBar from '@/components/design-system/navigation/BottomBar.vue';
 import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
@@ -21,38 +19,32 @@ import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
+import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 
 import { vkiLogoPercent } from '@/components/design-system/icons';
 
-import TabFilter from '../../components/TabFilter.vue';
-import { useElectionStore, UserAnswerEnum } from '@/stores/electionStore';
 import RecapQuestionCard from './RecapQuestionCard.vue';
-import StackComponent from '../../components/design-system/layout/StackComponent.vue';
-import BodyText from '../../components/design-system/typography/BodyText.vue';
 
 const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
 
-// TODO: Map route params to text
-const title = `${route.params.election} — ${route.params.district}`;
+const election = electionStore.election as Election;
+const electionName = election.name;
+const districtCode = route.params.district;
+const districtName = electionStore.districts.filter(
+  (district) => district.district_code === districtCode
+)[0].name;
 
-const handleResetClick = async () => {
-  // TODO: Show warning in modal
-  await router.push({
-    name: appRoutes.question.name,
-    params: { ...route.params, nr: 'first' },
-  });
-  // TODO: Initialize store
-  // electionStore.init();
-};
+const title = `${electionName} — ${districtName} (${districtCode})`;
 
-const handleBackClick = () => {
+const handlePreviousClick = () => {
   router.push({
     name: appRoutes.question.name,
     params: { ...route.params, nr: 'last' },
   });
 };
+
 const handleShowResultsClick = () => {
   router.push({
     name: appRoutes.result.name,
@@ -66,10 +58,6 @@ electionStore.calculator?.questions.forEach((q) =>
   q.tags?.forEach((tag) => availableTags.add(tag))
 );
 
-const handleFilterChange = (id: string) => {
-  console.debug(id);
-  selectedTag.value = id;
-};
 const handleStarClick = (index: number) => {
   electionStore.flipAnswerFlag(index);
 };
@@ -92,16 +80,6 @@ const isCardHidden = (index: number) => {
           <ButtonComponent
             kind="link"
             :responsive="true"
-            @click="handleResetClick"
-          >
-            Vyplnit znovu
-            <template #iconAfter>
-              <IconComponent :icon="mdiRestore" title="Vyplnit znovu" />
-            </template>
-          </ButtonComponent>
-          <ButtonComponent
-            kind="link"
-            :responsive="true"
             @click="router.push({ name: appRoutes.index.name })"
           >
             Zpět na hlavní stránku
@@ -118,12 +96,9 @@ const isCardHidden = (index: number) => {
     <template #sticky-header>
       <SecondaryNavigationBar>
         <template #before>
-          <IconButton
-            :icon="mdiArrowLeft"
-            size="medium"
-            title="Pro mě důležité"
-            @click="handleBackClick"
-          />
+          <IconButton @click="handlePreviousClick">
+            <IconComponent :icon="mdiArrowLeft" title="Otázky" />
+          </IconButton>
         </template>
         Rekapitulace
         <template #right>
@@ -145,11 +120,6 @@ const isCardHidden = (index: number) => {
           Zde si můžete projít svoje odpovědi a důležitosti a případně je ještě
           upravit.
         </BodyText>
-        <TabFilter
-          :tags="Array.from(availableTags)"
-          :input-change="handleFilterChange"
-          :selected-tag="selectedTag"
-        />
         <StackComponent class="list" spacing="small">
           <RecapQuestionCard
             v-for="i in [...Array(electionStore.questionCount).keys()]"
