@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { fetchElections } from '@/common/dataFetch';
+
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 import HeadingComponent from '@/components/design-system/typography/HeadingComponent.vue';
@@ -6,6 +8,8 @@ import CardComponent from '@/components/design-system/containers/CardComponent.v
 import StackComponent from '../../components/design-system/layout/StackComponent.vue';
 import BodyText from '../../components/design-system/typography/BodyText.vue';
 import ButtonComponent from '../../components/design-system/input/ButtonComponent.vue';
+
+const elections = await fetchElections();
 </script>
 
 <template>
@@ -41,6 +45,16 @@ import ButtonComponent from '../../components/design-system/input/ButtonComponen
               href="https://www.volebnikalkulacka.cz/"
             >
               Volební kalkulačky z předchozích let
+            </ButtonComponent>
+          </StackComponent>
+          <StackComponent horizontal spacing="small">
+            <ButtonComponent
+              v-for="election in elections"
+              :key="election.id"
+              kind="filled"
+              :href="`/kalkulacka/${election.id}`"
+            >
+              {{ election.name }}
             </ButtonComponent>
           </StackComponent>
         </StackComponent>
