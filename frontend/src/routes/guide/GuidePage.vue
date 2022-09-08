@@ -25,6 +25,7 @@ import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import LabelText from '@/components/design-system/typography/LabelText.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
+import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import StepProgress from '@/components/design-system/other/StepProgress.vue';
 import StepWrapper from '@/components/design-system/layout/StepWrapper.vue';
@@ -147,6 +148,20 @@ const handlePreviousClick = () => {
           </ButtonComponent>
         </template>
       </NavigationBar>
+    </template>
+    <template #sticky-header>
+      <SecondaryNavigationBar transparent>
+        <template v-if="currentStep > 1" #before>
+          <IconButton @click="handlePreviousClick">
+            <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
+          </IconButton>
+        </template>
+        <template v-if="farthestCompletedStep >= currentStep" #after>
+          <IconButton @click="handleNextClick">
+            <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
+          </IconButton>
+        </template>
+      </SecondaryNavigationBar>
     </template>
     <BottomBarWrapper>
       <StepWrapper>
