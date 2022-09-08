@@ -24,6 +24,7 @@ import StackComponent from '@/components/design-system/layout/StackComponent.vue
 import { vkiLogoPercent } from '@/components/design-system/icons';
 
 import RecapQuestionCard from './RecapQuestionCard.vue';
+import BackgroundComponent from '../../components/design-system/style/BackgroundComponent.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -72,84 +73,86 @@ const isCardHidden = (index: number) => {
 };
 </script>
 <template>
-  <StickyHeaderLayout>
-    <template #header>
-      <NavigationBar>
-        <template #title>{{ title }}</template>
-        <template #right>
-          <ButtonComponent
-            kind="link"
-            :responsive="true"
-            @click="router.push({ name: appRoutes.index.name })"
-          >
-            Zpět na hlavní stránku
-            <template #iconAfter>
-              <IconComponent
-                :icon="mdiCloseCircleOutline"
-                title="Zpět na hlavní stránku"
-              />
-            </template>
-          </ButtonComponent>
-        </template>
-      </NavigationBar>
-    </template>
-    <template #sticky-header>
-      <SecondaryNavigationBar>
-        <template #before>
-          <IconButton @click="handlePreviousClick">
-            <IconComponent :icon="mdiArrowLeft" title="Otázky" />
-          </IconButton>
-        </template>
-        Rekapitulace
-        <template #right>
-          <ButtonComponent kind="filled" @click="handleShowResultsClick">
-            <template #icon>
-              <IconComponent :icon="vkiLogoPercent" />
-            </template>
-            Zobrazit výsledky
-            <template #iconAfter>
-              <IconComponent :icon="mdiArrowRight" />
-            </template>
-          </ButtonComponent>
-        </template>
-      </SecondaryNavigationBar>
-    </template>
-    <BottomBarWrapper>
-      <StackComponent class="main" spacing="small">
-        <BodyText size="small">
-          Zde si můžete projít svoje odpovědi a důležitosti a případně je ještě
-          upravit.
-        </BodyText>
-        <StackComponent class="list" spacing="small">
-          <RecapQuestionCard
-            v-for="i in [...Array(electionStore.questionCount).keys()]"
-            :key="i"
-            :hidden="isCardHidden(i)"
-            :question="(electionStore.calculator?.questions[i] as Question)"
-            :answer="electionStore.answers[i]"
-            :current-question="i + 1"
-            :question-count="electionStore.questionCount"
-            :star-click="() => handleStarClick(i)"
-            :yes-click="() => handleAnswerClick(i, UserAnswerEnum.yes)"
-            :no-click="() => handleAnswerClick(i, UserAnswerEnum.no)"
-            :skip-click="() => handleAnswerClick(i, UserAnswerEnum.skip)"
-          />
-        </StackComponent>
-      </StackComponent>
-      <template #bottom-bar>
-        <BottomBar transparent="never" :desktop="false">
-          <div class="bottom-bar-grid">
+  <BackgroundComponent :is-image="false">
+    <StickyHeaderLayout>
+      <template #header>
+        <NavigationBar>
+          <template #title>{{ title }}</template>
+          <template #right>
+            <ButtonComponent
+              kind="link"
+              :responsive="true"
+              @click="router.push({ name: appRoutes.index.name })"
+            >
+              Zpět na hlavní stránku
+              <template #iconAfter>
+                <IconComponent
+                  :icon="mdiCloseCircleOutline"
+                  title="Zpět na hlavní stránku"
+                />
+              </template>
+            </ButtonComponent>
+          </template>
+        </NavigationBar>
+      </template>
+      <template #sticky-header>
+        <SecondaryNavigationBar>
+          <template #before>
+            <IconButton @click="handlePreviousClick">
+              <IconComponent :icon="mdiArrowLeft" title="Otázky" />
+            </IconButton>
+          </template>
+          Rekapitulace
+          <template #right>
             <ButtonComponent kind="filled" @click="handleShowResultsClick">
+              <template #icon>
+                <IconComponent :icon="vkiLogoPercent" />
+              </template>
               Zobrazit výsledky
               <template #iconAfter>
                 <IconComponent :icon="mdiArrowRight" />
               </template>
             </ButtonComponent>
-          </div>
-        </BottomBar>
+          </template>
+        </SecondaryNavigationBar>
       </template>
-    </BottomBarWrapper>
-  </StickyHeaderLayout>
+      <BottomBarWrapper>
+        <StackComponent class="main" spacing="small">
+          <BodyText size="small">
+            Zde si můžete projít svoje odpovědi a důležitosti a případně je
+            ještě upravit.
+          </BodyText>
+          <StackComponent class="list" spacing="small">
+            <RecapQuestionCard
+              v-for="i in [...Array(electionStore.questionCount).keys()]"
+              :key="i"
+              :hidden="isCardHidden(i)"
+              :question="(electionStore.calculator?.questions[i] as Question)"
+              :answer="electionStore.answers[i]"
+              :current-question="i + 1"
+              :question-count="electionStore.questionCount"
+              :star-click="() => handleStarClick(i)"
+              :yes-click="() => handleAnswerClick(i, UserAnswerEnum.yes)"
+              :no-click="() => handleAnswerClick(i, UserAnswerEnum.no)"
+              :skip-click="() => handleAnswerClick(i, UserAnswerEnum.skip)"
+            />
+          </StackComponent>
+        </StackComponent>
+        <template #bottom-bar>
+          <BottomBar transparent="never" :desktop="false">
+            <div class="bottom-bar-grid">
+              <ButtonComponent kind="filled" @click="handleShowResultsClick">
+                Zobrazit výsledky
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </BottomBar>
+        </template>
+      </BottomBarWrapper>
+    </StickyHeaderLayout>
+  </BackgroundComponent>
 </template>
 
 <style lang="scss" scoped>

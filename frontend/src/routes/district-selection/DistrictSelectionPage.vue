@@ -15,6 +15,7 @@ import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 import RadioButtonComponent from '@/components/design-system/input/RadioButtonComponent.vue';
 import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
+import BackgroundComponent from '../../components/design-system/style/BackgroundComponent.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -46,57 +47,63 @@ const onSubmit = () => {
 </script>
 
 <template>
-  <StickyHeaderLayout>
-    <template #header>
-      <NavigationBar transparent>
-        <template #title>{{ title }}</template>
-        <template #right>
-          <ButtonComponent
-            kind="link"
-            :responsive="true"
-            @click="router.push({ name: appRoutes.index.name })"
-          >
-            Zpět na hlavní stránku
-            <template #iconAfter>
-              <IconComponent
-                :icon="mdiCloseCircleOutline"
-                title="Zpět na hlavní stránku"
-              />
-            </template>
-          </ButtonComponent>
-        </template>
-      </NavigationBar>
-    </template>
-    <template #sticky-header>
-      <SecondaryNavigationBar transparent>
-        {{ heading }}
-      </SecondaryNavigationBar>
-    </template>
-    <form id="district-form" ref="form" @submit.prevent="onSubmit">
-      <BottomBarWrapper>
-        <div class="main">
-          <div class="list">
-            <RadioButtonComponent
-              v-for="option in options"
-              :key="option.value"
-              v-model="selected"
-              group-name="district-selection"
-              :value="option.value"
+  <BackgroundComponent :is-image="false">
+    <StickyHeaderLayout>
+      <template #header>
+        <NavigationBar transparent>
+          <template #title>{{ title }}</template>
+          <template #right>
+            <ButtonComponent
+              kind="link"
+              :responsive="true"
+              @click="router.push({ name: appRoutes.index.name })"
             >
-              {{ option.label }}
-            </RadioButtonComponent>
-          </div>
-        </div>
-        <template #bottom-bar>
-          <BottomBar class="bottom-bar" transparent="desktop">
-            <ButtonComponent kind="filled" type="submit" :disabled="!selected">
-              Potvrdit a pokračovat
+              Zpět na hlavní stránku
+              <template #iconAfter>
+                <IconComponent
+                  :icon="mdiCloseCircleOutline"
+                  title="Zpět na hlavní stránku"
+                />
+              </template>
             </ButtonComponent>
-          </BottomBar>
-        </template>
-      </BottomBarWrapper>
-    </form>
-  </StickyHeaderLayout>
+          </template>
+        </NavigationBar>
+      </template>
+      <template #sticky-header>
+        <SecondaryNavigationBar transparent>
+          {{ heading }}
+        </SecondaryNavigationBar>
+      </template>
+      <form id="district-form" ref="form" @submit.prevent="onSubmit">
+        <BottomBarWrapper>
+          <div class="main">
+            <div class="list">
+              <RadioButtonComponent
+                v-for="option in options"
+                :key="option.value"
+                v-model="selected"
+                group-name="district-selection"
+                :value="option.value"
+              >
+                {{ option.label }}
+              </RadioButtonComponent>
+            </div>
+          </div>
+          <template #bottom-bar>
+            <BottomBar class="bottom-bar" transparent="desktop">
+              <ButtonComponent
+                kind="filled"
+                type="submit"
+                :disabled="!selected"
+              >
+                Potvrdit a pokračovat
+              </ButtonComponent>
+            </BottomBar>
+          </template>
+        </BottomBarWrapper>
+      </form>
+    </StickyHeaderLayout>
+  </BackgroundComponent>
 </template>
 
 <style lang="scss" scoped>

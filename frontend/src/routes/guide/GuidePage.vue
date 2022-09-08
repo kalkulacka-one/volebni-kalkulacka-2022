@@ -37,6 +37,7 @@ import {
   vkiStarOutlined,
   vkiStarFilled,
 } from '@/components/design-system/icons';
+import BackgroundComponent from '../../components/design-system/style/BackgroundComponent.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -128,168 +129,170 @@ const handlePreviousClick = () => {
 </script>
 
 <template>
-  <StickyHeaderLayout>
-    <template #header>
-      <NavigationBar transparent>
-        <template #title>{{ title }}</template>
-        <template #right>
-          <ButtonComponent
-            kind="link"
-            :responsive="true"
-            @click="router.push({ name: appRoutes.index.name })"
-          >
-            Zpět na hlavní stránku
-            <template #iconAfter>
-              <IconComponent
-                :icon="mdiCloseCircleOutline"
-                title="Zpět na hlavní stránku"
-              />
-            </template>
-          </ButtonComponent>
-        </template>
-      </NavigationBar>
-    </template>
-    <template #sticky-header>
-      <SecondaryNavigationBar transparent>
-        <template v-if="currentStep > 1" #before>
-          <IconButton @click="handlePreviousClick">
-            <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
-          </IconButton>
-        </template>
-        <template v-if="farthestCompletedStep >= currentStep" #after>
-          <IconButton @click="handleNextClick">
-            <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
-          </IconButton>
-        </template>
-      </SecondaryNavigationBar>
-    </template>
-    <BottomBarWrapper>
-      <StepWrapper>
-        <template #before>
-          <IconButton v-if="currentStep > 1" @click="handlePreviousClick">
-            <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
-          </IconButton>
-        </template>
-        <StackComponent v-if="currentStep === 1" spacing="small">
-          <HeadingComponent kind="title" size="medium">
-            {{ electionName }}
-            <template #secondary>{{ districtName }}</template>
-          </HeadingComponent>
-          <BodyText size="medium">
-            {{ electionDescription }}
-          </BodyText>
-        </StackComponent>
-        <StackComponent v-if="currentStep === 2" spacing="small">
-          <BodyText size="medium">Odpovídat můžete pomocí tlačítek:</BodyText>
-          <CardComponent
-            corner="bottom-right"
-            border
-            style="align-self: center"
-          >
-            <StackComponent spacing="small">
-              <StackComponent horizontal spacing="small">
+  <BackgroundComponent :is-image="false">
+    <StickyHeaderLayout>
+      <template #header>
+        <NavigationBar transparent>
+          <template #title>{{ title }}</template>
+          <template #right>
+            <ButtonComponent
+              kind="link"
+              :responsive="true"
+              @click="router.push({ name: appRoutes.index.name })"
+            >
+              Zpět na hlavní stránku
+              <template #iconAfter>
                 <IconComponent
-                  :icon="vkiLogoInFavour"
-                  color="rgb(var(--color-primary-fg))"
+                  :icon="mdiCloseCircleOutline"
+                  title="Zpět na hlavní stránku"
                 />
-                <BodyText size="medium">= souhlasím</BodyText>
-              </StackComponent>
-              <StackComponent horizontal spacing="small">
-                <IconComponent
-                  :icon="vkiLogoAgainst"
-                  color="rgb(var(--color-secondary-fg))"
-                />
-                <BodyText size="medium">= nesouhlasím</BodyText>
-              </StackComponent>
-            </StackComponent>
-          </CardComponent>
-          <BodyText size="medium">
-            Když se s nějakou stranou v odpovědi shodnete, získá ve výpočtu
-            shody 1 bod.
-          </BodyText>
-        </StackComponent>
-        <StackComponent v-if="currentStep === 3" spacing="small">
-          <BodyText size="medium">
-            Pokud vám na daném tématu zvlášť záleží, označte ho hvězdičkou:
-          </BodyText>
-          <!-- TODO: remove inline styles -->
-          <CardComponent
-            corner="bottom-right"
-            border
-            style="align-self: center"
-          >
-            <StackComponent horizontal centered spacing="small">
-              <IconComponent :icon="vkiStarOutlined" />
-              <IconComponent :icon="mdiArrowRight" size="small" />
-              <IconComponent
-                :icon="vkiStarFilled"
-                color="rgb(var(--palette-yellow))"
-              />
-              <BodyText size="medium">= pro mě důležité</BodyText>
-            </StackComponent>
-          </CardComponent>
-          <BodyText size="medium">
-            Odpověď pak bude mít ve výpočtu shody dvojnásobnou váhu.
-          </BodyText>
-        </StackComponent>
-        <StackComponent v-if="currentStep === 4" spacing="small">
-          <BodyText size="medium">
-            Když nemáte názor, nejste si jistí nebo z jiného nechcete odpovídat,
-            zvolte:
-          </BodyText>
-          <CardComponent
-            corner="bottom-right"
-            border
-            style="align-self: center"
-          >
-            <StackComponent horizontal spacing="small">
-              <IconComponent :icon="vkiLogoNeutral" />
-              <BodyText size="medium">= přeskočit / bez odpovědi</BodyText>
-            </StackComponent>
-          </CardComponent>
-          <BodyText size="medium">
-            Pokud strana též na otázku neodpověděla, získá 1/2 bodu.
-          </BodyText>
-        </StackComponent>
-        <template #after>
-          <IconButton
-            v-if="farthestCompletedStep >= currentStep"
-            @click="handleNextClick"
-          >
-            <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
-          </IconButton>
-        </template>
-      </StepWrapper>
-      <template #bottom-bar>
-        <BottomBar class="bottom-bar" transparent="desktop">
-          <LabelText class="text">
-            Návod {{ currentStep }}&hairsp;/&hairsp;{{ stepsCount }}
-          </LabelText>
-          <StepProgress class="progress-indicator" :current="currentStep" />
-          <ButtonComponent
-            class="next-button"
-            :kind="nextButtonKind"
-            @click="handleNextClick"
-          >
-            {{ nextButtonTitle }}
-            <template #iconAfter>
-              <IconComponent :icon="mdiArrowRight" />
-            </template>
-          </ButtonComponent>
-          <ButtonComponent
-            class="skip-button"
-            kind="link"
-            @click="goToQuestions"
-          >
-            Přeskočit návod
-            <template #iconAfter>
-              <IconComponent :icon="mdiFastForward" />
-            </template>
-          </ButtonComponent>
-        </BottomBar>
+              </template>
+            </ButtonComponent>
+          </template>
+        </NavigationBar>
       </template>
-    </BottomBarWrapper>
-  </StickyHeaderLayout>
+      <template #sticky-header>
+        <SecondaryNavigationBar transparent>
+          <template v-if="currentStep > 1" #before>
+            <IconButton @click="handlePreviousClick">
+              <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
+            </IconButton>
+          </template>
+          <template v-if="farthestCompletedStep >= currentStep" #after>
+            <IconButton @click="handleNextClick">
+              <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
+            </IconButton>
+          </template>
+        </SecondaryNavigationBar>
+      </template>
+      <BottomBarWrapper>
+        <StepWrapper>
+          <template #before>
+            <IconButton v-if="currentStep > 1" @click="handlePreviousClick">
+              <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
+            </IconButton>
+          </template>
+          <StackComponent v-if="currentStep === 1" spacing="small">
+            <HeadingComponent kind="title" size="medium">
+              {{ electionName }}
+              <template #secondary>{{ districtName }}</template>
+            </HeadingComponent>
+            <BodyText size="medium">
+              {{ electionDescription }}
+            </BodyText>
+          </StackComponent>
+          <StackComponent v-if="currentStep === 2" spacing="small">
+            <BodyText size="medium">Odpovídat můžete pomocí tlačítek:</BodyText>
+            <CardComponent
+              corner="bottom-right"
+              border
+              style="align-self: center"
+            >
+              <StackComponent spacing="small">
+                <StackComponent horizontal spacing="small">
+                  <IconComponent
+                    :icon="vkiLogoInFavour"
+                    color="rgb(var(--color-primary-fg))"
+                  />
+                  <BodyText size="medium">= souhlasím</BodyText>
+                </StackComponent>
+                <StackComponent horizontal spacing="small">
+                  <IconComponent
+                    :icon="vkiLogoAgainst"
+                    color="rgb(var(--color-secondary-fg))"
+                  />
+                  <BodyText size="medium">= nesouhlasím</BodyText>
+                </StackComponent>
+              </StackComponent>
+            </CardComponent>
+            <BodyText size="medium">
+              Když se s nějakou stranou v odpovědi shodnete, získá ve výpočtu
+              shody 1 bod.
+            </BodyText>
+          </StackComponent>
+          <StackComponent v-if="currentStep === 3" spacing="small">
+            <BodyText size="medium">
+              Pokud vám na daném tématu zvlášť záleží, označte ho hvězdičkou:
+            </BodyText>
+            <!-- TODO: remove inline styles -->
+            <CardComponent
+              corner="bottom-right"
+              border
+              style="align-self: center"
+            >
+              <StackComponent horizontal centered spacing="small">
+                <IconComponent :icon="vkiStarOutlined" />
+                <IconComponent :icon="mdiArrowRight" size="small" />
+                <IconComponent
+                  :icon="vkiStarFilled"
+                  color="rgb(var(--palette-yellow))"
+                />
+                <BodyText size="medium">= pro mě důležité</BodyText>
+              </StackComponent>
+            </CardComponent>
+            <BodyText size="medium">
+              Odpověď pak bude mít ve výpočtu shody dvojnásobnou váhu.
+            </BodyText>
+          </StackComponent>
+          <StackComponent v-if="currentStep === 4" spacing="small">
+            <BodyText size="medium">
+              Když nemáte názor, nejste si jistí nebo z jiného nechcete
+              odpovídat, zvolte:
+            </BodyText>
+            <CardComponent
+              corner="bottom-right"
+              border
+              style="align-self: center"
+            >
+              <StackComponent horizontal spacing="small">
+                <IconComponent :icon="vkiLogoNeutral" />
+                <BodyText size="medium">= přeskočit / bez odpovědi</BodyText>
+              </StackComponent>
+            </CardComponent>
+            <BodyText size="medium">
+              Pokud strana též na otázku neodpověděla, získá 1/2 bodu.
+            </BodyText>
+          </StackComponent>
+          <template #after>
+            <IconButton
+              v-if="farthestCompletedStep >= currentStep"
+              @click="handleNextClick"
+            >
+              <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
+            </IconButton>
+          </template>
+        </StepWrapper>
+        <template #bottom-bar>
+          <BottomBar class="bottom-bar" transparent="desktop">
+            <LabelText class="text">
+              Návod {{ currentStep }}&hairsp;/&hairsp;{{ stepsCount }}
+            </LabelText>
+            <StepProgress class="progress-indicator" :current="currentStep" />
+            <ButtonComponent
+              class="next-button"
+              :kind="nextButtonKind"
+              @click="handleNextClick"
+            >
+              {{ nextButtonTitle }}
+              <template #iconAfter>
+                <IconComponent :icon="mdiArrowRight" />
+              </template>
+            </ButtonComponent>
+            <ButtonComponent
+              class="skip-button"
+              kind="link"
+              @click="goToQuestions"
+            >
+              Přeskočit návod
+              <template #iconAfter>
+                <IconComponent :icon="mdiFastForward" />
+              </template>
+            </ButtonComponent>
+          </BottomBar>
+        </template>
+      </BottomBarWrapper>
+    </StickyHeaderLayout>
+  </BackgroundComponent>
 </template>
 
 <style lang="scss" scoped>

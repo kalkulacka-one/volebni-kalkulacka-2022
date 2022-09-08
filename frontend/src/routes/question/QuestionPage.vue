@@ -22,6 +22,7 @@ import StepWrapper from '@/components/design-system/layout/StepWrapper.vue';
 
 import QuestionBottomBar from './QuestionBottomBar.vue';
 import QuestionCard from './QuestionCard.vue';
+import BackgroundComponent from '../../components/design-system/style/BackgroundComponent.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -179,26 +180,31 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
       </SecondaryNavigationBar>
     </template>
     <BottomBarWrapper>
-      <StepWrapper>
-        <template #before>
-          <IconButton @click="handlePreviousClick">
-            <IconComponent :icon="mdiArrowLeft" :title="previousButtonTitle" />
-          </IconButton>
-        </template>
-        <QuestionCard
-          :current-question="currentQuestion"
-          :question-count="electionStore.questionCount"
-          :question="(electionStore.calculator?.questions[questionNr] as Question)"
-        />
-        <template #after>
-          <IconButton
-            v-if="answeredQuestionsCount >= currentQuestion"
-            @click="handleNextClick"
-          >
-            <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
-          </IconButton>
-        </template>
-      </StepWrapper>
+      <BackgroundComponent>
+        <StepWrapper>
+          <template #before>
+            <IconButton @click="handlePreviousClick">
+              <IconComponent
+                :icon="mdiArrowLeft"
+                :title="previousButtonTitle"
+              />
+            </IconButton>
+          </template>
+          <QuestionCard
+            :current-question="currentQuestion"
+            :question-count="electionStore.questionCount"
+            :question="(electionStore.calculator?.questions[questionNr] as Question)"
+          />
+          <template #after>
+            <IconButton
+              v-if="answeredQuestionsCount >= currentQuestion"
+              @click="handleNextClick"
+            >
+              <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
+            </IconButton>
+          </template>
+        </StepWrapper>
+      </BackgroundComponent>
       <template #bottom-bar>
         <QuestionBottomBar
           :answer="electionStore.answers[questionNr]"

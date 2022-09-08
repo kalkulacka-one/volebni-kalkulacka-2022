@@ -93,17 +93,14 @@ const classes = computed(() => ({
     inset: 76px 134px auto auto;
     transform: rotate(30deg);
   }
-
-  @media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
+  .background {
     background-repeat: no-repeat;
     background-color: var(--color-neutral-bg);
     background-image: url(@/assets/background/check.svg),
       url(@/assets/background/times.svg);
     background-position: left -49px top 112px, right -49px top 289px;
-
-    .without-background {
-      background-image: none;
-    }
 
     .blue-rounded-spot,
     .red-rounded-spot,
@@ -129,6 +126,10 @@ const classes = computed(() => ({
       height: 227px;
       inset: 247px auto auto 170px;
     }
+  }
+
+  .without-background {
+    background-image: none;
   }
 }
 </style>
