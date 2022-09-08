@@ -15,6 +15,17 @@ export const fetchCalculator = async (
   return calculator;
 };
 
+export const fetchElections = async () => {
+  const data: Calculators = await fetch(
+    `/data/kalkulacka/calculators.json`
+  ).then((x) => {
+    if (x.status === 200) {
+      return x.json();
+    }
+  });
+  return data.elections;
+};
+
 export const fetchElectionData = async (electionId: string) => {
   const data: Calculators = await fetch(
     `/data/kalkulacka/calculators.json`
