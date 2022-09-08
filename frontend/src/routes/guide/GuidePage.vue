@@ -167,7 +167,7 @@ const handlePreviousClick = () => {
       <StepWrapper>
         <template #before>
           <IconButton v-if="currentStep > 1" @click="handlePreviousClick">
-            <IconComponent :icon="mdiArrowLeft" />
+            <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
           </IconButton>
         </template>
         <StackComponent v-if="currentStep === 1" spacing="small">
@@ -256,7 +256,7 @@ const handlePreviousClick = () => {
             v-if="farthestCompletedStep >= currentStep"
             @click="handleNextClick"
           >
-            <IconComponent :icon="mdiArrowRight" />
+            <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
           </IconButton>
         </template>
       </StepWrapper>
