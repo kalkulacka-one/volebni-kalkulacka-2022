@@ -9,6 +9,9 @@ import { calculateRelativeAgreement } from '@/common/resultParser';
 import type { Election } from '@/types/election';
 import type { CandidateAnswer } from '@/types/candidate-answer';
 
+import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
+
+import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
@@ -56,50 +59,57 @@ const resultsMedicine = calculateRelativeAgreement(
 );
 </script>
 <template>
-  <NavigationBar>
-    <template #title>{{ title }}</template>
-    <template #right>
-      <ButtonComponent
-        kind="link"
-        :responsive="true"
-        @click="router.push({ name: appRoutes.index.name })"
-      >
-        Zpět na hlavní stránku
-        <template #iconAfter>
-          <IconComponent
-            :icon="mdiCloseCircleOutline"
-            title="Zpět na hlavní stránku"
-            color="rgb(var(--color-neutral-fg))"
-          />
+  <StickyHeaderLayout>
+    <template #header>
+      <NavigationBar>
+        <template #title>{{ title }}</template>
+        <template #right>
+          <ButtonComponent
+            kind="link"
+            :responsive="true"
+            @click="router.push({ name: appRoutes.index.name })"
+          >
+            Zpět na hlavní stránku
+            <template #iconAfter>
+              <IconComponent
+                :icon="mdiCloseCircleOutline"
+                title="Zpět na hlavní stránku"
+              />
+            </template>
+          </ButtonComponent>
         </template>
-      </ButtonComponent>
+      </NavigationBar>
     </template>
-  </NavigationBar>
-  <ResultNavBar :on-back="handleBackClicked" />
-  <div class="body-wrapper">
-    <div class="candidates-wrapper">
-      <ResultCategory
-        title="Celková shoda"
-        :result="resultsGeneral"
-        category="general"
-        :max-visible-candidates="2"
-      />
-      <ResultCategory
-        ref="thematic-categories"
-        title="Shoda v ekologii"
-        :result="resultsEcology"
-        category="environment"
-        :max-visible-candidates="1"
-      />
-      <ResultCategory
-        title="Shoda ve zdravotnictví"
-        :result="resultsMedicine"
-        category="health"
-        :max-visible-candidates="10"
-      />
-    </div>
-    <ResultSideBar class="side-bar" />
-  </div>
+    <template #sticky-header>
+      <ResultNavBar :on-back="handleBackClicked" />
+    </template>
+    <BottomBarWrapper>
+      <div class="body-wrapper">
+        <div class="candidates-wrapper">
+          <ResultCategory
+            title="Celková shoda"
+            :result="resultsGeneral"
+            category="general"
+            :max-visible-candidates="2"
+          />
+          <ResultCategory
+            ref="thematic-categories"
+            title="Shoda v ekologii"
+            :result="resultsEcology"
+            category="environment"
+            :max-visible-candidates="1"
+          />
+          <ResultCategory
+            title="Shoda ve zdravotnictví"
+            :result="resultsMedicine"
+            category="health"
+            :max-visible-candidates="10"
+          />
+        </div>
+        <ResultSideBar class="side-bar" />
+      </div>
+    </BottomBarWrapper>
+  </StickyHeaderLayout>
 </template>
 
 <style lang="scss" scoped>
