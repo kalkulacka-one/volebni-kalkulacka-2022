@@ -20,7 +20,7 @@ export interface Candidate {
   /**
    * Candidate type
    */
-  type: 'party' | 'coalition' | 'person';
+  type: "party" | "coalition" | "person";
   /**
    * Longer description.
    */

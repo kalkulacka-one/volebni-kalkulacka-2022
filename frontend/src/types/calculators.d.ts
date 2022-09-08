@@ -16,7 +16,7 @@ export interface Calculators {
      */
     election_id: string;
     district_code: string;
-    label: string;
+    name: string;
     description?: string;
     /**
      * Show on HP start - ISO 8601
@@ -61,6 +61,6 @@ export interface Election {
   /**
    * Election type
    */
-  type?: 'senatni' | 'prezidentske' | 'snemovni' | 'krajske' | 'municipalni';
+  type?: "senatni" | "prezidentske" | "snemovni" | "krajske" | "municipalni";
   [k: string]: unknown;
 }
