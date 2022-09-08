@@ -6,10 +6,10 @@ resource "aws_api_gateway_rest_api" "kalkulacka" {
       "version" : "1.0"
     },
     "paths" : {
-      "/image/{proxy+}" : {
+      "/image/{uuid}" : {
         "x-amazon-apigateway-any-method" : {
           "parameters" : [ {
-            "name" : "proxy",
+            "name" : "uuid",
             "in" : "path",
             "required" : true,
             "schema" : {
@@ -26,16 +26,16 @@ resource "aws_api_gateway_rest_api" "kalkulacka" {
             },
             "passthroughBehavior" : "when_no_match",
             "cacheNamespace" : "hfghnw",
-            "cacheKeyParameters" : [ "method.request.path.proxy" ],
+            "cacheKeyParameters" : [ "method.request.path.uuid" ],
             "contentHandling" : "CONVERT_TO_BINARY",
             "type" : "aws_proxy"
           }
         }
       },
-      "/test/{proxy+}" : {
+      "/share/{uuid}" : {
         "x-amazon-apigateway-any-method" : {
           "parameters" : [ {
-            "name" : "proxy",
+            "name" : "uuid",
             "in" : "path",
             "required" : true,
             "schema" : {
@@ -52,7 +52,7 @@ resource "aws_api_gateway_rest_api" "kalkulacka" {
             },
             "passthroughBehavior" : "when_no_match",
             "cacheNamespace" : "hfghnw",
-            "cacheKeyParameters" : [ "method.request.path.proxy" ],
+            "cacheKeyParameters" : [ "method.request.path.uuid" ],
             "contentHandling" : "CONVERT_TO_TEXT",
             "type" : "aws_proxy"
           }
