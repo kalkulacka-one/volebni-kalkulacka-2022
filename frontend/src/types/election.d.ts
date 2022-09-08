@@ -36,6 +36,6 @@ export interface Election {
   /**
    * Election type
    */
-  type?: 'senatni' | 'prezidentske' | 'snemovni' | 'krajske' | 'municipalni';
+  type?: "senatni" | "prezidentske" | "snemovni" | "krajske" | "municipalni";
   [k: string]: unknown;
 }
