@@ -299,6 +299,10 @@ const computedSize = computed(() =>
   }
 }
 
+.text {
+  text-align: left;
+}
+
 .icon {
   &--only {
     margin: auto;
