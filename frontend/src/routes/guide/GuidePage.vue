@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import {
   mdiCloseCircleOutline,
@@ -51,8 +51,29 @@ const districtName = electionStore.districts.filter(
 
 const title = `${electionName} — ${districtName} (${districtCode})`;
 
-const currentStep = computed(() => parseInt(route.params.step as string) || 1);
+const forwardRoute = computed(
+  () =>
+    router.options.history.state.forward &&
+    router.resolve(router.options.history.state.forward as string)
+);
+
+const backRoute = computed(
+  () =>
+    router.options.history.state.back &&
+    router.resolve(router.options.history.state.back as string)
+);
+
 const stepsCount = 4;
+const currentStep = computed(() => parseInt(route.params.step as string) || 1);
+const farthestCompletedStep = ref(
+  Math.max(
+    currentStep.value - 1,
+    forwardRoute.value && forwardRoute.value.name === appRoutes.question.name
+      ? 4
+      : 0,
+    backRoute.value && backRoute.value.name === appRoutes.question.name ? 4 : 0
+  )
+);
 
 const nextButtonTitle = computed(() => {
   if (currentStep.value < stepsCount) {
@@ -88,7 +109,11 @@ const goToQuestions = () => {
 };
 
 const handleNextClick = () => {
-  console.log(currentStep.value);
+  farthestCompletedStep.value = Math.max(
+    farthestCompletedStep.value,
+    currentStep.value
+  );
+
   if (currentStep.value < stepsCount) {
     goToStep(currentStep.value + 1);
   } else {
@@ -212,7 +237,10 @@ const handlePreviousClick = () => {
           </BodyText>
         </StackComponent>
         <template #after>
-          <IconButton v-if="currentStep < stepsCount" @click="handleNextClick">
+          <IconButton
+            v-if="farthestCompletedStep >= currentStep"
+            @click="handleNextClick"
+          >
             <IconComponent :icon="mdiArrowRight" />
           </IconButton>
         </template>
