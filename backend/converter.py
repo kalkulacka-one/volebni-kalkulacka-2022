@@ -4,12 +4,14 @@ import argparse
 from dataclasses import dataclass
 from datetime import datetime
 from hashlib import md5
+import json
 import logging
+from pathlib import Path
 from random import randint
 import re
 import sys
 import time
-from typing import Any, Optional
+from typing import Any, Dict, Optional
 import uuid
 
 import gspread
@@ -84,7 +86,11 @@ class CandidateAnswers:
 
 
 class Election:
-    def __init__(self) -> None:
+    def __init__(self, *, id: str, key: str, name: str, description: str) -> None:
+        self.id = id
+        self.key = key
+        self.name = name
+        self.description = description
         self._districts: dict[str, District] = {}
         self._definitions: dict[District, list[QuestionDefinition]] = {}
         self._candidates: dict[District, dict[str, Candidate]] = {}
@@ -111,10 +117,18 @@ class Election:
     ) -> None:
         self._candidates[district] = candidates
 
+    @property
+    def candidates(self) -> dict[District, dict[str, Candidate]]:
+        return self._candidates
+
     def add_answers(
         self, district: District, answers: dict[str, CandidateAnswers]
     ) -> None:
         self._answers[district] = answers
+
+    @property
+    def answers(self) -> dict[District, dict[str, CandidateAnswers]]:
+        return self._answers
 
 
 def extract_questions(row: dict[str, Any]) -> dict[str, QuestionAnswer]:
@@ -231,7 +245,9 @@ def extract_question_definitions(
             title=str(row["otázka"]),
             gist=str(row["popis"]),
             detail=str(row["vysvětlení pojmů"]),
-            tags=[s.strip() for s in str(row["tagy"]).split(",")],
+            tags=[s.strip() for s in str(row["tagy"]).split(",")]
+            if str(row["tagy"]).strip()
+            else [],
         )
         definitions.append(definition)
     logger.info("Extracted question definitions: %d", len(definitions))
@@ -289,7 +305,7 @@ def extract_answers(
         for i in range(4, len(row), 3):
             if i + 2 > len(row):
                 continue
-            print(i, row[i])
+            # print(i, row[i])
             answers.append(
                 QuestionAnswer(
                     answer=str(row[i]) or None,
@@ -330,11 +346,21 @@ def extract_key(url: str) -> Optional[str]:
 
 
 def extract_election_senat(gc: gspread.Client, row: SheetRow) -> Election:
-    return Election()
+    return Election(
+        id="senat-2022",
+        key="senat-2022",
+        name="senat-2022",
+        description="senat-2022",
+    )
 
 
 def extract_election_komunalni(gc: gspread.Client, row: SheetRow) -> Election:
-    election = Election()
+    election = Election(
+        id="komunalni-2022",
+        key="komunalni-2022",
+        name="komunalni-2022",
+        description="komunalni-2022",
+    )
 
     url_questions = str(row["otázky originál"])
     key_questions = extract_key(url_questions)
@@ -359,8 +385,8 @@ def extract_election_komunalni(gc: gspread.Client, row: SheetRow) -> Election:
             extract_question_definitions(doc_questions.worksheet(district.name)),
         )
         time.sleep(args.wait)
-        if pos > 2:
-            break
+        # if pos > 2:
+        #     break
 
     url_candidates = str(row["kandidáti"])
     key_candidates = extract_key(url_candidates)
@@ -374,10 +400,139 @@ def extract_election_komunalni(gc: gspread.Client, row: SheetRow) -> Election:
             district, extract_candidates(doc_candidates.worksheet(district.name))
         )
         time.sleep(args.wait)
-        if pos > 2:
-            break
+        # if pos > 2:
+        #     break
 
     return election
+
+
+def convert_answer(a: str) -> Optional[str]:
+    return {
+        "ano": "yes",
+        "ne": "no",
+        "Nevím / nemáme jednoznačný názor": "dont_know",
+    }.get(a.lower())
+
+
+def generate_calculator_dict(election: Election, district: District) -> dict[str, Any]:
+    logger.info(
+        "Generate dict for election: %s and district: %s", election.id, district
+    )
+    d = {
+        "id": f"{election.id}-{district.code}",
+        "name": district.name,
+        "description": f"{district.name} - DESCRIPTION",
+        "district_code": district.code,
+        "election": {
+            "id": election.id,
+            "key": election.key,
+            "name": election.name,
+            "description": election.description,
+        },
+        "questions": [],
+        "candidates": [],
+        "answers": [],
+    }  # type: Dict[str, Any]
+
+    q_def = election.definitions[district]
+    for q in q_def:
+        d["questions"].append(
+            {
+                "id": f"{election.id}-{district.code}-question-{q.num}",
+                "name": q.name,
+                "title": q.title,
+                "gist": q.gist,
+                "detail": q.detail,
+                "tags": q.tags,
+            }
+        )
+    candidates = election.candidates[district]
+    for candidate in candidates.values():
+        c_dict = {
+            "id": f"{election.id}-{district.code}-candidate-{candidate.secret_code}",
+            "name": candidate.name,
+            "type": "party",
+            "description": f"{candidate.name} - DESCRIPTION",
+        }  # type: Dict[str, Any]
+
+        contacts = {"web": []}  # type: Dict[str, Any]
+        if candidate.fb:
+            contacts["facebook"] = candidate.fb
+        if candidate.tw:
+            contacts["twitter"] = candidate.tw
+        if candidate.ig:
+            contacts["instagram"] = candidate.ig
+        if candidate.web:
+            contacts["web"].append(
+                {
+                    "url": candidate.web,
+                    "label": "web",
+                }
+            )
+        if candidate.program:
+            contacts["web"].append(
+                {
+                    "url": candidate.program,
+                    "label": "program",
+                }
+            )
+        if candidate.wiki:
+            contacts["web"].append(
+                {
+                    "url": candidate.wiki,
+                    "label": "wiki",
+                }
+            )
+        if candidate.linkedin:
+            contacts["web"].append(
+                {
+                    "url": candidate.linkedin,
+                    "label": "linkedin",
+                }
+            )
+
+        c_dict["contacts"] = contacts
+        c_dict["parties"] = [
+            {
+                "id": f"{election.id}-{district.code}-{candidate.secret_code}-party",
+                "name": candidate.name,
+                "description": f"{candidate.name} - DESCRIPTION",
+                "contacts": contacts,
+                "abbreviation": candidate.abbreviation,
+            }
+        ]
+        d["candidates"].append(c_dict)
+
+    all_answers = election.answers[district]
+    for secret_code, candidate_answers in all_answers.items():
+        q_num = 1
+        if secret_code not in candidates:
+            logger.warning(
+                "Unknown secret code %s for election %s and district %s",
+                secret_code,
+                election.key,
+                district,
+            )
+            continue
+        for answer in candidate_answers.answers:
+            answer_dict = {
+                "id": f"{election.id}-{district.code}-answer-{secret_code}-{q_num}",
+                "candidate_id": (
+                    f"{election.id}-{district.code}-candidate-{secret_code}"
+                ),
+                "question_id": (f"{election.id}-{district.code}-question-{q_num}"),
+            }
+            add_element(
+                answer_dict,
+                "answer",
+                convert_answer(answer.answer) if answer.answer else None,
+            )
+            add_element(answer_dict, "comment", answer.comment)
+
+            d["answers"].append(answer_dict)
+            q_num += 1
+
+    return d
 
 
 if __name__ == "__main__":
@@ -386,15 +541,18 @@ if __name__ == "__main__":
         "--wait",
         type=float,
         help="Wait the specified number of seconds between requests to Google Sheet",
-        default=2.0,
+        default=5.0,
     )
     parser.add_argument(
         "--doc-key",
         help="Google Sheet key for parties",
         default="1-VqiamcH8phGtg2glC2FcOyxvYrXSaNiir1mMlVEXPs",
     )
-
-    parser.add_argument("--output", help="Output folder")
+    parser.add_argument(
+        "--output",
+        help="Output folder",
+        default="../data/kalkulacka",
+    )
 
     # TODO: there should be some sheet or additional parameters
     # describing voting districts
@@ -435,6 +593,45 @@ if __name__ == "__main__":
             election.add_answers(
                 district, extract_answers(doc_answers.worksheet("Form Responses 1"))
             )
+            time.sleep(args.wait)
+
+    # produce output file
+    output_root = Path(args.output)
+    output_root.mkdir(parents=True, exist_ok=True)
+
+    calculators_dict = {
+        "elections": [],
+        "calculators": [],
+    }  # type: Dict[str, Any]
+    for election_key, election in elections.items():
+        calculators_dict["elections"].append(
+            {
+                "id": election.id,
+                "key": election.key,
+                "name": election.name,
+                "description": election.description,
+            }
+        )
+        for district in election.districts.values():
+            calculators_dict["calculators"].append(
+                {
+                    "election_id": election.id,
+                    "district_code": district.code,
+                    "name": district.name,
+                    "description": f"{district.name} - DESCRIPTION",
+                    # TODO
+                    "on_hp_from": "2021-01-01",
+                    "on_hp_to": "2031-01-01",
+                }
+            )
+            calculator_dict = generate_calculator_dict(election, district)
+            calculator_file = output_root / election_key / f"{district.code}.json"
+            with calculator_file.open(mode="w", encoding="utf-8") as fh:
+                json.dump(calculator_dict, fh, indent=2, ensure_ascii=False)
+
+    calculators_file = output_root / "calculators.json"
+    with calculators_file.open(mode="w", encoding="utf-8") as fh:
+        json.dump(calculators_dict, fh, indent=2, ensure_ascii=False)
 
 
 # 1 / 0
