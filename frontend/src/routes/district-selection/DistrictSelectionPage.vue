@@ -29,7 +29,7 @@ const heading =
     : 'Zvolte své město';
 
 const options = electionStore.districts.map((x) => {
-  return { district_code: x.district_code, label: x.label };
+  return { district_code: x.district_code, label: x.name };
 });
 
 const onSubmit = (event: Event) => {
