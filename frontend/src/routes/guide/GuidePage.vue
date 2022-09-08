@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import {
   mdiCloseCircleOutline,
@@ -50,7 +50,7 @@ const districtName = electionStore.districts.filter(
 
 const title = `${electionName} — ${districtName}`;
 
-const currentStep = ref(1);
+const currentStep = computed(() => parseInt(route.params.step as string) || 1);
 const stepsCount = 4;
 
 const nextButtonTitle = computed(() => {
@@ -75,20 +75,28 @@ const skipButtonVisibility = computed(() => {
   }
 });
 
+const goToStep = (number: number) => {
+  router.push({
+    name: appRoutes.guide.name,
+    params: { ...route.params, step: number },
+  });
+};
+
 const goToQuestions = () => {
   router.push({ name: 'question', params: { ...route.params, nr: 'first' } });
 };
 
 const handleNextClick = () => {
+  console.log(currentStep.value);
   if (currentStep.value < stepsCount) {
-    currentStep.value++;
+    goToStep(currentStep.value + 1);
   } else {
     goToQuestions();
   }
 };
 
 const handlePreviousClick = () => {
-  currentStep.value--;
+  goToStep(currentStep.value - 1);
 };
 </script>
 

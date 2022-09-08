@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { mdiCloseCircleOutline } from '@mdi/js';
 
@@ -10,10 +11,10 @@ import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import BottomBar from '@/components/design-system/navigation/BottomBar.vue';
 import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
-import HeadingComponent from '@/components/design-system/typography/HeadingComponent.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
-import StackComponent from '@/components/design-system/layout/StackComponent.vue';
+import RadioButtonComponent from '@/components/design-system/input/RadioButtonComponent.vue';
+import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -28,22 +29,18 @@ const heading =
     ? 'Zvolte svůj senátní obvod'
     : 'Zvolte své město';
 
-const options = electionStore.districts.map((x) => {
-  return { district_code: x.district_code, label: x.name };
+const options = electionStore.districts.map((district) => {
+  return { value: district.district_code, label: district.name };
 });
 
-const onSubmit = (event: Event) => {
-  const form = event.target as HTMLFormElement;
-  const districtField = form.querySelector(
-    '#district-selection'
-  ) as HTMLSelectElement;
-  const districtCode = districtField.value;
-  if (districtCode !== '') {
-    const guideRoute = {
+const selected = ref((route.params.district as string) || null);
+
+const onSubmit = () => {
+  if (selected.value) {
+    router.push({
       name: appRoutes.guide.name,
-      params: { ...route.params, district: districtCode, nr: 1 },
-    };
-    router.push(guideRoute);
+      params: { ...route.params, district: selected.value, nr: 1 },
+    });
   }
 };
 </script>
@@ -70,23 +67,29 @@ const onSubmit = (event: Event) => {
         </template>
       </NavigationBar>
     </template>
-    <form @submit.prevent="onSubmit">
+    <template #sticky-header>
+      <SecondaryNavigationBar transparent>
+        {{ heading }}
+      </SecondaryNavigationBar>
+    </template>
+    <form id="district-form" ref="form" @submit.prevent="onSubmit">
       <BottomBarWrapper>
-        <StackComponent spacing="small">
-          <HeadingComponent>{{ heading }}</HeadingComponent>
-          <select id="district-selection" name="district-selection">
-            <option
-              v-for="x in options"
-              :key="x.district_code"
-              :value="x.district_code"
+        <div class="main">
+          <div class="list">
+            <RadioButtonComponent
+              v-for="option in options"
+              :key="option.value"
+              v-model="selected"
+              group-name="district-selection"
+              :value="option.value"
             >
-              {{ x.label }}
-            </option>
-          </select>
-        </StackComponent>
+              {{ option.label }}
+            </RadioButtonComponent>
+          </div>
+        </div>
         <template #bottom-bar>
           <BottomBar class="bottom-bar" transparent="desktop">
-            <ButtonComponent kind="filled" type="submit">
+            <ButtonComponent kind="filled" type="submit" :disabled="!selected">
               Potvrdit a pokračovat
             </ButtonComponent>
           </BottomBar>
@@ -97,6 +100,22 @@ const onSubmit = (event: Event) => {
 </template>
 
 <style lang="scss" scoped>
+.main {
+  display: grid;
+  grid-template-columns: minmax(24rem, max-content);
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: var(--spacing-small);
+}
+
+/* TODO: update breakpoint */
+@media (max-width: 700px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+}
+
 form {
   display: contents;
 }
