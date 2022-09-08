@@ -16,7 +16,7 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["election_id", "district_code", "label"],
+        "required": ["election_id", "district_code", "name"],
         "properties": {
           "election_id": {
             "type": "string",
@@ -25,7 +25,7 @@
           "district_code": {
             "type": "string"
           },
-          "label": {
+          "name": {
             "type": "string"
           },
           "description": {
