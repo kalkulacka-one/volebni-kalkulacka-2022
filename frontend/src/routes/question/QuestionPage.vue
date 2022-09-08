@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useRoute, useRouter, onBeforeRouteUpdate } from 'vue-router';
+import type { RouteParams } from 'vue-router';
 import { mdiCloseCircleOutline, mdiArrowRight, mdiArrowLeft } from '@mdi/js';
 
 import { appRoutes, questionGuard } from '@/main';
@@ -41,12 +42,32 @@ const districtName = electionStore.districts.filter(
 
 const title = `${electionName} — ${districtName} (${districtCode})`;
 
+const forwardRoute = computed(
+  () =>
+    router.options.history.state.forward &&
+    router.resolve(router.options.history.state.forward as string)
+);
+
+const backRoute = computed(
+  () =>
+    router.options.history.state.back &&
+    router.resolve(router.options.history.state.back as string)
+);
+
 const questionCount = computed(() => electionStore.questionCount);
 const currentQuestion = computed(() => parseInt(route.params['nr'] as string));
 const answeredQuestions = computed(() =>
   electionStore.answers.filter((answer) => answer.answer !== 0)
 );
 const answeredQuestionsCount = computed(() => answeredQuestions.value.length);
+
+const previousButtonTitle = computed(() => {
+  if (currentQuestion.value === 1) {
+    return 'Návod';
+  } else {
+    return 'Předchozí';
+  }
+});
 
 const nextButtonTitle = computed(() => {
   if (currentQuestion.value === questionCount.value) {
@@ -69,10 +90,10 @@ const goToRecap = () => {
   });
 };
 
-const goToGuide = (step = 1) => {
+const goToGuide = (params: RouteParams) => {
   router.push({
     name: appRoutes.guide.name,
-    params: { ...route.params, step: step },
+    params,
   });
 };
 
@@ -85,7 +106,10 @@ const handleNextClick = () => {
 };
 
 const handlePreviousClick = () => {
-  if (currentQuestion.value < questionCount.value) {
+  if (currentQuestion.value === 1) {
+    const params = (backRoute.value && backRoute.value.params) || {};
+    goToGuide(params);
+  } else if (currentQuestion.value < questionCount.value) {
     goToQuestion(currentQuestion.value - 1);
   } else {
     goToRecap();
@@ -142,9 +166,9 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
     </template>
     <template #sticky-header>
       <SecondaryNavigationBar transparent>
-        <template v-if="currentQuestion > 1" #before>
+        <template #before>
           <IconButton @click="handlePreviousClick">
-            <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
+            <IconComponent :icon="mdiArrowLeft" :title="previousButtonTitle" />
           </IconButton>
         </template>
         <template v-if="answeredQuestionsCount >= currentQuestion" #after>
@@ -157,8 +181,8 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
     <BottomBarWrapper>
       <StepWrapper>
         <template #before>
-          <IconButton v-if="currentQuestion > 1" @click="handlePreviousClick">
-            <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
+          <IconButton @click="handlePreviousClick">
+            <IconComponent :icon="mdiArrowLeft" :title="previousButtonTitle" />
           </IconButton>
         </template>
         <QuestionCard
