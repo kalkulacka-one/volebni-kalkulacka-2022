@@ -1,21 +1,34 @@
 <script setup lang="ts">
-import { calculateRelativeAgreement } from '@/common/resultParser';
+import { useRoute, useRouter } from 'vue-router';
+import { mdiCloseCircleOutline } from '@mdi/js';
+
 import { appRoutes } from '@/main';
 import { useElectionStore } from '@/stores/electionStore';
+import { calculateRelativeAgreement } from '@/common/resultParser';
+
+import type { Election } from '@/types/election';
 import type { CandidateAnswer } from '@/types/candidate-answer';
-import { useRoute, useRouter } from 'vue-router';
+
+import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
+import IconComponent from '@/components/design-system/icons/IconComponent.vue';
+import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
+
 import ResultNavBar from './ResultNavBar.vue';
 import ResultSideBar from './ResultSideBar.vue';
 import ResultCategory from './ResultCategory.vue';
-import NavigationBar from '../../components/design-system/navigation/NavigationBar.vue';
-import { mdiCloseCircleOutline } from '@mdi/js';
-import ButtonComponent from '../../components/design-system/input/ButtonComponent.vue';
-import IconComponent from '../../components/design-system/icons/IconComponent.vue';
 
 const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
-const title = `${route.params.election} — ${route.params.district}`;
+
+const election = electionStore.election as Election;
+const electionName = election.name;
+const districtCode = route.params.district;
+const districtName = electionStore.districts.filter(
+  (district) => district.district_code === districtCode
+)[0].name;
+
+const title = `${electionName} — ${districtName} (${districtCode})`;
 
 const handleBackClicked = () => {
   router.push({
