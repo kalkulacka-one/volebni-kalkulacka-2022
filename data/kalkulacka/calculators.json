@@ -1,10 +1,10 @@
 {
   "elections": [
     {
-      "id": "senat-2022",
-      "key": "senat-2022",
-      "name": "senat-2022",
-      "description": "senat-2022"
+      "id": "senatni-2022",
+      "key": "senatni-2022",
+      "name": "senatni-2022",
+      "description": "senatni-2022"
     },
     {
       "id": "komunalni-2022",
@@ -14,6 +14,222 @@
     }
   ],
   "calculators": [
+    {
+      "election_id": "senatni-2022",
+      "district_code": "1",
+      "name": "1",
+      "description": "1 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "4",
+      "name": "4",
+      "description": "4 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "7",
+      "name": "7",
+      "description": "7 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "10",
+      "name": "10",
+      "description": "10 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "13",
+      "name": "13",
+      "description": "13 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "16",
+      "name": "16",
+      "description": "16 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "19",
+      "name": "19",
+      "description": "19 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "22",
+      "name": "22",
+      "description": "22 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "25",
+      "name": "25",
+      "description": "25 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "28",
+      "name": "28",
+      "description": "28 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "31",
+      "name": "31",
+      "description": "31 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "34",
+      "name": "34",
+      "description": "34 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "37",
+      "name": "37",
+      "description": "37 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "40",
+      "name": "40",
+      "description": "40 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "43",
+      "name": "43",
+      "description": "43 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "46",
+      "name": "46",
+      "description": "46 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "49",
+      "name": "49",
+      "description": "49 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "52",
+      "name": "52",
+      "description": "52 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "55",
+      "name": "55",
+      "description": "55 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "58",
+      "name": "58",
+      "description": "58 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "61",
+      "name": "61",
+      "description": "61 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "64",
+      "name": "64",
+      "description": "64 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "67",
+      "name": "67",
+      "description": "67 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "70",
+      "name": "70",
+      "description": "70 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "73",
+      "name": "73",
+      "description": "73 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "76",
+      "name": "76",
+      "description": "76 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "79",
+      "name": "79",
+      "description": "79 - DESCRIPTION",
+      "on_hp_from": "2021-01-01",
+      "on_hp_to": "2031-01-01"
+    },
     {
       "election_id": "komunalni-2022",
       "district_code": "554782",

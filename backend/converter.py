@@ -1,13 +1,12 @@
 #!/usr/bin/env python
 
 import argparse
+from collections import defaultdict
 from dataclasses import dataclass
 from datetime import datetime
-from hashlib import md5
 import json
 import logging
 from pathlib import Path
-from random import randint
 import re
 import sys
 import time
@@ -92,9 +91,9 @@ class Election:
         self.name = name
         self.description = description
         self._districts: dict[str, District] = {}
-        self._definitions: dict[District, list[QuestionDefinition]] = {}
-        self._candidates: dict[District, dict[str, Candidate]] = {}
-        self._answers: dict[District, dict[str, CandidateAnswers]] = {}
+        self._definitions: dict[District, list[QuestionDefinition]] = defaultdict(list)
+        self._candidates: dict[District, dict[str, Candidate]] = defaultdict(dict)
+        self._answers: dict[District, dict[str, CandidateAnswers]] = defaultdict(dict)
 
     def add_districts(self, districts: dict[str, District]) -> None:
         self._districts.update(districts)
@@ -106,7 +105,7 @@ class Election:
     def add_question_definitions(
         self, district: District, definitions: list[QuestionDefinition]
     ) -> None:
-        self._definitions[district] = definitions
+        self._definitions[district].extend(definitions)
 
     @property
     def definitions(self) -> dict[District, list[QuestionDefinition]]:
@@ -115,7 +114,7 @@ class Election:
     def add_candidates(
         self, district: District, candidates: dict[str, Candidate]
     ) -> None:
-        self._candidates[district] = candidates
+        self._candidates[district].update(candidates)
 
     @property
     def candidates(self) -> dict[District, dict[str, Candidate]]:
@@ -124,91 +123,16 @@ class Election:
     def add_answers(
         self, district: District, answers: dict[str, CandidateAnswers]
     ) -> None:
-        self._answers[district] = answers
+        self._answers[district].update(answers)
 
     @property
     def answers(self) -> dict[District, dict[str, CandidateAnswers]]:
         return self._answers
 
 
-def extract_questions(row: dict[str, Any]) -> dict[str, QuestionAnswer]:
-    def convert_answer(a: str) -> Optional[str]:
-        return {"ano": "yes", "ne": "no"}.get(a.lower())
-
-    questions = dict()
-    text = ""
-    answer = ""
-    for k, v in row.items():
-        if re.match(r"\d+\.", k):
-            text = k
-            answer = v
-        if text:
-            questions[text] = QuestionAnswer(convert_answer(answer), v)
-            text = ""
-
-    return questions
-
-
-def generate_question_id(pos: int, txt: str) -> str:
-    return f"q-{pos:03}-{md5(txt.encode()).hexdigest()}"
-
-
-def generate_questions(questions: dict[str, QuestionAnswer]) -> list[dict[str, Any]]:
-    result = []
-    for pos, text in enumerate(questions.keys()):
-        result.append(
-            {
-                "id": generate_question_id(pos, text),
-                "name": f"?Name: {text[:15]}",
-                "title": text,
-                "gist": f"?Gist: {randint(2, 4) * text}",
-                "detail": f"?Detail: {randint(3, 6) * text}",
-                "tags": [f"?tag-{randint(1, 5)}" for _ in range(randint(1, 3))],
-            }
-        )
-
-    return result
-
-
-def generate_candidate_id(pos: int, txt: str) -> str:
-    return f"c-{pos:03}-{md5(txt.encode()).hexdigest()}"
-
-
-def generate_candidates(candidates: dict[str, Candidate]) -> list[dict[str, str]]:
-    result = []
-    for pos, key in enumerate(candidates.keys()):
-        candidate = candidates[key]
-        result.append(
-            {
-                "id": generate_candidate_id(pos, key),
-                "name": candidate.name,
-                "type": "party",  # TODO
-                "description": f"?Desc: {candidate.name}",
-            }
-        )
-    return result
-
-
-# def generate_answers(candidates: dict[str, Candidate]) -> list[dict[str, str]]:
-#     result = []
-#     for c_pos, c_key in enumerate(candidates.keys()):
-#         candidate = candidates[c_key]
-#         for q_pos, q_key in enumerate(candidate.questions.keys()):
-#             question = candidate.questions[q_key]
-#             candidate_id = generate_candidate_id(c_pos, c_key)
-#             question_id = generate_question_id(q_pos, q_key)
-#             answer_structure = {
-#                 "id": f"{candidate_id}-{question_id}",
-#                 "candidate_id": candidate_id,
-#                 "question_id": question_id,
-#             }
-#             add_element(answer_structure, "answer", question.answer)
-#             add_element(answer_structure, "comment", question.comment)
-#             result.append(answer_structure)
-#     return result
-
-
-def extract_districts(sheet: gspread.worksheet.Worksheet) -> dict[str, District]:
+def extract_komunalni_districts(
+    sheet: gspread.worksheet.Worksheet,
+) -> dict[str, District]:
     logger.info("Extracting districts")
     districts: dict[str, District] = {}
     for pos, row in enumerate(sheet.get_all_values()):
@@ -223,7 +147,7 @@ def extract_districts(sheet: gspread.worksheet.Worksheet) -> dict[str, District]
     return districts
 
 
-def extract_question_definitions(
+def extract_komunalni_question_definitions(
     sheet: gspread.worksheet.Worksheet,
 ) -> list[QuestionDefinition]:
     logger.info("Extracting question definitions")
@@ -254,7 +178,7 @@ def extract_question_definitions(
     return definitions
 
 
-def extract_candidates(
+def extract_komunalni_candidates(
     sheet: gspread.worksheet.Worksheet,
 ) -> dict[str, Candidate]:
     logger.info("Extracting candidates")
@@ -325,7 +249,7 @@ def extract_answers(
 
         res[secret_code] = candidate_answer
 
-    logger.info("Extracted candidates: %d", len(res))
+    logger.info("Extracted answers: %d", len(res))
     return res
 
 
@@ -345,13 +269,137 @@ def extract_key(url: str) -> Optional[str]:
     return None
 
 
+def extract_senatni_districts(
+    sheet: gspread.worksheet.Worksheet,
+) -> dict[str, District]:
+    logger.info("Extracting districts")
+    districts: dict[str, District] = {}
+    for row in sheet.get_all_records():
+        obvod = str(row["obvod"])
+        if obvod not in districts:
+            districts[obvod] = District(obvod, obvod)
+
+    return districts
+
+
+def extract_senatni_candidates(
+    sheet: gspread.worksheet.Worksheet, district: District
+) -> dict[str, Candidate]:
+    logger.info("Extracting candidates")
+    candidates: dict[str, Candidate] = {}
+    for row in sheet.get_all_records():
+        if str(row["obvod"]) != district.code:
+            continue
+        secret_code = str(row["code"])
+        candidate = Candidate(
+            id=uuid.uuid4(),
+            num=len(candidates) + 1,
+            name=f"{row['given_name']} {row['family_name']}",
+            short_name="",
+            abbreviation="",
+            # TODO: Photo
+            secret_code=secret_code,
+            important=bool(int(row["important"] or "0")),
+            contact=str(row["contact 1"]) or None,
+            contact_party=str(row["contact party"]) or None,
+            fb=str(row["fb"]) or None,
+            tw=str(row["tw"]) or None,
+            ig=str(row["ig"]) or None,
+            wiki=str(row["wiki"]) or None,
+            web=str(row["web"]) or None,
+            yt=str(row["yt"]) or None,
+            program=str(row["program"]) or None,
+            linkedin=str(row["linkedin"]) or None,
+            people=None,
+        )
+        candidates[secret_code] = candidate
+    logger.info("Extraction candidates: %d", len(candidates))
+
+    return candidates
+
+
+def extract_senatni_question_definitions(
+    sheet: gspread.worksheet.Worksheet,
+) -> list[QuestionDefinition]:
+    logger.info("Extracting question definitions")
+    definitions: list[QuestionDefinition] = []
+    for row in sheet.get_all_records():
+        definition = QuestionDefinition(
+            id=uuid.uuid4(),
+            num=int(row["id"]),
+            name=str(row["name"]),
+            title=str(row["question"]),
+            gist=str(row["description"]),
+            detail=str(row["more info"]),
+            tags=[str(row["téma"])],
+            # TODO: there is order column and others
+        )
+        definitions.append(definition)
+    logger.info("Extracted question definitions: %d", len(definitions))
+    return definitions
+
+
 def extract_election_senat(gc: gspread.Client, row: SheetRow) -> Election:
-    return Election(
-        id="senat-2022",
-        key="senat-2022",
-        name="senat-2022",
-        description="senat-2022",
+    election = Election(
+        id="senatni-2022",
+        key="senatni-2022",
+        name="senatni-2022",
+        description="senatni-2022",
     )
+
+    url_candidates = str(row["kandidáti"])
+    key_candidates = extract_key(url_candidates)
+    # load file
+    doc_candidates = gc.open_by_key(key_candidates)
+    sheet_candidates = doc_candidates.worksheet("candidates")
+    # read existing districts
+    logger.info("Loading districts")
+    election.add_districts(extract_senatni_districts(sheet_candidates))
+    time.sleep(args.wait)
+
+    # for each district load set of candidates
+    logger.info("Loading list of candidates")
+    for pos, district in enumerate(election.districts.values()):
+        logger.info("\t%d: Extracting candidates for district: %s", pos, district)
+        election.add_candidates(
+            district, extract_senatni_candidates(sheet_candidates, district)
+        )
+
+    time.sleep(args.wait)
+
+    url_questions = str(row["otázky originál"])
+    key_questions = extract_key(url_questions)
+    logger.info("Loading questions from URL %s (%s)", url_questions, key_questions)
+
+    # load file
+    doc_questions = gc.open_by_key(key_questions)
+    sheet_questions = doc_questions.worksheet("OTÁZKY")
+    question_definitions = extract_senatni_question_definitions(sheet_questions)
+
+    # for each district load set of questions
+    logger.info("Loading question definitions")
+    for pos, district in enumerate(election.districts.values()):
+        logger.info(
+            "\t%d: Extracting question definitions for district: %s", pos, district
+        )
+        election.add_question_definitions(
+            district,
+            question_definitions,
+        )
+
+    time.sleep(args.wait)
+
+    url_answers = str(rec["odpovědi"])
+    key_answers = extract_key(url_answers)
+    # load file
+    doc_answers = gc.open_by_key(key_answers)
+    sheet_answers = doc_answers.worksheet("Form Responses 1")
+    answers = extract_answers(sheet_answers)
+    for district in election.districts.values():
+        election.add_answers(district, answers)
+    time.sleep(args.wait)
+
+    return election
 
 
 def extract_election_komunalni(gc: gspread.Client, row: SheetRow) -> Election:
@@ -371,7 +419,9 @@ def extract_election_komunalni(gc: gspread.Client, row: SheetRow) -> Election:
 
     # read existing districts
     logger.info("Loading districts")
-    election.add_districts(extract_districts(doc_questions.worksheet("seznam")))
+    election.add_districts(
+        extract_komunalni_districts(doc_questions.worksheet("seznam"))
+    )
     time.sleep(args.wait)
 
     # for each district load set of questions
@@ -382,11 +432,11 @@ def extract_election_komunalni(gc: gspread.Client, row: SheetRow) -> Election:
         )
         election.add_question_definitions(
             district,
-            extract_question_definitions(doc_questions.worksheet(district.name)),
+            extract_komunalni_question_definitions(
+                doc_questions.worksheet(district.name)
+            ),
         )
         time.sleep(args.wait)
-        # if pos > 2:
-        #     break
 
     url_candidates = str(row["kandidáti"])
     key_candidates = extract_key(url_candidates)
@@ -397,11 +447,10 @@ def extract_election_komunalni(gc: gspread.Client, row: SheetRow) -> Election:
     for pos, district in enumerate(election.districts.values()):
         logger.info("\t%d: Extracting candidates for district: %s", pos, district)
         election.add_candidates(
-            district, extract_candidates(doc_candidates.worksheet(district.name))
+            district,
+            extract_komunalni_candidates(doc_candidates.worksheet(district.name)),
         )
         time.sleep(args.wait)
-        # if pos > 2:
-        #     break
 
     return election
 
@@ -514,6 +563,11 @@ def generate_calculator_dict(election: Election, district: District) -> dict[str
                 district,
             )
             continue
+        logger.info(
+            "Generating answers for district %s and candidate %s",
+            district,
+            candidate_answers.candidate,
+        )
         for answer in candidate_answers.answers:
             answer_dict = {
                 "id": f"{election.id}-{district.code}-answer-{secret_code}-{q_num}",
@@ -604,6 +658,8 @@ if __name__ == "__main__":
         "calculators": [],
     }  # type: Dict[str, Any]
     for election_key, election in elections.items():
+        election_root = output_root / election_key
+        election_root.mkdir(parents=True, exist_ok=True)
         calculators_dict["elections"].append(
             {
                 "id": election.id,
@@ -625,51 +681,10 @@ if __name__ == "__main__":
                 }
             )
             calculator_dict = generate_calculator_dict(election, district)
-            calculator_file = output_root / election_key / f"{district.code}.json"
+            calculator_file = election_root / f"{district.code}.json"
             with calculator_file.open(mode="w", encoding="utf-8") as fh:
                 json.dump(calculator_dict, fh, indent=2, ensure_ascii=False)
 
     calculators_file = output_root / "calculators.json"
     with calculators_file.open(mode="w", encoding="utf-8") as fh:
         json.dump(calculators_dict, fh, indent=2, ensure_ascii=False)
-
-
-# 1 / 0
-
-# doc_answers = gc.open_by_key(args.doc_answers)
-
-# sheet_answers = doc_answers.worksheet(args.sheet_answers)
-
-# data_answers = sheet_answers.get_all_records()
-
-# candidates = dict()
-
-# known_questions = []
-# for row in data_answers:
-#     name = str(row["Jméno strany:"])
-#     questions = extract_questions(row)
-#     candidates[name] = Candidate(name, questions)
-#     known_questions = questions
-
-
-# output_structure = {
-#     "id": "?senatni-2022-51",
-#     "name": "?Senatni volby 2022 - obvod 51",
-#     "description": "?Senatni volby - description",
-#     "election": {
-#         "id": "?uuid-sen-senatni-2022",
-#         "key": "?senatni-2022",
-#         "name": "?Senatni volby 2022",
-#         "description": "?Senatni volby - description",
-#     },
-#     "questions": {},
-#     "candidates": {},
-#     "answers": {},
-# }  # type: Dict[str, Any]
-
-# output_structure["questions"] = generate_questions(questions)
-# output_structure["candidates"] = generate_candidates(candidates)
-# output_structure["answers"] = generate_answers(candidates)
-
-
-# print(json.dumps(output_structure))
