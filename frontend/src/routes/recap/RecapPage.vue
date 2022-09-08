@@ -24,7 +24,6 @@ import SecondaryNavigationBar from '@/components/design-system/navigation/Second
 
 import { vkiLogoPercent } from '@/components/design-system/icons';
 
-import TabFilter from '../../components/TabFilter.vue';
 import { useElectionStore, UserAnswerEnum } from '@/stores/electionStore';
 import RecapQuestionCard from './RecapQuestionCard.vue';
 import StackComponent from '../../components/design-system/layout/StackComponent.vue';
@@ -66,10 +65,6 @@ electionStore.calculator?.questions.forEach((q) =>
   q.tags?.forEach((tag) => availableTags.add(tag))
 );
 
-const handleFilterChange = (id: string) => {
-  console.debug(id);
-  selectedTag.value = id;
-};
 const handleStarClick = (index: number) => {
   electionStore.flipAnswerFlag(index);
 };
@@ -142,11 +137,6 @@ const isCardHidden = (index: number) => {
           Zde si můžete projít svoje odpovědi a důležitosti a případně je ještě
           upravit.
         </BodyText>
-        <TabFilter
-          :tags="Array.from(availableTags)"
-          :input-change="handleFilterChange"
-          :selected-tag="selectedTag"
-        />
         <StackComponent class="list" spacing="small">
           <RecapQuestionCard
             v-for="i in [...Array(electionStore.questionCount).keys()]"
