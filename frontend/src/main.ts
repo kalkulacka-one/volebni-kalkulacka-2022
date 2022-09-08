@@ -8,6 +8,8 @@ import App from './App.vue';
 
 import './assets/main.css';
 
+import EmbedProviderWrapper from '@/components/EmbedProviderWrapper.vue';
+
 //routes
 import GuidePageVue from './routes/guide/GuidePage.vue';
 import IndexPageVue from './routes/index/IndexPage.vue';
@@ -209,6 +211,14 @@ export const appRoutes = {
   fallback: { path: '/:catchAll(.*)', redirect: '/' },
 };
 
+export const wrappedRoutes = [
+  {
+    path: '/',
+    component: EmbedProviderWrapper,
+    children: Object.values(appRoutes),
+  },
+];
+
 const app = createApp(App);
 
 const pinia = createPinia();
@@ -216,7 +226,7 @@ app.use(pinia);
 
 const router = createRouter({
   history: createWebHistory(),
-  routes: Object.values(appRoutes),
+  routes: wrappedRoutes,
 });
 
 //handles title and metadata
