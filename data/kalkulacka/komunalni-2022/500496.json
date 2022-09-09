@@ -8,8 +8,8 @@
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
     "description": "K dispozici je 35 kalkulaček pro největší města.",
-    "from": "2022-09-23 14:00",
-    "to": "2022-09-24 14:00"
+    "from": "2022-09-23T14:00:00",
+    "to": "2022-09-24T14:00:00"
   },
   "questions": [
     {
@@ -605,7 +605,8 @@
           },
           "abbreviation": "Piráti+ProOl"
         }
-      ]
+      ],
+      "motto": "Konečně rozvoj místo stagnace"
     },
     {
       "id": "komunalni-2022-500496-c-704728",
@@ -636,7 +637,8 @@
           },
           "abbreviation": "PŘÍSAHA"
         }
-      ]
+      ],
+      "motto": "Nová síla, noví lidé nezatížení minulostí.  To je Přísaha v Olomouci. "
     },
     {
       "id": "komunalni-2022-500496-c-538203",
@@ -709,7 +711,8 @@
           },
           "abbreviation": "KSČM"
         }
-      ]
+      ],
+      "motto": "Naše rozhodování neřídí \"zájmové skupiny\" v pozadí."
     },
     {
       "id": "komunalni-2022-500496-c-241472",
@@ -776,681 +779,1039 @@
   ],
   "answers": [
     {
-      "id": "komunalni-2022-500496-a-4",
+      "id": "komunalni-2022-500496-a-120992-1",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-1",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-7",
+      "id": "komunalni-2022-500496-a-120992-2",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-2",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-10",
+      "id": "komunalni-2022-500496-a-120992-3",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-3",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-13",
+      "id": "komunalni-2022-500496-a-120992-4",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-4",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-16",
+      "id": "komunalni-2022-500496-a-120992-5",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-5",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-19",
+      "id": "komunalni-2022-500496-a-120992-6",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-6",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-22",
+      "id": "komunalni-2022-500496-a-120992-7",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-7",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-25",
+      "id": "komunalni-2022-500496-a-120992-8",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-8",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-28",
+      "id": "komunalni-2022-500496-a-120992-9",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-9",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-31",
+      "id": "komunalni-2022-500496-a-120992-10",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-10",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-34",
+      "id": "komunalni-2022-500496-a-120992-11",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-11",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-37",
+      "id": "komunalni-2022-500496-a-120992-12",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-12",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-40",
+      "id": "komunalni-2022-500496-a-120992-13",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-13",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-43",
+      "id": "komunalni-2022-500496-a-120992-14",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-14",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-46",
+      "id": "komunalni-2022-500496-a-120992-15",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-15",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-49",
+      "id": "komunalni-2022-500496-a-120992-16",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-16",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-52",
+      "id": "komunalni-2022-500496-a-120992-17",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-17",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-55",
+      "id": "komunalni-2022-500496-a-120992-18",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-18",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-58",
+      "id": "komunalni-2022-500496-a-120992-19",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-19",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-61",
+      "id": "komunalni-2022-500496-a-120992-20",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-20",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-64",
+      "id": "komunalni-2022-500496-a-120992-21",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-21",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-67",
+      "id": "komunalni-2022-500496-a-120992-22",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-22",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-70",
+      "id": "komunalni-2022-500496-a-120992-23",
       "candidate_id": "komunalni-2022-500496-c-120992",
-      "question_id": "komunalni-2022-500496-q-23"
+      "question_id": "komunalni-2022-500496-q-23",
+      "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-500496-a-73",
+      "id": "komunalni-2022-500496-a-120992-24",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-24",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-76",
+      "id": "komunalni-2022-500496-a-120992-25",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-25",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-79",
+      "id": "komunalni-2022-500496-a-120992-26",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-26",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-82",
+      "id": "komunalni-2022-500496-a-120992-27",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-27",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-85",
+      "id": "komunalni-2022-500496-a-120992-28",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-28",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-88",
+      "id": "komunalni-2022-500496-a-120992-29",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-29",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-91",
+      "id": "komunalni-2022-500496-a-120992-30",
       "candidate_id": "komunalni-2022-500496-c-120992",
-      "question_id": "komunalni-2022-500496-q-30"
+      "question_id": "komunalni-2022-500496-q-30",
+      "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-500496-a-94",
+      "id": "komunalni-2022-500496-a-120992-31",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-31",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-97",
+      "id": "komunalni-2022-500496-a-120992-32",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-32",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-100",
+      "id": "komunalni-2022-500496-a-120992-33",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-33",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-103",
+      "id": "komunalni-2022-500496-a-120992-34",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-34",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-106",
+      "id": "komunalni-2022-500496-a-120992-35",
       "candidate_id": "komunalni-2022-500496-c-120992",
-      "question_id": "komunalni-2022-500496-q-35"
+      "question_id": "komunalni-2022-500496-q-35",
+      "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-500496-a-109",
+      "id": "komunalni-2022-500496-a-120992-36",
       "candidate_id": "komunalni-2022-500496-c-120992",
-      "question_id": "komunalni-2022-500496-q-36"
+      "question_id": "komunalni-2022-500496-q-36",
+      "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-500496-a-112",
+      "id": "komunalni-2022-500496-a-120992-37",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-37",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-115",
+      "id": "komunalni-2022-500496-a-120992-38",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-38",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-118",
+      "id": "komunalni-2022-500496-a-120992-39",
       "candidate_id": "komunalni-2022-500496-c-120992",
-      "question_id": "komunalni-2022-500496-q-39"
+      "question_id": "komunalni-2022-500496-q-39",
+      "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-500496-a-121",
+      "id": "komunalni-2022-500496-a-120992-40",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-40",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-124",
+      "id": "komunalni-2022-500496-a-120992-41",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-41",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-127",
+      "id": "komunalni-2022-500496-a-120992-42",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-42",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-130",
+      "id": "komunalni-2022-500496-a-120992-43",
       "candidate_id": "komunalni-2022-500496-c-120992",
-      "question_id": "komunalni-2022-500496-q-43"
+      "question_id": "komunalni-2022-500496-q-43",
+      "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-500496-a-133",
+      "id": "komunalni-2022-500496-a-120992-44",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-44",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-136",
+      "id": "komunalni-2022-500496-a-120992-45",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-45",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-139",
+      "id": "komunalni-2022-500496-a-120992-46",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-46",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-142",
+      "id": "komunalni-2022-500496-a-120992-47",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-47",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-145",
+      "id": "komunalni-2022-500496-a-120992-48",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-48",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-148",
+      "id": "komunalni-2022-500496-a-120992-49",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-49",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-151",
+      "id": "komunalni-2022-500496-a-120992-50",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-50",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-154",
+      "id": "komunalni-2022-500496-a-120992-51",
       "candidate_id": "komunalni-2022-500496-c-120992",
-      "question_id": "komunalni-2022-500496-q-51"
+      "question_id": "komunalni-2022-500496-q-51",
+      "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-500496-a-157",
+      "id": "komunalni-2022-500496-a-120992-52",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-52",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-160",
+      "id": "komunalni-2022-500496-a-120992-53",
       "candidate_id": "komunalni-2022-500496-c-120992",
-      "question_id": "komunalni-2022-500496-q-53"
+      "question_id": "komunalni-2022-500496-q-53",
+      "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-500496-a-163",
+      "id": "komunalni-2022-500496-a-120992-54",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-54",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-166",
+      "id": "komunalni-2022-500496-a-120992-55",
       "candidate_id": "komunalni-2022-500496-c-120992",
-      "question_id": "komunalni-2022-500496-q-55"
+      "question_id": "komunalni-2022-500496-q-55",
+      "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-500496-a-169",
+      "id": "komunalni-2022-500496-a-120992-56",
       "candidate_id": "komunalni-2022-500496-c-120992",
       "question_id": "komunalni-2022-500496-q-56",
       "answer": "no",
       "comment": "Je potřeba najít jiné řešení."
     },
     {
-      "id": "komunalni-2022-500496-a-172",
-      "candidate_id": "komunalni-2022-500496-c-120992",
-      "question_id": "komunalni-2022-500496-q-57"
-    },
-    {
-      "id": "komunalni-2022-500496-a-4",
+      "id": "komunalni-2022-500496-a-588378-1",
       "candidate_id": "komunalni-2022-500496-c-588378",
-      "question_id": "komunalni-2022-500496-q-1"
+      "question_id": "komunalni-2022-500496-q-1",
+      "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-500496-a-7",
+      "id": "komunalni-2022-500496-a-588378-2",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-2",
       "answer": "yes",
       "comment": "Ne nutně stejným způsobem jako dnes."
     },
     {
-      "id": "komunalni-2022-500496-a-10",
+      "id": "komunalni-2022-500496-a-588378-3",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-3",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-13",
+      "id": "komunalni-2022-500496-a-588378-4",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-4",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-16",
+      "id": "komunalni-2022-500496-a-588378-5",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-5",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-19",
+      "id": "komunalni-2022-500496-a-588378-6",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-6",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-22",
+      "id": "komunalni-2022-500496-a-588378-7",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-7",
       "answer": "no",
       "comment": "Pro město jde o významný zdroj příjmů."
     },
     {
-      "id": "komunalni-2022-500496-a-25",
+      "id": "komunalni-2022-500496-a-588378-8",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-8",
       "answer": "no",
       "comment": "Bylo by to krásné, ale z finančních důvodů není možné."
     },
     {
-      "id": "komunalni-2022-500496-a-28",
+      "id": "komunalni-2022-500496-a-588378-9",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-9",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-31",
+      "id": "komunalni-2022-500496-a-588378-10",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-10",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-34",
+      "id": "komunalni-2022-500496-a-588378-11",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-11",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-37",
+      "id": "komunalni-2022-500496-a-588378-12",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-12",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-40",
+      "id": "komunalni-2022-500496-a-588378-13",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-13",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-43",
+      "id": "komunalni-2022-500496-a-588378-14",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-14",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-46",
+      "id": "komunalni-2022-500496-a-588378-15",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-15",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-49",
+      "id": "komunalni-2022-500496-a-588378-16",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-16",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-52",
+      "id": "komunalni-2022-500496-a-588378-17",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-17",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-55",
+      "id": "komunalni-2022-500496-a-588378-18",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-18",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-58",
+      "id": "komunalni-2022-500496-a-588378-19",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-19",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-61",
+      "id": "komunalni-2022-500496-a-588378-20",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-20",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-64",
+      "id": "komunalni-2022-500496-a-588378-21",
       "candidate_id": "komunalni-2022-500496-c-588378",
-      "question_id": "komunalni-2022-500496-q-21"
+      "question_id": "komunalni-2022-500496-q-21",
+      "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-500496-a-67",
+      "id": "komunalni-2022-500496-a-588378-22",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-22",
       "answer": "yes",
       "comment": "Na základě jasných kritérií."
     },
     {
-      "id": "komunalni-2022-500496-a-70",
+      "id": "komunalni-2022-500496-a-588378-23",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-23",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-73",
+      "id": "komunalni-2022-500496-a-588378-24",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-24",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-76",
+      "id": "komunalni-2022-500496-a-588378-25",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-25",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-79",
+      "id": "komunalni-2022-500496-a-588378-26",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-26",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-82",
+      "id": "komunalni-2022-500496-a-588378-27",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-27",
       "answer": "yes",
       "comment": "Všechny druhy dopravy by měly být rovnoprávné."
     },
     {
-      "id": "komunalni-2022-500496-a-85",
+      "id": "komunalni-2022-500496-a-588378-28",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-28",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-88",
+      "id": "komunalni-2022-500496-a-588378-29",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-29",
       "answer": "yes",
       "comment": "Je nutné, aby developer vybudoval i občanskou vybavenost."
     },
     {
-      "id": "komunalni-2022-500496-a-91",
+      "id": "komunalni-2022-500496-a-588378-30",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-30",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-94",
+      "id": "komunalni-2022-500496-a-588378-31",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-31",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-97",
+      "id": "komunalni-2022-500496-a-588378-32",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-32",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-100",
+      "id": "komunalni-2022-500496-a-588378-33",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-33",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-103",
+      "id": "komunalni-2022-500496-a-588378-34",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-34",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-106",
+      "id": "komunalni-2022-500496-a-588378-35",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-35",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-109",
+      "id": "komunalni-2022-500496-a-588378-36",
       "candidate_id": "komunalni-2022-500496-c-588378",
-      "question_id": "komunalni-2022-500496-q-36"
+      "question_id": "komunalni-2022-500496-q-36",
+      "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-500496-a-112",
+      "id": "komunalni-2022-500496-a-588378-37",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-37",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-115",
+      "id": "komunalni-2022-500496-a-588378-38",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-38",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-118",
+      "id": "komunalni-2022-500496-a-588378-39",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-39",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-121",
+      "id": "komunalni-2022-500496-a-588378-40",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-40",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-124",
+      "id": "komunalni-2022-500496-a-588378-41",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-41",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-127",
+      "id": "komunalni-2022-500496-a-588378-42",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-42",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-130",
+      "id": "komunalni-2022-500496-a-588378-43",
       "candidate_id": "komunalni-2022-500496-c-588378",
-      "question_id": "komunalni-2022-500496-q-43"
+      "question_id": "komunalni-2022-500496-q-43",
+      "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-500496-a-133",
+      "id": "komunalni-2022-500496-a-588378-44",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-44",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-136",
+      "id": "komunalni-2022-500496-a-588378-45",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-45",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-139",
+      "id": "komunalni-2022-500496-a-588378-46",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-46",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-142",
+      "id": "komunalni-2022-500496-a-588378-47",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-47",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-145",
+      "id": "komunalni-2022-500496-a-588378-48",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-48",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-148",
+      "id": "komunalni-2022-500496-a-588378-49",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-49",
       "answer": "yes",
       "comment": "Městský architekt by měl být na plný úvazek."
     },
     {
-      "id": "komunalni-2022-500496-a-151",
+      "id": "komunalni-2022-500496-a-588378-50",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-50",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-154",
+      "id": "komunalni-2022-500496-a-588378-51",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-51",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-157",
+      "id": "komunalni-2022-500496-a-588378-52",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-52",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-160",
+      "id": "komunalni-2022-500496-a-588378-53",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-53",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-163",
+      "id": "komunalni-2022-500496-a-588378-54",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-54",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-166",
+      "id": "komunalni-2022-500496-a-588378-55",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-55",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-169",
+      "id": "komunalni-2022-500496-a-588378-56",
       "candidate_id": "komunalni-2022-500496-c-588378",
       "question_id": "komunalni-2022-500496-q-56",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-172",
-      "candidate_id": "komunalni-2022-500496-c-588378",
-      "question_id": "komunalni-2022-500496-q-57"
+      "id": "komunalni-2022-500496-a-704728-1",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-1",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-2",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-2",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-3",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-3",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-4",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-4",
+      "answer": "yes",
+      "comment": "Školy a školky"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-5",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-5",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-6",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-6",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-7",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-7",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-8",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-8",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-9",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-9",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-10",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-10",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-11",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-11",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-12",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-12",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-13",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-13",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-14",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-14",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-15",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-15",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-16",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-16",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-17",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-17",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-18",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-18",
+      "answer": "yes",
+      "comment": "Jinak by nevznikly, tak velké dluhy v Olomouci."
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-19",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-19",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-20",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-20",
+      "answer": "yes",
+      "comment": "Urgentně. "
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-21",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-21",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-22",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-22",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-23",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-23",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-24",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-24",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-25",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-25",
+      "answer": "no",
+      "comment": "V žádném případě."
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-26",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-26",
+      "answer": "yes",
+      "comment": "Jednoznačně."
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-27",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-27",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-28",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-28",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-29",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-29",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-30",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-30",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-31",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-31",
+      "answer": "yes",
+      "comment": "Jednoznačná priorita našeho hnutí."
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-32",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-32",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-33",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-33",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-34",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-34",
+      "answer": "yes",
+      "comment": "Kultivování mládeže"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-35",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-35",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-36",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-36",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-37",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-37",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-38",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-38",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-39",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-39",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-40",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-40",
+      "answer": "yes",
+      "comment": "Bezpečnost a pořádek je naší prioritou."
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-41",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-41",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-42",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-42",
+      "answer": "dont_know",
+      "comment": "Je třeba zvážit."
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-43",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-43",
+      "answer": "yes",
+      "comment": "Mládež potřebuje úspěšné vzory."
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-44",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-44",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-45",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-45",
+      "answer": "yes",
+      "comment": "Ale pod pečlivou kontrolu."
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-46",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-46",
+      "answer": "yes",
+      "comment": "Jednoznačná priorita."
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-47",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-47",
+      "answer": "yes",
+      "comment": "Bezvýhradně."
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-48",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-48",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-49",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-49",
+      "answer": "dont_know",
+      "comment": "Jaktože už tam dávno není!"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-50",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-50",
+      "answer": "no",
+      "comment": "Nesuplujme jesle, osvědčily se.  "
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-51",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-51",
+      "answer": "yes",
+      "comment": "Záleží, co si pod tímto pojmem představujeme. (registrace?)"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-52",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-52",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-53",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-53",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-54",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-54",
+      "answer": "yes",
+      "comment": "Podpora sportu u mládeže."
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-55",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-55",
+      "answer": "no",
+      "comment": "Udělejte rekonstrukci stávajících objektů."
+    },
+    {
+      "id": "komunalni-2022-500496-a-704728-56",
+      "candidate_id": "komunalni-2022-500496-c-704728",
+      "question_id": "komunalni-2022-500496-q-56",
+      "answer": "no",
+      "comment": "Ale jednoznačná přísná kontrola těchto míst např. městskou policií!"
     }
   ]
 }

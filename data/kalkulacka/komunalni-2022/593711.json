@@ -8,8 +8,8 @@
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
     "description": "K dispozici je 35 kalkulaček pro největší města.",
-    "from": "2022-09-23 14:00",
-    "to": "2022-09-24 14:00"
+    "from": "2022-09-23T14:00:00",
+    "to": "2022-09-24T14:00:00"
   },
   "questions": [
     {
@@ -597,7 +597,8 @@
           },
           "abbreviation": "SOM+NK"
         }
-      ]
+      ],
+      "motto": "O naše občany se postaráme. Znojmo je a bude přívětivé město pro život."
     },
     {
       "id": "komunalni-2022-593711-c-132801",
@@ -638,7 +639,8 @@
           },
           "abbreviation": "Piráti"
         }
-      ]
+      ],
+      "motto": "Máme odvahu dělat, co je správné."
     },
     {
       "id": "komunalni-2022-593711-c-186364",
@@ -664,649 +666,643 @@
   ],
   "answers": [
     {
-      "id": "komunalni-2022-593711-a-4",
+      "id": "komunalni-2022-593711-a-531306-1",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-1",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-593711-a-7",
+      "id": "komunalni-2022-593711-a-531306-2",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-2",
       "answer": "yes",
       "comment": "Zároveň musí poskytnout slevu obyvatelům, kteří to potřebují."
     },
     {
-      "id": "komunalni-2022-593711-a-10",
+      "id": "komunalni-2022-593711-a-531306-3",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-3",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-593711-a-13",
+      "id": "komunalni-2022-593711-a-531306-4",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-4",
       "answer": "no",
       "comment": "pouze v hustě zastavěných oblastech. Na běžných komunikacích ne."
     },
     {
-      "id": "komunalni-2022-593711-a-16",
+      "id": "komunalni-2022-593711-a-531306-5",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-5",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-19",
+      "id": "komunalni-2022-593711-a-531306-6",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-6",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-22",
+      "id": "komunalni-2022-593711-a-531306-7",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-7",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-25",
+      "id": "komunalni-2022-593711-a-531306-8",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-8",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-28",
+      "id": "komunalni-2022-593711-a-531306-9",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-9",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-31",
+      "id": "komunalni-2022-593711-a-531306-10",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-10",
       "answer": "yes",
       "comment": "již jsme zavedli"
     },
     {
-      "id": "komunalni-2022-593711-a-34",
+      "id": "komunalni-2022-593711-a-531306-11",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-11",
       "answer": "yes",
       "comment": "již se hlasuje jmenovitě"
     },
     {
-      "id": "komunalni-2022-593711-a-37",
+      "id": "komunalni-2022-593711-a-531306-12",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-12",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-40",
+      "id": "komunalni-2022-593711-a-531306-13",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-13",
       "answer": "no",
       "comment": "město se o své občany musí postarat jinou formou"
     },
     {
-      "id": "komunalni-2022-593711-a-43",
+      "id": "komunalni-2022-593711-a-531306-14",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-14",
       "answer": "no",
       "comment": "většina osvětlení je moderního typu s velmi nízkou spotřebou. záleží na vývoji cen."
     },
     {
-      "id": "komunalni-2022-593711-a-46",
+      "id": "komunalni-2022-593711-a-531306-15",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-15",
       "answer": "no",
       "comment": "jde o otázku bezpečnosti. veřejné osvětlení se navíc postupně modernizuje za účelem snížení spotřeby."
     },
     {
-      "id": "komunalni-2022-593711-a-49",
+      "id": "komunalni-2022-593711-a-531306-16",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-16",
       "answer": "yes",
       "comment": "v budovách úřadu a kulturních domech pokud v nich neprobíhá žádná akce"
     },
     {
-      "id": "komunalni-2022-593711-a-52",
+      "id": "komunalni-2022-593711-a-531306-17",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-17",
       "answer": "yes",
       "comment": "děti nemohou za chyby svých rodičů. nemají vstupovat do plnoletosti s trestem a znevýhodněním za své rodiče."
     },
     {
-      "id": "komunalni-2022-593711-a-55",
+      "id": "komunalni-2022-593711-a-531306-18",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-18",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-58",
+      "id": "komunalni-2022-593711-a-531306-19",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-19",
       "answer": "yes",
       "comment": "již probíhá v participativním rozpočtu Tvoříme Znojmo"
     },
     {
-      "id": "komunalni-2022-593711-a-61",
+      "id": "komunalni-2022-593711-a-531306-20",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-20",
       "answer": "yes",
       "comment": "tím se docílí nižší ceny nájemného na celém trhu"
     },
     {
-      "id": "komunalni-2022-593711-a-64",
+      "id": "komunalni-2022-593711-a-531306-21",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-21",
       "answer": "no",
       "comment": "osvětlení je moderního typu s nízkou spotřebou."
     },
     {
-      "id": "komunalni-2022-593711-a-67",
+      "id": "komunalni-2022-593711-a-531306-22",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-22",
       "answer": "yes",
       "comment": "pokud si to rodina nemůže dovolit"
     },
     {
-      "id": "komunalni-2022-593711-a-70",
+      "id": "komunalni-2022-593711-a-531306-23",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-23",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-593711-a-73",
+      "id": "komunalni-2022-593711-a-531306-24",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-24",
       "answer": "no",
       "comment": "při parkování musí být zvýhodněni občané města"
     },
     {
-      "id": "komunalni-2022-593711-a-76",
+      "id": "komunalni-2022-593711-a-531306-25",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-25",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-593711-a-79",
+      "id": "komunalni-2022-593711-a-531306-26",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-26",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-82",
+      "id": "komunalni-2022-593711-a-531306-27",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-27",
       "answer": "no",
       "comment": "hromadnou a pěší dopravu ano. cyklistická má být rovnocenou alternativou."
     },
     {
-      "id": "komunalni-2022-593711-a-85",
+      "id": "komunalni-2022-593711-a-531306-28",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-28",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-593711-a-88",
+      "id": "komunalni-2022-593711-a-531306-29",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-29",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-91",
+      "id": "komunalni-2022-593711-a-531306-30",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-30",
       "answer": "yes",
       "comment": "z dotací"
     },
     {
-      "id": "komunalni-2022-593711-a-94",
+      "id": "komunalni-2022-593711-a-531306-31",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-31",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-97",
+      "id": "komunalni-2022-593711-a-531306-32",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-32",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-100",
+      "id": "komunalni-2022-593711-a-531306-33",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-33",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-103",
+      "id": "komunalni-2022-593711-a-531306-34",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-34",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-106",
+      "id": "komunalni-2022-593711-a-531306-35",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-35",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-593711-a-109",
+      "id": "komunalni-2022-593711-a-531306-36",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-36",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-593711-a-112",
+      "id": "komunalni-2022-593711-a-531306-37",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-37",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-115",
+      "id": "komunalni-2022-593711-a-531306-38",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-38",
+      "answer": "dont_know",
       "comment": "záleží na formě podpory"
     },
     {
-      "id": "komunalni-2022-593711-a-118",
+      "id": "komunalni-2022-593711-a-531306-39",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-39",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-121",
+      "id": "komunalni-2022-593711-a-531306-40",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-40",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-124",
+      "id": "komunalni-2022-593711-a-531306-41",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-41",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-127",
+      "id": "komunalni-2022-593711-a-531306-42",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-42",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-130",
+      "id": "komunalni-2022-593711-a-531306-43",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-43",
       "answer": "yes",
       "comment": "v přiměřené výši."
     },
     {
-      "id": "komunalni-2022-593711-a-133",
+      "id": "komunalni-2022-593711-a-531306-44",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-44",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-136",
+      "id": "komunalni-2022-593711-a-531306-45",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-45",
       "answer": "yes",
       "comment": "zejména děti v oblasti školství."
     },
     {
-      "id": "komunalni-2022-593711-a-139",
+      "id": "komunalni-2022-593711-a-531306-46",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-46",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-142",
+      "id": "komunalni-2022-593711-a-531306-47",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-47",
       "answer": "no",
       "comment": "není možné rozřazovat děti do škol podle výše příjmů jejich rodičů"
     },
     {
-      "id": "komunalni-2022-593711-a-145",
+      "id": "komunalni-2022-593711-a-531306-48",
       "candidate_id": "komunalni-2022-593711-c-531306",
       "question_id": "komunalni-2022-593711-q-48",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-148",
-      "candidate_id": "komunalni-2022-593711-c-531306",
-      "question_id": "komunalni-2022-593711-q-49"
-    },
-    {
-      "id": "komunalni-2022-593711-a-4",
+      "id": "komunalni-2022-593711-a-132801-1",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-1",
       "answer": "no",
       "comment": "Chceme bránit gentrifikaci. Města jsou místem společenské otevřenosti."
     },
     {
-      "id": "komunalni-2022-593711-a-7",
+      "id": "komunalni-2022-593711-a-132801-2",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-2",
       "answer": "yes",
       "comment": "Poplatek za svoz komunálního odpadu lze nahradit případnou vyšší sazbou daně z nemovitosti, avšak český právní řád tomuto řešení moc nenahrává."
     },
     {
-      "id": "komunalni-2022-593711-a-10",
+      "id": "komunalni-2022-593711-a-132801-3",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-3",
       "answer": "no",
       "comment": "Úspora snížením vytápění DPS je vyloženě nevhodná."
     },
     {
-      "id": "komunalni-2022-593711-a-13",
+      "id": "komunalni-2022-593711-a-132801-4",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-4",
+      "answer": "dont_know",
       "comment": "V rezidentních obalstech by rychlost 30 kmh měla být standartní. Míst, kde by ve Znojmě dávalo omezení rychlosti aktuálně smysl je už poměrně málo.  "
     },
     {
-      "id": "komunalni-2022-593711-a-16",
+      "id": "komunalni-2022-593711-a-132801-5",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-5",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-19",
+      "id": "komunalni-2022-593711-a-132801-6",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-6",
       "answer": "no",
       "comment": "Je třeba nalézt hranici mezi svobodou a bezpečností. Domníváme se, že ve Znojmě je kamer již dostatek."
     },
     {
-      "id": "komunalni-2022-593711-a-22",
+      "id": "komunalni-2022-593711-a-132801-7",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-7",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-25",
+      "id": "komunalni-2022-593711-a-132801-8",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-8",
       "answer": "no",
       "comment": "Městská hromadná doprava by měla mít cenově dostupné předplatní jízdné, ale jízdné zdarma by bylo příliš nákaldné a velmi složitě by se to v rámci IDS JmK implementovalo. Navíc by přínos nebyl odpovídající nákladům."
     },
     {
-      "id": "komunalni-2022-593711-a-28",
+      "id": "komunalni-2022-593711-a-132801-9",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-9",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-31",
+      "id": "komunalni-2022-593711-a-132801-10",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-10",
       "answer": "yes",
       "comment": "Již je implementováno, ale poměrně složitě se to vyhledává. Město by to mělo poskytovat v uživatelsky přívětivé formě."
     },
     {
-      "id": "komunalni-2022-593711-a-34",
+      "id": "komunalni-2022-593711-a-132801-11",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-11",
       "answer": "yes",
       "comment": "Město tuto informaci nepsokytuje automaticky, je velmi složité se k této informaci dostat."
     },
     {
-      "id": "komunalni-2022-593711-a-37",
+      "id": "komunalni-2022-593711-a-132801-12",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-12",
       "answer": "yes",
       "comment": "Ve Znojmě je již zakázáno."
     },
     {
-      "id": "komunalni-2022-593711-a-40",
+      "id": "komunalni-2022-593711-a-132801-13",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-13",
       "answer": "yes",
       "comment": "S dovětkem - pokud to bude potřeba. V základu by měly potřeby (např. pro lidi bez domova) pokrýt již fungující sociální služby."
     },
     {
-      "id": "komunalni-2022-593711-a-43",
+      "id": "komunalni-2022-593711-a-132801-14",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-14",
       "answer": "yes",
       "comment": "Je to jedna z nejlogičtějších a nejjednodušších úspor v současné době."
     },
     {
-      "id": "komunalni-2022-593711-a-46",
+      "id": "komunalni-2022-593711-a-132801-15",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-15",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-49",
+      "id": "komunalni-2022-593711-a-132801-16",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-16",
       "answer": "no",
       "comment": "Určitě lze vytápět na nižší teplotu, ale je třeba zachovat rozumný komfort pro úředníky i občany, kteří na úřad dorazí. Omezení vytápění by vedlo spíše k vyšší nemocnosti a celkově tedy horším službám."
     },
     {
-      "id": "komunalni-2022-593711-a-52",
+      "id": "komunalni-2022-593711-a-132801-17",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-17",
       "answer": "yes",
       "comment": "To už je ve Znojmě provedeno."
     },
     {
-      "id": "komunalni-2022-593711-a-55",
+      "id": "komunalni-2022-593711-a-132801-18",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-18",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-593711-a-58",
+      "id": "komunalni-2022-593711-a-132801-19",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-19",
       "answer": "yes",
       "comment": "Ve Znojmě je polovičatá implementace, kdy se hlasovaní mohou účastnit i nerezidenti, respketive hlasovat může každý, nejen občan."
     },
     {
-      "id": "komunalni-2022-593711-a-61",
+      "id": "komunalni-2022-593711-a-132801-20",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-20",
       "answer": "yes",
       "comment": "Město by mělo držet výrazný podíl na nájemním trhu a k tomu musí sloužit udržovaný a rozvinutý městský bytový fond."
     },
     {
-      "id": "komunalni-2022-593711-a-64",
+      "id": "komunalni-2022-593711-a-132801-21",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-21",
       "answer": "yes",
       "comment": "Bude-li třeba hledat úspory, je třeba uspořit tam, kde to neovlivňuje poskytování základních městkých služeb."
     },
     {
-      "id": "komunalni-2022-593711-a-67",
+      "id": "komunalni-2022-593711-a-132801-22",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-22",
+      "answer": "dont_know",
       "comment": "Plošné obědy zdarma by byly pro městský rozpočet nákaldné. Je však zcela zásadní, aby každé dítě mělo možnost obědvat ve školní jídelně. Podporujeme projekt Obědy do škol, který hradí obědy pro děti, jejích rodiče si školní obědy nemohou dovolit."
     },
     {
-      "id": "komunalni-2022-593711-a-70",
+      "id": "komunalni-2022-593711-a-132801-23",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-23",
       "answer": "yes",
       "comment": "Ve Znojmě carshareingový projekt rozhodně chybí. Ve městě je spousta obyvatel, kteří vůz užívájí sporadicky a pokud budou mít adekvátní alternativu, tak si auto nebudou nadále vydržovat a dojde tím pádem k uvolnění veřejného prostoru.  "
     },
     {
-      "id": "komunalni-2022-593711-a-73",
+      "id": "komunalni-2022-593711-a-132801-24",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-24",
       "answer": "no",
       "comment": "Pakrovací zóny výrazně usnadňují parkování pro bydlící a proto vznik parkovacích zón, za splnění podmínyk vybudování P+R parkovišť, podporujeme."
     },
     {
-      "id": "komunalni-2022-593711-a-76",
+      "id": "komunalni-2022-593711-a-132801-25",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-25",
       "answer": "no",
       "comment": "Městký bytový fond má růst, nikoliv se ztenčovat."
     },
     {
-      "id": "komunalni-2022-593711-a-79",
+      "id": "komunalni-2022-593711-a-132801-26",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-26",
       "answer": "yes",
       "comment": "Město a develeper mají být partneři, kteří spolu utváří budoucí podobu města. Součástí tohoto parnerství musí být develeperská smlouva, která město i developera zaváže k podílu na budování veřejné infrastruktury. "
     },
     {
-      "id": "komunalni-2022-593711-a-82",
+      "id": "komunalni-2022-593711-a-132801-27",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-27",
       "answer": "yes",
       "comment": "Pokud se má zklidnit automobilová doprava a vytvořit přívětivější město, tak musí být prvně vybudovány adekvátní alternativy."
     },
     {
-      "id": "komunalni-2022-593711-a-85",
+      "id": "komunalni-2022-593711-a-132801-28",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-28",
+      "answer": "dont_know",
       "comment": "Tohle nelze dle současných zákonů z pozice města řešit. "
     },
     {
-      "id": "komunalni-2022-593711-a-88",
+      "id": "komunalni-2022-593711-a-132801-29",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-29",
       "answer": "yes",
       "comment": "Obecně je třeba, aby Znojmo začalo s developery lépe jednat. Nesmí to skončit u prodeje pozemku, to má být jen začátek spolupráce."
     },
     {
-      "id": "komunalni-2022-593711-a-91",
+      "id": "komunalni-2022-593711-a-132801-30",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-30",
       "answer": "yes",
       "comment": "Elektromobilita je poměrně zásadní prvek v rámci odchodu od fosilních zdrojů."
     },
     {
-      "id": "komunalni-2022-593711-a-94",
+      "id": "komunalni-2022-593711-a-132801-31",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-31",
       "answer": "yes",
       "comment": "V rámci podpory výstavby by město nemělo upřednostňovat jednu formu před jinou. Cílem je, aby ve městě bylo dostupné bydlení."
     },
     {
-      "id": "komunalni-2022-593711-a-97",
+      "id": "komunalni-2022-593711-a-132801-32",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-32",
       "answer": "yes",
       "comment": "Má to pozitivní aspekt z hlediska zvyku na používání veřejné dopravy a zároveň se tím zabrání zbytečným pokutam pro mladistvé."
     },
     {
-      "id": "komunalni-2022-593711-a-100",
+      "id": "komunalni-2022-593711-a-132801-33",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-33",
       "answer": "yes",
       "comment": "Město má pomoci vlastníkům nejen bytových domů. Město by mělo pomoci s instalací FVE obecně."
     },
     {
-      "id": "komunalni-2022-593711-a-103",
+      "id": "komunalni-2022-593711-a-132801-34",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-34",
       "answer": "yes",
       "comment": "Vstupné by mělo mít motivační charakter."
     },
     {
-      "id": "komunalni-2022-593711-a-106",
+      "id": "komunalni-2022-593711-a-132801-35",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-35",
       "answer": "yes",
       "comment": "Menstruační pomůcky by měly být brány jako standartní součást toalet, stejně jako mýdlo či toaletní papír."
     },
     {
-      "id": "komunalni-2022-593711-a-109",
+      "id": "komunalni-2022-593711-a-132801-36",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-36",
       "answer": "no",
       "comment": "Nemyslíme si, že to je povinnost, která by měla být ukládána zákonem. Ne všechny mravní normy musí být překlopeny v zákon."
     },
     {
-      "id": "komunalni-2022-593711-a-112",
+      "id": "komunalni-2022-593711-a-132801-37",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-37",
       "answer": "yes",
       "comment": "Je zásadní chybou, že v tomto směru město zaspalo. FVE už měly být všude, kde to dává smysl a kde to památkáři dovolí."
     },
     {
-      "id": "komunalni-2022-593711-a-115",
+      "id": "komunalni-2022-593711-a-132801-38",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-38",
       "answer": "no",
       "comment": "Elektrokoloběžky jsou součástí dopravního mixu, ale dost často bývají nebezpečné svým uživatelům a navíc \"koloběžkáři\" dost často jezdí tam, kde nemají. Z hlediska alternativ je prioritní cyklodoprava."
     },
     {
-      "id": "komunalni-2022-593711-a-118",
+      "id": "komunalni-2022-593711-a-132801-39",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-39",
       "answer": "yes",
       "comment": "Město by mělo aktivně podporavat integraci nejen cizinců, ale obecně by mělo podporavat integraci všech sociálně vyloučených."
     },
     {
-      "id": "komunalni-2022-593711-a-121",
+      "id": "komunalni-2022-593711-a-132801-40",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-40",
       "answer": "no",
       "comment": "Počet strážníků považujeme za dostatečný."
     },
     {
-      "id": "komunalni-2022-593711-a-124",
+      "id": "komunalni-2022-593711-a-132801-41",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-41",
       "answer": "yes",
       "comment": "Zelené střechy jsou jedním z důležitých nástrojů městské adaptace na klimatickou změnu."
     },
     {
-      "id": "komunalni-2022-593711-a-127",
+      "id": "komunalni-2022-593711-a-132801-42",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-42",
       "answer": "yes",
       "comment": "Cílem města je dosáhnout zklidnění automobilové dopravy."
     },
     {
-      "id": "komunalni-2022-593711-a-130",
+      "id": "komunalni-2022-593711-a-132801-43",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-43",
+      "answer": "dont_know",
       "comment": "V omezené míře je to součást reprezentace města."
     },
     {
-      "id": "komunalni-2022-593711-a-133",
+      "id": "komunalni-2022-593711-a-132801-44",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-44",
       "answer": "no",
       "comment": "Nižší daň z nemovitosti už ve Znojmě ex lege být nemůže."
     },
     {
-      "id": "komunalni-2022-593711-a-136",
+      "id": "komunalni-2022-593711-a-132801-45",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-45",
       "answer": "yes",
       "comment": "Město by mělo aktivněji vystupovat v rámci sociálích otázek a pomoci tam, kde selhává státní sociální politika."
     },
     {
-      "id": "komunalni-2022-593711-a-139",
+      "id": "komunalni-2022-593711-a-132801-46",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-46",
       "answer": "yes",
       "comment": "Město potřebuje mít silný bytový fond, aby udrželo dostupné bydlení."
     },
     {
-      "id": "komunalni-2022-593711-a-142",
+      "id": "komunalni-2022-593711-a-132801-47",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-47",
       "answer": "yes",
       "comment": "Shromažďování sociálně znevýhodněných dětí v jedné škole zásadně ovlivňuje jejich pozdější život, dochází k přenosu nevhodných návyků a z toho plynoucích dalších negativních jevů (toxikomanie, kriminalita)."
     },
     {
-      "id": "komunalni-2022-593711-a-145",
+      "id": "komunalni-2022-593711-a-132801-48",
       "candidate_id": "komunalni-2022-593711-c-132801",
       "question_id": "komunalni-2022-593711-q-48",
       "answer": "yes",
       "comment": "Podpora předškolního zařízení pro předškolní od 2 let věku je důležitou součástí prorodinné politiky."
-    },
-    {
-      "id": "komunalni-2022-593711-a-148",
-      "candidate_id": "komunalni-2022-593711-c-132801",
-      "question_id": "komunalni-2022-593711-q-49",
-      "comment": "Chybí Vám tu otázky přímo pro Znojmo, jako je: poporujete stavbu parkovacího domu, rekonstrukci Hroního náměstí a tak. Do budoucna individualizovat. A mail Vám padá do SPAMu."
     }
   ]
 }

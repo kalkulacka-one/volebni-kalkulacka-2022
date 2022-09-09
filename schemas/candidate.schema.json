@@ -23,6 +23,10 @@
       "type": "string",
       "description": "Longer description."
     },
+    "motto": {
+      "type": "string",
+      "description": "Candidate's motto."
+    },
     "img_url": {
       "type": "string",
       "description": "Image"
