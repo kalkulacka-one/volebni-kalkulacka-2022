@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { useRoute, useRouter } from 'vue-router';
+
+import { appRoutes } from '@/main';
 import { fetchElections } from '@/common/dataFetch';
 
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
@@ -9,6 +12,9 @@ import StackComponent from '../../components/design-system/layout/StackComponent
 import BodyText from '../../components/design-system/typography/BodyText.vue';
 import ButtonComponent from '../../components/design-system/input/ButtonComponent.vue';
 import BackgroundComponent from '../../components/design-system/style/BackgroundComponent.vue';
+
+const router = useRouter();
+const route = useRoute();
 
 const elections = await fetchElections();
 </script>
@@ -54,7 +60,13 @@ const elections = await fetchElections();
                 v-for="election in elections"
                 :key="election.id"
                 kind="filled"
-                :href="`/kalkulacka/${election.key}`"
+                @click="
+                  router.push({
+                    name: appRoutes.districtSelection.name,
+                    params: { ...route.params, election: election.key },
+                    query: { ...route.query },
+                  })
+                "
               >
                 {{ election.name }}
               </ButtonComponent>
