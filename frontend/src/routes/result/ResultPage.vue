@@ -18,7 +18,6 @@ import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
 
-import ResultSideBar from './ResultSideBar.vue';
 import ResultCategory from './ResultCategory.vue';
 import BackgroundComponent from '../../components/design-system/style/BackgroundComponent.vue';
 
@@ -116,7 +115,6 @@ const resultsMedicine = calculateRelativeAgreement(
               :max-visible-candidates="10"
             />
           </div>
-          <ResultSideBar class="side-bar" />
         </div>
       </BottomBarWrapper>
     </StickyHeaderLayout>
