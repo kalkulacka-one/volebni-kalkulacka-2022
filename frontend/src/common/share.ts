@@ -1,6 +1,6 @@
 import type { SocialMediaProps } from '@/components/design-system/icons/SocialMediaIcon.vue';
 
-const BASE_URL = 'https://kalkulacka.ceskodigital.cz';
+const BASE_URL = 'https://kalkulacka.ceskodigital.net';
 
 export const generateShareUrl = (uuid: string) => {
   return `${BASE_URL}/share/${uuid}`;
