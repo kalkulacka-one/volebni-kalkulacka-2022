@@ -55,6 +55,9 @@ poetry-run-api:
 poetry-run-converter:
 	poetry run ./converter.py
 
+poetry-run-add-images:
+	poetry run ./add_images.py
+
 run-api-docker: docker-run
 run-api-poetry: poetry-run-api
 run-converter: poetry-run-converter
