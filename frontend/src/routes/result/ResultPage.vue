@@ -20,6 +20,7 @@ import SecondaryNavigationBar from '@/components/design-system/navigation/Second
 
 import ResultSideBar from './ResultSideBar.vue';
 import ResultCategory from './ResultCategory.vue';
+import BackgroundComponent from '../../components/design-system/style/BackgroundComponent.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -60,64 +61,66 @@ const resultsMedicine = calculateRelativeAgreement(
 );
 </script>
 <template>
-  <StickyHeaderLayout>
-    <template #header>
-      <NavigationBar>
-        <template #title>{{ title }}</template>
-        <template #right>
-          <ButtonComponent
-            kind="link"
-            :responsive="true"
-            @click="router.push({ name: appRoutes.index.name })"
-          >
-            Zpět na hlavní stránku
-            <template #iconAfter>
-              <IconComponent
-                :icon="mdiCloseCircleOutline"
-                title="Zpět na hlavní stránku"
-              />
-            </template>
-          </ButtonComponent>
-        </template>
-      </NavigationBar>
-    </template>
-    <template #sticky-header>
-      <SecondaryNavigationBar>
-        <template #before>
-          <IconButton @click="handlePreviousClick">
-            <IconComponent :icon="mdiArrowLeft" title="Rekapitulace" />
-          </IconButton>
-        </template>
-        Moje shoda
-      </SecondaryNavigationBar>
-    </template>
-    <BottomBarWrapper>
-      <div class="body-wrapper">
-        <div class="candidates-wrapper">
-          <ResultCategory
-            title="Celková shoda"
-            :result="resultsGeneral"
-            category="general"
-            :max-visible-candidates="2"
-          />
-          <ResultCategory
-            ref="thematic-categories"
-            title="Shoda v ekologii"
-            :result="resultsEcology"
-            category="environment"
-            :max-visible-candidates="1"
-          />
-          <ResultCategory
-            title="Shoda ve zdravotnictví"
-            :result="resultsMedicine"
-            category="health"
-            :max-visible-candidates="10"
-          />
+  <BackgroundComponent :is-image="false">
+    <StickyHeaderLayout>
+      <template #header>
+        <NavigationBar>
+          <template #title>{{ title }}</template>
+          <template #right>
+            <ButtonComponent
+              kind="link"
+              :responsive="true"
+              @click="router.push({ name: appRoutes.index.name })"
+            >
+              Zpět na hlavní stránku
+              <template #iconAfter>
+                <IconComponent
+                  :icon="mdiCloseCircleOutline"
+                  title="Zpět na hlavní stránku"
+                />
+              </template>
+            </ButtonComponent>
+          </template>
+        </NavigationBar>
+      </template>
+      <template #sticky-header>
+        <SecondaryNavigationBar>
+          <template #before>
+            <IconButton @click="handlePreviousClick">
+              <IconComponent :icon="mdiArrowLeft" title="Rekapitulace" />
+            </IconButton>
+          </template>
+          Moje shoda
+        </SecondaryNavigationBar>
+      </template>
+      <BottomBarWrapper>
+        <div class="body-wrapper">
+          <div class="candidates-wrapper">
+            <ResultCategory
+              title="Celková shoda"
+              :result="resultsGeneral"
+              category="general"
+              :max-visible-candidates="2"
+            />
+            <ResultCategory
+              ref="thematic-categories"
+              title="Shoda v ekologii"
+              :result="resultsEcology"
+              category="environment"
+              :max-visible-candidates="1"
+            />
+            <ResultCategory
+              title="Shoda ve zdravotnictví"
+              :result="resultsMedicine"
+              category="health"
+              :max-visible-candidates="10"
+            />
+          </div>
+          <ResultSideBar class="side-bar" />
         </div>
-        <ResultSideBar class="side-bar" />
-      </div>
-    </BottomBarWrapper>
-  </StickyHeaderLayout>
+      </BottomBarWrapper>
+    </StickyHeaderLayout>
+  </BackgroundComponent>
 </template>
 
 <style lang="scss" scoped>

@@ -8,59 +8,62 @@ import CardComponent from '@/components/design-system/containers/CardComponent.v
 import StackComponent from '../../components/design-system/layout/StackComponent.vue';
 import BodyText from '../../components/design-system/typography/BodyText.vue';
 import ButtonComponent from '../../components/design-system/input/ButtonComponent.vue';
+import BackgroundComponent from '../../components/design-system/style/BackgroundComponent.vue';
 
 const elections = await fetchElections();
 </script>
 
 <template>
-  <StickyHeaderLayout>
-    <template #header>
-      <NavigationBar transparent />
-    </template>
-    <div class="wrapper">
-      <CardComponent class="card" shadow corner="top-left" padding="large">
-        <StackComponent spacing="small">
-          <HeadingComponent size="medium">
-            Volební kalkulačka 2022
-            <template #secondary>již brzy</template>
-          </HeadingComponent>
-          <BodyText size="large">
-            Ve spolupráci s
-            <a href="https://cesko.digital/projects/volebni-kalkulacka">
-              Česko.Digital
-            </a>
-            pro vás chystáme novou volební kalkulačku. Spustíme ji začátkem
-            záři. Sledujte Twitter
-            <a href="https://twitter/CeskoDigital">@CeskoDigital</a>.
-          </BodyText>
-          <StackComponent horizontal spacing="small">
-            <ButtonComponent
-              kind="filled"
-              href="https://twitter.com/intent/follow?screen_name=ceskodigital"
-            >
-              Sledovat @CeskoDigital na Twitteru
-            </ButtonComponent>
-            <ButtonComponent
-              kind="outlined"
-              href="https://www.volebnikalkulacka.cz/"
-            >
-              Volební kalkulačky z předchozích let
-            </ButtonComponent>
+  <BackgroundComponent>
+    <StickyHeaderLayout>
+      <template #header>
+        <NavigationBar transparent />
+      </template>
+      <div class="wrapper">
+        <CardComponent class="card" shadow corner="top-left" padding="large">
+          <StackComponent spacing="small">
+            <HeadingComponent size="medium">
+              Volební kalkulačka 2022
+              <template #secondary>již brzy</template>
+            </HeadingComponent>
+            <BodyText size="large">
+              Ve spolupráci s
+              <a href="https://cesko.digital/projects/volebni-kalkulacka">
+                Česko.Digital
+              </a>
+              pro vás chystáme novou volební kalkulačku. Spustíme ji začátkem
+              záři. Sledujte Twitter
+              <a href="https://twitter/CeskoDigital">@CeskoDigital</a>.
+            </BodyText>
+            <StackComponent horizontal spacing="small">
+              <ButtonComponent
+                kind="filled"
+                href="https://twitter.com/intent/follow?screen_name=ceskodigital"
+              >
+                Sledovat @CeskoDigital na Twitteru
+              </ButtonComponent>
+              <ButtonComponent
+                kind="outlined"
+                href="https://www.volebnikalkulacka.cz/"
+              >
+                Volební kalkulačky z předchozích let
+              </ButtonComponent>
+            </StackComponent>
+            <StackComponent horizontal spacing="small">
+              <ButtonComponent
+                v-for="election in elections"
+                :key="election.id"
+                kind="filled"
+                :href="`/kalkulacka/${election.key}`"
+              >
+                {{ election.name }}
+              </ButtonComponent>
+            </StackComponent>
           </StackComponent>
-          <StackComponent horizontal spacing="small">
-            <ButtonComponent
-              v-for="election in elections"
-              :key="election.id"
-              kind="filled"
-              :href="`/kalkulacka/${election.key}`"
-            >
-              {{ election.name }}
-            </ButtonComponent>
-          </StackComponent>
-        </StackComponent>
-      </CardComponent>
-    </div>
-  </StickyHeaderLayout>
+        </CardComponent>
+      </div>
+    </StickyHeaderLayout>
+  </BackgroundComponent>
 </template>
 
 <style scoped>
