@@ -22,6 +22,14 @@
       "type": "string",
       "description": "Longer description"
     },
+    "district_title": {
+      "type": "string",
+      "description": "Title in relation to election's districts (plaintext)"
+    },
+    "district_text": {
+      "type": "string",
+      "description": "Longer text in relation to election's districts (multi-line Markdown)"
+    },
     "from": {
       "type": "string",
       "description": "Election start - ISO 8601"
