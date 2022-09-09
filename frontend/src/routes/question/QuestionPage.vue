@@ -110,10 +110,8 @@ const handlePreviousClick = () => {
   if (currentQuestion.value === 1) {
     const params = (backRoute.value && backRoute.value.params) || {};
     goToGuide(params);
-  } else if (currentQuestion.value < questionCount.value) {
-    goToQuestion(currentQuestion.value - 1);
   } else {
-    goToRecap();
+    goToQuestion(currentQuestion.value - 1);
   }
 };
 
