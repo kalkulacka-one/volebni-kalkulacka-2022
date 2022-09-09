@@ -188,6 +188,7 @@ export const appRoutes = {
         },
       ],
     },
+    //TODO delete line below before production
     beforeEnter: resultsProcessor,
   },
   comparison: {
