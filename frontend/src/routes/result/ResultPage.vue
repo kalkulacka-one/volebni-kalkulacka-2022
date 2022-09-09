@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { useRoute, useRouter } from 'vue-router';
-import { mdiCloseCircleOutline, mdiArrowLeft } from '@mdi/js';
+import {
+  mdiShareVariantOutline,
+  mdiCloseCircleOutline,
+  mdiArrowLeft,
+} from '@mdi/js';
 
 import { appRoutes } from '@/main';
 import { useElectionStore } from '@/stores/electionStore';
@@ -39,6 +43,10 @@ const handlePreviousClick = () => {
     name: appRoutes.recap.name,
     params: { ...route.params },
   });
+};
+
+const handleShareClick = () => {
+  alert('TODO');
 };
 
 const resultsGeneral = calculateRelativeAgreement(
@@ -90,6 +98,18 @@ const resultsMedicine = calculateRelativeAgreement(
             </IconButton>
           </template>
           Moje shoda
+          <template #right>
+            <ButtonComponent
+              kind="link"
+              color="primary"
+              @click="handleShareClick"
+            >
+              <template #icon>
+                <IconComponent :icon="mdiShareVariantOutline" />
+              </template>
+              Sdílet
+            </ButtonComponent>
+          </template>
         </SecondaryNavigationBar>
       </template>
       <BottomBarWrapper>
