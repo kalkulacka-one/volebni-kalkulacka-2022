@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useElectionStore } from '@/stores/electionStore';
-import ResultAvatarComponent from '../../components/ResultAvatarComponent.vue';
 import {
   avatarsConfiguration,
   type TTopics,
@@ -15,6 +14,8 @@ import DividerComponent from '../../components/design-system/containers/DividerC
 import ResultCardContacts from './ResultCardContacts.vue';
 import SimpleProgress from '../../components/design-system/indicators/SimpleProgress.vue';
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
+
+import FilledCircle from '@/components/design-system/containers/FilledCircle.vue';
 
 export interface ResultCandidateCardProps {
   order: number;
@@ -59,15 +60,12 @@ switch (props.category) {
     background-color="white"
   >
     <div class="header">
-      <ResultAvatarComponent
-        class="avatar"
-        :size-avatar="strong ? 'large' : 'medium'"
-        :size-order-match="strong ? 'medium' : 'small'"
-        :order="order"
-        :image-url="candidate?.img_url || ''"
-        :alt="candidate?.name || 'unknown'"
-        :configuration="avatarConfig"
-      />
+      <FilledCircle
+        :size="order === 1 ? 'extra-large' : 'large'"
+        :background-color="`rgb(var(${primaryColor}))`"
+      >
+        {{ order }}.
+      </FilledCircle>
       <div class="header-central">
         <TitleText tag="p" :size="strong ? 'medium' : 'small'">{{
           candidate?.name
