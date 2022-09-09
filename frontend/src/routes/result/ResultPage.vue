@@ -25,6 +25,8 @@ import StackComponent from '@/components/design-system/layout/StackComponent.vue
 
 import ResultCategory from './ResultCategory.vue';
 import BackgroundComponent from '../../components/design-system/style/BackgroundComponent.vue';
+import { postResults } from '@/common/restApi';
+import { generateShareUrl } from '@/common/share';
 
 const router = useRouter();
 const route = useRoute();
@@ -46,8 +48,13 @@ const handlePreviousClick = () => {
   });
 };
 
-const handleShareClick = () => {
-  alert('TODO');
+const handleShareClick = async () => {
+  const res = await postResults();
+
+  if (!res?.result_id) {
+    return;
+  }
+  alert(generateShareUrl(res.result_id));
 };
 
 const resultsGeneral = calculateRelativeAgreement(

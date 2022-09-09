@@ -8,7 +8,8 @@ import type { ResultOutRest } from '@/types/rest/ResultOut';
 import { calculateRelativeAgreement } from './resultParser';
 
 //const BASE_URL = 'https://kalkulacka.ceskodigital.cz';
-const BASE_URL = 'http://localhost:8080';
+//const BASE_URL = 'http://localhost:8080';
+const BASE_URL = '';
 
 export const getResults = async (resultUuid: string) => {
   const endpointUrl = BASE_URL + `/api/results/${resultUuid}`;

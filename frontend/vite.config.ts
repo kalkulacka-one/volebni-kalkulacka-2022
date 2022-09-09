@@ -26,6 +26,7 @@ export default defineConfig({
       },
       '/api': {
         target: 'https://kalkulacka.ceskodigital.net',
+        //target: 'http://127.0.0.1:8080',
         changeOrigin: true,
       },
       '/js/script.outbound-links.js': {
