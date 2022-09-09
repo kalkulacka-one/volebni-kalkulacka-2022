@@ -33,6 +33,7 @@ const classes = computed(() => ({
 
 <style scoped lang="scss">
 .background {
+  display: grid;
   background-attachment: fixed;
 
   .blue-spot,
@@ -96,6 +97,7 @@ const classes = computed(() => ({
 }
 @media screen and (min-width: 768px) {
   .background {
+    display: grid;
     background-repeat: no-repeat;
     background-color: var(--color-neutral-bg);
     background-image: url(@/assets/background/check.svg),
