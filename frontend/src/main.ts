@@ -18,14 +18,11 @@ import ResultPageVue from './routes/result/ResultPage.vue';
 import RecapPageVue from './routes/recap/RecapPage.vue';
 import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
-import { fetchCalculator, fetchElectionData } from './common/dataFetch';
-import { useElectionStore, UserAnswerEnum } from './stores/electionStore';
+import { useElectionStore } from './stores/electionStore';
 import { createPinia } from 'pinia';
 import ErrorPageVue from './routes/error/ErrorPage.vue';
 import { decodeResults, encodeResults } from './common/resultParser';
-import { ThemeEnum, useThemeStore } from './stores/themeStore';
 import SharePageVue from './routes/share/SharePage.vue';
-import VueSocialSharing from 'vue-social-sharing';
 
 const RESULT_QUERY_NAME = 'result';
 
