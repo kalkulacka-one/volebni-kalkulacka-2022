@@ -154,7 +154,7 @@ const toggleClick = () => {
         <IconComponent
           :icon="isExpanded ? mdiChevronUp : mdiChevronDown"
           size="medium"
-          title="Pro mě důležité"
+          title="Zobrazit detaily"
         />
       </IconButton>
     </div>
