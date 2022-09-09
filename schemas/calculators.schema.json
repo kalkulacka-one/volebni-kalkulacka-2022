@@ -25,6 +25,14 @@
           "district_code": {
             "type": "string"
           },
+          "human_friendly_district_code": {
+            "type": "string",
+            "description": "District code to show to users"
+          }, 
+          "key": {
+            "type": "string",
+            "description": "Snake-cased key"
+          },
           "name": {
             "type": "string"
           },
