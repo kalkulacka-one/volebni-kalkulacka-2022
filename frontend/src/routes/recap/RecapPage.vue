@@ -104,7 +104,11 @@ const isCardHidden = (index: number) => {
           </template>
           Rekapitulace
           <template #right>
-            <ButtonComponent kind="filled" @click="handleShowResultsClick">
+            <ButtonComponent
+              class="desktop"
+              kind="filled"
+              @click="handleShowResultsClick"
+            >
               <template #icon>
                 <IconComponent :icon="vkiLogoPercent" />
               </template>
@@ -167,6 +171,10 @@ const isCardHidden = (index: number) => {
 @media (max-width: 700px) {
   .main {
     grid-template-columns: 1fr;
+  }
+
+  .desktop {
+    display: none;
   }
 }
 
