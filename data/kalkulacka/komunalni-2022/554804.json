@@ -1,17 +1,19 @@
 {
   "id": "komunalni-2022-554804",
   "name": "Ústí nad Labem",
-  "description": "Ústí nad Labem - DESCRIPTION",
+  "description": "Ústí nad Labem",
   "district_code": "554804",
   "election": {
     "id": "komunalni-2022",
     "key": "komunalni-2022",
-    "name": "komunalni-2022",
-    "description": "komunalni-2022"
+    "name": "Komunální volby 2022",
+    "description": "K dispozici je 35 kalkulaček pro největší města.",
+    "from": "2022-09-23 14:00",
+    "to": "2022-09-24 14:00"
   },
   "questions": [
     {
-      "id": "komunalni-2022-554804-question-1",
+      "id": "komunalni-2022-554804-q-1",
       "name": "Gentrifikace",
       "title": "V žádaných městských částech mají bydlet jen ti, kdo si to mohou finančně dovolit.",
       "gist": "Kritikům vadí, že ekonomické tlaky na původní obyvatele vedou k jejich postupnému vytlačování. Městské části pak ztrácejí pestrost a uzavírají se jen pro vybrané skupiny lidí. Zastánci tvrdí, že to je přirozený proces a že na bydlení v dobré čtvrti si člověk musí vydělat.",
@@ -19,7 +21,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-2",
+      "id": "komunalni-2022-554804-q-2",
       "name": "Poplatek za popelnice",
       "title": "Má město účtovat poplatek za svoz komunálního odpadu?",
       "gist": "Odpůrci tento poplatek považují za zbytečný; jedná se podle nich jen o jakousi „skrytou“ daň. Zastánci poplatku odmítají takový zásah do rozpočtu města na úkor důležitějších položek, přenesením zátěže na město.",
@@ -27,7 +29,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-3",
+      "id": "komunalni-2022-554804-q-3",
       "name": "Omezení vytápění",
       "title": "Mělo by město v případě nouze začít omezovat vytápění v domovech pro seniory?",
       "gist": "Zastánci omezování tvrdí, že nejen domácnosti, ale i samosprávy mohou mít potíže hradit výdaje za teplo kvůli velkému růstu cen energií. Odpůrci namítají, že senioři jsou zranitelná skupina obyvatel a nesmí být vystaveni ohrožení zdraví ani ve stavu nouze.",
@@ -35,7 +37,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-4",
+      "id": "komunalni-2022-554804-q-4",
       "name": "Zóny 30 km/h",
       "title": "Měly by se ve městě rozšířit zóny, kde mají auta povoleno jet max 30 km/h.?",
       "gist": "Obecně platí, že v obci smí vozidlo jet maximálně rychlostí 50 km/h. Zóny 30 (km/h) jsou podle zastánců levné opatření pro zklidňování dopravy v městské zástavbě a v některých evropských zemích se používají více než 20 let. Odpůrci to považují za brždění provozu a komplikaci dopravy.",
@@ -43,7 +45,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-5",
+      "id": "komunalni-2022-554804-q-5",
       "name": "Milostivé léto",
       "title": "Právě probíhá akce Milostivé léto: Má město individuálně obeslat všechny své dlužníky s potřebnými informacemi?",
       "gist": "Odpůrci obesílání dlužníků říkají, že se o své dluhy mají starat hlavně sami. Zastánci tvrdí, že by město mělo aktivně usilovat, aby se dlužné peníze vrátily do rozpočtu, a že osobní obeslání je účinné.",
@@ -51,7 +53,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-6",
+      "id": "komunalni-2022-554804-q-6",
       "name": "Více kamer",
       "title": "Měly by být ve městě instalovány další kamery?",
       "gist": "Zastánci uvádějí zvýšení bezpečnosti problémových lokalit, odpůrci zdůrazňují přílišný zásah do osobních práv a přesun kriminality do jiných míst.",
@@ -59,7 +61,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-7",
+      "id": "komunalni-2022-554804-q-7",
       "name": "Hazard zakázán",
       "title": "Jste pro úplný zákaz hazardu na území města?",
       "gist": "Příznivci zákazu argumentují sociálními problémy plynoucími z hazardu. Odpůrci zmiňují svobodu podnikání a finance, které město získá na daních.",
@@ -67,7 +69,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-8",
+      "id": "komunalni-2022-554804-q-8",
       "name": "MHD zdarma",
       "title": "Měla by být městská hromadná doprava pro všechny rezidenty zdarma?",
       "gist": "Zastánci zrušení jízdného argumentují zlepšením životního prostředí, zklidnění dopravy i úsporami za tisk lístků nebo vedení agendy s vymáháním dlužného jízdného. Odpůrci tvrdí, že se jedná o nehospodárné nakládání s veřejnými prostředky. Podle jiných by to příliš zatížilo městský rozpočet.",
@@ -75,7 +77,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-9",
+      "id": "komunalni-2022-554804-q-9",
       "name": "Bezbariérové zastávky MHD",
       "title": "Město by mělo více investovat do zastávek hromadné dopravy, aby byly až na výjimky bezbariérové.",
       "gist": "",
@@ -83,7 +85,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-10",
+      "id": "komunalni-2022-554804-q-10",
       "name": "Jmenovité výsledky hlasování zastupitelstva",
       "title": "Hlasování členů zastupitelstva města se má zveřejňovat jmenovitě.",
       "gist": "Podle zastánců je pro veřejnou kontrolu důležité vidět, jak přesně kdo v zastupitelstvu města hlasuje. Kritici to považují za zbytečné.",
@@ -91,7 +93,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-11",
+      "id": "komunalni-2022-554804-q-11",
       "name": "Jmenovité výsledky hlasování rady",
       "title": "Hlasování členů rady města se má zveřejňovat jmenovitě.",
       "gist": "Podle zastánců je pro veřejnou kontrolu důležité vidět, jak přesně kdo v radě města hlasuje. Kritici to považují za zbytečné.",
@@ -99,7 +101,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-12",
+      "id": "komunalni-2022-554804-q-12",
       "name": "Regulace zábavní pyrotechniky",
       "title": "Používání zábavní pyrotechniky jindy než na Silvestra má být ve městě zakázané.",
       "gist": "V případě neregulace bývají problematické hlavně letní měsíce, kdy jsou ohňostroje součástí řady domácích oslav.",
@@ -107,7 +109,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-13",
+      "id": "komunalni-2022-554804-q-13",
       "name": "Přístupné veřejné budovy v chladnu",
       "title": "Město by v topné sezóně mělo zpřístupnit některé veřejné budovy lidem jen pro zahřátí.",
       "gist": "Některá evropská města zvažují, že veřejnosti zpřístupní knihovny, komunitní centra či umělecké galerie, aby se zde mohli v nadcházející zimě zahřát ti, kdo si nemohou dovolit vytápět své domovy.",
@@ -115,7 +117,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-14",
+      "id": "komunalni-2022-554804-q-14",
       "name": "Úspora energií – světelná výzdoba",
       "title": "Kvůli úspoře energií by město mělo omezovat noční nasvícení kulturních památek.",
       "gist": "",
@@ -123,7 +125,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-15",
+      "id": "komunalni-2022-554804-q-15",
       "name": "Úspora energií – veřejné osvětlení",
       "title": "Má město kvůli úspoře energií omezovat veřejné osvětlení?",
       "gist": "Kvůli energetické krizi řada měst v Rakousku, Německu, Francii a Itálii omezuje pouliční osvětlení, některé obce ho v noci vypnou úplně. Vypnutí světel na tři a půl hodiny každou noc má snížit spotřebu energie cca o čtvrtinu. Kritici namítají, že se zhorší bezpečnost ve městě.",
@@ -131,7 +133,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-16",
+      "id": "komunalni-2022-554804-q-16",
       "name": "Úspora energií – omezení vytápění",
       "title": "V topné sezóně by se mělo omezit vytápění v městských budovách.",
       "gist": "Např. v sousedním Německu nyní plánují, že veřejné budovy se až na výjimky (např. školy) budou z důvodu úspor energie vytápět max. na 19 C.",
@@ -139,7 +141,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-17",
+      "id": "komunalni-2022-554804-q-17",
       "name": "Konec dětských exekucí",
       "title": "Souhlasím, aby město plošně odpouštělo dluhy dětským dlužníkům a nechalo zastavit jejich exekuce.",
       "gist": "Jedná se zpravidla o historické dluhy. Dnes již dětem u města obvykle dluhy nevznikají, zodpovídají za ně např. rodiče.",
@@ -147,7 +149,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-18",
+      "id": "komunalni-2022-554804-q-18",
       "name": "Městské transparentní účty",
       "title": "Má mít město transparentní účty, do kterých lze veřejně nahlížet?",
       "gist": "Zastánci uvádějí nutnost kontroly toho, jak město s penězi nakládá. Odpůrci se domnívají, že je to komplikované a že hrozí únik osobních údajů.",
@@ -155,7 +157,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-19",
+      "id": "komunalni-2022-554804-q-19",
       "name": "Participativní rozpočet",
       "title": "O části rozpočtu města mají mít možnost rozhodovat občané přímo.",
       "gist": "Jde např. o participativní rozpočet: radnice vymezí část peněz z ročního rozpočtu, občané pak podávají návrhy, co by se za tyto peníze mělo ve městě v následujícím roce vylepšit a vítězné projekty se poté realizují.",
@@ -163,7 +165,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-20",
+      "id": "komunalni-2022-554804-q-20",
       "name": "Zvýšení počtu městských bytů",
       "title": "Město by mělo zvyšovat počty bytů ve svém vlastnictví.",
       "gist": "Některá města se snaží o odkup nebo výstavbu bytů do svého vlastnictví. Důvodem mj. je, že se jim nedostává bytů pro lékaře a zdravotní sestry, policisty, učitele či seniory a potřebné. Kritici namítají, že údržba městských bytů zatěžuje rozpočet.",
@@ -171,7 +173,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-21",
+      "id": "komunalni-2022-554804-q-21",
       "name": "Omezení vánoční výzdoby",
       "title": "Město by mělo kvůli rostoucím cenám energie omezit veřejné slavnostní osvětlení v době Vánoc.",
       "gist": "K podobnému kroku přistoupila například rakouská Vídeň. Na hlavním bulváru Ring kolem centra nebude vánoční osvětlení vůbec, na dalších místech se bude rozsvěcet o hodinu později než doposud.",
@@ -179,7 +181,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-22",
+      "id": "komunalni-2022-554804-q-22",
       "name": "Obědy zdarma",
       "title": "Ve všech veřejných základních školách na území města by měly mít děti možnost obědvat zdarma.",
       "gist": "Podle průzkumů žije 20 procent českých dětí v ohrožení příjmovou chudobou. Některé děti již dostávají obědy zdarma díky několika různým projektům, závisí to ale na vůli školy a města, zda se do takových projektů zapojí.",
@@ -187,7 +189,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-23",
+      "id": "komunalni-2022-554804-q-23",
       "name": "Sdílení aut",
       "title": "Je třeba, aby město podporovalo sdílení aut (tzv. carsharing).",
       "gist": "Podle zastánců má sdílení vozů pomoci odlehčit dopravu ve městě. Kritici poukazují, že carsharingové společnosti pouze moderním druhem autopůjčovny, která je dostupnější a pohodlnější.",
@@ -195,7 +197,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-24",
+      "id": "komunalni-2022-554804-q-24",
       "name": "Žádné parkovací zóny",
       "title": "Parkování ve městě má být neomezené parkovacími zónami.",
       "gist": "Zastánci říkají, že zóny placeného státní přinášejí jistotu parkování rezidentům a že odvádějí z města auta, která do něj nezajíždějí, ale zůstávají v okrajových částech. Kritici namítají, že se parkování jen přelévá jinam a auty se zaplňují dříve klidné oblasti města. Vadí také, že zóny rezidentům parkovací místo automaticky nezaručí.",
@@ -203,7 +205,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-25",
+      "id": "komunalni-2022-554804-q-25",
       "name": "Privatizace bytů",
       "title": "Město má privatizovat své byty.",
       "gist": "Podle zastánců přináší privatizace bytů velké finanční prostředky pro město. Kritici chtějí, aby město mohlo s byty nakládat dle vlastního uvážení a potřeb občanů.",
@@ -211,7 +213,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-26",
+      "id": "komunalni-2022-554804-q-26",
       "name": "Podíl developerů na veřejných výdajích",
       "title": "Soukromí developeři se musí podílet na úhradě veřejných nákladů spojených s výstavbou jejich projektů.",
       "gist": "Podíl se týká komunikací, sítí, MHD apod. Může být finanční, nebo jako konkrétní plnění v rámci výstavby, např. výstavbou veřejné vybavenosti nebo poskytnutím podílu bytů do obecního vlastnictví.",
@@ -219,7 +221,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-27",
+      "id": "komunalni-2022-554804-q-27",
       "name": "Cyklodoprava",
       "title": "Má město upřednostňovat dopravu pěší, cyklistickou a hromadnou před dopravou automobilovou?",
       "gist": "Výhody cyklodopravy jsou podle zastánců nízký zábor veřejného prostoru, snižování dopravních zácp, zlepšení ovzduší či kladný vliv na lidské fyzické i mentální zdraví cyklistů. Odpůrci to považují za komplikaci pro autodopravu, za zbytečnost nebo za nedostatečně chráněný způsob dopravy. Cyklisté by měli jezdit po cyklostezkách, kde je neohrožují auta.",
@@ -227,7 +229,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-28",
+      "id": "komunalni-2022-554804-q-28",
       "name": "Zdanění prázdných bytů",
       "title": "Dlouhodobě prázdné byty by měly být více zdaněné.",
       "gist": "Krok má odrazovat od nákupu investičních bytů. Ty podle zastánců zdanění vyčerpávají bytové zásoby a zhoršují situaci pro lidi s nízkými a středními příjmy, kteří si chtějí zajistit vlastní bydlení. Podle kritiků se zvýší ceny nemovitostí a nájemní bydlení podraží. V ČR je jednotný výpočet daně pro všechny byty bez ohledu na to, kolik bytů majitel vlastní a zda jsou dlouhodobě obydlené.",
@@ -235,7 +237,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-29",
+      "id": "komunalni-2022-554804-q-29",
       "name": "Podíl developerů na veřejných výdajích",
       "title": "Příspěvky developerů na veřejnou vybavenost by se měly zvýšit.",
       "gist": "",
@@ -243,7 +245,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-30",
+      "id": "komunalni-2022-554804-q-30",
       "name": "Dobíjecí místa pro elektromobily",
       "title": "Město má podporovat budování dobíjecích míst pro elektromobily.",
       "gist": "",
@@ -251,7 +253,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-31",
+      "id": "komunalni-2022-554804-q-31",
       "name": "Podpora družstevního bydlení",
       "title": "Město má podporovat družstevní a spolkové formy bytové výstavby i subjekty, které budou poskytovat bydlení na neziskovém principu.",
       "gist": "",
@@ -259,7 +261,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-32",
+      "id": "komunalni-2022-554804-q-32",
       "name": "MHD zdarma do 18 let",
       "title": "Děti do 18 let mají mít MHD zdarma.",
       "gist": "",
@@ -267,7 +269,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-33",
+      "id": "komunalni-2022-554804-q-33",
       "name": "Fotovoltaika na soukromých střechách",
       "title": "Město má pomoci vlastníkům bytových domů s instalací fotovoltaických panelů na střeše.",
       "gist": "",
@@ -275,7 +277,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-34",
+      "id": "komunalni-2022-554804-q-34",
       "name": "Vstupné na kulturu a sport",
       "title": "V městských muzeích, galeriích a na sportovištích má být pro mládež bezplatné nebo symbolické vstupné.",
       "gist": "",
@@ -283,7 +285,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-35",
+      "id": "komunalni-2022-554804-q-35",
       "name": "Menstruační pomůcky v městských budovách",
       "title": "Na všech městských veřejných toaletách (na úřadech, v knihovnách apod.) mají být volně dostupné menstruační pomůcky.",
       "gist": "Podobně jako bývá dnes na všech toaletách mýdlo nebo toaletní papír.",
@@ -291,7 +293,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-36",
+      "id": "komunalni-2022-554804-q-36",
       "name": "Menstruační pomůcky –vydávání zdarma",
       "title": "Místní úřady mají mít zákonnou povinnost poskytovat vložky či tampony bezplatně každému, kdo je potřebuje.",
       "gist": "Některé ženy, např. samoživitelky, navíc s dospívajícími dcerami, pro svůj nízký příjem nemají přístup k adekvátním menstruačním pomůckám. Zastánci argumentují rovností a důstojností ve společnosti a tím, že toaletní papír či mýdlo jsou ve veřejných budovách běžně dostupné. Odpůrci to považují za finančně nákladné či nespravedlivé vůči lidem, kteří menstruaci nemají.",
@@ -299,7 +301,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-37",
+      "id": "komunalni-2022-554804-q-37",
       "name": "Fotovoltaika na městské budovy",
       "title": "Město má investovat do fotovoltaických panelů na střechách městských budov.",
       "gist": "",
@@ -307,7 +309,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-38",
+      "id": "komunalni-2022-554804-q-38",
       "name": "Elektrické koloběžky",
       "title": "Město má podporovat rozvoj dopravy na elektrických koloběžkách a podobných dopravních prostředcích.",
       "gist": "",
@@ -315,7 +317,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-39",
+      "id": "komunalni-2022-554804-q-39",
       "name": "Integrace cizinců",
       "title": "Město by mělo aktivně prosazovat integraci cizinců žijících ve městě.",
       "gist": "",
@@ -323,7 +325,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-40",
+      "id": "komunalni-2022-554804-q-40",
       "name": "Více strážníků",
       "title": "Mělo by být více městských strážníků?",
       "gist": "Zastánci uvádějí zvýšení pocitu bezpečí. Odpůrci namítají, že to jsou nyní pro město zbytečné výdaje navíc.",
@@ -331,7 +333,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-41",
+      "id": "komunalni-2022-554804-q-41",
       "name": "Zelené střechy",
       "title": "Město má prosazovat na nových či rekonstruovaných městských budovách zelené střechy.",
       "gist": "Oproti klasické střeše je založení zelené střechy nákladnější a složitější a je třeba ji následně udržovat. Kvůli vyššímu zatížení je třeba silnější střešní konstrukce. Zastánci poukazují na to, že zelené střechy izolují a snižují náklady na vytápění či chlazení vnitřních prostor v létě.",
@@ -339,7 +341,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-42",
+      "id": "komunalni-2022-554804-q-42",
       "name": "Cyklodoprava",
       "title": "Město by mělo podporovat dopravu obyvatel do práce či do školy na kole.",
       "gist": "Výhody cyklodopravy jsou podle zastánců nízký zábor veřejného prostoru, snižování dopravních zácp, zlepšení ovzduší či kladný vliv na lidské fyzické i mentální zdraví cyklistů. Odpůrci to považují za komplikaci pro autodopravu, za zbytečnost nebo za nedostatečně chráněný způsob dopravy. Cyklisté by měli jezdit po cyklostezkách, kde je neohrožují auta.",
@@ -347,7 +349,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-43",
+      "id": "komunalni-2022-554804-q-43",
       "name": "Podpora profesionálního sportu",
       "title": "Souhlasím, aby město finančně podporovalo profesionální sport ve městě.",
       "gist": "",
@@ -355,7 +357,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-44",
+      "id": "komunalni-2022-554804-q-44",
       "name": "Daň z nemovitosti",
       "title": "Daň z nemovitosti by se měla snížit.",
       "gist": "Město má relativně velkou volnost v nastavení výše daně z nemovitostí. Ta je celá příjmem města. Zastánci vyšší daně argumentují tím, že v porovnání s jinými zeměmi jsou české daně spíše nízké. Odpůrci daně často argumentují tím, že dochází ke zdanění již zdaněného.",
@@ -363,7 +365,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-45",
+      "id": "komunalni-2022-554804-q-45",
       "name": "Podpora chudých",
       "title": "Má podle vás město finančně podporovat sociálně slabé občany, aby se nepropadli do chudoby?",
       "gist": "",
@@ -371,7 +373,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-46",
+      "id": "komunalni-2022-554804-q-46",
       "name": "Bytový fond",
       "title": "Město má budovat a udržovat vlastní bytový fond",
       "gist": "Odpůrci tvrdí, že soukromí majitelé se o nemovitosti postarají lépe. Např. ve Vídni je cca čtvrtina bytů přímo v obecním vlastnictví a stejná část patří obecně prospěšným stavebním společnostem. Ty dostávají na výstavbu výhodné půjčky od města a na oplátku se zavazují držet nájmy na přijatelné úrovni i pro další generace. Výnosy musí investovat do výstavby nebo oprav bytů.",
@@ -379,7 +381,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-47",
+      "id": "komunalni-2022-554804-q-47",
       "name": "Společné vzdělávání",
       "title": "Město by mělo zamezovat shromažďování sociálně znevýhodněných dětí v jedné nebo několika málo školách.",
       "gist": "Zastánci chtějí zajistit všem dětem bez ohledu na jejich původ odpovídající podporu na každé škole. Odpůrci argumentují svobodným výběrem školy.",
@@ -387,7 +389,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-48",
+      "id": "komunalni-2022-554804-q-48",
       "name": "Bydlení především",
       "title": "Podporuji, aby Ústí nad Labem pokračovalo v projektu Housing First.",
       "gist": "Projekty Housing First zajišťují stabilní bydlení pro nejohroženější skupinu obyvatel. V Česku díky nim získalo bezpečný domov a podporu sociálních pracovníků více než 700 lidí, z toho 320 dětí. Do projektu se zapojují i další česká i světová města; např. ve Vídni si bydlení udrželo 98 % domácností. Pilotní Brno i přes úspěch i ocenění od projektu postupně ustoupilo. Vedení města argumentovalo vysokými náklady, zastánci projektu ale poukazovali, že je většina výdajů hrazená z fondů EU.",
@@ -395,7 +397,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-question-49",
+      "id": "komunalni-2022-554804-q-49",
       "name": "Sociální pomoc",
       "title": "Město má podporovat předškolní zařízení pro děti od 2 let věku.",
       "gist": "Pomocí sítě školek, dětských skupin nebo mateřských klubů má město podle zastánců pomoci rodičům skloubit pracovní povinnosti s péčí o děti. Odpůrci namítají, že děti do tří let mají být v domácí péči a že časnější péči mimo domov nemá město podporovat.",
@@ -405,10 +407,11 @@
   ],
   "candidates": [
     {
-      "id": "komunalni-2022-554804-candidate-415562",
+      "id": "komunalni-2022-554804-c-415562",
       "name": "ÚSTECKÉ FÓRUM OBČANŮ",
       "type": "party",
       "description": "ÚSTECKÉ FÓRUM OBČANŮ - DESCRIPTION",
+      "img_url": "ufo",
       "contacts": {
         "web": [
           {
@@ -419,7 +422,7 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554804-415562-party",
+          "id": "komunalni-2022-554804-c-415562-p",
           "name": "ÚSTECKÉ FÓRUM OBČANŮ",
           "description": "ÚSTECKÉ FÓRUM OBČANŮ - DESCRIPTION",
           "contacts": {
@@ -435,10 +438,11 @@
       ]
     },
     {
-      "id": "komunalni-2022-554804-candidate-606320",
+      "id": "komunalni-2022-554804-c-606320",
       "name": "Vaše Ústí",
       "type": "party",
       "description": "Vaše Ústí - DESCRIPTION",
+      "img_url": "vú",
       "contacts": {
         "web": [
           {
@@ -450,7 +454,7 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554804-606320-party",
+          "id": "komunalni-2022-554804-c-606320-p",
           "name": "Vaše Ústí",
           "description": "Vaše Ústí - DESCRIPTION",
           "contacts": {
@@ -467,16 +471,17 @@
       ]
     },
     {
-      "id": "komunalni-2022-554804-candidate-265108",
+      "id": "komunalni-2022-554804-c-265108",
       "name": "Občanská demokratická strana",
       "type": "party",
       "description": "Občanská demokratická strana - DESCRIPTION",
+      "img_url": "ods",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "komunalni-2022-554804-265108-party",
+          "id": "komunalni-2022-554804-c-265108-p",
           "name": "Občanská demokratická strana",
           "description": "Občanská demokratická strana - DESCRIPTION",
           "contacts": {
@@ -487,10 +492,11 @@
       ]
     },
     {
-      "id": "komunalni-2022-554804-candidate-986225",
+      "id": "komunalni-2022-554804-c-986225",
       "name": "STAROSTOVÉ A NEZÁVISLÍ",
       "type": "party",
       "description": "STAROSTOVÉ A NEZÁVISLÍ - DESCRIPTION",
+      "img_url": "stan",
       "contacts": {
         "web": [
           {
@@ -501,7 +507,7 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554804-986225-party",
+          "id": "komunalni-2022-554804-c-986225-p",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
           "description": "STAROSTOVÉ A NEZÁVISLÍ - DESCRIPTION",
           "contacts": {
@@ -517,16 +523,17 @@
       ]
     },
     {
-      "id": "komunalni-2022-554804-candidate-287190",
+      "id": "komunalni-2022-554804-c-287190",
       "name": "Aliance pro Ústí",
       "type": "party",
       "description": "Aliance pro Ústí - DESCRIPTION",
+      "img_url": "manifest.cz-nk",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "komunalni-2022-554804-287190-party",
+          "id": "komunalni-2022-554804-c-287190-p",
           "name": "Aliance pro Ústí",
           "description": "Aliance pro Ústí - DESCRIPTION",
           "contacts": {
@@ -537,16 +544,17 @@
       ]
     },
     {
-      "id": "komunalni-2022-554804-candidate-554883",
+      "id": "komunalni-2022-554804-c-554883",
       "name": "ANO 2011",
       "type": "party",
       "description": "ANO 2011 - DESCRIPTION",
+      "img_url": "ano",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "komunalni-2022-554804-554883-party",
+          "id": "komunalni-2022-554804-c-554883-p",
           "name": "ANO 2011",
           "description": "ANO 2011 - DESCRIPTION",
           "contacts": {
@@ -557,16 +565,17 @@
       ]
     },
     {
-      "id": "komunalni-2022-554804-candidate-118556",
+      "id": "komunalni-2022-554804-c-118556",
       "name": "Zdraví Sport Prosperita",
       "type": "party",
       "description": "Zdraví Sport Prosperita - DESCRIPTION",
+      "img_url": "pro zdraví",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "komunalni-2022-554804-118556-party",
+          "id": "komunalni-2022-554804-c-118556-p",
           "name": "Zdraví Sport Prosperita",
           "description": "Zdraví Sport Prosperita - DESCRIPTION",
           "contacts": {
@@ -577,16 +586,17 @@
       ]
     },
     {
-      "id": "komunalni-2022-554804-candidate-862129",
+      "id": "komunalni-2022-554804-c-862129",
       "name": "Svoboda a přímá demokracie (SPD) s podporou politické strany Trikolora",
       "type": "party",
       "description": "Svoboda a přímá demokracie (SPD) s podporou politické strany Trikolora - DESCRIPTION",
+      "img_url": "spd-trikolóra",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "komunalni-2022-554804-862129-party",
+          "id": "komunalni-2022-554804-c-862129-p",
           "name": "Svoboda a přímá demokracie (SPD) s podporou politické strany Trikolora",
           "description": "Svoboda a přímá demokracie (SPD) s podporou politické strany Trikolora - DESCRIPTION",
           "contacts": {
@@ -597,10 +607,11 @@
       ]
     },
     {
-      "id": "komunalni-2022-554804-candidate-320927",
+      "id": "komunalni-2022-554804-c-320927",
       "name": "Za lepší Střekov",
       "type": "party",
       "description": "Za lepší Střekov - DESCRIPTION",
+      "img_url": "zls",
       "contacts": {
         "web": [
           {
@@ -611,7 +622,7 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554804-320927-party",
+          "id": "komunalni-2022-554804-c-320927-p",
           "name": "Za lepší Střekov",
           "description": "Za lepší Střekov - DESCRIPTION",
           "contacts": {
@@ -627,10 +638,11 @@
       ]
     },
     {
-      "id": "komunalni-2022-554804-candidate-418969",
+      "id": "komunalni-2022-554804-c-418969",
       "name": "PRO! Ústí",
       "type": "party",
       "description": "PRO! Ústí - DESCRIPTION",
+      "img_url": "zel.-piráti-nk",
       "contacts": {
         "web": [
           {
@@ -642,7 +654,7 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554804-418969-party",
+          "id": "komunalni-2022-554804-c-418969-p",
           "name": "PRO! Ústí",
           "description": "PRO! Ústí - DESCRIPTION",
           "contacts": {
@@ -659,16 +671,17 @@
       ]
     },
     {
-      "id": "komunalni-2022-554804-candidate-627274",
+      "id": "komunalni-2022-554804-c-627274",
       "name": "Komunistická strana Čech a Moravy",
       "type": "party",
       "description": "Komunistická strana Čech a Moravy - DESCRIPTION",
+      "img_url": "ksčm",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "komunalni-2022-554804-627274-party",
+          "id": "komunalni-2022-554804-c-627274-p",
           "name": "Komunistická strana Čech a Moravy",
           "description": "Komunistická strana Čech a Moravy - DESCRIPTION",
           "contacts": {
@@ -679,10 +692,11 @@
       ]
     },
     {
-      "id": "komunalni-2022-554804-candidate-894961",
+      "id": "komunalni-2022-554804-c-894961",
       "name": "SPOLEČNĚ Ústí nad Labem",
       "type": "party",
       "description": "SPOLEČNĚ Ústí nad Labem - DESCRIPTION",
+      "img_url": "kdučsl-top09-nk",
       "contacts": {
         "web": [
           {
@@ -699,7 +713,7 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554804-894961-party",
+          "id": "komunalni-2022-554804-c-894961-p",
           "name": "SPOLEČNĚ Ústí nad Labem",
           "description": "SPOLEČNĚ Ústí nad Labem - DESCRIPTION",
           "contacts": {
@@ -721,10 +735,11 @@
       ]
     },
     {
-      "id": "komunalni-2022-554804-candidate-775234",
+      "id": "komunalni-2022-554804-c-775234",
       "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
       "type": "party",
       "description": "PŘÍSAHA - občanské hnutí Roberta Šlachty - DESCRIPTION",
+      "img_url": "přísaha",
       "contacts": {
         "web": [
           {
@@ -736,7 +751,7 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554804-775234-party",
+          "id": "komunalni-2022-554804-c-775234-p",
           "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
           "description": "PŘÍSAHA - občanské hnutí Roberta Šlachty - DESCRIPTION",
           "contacts": {
@@ -755,946 +770,1882 @@
   ],
   "answers": [
     {
-      "id": "komunalni-2022-554804-answer-775234-1",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-1",
+      "id": "komunalni-2022-554804-a-4",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-1",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-2",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-2",
+      "id": "komunalni-2022-554804-a-7",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-2",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-3",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-3",
+      "id": "komunalni-2022-554804-a-10",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-3",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-4",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-4",
+      "id": "komunalni-2022-554804-a-13",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-4",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-5",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-5"
+      "id": "komunalni-2022-554804-a-16",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-5"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-6",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-6",
+      "id": "komunalni-2022-554804-a-19",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-6",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-7",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-7",
+      "id": "komunalni-2022-554804-a-22",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-7",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-8",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-8",
+      "id": "komunalni-2022-554804-a-25",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-8",
       "answer": "no",
       "comment": "Lze se bavit ale o určité razantní slevě pro rezidenty apod. "
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-9",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-9",
+      "id": "komunalni-2022-554804-a-28",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-9",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-10",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-10",
+      "id": "komunalni-2022-554804-a-31",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-10",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-11",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-11",
+      "id": "komunalni-2022-554804-a-34",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-11",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-12",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-12",
+      "id": "komunalni-2022-554804-a-37",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-12",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-13",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-13"
+      "id": "komunalni-2022-554804-a-40",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-13"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-14",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-14",
+      "id": "komunalni-2022-554804-a-43",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-14",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-15",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-15"
+      "id": "komunalni-2022-554804-a-46",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-15"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-16",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-16",
+      "id": "komunalni-2022-554804-a-49",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-16",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-17",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-17",
+      "id": "komunalni-2022-554804-a-52",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-17",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-18",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-18",
+      "id": "komunalni-2022-554804-a-55",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-18",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-19",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-19",
+      "id": "komunalni-2022-554804-a-58",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-19",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-20",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-20",
+      "id": "komunalni-2022-554804-a-61",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-20",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-21",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-21"
+      "id": "komunalni-2022-554804-a-64",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-21"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-22",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-22",
+      "id": "komunalni-2022-554804-a-67",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-22",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-23",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-23",
+      "id": "komunalni-2022-554804-a-70",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-23",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-24",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-24"
+      "id": "komunalni-2022-554804-a-73",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-24"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-25",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-25",
+      "id": "komunalni-2022-554804-a-76",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-25",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-26",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-26",
+      "id": "komunalni-2022-554804-a-79",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-26",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-27",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-27",
+      "id": "komunalni-2022-554804-a-82",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-27",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-28",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-28",
+      "id": "komunalni-2022-554804-a-85",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-28",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-29",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-29",
+      "id": "komunalni-2022-554804-a-88",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-29",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-30",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-30",
+      "id": "komunalni-2022-554804-a-91",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-30",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-31",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-31",
+      "id": "komunalni-2022-554804-a-94",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-31",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-32",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-32",
+      "id": "komunalni-2022-554804-a-97",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-32",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-33",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-33",
+      "id": "komunalni-2022-554804-a-100",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-33",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-34",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-34",
+      "id": "komunalni-2022-554804-a-103",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-34",
       "answer": "yes",
       "comment": "Ano, ale jen pro rezidenty."
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-35",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-35",
+      "id": "komunalni-2022-554804-a-106",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-35",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-36",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-36",
+      "id": "komunalni-2022-554804-a-109",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-36",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-37",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-37",
+      "id": "komunalni-2022-554804-a-112",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-37",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-38",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-38",
+      "id": "komunalni-2022-554804-a-115",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-38",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-39",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-39"
+      "id": "komunalni-2022-554804-a-118",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-39"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-40",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-40",
+      "id": "komunalni-2022-554804-a-121",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-40",
       "answer": "yes",
       "comment": "Hlavní bod našeho programu spojený s peticí."
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-41",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-41",
+      "id": "komunalni-2022-554804-a-124",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-41",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-42",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-42",
+      "id": "komunalni-2022-554804-a-127",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-42",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-43",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-43",
+      "id": "komunalni-2022-554804-a-130",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-43",
       "comment": "Podpora mládeže a seniorů, komunitní sport. Profesionální sport si na sebe musíí v první řadě vydělat sám - měla by být i částečná podpora města. Nelze ale uměle držet ligu, na kterou město nemá hráče apod. "
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-44",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-44",
+      "id": "komunalni-2022-554804-a-133",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-44",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-45",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-45",
+      "id": "komunalni-2022-554804-a-136",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-45",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-46",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-46",
+      "id": "komunalni-2022-554804-a-139",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-46",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-47",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-47"
+      "id": "komunalni-2022-554804-a-142",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-47"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-48",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-48"
+      "id": "komunalni-2022-554804-a-145",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-48"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-49",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-49",
+      "id": "komunalni-2022-554804-a-148",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-49",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-775234-50",
-      "candidate_id": "komunalni-2022-554804-candidate-775234",
-      "question_id": "komunalni-2022-554804-question-50"
+      "id": "komunalni-2022-554804-a-151",
+      "candidate_id": "komunalni-2022-554804-c-775234",
+      "question_id": "komunalni-2022-554804-q-50"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-1",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-1",
+      "id": "komunalni-2022-554804-a-4",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-1",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-2",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-2",
+      "id": "komunalni-2022-554804-a-7",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-2",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-3",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-3",
+      "id": "komunalni-2022-554804-a-10",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-3",
       "answer": "no",
       "comment": "Musí hledat jiné zdroje vytápění."
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-4",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-4",
+      "id": "komunalni-2022-554804-a-13",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-4",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-5",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-5",
+      "id": "komunalni-2022-554804-a-16",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-5",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-6",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-6",
+      "id": "komunalni-2022-554804-a-19",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-6",
       "answer": "no",
       "comment": "Je potřeba plně zprovoznit stávající síť kamer."
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-7",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-7",
+      "id": "komunalni-2022-554804-a-22",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-7",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-8",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-8",
+      "id": "komunalni-2022-554804-a-25",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-8",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-9",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-9",
+      "id": "komunalni-2022-554804-a-28",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-9",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-10",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-10",
+      "id": "komunalni-2022-554804-a-31",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-10",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-11",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-11",
+      "id": "komunalni-2022-554804-a-34",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-11",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-12",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-12",
+      "id": "komunalni-2022-554804-a-37",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-12",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-13",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-13",
+      "id": "komunalni-2022-554804-a-40",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-13",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-14",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-14",
+      "id": "komunalni-2022-554804-a-43",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-14",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-15",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-15",
+      "id": "komunalni-2022-554804-a-46",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-15",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-16",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-16",
+      "id": "komunalni-2022-554804-a-49",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-16",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-17",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-17",
+      "id": "komunalni-2022-554804-a-52",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-17",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-18",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-18",
+      "id": "komunalni-2022-554804-a-55",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-18",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-19",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-19",
+      "id": "komunalni-2022-554804-a-58",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-19",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-20",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-20",
+      "id": "komunalni-2022-554804-a-61",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-20",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-21",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-21",
+      "id": "komunalni-2022-554804-a-64",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-21",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-22",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-22",
+      "id": "komunalni-2022-554804-a-67",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-22",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-23",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-23",
+      "id": "komunalni-2022-554804-a-70",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-23",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-24",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-24",
+      "id": "komunalni-2022-554804-a-73",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-24",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-25",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-25",
+      "id": "komunalni-2022-554804-a-76",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-25",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-26",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-26",
+      "id": "komunalni-2022-554804-a-79",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-26",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-27",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-27",
+      "id": "komunalni-2022-554804-a-82",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-27",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-28",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-28",
+      "id": "komunalni-2022-554804-a-85",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-28",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-29",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-29",
+      "id": "komunalni-2022-554804-a-88",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-29",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-30",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-30",
+      "id": "komunalni-2022-554804-a-91",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-30",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-31",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-31",
+      "id": "komunalni-2022-554804-a-94",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-31",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-32",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-32",
+      "id": "komunalni-2022-554804-a-97",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-32",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-33",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-33",
+      "id": "komunalni-2022-554804-a-100",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-33",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-34",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-34",
+      "id": "komunalni-2022-554804-a-103",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-34",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-35",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-35",
+      "id": "komunalni-2022-554804-a-106",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-35",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-36",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-36",
+      "id": "komunalni-2022-554804-a-109",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-36",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-37",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-37",
+      "id": "komunalni-2022-554804-a-112",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-37",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-38",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-38",
+      "id": "komunalni-2022-554804-a-115",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-38",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-39",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-39",
+      "id": "komunalni-2022-554804-a-118",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-39",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-40",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-40",
+      "id": "komunalni-2022-554804-a-121",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-40",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-41",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-41",
+      "id": "komunalni-2022-554804-a-124",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-41",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-42",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-42",
+      "id": "komunalni-2022-554804-a-127",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-42",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-43",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-43",
+      "id": "komunalni-2022-554804-a-130",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-43",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-44",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-44",
+      "id": "komunalni-2022-554804-a-133",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-44",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-45",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-45",
+      "id": "komunalni-2022-554804-a-136",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-45",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-46",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-46",
+      "id": "komunalni-2022-554804-a-139",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-46",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-47",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-47",
+      "id": "komunalni-2022-554804-a-142",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-47",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-48",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-48",
+      "id": "komunalni-2022-554804-a-145",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-48",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-49",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-49",
+      "id": "komunalni-2022-554804-a-148",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-49",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-answer-894961-50",
-      "candidate_id": "komunalni-2022-554804-candidate-894961",
-      "question_id": "komunalni-2022-554804-question-50"
+      "id": "komunalni-2022-554804-a-151",
+      "candidate_id": "komunalni-2022-554804-c-894961",
+      "question_id": "komunalni-2022-554804-q-50"
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-1",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-1",
+      "id": "komunalni-2022-554804-a-4",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-1",
       "answer": "no",
       "comment": "Na otázku nejde objektivně odpovědět. Každý občan může bydlet tam, kde se rozhodne, ale zároveň musí plnit své povinnosti - platit nájem, poplatky. Tzn. že musíme bydlet tam, kde si to můžeme z ekonomického hlediska dovolit.\n"
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-2",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-2",
+      "id": "komunalni-2022-554804-a-7",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-2",
       "answer": "yes",
       "comment": "Jedná se o běžnou službu, kterou bychom si měli platit sami. Pokud budou občané více třídit, je možné uvažovat o nízkém poplatku."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-3",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-3",
+      "id": "komunalni-2022-554804-a-10",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-3",
       "answer": "no",
       "comment": "Seniorům musí být zajištět max. komfort v DpS."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-4",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-4",
+      "id": "komunalni-2022-554804-a-13",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-4",
       "answer": "yes",
       "comment": "Je to jeden z nástrojů ke zvýšení dopravní bezpečnosti v panelových sídlištích či vilových čtvrtích."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-5",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-5",
+      "id": "komunalni-2022-554804-a-16",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-5",
       "answer": "no",
       "comment": "Město informuje občany dostatečně."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-6",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-6",
+      "id": "komunalni-2022-554804-a-19",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-6",
       "answer": "yes",
       "comment": "K zajištění bezpečnosti je nutné nejen rozšiřovat monitorování problémových míst, ale také modernizovat stávající systém."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-7",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-7",
+      "id": "komunalni-2022-554804-a-22",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-7",
       "answer": "yes",
       "comment": "Hazard je ve městě regulován dostatečně."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-8",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-8",
+      "id": "komunalni-2022-554804-a-25",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-8",
       "answer": "no",
       "comment": "Ekonomicky nereálné opatření, navíc není jisté, zda by toto opatření motivovalo občany jezdit méně auty a více využívat MHD.\n"
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-9",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-9",
+      "id": "komunalni-2022-554804-a-28",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-9",
       "answer": "yes",
       "comment": "Průběžně město realizuje."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-10",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-10",
+      "id": "komunalni-2022-554804-a-31",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-10",
       "answer": "yes",
       "comment": "Toto už probíhá."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-11",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-11",
+      "id": "komunalni-2022-554804-a-34",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-11",
       "answer": "no",
       "comment": "Jednání Rady města je ze zákona neveřejné."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-12",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-12",
+      "id": "komunalni-2022-554804-a-37",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-12",
       "answer": "no",
       "comment": "Město by mělo stanovit dny, kdy je možné pyrotechniku používat. Použití je každopádně nutné regulovat."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-13",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-13",
+      "id": "komunalni-2022-554804-a-40",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-13",
       "answer": "yes",
       "comment": "Vybrané budovy již zpřístupněny jsou."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-14",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-14",
+      "id": "komunalni-2022-554804-a-43",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-14",
       "answer": "yes",
       "comment": "Ano, je nutné šetřit.\n"
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-15",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-15",
+      "id": "komunalni-2022-554804-a-46",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-15",
       "answer": "yes",
       "comment": "Pokud opatření výrazně neohrozí bezpečnost občanů, je nutné šetřit."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-16",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-16",
+      "id": "komunalni-2022-554804-a-49",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-16",
       "answer": "yes",
       "comment": "V městských budovách nebo i ve školách se často přetápí, je nutné racionálně regulovat teplotu uvnitř budov."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-17",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-17",
+      "id": "komunalni-2022-554804-a-52",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-17",
       "answer": "yes",
       "comment": "Pohledávky za děti by měli hradit rodiče."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-18",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-18",
+      "id": "komunalni-2022-554804-a-55",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-18",
       "answer": "no",
       "comment": "Nelze jednoznačně odpovědět. Pokud hrozí ztráta ochrany osobních údajů, není možné upřednostnit transparentní účty užívat. Nakládání s veřejnými prostředky lze sledovat i jinými cestami, např. pomocí registru smluv."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-19",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-19",
+      "id": "komunalni-2022-554804-a-58",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-19",
       "answer": "yes",
       "comment": "Město to již podporuje."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-20",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-20",
+      "id": "komunalni-2022-554804-a-61",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-20",
       "answer": "no",
       "comment": "Počet bytů ve vlastnictví města (obvodů) je dostačující. Město by se mělo zaměřit především na zajištění startovacího bydlení nebo tzv. prostupného bydlení."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-21",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-21",
+      "id": "komunalni-2022-554804-a-64",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-21",
       "answer": "yes",
       "comment": "Je to jedno z menších opatření v oblasti úspor."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-22",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-22",
+      "id": "komunalni-2022-554804-a-67",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-22",
       "answer": "no",
       "comment": "Není možné diskriminovat žáky škol jiných zřizovatelů, navíc by se jednalo o velký zásah do městského rozpočtu.\n"
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-23",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-23",
+      "id": "komunalni-2022-554804-a-70",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-23",
       "answer": "no",
       "comment": "Není to pro město významná, ani lehce realizovatelná aktivita."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-24",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-24",
+      "id": "komunalni-2022-554804-a-73",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-24",
       "answer": "no",
       "comment": "Otázka není dobře položena. Parkování ve městě je nutné regulovat s ohledem na rostoucí počet aut."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-25",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-25",
+      "id": "komunalni-2022-554804-a-76",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-25",
       "answer": "no",
       "comment": "Město již nepotřebuje privatizovat byty.\n"
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-26",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-26",
+      "id": "komunalni-2022-554804-a-79",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-26",
       "answer": "yes",
       "comment": "Soukromí developeři by se měli podílet na financování občanské vybavenosti v souvislosti s jejich aktivitami, např. výstavba komunikací, chodníků, zastávek MHD nebo archeologického průzkumu."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-27",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-27",
+      "id": "komunalni-2022-554804-a-82",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-27",
       "answer": "yes",
       "comment": "Mělo by platit obecně v celé ČR."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-28",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-28",
+      "id": "komunalni-2022-554804-a-85",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-28",
       "answer": "no",
       "comment": "Nepřiměřený zásah do osobního práva občanů."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-29",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-29",
+      "id": "komunalni-2022-554804-a-88",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-29",
       "answer": "yes",
       "comment": "Nelze však zobecňovat, někde je finanční podpora developerů dostačující, jinde minimální."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-30",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-30",
+      "id": "komunalni-2022-554804-a-91",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-30",
       "answer": "yes",
       "comment": "S ohledem do budoucnosti je toto nezbytné."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-31",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-31",
+      "id": "komunalni-2022-554804-a-94",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-31",
       "answer": "yes",
       "comment": "Pro město je tento způsob podpory bydlení nejlepším vzhledem k občanům, kteří si nemůžou koupit vlastní byt."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-32",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-32",
+      "id": "komunalni-2022-554804-a-97",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-32",
       "answer": "no",
       "comment": "Slevy jsou dostatečné, věková hranice pro jízdu zdarma by měla být nižší."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-33",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-33",
+      "id": "komunalni-2022-554804-a-100",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-33",
       "answer": "no",
       "comment": "Vlastnící by si měli zajišťovat instalaci sami."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-34",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-34",
+      "id": "komunalni-2022-554804-a-103",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-34",
       "answer": "no",
       "comment": "Systém slev je dostatečný, ale dovedeme si představit, že by v budoucnu mohl být vstup do muzeí či galerií zdarma."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-35",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-35"
+      "id": "komunalni-2022-554804-a-106",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-35"
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-36",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-36",
+      "id": "komunalni-2022-554804-a-109",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-36",
       "answer": "no",
       "comment": "Systém sociální podpory je dostatečně štědrý a umožňuje pomůcky koupit."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-37",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-37",
+      "id": "komunalni-2022-554804-a-112",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-37",
       "answer": "yes",
       "comment": "Kde to bude z nejrůznějších důvodů možné, by mělo město fotovoltaiku podpořit. "
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-38",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-38",
+      "id": "komunalni-2022-554804-a-115",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-38",
       "answer": "yes",
       "comment": "Vhodný způsob snížení hustoty atomobilové dopravy."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-39",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-39",
+      "id": "komunalni-2022-554804-a-118",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-39",
       "answer": "yes",
       "comment": "Město integraci podporuje."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-40",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-40",
+      "id": "komunalni-2022-554804-a-121",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-40",
       "answer": "yes",
       "comment": "Zásadní priorita v oblasti bezpečnosti."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-41",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-41",
+      "id": "komunalni-2022-554804-a-124",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-41",
       "answer": "yes",
       "comment": "Do budoucna ano."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-42",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-42",
+      "id": "komunalni-2022-554804-a-127",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-42",
       "answer": "yes",
       "comment": "Město by mělo více podporovat cyklistiku."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-43",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-43",
+      "id": "komunalni-2022-554804-a-130",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-43",
       "answer": "yes",
       "comment": "Město podporuje profesionální sport přijatelnými nájmy svých sportovišť a finančně podporuje sportovní činnost mládeže."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-44",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-44",
+      "id": "komunalni-2022-554804-a-133",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-44",
       "answer": "no",
       "comment": "Daň z nemovitosti je na přijatelné výši v porovnání s jinými obcemi."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-45",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-45",
+      "id": "komunalni-2022-554804-a-136",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-45",
       "answer": "no",
       "comment": "Sociální systém v ČR je dostatečně štědrý."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-46",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-46",
+      "id": "komunalni-2022-554804-a-139",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-46",
       "answer": "yes",
       "comment": "Bytový fond by měl zahrnovat pouze přiměřený počet sociálních bytů, startovacích bytů či bytů k prostupnému bydlení."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-47",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-47",
+      "id": "komunalni-2022-554804-a-142",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-47",
       "answer": "yes",
       "comment": "Otázka je problematicky postavena. Děti by měly navštěvovat školu podle místa bydliště, to může vyvolat daný problém. Ale nutit děti ze sociálně znevýhodněných rodit jezdit do školy daleko od místa bydliště je nereálné."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-48",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-48",
+      "id": "komunalni-2022-554804-a-145",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-48",
       "answer": "yes",
       "comment": "Vhodná podpora systému sociálního bydlení."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-49",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-49",
+      "id": "komunalni-2022-554804-a-148",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-49",
       "answer": "yes",
       "comment": "Město již podporuje, zřizuje jesle a v MŠ je možné vzdělávat děti od 2 let."
     },
     {
-      "id": "komunalni-2022-554804-answer-265108-50",
-      "candidate_id": "komunalni-2022-554804-candidate-265108",
-      "question_id": "komunalni-2022-554804-question-50",
+      "id": "komunalni-2022-554804-a-151",
+      "candidate_id": "komunalni-2022-554804-c-265108",
+      "question_id": "komunalni-2022-554804-q-50",
       "comment": "Ústí by si zasloužilo v některých případech jiné otázky. Některé otázky nemají jednoznačné odpovědi."
+    },
+    {
+      "id": "komunalni-2022-554804-a-4",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-1",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-7",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-2",
+      "answer": "no",
+      "comment": "Ústí je spíše chudší město a neměli bychom slušné zatěžovat poplatky, které některé skupiny obyvatel stejně nezaplatí "
+    },
+    {
+      "id": "komunalni-2022-554804-a-10",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-3",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-13",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-4",
+      "answer": "yes",
+      "comment": "Hlavně v okolí škol, školek a v sídlištích."
+    },
+    {
+      "id": "komunalni-2022-554804-a-16",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-5",
+      "answer": "yes",
+      "comment": "Využít všechny svoje informační kanály k upozornění na tuto možnost."
+    },
+    {
+      "id": "komunalni-2022-554804-a-19",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-6",
+      "answer": "yes",
+      "comment": "Rozšířit počet kamer opět hlavně v okolí objektů, kde pohybují děti, školy, školky, parky, dětská hřiště pro zvýšení jejich bezpečnosti."
+    },
+    {
+      "id": "komunalni-2022-554804-a-22",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-7",
+      "answer": "no",
+      "comment": "Jednalo by se o velký výpadek financí do rozpočtu na potřebné investice. Navíc je ve městě již pouze 10 kasin, která jsou pod velkou kontrolou. "
+    },
+    {
+      "id": "komunalni-2022-554804-a-25",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-8",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-28",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-9",
+      "answer": "yes",
+      "comment": "Hlavně využít vždy vypsaných dotačních titulů."
+    },
+    {
+      "id": "komunalni-2022-554804-a-31",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-10",
+      "answer": "yes",
+      "comment": "Ke každému bodu jednání by mělo být přiloženo jmenné hlasování zastupitelů. "
+    },
+    {
+      "id": "komunalni-2022-554804-a-34",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-11",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-37",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-12",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-40",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-13",
+      "answer": "no",
+      "comment": "K tomuto účelu ve městě fungují charitativní organizace. "
+    },
+    {
+      "id": "komunalni-2022-554804-a-43",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-14",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-46",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-15",
+      "answer": "no",
+      "comment": "Mělo by instalovat úsporná svítidla a budovat tzv. chytrá osvětlení. "
+    },
+    {
+      "id": "komunalni-2022-554804-a-49",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-16",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-52",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-17",
+      "answer": "yes",
+      "comment": "Ale nastavit jasná pravidla. "
+    },
+    {
+      "id": "komunalni-2022-554804-a-55",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-18",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-58",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-19",
+      "answer": "yes",
+      "comment": "Občané by měli mít možnost navrhovat záměry a různá vylepšení, ale již nezasahovat do realizace. V našem městě se to děje aktivitami Místní agendy 21."
+    },
+    {
+      "id": "komunalni-2022-554804-a-61",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-20",
+      "answer": "yes",
+      "comment": "Ale pouze výkupem celých nemovitostí a výstavbou nových bytových domů formou družstevního bydlení, PPP projektů a podporou soukromých developerů."
+    },
+    {
+      "id": "komunalni-2022-554804-a-64",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-21",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-67",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-22",
+      "answer": "no",
+      "comment": "Děti ze sociálně slabších skupin využívají v Ústí projekt Women for Women."
+    },
+    {
+      "id": "komunalni-2022-554804-a-70",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-23",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-73",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-24",
+      "answer": "no",
+      "comment": "Město musí nejprve zajistit dostatek parkovacích míst a pak může řešit parkovací zóny, ale koncepčně v celé městě. "
+    },
+    {
+      "id": "komunalni-2022-554804-a-76",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-25",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-79",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-26",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-82",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-27",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-85",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-28",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-88",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-29",
+      "answer": "no",
+      "comment": "Ústí zatím není atraktivní pro developery. Mělo by je spíše podporovat. "
+    },
+    {
+      "id": "komunalni-2022-554804-a-91",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-30",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-94",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-31",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-97",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-32",
+      "answer": "yes",
+      "comment": "Určitě, aspoň nebudeme \"vyrábět\" dětské dlužníky a bude větší využití hromadné dopravy na úkor vožení dětí do škol auty."
+    },
+    {
+      "id": "komunalni-2022-554804-a-100",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-33",
+      "answer": "no",
+      "comment": "Jen na městských objektech."
+    },
+    {
+      "id": "komunalni-2022-554804-a-103",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-34",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-106",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-35",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-109",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-36",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-112",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-37",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-115",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-38"
+    },
+    {
+      "id": "komunalni-2022-554804-a-118",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-39"
+    },
+    {
+      "id": "komunalni-2022-554804-a-121",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-40",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-124",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-41"
+    },
+    {
+      "id": "komunalni-2022-554804-a-127",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-42",
+      "comment": "Problém našeho města je výrazně kopcovitý terén. "
+    },
+    {
+      "id": "komunalni-2022-554804-a-130",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-43",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-133",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-44",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-136",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-45",
+      "answer": "no",
+      "comment": "Toto je role státu. "
+    },
+    {
+      "id": "komunalni-2022-554804-a-139",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-46",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-142",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-47",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-145",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-48",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-148",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-49",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-151",
+      "candidate_id": "komunalni-2022-554804-c-415562",
+      "question_id": "komunalni-2022-554804-q-50"
+    },
+    {
+      "id": "komunalni-2022-554804-a-4",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-1"
+    },
+    {
+      "id": "komunalni-2022-554804-a-7",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-2",
+      "answer": "yes",
+      "comment": "Svoz odpadu není zadarmo ani nyní, občané za něj platí tím, že se jim nedostává jiných služeb."
+    },
+    {
+      "id": "komunalni-2022-554804-a-10",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-3",
+      "answer": "no",
+      "comment": "Senioři musí být chránění jako nejohroženější skupina obyvatel"
+    },
+    {
+      "id": "komunalni-2022-554804-a-13",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-4",
+      "answer": "yes",
+      "comment": "Určitě v okolí škol a školek"
+    },
+    {
+      "id": "komunalni-2022-554804-a-16",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-5",
+      "answer": "no",
+      "comment": "Propagace probíhá prostřednictvím všech informačních kanálů města"
+    },
+    {
+      "id": "komunalni-2022-554804-a-19",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-6",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-22",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-7",
+      "answer": "no",
+      "comment": "Už máme omezeno na minimum"
+    },
+    {
+      "id": "komunalni-2022-554804-a-25",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-8",
+      "answer": "no",
+      "comment": "Je to finančně nerealizovatelné"
+    },
+    {
+      "id": "komunalni-2022-554804-a-28",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-9",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-31",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-10",
+      "answer": "yes",
+      "comment": "Záznam ze zastupitelstva je veřejný a již nyní každý vidí hlasování"
+    },
+    {
+      "id": "komunalni-2022-554804-a-34",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-11",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-37",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-12",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-40",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-13",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-43",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-14",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-46",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-15",
+      "answer": "yes",
+      "comment": "Na míru neohrožující bezpečnost"
+    },
+    {
+      "id": "komunalni-2022-554804-a-49",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-16",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-52",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-17",
+      "comment": "Dluh dítěte jde za zákonným zástupcem, který nese odpovědnost."
+    },
+    {
+      "id": "komunalni-2022-554804-a-55",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-18",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-58",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-19",
+      "answer": "yes",
+      "comment": "Participativní rozpočet má město již několik let"
+    },
+    {
+      "id": "komunalni-2022-554804-a-61",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-20",
+      "answer": "yes",
+      "comment": "Ve městě je cca 40 000 bytů a město vlastní pouze zlomek"
+    },
+    {
+      "id": "komunalni-2022-554804-a-64",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-21",
+      "answer": "yes",
+      "comment": "V únosné míře"
+    },
+    {
+      "id": "komunalni-2022-554804-a-67",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-22",
+      "answer": "no",
+      "comment": "Otázka bezplatného stravování ve školách musí být záležitostí státu"
+    },
+    {
+      "id": "komunalni-2022-554804-a-70",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-23",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-73",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-24",
+      "answer": "yes",
+      "comment": "Již jsou v katastru města stanoveny zóny"
+    },
+    {
+      "id": "komunalni-2022-554804-a-76",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-25",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-79",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-26",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-82",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-27",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-85",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-28",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-88",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-29",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-91",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-30",
+      "comment": "Sázíme spíše na vodíkovou mobilitu"
+    },
+    {
+      "id": "komunalni-2022-554804-a-94",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-31",
+      "answer": "yes",
+      "comment": "Bytové družstvo již máme"
+    },
+    {
+      "id": "komunalni-2022-554804-a-97",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-32",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-100",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-33",
+      "answer": "yes",
+      "comment": "Metodicky"
+    },
+    {
+      "id": "komunalni-2022-554804-a-103",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-34",
+      "answer": "yes",
+      "comment": "Již je zavedeno"
+    },
+    {
+      "id": "komunalni-2022-554804-a-106",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-35",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-109",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-36",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-112",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-37",
+      "answer": "yes",
+      "comment": "Připravujeme projekty pro všechny městské budovy"
+    },
+    {
+      "id": "komunalni-2022-554804-a-115",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-38",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-118",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-39",
+      "answer": "yes",
+      "comment": "Město se podílí na integračních procesech"
+    },
+    {
+      "id": "komunalni-2022-554804-a-121",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-40",
+      "answer": "yes",
+      "comment": "S náborem je velký problém"
+    },
+    {
+      "id": "komunalni-2022-554804-a-124",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-41",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-127",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-42",
+      "answer": "yes",
+      "comment": "Podporujeme již nyní"
+    },
+    {
+      "id": "komunalni-2022-554804-a-130",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-43",
+      "answer": "no",
+      "comment": "Profesionální sport podporujeme, ale přednost by mělo být sportování dětí a mládeže"
+    },
+    {
+      "id": "komunalni-2022-554804-a-133",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-44",
+      "answer": "no",
+      "comment": "Je to významný příjem města"
+    },
+    {
+      "id": "komunalni-2022-554804-a-136",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-45",
+      "answer": "no",
+      "comment": "Je to úloha státu, ale přesto poskytujeme podporu neziskovým organizacím"
+    },
+    {
+      "id": "komunalni-2022-554804-a-139",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-46",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-142",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-47",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-145",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-48",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-148",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-49",
+      "answer": "yes",
+      "comment": "Podporujeme"
+    },
+    {
+      "id": "komunalni-2022-554804-a-151",
+      "candidate_id": "komunalni-2022-554804-c-554883",
+      "question_id": "komunalni-2022-554804-q-50"
+    },
+    {
+      "id": "komunalni-2022-554804-a-4",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-1",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-7",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-2",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-10",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-3",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-13",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-4",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-16",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-5",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-19",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-6",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-22",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-7",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-25",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-8",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-28",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-9",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-31",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-10",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-34",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-11",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-37",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-12",
+      "answer": "yes",
+      "comment": "Zcela zakázat!"
+    },
+    {
+      "id": "komunalni-2022-554804-a-40",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-13",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-43",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-14",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-46",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-15",
+      "answer": "yes",
+      "comment": "Využití chytrých lamp"
+    },
+    {
+      "id": "komunalni-2022-554804-a-49",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-16",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-52",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-17",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-55",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-18",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-58",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-19",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-61",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-20",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-64",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-21",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-67",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-22",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-70",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-23",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-73",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-24",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-76",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-25",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-79",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-26",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-82",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-27",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-85",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-28",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-88",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-29",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-91",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-30"
+    },
+    {
+      "id": "komunalni-2022-554804-a-94",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-31",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-97",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-32",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-100",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-33",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-103",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-34",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-106",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-35",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-109",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-36",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-112",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-37",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-115",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-38",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-118",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-39",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-121",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-40",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-124",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-41",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-127",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-42",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-130",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-43",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-133",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-44",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554804-a-136",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-45",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-139",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-46",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-142",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-47",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-145",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-48",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-148",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-49",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554804-a-151",
+      "candidate_id": "komunalni-2022-554804-c-418969",
+      "question_id": "komunalni-2022-554804-q-50"
     }
   ]
 }
