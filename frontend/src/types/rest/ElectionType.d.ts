@@ -13,4 +13,5 @@ export type ElectionTypeRest =
   | 'prezidentske'
   | 'snemovni'
   | 'krajske'
-  | 'municipalni';
+  | 'municipalni'
+  | 'undefined';

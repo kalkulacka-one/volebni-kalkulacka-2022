@@ -25,6 +25,7 @@ import ErrorPageVue from './routes/error/ErrorPage.vue';
 import { decodeResults, encodeResults } from './common/resultParser';
 import { ThemeEnum, useThemeStore } from './stores/themeStore';
 import SharePageVue from './routes/share/SharePage.vue';
+import VueSocialSharing from 'vue-social-sharing';
 
 const RESULT_QUERY_NAME = 'result';
 
@@ -99,8 +100,8 @@ export const appRoutes = {
   },
   districtSelection: {
     name: 'district-selection',
-    path: '/kalkulacka/:theme/:election/vyber',
-    alias: '/kalkulacka/:theme/:election',
+    path: '/kalkulacka/:election/vyber',
+    alias: '/kalkulacka/:election',
     component: DistrictSelectionPageVue,
     meta: {
       title: 'Volebni kalkulacka',
@@ -118,8 +119,8 @@ export const appRoutes = {
   },
   guide: {
     name: 'guide',
-    path: '/kalkulacka/:theme/:election/:district/navod/:step?',
-    alias: '/kalkulacka/:theme/:election/:district/navod',
+    path: '/kalkulacka/:election/:district/navod/:step?',
+    alias: '/kalkulacka/:election/:district/navod',
     component: GuidePageVue,
     meta: {
       title: 'Návod - Volebni kalkulacka',
@@ -137,7 +138,7 @@ export const appRoutes = {
   },
   question: {
     name: 'question',
-    path: '/kalkulacka/:theme/:election/:district/otazka/:nr',
+    path: '/kalkulacka/:election/:district/otazka/:nr',
     component: QuestionPageVue,
     meta: {
       title: 'Otazka $$ - Volebni kalkulacka',
@@ -157,7 +158,7 @@ export const appRoutes = {
   },
   recap: {
     name: 'recap',
-    path: '/kalkulacka/:theme/:election/:district/rekapitulace',
+    path: '/kalkulacka/:election/:district/rekapitulace',
     component: RecapPageVue,
     meta: {
       title: 'Rekapitulace - Volebni kalkulacka',
@@ -175,7 +176,7 @@ export const appRoutes = {
   },
   result: {
     name: 'result',
-    path: '/kalkulacka/:theme/:election/:district/vysledek',
+    path: '/kalkulacka/:election/:district/vysledek',
     component: ResultPageVue,
     meta: {
       title: 'Vysledky - Volebni kalkulacka',
@@ -194,7 +195,7 @@ export const appRoutes = {
   },
   comparison: {
     name: 'comparison',
-    path: '/kalkulacka/:theme/:election/:district/srovnani',
+    path: '/kalkulacka/:election/:district/srovnani',
     component: ComparisonPageVue,
     meta: {
       title: 'Porovnani - Volebni kalkulacka',
@@ -239,6 +240,7 @@ export const wrappedRoutes = [
   },
 ];
 
+//APP creation
 const app = createApp(App);
 
 const pinia = createPinia();
@@ -316,20 +318,39 @@ router.beforeEach(async (to, from) => {
   //load election if different
   if (from.params.election !== to.params.election) {
     if (to.params.election !== undefined) {
-      store.loadElection(to.params.election as string);
+      await store.loadElection(to.params.election as string);
     }
   }
   //load calculator data if district different
   if (from.params.district !== to.params.district) {
     if (to.params.district !== undefined) {
-      store.loadCalculator(
+      await store.loadCalculator(
         to.params.election as string,
         to.params.district as string
       );
     }
   }
 
+  //load results if hex string present
+  let hasResultQuery = false;
   if (
+    to.query[RESULT_QUERY_NAME] !== undefined &&
+    typeof to.query[RESULT_QUERY_NAME] === 'string'
+  ) {
+    const answers = decodeResults(to.query[RESULT_QUERY_NAME] as string);
+    if (answers.length === store.calculator?.questions.length) {
+      answers.forEach((x, i) => {
+        x.id = store.calculator?.questions[i].id as string;
+      });
+      store.answers = answers;
+      store.answerProgress = store.answers.length - 1;
+      hasResultQuery = true;
+    }
+  }
+
+  if (hasResultQuery) {
+    return true;
+  } else if (
     from.params.election !== to.params.election &&
     to.params.district === undefined &&
     to.params.election !== undefined &&

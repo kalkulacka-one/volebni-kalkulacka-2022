@@ -4,24 +4,59 @@ import type { CalculatorRest } from '@/types/rest/Calculator';
 import type { ElectionRest } from '@/types/rest/Election';
 import type { ResultAddedRest } from '@/types/rest/ResultAdded';
 import type { Matches, ResultInRest } from '@/types/rest/ResultIn';
+import type { ResultOutRest } from '@/types/rest/ResultOut';
 import { calculateRelativeAgreement } from './resultParser';
 
-const BASE_URL = 'https://kalkulacka.ceskodigital.cz/api/';
+//const BASE_URL = 'https://kalkulacka.ceskodigital.cz';
+const BASE_URL = 'http://localhost:8080';
 
 export const getResults = async (resultUuid: string) => {
-  return 0;
+  const endpointUrl = BASE_URL + `/api/results/${resultUuid}`;
+  const electionStore = useElectionStore();
+  const res = await fetch(endpointUrl, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+  });
+  if (!res.ok) {
+    if (res.status === 422) {
+      console.error(await res.json());
+    } else {
+      console.error(res.body);
+    }
+    return;
+  }
+  console.debug('GET results success!');
+  const result = (await res.json()) as ResultOutRest;
+  //load election
+  await electionStore.loadElection(result.calculator.election.id);
+  await electionStore.loadCalculator(
+    result.calculator.election.id,
+    result.calculator.district_code
+  );
+  electionStore.answers = result.answers.map((x) => {
+    const answer = x.answer.split('|');
+    return {
+      id: x.question_id,
+      flag: answer[0] === '1',
+      answer: parseInt(answer[1]),
+    };
+  });
 };
 
 export const postResults = async () => {
-  const endpointUrl = BASE_URL + '/results/';
+  const endpointUrl = BASE_URL + '/api/results/';
   const electionStore = useElectionStore();
   if (!electionStore.calculator) {
     throw new Error('Calculator undefined');
   } else if (!electionStore.election) {
     throw new Error('Election undefined');
-  } else if (!electionStore.election.type) {
-    throw new Error('Election type undefined');
   } else {
+    if (!electionStore.election.type) {
+      console.warn(`Election type undefined, setting to 'undefined'`);
+    }
     const answers: AnswerRest[] = electionStore.answers.map((x) => {
       return {
         question_id: x.id,
@@ -56,7 +91,7 @@ export const postResults = async () => {
       key: electionStore.election.key,
       name: electionStore.election.name,
       description: electionStore.election.description,
-      type: electionStore.election.type,
+      type: electionStore.election.type || 'undefined',
     };
     const calculator: CalculatorRest = {
       id: electionStore.calculator?.id,
@@ -78,12 +113,15 @@ export const postResults = async () => {
       },
       body: JSON.stringify(data),
     });
-    if (res.ok) {
-      return (await res.json()) as ResultAddedRest;
-    } else if (res.status === 422) {
-      console.error(res.json());
-    } else {
-      console.error(res.body);
+    if (!res.ok) {
+      if (res.status === 422) {
+        console.error(await res.json());
+      } else {
+        console.error(res.body);
+      }
+      return;
     }
+    console.debug('GET results success!');
+    return (await res.json()) as ResultAddedRest;
   }
 };

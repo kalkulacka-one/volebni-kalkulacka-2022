@@ -17,7 +17,8 @@ export type ElectionTypeRest =
   | 'prezidentske'
   | 'snemovni'
   | 'krajske'
-  | 'municipalni';
+  | 'municipalni'
+  | 'undefined';
 
 export interface ElectionRest {
   id: Id;
