@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { useRoute, useRouter } from 'vue-router';
-import { mdiCloseCircleOutline, mdiArrowLeft } from '@mdi/js';
+import {
+  mdiShareVariantOutline,
+  mdiCloseCircleOutline,
+  mdiArrowLeft,
+} from '@mdi/js';
 
 import { appRoutes } from '@/main';
 import { useElectionStore } from '@/stores/electionStore';
@@ -17,8 +21,8 @@ import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
+import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 
-import ResultSideBar from './ResultSideBar.vue';
 import ResultCategory from './ResultCategory.vue';
 import BackgroundComponent from '../../components/design-system/style/BackgroundComponent.vue';
 
@@ -40,6 +44,10 @@ const handlePreviousClick = () => {
     name: appRoutes.recap.name,
     params: { ...route.params },
   });
+};
+
+const handleShareClick = () => {
+  alert('TODO');
 };
 
 const resultsGeneral = calculateRelativeAgreement(
@@ -91,56 +99,59 @@ const resultsMedicine = calculateRelativeAgreement(
             </IconButton>
           </template>
           Moje shoda
+          <template #right>
+            <ButtonComponent
+              kind="link"
+              color="primary"
+              @click="handleShareClick"
+            >
+              <template #icon>
+                <IconComponent :icon="mdiShareVariantOutline" />
+              </template>
+              Sdílet
+            </ButtonComponent>
+          </template>
         </SecondaryNavigationBar>
       </template>
       <BottomBarWrapper>
-        <div class="body-wrapper">
-          <div class="candidates-wrapper">
-            <ResultCategory
-              title="Celková shoda"
-              :result="resultsGeneral"
-              category="general"
-              :max-visible-candidates="2"
-            />
-            <ResultCategory
-              ref="thematic-categories"
-              title="Shoda v ekologii"
-              :result="resultsEcology"
-              category="environment"
-              :max-visible-candidates="1"
-            />
-            <ResultCategory
-              title="Shoda ve zdravotnictví"
-              :result="resultsMedicine"
-              category="health"
-              :max-visible-candidates="10"
-            />
-          </div>
-          <ResultSideBar class="side-bar" />
-        </div>
+        <StackComponent class="main" spacing="medium">
+          <ResultCategory
+            title="Celková shoda"
+            :result="resultsGeneral"
+            category="general"
+            :max-visible-candidates="2"
+          />
+          <ResultCategory
+            ref="thematic-categories"
+            title="Shoda v ekologii"
+            :result="resultsEcology"
+            category="environment"
+            :max-visible-candidates="1"
+          />
+          <ResultCategory
+            title="Shoda ve zdravotnictví"
+            :result="resultsMedicine"
+            category="health"
+            :max-visible-candidates="10"
+          />
+        </StackComponent>
       </BottomBarWrapper>
     </StickyHeaderLayout>
   </BackgroundComponent>
 </template>
 
 <style lang="scss" scoped>
-.body-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: var(--spacing-small);
+.main {
+  display: grid;
+  grid-template-columns: clamp(32rem, 50vw, 48rem);
+  justify-content: center;
   padding: var(--spacing-small);
 }
-.candidates-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-  gap: var(--spacing-small);
-  padding: var(--spacing-small);
-}
-.side-bar {
-  padding: var(--spacing-small);
+
+/* TODO: update breakpoint */
+@media (max-width: 700px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

@@ -7,6 +7,7 @@ import ResultCandidateCard from './ResultCandidateCard.vue';
 import { mdiChevronDown } from '@mdi/js';
 import ButtonComponent from '../../components/design-system/input/ButtonComponent.vue';
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
+import StackComponent from '../../components/design-system/layout/StackComponent.vue';
 
 export interface ResultCategoryProps {
   result: ReturnType<typeof calculateRelativeAgreement>;
@@ -31,15 +32,17 @@ console.debug(visibleCandidates.value);
 
 <template>
   <TitleText tag="h4" size="medium">{{ title }}</TitleText>
-  <ResultCandidateCard
-    v-for="i in visibleCandidates"
-    :key="result[i - 1].cId"
-    :order="i"
-    :canidate-id="result[i - 1].cId"
-    :result="result[i - 1].result.result_percent"
-    :strong="i === 1"
-    :category="category"
-  />
+  <StackComponent style="display: grid" spacing="medium">
+    <ResultCandidateCard
+      v-for="i in visibleCandidates"
+      :key="result[i - 1].cId"
+      :order="i"
+      :canidate-id="result[i - 1].cId"
+      :result="result[i - 1].result.result_percent"
+      :strong="i === 1"
+      :category="category"
+    />
+  </StackComponent>
   <ButtonComponent
     kind="link"
     size="medium"

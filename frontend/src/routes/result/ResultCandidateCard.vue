@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+import { mdiChevronUp, mdiChevronDown } from '@mdi/js';
+
 import { useElectionStore } from '@/stores/electionStore';
-import ResultAvatarComponent from '../../components/ResultAvatarComponent.vue';
 import {
   avatarsConfiguration,
   type TTopics,
@@ -9,12 +11,12 @@ import CardComponent from '@/components/design-system/containers/CardComponent.v
 import BodyText from '../../components/design-system/typography/BodyText.vue';
 import TitleText from '../../components/design-system/typography/TitleText.vue';
 import IconButton from '../../components/design-system/input/IconButton.vue';
-import { mdiChevronDown } from '@mdi/js';
-import { ref } from 'vue';
 import DividerComponent from '../../components/design-system/containers/DividerComponent.vue';
 import ResultCardContacts from './ResultCardContacts.vue';
 import SimpleProgress from '../../components/design-system/indicators/SimpleProgress.vue';
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
+
+import FilledCircle from '@/components/design-system/containers/FilledCircle.vue';
 
 export interface ResultCandidateCardProps {
   order: number;
@@ -28,10 +30,6 @@ const store = useElectionStore();
 const candidate = store.calculator?.candidates.find(
   (x) => x.id === props.canidateId
 );
-const isExpanded = ref(false);
-const handleExpandClick = () => {
-  isExpanded.value = !isExpanded.value;
-};
 let avatarConfig = avatarsConfiguration.general;
 let primaryColor = '--palette-primary-50';
 switch (props.category) {
@@ -46,79 +44,100 @@ switch (props.category) {
   default:
     break;
 }
+
+const isExpanded = ref(false);
+const toggleClick = () => {
+  isExpanded.value = !isExpanded.value;
+};
 </script>
 <template>
   <CardComponent
-    class="card-wrapper"
+    :class="[
+      'result-question-card',
+      isExpanded && 'result-question-card--expanded',
+    ]"
     corner="top-left"
-    radius="large"
-    shadow
     border
-    :border-kind="strong ? 'strong' : 'normal'"
+    shadow
     padding="small"
-    background-color="white"
   >
-    <div class="header">
-      <ResultAvatarComponent
-        class="avatar"
-        :size-avatar="strong ? 'large' : 'medium'"
-        :size-order-match="strong ? 'medium' : 'small'"
-        :order="order"
-        :image-url="candidate?.img_url || ''"
-        :alt="candidate?.name || 'unknown'"
-        :configuration="avatarConfig"
-      />
-      <div class="header-central">
-        <TitleText tag="p" :size="strong ? 'medium' : 'small'">{{
-          candidate?.name
-        }}</TitleText>
-        <SimpleProgress
-          :id="candidate?.id || ''"
-          :color-primary="`rgb(var(${primaryColor}))`"
-          color-secondary="rgb(var(--color-neutral-bg))"
-          height="0.375rem"
-          :value="result"
-          :max="100"
-        ></SimpleProgress>
-        <div class="party-wrapper">
-          <div
-            v-for="(party, i) in candidate?.parties"
-            :key="party.id"
-            class="party"
+    <div class="avatar desktop">
+      <FilledCircle
+        :size="order === 1 ? 'extra-large' : 'large'"
+        :background-color="`rgb(var(${primaryColor}))`"
+      >
+        {{ order }}.
+      </FilledCircle>
+    </div>
+    <div class="avatar mobile">
+      <FilledCircle
+        :size="order === 1 ? 'large' : 'medium'"
+        :background-color="`rgb(var(${primaryColor}))`"
+      >
+        {{ order }}.
+      </FilledCircle>
+    </div>
+    <div class="text">
+      <TitleText class="desktop" tag="p" :size="strong ? 'medium' : 'small'">
+        {{ candidate?.name }}
+      </TitleText>
+      <BodyText class="mobile" tag="p" :size="strong ? 'medium' : 'small'">
+        <strong>{{ candidate?.name }}</strong>
+      </BodyText>
+    </div>
+    <div class="progress-bar">
+      <SimpleProgress
+        :id="candidate?.id || ''"
+        :color-primary="`rgb(var(${primaryColor}))`"
+        color-secondary="rgb(var(--color-neutral-bg))"
+        height="0.375rem"
+        :value="result"
+        :max="100"
+      ></SimpleProgress>
+    </div>
+    <div class="secondary-text">
+      <div class="party-wrapper">
+        <div
+          v-for="(party, i) in candidate?.parties"
+          :key="party.id"
+          class="party"
+        >
+          <img
+            v-if="party.img_url"
+            class="party-logo"
+            :src="party.img_url"
+            :alt="'nologo'"
+          />
+          <BodyText size="medium"
+            >{{ i !== 0 ? ', ' : '' }}{{ party.name }}</BodyText
           >
-            <img
-              v-if="party.img_url"
-              class="party-logo"
-              :src="party.img_url"
-              :alt="'nologo'"
-            />
-            <BodyText size="medium"
-              >{{ i !== 0 ? ', ' : '' }}{{ party.name }}</BodyText
-            >
-          </div>
         </div>
       </div>
-      <TitleText
-        class="header-percentage"
-        tag="p"
-        :size="strong ? 'large' : 'medium'"
-        >{{ result }} %</TitleText
-      >
-      <IconButton
-        :class="[
-          'header-expand-btn',
-          isExpanded ? 'header-expand-btn--active' : '',
-        ]"
-        @click="handleExpandClick"
-      >
+    </div>
+    <TitleText
+      class="percentage desktop"
+      tag="p"
+      :size="order === 1 ? 'large' : 'medium'"
+    >
+      {{ result }} %
+    </TitleText>
+    <TitleText
+      class="percentage mobile"
+      tag="p"
+      :size="order === 1 ? 'medium' : 'small'"
+    >
+      {{ result }} %
+    </TitleText>
+    <div class="toggle">
+      <IconButton @click="toggleClick">
         <IconComponent
+          :icon="isExpanded ? mdiChevronUp : mdiChevronDown"
           size="medium"
-          :icon="mdiChevronDown"
-          color="rgb(var(--color-neutral-fg))"
+          title="Zobrazit detaily"
         />
       </IconButton>
     </div>
-    <div :class="['details', isExpanded ? '' : 'details--collapsed']">
+    <div v-show="isExpanded" class="expansion">
       <BodyText size="small"
         ><strong>Co o sobě kanidát/ka říká</strong></BodyText
       >
@@ -149,52 +168,85 @@ switch (props.category) {
     }
   }
 }
-.divider {
-  margin: 0px;
-  margin-top: var(--spacing-small);
-  margin-bottom: var(--spacing-small);
-}
-.card-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: fit-content;
-  padding: var(--spacing-small);
-}
-.header {
-  display: flex;
-  flex-direction: row;
-  gap: var(--spacing-small);
-  align-items: center;
-  &-central {
-    flex: 2 1 100%;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-small);
-    align-items: flex-start;
-    justify-content: space-between;
+
+.result-question-card {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr 4.5rem auto;
+  grid-template-areas:
+    'avatar text percentage toggle'
+    'avatar progress-bar percentage toggle'
+    'avatar secondary-text percentage toggle';
+  column-gap: var(--spacing-medium);
+  row-gap: var(--spacing-small);
+
+  .avatar {
+    grid-area: avatar;
+    align-self: center;
+    justify-self: center;
   }
-  &-percentage {
-    white-space: nowrap;
-    margin-left: var(--spacing-large);
+
+  .text {
+    grid-area: text;
   }
-  &-expand-btn {
-    :deep(svg) {
-      transition: transform 0.5s;
+
+  .progress-bar {
+    grid-area: progress-bar;
+  }
+
+  .secondary-text {
+    grid-area: secondary-text;
+  }
+
+  .percentage {
+    grid-area: percentage;
+    align-self: center;
+  }
+
+  .toggle {
+    grid-area: toggle;
+    align-self: center;
+  }
+
+  .expansion {
+    grid-area: expansion;
+  }
+
+  &--expanded {
+    grid-template-areas:
+      'avatar text percentage toggle'
+      'avatar progress-bar percentage toggle'
+      'avatar secondary-text percentage toggle'
+      'expansion expansion expansion expansion';
+
+    .expansion {
+      margin-top: var(--spacing-medium);
     }
-    &--active {
-      :deep(svg) {
-        transform: rotateX(0.5turn);
-      }
+  }
+
+  @media (max-width: 700px) {
+    grid-template-columns: 3rem 1fr 4.5rem auto;
+    column-gap: var(--spacing-extra-small);
+
+    &--expanded {
+      row-gap: var(--spacing-small);
     }
   }
-}
-.details {
-  transition: all 0.3s ease-out;
-  overflow: hidden;
-  height: auto;
-  &--collapsed {
-    height: 0px;
+
+  .desktop,
+  .mobile {
+    display: none;
+  }
+
+  @media (min-width: 700px) {
+    .desktop {
+      display: initial;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .mobile {
+      display: initial;
+    }
   }
 }
 </style>
