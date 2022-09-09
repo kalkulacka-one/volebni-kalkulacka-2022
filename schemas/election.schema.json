@@ -42,6 +42,10 @@
       "type": "string",
       "description": "Election end - ISO 8601"
     },
+    "eta": {
+      "type": "number",
+      "description": "Estimated time to complete in minutes"
+    },
     "type": {
       "type": "string",
       "description": "Election type",
