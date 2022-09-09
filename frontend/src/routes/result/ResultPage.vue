@@ -21,6 +21,7 @@ import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
+import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 
 import ResultCategory from './ResultCategory.vue';
 import BackgroundComponent from '../../components/design-system/style/BackgroundComponent.vue';
@@ -113,52 +114,44 @@ const resultsMedicine = calculateRelativeAgreement(
         </SecondaryNavigationBar>
       </template>
       <BottomBarWrapper>
-        <div class="body-wrapper">
-          <div class="candidates-wrapper">
-            <ResultCategory
-              title="Celková shoda"
-              :result="resultsGeneral"
-              category="general"
-              :max-visible-candidates="2"
-            />
-            <ResultCategory
-              ref="thematic-categories"
-              title="Shoda v ekologii"
-              :result="resultsEcology"
-              category="environment"
-              :max-visible-candidates="1"
-            />
-            <ResultCategory
-              title="Shoda ve zdravotnictví"
-              :result="resultsMedicine"
-              category="health"
-              :max-visible-candidates="10"
-            />
-          </div>
-        </div>
+        <StackComponent class="main" spacing="medium">
+          <ResultCategory
+            title="Celková shoda"
+            :result="resultsGeneral"
+            category="general"
+            :max-visible-candidates="2"
+          />
+          <ResultCategory
+            ref="thematic-categories"
+            title="Shoda v ekologii"
+            :result="resultsEcology"
+            category="environment"
+            :max-visible-candidates="1"
+          />
+          <ResultCategory
+            title="Shoda ve zdravotnictví"
+            :result="resultsMedicine"
+            category="health"
+            :max-visible-candidates="10"
+          />
+        </StackComponent>
       </BottomBarWrapper>
     </StickyHeaderLayout>
   </BackgroundComponent>
 </template>
 
 <style lang="scss" scoped>
-.body-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: var(--spacing-small);
+.main {
+  display: grid;
+  grid-template-columns: clamp(32rem, 50vw, 48rem);
+  justify-content: center;
   padding: var(--spacing-small);
 }
-.candidates-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-  gap: var(--spacing-small);
-  padding: var(--spacing-small);
-}
-.side-bar {
-  padding: var(--spacing-small);
+
+/* TODO: update breakpoint */
+@media (max-width: 700px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
