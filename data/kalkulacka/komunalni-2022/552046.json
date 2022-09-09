@@ -1,17 +1,19 @@
 {
   "id": "komunalni-2022-552046",
   "name": "Tábor",
-  "description": "Tábor - DESCRIPTION",
+  "description": "Tábor",
   "district_code": "552046",
   "election": {
     "id": "komunalni-2022",
     "key": "komunalni-2022",
-    "name": "komunalni-2022",
-    "description": "komunalni-2022"
+    "name": "Komunální volby 2022",
+    "description": "K dispozici je 35 kalkulaček pro největší města.",
+    "from": "2022-09-23 14:00",
+    "to": "2022-09-24 14:00"
   },
   "questions": [
     {
-      "id": "komunalni-2022-552046-question-1",
+      "id": "komunalni-2022-552046-q-1",
       "name": "Gentrifikace",
       "title": "V žádaných městských částech mají bydlet jen ti, kdo si to mohou finančně dovolit.",
       "gist": "Kritikům vadí, že ekonomické tlaky na původní obyvatele vedou k jejich postupnému vytlačování. Městské části pak ztrácejí pestrost a uzavírají se jen pro vybrané skupiny lidí. Zastánci tvrdí, že to je přirozený proces a že na bydlení v dobré čtvrti si člověk musí vydělat.",
@@ -19,7 +21,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-2",
+      "id": "komunalni-2022-552046-q-2",
       "name": "Poplatek za popelnice",
       "title": "Má město účtovat poplatek za svoz komunálního odpadu?",
       "gist": "Odpůrci tento poplatek považují za zbytečný; jedná se podle nich jen o jakousi „skrytou“ daň. Zastánci poplatku odmítají takový zásah do rozpočtu města na úkor důležitějších položek, přenesením zátěže na město.",
@@ -27,7 +29,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-3",
+      "id": "komunalni-2022-552046-q-3",
       "name": "Omezení vytápění",
       "title": "Mělo by město v případě nouze začít omezovat vytápění v domovech pro seniory?",
       "gist": "Zastánci omezování tvrdí, že nejen domácnosti, ale i samosprávy mohou mít potíže hradit výdaje za teplo kvůli velkému růstu cen energií. Odpůrci namítají, že senioři jsou zranitelná skupina obyvatel a nesmí být vystaveni ohrožení zdraví ani ve stavu nouze.",
@@ -35,7 +37,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-4",
+      "id": "komunalni-2022-552046-q-4",
       "name": "Zóny 30 km/h",
       "title": "Měly by se ve městě rozšířit zóny, kde mají auta povoleno jet max 30 km/h.?",
       "gist": "Obecně platí, že v obci smí vozidlo jet maximálně rychlostí 50 km/h. Zóny 30 (km/h) jsou podle zastánců levné opatření pro zklidňování dopravy v městské zástavbě a v některých evropských zemích se používají více než 20 let. Odpůrci to považují za brždění provozu a komplikaci dopravy.",
@@ -43,7 +45,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-5",
+      "id": "komunalni-2022-552046-q-5",
       "name": "Milostivé léto",
       "title": "Právě probíhá akce Milostivé léto: Má město individuálně obeslat všechny své dlužníky s potřebnými informacemi?",
       "gist": "Odpůrci obesílání dlužníků říkají, že se o své dluhy mají starat hlavně sami. Zastánci tvrdí, že by město mělo aktivně usilovat, aby se dlužné peníze vrátily do rozpočtu, a že osobní obeslání je účinné.",
@@ -51,7 +53,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-6",
+      "id": "komunalni-2022-552046-q-6",
       "name": "Více kamer",
       "title": "Měly by být ve městě instalovány další kamery?",
       "gist": "Zastánci uvádějí zvýšení bezpečnosti problémových lokalit, odpůrci zdůrazňují přílišný zásah do osobních práv a přesun kriminality do jiných míst.",
@@ -59,7 +61,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-7",
+      "id": "komunalni-2022-552046-q-7",
       "name": "Hazard zakázán",
       "title": "Jste pro úplný zákaz hazardu na území města?",
       "gist": "Příznivci zákazu argumentují sociálními problémy plynoucími z hazardu. Odpůrci zmiňují svobodu podnikání a finance, které město získá na daních.",
@@ -67,7 +69,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-8",
+      "id": "komunalni-2022-552046-q-8",
       "name": "MHD zdarma",
       "title": "Měla by být městská hromadná doprava pro všechny rezidenty zdarma?",
       "gist": "Zastánci zrušení jízdného argumentují zlepšením životního prostředí, zklidnění dopravy i úsporami za tisk lístků nebo vedení agendy s vymáháním dlužného jízdného. Odpůrci tvrdí, že se jedná o nehospodárné nakládání s veřejnými prostředky. Podle jiných by to příliš zatížilo městský rozpočet.",
@@ -75,7 +77,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-9",
+      "id": "komunalni-2022-552046-q-9",
       "name": "Bezbariérové zastávky MHD",
       "title": "Město by mělo více investovat do zastávek hromadné dopravy, aby byly až na výjimky bezbariérové.",
       "gist": "",
@@ -83,7 +85,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-10",
+      "id": "komunalni-2022-552046-q-10",
       "name": "Jmenovité výsledky hlasování zastupitelstva",
       "title": "Hlasování členů zastupitelstva města se má zveřejňovat jmenovitě.",
       "gist": "Podle zastánců je pro veřejnou kontrolu důležité vidět, jak přesně kdo v zastupitelstvu města hlasuje. Kritici to považují za zbytečné.",
@@ -91,7 +93,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-11",
+      "id": "komunalni-2022-552046-q-11",
       "name": "Jmenovité výsledky hlasování rady",
       "title": "Hlasování členů rady města se má zveřejňovat jmenovitě.",
       "gist": "Podle zastánců je pro veřejnou kontrolu důležité vidět, jak přesně kdo v radě města hlasuje. Kritici to považují za zbytečné.",
@@ -99,7 +101,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-12",
+      "id": "komunalni-2022-552046-q-12",
       "name": "Regulace zábavní pyrotechniky",
       "title": "Používání zábavní pyrotechniky jindy než na Silvestra má být ve městě zakázané.",
       "gist": "V případě neregulace bývají problematické hlavně letní měsíce, kdy jsou ohňostroje součástí řady domácích oslav.",
@@ -107,7 +109,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-13",
+      "id": "komunalni-2022-552046-q-13",
       "name": "Přístupné veřejné budovy v chladnu",
       "title": "Město by v topné sezóně mělo zpřístupnit některé veřejné budovy lidem jen pro zahřátí.",
       "gist": "Některá evropská města zvažují, že veřejnosti zpřístupní knihovny, komunitní centra či umělecké galerie, aby se zde mohli v nadcházející zimě zahřát ti, kdo si nemohou dovolit vytápět své domovy.",
@@ -115,7 +117,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-14",
+      "id": "komunalni-2022-552046-q-14",
       "name": "Úspora energií – světelná výzdoba",
       "title": "Kvůli úspoře energií by město mělo omezovat noční nasvícení kulturních památek.",
       "gist": "",
@@ -123,7 +125,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-15",
+      "id": "komunalni-2022-552046-q-15",
       "name": "Úspora energií – veřejné osvětlení",
       "title": "Má město kvůli úspoře energií omezovat veřejné osvětlení?",
       "gist": "Kvůli energetické krizi řada měst v Rakousku, Německu, Francii a Itálii omezuje pouliční osvětlení, některé obce ho v noci vypnou úplně. Vypnutí světel na tři a půl hodiny každou noc má snížit spotřebu energie cca o čtvrtinu. Kritici namítají, že se zhorší bezpečnost ve městě.",
@@ -131,7 +133,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-16",
+      "id": "komunalni-2022-552046-q-16",
       "name": "Úspora energií – omezení vytápění",
       "title": "V topné sezóně by se mělo omezit vytápění v městských budovách.",
       "gist": "Např. v sousedním Německu nyní plánují, že veřejné budovy se až na výjimky (např. školy) budou z důvodu úspor energie vytápět max. na 19 C.",
@@ -139,7 +141,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-17",
+      "id": "komunalni-2022-552046-q-17",
       "name": "Konec dětských exekucí",
       "title": "Souhlasím, aby město plošně odpouštělo dluhy dětským dlužníkům a nechalo zastavit jejich exekuce.",
       "gist": "Jedná se zpravidla o historické dluhy. Dnes již dětem u města obvykle dluhy nevznikají, zodpovídají za ně např. rodiče.",
@@ -147,7 +149,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-18",
+      "id": "komunalni-2022-552046-q-18",
       "name": "Městské transparentní účty",
       "title": "Má mít město transparentní účty, do kterých lze veřejně nahlížet?",
       "gist": "Zastánci uvádějí nutnost kontroly toho, jak město s penězi nakládá. Odpůrci se domnívají, že je to komplikované a že hrozí únik osobních údajů.",
@@ -155,7 +157,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-19",
+      "id": "komunalni-2022-552046-q-19",
       "name": "Participativní rozpočet",
       "title": "O části rozpočtu města mají mít možnost rozhodovat občané přímo.",
       "gist": "Jde např. o participativní rozpočet: radnice vymezí část peněz z ročního rozpočtu, občané pak podávají návrhy, co by se za tyto peníze mělo ve městě v následujícím roce vylepšit a vítězné projekty se poté realizují.",
@@ -163,7 +165,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-20",
+      "id": "komunalni-2022-552046-q-20",
       "name": "Zvýšení počtu městských bytů",
       "title": "Město by mělo zvyšovat počty bytů ve svém vlastnictví.",
       "gist": "Některá města se snaží o odkup nebo výstavbu bytů do svého vlastnictví. Důvodem mj. je, že se jim nedostává bytů pro lékaře a zdravotní sestry, policisty, učitele či seniory a potřebné. Kritici namítají, že údržba městských bytů zatěžuje rozpočet.",
@@ -171,7 +173,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-21",
+      "id": "komunalni-2022-552046-q-21",
       "name": "Omezení vánoční výzdoby",
       "title": "Město by mělo kvůli rostoucím cenám energie omezit veřejné slavnostní osvětlení v době Vánoc.",
       "gist": "K podobnému kroku přistoupila například rakouská Vídeň. Na hlavním bulváru Ring kolem centra nebude vánoční osvětlení vůbec, na dalších místech se bude rozsvěcet o hodinu později než doposud.",
@@ -179,7 +181,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-22",
+      "id": "komunalni-2022-552046-q-22",
       "name": "Obědy zdarma",
       "title": "Ve všech veřejných základních školách na území města by měly mít děti možnost obědvat zdarma.",
       "gist": "Podle průzkumů žije 20 procent českých dětí v ohrožení příjmovou chudobou. Některé děti již dostávají obědy zdarma díky několika různým projektům, závisí to ale na vůli školy a města, zda se do takových projektů zapojí.",
@@ -187,7 +189,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-23",
+      "id": "komunalni-2022-552046-q-23",
       "name": "Sdílení aut",
       "title": "Je třeba, aby město podporovalo sdílení aut (tzv. carsharing).",
       "gist": "Podle zastánců má sdílení vozů pomoci odlehčit dopravu ve městě. Kritici poukazují, že carsharingové společnosti pouze moderním druhem autopůjčovny, která je dostupnější a pohodlnější.",
@@ -195,7 +197,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-24",
+      "id": "komunalni-2022-552046-q-24",
       "name": "Žádné parkovací zóny",
       "title": "Parkování ve městě má být neomezené parkovacími zónami.",
       "gist": "Zastánci říkají, že zóny placeného státní přinášejí jistotu parkování rezidentům a že odvádějí z města auta, která do něj nezajíždějí, ale zůstávají v okrajových částech. Kritici namítají, že se parkování jen přelévá jinam a auty se zaplňují dříve klidné oblasti města. Vadí také, že zóny rezidentům parkovací místo automaticky nezaručí.",
@@ -203,7 +205,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-25",
+      "id": "komunalni-2022-552046-q-25",
       "name": "Privatizace bytů",
       "title": "Město má privatizovat své byty.",
       "gist": "Podle zastánců přináší privatizace bytů velké finanční prostředky pro město. Kritici chtějí, aby město mohlo s byty nakládat dle vlastního uvážení a potřeb občanů.",
@@ -211,7 +213,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-26",
+      "id": "komunalni-2022-552046-q-26",
       "name": "Podíl developerů na veřejných výdajích",
       "title": "Soukromí developeři se musí podílet na úhradě veřejných nákladů spojených s výstavbou jejich projektů.",
       "gist": "Podíl se týká komunikací, sítí, MHD apod. Může být finanční, nebo jako konkrétní plnění v rámci výstavby, např. výstavbou veřejné vybavenosti nebo poskytnutím podílu bytů do obecního vlastnictví.",
@@ -219,7 +221,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-27",
+      "id": "komunalni-2022-552046-q-27",
       "name": "Cyklodoprava",
       "title": "Má město upřednostňovat dopravu pěší, cyklistickou a hromadnou před dopravou automobilovou?",
       "gist": "Výhody cyklodopravy jsou podle zastánců nízký zábor veřejného prostoru, snižování dopravních zácp, zlepšení ovzduší či kladný vliv na lidské fyzické i mentální zdraví cyklistů. Odpůrci to považují za komplikaci pro autodopravu, za zbytečnost nebo za nedostatečně chráněný způsob dopravy. Cyklisté by měli jezdit po cyklostezkách, kde je neohrožují auta.",
@@ -227,7 +229,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-28",
+      "id": "komunalni-2022-552046-q-28",
       "name": "Zdanění prázdných bytů",
       "title": "Dlouhodobě prázdné byty by měly být více zdaněné.",
       "gist": "Krok má odrazovat od nákupu investičních bytů. Ty podle zastánců zdanění vyčerpávají bytové zásoby a zhoršují situaci pro lidi s nízkými a středními příjmy, kteří si chtějí zajistit vlastní bydlení. Podle kritiků se zvýší ceny nemovitostí a nájemní bydlení podraží. V ČR je jednotný výpočet daně pro všechny byty bez ohledu na to, kolik bytů majitel vlastní a zda jsou dlouhodobě obydlené.",
@@ -235,7 +237,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-29",
+      "id": "komunalni-2022-552046-q-29",
       "name": "Podíl developerů na veřejných výdajích",
       "title": "Příspěvky developerů na veřejnou vybavenost by se měly zvýšit.",
       "gist": "",
@@ -243,7 +245,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-30",
+      "id": "komunalni-2022-552046-q-30",
       "name": "Dobíjecí místa pro elektromobily",
       "title": "Město má podporovat budování dobíjecích míst pro elektromobily.",
       "gist": "",
@@ -251,7 +253,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-31",
+      "id": "komunalni-2022-552046-q-31",
       "name": "Podpora družstevního bydlení",
       "title": "Město má podporovat družstevní a spolkové formy bytové výstavby i subjekty, které budou poskytovat bydlení na neziskovém principu.",
       "gist": "",
@@ -259,7 +261,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-32",
+      "id": "komunalni-2022-552046-q-32",
       "name": "MHD zdarma do 18 let",
       "title": "Děti do 18 let mají mít MHD zdarma.",
       "gist": "",
@@ -267,7 +269,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-33",
+      "id": "komunalni-2022-552046-q-33",
       "name": "Fotovoltaika na soukromých střechách",
       "title": "Město má pomoci vlastníkům bytových domů s instalací fotovoltaických panelů na střeše.",
       "gist": "",
@@ -275,7 +277,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-34",
+      "id": "komunalni-2022-552046-q-34",
       "name": "Vstupné na kulturu a sport",
       "title": "V městských muzeích, galeriích a na sportovištích má být pro mládež bezplatné nebo symbolické vstupné.",
       "gist": "",
@@ -283,7 +285,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-35",
+      "id": "komunalni-2022-552046-q-35",
       "name": "Menstruační pomůcky v městských budovách",
       "title": "Na všech městských veřejných toaletách (na úřadech, v knihovnách apod.) mají být volně dostupné menstruační pomůcky.",
       "gist": "Podobně jako bývá dnes na všech toaletách mýdlo nebo toaletní papír.",
@@ -291,7 +293,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-36",
+      "id": "komunalni-2022-552046-q-36",
       "name": "Menstruační pomůcky –vydávání zdarma",
       "title": "Místní úřady mají mít zákonnou povinnost poskytovat vložky či tampony bezplatně každému, kdo je potřebuje.",
       "gist": "Některé ženy, např. samoživitelky, navíc s dospívajícími dcerami, pro svůj nízký příjem nemají přístup k adekvátním menstruačním pomůckám. Zastánci argumentují rovností a důstojností ve společnosti a tím, že toaletní papír či mýdlo jsou ve veřejných budovách běžně dostupné. Odpůrci to považují za finančně nákladné či nespravedlivé vůči lidem, kteří menstruaci nemají.",
@@ -299,7 +301,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-37",
+      "id": "komunalni-2022-552046-q-37",
       "name": "Fotovoltaika na městské budovy",
       "title": "Město má investovat do fotovoltaických panelů na střechách městských budov.",
       "gist": "",
@@ -307,7 +309,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-38",
+      "id": "komunalni-2022-552046-q-38",
       "name": "Elektrické koloběžky",
       "title": "Město má podporovat rozvoj dopravy na elektrických koloběžkách a podobných dopravních prostředcích.",
       "gist": "",
@@ -315,7 +317,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-39",
+      "id": "komunalni-2022-552046-q-39",
       "name": "Integrace cizinců",
       "title": "Město by mělo aktivně prosazovat integraci cizinců žijících ve městě.",
       "gist": "",
@@ -323,7 +325,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-40",
+      "id": "komunalni-2022-552046-q-40",
       "name": "Více strážníků",
       "title": "Mělo by být více městských strážníků?",
       "gist": "Zastánci uvádějí zvýšení pocitu bezpečí. Odpůrci namítají, že to jsou nyní pro město zbytečné výdaje navíc.",
@@ -331,7 +333,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-41",
+      "id": "komunalni-2022-552046-q-41",
       "name": "Zelené střechy",
       "title": "Město má prosazovat na nových či rekonstruovaných městských budovách zelené střechy.",
       "gist": "Oproti klasické střeše je založení zelené střechy nákladnější a složitější a je třeba ji následně udržovat. Kvůli vyššímu zatížení je třeba silnější střešní konstrukce. Zastánci poukazují na to, že zelené střechy izolují a snižují náklady na vytápění či chlazení vnitřních prostor v létě.",
@@ -339,7 +341,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-42",
+      "id": "komunalni-2022-552046-q-42",
       "name": "Cyklodoprava",
       "title": "Město by mělo podporovat dopravu obyvatel do práce či do školy na kole.",
       "gist": "Výhody cyklodopravy jsou podle zastánců nízký zábor veřejného prostoru, snižování dopravních zácp, zlepšení ovzduší či kladný vliv na lidské fyzické i mentální zdraví cyklistů. Odpůrci to považují za komplikaci pro autodopravu, za zbytečnost nebo za nedostatečně chráněný způsob dopravy. Cyklisté by měli jezdit po cyklostezkách, kde je neohrožují auta.",
@@ -347,7 +349,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-43",
+      "id": "komunalni-2022-552046-q-43",
       "name": "Podpora profesionálního sportu",
       "title": "Souhlasím, aby město finančně podporovalo profesionální sport ve městě.",
       "gist": "",
@@ -355,7 +357,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-44",
+      "id": "komunalni-2022-552046-q-44",
       "name": "Daň z nemovitosti",
       "title": "Daň z nemovitosti by se měla snížit.",
       "gist": "Město má relativně velkou volnost v nastavení výše daně z nemovitostí. Ta je celá příjmem města. Zastánci vyšší daně argumentují tím, že v porovnání s jinými zeměmi jsou české daně spíše nízké. Odpůrci daně často argumentují tím, že dochází ke zdanění již zdaněného.",
@@ -363,7 +365,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-45",
+      "id": "komunalni-2022-552046-q-45",
       "name": "Podpora chudých",
       "title": "Má podle vás město finančně podporovat sociálně slabé občany, aby se nepropadli do chudoby?",
       "gist": "",
@@ -371,7 +373,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-46",
+      "id": "komunalni-2022-552046-q-46",
       "name": "Bytový fond",
       "title": "Město má budovat a udržovat vlastní bytový fond",
       "gist": "Odpůrci tvrdí, že soukromí majitelé se o nemovitosti postarají lépe. Např. ve Vídni je cca čtvrtina bytů přímo v obecním vlastnictví a stejná část patří obecně prospěšným stavebním společnostem. Ty dostávají na výstavbu výhodné půjčky od města a na oplátku se zavazují držet nájmy na přijatelné úrovni i pro další generace. Výnosy musí investovat do výstavby nebo oprav bytů.",
@@ -379,7 +381,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-47",
+      "id": "komunalni-2022-552046-q-47",
       "name": "Společné vzdělávání",
       "title": "Město by mělo zamezovat shromažďování sociálně znevýhodněných dětí v jedné nebo několika málo školách.",
       "gist": "Zastánci chtějí zajistit všem dětem bez ohledu na jejich původ odpovídající podporu na každé škole. Odpůrci argumentují svobodným výběrem školy.",
@@ -387,7 +389,7 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-552046-question-48",
+      "id": "komunalni-2022-552046-q-48",
       "name": "Sociální pomoc",
       "title": "Město má podporovat předškolní zařízení pro děti od 2 let věku.",
       "gist": "Pomocí sítě školek, dětských skupin nebo mateřských klubů má město podle zastánců pomoci rodičům skloubit pracovní povinnosti s péčí o děti. Odpůrci namítají, že děti do tří let mají být v domácí péči a že časnější péči mimo domov nemá město podporovat.",
@@ -397,16 +399,17 @@
   ],
   "candidates": [
     {
-      "id": "komunalni-2022-552046-candidate-653212",
+      "id": "komunalni-2022-552046-c-653212",
       "name": "ANO 2011",
       "type": "party",
       "description": "ANO 2011 - DESCRIPTION",
+      "img_url": "ano",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "komunalni-2022-552046-653212-party",
+          "id": "komunalni-2022-552046-c-653212-p",
           "name": "ANO 2011",
           "description": "ANO 2011 - DESCRIPTION",
           "contacts": {
@@ -417,10 +420,11 @@
       ]
     },
     {
-      "id": "komunalni-2022-552046-candidate-711686",
+      "id": "komunalni-2022-552046-c-711686",
       "name": "Tábor 2020",
       "type": "party",
       "description": "Tábor 2020 - DESCRIPTION",
+      "img_url": "t2020",
       "contacts": {
         "web": [
           {
@@ -439,7 +443,7 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-552046-711686-party",
+          "id": "komunalni-2022-552046-c-711686-p",
           "name": "Tábor 2020",
           "description": "Tábor 2020 - DESCRIPTION",
           "contacts": {
@@ -463,10 +467,11 @@
       ]
     },
     {
-      "id": "komunalni-2022-552046-candidate-887165",
+      "id": "komunalni-2022-552046-c-887165",
       "name": "Česká pirátská strana",
       "type": "party",
       "description": "Česká pirátská strana - DESCRIPTION",
+      "img_url": "piráti",
       "contacts": {
         "web": [
           {
@@ -477,7 +482,7 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-552046-887165-party",
+          "id": "komunalni-2022-552046-c-887165-p",
           "name": "Česká pirátská strana",
           "description": "Česká pirátská strana - DESCRIPTION",
           "contacts": {
@@ -493,16 +498,17 @@
       ]
     },
     {
-      "id": "komunalni-2022-552046-candidate-479115",
+      "id": "komunalni-2022-552046-c-479115",
       "name": "ŠANCE pro TÁBOR (ČSSD, SPD, KSČM, nezávislí)",
       "type": "party",
       "description": "ŠANCE pro TÁBOR (ČSSD, SPD, KSČM, nezávislí) - DESCRIPTION",
+      "img_url": "čssdksčmspdnk",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "komunalni-2022-552046-479115-party",
+          "id": "komunalni-2022-552046-c-479115-p",
           "name": "ŠANCE pro TÁBOR (ČSSD, SPD, KSČM, nezávislí)",
           "description": "ŠANCE pro TÁBOR (ČSSD, SPD, KSČM, nezávislí) - DESCRIPTION",
           "contacts": {
@@ -513,10 +519,11 @@
       ]
     },
     {
-      "id": "komunalni-2022-552046-candidate-624531",
+      "id": "komunalni-2022-552046-c-624531",
       "name": "SPOLEČNĚ PRO TÁBOR",
       "type": "party",
       "description": "SPOLEČNĚ PRO TÁBOR - DESCRIPTION",
+      "img_url": "ods-top 09",
       "contacts": {
         "web": [
           {
@@ -527,7 +534,7 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-552046-624531-party",
+          "id": "komunalni-2022-552046-c-624531-p",
           "name": "SPOLEČNĚ PRO TÁBOR",
           "description": "SPOLEČNĚ PRO TÁBOR - DESCRIPTION",
           "contacts": {
@@ -543,16 +550,17 @@
       ]
     },
     {
-      "id": "komunalni-2022-552046-candidate-923685",
+      "id": "komunalni-2022-552046-c-923685",
       "name": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK",
       "type": "party",
       "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK - DESCRIPTION",
+      "img_url": "dsz-nk",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "komunalni-2022-552046-923685-party",
+          "id": "komunalni-2022-552046-c-923685-p",
           "name": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK",
           "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK - DESCRIPTION",
           "contacts": {
@@ -563,16 +571,17 @@
       ]
     },
     {
-      "id": "komunalni-2022-552046-candidate-605202",
+      "id": "komunalni-2022-552046-c-605202",
       "name": "KDU-ČSL a nezávislí kandidáti",
       "type": "party",
       "description": "KDU-ČSL a nezávislí kandidáti - DESCRIPTION",
+      "img_url": "kdu-čsl-nk",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "komunalni-2022-552046-605202-party",
+          "id": "komunalni-2022-552046-c-605202-p",
           "name": "KDU-ČSL a nezávislí kandidáti",
           "description": "KDU-ČSL a nezávislí kandidáti - DESCRIPTION",
           "contacts": {
@@ -583,10 +592,11 @@
       ]
     },
     {
-      "id": "komunalni-2022-552046-candidate-706920",
+      "id": "komunalni-2022-552046-c-706920",
       "name": "JiNAK! - sdružení zelených a nezávislých",
       "type": "party",
       "description": "JiNAK! - sdružení zelených a nezávislých - DESCRIPTION",
+      "img_url": "zelení-nk",
       "contacts": {
         "web": [
           {
@@ -605,7 +615,7 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-552046-706920-party",
+          "id": "komunalni-2022-552046-c-706920-p",
           "name": "JiNAK! - sdružení zelených a nezávislých",
           "description": "JiNAK! - sdružení zelených a nezávislých - DESCRIPTION",
           "contacts": {
@@ -629,10 +639,11 @@
       ]
     },
     {
-      "id": "komunalni-2022-552046-candidate-892184",
+      "id": "komunalni-2022-552046-c-892184",
       "name": "TÁBOR - NÁŠ DOMOV",
       "type": "party",
       "description": "TÁBOR - NÁŠ DOMOV - DESCRIPTION",
+      "img_url": "domov-nk",
       "contacts": {
         "web": [
           {
@@ -644,7 +655,7 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-552046-892184-party",
+          "id": "komunalni-2022-552046-c-892184-p",
           "name": "TÁBOR - NÁŠ DOMOV",
           "description": "TÁBOR - NÁŠ DOMOV - DESCRIPTION",
           "contacts": {
