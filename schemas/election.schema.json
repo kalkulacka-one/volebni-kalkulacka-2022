@@ -18,6 +18,10 @@
       "type": "string",
       "description": "Election's name"
     },
+    "short_name": {
+      "type": "string",
+      "description": "Election's short name"
+    },
     "description": {
       "type": "string",
       "description": "Longer description"
