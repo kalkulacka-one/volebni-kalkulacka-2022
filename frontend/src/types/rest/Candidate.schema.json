@@ -1,0 +1,12 @@
+{
+  "title": "CandidateRest",
+  "required": ["candidate_id", "name", "short_name", "abbreviation", "logo"],
+  "type": "object",
+  "properties": {
+    "candidate_id": { "title": "Candidate Id", "type": "string" },
+    "name": { "title": "Name", "type": "string" },
+    "short_name": { "title": "Short Name", "type": "string" },
+    "abbreviation": { "title": "Abbreviation", "type": "string" },
+    "logo": { "title": "Logo", "type": "string" }
+  }
+}

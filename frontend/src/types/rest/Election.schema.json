@@ -1,0 +1,12 @@
+{
+  "title": "ElectionRest",
+  "required": ["id", "key", "name", "description", "type"],
+  "type": "object",
+  "properties": {
+    "id": { "title": "Id", "type": "string" },
+    "key": { "title": "Key", "type": "string" },
+    "name": { "title": "Name", "type": "string" },
+    "description": { "title": "Description", "type": "string" },
+    "type": { "$ref": "ElectionType" }
+  }
+}

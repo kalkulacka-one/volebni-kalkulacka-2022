@@ -1,0 +1,9 @@
+{
+  "title": "MatchRest",
+  "required": ["candidate", "score"],
+  "type": "object",
+  "properties": {
+    "candidate": { "$ref": "Candidate" },
+    "score": { "title": "Score", "type": "integer" }
+  }
+}

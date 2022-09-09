@@ -1,0 +1,19 @@
+{
+  "title": "ResultInRest",
+  "required": ["answers", "matches", "calculator"],
+  "type": "object",
+  "properties": {
+    "answers": {
+      "title": "Answers",
+      "type": "array",
+      "items": { "$ref": "Answer" }
+    },
+    "matches": {
+      "title": "Matches",
+      "type": "array",
+      "items": { "$ref": "Match" }
+    },
+    "calculator": { "$ref": "Calculator" },
+    "source": { "title": "Source", "type": "string" }
+  }
+}

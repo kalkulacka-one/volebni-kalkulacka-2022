@@ -1,0 +1,11 @@
+{
+  "title": "HTTPValidationErrorRest",
+  "type": "object",
+  "properties": {
+    "detail": {
+      "title": "Detail",
+      "type": "array",
+      "items": { "$ref": "ValidationError" }
+    }
+  }
+}

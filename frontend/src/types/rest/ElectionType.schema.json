@@ -1,0 +1,6 @@
+{
+  "title": "ElectionTypeRest",
+  "enum": ["senatni", "prezidentske", "snemovni", "krajske", "municipalni"],
+  "type": "string",
+  "description": "An enumeration."
+}
