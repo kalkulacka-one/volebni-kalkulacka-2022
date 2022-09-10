@@ -16,6 +16,7 @@
   border-radius: 50%;
   border: none;
   cursor: pointer;
+  color: inherit;
 
   &:disabled {
     color: rgb(var(--color-neutral-fg-disabled));
