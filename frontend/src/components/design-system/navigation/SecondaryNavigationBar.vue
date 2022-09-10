@@ -55,6 +55,9 @@ const background = computed(() =>
   grid-template-areas: 'before title right after';
   gap: var(--spacing-large);
 
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+
   .before {
     grid-area: before;
   }
