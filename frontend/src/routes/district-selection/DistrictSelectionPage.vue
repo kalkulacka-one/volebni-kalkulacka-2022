@@ -94,6 +94,7 @@ const onSubmit = () => {
               <ButtonComponent
                 kind="filled"
                 type="submit"
+                color="primary"
                 :disabled="!selected"
               >
                 Potvrdit a pokračovat
