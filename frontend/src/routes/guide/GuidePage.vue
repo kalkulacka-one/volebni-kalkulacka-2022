@@ -25,6 +25,7 @@ import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import LabelText from '@/components/design-system/typography/LabelText.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
+import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
 import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import StepProgress from '@/components/design-system/other/StepProgress.vue';
@@ -160,25 +161,29 @@ const handlePreviousClick = () => {
         </NavigationBar>
       </template>
       <template #sticky-header>
-        <SecondaryNavigationBar transparent>
-          <template v-if="currentStep > 1" #before>
-            <IconButton @click="handlePreviousClick">
-              <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
-            </IconButton>
-          </template>
-          <template v-if="farthestCompletedStep >= currentStep" #after>
-            <IconButton @click="handleNextClick">
-              <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
-            </IconButton>
-          </template>
-        </SecondaryNavigationBar>
+        <ResponsiveWrapper mobile>
+          <SecondaryNavigationBar transparent>
+            <template v-if="currentStep > 1" #before>
+              <IconButton @click="handlePreviousClick">
+                <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
+              </IconButton>
+            </template>
+            <template v-if="farthestCompletedStep >= currentStep" #after>
+              <IconButton @click="handleNextClick">
+                <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
+              </IconButton>
+            </template>
+          </SecondaryNavigationBar>
+        </ResponsiveWrapper>
       </template>
       <BottomBarWrapper>
         <StepWrapper>
           <template #before>
-            <IconButton v-if="currentStep > 1" @click="handlePreviousClick">
-              <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
-            </IconButton>
+            <ResponsiveWrapper desktop>
+              <IconButton v-if="currentStep > 1" @click="handlePreviousClick">
+                <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
+              </IconButton>
+            </ResponsiveWrapper>
           </template>
           <StackComponent v-if="currentStep === 1" spacing="small">
             <HeadingComponent kind="title" size="medium">
@@ -262,12 +267,14 @@ const handlePreviousClick = () => {
             </BodyText>
           </StackComponent>
           <template #after>
-            <IconButton
-              v-if="farthestCompletedStep >= currentStep"
-              @click="handleNextClick"
-            >
-              <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
-            </IconButton>
+            <ResponsiveWrapper desktop>
+              <IconButton
+                v-if="farthestCompletedStep >= currentStep"
+                @click="handleNextClick"
+              >
+                <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
+              </IconButton>
+            </ResponsiveWrapper>
           </template>
         </StepWrapper>
         <template #bottom-bar>
