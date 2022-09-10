@@ -148,18 +148,30 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
       <NavigationBar transparent>
         <template #title>{{ title }}</template>
         <template #right>
-          <ButtonComponent
-            kind="link"
-            @click="router.push({ name: appRoutes.index.name })"
-          >
-            Zpět na hlavní stránku
-            <template #iconAfter>
-              <IconComponent
-                :icon="mdiCloseCircleOutline"
-                title="Zpět na hlavní stránku"
-              />
-            </template>
-          </ButtonComponent>
+          <ResponsiveWrapper desktop>
+            <ButtonComponent
+              kind="link"
+              @click="router.push({ name: appRoutes.index.name })"
+            >
+              Zpět na hlavní stránku
+              <template #iconAfter>
+                <IconComponent :icon="mdiCloseCircleOutline" />
+              </template>
+            </ButtonComponent>
+          </ResponsiveWrapper>
+          <ResponsiveWrapper mobile>
+            <ButtonComponent
+              kind="link"
+              @click="router.push({ name: appRoutes.index.name })"
+            >
+              <template #icon>
+                <IconComponent
+                  :icon="mdiCloseCircleOutline"
+                  title="Zpět na hlavní stránku"
+                />
+              </template>
+            </ButtonComponent>
+          </ResponsiveWrapper>
         </template>
       </NavigationBar>
     </template>
