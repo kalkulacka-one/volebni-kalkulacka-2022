@@ -7,8 +7,8 @@ export interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  desktop: true,
-  mobile: true,
+  desktop: false,
+  mobile: false,
 });
 
 const classes = computed(() => ({
