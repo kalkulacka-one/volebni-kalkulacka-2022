@@ -28,6 +28,7 @@ const classes = computed(() => ({
   display: none;
 
   &--desktop {
+    // TODO: Update breakpoint
     @media (min-width: 601px) {
       display: contents;
     }
@@ -35,6 +36,7 @@ const classes = computed(() => ({
 
   &--mobile {
     @media (max-width: 600px) {
+      // TODO: Update breakpoint
       display: contents;
     }
   }
