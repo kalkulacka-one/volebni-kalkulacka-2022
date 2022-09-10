@@ -32,44 +32,30 @@ const classes = computed(() => ({
   display: flex;
   align-items: start;
 
+  &--spacing {
+    &-extra-small {
+      gap: var(--spacing-extra-small);
+    }
+
+    &-small {
+      gap: var(--spacing-small);
+    }
+
+    &-medium {
+      gap: var(--spacing-medium);
+    }
+
+    &-large {
+      gap: var(--spacing-large);
+    }
+  }
+
   &--vertical {
     flex-direction: column;
-
-    &.stack--spacing-extra-small:deep() > * + * {
-      margin-top: var(--spacing-extra-small);
-    }
-
-    &.stack--spacing-small:deep() > * + * {
-      margin-top: var(--spacing-small);
-    }
-
-    &.stack--spacing-medium:deep() > * + * {
-      margin-top: var(--spacing-medium);
-    }
-
-    &.stack--spacing-large:deep() > * + * {
-      margin-top: var(--spacing-large);
-    }
   }
 
   &--horizontal {
     flex-direction: row;
-
-    &.stack--spacing-extra-small:deep() > * + * {
-      margin-left: var(--spacing-extra-small);
-    }
-
-    &.stack--spacing-small:deep() > * + * {
-      margin-left: var(--spacing-small);
-    }
-
-    &.stack--spacing-medium:deep() > * + * {
-      margin-left: var(--spacing-medium);
-    }
-
-    &.stack--spacing-large:deep() > * + * {
-      margin-left: var(--spacing-large);
-    }
   }
 
   &--centered {
