@@ -38,8 +38,13 @@ console.log(props.answer);
 
 <template>
   <BottomBar class="bottom-bar" transparent="never">
-    <StackComponent horizontal centered>
-      <IconButton @click="starClick">
+    <StackComponent
+      horizontal
+      centered
+      class="important-button"
+      @click="starClick"
+    >
+      <IconButton>
         <IconComponent
           :icon="starIcon"
           :color="starColor"
@@ -93,6 +98,16 @@ console.log(props.answer);
 </template>
 
 <style lang="scss" scoped>
+.important-button {
+  &:hover {
+    cursor: pointer;
+
+    .icon-button {
+      background: rgba(var(--color-neutral-bg-backdrop-hover));
+    }
+  }
+}
+
 .bottom-bar {
   display: grid;
   grid-template-columns: auto auto auto;
