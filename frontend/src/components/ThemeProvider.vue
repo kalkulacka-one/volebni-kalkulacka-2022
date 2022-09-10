@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { shallowRef, watchEffect } from 'vue';
-import { capitalize, camelize } from 'vue';
+import { shallowRef, watchEffect, capitalize, camelize } from 'vue';
 
 export interface Props {
   theme?: string;

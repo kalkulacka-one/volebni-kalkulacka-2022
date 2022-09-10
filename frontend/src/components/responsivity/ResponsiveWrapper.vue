@@ -1,0 +1,44 @@
+<script setup lang="ts">
+import { computed } from 'vue';
+
+export interface Props {
+  desktop?: boolean;
+  mobile?: boolean;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  desktop: false,
+  mobile: false,
+});
+
+const classes = computed(() => ({
+  'responsive-wrapper--desktop': props.desktop,
+  'responsive-wrapper--mobile': props.mobile,
+}));
+</script>
+
+<template>
+  <div :class="['responsive-wrapper', classes]">
+    <slot />
+  </div>
+</template>
+
+<style lang="scss" scoped>
+.responsive-wrapper {
+  display: none;
+
+  &--desktop {
+    // TODO: Update breakpoint
+    @media (min-width: 601px) {
+      display: contents;
+    }
+  }
+
+  &--mobile {
+    @media (max-width: 600px) {
+      // TODO: Update breakpoint
+      display: contents;
+    }
+  }
+}
+</style>
