@@ -39,7 +39,7 @@ const elections = await fetchElections();
               </a>
               pro vás chystáme novou volební kalkulačku. Spustíme ji začátkem
               záři. Sledujte Twitter
-              <a href="https://twitter/CeskoDigital">@CeskoDigital</a>.
+              <a href="https://twitter.com/CeskoDigital">@CeskoDigital</a>.
             </BodyText>
             <StackComponent horizontal spacing="small">
               <ButtonComponent
