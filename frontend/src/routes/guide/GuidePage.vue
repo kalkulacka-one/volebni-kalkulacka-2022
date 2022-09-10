@@ -91,6 +91,14 @@ const nextButtonKind = computed(() => {
     return 'filled';
   }
 });
+const nextButtonColor = computed(() => {
+  if (currentStep.value < stepsCount) {
+    return 'neutral';
+  } else {
+    return 'primary';
+  }
+});
+
 const skipButtonVisibility = computed(() => {
   if (currentStep.value < stepsCount) {
     return 'initial';
@@ -271,6 +279,7 @@ const handlePreviousClick = () => {
             <ButtonComponent
               class="next-button"
               :kind="nextButtonKind"
+              :color="nextButtonColor"
               @click="handleNextClick"
             >
               {{ nextButtonTitle }}

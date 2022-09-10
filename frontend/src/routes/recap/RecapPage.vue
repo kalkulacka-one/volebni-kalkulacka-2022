@@ -107,6 +107,7 @@ const isCardHidden = (index: number) => {
             <ButtonComponent
               class="desktop"
               kind="filled"
+              color="primary"
               @click="handleShowResultsClick"
             >
               <template #icon>
