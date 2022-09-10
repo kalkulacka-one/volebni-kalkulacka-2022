@@ -32,6 +32,7 @@ import RootLayout from '@/components/layouts/RootLayout.vue';
     grid-area: sticky-header;
     position: sticky;
     top: 0;
+    z-index: 100;
   }
 
   .main {
