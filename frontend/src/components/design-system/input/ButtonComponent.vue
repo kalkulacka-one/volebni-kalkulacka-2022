@@ -78,16 +78,46 @@ const computedSize = computed(() =>
   }
 
   &--link {
-    color: rgb(var(--color-neutral-fg));
-    border: none;
+    &.button--neutral {
+      color: rgb(var(--color-neutral-fg));
+      border: none;
 
-    &:not(.button--read-only):hover {
-      color: rgb(var(--color-neutral-fg-hover));
+      &:not(.button--read-only):hover {
+        color: rgb(var(--color-neutral-fg-hover));
+      }
+
+      .button--selected,
+      &:not(.button--read-only):active {
+        color: rgb(var(--color-neutral-fg-active));
+      }
     }
 
-    .button--selected,
-    &:not(.button--read-only):active {
-      color: rgb(var(--color-neutral-fg-active));
+    &.button--primary {
+      color: rgb(var(--color-primary-fg));
+      border: none;
+
+      &:not(.button--read-only):hover {
+        color: rgb(var(--color-primary-fg-hover));
+      }
+
+      .button--selected,
+      &:not(.button--read-only):active {
+        color: rgb(var(--color-primary-fg-active));
+      }
+    }
+
+    &.button--secondary {
+      color: rgb(var(--color-secondary-fg));
+      border: none;
+
+      &:not(.button--read-only):hover {
+        color: rgb(var(--color-secondary-fg-hover));
+      }
+
+      .button--selected,
+      &:not(.button--read-only):active {
+        color: rgb(var(--color-secondary-fg-active));
+      }
     }
 
     &:disabled {
@@ -137,23 +167,67 @@ const computedSize = computed(() =>
   }
 
   &--outlined {
-    color: rgb(var(--color-neutral-fg));
-    background-color: transparent;
-    border-color: rgb(var(--color-neutral-border-strong));
+    &.button--neutral {
+      color: rgb(var(--color-neutral-fg));
+      background-color: transparent;
+      border-color: rgb(var(--color-neutral-border-strong));
 
-    &:not(.button--read-only):hover {
-      background-color: rgba(
-        var(--color-neutral-fg-hover),
-        var(--transparency-10)
-      );
+      &:not(.button--read-only):hover {
+        background-color: rgba(
+          var(--color-neutral-fg-hover),
+          var(--transparency-10)
+        );
+      }
+
+      .button--selected,
+      &:not(.button--read-only):active {
+        background-color: rgba(
+          var(--color-neutral-fg-active),
+          var(--transparency-10)
+        );
+      }
     }
 
-    .button--selected,
-    &:not(.button--read-only):active {
-      background-color: rgba(
-        var(--color-neutral-fg-active),
-        var(--transparency-10)
-      );
+    &.button--primary {
+      color: rgb(var(--color-primary-fg));
+      background-color: transparent;
+      border-color: rgb(var(--color-primary-border-strong));
+
+      &:not(.button--read-only):hover {
+        background-color: rgba(
+          var(--color-primary-fg-hover),
+          var(--transparency-10)
+        );
+      }
+
+      .button--selected,
+      &:not(.button--read-only):active {
+        background-color: rgba(
+          var(--color-primary-fg-active),
+          var(--transparency-10)
+        );
+      }
+    }
+
+    &.button--secondary {
+      color: rgb(var(--color-secondary-fg));
+      background-color: transparent;
+      border-color: rgb(var(--color-secondary-border-strong));
+
+      &:not(.button--read-only):hover {
+        background-color: rgba(
+          var(--color-secondary-fg-hover),
+          var(--transparency-10)
+        );
+      }
+
+      .button--selected,
+      &:not(.button--read-only):active {
+        background-color: rgba(
+          var(--color-secondary-fg-active),
+          var(--transparency-10)
+        );
+      }
     }
 
     &:disabled {
@@ -173,17 +247,53 @@ const computedSize = computed(() =>
   }
 
   &--filled {
-    color: rgb(var(--color-primary-fg-inverse));
-    background-color: rgb(var(--color-primary-bg-strong));
-    border-color: transparent;
+    &.button--primary {
+      color: rgb(var(--color-primary-fg-inverse));
+      background-color: rgb(var(--color-primary-bg-strong));
+      border-color: transparent;
 
-    &:not(.button--read-only):hover {
-      background-color: rgb(var(--color-primary-bg-strong-hover));
+      &:not(.button--read-only):hover {
+        background-color: rgb(var(--color-primary-bg-strong-hover));
+      }
+
+      .button--selected,
+      &:not(.button--read-only):active {
+        background-color: rgb(var(--color-primary-bg-strong-active));
+      }
     }
 
-    .button--selected,
-    &:not(.button--read-only):active {
-      background-color: rgb(var(--color-primary-bg-strong-active));
+    &.button--neutral {
+      color: rgb(var(--color-neutral-fg-inverse));
+      background-color: rgb(var(--color-neutral-bg-strong));
+      border-color: transparent;
+
+      &:not(.button--read-only):hover {
+        color: rgb(var(--color-neutral-fg-inverse));
+        background-color: rgb(var(--color-neutral-bg-strong-hover));
+      }
+
+      &.button--selected,
+      &:not(.button--read-only):active {
+        color: rgb(var(--color-neutral-fg-inverse));
+        background-color: rgb(var(--color-neutral-bg-strong-active));
+      }
+    }
+
+    &.button--secondary {
+      color: rgb(var(--color-secondary-fg-inverse));
+      background-color: rgb(var(--color-secondary-bg-strong));
+      border-color: transparent;
+
+      &:not(.button--read-only):hover {
+        color: rgb(var(--color-secondary-fg-inverse));
+        background-color: rgb(var(--color-secondary-bg-strong-hover));
+      }
+
+      &.button--selected,
+      &:not(.button--read-only):active {
+        color: rgb(var(--color-secondary-fg-inverse));
+        background-color: rgb(var(--color-secondary-bg-strong));
+      }
     }
   }
 
@@ -297,6 +407,10 @@ const computedSize = computed(() =>
       }
     }
   }
+}
+
+.text {
+  text-align: left;
 }
 
 .icon {
