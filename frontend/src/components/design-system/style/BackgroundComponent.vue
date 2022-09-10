@@ -35,6 +35,7 @@ const classes = computed(() => ({
 .background {
   display: grid;
   background-attachment: fixed;
+  height: 100%;
 
   .blue-spot,
   .red-spot,
