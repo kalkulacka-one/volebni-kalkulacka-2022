@@ -236,7 +236,7 @@ const handlePreviousClick = () => {
           </StackComponent>
           <StackComponent v-if="currentStep === 4" spacing="small">
             <BodyText size="medium">
-              Když nemáte názor, nejste si jistí nebo z jiného nechcete
+              Když nemáte názor, nejste si jisti nebo z jiného důvodu nechcete
               odpovídat, zvolte:
             </BodyText>
             <CardComponent
