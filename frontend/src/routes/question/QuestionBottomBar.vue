@@ -38,7 +38,12 @@ console.log(props.answer);
 
 <template>
   <BottomBar class="bottom-bar" transparent="never">
-    <StackComponent horizontal centered class="important-button" @click="starClick">
+    <StackComponent
+      horizontal
+      centered
+      class="important-button"
+      @click="starClick"
+    >
       <IconButton>
         <IconComponent
           :icon="starIcon"
