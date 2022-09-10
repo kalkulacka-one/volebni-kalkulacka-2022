@@ -61,6 +61,7 @@ poetry-run-add-images:
 run-api-docker: docker-run
 run-api-poetry: poetry-run-api
 run-converter: poetry-run-converter
+run-add-images: poetry-run-add-images
 
 run-localstack:
 	# https://localstack.cloud/
