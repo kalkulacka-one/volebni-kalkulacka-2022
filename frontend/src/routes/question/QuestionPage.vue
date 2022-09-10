@@ -150,7 +150,6 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
         <template #right>
           <ButtonComponent
             kind="link"
-            :responsive="true"
             @click="router.push({ name: appRoutes.index.name })"
           >
             Zpět na hlavní stránku

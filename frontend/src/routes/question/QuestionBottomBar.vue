@@ -59,7 +59,6 @@ console.log(props.answer);
         class="in-favour"
         kind="answer"
         color="primary"
-        responsive
         :selected="answer.answer === UserAnswerEnum.yes"
         @click="yesClick"
       >
@@ -72,7 +71,6 @@ console.log(props.answer);
         class="against"
         kind="answer"
         color="secondary"
-        responsive
         :selected="answer.answer === UserAnswerEnum.no"
         @click="noClick"
       >
@@ -85,7 +83,6 @@ console.log(props.answer);
     <ButtonComponent
       class="skip"
       kind="answer"
-      responsive
       :selected="answer.answer === UserAnswerEnum.skip"
       @click="skipClick"
     >

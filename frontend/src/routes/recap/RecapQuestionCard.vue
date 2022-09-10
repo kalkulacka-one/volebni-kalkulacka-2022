@@ -111,7 +111,6 @@ const toggleClick = () => {
         color="primary"
         :selected="answer.answer === UserAnswerEnum.yes && isExpanded"
         :read-only="!isExpanded"
-        responsive
         @click="yesClick"
       >
         <template #icon>
@@ -126,7 +125,6 @@ const toggleClick = () => {
         color="secondary"
         :selected="answer.answer === UserAnswerEnum.no && isExpanded"
         :read-only="!isExpanded"
-        responsive
         @click="noClick"
       >
         <template #icon>
@@ -140,7 +138,6 @@ const toggleClick = () => {
         kind="answer"
         :selected="answer.answer === UserAnswerEnum.skip && isExpanded"
         :read-only="!isExpanded"
-        responsive
         @click="skipClick"
       >
         <template #icon>

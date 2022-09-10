@@ -84,7 +84,6 @@ const resultsMedicine = calculateRelativeAgreement(
           <template #right>
             <ButtonComponent
               kind="link"
-              :responsive="true"
               @click="router.push({ name: appRoutes.index.name })"
             >
               Zpět na hlavní stránku
