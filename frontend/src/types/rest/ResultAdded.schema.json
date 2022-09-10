@@ -1,0 +1,6 @@
+{
+  "title": "ResultAddedRest",
+  "required": ["result_id"],
+  "type": "object",
+  "properties": { "result_id": { "title": "Result Id", "type": "string" } }
+}

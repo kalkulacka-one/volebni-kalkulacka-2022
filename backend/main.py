@@ -6,10 +6,25 @@ import uuid
 
 import boto3
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from mangum import Mangum
 from pydantic import BaseModel
 
 app = FastAPI()
+
+origins = [
+    "https://https://kalkulacka.ceskodigital.net",
+    "http://localhost:5201",
+    "http://localhost:8080",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 handler = Mangum(app)
 
@@ -51,6 +66,7 @@ class ElectionType(str, Enum):
     snemovni = "snemovni"
     krajske = "krajske"
     municipalni = "municipalni"
+    undefined = "undefined"
 
 
 class Election(BaseModel):

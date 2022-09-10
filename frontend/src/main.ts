@@ -18,11 +18,11 @@ import ResultPageVue from './routes/result/ResultPage.vue';
 import RecapPageVue from './routes/recap/RecapPage.vue';
 import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
-import { fetchCalculator, fetchElectionData } from './common/dataFetch';
-import { useElectionStore, UserAnswerEnum } from './stores/electionStore';
+import { useElectionStore } from './stores/electionStore';
 import { createPinia } from 'pinia';
 import ErrorPageVue from './routes/error/ErrorPage.vue';
 import { decodeResults, encodeResults } from './common/resultParser';
+import SharePageVue from './routes/share/SharePage.vue';
 
 const RESULT_QUERY_NAME = 'result';
 
@@ -188,6 +188,7 @@ export const appRoutes = {
         },
       ],
     },
+    //TODO delete line below before production
     beforeEnter: resultsProcessor,
   },
   comparison: {
@@ -208,6 +209,24 @@ export const appRoutes = {
       ],
     },
   },
+  share: {
+    name: 'share',
+    path: '/share/:uuid',
+    component: SharePageVue,
+    meta: {
+      title: 'Moje vysledky - Volebni kalkulacka',
+      metaTags: [
+        {
+          name: 'description',
+          content: 'Popis - Moje vysledky - Volebni kalkulacka.',
+        },
+        {
+          property: 'og:description',
+          content: 'Popis - Moje vysledky - Volebni kalkulacka.',
+        },
+      ],
+    },
+  },
   fallback: { path: '/:catchAll(.*)', redirect: '/' },
 };
 
@@ -219,6 +238,7 @@ export const wrappedRoutes = [
   },
 ];
 
+//APP creation
 const app = createApp(App);
 
 const pinia = createPinia();
@@ -296,57 +316,19 @@ router.beforeEach(async (to, from) => {
   //load election if different
   if (from.params.election !== to.params.election) {
     if (to.params.election !== undefined) {
-      store.districts = [];
-      store.election = undefined;
-      store.init();
-      let electionData = undefined;
-      try {
-        electionData = await fetchElectionData(to.params.election as string);
-      } catch (error) {
-        console.error(error);
-      }
-      if (electionData?.election === undefined) {
-        return {
-          name: appRoutes.error.name,
-          params: { case: 'api-error-election' },
-        };
-      }
-      console.debug('Election fetch complete!');
-      store.districts = electionData.districts;
-      store.election = electionData.election;
+      await store.loadElection(to.params.election as string);
     }
   }
-  //load district if different
+  //load calculator data if district different
   if (from.params.district !== to.params.district) {
     if (to.params.district !== undefined) {
-      store.calculator = undefined;
-      store.init();
-      let calculator = undefined;
-      try {
-        calculator = await fetchCalculator(
-          to.params.election as string,
-          to.params.district as string
-        );
-      } catch (error) {
-        console.error(error);
-      }
-      if (calculator === undefined) {
-        return {
-          name: appRoutes.error.name,
-          params: { case: 'api-error-district' },
-        };
-      }
-      console.debug('District fetch complete!');
-      store.calculator = calculator;
-      store.answers = calculator.questions.map((x) => {
-        return {
-          answer: UserAnswerEnum.undefined,
-          flag: false,
-          id: x.id as string,
-        };
-      });
+      await store.loadCalculator(
+        to.params.election as string,
+        to.params.district as string
+      );
     }
   }
+
   //load results if hex string present
   let hasResultQuery = false;
   if (

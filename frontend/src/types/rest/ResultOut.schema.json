@@ -1,0 +1,25 @@
+{
+  "title": "ResultOutRest",
+  "required": ["result_id", "created_at", "answers", "matches", "calculator"],
+  "type": "object",
+  "properties": {
+    "result_id": { "title": "Result Id", "type": "string" },
+    "created_at": {
+      "title": "Created At",
+      "type": "string",
+      "format": "date-time"
+    },
+    "answers": {
+      "title": "Answers",
+      "type": "array",
+      "items": { "$ref": "Answer" }
+    },
+    "matches": {
+      "title": "Matches",
+      "type": "array",
+      "items": { "$ref": "Match" }
+    },
+    "calculator": { "$ref": "Calculator" },
+    "source": { "title": "Source", "type": "string" }
+  }
+}

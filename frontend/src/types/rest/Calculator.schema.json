@@ -1,0 +1,12 @@
+{
+  "title": "CalculatorRest",
+  "required": ["id", "name", "description", "district_code", "election"],
+  "type": "object",
+  "properties": {
+    "id": { "title": "Id", "type": "string" },
+    "name": { "title": "Name", "type": "string" },
+    "description": { "title": "Description", "type": "string" },
+    "district_code": { "title": "District Code", "type": "string" },
+    "election": { "$ref": "Election" }
+  }
+}

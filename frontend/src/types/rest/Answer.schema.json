@@ -1,0 +1,9 @@
+{
+  "title": "AnswerRest",
+  "required": ["question_id", "answer"],
+  "type": "object",
+  "properties": {
+    "question_id": { "title": "Question Id", "type": "string" },
+    "answer": { "title": "Answer", "type": "string" }
+  }
+}
