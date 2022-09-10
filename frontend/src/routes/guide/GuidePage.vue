@@ -29,6 +29,7 @@ import SecondaryNavigationBar from '@/components/design-system/navigation/Second
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import StepProgress from '@/components/design-system/other/StepProgress.vue';
 import StepWrapper from '@/components/design-system/layout/StepWrapper.vue';
+import LoaderComponent from '../../components/design-system/other/LoaderComponent.vue';
 
 import {
   vkiLogoInFavour,
@@ -52,6 +53,8 @@ const districtName = electionStore.districts.filter(
 )[0].name;
 
 const title = `${electionName} — ${districtName} (${districtCode})`;
+
+const loading = true;
 
 const forwardRoute = computed(
   () =>
@@ -292,6 +295,8 @@ const handlePreviousClick = () => {
         </template>
       </BottomBarWrapper>
     </StickyHeaderLayout>
+    <!-- přidat v-if na základě nějakého stavu true/false -->
+    <LoaderComponent v-if="loading" />
   </BackgroundComponent>
 </template>
 

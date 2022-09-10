@@ -6,15 +6,20 @@ export interface Props {
   color?: string;
   size?: 'small' | 'medium' | 'large' | 'extra-large' | 'extra-huge';
   title?: string;
+  loadAnimation?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 'medium',
   color: 'currentColor',
   title: undefined,
+  loadAnimation: false,
 });
 
-const classes = computed(() => [`icon--${props.size}`]);
+const classes = computed(() => ({
+  [`icon--${props.size}`]: props.size,
+  'icon--animation': props.loadAnimation,
+}));
 </script>
 
 <template>
@@ -56,6 +61,21 @@ const classes = computed(() => [`icon--${props.size}`]);
   &--extra-huge {
     width: var(--spacing-extra-huge);
     height: var(--spacing-extra-huge);
+  }
+
+  &--animation {
+    :deep(svg) {
+      animation: spin 1.2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
   }
 }
 </style>
