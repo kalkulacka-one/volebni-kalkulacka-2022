@@ -29,13 +29,13 @@ const classes = computed(() => ({
 
   &--desktop {
     @media (min-width: 601px) {
-      display: initial;
+      display: contents;
     }
   }
 
   &--mobile {
     @media (max-width: 600px) {
-      display: initial;
+      display: contents;
     }
   }
 }
