@@ -34,6 +34,9 @@ class District:
     name: str
     description: str
     code: str
+    active: bool = True
+    on_hp_from: Optional[datetime] = None
+    on_hp_to: Optional[datetime] = None
 
 
 @dataclass
@@ -91,6 +94,7 @@ class CandidateAnswers:
     filled_by: str
     secret_code: str
     answers: list[QuestionAnswer]
+    motto: Optional[str] = None
 
 
 class Election:
@@ -101,8 +105,8 @@ class Election:
         key: str,
         name: str,
         description: str,
-        voting_from: str,
-        voting_to: str,
+        voting_from: datetime,
+        voting_to: datetime,
     ) -> None:
         self.id = id
         self.key = key
@@ -116,6 +120,7 @@ class Election:
         self._answers: dict[District, dict[str, CandidateAnswers]] = defaultdict(dict)
 
     def add_districts(self, districts: dict[str, District]) -> None:
+        logger.info("Adding district %d", len(districts))
         self._districts.update(districts)
 
     @property
@@ -167,8 +172,8 @@ def gen_candidate_id(election: Election, district: District, code: str) -> str:
     return gen_id(election, district, f"c-{code}")
 
 
-def gen_answer_id(election: Election, district: District, num: int) -> str:
-    return gen_id(election, district, f"a-{num}")
+def gen_answer_id(election: Election, district: District, code: str, num: int) -> str:
+    return gen_id(election, district, f"a-{code}-{num}")
 
 
 def extract_komunalni_districts(
@@ -176,13 +181,25 @@ def extract_komunalni_districts(
 ) -> dict[str, District]:
     logger.info("Extracting districts")
     districts: dict[str, District] = {}
-    for pos, row in enumerate(sheet.get_all_values()):
-        if not pos:
-            # first line is header => so lets skip it
-            continue
-        district = District(row[0], row[0], row[1])
+    for row in sheet.get_all_records(
+        expected_headers=[
+            "město",
+            "code",
+            "description",
+            "active",
+        ]
+    ):
+        active = str(row["active"]).strip()
+        district = District(
+            name=str(row["město"]),
+            code=str(row["code"]),
+            description=str(row["description"]),
+            active=bool(int(active)) if active else False,
+            on_hp_from=datetime(2022, 9, 1, 0, 0, 0),
+            on_hp_to=datetime(2022, 9, 30, 14, 0, 0),
+        )
         logger.info("\tExtracted district: %s", district)
-        districts[row[0]] = district
+        districts[str(row["město"])] = district
     logger.info("Districts extracted: %d", len(districts))
 
     return districts
@@ -264,29 +281,46 @@ def extract_answers(
     election: Election,
     district: District,
 ) -> dict[str, CandidateAnswers]:
-    logger.info("Extracting answers: %s", sheet.title)
+    logger.info("Extracting answers for district: %s", district)
     res: dict[str, CandidateAnswers] = {}
     # TODO: We are relaying on fixed column order
-    for pos, row in enumerate(sheet.get_all_values()):
-        if pos == 0:
-            # skip header
-            continue
-        ts = datetime.strptime(str(row[0]), "%m/%d/%Y %H:%M:%S")
-        candidate = str(row[1])
-        filled_by = str(row[2])
-        secret_code = str(row[3])
+
+    mapping = {}  # type: Dict[int, str]
+    for row in sheet.get_all_records(election):
+        ts = datetime.strptime(str(row["Timestamp"]), "%m/%d/%Y %H:%M:%S")
+        candidate = str(row.get("Jméno kandidáta:", row.get("Jméno strany:")))
+        filled_by = str(row["Jméno osoby, která vyplňuje dotazník:"])
+        secret_code = str(row["Bezpečnostní kód:"])
+        motto = str(row.get('Vaše charakteristika ("bio", "motto"):', "")) or None
         answers: list[QuestionAnswer] = []
-        for i in range(4, len(row), 3):
-            if i + 2 > len(row):
+
+        # construct mapping between question number and column name
+        # we cannot relly on the fact that there is exactly the same
+        # wording
+        if not mapping:
+            pattern = re.compile(r"(\d+)\. ")
+            for key in row.keys():
+                m = pattern.match(key)
+                if m:
+                    mapping[int(m.group(1))] = key
+
+        for q in election.definitions[district]:
+            answer_col = mapping.get(q.num)
+            if not answer_col:
+                logger.error(
+                    "Missing answers column for question: %d. %s",
+                    q.num,
+                    q.title,
+                )
                 continue
-            # print(i, row[i])
+            comment_col = f"Případný komentář k otázce {q.num}"
+            is_important_col = f"Téma otázky {q.num} je pro nás velmi důležité."
             answers.append(
                 QuestionAnswer(
-                    id=gen_answer_id(election, district, i),
-                    answer=str(row[i]) or None,
-                    comment=str(row[i + 1]) or None,
-                    # TODO: find how it's marked
-                    is_important=False,
+                    id=gen_answer_id(election, district, secret_code, q.num),
+                    answer=convert_answer(str(row[answer_col])) or None,
+                    comment=convert_comment(str(row[comment_col])) or None,
+                    is_important=bool(row[is_important_col]),
                 )
             )
 
@@ -296,6 +330,7 @@ def extract_answers(
             filled_by=filled_by,
             secret_code=secret_code,
             answers=answers,
+            motto=motto,
         )
 
         res[secret_code] = candidate_answer
@@ -329,7 +364,12 @@ def extract_senatni_districts(
         code = str(row["obvod"])
         if code not in districts:
             districts[code] = District(
-                str(row["obvod_name"]), str(row["obvod_name"]), code
+                name=str(row["obvod_name"]),
+                description=str(row["obvod_description"]),
+                code=code,
+                active=True,
+                on_hp_from=datetime(2022, 9, 1, 0, 0, 0),
+                on_hp_to=datetime(2022, 9, 30, 14, 0, 0),
             )
 
     return districts
@@ -402,8 +442,8 @@ def extract_election_senat(gc: gspread.Client, row: SheetRow) -> Election:
         key="senatni-2022",
         name="Senátní volby 2022",
         description="Volí se třetina senátních obvodů.",
-        voting_from="2022-09-23 14:00",
-        voting_to="2022-09-24 14:00",
+        voting_from=datetime(2022, 9, 23, 14, 0, 0),
+        voting_to=datetime(2022, 9, 24, 14, 0, 0),
     )
 
     url_candidates = str(row["kandidáti"])
@@ -433,7 +473,7 @@ def extract_election_senat(gc: gspread.Client, row: SheetRow) -> Election:
     # load file
     doc_questions = gc.open_by_key(key_questions)
     sheet_questions = doc_questions.worksheet("OTÁZKY")
-    district_global = District("global", "global", "global")
+    district_global = District("global", "global", "global", True)
     question_definitions = extract_senatni_question_definitions(
         sheet_questions,
         election,
@@ -452,6 +492,7 @@ def extract_election_senat(gc: gspread.Client, row: SheetRow) -> Election:
         )
     time.sleep(args.wait)
 
+    logger.info("Extracting answers")
     url_answers = str(rec["odpovědi"])
     key_answers = extract_key(url_answers)
     # load file
@@ -475,8 +516,8 @@ def extract_election_komunalni(gc: gspread.Client, row: SheetRow) -> Election:
         key="komunalni-2022",
         name="Komunální volby 2022",
         description="K dispozici je 35 kalkulaček pro největší města.",
-        voting_from="2022-09-23 14:00",
-        voting_to="2022-09-24 14:00",
+        voting_from=datetime(2022, 9, 23, 14, 0, 0),
+        voting_to=datetime(2022, 9, 24, 14, 0, 0),
     )
 
     url_questions = str(row["otázky originál"])
@@ -496,6 +537,9 @@ def extract_election_komunalni(gc: gspread.Client, row: SheetRow) -> Election:
     # for each district load set of questions
     logger.info("Loading question definitions")
     for pos, district in enumerate(election.districts.values()):
+        if not district.active:
+            logger.info("Skipping loading questions for district %s", district)
+            continue
         logger.info(
             "\t%d: Extracting question definitions for district: %s", pos, district
         )
@@ -516,6 +560,9 @@ def extract_election_komunalni(gc: gspread.Client, row: SheetRow) -> Election:
     # for each district load set of candidates
     logger.info("Loading list of candidates")
     for pos, district in enumerate(election.districts.values()):
+        if not district.active:
+            logger.info("Skipping loading questions for district %s", district)
+            continue
         logger.info("\t%d: Extracting candidates for district: %s", pos, district)
         election.add_candidates(
             district,
@@ -534,8 +581,31 @@ def convert_answer(a: str) -> Optional[str]:
     return {
         "ano": "yes",
         "ne": "no",
-        "Nevím / nemáme jednoznačný názor": "dont_know",
+        "nevím / nemám jednoznačný názor": "dont_know",
+        "nevím / nemáme jednoznačný názor": "dont_know",
     }.get(a.lower())
+
+
+def convert_comment(c: str) -> Optional[str]:
+    # sometimes is value in empty column 0, so we should handle it
+    if c in {"0", ""}:
+        return None
+    return c
+
+
+def generate_election_dict(election: Election) -> dict[str, str]:
+    d = {
+        "id": election.id,
+        "key": election.key,
+        "name": election.name,
+        "description": election.description,
+    }  # type: Dict[str, str]
+    add_element(
+        d, "from", election.voting_from.isoformat() if election.voting_from else None
+    )
+    add_element(d, "to", election.voting_to.isoformat() if election.voting_to else None)
+
+    return d
 
 
 def generate_calculator_dict(election: Election, district: District) -> dict[str, Any]:
@@ -547,14 +617,7 @@ def generate_calculator_dict(election: Election, district: District) -> dict[str
         "name": district.name,
         "description": f"{district.description}",
         "district_code": district.code,
-        "election": {
-            "id": election.id,
-            "key": election.key,
-            "name": election.name,
-            "description": election.description,
-            "from": election.voting_from,
-            "to": election.voting_to,
-        },
+        "election": generate_election_dict(election),
         "questions": [],
         "candidates": [],
         "answers": [],
@@ -630,6 +693,9 @@ def generate_calculator_dict(election: Election, district: District) -> dict[str
                 "abbreviation": candidate.abbreviation,
             }
         ]
+        answers = election.answers[district].get(candidate.secret_code)
+        if answers:
+            add_element(c_dict, "motto", answers.motto)
         d["candidates"].append(c_dict)
 
     all_answers = election.answers[district]
@@ -657,7 +723,7 @@ def generate_calculator_dict(election: Election, district: District) -> dict[str
             add_element(
                 answer_dict,
                 "answer",
-                convert_answer(answer.answer) if answer.answer else None,
+                answer.answer,
             )
             add_element(answer_dict, "comment", answer.comment)
 
@@ -711,10 +777,20 @@ if __name__ == "__main__":
                 logger.error(
                     "Unknown district: %s; known districts: %s",
                     name,
-                    [d.name for d in election.districts.values()],
+                    [(d.name, d.name == name) for d in election.districts.values()],
                 )
                 continue
             if district not in election.definitions:
+                logger.info(
+                    "Skipping district %s - no question definitions",
+                    district,
+                )
+                continue
+            if not district.active:
+                logger.info(
+                    "Skipping district %s - not active",
+                    district,
+                )
                 continue
 
             logger.info("Extracting answers for district: %s", district)
@@ -743,33 +819,38 @@ if __name__ == "__main__":
     for election_key, election in elections.items():
         election_root = output_root / election_key
         election_root.mkdir(parents=True, exist_ok=True)
-        calculators_dict["elections"].append(
-            {
-                "id": election.id,
-                "key": election.key,
-                "name": election.name,
-                "description": election.description,
-                "from": election.voting_from,
-                "to": election.voting_to,
-            }
-        )
+        calculators_dict["elections"].append(generate_election_dict(election))
         for district in election.districts.values():
-            calculators_dict["calculators"].append(
-                {
-                    "election_id": election.id,
-                    "district_code": district.code,
-                    "name": district.name,
-                    "description": district.description,
-                    # TODO
-                    "on_hp_from": "2021-01-01",
-                    "on_hp_to": "2031-01-01",
-                }
+            if not district.active:
+                logger.info(
+                    "Skipping generation for district %s - not active",
+                    district,
+                )
+                continue
+            calc_dict = {
+                "election_id": election.id,
+                "district_code": district.code,
+                "name": district.name,
+                "description": district.description,
+            }
+            add_element(
+                calc_dict,
+                "on_hp_from",
+                district.on_hp_from.isoformat() if district.on_hp_from else None,
             )
+            add_element(
+                calc_dict,
+                "on_hp_to",
+                district.on_hp_to.isoformat() if district.on_hp_to else None,
+            )
+            calculators_dict["calculators"].append(calc_dict)
             calculator_dict = generate_calculator_dict(election, district)
             calculator_file = election_root / f"{district.code}.json"
             with calculator_file.open(mode="w", encoding="utf-8") as fh:
                 json.dump(calculator_dict, fh, indent=2, ensure_ascii=False)
+                logger.info("Calculator file stored into %s", calculator_file)
 
     calculators_file = output_root / "calculators.json"
     with calculators_file.open(mode="w", encoding="utf-8") as fh:
         json.dump(calculators_dict, fh, indent=2, ensure_ascii=False)
+        logger.info("Index stored into %s", calculators_file)

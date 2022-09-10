@@ -8,8 +8,8 @@
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
     "description": "K dispozici je 35 kalkulaček pro největší města.",
-    "from": "2022-09-23 14:00",
-    "to": "2022-09-24 14:00"
+    "from": "2022-09-23T14:00:00",
+    "to": "2022-09-24T14:00:00"
   },
   "questions": [
     {
@@ -500,7 +500,8 @@
           },
           "abbreviation": "Svob+Trikol+NK"
         }
-      ]
+      ],
+      "motto": "Obyčejné věci pro obyčejné lidi = Písek srdcem a rozumem."
     },
     {
       "id": "komunalni-2022-549240-c-471937",
@@ -542,7 +543,8 @@
           },
           "abbreviation": "TOP 09+JIH 12"
         }
-      ]
+      ],
+      "motto": "Máme skvělý tým - PRO PÍSEK!"
     },
     {
       "id": "komunalni-2022-549240-c-669759",
@@ -633,313 +635,605 @@
   ],
   "answers": [
     {
-      "id": "komunalni-2022-549240-a-4",
+      "id": "komunalni-2022-549240-a-424512-1",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-1",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-549240-a-7",
+      "id": "komunalni-2022-549240-a-424512-2",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-2",
       "answer": "yes",
       "comment": "Odpad produkuje každý z nás, poplatek by měl být zachován. Celkové roční náklady na svoz odpadu jsou 29 mil. Kč. Zrušením poplatku přijde město o 12 mil., které bude muset investovat navíc a za které by se daly opravit např. povrchy ve 3 ulicích."
     },
     {
-      "id": "komunalni-2022-549240-a-10",
+      "id": "komunalni-2022-549240-a-424512-3",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-3",
       "answer": "no",
       "comment": "Město zatím žádné domy pro seniory neprovozuje, ani prostřednictvím jím zřízených organizací."
     },
     {
-      "id": "komunalni-2022-549240-a-13",
+      "id": "komunalni-2022-549240-a-424512-4",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-4",
       "answer": "yes",
       "comment": "Tato zóna by mohla být vytvořena v centru města, minimálně na Velkém náměstí. Vytvořil by se bezpečný prostor pro chodce a zároveň by to umožnilo jednoúrovňové řešení plochy bez zbytečných bariér (vysoké obrubníky, atd.)"
     },
     {
-      "id": "komunalni-2022-549240-a-16",
+      "id": "komunalni-2022-549240-a-424512-5",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-5",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-19",
+      "id": "komunalni-2022-549240-a-424512-6",
       "candidate_id": "komunalni-2022-549240-c-424512",
-      "question_id": "komunalni-2022-549240-q-6"
+      "question_id": "komunalni-2022-549240-q-6",
+      "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-549240-a-22",
+      "id": "komunalni-2022-549240-a-424512-7",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-7",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-25",
+      "id": "komunalni-2022-549240-a-424512-8",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-8",
       "answer": "no",
       "comment": "Pro seniory a studenty je cena za roční jízdenku 100 Kč, je to víceméně symbolická suma. "
     },
     {
-      "id": "komunalni-2022-549240-a-28",
+      "id": "komunalni-2022-549240-a-424512-9",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-9",
       "answer": "yes",
       "comment": "Postupně by mělo dojít na úpravy zastávek tak, jak se budou jednotlivé ulice rekonstruovat."
     },
     {
-      "id": "komunalni-2022-549240-a-31",
+      "id": "komunalni-2022-549240-a-424512-10",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-10",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-34",
+      "id": "komunalni-2022-549240-a-424512-11",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-11",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-37",
+      "id": "komunalni-2022-549240-a-424512-12",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-12",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-40",
+      "id": "komunalni-2022-549240-a-424512-13",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-13",
       "answer": "yes",
       "comment": "Městská knihovna slouží široké veřejnosti, přijít se ohřát a při té příležitosti si i něco přečíst by neměl být problém."
     },
     {
-      "id": "komunalni-2022-549240-a-43",
+      "id": "komunalni-2022-549240-a-424512-14",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-14",
       "answer": "no",
       "comment": "Noční nasvícení kulturních památek tvoří jen velmi zanedbatelnou položku v celkovém objemu."
     },
     {
-      "id": "komunalni-2022-549240-a-46",
+      "id": "komunalni-2022-549240-a-424512-15",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-15",
       "answer": "yes",
       "comment": "Momentálně pracujeme na úsporných opatřeních v oblasti veřejného opatření."
     },
     {
-      "id": "komunalni-2022-549240-a-49",
+      "id": "komunalni-2022-549240-a-424512-16",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-16",
       "answer": "yes",
       "comment": "Městské budovy jsou až na několik výjimek napojené na městskou teplárnu. Nicméně pokud chceme, aby si svůj komfort snížili i občané, je třeba jít příkladem."
     },
     {
-      "id": "komunalni-2022-549240-a-52",
+      "id": "komunalni-2022-549240-a-424512-17",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-17",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-55",
+      "id": "komunalni-2022-549240-a-424512-18",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-18",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-58",
+      "id": "komunalni-2022-549240-a-424512-19",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-19",
       "answer": "yes",
       "comment": "Město má vyčleněnou částku 3 mil. Kč na participativní rozpočet, tedy na projekty, které vymýšlejí sami občané a také o nich sami rozhodují. Chtěli bychom v tom pokračovat."
     },
     {
-      "id": "komunalni-2022-549240-a-61",
+      "id": "komunalni-2022-549240-a-424512-20",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-20",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-64",
+      "id": "komunalni-2022-549240-a-424512-21",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-21",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-549240-a-67",
+      "id": "komunalni-2022-549240-a-424512-22",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-22",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-549240-a-70",
+      "id": "komunalni-2022-549240-a-424512-23",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-23",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-73",
+      "id": "komunalni-2022-549240-a-424512-24",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-24",
       "answer": "no",
       "comment": "Parkovací zóny se momentálně jeví jako nejvhodnější nástroj k regulaci parkování např. na sídlištích nebo i v centru města. Nicméně musí být doplněny vhodnou alternativou, jako jsou např. kapacitní parkovací domy."
     },
     {
-      "id": "komunalni-2022-549240-a-76",
+      "id": "komunalni-2022-549240-a-424512-25",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-25",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-549240-a-79",
+      "id": "komunalni-2022-549240-a-424512-26",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-26",
       "answer": "yes",
       "comment": "Již připravujeme podklady k přípravě pravidel pro spolupráci s developery."
     },
     {
-      "id": "komunalni-2022-549240-a-82",
+      "id": "komunalni-2022-549240-a-424512-27",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-27",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-85",
+      "id": "komunalni-2022-549240-a-424512-28",
       "candidate_id": "komunalni-2022-549240-c-424512",
-      "question_id": "komunalni-2022-549240-q-28"
+      "question_id": "komunalni-2022-549240-q-28",
+      "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-549240-a-88",
+      "id": "komunalni-2022-549240-a-424512-29",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-29",
       "answer": "yes",
       "comment": "Momentálně je výše příspěvků 0, takže by se určitě měly zvýšit, resp. zavést."
     },
     {
-      "id": "komunalni-2022-549240-a-91",
+      "id": "komunalni-2022-549240-a-424512-30",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-30",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-94",
+      "id": "komunalni-2022-549240-a-424512-31",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-31",
       "answer": "yes",
       "comment": "Pro takové formy výstavby jsme schopni poskytnout vhodné pozemky, ale je třeba je vybavit potřebnou infrastrukturou."
     },
     {
-      "id": "komunalni-2022-549240-a-97",
+      "id": "komunalni-2022-549240-a-424512-32",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-32",
       "answer": "no",
       "comment": "Děti do 18 let dnes platí 100 Kč ročně, jde o symbolický poplatek."
     },
     {
-      "id": "komunalni-2022-549240-a-100",
+      "id": "komunalni-2022-549240-a-424512-33",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-33",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-549240-a-103",
+      "id": "komunalni-2022-549240-a-424512-34",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-34",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-106",
+      "id": "komunalni-2022-549240-a-424512-35",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-35",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-549240-a-109",
+      "id": "komunalni-2022-549240-a-424512-36",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-36",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-549240-a-112",
+      "id": "komunalni-2022-549240-a-424512-37",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-37",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-115",
+      "id": "komunalni-2022-549240-a-424512-38",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-38",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-549240-a-118",
+      "id": "komunalni-2022-549240-a-424512-39",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-39",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-121",
+      "id": "komunalni-2022-549240-a-424512-40",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-40",
       "answer": "yes",
       "comment": "Ale bude to generovat samozřejmě vyšší náklady na platy. Dále je také nedostatek vhodných zájemců o tuto nepopulární práci."
     },
     {
-      "id": "komunalni-2022-549240-a-124",
+      "id": "komunalni-2022-549240-a-424512-41",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-41",
       "answer": "yes",
       "comment": "Město prosazovat zelené střechy chce, ale bohužel naráží na odpor ze strany památkové péče."
     },
     {
-      "id": "komunalni-2022-549240-a-127",
+      "id": "komunalni-2022-549240-a-424512-42",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-42",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-130",
+      "id": "komunalni-2022-549240-a-424512-43",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-43",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-133",
+      "id": "komunalni-2022-549240-a-424512-44",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-44",
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-549240-a-136",
+      "id": "komunalni-2022-549240-a-424512-45",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-45",
       "answer": "no",
       "comment": "Podpora by měla být motivační, např. zvýhodněné nájemné na dobu určitou nebo možnost splátkových kalendářů. NE finanční podpora."
     },
     {
-      "id": "komunalni-2022-549240-a-139",
+      "id": "komunalni-2022-549240-a-424512-46",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-46",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-142",
+      "id": "komunalni-2022-549240-a-424512-47",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-47",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-145",
+      "id": "komunalni-2022-549240-a-424512-48",
       "candidate_id": "komunalni-2022-549240-c-424512",
       "question_id": "komunalni-2022-549240-q-48",
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-148",
-      "candidate_id": "komunalni-2022-549240-c-424512",
-      "question_id": "komunalni-2022-549240-q-49"
+      "id": "komunalni-2022-549240-a-746441-1",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-1",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-2",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-2",
+      "answer": "no",
+      "comment": "Písečákům zrušíme poplatek za popelnice i poplatek za psa. Občané si tyto služby už zaplatili ze svých daní. "
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-3",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-3",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-4",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-4",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-5",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-5",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-6",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-6",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-7",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-7",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-8",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-8",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-9",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-9",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-10",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-10",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-11",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-11",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-12",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-12",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-13",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-13",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-14",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-14",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-15",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-15",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-16",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-16",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-17",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-17",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-18",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-18",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-19",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-19",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-20",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-20",
+      "answer": "no",
+      "comment": "Město by mělo udržovat svůj bytový fond pro nezbytné účely (např. sociální bydlení, služební byty,...). Přebytek bytů by měl být nabídnut lidem k odprodeji. Písek srdcem a rozumem primárně podporuje dostupné bydlení skrze družstevní bytovou výstavbu."
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-21",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-21",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-22",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-22",
+      "answer": "no",
+      "comment": "Existuje spousta funkčních soukromých projektů, které dětem ve vážné sociální situaci zajišťují bezplatné obědy."
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-23",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-23",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-24",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-24",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-25",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-25",
+      "answer": "yes",
+      "comment": "Město by mělo udržovat svůj bytový fond pro nezbytné účely (např. sociální bydlení, služební byty,...). Přebytek bytů by měl být nabídnut k odprodeji. Písek srdcem a rozumem primárně podporuje dostupné bydlení skrze družstevní bytovou výstavbu."
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-26",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-26",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-27",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-27",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-28",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-28",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-29",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-29",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-30",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-30",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-31",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-31",
+      "answer": "yes",
+      "comment": "Písek srdcem a rozumem podporuje dostupné bydlení skrze družstevní bytovou výstavbu."
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-32",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-32",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-33",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-33",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-34",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-34",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-35",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-35",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-36",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-36",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-37",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-37",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-38",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-38",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-39",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-39",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-40",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-40",
+      "answer": "no",
+      "comment": "Problémem města není nedostatek strážníků, ale jsou to banální prohřešky, jako je např. špatné parkování, které plýtvají časem strážníků. Tyto prohřešky budeme řešit technologickými prostředky, aby strážníci mohli být více v ulicích.\n"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-41",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-41",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-42",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-42",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-43",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-43",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-44",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-44",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-45",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-45",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-46",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-46",
+      "answer": "yes",
+      "comment": "Město by mělo udržovat svůj bytový fond pro nezbytné účely (např. sociální bydlení, služební byty,...). Přebytek bytů by měl být nabídnut k odprodeji. Písek srdcem a rozumem primárně podporuje dostupné bydlení skrze družstevní bytovou výstavbu."
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-47",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-47",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-746441-48",
+      "candidate_id": "komunalni-2022-549240-c-746441",
+      "question_id": "komunalni-2022-549240-q-48",
+      "answer": "yes"
     }
   ]
 }
