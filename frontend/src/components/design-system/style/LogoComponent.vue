@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
+import { appRoutes } from '@/main';
+
 import { computed } from 'vue';
 
 export interface Props {
@@ -15,6 +18,8 @@ const props = withDefaults(defineProps<Props>(), {
   responsive: false,
 });
 
+const router = useRouter();
+
 const classes = computed(() => ({
   [`logo--${props.size}`]: props.size,
 }));
@@ -29,7 +34,10 @@ const responsive = computed(() => ({
 </script>
 
 <template>
-  <div :class="['logo-wrapper', responsive]">
+  <div
+    :class="['logo-wrapper', responsive]"
+    @click="router.push({ name: appRoutes.index.name })"
+  >
     <div :class="['logo', classes, logoMonochromatic]">
       <svg viewBox="0 0 300 65" role="img" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -79,6 +87,10 @@ const responsive = computed(() => ({
       }
     }
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 .logo {
   &--small {
@@ -105,10 +117,20 @@ const responsive = computed(() => ({
       font-size: var(--typography-body-small-size);
       margin-left: 0.563rem;
     }
+
+    &:hover {
+      color: rgb(var(--color-neutral-fg));
+      transition: color 0.3s ease-in;
+    }
   }
 
   &--monochromatic {
     color: rgb(var(--color-neutral-fg));
+  }
+
+  svg:hover * {
+    fill: rgb(var(--color-neutral-fg));
+    transition: fill 0.3s ease-in;
   }
 }
 </style>
