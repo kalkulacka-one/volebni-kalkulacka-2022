@@ -44,12 +44,14 @@ const elections = await fetchElections();
             <StackComponent horizontal spacing="small">
               <ButtonComponent
                 kind="filled"
+                color="primary"
                 href="https://twitter.com/intent/follow?screen_name=ceskodigital"
               >
                 Sledovat @CeskoDigital na Twitteru
               </ButtonComponent>
               <ButtonComponent
                 kind="outlined"
+                color="primary"
                 href="https://www.volebnikalkulacka.cz/"
               >
                 Volební kalkulačky z předchozích let
