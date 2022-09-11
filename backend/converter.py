@@ -314,15 +314,26 @@ def extract_answers(
                 )
                 continue
             comment_col = f"Případný komentář k otázce {q.num}"
-            is_important_col = f"Téma otázky {q.num} je pro nás velmi důležité."
+            is_important_col_kom = f"Téma otázky {q.num} je pro nás velmi důležité."
+            is_important_col_sen = f"Téma otázky {q.num} je pro mě velmi důležité."
             answers.append(
                 QuestionAnswer(
                     id=gen_answer_id(election, district, secret_code, q.num),
                     answer=convert_answer(str(row[answer_col])) or None,
                     comment=convert_comment(str(row[comment_col])) or None,
-                    is_important=bool(row[is_important_col]),
+                    is_important=bool(
+                        row.get(is_important_col_kom, row.get(is_important_col_sen))
+                    ),
                 )
             )
+
+        logger.info(
+            "Extracted answers for candidate %s (%s), district %s: %d",
+            candidate,
+            secret_code,
+            district,
+            len(answers),
+        )
 
         candidate_answer = CandidateAnswers(
             timestamp=ts,
@@ -335,7 +346,7 @@ def extract_answers(
 
         res[secret_code] = candidate_answer
 
-    logger.info("Extracted answers: %d", len(res))
+    logger.info("Extracted answers for %d candidates", len(res))
     return res
 
 
@@ -363,11 +374,12 @@ def extract_senatni_districts(
     for row in sheet.get_all_records():
         code = str(row["obvod"])
         if code not in districts:
+            active = str(row["active"]).strip()
             districts[code] = District(
                 name=str(row["obvod_name"]),
                 description=str(row["obvod_description"]),
                 code=code,
-                active=True,
+                active=bool(int(active)) if active else False,
                 on_hp_from=datetime(2022, 9, 1, 0, 0, 0),
                 on_hp_to=datetime(2022, 9, 30, 14, 0, 0),
             )
@@ -486,6 +498,9 @@ def extract_election_senat(gc: gspread.Client, row: SheetRow) -> Election:
         logger.info(
             "\t%d: Extracting question definitions for district: %s", pos, district
         )
+        if not district.active:
+            logger.info("Skipping loading questions for district %s", district)
+            continue
         election.add_question_definitions(
             district,
             question_definitions,
@@ -498,14 +513,17 @@ def extract_election_senat(gc: gspread.Client, row: SheetRow) -> Election:
     # load file
     doc_answers = gc.open_by_key(key_answers)
     sheet_answers = doc_answers.worksheet("Form Responses 1")
-    answers = extract_answers(sheet_answers, election, district_global)
 
     for district in election.districts.values():
+        if not district.active:
+            logger.info("Skipping loading questions for district %s", district)
+            continue
         candidates = election.candidates[district]
+        answers = extract_answers(sheet_answers, election, district)
         election.add_answers(
             district, {c: a for c, a in answers.items() if c in candidates}
         )
-    time.sleep(args.wait)
+        time.sleep(args.wait)
 
     return election
 
@@ -710,9 +728,10 @@ def generate_calculator_dict(election: Election, district: District) -> dict[str
             )
             continue
         logger.info(
-            "Generating answers for district %s and candidate %s",
+            "Generating answers for district %s and candidate %s with answers %d",
             district,
             candidate_answers.candidate,
+            len(candidate_answers.answers),
         )
         for answer in candidate_answers.answers:
             answer_dict = {
