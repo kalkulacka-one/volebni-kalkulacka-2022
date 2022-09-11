@@ -7,9 +7,9 @@ export interface Props {
   border?: boolean;
   borderKind?: 'normal' | 'strong';
   shadow?: boolean;
-  padding?: 'small' | 'small-mixed' | 'large';
+  padding?: 'small' | 'medium' | 'large';
+  paddingResponsive?: boolean;
   backgroundColor?: string;
-  responsive?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -18,8 +18,8 @@ const props = withDefaults(defineProps<Props>(), {
   borderKind: 'normal',
   shadow: false,
   padding: 'small',
+  paddingResponsive: false,
   backgroundColor: 'rgb(var(--color-neutral-bg-container))',
-  responsive: false,
 });
 
 const classes = computed(() => ({
@@ -28,8 +28,9 @@ const classes = computed(() => ({
   'card--border': props.border,
   [`card--border-${props.borderKind}`]: props.border,
   'card--shadow': props.shadow,
-  [`card--padding-${props.padding}`]: props.padding,
-  'card--responsive': props.responsive,
+  [`card--padding-${props.padding}${
+    props.paddingResponsive ? `-responsive` : ''
+  }`]: props.padding,
 }));
 </script>
 
@@ -83,6 +84,7 @@ const classes = computed(() => ({
   }
 
   &--shadow {
+    // TODO: Add shadow to theme
     box-shadow: 6px 8px 0px 0px
       rgba(var(--color-neutral-shadow), var(--transparency-20));
   }
@@ -90,13 +92,17 @@ const classes = computed(() => ({
   &--padding {
     &-small {
       padding: var(--spacing-small);
-    }
-    &-small-mixed {
-      // TODO: fix breakpoint
-      padding: var(--spacing-small) var(--spacing-small);
 
-      @media (min-width: 700px) {
-        padding: var(--spacing-small) var(--spacing-large);
+      &-responsive {
+        padding: var(--responsive-spacing-small);
+      }
+    }
+
+    &-medium {
+      padding: var(--spacing-medium);
+
+      &-responsive {
+        padding: var(--responsive-spacing-medium);
       }
     }
 
@@ -105,13 +111,12 @@ const classes = computed(() => ({
       padding-bottom: var(--spacing-large);
       padding-left: calc(2 * var(--spacing-large));
       padding-right: calc(2 * var(--spacing-large));
-    }
-  }
 
-  &--responsive {
-    @media (max-width: 700px) {
-      &.card--padding-large {
-        padding: var(--spacing-small);
+      &-responsive {
+        padding-top: var(--responsive-spacing-large);
+        padding-bottom: var(--responsive-spacing-large);
+        padding-left: var(--responsive-spacing-2-large);
+        padding-right: var(--responsive-spacing-2-large);
       }
     }
   }

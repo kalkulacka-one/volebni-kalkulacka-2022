@@ -37,7 +37,8 @@ const toggleAccordion = () => {
       :id="`collapse${$.uid}`"
       corner="top-left"
       background-color="rgb(var(--palette-neutral-90))"
-      padding="small-mixed"
+      padding="medium"
+      padding-responsive
       :style="{ marginTop: 'var(--accordion-elements-spacing)' }"
     >
       <slot name="content" />

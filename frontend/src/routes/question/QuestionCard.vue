@@ -24,7 +24,7 @@ defineProps<Props>();
     border
     shadow
     padding="large"
-    responsive
+    padding-responsive
   >
     <StackComponent spacing="large">
       <StackComponent horizontal centered spacing="small">
