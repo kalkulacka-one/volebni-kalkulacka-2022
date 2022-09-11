@@ -6,7 +6,6 @@ import { fetchElections } from '@/common/dataFetch';
 
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
-import HeadingComponent from '@/components/design-system/typography/HeadingComponent.vue';
 import CardComponent from '@/components/design-system/containers/CardComponent.vue';
 import StackComponent from '../../components/design-system/layout/StackComponent.vue';
 import BodyText from '../../components/design-system/typography/BodyText.vue';
@@ -200,7 +199,7 @@ export default {
               podpoříte a umožníte nám pokračovat v jejich tvorbě.</BodyText
             >
           </StackComponent>
-          <div data-darujme-widget-token="w2acrk0w61fgr3so">&nbsp;</div>
+          <div class="donation" data-darujme-widget-token="w2acrk0w61fgr3so">&nbsp;</div>
         </div>
       </div>
       <FooterMultiWord class="section" />
@@ -233,6 +232,10 @@ export default {
   @media (max-width: 767px) {
     flex-direction: column;
   }
+}
+
+.donation {
+  background-color: white;
 }
 
 .wrapper {
