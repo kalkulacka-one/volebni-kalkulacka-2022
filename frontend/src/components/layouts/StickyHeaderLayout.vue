@@ -38,6 +38,8 @@ import RootLayout from '@/components/layouts/RootLayout.vue';
   .main {
     display: grid;
     grid-area: main;
+    grid-row-start: sticky-header;
+    grid-row-end: main;
   }
 }
 </style>

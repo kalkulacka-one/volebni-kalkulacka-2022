@@ -18,6 +18,8 @@
   .main {
     grid-area: main;
     min-height: 100%;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .bottom-bar {
