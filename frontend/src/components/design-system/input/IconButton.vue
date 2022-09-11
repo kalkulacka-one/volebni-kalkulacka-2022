@@ -24,8 +24,10 @@
     cursor: not-allowed;
   }
 
-  &:hover {
-    background: rgba(var(--color-neutral-bg-backdrop-hover));
+  @media (hover: hover) {
+    &:hover {
+      background: rgba(var(--color-neutral-bg-backdrop-hover));
+    }
   }
 
   &:active {
