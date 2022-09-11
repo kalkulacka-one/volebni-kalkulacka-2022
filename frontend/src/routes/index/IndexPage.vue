@@ -15,7 +15,6 @@ import BackgroundComponent from '../../components/design-system/style/Background
 
 const router = useRouter();
 const route = useRoute();
-
 </script>
 
 <template>
