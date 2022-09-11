@@ -167,7 +167,6 @@ const resultsMedicine = calculateRelativeAgreement(
       <BottomBarWrapper>
         <StackComponent class="main" spacing="medium">
           <ResultCategory
-            title="Celková shoda"
             :result="resultsGeneral"
             category="general"
             :max-visible-candidates="2"
