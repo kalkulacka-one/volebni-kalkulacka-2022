@@ -30,6 +30,9 @@
   // – large
   --responsive-spacing-large: var(--spacing-large);
   @media (max-width: calc($breakpoint-extra-small - 1px)) {
+    --responsive-spacing-large: var(--spacing-extra-small);
+  }
+  @media (min-width: $breakpoint-extra-small) and (max-width: calc($breakpoint-small - 1px)) {
     --responsive-spacing-large: var(--spacing-small);
   }
   // – 2 × large
