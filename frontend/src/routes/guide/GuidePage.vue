@@ -54,17 +54,11 @@ const districtName = electionStore.districts.filter(
 const showDistrictCode = electionStore.districts.filter(
   (district) => district.district_code === districtCode
 )[0].show_district_code;
+const districtNameWithCode = showDistrictCode
+  ? `${districtName} (${districtCode})`
+  : districtName;
 
-// TODO: Map route params to text
-const breadcrumbs =
-  `${electionName} — ${districtName}` +
-  (showDistrictCode ? ` (${districtCode})` : '');
-
-// TODO: Replace with data from store
-const title =
-  route.params.election === 'senatni-2022'
-    ? 'Zvolte svůj senátní obvod'
-    : 'Zvolte své město';
+const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
 
 // TODO: Replace with data from store
 const text =
@@ -225,7 +219,7 @@ const handlePreviousClick = () => {
           <StackComponent v-if="currentStep === 1" spacing="small">
             <HeadingComponent kind="title" size="medium">
               {{ electionName }}
-              <template #secondary>{{ districtName }}</template>
+              <template #secondary>{{ districtNameWithCode }}</template>
             </HeadingComponent>
             <BodyText size="medium">
               <MarkdownIt :markdown="text" />
