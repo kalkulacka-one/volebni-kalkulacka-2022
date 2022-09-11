@@ -744,7 +744,7 @@ Na konci se dozvíte, jak se strany shodují s Vašimi názory.
     num_active_districts = len([d for d in election.districts.values() if d.active])
 
     election.description = (
-        f"K dispozici jsou kalkulačky pro {num_active_districts} měst."
+        f"K dispozici jsou kalkulačky pro **{num_active_districts} měst** České republiky."
     )
     election.instructions[InstructionKey.STEP_1_1] = election.description
 
