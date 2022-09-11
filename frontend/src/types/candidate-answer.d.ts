@@ -24,7 +24,7 @@ export interface CandidateAnswer {
   /**
    * Answer on given question
    */
-  answer?: "yes" | "no";
+  answer?: "yes" | "no" | "dont_know";
   /**
    * Candidate's comment related to their answer.
    */
