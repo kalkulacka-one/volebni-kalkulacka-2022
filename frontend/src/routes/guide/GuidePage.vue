@@ -13,8 +13,6 @@ import { useElectionStore } from '@/stores/electionStore';
 
 import type { Election } from '@/types/election';
 
-import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
-
 import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 import BottomBar from '@/components/design-system/navigation/BottomBar.vue';
@@ -39,7 +37,9 @@ import {
   vkiStarFilled,
 } from '@/components/design-system/icons';
 
+import MarkdownIt from '@/components/utilities/MarkdownIt.vue';
 import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
+import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -47,7 +47,6 @@ const electionStore = useElectionStore();
 
 const election = electionStore.election as Election;
 const electionName = election.name;
-const electionDescription = election.description;
 const districtCode = route.params.district;
 const districtName = electionStore.districts.filter(
   (district) => district.district_code === districtCode
@@ -55,10 +54,25 @@ const districtName = electionStore.districts.filter(
 const showDistrictCode = electionStore.districts.filter(
   (district) => district.district_code === districtCode
 )[0].show_district_code;
+const districtNameWithCode = showDistrictCode
+  ? `${districtName} (${districtCode})`
+  : districtName;
 
-const title =
-  `${electionName} — ${districtName}` +
-  (showDistrictCode ? ` (${districtCode})` : '');
+const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
+
+// TODO: Replace with data from store
+const text =
+  route.params.election === 'senatni-2022'
+    ? `
+Vítejte ve Volební kalkulačce pro volby do zastupitelstev měst.
+
+Čeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující strany. Zodpovězení otázek zabere cca 10 minut. Na konci se dozvíte, jak se strany shodují s vašimi názory.
+      `
+    : `
+Vítejte ve Volební kalkulačce pro komunální volby 2022.
+
+Čeká vás 30-40 otázek, jejich zodpovězení zabere cca 10 minut. Na konci se dozvíte, v kolika procentech odpovědí se s kandidujícími stranami shodujete v názorech.
+    `;
 
 const forwardRoute = computed(
   () =>
@@ -148,7 +162,7 @@ const handlePreviousClick = () => {
     <StickyHeaderLayout>
       <template #header>
         <NavigationBar transparent>
-          <template #title>{{ title }}</template>
+          <template #title>{{ breadcrumbs }}</template>
           <template #right>
             <ResponsiveWrapper medium large extra-large huge>
               <ButtonComponent
@@ -205,10 +219,10 @@ const handlePreviousClick = () => {
           <StackComponent v-if="currentStep === 1" spacing="small">
             <HeadingComponent kind="title" size="medium">
               {{ electionName }}
-              <template #secondary>{{ districtName }}</template>
+              <template #secondary>{{ districtNameWithCode }}</template>
             </HeadingComponent>
             <BodyText size="medium">
-              {{ electionDescription }}
+              <MarkdownIt :markdown="text" />
             </BodyText>
           </StackComponent>
           <StackComponent v-if="currentStep === 2" spacing="small">
@@ -235,10 +249,17 @@ const handlePreviousClick = () => {
                 </StackComponent>
               </StackComponent>
             </CardComponent>
-            <BodyText size="medium">
-              Když se s nějakou stranou v odpovědi shodnete, získá ve výpočtu
-              shody 1 bod.
-            </BodyText>
+            <StackComponent spacing="extra-small">
+              <BodyText size="medium">
+                Když se s&nbsp;kandidátem nebo stranou v&nbsp;odpovědi shodnete,
+                získá ve výpočtu shody 1&nbsp;bod. V&nbsp;opačném případě
+                1&nbsp;bod ztratí.
+              </BodyText>
+              <BodyText size="medium">
+                Pokud kandidát nebo strana odpověděli neutrálně, otázka se
+                započítá se ziskem 0&nbsp;bodů.
+              </BodyText>
+            </StackComponent>
           </StackComponent>
           <StackComponent v-if="currentStep === 3" spacing="small">
             <BodyText size="medium">
@@ -266,8 +287,8 @@ const handlePreviousClick = () => {
           </StackComponent>
           <StackComponent v-if="currentStep === 4" spacing="small">
             <BodyText size="medium">
-              Když nemáte názor, nejste si jisti nebo z jiného důvodu nechcete
-              odpovídat, zvolte:
+              Když nemáte názor, nejste si jisti nebo z&nbsp;jiného důvodu
+              nechcete odpovídat, zvolte:
             </BodyText>
             <CardComponent
               corner="bottom-right"
@@ -280,7 +301,7 @@ const handlePreviousClick = () => {
               </StackComponent>
             </CardComponent>
             <BodyText size="medium">
-              Pokud strana též na otázku neodpověděla, získá 1/2 bodu.
+              Tato otázka se do výpočtu vaší shody nezapočítá.
             </BodyText>
           </StackComponent>
           <template #after>

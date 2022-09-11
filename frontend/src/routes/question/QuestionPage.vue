@@ -44,10 +44,11 @@ const districtName = electionStore.districts.filter(
 const showDistrictCode = electionStore.districts.filter(
   (district) => district.district_code === districtCode
 )[0].show_district_code;
+const districtNameWithCode = showDistrictCode
+  ? `${districtName} (${districtCode})`
+  : districtName;
 
-const title =
-  `${electionName} — ${districtName}` +
-  (showDistrictCode ? ` (${districtCode})` : '');
+const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
 
 const forwardRoute = computed(
   () =>
@@ -151,7 +152,7 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
   <StickyHeaderLayout>
     <template #header>
       <NavigationBar transparent>
-        <template #title>{{ title }}</template>
+        <template #title>{{ breadcrumbs }}</template>
         <template #right>
           <ResponsiveWrapper medium large extra-large huge>
             <ButtonComponent
