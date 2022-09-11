@@ -10,7 +10,6 @@ export interface Props {
   size?: 'medium' | 'small';
   color?: 'neutral' | 'primary' | 'secondary';
   selected?: boolean;
-  responsive?: boolean;
   readOnly?: boolean;
 }
 
@@ -20,7 +19,6 @@ const props = withDefaults(defineProps<Props>(), {
   size: 'medium',
   color: 'neutral',
   selected: false,
-  responsive: false,
   readOnly: false,
 });
 
@@ -29,7 +27,6 @@ const classes = computed(() => ({
   [`button--${props.size}`]: props.size,
   [`button--${props.color}`]: props.color,
   'button--selected': props.selected,
-  'button--responsive': props.responsive,
   'button--read-only': props.readOnly,
 }));
 
@@ -378,34 +375,6 @@ const computedSize = computed(() =>
         color: rgb(var(--color-secondary-fg-inverse));
         background-color: rgb(var(--color-secondary-bg-strong));
         border-color: transparent;
-      }
-    }
-  }
-
-  &--responsive {
-    @media (max-width: 700px) {
-      .text {
-        display: none;
-      }
-
-      .icon {
-        &--before {
-          margin-right: 0;
-        }
-
-        &--after {
-          margin-left: 0;
-        }
-      }
-
-      &.button--answer {
-        &.button--medium {
-          padding: calc(var(--spacing-small) - var(--spacing-nano));
-        }
-
-        &.button--small {
-          padding: calc(var(--spacing-extra-small) - var(--spacing-nano));
-        }
       }
     }
   }

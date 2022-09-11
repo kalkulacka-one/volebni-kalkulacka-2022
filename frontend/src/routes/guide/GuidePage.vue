@@ -15,6 +15,7 @@ import type { Election } from '@/types/election';
 
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
+import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 import BottomBar from '@/components/design-system/navigation/BottomBar.vue';
 import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper.vue';
@@ -37,7 +38,8 @@ import {
   vkiStarOutlined,
   vkiStarFilled,
 } from '@/components/design-system/icons';
-import BackgroundComponent from '../../components/design-system/style/BackgroundComponent.vue';
+
+import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -143,42 +145,57 @@ const handlePreviousClick = () => {
         <NavigationBar transparent>
           <template #title>{{ title }}</template>
           <template #right>
-            <ButtonComponent
-              kind="link"
-              :responsive="true"
-              @click="router.push({ name: appRoutes.index.name })"
-            >
-              Zpět na hlavní stránku
-              <template #iconAfter>
-                <IconComponent
-                  :icon="mdiCloseCircleOutline"
-                  title="Zpět na hlavní stránku"
-                />
-              </template>
-            </ButtonComponent>
+            <ResponsiveWrapper desktop>
+              <ButtonComponent
+                kind="link"
+                @click="router.push({ name: appRoutes.index.name })"
+              >
+                Zpět na hlavní stránku
+                <template #iconAfter>
+                  <IconComponent :icon="mdiCloseCircleOutline" />
+                </template>
+              </ButtonComponent>
+            </ResponsiveWrapper>
+            <ResponsiveWrapper mobile>
+              <ButtonComponent
+                kind="link"
+                @click="router.push({ name: appRoutes.index.name })"
+              >
+                <template #icon>
+                  <IconComponent
+                    :icon="mdiCloseCircleOutline"
+                    title="Zpět na hlavní stránku"
+                  />
+                </template>
+              </ButtonComponent>
+            </ResponsiveWrapper>
           </template>
         </NavigationBar>
       </template>
       <template #sticky-header>
-        <SecondaryNavigationBar transparent>
-          <template v-if="currentStep > 1" #before>
-            <IconButton @click="handlePreviousClick">
-              <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
-            </IconButton>
-          </template>
-          <template v-if="farthestCompletedStep >= currentStep" #after>
-            <IconButton @click="handleNextClick">
-              <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
-            </IconButton>
-          </template>
-        </SecondaryNavigationBar>
+        <ResponsiveWrapper mobile>
+          <SecondaryNavigationBar transparent>
+            <template v-if="currentStep > 1" #before>
+              <IconButton @click="handlePreviousClick">
+                <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
+              </IconButton>
+            </template>
+            <template v-if="farthestCompletedStep >= currentStep" #after>
+              <IconButton @click="handleNextClick">
+                <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
+              </IconButton>
+            </template>
+          </SecondaryNavigationBar>
+        </ResponsiveWrapper>
       </template>
       <BottomBarWrapper>
         <StepWrapper>
           <template #before>
-            <IconButton v-if="currentStep > 1" @click="handlePreviousClick">
-              <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
-            </IconButton>
+            <ResponsiveWrapper desktop>
+              <IconButton v-if="currentStep > 1" @click="handlePreviousClick">
+                <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
+              </IconButton>
+            </ResponsiveWrapper>
           </template>
           <StackComponent v-if="currentStep === 1" spacing="small">
             <HeadingComponent kind="title" size="medium">
@@ -262,42 +279,75 @@ const handlePreviousClick = () => {
             </BodyText>
           </StackComponent>
           <template #after>
-            <IconButton
-              v-if="farthestCompletedStep >= currentStep"
-              @click="handleNextClick"
-            >
-              <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
-            </IconButton>
+            <ResponsiveWrapper desktop>
+              <IconButton
+                v-if="farthestCompletedStep >= currentStep"
+                @click="handleNextClick"
+              >
+                <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
+              </IconButton>
+            </ResponsiveWrapper>
           </template>
         </StepWrapper>
         <template #bottom-bar>
-          <BottomBar class="bottom-bar" transparent="desktop">
-            <LabelText class="text">
-              Návod {{ currentStep }}&hairsp;/&hairsp;{{ stepsCount }}
-            </LabelText>
-            <StepProgress class="progress-indicator" :current="currentStep" />
-            <ButtonComponent
-              class="next-button"
-              :kind="nextButtonKind"
-              :color="nextButtonColor"
-              @click="handleNextClick"
-            >
-              {{ nextButtonTitle }}
-              <template #iconAfter>
-                <IconComponent :icon="mdiArrowRight" />
-              </template>
-            </ButtonComponent>
-            <ButtonComponent
-              class="skip-button"
-              kind="link"
-              @click="goToQuestions"
-            >
-              Přeskočit návod
-              <template #iconAfter>
-                <IconComponent :icon="mdiFastForward" />
-              </template>
-            </ButtonComponent>
-          </BottomBar>
+          <ResponsiveWrapper desktop>
+            <BottomBar class="bottom-bar" transparent>
+              <LabelText class="text">
+                Návod {{ currentStep }}&hairsp;/&hairsp;{{ stepsCount }}
+              </LabelText>
+              <StepProgress class="progress-indicator" :current="currentStep" />
+              <ButtonComponent
+                class="next-button"
+                :kind="nextButtonKind"
+                :color="nextButtonColor"
+                @click="handleNextClick"
+              >
+                {{ nextButtonTitle }}
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+              <ButtonComponent
+                class="skip-button"
+                kind="link"
+                @click="goToQuestions"
+              >
+                Přeskočit návod
+                <template #iconAfter>
+                  <IconComponent :icon="mdiFastForward" />
+                </template>
+              </ButtonComponent>
+            </BottomBar>
+          </ResponsiveWrapper>
+          <ResponsiveWrapper mobile>
+            <BottomBar class="bottom-bar">
+              <LabelText class="text">
+                Návod {{ currentStep }}&hairsp;/&hairsp;{{ stepsCount }}
+              </LabelText>
+              <StepProgress class="progress-indicator" :current="currentStep" />
+              <ButtonComponent
+                class="next-button"
+                :kind="nextButtonKind"
+                :color="nextButtonColor"
+                @click="handleNextClick"
+              >
+                {{ nextButtonTitle }}
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+              <ButtonComponent
+                class="skip-button"
+                kind="link"
+                @click="goToQuestions"
+              >
+                Přeskočit návod
+                <template #iconAfter>
+                  <IconComponent :icon="mdiFastForward" />
+                </template>
+              </ButtonComponent>
+            </BottomBar>
+          </ResponsiveWrapper>
         </template>
       </BottomBarWrapper>
     </StickyHeaderLayout>

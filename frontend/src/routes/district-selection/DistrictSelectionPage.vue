@@ -8,6 +8,7 @@ import { useElectionStore } from '@/stores/electionStore';
 
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
+import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
 import BottomBar from '@/components/design-system/navigation/BottomBar.vue';
 import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
@@ -15,7 +16,8 @@ import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 import RadioButtonComponent from '@/components/design-system/input/RadioButtonComponent.vue';
 import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
-import BackgroundComponent from '../../components/design-system/style/BackgroundComponent.vue';
+
+import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -53,19 +55,30 @@ const onSubmit = () => {
         <NavigationBar transparent>
           <template #title>{{ title }}</template>
           <template #right>
-            <ButtonComponent
-              kind="link"
-              :responsive="true"
-              @click="router.push({ name: appRoutes.index.name })"
-            >
-              Zpět na hlavní stránku
-              <template #iconAfter>
-                <IconComponent
-                  :icon="mdiCloseCircleOutline"
-                  title="Zpět na hlavní stránku"
-                />
-              </template>
-            </ButtonComponent>
+            <ResponsiveWrapper desktop>
+              <ButtonComponent
+                kind="link"
+                @click="router.push({ name: appRoutes.index.name })"
+              >
+                Zpět na hlavní stránku
+                <template #iconAfter>
+                  <IconComponent :icon="mdiCloseCircleOutline" />
+                </template>
+              </ButtonComponent>
+            </ResponsiveWrapper>
+            <ResponsiveWrapper mobile>
+              <ButtonComponent
+                kind="link"
+                @click="router.push({ name: appRoutes.index.name })"
+              >
+                <template #icon>
+                  <IconComponent
+                    :icon="mdiCloseCircleOutline"
+                    title="Zpět na hlavní stránku"
+                  />
+                </template>
+              </ButtonComponent>
+            </ResponsiveWrapper>
           </template>
         </NavigationBar>
       </template>
@@ -90,16 +103,30 @@ const onSubmit = () => {
             </div>
           </div>
           <template #bottom-bar>
-            <BottomBar class="bottom-bar" transparent="desktop">
-              <ButtonComponent
-                kind="filled"
-                type="submit"
-                color="primary"
-                :disabled="!selected"
-              >
-                Potvrdit a pokračovat
-              </ButtonComponent>
-            </BottomBar>
+            <ResponsiveWrapper desktop>
+              <BottomBar class="bottom-bar" transparent>
+                <ButtonComponent
+                  kind="filled"
+                  type="submit"
+                  color="primary"
+                  :disabled="!selected"
+                >
+                  Potvrdit a pokračovat
+                </ButtonComponent>
+              </BottomBar>
+            </ResponsiveWrapper>
+            <ResponsiveWrapper mobile>
+              <BottomBar class="bottom-bar">
+                <ButtonComponent
+                  kind="filled"
+                  type="submit"
+                  color="primary"
+                  :disabled="!selected"
+                >
+                  Potvrdit a pokračovat
+                </ButtonComponent>
+              </BottomBar>
+            </ResponsiveWrapper>
           </template>
         </BottomBarWrapper>
       </form>

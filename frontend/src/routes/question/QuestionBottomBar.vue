@@ -10,6 +10,8 @@ import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 
+import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
+
 import {
   vkiLogoInFavour,
   vkiLogoAgainst,
@@ -37,63 +39,117 @@ console.log(props.answer);
 </script>
 
 <template>
-  <BottomBar class="bottom-bar" transparent="never">
-    <StackComponent
-      horizontal
-      centered
-      class="important-button"
-      @click="starClick"
-    >
+  <BottomBar class="bottom-bar">
+    <ResponsiveWrapper desktop>
+      <StackComponent
+        horizontal
+        centered
+        class="important-button"
+        @click="starClick"
+      >
+        <IconButton>
+          <IconComponent
+            :icon="starIcon"
+            :color="starColor"
+            size="large"
+            title="Pro mě důležité"
+          />
+        </IconButton>
+        <BodyText class="star-text" size="medium">Pro mě důležité</BodyText>
+      </StackComponent>
+    </ResponsiveWrapper>
+    <ResponsiveWrapper mobile>
       <IconButton>
         <IconComponent
           :icon="starIcon"
           :color="starColor"
           size="large"
           title="Pro mě důležité"
+          @click="starClick"
         />
       </IconButton>
-      <BodyText class="star-text" size="medium"> Pro mě důležité </BodyText>
-    </StackComponent>
+    </ResponsiveWrapper>
     <StackComponent horizontal spacing="small">
-      <ButtonComponent
-        class="in-favour"
-        kind="answer"
-        color="primary"
-        responsive
-        :selected="answer.answer === UserAnswerEnum.yes"
-        @click="yesClick"
-      >
-        <template #icon>
-          <IconComponent :icon="vkiLogoInFavour" />
-        </template>
-        Jsem pro
-      </ButtonComponent>
-      <ButtonComponent
-        class="against"
-        kind="answer"
-        color="secondary"
-        responsive
-        :selected="answer.answer === UserAnswerEnum.no"
-        @click="noClick"
-      >
-        <template #icon>
-          <IconComponent :icon="vkiLogoAgainst" />
-        </template>
-        Jsem proti
-      </ButtonComponent>
+      <ResponsiveWrapper desktop>
+        <ButtonComponent
+          class="in-favour"
+          kind="answer"
+          color="primary"
+          :selected="answer.answer === UserAnswerEnum.yes"
+          @click="yesClick"
+        >
+          <template #icon>
+            <IconComponent :icon="vkiLogoInFavour" />
+          </template>
+          Jsem pro
+        </ButtonComponent>
+      </ResponsiveWrapper>
+      <ResponsiveWrapper mobile>
+        <ButtonComponent
+          class="in-favour"
+          kind="answer"
+          color="primary"
+          :selected="answer.answer === UserAnswerEnum.yes"
+          @click="yesClick"
+        >
+          <template #icon>
+            <IconComponent :icon="vkiLogoInFavour" title="Jsem pro" />
+          </template>
+        </ButtonComponent>
+      </ResponsiveWrapper>
+      <ResponsiveWrapper desktop>
+        <ButtonComponent
+          class="against"
+          kind="answer"
+          color="secondary"
+          :selected="answer.answer === UserAnswerEnum.no"
+          @click="noClick"
+        >
+          <template #icon>
+            <IconComponent :icon="vkiLogoAgainst" />
+          </template>
+          Jsem proti
+        </ButtonComponent>
+      </ResponsiveWrapper>
+      <ResponsiveWrapper mobile>
+        <ButtonComponent
+          class="against"
+          kind="answer"
+          color="secondary"
+          :selected="answer.answer === UserAnswerEnum.no"
+          @click="noClick"
+        >
+          <template #icon>
+            <IconComponent :icon="vkiLogoAgainst" title="Jsem proti" />
+          </template>
+        </ButtonComponent>
+      </ResponsiveWrapper>
     </StackComponent>
-    <ButtonComponent
-      class="skip"
-      kind="answer"
-      responsive
-      :selected="answer.answer === UserAnswerEnum.skip"
-      @click="skipClick"
-    >
-      <template #icon>
-        <IconComponent :icon="vkiLogoNeutral" />
-      </template>
-      Přeskočit
-    </ButtonComponent>
+    <ResponsiveWrapper desktop>
+      <ButtonComponent
+        class="skip"
+        kind="answer"
+        :selected="answer.answer === UserAnswerEnum.skip"
+        @click="skipClick"
+      >
+        <template #icon>
+          <IconComponent :icon="vkiLogoNeutral" />
+        </template>
+        Přeskočit
+      </ButtonComponent>
+    </ResponsiveWrapper>
+    <ResponsiveWrapper mobile>
+      <ButtonComponent
+        class="skip"
+        kind="answer"
+        :selected="answer.answer === UserAnswerEnum.skip"
+        @click="skipClick"
+      >
+        <template #icon>
+          <IconComponent :icon="vkiLogoNeutral" title="Přeskočit" />
+        </template>
+      </ButtonComponent>
+    </ResponsiveWrapper>
   </BottomBar>
 </template>
 
@@ -113,13 +169,5 @@ console.log(props.answer);
   grid-template-columns: auto auto auto;
   gap: var(--spacing-large);
   justify-content: center;
-
-  @media (max-width: 700px) {
-    justify-content: space-between;
-
-    .star-text {
-      display: none;
-    }
-  }
 }
 </style>

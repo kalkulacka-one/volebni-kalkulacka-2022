@@ -17,6 +17,7 @@ import ButtonComponent from '@/components/design-system/input/ButtonComponent.vu
 import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
+import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
 import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
 import StepWrapper from '@/components/design-system/layout/StepWrapper.vue';
 
@@ -147,39 +148,36 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
       <NavigationBar transparent>
         <template #title>{{ title }}</template>
         <template #right>
-          <ButtonComponent
-            kind="link"
-            :responsive="true"
-            @click="router.push({ name: appRoutes.index.name })"
-          >
-            Zpět na hlavní stránku
-            <template #iconAfter>
-              <IconComponent
-                :icon="mdiCloseCircleOutline"
-                title="Zpět na hlavní stránku"
-              />
-            </template>
-          </ButtonComponent>
+          <ResponsiveWrapper desktop>
+            <ButtonComponent
+              kind="link"
+              @click="router.push({ name: appRoutes.index.name })"
+            >
+              Zpět na hlavní stránku
+              <template #iconAfter>
+                <IconComponent :icon="mdiCloseCircleOutline" />
+              </template>
+            </ButtonComponent>
+          </ResponsiveWrapper>
+          <ResponsiveWrapper mobile>
+            <ButtonComponent
+              kind="link"
+              @click="router.push({ name: appRoutes.index.name })"
+            >
+              <template #icon>
+                <IconComponent
+                  :icon="mdiCloseCircleOutline"
+                  title="Zpět na hlavní stránku"
+                />
+              </template>
+            </ButtonComponent>
+          </ResponsiveWrapper>
         </template>
       </NavigationBar>
     </template>
     <template #sticky-header>
-      <SecondaryNavigationBar transparent>
-        <template #before>
-          <IconButton @click="handlePreviousClick">
-            <IconComponent :icon="mdiArrowLeft" :title="previousButtonTitle" />
-          </IconButton>
-        </template>
-        <template v-if="answeredQuestionsCount >= currentQuestion" #after>
-          <IconButton @click="handleNextClick">
-            <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
-          </IconButton>
-        </template>
-      </SecondaryNavigationBar>
-    </template>
-    <BottomBarWrapper>
-      <BackgroundComponent>
-        <StepWrapper>
+      <ResponsiveWrapper mobile>
+        <SecondaryNavigationBar transparent>
           <template #before>
             <IconButton @click="handlePreviousClick">
               <IconComponent
@@ -188,18 +186,41 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
               />
             </IconButton>
           </template>
+          <template v-if="answeredQuestionsCount >= currentQuestion" #after>
+            <IconButton @click="handleNextClick">
+              <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
+            </IconButton>
+          </template>
+        </SecondaryNavigationBar>
+      </ResponsiveWrapper>
+    </template>
+    <BottomBarWrapper>
+      <BackgroundComponent>
+        <StepWrapper>
+          <template #before>
+            <ResponsiveWrapper desktop>
+              <IconButton @click="handlePreviousClick">
+                <IconComponent
+                  :icon="mdiArrowLeft"
+                  :title="previousButtonTitle"
+                />
+              </IconButton>
+            </ResponsiveWrapper>
+          </template>
           <QuestionCard
             :current-question="currentQuestion"
             :question-count="electionStore.questionCount"
             :question="(electionStore.calculator?.questions[questionNr] as Question)"
           />
           <template #after>
-            <IconButton
-              v-if="answeredQuestionsCount >= currentQuestion"
-              @click="handleNextClick"
-            >
-              <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
-            </IconButton>
+            <ResponsiveWrapper desktop>
+              <IconButton
+                v-if="answeredQuestionsCount >= currentQuestion"
+                @click="handleNextClick"
+              >
+                <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
+              </IconButton>
+            </ResponsiveWrapper>
           </template>
         </StepWrapper>
       </BackgroundComponent>
