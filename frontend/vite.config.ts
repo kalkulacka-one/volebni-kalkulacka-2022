@@ -12,7 +12,7 @@ export default defineConfig({
     port: 5201,
     proxy: {
       '/data': {
-        target: 'https://kalkulacka.ceskodigital.net',
+        target: 'https://volebnikalkulacka.cz',
         //target: 'http://127.0.0.1:5201/dev',
         changeOrigin: true,
         cookieDomainRewrite: { '*': '' },
@@ -26,12 +26,12 @@ export default defineConfig({
           }),
       },
       '/api': {
-        target: 'https://kalkulacka.ceskodigital.net',
+        target: 'https://volebnikalkulacka.cz',
         //target: 'http://127.0.0.1:8080',
         changeOrigin: true,
       },
       '/js/script.outbound-links.js': {
-        target: 'https://kalkulacka.ceskodigital.net',
+        target: 'https://volebnikalkulacka.cz',
         changeOrigin: true,
       },
     },

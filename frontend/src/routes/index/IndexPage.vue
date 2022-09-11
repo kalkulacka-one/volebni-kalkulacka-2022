@@ -16,7 +16,6 @@ import BackgroundComponent from '../../components/design-system/style/Background
 const router = useRouter();
 const route = useRoute();
 
-const elections = await fetchElections();
 </script>
 
 <template>
@@ -55,22 +54,6 @@ const elections = await fetchElections();
                 href="https://www.volebnikalkulacka.cz/"
               >
                 Volební kalkulačky z předchozích let
-              </ButtonComponent>
-            </StackComponent>
-            <StackComponent horizontal spacing="small">
-              <ButtonComponent
-                v-for="election in elections"
-                :key="election.id"
-                kind="filled"
-                @click="
-                  router.push({
-                    name: appRoutes.districtSelection.name,
-                    params: { ...route.params, election: election.key },
-                    query: { ...route.query },
-                  })
-                "
-              >
-                {{ election.name }}
               </ButtonComponent>
             </StackComponent>
           </StackComponent>
