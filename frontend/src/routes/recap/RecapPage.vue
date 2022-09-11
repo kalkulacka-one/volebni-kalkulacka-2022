@@ -42,10 +42,11 @@ const districtName = electionStore.districts.filter(
 const showDistrictCode = electionStore.districts.filter(
   (district) => district.district_code === districtCode
 )[0].show_district_code;
+const districtNameWithCode = showDistrictCode
+  ? `${districtName} (${districtCode})`
+  : districtName;
 
-const title =
-  `${electionName} — ${districtName}` +
-  (showDistrictCode ? ` (${districtCode})` : '');
+const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
 
 const handlePreviousClick = () => {
   router.push({
@@ -85,7 +86,7 @@ const isCardHidden = (index: number) => {
     <StickyHeaderLayout>
       <template #header>
         <NavigationBar>
-          <template #title>{{ title }}</template>
+          <template #title>{{ breadcrumbs }}</template>
           <template #right>
             <ResponsiveWrapper extra-small small>
               <ButtonComponent
