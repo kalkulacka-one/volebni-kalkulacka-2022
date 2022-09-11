@@ -39,7 +39,7 @@ console.log(props.answer);
 </script>
 
 <template>
-  <BottomBar class="bottom-bar" transparent="never">
+  <BottomBar class="bottom-bar">
     <ResponsiveWrapper desktop>
       <StackComponent
         horizontal
