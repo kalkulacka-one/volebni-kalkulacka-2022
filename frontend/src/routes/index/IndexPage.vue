@@ -50,7 +50,7 @@ const route = useRoute();
               <ButtonComponent
                 kind="outlined"
                 color="primary"
-                href="https://www.volebnikalkulacka.cz/"
+                href="https://origin.volebnikalkulacka.cz/"
               >
                 Volební kalkulačky z předchozích let
               </ButtonComponent>
