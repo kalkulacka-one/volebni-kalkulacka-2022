@@ -37,6 +37,12 @@ withDefaults(defineProps<Props>(), {
   }
 }
 
+.extra-small {
+  font-size: var(--typography-body-extra-small-size);
+  line-height: var(--typography-body-extra-small-line-height);
+  letter-spacing: var(--typography-body-extra-small-letter-spacing);
+}
+
 .small {
   font-size: var(--typography-body-small-size);
   line-height: var(--typography-body-small-line-height);
