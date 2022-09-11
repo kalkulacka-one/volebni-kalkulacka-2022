@@ -145,7 +145,7 @@ const handlePreviousClick = () => {
         <NavigationBar transparent>
           <template #title>{{ title }}</template>
           <template #right>
-            <ResponsiveWrapper desktop>
+            <ResponsiveWrapper medium large extra-large huge>
               <ButtonComponent
                 kind="link"
                 @click="router.push({ name: appRoutes.index.name })"
@@ -156,7 +156,7 @@ const handlePreviousClick = () => {
                 </template>
               </ButtonComponent>
             </ResponsiveWrapper>
-            <ResponsiveWrapper mobile>
+            <ResponsiveWrapper extra-small small>
               <ButtonComponent
                 kind="link"
                 @click="router.push({ name: appRoutes.index.name })"
@@ -173,7 +173,7 @@ const handlePreviousClick = () => {
         </NavigationBar>
       </template>
       <template #sticky-header>
-        <ResponsiveWrapper mobile>
+        <ResponsiveWrapper extra-small small>
           <SecondaryNavigationBar transparent>
             <template v-if="currentStep > 1" #before>
               <IconButton @click="handlePreviousClick">
@@ -191,7 +191,7 @@ const handlePreviousClick = () => {
       <BottomBarWrapper>
         <StepWrapper>
           <template #before>
-            <ResponsiveWrapper desktop>
+            <ResponsiveWrapper medium large extra-large huge>
               <IconButton v-if="currentStep > 1" @click="handlePreviousClick">
                 <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
               </IconButton>
@@ -279,7 +279,7 @@ const handlePreviousClick = () => {
             </BodyText>
           </StackComponent>
           <template #after>
-            <ResponsiveWrapper desktop>
+            <ResponsiveWrapper medium large extra-large huge>
               <IconButton
                 v-if="farthestCompletedStep >= currentStep"
                 @click="handleNextClick"
@@ -290,7 +290,7 @@ const handlePreviousClick = () => {
           </template>
         </StepWrapper>
         <template #bottom-bar>
-          <ResponsiveWrapper desktop>
+          <ResponsiveWrapper medium large extra-large huge>
             <BottomBar class="bottom-bar" transparent>
               <LabelText class="text">
                 Návod {{ currentStep }}&hairsp;/&hairsp;{{ stepsCount }}
@@ -319,7 +319,7 @@ const handlePreviousClick = () => {
               </ButtonComponent>
             </BottomBar>
           </ResponsiveWrapper>
-          <ResponsiveWrapper mobile>
+          <ResponsiveWrapper extra-small small>
             <BottomBar class="bottom-bar">
               <LabelText class="text">
                 Návod {{ currentStep }}&hairsp;/&hairsp;{{ stepsCount }}

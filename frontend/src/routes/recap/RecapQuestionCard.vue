@@ -60,7 +60,7 @@ const toggleClick = () => {
     padding="small"
   >
     <div class="important">
-      <ResponsiveWrapper desktop>
+      <ResponsiveWrapper medium large extra-large huge>
         <IconButton @click="starClick">
           <IconComponent
             :icon="starIcon"
@@ -70,7 +70,7 @@ const toggleClick = () => {
           />
         </IconButton>
       </ResponsiveWrapper>
-      <ResponsiveWrapper mobile>
+      <ResponsiveWrapper extra-small small>
         <IconButton @click="starClick">
           <IconComponent
             :icon="starIcon"
@@ -110,7 +110,7 @@ const toggleClick = () => {
       horizontal
       :spacing="(isExpanded && 'small') || undefined"
     >
-      <ResponsiveWrapper desktop>
+      <ResponsiveWrapper medium large extra-large huge>
         <ButtonComponent
           v-show="answer.answer === UserAnswerEnum.yes || isExpanded"
           class="in-favour"

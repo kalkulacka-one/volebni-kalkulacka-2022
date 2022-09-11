@@ -148,7 +148,7 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
       <NavigationBar transparent>
         <template #title>{{ title }}</template>
         <template #right>
-          <ResponsiveWrapper desktop>
+          <ResponsiveWrapper medium large extra-large huge>
             <ButtonComponent
               kind="link"
               @click="router.push({ name: appRoutes.index.name })"
@@ -159,7 +159,7 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
               </template>
             </ButtonComponent>
           </ResponsiveWrapper>
-          <ResponsiveWrapper mobile>
+          <ResponsiveWrapper extra-small small>
             <ButtonComponent
               kind="link"
               @click="router.push({ name: appRoutes.index.name })"
@@ -176,7 +176,7 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
       </NavigationBar>
     </template>
     <template #sticky-header>
-      <ResponsiveWrapper mobile>
+      <ResponsiveWrapper extra-small small>
         <SecondaryNavigationBar transparent>
           <template #before>
             <IconButton @click="handlePreviousClick">
@@ -198,7 +198,7 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
       <BackgroundComponent>
         <StepWrapper>
           <template #before>
-            <ResponsiveWrapper desktop>
+            <ResponsiveWrapper medium large extra-large huge>
               <IconButton @click="handlePreviousClick">
                 <IconComponent
                   :icon="mdiArrowLeft"
@@ -213,7 +213,7 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
             :question="(electionStore.calculator?.questions[questionNr] as Question)"
           />
           <template #after>
-            <ResponsiveWrapper desktop>
+            <ResponsiveWrapper medium large extra-large huge>
               <IconButton
                 v-if="answeredQuestionsCount >= currentQuestion"
                 @click="handleNextClick"

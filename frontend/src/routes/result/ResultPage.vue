@@ -84,7 +84,7 @@ const resultsMedicine = calculateRelativeAgreement(
         <NavigationBar>
           <template #title>{{ title }}</template>
           <template #right>
-            <ResponsiveWrapper desktop>
+            <ResponsiveWrapper medium large extra-large huge>
               <ButtonComponent
                 kind="link"
                 @click="router.push({ name: appRoutes.index.name })"
@@ -95,7 +95,7 @@ const resultsMedicine = calculateRelativeAgreement(
                 </template>
               </ButtonComponent>
             </ResponsiveWrapper>
-            <ResponsiveWrapper mobile>
+            <ResponsiveWrapper extra-small small>
               <ButtonComponent
                 kind="link"
                 @click="router.push({ name: appRoutes.index.name })"
