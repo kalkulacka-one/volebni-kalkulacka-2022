@@ -22,6 +22,7 @@ export interface Calculator {
    */
   description: string;
   district_code: string;
+  show_district_code?: boolean;
   /**
    * Show on HP start - ISO 8601
    */
@@ -65,6 +66,12 @@ export interface Election {
    * Longer description
    */
   description: string;
+  /**
+   * Instructions for filling calculators for this election
+   */
+  instructions?: {
+    [k: string]: unknown;
+  };
   /**
    * Election start - ISO 8601
    */
@@ -129,6 +136,10 @@ export interface Candidate {
    * Longer description.
    */
   description: string;
+  /**
+   * Candidate's motto.
+   */
+  motto?: string;
   /**
    * Image
    */
@@ -236,7 +247,7 @@ export interface CandidateAnswer {
   /**
    * Answer on given question
    */
-  answer?: "yes" | "no";
+  answer?: "yes" | "no" | "dont_know";
   /**
    * Candidate's comment related to their answer.
    */

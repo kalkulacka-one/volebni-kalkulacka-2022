@@ -34,7 +34,12 @@ const heading =
     : 'Zvolte své město';
 
 const options = electionStore.districts.map((district) => {
-  return { value: district.district_code, label: district.name };
+  return {
+    value: district.district_code,
+    label:
+      district.name +
+      (district.show_district_code ? ` (${district.district_code})` : ''),
+  };
 });
 
 const selected = ref((route.params.district as string) || null);
