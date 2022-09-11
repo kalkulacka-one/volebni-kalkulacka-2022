@@ -121,38 +121,87 @@ const toggleClick = () => {
           @click="yesClick"
         >
           <template #icon>
-            <IconComponent :icon="vkiLogoInFavour" />
+            <IconComponent
+              :icon="vkiLogoInFavour"
+              :title="isExpanded ? 'Jsem pro' : undefined"
+            />
           </template>
           <template v-if="isExpanded" #default>Jsem pro</template>
         </ButtonComponent>
+        <ButtonComponent
+          v-show="answer.answer === UserAnswerEnum.no || isExpanded"
+          class="against"
+          kind="answer"
+          color="secondary"
+          :selected="answer.answer === UserAnswerEnum.no && isExpanded"
+          :read-only="!isExpanded"
+          @click="noClick"
+        >
+          <template #icon>
+            <IconComponent
+              :icon="vkiLogoAgainst"
+              :title="isExpanded ? 'Jsem proti' : undefined"
+            />
+          </template>
+          <template v-if="isExpanded" #default>Jsem proti</template>
+        </ButtonComponent>
+        <ButtonComponent
+          v-show="answer.answer === UserAnswerEnum.skip || isExpanded"
+          class="skip"
+          kind="answer"
+          :selected="answer.answer === UserAnswerEnum.skip && isExpanded"
+          :read-only="!isExpanded"
+          @click="skipClick"
+        >
+          <template #icon>
+            <IconComponent
+              :icon="vkiLogoNeutral"
+              :title="isExpanded ? 'Bez odpovědi' : undefined"
+            />
+          </template>
+          <template v-if="isExpanded" #default>Bez odpovědi</template>
+        </ButtonComponent>
       </ResponsiveWrapper>
-      <ButtonComponent
-        v-show="answer.answer === UserAnswerEnum.no || isExpanded"
-        class="against"
-        kind="answer"
-        color="secondary"
-        :selected="answer.answer === UserAnswerEnum.no && isExpanded"
-        :read-only="!isExpanded"
-        @click="noClick"
-      >
-        <template #icon>
-          <IconComponent :icon="vkiLogoAgainst" />
-        </template>
-        <template v-if="isExpanded" #default>Jsem proti</template>
-      </ButtonComponent>
-      <ButtonComponent
-        v-show="answer.answer === UserAnswerEnum.skip || isExpanded"
-        class="skip"
-        kind="answer"
-        :selected="answer.answer === UserAnswerEnum.skip && isExpanded"
-        :read-only="!isExpanded"
-        @click="skipClick"
-      >
-        <template #icon>
-          <IconComponent :icon="vkiLogoNeutral" />
-        </template>
-        <template v-if="isExpanded" #default>Bez odpovědi</template>
-      </ButtonComponent>
+      <ResponsiveWrapper extra-small small>
+        <ButtonComponent
+          v-show="answer.answer === UserAnswerEnum.yes || isExpanded"
+          class="in-favour"
+          kind="answer"
+          color="primary"
+          :selected="answer.answer === UserAnswerEnum.yes && isExpanded"
+          :read-only="!isExpanded"
+          @click="yesClick"
+        >
+          <template #icon>
+            <IconComponent :icon="vkiLogoInFavour" title="Jsem pro" />
+          </template>
+        </ButtonComponent>
+        <ButtonComponent
+          v-show="answer.answer === UserAnswerEnum.no || isExpanded"
+          class="against"
+          kind="answer"
+          color="secondary"
+          :selected="answer.answer === UserAnswerEnum.no && isExpanded"
+          :read-only="!isExpanded"
+          @click="noClick"
+        >
+          <template #icon>
+            <IconComponent :icon="vkiLogoAgainst" title="Jsem proti" />
+          </template>
+        </ButtonComponent>
+        <ButtonComponent
+          v-show="answer.answer === UserAnswerEnum.skip || isExpanded"
+          class="skip"
+          kind="answer"
+          :selected="answer.answer === UserAnswerEnum.skip && isExpanded"
+          :read-only="!isExpanded"
+          @click="skipClick"
+        >
+          <template #icon>
+            <IconComponent :icon="vkiLogoNeutral" title="Bez odpovědi" />
+          </template>
+        </ButtonComponent>
+      </ResponsiveWrapper>
     </StackComponent>
     <div class="toggle">
       <IconButton @click="toggleClick">
