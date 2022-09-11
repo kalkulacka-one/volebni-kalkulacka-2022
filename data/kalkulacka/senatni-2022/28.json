@@ -3,11 +3,19 @@
   "name": "Mělník",
   "description": "část okresu Mělník, ohraničená na severu obcemi Čečelice, Liblice, Malý Újezd, Velký Borek, Mělník, Obříství, Zálezlice, Vojkovice, Vraňany, Jeviněves, severní část okresu Praha-východ, ohraničená na jihu obcemi Káraný, Lázně Toušeň, Nový Vestec, Brandýs nad Labem - Stará Boleslav, Dřevčice, Jenštejn, Radonice",
   "district_code": "28",
+  "show_district_code": true,
   "election": {
     "id": "senatni-2022",
     "key": "senatni-2022",
     "name": "Senátní volby 2022",
-    "description": "Volí se třetina senátních obvodů.",
+    "description": "Letos se volí v třetině obvodů v rámci ČR.",
+    "instructions": {
+      "header": "Zvolte svůj senátní obvod",
+      "step_1_1": "Letos se volí v třetině obvodů v rámci ČR.",
+      "step_1_2": "Více o senátních obvodech",
+      "step_1_link": "https://2022.programydovoleb.cz/senatni-volby",
+      "step_2_1": "\nOdpovězte na 40 otázek.\nNa stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.\nZodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte,\njak se kandidáti shodují s Vašimi názory.\n            "
+    },
     "from": "2022-09-23T14:00:00",
     "to": "2022-09-24T14:00:00"
   },
@@ -504,8 +512,8 @@
       "parties": [
         {
           "id": "senatni-2022-28-c-454822-p",
-          "name": "Zdeněk Šarapatka",
-          "description": "Zdeněk Šarapatka",
+          "name": "TOP 09",
+          "description": "TOP 09",
           "contacts": {
             "web": [
               {
@@ -524,7 +532,7 @@
             "facebook": "https://www.facebook.com/zsarapatka",
             "twitter": "https://twitter.com/zdeneksarapatka"
           },
-          "abbreviation": ""
+          "abbreviation": "TOP 09"
         }
       ]
     },
@@ -547,8 +555,8 @@
       "parties": [
         {
           "id": "senatni-2022-28-c-553512-p",
-          "name": "Andrea Brzobohatá",
-          "description": "Andrea Brzobohatá",
+          "name": "ANO 2011",
+          "description": "ANO 2011",
           "contacts": {
             "web": [
               {
@@ -560,7 +568,7 @@
             "twitter": "https://twitter.com/brzobohataandy",
             "instagram": "https://www.instagram.com/brzobohataandrea/"
           },
-          "abbreviation": ""
+          "abbreviation": "ANO 2011"
         }
       ]
     },
@@ -575,12 +583,12 @@
       "parties": [
         {
           "id": "senatni-2022-28-c-720036-p",
-          "name": "Milan Němec",
-          "description": "Milan Němec",
+          "name": "ZA SPORT A ZDRAVÝ MĚLNÍK",
+          "description": "ZA SPORT A ZDRAVÝ MĚLNÍK",
           "contacts": {
             "web": []
           },
-          "abbreviation": ""
+          "abbreviation": "ZA SPORT A ZDRAVÝ MĚLNÍK"
         }
       ]
     },
@@ -611,8 +619,8 @@
       "parties": [
         {
           "id": "senatni-2022-28-c-289041-p",
-          "name": "Petr Holeček",
-          "description": "Petr Holeček",
+          "name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "description": "STAROSTOVÉ A NEZÁVISLÍ",
           "contacts": {
             "web": [
               {
@@ -632,7 +640,7 @@
             "twitter": "https://twitter.com/holecek_p",
             "instagram": "https://www.instagram.com/holecek_petr_stan/"
           },
-          "abbreviation": ""
+          "abbreviation": "STAROSTOVÉ A NEZÁVISLÍ"
         }
       ]
     },
@@ -654,8 +662,8 @@
       "parties": [
         {
           "id": "senatni-2022-28-c-704700-p",
-          "name": "Jarmila Smotlachová",
-          "description": "Jarmila Smotlachová",
+          "name": "Občanská demokratická strana",
+          "description": "Občanská demokratická strana",
           "contacts": {
             "web": [
               {
@@ -666,7 +674,7 @@
             "facebook": "https://www.facebook.com/smotlachovaj",
             "instagram": "https://www.instagram.com/smotlachovaj/"
           },
-          "abbreviation": ""
+          "abbreviation": "Občanská demokratická strana"
         }
       ]
     },
@@ -682,13 +690,13 @@
       "parties": [
         {
           "id": "senatni-2022-28-c-972909-p",
-          "name": "Karen Pumrová",
-          "description": "Karen Pumrová",
+          "name": "Manifest.cz - Pravá Svoboda a Prosperita",
+          "description": "Manifest.cz - Pravá Svoboda a Prosperita",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/karen.pumrova.3"
           },
-          "abbreviation": ""
+          "abbreviation": "Manifest.cz - Pravá Svoboda a Prosperita"
         }
       ]
     },
@@ -705,14 +713,14 @@
       "parties": [
         {
           "id": "senatni-2022-28-c-205170-p",
-          "name": "Ivan Noveský",
-          "description": "Ivan Noveský",
+          "name": "Právo Respekt Odbornost",
+          "description": "Právo Respekt Odbornost",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/ivan.novesky",
             "twitter": "https://twitter.com/IvanNovesky"
           },
-          "abbreviation": ""
+          "abbreviation": "Právo Respekt Odbornost"
         }
       ]
     }
@@ -1761,6 +1769,392 @@
       "candidate_id": "senatni-2022-28-c-704700",
       "question_id": "senatni-2022-global-q-58",
       "answer": "no"
+    },
+    {
+      "id": "senatni-2022-28-a-553512-1",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-1",
+      "answer": "no",
+      "comment": "Zdanění prázdných bytů problémy s dostupným bydlením nevyřeší."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-2",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-2",
+      "answer": "no",
+      "comment": "Regulace cen nájemních bytů povede k tomu, co se stalo v Berlíně. Přestanou se stavět nájemní byty, protože se to investorům nevyplatí."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-3",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-3",
+      "answer": "yes",
+      "comment": "Na určitě věci ano při dostatečném počtu lidí, kteří petici podepsali."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-4",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-4",
+      "answer": "no",
+      "comment": "Dopravní infrastrukturu je třeba rozvíjet celkově. Nejde dělat jen jednu věc. "
+    },
+    {
+      "id": "senatni-2022-28-a-553512-5",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-5",
+      "answer": "no",
+      "comment": "Je třeba dobře hospodařit, aby bylo na důchody a nemuselo se odcházet do důchodu později."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-6",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-6",
+      "answer": "yes",
+      "comment": "S vodou je problém. Vody není dost, musí se zadržovat v krajině. Část země je ohrožena suchem."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-7",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-7",
+      "answer": "no",
+      "comment": "Současný systém funguje. Není ho třeba měnit."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-8",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-8",
+      "answer": "no",
+      "comment": "Není vhodná doba na změnu daní."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-9",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-9",
+      "answer": "no",
+      "comment": "Drogy ničí zdraví, rozvracejí vztahy a ničí společnost."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-10",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-10",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-28-a-553512-11",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-11",
+      "answer": "yes",
+      "comment": "U nás vydělávají a nic neplatí. Každý musí, kdo má u nás zisk, by měl platit daně."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-12",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-12",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-28-a-553512-13",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-13",
+      "answer": "no",
+      "comment": "Těžko mohou vše uhlídat a posuzovat, co je fake news."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-14",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-14",
+      "answer": "yes",
+      "comment": "Nešetří a kvalita není dobrá ani za větší peníze. "
+    },
+    {
+      "id": "senatni-2022-28-a-553512-15",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-15",
+      "answer": "yes",
+      "comment": "Firmy si mají najímat lidí přímo. Není důvod, aby část příjmu pracovníku jde agentuře."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-16",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-16",
+      "answer": "no",
+      "comment": "Manželství je pro ženu a muže. Práva zvýšit pro jiné v registrovaném partnerství."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-17",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-17",
+      "answer": "yes",
+      "comment": "Racionalizace a optimalizace je ku prospěchu. Klesnou náklady."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-18",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-18",
+      "answer": "yes",
+      "comment": "To má hlavu a patu."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-19",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-19",
+      "answer": "yes",
+      "comment": "Ale nejde to jednoduše. Mohou to dělat obce, stát nebo kraje. "
+    },
+    {
+      "id": "senatni-2022-28-a-553512-20",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-20",
+      "answer": "yes",
+      "comment": "Bylo by to dobré, ale stát nemá zájem."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-21",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-21",
+      "answer": "no",
+      "comment": "Jen to zkomplikuje funkčnost a narostou náklady."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-22",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-22",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-28-a-553512-23",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-23",
+      "answer": "no",
+      "comment": "Nelze účinně kontrolovat svobodnu volbu, je větší možnost volebních podvodů."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-24",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-24",
+      "answer": "yes",
+      "comment": "Jsme průmyslová země a potřebujeme vzdělané lidi Technické obory jsou náročné na vzdělání."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-25",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-25",
+      "answer": "yes",
+      "comment": "Je to jako v životě. Lidi se stýkají komunitně podle různých kritérií. Není to podle IQ."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-26",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-26",
+      "answer": "no",
+      "comment": "Současný systém je už dost inkluzivní."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-27",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-27",
+      "answer": "no",
+      "comment": "Evropská unie potřebuje reformu."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-28",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-28",
+      "answer": "no",
+      "comment": "Nic to nepřinese."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-29",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-29",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-28-a-553512-30",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-30",
+      "answer": "no",
+      "comment": "Místo Česka je tam, kde z toho budeme mít největší užitek a jádro EU to není."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-31",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-31",
+      "answer": "no",
+      "comment": "Pomáháme dost za hranicemi svých možností. Pomáhat na dluh, povede k dalším problémům."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-32",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-32",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-28-a-553512-33",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-33",
+      "answer": "no",
+      "comment": "Zpřísnit z několika důvodů: bezpečnost, nemoci a zachování charakteru Česka a národa."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-34",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-34",
+      "answer": "yes",
+      "comment": "Volný pohyb osob, zboží, kapitálu a služeb je dobrý profit."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-35",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-35",
+      "answer": "no",
+      "comment": "Napřed lidem, aby mohli kvalitně žít a nesnižovala se jim životní úroveň."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-36",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-36",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-28-a-553512-37",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-37",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-28-a-553512-38",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-38",
+      "answer": "yes",
+      "comment": "Ušetří se náklady a zvýší se péče."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-39",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-39",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-28-a-553512-40",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-40",
+      "answer": "yes",
+      "comment": "Pokuta má mít výchovný efekt a to hned. Nemá sloužit k plnění rozpočtu obcí."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-41",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-41",
+      "answer": "yes",
+      "comment": "Automatické sledování je lehce zneužitelné."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-42",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-42",
+      "answer": "no",
+      "comment": "Každý stát musí splňovat podmínky. Oni podmínky nebudou hodně dlouiho."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-43",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-43",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-28-a-553512-44",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-44",
+      "answer": "no",
+      "comment": "Situaci to nevyřeší. Stačí když nám z Německa budou dodávat ruský plyn za ruskou cenu s malou přirážkou za přepravu k nám."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-45",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-45",
+      "answer": "yes",
+      "comment": "Nemám k němu výhrad."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-46",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-46",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-28-a-553512-47",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-47",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-28-a-553512-48",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-48",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-28-a-553512-49",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-49",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-28-a-553512-50",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-50",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-28-a-553512-51",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-51",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-28-a-553512-52",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-52",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-28-a-553512-53",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-53",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-28-a-553512-54",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-54",
+      "answer": "no",
+      "comment": "Zemědělec jako zemědělec. Naši zemědělci mají mít dotace jako západní zemědělci."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-55",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-55",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-28-a-553512-56",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-56",
+      "answer": "no",
+      "comment": "Stát neuměl a neumí s byty hospodařit."
+    },
+    {
+      "id": "senatni-2022-28-a-553512-57",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-57",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-28-a-553512-58",
+      "candidate_id": "senatni-2022-28-c-553512",
+      "question_id": "senatni-2022-global-q-58",
+      "answer": "yes"
     }
   ]
 }

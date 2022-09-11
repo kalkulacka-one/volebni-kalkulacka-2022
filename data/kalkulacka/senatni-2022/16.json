@@ -3,11 +3,19 @@
   "name": "Beroun",
   "description": "část okresu Beroun, ohraničená na západě obcemi Hudlice, Svatá, Hředle, Točník, Žebrák, Tlustice, Hořovice, Podluhy, část okresu Praha-západ, ohraničená na severu obcemi Číčovice, Tuchoměřice, na jihu obcemi Řevnice, Dobřichovice, Černolice, Jíloviště, Klínec, Měchenice, Březová-Oleško, Okrouhlo, a na východě obcemi Zvole, Ohrobec, Dolní Břežany, Zlatníky-Hodkovice, Vestec",
   "district_code": "16",
+  "show_district_code": true,
   "election": {
     "id": "senatni-2022",
     "key": "senatni-2022",
     "name": "Senátní volby 2022",
-    "description": "Volí se třetina senátních obvodů.",
+    "description": "Letos se volí v třetině obvodů v rámci ČR.",
+    "instructions": {
+      "header": "Zvolte svůj senátní obvod",
+      "step_1_1": "Letos se volí v třetině obvodů v rámci ČR.",
+      "step_1_2": "Více o senátních obvodech",
+      "step_1_link": "https://2022.programydovoleb.cz/senatni-volby",
+      "step_2_1": "\nOdpovězte na 40 otázek.\nNa stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.\nZodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte,\njak se kandidáti shodují s Vašimi názory.\n            "
+    },
     "from": "2022-09-23T14:00:00",
     "to": "2022-09-24T14:00:00"
   },
@@ -490,13 +498,13 @@
       "parties": [
         {
           "id": "senatni-2022-16-c-875643-p",
-          "name": "Michal Auředník",
-          "description": "Michal Auředník",
+          "name": "NEZÁVISLÍ",
+          "description": "NEZÁVISLÍ",
           "contacts": {
             "web": [],
             "twitter": "https://twitter.com/MichalAurednik"
           },
-          "abbreviation": ""
+          "abbreviation": "NEZÁVISLÍ"
         }
       ]
     },
@@ -527,8 +535,8 @@
       "parties": [
         {
           "id": "senatni-2022-16-c-219251-p",
-          "name": "Janis Sidovský",
-          "description": "Janis Sidovský",
+          "name": "Janis Sidovský, senátor pro všechny - s podporou LES a SEN 21",
+          "description": "Janis Sidovský, senátor pro všechny - s podporou LES a SEN 21",
           "contacts": {
             "web": [
               {
@@ -548,7 +556,7 @@
             "twitter": "https://twitter.com/JanisSidovsky",
             "instagram": "https://www.instagram.com/janissid/"
           },
-          "abbreviation": ""
+          "abbreviation": "Janis Sidovský, senátor pro všechny - s podporou LES a SEN 21"
         }
       ]
     },
@@ -570,8 +578,8 @@
       "parties": [
         {
           "id": "senatni-2022-16-c-728249-p",
-          "name": "Jiří Oberfalzer",
-          "description": "Jiří Oberfalzer",
+          "name": "Koalice SPOLU",
+          "description": "Koalice SPOLU",
           "contacts": {
             "web": [
               {
@@ -582,7 +590,7 @@
             "facebook": "https://www.facebook.com/jiri.oberfalzer.3",
             "twitter": "https://twitter.com/JiriOberfalzer"
           },
-          "abbreviation": ""
+          "abbreviation": "Koalice SPOLU"
         }
       ]
     },
@@ -617,8 +625,8 @@
       "parties": [
         {
           "id": "senatni-2022-16-c-244153-p",
-          "name": "Martin Karim",
-          "description": "Martin Karim",
+          "name": "Česká pirátská strana",
+          "description": "Česká pirátská strana",
           "contacts": {
             "web": [
               {
@@ -642,7 +650,7 @@
             "twitter": "https://twitter.com/PiratKarimMar",
             "instagram": "https://www.instagram.com/martinkarim8/"
           },
-          "abbreviation": ""
+          "abbreviation": "Česká pirátská strana"
         }
       ]
     }

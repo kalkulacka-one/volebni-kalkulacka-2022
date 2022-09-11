@@ -24,7 +24,7 @@ handler.setLevel(logging.INFO)
 logger.addHandler(handler)
 
 
-def add_element(struct: dict[str, str], key: str, val: Optional[str]) -> None:
+def add_element(struct: dict[str, Any], key: str, val: Optional[Any]) -> None:
     if val is not None:
         struct[key] = val
 
@@ -35,6 +35,7 @@ class District:
     name: str
     description: str
     code: str
+    show_code: bool = False
     active: bool = True
     on_hp_from: Optional[datetime] = None
     on_hp_to: Optional[datetime] = None
@@ -58,6 +59,28 @@ class CandidateType(Enum):
 
 
 @dataclass(eq=True, frozen=True)
+class Contacts:
+    fb: Optional[str]
+    tw: Optional[str]
+    ig: Optional[str]
+    wiki: Optional[str]
+    web: Optional[str]
+    yt: Optional[str]
+    program: Optional[str]
+    linkedin: Optional[str]
+
+
+@dataclass(eq=True, frozen=True)
+class Party:
+    id: str
+    name: str
+    short_name: str
+    abbreviation: str
+    description: str
+    contacts: Contacts
+
+
+@dataclass(eq=True, frozen=True)
 class Candidate:
     id: str
     num: int
@@ -68,17 +91,11 @@ class Candidate:
     secret_code: str
     important: bool
     type: CandidateType
+    parties: list[Party]
+    contacts: Contacts
     logo: Optional[str]
     contact: Optional[str]
     contact_party: Optional[str]
-    fb: Optional[str]
-    tw: Optional[str]
-    ig: Optional[str]
-    wiki: Optional[str]
-    web: Optional[str]
-    yt: Optional[str]
-    program: Optional[str]
-    linkedin: Optional[str]
     people: Optional[str]
 
 
@@ -102,6 +119,14 @@ class CandidateAnswers:
     motto: Optional[str] = None
 
 
+class InstructionKey(Enum):
+    HEADER = "header"
+    STEP_1_1 = "step_1_1"
+    STEP_1_2 = "step_1_2"
+    STEP_1_LINK = "step_1_link"
+    STEP_2_1 = "step_2_1"
+
+
 class Election:
     def __init__(
         self,
@@ -112,6 +137,7 @@ class Election:
         description: str,
         voting_from: datetime,
         voting_to: datetime,
+        instructions: dict[InstructionKey, str],
     ) -> None:
         self.id = id
         self.key = key
@@ -119,6 +145,7 @@ class Election:
         self.description = description
         self.voting_from = voting_from
         self.voting_to = voting_to
+        self.instructions = instructions
         self._districts: dict[str, District] = {}
         self._definitions: dict[District, list[QuestionDefinition]] = defaultdict(list)
         self._candidates: dict[District, dict[str, Candidate]] = defaultdict(dict)
@@ -247,6 +274,7 @@ def extract_komunalni_districts(
             id=gen_district_id(election, code),
             name=str(row["město"]),
             code=code,
+            show_code=False,
             description=str(row["description"]),
             active=bool(int(active)) if active else False,
             on_hp_from=datetime(2022, 9, 1, 0, 0, 0),
@@ -294,6 +322,19 @@ def extract_komunalni_question_definitions(
     return reorder_question_definitions(definitions)
 
 
+def extract_contacts(row: SheetRow) -> Contacts:
+    return Contacts(
+        fb=str(row["fb"]) or None,
+        tw=str(row["tw"]) or None,
+        ig=str(row["ig"]) or None,
+        wiki=str(row["wiki"]) or None,
+        web=str(row["web"]) or None,
+        yt=str(row["yt"]) or None,
+        program=str(row["program"]) or None,
+        linkedin=str(row["linkedin"]) or None,
+    )
+
+
 def extract_komunalni_candidates(
     sheet: gspread.worksheet.Worksheet,
     election: Election,
@@ -303,8 +344,10 @@ def extract_komunalni_candidates(
     candidates: dict[str, Candidate] = {}
     for row in sheet.get_all_records():
         secret_code = str(row["code"])
+        candidate_id = gen_candidate_id(election, district, secret_code)
+        contacts = extract_contacts(row)
         candidate = Candidate(
-            id=gen_candidate_id(election, district, secret_code),
+            id=candidate_id,
             num=int(row["id"]),
             name=str(row["name"]),
             short_name=str(row["short_name"]),
@@ -316,15 +359,18 @@ def extract_komunalni_candidates(
             logo=str(row["logo"]) or None,
             contact=str(row["contact 1"]) or None,
             contact_party=str(row["contact party"]) or None,
-            fb=str(row["fb"]) or None,
-            tw=str(row["tw"]) or None,
-            ig=str(row["ig"]) or None,
-            wiki=str(row["wiki"]) or None,
-            web=str(row["web"]) or None,
-            yt=str(row["yt"]) or None,
-            program=str(row["program"]) or None,
-            linkedin=str(row["linkedin"]) or None,
+            contacts=contacts,
             people=str(row["people"]) or None,
+            parties=[
+                Party(
+                    id=f"{candidate_id}-p",
+                    name=str(row["name"]),
+                    short_name=str(row["short_name"]),
+                    abbreviation=str(row["abbreviation"]),
+                    description=str(row["name"]),
+                    contacts=contacts,
+                )
+            ],
         )
         candidates[secret_code] = candidate
     logger.info("Extraction candidates: %d", len(candidates))
@@ -450,6 +496,7 @@ def extract_senatni_districts(
                 name=str(row["obvod_name"]),
                 description=str(row["obvod_description"]),
                 code=code,
+                show_code=True,
                 active=bool(int(active)) if active else False,
                 on_hp_from=datetime(2022, 9, 1, 0, 0, 0),
                 on_hp_to=datetime(2022, 9, 30, 14, 0, 0),
@@ -468,8 +515,10 @@ def extract_senatni_candidates(
             continue
         secret_code = str(row["code"])
         name = f"{row['given_name']} {row['family_name']}"
+        candidate_id = gen_candidate_id(election, district, secret_code)
+        contacts = extract_contacts(row)
         candidate = Candidate(
-            id=gen_candidate_id(election, district, secret_code),
+            id=candidate_id,
             num=len(candidates) + 1,
             name=name,
             short_name="",
@@ -481,15 +530,18 @@ def extract_senatni_candidates(
             logo=str(row["photo"]) or None,
             contact=str(row["contact 1"]) or None,
             contact_party=str(row["contact party"]) or None,
-            fb=str(row["fb"]) or None,
-            tw=str(row["tw"]) or None,
-            ig=str(row["ig"]) or None,
-            wiki=str(row["wiki"]) or None,
-            web=str(row["web"]) or None,
-            yt=str(row["yt"]) or None,
-            program=str(row["program"]) or None,
-            linkedin=str(row["linkedin"]) or None,
+            contacts=contacts,
             people=None,
+            parties=[
+                Party(
+                    id=f"{candidate_id}-p",
+                    name=str(row["party"]),
+                    short_name=str(row["party"]),
+                    abbreviation=str(row["party"]),
+                    description=str(row["party"]),
+                    contacts=contacts,
+                )
+            ],
         )
         candidates[secret_code] = candidate
     logger.info("Extraction candidates: %d", len(candidates))
@@ -526,9 +578,22 @@ def extract_election_senat(gc: gspread.Client, row: SheetRow) -> Election:
         id="senatni-2022",
         key="senatni-2022",
         name="Senátní volby 2022",
-        description="Volí se třetina senátních obvodů.",
+        description="Letos se volí v třetině obvodů v rámci ČR.",
         voting_from=datetime(2022, 9, 23, 14, 0, 0),
         voting_to=datetime(2022, 9, 24, 14, 0, 0),
+        instructions={
+            InstructionKey.HEADER: "Zvolte svůj senátní obvod",
+            InstructionKey.STEP_1_1: "Letos se volí v třetině obvodů v rámci ČR.",
+            InstructionKey.STEP_1_2: "Více o senátních obvodech",
+            InstructionKey.STEP_1_LINK: "https://2022.programydovoleb.cz/senatni-volby",
+            InstructionKey.STEP_2_1: """
+Odpovězte na 40 otázek.
+Na stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.
+Zodpovězení otázek zabere cca 10 minut.
+Na konci se dozvíte,
+jak se kandidáti shodují s Vašimi názory.
+            """,
+        },
     )
 
     url_candidates = str(row["kandidáti"])
@@ -608,9 +673,18 @@ def extract_election_komunalni(gc: gspread.Client, row: SheetRow) -> Election:
         id="komunalni-2022",
         key="komunalni-2022",
         name="Komunální volby 2022",
-        description="K dispozici je 35 kalkulaček pro největší města.",
+        description="PLACEHOLDER",
         voting_from=datetime(2022, 9, 23, 14, 0, 0),
         voting_to=datetime(2022, 9, 24, 14, 0, 0),
+        instructions={
+            InstructionKey.HEADER: "Zvolte své město",
+            InstructionKey.STEP_1_1: "PLACEHOLDER",
+            InstructionKey.STEP_2_1: """
+Čeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující
+strany. Zodpovězení otázek zabere cca 10 minut.
+Na konci se dozvíte, jak se strany shodují s Vašimi názory.
+                """,
+        },
     )
 
     url_questions = str(row["otázky originál"])
@@ -667,6 +741,13 @@ def extract_election_komunalni(gc: gspread.Client, row: SheetRow) -> Election:
         )
         time.sleep(args.wait)
 
+    num_active_districts = len([d for d in election.districts.values() if d.active])
+
+    election.description = (
+        f"K dispozici jsou kalkulačky pro {num_active_districts} měst."
+    )
+    election.instructions[InstructionKey.STEP_1_1] = election.description
+
     return election
 
 
@@ -686,19 +767,69 @@ def convert_comment(c: str) -> Optional[str]:
     return c
 
 
-def generate_election_dict(election: Election) -> dict[str, str]:
+def generate_election_dict(election: Election) -> dict[str, Any]:
     d = {
         "id": election.id,
         "key": election.key,
         "name": election.name,
         "description": election.description,
-    }  # type: Dict[str, str]
+        "instructions": {k.value: v for k, v in election.instructions.items()},
+    }  # type: Dict[str, Any]
     add_element(
         d, "from", election.voting_from.isoformat() if election.voting_from else None
     )
     add_element(d, "to", election.voting_to.isoformat() if election.voting_to else None)
 
     return d
+
+
+def generate_contacts(contacts: Contacts) -> dict[str, Any]:
+    res = {"web": []}  # type: Dict[str, Any]
+    if contacts.fb:
+        res["facebook"] = contacts.fb
+    if contacts.tw:
+        res["twitter"] = contacts.tw
+    if contacts.ig:
+        res["instagram"] = contacts.ig
+    if contacts.web:
+        res["web"].append(
+            {
+                "url": contacts.web,
+                "label": "web",
+            }
+        )
+    if contacts.program:
+        res["web"].append(
+            {
+                "url": contacts.program,
+                "label": "program",
+            }
+        )
+    if contacts.wiki:
+        res["web"].append(
+            {
+                "url": contacts.wiki,
+                "label": "wiki",
+            }
+        )
+    if contacts.linkedin:
+        res["web"].append(
+            {
+                "url": contacts.linkedin,
+                "label": "linkedin",
+            }
+        )
+    return res
+
+
+def generate_party(party: Party) -> dict[str, Any]:
+    return {
+        "id": party.id,
+        "name": party.name,
+        "description": party.description,
+        "contacts": generate_contacts(party.contacts),
+        "abbreviation": party.abbreviation,
+    }
 
 
 def generate_calculator_dict(election: Election, district: District) -> dict[str, Any]:
@@ -710,6 +841,7 @@ def generate_calculator_dict(election: Election, district: District) -> dict[str
         "name": district.name,
         "description": district.description,
         "district_code": district.code,
+        "show_district_code": district.show_code,
         "election": generate_election_dict(election),
         "questions": [],
         "candidates": [],
@@ -738,54 +870,10 @@ def generate_calculator_dict(election: Election, district: District) -> dict[str
         }  # type: Dict[str, Any]
         add_element(c_dict, "img_url", candidate.logo)
 
-        contacts = {"web": []}  # type: Dict[str, Any]
-        if candidate.fb:
-            contacts["facebook"] = candidate.fb
-        if candidate.tw:
-            contacts["twitter"] = candidate.tw
-        if candidate.ig:
-            contacts["instagram"] = candidate.ig
-        if candidate.web:
-            contacts["web"].append(
-                {
-                    "url": candidate.web,
-                    "label": "web",
-                }
-            )
-        if candidate.program:
-            contacts["web"].append(
-                {
-                    "url": candidate.program,
-                    "label": "program",
-                }
-            )
-        if candidate.wiki:
-            contacts["web"].append(
-                {
-                    "url": candidate.wiki,
-                    "label": "wiki",
-                }
-            )
-        if candidate.linkedin:
-            contacts["web"].append(
-                {
-                    "url": candidate.linkedin,
-                    "label": "linkedin",
-                }
-            )
+        contacts = generate_contacts(candidate.contacts)
 
         c_dict["contacts"] = contacts
-        c_dict["parties"] = [
-            {
-                "id": (
-                    f"{gen_candidate_id(election, district, candidate.secret_code)}-p"
-                ),
-                "name": candidate.name,
-                "description": candidate.description,
-                "contacts": contacts,
-                "abbreviation": candidate.abbreviation,
-            }
-        ]
+        c_dict["parties"] = [generate_party(p) for p in candidate.parties]
         answers = election.answers[district].get(candidate.secret_code)
         if answers:
             add_element(c_dict, "motto", answers.motto)
@@ -924,6 +1012,7 @@ if __name__ == "__main__":
             calc_dict = {
                 "election_id": election.id,
                 "district_code": district.code,
+                "show_district_code": district.show_code,
                 "name": district.name,
                 "description": district.description,
             }

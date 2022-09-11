@@ -3,11 +3,17 @@
   "name": "Karviná",
   "description": "Karviná",
   "district_code": "598917",
+  "show_district_code": false,
   "election": {
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici je 35 kalkulaček pro největší města.",
+    "description": "K dispozici jsou kalkulačky pro 9 měst.",
+    "instructions": {
+      "header": "Zvolte své město",
+      "step_1_1": "K dispozici jsou kalkulačky pro 9 měst.",
+      "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
+    },
     "from": "2022-09-23T14:00:00",
     "to": "2022-09-24T14:00:00"
   },

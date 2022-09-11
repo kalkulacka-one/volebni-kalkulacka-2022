@@ -3,11 +3,19 @@
   "name": "Olomouc",
   "description": "východní část okresu Olomouc, ohraničenou na západě obcemi Město Libavá, Domašov nad Bystřicí, Jívová, Dolany, Hlušovice, Olomouc, Křelov-Břuchotín, Kožušany-Tážaly, Blatec",
   "district_code": "61",
+  "show_district_code": true,
   "election": {
     "id": "senatni-2022",
     "key": "senatni-2022",
     "name": "Senátní volby 2022",
-    "description": "Volí se třetina senátních obvodů.",
+    "description": "Letos se volí v třetině obvodů v rámci ČR.",
+    "instructions": {
+      "header": "Zvolte svůj senátní obvod",
+      "step_1_1": "Letos se volí v třetině obvodů v rámci ČR.",
+      "step_1_2": "Více o senátních obvodech",
+      "step_1_link": "https://2022.programydovoleb.cz/senatni-volby",
+      "step_2_1": "\nOdpovězte na 40 otázek.\nNa stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.\nZodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte,\njak se kandidáti shodují s Vašimi názory.\n            "
+    },
     "from": "2022-09-23T14:00:00",
     "to": "2022-09-24T14:00:00"
   },
@@ -499,8 +507,8 @@
       "parties": [
         {
           "id": "senatni-2022-61-c-131643-p",
-          "name": "Ctirad Musil",
-          "description": "Ctirad Musil",
+          "name": "Moravané",
+          "description": "Moravané",
           "contacts": {
             "web": [
               {
@@ -514,7 +522,7 @@
             ],
             "facebook": "https://www.facebook.com/ctirad.musil"
           },
-          "abbreviation": ""
+          "abbreviation": "Moravané"
         }
       ]
     },
@@ -529,12 +537,12 @@
       "parties": [
         {
           "id": "senatni-2022-61-c-504062-p",
-          "name": "Petr Vrána",
-          "description": "Petr Vrána",
+          "name": "Právo Respekt Odbornost",
+          "description": "Právo Respekt Odbornost",
           "contacts": {
             "web": []
           },
-          "abbreviation": ""
+          "abbreviation": "Právo Respekt Odbornost"
         }
       ]
     },
@@ -567,8 +575,8 @@
       "parties": [
         {
           "id": "senatni-2022-61-c-330603-p",
-          "name": "Michal Malacka",
-          "description": "Michal Malacka",
+          "name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "description": "STAROSTOVÉ A NEZÁVISLÍ",
           "contacts": {
             "web": [
               {
@@ -590,7 +598,7 @@
             ],
             "facebook": "https://www.facebook.com/michal.malacka/"
           },
-          "abbreviation": ""
+          "abbreviation": "STAROSTOVÉ A NEZÁVISLÍ"
         }
       ]
     },
@@ -607,14 +615,14 @@
       "parties": [
         {
           "id": "senatni-2022-61-c-290618-p",
-          "name": "Milan Brázdil",
-          "description": "Milan Brázdil",
+          "name": "ANO 2011",
+          "description": "ANO 2011",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/milanbrazdil2022",
             "instagram": "https://www.instagram.com/airrescuedoctor/"
           },
-          "abbreviation": ""
+          "abbreviation": "ANO 2011"
         }
       ]
     },
@@ -644,8 +652,8 @@
       "parties": [
         {
           "id": "senatni-2022-61-c-836627-p",
-          "name": "Lumír Kantor",
-          "description": "Lumír Kantor",
+          "name": "KDU-ČSL",
+          "description": "KDU-ČSL",
           "contacts": {
             "web": [
               {
@@ -664,7 +672,7 @@
             "facebook": "https://www.facebook.com/lumirkantor",
             "twitter": "https://twitter.com/KantorLumir"
           },
-          "abbreviation": ""
+          "abbreviation": "KDU-ČSL"
         }
       ]
     },
@@ -689,8 +697,8 @@
       "parties": [
         {
           "id": "senatni-2022-61-c-146752-p",
-          "name": "Václav Ranc",
-          "description": "Václav Ranc",
+          "name": "Česká pirátská strana",
+          "description": "Česká pirátská strana",
           "contacts": {
             "web": [
               {
@@ -704,7 +712,7 @@
             ],
             "facebook": "https://www.facebook.com/vaclav.ranc.75"
           },
-          "abbreviation": ""
+          "abbreviation": "Česká pirátská strana"
         }
       ]
     },
@@ -730,8 +738,8 @@
       "parties": [
         {
           "id": "senatni-2022-61-c-405277-p",
-          "name": "Čestmír Neoral",
-          "description": "Čestmír Neoral",
+          "name": "Občanská demokratická strana",
+          "description": "Občanská demokratická strana",
           "contacts": {
             "web": [
               {
@@ -746,7 +754,7 @@
             "facebook": "https://www.facebook.com/cestmirdosenatu",
             "instagram": "https://www.instagram.com/cestmir_neoral/"
           },
-          "abbreviation": ""
+          "abbreviation": "Občanská demokratická strana"
         }
       ]
     },
@@ -777,8 +785,8 @@
       "parties": [
         {
           "id": "senatni-2022-61-c-202876-p",
-          "name": "Zuzana Majerová",
-          "description": "Zuzana Majerová",
+          "name": "Trikolora",
+          "description": "Trikolora",
           "contacts": {
             "web": [
               {
@@ -798,7 +806,7 @@
             "twitter": "https://twitter.com/MajerovaZ",
             "instagram": "https://www.instagram.com/zuzana_majerova_trikolora/"
           },
-          "abbreviation": ""
+          "abbreviation": "Trikolora"
         }
       ]
     }

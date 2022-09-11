@@ -1,13 +1,21 @@
 {
   "id": "senatni-2022-58",
-  "name": "Brno-město (58)",
+  "name": "Brno - město",
   "description": "část okresu Brno-město, tvořená městskými částmi Brno-jih, Bohunice, Černovice, Židenice, Líšeň, Vinohrady, Obřany-Maloměřice, Tuřany, Slatina, Chrlice",
   "district_code": "58",
+  "show_district_code": true,
   "election": {
     "id": "senatni-2022",
     "key": "senatni-2022",
     "name": "Senátní volby 2022",
-    "description": "Volí se třetina senátních obvodů.",
+    "description": "Letos se volí v třetině obvodů v rámci ČR.",
+    "instructions": {
+      "header": "Zvolte svůj senátní obvod",
+      "step_1_1": "Letos se volí v třetině obvodů v rámci ČR.",
+      "step_1_2": "Více o senátních obvodech",
+      "step_1_link": "https://2022.programydovoleb.cz/senatni-volby",
+      "step_2_1": "\nOdpovězte na 40 otázek.\nNa stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.\nZodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte,\njak se kandidáti shodují s Vašimi názory.\n            "
+    },
     "from": "2022-09-23T14:00:00",
     "to": "2022-09-24T14:00:00"
   },
@@ -504,8 +512,8 @@
       "parties": [
         {
           "id": "senatni-2022-58-c-381319-p",
-          "name": "Jiří Dušek",
-          "description": "Jiří Dušek",
+          "name": "Brno je můj vesmír",
+          "description": "Brno je můj vesmír",
           "contacts": {
             "web": [
               {
@@ -524,7 +532,7 @@
             "facebook": "https://www.facebook.com/brnojemujvesmir/",
             "twitter": "https://twitter.com/JiDusek"
           },
-          "abbreviation": ""
+          "abbreviation": "Brno je můj vesmír"
         }
       ]
     },
@@ -555,8 +563,8 @@
       "parties": [
         {
           "id": "senatni-2022-58-c-296693-p",
-          "name": "Petr Kunc",
-          "description": "Petr Kunc",
+          "name": "SEN 21",
+          "description": "SEN 21",
           "contacts": {
             "web": [
               {
@@ -576,7 +584,7 @@
             "twitter": "https://twitter.com/kunc_zidenice",
             "instagram": "https://instagram.com/petrkunc.cz"
           },
-          "abbreviation": ""
+          "abbreviation": "SEN 21"
         }
       ]
     },
@@ -591,12 +599,12 @@
       "parties": [
         {
           "id": "senatni-2022-58-c-663420-p",
-          "name": "Lucie Zajícová",
-          "description": "Lucie Zajícová",
+          "name": "DOMOV",
+          "description": "DOMOV",
           "contacts": {
             "web": []
           },
-          "abbreviation": ""
+          "abbreviation": "DOMOV"
         }
       ]
     },
@@ -625,8 +633,8 @@
       "parties": [
         {
           "id": "senatni-2022-58-c-995955-p",
-          "name": "Zdeněk Koudelka",
-          "description": "Zdeněk Koudelka",
+          "name": "Koalice SPD, Trikolora, Moravané",
+          "description": "Koalice SPD, Trikolora, Moravané",
           "contacts": {
             "web": [
               {
@@ -644,7 +652,7 @@
             ],
             "facebook": "https://www.facebook.com/rektor.zdenekkoudelka/"
           },
-          "abbreviation": ""
+          "abbreviation": "Koalice SPD, Trikolora, Moravané"
         }
       ]
     },
@@ -675,8 +683,8 @@
       "parties": [
         {
           "id": "senatni-2022-58-c-630883-p",
-          "name": "Michal Sedláček",
-          "description": "Michal Sedláček",
+          "name": "SPOLEČNĚ - TOP 09, KDU-ČSL",
+          "description": "SPOLEČNĚ - TOP 09, KDU-ČSL",
           "contacts": {
             "web": [
               {
@@ -696,7 +704,7 @@
             "twitter": "https://twitter.com/michalms",
             "instagram": "https://www.instagram.com/sedlacek.michal2016/"
           },
-          "abbreviation": ""
+          "abbreviation": "SPOLEČNĚ - TOP 09, KDU-ČSL"
         }
       ]
     },
@@ -718,8 +726,8 @@
       "parties": [
         {
           "id": "senatni-2022-58-c-260752-p",
-          "name": "Petr Vokřál",
-          "description": "Petr Vokřál",
+          "name": "ANO 2011",
+          "description": "ANO 2011",
           "contacts": {
             "web": [
               {
@@ -730,7 +738,7 @@
             "facebook": "https://www.facebook.com/vokralp/",
             "twitter": "https://twitter.com/pvokral"
           },
-          "abbreviation": ""
+          "abbreviation": "ANO 2011"
         }
       ]
     }

@@ -3,11 +3,19 @@
   "name": "Český Krumlov",
   "description": "celý okres Český Krumlov, východní část okresu Prachatice, ohraničená na západě obcemi Stožec, Volary, Záblatí, Kratušín, Drslavice, Zábrdí, Prachatice, Žernovice, Nebahovy, Lhenice, Netolice, Malovice, západní část okresu České Budějovice, ohraničená na východě obcemi Týn nad Vltavou, Horní Kněžeklady, Modrá Hůrka, Hluboká nad Vltavou, Dasný, Čejkovice, Branišov, Litvínovice, Planá, Boršov nad Vltavou, Včelná, Roudné, Staré Hodějovice, Nová Ves, Strážkovice, Ostrolovský Újezd, Trhové Sviny, Olešnice, Nové Hrady, Hranice",
   "district_code": "10",
+  "show_district_code": true,
   "election": {
     "id": "senatni-2022",
     "key": "senatni-2022",
     "name": "Senátní volby 2022",
-    "description": "Volí se třetina senátních obvodů.",
+    "description": "Letos se volí v třetině obvodů v rámci ČR.",
+    "instructions": {
+      "header": "Zvolte svůj senátní obvod",
+      "step_1_1": "Letos se volí v třetině obvodů v rámci ČR.",
+      "step_1_2": "Více o senátních obvodech",
+      "step_1_link": "https://2022.programydovoleb.cz/senatni-volby",
+      "step_2_1": "\nOdpovězte na 40 otázek.\nNa stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.\nZodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte,\njak se kandidáti shodují s Vašimi názory.\n            "
+    },
     "from": "2022-09-23T14:00:00",
     "to": "2022-09-24T14:00:00"
   },
@@ -503,8 +511,8 @@
       "parties": [
         {
           "id": "senatni-2022-10-c-908666-p",
-          "name": "Robert Huneš",
-          "description": "Robert Huneš",
+          "name": "KDU-ČSL",
+          "description": "KDU-ČSL",
           "contacts": {
             "web": [
               {
@@ -522,7 +530,7 @@
             ],
             "facebook": "https://www.facebook.com/Robert-Hune%C5%A1-do-sen%C3%A1tu-273339916189874/"
           },
-          "abbreviation": ""
+          "abbreviation": "KDU-ČSL"
         }
       ]
     },
@@ -549,8 +557,8 @@
       "parties": [
         {
           "id": "senatni-2022-10-c-593117-p",
-          "name": "Tomáš Jirsa",
-          "description": "Tomáš Jirsa",
+          "name": "Občanská demokratická strana",
+          "description": "Občanská demokratická strana",
           "contacts": {
             "web": [
               {
@@ -566,7 +574,7 @@
             "twitter": "https://twitter.com/Tomas_Jirsa",
             "instagram": "https://www.instagram.com/senator_tomasjirsa/"
           },
-          "abbreviation": ""
+          "abbreviation": "Občanská demokratická strana"
         }
       ]
     },
@@ -592,8 +600,8 @@
       "parties": [
         {
           "id": "senatni-2022-10-c-974997-p",
-          "name": "Dalibor Uhlíř",
-          "description": "Dalibor Uhlíř",
+          "name": "NEZÁVISLÍ",
+          "description": "NEZÁVISLÍ",
           "contacts": {
             "web": [
               {
@@ -608,7 +616,7 @@
             "facebook": "https://www.facebook.com/daliboruhlir.cz/",
             "instagram": "https://www.instagram.com/dalibor.uhlir/"
           },
-          "abbreviation": ""
+          "abbreviation": "NEZÁVISLÍ"
         }
       ]
     },
@@ -623,12 +631,12 @@
       "parties": [
         {
           "id": "senatni-2022-10-c-488789-p",
-          "name": "Miroslav Lorenc",
-          "description": "Miroslav Lorenc",
+          "name": "ANO 2011",
+          "description": "ANO 2011",
           "contacts": {
             "web": []
           },
-          "abbreviation": ""
+          "abbreviation": "ANO 2011"
         }
       ]
     },
@@ -644,13 +652,13 @@
       "parties": [
         {
           "id": "senatni-2022-10-c-310539-p",
-          "name": "Václav Mikeš",
-          "description": "Václav Mikeš",
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/vaclav.mikes.33"
           },
-          "abbreviation": ""
+          "abbreviation": "Svoboda a přímá demokracie (SPD)"
         }
       ]
     }
@@ -1030,7 +1038,7 @@
       "id": "senatni-2022-10-a-908666-2",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-2",
-      "answer": "dont_know"
+      "answer": "no"
     },
     {
       "id": "senatni-2022-10-a-908666-3",
@@ -1042,7 +1050,7 @@
       "id": "senatni-2022-10-a-908666-4",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-4",
-      "answer": "dont_know"
+      "answer": "no"
     },
     {
       "id": "senatni-2022-10-a-908666-5",
@@ -1054,43 +1062,43 @@
       "id": "senatni-2022-10-a-908666-6",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-6",
-      "answer": "no"
+      "answer": "yes"
     },
     {
       "id": "senatni-2022-10-a-908666-7",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-7",
-      "answer": "yes"
+      "answer": "no"
     },
     {
       "id": "senatni-2022-10-a-908666-8",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-8",
-      "answer": "dont_know"
+      "answer": "yes"
     },
     {
       "id": "senatni-2022-10-a-908666-9",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-9",
-      "answer": "dont_know"
+      "answer": "no"
     },
     {
       "id": "senatni-2022-10-a-908666-10",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-10",
-      "answer": "yes"
+      "answer": "dont_know"
     },
     {
       "id": "senatni-2022-10-a-908666-11",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-11",
-      "answer": "yes"
+      "answer": "no"
     },
     {
       "id": "senatni-2022-10-a-908666-12",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-12",
-      "answer": "yes"
+      "answer": "no"
     },
     {
       "id": "senatni-2022-10-a-908666-13",
@@ -1108,7 +1116,7 @@
       "id": "senatni-2022-10-a-908666-15",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-15",
-      "answer": "dont_know"
+      "answer": "no"
     },
     {
       "id": "senatni-2022-10-a-908666-16",
@@ -1126,25 +1134,25 @@
       "id": "senatni-2022-10-a-908666-18",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-18",
-      "answer": "dont_know"
+      "answer": "yes"
     },
     {
       "id": "senatni-2022-10-a-908666-19",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-19",
-      "answer": "dont_know"
+      "answer": "yes"
     },
     {
       "id": "senatni-2022-10-a-908666-20",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-20",
-      "answer": "yes"
+      "answer": "no"
     },
     {
       "id": "senatni-2022-10-a-908666-21",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-21",
-      "answer": "dont_know"
+      "answer": "no"
     },
     {
       "id": "senatni-2022-10-a-908666-22",
@@ -1156,13 +1164,13 @@
       "id": "senatni-2022-10-a-908666-23",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-23",
-      "answer": "dont_know"
+      "answer": "yes"
     },
     {
       "id": "senatni-2022-10-a-908666-24",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-24",
-      "answer": "yes"
+      "answer": "dont_know"
     },
     {
       "id": "senatni-2022-10-a-908666-25",
@@ -1210,13 +1218,13 @@
       "id": "senatni-2022-10-a-908666-32",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-32",
-      "answer": "yes"
+      "answer": "dont_know"
     },
     {
       "id": "senatni-2022-10-a-908666-33",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-33",
-      "answer": "dont_know"
+      "answer": "no"
     },
     {
       "id": "senatni-2022-10-a-908666-34",
@@ -1252,7 +1260,7 @@
       "id": "senatni-2022-10-a-908666-39",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-39",
-      "answer": "yes"
+      "answer": "dont_know"
     },
     {
       "id": "senatni-2022-10-a-908666-40",
@@ -1264,7 +1272,7 @@
       "id": "senatni-2022-10-a-908666-41",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-41",
-      "answer": "dont_know"
+      "answer": "no"
     },
     {
       "id": "senatni-2022-10-a-908666-42",
@@ -1276,7 +1284,7 @@
       "id": "senatni-2022-10-a-908666-43",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-43",
-      "answer": "yes"
+      "answer": "dont_know"
     },
     {
       "id": "senatni-2022-10-a-908666-44",
@@ -1288,7 +1296,7 @@
       "id": "senatni-2022-10-a-908666-45",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-45",
-      "answer": "no"
+      "answer": "yes"
     },
     {
       "id": "senatni-2022-10-a-908666-46",
@@ -1306,7 +1314,7 @@
       "id": "senatni-2022-10-a-908666-48",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-48",
-      "answer": "no"
+      "answer": "yes"
     },
     {
       "id": "senatni-2022-10-a-908666-49",
@@ -1318,7 +1326,7 @@
       "id": "senatni-2022-10-a-908666-50",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-50",
-      "answer": "dont_know"
+      "answer": "no"
     },
     {
       "id": "senatni-2022-10-a-908666-51",
@@ -1348,13 +1356,13 @@
       "id": "senatni-2022-10-a-908666-55",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-55",
-      "answer": "dont_know"
+      "answer": "no"
     },
     {
       "id": "senatni-2022-10-a-908666-56",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-56",
-      "answer": "dont_know"
+      "answer": "no"
     },
     {
       "id": "senatni-2022-10-a-908666-57",
@@ -1366,7 +1374,7 @@
       "id": "senatni-2022-10-a-908666-58",
       "candidate_id": "senatni-2022-10-c-908666",
       "question_id": "senatni-2022-global-q-58",
-      "answer": "yes"
+      "answer": "no"
     }
   ]
 }

@@ -3,11 +3,19 @@
   "name": "Tábor",
   "description": "celý okres Tábor, východní část okresu Písek, ohraničená na západě obcemi Žďár, Tálín, Paseky, Kluky, Dolní Novosedly, Záhoří, Vrcovice, Vojníkov, Vráž, Ostrovec, Smetanova Lhota, Čimelice, Nerestce, Mirovice, a jižní část okresu Benešov, tvořená obcemi Votice, Neustupov, Miličín, Mezno, Střezimíř, Jankov, Ratměřice, Zvěstov",
   "district_code": "13",
+  "show_district_code": true,
   "election": {
     "id": "senatni-2022",
     "key": "senatni-2022",
     "name": "Senátní volby 2022",
-    "description": "Volí se třetina senátních obvodů.",
+    "description": "Letos se volí v třetině obvodů v rámci ČR.",
+    "instructions": {
+      "header": "Zvolte svůj senátní obvod",
+      "step_1_1": "Letos se volí v třetině obvodů v rámci ČR.",
+      "step_1_2": "Více o senátních obvodech",
+      "step_1_link": "https://2022.programydovoleb.cz/senatni-volby",
+      "step_2_1": "\nOdpovězte na 40 otázek.\nNa stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.\nZodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte,\njak se kandidáti shodují s Vašimi názory.\n            "
+    },
     "from": "2022-09-23T14:00:00",
     "to": "2022-09-24T14:00:00"
   },
@@ -496,8 +504,8 @@
       "parties": [
         {
           "id": "senatni-2022-13-c-440713-p",
-          "name": "Marek Slabý",
-          "description": "Marek Slabý",
+          "name": "Tábor 2020 a SPOLU - Občanská demokratická strana, KDU-ČSL, TOP 09",
+          "description": "Tábor 2020 a SPOLU - Občanská demokratická strana, KDU-ČSL, TOP 09",
           "contacts": {
             "web": [
               {
@@ -508,7 +516,7 @@
             "facebook": "https://www.facebook.com/SlabyMarek",
             "instagram": "https://www.instagram.com/marekslaby22/"
           },
-          "abbreviation": ""
+          "abbreviation": "Tábor 2020 a SPOLU - Občanská demokratická strana, KDU-ČSL, TOP 09"
         }
       ]
     },
@@ -525,14 +533,14 @@
       "parties": [
         {
           "id": "senatni-2022-13-c-203124-p",
-          "name": "Martin Kákona",
-          "description": "Martin Kákona",
+          "name": "Česká pirátská strana",
+          "description": "Česká pirátská strana",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/martinkakona",
             "twitter": "https://twitter.com/MKakona"
           },
-          "abbreviation": ""
+          "abbreviation": "Česká pirátská strana"
         }
       ]
     },
@@ -552,8 +560,8 @@
       "parties": [
         {
           "id": "senatni-2022-13-c-941147-p",
-          "name": "Jaroslav Větrovský",
-          "description": "Jaroslav Větrovský",
+          "name": "JIHOČEŠI 2012",
+          "description": "JIHOČEŠI 2012",
           "contacts": {
             "web": [
               {
@@ -562,7 +570,7 @@
               }
             ]
           },
-          "abbreviation": ""
+          "abbreviation": "JIHOČEŠI 2012"
         }
       ]
     },
@@ -589,8 +597,8 @@
       "parties": [
         {
           "id": "senatni-2022-13-c-420091-p",
-          "name": "Jiří Machač",
-          "description": "Jiří Machač",
+          "name": "JIŘÍ MACHAČ",
+          "description": "JIŘÍ MACHAČ",
           "contacts": {
             "web": [
               {
@@ -606,7 +614,7 @@
             "twitter": "https://twitter.com/jirimachac_",
             "instagram": "https://instagram.com/jirimachac_"
           },
-          "abbreviation": ""
+          "abbreviation": "JIŘÍ MACHAČ"
         }
       ]
     },
@@ -622,13 +630,13 @@
       "parties": [
         {
           "id": "senatni-2022-13-c-940838-p",
-          "name": "Martin Kupec",
-          "description": "Martin Kupec",
+          "name": "ANO 2011",
+          "description": "ANO 2011",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/profile.php?id=100010001926506"
           },
-          "abbreviation": ""
+          "abbreviation": "ANO 2011"
         }
       ]
     },
@@ -643,12 +651,12 @@
       "parties": [
         {
           "id": "senatni-2022-13-c-338969-p",
-          "name": "Jiří Šimánek",
-          "description": "Jiří Šimánek",
+          "name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "description": "STAROSTOVÉ A NEZÁVISLÍ",
           "contacts": {
             "web": []
           },
-          "abbreviation": ""
+          "abbreviation": "STAROSTOVÉ A NEZÁVISLÍ"
         }
       ]
     },
@@ -669,8 +677,8 @@
       "parties": [
         {
           "id": "senatni-2022-13-c-459651-p",
-          "name": "Evžen Zadražil",
-          "description": "Evžen Zadražil",
+          "name": "Svobodní",
+          "description": "Svobodní",
           "contacts": {
             "web": [
               {
@@ -680,7 +688,7 @@
             ],
             "facebook": "http://facebook.com/evzenzadrazil.cz/"
           },
-          "abbreviation": ""
+          "abbreviation": "Svobodní"
         }
       ]
     },
@@ -696,13 +704,13 @@
       "parties": [
         {
           "id": "senatni-2022-13-c-267821-p",
-          "name": "Olga Bastlová",
-          "description": "Olga Bastlová",
+          "name": "Česká strana sociálně demokratická",
+          "description": "Česká strana sociálně demokratická",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/olga.bastlova"
           },
-          "abbreviation": ""
+          "abbreviation": "Česká strana sociálně demokratická"
         }
       ]
     },
@@ -717,12 +725,12 @@
       "parties": [
         {
           "id": "senatni-2022-13-c-545048-p",
-          "name": "Miloš Zábranský",
-          "description": "Miloš Zábranský",
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": {
             "web": []
           },
-          "abbreviation": ""
+          "abbreviation": "Svoboda a přímá demokracie (SPD)"
         }
       ]
     }

@@ -1,13 +1,21 @@
 {
   "id": "senatni-2022-7",
-  "name": "Plzeň-město",
+  "name": "Plzeň - město",
   "description": "celý okres Plzeň-jih, městský obvod Plzeň 2-Slovany, severní část okresu Klatovy, ohraničená na jihu obcemi Křenice, Ježovy, Mezihoří, Švihov, Měčín, Újezd u Plánice, Plánice, Zavlekov, Nalžovské Hory, Hradešice, Malý Bor, Velké Hydčice, Horažďovice, a jihovýchodní část okresu Plzeň-město, ohraničená na severozápadě obcemi Letkov, Tymákov, Starý Plzenec, Losiná",
   "district_code": "7",
+  "show_district_code": true,
   "election": {
     "id": "senatni-2022",
     "key": "senatni-2022",
     "name": "Senátní volby 2022",
-    "description": "Volí se třetina senátních obvodů.",
+    "description": "Letos se volí v třetině obvodů v rámci ČR.",
+    "instructions": {
+      "header": "Zvolte svůj senátní obvod",
+      "step_1_1": "Letos se volí v třetině obvodů v rámci ČR.",
+      "step_1_2": "Více o senátních obvodech",
+      "step_1_link": "https://2022.programydovoleb.cz/senatni-volby",
+      "step_2_1": "\nOdpovězte na 40 otázek.\nNa stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.\nZodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte,\njak se kandidáti shodují s Vašimi názory.\n            "
+    },
     "from": "2022-09-23T14:00:00",
     "to": "2022-09-24T14:00:00"
   },
@@ -505,8 +513,8 @@
       "parties": [
         {
           "id": "senatni-2022-7-c-883400-p",
-          "name": "Jiří Valenta",
-          "description": "Jiří Valenta",
+          "name": "Komunistická strana Čech a Moravy",
+          "description": "Komunistická strana Čech a Moravy",
           "contacts": {
             "web": [
               {
@@ -526,7 +534,7 @@
             "twitter": "https://twitter.com/JiValenta",
             "instagram": "https://www.instagram.com/valenta1965/"
           },
-          "abbreviation": ""
+          "abbreviation": "Komunistická strana Čech a Moravy"
         }
       ]
     },
@@ -547,8 +555,8 @@
       "parties": [
         {
           "id": "senatni-2022-7-c-401024-p",
-          "name": "Jan Kůrka",
-          "description": "Jan Kůrka",
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": {
             "web": [
               {
@@ -558,7 +566,7 @@
             ],
             "facebook": "https://www.facebook.com/SPD-Plze%C5%88-m%C4%9Bsto-1927335734168406/"
           },
-          "abbreviation": ""
+          "abbreviation": "Svoboda a přímá demokracie (SPD)"
         }
       ]
     },
@@ -585,8 +593,8 @@
       "parties": [
         {
           "id": "senatni-2022-7-c-519910-p",
-          "name": "Pavel Šrámek",
-          "description": "Pavel Šrámek",
+          "name": "PRO PLZEŇ",
+          "description": "PRO PLZEŇ",
           "contacts": {
             "web": [
               {
@@ -602,7 +610,7 @@
             "twitter": "https://twitter.com/Sramek_Pavel",
             "instagram": "https://www.instagram.com/sramek_pavel/"
           },
-          "abbreviation": ""
+          "abbreviation": "PRO PLZEŇ"
         }
       ]
     },
@@ -624,8 +632,8 @@
       "parties": [
         {
           "id": "senatni-2022-7-c-801538-p",
-          "name": "Václav Chaloupek",
-          "description": "Václav Chaloupek",
+          "name": "Václav Chaloupek do Senátu - koalice OPAT a STAN",
+          "description": "Václav Chaloupek do Senátu - koalice OPAT a STAN",
           "contacts": {
             "web": [
               {
@@ -636,7 +644,7 @@
             "facebook": "https://www.facebook.com/VaclavChaloupek",
             "twitter": "https://twitter.com/VaclavChaloupek"
           },
-          "abbreviation": ""
+          "abbreviation": "Václav Chaloupek do Senátu - koalice OPAT a STAN"
         }
       ]
     },
@@ -666,8 +674,8 @@
       "parties": [
         {
           "id": "senatni-2022-7-c-582714-p",
-          "name": "Daniela Kovářová",
-          "description": "Daniela Kovářová",
+          "name": "JUDr. Daniela Kovářová",
+          "description": "JUDr. Daniela Kovářová",
           "contacts": {
             "web": [
               {
@@ -686,7 +694,7 @@
             "facebook": "https://www.facebook.com/daniela.kovarova.advokatka/",
             "twitter": "https://twitter.com/DanielaKovarova"
           },
-          "abbreviation": ""
+          "abbreviation": "JUDr. Daniela Kovářová"
         }
       ]
     },
@@ -707,8 +715,8 @@
       "parties": [
         {
           "id": "senatni-2022-7-c-161426-p",
-          "name": "Josef Váňa",
-          "description": "Josef Váňa",
+          "name": "ANO 2011",
+          "description": "ANO 2011",
           "contacts": {
             "web": [
               {
@@ -718,7 +726,7 @@
             ],
             "facebook": "https://www.facebook.com/josefvanadosenatu"
           },
-          "abbreviation": ""
+          "abbreviation": "ANO 2011"
         }
       ]
     },
@@ -735,14 +743,14 @@
       "parties": [
         {
           "id": "senatni-2022-7-c-189360-p",
-          "name": "Karel Naxera",
-          "description": "Karel Naxera",
+          "name": "SPOLU— ODS, KDU-ČSL, TOP 09",
+          "description": "SPOLU— ODS, KDU-ČSL, TOP 09",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/naxerakarel",
             "instagram": "https://www.instagram.com/karelnaxera/"
           },
-          "abbreviation": ""
+          "abbreviation": "SPOLU— ODS, KDU-ČSL, TOP 09"
         }
       ]
     }

@@ -3,11 +3,19 @@
   "name": "Praha 6",
   "description": "území městské části Praha 6, s výjimkou k. ú. Střešovice, části k. ú. Bubeneč, části k. ú. Hradčany a části k. ú. Sedlec, ležícími na území městské části Praha 6. Dále zahrnuje území městských částí Praha 17, Praha-Přední Kopanina, Praha-Nebušice, Praha-Lysolaje, Praha-Zličín",
   "district_code": "25",
+  "show_district_code": true,
   "election": {
     "id": "senatni-2022",
     "key": "senatni-2022",
     "name": "Senátní volby 2022",
-    "description": "Volí se třetina senátních obvodů.",
+    "description": "Letos se volí v třetině obvodů v rámci ČR.",
+    "instructions": {
+      "header": "Zvolte svůj senátní obvod",
+      "step_1_1": "Letos se volí v třetině obvodů v rámci ČR.",
+      "step_1_2": "Více o senátních obvodech",
+      "step_1_link": "https://2022.programydovoleb.cz/senatni-volby",
+      "step_2_1": "\nOdpovězte na 40 otázek.\nNa stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.\nZodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte,\njak se kandidáti shodují s Vašimi názory.\n            "
+    },
     "from": "2022-09-23T14:00:00",
     "to": "2022-09-24T14:00:00"
   },
@@ -490,13 +498,13 @@
       "parties": [
         {
           "id": "senatni-2022-25-c-842348-p",
-          "name": "Jaroslav Dvořák",
-          "description": "Jaroslav Dvořák",
+          "name": "Česká strana národně sociální",
+          "description": "Česká strana národně sociální",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/JarDvorak"
           },
-          "abbreviation": ""
+          "abbreviation": "Česká strana národně sociální"
         }
       ]
     },
@@ -514,15 +522,15 @@
       "parties": [
         {
           "id": "senatni-2022-25-c-377248-p",
-          "name": "Petr Pavlík",
-          "description": "Petr Pavlík",
+          "name": "Česká strana sociálně demokratická",
+          "description": "Česká strana sociálně demokratická",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/petr.pavlik.3154",
             "twitter": "https://twitter.com/PetrPavlik9",
             "instagram": "https://www.instagram.com/petr.pavlik.3154/"
           },
-          "abbreviation": ""
+          "abbreviation": "Česká strana sociálně demokratická"
         }
       ]
     },
@@ -537,12 +545,12 @@
       "parties": [
         {
           "id": "senatni-2022-25-c-678819-p",
-          "name": "Jiří Pavel Pešek",
-          "description": "Jiří Pavel Pešek",
+          "name": "Manifest.cz - Pravá Svoboda a Prosperita",
+          "description": "Manifest.cz - Pravá Svoboda a Prosperita",
           "contacts": {
             "web": []
           },
-          "abbreviation": ""
+          "abbreviation": "Manifest.cz - Pravá Svoboda a Prosperita"
         }
       ]
     },
@@ -569,8 +577,8 @@
       "parties": [
         {
           "id": "senatni-2022-25-c-813666-p",
-          "name": "Jiří Růžička",
-          "description": "Jiří Růžička",
+          "name": "SPOLU (ODS, KDU-ČSL, TOP 09) a Starostové",
+          "description": "SPOLU (ODS, KDU-ČSL, TOP 09) a Starostové",
           "contacts": {
             "web": [
               {
@@ -586,7 +594,7 @@
             "twitter": "https://twitter.com/ruzickavsenatu",
             "instagram": "https://www.instagram.com/ruzicka_jiri/"
           },
-          "abbreviation": ""
+          "abbreviation": "SPOLU (ODS, KDU-ČSL, TOP 09) a Starostové"
         }
       ]
     },
@@ -601,12 +609,12 @@
       "parties": [
         {
           "id": "senatni-2022-25-c-426167-p",
-          "name": "Petr Hannig",
-          "description": "Petr Hannig",
+          "name": "ROZUMNÍ",
+          "description": "ROZUMNÍ",
           "contacts": {
             "web": []
           },
-          "abbreviation": ""
+          "abbreviation": "ROZUMNÍ"
         }
       ]
     },
@@ -637,8 +645,8 @@
       "parties": [
         {
           "id": "senatni-2022-25-c-630845-p",
-          "name": "Lenka Helena Koenigsmark",
-          "description": "Lenka Helena Koenigsmark",
+          "name": "SEN 21",
+          "description": "SEN 21",
           "contacts": {
             "web": [
               {
@@ -658,7 +666,7 @@
             "twitter": "https://twitter.com/LKoenigsmark",
             "instagram": "https://www.instagram.com/maxmilion_and_me/"
           },
-          "abbreviation": ""
+          "abbreviation": "SEN 21"
         }
       ]
     },
@@ -673,12 +681,12 @@
       "parties": [
         {
           "id": "senatni-2022-25-c-188521-p",
-          "name": "Petr Vacek",
-          "description": "Petr Vacek",
+          "name": "PRO 2022",
+          "description": "PRO 2022",
           "contacts": {
             "web": []
           },
-          "abbreviation": ""
+          "abbreviation": "PRO 2022"
         }
       ]
     },
@@ -705,8 +713,8 @@
       "parties": [
         {
           "id": "senatni-2022-25-c-290001-p",
-          "name": "Dana Balcarová",
-          "description": "Dana Balcarová",
+          "name": "Česká pirátská strana",
+          "description": "Česká pirátská strana",
           "contacts": {
             "web": [
               {
@@ -722,7 +730,7 @@
             "twitter": "https://twitter.com/DanaBalcarova",
             "instagram": "https://www.instagram.com/dana_balcarova/"
           },
-          "abbreviation": ""
+          "abbreviation": "Česká pirátská strana"
         }
       ]
     }

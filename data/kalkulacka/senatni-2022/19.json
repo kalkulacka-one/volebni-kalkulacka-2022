@@ -3,11 +3,19 @@
   "name": "Praha 11",
   "description": "území městských částí Praha 11, Praha 15, Praha 22, Praha-Benice, Praha-Dolní Měcholupy, Praha-Kolovraty, Praha-Královice, Praha-Křeslice, Praha-Nedvězí",
   "district_code": "19",
+  "show_district_code": true,
   "election": {
     "id": "senatni-2022",
     "key": "senatni-2022",
     "name": "Senátní volby 2022",
-    "description": "Volí se třetina senátních obvodů.",
+    "description": "Letos se volí v třetině obvodů v rámci ČR.",
+    "instructions": {
+      "header": "Zvolte svůj senátní obvod",
+      "step_1_1": "Letos se volí v třetině obvodů v rámci ČR.",
+      "step_1_2": "Více o senátních obvodech",
+      "step_1_link": "https://2022.programydovoleb.cz/senatni-volby",
+      "step_2_1": "\nOdpovězte na 40 otázek.\nNa stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.\nZodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte,\njak se kandidáti shodují s Vašimi názory.\n            "
+    },
     "from": "2022-09-23T14:00:00",
     "to": "2022-09-24T14:00:00"
   },
@@ -500,8 +508,8 @@
       "parties": [
         {
           "id": "senatni-2022-19-c-420727-p",
-          "name": "David Bohbot",
-          "description": "David Bohbot",
+          "name": "Svobodní",
+          "description": "Svobodní",
           "contacts": {
             "web": [
               {
@@ -516,7 +524,7 @@
             "facebook": "https://www.facebook.com/bezpecnostniexpert",
             "instagram": "https://www.instagram.com/bohbot_david/"
           },
-          "abbreviation": ""
+          "abbreviation": "Svobodní"
         }
       ]
     },
@@ -532,13 +540,13 @@
       "parties": [
         {
           "id": "senatni-2022-19-c-746291-p",
-          "name": "Milan Urban",
-          "description": "Milan Urban",
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/milanu925"
           },
-          "abbreviation": ""
+          "abbreviation": "Svoboda a přímá demokracie (SPD)"
         }
       ]
     },
@@ -549,18 +557,20 @@
       "description": "Šárka Oharková",
       "contacts": {
         "web": [],
+        "facebook": "https://www.facebook.com/sarka.oharkova.3",
         "instagram": "https://www.instagram.com/senatorkasarka/"
       },
       "parties": [
         {
           "id": "senatni-2022-19-c-999606-p",
-          "name": "Šárka Oharková",
-          "description": "Šárka Oharková",
+          "name": "Hnutí PES",
+          "description": "Hnutí PES",
           "contacts": {
             "web": [],
+            "facebook": "https://www.facebook.com/sarka.oharkova.3",
             "instagram": "https://www.instagram.com/senatorkasarka/"
           },
-          "abbreviation": ""
+          "abbreviation": "Hnutí PES"
         }
       ]
     },
@@ -582,8 +592,8 @@
       "parties": [
         {
           "id": "senatni-2022-19-c-325120-p",
-          "name": "Vladimír Špidla",
-          "description": "Vladimír Špidla",
+          "name": "Česká strana sociálně demokratická",
+          "description": "Česká strana sociálně demokratická",
           "contacts": {
             "web": [
               {
@@ -594,7 +604,7 @@
             "facebook": "https://www.facebook.com/spidla.aneb.zdroje.jsou/",
             "twitter": "https://twitter.com/vladimir_spidla"
           },
-          "abbreviation": ""
+          "abbreviation": "Česká strana sociálně demokratická"
         }
       ]
     },
@@ -615,8 +625,8 @@
       "parties": [
         {
           "id": "senatni-2022-19-c-107153-p",
-          "name": "Ladislav Kos",
-          "description": "Ladislav Kos",
+          "name": "KOS do Senátu",
+          "description": "KOS do Senátu",
           "contacts": {
             "web": [
               {
@@ -626,7 +636,7 @@
             ],
             "facebook": "https://www.facebook.com/ladislav.kos.senat/"
           },
-          "abbreviation": ""
+          "abbreviation": "KOS do Senátu"
         }
       ]
     },
@@ -643,14 +653,14 @@
       "parties": [
         {
           "id": "senatni-2022-19-c-517013-p",
-          "name": "Robert Vašíček",
-          "description": "Robert Vašíček",
+          "name": "Česká strana národně sociální",
+          "description": "Česká strana národně sociální",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/robert.vasicek79",
             "twitter": "https://twitter.com/robertvasicek79"
           },
-          "abbreviation": ""
+          "abbreviation": "Česká strana národně sociální"
         }
       ]
     },
@@ -681,8 +691,8 @@
       "parties": [
         {
           "id": "senatni-2022-19-c-358095-p",
-          "name": "Tomáš Hudeček",
-          "description": "Tomáš Hudeček",
+          "name": "Nezávislý kandidát",
+          "description": "Nezávislý kandidát",
           "contacts": {
             "web": [
               {
@@ -702,7 +712,7 @@
             "twitter": "https://twitter.com/hudecektomas?lang=en",
             "instagram": "https://www.instagram.com/hudecektomas/?hl=en"
           },
-          "abbreviation": ""
+          "abbreviation": "Nezávislý kandidát"
         }
       ]
     },
@@ -725,8 +735,8 @@
       "parties": [
         {
           "id": "senatni-2022-19-c-388017-p",
-          "name": "Hana Kordová Marvanová",
-          "description": "Hana Kordová Marvanová",
+          "name": "SPOLU (ODS, TOP 09, KDU-ČSL)",
+          "description": "SPOLU (ODS, TOP 09, KDU-ČSL)",
           "contacts": {
             "web": [
               {
@@ -738,7 +748,7 @@
             "twitter": "https://twitter.com/HanaMarvanova",
             "instagram": "https://www.instagram.com/hanak_marvanova/"
           },
-          "abbreviation": ""
+          "abbreviation": "SPOLU (ODS, TOP 09, KDU-ČSL)"
         }
       ]
     }

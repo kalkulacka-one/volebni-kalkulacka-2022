@@ -3,11 +3,19 @@
   "name": "Bruntál",
   "description": "celý okres Bruntál, západní část okresu Opava, ohraničená na východě obcemi Holasovice, Neplachovice, Stěbořice, Dolní Životice, Lhotka u Litultovic, Moravice, Nové Lublice, Kružberk, Staré Těchanovice, Čermná ve Slezsku",
   "district_code": "64",
+  "show_district_code": true,
   "election": {
     "id": "senatni-2022",
     "key": "senatni-2022",
     "name": "Senátní volby 2022",
-    "description": "Volí se třetina senátních obvodů.",
+    "description": "Letos se volí v třetině obvodů v rámci ČR.",
+    "instructions": {
+      "header": "Zvolte svůj senátní obvod",
+      "step_1_1": "Letos se volí v třetině obvodů v rámci ČR.",
+      "step_1_2": "Více o senátních obvodech",
+      "step_1_link": "https://2022.programydovoleb.cz/senatni-volby",
+      "step_2_1": "\nOdpovězte na 40 otázek.\nNa stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.\nZodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte,\njak se kandidáti shodují s Vašimi názory.\n            "
+    },
     "from": "2022-09-23T14:00:00",
     "to": "2022-09-24T14:00:00"
   },
@@ -495,8 +503,8 @@
       "parties": [
         {
           "id": "senatni-2022-64-c-337974-p",
-          "name": "Ladislav Šupina",
-          "description": "Ladislav Šupina",
+          "name": "Komunistická strana Čech a Moravy",
+          "description": "Komunistická strana Čech a Moravy",
           "contacts": {
             "web": [
               {
@@ -506,7 +514,7 @@
             ],
             "facebook": "https://www.facebook.com/ladislavsupina"
           },
-          "abbreviation": ""
+          "abbreviation": "Komunistická strana Čech a Moravy"
         }
       ]
     },
@@ -522,13 +530,13 @@
       "parties": [
         {
           "id": "senatni-2022-64-c-188030-p",
-          "name": "Pavla Löwenthalová",
-          "description": "Pavla Löwenthalová",
+          "name": "SPOLU",
+          "description": "SPOLU",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/PavlaLowenthalovaKandidat64"
           },
-          "abbreviation": ""
+          "abbreviation": "SPOLU"
         }
       ]
     },
@@ -544,13 +552,13 @@
       "parties": [
         {
           "id": "senatni-2022-64-c-419952-p",
-          "name": "Luděk Šarman",
-          "description": "Luděk Šarman",
+          "name": "NEZÁVISLÍ",
+          "description": "NEZÁVISLÍ",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/ludek.sarman.7"
           },
-          "abbreviation": ""
+          "abbreviation": "NEZÁVISLÍ"
         }
       ]
     },
@@ -571,8 +579,8 @@
       "parties": [
         {
           "id": "senatni-2022-64-c-542456-p",
-          "name": "Miroslava Hustáková",
-          "description": "Miroslava Hustáková",
+          "name": "Trikolora",
+          "description": "Trikolora",
           "contacts": {
             "web": [
               {
@@ -582,7 +590,7 @@
             ],
             "facebook": "https://www.facebook.com/profile.php?id=100083011057007"
           },
-          "abbreviation": ""
+          "abbreviation": "Trikolora"
         }
       ]
     },
@@ -607,8 +615,8 @@
       "parties": [
         {
           "id": "senatni-2022-64-c-298500-p",
-          "name": "Ladislav Václavec",
-          "description": "Ladislav Václavec",
+          "name": "ANO 2011",
+          "description": "ANO 2011",
           "contacts": {
             "web": [
               {
@@ -622,7 +630,7 @@
             ],
             "facebook": "https://www.facebook.com/ladavaclavec"
           },
-          "abbreviation": ""
+          "abbreviation": "ANO 2011"
         }
       ]
     },
@@ -647,8 +655,8 @@
       "parties": [
         {
           "id": "senatni-2022-64-c-419215-p",
-          "name": "Antonín Staněk",
-          "description": "Antonín Staněk",
+          "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+          "description": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
           "contacts": {
             "web": [
               {
@@ -662,7 +670,7 @@
             ],
             "facebook": "https://m.facebook.com/stanek.antonin/"
           },
-          "abbreviation": ""
+          "abbreviation": "PŘÍSAHA - občanské hnutí Roberta Šlachty"
         }
       ]
     }

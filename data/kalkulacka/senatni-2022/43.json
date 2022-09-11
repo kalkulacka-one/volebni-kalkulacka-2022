@@ -3,11 +3,19 @@
   "name": "Pardubice",
   "description": "západní část okresu Pardubice, ohraničená na východě obcemi Pardubice, Lázně Bohdaneč, Dolany, jihozápadní část okresu Hradec Králové, ohraničená na severu obcemi Lišice, Chlumec nad Cidlinou, Nové Město, Písek, Stará Voda, Chudeřice",
   "district_code": "43",
+  "show_district_code": true,
   "election": {
     "id": "senatni-2022",
     "key": "senatni-2022",
     "name": "Senátní volby 2022",
-    "description": "Volí se třetina senátních obvodů.",
+    "description": "Letos se volí v třetině obvodů v rámci ČR.",
+    "instructions": {
+      "header": "Zvolte svůj senátní obvod",
+      "step_1_1": "Letos se volí v třetině obvodů v rámci ČR.",
+      "step_1_2": "Více o senátních obvodech",
+      "step_1_link": "https://2022.programydovoleb.cz/senatni-volby",
+      "step_2_1": "\nOdpovězte na 40 otázek.\nNa stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.\nZodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte,\njak se kandidáti shodují s Vašimi názory.\n            "
+    },
     "from": "2022-09-23T14:00:00",
     "to": "2022-09-24T14:00:00"
   },
@@ -489,12 +497,12 @@
       "parties": [
         {
           "id": "senatni-2022-43-c-191288-p",
-          "name": "Milan Bušek",
-          "description": "Milan Bušek",
+          "name": "Nezávislý kandidát",
+          "description": "Nezávislý kandidát",
           "contacts": {
             "web": []
           },
-          "abbreviation": ""
+          "abbreviation": "Nezávislý kandidát"
         }
       ]
     },
@@ -519,8 +527,8 @@
       "parties": [
         {
           "id": "senatni-2022-43-c-143881-p",
-          "name": "Martin Charvát",
-          "description": "Martin Charvát",
+          "name": "ANO 2011",
+          "description": "ANO 2011",
           "contacts": {
             "web": [
               {
@@ -534,7 +542,7 @@
             ],
             "facebook": "https://www.facebook.com/MartinCharvatPCE"
           },
-          "abbreviation": ""
+          "abbreviation": "ANO 2011"
         }
       ]
     },
@@ -549,12 +557,12 @@
       "parties": [
         {
           "id": "senatni-2022-43-c-849519-p",
-          "name": "Jaromír Nosek",
-          "description": "Jaromír Nosek",
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": {
             "web": []
           },
-          "abbreviation": ""
+          "abbreviation": "Svoboda a přímá demokracie (SPD)"
         }
       ]
     },
@@ -584,8 +592,8 @@
       "parties": [
         {
           "id": "senatni-2022-43-c-742106-p",
-          "name": "Miluše Horská",
-          "description": "Miluše Horská",
+          "name": "KDU-ČSL a Nestraníci",
+          "description": "KDU-ČSL a Nestraníci",
           "contacts": {
             "web": [
               {
@@ -604,7 +612,7 @@
             "facebook": "https://www.facebook.com/milusehorska",
             "instagram": "https://www.instagram.com/miluse_horska/"
           },
-          "abbreviation": ""
+          "abbreviation": "KDU-ČSL a Nestraníci"
         }
       ]
     },
@@ -629,8 +637,8 @@
       "parties": [
         {
           "id": "senatni-2022-43-c-191858-p",
-          "name": "Vladimír Ninger",
-          "description": "Vladimír Ninger",
+          "name": "Společně pro prosperující Pardubicko - ČSSD v koalici se Stranou soukromníků České republiky a s podporou uskupení 3PK, hnutí Pardubáci společně a Patrioti Pardubic",
+          "description": "Společně pro prosperující Pardubicko - ČSSD v koalici se Stranou soukromníků České republiky a s podporou uskupení 3PK, hnutí Pardubáci společně a Patrioti Pardubic",
           "contacts": {
             "web": [
               {
@@ -644,7 +652,7 @@
             ],
             "facebook": "https://www.facebook.com/MUDrNinger"
           },
-          "abbreviation": ""
+          "abbreviation": "Společně pro prosperující Pardubicko - ČSSD v koalici se Stranou soukromníků České republiky a s podporou uskupení 3PK, hnutí Pardubáci společně a Patrioti Pardubic"
         }
       ]
     },
@@ -659,12 +667,12 @@
       "parties": [
         {
           "id": "senatni-2022-43-c-650117-p",
-          "name": "Svatopluk Pleva",
-          "description": "Svatopluk Pleva",
+          "name": "BEZPEČNOST, ODPOVĚDNOST, SOLIDARITA",
+          "description": "BEZPEČNOST, ODPOVĚDNOST, SOLIDARITA",
           "contacts": {
             "web": []
           },
-          "abbreviation": ""
+          "abbreviation": "BEZPEČNOST, ODPOVĚDNOST, SOLIDARITA"
         }
       ]
     }
@@ -1015,6 +1023,354 @@
     {
       "id": "senatni-2022-43-a-191858-58",
       "candidate_id": "senatni-2022-43-c-191858",
+      "question_id": "senatni-2022-global-q-58",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-1",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-1",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-2",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-2",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-3",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-3",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-4",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-4",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-5",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-5",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-6",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-6",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-7",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-7",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-8",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-8",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-9",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-9",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-10",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-10",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-11",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-11",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-12",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-12",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-13",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-13",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-14",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-14",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-15",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-15",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-16",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-16",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-17",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-17",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-18",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-18",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-19",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-19",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-20",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-20",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-21",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-21",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-22",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-22",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-23",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-23",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-24",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-24",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-25",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-25",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-26",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-26",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-27",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-27",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-28",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-28",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-29",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-29",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-30",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-30",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-31",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-31",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-32",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-32",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-33",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-33",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-34",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-34",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-35",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-35",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-36",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-36",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-37",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-37",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-38",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-38",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-39",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-39",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-40",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-40",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-41",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-41",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-42",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-42",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-43",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-43",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-44",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-44",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-45",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-45",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-46",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-46",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-47",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-47",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-48",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-48",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-49",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-49",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-50",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-50",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-51",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-51",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-52",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-52",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-53",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-53",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-54",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-54",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-55",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-55",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-56",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-56",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-57",
+      "candidate_id": "senatni-2022-43-c-742106",
+      "question_id": "senatni-2022-global-q-57",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-43-a-742106-58",
+      "candidate_id": "senatni-2022-43-c-742106",
       "question_id": "senatni-2022-global-q-58",
       "answer": "yes"
     }
