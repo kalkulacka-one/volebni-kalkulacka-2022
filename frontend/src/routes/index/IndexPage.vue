@@ -16,7 +16,7 @@ import HeadlineText from '@/components/design-system/typography/HeadlineText.vue
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import { mdiArrowDown, mdiArrowRight } from '@mdi/js';
 import InfoBubble from '@/components/InfoBubble.vue';
-import FooterMultiWord from "@/components/FooterMultiWord.vue";
+import FooterMultiWord from '@/components/FooterMultiWord.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -199,7 +199,9 @@ export default {
               podpoříte a umožníte nám pokračovat v jejich tvorbě.</BodyText
             >
           </StackComponent>
-          <div class="donation" data-darujme-widget-token="w2acrk0w61fgr3so">&nbsp;</div>
+          <div class="donation" data-darujme-widget-token="w2acrk0w61fgr3so">
+            &nbsp;
+          </div>
         </div>
       </div>
       <FooterMultiWord class="section" />
