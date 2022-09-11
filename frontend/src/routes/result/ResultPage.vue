@@ -25,6 +25,7 @@ import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
+import TitleText from '@/components/design-system/typography/TitleText.vue';
 
 import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
 
@@ -112,26 +113,50 @@ const resultsMedicine = calculateRelativeAgreement(
         </NavigationBar>
       </template>
       <template #sticky-header>
-        <SecondaryNavigationBar>
-          <template #before>
-            <IconButton @click="handlePreviousClick">
-              <IconComponent :icon="mdiArrowLeft" title="Rekapitulace" />
-            </IconButton>
-          </template>
-          Moje shoda
-          <template #right>
-            <ButtonComponent
-              kind="link"
-              color="primary"
-              @click="handleShareClick"
-            >
-              <template #icon>
-                <IconComponent :icon="mdiShareVariantOutline" />
-              </template>
-              Sdílet
-            </ButtonComponent>
-          </template>
-        </SecondaryNavigationBar>
+        <ResponsiveWrapper extra-small small>
+          <SecondaryNavigationBar centered-title>
+            <template #before>
+              <IconButton @click="handlePreviousClick">
+                <IconComponent :icon="mdiArrowLeft" title="Rekapitulace" />
+              </IconButton>
+            </template>
+            <TitleText tag="h2" size="medium">Moje shoda</TitleText>
+            <template #after>
+              <ButtonComponent
+                kind="link"
+                color="primary"
+                @click="handleShareClick"
+              >
+                <template #icon>
+                  <IconComponent :icon="mdiShareVariantOutline" />
+                </template>
+                Sdílet
+              </ButtonComponent>
+            </template>
+          </SecondaryNavigationBar>
+        </ResponsiveWrapper>
+        <ResponsiveWrapper medium large extra-large huge>
+          <SecondaryNavigationBar>
+            <template #before>
+              <IconButton @click="handlePreviousClick">
+                <IconComponent :icon="mdiArrowLeft" title="Rekapitulace" />
+              </IconButton>
+            </template>
+            <TitleText tag="h2" size="large">Moje shoda</TitleText>
+            <template #after>
+              <ButtonComponent
+                kind="link"
+                color="primary"
+                @click="handleShareClick"
+              >
+                <template #icon>
+                  <IconComponent :icon="mdiShareVariantOutline" />
+                </template>
+                Sdílet
+              </ButtonComponent>
+            </template>
+          </SecondaryNavigationBar>
+        </ResponsiveWrapper>
       </template>
       <BottomBarWrapper>
         <StackComponent class="main" spacing="medium">
