@@ -37,6 +37,7 @@ import {
   vkiStarFilled,
 } from '@/components/design-system/icons';
 
+import EmbedWrapper from '@/components/responsivity/EmbedWrapper.vue';
 import MarkdownIt from '@/components/utilities/MarkdownIt.vue';
 import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
@@ -164,30 +165,32 @@ const handlePreviousClick = () => {
         <NavigationBar transparent>
           <template #title>{{ breadcrumbs }}</template>
           <template #right>
-            <ResponsiveWrapper medium large extra-large huge>
-              <ButtonComponent
-                kind="link"
-                @click="router.push({ name: appRoutes.index.name })"
-              >
-                Zpět na hlavní stránku
-                <template #iconAfter>
-                  <IconComponent :icon="mdiCloseCircleOutline" />
-                </template>
-              </ButtonComponent>
-            </ResponsiveWrapper>
-            <ResponsiveWrapper extra-small small>
-              <ButtonComponent
-                kind="link"
-                @click="router.push({ name: appRoutes.index.name })"
-              >
-                <template #icon>
-                  <IconComponent
-                    :icon="mdiCloseCircleOutline"
-                    title="Zpět na hlavní stránku"
-                  />
-                </template>
-              </ButtonComponent>
-            </ResponsiveWrapper>
+            <EmbedWrapper>
+              <ResponsiveWrapper medium large extra-large huge>
+                <ButtonComponent
+                  kind="link"
+                  @click="router.push({ name: appRoutes.index.name })"
+                >
+                  Zpět na hlavní stránku
+                  <template #iconAfter>
+                    <IconComponent :icon="mdiCloseCircleOutline" />
+                  </template>
+                </ButtonComponent>
+              </ResponsiveWrapper>
+              <ResponsiveWrapper extra-small small>
+                <ButtonComponent
+                  kind="link"
+                  @click="router.push({ name: appRoutes.index.name })"
+                >
+                  <template #icon>
+                    <IconComponent
+                      :icon="mdiCloseCircleOutline"
+                      title="Zpět na hlavní stránku"
+                    />
+                  </template>
+                </ButtonComponent>
+              </ResponsiveWrapper>
+            </EmbedWrapper>
           </template>
         </NavigationBar>
       </template>

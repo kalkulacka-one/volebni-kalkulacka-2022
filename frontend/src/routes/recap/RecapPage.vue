@@ -9,8 +9,6 @@ import { useElectionStore, UserAnswerEnum } from '@/stores/electionStore';
 import type { Election } from '@/types/election';
 import type { Question } from '@/types/question';
 
-import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
-
 import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 import BottomBar from '@/components/design-system/navigation/BottomBar.vue';
@@ -25,7 +23,9 @@ import TitleText from '@/components/design-system/typography/TitleText.vue';
 
 import { vkiLogoPercent } from '@/components/design-system/icons';
 
+import EmbedWrapper from '@/components/responsivity/EmbedWrapper.vue';
 import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
+import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
 import RecapQuestionCard from './RecapQuestionCard.vue';
 
@@ -88,30 +88,32 @@ const isCardHidden = (index: number) => {
         <NavigationBar>
           <template #title>{{ breadcrumbs }}</template>
           <template #right>
-            <ResponsiveWrapper extra-small small>
-              <ButtonComponent
-                kind="link"
-                @click="router.push({ name: appRoutes.index.name })"
-              >
-                <template #icon>
-                  <IconComponent
-                    :icon="mdiCloseCircleOutline"
-                    title="Zpět na hlavní stránku"
-                  />
-                </template>
-              </ButtonComponent>
-            </ResponsiveWrapper>
-            <ResponsiveWrapper medium large extra-large huge>
-              <ButtonComponent
-                kind="link"
-                @click="router.push({ name: appRoutes.index.name })"
-              >
-                Zpět na hlavní stránku
-                <template #iconAfter>
-                  <IconComponent :icon="mdiCloseCircleOutline" />
-                </template>
-              </ButtonComponent>
-            </ResponsiveWrapper>
+            <EmbedWrapper>
+              <ResponsiveWrapper extra-small small>
+                <ButtonComponent
+                  kind="link"
+                  @click="router.push({ name: appRoutes.index.name })"
+                >
+                  <template #icon>
+                    <IconComponent
+                      :icon="mdiCloseCircleOutline"
+                      title="Zpět na hlavní stránku"
+                    />
+                  </template>
+                </ButtonComponent>
+              </ResponsiveWrapper>
+              <ResponsiveWrapper medium large extra-large huge>
+                <ButtonComponent
+                  kind="link"
+                  @click="router.push({ name: appRoutes.index.name })"
+                >
+                  Zpět na hlavní stránku
+                  <template #iconAfter>
+                    <IconComponent :icon="mdiCloseCircleOutline" />
+                  </template>
+                </ButtonComponent>
+              </ResponsiveWrapper>
+            </EmbedWrapper>
           </template>
         </NavigationBar>
       </template>
