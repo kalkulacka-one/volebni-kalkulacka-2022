@@ -26,10 +26,13 @@ const elections = await fetchElections();
 </script>
 
 <script lang="ts">
+import { ref } from 'vue';
+
+const info = ref<HTMLElement | null>(null);
 export default {
   methods: {
     scrollDown() {
-      this.$refs.info.$el.scrollIntoView({ behavior: 'smooth' });
+      info.value?.scrollIntoView({ behavior: 'smooth' });
     },
   },
   created() {
@@ -143,9 +146,8 @@ export default {
           ></ButtonComponent>
         </StackComponent>
         <StackComponent class="section" spacing="small" centered>
-          <TitleText size="large" tag="h2" ref="info"
-            >Jak kalkulačka vzniká?</TitleText
-          >
+          <div ref="info"></div>
+          <TitleText size="large" tag="h2">Jak kalkulačka vzniká?</TitleText>
           <BodyText size="medium"
             >Volební kalkulačka je projekt neziskové organizace KohoVolit.eu a
             je nestranným pomocníkem při Vašem rozhodování koho volit.</BodyText
