@@ -55,7 +55,7 @@ const onSubmit = () => {
         <NavigationBar transparent>
           <template #title>{{ title }}</template>
           <template #right>
-            <ResponsiveWrapper desktop>
+            <ResponsiveWrapper medium large extra-large huge>
               <ButtonComponent
                 kind="link"
                 @click="router.push({ name: appRoutes.index.name })"
@@ -66,7 +66,7 @@ const onSubmit = () => {
                 </template>
               </ButtonComponent>
             </ResponsiveWrapper>
-            <ResponsiveWrapper mobile>
+            <ResponsiveWrapper extra-small small>
               <ButtonComponent
                 kind="link"
                 @click="router.push({ name: appRoutes.index.name })"
@@ -103,7 +103,7 @@ const onSubmit = () => {
             </div>
           </div>
           <template #bottom-bar>
-            <ResponsiveWrapper desktop>
+            <ResponsiveWrapper medium large extra-large huge>
               <BottomBar class="bottom-bar" transparent>
                 <ButtonComponent
                   kind="filled"
@@ -115,7 +115,7 @@ const onSubmit = () => {
                 </ButtonComponent>
               </BottomBar>
             </ResponsiveWrapper>
-            <ResponsiveWrapper mobile>
+            <ResponsiveWrapper extra-small small>
               <BottomBar class="bottom-bar">
                 <ButtonComponent
                   kind="filled"

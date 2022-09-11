@@ -1,3 +1,5 @@
+@import '@/assets/breakpoints.scss';
+
 *:deep() {
   // Spacings
   // --------
@@ -13,6 +15,28 @@
   --spacing-extra-large: 2.5rem;
   --spacing-huge: 3rem;
   --spacing-extra-huge: 3.5rem;
+
+  // Responsive spacings
+  // -------------------
+  // – extra small
+  --responsive-spacing-extra-small: var(--spacing-extra-small);
+  // – small
+  --responsive-spacing-small: var(--spacing-small);
+  // – medium
+  --responsive-spacing-medium: var(--spacing-medium);
+  @media (max-width: calc($breakpoint-extra-small - 1px)) {
+    --responsive-spacing-medium: var(--spacing-small);
+  }
+  // – large
+  --responsive-spacing-large: var(--spacing-large);
+  @media (max-width: calc($breakpoint-extra-small - 1px)) {
+    --responsive-spacing-large: var(--spacing-small);
+  }
+  // – 2 × large
+  --responsive-spacing-2-large: calc(2 * var(--spacing-large));
+  @media (max-width: calc($breakpoint-extra-small - 1px)) {
+    --responsive-spacing-2-large: var(--spacing-small);
+  }
 
   // Radiuses
   // --------

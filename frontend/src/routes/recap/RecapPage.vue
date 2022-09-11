@@ -81,7 +81,7 @@ const isCardHidden = (index: number) => {
         <NavigationBar>
           <template #title>{{ title }}</template>
           <template #right>
-            <ResponsiveWrapper desktop>
+            <ResponsiveWrapper medium large extra-large huge>
               <ButtonComponent
                 kind="link"
                 @click="router.push({ name: appRoutes.index.name })"
@@ -92,7 +92,7 @@ const isCardHidden = (index: number) => {
                 </template>
               </ButtonComponent>
             </ResponsiveWrapper>
-            <ResponsiveWrapper mobile>
+            <ResponsiveWrapper extra-small small>
               <ButtonComponent
                 kind="link"
                 @click="router.push({ name: appRoutes.index.name })"
@@ -117,7 +117,7 @@ const isCardHidden = (index: number) => {
           </template>
           Rekapitulace
           <template #right>
-            <ResponsiveWrapper desktop>
+            <ResponsiveWrapper medium large extra-large huge>
               <ButtonComponent
                 class="desktop"
                 kind="filled"
@@ -159,7 +159,7 @@ const isCardHidden = (index: number) => {
           </StackComponent>
         </StackComponent>
         <template #bottom-bar>
-          <ResponsiveWrapper mobile>
+          <ResponsiveWrapper extra-small small>
             <BottomBar>
               <div class="bottom-bar-grid">
                 <ButtonComponent kind="filled" @click="handleShowResultsClick">

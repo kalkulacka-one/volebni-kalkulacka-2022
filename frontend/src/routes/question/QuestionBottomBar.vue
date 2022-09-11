@@ -40,7 +40,7 @@ console.log(props.answer);
 
 <template>
   <BottomBar class="bottom-bar">
-    <ResponsiveWrapper desktop>
+    <ResponsiveWrapper medium large extra-large huge>
       <StackComponent
         horizontal
         centered
@@ -58,7 +58,7 @@ console.log(props.answer);
         <BodyText class="star-text" size="medium">Pro mě důležité</BodyText>
       </StackComponent>
     </ResponsiveWrapper>
-    <ResponsiveWrapper mobile>
+    <ResponsiveWrapper extra-small small>
       <IconButton>
         <IconComponent
           :icon="starIcon"
@@ -70,7 +70,7 @@ console.log(props.answer);
       </IconButton>
     </ResponsiveWrapper>
     <StackComponent horizontal spacing="small">
-      <ResponsiveWrapper desktop>
+      <ResponsiveWrapper medium large extra-large huge>
         <ButtonComponent
           class="in-favour"
           kind="answer"
@@ -84,7 +84,7 @@ console.log(props.answer);
           Jsem pro
         </ButtonComponent>
       </ResponsiveWrapper>
-      <ResponsiveWrapper mobile>
+      <ResponsiveWrapper extra-small small>
         <ButtonComponent
           class="in-favour"
           kind="answer"
@@ -97,7 +97,7 @@ console.log(props.answer);
           </template>
         </ButtonComponent>
       </ResponsiveWrapper>
-      <ResponsiveWrapper desktop>
+      <ResponsiveWrapper medium large extra-large huge>
         <ButtonComponent
           class="against"
           kind="answer"
@@ -111,7 +111,7 @@ console.log(props.answer);
           Jsem proti
         </ButtonComponent>
       </ResponsiveWrapper>
-      <ResponsiveWrapper mobile>
+      <ResponsiveWrapper extra-small small>
         <ButtonComponent
           class="against"
           kind="answer"
@@ -125,7 +125,7 @@ console.log(props.answer);
         </ButtonComponent>
       </ResponsiveWrapper>
     </StackComponent>
-    <ResponsiveWrapper desktop>
+    <ResponsiveWrapper medium large extra-large huge>
       <ButtonComponent
         class="skip"
         kind="answer"
@@ -138,7 +138,7 @@ console.log(props.answer);
         Přeskočit
       </ButtonComponent>
     </ResponsiveWrapper>
-    <ResponsiveWrapper mobile>
+    <ResponsiveWrapper extra-small small>
       <ButtonComponent
         class="skip"
         kind="answer"

@@ -3,16 +3,20 @@ import { computed } from 'vue';
 
 export interface Props {
   padding?: 'small' | 'medium' | 'large';
+  paddingResponsive?: boolean;
   background?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   padding: undefined,
+  paddingResponsive: false,
   background: 'rgb(var(--color-neutral-bg-container))',
 });
 
 const classes = computed(() => ({
-  [`container--padding-${props.padding}`]: props.padding,
+  [`container--padding-${props.padding}${
+    props.paddingResponsive ? `-responsive` : ''
+  }`]: props.padding,
 }));
 </script>
 
@@ -29,12 +33,26 @@ const classes = computed(() => ({
   &--padding {
     &-small {
       padding: var(--spacing-small);
+
+      &-responsive {
+        padding: var(--responsive-spacing-small);
+      }
     }
+
     &-medium {
       padding: var(--spacing-medium);
+
+      &-responsive {
+        padding: var(--responsive-spacing-medium);
+      }
     }
+
     &-large {
       padding: var(--spacing-large);
+
+      &-responsive {
+        padding: var(--responsive-spacing-large);
+      }
     }
   }
 }
