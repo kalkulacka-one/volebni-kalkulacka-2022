@@ -59,6 +59,7 @@ const onSubmit = () => {
     router.push({
       name: appRoutes.guide.name,
       params: { ...route.params, district: selected.value, nr: 1 },
+      query: { ...route.query },
     });
   }
 };
@@ -75,7 +76,12 @@ const onSubmit = () => {
               <ResponsiveWrapper medium large extra-large huge>
                 <ButtonComponent
                   kind="link"
-                  @click="router.push({ name: appRoutes.index.name })"
+                  @click="
+                    router.push({
+                      name: appRoutes.index.name,
+                      query: { ...route.query },
+                    })
+                  "
                 >
                   Zpět na hlavní stránku
                   <template #iconAfter>
@@ -86,7 +92,12 @@ const onSubmit = () => {
               <ResponsiveWrapper extra-small small>
                 <ButtonComponent
                   kind="link"
-                  @click="router.push({ name: appRoutes.index.name })"
+                  @click="
+                    router.push({
+                      name: appRoutes.index.name,
+                      query: { ...route.query },
+                    })
+                  "
                 >
                   <template #icon>
                     <IconComponent

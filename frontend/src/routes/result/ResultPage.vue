@@ -54,6 +54,7 @@ const handlePreviousClick = () => {
   router.push({
     name: appRoutes.recap.name,
     params: { ...route.params },
+    query: { ...route.query },
   });
 };
 
@@ -95,7 +96,12 @@ const resultsMedicine = calculateRelativeAgreement(
               <ResponsiveWrapper medium large extra-large huge>
                 <ButtonComponent
                   kind="link"
-                  @click="router.push({ name: appRoutes.index.name })"
+                  @click="
+                    router.push({
+                      name: appRoutes.index.name,
+                      query: { ...route.query },
+                    })
+                  "
                 >
                   Zpět na hlavní stránku
                   <template #iconAfter>
@@ -106,7 +112,12 @@ const resultsMedicine = calculateRelativeAgreement(
               <ResponsiveWrapper extra-small small>
                 <ButtonComponent
                   kind="link"
-                  @click="router.push({ name: appRoutes.index.name })"
+                  @click="
+                    router.push({
+                      name: appRoutes.index.name,
+                      query: { ...route.query },
+                    })
+                  "
                 >
                   <template #icon>
                     <IconComponent

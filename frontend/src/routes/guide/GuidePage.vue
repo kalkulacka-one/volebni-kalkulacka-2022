@@ -133,11 +133,16 @@ const goToStep = (number: number) => {
   router.push({
     name: appRoutes.guide.name,
     params: { ...route.params, step: number },
+    query: { ...route.query },
   });
 };
 
 const goToQuestions = () => {
-  router.push({ name: 'question', params: { ...route.params, nr: 'first' } });
+  router.push({
+    name: 'question',
+    params: { ...route.params, nr: 'first' },
+    query: { ...route.query },
+  });
 };
 
 const handleNextClick = () => {
@@ -169,7 +174,12 @@ const handlePreviousClick = () => {
               <ResponsiveWrapper medium large extra-large huge>
                 <ButtonComponent
                   kind="link"
-                  @click="router.push({ name: appRoutes.index.name })"
+                  @click="
+                    router.push({
+                      name: appRoutes.index.name,
+                      query: { ...route.query },
+                    })
+                  "
                 >
                   Zpět na hlavní stránku
                   <template #iconAfter>
@@ -180,7 +190,12 @@ const handlePreviousClick = () => {
               <ResponsiveWrapper extra-small small>
                 <ButtonComponent
                   kind="link"
-                  @click="router.push({ name: appRoutes.index.name })"
+                  @click="
+                    router.push({
+                      name: appRoutes.index.name,
+                      query: { ...route.query },
+                    })
+                  "
                 >
                   <template #icon>
                     <IconComponent

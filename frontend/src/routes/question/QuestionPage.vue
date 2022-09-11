@@ -90,12 +90,14 @@ const goToQuestion = (number: number) => {
   router.push({
     name: appRoutes.question.name,
     params: { ...route.params, nr: number },
+    query: { ...route.query },
   });
 };
 
 const goToRecap = () => {
   router.push({
     name: appRoutes.recap.name,
+    query: { ...route.query },
   });
 };
 
@@ -103,6 +105,7 @@ const goToGuide = (params: RouteParams) => {
   router.push({
     name: appRoutes.guide.name,
     params,
+    query: { ...route.query },
   });
 };
 
@@ -135,6 +138,7 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
   const newRoute = {
     name: appRoutes.question.name,
     params: { ...route.params, nr: questionNr.value + 2 },
+    query: { ...route.query },
   };
   if (
     electionStore.answerProgress === questionNr.value &&
@@ -159,7 +163,12 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
             <ResponsiveWrapper medium large extra-large huge>
               <ButtonComponent
                 kind="link"
-                @click="router.push({ name: appRoutes.index.name })"
+                @click="
+                  router.push({
+                    name: appRoutes.index.name,
+                    query: { ...route.query },
+                  })
+                "
               >
                 Zpět na hlavní stránku
                 <template #iconAfter>
@@ -170,7 +179,12 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
             <ResponsiveWrapper extra-small small>
               <ButtonComponent
                 kind="link"
-                @click="router.push({ name: appRoutes.index.name })"
+                @click="
+                  router.push({
+                    name: appRoutes.index.name,
+                    query: { ...route.query },
+                  })
+                "
               >
                 <template #icon>
                   <IconComponent

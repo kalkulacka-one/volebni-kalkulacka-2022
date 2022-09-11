@@ -52,6 +52,7 @@ const handlePreviousClick = () => {
   router.push({
     name: appRoutes.question.name,
     params: { ...route.params, nr: 'last' },
+    query: { ...route.query },
   });
 };
 
@@ -59,6 +60,7 @@ const handleShowResultsClick = () => {
   router.push({
     name: appRoutes.result.name,
     params: { ...route.params },
+    query: { ...route.query },
   });
 };
 
@@ -92,7 +94,12 @@ const isCardHidden = (index: number) => {
               <ResponsiveWrapper extra-small small>
                 <ButtonComponent
                   kind="link"
-                  @click="router.push({ name: appRoutes.index.name })"
+                  @click="
+                    router.push({
+                      name: appRoutes.index.name,
+                      query: { ...route.query },
+                    })
+                  "
                 >
                   <template #icon>
                     <IconComponent
@@ -105,7 +112,12 @@ const isCardHidden = (index: number) => {
               <ResponsiveWrapper medium large extra-large huge>
                 <ButtonComponent
                   kind="link"
-                  @click="router.push({ name: appRoutes.index.name })"
+                  @click="
+                    router.push({
+                      name: appRoutes.index.name,
+                      query: { ...route.query },
+                    })
+                  "
                 >
                   Zpět na hlavní stránku
                   <template #iconAfter>
