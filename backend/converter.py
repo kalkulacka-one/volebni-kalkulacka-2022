@@ -163,6 +163,9 @@ class Election:
     def answers(self) -> dict[District, dict[str, CandidateAnswers]]:
         return self._answers
 
+    def __str__(self) -> str:
+        return f"Election(id='{self.id}', key='{self.key}', name='{self.name}')"
+
 
 def gen_district_id(election: Election, code: str) -> str:
     return f"{election.key}-{code}"
