@@ -81,8 +81,10 @@ const computedSize = computed(() =>
       color: rgb(var(--color-neutral-fg));
       border: none;
 
-      &:not(.button--read-only):hover {
-        color: rgb(var(--color-neutral-fg-hover));
+      @media (hover: hover) {
+        &:not(.button--read-only):hover {
+          color: rgb(var(--color-neutral-fg-hover));
+        }
       }
 
       .button--selected,
@@ -95,8 +97,10 @@ const computedSize = computed(() =>
       color: rgb(var(--color-primary-fg));
       border: none;
 
-      &:not(.button--read-only):hover {
-        color: rgb(var(--color-primary-fg-hover));
+      @media (hover: hover) {
+        &:not(.button--read-only):hover {
+          color: rgb(var(--color-primary-fg-hover));
+        }
       }
 
       .button--selected,
@@ -109,8 +113,10 @@ const computedSize = computed(() =>
       color: rgb(var(--color-secondary-fg));
       border: none;
 
-      &:not(.button--read-only):hover {
-        color: rgb(var(--color-secondary-fg-hover));
+      @media (hover: hover) {
+        &:not(.button--read-only):hover {
+          color: rgb(var(--color-secondary-fg-hover));
+        }
       }
 
       .button--selected,
@@ -171,11 +177,13 @@ const computedSize = computed(() =>
       background-color: transparent;
       border-color: rgb(var(--color-neutral-border-strong));
 
-      &:not(.button--read-only):hover {
-        background-color: rgba(
-          var(--color-neutral-fg-hover),
-          var(--transparency-10)
-        );
+      @media (hover: hover) {
+        &:not(.button--read-only):hover {
+          background-color: rgba(
+            var(--color-neutral-fg-hover),
+            var(--transparency-10)
+          );
+        }
       }
 
       .button--selected,
@@ -192,11 +200,13 @@ const computedSize = computed(() =>
       background-color: transparent;
       border-color: rgb(var(--color-primary-border-strong));
 
-      &:not(.button--read-only):hover {
-        background-color: rgba(
-          var(--color-primary-fg-hover),
-          var(--transparency-10)
-        );
+      @media (hover: hover) {
+        &:not(.button--read-only):hover {
+          background-color: rgba(
+            var(--color-primary-fg-hover),
+            var(--transparency-10)
+          );
+        }
       }
 
       .button--selected,
@@ -213,11 +223,13 @@ const computedSize = computed(() =>
       background-color: transparent;
       border-color: rgb(var(--color-secondary-border-strong));
 
-      &:not(.button--read-only):hover {
-        background-color: rgba(
-          var(--color-secondary-fg-hover),
-          var(--transparency-10)
-        );
+      @media (hover: hover) {
+        &:not(.button--read-only):hover {
+          background-color: rgba(
+            var(--color-secondary-fg-hover),
+            var(--transparency-10)
+          );
+        }
       }
 
       .button--selected,
@@ -251,8 +263,10 @@ const computedSize = computed(() =>
       background-color: rgb(var(--color-primary-bg-strong));
       border-color: transparent;
 
-      &:not(.button--read-only):hover {
-        background-color: rgb(var(--color-primary-bg-strong-hover));
+      @media (hover: hover) {
+        &:not(.button--read-only):hover {
+          background-color: rgb(var(--color-primary-bg-strong-hover));
+        }
       }
 
       .button--selected,
@@ -266,9 +280,11 @@ const computedSize = computed(() =>
       background-color: rgb(var(--color-neutral-bg-strong));
       border-color: transparent;
 
-      &:not(.button--read-only):hover {
-        color: rgb(var(--color-neutral-fg-inverse));
-        background-color: rgb(var(--color-neutral-bg-strong-hover));
+      @media (hover: hover) {
+        &:not(.button--read-only):hover {
+          color: rgb(var(--color-neutral-fg-inverse));
+          background-color: rgb(var(--color-neutral-bg-strong-hover));
+        }
       }
 
       &.button--selected,
@@ -283,9 +299,11 @@ const computedSize = computed(() =>
       background-color: rgb(var(--color-secondary-bg-strong));
       border-color: transparent;
 
-      &:not(.button--read-only):hover {
-        color: rgb(var(--color-secondary-fg-inverse));
-        background-color: rgb(var(--color-secondary-bg-strong-hover));
+      @media (hover: hover) {
+        &:not(.button--read-only):hover {
+          color: rgb(var(--color-secondary-fg-inverse));
+          background-color: rgb(var(--color-secondary-bg-strong-hover));
+        }
       }
 
       &.button--selected,
@@ -326,10 +344,12 @@ const computedSize = computed(() =>
       background-color: transparent;
       border-color: rgb(var(--color-neutral-border-strong));
 
-      &:not(.button--read-only):hover {
-        color: rgb(var(--color-neutral-fg-inverse));
-        background-color: rgb(var(--color-neutral-bg-strong-hover));
-        border-color: transparent;
+      @media (hover: hover) {
+        &:not(.button--read-only):hover {
+          color: rgb(var(--color-neutral-fg-inverse));
+          background-color: rgb(var(--color-neutral-bg-strong-hover));
+          border-color: transparent;
+        }
       }
 
       &.button--selected,
@@ -345,10 +365,12 @@ const computedSize = computed(() =>
       background-color: transparent;
       border-color: rgb(var(--color-primary-border-strong));
 
-      &:not(.button--read-only):hover {
-        color: rgb(var(--color-primary-fg-inverse));
-        background-color: rgb(var(--color-primary-bg-strong-hover));
-        border-color: transparent;
+      @media (hover: hover) {
+        &:not(.button--read-only):hover {
+          color: rgb(var(--color-primary-fg-inverse));
+          background-color: rgb(var(--color-primary-bg-strong-hover));
+          border-color: transparent;
+        }
       }
 
       &.button--selected,
@@ -364,10 +386,12 @@ const computedSize = computed(() =>
       background-color: transparent;
       border-color: rgb(var(--color-secondary-border-strong));
 
-      &:not(.button--read-only):hover {
-        color: rgb(var(--color-secondary-fg-inverse));
-        background-color: rgb(var(--color-secondary-bg-strong-hover));
-        border-color: transparent;
+      @media (hover: hover) {
+        &:not(.button--read-only):hover {
+          color: rgb(var(--color-secondary-fg-inverse));
+          background-color: rgb(var(--color-secondary-bg-strong-hover));
+          border-color: transparent;
+        }
       }
 
       &.button--selected,
