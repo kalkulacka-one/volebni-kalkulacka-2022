@@ -16,6 +16,7 @@ export interface Calculators {
      */
     election_id: string;
     district_code: string;
+    show_district_code?: boolean;
     name: string;
     description?: string;
     /**
@@ -50,6 +51,12 @@ export interface Election {
    * Longer description
    */
   description: string;
+  /**
+   * Instructions for filling calculators for this election
+   */
+  instructions?: {
+    [k: string]: unknown;
+  };
   /**
    * Election start - ISO 8601
    */

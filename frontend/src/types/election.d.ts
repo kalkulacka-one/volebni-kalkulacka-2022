@@ -26,6 +26,12 @@ export interface Election {
    */
   description: string;
   /**
+   * Instructions for filling calculators for this election
+   */
+  instructions?: {
+    [k: string]: unknown;
+  };
+  /**
    * Election start - ISO 8601
    */
   from?: string;

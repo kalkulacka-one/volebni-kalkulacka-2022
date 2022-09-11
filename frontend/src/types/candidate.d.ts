@@ -26,6 +26,10 @@ export interface Candidate {
    */
   description: string;
   /**
+   * Candidate's motto.
+   */
+  motto?: string;
+  /**
    * Image
    */
   img_url?: string;
