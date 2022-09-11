@@ -97,8 +97,8 @@ export const appRoutes = {
   },
   districtSelection: {
     name: 'district-selection',
-    path: '/kalkulacka/:election/vyber',
-    alias: '/kalkulacka/:election',
+    path: '/volby/:election/vyber',
+    alias: '/volby/:election',
     component: DistrictSelectionPageVue,
     meta: {
       title: 'Volebni kalkulacka',
@@ -116,8 +116,8 @@ export const appRoutes = {
   },
   guide: {
     name: 'guide',
-    path: '/kalkulacka/:election/:district/navod/:step?',
-    alias: '/kalkulacka/:election/:district/navod',
+    path: '/volby/:election/:district/navod/:step?',
+    alias: '/volby/:election/:district/navod',
     component: GuidePageVue,
     meta: {
       title: 'Návod - Volebni kalkulacka',
@@ -135,7 +135,7 @@ export const appRoutes = {
   },
   question: {
     name: 'question',
-    path: '/kalkulacka/:election/:district/otazka/:nr',
+    path: '/volby/:election/:district/otazka/:nr',
     component: QuestionPageVue,
     meta: {
       title: 'Otazka $$ - Volebni kalkulacka',
@@ -155,7 +155,7 @@ export const appRoutes = {
   },
   recap: {
     name: 'recap',
-    path: '/kalkulacka/:election/:district/rekapitulace',
+    path: '/volby/:election/:district/rekapitulace',
     component: RecapPageVue,
     meta: {
       title: 'Rekapitulace - Volebni kalkulacka',
@@ -173,7 +173,7 @@ export const appRoutes = {
   },
   result: {
     name: 'result',
-    path: '/kalkulacka/:election/:district/vysledek',
+    path: '/volby/:election/:district/vysledek',
     component: ResultPageVue,
     meta: {
       title: 'Vysledky - Volebni kalkulacka',
@@ -193,7 +193,7 @@ export const appRoutes = {
   },
   comparison: {
     name: 'comparison',
-    path: '/kalkulacka/:election/:district/srovnani',
+    path: '/volby/:election/:district/srovnani',
     component: ComparisonPageVue,
     meta: {
       title: 'Porovnani - Volebni kalkulacka',
