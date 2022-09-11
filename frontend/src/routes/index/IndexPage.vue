@@ -17,7 +17,7 @@ import HeadlineText from '@/components/design-system/typography/HeadlineText.vue
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import { mdiArrowDown, mdiArrowRight } from '@mdi/js';
 import InfoBubble from '@/components/InfoBubble.vue';
-import Footer from '@/components/Footer.vue';
+import FooterMultiWord from "@/components/FooterMultiWord.vue";
 
 const router = useRouter();
 const route = useRoute();
@@ -203,7 +203,7 @@ export default {
           <div data-darujme-widget-token="w2acrk0w61fgr3so">&nbsp;</div>
         </div>
       </div>
-      <Footer class="section" />
+      <FooterMultiWord class="section" />
     </StickyHeaderLayout>
   </BackgroundComponent>
 </template>
