@@ -127,7 +127,8 @@ const onSubmit = () => {
                   <MarkdownIt :markdown="text" />
                 </StackComponent>
               </BodyText>
-              <div class="list">
+              <!-- TODO: remove inline styles -->
+              <div class="list" style="align-self: stretch">
                 <RadioButtonComponent
                   v-for="option in options"
                   :key="option.value"
