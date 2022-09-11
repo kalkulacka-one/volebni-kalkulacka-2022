@@ -15,6 +15,7 @@ import type { Election } from '@/types/election';
 
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
+import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 import BottomBar from '@/components/design-system/navigation/BottomBar.vue';
 import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper.vue';
@@ -25,7 +26,6 @@ import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import LabelText from '@/components/design-system/typography/LabelText.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
-import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
 import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import StepProgress from '@/components/design-system/other/StepProgress.vue';
@@ -38,7 +38,8 @@ import {
   vkiStarOutlined,
   vkiStarFilled,
 } from '@/components/design-system/icons';
-import BackgroundComponent from '../../components/design-system/style/BackgroundComponent.vue';
+
+import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -289,33 +290,64 @@ const handlePreviousClick = () => {
           </template>
         </StepWrapper>
         <template #bottom-bar>
-          <BottomBar class="bottom-bar" transparent="desktop">
-            <LabelText class="text">
-              Návod {{ currentStep }}&hairsp;/&hairsp;{{ stepsCount }}
-            </LabelText>
-            <StepProgress class="progress-indicator" :current="currentStep" />
-            <ButtonComponent
-              class="next-button"
-              :kind="nextButtonKind"
-              :color="nextButtonColor"
-              @click="handleNextClick"
-            >
-              {{ nextButtonTitle }}
-              <template #iconAfter>
-                <IconComponent :icon="mdiArrowRight" />
-              </template>
-            </ButtonComponent>
-            <ButtonComponent
-              class="skip-button"
-              kind="link"
-              @click="goToQuestions"
-            >
-              Přeskočit návod
-              <template #iconAfter>
-                <IconComponent :icon="mdiFastForward" />
-              </template>
-            </ButtonComponent>
-          </BottomBar>
+          <ResponsiveWrapper desktop>
+            <BottomBar class="bottom-bar" transparent>
+              <LabelText class="text">
+                Návod {{ currentStep }}&hairsp;/&hairsp;{{ stepsCount }}
+              </LabelText>
+              <StepProgress class="progress-indicator" :current="currentStep" />
+              <ButtonComponent
+                class="next-button"
+                :kind="nextButtonKind"
+                :color="nextButtonColor"
+                @click="handleNextClick"
+              >
+                {{ nextButtonTitle }}
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+              <ButtonComponent
+                class="skip-button"
+                kind="link"
+                @click="goToQuestions"
+              >
+                Přeskočit návod
+                <template #iconAfter>
+                  <IconComponent :icon="mdiFastForward" />
+                </template>
+              </ButtonComponent>
+            </BottomBar>
+          </ResponsiveWrapper>
+          <ResponsiveWrapper mobile>
+            <BottomBar class="bottom-bar">
+              <LabelText class="text">
+                Návod {{ currentStep }}&hairsp;/&hairsp;{{ stepsCount }}
+              </LabelText>
+              <StepProgress class="progress-indicator" :current="currentStep" />
+              <ButtonComponent
+                class="next-button"
+                :kind="nextButtonKind"
+                :color="nextButtonColor"
+                @click="handleNextClick"
+              >
+                {{ nextButtonTitle }}
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+              <ButtonComponent
+                class="skip-button"
+                kind="link"
+                @click="goToQuestions"
+              >
+                Přeskočit návod
+                <template #iconAfter>
+                  <IconComponent :icon="mdiFastForward" />
+                </template>
+              </ButtonComponent>
+            </BottomBar>
+          </ResponsiveWrapper>
         </template>
       </BottomBarWrapper>
     </StickyHeaderLayout>
