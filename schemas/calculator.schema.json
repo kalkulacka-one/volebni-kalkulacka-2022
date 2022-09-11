@@ -30,6 +30,9 @@
     "district_code": {
       "type": "string"
     },
+    "show_district_code": {
+      "type": "boolean"
+    },
     "on_hp_from": {
       "type": "string",
       "description": "Show on HP start - ISO 8601"

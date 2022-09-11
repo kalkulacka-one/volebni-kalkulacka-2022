@@ -3,11 +3,19 @@
   "name": "Ústí nad Orlicí",
   "description": "část okresu Ústí nad Orlicí, ohraničená na severozápadě obcemi Vraclav, Zámrsk, Slatina, Vysoké Mýto, Zálší, Kosořín, Zářecká Lhota, Mostek, Nasavrky, Podlesí, Seč, Sudslava, na jihozápadě obcemi Vysoké Mýto, Pustina, Libecina, Javorník, severozápadní část okresu Svitavy, tvořená obcemi Sloupnice, Vlčkov, Němčice",
   "district_code": "46",
+  "show_district_code": true,
   "election": {
     "id": "senatni-2022",
     "key": "senatni-2022",
     "name": "Senátní volby 2022",
-    "description": "Volí se třetina senátních obvodů.",
+    "description": "Letos se volí v třetině obvodů v rámci ČR.",
+    "instructions": {
+      "header": "Zvolte svůj senátní obvod",
+      "step_1_1": "Letos se volí v třetině obvodů v rámci ČR.",
+      "step_1_2": "Více o senátních obvodech",
+      "step_1_link": "https://2022.programydovoleb.cz/senatni-volby",
+      "step_2_1": "\nOdpovězte na 40 otázek.\nNa stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.\nZodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte,\njak se kandidáti shodují s Vašimi názory.\n            "
+    },
     "from": "2022-09-23T14:00:00",
     "to": "2022-09-24T14:00:00"
   },
@@ -500,8 +508,8 @@
       "parties": [
         {
           "id": "senatni-2022-46-c-367047-p",
-          "name": "Petr Fiala",
-          "description": "Petr Fiala",
+          "name": "Společně pro kraj a KDU-ČSL",
+          "description": "Společně pro kraj a KDU-ČSL",
           "contacts": {
             "web": [
               {
@@ -516,7 +524,7 @@
             "facebook": "https://www.facebook.com/petrfialaletohrad/",
             "twitter": "https://twitter.com/petrfiala68"
           },
-          "abbreviation": ""
+          "abbreviation": "Společně pro kraj a KDU-ČSL"
         }
       ]
     },
@@ -531,12 +539,12 @@
       "parties": [
         {
           "id": "senatni-2022-46-c-835047-p",
-          "name": "Josef Kopecký",
-          "description": "Josef Kopecký",
+          "name": "Občanská demokratická strana",
+          "description": "Občanská demokratická strana",
           "contacts": {
             "web": []
           },
-          "abbreviation": ""
+          "abbreviation": "Občanská demokratická strana"
         }
       ]
     },
@@ -546,17 +554,19 @@
       "type": "person",
       "description": "Stanislav Ešner",
       "contacts": {
-        "web": []
+        "web": [],
+        "facebook": "https://www.facebook.com/groups/339050501225275/user/100003277729229/"
       },
       "parties": [
         {
           "id": "senatni-2022-46-c-490291-p",
-          "name": "Stanislav Ešner",
-          "description": "Stanislav Ešner",
+          "name": "ANO 2011",
+          "description": "ANO 2011",
           "contacts": {
-            "web": []
+            "web": [],
+            "facebook": "https://www.facebook.com/groups/339050501225275/user/100003277729229/"
           },
-          "abbreviation": ""
+          "abbreviation": "ANO 2011"
         }
       ]
     }

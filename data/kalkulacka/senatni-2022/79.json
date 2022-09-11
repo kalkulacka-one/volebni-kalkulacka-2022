@@ -3,11 +3,19 @@
   "name": "Hodonín",
   "description": "západní část okresu Hodonín, ohraničená na východě obcemi Domanín, Bzenec, Vnorovy, Kněždub, Tvarožná Lhota",
   "district_code": "79",
+  "show_district_code": true,
   "election": {
     "id": "senatni-2022",
     "key": "senatni-2022",
     "name": "Senátní volby 2022",
-    "description": "Volí se třetina senátních obvodů.",
+    "description": "Letos se volí v třetině obvodů v rámci ČR.",
+    "instructions": {
+      "header": "Zvolte svůj senátní obvod",
+      "step_1_1": "Letos se volí v třetině obvodů v rámci ČR.",
+      "step_1_2": "Více o senátních obvodech",
+      "step_1_link": "https://2022.programydovoleb.cz/senatni-volby",
+      "step_2_1": "\nOdpovězte na 40 otázek.\nNa stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.\nZodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte,\njak se kandidáti shodují s Vašimi názory.\n            "
+    },
     "from": "2022-09-23T14:00:00",
     "to": "2022-09-24T14:00:00"
   },
@@ -489,12 +497,12 @@
       "parties": [
         {
           "id": "senatni-2022-79-c-228951-p",
-          "name": "Antonín Kuchař",
-          "description": "Antonín Kuchař",
+          "name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "description": "STAROSTOVÉ A NEZÁVISLÍ",
           "contacts": {
             "web": []
           },
-          "abbreviation": ""
+          "abbreviation": "STAROSTOVÉ A NEZÁVISLÍ"
         }
       ]
     },
@@ -523,8 +531,8 @@
       "parties": [
         {
           "id": "senatni-2022-79-c-231466-p",
-          "name": "Eva Rajchmanová",
-          "description": "Eva Rajchmanová",
+          "name": "SPOLU (ODS + KDU-ČSL + TOP 09)",
+          "description": "SPOLU (ODS + KDU-ČSL + TOP 09)",
           "contacts": {
             "web": [
               {
@@ -542,7 +550,7 @@
             ],
             "facebook": "https://www.facebook.com/RajchmanovaEva/"
           },
-          "abbreviation": ""
+          "abbreviation": "SPOLU (ODS + KDU-ČSL + TOP 09)"
         }
       ]
     },
@@ -558,13 +566,13 @@
       "parties": [
         {
           "id": "senatni-2022-79-c-623931-p",
-          "name": "Ladislava Brančíková",
-          "description": "Ladislava Brančíková",
+          "name": "ANO 2011",
+          "description": "ANO 2011",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/profile.php?id=100082698219514"
           },
-          "abbreviation": ""
+          "abbreviation": "ANO 2011"
         }
       ]
     },
@@ -580,13 +588,13 @@
       "parties": [
         {
           "id": "senatni-2022-79-c-410558-p",
-          "name": "Lenka Ingrová",
-          "description": "Lenka Ingrová",
+          "name": "Komunistická strana Čech a Moravy",
+          "description": "Komunistická strana Čech a Moravy",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/profile.php?id=100000634963687"
           },
-          "abbreviation": ""
+          "abbreviation": "Komunistická strana Čech a Moravy"
         }
       ]
     },
@@ -611,8 +619,8 @@
       "parties": [
         {
           "id": "senatni-2022-79-c-771797-p",
-          "name": "Ivo Vašíček",
-          "description": "Ivo Vašíček",
+          "name": "Česká pirátská strana",
+          "description": "Česká pirátská strana",
           "contacts": {
             "web": [
               {
@@ -626,7 +634,7 @@
             ],
             "facebook": "https://www.facebook.com/ivovasicekpolitik"
           },
-          "abbreviation": ""
+          "abbreviation": "Česká pirátská strana"
         }
       ]
     },
@@ -642,13 +650,13 @@
       "parties": [
         {
           "id": "senatni-2022-79-c-266442-p",
-          "name": "Vítězslav Krabička",
-          "description": "Vítězslav Krabička",
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/vitezslav.krabicka"
           },
-          "abbreviation": ""
+          "abbreviation": "Svoboda a přímá demokracie (SPD)"
         }
       ]
     },
@@ -669,8 +677,8 @@
       "parties": [
         {
           "id": "senatni-2022-79-c-811606-p",
-          "name": "Zbyněk Pastyřík",
-          "description": "Zbyněk Pastyřík",
+          "name": "Koalice Moravského zemského hnutí a politické strany Moravané",
+          "description": "Koalice Moravského zemského hnutí a politické strany Moravané",
           "contacts": {
             "web": [
               {
@@ -680,7 +688,7 @@
             ],
             "facebook": "https://www.facebook.com/zbynekdosenatu/"
           },
-          "abbreviation": ""
+          "abbreviation": "Koalice Moravského zemského hnutí a politické strany Moravané"
         }
       ]
     }
@@ -2140,6 +2148,717 @@
       "candidate_id": "senatni-2022-79-c-811606",
       "question_id": "senatni-2022-global-q-58",
       "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-1",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-1",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-2",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-2",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-3",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-3",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-4",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-4",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-5",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-5",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-6",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-6",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-7",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-7",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-8",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-8",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-9",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-9",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-10",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-10",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-11",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-11",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-12",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-12",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-13",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-13",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-14",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-14",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-15",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-15",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-16",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-16",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-17",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-17",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-18",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-18",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-19",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-19",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-20",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-20",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-21",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-21",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-22",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-22",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-23",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-23",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-24",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-24",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-25",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-25",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-26",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-26",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-27",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-27",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-28",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-28",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-29",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-29",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-30",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-30",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-31",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-31",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-32",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-32",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-33",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-33",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-34",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-34",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-35",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-35",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-36",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-36",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-37",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-37",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-38",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-38",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-39",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-39",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-40",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-40",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-41",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-41",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-42",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-42",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-43",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-43",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-44",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-44",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-45",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-45",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-46",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-46",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-47",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-47",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-48",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-48",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-49",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-49",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-50",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-50",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-51",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-51",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-52",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-52",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-53",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-53",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-54",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-54",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-55",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-55",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-56",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-56",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-57",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-57",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-79-a-266442-58",
+      "candidate_id": "senatni-2022-79-c-266442",
+      "question_id": "senatni-2022-global-q-58",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-1",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-1",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-2",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-2",
+      "answer": "yes",
+      "comment": "Bydlení by mělo být finančně únosné, problémem je také zneužívání sociálních dávek."
+    },
+    {
+      "id": "senatni-2022-79-a-231466-3",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-3",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-4",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-4",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-5",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-5",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-6",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-6",
+      "answer": "dont_know",
+      "comment": "Nové přehrady - tam, kde to dává smysl, musí být zacílené. Důležité je zadržení vody v krajině."
+    },
+    {
+      "id": "senatni-2022-79-a-231466-7",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-7",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-8",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-8",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-9",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-9",
+      "answer": "dont_know",
+      "comment": "Legalita - pro účely tišení bolesti, lékařské účely"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-10",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-10",
+      "answer": "yes",
+      "comment": "Jen velmi málo obětí nahlašuje tento trestný čin, zhruba pouze 1/3 pachatelů je odsouzena k trestu vězení, 2/3 jsou odsouzeni pouze k podmínečnému trestu. Neberou se v úvahu často doživotní traumata obětí."
+    },
+    {
+      "id": "senatni-2022-79-a-231466-11",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-11",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-12",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-12",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-13",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-13",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-14",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-14",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-15",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-15",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-16",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-16",
+      "answer": "dont_know",
+      "comment": "Manželství je pro mě svazkem muže a ženy s potenciálem přirozeného předávání lidského života. Mám úctu ke každému člověku a respektuji jeho svobodu rozhodnutí,  jakým způsobem bude žít. Lidovci jsou nicméně součástí vlády, která má v programovém prohlášení jasně napsáno, že podpoří úpravu právních podmínek pro registrované partnery v občanském zákoníku. Lidovecký poslanec Jiří Navrátil proto připravuje s ministerstvem spravedlnosti novelu, která práva lidí v manželství a registrovaném partnerství upraví. Ať už se jedná o otázky společného jmění manželů, dědického práva apod."
+    },
+    {
+      "id": "senatni-2022-79-a-231466-17",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-17",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-18",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-18",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-19",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-19",
+      "answer": "yes",
+      "comment": "Zejména by se to mělo týkat obecní a státní výstavby bytů."
+    },
+    {
+      "id": "senatni-2022-79-a-231466-20",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-20",
+      "answer": "yes",
+      "comment": "\nMnožství domácností nepobírá sociální dávky, na které mají  nárok.\n"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-21",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-21",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-22",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-22",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-23",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-23",
+      "answer": "dont_know",
+      "comment": "Možnost volit online bude nutná, zejména do budoucna, a to nejen pro mladší voliče. Důležité je ovšem řádně připravit technické podmínky, tak aby nemohlo dojít k manipulaci.\n"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-24",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-24",
+      "answer": "yes",
+      "comment": "Technických oborů je málo a málo uchazečů se na ně hlásí, důležité je také podpořit zájem o tyto obory."
+    },
+    {
+      "id": "senatni-2022-79-a-231466-25",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-25",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-26",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-26",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-27",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-27",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-28",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-28",
+      "answer": "yes",
+      "comment": "V době, kdy to pro náš stát bude výhodné"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-29",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-29",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-30",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-30",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-31",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-31",
+      "answer": "yes",
+      "comment": "Pokud se nebudeme věnovat rozvojovým regionům, mohou se objevovat další uprchlické vlny."
+    },
+    {
+      "id": "senatni-2022-79-a-231466-32",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-32",
+      "answer": "yes",
+      "comment": "Pokud nebudeme řešit i rozvojové země, můžeme očekávat další migrační vlny. "
+    },
+    {
+      "id": "senatni-2022-79-a-231466-33",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-33",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-34",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-34",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-35",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-35",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-36",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-36",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-37",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-37",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-38",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-38",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-39",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-39",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-40",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-40",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-41",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-41",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-42",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-42",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-43",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-43",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-44",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-44",
+      "answer": "yes",
+      "comment": "Důležitý je společný postoj evropských států."
+    },
+    {
+      "id": "senatni-2022-79-a-231466-45",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-45",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-46",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-46",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-47",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-47",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-48",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-48",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-49",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-49",
+      "answer": "yes",
+      "comment": "Důležité je, že jádro bylo uznáno mezi čistou energii."
+    },
+    {
+      "id": "senatni-2022-79-a-231466-50",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-50",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-51",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-51",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-52",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-52",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-53",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-53",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-54",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-54",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-55",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-55",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-56",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-56",
+      "answer": "yes",
+      "comment": "Důležitá je dostupnost bydlení - mladí lidé, sociálně ohrožení...."
+    },
+    {
+      "id": "senatni-2022-79-a-231466-57",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-57",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-79-a-231466-58",
+      "candidate_id": "senatni-2022-79-c-231466",
+      "question_id": "senatni-2022-global-q-58",
+      "answer": "yes"
     }
   ]
 }

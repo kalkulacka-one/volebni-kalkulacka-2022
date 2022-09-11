@@ -3,11 +3,19 @@
   "name": "Kutná Hora",
   "description": "celý okres Kutná Hora, západní část okresu Havlíčkův Brod, ohraničená na východě obcemi Borek, Uhelná Příbram, Nová Ves u Chotěboře, Nejepín, Jilem, Sedletín, Olešná, Radostín, Veselý Žďár, Okrouhlice, Krásná Hora, Květinov, Michalovice, Lípa, Herálec, Slavníč, jižní část okresu Benešov, ohraničená na jihovýchodě obcemi Tichonice, Psáře, Všechlapy, Libež, Slověnice, Bílkovice, Radošovice, Vlašim, Veliš, Louňovice pod Blaníkem, Kamberk, východní část okresu Benešov, tvořená obcí Sázava",
   "district_code": "40",
+  "show_district_code": true,
   "election": {
     "id": "senatni-2022",
     "key": "senatni-2022",
     "name": "Senátní volby 2022",
-    "description": "Volí se třetina senátních obvodů.",
+    "description": "Letos se volí v třetině obvodů v rámci ČR.",
+    "instructions": {
+      "header": "Zvolte svůj senátní obvod",
+      "step_1_1": "Letos se volí v třetině obvodů v rámci ČR.",
+      "step_1_2": "Více o senátních obvodech",
+      "step_1_link": "https://2022.programydovoleb.cz/senatni-volby",
+      "step_2_1": "\nOdpovězte na 40 otázek.\nNa stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.\nZodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte,\njak se kandidáti shodují s Vašimi názory.\n            "
+    },
     "from": "2022-09-23T14:00:00",
     "to": "2022-09-24T14:00:00"
   },
@@ -499,8 +507,8 @@
       "parties": [
         {
           "id": "senatni-2022-40-c-392078-p",
-          "name": "Bohuslav Procházka",
-          "description": "Bohuslav Procházka",
+          "name": "KDU-ČSL",
+          "description": "KDU-ČSL",
           "contacts": {
             "web": [
               {
@@ -514,7 +522,7 @@
             ],
             "facebook": "https://www.facebook.com/kandidatsesrdcem"
           },
-          "abbreviation": ""
+          "abbreviation": "KDU-ČSL"
         }
       ]
     },
@@ -535,8 +543,8 @@
       "parties": [
         {
           "id": "senatni-2022-40-c-500322-p",
-          "name": "Jaromír Strnad",
-          "description": "Jaromír Strnad",
+          "name": "Koalice České strany sociálně demokratické a ANO 2011",
+          "description": "Koalice České strany sociálně demokratické a ANO 2011",
           "contacts": {
             "web": [
               {
@@ -546,7 +554,7 @@
             ],
             "facebook": "https://www.facebook.com/senatorstrnad/"
           },
-          "abbreviation": ""
+          "abbreviation": "Koalice České strany sociálně demokratické a ANO 2011"
         }
       ]
     },
@@ -569,8 +577,8 @@
       "parties": [
         {
           "id": "senatni-2022-40-c-914940-p",
-          "name": "Kateřina Daczická",
-          "description": "Kateřina Daczická",
+          "name": "Občanská demokratická strana",
+          "description": "Občanská demokratická strana",
           "contacts": {
             "web": [
               {
@@ -582,7 +590,7 @@
             "twitter": "https://twitter.com/KDaczicka",
             "instagram": "https://www.instagram.com/katerinadaczicka/"
           },
-          "abbreviation": ""
+          "abbreviation": "Občanská demokratická strana"
         }
       ]
     },
@@ -603,8 +611,8 @@
       "parties": [
         {
           "id": "senatni-2022-40-c-602069-p",
-          "name": "Jiří Reichel",
-          "description": "Jiří Reichel",
+          "name": "Komunistická strana Čech a Moravy",
+          "description": "Komunistická strana Čech a Moravy",
           "contacts": {
             "web": [
               {
@@ -614,7 +622,7 @@
             ],
             "facebook": "https://www.facebook.com/Ji%C5%99%C3%AD-Reichel-kandid%C3%A1t-do-Sen%C3%A1tu-%C4%8CR-106733458746528"
           },
-          "abbreviation": ""
+          "abbreviation": "Komunistická strana Čech a Moravy"
         }
       ]
     },
@@ -635,8 +643,8 @@
       "parties": [
         {
           "id": "senatni-2022-40-c-815996-p",
-          "name": "Luděk Jeništa",
-          "description": "Luděk Jeništa",
+          "name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "description": "STAROSTOVÉ A NEZÁVISLÍ",
           "contacts": {
             "web": [
               {
@@ -646,7 +654,7 @@
             ],
             "facebook": "https://www.facebook.com/profile.php?id=100005614817356"
           },
-          "abbreviation": ""
+          "abbreviation": "STAROSTOVÉ A NEZÁVISLÍ"
         }
       ]
     },
@@ -661,12 +669,12 @@
       "parties": [
         {
           "id": "senatni-2022-40-c-516282-p",
-          "name": "Antonín Dušek",
-          "description": "Antonín Dušek",
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": {
             "web": []
           },
-          "abbreviation": ""
+          "abbreviation": "Svoboda a přímá demokracie (SPD)"
         }
       ]
     },
@@ -693,8 +701,8 @@
       "parties": [
         {
           "id": "senatni-2022-40-c-353870-p",
-          "name": "Jiří Strachota",
-          "description": "Jiří Strachota",
+          "name": "Svobodní",
+          "description": "Svobodní",
           "contacts": {
             "web": [
               {
@@ -710,7 +718,7 @@
             "twitter": "https://twitter.com/jiristrachota",
             "instagram": "https://www.instagram.com/jiri.strachota/"
           },
-          "abbreviation": ""
+          "abbreviation": "Svobodní"
         }
       ]
     }

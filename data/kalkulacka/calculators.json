@@ -4,7 +4,14 @@
       "id": "senatni-2022",
       "key": "senatni-2022",
       "name": "Senátní volby 2022",
-      "description": "Volí se třetina senátních obvodů.",
+      "description": "Letos se volí v třetině obvodů v rámci ČR.",
+      "instructions": {
+        "header": "Zvolte svůj senátní obvod",
+        "step_1_1": "Letos se volí v třetině obvodů v rámci ČR.",
+        "step_1_2": "Více o senátních obvodech",
+        "step_1_link": "https://2022.programydovoleb.cz/senatni-volby",
+        "step_2_1": "\nOdpovězte na 40 otázek.\nNa stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.\nZodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte,\njak se kandidáti shodují s Vašimi názory.\n            "
+      },
       "from": "2022-09-23T14:00:00",
       "to": "2022-09-24T14:00:00"
     },
@@ -12,7 +19,12 @@
       "id": "komunalni-2022",
       "key": "komunalni-2022",
       "name": "Komunální volby 2022",
-      "description": "K dispozici je 35 kalkulaček pro největší města.",
+      "description": "K dispozici jsou kalkulačky pro 9 měst.",
+      "instructions": {
+        "header": "Zvolte své město",
+        "step_1_1": "K dispozici jsou kalkulačky pro 9 měst.",
+        "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
+      },
       "from": "2022-09-23T14:00:00",
       "to": "2022-09-24T14:00:00"
     }
@@ -21,6 +33,7 @@
     {
       "election_id": "senatni-2022",
       "district_code": "1",
+      "show_district_code": true,
       "name": "Karlovy Vary",
       "description": "Karlovy Vary",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -29,6 +42,7 @@
     {
       "election_id": "senatni-2022",
       "district_code": "4",
+      "show_district_code": true,
       "name": "Most",
       "description": "Most",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -37,14 +51,16 @@
     {
       "election_id": "senatni-2022",
       "district_code": "7",
-      "name": "Plzeň-město",
-      "description": "Plzeň-město",
+      "show_district_code": true,
+      "name": "Plzeň - město",
+      "description": "Plzeň - město",
       "on_hp_from": "2022-09-01T00:00:00",
       "on_hp_to": "2022-09-30T14:00:00"
     },
     {
       "election_id": "senatni-2022",
       "district_code": "10",
+      "show_district_code": true,
       "name": "Český Krumlov",
       "description": "Český Krumlov",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -53,6 +69,7 @@
     {
       "election_id": "senatni-2022",
       "district_code": "13",
+      "show_district_code": true,
       "name": "Tábor",
       "description": "Tábor",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -61,6 +78,7 @@
     {
       "election_id": "senatni-2022",
       "district_code": "16",
+      "show_district_code": true,
       "name": "Beroun",
       "description": "Beroun",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -69,6 +87,7 @@
     {
       "election_id": "senatni-2022",
       "district_code": "19",
+      "show_district_code": true,
       "name": "Praha 11",
       "description": "Praha 11",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -77,6 +96,7 @@
     {
       "election_id": "senatni-2022",
       "district_code": "22",
+      "show_district_code": true,
       "name": "Praha 10",
       "description": "Praha 10",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -85,6 +105,7 @@
     {
       "election_id": "senatni-2022",
       "district_code": "25",
+      "show_district_code": true,
       "name": "Praha 6",
       "description": "Praha 6",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -93,6 +114,7 @@
     {
       "election_id": "senatni-2022",
       "district_code": "28",
+      "show_district_code": true,
       "name": "Mělník",
       "description": "Mělník",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -101,6 +123,7 @@
     {
       "election_id": "senatni-2022",
       "district_code": "31",
+      "show_district_code": true,
       "name": "Ústí nad Labem",
       "description": "Ústí nad Labem",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -109,6 +132,7 @@
     {
       "election_id": "senatni-2022",
       "district_code": "34",
+      "show_district_code": true,
       "name": "Liberec",
       "description": "Liberec",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -117,6 +141,7 @@
     {
       "election_id": "senatni-2022",
       "district_code": "37",
+      "show_district_code": true,
       "name": "Jičín",
       "description": "Jičín",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -125,6 +150,7 @@
     {
       "election_id": "senatni-2022",
       "district_code": "40",
+      "show_district_code": true,
       "name": "Kutná Hora",
       "description": "Kutná Hora",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -133,6 +159,7 @@
     {
       "election_id": "senatni-2022",
       "district_code": "43",
+      "show_district_code": true,
       "name": "Pardubice",
       "description": "Pardubice",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -141,6 +168,7 @@
     {
       "election_id": "senatni-2022",
       "district_code": "46",
+      "show_district_code": true,
       "name": "Ústí nad Orlicí",
       "description": "Ústí nad Orlicí",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -149,6 +177,7 @@
     {
       "election_id": "senatni-2022",
       "district_code": "49",
+      "show_district_code": true,
       "name": "Blansko",
       "description": "Blansko",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -157,6 +186,7 @@
     {
       "election_id": "senatni-2022",
       "district_code": "52",
+      "show_district_code": true,
       "name": "Jihlava",
       "description": "Jihlava",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -165,22 +195,25 @@
     {
       "election_id": "senatni-2022",
       "district_code": "55",
-      "name": "Brno-město (55)",
-      "description": "Brno-město (55)",
+      "show_district_code": true,
+      "name": "Brno - město",
+      "description": "Brno - město",
       "on_hp_from": "2022-09-01T00:00:00",
       "on_hp_to": "2022-09-30T14:00:00"
     },
     {
       "election_id": "senatni-2022",
       "district_code": "58",
-      "name": "Brno-město (58)",
-      "description": "Brno-město (58)",
+      "show_district_code": true,
+      "name": "Brno - město",
+      "description": "Brno - město",
       "on_hp_from": "2022-09-01T00:00:00",
       "on_hp_to": "2022-09-30T14:00:00"
     },
     {
       "election_id": "senatni-2022",
       "district_code": "61",
+      "show_district_code": true,
       "name": "Olomouc",
       "description": "Olomouc",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -189,6 +222,7 @@
     {
       "election_id": "senatni-2022",
       "district_code": "64",
+      "show_district_code": true,
       "name": "Bruntál",
       "description": "Bruntál",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -197,6 +231,7 @@
     {
       "election_id": "senatni-2022",
       "district_code": "67",
+      "show_district_code": true,
       "name": "Nový Jičín",
       "description": "Nový Jičín",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -205,14 +240,16 @@
     {
       "election_id": "senatni-2022",
       "district_code": "70",
-      "name": "Ostrava-město",
-      "description": "Ostrava-město",
+      "show_district_code": true,
+      "name": "Ostrava - město",
+      "description": "Ostrava - město",
       "on_hp_from": "2022-09-01T00:00:00",
       "on_hp_to": "2022-09-30T14:00:00"
     },
     {
       "election_id": "senatni-2022",
       "district_code": "73",
+      "show_district_code": true,
       "name": "Frýdek-Místek",
       "description": "Frýdek-Místek",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -221,6 +258,7 @@
     {
       "election_id": "senatni-2022",
       "district_code": "76",
+      "show_district_code": true,
       "name": "Kroměříž",
       "description": "Kroměříž",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -229,6 +267,7 @@
     {
       "election_id": "senatni-2022",
       "district_code": "79",
+      "show_district_code": true,
       "name": "Hodonín",
       "description": "Hodonín",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -237,6 +276,7 @@
     {
       "election_id": "komunalni-2022",
       "district_code": "554782",
+      "show_district_code": false,
       "name": "Praha hl. m.",
       "description": "Praha hl. m.",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -245,6 +285,7 @@
     {
       "election_id": "komunalni-2022",
       "district_code": "582786",
+      "show_district_code": false,
       "name": "Brno",
       "description": "Brno",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -253,6 +294,7 @@
     {
       "election_id": "komunalni-2022",
       "district_code": "554791",
+      "show_district_code": false,
       "name": "Plzeň",
       "description": "Plzeň",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -261,6 +303,7 @@
     {
       "election_id": "komunalni-2022",
       "district_code": "563889",
+      "show_district_code": false,
       "name": "Liberec",
       "description": "Liberec",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -269,6 +312,7 @@
     {
       "election_id": "komunalni-2022",
       "district_code": "569810",
+      "show_district_code": false,
       "name": "Hradec Králové",
       "description": "Hradec Králové",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -277,6 +321,7 @@
     {
       "election_id": "komunalni-2022",
       "district_code": "554804",
+      "show_district_code": false,
       "name": "Ústí nad Labem",
       "description": "Ústí nad Labem",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -285,6 +330,7 @@
     {
       "election_id": "komunalni-2022",
       "district_code": "555134",
+      "show_district_code": false,
       "name": "Pardubice",
       "description": "Pardubice",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -293,6 +339,7 @@
     {
       "election_id": "komunalni-2022",
       "district_code": "598917",
+      "show_district_code": false,
       "name": "Karviná",
       "description": "Karviná",
       "on_hp_from": "2022-09-01T00:00:00",
@@ -301,6 +348,7 @@
     {
       "election_id": "komunalni-2022",
       "district_code": "590266",
+      "show_district_code": false,
       "name": "Třebíč",
       "description": "Třebíč",
       "on_hp_from": "2022-09-01T00:00:00",

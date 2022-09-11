@@ -3,11 +3,19 @@
   "name": "Ústí nad Labem",
   "description": "celý okres Ústí nad Labem, část okresu Litoměřice, tvořená obcemi Prackovice nad Labem, Chotiměř, Velemín",
   "district_code": "31",
+  "show_district_code": true,
   "election": {
     "id": "senatni-2022",
     "key": "senatni-2022",
     "name": "Senátní volby 2022",
-    "description": "Volí se třetina senátních obvodů.",
+    "description": "Letos se volí v třetině obvodů v rámci ČR.",
+    "instructions": {
+      "header": "Zvolte svůj senátní obvod",
+      "step_1_1": "Letos se volí v třetině obvodů v rámci ČR.",
+      "step_1_2": "Více o senátních obvodech",
+      "step_1_link": "https://2022.programydovoleb.cz/senatni-volby",
+      "step_2_1": "\nOdpovězte na 40 otázek.\nNa stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.\nZodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte,\njak se kandidáti shodují s Vašimi názory.\n            "
+    },
     "from": "2022-09-23T14:00:00",
     "to": "2022-09-24T14:00:00"
   },
@@ -505,8 +513,8 @@
       "parties": [
         {
           "id": "senatni-2022-31-c-665893-p",
-          "name": "Věra Nechybová",
-          "description": "Věra Nechybová",
+          "name": "ÚSTECKÉ FÓRUM OBČANŮ",
+          "description": "ÚSTECKÉ FÓRUM OBČANŮ",
           "contacts": {
             "web": [
               {
@@ -526,7 +534,7 @@
             "twitter": "https://twitter.com/VeraNechybova",
             "instagram": "https://www.instagram.com/veranechybovasenatorkou/"
           },
-          "abbreviation": ""
+          "abbreviation": "ÚSTECKÉ FÓRUM OBČANŮ"
         }
       ]
     },
@@ -552,8 +560,8 @@
       "parties": [
         {
           "id": "senatni-2022-31-c-165219-p",
-          "name": "Martin Krsek",
-          "description": "Martin Krsek",
+          "name": "SEN 21",
+          "description": "SEN 21",
           "contacts": {
             "web": [
               {
@@ -568,7 +576,7 @@
             "facebook": "https://www.facebook.com/echtkrsek",
             "instagram": "https://www.instagram.com/echtkrsek/"
           },
-          "abbreviation": ""
+          "abbreviation": "SEN 21"
         }
       ]
     },
@@ -590,8 +598,8 @@
       "parties": [
         {
           "id": "senatni-2022-31-c-619365-p",
-          "name": "Alfréd Dytrt",
-          "description": "Alfréd Dytrt",
+          "name": "SPOLEČNĚ - TOP 09, KDU-ČSL",
+          "description": "SPOLEČNĚ - TOP 09, KDU-ČSL",
           "contacts": {
             "web": [
               {
@@ -602,7 +610,7 @@
             "facebook": "https://m.facebook.com/AlfredDytrtSenat/",
             "instagram": "https://instagram.com/alfred_dytrt"
           },
-          "abbreviation": ""
+          "abbreviation": "SPOLEČNĚ - TOP 09, KDU-ČSL"
         }
       ]
     },
@@ -618,13 +626,13 @@
       "parties": [
         {
           "id": "senatni-2022-31-c-246453-p",
-          "name": "Jan Beer",
-          "description": "Jan Beer",
+          "name": "ROZUMNÍ",
+          "description": "ROZUMNÍ",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/jan.beer.39"
           },
-          "abbreviation": ""
+          "abbreviation": "ROZUMNÍ"
         }
       ]
     },
@@ -651,8 +659,8 @@
       "parties": [
         {
           "id": "senatni-2022-31-c-699892-p",
-          "name": "Martin Balej",
-          "description": "Martin Balej",
+          "name": "Občanská demokratická strana",
+          "description": "Občanská demokratická strana",
           "contacts": {
             "web": [
               {
@@ -668,7 +676,7 @@
             "twitter": "https://twitter.com/martin_balej",
             "instagram": "https://www.instagram.com/martin.balej/"
           },
-          "abbreviation": ""
+          "abbreviation": "Občanská demokratická strana"
         }
       ]
     },
@@ -694,8 +702,8 @@
       "parties": [
         {
           "id": "senatni-2022-31-c-800949-p",
-          "name": "Jaroslav Telecký",
-          "description": "Jaroslav Telecký",
+          "name": "Právo Respekt Odbornost",
+          "description": "Právo Respekt Odbornost",
           "contacts": {
             "web": [
               {
@@ -710,7 +718,7 @@
             "facebook": "https://www.facebook.com/JaroslavTeleckySenat",
             "instagram": "https://www.instagram.com/jaroslav_telecky/"
           },
-          "abbreviation": ""
+          "abbreviation": "Právo Respekt Odbornost"
         }
       ]
     },
@@ -726,13 +734,13 @@
       "parties": [
         {
           "id": "senatni-2022-31-c-163515-p",
-          "name": "René Hladík",
-          "description": "René Hladík",
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/rene.hladik.1"
           },
-          "abbreviation": ""
+          "abbreviation": "Svoboda a přímá demokracie (SPD)"
         }
       ]
     },
@@ -752,8 +760,8 @@
       "parties": [
         {
           "id": "senatni-2022-31-c-570575-p",
-          "name": "Miloslav Buldra",
-          "description": "Miloslav Buldra",
+          "name": "Komunistická strana Čech a Moravy",
+          "description": "Komunistická strana Čech a Moravy",
           "contacts": {
             "web": [
               {
@@ -762,7 +770,7 @@
               }
             ]
           },
-          "abbreviation": ""
+          "abbreviation": "Komunistická strana Čech a Moravy"
         }
       ]
     },
@@ -772,17 +780,19 @@
       "type": "person",
       "description": "Petr Nedvědický",
       "contacts": {
-        "web": []
+        "web": [],
+        "facebook": "https://www.facebook.com/Ano2011UstinadLabem/"
       },
       "parties": [
         {
           "id": "senatni-2022-31-c-392644-p",
-          "name": "Petr Nedvědický",
-          "description": "Petr Nedvědický",
+          "name": "ANO 2011",
+          "description": "ANO 2011",
           "contacts": {
-            "web": []
+            "web": [],
+            "facebook": "https://www.facebook.com/Ano2011UstinadLabem/"
           },
-          "abbreviation": ""
+          "abbreviation": "ANO 2011"
         }
       ]
     }

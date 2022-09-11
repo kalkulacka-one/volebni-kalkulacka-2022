@@ -1,13 +1,21 @@
 {
   "id": "senatni-2022-70",
-  "name": "Ostrava-město",
+  "name": "Ostrava - město",
   "description": "část okresu Ostrava-město, tvořená městskými obvody Moravská Ostrava a Přívoz, Mariánské Hory a Hulváky, Lhotka, Hošťálkovice, Nová Ves, Petřkovice, Slezská Ostrava, Radvanice a Bartovice, Michálkovice, Vítkovice, Hrabová, Nová Bělá, Stará Bělá a obcemi Stará Ves nad Ondřejnicí, Vratimov, Václavovice, Šenov",
   "district_code": "70",
+  "show_district_code": true,
   "election": {
     "id": "senatni-2022",
     "key": "senatni-2022",
     "name": "Senátní volby 2022",
-    "description": "Volí se třetina senátních obvodů.",
+    "description": "Letos se volí v třetině obvodů v rámci ČR.",
+    "instructions": {
+      "header": "Zvolte svůj senátní obvod",
+      "step_1_1": "Letos se volí v třetině obvodů v rámci ČR.",
+      "step_1_2": "Více o senátních obvodech",
+      "step_1_link": "https://2022.programydovoleb.cz/senatni-volby",
+      "step_2_1": "\nOdpovězte na 40 otázek.\nNa stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.\nZodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte,\njak se kandidáti shodují s Vašimi názory.\n            "
+    },
     "from": "2022-09-23T14:00:00",
     "to": "2022-09-24T14:00:00"
   },
@@ -489,12 +497,12 @@
       "parties": [
         {
           "id": "senatni-2022-70-c-523255-p",
-          "name": "Radoslav Štědroň",
-          "description": "Radoslav Štědroň",
+          "name": "Strana státu přímé demokracie - Strana práce",
+          "description": "Strana státu přímé demokracie - Strana práce",
           "contacts": {
             "web": []
           },
-          "abbreviation": ""
+          "abbreviation": "Strana státu přímé demokracie - Strana práce"
         }
       ]
     },
@@ -520,8 +528,8 @@
       "parties": [
         {
           "id": "senatni-2022-70-c-894640-p",
-          "name": "Zdeněk Nytra",
-          "description": "Zdeněk Nytra",
+          "name": "Koalice SPOLU",
+          "description": "Koalice SPOLU",
           "contacts": {
             "web": [
               {
@@ -536,7 +544,7 @@
             "facebook": "https://www.facebook.com/senatornytra/",
             "twitter": "https://twitter.com/ZdenekNytra"
           },
-          "abbreviation": ""
+          "abbreviation": "Koalice SPOLU"
         }
       ]
     },
@@ -552,13 +560,13 @@
       "parties": [
         {
           "id": "senatni-2022-70-c-397158-p",
-          "name": "Liana Janáčková",
-          "description": "Liana Janáčková",
+          "name": "Zdraví Sport Prosperita",
+          "description": "Zdraví Sport Prosperita",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/liana.janackova.1"
           },
-          "abbreviation": ""
+          "abbreviation": "Zdraví Sport Prosperita"
         }
       ]
     },
@@ -573,12 +581,12 @@
       "parties": [
         {
           "id": "senatni-2022-70-c-550066-p",
-          "name": "Miroslav Antl",
-          "description": "Miroslav Antl",
+          "name": "ANO 2011",
+          "description": "ANO 2011",
           "contacts": {
             "web": []
           },
-          "abbreviation": ""
+          "abbreviation": "ANO 2011"
         }
       ]
     },
@@ -603,8 +611,8 @@
       "parties": [
         {
           "id": "senatni-2022-70-c-254017-p",
-          "name": "Peter Harvánek",
-          "description": "Peter Harvánek",
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": {
             "web": [
               {
@@ -618,7 +626,7 @@
             ],
             "facebook": "https://www.facebook.com/pharvanek"
           },
-          "abbreviation": ""
+          "abbreviation": "Svoboda a přímá demokracie (SPD)"
         }
       ]
     },
@@ -633,12 +641,12 @@
       "parties": [
         {
           "id": "senatni-2022-70-c-635788-p",
-          "name": "Patrik Hujdus",
-          "description": "Patrik Hujdus",
+          "name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "description": "STAROSTOVÉ A NEZÁVISLÍ",
           "contacts": {
             "web": []
           },
-          "abbreviation": ""
+          "abbreviation": "STAROSTOVÉ A NEZÁVISLÍ"
         }
       ]
     },
@@ -653,12 +661,12 @@
       "parties": [
         {
           "id": "senatni-2022-70-c-938712-p",
-          "name": "Hana Zelená",
-          "description": "Hana Zelená",
+          "name": "Právo Respekt Odbornost",
+          "description": "Právo Respekt Odbornost",
           "contacts": {
             "web": []
           },
-          "abbreviation": ""
+          "abbreviation": "Právo Respekt Odbornost"
         }
       ]
     }

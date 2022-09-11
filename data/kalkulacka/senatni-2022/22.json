@@ -3,11 +3,19 @@
   "name": "Praha 10",
   "description": "území městské části Praha 10, s výjimkou části k. ú. Vinohrady, ležící na území městské části Praha 10. Dále zahrnuje území městských částí Praha-Štěrboholy, Praha Dubeč",
   "district_code": "22",
+  "show_district_code": true,
   "election": {
     "id": "senatni-2022",
     "key": "senatni-2022",
     "name": "Senátní volby 2022",
-    "description": "Volí se třetina senátních obvodů.",
+    "description": "Letos se volí v třetině obvodů v rámci ČR.",
+    "instructions": {
+      "header": "Zvolte svůj senátní obvod",
+      "step_1_1": "Letos se volí v třetině obvodů v rámci ČR.",
+      "step_1_2": "Více o senátních obvodech",
+      "step_1_link": "https://2022.programydovoleb.cz/senatni-volby",
+      "step_2_1": "\nOdpovězte na 40 otázek.\nNa stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.\nZodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte,\njak se kandidáti shodují s Vašimi názory.\n            "
+    },
     "from": "2022-09-23T14:00:00",
     "to": "2022-09-24T14:00:00"
   },
@@ -490,13 +498,13 @@
       "parties": [
         {
           "id": "senatni-2022-22-c-972050-p",
-          "name": "Bohumil Zoufalík",
-          "description": "Bohumil Zoufalík",
+          "name": "NEZÁVISLÍ PRO PRAHU 10 – HNUTÍ PRO LEPŠÍ DESÍTKU",
+          "description": "NEZÁVISLÍ PRO PRAHU 10 – HNUTÍ PRO LEPŠÍ DESÍTKU",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/Bohumil-Zoufal%C3%ADk-202898533222807/?_rdr"
           },
-          "abbreviation": ""
+          "abbreviation": "NEZÁVISLÍ PRO PRAHU 10 – HNUTÍ PRO LEPŠÍ DESÍTKU"
         }
       ]
     },
@@ -527,8 +535,8 @@
       "parties": [
         {
           "id": "senatni-2022-22-c-371682-p",
-          "name": "Renata Chmelová",
-          "description": "Renata Chmelová",
+          "name": "RENATA CHMELOVÁ DO SENÁTU: VLASTA a STAN s podporou LES, Zelených a SEN 21",
+          "description": "RENATA CHMELOVÁ DO SENÁTU: VLASTA a STAN s podporou LES, Zelených a SEN 21",
           "contacts": {
             "web": [
               {
@@ -548,7 +556,7 @@
             "twitter": "https://twitter.com/SenatorkaRenata",
             "instagram": "https://www.instagram.com/senatorkarenata/"
           },
-          "abbreviation": ""
+          "abbreviation": "RENATA CHMELOVÁ DO SENÁTU: VLASTA a STAN s podporou LES, Zelených a SEN 21"
         }
       ]
     },
@@ -577,8 +585,8 @@
       "parties": [
         {
           "id": "senatni-2022-22-c-549994-p",
-          "name": "Jan Pirk",
-          "description": "Jan Pirk",
+          "name": "SPOLU – ODS, KDU-ČSL, TOP 09",
+          "description": "SPOLU – ODS, KDU-ČSL, TOP 09",
           "contacts": {
             "web": [
               {
@@ -596,7 +604,7 @@
             ],
             "facebook": "https://www.facebook.com/profpirk"
           },
-          "abbreviation": ""
+          "abbreviation": "SPOLU – ODS, KDU-ČSL, TOP 09"
         }
       ]
     },
@@ -611,12 +619,12 @@
       "parties": [
         {
           "id": "senatni-2022-22-c-878037-p",
-          "name": "Helena Leisztner",
-          "description": "Helena Leisztner",
+          "name": "ANO 2011",
+          "description": "ANO 2011",
           "contacts": {
             "web": []
           },
-          "abbreviation": ""
+          "abbreviation": "ANO 2011"
         }
       ]
     },
@@ -632,13 +640,13 @@
       "parties": [
         {
           "id": "senatni-2022-22-c-762354-p",
-          "name": "Štěpán Kavur",
-          "description": "Štěpán Kavur",
+          "name": "Česká strana sociálně demokratická",
+          "description": "Česká strana sociálně demokratická",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/stepan.kavur"
           },
-          "abbreviation": ""
+          "abbreviation": "Česká strana sociálně demokratická"
         }
       ]
     },
@@ -654,13 +662,13 @@
       "parties": [
         {
           "id": "senatni-2022-22-c-357855-p",
-          "name": "Jiří Kobza",
-          "description": "Jiří Kobza",
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/jirikobza.cz/"
           },
-          "abbreviation": ""
+          "abbreviation": "Svoboda a přímá demokracie (SPD)"
         }
       ]
     }
@@ -2108,6 +2116,375 @@
     {
       "id": "senatni-2022-22-a-549994-58",
       "candidate_id": "senatni-2022-22-c-549994",
+      "question_id": "senatni-2022-global-q-58",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-1",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-1",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-2",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-2",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-3",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-3",
+      "answer": "yes",
+      "comment": "Neexistence zákona o celostátním závazném referendu bez jakýchkoli tematických omezení je velkým dluhem všech polistopadových politických garnitur a je i v rozporu s ústavním pořádkem, zejména s Listinou základních práv a svobod."
+    },
+    {
+      "id": "senatni-2022-22-a-357855-4",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-4",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-5",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-5",
+      "answer": "no",
+      "comment": "Věk vzniku nároku na starobní důchod se v žádném případě nesmí zvyšovat, naopak, u příslušníků fyzicky náročných a psychicky stresujících profesí se má snížit."
+    },
+    {
+      "id": "senatni-2022-22-a-357855-6",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-6",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-7",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-7",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-8",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-8",
+      "answer": "no",
+      "comment": "Jediná spravedlivá daňová sazba u příjmu fyzických osob je rovná daň, tzn. odvod stejného procenta z příjmu pro všechny zaměstnance a živnostníky."
+    },
+    {
+      "id": "senatni-2022-22-a-357855-9",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-9",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-10",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-10",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-11",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-11",
+      "answer": "yes",
+      "comment": "Je nezbytné zdanit nadnárodní korporace, které v ČR realizují obrovské zisky, neplatí daně a navíc používají cenzorské praktiky proti svobodě projevu a slova."
+    },
+    {
+      "id": "senatni-2022-22-a-357855-12",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-12",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-13",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-13",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-14",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-14",
+      "answer": "yes",
+      "comment": "Určitě by měly být sníženy koncesionářské poplatky pro seniory."
+    },
+    {
+      "id": "senatni-2022-22-a-357855-15",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-15",
+      "answer": "yes",
+      "comment": "Existuje zde velký prostor pro podvody, zaměstnávání načerno, úniky na daních a pojistném a novodobé až otrokářské praktiky vůči agenturním zaměstnancům."
+    },
+    {
+      "id": "senatni-2022-22-a-357855-16",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-16",
+      "answer": "no",
+      "comment": "Manželství bylo, je a navždy bude, bez ohledu na nátlak aktivistů, výhradně svazkem muže a ženy."
+    },
+    {
+      "id": "senatni-2022-22-a-357855-17",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-17",
+      "answer": "yes",
+      "comment": "Ale skutečným řešením tragické situace v této oblasti je zestátnění exekucí a jejich provádění výhradně státními orgány nebo soudy."
+    },
+    {
+      "id": "senatni-2022-22-a-357855-18",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-18",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-19",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-19",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-20",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-20",
+      "answer": "no",
+      "comment": "Ale musí poskytovat pravidelné a veřejně dostupné informace o pravidlech sociálních dávek a jejich parametrech."
+    },
+    {
+      "id": "senatni-2022-22-a-357855-21",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-21",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-22",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-22",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-23",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-23",
+      "answer": "no",
+      "comment": "Nikdy. Je to protiústavní. Výkon volebního hlasování musí být výhradně osobní, prezenční, se zachováním a garancí tajnosti, rovnosti a přímosti volebního práva a aktu volby."
+    },
+    {
+      "id": "senatni-2022-22-a-357855-24",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-24",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-25",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-25",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-26",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-26",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-27",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-27",
+      "answer": "yes",
+      "comment": "Nejen na energetické krizi je dobře vidět, že nás členství v EU jednoznačně ekonmicky poškozuje."
+    },
+    {
+      "id": "senatni-2022-22-a-357855-28",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-28",
+      "answer": "no",
+      "comment": "Nikdy"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-29",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-29",
+      "answer": "yes",
+      "comment": "Ale k této otázce by mělo proběhnout celostátní závazné referendum, které v době vstupu neakceptovatelně neproběhlo."
+    },
+    {
+      "id": "senatni-2022-22-a-357855-30",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-30",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-31",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-31",
+      "answer": "no",
+      "comment": "Měli bychom ze státního rozpočtu bez prostředníků poskytovat rozvojovou pomoc pouze těm státům, kde to bude mít ekonomický smysl a kde to bude generovat politický či ekonomický profit pro Českou republiku, její občany a firmy."
+    },
+    {
+      "id": "senatni-2022-22-a-357855-32",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-32",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-33",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-33",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-34",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-34",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-35",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-35",
+      "answer": "yes",
+      "comment": "Ale s upřednostněním dodávek od českých zbrojních firem ve prospěch budování vševojskové armády schopné obrany území a občanů ČR."
+    },
+    {
+      "id": "senatni-2022-22-a-357855-36",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-36",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-37",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-37",
+      "answer": "no",
+      "comment": "Ta už existuje."
+    },
+    {
+      "id": "senatni-2022-22-a-357855-38",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-38",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-39",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-39",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-40",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-40",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-41",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-41",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-42",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-42",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-43",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-43",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-44",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-44",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-45",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-45",
+      "answer": "yes",
+      "comment": "Doktor Křeček je vynikající ombudsman, má moji jednoznačnou podporu."
+    },
+    {
+      "id": "senatni-2022-22-a-357855-46",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-46",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-47",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-47",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-48",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-48",
+      "answer": "no",
+      "comment": "Plně postačují naše domácí české právní předpisy."
+    },
+    {
+      "id": "senatni-2022-22-a-357855-49",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-49",
+      "answer": "no",
+      "comment": "Má v něm naopak pokračovat."
+    },
+    {
+      "id": "senatni-2022-22-a-357855-50",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-50",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-51",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-51",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-52",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-52",
+      "answer": "yes",
+      "comment": "Je to v našem národním zájmu, je to povinnost vůči našim občanům a firmám."
+    },
+    {
+      "id": "senatni-2022-22-a-357855-53",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-53",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-54",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-54",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-55",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-55",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-56",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-56",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-22-a-357855-57",
+      "candidate_id": "senatni-2022-22-c-357855",
+      "question_id": "senatni-2022-global-q-57",
+      "answer": "dont_know",
+      "comment": "Je to věc Ukrajiny a její případné dohody s Ruskem."
+    },
+    {
+      "id": "senatni-2022-22-a-357855-58",
+      "candidate_id": "senatni-2022-22-c-357855",
       "question_id": "senatni-2022-global-q-58",
       "answer": "yes"
     }

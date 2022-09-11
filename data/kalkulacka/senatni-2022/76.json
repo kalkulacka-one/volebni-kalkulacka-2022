@@ -3,11 +3,19 @@
   "name": "Kroměříž",
   "description": "celý okres Kroměříž, východní část okresu Vyškov, ohraničená na východě obcemi Ivanovice na Hané, Švábenice, Chvalkovice, Uhřice, Milonice, Nevojice",
   "district_code": "76",
+  "show_district_code": true,
   "election": {
     "id": "senatni-2022",
     "key": "senatni-2022",
     "name": "Senátní volby 2022",
-    "description": "Volí se třetina senátních obvodů.",
+    "description": "Letos se volí v třetině obvodů v rámci ČR.",
+    "instructions": {
+      "header": "Zvolte svůj senátní obvod",
+      "step_1_1": "Letos se volí v třetině obvodů v rámci ČR.",
+      "step_1_2": "Více o senátních obvodech",
+      "step_1_link": "https://2022.programydovoleb.cz/senatni-volby",
+      "step_2_1": "\nOdpovězte na 40 otázek.\nNa stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.\nZodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte,\njak se kandidáti shodují s Vašimi názory.\n            "
+    },
     "from": "2022-09-23T14:00:00",
     "to": "2022-09-24T14:00:00"
   },
@@ -495,8 +503,8 @@
       "parties": [
         {
           "id": "senatni-2022-76-c-132112-p",
-          "name": "Rudolf Seifert",
-          "description": "Rudolf Seifert",
+          "name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "description": "STAROSTOVÉ A NEZÁVISLÍ",
           "contacts": {
             "web": [
               {
@@ -506,7 +514,7 @@
             ],
             "facebook": "https://www.facebook.com/StarostaSeifert/"
           },
-          "abbreviation": ""
+          "abbreviation": "STAROSTOVÉ A NEZÁVISLÍ"
         }
       ]
     },
@@ -521,12 +529,12 @@
       "parties": [
         {
           "id": "senatni-2022-76-c-592201-p",
-          "name": "Stanislav Skála",
-          "description": "Stanislav Skála",
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": {
             "web": []
           },
-          "abbreviation": ""
+          "abbreviation": "Svoboda a přímá demokracie (SPD)"
         }
       ]
     },
@@ -536,17 +544,19 @@
       "type": "person",
       "description": "Lucie Pluhařová",
       "contacts": {
-        "web": []
+        "web": [],
+        "facebook": "https://www.facebook.com/pluharovalucie"
       },
       "parties": [
         {
           "id": "senatni-2022-76-c-623635-p",
-          "name": "Lucie Pluhařová",
-          "description": "Lucie Pluhařová",
+          "name": "ANO 2011",
+          "description": "ANO 2011",
           "contacts": {
-            "web": []
+            "web": [],
+            "facebook": "https://www.facebook.com/pluharovalucie"
           },
-          "abbreviation": ""
+          "abbreviation": "ANO 2011"
         }
       ]
     },
@@ -572,8 +582,8 @@
       "parties": [
         {
           "id": "senatni-2022-76-c-179826-p",
-          "name": "Olga Sehnalová",
-          "description": "Olga Sehnalová",
+          "name": "Česká strana sociálně demokratická",
+          "description": "Česká strana sociálně demokratická",
           "contacts": {
             "web": [
               {
@@ -588,7 +598,7 @@
             "facebook": "https://www.facebook.com/OlgaSehnalova/",
             "twitter": "https://twitter.com/OlgaSehnalova"
           },
-          "abbreviation": ""
+          "abbreviation": "Česká strana sociálně demokratická"
         }
       ]
     },
@@ -618,8 +628,8 @@
       "parties": [
         {
           "id": "senatni-2022-76-c-651961-p",
-          "name": "Šárka Jelínková",
-          "description": "Šárka Jelínková",
+          "name": "SPOLU (ODS + KDU-ČSL + TOP 09)",
+          "description": "SPOLU (ODS + KDU-ČSL + TOP 09)",
           "contacts": {
             "web": [
               {
@@ -638,7 +648,7 @@
             "facebook": "https://www.facebook.com/jelinkova.sarka/",
             "twitter": "https://twitter.com/jelinkovakdu?lang=cs"
           },
-          "abbreviation": ""
+          "abbreviation": "SPOLU (ODS + KDU-ČSL + TOP 09)"
         }
       ]
     },
@@ -658,8 +668,8 @@
       "parties": [
         {
           "id": "senatni-2022-76-c-161118-p",
-          "name": "Jana Zwyrtek Hamplová",
-          "description": "Jana Zwyrtek Hamplová",
+          "name": "NEZÁVISLÍ",
+          "description": "NEZÁVISLÍ",
           "contacts": {
             "web": [
               {
@@ -668,7 +678,7 @@
               }
             ]
           },
-          "abbreviation": ""
+          "abbreviation": "NEZÁVISLÍ"
         }
       ]
     }

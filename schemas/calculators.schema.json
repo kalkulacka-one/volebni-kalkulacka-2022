@@ -25,6 +25,9 @@
           "district_code": {
             "type": "string"
           },
+          "show_district_code": {
+            "type": "boolean"
+          },
           "name": {
             "type": "string"
           },

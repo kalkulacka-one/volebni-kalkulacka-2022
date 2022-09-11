@@ -3,11 +3,19 @@
   "name": "Blansko",
   "description": "celý okres Blansko, severní část okresu Brno-venkov, ohraničená na západě obcemi Běleč, Ochoz u Tišnova, Lomnice, na jihu obcemi Štěpánovice, Lomnička, Železné, Drásov, Čebín, Moravské Knínice, Vranov",
   "district_code": "49",
+  "show_district_code": true,
   "election": {
     "id": "senatni-2022",
     "key": "senatni-2022",
     "name": "Senátní volby 2022",
-    "description": "Volí se třetina senátních obvodů.",
+    "description": "Letos se volí v třetině obvodů v rámci ČR.",
+    "instructions": {
+      "header": "Zvolte svůj senátní obvod",
+      "step_1_1": "Letos se volí v třetině obvodů v rámci ČR.",
+      "step_1_2": "Více o senátních obvodech",
+      "step_1_link": "https://2022.programydovoleb.cz/senatni-volby",
+      "step_2_1": "\nOdpovězte na 40 otázek.\nNa stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.\nZodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte,\njak se kandidáti shodují s Vašimi názory.\n            "
+    },
     "from": "2022-09-23T14:00:00",
     "to": "2022-09-24T14:00:00"
   },
@@ -484,17 +492,19 @@
       "type": "person",
       "description": "Jiří Rokos",
       "contacts": {
-        "web": []
+        "web": [],
+        "facebook": "https://www.facebook.com/RokosJiri"
       },
       "parties": [
         {
           "id": "senatni-2022-49-c-631671-p",
-          "name": "Jiří Rokos",
-          "description": "Jiří Rokos",
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": {
-            "web": []
+            "web": [],
+            "facebook": "https://www.facebook.com/RokosJiri"
           },
-          "abbreviation": ""
+          "abbreviation": "Svoboda a přímá demokracie (SPD)"
         }
       ]
     },
@@ -510,13 +520,13 @@
       "parties": [
         {
           "id": "senatni-2022-49-c-770071-p",
-          "name": "Antonín Žirovnický",
-          "description": "Antonín Žirovnický",
+          "name": "ANO 2011",
+          "description": "ANO 2011",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/zirovnickydosenatu/"
           },
-          "abbreviation": ""
+          "abbreviation": "ANO 2011"
         }
       ]
     },
@@ -531,12 +541,12 @@
       "parties": [
         {
           "id": "senatni-2022-49-c-523550-p",
-          "name": "Martin Sklář",
-          "description": "Martin Sklář",
+          "name": "Strana soukromníků České republiky",
+          "description": "Strana soukromníků České republiky",
           "contacts": {
             "web": []
           },
-          "abbreviation": ""
+          "abbreviation": "Strana soukromníků České republiky"
         }
       ]
     },
@@ -558,8 +568,8 @@
       "parties": [
         {
           "id": "senatni-2022-49-c-229934-p",
-          "name": "Filip Vítek",
-          "description": "Filip Vítek",
+          "name": "Česká pirátská strana",
+          "description": "Česká pirátská strana",
           "contacts": {
             "web": [
               {
@@ -570,7 +580,7 @@
             "facebook": "https://www.facebook.com/FilipVitekDoSenatu",
             "twitter": "https://twitter.com/filipeskamoter"
           },
-          "abbreviation": ""
+          "abbreviation": "Česká pirátská strana"
         }
       ]
     },
@@ -590,8 +600,8 @@
       "parties": [
         {
           "id": "senatni-2022-49-c-439462-p",
-          "name": "Drago Sukalovský",
-          "description": "Drago Sukalovský",
+          "name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "description": "STAROSTOVÉ A NEZÁVISLÍ",
           "contacts": {
             "web": [
               {
@@ -600,7 +610,7 @@
               }
             ]
           },
-          "abbreviation": ""
+          "abbreviation": "STAROSTOVÉ A NEZÁVISLÍ"
         }
       ]
     },
@@ -629,8 +639,8 @@
       "parties": [
         {
           "id": "senatni-2022-49-c-744028-p",
-          "name": "Jaromíra Vítková",
-          "description": "Jaromíra Vítková",
+          "name": "SPOLU (ODS + KDU-ČSL + TOP 09)",
+          "description": "SPOLU (ODS + KDU-ČSL + TOP 09)",
           "contacts": {
             "web": [
               {
@@ -648,7 +658,7 @@
             ],
             "facebook": "https://www.facebook.com/jaromiravitkovasenatorka.cz/"
           },
-          "abbreviation": ""
+          "abbreviation": "SPOLU (ODS + KDU-ČSL + TOP 09)"
         }
       ]
     },
@@ -669,8 +679,8 @@
       "parties": [
         {
           "id": "senatni-2022-49-c-882688-p",
-          "name": "Zdeněk Wetter",
-          "description": "Zdeněk Wetter",
+          "name": "Česká strana sociálně demokratická",
+          "description": "Česká strana sociálně demokratická",
           "contacts": {
             "web": [
               {
@@ -680,7 +690,7 @@
             ],
             "facebook": "https://www.facebook.com/zdenekwetterdosenatu/"
           },
-          "abbreviation": ""
+          "abbreviation": "Česká strana sociálně demokratická"
         }
       ]
     }
