@@ -8,14 +8,12 @@ export interface Props {
   monochromatic?: string;
   text?: boolean;
   size?: 'small' | 'medium' | 'large' | 'extra-large' | 'extra-huge';
-  responsive?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   monochromatic: undefined,
   text: true,
   size: 'small',
-  responsive: false,
 });
 
 const router = useRouter();
@@ -27,15 +25,11 @@ const classes = computed(() => ({
 const logoMonochromatic = computed(() => ({
   'logo--monochromatic': props.monochromatic,
 }));
-
-const responsive = computed(() => ({
-  'logo-wrapper--responsive': props.responsive,
-}));
 </script>
 
 <template>
   <div
-    :class="['logo-wrapper', responsive]"
+    :class="['logo-wrapper']"
     @click="router.push({ name: appRoutes.index.name })"
   >
     <div :class="['logo', classes, logoMonochromatic]">
@@ -79,14 +73,6 @@ const responsive = computed(() => ({
 .logo-wrapper {
   display: flex;
   align-items: center;
-
-  &--responsive {
-    @media (max-width: 700px) {
-      .logo--text {
-        display: none;
-      }
-    }
-  }
 
   &:hover {
     cursor: pointer;
