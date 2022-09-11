@@ -52,8 +52,13 @@ const districtCode = route.params.district;
 const districtName = electionStore.districts.filter(
   (district) => district.district_code === districtCode
 )[0].name;
+const showDistrictCode = electionStore.districts.filter(
+  (district) => district.district_code === districtCode
+)[0].show_district_code;
 
-const title = `${electionName} — ${districtName} (${districtCode})`;
+const title =
+  `${electionName} — ${districtName}` +
+  (showDistrictCode ? ` (${districtCode})` : '');
 
 const forwardRoute = computed(
   () =>
