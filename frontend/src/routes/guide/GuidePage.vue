@@ -263,6 +263,25 @@ const handlePreviousClick = () => {
           </StackComponent>
           <StackComponent v-if="currentStep === 3" spacing="small">
             <BodyText size="medium">
+              Když nemáte názor, nejste si jisti nebo z&nbsp;jiného důvodu
+              nechcete odpovídat, zvolte:
+            </BodyText>
+            <CardComponent
+              corner="bottom-right"
+              border
+              style="align-self: center"
+            >
+              <StackComponent horizontal spacing="small">
+                <IconComponent :icon="vkiLogoNeutral" />
+                <BodyText size="medium">= přeskočit / bez odpovědi</BodyText>
+              </StackComponent>
+            </CardComponent>
+            <BodyText size="medium">
+              Tato otázka se do výpočtu vaší shody nezapočítá.
+            </BodyText>
+          </StackComponent>
+          <StackComponent v-if="currentStep === 4" spacing="small">
+            <BodyText size="medium">
               Pokud vám na daném tématu zvlášť záleží, označte ho hvězdičkou:
             </BodyText>
             <!-- TODO: remove inline styles -->
@@ -283,25 +302,6 @@ const handlePreviousClick = () => {
             </CardComponent>
             <BodyText size="medium">
               Odpověď pak bude mít ve výpočtu shody dvojnásobnou váhu.
-            </BodyText>
-          </StackComponent>
-          <StackComponent v-if="currentStep === 4" spacing="small">
-            <BodyText size="medium">
-              Když nemáte názor, nejste si jisti nebo z&nbsp;jiného důvodu
-              nechcete odpovídat, zvolte:
-            </BodyText>
-            <CardComponent
-              corner="bottom-right"
-              border
-              style="align-self: center"
-            >
-              <StackComponent horizontal spacing="small">
-                <IconComponent :icon="vkiLogoNeutral" />
-                <BodyText size="medium">= přeskočit / bez odpovědi</BodyText>
-              </StackComponent>
-            </CardComponent>
-            <BodyText size="medium">
-              Tato otázka se do výpočtu vaší shody nezapočítá.
             </BodyText>
           </StackComponent>
           <template #after>
