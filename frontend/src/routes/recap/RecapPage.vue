@@ -162,7 +162,11 @@ const isCardHidden = (index: number) => {
           <ResponsiveWrapper mobile>
             <BottomBar>
               <div class="bottom-bar-grid">
-                <ButtonComponent kind="filled" @click="handleShowResultsClick">
+                <ButtonComponent
+                  kind="filled"
+                  color="primary"
+                  @click="handleShowResultsClick"
+                >
                   Zobrazit výsledky
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
