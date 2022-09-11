@@ -4,14 +4,14 @@ import { mdiChevronUp, mdiChevronDown } from '@mdi/js';
 
 import { UserAnswerEnum, type UserAnswer } from '@/stores/electionStore';
 import type { Question } from '@/types/question';
-import StackComponent from '../../components/design-system/layout/StackComponent.vue';
-import BodyText from '../../components/design-system/typography/BodyText.vue';
-import CardComponent from '../../components/design-system/containers/CardComponent.vue';
-import TagComponent from '@/components/design-system/containers/TagComponent.vue';
 
+import BodyText from '@/components/design-system/typography/BodyText.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
+import CardComponent from '@/components/design-system/containers/CardComponent.vue';
 import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
+import StackComponent from '@/components/design-system/layout/StackComponent.vue';
+import TagComponent from '@/components/design-system/containers/TagComponent.vue';
 
 import {
   vkiLogoInFavour,
@@ -20,6 +20,8 @@ import {
   vkiStarOutlined,
   vkiStarFilled,
 } from '@/components/design-system/icons';
+
+import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
 
 export interface Props {
   question: Question;
@@ -58,22 +60,26 @@ const toggleClick = () => {
     padding="small"
   >
     <div class="important">
-      <IconButton class="desktop" @click="starClick">
-        <IconComponent
-          :icon="starIcon"
-          :color="starColor"
-          size="large"
-          title="Pro mě důležité"
-        />
-      </IconButton>
-      <IconButton class="mobile" @click="starClick">
-        <IconComponent
-          :icon="starIcon"
-          :color="starColor"
-          size="medium"
-          title="Pro mě důležité"
-        />
-      </IconButton>
+      <ResponsiveWrapper desktop>
+        <IconButton @click="starClick">
+          <IconComponent
+            :icon="starIcon"
+            :color="starColor"
+            size="large"
+            title="Pro mě důležité"
+          />
+        </IconButton>
+      </ResponsiveWrapper>
+      <ResponsiveWrapper mobile>
+        <IconButton @click="starClick">
+          <IconComponent
+            :icon="starIcon"
+            :color="starColor"
+            size="medium"
+            title="Pro mě důležité"
+          />
+        </IconButton>
+      </ResponsiveWrapper>
     </div>
     <div class="details">
       <StackComponent centered horizontal spacing="small">
@@ -104,20 +110,22 @@ const toggleClick = () => {
       horizontal
       :spacing="(isExpanded && 'small') || undefined"
     >
-      <ButtonComponent
-        v-show="answer.answer === UserAnswerEnum.yes || isExpanded"
-        class="in-favour"
-        kind="answer"
-        color="primary"
-        :selected="answer.answer === UserAnswerEnum.yes && isExpanded"
-        :read-only="!isExpanded"
-        @click="yesClick"
-      >
-        <template #icon>
-          <IconComponent :icon="vkiLogoInFavour" />
-        </template>
-        <template v-if="isExpanded" #default>Jsem pro</template>
-      </ButtonComponent>
+      <ResponsiveWrapper desktop>
+        <ButtonComponent
+          v-show="answer.answer === UserAnswerEnum.yes || isExpanded"
+          class="in-favour"
+          kind="answer"
+          color="primary"
+          :selected="answer.answer === UserAnswerEnum.yes && isExpanded"
+          :read-only="!isExpanded"
+          @click="yesClick"
+        >
+          <template #icon>
+            <IconComponent :icon="vkiLogoInFavour" />
+          </template>
+          <template v-if="isExpanded" #default>Jsem pro</template>
+        </ButtonComponent>
+      </ResponsiveWrapper>
       <ButtonComponent
         v-show="answer.answer === UserAnswerEnum.no || isExpanded"
         class="against"

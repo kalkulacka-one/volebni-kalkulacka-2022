@@ -11,6 +11,7 @@ import type { Question } from '@/types/question';
 
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
+import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 import BottomBar from '@/components/design-system/navigation/BottomBar.vue';
 import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper.vue';
@@ -23,8 +24,9 @@ import StackComponent from '@/components/design-system/layout/StackComponent.vue
 
 import { vkiLogoPercent } from '@/components/design-system/icons';
 
+import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
+
 import RecapQuestionCard from './RecapQuestionCard.vue';
-import BackgroundComponent from '../../components/design-system/style/BackgroundComponent.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -115,20 +117,22 @@ const isCardHidden = (index: number) => {
           </template>
           Rekapitulace
           <template #right>
-            <ButtonComponent
-              class="desktop"
-              kind="filled"
-              color="primary"
-              @click="handleShowResultsClick"
-            >
-              <template #icon>
-                <IconComponent :icon="vkiLogoPercent" />
-              </template>
-              Zobrazit výsledky
-              <template #iconAfter>
-                <IconComponent :icon="mdiArrowRight" />
-              </template>
-            </ButtonComponent>
+            <ResponsiveWrapper desktop>
+              <ButtonComponent
+                class="desktop"
+                kind="filled"
+                color="primary"
+                @click="handleShowResultsClick"
+              >
+                <template #icon>
+                  <IconComponent :icon="vkiLogoPercent" />
+                </template>
+                Zobrazit výsledky
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </ResponsiveWrapper>
           </template>
         </SecondaryNavigationBar>
       </template>
@@ -155,16 +159,18 @@ const isCardHidden = (index: number) => {
           </StackComponent>
         </StackComponent>
         <template #bottom-bar>
-          <BottomBar transparent="never" :desktop="false">
-            <div class="bottom-bar-grid">
-              <ButtonComponent kind="filled" @click="handleShowResultsClick">
-                Zobrazit výsledky
-                <template #iconAfter>
-                  <IconComponent :icon="mdiArrowRight" />
-                </template>
-              </ButtonComponent>
-            </div>
-          </BottomBar>
+          <ResponsiveWrapper mobile>
+            <BottomBar>
+              <div class="bottom-bar-grid">
+                <ButtonComponent kind="filled" @click="handleShowResultsClick">
+                  Zobrazit výsledky
+                  <template #iconAfter>
+                    <IconComponent :icon="mdiArrowRight" />
+                  </template>
+                </ButtonComponent>
+              </div>
+            </BottomBar>
+          </ResponsiveWrapper>
         </template>
       </BottomBarWrapper>
     </StickyHeaderLayout>
