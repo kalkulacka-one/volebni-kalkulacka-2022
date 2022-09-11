@@ -298,15 +298,23 @@ const computedSize = computed(() =>
 
   &--answer {
     &.button--medium {
-      padding-left: calc(var(--spacing-medium) - var(--spacing-nano));
-      padding-right: calc(var(--spacing-medium) - var(--spacing-nano));
+      padding-left: calc(
+        var(--responsive-spacing-medium) - var(--spacing-nano)
+      );
+      padding-right: calc(
+        var(--responsive-spacing-medium) - var(--spacing-nano)
+      );
       padding-top: calc(var(--spacing-small) - var(--spacing-nano));
       padding-bottom: calc(var(--spacing-small) - var(--spacing-nano));
     }
 
     &.button--small {
-      padding-left: calc(var(--spacing-medium) - var(--spacing-nano));
-      padding-right: calc(var(--spacing-medium) - var(--spacing-nano));
+      padding-left: calc(
+        var(--responsive-spacing-medium) - var(--spacing-nano)
+      );
+      padding-right: calc(
+        var(--responsive-spacing-medium) - var(--spacing-nano)
+      );
       padding-top: calc(var(--spacing-extra-small) - var(--spacing-nano));
       padding-bottom: calc(var(--spacing-extra-small) - var(--spacing-nano));
     }
