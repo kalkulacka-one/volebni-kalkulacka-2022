@@ -2,20 +2,23 @@
 import { computed } from 'vue';
 
 import ContainerComponent from '@/components/design-system/containers/ContainerComponent.vue';
-import TitleText from '@/components/design-system/typography/TitleText.vue';
 
 export interface Props {
+  padding?: 'small' | 'medium' | 'large';
+  paddingResponsive?: boolean;
   transparent?: boolean;
-  centered?: boolean;
+  centeredTitle?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
+  padding: 'large',
+  paddingResponsive: true,
   transparent: false,
-  centered: false,
+  centeredTitle: false,
 });
 
 const classes = computed(() => ({
-  'secondary-navigation-bar--centered': props.centered,
+  'secondary-navigation-bar--centered-title': props.centeredTitle,
 }));
 
 const background = computed(() =>
@@ -27,18 +30,14 @@ const background = computed(() =>
   <ContainerComponent
     :class="['secondary-navigation-bar', classes]"
     :background="background"
-    padding="medium"
+    :padding="padding"
+    :padding-responsive="paddingResponsive"
   >
     <div v-if="$slots.before" class="before">
       <slot name="before" />
     </div>
     <div class="title">
-      <TitleText tag="h2" size="large">
-        <slot />
-      </TitleText>
-    </div>
-    <div v-if="$slots.right" class="right">
-      <slot name="right" />
+      <slot />
     </div>
     <div v-if="$slots.after" class="after">
       <slot name="after" />
@@ -50,10 +49,9 @@ const background = computed(() =>
 .secondary-navigation-bar {
   display: grid;
   align-items: center;
-  grid-template-columns: auto 1fr auto auto;
-  grid-template-rows: 1fr;
-  grid-template-areas: 'before title right after';
-  gap: var(--spacing-large);
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: 'before title after';
+  gap: var(--responsive-spacing-large);
 
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
@@ -66,12 +64,16 @@ const background = computed(() =>
     grid-area: title;
   }
 
-  .right {
-    grid-area: right;
-  }
-
   .after {
     grid-area: after;
+  }
+
+  &--centered-title {
+    .title {
+      grid-column-start: before;
+      grid-column-end: after;
+      justify-self: center;
+    }
   }
 }
 </style>
