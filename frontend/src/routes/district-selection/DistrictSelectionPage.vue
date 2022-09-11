@@ -16,6 +16,7 @@ import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 import RadioButtonComponent from '@/components/design-system/input/RadioButtonComponent.vue';
 import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
+import TitleText from '@/components/design-system/typography/TitleText.vue';
 
 import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
 
@@ -83,9 +84,16 @@ const onSubmit = () => {
         </NavigationBar>
       </template>
       <template #sticky-header>
-        <SecondaryNavigationBar transparent>
-          {{ heading }}
-        </SecondaryNavigationBar>
+        <ResponsiveWrapper extra-small small>
+          <SecondaryNavigationBar transparent centered-title>
+            <TitleText tag="h2" size="medium">{{ heading }}</TitleText>
+          </SecondaryNavigationBar>
+        </ResponsiveWrapper>
+        <ResponsiveWrapper medium large extra-large huge>
+          <SecondaryNavigationBar transparent>
+            <TitleText tag="h2" size="large">{{ heading }}</TitleText>
+          </SecondaryNavigationBar>
+        </ResponsiveWrapper>
       </template>
       <form id="district-form" ref="form" @submit.prevent="onSubmit">
         <BottomBarWrapper>
