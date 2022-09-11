@@ -30,6 +30,7 @@ const electionStore = useElectionStore();
 
 const election = electionStore.election as Election;
 const electionName = election.name;
+const electionDescription = election.description;
 
 const breadcrumbs = electionName;
 
@@ -39,17 +40,7 @@ const title =
     ? 'Zvolte svůj senátní obvod'
     : 'Zvolte své město';
 
-// TODO: Replace with data from store
-const text =
-  route.params.election === 'senatni-2022'
-    ? `
-Ve volbách volí třetina obvodů v rámci ČR.
-
-[Více o senátních obvodech](https://google.com)
-      `
-    : `
-K dispozici jsou kalkulačky pro **35 největších měst** České republiky.
-    `;
+const text = electionDescription;
 
 const options = electionStore.districts.map((district) => {
   return {

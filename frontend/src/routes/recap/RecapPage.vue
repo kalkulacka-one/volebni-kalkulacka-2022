@@ -155,8 +155,8 @@ const isCardHidden = (index: number) => {
       <BottomBarWrapper>
         <StackComponent class="main" spacing="small">
           <BodyText size="small">
-            Zde si můžete projít svoje odpovědi a důležitosti a případně je
-            ještě upravit.
+            Zde si můžete projít a&nbsp;případně upravit svoje odpovědi
+            a&nbsp;jejich váhu.
           </BodyText>
           <StackComponent class="list" spacing="small">
             <RecapQuestionCard

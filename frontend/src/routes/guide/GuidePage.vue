@@ -70,9 +70,9 @@ const title =
 const text =
   route.params.election === 'senatni-2022'
     ? `
-Vítejte ve Volební kalkulačce pro volby do zastupitelstva obce.
+Vítejte ve Volební kalkulačce pro volby do zastupitelstev měst.
 
-Čeká vás 30-40 otázek. Na stejné otázky odpověděli kandidující strany ve vašem městě. Zodpovězení otázek zabere cca 10 minut. Na konci se dozvíte, jak se s názory stran shodujete.
+Čeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující strany. Zodpovězení otázek zabere cca 10 minut. Na konci se dozvíte, jak se strany shodují s vašimi názory.
       `
     : `
 Vítejte ve Volební kalkulačce pro komunální volby 2022.
@@ -224,7 +224,7 @@ const handlePreviousClick = () => {
           </template>
           <StackComponent v-if="currentStep === 1" spacing="small">
             <HeadingComponent kind="title" size="medium">
-              {{ title }}
+              {{ electionName }}
               <template #secondary>{{ districtName }}</template>
             </HeadingComponent>
             <BodyText size="medium">
@@ -255,10 +255,17 @@ const handlePreviousClick = () => {
                 </StackComponent>
               </StackComponent>
             </CardComponent>
-            <BodyText size="medium">
-              Když se s kandidátem nebo stranou v odpovědi shodnete, získá ve
-              výpočtu shody 1 bod.
-            </BodyText>
+            <StackComponent spacing="extra-small">
+              <BodyText size="medium">
+                Když se s&nbsp;kandidátem nebo stranou v&nbsp;odpovědi shodnete,
+                získá ve výpočtu shody 1&nbsp;bod. V&nbsp;opačném případě
+                1&nbsp;bod ztratí.
+              </BodyText>
+              <BodyText size="medium">
+                Pokud kandidát nebo strana odpověděli neutrálně, otázka se
+                započítá se ziskem 0&nbsp;bodů.
+              </BodyText>
+            </StackComponent>
           </StackComponent>
           <StackComponent v-if="currentStep === 3" spacing="small">
             <BodyText size="medium">
@@ -286,8 +293,8 @@ const handlePreviousClick = () => {
           </StackComponent>
           <StackComponent v-if="currentStep === 4" spacing="small">
             <BodyText size="medium">
-              Když nemáte názor, nejste si jisti nebo z jiného důvodu nechcete
-              odpovídat, zvolte:
+              Když nemáte názor, nejste si jisti nebo z&nbsp;jiného důvodu
+              nechcete odpovídat, zvolte:
             </BodyText>
             <CardComponent
               corner="bottom-right"
@@ -300,8 +307,7 @@ const handlePreviousClick = () => {
               </StackComponent>
             </CardComponent>
             <BodyText size="medium">
-              Pokud kandidát nebo strana odpověděli neutrálně, otázka se
-              započítá se ziskem 0 bodů.
+              Tato otázka se do výpočtu vaší shody nezapočítá.
             </BodyText>
           </StackComponent>
           <template #after>
