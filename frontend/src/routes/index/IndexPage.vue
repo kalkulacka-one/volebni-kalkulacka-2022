@@ -27,7 +27,7 @@ const route = useRoute();
         <CardComponent class="card" shadow corner="top-left" padding="large">
           <StackComponent spacing="small">
             <HeadingComponent size="medium">
-              Volební kalkulačka 2022
+              Volební kalkulačka 2022 - Test
               <template #secondary>již brzy</template>
             </HeadingComponent>
             <BodyText size="large">
