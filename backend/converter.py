@@ -49,6 +49,7 @@ class QuestionDefinition:
     gist: str
     detail: str
     tags: list[str]
+    order: Optional[float] = None
 
 
 class CandidateType(Enum):
@@ -187,6 +188,45 @@ def gen_answer_id(election: Election, district: District, code: str, num: int) -
     return gen_id(election, district, f"a-{code}-{num}")
 
 
+def reorder_question_definitions(
+    questions: list[QuestionDefinition],
+) -> list[QuestionDefinition]:
+    orders = {i: q.order for i, q in enumerate(questions)}
+    if len(set(orders.values())) == 1:
+        # if there is single value => don't do any ordering
+        return questions
+
+    return [
+        questions[i]
+        for i, order in sorted(orders.items(), key=lambda x: (x[1] is None, x[1]))
+        if order is not None
+    ]
+
+
+def extract_order(row: dict[str, Any], key: str) -> Optional[float]:
+    """
+    Extract order from the row
+    >>> extract_order({}, "order") is None
+    True
+    >>> extract_order({'order': '0'}, "order") is None
+    True
+    >>> extract_order({'order': ' '}, "order") is None
+    True
+    >>> extract_order({'order': '0.2'}, "order")
+    0.2
+    """
+    order_r = row.get(key)
+    if not order_r:
+        return None
+    order_s = str(order_r).strip()
+    if not order_s:
+        return None
+    order_f = float(order_s)
+    if not order_f:
+        return None
+    return order_f
+
+
 def extract_komunalni_districts(
     sheet: gspread.worksheet.Worksheet,
     election: Election,
@@ -247,10 +287,11 @@ def extract_komunalni_question_definitions(
             tags=[s.strip() for s in str(row["tagy"]).split(",")]
             if str(row["tagy"]).strip()
             else [],
+            order=extract_order(row, "order"),
         )
         definitions.append(definition)
     logger.info("Extracted question definitions: %d", len(definitions))
-    return definitions
+    return reorder_question_definitions(definitions)
 
 
 def extract_komunalni_candidates(
@@ -473,11 +514,11 @@ def extract_senatni_question_definitions(
             gist=str(row["description"]),
             detail=str(row["more info"]),
             tags=[str(row["téma"])],
-            # TODO: there is order column and others
+            order=extract_order(row, "order"),
         )
         definitions.append(definition)
     logger.info("Extracted question definitions: %d", len(definitions))
-    return definitions
+    return reorder_question_definitions(definitions)
 
 
 def extract_election_senat(gc: gspread.Client, row: SheetRow) -> Election:
