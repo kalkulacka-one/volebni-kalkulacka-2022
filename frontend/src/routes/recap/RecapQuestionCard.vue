@@ -82,7 +82,12 @@ const toggleClick = () => {
       </ResponsiveWrapper>
     </div>
     <div class="details">
-      <StackComponent centered horizontal spacing="small">
+      <StackComponent
+        centered
+        horizontal
+        spacing="extra-small"
+        spacing-responsive
+      >
         <BodyText size="small">
           {{ currentQuestion }}/{{ questionCount }}
         </BodyText>
