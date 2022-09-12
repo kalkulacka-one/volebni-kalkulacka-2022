@@ -12,7 +12,7 @@ import StackComponent from '../../components/design-system/layout/StackComponent
 export interface ResultCategoryProps {
   result: ReturnType<typeof calculateRelativeAgreement>;
   category: TTopics;
-  title: string;
+  title?: string;
   maxVisibleCandidates: number;
 }
 const props = defineProps<ResultCategoryProps>();
@@ -31,7 +31,7 @@ console.debug(visibleCandidates.value);
 </script>
 
 <template>
-  <TitleText tag="h4" size="medium">{{ title }}</TitleText>
+  <TitleText v-if="title" tag="h4" size="medium">{{ title }}</TitleText>
   <StackComponent style="display: grid" spacing="medium">
     <ResultCandidateCard
       v-for="i in visibleCandidates"

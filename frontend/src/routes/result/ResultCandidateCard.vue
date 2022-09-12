@@ -128,7 +128,7 @@ const toggleClick = () => {
     >
       {{ result }}&nbsp;%
     </TitleText>
-    <div class="toggle">
+    <div v-if="candidate?.motto" class="toggle">
       <IconButton @click="toggleClick">
         <IconComponent
           :icon="isExpanded ? mdiChevronUp : mdiChevronDown"
@@ -137,11 +137,11 @@ const toggleClick = () => {
         />
       </IconButton>
     </div>
-    <div v-show="isExpanded" class="expansion">
+    <div v-if="candidate?.motto" v-show="isExpanded" class="expansion">
       <BodyText size="small"
         ><strong>Co o sobě kanidát/ka říká</strong></BodyText
       >
-      <BodyText size="small">{{ candidate?.description }}</BodyText>
+      <BodyText size="small">{{ candidate?.motto }}</BodyText>
       <DividerComponent class="divider"></DividerComponent>
       <ResultCardContacts
         v-if="candidate?.contact"

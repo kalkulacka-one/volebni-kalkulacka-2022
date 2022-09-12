@@ -171,23 +171,22 @@ const resultsMedicine = calculateRelativeAgreement(
       <BottomBarWrapper>
         <StackComponent class="main" spacing="medium">
           <ResultCategory
-            title="Celková shoda"
             :result="resultsGeneral"
             category="general"
-            :max-visible-candidates="2"
+            :max-visible-candidates="5"
           />
           <ResultCategory
             ref="thematic-categories"
             title="Shoda v ekologii"
             :result="resultsEcology"
             category="environment"
-            :max-visible-candidates="1"
+            :max-visible-candidates="2"
           />
           <ResultCategory
             title="Shoda ve zdravotnictví"
             :result="resultsMedicine"
             category="health"
-            :max-visible-candidates="10"
+            :max-visible-candidates="2"
           />
         </StackComponent>
       </BottomBarWrapper>
