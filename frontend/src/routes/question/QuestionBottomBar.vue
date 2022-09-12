@@ -69,73 +69,58 @@ console.log(props.answer);
         />
       </IconButton>
     </ResponsiveWrapper>
-    <StackComponent horizontal spacing="small">
-      <ResponsiveWrapper medium large extra-large huge>
-        <ButtonComponent
-          class="in-favour"
-          kind="answer"
-          color="primary"
-          :selected="answer.answer === UserAnswerEnum.yes"
-          @click="yesClick"
-        >
-          <template #icon>
-            <IconComponent :icon="vkiLogoInFavour" />
-          </template>
-          Jsem pro
-        </ButtonComponent>
-      </ResponsiveWrapper>
-      <ResponsiveWrapper extra-small small>
-        <ButtonComponent
-          class="in-favour"
-          kind="answer"
-          color="primary"
-          :selected="answer.answer === UserAnswerEnum.yes"
-          @click="yesClick"
-        >
-          <template #icon>
-            <IconComponent :icon="vkiLogoInFavour" title="Jsem pro" />
-          </template>
-        </ButtonComponent>
-      </ResponsiveWrapper>
-      <ResponsiveWrapper medium large extra-large huge>
-        <ButtonComponent
-          class="against"
-          kind="answer"
-          color="secondary"
-          :selected="answer.answer === UserAnswerEnum.no"
-          @click="noClick"
-        >
-          <template #icon>
-            <IconComponent :icon="vkiLogoAgainst" />
-          </template>
-          Jsem proti
-        </ButtonComponent>
-      </ResponsiveWrapper>
-      <ResponsiveWrapper extra-small small>
-        <ButtonComponent
-          class="against"
-          kind="answer"
-          color="secondary"
-          :selected="answer.answer === UserAnswerEnum.no"
-          @click="noClick"
-        >
-          <template #icon>
-            <IconComponent :icon="vkiLogoAgainst" title="Jsem proti" />
-          </template>
-        </ButtonComponent>
-      </ResponsiveWrapper>
-    </StackComponent>
-    <ResponsiveWrapper medium large extra-large huge>
+    <ResponsiveWrapper extra-small>
       <ButtonComponent
-        class="skip"
+        class="in-favour"
         kind="answer"
-        :selected="answer.answer === UserAnswerEnum.skip"
-        @click="skipClick"
+        color="primary"
+        :selected="answer.answer === UserAnswerEnum.yes"
+        @click="yesClick"
       >
         <template #icon>
-          <IconComponent :icon="vkiLogoNeutral" />
+          <IconComponent :icon="vkiLogoInFavour" title="Jsem pro" />
         </template>
-        Přeskočit
+      </ButtonComponent>
+    </ResponsiveWrapper>
+    <ResponsiveWrapper small medium large extra-large huge>
+      <ButtonComponent
+        class="in-favour"
+        kind="answer"
+        color="primary"
+        :selected="answer.answer === UserAnswerEnum.yes"
+        @click="yesClick"
+      >
+        <template #icon>
+          <IconComponent :icon="vkiLogoInFavour" />
+        </template>
+        Jsem pro
+      </ButtonComponent>
+    </ResponsiveWrapper>
+    <ResponsiveWrapper extra-small>
+      <ButtonComponent
+        class="against"
+        kind="answer"
+        color="secondary"
+        :selected="answer.answer === UserAnswerEnum.no"
+        @click="noClick"
+      >
+        <template #icon>
+          <IconComponent :icon="vkiLogoAgainst" title="Jsem proti" />
+        </template>
+      </ButtonComponent>
+    </ResponsiveWrapper>
+    <ResponsiveWrapper small medium large extra-large huge>
+      <ButtonComponent
+        class="against"
+        kind="answer"
+        color="secondary"
+        :selected="answer.answer === UserAnswerEnum.no"
+        @click="noClick"
+      >
+        <template #icon>
+          <IconComponent :icon="vkiLogoAgainst" />
+        </template>
+        Jsem proti
       </ButtonComponent>
     </ResponsiveWrapper>
     <ResponsiveWrapper extra-small small>
@@ -148,6 +133,19 @@ console.log(props.answer);
         <template #icon>
           <IconComponent :icon="vkiLogoNeutral" title="Přeskočit" />
         </template>
+      </ButtonComponent>
+    </ResponsiveWrapper>
+    <ResponsiveWrapper medium large extra-large huge>
+      <ButtonComponent
+        class="skip"
+        kind="answer"
+        :selected="answer.answer === UserAnswerEnum.skip"
+        @click="skipClick"
+      >
+        <template #icon>
+          <IconComponent :icon="vkiLogoNeutral" />
+        </template>
+        Přeskočit
       </ButtonComponent>
     </ResponsiveWrapper>
   </BottomBar>
@@ -164,10 +162,19 @@ console.log(props.answer);
   }
 }
 
+.in-favour {
+  justify-self: end;
+}
+
+.against {
+  justify-self: start;
+}
+
 .bottom-bar {
   display: grid;
-  grid-template-columns: auto auto auto;
-  gap: var(--spacing-large);
-  justify-content: center;
+  grid-template-columns: auto max-content max-content auto;
+  gap: var(--responsive-spacing-large);
+  justify-items: center;
+  align-items: center;
 }
 </style>
