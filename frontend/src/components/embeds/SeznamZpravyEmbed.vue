@@ -4,7 +4,6 @@ import ThemeProvider from '@/components/ThemeProvider.vue';
 
 <template>
   <ThemeProvider theme="seznam-zpravy">
-    <div>Najdu tam, co neznám.</div>
     <slot />
   </ThemeProvider>
 </template>

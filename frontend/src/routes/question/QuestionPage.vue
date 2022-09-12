@@ -21,6 +21,7 @@ import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
 import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
 import StepWrapper from '@/components/design-system/layout/StepWrapper.vue';
 
+import EmbedWrapper from '@/components/responsivity/EmbedWrapper.vue';
 import QuestionBottomBar from './QuestionBottomBar.vue';
 import QuestionCard from './QuestionCard.vue';
 import BackgroundComponent from '../../components/design-system/style/BackgroundComponent.vue';
@@ -89,12 +90,14 @@ const goToQuestion = (number: number) => {
   router.push({
     name: appRoutes.question.name,
     params: { ...route.params, nr: number },
+    query: { ...route.query },
   });
 };
 
 const goToRecap = () => {
   router.push({
     name: appRoutes.recap.name,
+    query: { ...route.query },
   });
 };
 
@@ -102,6 +105,7 @@ const goToGuide = (params: RouteParams) => {
   router.push({
     name: appRoutes.guide.name,
     params,
+    query: { ...route.query },
   });
 };
 
@@ -134,6 +138,7 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
   const newRoute = {
     name: appRoutes.question.name,
     params: { ...route.params, nr: questionNr.value + 2 },
+    query: { ...route.query },
   };
   if (
     electionStore.answerProgress === questionNr.value &&
@@ -154,30 +159,42 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
       <NavigationBar transparent>
         <template #title>{{ breadcrumbs }}</template>
         <template #right>
-          <ResponsiveWrapper medium large extra-large huge>
-            <ButtonComponent
-              kind="link"
-              @click="router.push({ name: appRoutes.index.name })"
-            >
-              Zpět na hlavní stránku
-              <template #iconAfter>
-                <IconComponent :icon="mdiCloseCircleOutline" />
-              </template>
-            </ButtonComponent>
-          </ResponsiveWrapper>
-          <ResponsiveWrapper extra-small small>
-            <ButtonComponent
-              kind="link"
-              @click="router.push({ name: appRoutes.index.name })"
-            >
-              <template #icon>
-                <IconComponent
-                  :icon="mdiCloseCircleOutline"
-                  title="Zpět na hlavní stránku"
-                />
-              </template>
-            </ButtonComponent>
-          </ResponsiveWrapper>
+          <EmbedWrapper>
+            <ResponsiveWrapper medium large extra-large huge>
+              <ButtonComponent
+                kind="link"
+                @click="
+                  router.push({
+                    name: appRoutes.index.name,
+                    query: { ...route.query },
+                  })
+                "
+              >
+                Zpět na hlavní stránku
+                <template #iconAfter>
+                  <IconComponent :icon="mdiCloseCircleOutline" />
+                </template>
+              </ButtonComponent>
+            </ResponsiveWrapper>
+            <ResponsiveWrapper extra-small small>
+              <ButtonComponent
+                kind="link"
+                @click="
+                  router.push({
+                    name: appRoutes.index.name,
+                    query: { ...route.query },
+                  })
+                "
+              >
+                <template #icon>
+                  <IconComponent
+                    :icon="mdiCloseCircleOutline"
+                    title="Zpět na hlavní stránku"
+                  />
+                </template>
+              </ButtonComponent>
+            </ResponsiveWrapper>
+          </EmbedWrapper>
         </template>
       </NavigationBar>
     </template>

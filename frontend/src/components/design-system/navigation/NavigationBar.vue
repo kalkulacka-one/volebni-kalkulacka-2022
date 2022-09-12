@@ -6,6 +6,7 @@ import StackComponent from '@/components/design-system/layout/StackComponent.vue
 import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 
+import EmbedWrapper from '@/components/responsivity/EmbedWrapper.vue';
 import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
 
 export interface Props {
@@ -39,12 +40,25 @@ const background = computed(() =>
     :padding-responsive="paddingResponsive"
   >
     <div class="logo">
-      <ResponsiveWrapper extra-small small>
-        <LogoComponent :text="false" />
-      </ResponsiveWrapper>
-      <ResponsiveWrapper medium large extra-large huge>
-        <LogoComponent />
-      </ResponsiveWrapper>
+      <EmbedWrapper>
+        <ResponsiveWrapper extra-small small>
+          <LogoComponent :text="false" />
+        </ResponsiveWrapper>
+        <ResponsiveWrapper medium large extra-large huge>
+          <LogoComponent />
+        </ResponsiveWrapper>
+      </EmbedWrapper>
+      <EmbedWrapper embed>
+        <ResponsiveWrapper extra-small small>
+          <LogoComponent
+            :text="false"
+            monochromatic="rgb(var(--color-neutral-fg))"
+          />
+        </ResponsiveWrapper>
+        <ResponsiveWrapper medium large extra-large huge>
+          <LogoComponent monochromatic="rgb(var(--color-neutral-fg))" />
+        </ResponsiveWrapper>
+      </EmbedWrapper>
     </div>
     <ResponsiveWrapper extra-small>
       <div class="title">

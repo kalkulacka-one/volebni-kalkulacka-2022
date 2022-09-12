@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { appRoutes } from '@/main';
-import { useRouter } from 'vue-router';
+import { useRouter, useRoute } from 'vue-router';
 
 export interface Props {
   case: 'api-error-election' | 'api-error-district';
@@ -8,9 +8,11 @@ export interface Props {
 
 const props = defineProps<Props>();
 const router = useRouter();
+const route = useRoute();
 const handleHomeClicked = () => {
   router.push({
     name: appRoutes.index.name,
+    query: { ...route.query },
   });
 };
 let header = 'Unknown Error';

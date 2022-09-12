@@ -20,6 +20,7 @@ import SecondaryNavigationBar from '@/components/design-system/navigation/Second
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import TitleText from '@/components/design-system/typography/TitleText.vue';
 
+import EmbedWrapper from '@/components/responsivity/EmbedWrapper.vue';
 import MarkdownIt from '@/components/utilities/MarkdownIt.vue';
 import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
@@ -58,6 +59,7 @@ const onSubmit = () => {
     router.push({
       name: appRoutes.guide.name,
       params: { ...route.params, district: selected.value, nr: 1 },
+      query: { ...route.query },
     });
   }
 };
@@ -70,30 +72,42 @@ const onSubmit = () => {
         <NavigationBar transparent>
           <template #title>{{ breadcrumbs }}</template>
           <template #right>
-            <ResponsiveWrapper medium large extra-large huge>
-              <ButtonComponent
-                kind="link"
-                @click="router.push({ name: appRoutes.index.name })"
-              >
-                Zpět na hlavní stránku
-                <template #iconAfter>
-                  <IconComponent :icon="mdiCloseCircleOutline" />
-                </template>
-              </ButtonComponent>
-            </ResponsiveWrapper>
-            <ResponsiveWrapper extra-small small>
-              <ButtonComponent
-                kind="link"
-                @click="router.push({ name: appRoutes.index.name })"
-              >
-                <template #icon>
-                  <IconComponent
-                    :icon="mdiCloseCircleOutline"
-                    title="Zpět na hlavní stránku"
-                  />
-                </template>
-              </ButtonComponent>
-            </ResponsiveWrapper>
+            <EmbedWrapper>
+              <ResponsiveWrapper medium large extra-large huge>
+                <ButtonComponent
+                  kind="link"
+                  @click="
+                    router.push({
+                      name: appRoutes.index.name,
+                      query: { ...route.query },
+                    })
+                  "
+                >
+                  Zpět na hlavní stránku
+                  <template #iconAfter>
+                    <IconComponent :icon="mdiCloseCircleOutline" />
+                  </template>
+                </ButtonComponent>
+              </ResponsiveWrapper>
+              <ResponsiveWrapper extra-small small>
+                <ButtonComponent
+                  kind="link"
+                  @click="
+                    router.push({
+                      name: appRoutes.index.name,
+                      query: { ...route.query },
+                    })
+                  "
+                >
+                  <template #icon>
+                    <IconComponent
+                      :icon="mdiCloseCircleOutline"
+                      title="Zpět na hlavní stránku"
+                    />
+                  </template>
+                </ButtonComponent>
+              </ResponsiveWrapper>
+            </EmbedWrapper>
           </template>
         </NavigationBar>
       </template>

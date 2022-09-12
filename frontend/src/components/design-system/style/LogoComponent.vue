@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router';
+import { useRouter, useRoute } from 'vue-router';
 import { appRoutes } from '@/main';
 
 import { computed } from 'vue';
@@ -17,6 +17,7 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 const router = useRouter();
+const route = useRoute();
 
 const classes = computed(() => ({
   [`logo--${props.size}`]: props.size,
@@ -30,7 +31,9 @@ const logoMonochromatic = computed(() => ({
 <template>
   <div
     :class="['logo-wrapper']"
-    @click="router.push({ name: appRoutes.index.name })"
+    @click="
+      router.push({ name: appRoutes.index.name, query: { ...route.query } })
+    "
   >
     <div :class="['logo', classes, logoMonochromatic]">
       <svg viewBox="0 0 300 65" role="img" xmlns="http://www.w3.org/2000/svg">

@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, inject } from 'vue';
+import { EmbedKey } from '@/components/EmbedKey';
 
 export interface Props {
   isImage?: boolean;
@@ -11,24 +12,31 @@ const props = withDefaults(defineProps<Props>(), {
 const classes = computed(() => ({
   'without-background': !props.isImage,
 }));
+
+const currentEmbed = inject(EmbedKey);
 </script>
 
 <template>
-  <div :class="['background', classes]">
-    <template v-if="props.isImage">
-      <div class="red-spot"></div>
-      <div class="blue-spot"></div>
-      <div class="blue-rounded-spot"></div>
-      <div class="red-rounded-spot"></div>
-      <div class="white-rounded-spot"></div>
-      <div class="gray-rounded-spot"></div>
-    </template>
-    <template v-else>
-      <div class="red-rounded-spot-single"></div>
-      <div class="blue-rounded-spot-single"></div>
-    </template>
+  <template v-if="currentEmbed">
     <slot />
-  </div>
+  </template>
+  <template v-else>
+    <div :class="['background', classes]">
+      <template v-if="props.isImage">
+        <div class="red-spot"></div>
+        <div class="blue-spot"></div>
+        <div class="blue-rounded-spot"></div>
+        <div class="red-rounded-spot"></div>
+        <div class="white-rounded-spot"></div>
+        <div class="gray-rounded-spot"></div>
+      </template>
+      <template v-else>
+        <div class="red-rounded-spot-single"></div>
+        <div class="blue-rounded-spot-single"></div>
+      </template>
+      <slot />
+    </div>
+  </template>
 </template>
 
 <style scoped lang="scss">
