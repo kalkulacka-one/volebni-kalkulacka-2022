@@ -114,6 +114,7 @@ const toggleClick = () => {
       class="answer"
       horizontal
       :spacing="(isExpanded && 'small') || undefined"
+      spacing-responsive
     >
       <ResponsiveWrapper medium large extra-large huge>
         <ButtonComponent
@@ -217,7 +218,12 @@ const toggleClick = () => {
         />
       </IconButton>
     </div>
-    <StackComponent v-show="isExpanded" class="expansion" spacing="small">
+    <StackComponent
+      v-show="isExpanded"
+      class="expansion"
+      spacing="small"
+      spacing-responsive
+    >
       <BodyText size="medium">{{ question.gist }}</BodyText>
       <CardComponent
         v-if="question.detail"
@@ -238,7 +244,7 @@ const toggleClick = () => {
   grid-template-areas:
     'important details answer toggle'
     'important text answer toggle';
-  column-gap: var(--spacing-medium);
+  column-gap: var(--responsive-spacing-medium);
 
   .important {
     grid-area: important;
@@ -278,11 +284,11 @@ const toggleClick = () => {
     .answer {
       display: grid;
       grid-template-columns: auto auto auto;
-      margin-top: var(--spacing-medium);
+      margin-top: var(--responsive-spacing-medium);
     }
 
     .expansion {
-      margin-top: var(--spacing-medium);
+      margin-top: var(--responsive-spacing-medium);
     }
   }
 
@@ -312,7 +318,7 @@ const toggleClick = () => {
         'details details details details details'
         'text text text text text'
         'expansion expansion expansion expansion expansion';
-      row-gap: var(--spacing-small);
+      row-gap: var(--responsive-spacing-small);
 
       .answer,
       .expansion {
