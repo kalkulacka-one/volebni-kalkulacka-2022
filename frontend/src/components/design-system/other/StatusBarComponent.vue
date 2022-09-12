@@ -65,11 +65,6 @@ const classes = [
     background-color: rgb(var(--color-secondary-bg-strong));
   }
 
-  &-last {
-    height: 0.5rem;
-    min-width: 1.25rem;
-  }
-
   &-wrapper {
     height: 0.25rem;
     background-color: rgb(var(--color-neutral-bg-disabled));
