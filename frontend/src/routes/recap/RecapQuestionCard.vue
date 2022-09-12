@@ -250,6 +250,8 @@ const toggleClick = () => {
   .important {
     grid-area: important;
     align-self: center;
+    margin-right: calc(-0.5 * var(--responsive-spacing-medium));
+    margin-left: calc(-0.5 * var(--responsive-spacing-medium));
   }
 
   .details {
@@ -268,6 +270,8 @@ const toggleClick = () => {
   .toggle {
     grid-area: toggle;
     align-self: center;
+    margin-right: calc(-0.5 * var(--responsive-spacing-medium));
+    margin-left: calc(-0.5 * var(--responsive-spacing-medium));
   }
 
   .expansion {
