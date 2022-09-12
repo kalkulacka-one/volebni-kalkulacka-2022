@@ -249,7 +249,7 @@ const handlePreviousClick = () => {
         </ResponsiveWrapper>
       </template>
       <BottomBarWrapper>
-        <StepWrapper>
+        <StepWrapper centered>
           <template #before>
             <ResponsiveWrapper medium large extra-large huge>
               <IconButton @click="handlePreviousClick">
