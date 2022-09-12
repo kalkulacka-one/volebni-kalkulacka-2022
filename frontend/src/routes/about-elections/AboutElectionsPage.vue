@@ -9,13 +9,30 @@ import HeadlineText from '@/components/design-system/typography/HeadlineText.vue
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 import TitleText from '@/components/design-system/typography/TitleText.vue';
+import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
+import ContainerComponent from '@/components/design-system/containers/ContainerComponent.vue';
 </script>
 
 <template>
   <BackgroundComponent>
     <StickyHeaderLayout>
       <template #header>
-        <NavigationBar transparent />
+        <ContainerComponent
+          class="navigation-bar"
+          padding="medium"
+          responsive-padding
+          background="transparent"
+        >
+          <div class="grid">
+            <router-link to="/"
+              ><LogoComponent responsive />
+              <div class="title">
+                <BodyText size="small"> </BodyText></div
+            ></router-link>
+            <StackComponent class="right" horizontal spacing="small">
+            </StackComponent>
+          </div>
+        </ContainerComponent>
       </template>
     </StickyHeaderLayout>
     <StaticContentLayout>

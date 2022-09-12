@@ -66,17 +66,7 @@ export const appRoutes = {
     path: '/',
     component: IndexPageVue,
     meta: {
-      title: 'Index Page - Test',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'The index page.',
-        },
-        {
-          property: 'og:description',
-          content: 'The index page.',
-        },
-      ],
+      title: 'Volební Kalkulačka',
     },
   },
   aboutUs: {
@@ -109,17 +99,7 @@ export const appRoutes = {
     props: true,
     component: ErrorPageVue,
     meta: {
-      title: 'Error - Volebni kalkulacka',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Error',
-        },
-        {
-          property: 'og:description',
-          content: 'Error',
-        },
-      ],
+      title: 'Error - Volební Kalkulačka',
     },
   },
   districtSelection: {
@@ -128,17 +108,7 @@ export const appRoutes = {
     alias: '/volby/:election',
     component: DistrictSelectionPageVue,
     meta: {
-      title: 'Volebni kalkulacka',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Pospis Volebni kalkulacka',
-        },
-        {
-          property: 'og:description',
-          content: 'Pospis Volebni kalkulacka',
-        },
-      ],
+      title: 'Volební Kalkulačka',
     },
   },
   guide: {
@@ -147,17 +117,7 @@ export const appRoutes = {
     alias: '/volby/:election/:district/navod',
     component: GuidePageVue,
     meta: {
-      title: 'Návod - Volebni kalkulacka',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Popis - Návod - Volebni kalkulacka.',
-        },
-        {
-          property: 'og:description',
-          content: 'Popis - Návod - Volebni kalkulacka.',
-        },
-      ],
+      title: 'Návod - Volební Kalkulačka',
     },
   },
   question: {
@@ -165,18 +125,8 @@ export const appRoutes = {
     path: '/volby/:election/:district/otazka/:nr',
     component: QuestionPageVue,
     meta: {
-      title: 'Otazka $$ - Volebni kalkulacka',
+      title: 'Otázka $$ - Volební Kalkulačka',
       hasNumber: true,
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Popis - Otazka - Volebni kalkulacka.',
-        },
-        {
-          property: 'og:description',
-          content: 'Popis - Otazka - Volebni kalkulacka.',
-        },
-      ],
     },
     beforeEnter: questionGuard,
   },
@@ -185,17 +135,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/rekapitulace',
     component: RecapPageVue,
     meta: {
-      title: 'Rekapitulace - Volebni kalkulacka',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Popis - Rekapitulace - Volebni kalkulacka.',
-        },
-        {
-          property: 'og:description',
-          content: 'Popis - Rekapitulace - Volebni kalkulacka.',
-        },
-      ],
+      title: 'Rekapitulace - Volební Kalkulačka',
     },
   },
   result: {
@@ -203,37 +143,15 @@ export const appRoutes = {
     path: '/volby/:election/:district/vysledek',
     component: ResultPageVue,
     meta: {
-      title: 'Vysledky - Volebni kalkulacka',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Popis - Vysledky - Volebni kalkulacka.',
-        },
-        {
-          property: 'og:description',
-          content: 'Popis - Vysledky - Volebni kalkulacka.',
-        },
-      ],
+      title: 'Výsledky - Volební Kalkulačka',
     },
-    //TODO delete line below before production
-    beforeEnter: resultsProcessor,
   },
   comparison: {
     name: 'comparison',
     path: '/volby/:election/:district/srovnani',
     component: ComparisonPageVue,
     meta: {
-      title: 'Porovnani - Volebni kalkulacka',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Popis - Porovnani - Volebni kalkulacka.',
-        },
-        {
-          property: 'og:description',
-          content: 'Popis - Porovnani - Volebni kalkulacka.',
-        },
-      ],
+      title: 'Porovnaní - Volební Kalkulačka',
     },
   },
   share: {
@@ -241,17 +159,7 @@ export const appRoutes = {
     path: '/share/:uuid',
     component: SharePageVue,
     meta: {
-      title: 'Moje vysledky - Volebni kalkulacka',
-      metaTags: [
-        {
-          name: 'description',
-          content: 'Popis - Moje vysledky - Volebni kalkulacka.',
-        },
-        {
-          property: 'og:description',
-          content: 'Popis - Moje vysledky - Volebni kalkulacka.',
-        },
-      ],
+      title: 'Moje výsledky - Volební Kalkulačka',
     },
   },
   fallback: { path: '/:catchAll(.*)', redirect: '/' },
