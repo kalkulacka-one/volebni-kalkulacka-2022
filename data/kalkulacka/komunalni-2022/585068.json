@@ -3,11 +3,17 @@
   "name": "Zlín",
   "description": "Zlín",
   "district_code": "585068",
+  "show_district_code": false,
   "election": {
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici je 35 kalkulaček pro největší města.",
+    "description": "K dispozici jsou kalkulačky pro **15** měst České republiky.",
+    "instructions": {
+      "header": "Zvolte své město",
+      "step_1_1": "K dispozici jsou kalkulačky pro **15** měst České republiky.",
+      "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
+    },
     "from": "2022-09-23T14:00:00",
     "to": "2022-09-24T14:00:00"
   },
@@ -402,7 +408,7 @@
       "id": "komunalni-2022-585068-c-759713",
       "name": "Občanská demokratická strana",
       "type": "party",
-      "description": "Občanská demokratická strana - DESCRIPTION",
+      "description": "Občanská demokratická strana",
       "img_url": "ods",
       "contacts": {
         "web": [],
@@ -414,14 +420,15 @@
         {
           "id": "komunalni-2022-585068-c-759713-p",
           "name": "Občanská demokratická strana",
-          "description": "Občanská demokratická strana - DESCRIPTION",
+          "short_name": "Občanská demokratická strana",
+          "abbreviation": "ODS",
+          "description": "Občanská demokratická strana",
           "contacts": {
             "web": [],
             "facebook": "https://facebook.com/golan.tomas",
             "twitter": "https://twitter.com/golan_tomas",
             "instagram": "https://www.instagram.com/tomasgolansenator/"
-          },
-          "abbreviation": "ODS"
+          }
         }
       ],
       "motto": "Budoucnost pro Zlín"
@@ -430,7 +437,7 @@
       "id": "komunalni-2022-585068-c-880254",
       "name": "ROZHÝBEJME ZLÍN",
       "type": "party",
-      "description": "ROZHÝBEJME ZLÍN - DESCRIPTION",
+      "description": "ROZHÝBEJME ZLÍN",
       "img_url": "trikolora-nk",
       "contacts": {
         "web": [
@@ -450,7 +457,9 @@
         {
           "id": "komunalni-2022-585068-c-880254-p",
           "name": "ROZHÝBEJME ZLÍN",
-          "description": "ROZHÝBEJME ZLÍN - DESCRIPTION",
+          "short_name": "ROZHÝBEJME ZLÍN",
+          "abbreviation": "Trikolora+NK",
+          "description": "ROZHÝBEJME ZLÍN",
           "contacts": {
             "web": [
               {
@@ -464,8 +473,7 @@
             ],
             "facebook": "https://www.facebook.com/rozhybejmezlin.cz/",
             "instagram": "https://instagram.com/rozhybejme.zlin?igshid=YmMyMTA2M2Y="
-          },
-          "abbreviation": "Trikolora+NK"
+          }
         }
       ]
     },
@@ -473,7 +481,7 @@
       "id": "komunalni-2022-585068-c-121027",
       "name": "Zlín sobě",
       "type": "party",
-      "description": "Zlín sobě - DESCRIPTION",
+      "description": "Zlín sobě",
       "img_url": "čssd-nk",
       "contacts": {
         "web": []
@@ -482,11 +490,12 @@
         {
           "id": "komunalni-2022-585068-c-121027-p",
           "name": "Zlín sobě",
-          "description": "Zlín sobě - DESCRIPTION",
+          "short_name": "Zlín sobě",
+          "abbreviation": "ČSSD+NK",
+          "description": "Zlín sobě",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "ČSSD+NK"
+          }
         }
       ],
       "motto": "Když vláda selhává, Zlín sobě pomáhá!!!"
@@ -495,7 +504,7 @@
       "id": "komunalni-2022-585068-c-602014",
       "name": "Česká pirátská strana",
       "type": "party",
-      "description": "Česká pirátská strana - DESCRIPTION",
+      "description": "Česká pirátská strana",
       "img_url": "piráti",
       "contacts": {
         "web": []
@@ -504,11 +513,12 @@
         {
           "id": "komunalni-2022-585068-c-602014-p",
           "name": "Česká pirátská strana",
-          "description": "Česká pirátská strana - DESCRIPTION",
+          "short_name": "Česká pirátská strana",
+          "abbreviation": "Piráti",
+          "description": "Česká pirátská strana",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "Piráti"
+          }
         }
       ],
       "motto": "Jediná liberální strana v našem městě, tedy jediná možná cesta do budoucnosti."
@@ -517,7 +527,7 @@
       "id": "komunalni-2022-585068-c-171901",
       "name": "Zlín 21",
       "type": "party",
-      "description": "Zlín 21 - DESCRIPTION",
+      "description": "Zlín 21",
       "img_url": "z21",
       "contacts": {
         "web": [
@@ -534,7 +544,9 @@
         {
           "id": "komunalni-2022-585068-c-171901-p",
           "name": "Zlín 21",
-          "description": "Zlín 21 - DESCRIPTION",
+          "short_name": "Zlín 21",
+          "abbreviation": "Z21",
+          "description": "Zlín 21",
           "contacts": {
             "web": [
               {
@@ -545,8 +557,7 @@
             "facebook": "https://www.facebook.com/zlin21/",
             "twitter": "https://twitter.com/21Zlin",
             "instagram": "https://www.instagram.com/hnuti_zlin21"
-          },
-          "abbreviation": "Z21"
+          }
         }
       ],
       "motto": "Dobrá volba pro občany "
@@ -555,7 +566,7 @@
       "id": "komunalni-2022-585068-c-919562",
       "name": "STAROSTOVÉ A NEZÁVISLÍ",
       "type": "party",
-      "description": "STAROSTOVÉ A NEZÁVISLÍ - DESCRIPTION",
+      "description": "STAROSTOVÉ A NEZÁVISLÍ",
       "img_url": "stan",
       "contacts": {
         "web": []
@@ -564,11 +575,12 @@
         {
           "id": "komunalni-2022-585068-c-919562-p",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "description": "STAROSTOVÉ A NEZÁVISLÍ - DESCRIPTION",
+          "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "abbreviation": "STAN",
+          "description": "STAROSTOVÉ A NEZÁVISLÍ",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "STAN"
+          }
         }
       ],
       "motto": "Chceme rodinné, bezpečné a zelené město. To vše na základě zdravé ekonomiky bez nepřiměřeného zadlužování. Neslibujeme nesplnitelné a víme, co chceme!"
@@ -577,7 +589,7 @@
       "id": "komunalni-2022-585068-c-348037",
       "name": "Svoboda a přímá demokracie (SPD)",
       "type": "party",
-      "description": "Svoboda a přímá demokracie (SPD) - DESCRIPTION",
+      "description": "Svoboda a přímá demokracie (SPD)",
       "img_url": "spd",
       "contacts": {
         "web": []
@@ -586,11 +598,12 @@
         {
           "id": "komunalni-2022-585068-c-348037-p",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "description": "Svoboda a přímá demokracie (SPD) - DESCRIPTION",
+          "short_name": "Svoboda a př. demokracie (SPD)",
+          "abbreviation": "SPD",
+          "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "SPD"
+          }
         }
       ]
     },
@@ -598,7 +611,7 @@
       "id": "komunalni-2022-585068-c-456015",
       "name": "ANO 2011",
       "type": "party",
-      "description": "ANO 2011 - DESCRIPTION",
+      "description": "ANO 2011",
       "img_url": "ano",
       "contacts": {
         "web": []
@@ -607,19 +620,21 @@
         {
           "id": "komunalni-2022-585068-c-456015-p",
           "name": "ANO 2011",
-          "description": "ANO 2011 - DESCRIPTION",
+          "short_name": "ANO 2011",
+          "abbreviation": "ANO",
+          "description": "ANO 2011",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "ANO"
+          }
         }
-      ]
+      ],
+      "motto": "Rozvoj města a spokojenost obyvatel je naše priorita."
     },
     {
       "id": "komunalni-2022-585068-c-913309",
       "name": "KDU-ČSL s podporou TOP 09 a nezávislých kandidátů",
       "type": "party",
-      "description": "KDU-ČSL s podporou TOP 09 a nezávislých kandidátů - DESCRIPTION",
+      "description": "KDU-ČSL s podporou TOP 09 a nezávislých kandidátů",
       "img_url": "kdučsl-top09-nk",
       "contacts": {
         "web": []
@@ -628,11 +643,12 @@
         {
           "id": "komunalni-2022-585068-c-913309-p",
           "name": "KDU-ČSL s podporou TOP 09 a nezávislých kandidátů",
-          "description": "KDU-ČSL s podporou TOP 09 a nezávislých kandidátů - DESCRIPTION",
+          "short_name": "KDU-ČSL s podporou TOP 09 a NK",
+          "abbreviation": "KDUČSL+TOP09+NK",
+          "description": "KDU-ČSL s podporou TOP 09 a nezávislých kandidátů",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "KDUČSL+TOP09+NK"
+          }
         }
       ],
       "motto": "KDU-ČSL s podporou TOP 09 a NK"
@@ -2503,6 +2519,333 @@
       "question_id": "komunalni-2022-585068-q-48",
       "answer": "dont_know",
       "comment": "Neznáme poptávku po této službě "
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-1",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-1",
+      "answer": "no",
+      "comment": "Město se musí rozvíjet komplexně a koncepčně, což rozdělování společnosti naprosto popírá."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-2",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-2",
+      "answer": "yes",
+      "comment": "Spoluúčast občanů na správě města alespoň v malé míře je důležitá pro správné vnímání služby a zároveň motivace pro důkladné nakládání s odpadem."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-3",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-3",
+      "answer": "no",
+      "comment": "Úspory musí město hledat zejména ve svém provozu, nikoliv v první řadě snižovat komfort obyvatel."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-4",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-4",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-5",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-5",
+      "answer": "yes",
+      "comment": "Město informuje o této akci ve svém Magazínu Zlín, který chodí všem a také na svých webových stránkách."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-6",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-6",
+      "answer": "yes",
+      "comment": "Zachovat Zlín jako nejbezpečnější krajské město je důležitá silná stránka města."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-7",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-7",
+      "answer": "no",
+      "comment": "Při úplném zákazu se hráči přesunou jen do online her nebo do nelegálních heren, a proto je lepší cílená regulace."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-8",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-8",
+      "answer": "no",
+      "comment": "MHD stojí v současné době město více než je polovina rozpočtu na investice. Chceme MHD dále podporovat, musí být dostupná, ale určitá spoluúčast, jako je v současné době, je nutná."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-9",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-9",
+      "answer": "yes",
+      "comment": "Podpora MHD a její využívání je klíčové."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-10",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-10",
+      "answer": "yes",
+      "comment": "Již v rámci zastupitelstva města probíhá."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-11",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-11",
+      "answer": "no",
+      "comment": "Koalice funguje jako celek bez ohledu na váhu hlasování."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-12",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-12",
+      "answer": "no",
+      "comment": "Pokračovat v současné regulaci, kdy je pyrotechniku možné využívat i při významných akcích."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-13",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-13",
+      "answer": "no",
+      "comment": "Pro tyto účely město spolupracuje se sociálním odborem a službami."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-14",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-14",
+      "answer": "yes",
+      "comment": "Město by mělo hledat úspory komplexně."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-15",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-15",
+      "answer": "yes",
+      "comment": "Při zachování bezpečnosti využít současné SMART technologie rozsvěcování světel a jejich zhasínání, či snížení výkonu."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-16",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-16",
+      "answer": "yes",
+      "comment": "Úspory se musí hledat komplexně a veřejná správa musí jít příkladem."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-17",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-17",
+      "answer": "yes",
+      "comment": "Děti za své rodiče nemohou, je vhodné jim do života pomoci."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-18",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-18",
+      "answer": "yes",
+      "comment": "Město nemá co tajit, rozklikávací rozpočet již funguje, stav účtu nic navíc neřekne, ale zároveň jej není třeba tajit, i když skrze rozpočtování může být velmi matoucí až zavádějící."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-19",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-19",
+      "answer": "yes",
+      "comment": "Již je realizováno pomocí komisí místních částí a projektem Tvoříme Zlín."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-20",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-20",
+      "answer": "yes",
+      "comment": "Výstavba bytů a tvorba rozvojových lokalit je nutná pro celkový rozvoj Zlína."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-21",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-21",
+      "answer": "no",
+      "comment": "Je potřeba nevytvářet depresivní náladu, a proto u určitých věcí není vhodné hledat významné úspory."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-22",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-22",
+      "answer": "yes",
+      "comment": "Již funguje pro děti, které to potřebují."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-23",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-23",
+      "answer": "yes",
+      "comment": "Sdílená a alternativní mobilita je trend."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-24",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-24",
+      "answer": "no",
+      "comment": "Trend je důraz na využívání MHD a alternativní způsoby dopravy pro snížení hustoty dopravy v centru města."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-25",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-25",
+      "answer": "no",
+      "comment": "Město musí naopak zvyšovat svůj bytový fond."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-26",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-26",
+      "answer": "yes",
+      "comment": "Je nutné, aby developeři stavěli i veřejný prostor, cesty, chodníky, hřiště, kanalizaci, osvětlení aj., neboli ve svých projektech se účastnili na rozvoji města. "
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-27",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-27",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-28",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-28",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-29",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-29",
+      "answer": "yes",
+      "comment": "Stačí formou investicí do rozvoje lokality."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-30",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-30",
+      "answer": "yes",
+      "comment": "Tento trend je nutná a je potřeba využívat dotační tituly pro vybudování sítě nabíječek."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-31",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-31",
+      "answer": "yes",
+      "comment": "Je to jedna z variant rozvoje dostupného bydlení při nižších úrokových sazbách."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-32",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-32",
+      "answer": "no",
+      "comment": "Malá spoluúčast pro udržení kvalitní služby je vhodná."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-33",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-33",
+      "answer": "yes",
+      "comment": "Město pomáhá prostřednictvím své společnosti Teplo Zlín."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-34",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-34",
+      "answer": "yes",
+      "comment": "Je nutné, aby děti sportovaly a vzdělávaly se."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-35",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-35",
+      "answer": "no",
+      "comment": "Jedná se o hygienické prostředky, které má každá individuální."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-36",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-36",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-37",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-37",
+      "answer": "yes",
+      "comment": "Hledat úspory v provozních nákladech je nutností."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-38",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-38",
+      "answer": "yes",
+      "comment": "Při dodržování jasných pravidel, aby nezpůsobovaly tyto prostředky překážky na chodnících, cestách či v zeleni."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-39",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-39",
+      "answer": "no",
+      "comment": "Integraci si řeší každý zaměstnavatel dle potřeby a sociální odbor integraci řeší dostatečně."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-40",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-40",
+      "answer": "yes",
+      "comment": "Bezpečnost je nutné udržet jako silnou stránku města."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-41",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-41",
+      "answer": "yes",
+      "comment": "Udržování vody a další ekologické otázky včetně úspor je nutné podporovat."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-42",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-42",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-43",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-43",
+      "answer": "yes",
+      "comment": "Formou reklamy podporovat tyto atrakce města."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-44",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-44",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-45",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-45",
+      "answer": "no",
+      "comment": "Řeší stát prostřednictvím sociálního odboru města."
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-46",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-46",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-47",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-47",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-585068-a-456015-48",
+      "candidate_id": "komunalni-2022-585068-c-456015",
+      "question_id": "komunalni-2022-585068-q-48",
+      "answer": "yes"
     }
   ]
 }

@@ -3,11 +3,17 @@
   "name": "Teplice",
   "description": "Teplice",
   "district_code": "567442",
+  "show_district_code": false,
   "election": {
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici je 35 kalkulaček pro největší města.",
+    "description": "K dispozici jsou kalkulačky pro **15** měst České republiky.",
+    "instructions": {
+      "header": "Zvolte své město",
+      "step_1_1": "K dispozici jsou kalkulačky pro **15** měst České republiky.",
+      "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
+    },
     "from": "2022-09-23T14:00:00",
     "to": "2022-09-24T14:00:00"
   },
@@ -402,7 +408,7 @@
       "id": "komunalni-2022-567442-c-593168",
       "name": "ODS spolu s TOP 09",
       "type": "party",
-      "description": "ODS spolu s TOP 09 - DESCRIPTION",
+      "description": "ODS spolu s TOP 09",
       "img_url": "ods-top 09",
       "contacts": {
         "web": []
@@ -411,11 +417,12 @@
         {
           "id": "komunalni-2022-567442-c-593168-p",
           "name": "ODS spolu s TOP 09",
-          "description": "ODS spolu s TOP 09 - DESCRIPTION",
+          "short_name": "ODS spolu s TOP 09",
+          "abbreviation": "ODS+TOP 09",
+          "description": "ODS spolu s TOP 09",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "ODS+TOP 09"
+          }
         }
       ],
       "motto": "Vaše jistota, naše odpovědnost"
@@ -424,7 +431,7 @@
       "id": "komunalni-2022-567442-c-472474",
       "name": "Svoboda a přímá demokracie (SPD)",
       "type": "party",
-      "description": "Svoboda a přímá demokracie (SPD) - DESCRIPTION",
+      "description": "Svoboda a přímá demokracie (SPD)",
       "img_url": "spd",
       "contacts": {
         "web": []
@@ -433,11 +440,12 @@
         {
           "id": "komunalni-2022-567442-c-472474-p",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "description": "Svoboda a přímá demokracie (SPD) - DESCRIPTION",
+          "short_name": "Svoboda a př. demokracie (SPD)",
+          "abbreviation": "SPD",
+          "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "SPD"
+          }
         }
       ],
       "motto": "Vize, práce, zkušenosti"
@@ -446,7 +454,7 @@
       "id": "komunalni-2022-567442-c-843481",
       "name": "Zdraví Sport Prosperita",
       "type": "party",
-      "description": "Zdraví Sport Prosperita - DESCRIPTION",
+      "description": "Zdraví Sport Prosperita",
       "img_url": "pro zdraví",
       "contacts": {
         "web": []
@@ -455,11 +463,12 @@
         {
           "id": "komunalni-2022-567442-c-843481-p",
           "name": "Zdraví Sport Prosperita",
-          "description": "Zdraví Sport Prosperita - DESCRIPTION",
+          "short_name": "Zdraví Sport Prosperita",
+          "abbreviation": "PRO Zdraví",
+          "description": "Zdraví Sport Prosperita",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "PRO Zdraví"
+          }
         }
       ]
     },
@@ -467,7 +476,7 @@
       "id": "komunalni-2022-567442-c-209742",
       "name": "ANO 2011",
       "type": "party",
-      "description": "ANO 2011 - DESCRIPTION",
+      "description": "ANO 2011",
       "img_url": "ano",
       "contacts": {
         "web": []
@@ -476,19 +485,21 @@
         {
           "id": "komunalni-2022-567442-c-209742-p",
           "name": "ANO 2011",
-          "description": "ANO 2011 - DESCRIPTION",
+          "short_name": "ANO 2011",
+          "abbreviation": "ANO",
+          "description": "ANO 2011",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "ANO"
+          }
         }
-      ]
+      ],
+      "motto": "Máme krásné lázeňské město a znalosti a prostředky na rozvoj"
     },
     {
       "id": "komunalni-2022-567442-c-731451",
       "name": "Komunistická strana Čech a Moravy",
       "type": "party",
-      "description": "Komunistická strana Čech a Moravy - DESCRIPTION",
+      "description": "Komunistická strana Čech a Moravy",
       "img_url": "ksčm",
       "contacts": {
         "web": []
@@ -497,11 +508,12 @@
         {
           "id": "komunalni-2022-567442-c-731451-p",
           "name": "Komunistická strana Čech a Moravy",
-          "description": "Komunistická strana Čech a Moravy - DESCRIPTION",
+          "short_name": "Komunistická str.Čech a Moravy",
+          "abbreviation": "KSČM",
+          "description": "Komunistická strana Čech a Moravy",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "KSČM"
+          }
         }
       ],
       "motto": "Jediný politik, kterému můžete věřit, jste vy sami. A proto jsem zde i já. "
@@ -510,7 +522,7 @@
       "id": "komunalni-2022-567442-c-119103",
       "name": "VOLBA PRO! TEPLICE",
       "type": "party",
-      "description": "VOLBA PRO! TEPLICE - DESCRIPTION",
+      "description": "VOLBA PRO! TEPLICE",
       "img_url": "kdu-zel-pir-nk",
       "contacts": {
         "web": [
@@ -526,7 +538,9 @@
         {
           "id": "komunalni-2022-567442-c-119103-p",
           "name": "VOLBA PRO! TEPLICE",
-          "description": "VOLBA PRO! TEPLICE - DESCRIPTION",
+          "short_name": "VOLBA PRO! TEPLICE",
+          "abbreviation": "KDU+Zel+Pir+NK",
+          "description": "VOLBA PRO! TEPLICE",
           "contacts": {
             "web": [
               {
@@ -536,8 +550,7 @@
             ],
             "facebook": "https://www.facebook.com/search/top?q=volba%20pro%20teplice",
             "instagram": "https://instagram.com/volbaproteplice?igshid=YmMyMTA2M2Y="
-          },
-          "abbreviation": "KDU+Zel+Pir+NK"
+          }
         }
       ],
       "motto": "Lidé, kterým věříte."
@@ -1754,6 +1767,294 @@
       "question_id": "komunalni-2022-567442-q-48",
       "answer": "dont_know",
       "comment": "město podporuje městské jesle"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-1",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-1",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-2",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-2",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-3",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-3",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-4",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-4",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-5",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-5",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-6",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-6",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-7",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-7",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-8",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-8",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-9",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-9",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-10",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-10",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-11",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-11",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-12",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-12",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-13",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-13",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-14",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-14",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-15",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-15",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-16",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-16",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-17",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-17",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-18",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-18",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-19",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-19",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-20",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-20",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-21",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-21",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-22",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-22",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-23",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-23",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-24",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-24",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-25",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-25",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-26",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-26",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-27",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-27",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-28",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-28",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-29",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-29",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-30",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-30",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-31",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-31",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-32",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-32",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-33",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-33",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-34",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-34",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-35",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-35",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-36",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-36",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-37",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-37",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-38",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-38",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-39",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-39",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-40",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-40",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-41",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-41",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-42",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-42",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-43",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-43",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-44",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-44",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-45",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-45",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-46",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-46",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-47",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-47",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567442-a-209742-48",
+      "candidate_id": "komunalni-2022-567442-c-209742",
+      "question_id": "komunalni-2022-567442-q-48",
+      "answer": "yes"
     }
   ]
 }

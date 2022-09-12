@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro 9 měst.",
+    "description": "K dispozici jsou kalkulačky pro **15** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro 9 měst.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **15** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -429,8 +429,8 @@
     {
       "id": "komunalni-2022-569810-q-52",
       "name": "Oprava Velkého náměstí",
-      "title": "Podporuji opravu Vekého náměstí a snížení počtu parkovacích míst.",
-      "gist": "Před deseti lety zablokovalo 24 ze 250 vlastníků nemovitostí opravu Velkého náměstí. Vadí jim hlavně, že by se změnšil počet parkovacíh míst. Vlastníci nemovitostí ani po deseti letech nesouhlasí se snížením počtu parkovacích míst. Řešením by mohly být úpravy ulic v okolí a vybudování bezbariérového přístupu na náměstí.",
+      "title": "Podporuji opravu Velkého náměstí a snížení počtu parkovacích míst.",
+      "gist": "Před deseti lety zablokovalo 24 ze 250 vlastníků nemovitostí opravu Velkého náměstí. Vadí jim hlavně, že by se zmenšil počet parkovacích míst. Vlastníci nemovitostí ani po deseti letech nesouhlasí se snížením počtu parkovacích míst. Řešením by mohly být úpravy ulic v okolí a vybudování bezbariérového přístupu na náměstí.",
       "detail": "",
       "tags": []
     },
@@ -457,11 +457,12 @@
         {
           "id": "komunalni-2022-569810-c-760916-p",
           "name": "HRADEC ROZUMEM",
+          "short_name": "HRADEC ROZUMEM",
+          "abbreviation": "Svob+PRO2022+NK",
           "description": "HRADEC ROZUMEM",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "Svob+PRO2022+NK"
+          }
         }
       ]
     },
@@ -478,11 +479,12 @@
         {
           "id": "komunalni-2022-569810-c-244511-p",
           "name": "Česká strana sociálně demokratická s podporou nezávislých",
+          "short_name": "ČSSD s podporou nezávislých",
+          "abbreviation": "ČSSD+NK",
           "description": "Česká strana sociálně demokratická s podporou nezávislých",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "ČSSD+NK"
+          }
         }
       ],
       "motto": "Chceme aby byl Hradec městem pro všechny generace."
@@ -500,11 +502,12 @@
         {
           "id": "komunalni-2022-569810-c-515530-p",
           "name": "ROMA LUMA",
+          "short_name": "ROMA LUMA",
+          "abbreviation": "LUMA",
           "description": "ROMA LUMA",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "LUMA"
+          }
         }
       ],
       "motto": "Nejlepsi steana pto nase mesto Roma Luma "
@@ -522,11 +525,12 @@
         {
           "id": "komunalni-2022-569810-c-748887-p",
           "name": "HRADEČÁCI",
+          "short_name": "HRADEČÁCI",
+          "abbreviation": "HK",
           "description": "HRADEČÁCI",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "HK"
+          }
         }
       ],
       "motto": "Město lidem"
@@ -544,11 +548,12 @@
         {
           "id": "komunalni-2022-569810-c-841188-p",
           "name": "Svoboda a přímá demokracie (SPD)",
+          "short_name": "Svoboda a př. demokracie (SPD)",
+          "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "SPD"
+          }
         }
       ],
       "motto": "Chceme bezpečí, krásu a prosperitu pro naše město. "
@@ -566,11 +571,12 @@
         {
           "id": "komunalni-2022-569810-c-813906-p",
           "name": "Hradečtí kantoři a Nestraníci",
+          "short_name": "Hradečtí kantoři a Nestraníci",
+          "abbreviation": "Nestraníci+NK",
           "description": "Hradečtí kantoři a Nestraníci",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "Nestraníci+NK"
+          }
         }
       ],
       "motto": "Hradečtí kantoři a Nestraníci = Hradec Králové nově"
@@ -600,6 +606,8 @@
         {
           "id": "komunalni-2022-569810-c-938535-p",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
           "contacts": {
             "web": [
@@ -615,8 +623,7 @@
             "facebook": "https://www.facebook.com/HradeckySTAN",
             "twitter": "https://twitter.com/stanhradec",
             "instagram": "https://instagram.com/stan.hradec"
-          },
-          "abbreviation": "STAN"
+          }
         }
       ],
       "motto": "Otevřená radnice, komunikace, naslouchání občanům, Občan jako partner města"
@@ -645,6 +652,8 @@
         {
           "id": "komunalni-2022-569810-c-707699-p",
           "name": "Hradecký demokratický klub a TOP 09 s podporou Hradeckých patriotů a LES",
+          "short_name": "HDK a TOP 09 s podp. HP a LES",
+          "abbreviation": "TOP+LES+HP+HDK",
           "description": "Hradecký demokratický klub a TOP 09 s podporou Hradeckých patriotů a LES",
           "contacts": {
             "web": [
@@ -659,8 +668,7 @@
             ],
             "facebook": "https://www.facebook.com/HradectiPatrioti",
             "instagram": "https://www.instagram.com/top09_hk/"
-          },
-          "abbreviation": "TOP+LES+HP+HDK"
+          }
         }
       ],
       "motto": "Jasná a moderní vize, jak proměnit Hradec v lepší místo pro život."
@@ -684,6 +692,8 @@
         {
           "id": "komunalni-2022-569810-c-956549-p",
           "name": "Změna pro Hradec a Zelení",
+          "short_name": "Změna pro Hradec a Zelení",
+          "abbreviation": "Zelení+NK",
           "description": "Změna pro Hradec a Zelení",
           "contacts": {
             "web": [
@@ -693,8 +703,7 @@
               }
             ],
             "facebook": "https://www.facebook.com/zmenaprohradec"
-          },
-          "abbreviation": "Zelení+NK"
+          }
         }
       ],
       "motto": "Jsme kandidátka pro otevřené, zelené, bezpečné, kulturní a vzdělané město "
@@ -712,11 +721,12 @@
         {
           "id": "komunalni-2022-569810-c-589869-p",
           "name": "Komunistická strana Čech a Moravy",
+          "short_name": "Komunistická str.Čech a Moravy",
+          "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "KSČM"
+          }
         }
       ]
     },
@@ -733,13 +743,15 @@
         {
           "id": "komunalni-2022-569810-c-601843-p",
           "name": "ANO 2011",
+          "short_name": "ANO 2011",
+          "abbreviation": "ANO",
           "description": "ANO 2011",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "ANO"
+          }
         }
-      ]
+      ],
+      "motto": "Chceme řešit obyčejné věci na něž Hradečáci denně narážejí."
     },
     {
       "id": "komunalni-2022-569810-c-655604",
@@ -754,11 +766,12 @@
         {
           "id": "komunalni-2022-569810-c-655604-p",
           "name": "Občanská demokratická strana",
+          "short_name": "Občanská demokratická strana",
+          "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "ODS"
+          }
         }
       ]
     },
@@ -781,6 +794,8 @@
         {
           "id": "komunalni-2022-569810-c-803953-p",
           "name": "ROZVÍJÍME HRADEC - NOVÁ HRADECKÁ OBČANSKÁ KANDIDÁTKA",
+          "short_name": "ROZVÍJÍME HRADEC - NOVÁ H.O.K.",
+          "abbreviation": "RH+NK",
           "description": "ROZVÍJÍME HRADEC - NOVÁ HRADECKÁ OBČANSKÁ KANDIDÁTKA",
           "contacts": {
             "web": [
@@ -790,10 +805,10 @@
               }
             ],
             "facebook": "https://www.facebook.com/rozvijimehradec.cz"
-          },
-          "abbreviation": "RH+NK"
+          }
         }
-      ]
+      ],
+      "motto": "Kvalitní kandidáti se zkušenostmi, pevnými názory a moderními vizemi pro město"
     },
     {
       "id": "komunalni-2022-569810-c-982677",
@@ -808,11 +823,12 @@
         {
           "id": "komunalni-2022-569810-c-982677-p",
           "name": "Česká pirátská strana",
+          "short_name": "Česká pirátská strana",
+          "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "Piráti"
+          }
         }
       ],
       "motto": "Piráti mají odvahu dělat, co je správné."
@@ -831,12 +847,13 @@
         {
           "id": "komunalni-2022-569810-c-278614-p",
           "name": "Koalice pro Hradec",
+          "short_name": "Koalice pro Hradec",
+          "abbreviation": "KDU-ČSL+NK",
           "description": "Koalice pro Hradec",
           "contacts": {
             "web": [],
             "twitter": "https://twitter.com/koaliceHK"
-          },
-          "abbreviation": "KDU-ČSL+NK"
+          }
         }
       ],
       "motto": "Hradec pro všechny, všichni pro Hradec."
@@ -4245,6 +4262,720 @@
       "candidate_id": "komunalni-2022-569810-c-748887",
       "question_id": "komunalni-2022-569810-q-53",
       "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-1",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-1",
+      "answer": "no",
+      "comment": "rozhodně nepodporujeme, aby jednotlivé části města byly určovány skupinám obyvatel podle jejich ekonomické situace či obdobných faktorů"
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-2",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-2",
+      "answer": "yes",
+      "comment": "Poplatek za odpady máme v Hradci Králové již mnoho let a je vyjádřením, že se jako obyvatelé podílíme na nákladech za řešení odpadů. Jeho zrušení by znamenalo, že to obyvatelé uhradí beztak, jen skrytou formou v rámci rozpočtu města."
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-3",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-3",
+      "answer": "no",
+      "comment": "Rozhodně ne. Stejně tak v žádných jiných obdobných zařízeních a institucí. Je odpovědností města, jejich činnost zajistit bez omezování. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-4",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-4",
+      "answer": "no",
+      "comment": "Nechceme za každou cenu omezovat pohyb osobních aut ve městě. Snižování rychlosti může vést ke zbytečnému zahušťování dopravy, se všemi negativy, jako jsou emise apod. Chceme, aby město bylo snadno průjezdné a jeho obyvatelé se jím mohli rychle dostat tam, kam potřebují. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-5",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-5",
+      "answer": "yes",
+      "comment": "Chceme lidem maximálně pomoci vyřešit jejich situaci a zároveň získat co nejvíce dlužných plateb do městské pokladny. Ideálem je, aby město nemělo pokud možno žádné dlužníky."
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-6",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-6",
+      "answer": "no",
+      "comment": "Cokoli se dotýká lidské svobody, je třeba řešit velmi obezřetně, což se týká i počtu kamer, jež nás sledují v ulicích města. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-7",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-7",
+      "answer": "yes",
+      "comment": "Jen velmi neradi bychom omezovali jakékoli podnikání, ovšem hazard na určitou skupinu lidí působí natolik destruktivně, že jeho důsledky se negativně projevují vůči celým rodinám, včetně malých dětí. To mj. přináší tlak na sociální pomoc ze strany města i potřebu dalších podpůrných činností. V tomto smyslu, zákaz hazardu by městu ulevil od řešení mnoha sociálně patologických jevů. Zachovat by jej bylo možné pouze za velmi striktních omezení, tak aby se jej nemohli nijak účastnit lidé z rizikových skupin (např. uzavření pouze pro registrované hráče za splnění vícero velmi přísných podmínek)."
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-8",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-8",
+      "answer": "no",
+      "comment": "V této fázi ne, neboť rozpočet města ani další faktory na to nejsou připraveny. Pokud by byl vybudován systém záchytných parkovišť apod., do budoucna by to teoreticky mohla být jedna z variant, jak ulevit dopravě ve městě. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-9",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-9",
+      "answer": "yes",
+      "comment": "Cokoli zvýší komfort obyvatel města podporujeme a vítáme. Bezbariérové zastávky MHD bychom podpořili zejména s ohledem na maminky s kočárky nebo starší lidi, kterým se již hůře zdolávají schody apod."
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-10",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-10",
+      "answer": "yes",
+      "comment": "Již nyní jsou na webu města k dohledání hlasovací protokoly, z nichž lze zjistit jmenovitě, jak který zastupitel hlasoval. Jsme rozhodně pro co největší otevřenost a transparentnost. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-11",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-11",
+      "answer": "yes",
+      "comment": "Jsme pro co největší otevřenost a transparentnost a podporujeme, aby obyvatelé města viděli, jak hlasují jednotliví členové rady. Dovedeme si představit to samé také u členů výborů  a komisí. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-12",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-12",
+      "answer": "no",
+      "comment": "Uvědomujeme si, že pro mnoho lidí je zábavní pyrotechnika negativním jevem, stejně jako fakt, že může být užívána nad míru - ovšem jakékoli omezování svobodného jednání, je vždy velmi citlivé a z principu nechceme obyvatele omezovat v ničem co není nezbytně nutné. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-13",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-13",
+      "answer": "yes",
+      "comment": "Podporujeme vše, co prakticky pomůže obyvatelům města. Zpřístupnění budov může podpořit vzájemné setkávání se, navazování vztahů a komunikaci. Zároveň město (a nejen město, ale i vláda ČR) musí udělat vše pro to, aby lidé ve vytápění svých domovů nebyli jakkoli omezeni."
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-14",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-14",
+      "answer": "yes",
+      "comment": "je to jedno ze schůdných úsporných opatření, zvláště, když se bude jednat o noční hodiny, kdy je pohyb po městě minimální, např. mezi půlnocí a pátou hodinou ranní"
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-15",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-15",
+      "answer": "yes",
+      "comment": "zde bychom podpořili omezení jen v té nejnezbytnější míře, tedy na co nejkratší dobu, popř. jen u části lamp, tak aby viditelnost na ulicích byla zachována co možná nejvíce."
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-16",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-16",
+      "answer": "no",
+      "comment": "Rozhodně pro nás není přijatelné omezovat topení např. ve školách a dalších městských institucích. Město musí zajistit jejich vytápění bez omezení. I díky naší aktivitě se městu podařilo dojednat výjimku pro opatovickou elektrárnu, díky níž se cena tepla nenavýší více než o 15%, tedy by zajištění vytápění městských budov nemělo vyjít o tolik dráž"
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-17",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-17",
+      "answer": "yes",
+      "comment": "Rozhodně ano. Děti nesmí být v zajetí dluhů, za něž většinou ani nemohou."
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-18",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-18",
+      "answer": "yes",
+      "comment": "Jsme principiálně pro co největší otevřenost a transparentnost."
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-19",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-19",
+      "answer": "yes",
+      "comment": "Když se budou moci obyvatelé více podílet na záležitostech města, o to více budou moci vnímat, že je to i jejich město. Za jejich zapojení se, budeme rádi."
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-20",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-20",
+      "answer": "yes",
+      "comment": "Dostatek bytů je je jedna z největších potřeb města. V tomto smyslu je vhodné, aby město mělo ve svém vlastnictví byty, které mohou sloužit jako startovací pro mladé rodiny apod. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-21",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-21",
+      "answer": "no",
+      "comment": "Město má být příjemným místem k životu pro své obyvatele. Vánoce jsou tím nejjedinečnějším obdobím, k němuž výzdoba a vánoční osvětlení patří. Dotváří jeho atmosféru a výhledově by se mělo rozvinout, tak aby se Hradec Králové stal vyhledávaným místem pro návštěvy v předvánočním období. Šetřit musí Hradec v jiných věcech, které lze dělat racionálněji."
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-22",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-22",
+      "answer": "no",
+      "comment": "Dle statistik se potřeba pomoci týká až 20% dětí, to znamená, že 80% rodin je schopno obědy platit. Pomoc má jít k těm, kteří ji potřebují nejvíce, nikoli plošně, neboť pak ji z našich daní platíme všichni všem. Tedy pomáhejme dětem a jejich rodinám, které to potřebují. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-23",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-23",
+      "answer": "no",
+      "comment": "je to jistě užitečná věc, ovšem může se realizovat bez účasti města, na komerční bázi"
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-24",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-24",
+      "answer": "no",
+      "comment": "parkovací zóny neřeší vše, ovšem jejich zrušení by nic podstatného neřešilo. Město musí pracovat na navyšování parkovacích míst a je nutné, aby do budoucna výtěžek z parkovacích míst šel plně do rozpočtu města, nikoli soukromým společnostem."
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-25",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-25",
+      "answer": "no",
+      "comment": "Město potřebuje byty ve svém vlastnictví, aby je mohlo poskytovat těm, kteří v určité fázi nemají dost finančních prostředků či jiných podmínek na zajištění si bydlení jiným způsobem."
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-26",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-26",
+      "answer": "yes",
+      "comment": "Rozhodně ano. Spolupráce s developery je pro město důležitá, neboť je třeba, aby stále rostl počet bytů a jejich dostupnost pro obyvatele města. Jer však třeba, aby developerské projekty zahrnovaly i tzv. občanskou vybavenost - školky, obchody, zastávky MHD, místa k odpočinku, dětská hřiště, posezení apod. Není správné, aby je plně investovalo město. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-27",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-27",
+      "answer": "no",
+      "comment": "Jednoznačně podporujeme cyklistickou i pěší dopravu. Ovšem automobilová doprava je stejně tak důležitá a nezbytná. Nechceme následovat Prahu v tom, kdy pod vedením Pirátů, se pro řidiče aut stala stále méně průjezdnou. Je třeba racionálně upravovat automobilovou dopravu, tak aby město bylo snadno průjezdné a zároveň podporovat cyklistickou dopravu a místa jen pro pěší. Do města patří všechny tyto aspekty. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-28",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-28",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-29",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-29",
+      "answer": "yes",
+      "comment": "Spolupráce s developery je pro město důležitá, neboť je v zájmu jeho obyvatel, aby ve městě vznikaly nová místa k bydlení. Ovšem developeři se musí více podílet na veřejné vybavenosti. Je třeba, aby v nových čtvrtích byly zastávky MHD, dětská hřiště, školky, posezení apod. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-30",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-30",
+      "answer": "yes",
+      "comment": "podporovat ano, ideálně však tak, aby financovány nebyly městem, ale dalšími subjekty"
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-31",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-31",
+      "answer": "yes",
+      "comment": "Jednoznačně ano. Cokoli přispěje k růstu nabídky bydlení pro obyvatele města, je vítáno a město to má podporovat a my to rozhodně podporujeme."
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-32",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-32",
+      "answer": "yes",
+      "comment": "uvědomujeme si finanční náročnost takového kroku, ovšem MHD z velké části slouží právě dětem a studentům a její podporou město podporuje rodiny - což je jednou z priorit, pokud chceme, aby se počet obyvatel města zvyšoval"
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-33",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-33",
+      "answer": "yes",
+      "comment": "Ideálně tak, že pomůže získat financování z jiných zdrojů (granty, fondy EU apod.)"
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-34",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-34",
+      "answer": "yes",
+      "comment": "Je to další z aspektů podpory dětí a mládeže a tím podpory rodin. Čím více dětí navštíví muzea a galerie, tím lépe. Je rozhodně v zájmu města, aby nejmladší Hradečáci měli k těmto institucím kladný vztah a nic jim v jejich návštěvě nebránilo. Obdobně je jedině dobře pokud mají děti kladný vztah ke sportu a je vhodné je v něm podporovat. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-35",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-35",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-36",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-36",
+      "answer": "no",
+      "comment": "Rozhodně ne. Podpora těch, kteří to potřebují, nemá být na bázi zákonné povinnosti, ale vzájemné solidarity a pomoci. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-37",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-37",
+      "answer": "yes",
+      "comment": "Samozřejmě tam, kde to má racionální důvody a zároveň v max. míře využít podpory ze strany státu, EU apod."
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-38",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-38",
+      "answer": "no",
+      "comment": "To neznamená, že jsme proti elektrickým koloběžkám obecně. Jejich umístění má být na komerční bázi, na základě dohody s městem na jasných pravidlech, jak v otázce bezpečnosti, tak míst jejich parkování, aby se např. nevyskytovaly tam, kde to není vhodné."
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-39",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-39",
+      "answer": "no",
+      "comment": "Město má primárně vytvářet podmínky pro to, aby se zde jeho obyvatelům žilo co možná nejlépe. Mezi Hradečáky je mnoho cizinců, kteří se do života města zapojují zcela přirozeně, aniž by bylo třeba umělého \"prosazování integrace\"."
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-40",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-40",
+      "answer": "no",
+      "comment": "Město má mnoho oblastí do nichž je třeba investovat finanční prostředky, navyšování počtu strážníků, by tyto finance odčerpalo. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-41",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-41",
+      "answer": "no",
+      "comment": "Jsou budovy u nichž to může být vhodné a vítané, ovšem termín \"prosazovat\" spíše vybízí k tomu, že by to měla být povinnost a pojetí, že by město mělo být povinno realizovat zelené střechy rozhodně nepodporujeme."
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-42",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-42",
+      "answer": "yes",
+      "comment": "Kola k Hradci Králové patří a vždy budou. Rozhodně podporujeme, aby město bylo vůči cyklistům co nejpřívětivější. Zároveň to však neznamená, že bychom chtěli klást nesmyslné překážky autům (a la Praha)."
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-43",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-43",
+      "answer": "yes",
+      "comment": "U města velikosti Hradce Králové k němu profesionální sport patří. Je proto přirozené, že ho město podporuje, byť je zároveň vhodné, aby se na činnosti klubu podílel i partner ze soukromé sféry a další partneři z řad podnikatelských subjektů. Profesionální kluby nepřináší \"jen\" zábavu, ale zároveň zázemí stovkám dětí, které motivují ke sportu, což je velmi důležité a pro město velice důležité. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-44",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-44",
+      "answer": "dont_know",
+      "comment": "Daň z nemovitosti by se rozhodně neměla zvýšit, to v žádném případě nepodpoříme. Obecně bychom rádi daňovou zátěž obyvatel snižovali a v této souvislosti i daň z nemovitosti. Ovšem vzhledem k současné situaci, je třeba takový krok důkladně propočítat, aby město finančně neohrozil. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-45",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-45",
+      "answer": "yes",
+      "comment": "Je v zájmu města, pomoci jeho obyvatelům, aby se nedostali do neřešitelné situace, v níž by nakonec město vynaložilo mnohem více financí. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-46",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-46",
+      "answer": "yes",
+      "comment": "Město potřebuje své byty, aby je mělo k dispozici pro ty, kteří v určité fázi nejsou schopni si jej zajistit sami. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-47",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-47",
+      "answer": "yes",
+      "comment": "Jednoznačně ano. V žádném případě nechceme, aby zapojení dětí do jednotlivých škol bylo dáno jejich ekonomickou situací či podobnými faktory."
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-48",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-48",
+      "answer": "yes",
+      "comment": "Ano, neboť chceme, aby v Hradci Králové měly rodiny co nejpříznivější podmínky, tak aby počet obyvatel mohl narůstat. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-49",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-49",
+      "answer": "yes",
+      "comment": "Město by mělo mít vliv na to, že klub bude působit v Hradci Králové, tedy aby nebyl přesunut (prodán) jinam, bez toho, že by do toho město mohlo jakkoli zasáhnout. Podobně by mělo mít vliv na nastavení podmínek pro rozvoj mládežnických kategorií. Ideální je, aby jeho podíl byl max. 51%. Může být i mnohem nižší, pokud bude mít smluvně zajištěn závazný dosah na činnost klubu. Rozhodně podporujeme to, aby v hradeckých profesionálních klubech působily soukromé společnosti - obdobně jako tomu je u hokejového klubu MountfieldHK. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-50",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-50",
+      "answer": "no",
+      "comment": "Celá záležitost s přesunem torza mostu a jeho konzervací, je zbytečným utrácením finančních prostředků města, které by bylo vhodnější použít např. na opravu silnic a chodníků. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-51",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-51",
+      "answer": "yes",
+      "comment": "Hradec Králové je krásné a jedinečné město. Svou architekturou na seznam světového dědictví UNESCO rozhodně patří. Je velká škoda, že ho nezná tolik lidí, kolik by si, vzhledem ke své jedinečnosti zasloužilo. Zápis do UNESCO by zvýšilo jeho prestiž a známost a otevřelo by Hradec turistům, což by bylo rozhodně pozitivní. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-52",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-52",
+      "answer": "yes",
+      "comment": "Podporujeme opravu Velkého náměstí, ovšem jsme proti snížení počtu parkovacích míst. Jejich snížení v této lokalitě, by mohlo zapůsobit velmi negativně a je třeba najít takové řešení, aby ke snížení nedošlo. Chceme-li, aby náměstí žilo a lidé sem chodili do restaurací, kaváren, galerií a divadla, pak je třeba, aby mohli zaparkovat poblíž.\nV dlouhodobém horizontu bychom si dovedli představit vybudování podzemního parkoviště, které by se dalo spojit s historickými prostory a stát se i turistickou atrakcí (podzemní chodby). Ovšem v současné ekonomické situaci, to není na pořadu dne. Proto bychom nyní podporovali rekonstrukci po etapách. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-601843-53",
+      "candidate_id": "komunalni-2022-569810-c-601843",
+      "question_id": "komunalni-2022-569810-q-53",
+      "answer": "dont_know",
+      "comment": "Obecně chceme maximálně snižovat kamionovou dopravu ve městě, i proto zastupitelé za ANO a naši poslanci podporovali urychlení výstavby dálnic D11 a D35, které přinesly výrazné snížení počtu kamionů projíždějících městem. Co se týče ul. Pouchovská, na jedné straně chápeme aktivitu místní KMS a podporujeme ji, na druhou stranu do skladištní oblasti kamiony zajíždět potřebují a nalezení řešení, které uleví ul. Pouchovská a nepřeleje kamiony jen o pár ulic dále, je oříškem. Rozhodně je to téma, jímž se musí radnice, jež vzejde z městských voleb, zabývat. "
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-1",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-1",
+      "answer": "no",
+      "comment": "Vhodnou strukturu bydlení je potřeba dosáhnout rovnoměrným složením obyvatel jednotlivých městských čtvrtí"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-2",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-2",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-3",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-3",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-4",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-4",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-5",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-5",
+      "answer": "yes",
+      "comment": "Ano, je to i ve prospěch města"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-6",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-6",
+      "answer": "yes",
+      "comment": "Pouze ve vybraných lokalitách, kde jsou potřeba  - např. dětská hřiště, školní hřiště, školy"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-7",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-7",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-8",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-8",
+      "answer": "no",
+      "comment": "Pouze pro vybrané skupiny občanů, tj. seniory a maminky s dětmi"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-9",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-9",
+      "answer": "yes",
+      "comment": "Bezbariérový přístup by měl být samozřejmostí"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-10",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-10",
+      "answer": "yes",
+      "comment": "V současné době už tomu tak je"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-11",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-11",
+      "answer": "yes",
+      "comment": "Je to tak i v současné době"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-12",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-12",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-13",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-13",
+      "answer": "no",
+      "comment": "Město by mělo přijmout opatření, jak občanům v tomto směru adekvátně pomoci"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-14",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-14",
+      "answer": "no",
+      "comment": "Pouze v kritickém případě nedostatku energií"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-15",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-15",
+      "answer": "no",
+      "comment": "Pouze ve výjimečných případech, pokud to bude nezbytně nutné"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-16",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-16",
+      "answer": "dont_know",
+      "comment": "Pouze v nezbytně nutném rozsahu"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-17",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-17",
+      "answer": "dont_know",
+      "comment": "Záleží na jednotlivých případech"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-18",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-18",
+      "answer": "no",
+      "comment": "V případě zájmu o informace je potřeba postupovat podle platné legislativy"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-19",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-19",
+      "answer": "yes",
+      "comment": "Prosazujeme participativní rozpočet"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-20",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-20",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-21",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-21",
+      "answer": "dont_know",
+      "comment": "Ano, ale v nezbytně nutné míře"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-22",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-22",
+      "answer": "no",
+      "comment": "Je důležité nastavit systém podpory pro sociálně slabé rodiny"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-23",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-23",
+      "answer": "yes",
+      "comment": "Funguje to dobře i v jiných městech evropských zemí, např. v Kodani"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-24",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-24",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-25",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-25",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-26",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-26",
+      "answer": "yes",
+      "comment": "Je třeba nastavit systém, který zohlední zapojení developerů do veřejné infrastruktury"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-27",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-27",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-28",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-28",
+      "answer": "no",
+      "comment": "Je to velmi obtížně prakticky realizovatelné"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-29",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-29",
+      "answer": "yes",
+      "comment": "Město musí otevřeně komunikovat s developery a zajistit jejich spoluúčast na veřejné vybavenosti"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-30",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-30",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-31",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-31",
+      "answer": "yes",
+      "comment": "Družstevní bydlení je jedním z historicky ověřeným způsobů, jak dosáhnout dostupnějšího bydlení"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-32",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-32",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-33",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-33",
+      "answer": "yes",
+      "comment": "Informační a organizační podporou, případně informacemi o dotačních programech"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-34",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-34",
+      "answer": "yes",
+      "comment": "Jsme pro symbolické vstupné"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-35",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-35",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-36",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-36",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-37",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-37",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-38",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-38",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-39",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-39",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-40",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-40",
+      "answer": "dont_know",
+      "comment": "Je potřeba analyzovat současný stav a na základě toho se rozhodnout"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-41",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-41",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-42",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-42",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-43",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-43",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-44",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-44",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-45",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-45",
+      "answer": "yes",
+      "comment": "Zároveň je důležité je adekvátně motivovat a pomoci jim najít pracovní uplatnění"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-46",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-46",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-47",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-47",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-48",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-48",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-49",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-49",
+      "answer": "yes",
+      "comment": "Při zajištění práv a zájmů města"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-50",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-50",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-51",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-51",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-52",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-52",
+      "answer": "yes",
+      "comment": "Při řešení parkování v co nejbližší lokalitě, např. Žižkovy kasárna"
+    },
+    {
+      "id": "komunalni-2022-569810-a-803953-53",
+      "candidate_id": "komunalni-2022-569810-c-803953",
+      "question_id": "komunalni-2022-569810-q-53",
+      "answer": "dont_know"
     }
   ]
 }
