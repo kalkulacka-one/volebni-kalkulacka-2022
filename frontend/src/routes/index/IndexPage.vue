@@ -17,15 +17,18 @@ import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import { mdiArrowDown, mdiArrowRight } from '@mdi/js';
 import InfoBubble from '@/components/InfoBubble.vue';
 import FooterMultiWord from '@/components/FooterMultiWord.vue';
+import DonateBlock from '@/components/DonateBlock.vue';
+import StaticContentLayout from '@/components/layouts/StaticContentLayout.vue';
 
 const router = useRouter();
 const route = useRoute();
-
-const elections = await fetchElections();
 </script>
 
 <script lang="ts">
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
 
 const info = ref<HTMLElement | null>(null);
 export default {
@@ -33,16 +36,6 @@ export default {
     scrollDown() {
       info.value?.scrollIntoView({ behavior: 'smooth' });
     },
-  },
-  created() {
-    eval(`+function(w, d, s, u, a, b) {
-          w["DarujmeObject"] = u;
-          w[u] = w[u] || function () { (w[u].q = w[u].q || []).push(arguments) };
-          a = d.createElement(s); b = d.getElementsByTagName(s)[0];
-          a.async = 1; a.src = "https://www.darujme.cz/assets/scripts/widget.js";
-          b.parentNode.insertBefore(a, b);
-        }(window, document, "script", "Darujme");
-    Darujme(1, "w2acrk0w61fgr3so", 'render', "https://www.darujme.cz/widget?token=w2acrk0w61fgr3so", "100%");`);
   },
 };
 </script>
@@ -53,7 +46,7 @@ export default {
       <template #header>
         <NavigationBar transparent />
       </template>
-      <div class="content">
+      <StaticContentLayout>
         <div class="section-header section">
           <CardComponent
             padding="small"
@@ -69,7 +62,10 @@ export default {
                   >pro nadcházející komunální a senátní volby
                   <b>23. 9. 2022 –24. 9. 2022</b></BodyText
                 >
-                <ButtonComponent kind="link" color="primary"
+                <ButtonComponent
+                  kind="link"
+                  color="primary"
+                  @click="router.push(appRoutes.aboutElections)"
                   >Více o volbách</ButtonComponent
                 >
               </div>
@@ -82,10 +78,10 @@ export default {
                   >Komunální volby 2022</TitleText
                 >
                 <BodyText size="medium"
-                  >K dispozici jsou kalkulačky pro 35 největších měst.</BodyText
+                  >K dispozici jsou kalkulačky pro vybraná města.</BodyText
                 >
                 <div class="divider" />
-                <BodyText size="small">Dnes vyplnilo 12 678 občanů</BodyText>
+                <BodyText size="small">Vyplňte si kalkulačku</BodyText>
               </div>
               <ButtonComponent
                 kind="filled"
@@ -109,24 +105,18 @@ export default {
                   >Pro jednotlivé volební obvody.</BodyText
                 >
                 <BodyText size="medium"
-                  ><a href="https://google.com"
+                  ><a
+                    href="https://2022.programydovoleb.cz/senatni-volby#kde-se-letos-voli"
                     >Více o senátních obvodech</a
                   ></BodyText
                 >
               </div>
               <div class="divider" />
-              <BodyText size="small">Dnes vyplnilo 12 678 občanů</BodyText>
-              <ButtonComponent
-                kind="filled"
-                color="primary"
-                @click="
-                  router.push({
-                    name: appRoutes.districtSelection.name,
-                    params: { ...route.params, election: 'senatni-2022' },
-                    query: { ...route.query },
-                  })
-                "
-                >Spustit kalkulačku</ButtonComponent
+              <BodyText size="small"
+                >Kalkulačku pro senátní volby připravujeme</BodyText
+              >
+              <ButtonComponent kind="filled" color="neutral" read-only
+                >Připravuje se</ButtonComponent
               >
             </div>
           </CardComponent>
@@ -181,29 +171,15 @@ export default {
             >Volební kalkulačka je pouze informační služba a není jejím cílem
             dávat konkrétní volební doporučení.</BodyText
           >
-          <ButtonComponent kind="link"
+          <ButtonComponent kind="link" @click="router.push('/o-nas')"
             ><div class="button-content">
               Zjistit více<IconComponent
                 :icon="mdiArrowRight"
               ></IconComponent></div
           ></ButtonComponent>
         </StackComponent>
-
-        <div class="section-donation section">
-          <StackComponent spacing="small">
-            <TitleText size="large" tag="h2"
-              >Podpořte tvorbu kalkulaček</TitleText
-            >
-            <BodyText size="medium"
-              >Líbí se vám projekt Volební kalkulačka? Budeme rádi pokud nás
-              podpoříte a umožníte nám pokračovat v jejich tvorbě.</BodyText
-            >
-          </StackComponent>
-          <div class="donation" data-darujme-widget-token="w2acrk0w61fgr3so">
-            &nbsp;
-          </div>
-        </div>
-      </div>
+        <DonateBlock />
+      </StaticContentLayout>
       <FooterMultiWord class="section" />
     </StickyHeaderLayout>
   </BackgroundComponent>
@@ -224,20 +200,6 @@ export default {
 
 .section {
   padding: 40px 0;
-}
-
-.section-donation {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-
-  @media (max-width: 767px) {
-    flex-direction: column;
-  }
-}
-
-.donation {
-  background-color: white;
 }
 
 .wrapper {
@@ -272,13 +234,6 @@ export default {
   width: 100%;
   height: 2px;
   background-color: rgb(var(--color-neutral-bg));
-}
-
-.content {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 16px;
 }
 
 .button-content {

@@ -23,6 +23,9 @@ import { createPinia } from 'pinia';
 import ErrorPageVue from './routes/error/ErrorPage.vue';
 import { decodeResults, encodeResults } from './common/resultParser';
 import SharePageVue from './routes/share/SharePage.vue';
+import AboutUsPageVue from './routes/about-us/AboutUsPage.vue';
+import AboutElectionsPageVue from './routes/about-elections/AboutElectionsPage.vue';
+import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
 
 const RESULT_QUERY_NAME = 'result';
 
@@ -74,6 +77,30 @@ export const appRoutes = {
           content: 'The index page.',
         },
       ],
+    },
+  },
+  aboutUs: {
+    name: 'o-nas',
+    path: '/o-nas',
+    component: AboutUsPageVue,
+    meta: {
+      title: 'O nás',
+    },
+  },
+  aboutElections: {
+    name: 'o-volbach',
+    path: '/o-volbach',
+    component: AboutElectionsPageVue,
+    meta: {
+      title: 'O volbách',
+    },
+  },
+  dataProtection: {
+    name: 'ochrana-dat',
+    path: '/ochrana-dat',
+    component: DataProtectionPageVue,
+    meta: {
+      title: 'Ochrana dat',
     },
   },
   error: {
@@ -247,6 +274,18 @@ app.use(pinia);
 const router = createRouter({
   history: createWebHistory(),
   routes: wrappedRoutes,
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      // This ensures that if hash is provided to router.push it works as expected.
+      //  & since we have used "behavior: 'smooth'" the browser will slowly come to this hash position.
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+      };
+    }
+
+    return { top: 0 };
+  },
 });
 
 //handles title and metadata
