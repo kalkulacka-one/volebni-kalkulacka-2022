@@ -128,6 +128,7 @@ const resultsMedicine = calculateRelativeAgreement(
             </template>
             <TitleText tag="h2" size="medium">Moje shoda</TitleText>
             <template #after>
+              <!-- 
               <ButtonComponent
                 kind="link"
                 color="primary"
@@ -138,6 +139,7 @@ const resultsMedicine = calculateRelativeAgreement(
                 </template>
                 Sdílet
               </ButtonComponent>
+              -->
             </template>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
@@ -150,6 +152,7 @@ const resultsMedicine = calculateRelativeAgreement(
             </template>
             <TitleText tag="h2" size="large">Moje shoda</TitleText>
             <template #after>
+              <!--
               <ButtonComponent
                 kind="link"
                 color="primary"
@@ -160,6 +163,7 @@ const resultsMedicine = calculateRelativeAgreement(
                 </template>
                 Sdílet
               </ButtonComponent>
+              -->
             </template>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
