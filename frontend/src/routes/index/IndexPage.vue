@@ -28,8 +28,6 @@ const route = useRoute();
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 
-const router = useRouter();
-
 const info = ref<HTMLElement | null>(null);
 export default {
   methods: {
