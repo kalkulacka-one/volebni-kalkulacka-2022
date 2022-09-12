@@ -1,4 +1,7 @@
 BACKEND_DIR=backend
+FRONTENT_DIR=frontend
+SCHEMAS_DIR=schemas
+DATA_DIR=data
 
 test: test-backend
 
@@ -17,3 +20,9 @@ install-all: install-all-backend
 install-all-backend:
 	cd $(BACKEND_DIR); \
 	make install-all
+
+generate-data:
+	(cd $(BACKEND_DIR); make run-converter run-add-images); \
+	(cd $(SCHEMAS_DIR); ./validate.sh); \
+	(cd $(FRONTENT_DIR); npm run parse-schema); \
+	git add $(DATA);
