@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { mdiArrowRight } from '@mdi/js';
 
 import { UserAnswerEnum, type UserAnswer } from '@/stores/electionStore';
 
@@ -71,7 +70,7 @@ console.log(props.answer);
       </IconButton>
     </ResponsiveWrapper>
     <StackComponent horizontal spacing="small">
-      <ResponsiveWrapper small medium large extra-large huge>
+      <ResponsiveWrapper medium large extra-large huge>
         <ButtonComponent
           class="in-favour"
           kind="answer"
@@ -85,7 +84,7 @@ console.log(props.answer);
           Jsem pro
         </ButtonComponent>
       </ResponsiveWrapper>
-      <ResponsiveWrapper extra-small>
+      <ResponsiveWrapper extra-small small>
         <ButtonComponent
           class="in-favour"
           kind="answer"
@@ -98,7 +97,7 @@ console.log(props.answer);
           </template>
         </ButtonComponent>
       </ResponsiveWrapper>
-      <ResponsiveWrapper small medium large extra-large huge>
+      <ResponsiveWrapper medium large extra-large huge>
         <ButtonComponent
           class="against"
           kind="answer"
@@ -112,7 +111,7 @@ console.log(props.answer);
           Jsem proti
         </ButtonComponent>
       </ResponsiveWrapper>
-      <ResponsiveWrapper extra-small>
+      <ResponsiveWrapper extra-small small>
         <ButtonComponent
           class="against"
           kind="answer"
@@ -126,25 +125,10 @@ console.log(props.answer);
         </ButtonComponent>
       </ResponsiveWrapper>
     </StackComponent>
-    <ResponsiveWrapper extra-small>
-      <IconButton class="skip" @click="skipClick">
-        <IconComponent :icon="mdiArrowRight" size="large" title="Přeskočit" />
-      </IconButton>
-    </ResponsiveWrapper>
-    <ResponsiveWrapper small>
-      <ButtonComponent
-        class="skip"
-        kind="link"
-        :selected="answer.answer === UserAnswerEnum.skip"
-        @click="skipClick"
-      >
-        Přeskočit
-      </ButtonComponent>
-    </ResponsiveWrapper>
     <ResponsiveWrapper medium large extra-large huge>
       <ButtonComponent
         class="skip"
-        kind="link"
+        kind="answer"
         :selected="answer.answer === UserAnswerEnum.skip"
         @click="skipClick"
       >
@@ -152,6 +136,18 @@ console.log(props.answer);
           <IconComponent :icon="vkiLogoNeutral" />
         </template>
         Přeskočit
+      </ButtonComponent>
+    </ResponsiveWrapper>
+    <ResponsiveWrapper extra-small small>
+      <ButtonComponent
+        class="skip"
+        kind="answer"
+        :selected="answer.answer === UserAnswerEnum.skip"
+        @click="skipClick"
+      >
+        <template #icon>
+          <IconComponent :icon="vkiLogoNeutral" title="Přeskočit" />
+        </template>
       </ButtonComponent>
     </ResponsiveWrapper>
   </BottomBar>
@@ -171,7 +167,7 @@ console.log(props.answer);
 .bottom-bar {
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: var(--responsive-spacing-large);
-  justify-content: space-between;
+  gap: var(--spacing-large);
+  justify-content: center;
 }
 </style>
