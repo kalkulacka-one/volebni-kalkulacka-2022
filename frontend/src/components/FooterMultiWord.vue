@@ -77,12 +77,12 @@ const router = useRouter();
             <StackComponent spacing="extra-small">
               <StackComponent spacing="small" centered horizontal
                 ><IconComponent :icon="mdiEmail" /><BodyText size="small"
-                  >kohovolit@kohovolit.eu</BodyText
+                  >info@kohovolit.eu</BodyText
                 ></StackComponent
               >
               <StackComponent spacing="small" centered horizontal
                 ><IconComponent :icon="mdiPhone" /><BodyText size="small"
-                  >+420 878 654 780</BodyText
+                  >+420 735 518 529</BodyText
                 ></StackComponent
               >
             </StackComponent>
