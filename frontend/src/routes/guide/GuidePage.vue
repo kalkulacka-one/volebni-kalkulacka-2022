@@ -65,14 +65,10 @@ const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
 const text =
   route.params.election === 'senatni-2022'
     ? `
-Vítejte ve Volební kalkulačce pro volby do zastupitelstev měst.
-
-Čeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující strany. Zodpovězení otázek zabere cca 10 minut. Na konci se dozvíte, jak se strany shodují s vašimi názory.
+Čeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující strany. Zodpovězení otázek zabere cca 10 minut. Na konci se dozvíte, jak se kandidáti shodují s vašimi názory.
       `
     : `
-Vítejte ve Volební kalkulačce pro komunální volby 2022.
-
-Čeká vás 30-40 otázek, jejich zodpovězení zabere cca 10 minut. Na konci se dozvíte, v kolika procentech odpovědí se s kandidujícími stranami shodujete v názorech.
+Čeká vás 30-40 otázek, jejich zodpovězení zabere cca 10 minut. Na konci se dozvíte, jak se kandidující strany shodují s vašimi názory.
     `;
 
 const forwardRoute = computed(
