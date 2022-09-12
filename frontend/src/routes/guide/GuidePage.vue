@@ -67,12 +67,12 @@ const text =
     ? `
     Vítejte ve Volební kalkulačce pro volby do Senátu ČR.
 
-Čeká vás zhruba 40 otázek. Na stejné otázky nám odpověděly kandidující strany. Zodpovězení otázek zabere cca 10 minut. Na konci se dozvíte, jak se kandidáti shodují s vašimi názory.
+Čeká vás zhruba 40 otázek. Na stejné otázky nám odpověděli kandidáti. Zodpovězení otázek zabere cca 10 minut. Na konci se dozvíte, jak se kandidáti shodují s vašimi názory.
       `
     : `
     Vítejte ve Volební kalkulačce pro komunální volby 2022.
 
-Čeká vás zhruba 40 otázek, jejich zodpovězení zabere cca 10 minut. Na konci se dozvíte, jak se kandidující strany shodují s vašimi názory.
+Čeká vás zhruba 40 otázek. Na stejné otázky nám odpověděly kandidující strany. Zodpovězení otázek zabere cca 10 minut. Na konci se dozvíte, jak se kandidující strany shodují s vašimi názory.
     `;
 
 const forwardRoute = computed(
