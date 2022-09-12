@@ -26,7 +26,6 @@ const route = useRoute();
 
 <script lang="ts">
 import { ref } from 'vue';
-import { useRouter } from 'vue-router';
 
 const info = ref<HTMLElement | null>(null);
 export default {
