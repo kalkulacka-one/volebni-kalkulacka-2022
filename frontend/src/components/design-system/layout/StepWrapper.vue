@@ -1,5 +1,21 @@
+<script setup lang="ts">
+import { computed } from 'vue';
+
+export interface Props {
+  centered?: boolean;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  centered: false,
+});
+
+const classes = computed(() => ({
+  'step-wrapper--centered': props.centered,
+}));
+</script>
+
 <template>
-  <div class="step-wrapper">
+  <div :class="['step-wrapper', classes]">
     <div class="before">
       <slot name="before" />
     </div>
@@ -19,8 +35,11 @@
   grid-template-areas: 'before main after';
   gap: var(--spacing-large);
   height: 100%;
-  align-items: center;
   padding: var(--spacing-small);
+
+  &--centered {
+    align-items: center;
+  }
 
   .before {
     grid-area: before;
