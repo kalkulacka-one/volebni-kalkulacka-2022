@@ -2,10 +2,10 @@
 import { useRoute, useRouter } from 'vue-router';
 
 import { appRoutes } from '@/main';
-import { fetchElections } from '@/common/dataFetch';
 
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
-import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
+import ContainerComponent from '@/components/design-system/containers/ContainerComponent.vue';
+import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
 import CardComponent from '@/components/design-system/containers/CardComponent.vue';
 import StackComponent from '../../components/design-system/layout/StackComponent.vue';
 import BodyText from '../../components/design-system/typography/BodyText.vue';
@@ -41,7 +41,21 @@ export default {
   <BackgroundComponent>
     <StickyHeaderLayout>
       <template #header>
-        <NavigationBar transparent />
+        <ContainerComponent
+          class="navigation-bar"
+          padding="medium"
+          responsive-padding
+          background="transparent"
+        >
+          <div class="grid">
+            <LogoComponent responsive />
+            <div class="title">
+              <BodyText size="small"> </BodyText>
+            </div>
+            <StackComponent class="right" horizontal spacing="small">
+            </StackComponent>
+          </div>
+        </ContainerComponent>
       </template>
       <StaticContentLayout>
         <div class="section-header section">
@@ -254,6 +268,27 @@ export default {
   @media (max-width: 478px) {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
+  }
+}
+.navigation-bar {
+  .grid {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto 1fr;
+
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr auto 1fr;
+    }
+
+    .title {
+      justify-self: center;
+      margin-left: var(--spacing-medium);
+      margin-right: var(--spacing-medium);
+    }
+
+    .right {
+      justify-content: end;
+    }
   }
 }
 </style>
