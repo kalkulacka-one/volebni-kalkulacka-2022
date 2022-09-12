@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import {
   mdiShareVariantOutline,
@@ -66,6 +67,10 @@ const handleShareClick = async () => {
   }
   alert(generateShareUrl(res.result_id));
 };
+
+onMounted(async () => {
+  const response = await postResults();
+});
 
 const resultsGeneral = calculateRelativeAgreement(
   electionStore.calculator?.answers as CandidateAnswer[],
