@@ -109,7 +109,10 @@ const toggleClick = () => {
             :alt="'nologo'"
           />
           <BodyText size="medium"
-            >{{ i !== 0 ? ', ' : '' }}{{ party.name }}</BodyText
+            >{{ i !== 0 ? ', ' : ''
+            }}{{
+              candidate?.type == 'person' ? party.name : party.short_name
+            }}</BodyText
           >
         </div>
       </div>
