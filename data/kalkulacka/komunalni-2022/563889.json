@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro 9 měst.",
+    "description": "K dispozici jsou kalkulačky pro **15** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro 9 měst.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **15** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -449,11 +449,12 @@
         {
           "id": "komunalni-2022-563889-c-709264-p",
           "name": "Trikolora a Soukromníci",
+          "short_name": "Trikolora a Soukromníci",
+          "abbreviation": "Trikol+Soukrom",
           "description": "Trikolora a Soukromníci",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "Trikol+Soukrom"
+          }
         }
       ]
     },
@@ -475,6 +476,8 @@
         {
           "id": "komunalni-2022-563889-c-434921-p",
           "name": "ANO 2011",
+          "short_name": "ANO 2011",
+          "abbreviation": "ANO",
           "description": "ANO 2011",
           "contacts": {
             "web": [
@@ -483,8 +486,7 @@
                 "label": "program"
               }
             ]
-          },
-          "abbreviation": "ANO"
+          }
         }
       ],
       "motto": "Reálné cíle, ne vzdušné zámky"
@@ -509,6 +511,8 @@
         {
           "id": "komunalni-2022-563889-c-184949-p",
           "name": "Česká pirátská strana",
+          "short_name": "Česká pirátská strana",
+          "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
           "contacts": {
             "web": [
@@ -519,8 +523,7 @@
             ],
             "facebook": "https://www.facebook.com/piratiliberec",
             "instagram": "https://www.instagram.com/piratiliberec/"
-          },
-          "abbreviation": "Piráti"
+          }
         }
       ],
       "motto": "Máme odvahu dělat, co je správné."
@@ -548,6 +551,8 @@
         {
           "id": "komunalni-2022-563889-c-282146-p",
           "name": "Starostové pro Liberecký kraj společně s TOP 09 a KDU-ČSL",
+          "short_name": "SLK společ. s TOP 09 a KDU-ČSL",
+          "abbreviation": "KDU-ČSL+SLK+TOP",
           "description": "Starostové pro Liberecký kraj společně s TOP 09 a KDU-ČSL",
           "contacts": {
             "web": [
@@ -561,8 +566,7 @@
               }
             ],
             "facebook": "https://www.facebook.com/kducslliberec"
-          },
-          "abbreviation": "KDU-ČSL+SLK+TOP"
+          }
         }
       ],
       "motto": "Staráme se o město každý den."
@@ -587,6 +591,8 @@
         {
           "id": "komunalni-2022-563889-c-188908-p",
           "name": "Liberec otevřený lidem",
+          "short_name": "Liberec otevřený lidem",
+          "abbreviation": "Zelení+NK",
           "description": "Liberec otevřený lidem",
           "contacts": {
             "web": [
@@ -597,8 +603,7 @@
             ],
             "facebook": "https://www.facebook.com/liberecotevrenylidem/",
             "twitter": "https://twitter.com/libereclidem"
-          },
-          "abbreviation": "Zelení+NK"
+          }
         }
       ],
       "motto": "Máme skutečná řešení pro Liberec. Naše sliby myslíme vážně."
@@ -626,6 +631,8 @@
         {
           "id": "komunalni-2022-563889-c-230742-p",
           "name": "ODS společně se Sportovci",
+          "short_name": "ODS společně se Sportovci",
+          "abbreviation": "ODS+USZ+NK",
           "description": "ODS společně se Sportovci",
           "contacts": {
             "web": [
@@ -639,10 +646,10 @@
               }
             ],
             "facebook": "https://www.facebook.com/ODSLiberec"
-          },
-          "abbreviation": "ODS+USZ+NK"
+          }
         }
-      ]
+      ],
+      "motto": "Liberec a jeho obyvatelé jsou pro nás na prvním místě."
     },
     {
       "id": "komunalni-2022-563889-c-843854",
@@ -657,11 +664,12 @@
         {
           "id": "komunalni-2022-563889-c-843854-p",
           "name": "Právo Respekt Odbornost",
+          "short_name": "Právo Respekt Odbornost",
+          "abbreviation": "PRO 2022",
           "description": "Právo Respekt Odbornost",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "PRO 2022"
+          }
         }
       ],
       "motto": "Řídit město udržitelně, se zdravým rozumem a  ve prospěch jeho obyvatel"
@@ -679,11 +687,12 @@
         {
           "id": "komunalni-2022-563889-c-401265-p",
           "name": "Komunistická strana Čech a Moravy a Podještědská levice",
+          "short_name": "KSČM a Podještědská levice",
+          "abbreviation": "KSČM+NK",
           "description": "Komunistická strana Čech a Moravy a Podještědská levice",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "KSČM+NK"
+          }
         }
       ],
       "motto": "Bydlení a bezpečnost"
@@ -701,11 +710,12 @@
         {
           "id": "komunalni-2022-563889-c-323656-p",
           "name": "Česká strana sociálně demokratická",
+          "short_name": "Česká str.sociálně demokrat.",
+          "abbreviation": "ČSSD",
           "description": "Česká strana sociálně demokratická",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "ČSSD"
+          }
         }
       ],
       "motto": "S vaši podporou chceme řešit důležité věci pro Liberec"
@@ -729,6 +739,8 @@
         {
           "id": "komunalni-2022-563889-c-690485-p",
           "name": "Svoboda a přímá demokracie (SPD)",
+          "short_name": "Svoboda a př. demokracie (SPD)",
+          "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": {
             "web": [
@@ -738,8 +750,7 @@
               }
             ],
             "facebook": "https://www.facebook.com/spdliberecky"
-          },
-          "abbreviation": "SPD"
+          }
         }
       ],
       "motto": "Jsme silný tým a pomůžeme rozvoji města. Občan náš partner."
@@ -3383,6 +3394,333 @@
       "question_id": "komunalni-2022-563889-q-52",
       "answer": "yes",
       "comment": "Podpora návratu maminek do práce, velmi důležité i pro samoživitelky"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-1",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-1",
+      "answer": "no",
+      "comment": "Nicméně platí, že pokud si to nemohou dovolit, tak tam přeci bydlet nebudou."
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-2",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-2",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-3",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-3",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-4",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-4",
+      "answer": "dont_know",
+      "comment": "Ve chvíli, kdy je proto důvod, tak se tak děje. Musí to být v souladu s odborem dopravy."
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-5",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-5",
+      "answer": "no",
+      "comment": "Propagace je celoplošná, další náklady by neměli efekt."
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-6",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-6",
+      "answer": "dont_know",
+      "comment": "Jsou místa, kde je to vhodné zvážit s ohledem na bezpečnost."
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-7",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-7",
+      "answer": "no",
+      "comment": "Je to druh legálního podnikání."
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-8",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-8",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-9",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-9",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-10",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-10",
+      "answer": "yes",
+      "comment": "V Liberci je zveřejňováno jmenovitě."
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-11",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-11",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-12",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-12",
+      "answer": "dont_know",
+      "comment": "Jsou typy akcí, kdy je možné to povolit."
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-13",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-13",
+      "answer": "yes",
+      "comment": "Veřejné budovy jsou přístupné."
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-14",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-14",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-15",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-15",
+      "answer": "dont_know",
+      "comment": "Je to na zvážení v jaké době a v jaké lokalitě."
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-16",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-16",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-17",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-17",
+      "answer": "no",
+      "comment": "Lze využít milostivé léto, odpuštění dluhu nemá výchovný rozměr."
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-18",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-18",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-19",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-19",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-20",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-20",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-21",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-21",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-22",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-22",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-23",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-23",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-24",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-24",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-25",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-25",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-26",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-26",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-27",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-27",
+      "answer": "no",
+      "comment": "Všechny typy dopravy by si měli být rovny."
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-28",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-28",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-29",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-29",
+      "answer": "dont_know",
+      "comment": "Developeři by se měli podílet podle toho jak zatíží veřejnou infrastrukturu do budoucna. Město by budoucí stavebníky nemělo nepřiměřeně vydírat."
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-30",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-30",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-31",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-31",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-32",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-32",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-33",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-33",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-34",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-34",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-35",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-35",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-36",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-36",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-37",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-37",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-38",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-38",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-39",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-39",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-40",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-40",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-41",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-41",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-42",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-42",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-43",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-43",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-44",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-44",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-45",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-45",
+      "answer": "dont_know",
+      "comment": "Mělo by být použito především nástrojů ze státní podpory."
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-46",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-46",
+      "answer": "yes",
+      "comment": "A to především pro udržení lidí v důležitých pozicích pro město, jako jsou učitelé, zdravotnický personál, policisté a další."
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-47",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-47",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-48",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-48",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-49",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-49",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-50",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-50",
+      "answer": "dont_know",
+      "comment": "Odstraněním jedné, se přesunou na jinou, to problém neřeší."
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-51",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-51",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-563889-a-230742-52",
+      "candidate_id": "komunalni-2022-563889-c-230742",
+      "question_id": "komunalni-2022-563889-q-52",
+      "answer": "yes"
     }
   ]
 }

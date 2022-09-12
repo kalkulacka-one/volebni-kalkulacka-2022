@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro 9 měst.",
+    "description": "K dispozici jsou kalkulačky pro **15** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro 9 měst.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **15** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -430,6 +430,8 @@
         {
           "id": "komunalni-2022-554804-c-415562-p",
           "name": "ÚSTECKÉ FÓRUM OBČANŮ",
+          "short_name": "ÚSTECKÉ FÓRUM OBČANŮ",
+          "abbreviation": "UFO",
           "description": "ÚSTECKÉ FÓRUM OBČANŮ",
           "contacts": {
             "web": [
@@ -438,8 +440,7 @@
                 "label": "web"
               }
             ]
-          },
-          "abbreviation": "UFO"
+          }
         }
       ],
       "motto": "Jsme sdružení ústeckých patriotů -Ústí je náš domov!"
@@ -463,6 +464,8 @@
         {
           "id": "komunalni-2022-554804-c-606320-p",
           "name": "Vaše Ústí",
+          "short_name": "Vaše Ústí",
+          "abbreviation": "VÚ",
           "description": "Vaše Ústí",
           "contacts": {
             "web": [
@@ -472,8 +475,7 @@
               }
             ],
             "facebook": "https://www.facebook.com/vasemestonasestarost"
-          },
-          "abbreviation": "VÚ"
+          }
         }
       ],
       "motto": "Děláme Ústí lepší. Slušně a poctivě."
@@ -491,11 +493,12 @@
         {
           "id": "komunalni-2022-554804-c-265108-p",
           "name": "Občanská demokratická strana",
+          "short_name": "Občanská demokratická strana",
+          "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "ODS"
+          }
         }
       ],
       "motto": "Lepší volba v Ústí v těchto volbách opravdu není!"
@@ -518,6 +521,8 @@
         {
           "id": "komunalni-2022-554804-c-986225-p",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
           "contacts": {
             "web": [
@@ -526,8 +531,7 @@
                 "label": "program"
               }
             ]
-          },
-          "abbreviation": "STAN"
+          }
         }
       ],
       "motto": "Vyřešíme nahromaděné problémy z minulosti a přicházíme s jasnou vizí dalšího rozvoje."
@@ -545,11 +549,12 @@
         {
           "id": "komunalni-2022-554804-c-287190-p",
           "name": "Aliance pro Ústí",
+          "short_name": "Aliance pro Ústí",
+          "abbreviation": "Manifest.cz+NK",
           "description": "Aliance pro Ústí",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "Manifest.cz+NK"
+          }
         }
       ]
     },
@@ -566,11 +571,12 @@
         {
           "id": "komunalni-2022-554804-c-554883-p",
           "name": "ANO 2011",
+          "short_name": "ANO 2011",
+          "abbreviation": "ANO",
           "description": "ANO 2011",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "ANO"
+          }
         }
       ],
       "motto": "Strana, za kterou jsou vidět výsledky otevřená i pro jiné názory"
@@ -588,11 +594,12 @@
         {
           "id": "komunalni-2022-554804-c-118556-p",
           "name": "Zdraví Sport Prosperita",
+          "short_name": "Zdraví Sport Prosperita",
+          "abbreviation": "PRO Zdraví",
           "description": "Zdraví Sport Prosperita",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "PRO Zdraví"
+          }
         }
       ],
       "motto": "máme nejkvalitněší kandidáty"
@@ -610,11 +617,12 @@
         {
           "id": "komunalni-2022-554804-c-862129-p",
           "name": "Svoboda a přímá demokracie (SPD) s podporou politické strany Trikolora",
+          "short_name": "Koalice SPD, Trikolora",
+          "abbreviation": "SPD+Trikolora",
           "description": "Svoboda a přímá demokracie (SPD) s podporou politické strany Trikolora",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "SPD+Trikolora"
+          }
         }
       ],
       "motto": "Pro SPD je ČR a slušný občan na prvním místě"
@@ -637,6 +645,8 @@
         {
           "id": "komunalni-2022-554804-c-320927-p",
           "name": "Za lepší Střekov",
+          "short_name": "Za lepší Střekov",
+          "abbreviation": "ZLS",
           "description": "Za lepší Střekov",
           "contacts": {
             "web": [
@@ -645,8 +655,7 @@
                 "label": "web"
               }
             ]
-          },
-          "abbreviation": "ZLS"
+          }
         }
       ]
     },
@@ -669,6 +678,8 @@
         {
           "id": "komunalni-2022-554804-c-418969-p",
           "name": "PRO! Ústí",
+          "short_name": "PRO! Ústí",
+          "abbreviation": "Zel.+Piráti+NK",
           "description": "PRO! Ústí",
           "contacts": {
             "web": [
@@ -678,8 +689,7 @@
               }
             ],
             "facebook": "https://www.facebook.com/hnutiprousti/"
-          },
-          "abbreviation": "Zel.+Piráti+NK"
+          }
         }
       ],
       "motto": "Aby Ústí bylo město, kde se dobře žije udržitelným způsobem."
@@ -697,11 +707,12 @@
         {
           "id": "komunalni-2022-554804-c-627274-p",
           "name": "Komunistická strana Čech a Moravy",
+          "short_name": "Komunistická str.Čech a Moravy",
+          "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "KSČM"
+          }
         }
       ]
     },
@@ -729,6 +740,8 @@
         {
           "id": "komunalni-2022-554804-c-894961-p",
           "name": "SPOLEČNĚ Ústí nad Labem",
+          "short_name": "SPOLEČNĚ Ústí nad Labem",
+          "abbreviation": "KDUČSL+TOP09+NK",
           "description": "SPOLEČNĚ Ústí nad Labem",
           "contacts": {
             "web": [
@@ -743,8 +756,7 @@
             ],
             "facebook": "https://www.facebook.com/spolecneUSTI",
             "instagram": "https://www.instagram.com/spolecne_usti/"
-          },
-          "abbreviation": "KDUČSL+TOP09+NK"
+          }
         }
       ],
       "motto": "Společně po lepších cestách!"
@@ -768,6 +780,8 @@
         {
           "id": "komunalni-2022-554804-c-775234-p",
           "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+          "short_name": "PŘÍSAHA Roberta Šlachty",
+          "abbreviation": "PŘÍSAHA",
           "description": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
           "contacts": {
             "web": [
@@ -777,8 +791,7 @@
               }
             ],
             "facebook": "https://www.facebook.com/PrisahaUsti"
-          },
-          "abbreviation": "PŘÍSAHA"
+          }
         }
       ],
       "motto": "Jsme Přísaha v Ústí nad Labem. Tady jsme doma a tady to máme rádi, proto jdeme do politiky a chceme, aby platil stejný metr pro všechny."

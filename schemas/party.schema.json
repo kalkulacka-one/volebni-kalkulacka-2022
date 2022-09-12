@@ -14,6 +14,10 @@
       "type": "string",
       "description": "Party name"
     },
+    "short_name": {
+      "type": "string",
+      "description": "Party short name"
+    },
     "description": {
       "type": "string",
       "description": "Longer description."
