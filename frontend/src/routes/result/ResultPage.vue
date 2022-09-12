@@ -141,7 +141,7 @@ const resultsMedicine = calculateRelativeAgreement(
             </template>
             <TitleText tag="h2" size="medium">Moje shoda</TitleText>
             <template #after>
-              <!-- 
+              <!--
               <ButtonComponent
                 kind="link"
                 color="primary"
