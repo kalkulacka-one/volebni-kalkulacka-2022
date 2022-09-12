@@ -349,7 +349,7 @@ def extract_komunalni_candidates(
         candidate = Candidate(
             id=candidate_id,
             num=int(row["id"]),
-            name=str(row["name"]),
+            name=str(row["short_name"]),
             short_name=str(row["short_name"]),
             abbreviation=str(row["abbreviation"]),
             description=str(row["name"]),
