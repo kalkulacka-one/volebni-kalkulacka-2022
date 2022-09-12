@@ -12,8 +12,7 @@ export default defineConfig({
     port: 5201,
     proxy: {
       '/data': {
-        target: 'https://volebnikalkulacka.cz',
-        //target: 'http://127.0.0.1:5201/dev',
+        target: 'https://www.volebnikalkulacka.cz',
         changeOrigin: true,
         cookieDomainRewrite: { '*': '' },
         configure: (proxy) =>
@@ -26,12 +25,11 @@ export default defineConfig({
           }),
       },
       '/api': {
-        target: 'https://volebnikalkulacka.cz',
-        //target: 'http://127.0.0.1:8080',
+        target: 'https://www.volebnikalkulacka.cz',
         changeOrigin: true,
       },
       '/js/script.outbound-links.js': {
-        target: 'https://volebnikalkulacka.cz',
+        target: 'https://www.volebnikalkulacka.cz',
         changeOrigin: true,
       },
     },
