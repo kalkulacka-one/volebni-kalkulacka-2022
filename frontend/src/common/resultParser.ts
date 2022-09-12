@@ -116,8 +116,8 @@ export const calculateRelativeAgreement = (
       relativeAgreement.set(ca.candidate_id, {
         count: 0,
         raw_result: 0,
-        result: 0,
-        result_percent: 0,
+        result: 0.5,
+        result_percent: 50,
         random: Math.random(),
       });
     }
