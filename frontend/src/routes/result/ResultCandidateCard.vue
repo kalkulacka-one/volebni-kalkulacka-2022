@@ -174,7 +174,7 @@ const toggleClick = () => {
 
 .result-question-card {
   display: grid;
-  grid-template-columns: 4.5rem 1fr 4.5rem auto;
+  // grid-template-columns: 4.5rem 1fr 4.5rem auto;
   grid-template-areas:
     'avatar text percentage toggle'
     'avatar progress-bar percentage toggle'

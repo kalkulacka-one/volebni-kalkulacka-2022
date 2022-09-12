@@ -87,6 +87,7 @@ const toggleClick = () => {
         horizontal
         spacing="extra-small"
         spacing-responsive
+        style="flex-wrap: wrap"
       >
         <BodyText size="small">
           {{ currentQuestion }}/{{ questionCount }}
@@ -239,8 +240,8 @@ const toggleClick = () => {
 <style lang="scss" scoped>
 .recap-question-card {
   display: grid;
-  grid-template-columns: auto 1fr 4.5rem auto;
-  grid-template-rows: 2rem auto;
+  grid-template-columns: min-content 1fr min-content min-content;
+  //grid-template-rows: 2rem auto;
   grid-template-areas:
     'important details answer toggle'
     'important text answer toggle';
