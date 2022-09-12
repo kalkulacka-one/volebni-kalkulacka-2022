@@ -19,10 +19,10 @@
       "id": "komunalni-2022",
       "key": "komunalni-2022",
       "name": "Komunální volby 2022",
-      "description": "K dispozici jsou kalkulačky pro 9 měst.",
+      "description": "K dispozici jsou kalkulačky pro **15** měst České republiky.",
       "instructions": {
         "header": "Zvolte své město",
-        "step_1_1": "K dispozici jsou kalkulačky pro 9 měst.",
+        "step_1_1": "K dispozici jsou kalkulačky pro **15** měst České republiky.",
         "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
       },
       "from": "2022-09-23T14:00:00",
@@ -293,6 +293,15 @@
     },
     {
       "election_id": "komunalni-2022",
+      "district_code": "554821",
+      "show_district_code": false,
+      "name": "Ostrava",
+      "description": "Ostrava",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "komunalni-2022",
       "district_code": "554791",
       "show_district_code": false,
       "name": "Plzeň",
@@ -306,6 +315,24 @@
       "show_district_code": false,
       "name": "Liberec",
       "description": "Liberec",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "500496",
+      "show_district_code": false,
+      "name": "Olomouc",
+      "description": "Olomouc",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "544256",
+      "show_district_code": false,
+      "name": "České Budějovice",
+      "description": "České Budějovice",
       "on_hp_from": "2022-09-01T00:00:00",
       "on_hp_to": "2022-09-30T14:00:00"
     },
@@ -338,10 +365,37 @@
     },
     {
       "election_id": "komunalni-2022",
-      "district_code": "598917",
+      "district_code": "585068",
       "show_district_code": false,
-      "name": "Karviná",
-      "description": "Karviná",
+      "name": "Zlín",
+      "description": "Zlín",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "532053",
+      "show_district_code": false,
+      "name": "Kladno",
+      "description": "Kladno",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "567027",
+      "show_district_code": false,
+      "name": "Most",
+      "description": "Most",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "567442",
+      "show_district_code": false,
+      "name": "Teplice",
+      "description": "Teplice",
       "on_hp_from": "2022-09-01T00:00:00",
       "on_hp_to": "2022-09-30T14:00:00"
     },

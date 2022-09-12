@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro 9 měst.",
+    "description": "K dispozici jsou kalkulačky pro **15** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro 9 měst.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **15** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -246,7 +246,7 @@
       "id": "komunalni-2022-554782-q-52",
       "name": "Krátkodobé pronájmy",
       "title": "Podporuji, aby se v Praze výrazně reguloval trh s krátkodobým bydlením.",
-      "gist": "Zastánci regulace argumentují, že krátkodobě pronajímané nemovitosti křiví trh a vedou ke zvýšení cen. Vadí také nulové sousedské vazby a malá ohleduplnost hostů k dlouhodobým obyvatelům. Kritici poukazují, že se soukromým majetkem si vlastníci mohou nakládat jak chtějí.",
+      "gist": "Zastánci regulace argumentují, že krátkodobě pronajímané nemovitosti křiví trh a vedou ke zvýšení cen. Vadí také nulové sousedské vazby a malá ohleduplnost hostů k dlouhodobým obyvatelům. Kritici poukazují, že se soukromým majetkem si vlastníci mohou nakládat, jak chtějí.",
       "detail": "",
       "tags": ["Bydlení"]
     },
@@ -345,6 +345,14 @@
       "gist": "Oproti klasické střeše je založení zelené střechy nákladnější a složitější a je třeba ji následně udržovat. Kvůli vyššímu zatížení je třeba silnější střešní konstrukce. Zastánci poukazují na to, že zelené střechy izolují a snižují náklady na vytápění či chlazení vnitřních prostor v létě.",
       "detail": "Klasické střechy mohou mít až 70 stupňů, teplota ozeleněné střechy se blíží například trávníku v okolí.",
       "tags": ["Klimatické změny"]
+    },
+    {
+      "id": "komunalni-2022-554782-q-7",
+      "name": "Hazard zakázán",
+      "title": "Jste pro úplný zákaz hazardu na území města?",
+      "gist": "Příznivci zákazu argumentují sociálními problémy plynoucími z hazardu. Odpůrci zmiňují svobodu podnikání a finance, které město získá na daních.",
+      "detail": "",
+      "tags": []
     }
   ],
   "candidates": [
@@ -361,11 +369,12 @@
         {
           "id": "komunalni-2022-554782-c-540309-p",
           "name": "Svobodní",
+          "short_name": "Svobodní",
+          "abbreviation": "Svobodní",
           "description": "Svobodní",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "Svobodní"
+          }
         }
       ]
     },
@@ -388,6 +397,8 @@
         {
           "id": "komunalni-2022-554782-c-254716-p",
           "name": "PRAHA NÁŠ DOMOV",
+          "short_name": "PRAHA NÁŠ DOMOV",
+          "abbreviation": "Rozum+Suver+DOM",
           "description": "PRAHA NÁŠ DOMOV",
           "contacts": {
             "web": [
@@ -397,8 +408,7 @@
               }
             ],
             "facebook": "https://www.facebook.com/davidtygr.ploc"
-          },
-          "abbreviation": "Rozum+Suver+DOM"
+          }
         }
       ]
     },
@@ -417,13 +427,14 @@
         {
           "id": "komunalni-2022-554782-c-856015-p",
           "name": "Praha bez chaosu",
+          "short_name": "Praha bez chaosu",
+          "abbreviation": "P bez chaosu+NK",
           "description": "Praha bez chaosu",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/pbch.cz",
             "instagram": "https://www.instagram.com/praha_bez_chaosu/"
-          },
-          "abbreviation": "P bez chaosu+NK"
+          }
         }
       ]
     },
@@ -456,6 +467,8 @@
         {
           "id": "komunalni-2022-554782-c-550372-p",
           "name": "PRAHA SOBĚ",
+          "short_name": "PRAHA SOBĚ",
+          "abbreviation": "PRAHA SOBĚ+NK",
           "description": "PRAHA SOBĚ",
           "contacts": {
             "web": [
@@ -475,8 +488,7 @@
             "facebook": "https://www.facebook.com/PRAHASOBE.CZ/",
             "twitter": "https://twitter.com/prahasobe?lang=cs",
             "instagram": "https://www.instagram.com/prahasobe/"
-          },
-          "abbreviation": "PRAHA SOBĚ+NK"
+          }
         }
       ]
     },
@@ -499,6 +511,8 @@
         {
           "id": "komunalni-2022-554782-c-917016-p",
           "name": "LEPŠÍ PRAHA PRO PRAŽANY – snížení daně z nemovitých věcí o 50%, městská hromadná doprava zdarma, internet zdarma…",
+          "short_name": "LEPŠÍ PRAHA PRO PRAŽANY",
+          "abbreviation": "ND+ANS",
           "description": "LEPŠÍ PRAHA PRO PRAŽANY – snížení daně z nemovitých věcí o 50%, městská hromadná doprava zdarma, internet zdarma…",
           "contacts": {
             "web": [
@@ -508,8 +522,7 @@
               }
             ],
             "facebook": "https://www.facebook.com/permalink.php?story_fbid=pfbid023ssKDjTLgqzutqXmufV32xHmEJzdvaVZFJUhj5izF34XpjuFtjp7mNg8RtjrUVjCl&id=100011339901189"
-          },
-          "abbreviation": "ND+ANS"
+          }
         }
       ]
     },
@@ -534,6 +547,8 @@
         {
           "id": "komunalni-2022-554782-c-528817-p",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
           "contacts": {
             "web": [
@@ -545,8 +560,7 @@
             "facebook": "https://www.facebook.com/starostovenezavisli.praha",
             "twitter": "https://twitter.com/STANPraha",
             "instagram": "https://instagram.com/stan.praha"
-          },
-          "abbreviation": "STAN"
+          }
         }
       ]
     },
@@ -563,11 +577,12 @@
         {
           "id": "komunalni-2022-554782-c-684523-p",
           "name": "Volte Pravý Blok - stranu za ODVOLATELNOST politiků a státních úředníků PŘÍMO OBČANY",
+          "short_name": "Volte Pr.Blok www.cibulka.net",
+          "abbreviation": "PB",
           "description": "Volte Pravý Blok - stranu za ODVOLATELNOST politiků a státních úředníků PŘÍMO OBČANY",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "PB"
+          }
         }
       ]
     },
@@ -595,6 +610,8 @@
         {
           "id": "komunalni-2022-554782-c-738486-p",
           "name": "Česká pirátská strana",
+          "short_name": "Česká pirátská strana",
+          "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
           "contacts": {
             "web": [
@@ -609,8 +626,7 @@
             ],
             "facebook": "https://www.facebook.com/CeskaPiratskaStranaPraha/",
             "twitter": "https://twitter.com/piratipraha"
-          },
-          "abbreviation": "Piráti"
+          }
         }
       ]
     },
@@ -637,6 +653,8 @@
         {
           "id": "komunalni-2022-554782-c-401009-p",
           "name": "Motoristé sobě",
+          "short_name": "Motoristé sobě",
+          "abbreviation": "AUTO",
           "description": "Motoristé sobě",
           "contacts": {
             "web": [
@@ -650,8 +668,7 @@
               }
             ],
             "facebook": "https://facebook.com/motoristesobe"
-          },
-          "abbreviation": "AUTO"
+          }
         }
       ]
     },
@@ -674,6 +691,8 @@
         {
           "id": "komunalni-2022-554782-c-305273-p",
           "name": "Přísaha s Patrioty",
+          "short_name": "Přísaha s Patrioty",
+          "abbreviation": "PatrČR+PŘÍSAHA",
           "description": "Přísaha s Patrioty",
           "contacts": {
             "web": [
@@ -683,8 +702,7 @@
               }
             ],
             "facebook": "https://www.facebook.com/myjsmePrisahaPraha"
-          },
-          "abbreviation": "PatrČR+PŘÍSAHA"
+          }
         }
       ]
     },
@@ -701,11 +719,12 @@
         {
           "id": "komunalni-2022-554782-c-532713-p",
           "name": "Za bezpečné ulice v Praze",
+          "short_name": "Za bezpečné ulice v Praze",
+          "abbreviation": "DSSS+BEZ-UL",
           "description": "Za bezpečné ulice v Praze",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "DSSS+BEZ-UL"
+          }
         }
       ]
     },
@@ -722,11 +741,12 @@
         {
           "id": "komunalni-2022-554782-c-476009-p",
           "name": "Urza.cz: Nechceme vaše hlasy; ke svobodě se nelze provolit... Máme jinou vizi. Jdeme jinou cestou.",
+          "short_name": "Urza.cz: Nechceme vaše hlasy",
+          "abbreviation": "Nevolte Urza.cz",
           "description": "Urza.cz: Nechceme vaše hlasy; ke svobodě se nelze provolit... Máme jinou vizi. Jdeme jinou cestou.",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "Nevolte Urza.cz"
+          }
         }
       ]
     },
@@ -749,6 +769,8 @@
         {
           "id": "komunalni-2022-554782-c-595054-p",
           "name": "Komunistická strana Čech a Moravy",
+          "short_name": "Komunistická str.Čech a Moravy",
+          "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
           "contacts": {
             "web": [
@@ -758,8 +780,7 @@
               }
             ],
             "facebook": "http://facebook.com/kscmpraha"
-          },
-          "abbreviation": "KSČM"
+          }
         }
       ]
     },
@@ -788,6 +809,8 @@
         {
           "id": "komunalni-2022-554782-c-304346-p",
           "name": "SPOLU pro Prahu (ODS, TOP 09, KDU-ČSL)",
+          "short_name": "SPOLU pro Prahu",
+          "abbreviation": "KDU+ODS+TOP 09",
           "description": "SPOLU pro Prahu (ODS, TOP 09, KDU-ČSL)",
           "contacts": {
             "web": [
@@ -803,8 +826,7 @@
             "facebook": "https://www.facebook.com/spoluproprahu22",
             "twitter": "https://twitter.com/KoaliceSpoluPha",
             "instagram": "https://www.instagram.com/spolu_pro_prahu/"
-          },
-          "abbreviation": "KDU+ODS+TOP 09"
+          }
         }
       ]
     },
@@ -837,6 +859,8 @@
         {
           "id": "komunalni-2022-554782-c-834158-p",
           "name": "Solidarita – koalice ČSSD, Zelených, Budoucnosti a Idealistů",
+          "short_name": "Solidarita - ČSSD,Zel,Bud,Ide",
+          "abbreviation": "Ze+ČSSD+Bud+Ide",
           "description": "Solidarita – koalice ČSSD, Zelených, Budoucnosti a Idealistů",
           "contacts": {
             "web": [
@@ -856,8 +880,7 @@
             "facebook": "https://www.facebook.com/solidarita2022",
             "twitter": "https://twitter.com/solidarita2022",
             "instagram": "https://www.instagram.com/solidarita2022/"
-          },
-          "abbreviation": "Ze+ČSSD+Bud+Ide"
+          }
         }
       ]
     },
@@ -874,11 +897,12 @@
         {
           "id": "komunalni-2022-554782-c-514272-p",
           "name": "SPD, Trikolora, Hnutí PES a nezávislí společně pro Prahu",
+          "short_name": "SPD,Trik.,PES a nez. pro Prahu",
+          "abbreviation": "SPD+Trik+PES+NK",
           "description": "SPD, Trikolora, Hnutí PES a nezávislí společně pro Prahu",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "SPD+Trik+PES+NK"
+          }
         }
       ]
     },
@@ -895,11 +919,12 @@
         {
           "id": "komunalni-2022-554782-c-393428-p",
           "name": "Společnost proti developerské výstavbě v Prokopském údolí",
+          "short_name": "Společ.proti výst.v Prok.údolí",
+          "abbreviation": "SPDV",
           "description": "Společnost proti developerské výstavbě v Prokopském údolí",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "SPDV"
+          }
         }
       ]
     },
@@ -924,6 +949,8 @@
         {
           "id": "komunalni-2022-554782-c-174835-p",
           "name": "Volt",
+          "short_name": "Volt",
+          "abbreviation": "VČR",
           "description": "Volt",
           "contacts": {
             "web": [
@@ -935,8 +962,7 @@
             "facebook": "https://www.facebook.com/voltczechia",
             "twitter": "https://twitter.com/VoltCzechia",
             "instagram": "https://www.instagram.com/voltcz/"
-          },
-          "abbreviation": "VČR"
+          }
         }
       ]
     },
@@ -953,11 +979,12 @@
         {
           "id": "komunalni-2022-554782-c-318069-p",
           "name": "DOST",
+          "short_name": "DOST",
+          "abbreviation": "DOST",
           "description": "DOST",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "DOST"
+          }
         }
       ]
     },
@@ -974,11 +1001,12 @@
         {
           "id": "komunalni-2022-554782-c-464824-p",
           "name": "S.O.S. ZA PRÁVA ZVÍŘAT — Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK",
+          "short_name": "S.O.S. ZA PRÁVA ZVÍŘAT",
+          "abbreviation": "DSZ+NK",
           "description": "S.O.S. ZA PRÁVA ZVÍŘAT — Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "DSZ+NK"
+          }
         }
       ]
     },
@@ -997,13 +1025,14 @@
         {
           "id": "komunalni-2022-554782-c-662662-p",
           "name": "ANO 2011",
+          "short_name": "ANO 2011",
+          "abbreviation": "ANO",
           "description": "ANO 2011",
           "contacts": {
             "web": [],
             "facebook": "https://www.facebook.com/ANOPraha/",
             "twitter": "https://twitter.com/PatrikNacher"
-          },
-          "abbreviation": "ANO"
+          }
         }
       ]
     },
@@ -1025,6 +1054,8 @@
         {
           "id": "komunalni-2022-554782-c-568122-p",
           "name": "Strana soukromníků ČR, Koruna Česká (monarch. strana Čech, Moravy a Slezska), Konzervat. strana, Klub angaž. nestraníků",
+          "short_name": "Str.soukr. ČR, KČ, KS, KAN",
+          "abbreviation": "KONSKANMonSoukr",
           "description": "Strana soukromníků ČR, Koruna Česká (monarch. strana Čech, Moravy a Slezska), Konzervat. strana, Klub angaž. nestraníků",
           "contacts": {
             "web": [
@@ -1033,8 +1064,7 @@
                 "label": "program"
               }
             ]
-          },
-          "abbreviation": "KONSKANMonSoukr"
+          }
         }
       ]
     }
@@ -1284,6 +1314,12 @@
       "id": "komunalni-2022-554782-a-476009-43",
       "candidate_id": "komunalni-2022-554782-c-476009",
       "question_id": "komunalni-2022-554782-q-43",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554782-a-476009-7",
+      "candidate_id": "komunalni-2022-554782-c-476009",
+      "question_id": "komunalni-2022-554782-q-7",
       "answer": "no"
     },
     {
@@ -1559,6 +1595,13 @@
       "answer": "yes"
     },
     {
+      "id": "komunalni-2022-554782-a-532713-7",
+      "candidate_id": "komunalni-2022-554782-c-532713",
+      "question_id": "komunalni-2022-554782-q-7",
+      "answer": "yes",
+      "comment": "Bez výjimek a radikálně!"
+    },
+    {
       "id": "komunalni-2022-554782-a-254716-15",
       "candidate_id": "komunalni-2022-554782-c-254716",
       "question_id": "komunalni-2022-554782-q-15",
@@ -1818,6 +1861,13 @@
       "answer": "dont_know"
     },
     {
+      "id": "komunalni-2022-554782-a-254716-7",
+      "candidate_id": "komunalni-2022-554782-c-254716",
+      "question_id": "komunalni-2022-554782-q-7",
+      "answer": "no",
+      "comment": "casina nám nevadí"
+    },
+    {
       "id": "komunalni-2022-554782-a-662662-15",
       "candidate_id": "komunalni-2022-554782-c-662662",
       "question_id": "komunalni-2022-554782-q-15",
@@ -2066,6 +2116,12 @@
       "answer": "yes"
     },
     {
+      "id": "komunalni-2022-554782-a-662662-7",
+      "candidate_id": "komunalni-2022-554782-c-662662",
+      "question_id": "komunalni-2022-554782-q-7",
+      "answer": "dont_know"
+    },
+    {
       "id": "komunalni-2022-554782-a-318069-15",
       "candidate_id": "komunalni-2022-554782-c-318069",
       "question_id": "komunalni-2022-554782-q-15",
@@ -2311,6 +2367,12 @@
       "id": "komunalni-2022-554782-a-318069-43",
       "candidate_id": "komunalni-2022-554782-c-318069",
       "question_id": "komunalni-2022-554782-q-43",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554782-a-318069-7",
+      "candidate_id": "komunalni-2022-554782-c-318069",
+      "question_id": "komunalni-2022-554782-q-7",
       "answer": "no"
     },
     {
@@ -2565,6 +2627,13 @@
       "answer": "yes"
     },
     {
+      "id": "komunalni-2022-554782-a-174835-7",
+      "candidate_id": "komunalni-2022-554782-c-174835",
+      "question_id": "komunalni-2022-554782-q-7",
+      "answer": "no",
+      "comment": "Nejsme pro úplný zákaz, ale jsme pro silnou regulaci. "
+    },
+    {
       "id": "komunalni-2022-554782-a-540309-15",
       "candidate_id": "komunalni-2022-554782-c-540309",
       "question_id": "komunalni-2022-554782-q-15",
@@ -2809,6 +2878,12 @@
       "candidate_id": "komunalni-2022-554782-c-540309",
       "question_id": "komunalni-2022-554782-q-43",
       "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554782-a-540309-7",
+      "candidate_id": "komunalni-2022-554782-c-540309",
+      "question_id": "komunalni-2022-554782-q-7",
+      "answer": "no"
     },
     {
       "id": "komunalni-2022-554782-a-595054-15",
@@ -3067,6 +3142,12 @@
       "answer": "yes"
     },
     {
+      "id": "komunalni-2022-554782-a-595054-7",
+      "candidate_id": "komunalni-2022-554782-c-595054",
+      "question_id": "komunalni-2022-554782-q-7",
+      "answer": "yes"
+    },
+    {
       "id": "komunalni-2022-554782-a-834158-15",
       "candidate_id": "komunalni-2022-554782-c-834158",
       "question_id": "komunalni-2022-554782-q-15",
@@ -3310,6 +3391,12 @@
       "id": "komunalni-2022-554782-a-834158-43",
       "candidate_id": "komunalni-2022-554782-c-834158",
       "question_id": "komunalni-2022-554782-q-43",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554782-a-834158-7",
+      "candidate_id": "komunalni-2022-554782-c-834158",
+      "question_id": "komunalni-2022-554782-q-7",
       "answer": "yes"
     },
     {
@@ -3564,6 +3651,12 @@
       "id": "komunalni-2022-554782-a-401009-43",
       "candidate_id": "komunalni-2022-554782-c-401009",
       "question_id": "komunalni-2022-554782-q-43",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554782-a-401009-7",
+      "candidate_id": "komunalni-2022-554782-c-401009",
+      "question_id": "komunalni-2022-554782-q-7",
       "answer": "no"
     },
     {
@@ -3823,6 +3916,12 @@
       "id": "komunalni-2022-554782-a-528817-43",
       "candidate_id": "komunalni-2022-554782-c-528817",
       "question_id": "komunalni-2022-554782-q-43",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554782-a-528817-7",
+      "candidate_id": "komunalni-2022-554782-c-528817",
+      "question_id": "komunalni-2022-554782-q-7",
       "answer": "yes"
     },
     {
@@ -4113,6 +4212,13 @@
       "comment": "Zelené střechy jsou důležité pro adaptaci na klimatickou změnu. Instalace zelených střech je již navržena za určitých podmínek v novele pražských stavebních předpisu, které jsou právě projednávány."
     },
     {
+      "id": "komunalni-2022-554782-a-738486-7",
+      "candidate_id": "komunalni-2022-554782-c-738486",
+      "question_id": "komunalni-2022-554782-q-7",
+      "answer": "no",
+      "comment": "U hazardu stejně jako u návykových látek je potřeba snižovat rizika s nimi spojená, protože ničí mnohé lidské životy jak uživatelů, tak jejich okolí. Prohibice ale není nejlepším řešením. S jednotlivými hazardními hrami jsou spojena různá rizika, nelze všechny házet do jednoho pytle. Navíc v případě nulové tolerance se hráči ve velké míře přesouvají do těžko regulovatelného online prostoru, kde nelze účinně snižovat rizika. Proto místo prohibice prosazujeme prevenci, regulaci tvrdých hazardních her (například „výherních“ automatů) a rozšiřování adiktologických služeb. Nevidíme ale důvod omezovat lidi například v tom, aby si šli zahrát poker do kasina."
+    },
+    {
       "id": "komunalni-2022-554782-a-550372-15",
       "candidate_id": "komunalni-2022-554782-c-550372",
       "question_id": "komunalni-2022-554782-q-15",
@@ -4385,6 +4491,13 @@
       "answer": "yes"
     },
     {
+      "id": "komunalni-2022-554782-a-550372-7",
+      "candidate_id": "komunalni-2022-554782-c-550372",
+      "question_id": "komunalni-2022-554782-q-7",
+      "answer": "yes",
+      "comment": "Hazard je jeden z nejodpornějších způsobů jak vydělávat peníze - na neštěstí a ničení životů jiných lidí. "
+    },
+    {
       "id": "komunalni-2022-554782-a-514272-15",
       "candidate_id": "komunalni-2022-554782-c-514272",
       "question_id": "komunalni-2022-554782-q-15",
@@ -4640,6 +4753,12 @@
       "candidate_id": "komunalni-2022-554782-c-514272",
       "question_id": "komunalni-2022-554782-q-43",
       "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554782-a-514272-7",
+      "candidate_id": "komunalni-2022-554782-c-514272",
+      "question_id": "komunalni-2022-554782-q-7",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-554782-a-856015-15",
@@ -4898,6 +5017,12 @@
       "answer": "yes"
     },
     {
+      "id": "komunalni-2022-554782-a-856015-7",
+      "candidate_id": "komunalni-2022-554782-c-856015",
+      "question_id": "komunalni-2022-554782-q-7",
+      "answer": "yes"
+    },
+    {
       "id": "komunalni-2022-554782-a-305273-15",
       "candidate_id": "komunalni-2022-554782-c-305273",
       "question_id": "komunalni-2022-554782-q-15",
@@ -5144,6 +5269,12 @@
       "answer": "yes"
     },
     {
+      "id": "komunalni-2022-554782-a-305273-7",
+      "candidate_id": "komunalni-2022-554782-c-305273",
+      "question_id": "komunalni-2022-554782-q-7",
+      "answer": "no"
+    },
+    {
       "id": "komunalni-2022-554782-a-917016-15",
       "candidate_id": "komunalni-2022-554782-c-917016",
       "question_id": "komunalni-2022-554782-q-15",
@@ -5388,6 +5519,12 @@
       "candidate_id": "komunalni-2022-554782-c-917016",
       "question_id": "komunalni-2022-554782-q-43",
       "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-554782-a-917016-7",
+      "candidate_id": "komunalni-2022-554782-c-917016",
+      "question_id": "komunalni-2022-554782-q-7",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-554782-a-304346-15",
@@ -5642,6 +5779,13 @@
       "candidate_id": "komunalni-2022-554782-c-304346",
       "question_id": "komunalni-2022-554782-q-43",
       "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-554782-a-304346-7",
+      "candidate_id": "komunalni-2022-554782-c-304346",
+      "question_id": "komunalni-2022-554782-q-7",
+      "answer": "no",
+      "comment": "ODS již prosadila zákaz heren na území Prahy."
     }
   ]
 }

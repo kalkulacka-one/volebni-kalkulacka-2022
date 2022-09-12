@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro 9 měst.",
+    "description": "K dispozici jsou kalkulačky pro **15** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro 9 měst.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **15** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -428,6 +428,8 @@
         {
           "id": "komunalni-2022-555134-c-915355-p",
           "name": "SPOLU (ODS, KDU-ČSL, TOP 09)",
+          "short_name": "SPOLU (ODS, KDU-ČSL, TOP 09)",
+          "abbreviation": "KDU+ODS+TOP 09",
           "description": "SPOLU (ODS, KDU-ČSL, TOP 09)",
           "contacts": {
             "web": [
@@ -442,8 +444,7 @@
             ],
             "facebook": "https://www.facebook.com/spoluPardubice",
             "instagram": "https://www.instagram.com/spolupardubice/"
-          },
-          "abbreviation": "KDU+ODS+TOP 09"
+          }
         }
       ],
       "motto": "Pravá volba pro Pardubice."
@@ -471,6 +472,8 @@
         {
           "id": "komunalni-2022-555134-c-349076-p",
           "name": "Piráti: 42projektu.cz",
+          "short_name": "Piráti: 42projektu.cz",
+          "abbreviation": "Zelení+Piráti",
           "description": "Piráti: 42projektu.cz",
           "contacts": {
             "web": [
@@ -484,8 +487,7 @@
               }
             ],
             "facebook": "https://www.facebook.com/zeleni.pardubice"
-          },
-          "abbreviation": "Zelení+Piráti"
+          }
         }
       ],
       "motto": "Moderní, středově liberální strana přinášející konkrétní projekty pro Pardubice"
@@ -510,6 +512,8 @@
         {
           "id": "komunalni-2022-555134-c-280020-p",
           "name": "Žijeme Pardubice",
+          "short_name": "Žijeme Pardubice",
+          "abbreviation": "ČSSD+PP21+NK",
           "description": "Žijeme Pardubice",
           "contacts": {
             "web": [
@@ -520,8 +524,7 @@
             ],
             "facebook": "https://www.facebook.com/zijemepardubice/",
             "instagram": "https://www.instagram.com/zijemepardubice/"
-          },
-          "abbreviation": "ČSSD+PP21+NK"
+          }
         }
       ],
       "motto": "Zkušenost. Odvaha. Rovnováha. Takové chceme Pardubice. Takoví jsme my. "
@@ -545,6 +548,8 @@
         {
           "id": "komunalni-2022-555134-c-343643-p",
           "name": "NAŠE PARDUBICE - \"Nechme město rozkvést\"",
+          "short_name": "NAŠE PARDUBICE",
+          "abbreviation": "SPDV+NK",
           "description": "NAŠE PARDUBICE - \"Nechme město rozkvést\"",
           "contacts": {
             "web": [
@@ -554,8 +559,7 @@
               }
             ],
             "facebook": "https://www.facebook.com/nasepardubice/"
-          },
-          "abbreviation": "SPDV+NK"
+          }
         }
       ],
       "motto": "Naše Pardubice - Nechme město rozkvést skrze potenciál svých obyvatel"
@@ -579,6 +583,8 @@
         {
           "id": "komunalni-2022-555134-c-694313-p",
           "name": "ANO 2011",
+          "short_name": "ANO 2011",
+          "abbreviation": "ANO",
           "description": "ANO 2011",
           "contacts": {
             "web": [
@@ -588,8 +594,7 @@
               }
             ],
             "facebook": "https://www.facebook.com/AnoPardubice"
-          },
-          "abbreviation": "ANO"
+          }
         }
       ],
       "motto": "Budujeme lepší Pardubice"
@@ -607,11 +612,12 @@
         {
           "id": "komunalni-2022-555134-c-193762-p",
           "name": "SPD a nezávislí s podporou Trikolory",
+          "short_name": "SPD a nezáv. s podp. Trikolory",
+          "abbreviation": "SPD+Trikol+NK",
           "description": "SPD a nezávislí s podporou Trikolory",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "SPD+Trikol+NK"
+          }
         }
       ],
       "motto": "Tým plný odborníků, kteří vyřeší všechny Vaše problémy."
@@ -639,6 +645,8 @@
         {
           "id": "komunalni-2022-555134-c-812723-p",
           "name": "SPOLEČNĚ PRO PARDUBICE (Pardubáci společně, Sdružení pro Pardubice, Pardubice pro lidi)",
+          "short_name": "SPOLEČNĚ PRO PARDUBICE",
+          "abbreviation": "SNK ED+VČ+PPL",
           "description": "SPOLEČNĚ PRO PARDUBICE (Pardubáci společně, Sdružení pro Pardubice, Pardubice pro lidi)",
           "contacts": {
             "web": [
@@ -652,8 +660,7 @@
               }
             ],
             "facebook": "https://www.facebook.com/spolecnepropardubice/"
-          },
-          "abbreviation": "SNK ED+VČ+PPL"
+          }
         }
       ],
       "motto": "Jsme jediné ryze pardubické uskupení."
@@ -671,11 +678,12 @@
         {
           "id": "komunalni-2022-555134-c-918217-p",
           "name": "Komunistická strana Čech a Moravy",
+          "short_name": "Komunistická str.Čech a Moravy",
+          "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "KSČM"
+          }
         }
       ]
     },
@@ -698,6 +706,8 @@
         {
           "id": "komunalni-2022-555134-c-188831-p",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
           "contacts": {
             "web": [
@@ -707,8 +717,7 @@
               }
             ],
             "facebook": "https://www.facebook.com/klickpardubicim"
-          },
-          "abbreviation": "STAN"
+          }
         }
       ],
       "motto": "Kandidaturu bereme jako službu občanům, máme vztah k městu a jasnou vizi pro rozvoj Pardubic"

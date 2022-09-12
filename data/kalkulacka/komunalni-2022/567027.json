@@ -3,11 +3,17 @@
   "name": "Most",
   "description": "Most",
   "district_code": "567027",
+  "show_district_code": false,
   "election": {
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici je 35 kalkulaček pro největší města.",
+    "description": "K dispozici jsou kalkulačky pro **15** měst České republiky.",
+    "instructions": {
+      "header": "Zvolte své město",
+      "step_1_1": "K dispozici jsou kalkulačky pro **15** měst České republiky.",
+      "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
+    },
     "from": "2022-09-23T14:00:00",
     "to": "2022-09-24T14:00:00"
   },
@@ -410,7 +416,7 @@
       "id": "komunalni-2022-567027-c-976572",
       "name": "Komunistická strana Čech a Moravy",
       "type": "party",
-      "description": "Komunistická strana Čech a Moravy - DESCRIPTION",
+      "description": "Komunistická strana Čech a Moravy",
       "img_url": "ksčm",
       "contacts": {
         "web": []
@@ -419,11 +425,12 @@
         {
           "id": "komunalni-2022-567027-c-976572-p",
           "name": "Komunistická strana Čech a Moravy",
-          "description": "Komunistická strana Čech a Moravy - DESCRIPTION",
+          "short_name": "Komunistická str.Čech a Moravy",
+          "abbreviation": "KSČM",
+          "description": "Komunistická strana Čech a Moravy",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "KSČM"
+          }
         }
       ]
     },
@@ -431,7 +438,7 @@
       "id": "komunalni-2022-567027-c-678018",
       "name": "Svoboda a přímá demokracie (SPD) s podporou Trikolory",
       "type": "party",
-      "description": "Svoboda a přímá demokracie (SPD) s podporou Trikolory - DESCRIPTION",
+      "description": "Svoboda a přímá demokracie (SPD) s podporou Trikolory",
       "img_url": "spd-trikolora",
       "contacts": {
         "web": []
@@ -440,20 +447,21 @@
         {
           "id": "komunalni-2022-567027-c-678018-p",
           "name": "Svoboda a přímá demokracie (SPD) s podporou Trikolory",
-          "description": "Svoboda a přímá demokracie (SPD) s podporou Trikolory - DESCRIPTION",
+          "short_name": "SPD s podporou Trikolory",
+          "abbreviation": "SPD+Trikolora",
+          "description": "Svoboda a přímá demokracie (SPD) s podporou Trikolory",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "SPD+Trikolora"
+          }
         }
       ],
-      "motto": "Občané jsou hlasem našeho města a společně můžeme být slyšet."
+      "motto": "Společě můžeme být slyšet, Společně a transparentněarentní"
     },
     {
       "id": "komunalni-2022-567027-c-431322",
       "name": "ProMOST",
       "type": "party",
-      "description": "ProMOST - DESCRIPTION",
+      "description": "ProMOST",
       "img_url": "promost",
       "contacts": {
         "web": [
@@ -468,7 +476,9 @@
         {
           "id": "komunalni-2022-567027-c-431322-p",
           "name": "ProMOST",
-          "description": "ProMOST - DESCRIPTION",
+          "short_name": "ProMOST",
+          "abbreviation": "ProMOST",
+          "description": "ProMOST",
           "contacts": {
             "web": [
               {
@@ -477,8 +487,7 @@
               }
             ],
             "facebook": "https://facebook.com/promost.cz"
-          },
-          "abbreviation": "ProMOST"
+          }
         }
       ]
     },
@@ -486,7 +495,7 @@
       "id": "komunalni-2022-567027-c-174115",
       "name": "ANO 2011",
       "type": "party",
-      "description": "ANO 2011 - DESCRIPTION",
+      "description": "ANO 2011",
       "img_url": "ano",
       "contacts": {
         "web": []
@@ -495,11 +504,12 @@
         {
           "id": "komunalni-2022-567027-c-174115-p",
           "name": "ANO 2011",
-          "description": "ANO 2011 - DESCRIPTION",
+          "short_name": "ANO 2011",
+          "abbreviation": "ANO",
+          "description": "ANO 2011",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "ANO"
+          }
         }
       ],
       "motto": "Budeme spolupracovat ve všech oblastech důležitých pro naše město."
@@ -508,7 +518,7 @@
       "id": "komunalni-2022-567027-c-138280",
       "name": "Občané městu, město občanům",
       "type": "party",
-      "description": "Občané městu, město občanům - DESCRIPTION",
+      "description": "Občané městu, město občanům",
       "img_url": "ommo",
       "contacts": {
         "web": []
@@ -517,11 +527,12 @@
         {
           "id": "komunalni-2022-567027-c-138280-p",
           "name": "Občané městu, město občanům",
-          "description": "Občané městu, město občanům - DESCRIPTION",
+          "short_name": "Občané městu, město občanům",
+          "abbreviation": "OMMO",
+          "description": "Občané městu, město občanům",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "OMMO"
+          }
         }
       ],
       "motto": "politické hnutí orientované na sociální a ekologický rozměr, akcentující veřejný zájem a odpovědné individuální nasazení"
@@ -530,7 +541,7 @@
       "id": "komunalni-2022-567027-c-454542",
       "name": "Česká strana sociálně demokratická",
       "type": "party",
-      "description": "Česká strana sociálně demokratická - DESCRIPTION",
+      "description": "Česká strana sociálně demokratická",
       "img_url": "čssd",
       "contacts": {
         "web": []
@@ -539,11 +550,12 @@
         {
           "id": "komunalni-2022-567027-c-454542-p",
           "name": "Česká strana sociálně demokratická",
-          "description": "Česká strana sociálně demokratická - DESCRIPTION",
+          "short_name": "Česká str.sociálně demokrat.",
+          "abbreviation": "ČSSD",
+          "description": "Česká strana sociálně demokratická",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "ČSSD"
+          }
         }
       ]
     },
@@ -551,7 +563,7 @@
       "id": "komunalni-2022-567027-c-645179",
       "name": "ODS a NEZÁVISLÍ",
       "type": "party",
-      "description": "ODS a NEZÁVISLÍ - DESCRIPTION",
+      "description": "ODS a NEZÁVISLÍ",
       "img_url": "ods-nk",
       "contacts": {
         "web": []
@@ -560,20 +572,21 @@
         {
           "id": "komunalni-2022-567027-c-645179-p",
           "name": "ODS a NEZÁVISLÍ",
-          "description": "ODS a NEZÁVISLÍ - DESCRIPTION",
+          "short_name": "ODS a NEZÁVISLÍ",
+          "abbreviation": "ODS+NK",
+          "description": "ODS a NEZÁVISLÍ",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "ODS+NK"
+          }
         }
       ],
-      "motto": "Volte lidi, které znáte."
+      "motto": "Volte lidi, které znáte"
     },
     {
       "id": "komunalni-2022-567027-c-750273",
       "name": "Piráti a Zelení pro Most",
       "type": "party",
-      "description": "Piráti a Zelení pro Most - DESCRIPTION",
+      "description": "Piráti a Zelení pro Most",
       "img_url": "zelení-piráti",
       "contacts": {
         "web": [
@@ -588,7 +601,9 @@
         {
           "id": "komunalni-2022-567027-c-750273-p",
           "name": "Piráti a Zelení pro Most",
-          "description": "Piráti a Zelení pro Most - DESCRIPTION",
+          "short_name": "Piráti a Zelení pro Most",
+          "abbreviation": "Zelení+Piráti",
+          "description": "Piráti a Zelení pro Most",
           "contacts": {
             "web": [
               {
@@ -597,8 +612,7 @@
               }
             ],
             "facebook": "https://www.facebook.com/piratiazelenipromost/"
-          },
-          "abbreviation": "Zelení+Piráti"
+          }
         }
       ],
       "motto": "Máme odvahu měnit Most k lepšímu! Volte č.8! !"
@@ -607,7 +621,7 @@
       "id": "komunalni-2022-567027-c-152154",
       "name": "Sdružení Mostečané Mostu",
       "type": "party",
-      "description": "Sdružení Mostečané Mostu - DESCRIPTION",
+      "description": "Sdružení Mostečané Mostu",
       "img_url": "ns-nk",
       "contacts": {
         "web": [
@@ -621,7 +635,9 @@
         {
           "id": "komunalni-2022-567027-c-152154-p",
           "name": "Sdružení Mostečané Mostu",
-          "description": "Sdružení Mostečané Mostu - DESCRIPTION",
+          "short_name": "Sdružení Mostečané Mostu",
+          "abbreviation": "NS+NK",
+          "description": "Sdružení Mostečané Mostu",
           "contacts": {
             "web": [
               {
@@ -629,16 +645,16 @@
                 "label": "web"
               }
             ]
-          },
-          "abbreviation": "NS+NK"
+          }
         }
-      ]
+      ],
+      "motto": "Strana, která konečně vyřeší problémové občany."
     },
     {
       "id": "komunalni-2022-567027-c-399616",
       "name": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK",
       "type": "party",
-      "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK - DESCRIPTION",
+      "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK",
       "img_url": "dsz-nk",
       "contacts": {
         "web": []
@@ -647,11 +663,12 @@
         {
           "id": "komunalni-2022-567027-c-399616-p",
           "name": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK",
-          "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK - DESCRIPTION",
+          "short_name": "DSZ-ZPZ-SDSZ-ZPZaNK",
+          "abbreviation": "DSZ+NK",
+          "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "DSZ+NK"
+          }
         }
       ]
     }
@@ -1277,14 +1294,15 @@
       "id": "komunalni-2022-567027-a-645179-1",
       "candidate_id": "komunalni-2022-567027-c-645179",
       "question_id": "komunalni-2022-567027-q-1",
-      "answer": "dont_know",
-      "comment": "Velmi špatně položená otázka "
+      "answer": "yes",
+      "comment": "Otázka by měla znít trochu jinak. Nechceme si nechat ničit Most jednou skupinou osob. Nepřizpůsobiví nemají v Mostě co dělat."
     },
     {
       "id": "komunalni-2022-567027-a-645179-2",
       "candidate_id": "komunalni-2022-567027-c-645179",
       "question_id": "komunalni-2022-567027-q-2",
-      "answer": "yes"
+      "answer": "yes",
+      "comment": "Poplatek by měl platit ten, kdo neustále vyhazuje rozměrný odpad k popelnicím místo toho, aby ho odvezl na sběrný dvůr. Odpady zdarma mají být benefitem pro slušné občany."
     },
     {
       "id": "komunalni-2022-567027-a-645179-3",
@@ -1320,7 +1338,8 @@
       "id": "komunalni-2022-567027-a-645179-8",
       "candidate_id": "komunalni-2022-567027-c-645179",
       "question_id": "komunalni-2022-567027-q-8",
-      "answer": "no"
+      "answer": "no",
+      "comment": "ODS a NEZÁVISLÍ mají v programu: senioři a invalidé zdarma. U žáků chceme změnu, zdarma pouze pro žáky, kteří nebudou mít neomluvené hodiny."
     },
     {
       "id": "komunalni-2022-567027-a-645179-9",
@@ -1332,31 +1351,34 @@
       "id": "komunalni-2022-567027-a-645179-10",
       "candidate_id": "komunalni-2022-567027-c-645179",
       "question_id": "komunalni-2022-567027-q-10",
-      "answer": "dont_know"
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-567027-a-645179-11",
       "candidate_id": "komunalni-2022-567027-c-645179",
       "question_id": "komunalni-2022-567027-q-11",
-      "answer": "dont_know"
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-567027-a-645179-12",
       "candidate_id": "komunalni-2022-567027-c-645179",
       "question_id": "komunalni-2022-567027-q-12",
-      "answer": "yes"
+      "answer": "yes",
+      "comment": "Ovšem měla by tu být možnost pro některé události, jako jsou významné svátky, výročí..."
     },
     {
       "id": "komunalni-2022-567027-a-645179-13",
       "candidate_id": "komunalni-2022-567027-c-645179",
       "question_id": "komunalni-2022-567027-q-13",
-      "answer": "no"
+      "answer": "no",
+      "comment": "Obáváme se hluku a rizikového chování u některých z našich spoluobčanů"
     },
     {
       "id": "komunalni-2022-567027-a-645179-14",
       "candidate_id": "komunalni-2022-567027-c-645179",
       "question_id": "komunalni-2022-567027-q-14",
-      "answer": "dont_know"
+      "answer": "dont_know",
+      "comment": "V Mostě těch nasvícených památek moc není"
     },
     {
       "id": "komunalni-2022-567027-a-645179-15",
@@ -1369,13 +1391,14 @@
       "candidate_id": "komunalni-2022-567027-c-645179",
       "question_id": "komunalni-2022-567027-q-16",
       "answer": "dont_know",
-      "comment": "Opět špatně položená otázka. Bez komentáře nemá smysl odpovídat "
+      "comment": "Nemůžeme odpovědět ano, ne. Například ve školách, domech pro seniory nechceme snižovat teploty."
     },
     {
       "id": "komunalni-2022-567027-a-645179-17",
       "candidate_id": "komunalni-2022-567027-c-645179",
       "question_id": "komunalni-2022-567027-q-17",
-      "answer": "yes"
+      "answer": "dont_know",
+      "comment": "Opět těžká otázka. Případ od případu."
     },
     {
       "id": "komunalni-2022-567027-a-645179-18",
@@ -1406,7 +1429,7 @@
       "candidate_id": "komunalni-2022-567027-c-645179",
       "question_id": "komunalni-2022-567027-q-22",
       "answer": "no",
-      "comment": "V Mostě je velká část obyvatel, která má kupu dětí, nestarají se o jejich výchovu, vzdělávání. Ještě jim hradit stravné? To už by neměli vůbec žádnou motivaci, když vše dostanou bez vlastního přičinění."
+      "comment": "Jsou rodiny, které nemají žádnou motivaci jakkoliv změnit své hodnoty a jen čekají s nataženou rukou, co jim kdo dá. Toto nehodláme podporovat. Pokud by šlo o rodinu, která se dostane do složité životní situace, měla by mít veškerou možnou podporu."
     },
     {
       "id": "komunalni-2022-567027-a-645179-23",
@@ -1418,7 +1441,7 @@
       "id": "komunalni-2022-567027-a-645179-24",
       "candidate_id": "komunalni-2022-567027-c-645179",
       "question_id": "komunalni-2022-567027-q-24",
-      "answer": "dont_know"
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-567027-a-645179-25",
@@ -1430,13 +1453,13 @@
       "id": "komunalni-2022-567027-a-645179-26",
       "candidate_id": "komunalni-2022-567027-c-645179",
       "question_id": "komunalni-2022-567027-q-26",
-      "answer": "dont_know"
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-567027-a-645179-27",
       "candidate_id": "komunalni-2022-567027-c-645179",
       "question_id": "komunalni-2022-567027-q-27",
-      "answer": "dont_know"
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-567027-a-645179-28",
@@ -1466,7 +1489,8 @@
       "id": "komunalni-2022-567027-a-645179-32",
       "candidate_id": "komunalni-2022-567027-c-645179",
       "question_id": "komunalni-2022-567027-q-32",
-      "answer": "no"
+      "answer": "dont_know",
+      "comment": "Pro nás ne zcela vhodně položená otázka. Doprava zdarma jen pro žáky, kteří nemají neomluvené hodiny. Prozatím chceme ponechat jen pro žáky základních škol."
     },
     {
       "id": "komunalni-2022-567027-a-645179-33",
@@ -1478,20 +1502,20 @@
       "id": "komunalni-2022-567027-a-645179-34",
       "candidate_id": "komunalni-2022-567027-c-645179",
       "question_id": "komunalni-2022-567027-q-34",
-      "answer": "yes"
+      "answer": "yes",
+      "comment": "Musí být zajištěn dohled - vysoké procento vandalismu"
     },
     {
       "id": "komunalni-2022-567027-a-645179-35",
       "candidate_id": "komunalni-2022-567027-c-645179",
       "question_id": "komunalni-2022-567027-q-35",
-      "answer": "no"
+      "answer": "dont_know"
     },
     {
       "id": "komunalni-2022-567027-a-645179-36",
       "candidate_id": "komunalni-2022-567027-c-645179",
       "question_id": "komunalni-2022-567027-q-36",
-      "answer": "no",
-      "comment": "A co kondomy? Myslel někdo i na ně?"
+      "answer": "no"
     },
     {
       "id": "komunalni-2022-567027-a-645179-37",
@@ -1503,13 +1527,14 @@
       "id": "komunalni-2022-567027-a-645179-38",
       "candidate_id": "komunalni-2022-567027-c-645179",
       "question_id": "komunalni-2022-567027-q-38",
-      "answer": "no"
+      "answer": "dont_know"
     },
     {
       "id": "komunalni-2022-567027-a-645179-39",
       "candidate_id": "komunalni-2022-567027-c-645179",
       "question_id": "komunalni-2022-567027-q-39",
-      "answer": "dont_know"
+      "answer": "yes",
+      "comment": "Aktivní integrace jen s těmi, kteří o to stojí, mají snahu. Ti, kteří nechtějí, nemá smysl do něčeho nutit. Oni sami musí přijmout zákony, pravidla a vzorce chování, které u nás platí. "
     },
     {
       "id": "komunalni-2022-567027-a-645179-40",
@@ -1546,7 +1571,7 @@
       "candidate_id": "komunalni-2022-567027-c-645179",
       "question_id": "komunalni-2022-567027-q-45",
       "answer": "no",
-      "comment": "Opět špatně položená otázka. Kdo je sociálně slabý občan?"
+      "comment": "Město má pomoci jen těm, kteří se dostanou do špatné situace a tu situaci sami aktivně řeší a pracují na tom, aby se z ní dostali. Rozhodně nemá smysl pomáhat někomu, kdo svou situaci neřeší. "
     },
     {
       "id": "komunalni-2022-567027-a-645179-46",
@@ -1558,7 +1583,8 @@
       "id": "komunalni-2022-567027-a-645179-47",
       "candidate_id": "komunalni-2022-567027-c-645179",
       "question_id": "komunalni-2022-567027-q-47",
-      "answer": "no"
+      "answer": "dont_know",
+      "comment": "O složení žáků rozhoduje zejména ředitel školy."
     },
     {
       "id": "komunalni-2022-567027-a-645179-48",
@@ -1576,7 +1602,7 @@
       "id": "komunalni-2022-567027-a-678018-1",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-1",
-      "answer": "no"
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-567027-a-678018-2",
@@ -1594,20 +1620,21 @@
       "id": "komunalni-2022-567027-a-678018-4",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-4",
-      "answer": "yes"
+      "answer": "no",
+      "comment": "Je jich dostatek, třeba u škol "
     },
     {
       "id": "komunalni-2022-567027-a-678018-5",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-5",
-      "answer": "dont_know"
+      "answer": "no"
     },
     {
       "id": "komunalni-2022-567027-a-678018-6",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-6",
-      "answer": "yes",
-      "comment": "V Mostě jsou další lokality, kde dochází k trestné činnosti, které nejsou monitorovány"
+      "answer": "no",
+      "comment": "Spíš více strážníků v ulicích "
     },
     {
       "id": "komunalni-2022-567027-a-678018-7",
@@ -1620,13 +1647,13 @@
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-8",
       "answer": "no",
-      "comment": "Městská hromadná doprava by měla být poskytována bezplatně pro seniory, invalidy a děti školou povinné."
+      "comment": "Je určité cílené skupiny obyvatel "
     },
     {
       "id": "komunalni-2022-567027-a-678018-9",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-9",
-      "answer": "yes"
+      "answer": "dont_know"
     },
     {
       "id": "komunalni-2022-567027-a-678018-10",
@@ -1650,40 +1677,38 @@
       "id": "komunalni-2022-567027-a-678018-13",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-13",
-      "answer": "dont_know"
+      "answer": "no"
     },
     {
       "id": "komunalni-2022-567027-a-678018-14",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-14",
-      "answer": "yes"
+      "answer": "yes",
+      "comment": "Vše "
     },
     {
       "id": "komunalni-2022-567027-a-678018-15",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-15",
-      "answer": "no",
-      "comment": "Z hlediska bezpečnosti zachovat nejen v problémových lokalitách ve městě. "
+      "answer": "no"
     },
     {
       "id": "komunalni-2022-567027-a-678018-16",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-16",
-      "answer": "yes"
+      "answer": "no"
     },
     {
       "id": "komunalni-2022-567027-a-678018-17",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-17",
-      "answer": "dont_know",
-      "comment": "Nastavit vhodnější systém, aby nedocházelo k následnému vymáhání astronomických částek exekutory."
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-567027-a-678018-18",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-18",
-      "answer": "yes",
-      "comment": "Hospodaření města by mělo být pro občany přístupné."
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-567027-a-678018-19",
@@ -1695,39 +1720,38 @@
       "id": "komunalni-2022-567027-a-678018-20",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-20",
-      "answer": "yes",
-      "comment": "Ano a např. nabídnout mladým rodinám jako startovací byty"
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-567027-a-678018-21",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-21",
-      "answer": "yes"
+      "answer": "dont_know"
     },
     {
       "id": "komunalni-2022-567027-a-678018-22",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-22",
-      "answer": "no",
-      "comment": "Umožnit dětem ze sociálně slabých rodin a rodinám s nízkými příjmy"
+      "answer": "yes",
+      "comment": "Bez výjimek "
     },
     {
       "id": "komunalni-2022-567027-a-678018-23",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-23",
-      "answer": "dont_know"
+      "answer": "no"
     },
     {
       "id": "komunalni-2022-567027-a-678018-24",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-24",
-      "answer": "dont_know"
+      "answer": "no"
     },
     {
       "id": "komunalni-2022-567027-a-678018-25",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-25",
-      "answer": "dont_know"
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-567027-a-678018-26",
@@ -1739,32 +1763,31 @@
       "id": "komunalni-2022-567027-a-678018-27",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-27",
-      "answer": "dont_know"
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-567027-a-678018-28",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-28",
-      "answer": "no"
+      "answer": "dont_know"
     },
     {
       "id": "komunalni-2022-567027-a-678018-29",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-29",
-      "answer": "dont_know"
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-567027-a-678018-30",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-30",
-      "answer": "dont_know",
-      "comment": "V budoucnu ano, momentálně vzhledem k růstu cen energií a celkovému zdražování myslíte, že si běžný občan dovolí zakoupit elektromobil? "
+      "answer": "no"
     },
     {
       "id": "komunalni-2022-567027-a-678018-31",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-31",
-      "answer": "dont_know"
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-567027-a-678018-32",
@@ -1776,14 +1799,13 @@
       "id": "komunalni-2022-567027-a-678018-33",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-33",
-      "answer": "yes"
+      "answer": "dont_know"
     },
     {
       "id": "komunalni-2022-567027-a-678018-34",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-34",
-      "answer": "yes",
-      "comment": "Je důležitá podpora kulturních, volnočasových a sportovních aktivit dětí a mládeže."
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-567027-a-678018-35",
@@ -1813,7 +1835,7 @@
       "id": "komunalni-2022-567027-a-678018-39",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-39",
-      "answer": "dont_know"
+      "answer": "no"
     },
     {
       "id": "komunalni-2022-567027-a-678018-40",
@@ -1825,19 +1847,20 @@
       "id": "komunalni-2022-567027-a-678018-41",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-41",
-      "answer": "yes"
+      "answer": "no"
     },
     {
       "id": "komunalni-2022-567027-a-678018-42",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-42",
-      "answer": "dont_know"
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-567027-a-678018-43",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-43",
-      "answer": "yes"
+      "answer": "yes",
+      "comment": "Reklama i prezentace města "
     },
     {
       "id": "komunalni-2022-567027-a-678018-44",
@@ -1849,7 +1872,7 @@
       "id": "komunalni-2022-567027-a-678018-45",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-45",
-      "answer": "yes"
+      "answer": "no"
     },
     {
       "id": "komunalni-2022-567027-a-678018-46",
@@ -1861,13 +1884,13 @@
       "id": "komunalni-2022-567027-a-678018-47",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-47",
-      "answer": "dont_know"
+      "answer": "no"
     },
     {
       "id": "komunalni-2022-567027-a-678018-48",
       "candidate_id": "komunalni-2022-567027-c-678018",
       "question_id": "komunalni-2022-567027-q-48",
-      "answer": "yes"
+      "answer": "dont_know"
     },
     {
       "id": "komunalni-2022-567027-a-678018-49",
@@ -2189,6 +2212,336 @@
     {
       "id": "komunalni-2022-567027-a-750273-49",
       "candidate_id": "komunalni-2022-567027-c-750273",
+      "question_id": "komunalni-2022-567027-q-49",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-1",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-1",
+      "answer": "yes",
+      "comment": "Město by ale mělo vlastnit několik bytů v různých částech města. Byty v těch žádanějších částech města by tak mohlo využívat jako startovací byty pro podporu mladých doktorů, hasičů, policistů apod. Podle toho, kterou profesi je ve městě momentálně potřeba posílit."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-2",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-2",
+      "answer": "no",
+      "comment": "V ideálním případě, by občané města neměli platit za žádné služby, které město pro občany dělá. Jako si nemusíme platit veřejné osvětlení, úklid ulic, nebo sekání trávy, tak ani svoz odpadu, by neměl být zpoplatněný. Je ale velmi důležité, aby těchto výhod mohli využívat pouze občané, kteří mají trvalý pobyt ve městě, nemají vůči městu dluh, nejsou problémoví, řádně odvádějí daně a pracují. "
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-3",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-3",
+      "answer": "no",
+      "comment": "Starost o seniory je naší prioritou. Rozhodně nechceme, aby naše seniory trápila zima."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-4",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-4",
+      "answer": "yes",
+      "comment": "Stupeň automobilizace výrazně stoupl a především na sídlištích je 30 km/h nutnost. Stejně tak by měla na všech těchto cílových komunikací být zavedena přednost zprava, což také zvyšuje bezpečnost a řidiče nutí k ostražitosti."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-5",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-5",
+      "answer": "yes",
+      "comment": "Tento sociální projekt má smysl. Lidé, kteří chtějí řádně splatit své dluhy mají být podpořeni."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-6",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-6",
+      "answer": "yes",
+      "comment": "Samotná instalace kamer ale nic neřeší, jelikož není v silách MP (v rámci rozumného rozpočtu) sledovat stovky míst najednou. Je potřeba, aby byly zavedeny také softwary s algoritmy rozeznávající krizové situace a zvuky, jako je např. tříštění skla nebo volání o pomoc. Poté je možné strážníkem situaci vyhodnotit a včas zasáhnout. "
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-7",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-7",
+      "answer": "yes",
+      "comment": "Je ale potřeba definovat co je škodlivý hazard a co je zábava. Pokud chce někdo utratit své vydělané peníze např. během dostihů, při sázení na sportovní utkání, nebo v luxusním casinu, tak je to jeho věc. Naopak obří místnosti s hracími automaty jsou určené pouze k vyždímání nízkopříjmové skupiny obyvatel, což pouze přináší problémy."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-8",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-8",
+      "answer": "yes",
+      "comment": "Stejně jako v případě odpadů. Ano, v ideálním případě, bychom jako občané neměli platit za žádné služby (pokud nepobíráme dávky, žijeme slušně, nedlužíme městu apod.). V tomto případě si ale budeme muset na tento nadstandart ještě počkat, i když pro vybrané skupiny obyvatel chceme MHD zdarma zachovat jako je tomu nyní."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-9",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-9",
+      "answer": "yes",
+      "comment": "Bezbariérovost města je samozřejmostí, o které není potřeba diskutovat. Každý občan by se měl dostat tam kam potřebuje bez větších obtíží a to neplatí jen o zastávkách MHD."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-10",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-10",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-11",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-11",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-12",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-12",
+      "answer": "yes",
+      "comment": "Samozřejmě s předem hlášenými výjimkami "
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-13",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-13",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-14",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-14",
+      "answer": "yes",
+      "comment": "Především ty, které jsou nasvíceny sodíkovými výbojkami. "
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-15",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-15",
+      "answer": "no",
+      "comment": "Pocit bezpečí je na prvním místě. Uvažovat by se dalo v případě chodníkových ploch s nasvícením starých sodíkových výbojek o instalaci pohybových čidel, tak aby odlehlá místa, kde v noci nikdo neprochází byla vypnutá."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-16",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-16",
+      "answer": "yes",
+      "comment": "Úspory je potřeba hledat všude, ale nemělo by to být na úkor kvality pracovního prostředí."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-17",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-17",
+      "answer": "no",
+      "comment": "Obzvláště u dětí je důležité, aby si uvědomovali důsledky svých činů. Nicméně by měli existovat výjimky, které by mohla posuzovat odborná komise."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-18",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-18",
+      "answer": "yes",
+      "comment": "Problém s transparentností je v tom, že bez odborného komentáře můžou takové informace vyvolávat v některých lidech nedůvěru a konkrétně v tomto případě, mohou být zdrojem dezinformací za účelem poškodit politickou stranu u moci. Nahlížení na účty města by tak bylo za určitých pravidel."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-19",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-19",
+      "answer": "yes",
+      "comment": "Participativní rozpočet je jeden z účinných nástrojů pro zvýšení zájmu obyvatel o naše město."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-20",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-20",
+      "answer": "yes",
+      "comment": "Ano a to za účelem využití pro sociální služby. Ale POZOR! výkupy bytů neřeší problémy v sociálně vyloučených lokalitách. Město za prvé nemůže nakupovat byty za jinou než odhadní cenu, takže ty byty, které by bylo potřeba vykoupit, většinou vykoupit nejdou. Navíc cena bytů je na takové úrovni, že by k vyřešení situace nestačil ani celý roční rozpočet města."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-21",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-21",
+      "answer": "yes",
+      "comment": "Úspory jsou dnes nutné. Ale spíše bychom se měli zaměřit na počet dní s vánoční výzdobou, než na snižování množství, které vytváří atmosféru. Ta je v dnešní těžké době pro občany naopak velmi důležitá."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-22",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-22",
+      "answer": "dont_know",
+      "comment": "Na jednu stranu se to zdá dobrý nápad, ale jak ukazují zkušenosti z jiných měst, tak se toto zvýhodnění neukázalo jako efektivní."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-23",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-23",
+      "answer": "dont_know",
+      "comment": "Je to nástroj, který by do budoucna mohl mít potenciál v rámci snížení individuální dopravy. Nicméně si myslíme, že ještě není naše společnost na tento způsob dopravy připravena. "
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-24",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-24",
+      "answer": "dont_know",
+      "comment": "Jedná se o velmi složité téma, které je potřeba analyzovat. Jsme pro to, aby byla vybrána lokalita, kde by se tento způsob parkování vyzkoušel. V dané lokalitě musí být možnost v dostatečné docházkové vzdálenosti zaparkovat bez omezení."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-25",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-25",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-26",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-26",
+      "answer": "yes",
+      "comment": "Pokud chceme rozvíjet naše město, měli bychom kvalitní výstavbu podporovat. Je důležité ale rozlišovat druh výstavby, která je pro naše město přínosem a která spíše zátěží, v druhém případě, je potřeba, aby výstavba byla přínosem alespoň z hlediska veřejných nákladů."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-27",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-27",
+      "answer": "yes",
+      "comment": "Abychom měli udržitelnou dopravu, je nutné podporovat ostatní druhy dopravy. Navíc chceme aby lidé žili ve městě a ne v autech a na silnicích. Je potřeba podporovat i veřejná prostranství, tak aby nemuseli lidé za kouskem hezkého prostředí jezdit na okraj města."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-28",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-28",
+      "answer": "no",
+      "comment": "Toto je problém Prahy, kde mají nedostatek míst k bydlení. V našem městě doporučujeme opak. Pokud nemáte slušného nájemníka, raději nechte byt prázdný."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-29",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-29",
+      "answer": "yes",
+      "comment": "viz otázka 26"
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-30",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-30",
+      "answer": "yes",
+      "comment": "Ať už se nám to líbí nebo ne, tak elektromobilita je na vzestupu a město musí být připraveno na rozšiřování tohoto trendu. "
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-31",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-31",
+      "answer": "yes",
+      "comment": "Vzhledem k legislativě, je tento druh správy domu mnohem výhodnější z hlediska vypořádání se s problémovými občany."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-32",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-32",
+      "answer": "yes",
+      "comment": "viz otázka č.8"
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-33",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-33",
+      "answer": "yes",
+      "comment": "A nejen to, je potřeba pomoci i s instalací tepelných čerpadel a dalšími alternativními zdroji energie."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-34",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-34",
+      "answer": "yes",
+      "comment": "Opět viz služby občanům. V ideálním případě, by si lidé neměli platit ve městě za žádné služby. V některých případech je ale nutné, aby byly služby zpoplatnění, aby si lidé dané služby vážili."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-35",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-35",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-36",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-36",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-37",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-37",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-38",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-38",
+      "answer": "no",
+      "comment": "Dokud nebude vytvořena síť cyklopruhů na silnicích, tak ne. Elektrokola a elektorkoloběžky mohou být na chodnících a silnicích velmi nebezpečné."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-39",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-39",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-40",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-40",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-41",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-41",
+      "answer": "no",
+      "comment": "momentálně je spíše potřeba využití střech pro alternativní způsob získání energie."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-42",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-42",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-43",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-43",
+      "answer": "yes",
+      "comment": "Podpora významných sportovních klubů, které nás reprezentují v republice, nebo dokonce ve světě by být měla. I tak by ale neměla být hlavním zdrojem příjmu daného sportovního klubu."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-44",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-44",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-45",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-45",
+      "answer": "no",
+      "comment": "Město by v této oblasti nemělo nahrazovat stát. V ojedinělých případech město může pomáhat, ale rozhodně ne plošně."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-46",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-46",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-47",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-47",
+      "answer": "no",
+      "comment": "Je otázkou, co se myslí sociálně znevýhodněnými dětmi. V případě vychovaných dětí ze sociálně slabších rodin by určitě nemělo ke shromažďování docházet. Ale děti, které jsou problémové není možné rozházet po všech třídách, kde jsou tak ostatní děti zpomalování a nebo nevhodně ovlivňovány."
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-48",
+      "candidate_id": "komunalni-2022-567027-c-152154",
+      "question_id": "komunalni-2022-567027-q-48",
+      "answer": "yes",
+      "comment": "Ano, jedná se o projekt, který má výsledky a pomáhá, především kontrolovaně tam, kde to má smysl. "
+    },
+    {
+      "id": "komunalni-2022-567027-a-152154-49",
+      "candidate_id": "komunalni-2022-567027-c-152154",
       "question_id": "komunalni-2022-567027-q-49",
       "answer": "yes"
     }
