@@ -99,6 +99,14 @@ const farthestCompletedStep = ref(
   )
 );
 
+const previousButtonTitle = computed(() => {
+  if (currentStep.value === 1) {
+    return 'Změnit obvod';
+  } else {
+    return 'Předchozí';
+  }
+});
+
 const nextButtonTitle = computed(() => {
   if (currentStep.value < stepsCount) {
     return 'Další';
@@ -145,6 +153,14 @@ const goToQuestions = () => {
   });
 };
 
+const goToDistrictSelection = () => {
+  router.push({
+    name: 'district-selection',
+    params: { ...route.params },
+    query: { ...route.query },
+  });
+};
+
 const handleNextClick = () => {
   farthestCompletedStep.value = Math.max(
     farthestCompletedStep.value,
@@ -159,7 +175,11 @@ const handleNextClick = () => {
 };
 
 const handlePreviousClick = () => {
-  goToStep(currentStep.value - 1);
+  if (currentStep.value === 1) {
+    goToDistrictSelection();
+  } else {
+    goToStep(currentStep.value - 1);
+  }
 };
 </script>
 
@@ -212,9 +232,12 @@ const handlePreviousClick = () => {
       <template #sticky-header>
         <ResponsiveWrapper extra-small small>
           <SecondaryNavigationBar transparent>
-            <template v-if="currentStep > 1" #before>
+            <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
+                <IconComponent
+                  :icon="mdiArrowLeft"
+                  :title="previousButtonTitle"
+                />
               </IconButton>
             </template>
             <template v-if="farthestCompletedStep >= currentStep" #after>
@@ -229,8 +252,11 @@ const handlePreviousClick = () => {
         <StepWrapper>
           <template #before>
             <ResponsiveWrapper medium large extra-large huge>
-              <IconButton v-if="currentStep > 1" @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
+              <IconButton @click="handlePreviousClick">
+                <IconComponent
+                  :icon="mdiArrowLeft"
+                  :title="previousButtonTitle"
+                />
               </IconButton>
             </ResponsiveWrapper>
           </template>
