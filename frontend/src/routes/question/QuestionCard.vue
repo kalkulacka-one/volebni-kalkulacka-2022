@@ -26,8 +26,8 @@ defineProps<Props>();
     padding="large"
     padding-responsive
   >
-    <StackComponent spacing="large">
-      <StackComponent horizontal centered spacing="small">
+    <StackComponent spacing="large" spacing-responsive>
+      <StackComponent horizontal centered spacing="small" spacing-responsive>
         <BodyText size="small">
           {{ currentQuestion }}/{{ questionCount }}
         </BodyText>
@@ -42,7 +42,9 @@ defineProps<Props>();
       <HeadingComponent class="heading--mobile" kind="title" size="medium">
         {{ question.title }}
       </HeadingComponent>
-      <BodyText size="medium">{{ question.gist }}</BodyText>
+      <BodyText v-if="question.gist" size="medium">{{
+        question.gist
+      }}</BodyText>
       <AccordionComponent v-if="question.detail" class="detail">
         <template #content>
           <BodyText size="medium">{{ question.detail }}</BodyText>

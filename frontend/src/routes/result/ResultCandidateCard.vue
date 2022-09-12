@@ -119,14 +119,14 @@ const toggleClick = () => {
       tag="p"
       :size="order === 1 ? 'large' : 'medium'"
     >
-      {{ result }} %
+      {{ result }}&nbsp;%
     </TitleText>
     <TitleText
       class="percentage mobile"
       tag="p"
       :size="order === 1 ? 'medium' : 'small'"
     >
-      {{ result }} %
+      {{ result }}&nbsp;%
     </TitleText>
     <div class="toggle">
       <IconButton @click="toggleClick">

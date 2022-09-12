@@ -40,6 +40,9 @@
   @media (max-width: calc($breakpoint-extra-small - 1px)) {
     --responsive-spacing-2-large: var(--spacing-small);
   }
+  @media (min-width: $breakpoint-extra-small) and (max-width: calc($breakpoint-small - 1px)) {
+    --responsive-spacing-2-large: calc(2 * var(--spacing-small));
+  }
 
   // Radiuses
   // --------
