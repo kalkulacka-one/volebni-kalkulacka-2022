@@ -25,6 +25,7 @@ import EmbedWrapper from '@/components/responsivity/EmbedWrapper.vue';
 import QuestionBottomBar from './QuestionBottomBar.vue';
 import QuestionCard from './QuestionCard.vue';
 import BackgroundComponent from '../../components/design-system/style/BackgroundComponent.vue';
+import StatusBarComponent from '@/components/design-system/other/StatusBarComponent.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -262,6 +263,11 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
         </ResponsiveWrapper>
       </BackgroundComponent>
       <template #bottom-bar>
+        <StatusBarComponent
+          :total-question="electionStore.questionCount"
+          :answers="electionStore.answers"
+          :current-question="questionNr"
+        />
         <QuestionBottomBar
           :answer="electionStore.answers[questionNr]"
           :star-click="handleStarClick"
