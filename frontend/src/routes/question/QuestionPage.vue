@@ -219,33 +219,47 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
     </template>
     <BottomBarWrapper>
       <BackgroundComponent>
-        <StepWrapper>
-          <template #before>
-            <ResponsiveWrapper medium large extra-large huge>
-              <IconButton @click="handlePreviousClick">
-                <IconComponent
-                  :icon="mdiArrowLeft"
-                  :title="previousButtonTitle"
-                />
-              </IconButton>
-            </ResponsiveWrapper>
-          </template>
-          <QuestionCard
-            :current-question="currentQuestion"
-            :question-count="electionStore.questionCount"
-            :question="(electionStore.calculator?.questions[questionNr] as Question)"
-          />
-          <template #after>
-            <ResponsiveWrapper medium large extra-large huge>
-              <IconButton
-                v-if="answeredQuestionsCount >= currentQuestion"
-                @click="handleNextClick"
-              >
-                <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
-              </IconButton>
-            </ResponsiveWrapper>
-          </template>
-        </StepWrapper>
+        <ResponsiveWrapper extra-small>
+          <StepWrapper>
+            <QuestionCard
+              :current-question="currentQuestion"
+              :question-count="electionStore.questionCount"
+              :question="(electionStore.calculator?.questions[questionNr] as Question)"
+            />
+          </StepWrapper>
+        </ResponsiveWrapper>
+        <ResponsiveWrapper small medium large extra-large huge>
+          <StepWrapper centered>
+            <template #before>
+              <ResponsiveWrapper medium large extra-large huge>
+                <IconButton @click="handlePreviousClick">
+                  <IconComponent
+                    :icon="mdiArrowLeft"
+                    :title="previousButtonTitle"
+                  />
+                </IconButton>
+              </ResponsiveWrapper>
+            </template>
+            <QuestionCard
+              :current-question="currentQuestion"
+              :question-count="electionStore.questionCount"
+              :question="(electionStore.calculator?.questions[questionNr] as Question)"
+            />
+            <template #after>
+              <ResponsiveWrapper medium large extra-large huge>
+                <IconButton
+                  v-if="answeredQuestionsCount >= currentQuestion"
+                  @click="handleNextClick"
+                >
+                  <IconComponent
+                    :icon="mdiArrowRight"
+                    :title="nextButtonTitle"
+                  />
+                </IconButton>
+              </ResponsiveWrapper>
+            </template>
+          </StepWrapper>
+        </ResponsiveWrapper>
       </BackgroundComponent>
       <template #bottom-bar>
         <QuestionBottomBar
