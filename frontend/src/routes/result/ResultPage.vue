@@ -141,7 +141,7 @@ const resultsMedicine = calculateRelativeAgreement(
             </template>
             <TitleText tag="h2" size="medium">Moje shoda</TitleText>
             <template #after>
-              <!-- 
+              <!--
               <ButtonComponent
                 kind="link"
                 color="primary"
@@ -186,20 +186,7 @@ const resultsMedicine = calculateRelativeAgreement(
           <ResultCategory
             :result="resultsGeneral"
             category="general"
-            :max-visible-candidates="5"
-          />
-          <ResultCategory
-            ref="thematic-categories"
-            title="Shoda v ekologii"
-            :result="resultsEcology"
-            category="environment"
-            :max-visible-candidates="2"
-          />
-          <ResultCategory
-            title="Shoda ve zdravotnictví"
-            :result="resultsMedicine"
-            category="health"
-            :max-visible-candidates="2"
+            :max-visible-candidates="10"
           />
         </StackComponent>
       </BottomBarWrapper>

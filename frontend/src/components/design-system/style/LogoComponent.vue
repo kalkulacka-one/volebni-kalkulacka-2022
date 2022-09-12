@@ -8,12 +8,14 @@ export interface Props {
   monochromatic?: string;
   text?: boolean;
   size?: 'small' | 'medium' | 'large' | 'extra-large' | 'extra-huge';
+  link?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   monochromatic: undefined,
   text: true,
   size: 'small',
+  link: false,
 });
 
 const router = useRouter();
@@ -26,14 +28,18 @@ const classes = computed(() => ({
 const logoMonochromatic = computed(() => ({
   'logo--monochromatic': props.monochromatic,
 }));
+
+const handleClick = () => {
+  if (props.link) {
+    router.push({ name: appRoutes.index.name, query: { ...route.query } });
+  }
+};
 </script>
 
 <template>
   <div
-    :class="['logo-wrapper']"
-    @click="
-      router.push({ name: appRoutes.index.name, query: { ...route.query } })
-    "
+    :class="['logo-wrapper', props.link ? 'logo-wrapper--link' : '']"
+    @click="handleClick"
   >
     <div :class="['logo', classes, logoMonochromatic]">
       <svg viewBox="0 0 300 65" role="img" xmlns="http://www.w3.org/2000/svg">
@@ -77,7 +83,7 @@ const logoMonochromatic = computed(() => ({
   display: flex;
   align-items: center;
 
-  &:hover {
+  &--link:hover {
     cursor: pointer;
   }
 }

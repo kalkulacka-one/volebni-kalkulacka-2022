@@ -3,11 +3,17 @@
   "name": "Kladno",
   "description": "Kladno",
   "district_code": "532053",
+  "show_district_code": false,
   "election": {
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici je 35 kalkulaček pro největší města.",
+    "description": "K dispozici jsou kalkulačky pro **15** měst České republiky.",
+    "instructions": {
+      "header": "Zvolte své město",
+      "step_1_1": "K dispozici jsou kalkulačky pro **15** měst České republiky.",
+      "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
+    },
     "from": "2022-09-23T14:00:00",
     "to": "2022-09-24T14:00:00"
   },
@@ -402,7 +408,7 @@
       "id": "komunalni-2022-532053-c-937609",
       "name": "Občanská demokratická strana",
       "type": "party",
-      "description": "Občanská demokratická strana - DESCRIPTION",
+      "description": "Občanská demokratická strana",
       "img_url": "ods",
       "contacts": {
         "web": [
@@ -422,7 +428,9 @@
         {
           "id": "komunalni-2022-532053-c-937609-p",
           "name": "Občanská demokratická strana",
-          "description": "Občanská demokratická strana - DESCRIPTION",
+          "short_name": "Občanská demokratická strana",
+          "abbreviation": "ODS",
+          "description": "Občanská demokratická strana",
           "contacts": {
             "web": [
               {
@@ -436,8 +444,7 @@
             ],
             "facebook": "https://www.facebook.com/ODSKladno",
             "instagram": "https://www.instagram.com/leos_stransky/"
-          },
-          "abbreviation": "ODS"
+          }
         }
       ],
       "motto": "Plán pro Kladno www.planprokladno.cz"
@@ -446,7 +453,7 @@
       "id": "komunalni-2022-532053-c-786086",
       "name": "VOLBA PRO KLADNO",
       "type": "party",
-      "description": "VOLBA PRO KLADNO - DESCRIPTION",
+      "description": "VOLBA PRO KLADNO",
       "img_url": "vpk",
       "contacts": {
         "web": [
@@ -461,7 +468,9 @@
         {
           "id": "komunalni-2022-532053-c-786086-p",
           "name": "VOLBA PRO KLADNO",
-          "description": "VOLBA PRO KLADNO - DESCRIPTION",
+          "short_name": "VOLBA PRO KLADNO",
+          "abbreviation": "VPK",
+          "description": "VOLBA PRO KLADNO",
           "contacts": {
             "web": [
               {
@@ -470,16 +479,16 @@
               }
             ],
             "facebook": "https://www.facebook.com/VolbaProKladno.cz"
-          },
-          "abbreviation": "VPK"
+          }
         }
-      ]
+      ],
+      "motto": "Kladno musí být kvalitním místem pro život."
     },
     {
       "id": "komunalni-2022-532053-c-773113",
       "name": "Svoboda a přímá demokracie (SPD)",
       "type": "party",
-      "description": "Svoboda a přímá demokracie (SPD) - DESCRIPTION",
+      "description": "Svoboda a přímá demokracie (SPD)",
       "img_url": "spd",
       "contacts": {
         "web": []
@@ -488,19 +497,21 @@
         {
           "id": "komunalni-2022-532053-c-773113-p",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "description": "Svoboda a přímá demokracie (SPD) - DESCRIPTION",
+          "short_name": "Svoboda a př. demokracie (SPD)",
+          "abbreviation": "SPD",
+          "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "SPD"
+          }
         }
-      ]
+      ],
+      "motto": "Chceme moderní město s kvalitním transparentním hospodařením bez vyvolených „kamarádů“. "
     },
     {
       "id": "komunalni-2022-532053-c-133748",
       "name": "Komunistická strana Čech a Moravy",
       "type": "party",
-      "description": "Komunistická strana Čech a Moravy - DESCRIPTION",
+      "description": "Komunistická strana Čech a Moravy",
       "img_url": "ksčm",
       "contacts": {
         "web": []
@@ -509,11 +520,12 @@
         {
           "id": "komunalni-2022-532053-c-133748-p",
           "name": "Komunistická strana Čech a Moravy",
-          "description": "Komunistická strana Čech a Moravy - DESCRIPTION",
+          "short_name": "Komunistická str.Čech a Moravy",
+          "abbreviation": "KSČM",
+          "description": "Komunistická strana Čech a Moravy",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "KSČM"
+          }
         }
       ]
     },
@@ -521,7 +533,7 @@
       "id": "komunalni-2022-532053-c-358217",
       "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
       "type": "party",
-      "description": "PŘÍSAHA - občanské hnutí Roberta Šlachty - DESCRIPTION",
+      "description": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
       "img_url": "přísaha",
       "contacts": {
         "web": [
@@ -536,7 +548,9 @@
         {
           "id": "komunalni-2022-532053-c-358217-p",
           "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
-          "description": "PŘÍSAHA - občanské hnutí Roberta Šlachty - DESCRIPTION",
+          "short_name": "PŘÍSAHA Roberta Šlachty",
+          "abbreviation": "PŘÍSAHA",
+          "description": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
           "contacts": {
             "web": [
               {
@@ -545,8 +559,7 @@
               }
             ],
             "facebook": "https://www.facebook.com/prisahakladno"
-          },
-          "abbreviation": "PŘÍSAHA"
+          }
         }
       ],
       "motto": "Nová síla pro Kladno"
@@ -555,7 +568,7 @@
       "id": "komunalni-2022-532053-c-897710",
       "name": "SPOLEČNĚ pro Kladno (koalice TOP 09 a KDU-ČSL)",
       "type": "party",
-      "description": "SPOLEČNĚ pro Kladno (koalice TOP 09 a KDU-ČSL) - DESCRIPTION",
+      "description": "SPOLEČNĚ pro Kladno (koalice TOP 09 a KDU-ČSL)",
       "img_url": "kdu-čsl-top 09",
       "contacts": {
         "web": []
@@ -564,11 +577,12 @@
         {
           "id": "komunalni-2022-532053-c-897710-p",
           "name": "SPOLEČNĚ pro Kladno (koalice TOP 09 a KDU-ČSL)",
-          "description": "SPOLEČNĚ pro Kladno (koalice TOP 09 a KDU-ČSL) - DESCRIPTION",
+          "short_name": "SPOLEČNĚ pro Kladno",
+          "abbreviation": "KDU-ČSL+TOP 09",
+          "description": "SPOLEČNĚ pro Kladno (koalice TOP 09 a KDU-ČSL)",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "KDU-ČSL+TOP 09"
+          }
         }
       ],
       "motto": "Dáme městu řádné hospodáře"
@@ -577,7 +591,7 @@
       "id": "komunalni-2022-532053-c-646539",
       "name": "OPRAVÍME KLADNO - PIRÁTI A STAROSTOVÉ",
       "type": "party",
-      "description": "OPRAVÍME KLADNO - PIRÁTI A STAROSTOVÉ - DESCRIPTION",
+      "description": "OPRAVÍME KLADNO - PIRÁTI A STAROSTOVÉ",
       "img_url": "stan-piráti",
       "contacts": {
         "web": [
@@ -597,7 +611,9 @@
         {
           "id": "komunalni-2022-532053-c-646539-p",
           "name": "OPRAVÍME KLADNO - PIRÁTI A STAROSTOVÉ",
-          "description": "OPRAVÍME KLADNO - PIRÁTI A STAROSTOVÉ - DESCRIPTION",
+          "short_name": "OPRAVÍME KLADNO-PIRÁTI A STAN",
+          "abbreviation": "STAN+Piráti",
+          "description": "OPRAVÍME KLADNO - PIRÁTI A STAROSTOVÉ",
           "contacts": {
             "web": [
               {
@@ -611,8 +627,7 @@
             ],
             "facebook": "https://www.facebook.com/roman.hajek.primatorem",
             "instagram": "https://www.instagram.com/romanhajek/"
-          },
-          "abbreviation": "STAN+Piráti"
+          }
         }
       ],
       "motto": "Do stojatých vod kladenské politiky přinášíme nový přístup."
@@ -621,7 +636,7 @@
       "id": "komunalni-2022-532053-c-682005",
       "name": "ANO 2011",
       "type": "party",
-      "description": "ANO 2011 - DESCRIPTION",
+      "description": "ANO 2011",
       "img_url": "ano",
       "contacts": {
         "web": []
@@ -630,11 +645,12 @@
         {
           "id": "komunalni-2022-532053-c-682005-p",
           "name": "ANO 2011",
-          "description": "ANO 2011 - DESCRIPTION",
+          "short_name": "ANO 2011",
+          "abbreviation": "ANO",
+          "description": "ANO 2011",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "ANO"
+          }
         }
       ]
     },
@@ -642,7 +658,7 @@
       "id": "komunalni-2022-532053-c-830763",
       "name": "Koalice pro Kladno (ČSSD a Zelení)",
       "type": "party",
-      "description": "Koalice pro Kladno (ČSSD a Zelení) - DESCRIPTION",
+      "description": "Koalice pro Kladno (ČSSD a Zelení)",
       "img_url": "zelení-čssd",
       "contacts": {
         "web": [
@@ -656,7 +672,9 @@
         {
           "id": "komunalni-2022-532053-c-830763-p",
           "name": "Koalice pro Kladno (ČSSD a Zelení)",
-          "description": "Koalice pro Kladno (ČSSD a Zelení) - DESCRIPTION",
+          "short_name": "Koalice Kladno(ČSSD a Zelení)",
+          "abbreviation": "Zelení+ČSSD",
+          "description": "Koalice pro Kladno (ČSSD a Zelení)",
           "contacts": {
             "web": [
               {
@@ -664,8 +682,7 @@
                 "label": "program"
               }
             ]
-          },
-          "abbreviation": "Zelení+ČSSD"
+          }
         }
       ],
       "motto": "Slušně a lépe"
@@ -2183,6 +2200,625 @@
     {
       "id": "komunalni-2022-532053-a-937609-48",
       "candidate_id": "komunalni-2022-532053-c-937609",
+      "question_id": "komunalni-2022-532053-q-48",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-1",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-1",
+      "answer": "yes",
+      "comment": "Na druhou stranu je ale nutné dbát na to, aby nevznikala ghetta nepřizpůsobivých."
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-2",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-2",
+      "answer": "yes",
+      "comment": "Svoz odpadu je služba, kterou stejně nějakou formou ve výsledku zaplatí občané. Poplatek je transparentní forma, které všichni rozumí. Samozřejmě v době energetické krize, kdy občané vinou nic nedělající vládní pětikoalice mnohy nemají na zaplacení drahých energií, dává smysl tento poplatek odpustit. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-3",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-3",
+      "answer": "no",
+      "comment": "Senioři a také například děti jsou ohroženou skupinou, kterou musíme chránit. Samozřejmě je možné omezit využívání energií, ale vždy s rozumem a s ohledem k potřebám této ohrožené skupiny. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-4",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-4",
+      "answer": "no",
+      "comment": "Na Kladně toto omezení moc nedává smysl. V sídlištích, kde na každé straně už tak úzkých ulic parkují auta, se stejně třicítkou jezdí už dávno. A ve větších ulicích jako například Vítězná / ČSA nebo C. Boudy / J. Kociána by třicítka zbytečně zpomalovala dopravu. Je samozřejmě možné do kokrétních ulic rychlostní omezení dát, typicky po diskuzi s občany dané lokality. Například před školy a školky, což už ale v mnoha případech existuje. Ale plošně omezit dopravu by spíš bylo kontraproduktivní. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-5",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-5",
+      "answer": "yes",
+      "comment": "I když se o Milostivém létu píše v novinách a mluví v televizi, stále mnoho občanů o něm neví. A jelikož je to nástroj, jak občanům pomoci v jejich tíživé situaci, město by ho mělo využít. Předejde tím ještě větším sociálním problémům. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-6",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-6",
+      "answer": "yes",
+      "comment": "Především na rizikových místech. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-7",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-7",
+      "answer": "yes",
+      "comment": "Vyřešit problém hazardu na Kladně se již v roce 2019 povedlo, ale po puči v roce 2020 současné vedení města hazard bohužel opět povolilo. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-8",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-8",
+      "answer": "no",
+      "comment": "Pro ohrožené skupiny obyvatel (děti, senioři, zdravotně postižení atd.) ale samozřejmě slevy na jízdném nebo doprava zdarma dávají smysl. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-9",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-9",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-10",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-10",
+      "answer": "yes",
+      "comment": "Není důvod, aby se zastupitelé schovávali. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-11",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-11",
+      "answer": "yes",
+      "comment": "Není důvod, aby se členové rady města schovávali. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-12",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-12",
+      "answer": "yes",
+      "comment": "Jakýkoliv veřejně neohlášený ohňostroj a petardy dokážou obyvatelům i ve velké vzdálenosti způsobit velké problémy (senioři, pacienti v nemocnici, kojící matky s dětmi). Stejně tak ohrožují zvířata. Na Silvestra je ale zábavní pyrotechnika již takřka českou tradicí, a tak by se samozřejmě v tuto dobu omezovat neměla. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-13",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-13",
+      "answer": "dont_know",
+      "comment": "Veřejné budovy již přeci přístupné jsou. Pokud je někomu zima, může vejít a ohřát se, i když nechce řešit žádnou konkrétní agendu. Pokud ale otázka cílí na to, zda-li by měly být veřejné budovy přístupné i v noci, tak s tím nelze souhlasit. Přineslo by to s sebou řadu bezpečnostích a hygienických problémů, které by naopak celou situaci jak pro město, tak pro obyvatele zhoršily. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-14",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-14",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-15",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-15",
+      "answer": "dont_know",
+      "comment": "V odůvodněných případech, kdy to například nezpůsobí bezpečností problémy, je to možné. Ale plošně samozřejmě ne. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-16",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-16",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-17",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-17",
+      "answer": "yes",
+      "comment": "Praxe, že malé děti, které si ani nemohou vydělávat, mají dluhy, vůbec nedává smysl. Nesmíme připustit, aby děti měly dluhy a exekuce. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-18",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-18",
+      "answer": "yes",
+      "comment": "Občané by měli vědět, jak město utrácí veřejné finance. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-19",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-19",
+      "answer": "no",
+      "comment": "Ve výjimečných a odůvodněných případech je samozřejmě možné vyhlásit referendum, které hnutí SPD podporuje. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-20",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-20",
+      "answer": "yes",
+      "comment": "Hnutí SPD dlouhodobě upozorňuje na nutnost například výstavby startovacích bytů pro mladé rodiny. Regulované nájemné by bylo podmíněno beztrestností a dobrou pracovní morálkou. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-21",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-21",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-22",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-22",
+      "answer": "no",
+      "comment": "Již nyní mají děti obědy zhruba ze dvou třetin dotované a platí tedy zhruba jen třetinu plné ceny. Samozřejmě je možné, aby město v odůvodněných případech dotaci navýšilo, aby se nestalo, že děti ze slušných a pracujících rodin nemají na oběd. Hnutí SPD je ale proti neadresným sociálním dávkám, které pak skončí v alkoholu, v cigaretách nebo v herně. Nechceme podporovat nepřizpůsobivé."
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-23",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-23",
+      "answer": "dont_know",
+      "comment": "Jsme otevření k diskuzi. V případě podpory z rozpočtu města je nutné zhodnotit celkové náklady a přínos pro společnost. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-24",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-24",
+      "answer": "yes",
+      "comment": "Kladno není tak velké jako Praha, aby muselo mít složité parkovací zóny. Nicméně podporujeme například vybudování jednopatrového parkovacího domu u hlavní třídy, abychom ulevili centru a podpořili návrat občanů do této lokality. Stejně tak by se měl vybudovat parkovací dům například v kročehlavském sídlišti. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-25",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-25",
+      "answer": "no",
+      "comment": "Město musí disponovat dostatečnou kapacitou vlastních bytů s regulovaným nájemným. Viz otázka č. 20."
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-26",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-26",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-27",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-27",
+      "answer": "yes",
+      "comment": "Nicméně odmítáme nahodilé experimenty, které provádí například současného vedení hlavního města Praha, kdy se velmi omezuje a komplikuje automobilová doprava na úkor pruhů pro cyklisty, které pak ale nikdo nevyužívá. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-28",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-28",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-29",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-29",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-30",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-30",
+      "answer": "no",
+      "comment": "Město přeci také nestaví čerpací stanice. Navíc hnutí SPD se dlouhodobě staví proti Zelené dohodě (tzv. Green Deal) a obecně zelenému šílenství, které přichází z Evropské unie. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-31",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-31",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-32",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-32",
+      "answer": "dont_know",
+      "comment": "Není důvod měnit současný model, kdy předškolní děti mají jízdné zdarma a děti od šesti let platí poloviční jízdné. Stejně jako v případě otázky č. 22 (obědy ve školách zdarma) nechceme, aby případné další dotování dopravy skončilo v alkoholu, v cigaretách nebo v hernách. Hnutí SPD podporuje slušné a pracující občany, ne nepřizpůsobivé. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-33",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-33",
+      "answer": "no",
+      "comment": "Toto již řeší státní dotace. Není důvod, aby se fungující systém zapojením města všem zkomplikoval. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-34",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-34",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-35",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-35",
+      "answer": "no",
+      "comment": "Toto by vedlo ke zbytečnému plýtvání. Již nyní existují nástroje, jak pomoci občanům ve finanční tísni. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-36",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-36",
+      "answer": "no",
+      "comment": "Ženy, které skutečně takovou pomoc potřebují, mají již nyní možnost využít finanční pomoci státu, aby si toto zboží zakoupily. Nebo mohou využít například potravinových bank, kde je toto zboží k dispozici.  "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-37",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-37",
+      "answer": "yes",
+      "comment": "Samozřejmě ale ne za každou cenu a s ohledem na místní specifika a estetičnost. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-38",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-38",
+      "answer": "dont_know",
+      "comment": "Jízda na elektrických koloběžkách s sebou nese velká nebezpečí, která si jezdci mnohdy neuvědomují, a to jak na silnici, tak na chodníku. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-39",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-39",
+      "answer": "yes",
+      "comment": "Integrace má smysl zvláště v případě cizinců pocházejících ze zemí, které mají kulturně blízko k ČR. Nicméně město by mělo pečlivě vážit, jak svoje prostředky vynakládá, aby integrace byla úspěšná. Nechceme integraci, která nikam nevede. Nechceme sypat peníze nepotřebným politickým neziskovým organizacím."
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-40",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-40",
+      "answer": "no",
+      "comment": "Dle našeho názoru je současný počet dostačující. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-41",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-41",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-42",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-42",
+      "answer": "dont_know",
+      "comment": "Město by převážně mělo podporovat kvalitní autobusovou dopravu, která funguje celoročně."
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-43",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-43",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-44",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-44",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-45",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-45",
+      "answer": "yes",
+      "comment": "Pro SPD je prioritou podpora slušných a pracujících občanů, ne nepřizpůsobivých. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-46",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-46",
+      "answer": "yes",
+      "comment": "To je obdobná otázka jako otázky č. 20 a 25. Hnutí SPD dlouhodobě upozorňuje na nutnost například výstavby startovacích bytů pro mladé rodiny. Regulované nájemné by bylo podmíněno beztrestností a dobrou pracovní morálkou. "
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-47",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-47",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-773113-48",
+      "candidate_id": "komunalni-2022-532053-c-773113",
+      "question_id": "komunalni-2022-532053-q-48",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-1",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-1",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-2",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-2",
+      "answer": "no",
+      "comment": "Dočasně, po dobu energetické krize a vysoké inflace."
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-3",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-3",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-4",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-4",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-5",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-5",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-6",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-6",
+      "answer": "yes",
+      "comment": "Za podmínky přísného dodržování soukromí a GDPR. Máme téměř dokonalý systém, ale jsou místa, která jsou z hlediska bezpečnosti potřeba pokrýt."
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-7",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-7",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-8",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-8",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-9",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-9",
+      "answer": "yes",
+      "comment": "Všechny autubusy MHD Kladno jsou již bezbariérové, většina zastávek též,"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-10",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-10",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-11",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-11",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-12",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-12",
+      "answer": "yes",
+      "comment": "Mimo předem oznámených akcí."
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-13",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-13",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-14",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-14",
+      "answer": "no",
+      "comment": "Máme úsporná svítidla a méně nasvícených památek."
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-15",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-15",
+      "answer": "no",
+      "comment": "Máme již úsporná svítidla a chceme je dále rozšiřovat."
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-16",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-16",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-17",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-17",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-18",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-18",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-19",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-19",
+      "answer": "no",
+      "comment": "Rozpočtová pravidla jsou stanovena zákonem."
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-20",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-20",
+      "answer": "dont_know",
+      "comment": "Záleží na situaci a poptávce."
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-21",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-21",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-22",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-22",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-23",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-23",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-24",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-24",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-25",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-25",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-26",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-26",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-27",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-27",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-28",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-28",
+      "answer": "no",
+      "comment": "Takové u nás neexistují."
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-29",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-29",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-30",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-30",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-31",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-31",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-32",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-32",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-33",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-33",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-34",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-34",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-35",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-35",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-36",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-36",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-37",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-37",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-38",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-38",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-39",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-39",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-40",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-40",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-41",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-41",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-42",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-42",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-43",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-43",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-44",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-44",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-45",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-45",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-46",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-46",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-47",
+      "candidate_id": "komunalni-2022-532053-c-786086",
+      "question_id": "komunalni-2022-532053-q-47",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-532053-a-786086-48",
+      "candidate_id": "komunalni-2022-532053-c-786086",
       "question_id": "komunalni-2022-532053-q-48",
       "answer": "yes"
     }

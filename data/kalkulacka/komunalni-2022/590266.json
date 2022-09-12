@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro 9 měst.",
+    "description": "K dispozici jsou kalkulačky pro **15** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro 9 měst.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **15** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -417,11 +417,12 @@
         {
           "id": "komunalni-2022-590266-c-860344-p",
           "name": "Třebíč můj domov",
+          "short_name": "Třebíč můj domov",
+          "abbreviation": "SNK ED+NK",
           "description": "Třebíč můj domov",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "SNK ED+NK"
+          }
         }
       ],
       "motto": "Děláme to, co říkáme. Pokračujeme v tom, co má smysl."
@@ -451,6 +452,8 @@
         {
           "id": "komunalni-2022-590266-c-378973-p",
           "name": "Třebíč Občanům!",
+          "short_name": "Třebíč Občanům!",
+          "abbreviation": "KAN+NK",
           "description": "Třebíč Občanům!",
           "contacts": {
             "web": [
@@ -466,8 +469,7 @@
             "facebook": "https://www.facebook.com/trebicobcanum",
             "twitter": "https://twitter.com/trebicobcanum",
             "instagram": "https://www.instagram.com/trebic_obcanum/"
-          },
-          "abbreviation": "KAN+NK"
+          }
         }
       ],
       "motto": "Změna, to jsme my! Spokojené bydlení - obchvat Třebíče - transparentní radnice."
@@ -485,11 +487,12 @@
         {
           "id": "komunalni-2022-590266-c-505803-p",
           "name": "ANO 2011",
+          "short_name": "ANO 2011",
+          "abbreviation": "ANO",
           "description": "ANO 2011",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "ANO"
+          }
         }
       ],
       "motto": "Pojďte do toho s námi, aby bylo líp."
@@ -507,11 +510,12 @@
         {
           "id": "komunalni-2022-590266-c-238616-p",
           "name": "Občané patrioti",
+          "short_name": "Občané patrioti",
+          "abbreviation": "OPAT",
           "description": "Občané patrioti",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "OPAT"
+          }
         }
       ],
       "motto": "Nekandidujeme proto, abychom si přilepšili, ale abychom  sloužili a pomáhali městu a jeho občanům. Nejsme totiž  politici, jsme patrioti."
@@ -529,11 +533,12 @@
         {
           "id": "komunalni-2022-590266-c-543213-p",
           "name": "PIRÁTI A NEZÁVISLÍ",
+          "short_name": "PIRÁTI A NEZÁVISLÍ",
+          "abbreviation": "Piráti+NK",
           "description": "PIRÁTI A NEZÁVISLÍ",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "Piráti+NK"
+          }
         }
       ],
       "motto": "Máme odvahu oživit Třebíč."
@@ -551,11 +556,12 @@
         {
           "id": "komunalni-2022-590266-c-763579-p",
           "name": "KDU-ČSL",
+          "short_name": "KDU-ČSL",
+          "abbreviation": "KDU-ČSL",
           "description": "KDU-ČSL",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "KDU-ČSL"
+          }
         }
       ]
     },
@@ -572,11 +578,12 @@
         {
           "id": "komunalni-2022-590266-c-160320-p",
           "name": "TSD - Třebíč sociálně demokratická",
+          "short_name": "TSD-Třebíč sociálně demokrat.",
+          "abbreviation": "ČSSD+NK",
           "description": "TSD - Třebíč sociálně demokratická",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "ČSSD+NK"
+          }
         }
       ]
     },
@@ -593,11 +600,12 @@
         {
           "id": "komunalni-2022-590266-c-875906-p",
           "name": "Komunistická strana Čech a Moravy",
+          "short_name": "Komunistická str.Čech a Moravy",
+          "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "KSČM"
+          }
         }
       ]
     },
@@ -614,11 +622,12 @@
         {
           "id": "komunalni-2022-590266-c-900395-p",
           "name": "Domov pro Třebíč",
+          "short_name": "Domov pro Třebíč",
+          "abbreviation": "DOMOV+NK",
           "description": "Domov pro Třebíč",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "DOMOV+NK"
+          }
         }
       ],
       "motto": "Náš DOMOV je Třebíč. Ne Brusel, Tchaj-wan, Kyjev"
@@ -636,11 +645,12 @@
         {
           "id": "komunalni-2022-590266-c-711663-p",
           "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
           "description": "TOP 09",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "TOP 09"
+          }
         }
       ],
       "motto": "Máme vizi: město pro lidi"
@@ -658,11 +668,12 @@
         {
           "id": "komunalni-2022-590266-c-166431-p",
           "name": "Svoboda a přímá demokracie (SPD) s podporou Trikolory",
+          "short_name": "SPD s podporou Trikolory",
+          "abbreviation": "SPD+Trikolora",
           "description": "Svoboda a přímá demokracie (SPD) s podporou Trikolory",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "SPD+Trikolora"
+          }
         }
       ],
       "motto": "Poctivou prací dokážeme heslo lepší Třebíč dovést ke spokojenosti všech."
@@ -680,11 +691,12 @@
         {
           "id": "komunalni-2022-590266-c-180898-p",
           "name": "PRO TŘEBÍČ",
+          "short_name": "PRO TŘEBÍČ",
+          "abbreviation": "STAN+NK",
           "description": "PRO TŘEBÍČ",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "STAN+NK"
+          }
         }
       ],
       "motto": "Činy místo slov."
@@ -702,11 +714,12 @@
         {
           "id": "komunalni-2022-590266-c-934440-p",
           "name": "Občanská demokratická strana a Ta naše Třebíč",
+          "short_name": "ODS a TnT",
+          "abbreviation": "ODS+TnT",
           "description": "Občanská demokratická strana a Ta naše Třebíč",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "ODS+TnT"
+          }
         }
       ],
       "motto": "Společně za Třebíč, společně za Vás."
@@ -724,11 +737,12 @@
         {
           "id": "komunalni-2022-590266-c-589003-p",
           "name": "Břehy",
+          "short_name": "Břehy",
+          "abbreviation": "Zelení+NK",
           "description": "Břehy",
           "contacts": {
             "web": []
-          },
-          "abbreviation": "Zelení+NK"
+          }
         }
       ],
       "motto": "Město nedědíme po předcích, půjčujeme si je od svých dětí."

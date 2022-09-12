@@ -7,6 +7,7 @@ from pathlib import Path
 import sys
 from typing import Any, Callable, Optional
 
+import cv2
 import requests
 
 logger = logging.getLogger()
@@ -14,6 +15,50 @@ logger.setLevel(logging.INFO)
 handler = logging.StreamHandler(sys.stderr)
 handler.setLevel(logging.INFO)
 logger.addHandler(handler)
+
+
+def extract_face(source: Path, target: Path) -> bool:
+    # https://github.com/shantnu/FaceDetect/blob/master/face_detect_cv3.py
+    # Get user supplied values
+    cascPath = "haarcascade_frontalface_default.xml"
+
+    # Create the haar cascade
+    faceCascade = cv2.CascadeClassifier(cascPath)
+
+    # Read the image
+    try:
+        image = cv2.imread(str(source.absolute()))
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+        # Detect faces in the image
+        faces = faceCascade.detectMultiScale(
+            gray,
+            scaleFactor=1.1,
+            minNeighbors=5,
+            minSize=(30, 30)
+            # flags = cv2.CV_HAAR_SCALE_IMAGE
+        )
+
+        logger.info("Found %d faces in %s", len(faces), source)
+        if len(faces) != 1:
+            return False
+        (x, y, w, h) = faces[0]
+        left = int(x - 0.2 * w)
+        right = int(x + 1.2 * w)
+        top = int(y - 0.32 * h)
+        bottom = int(y + 1.20 * h)
+        cropped = image[top:bottom, left:right]
+        # based on figma there is 72x72 and 48x48 version
+        new_width = 96
+        new_height = int(1 / ((right - left) / new_width) * (bottom - top))
+        resized = cv2.resize(
+            cropped, (new_height, new_width), interpolation=cv2.INTER_LINEAR
+        )
+        cv2.imwrite(str(target.absolute()), resized)
+        return True
+    except cv2.error as e:
+        logger.error("Cannot generate face from %s, %s", source, e)
+        return False
 
 
 def process_senatni(
@@ -51,20 +96,32 @@ def process_senatni(
             continue
 
         remote_url = photos[0]["url"]
-        local_path = avatar_dir / f"{candidate['id']}.{remote_url.split('.')[-1]}"
-        if not local_path.exists():
-            logger.info("\t%s - downloading from %s", local_path.absolute(), remote_url)
+        image_suffix = remote_url.split(".")[-1]
+        local_original_path = avatar_dir / f"{candidate['id']}-original.{image_suffix}"
+        used_path = local_original_path
+        if not local_original_path.exists():
+            logger.info(
+                "\t%s - downloading from %s", local_original_path.absolute(), remote_url
+            )
             response = requests.get(remote_url)
-            with local_path.open("wb") as fh:
+            with local_original_path.open("wb") as fh:
                 fh.write(response.content)
-            img_url = "/".join(str(local_path.absolute()).split("/")[-5:])
+
+            local_face_path = avatar_dir / f"{candidate['id']}-face.{image_suffix}"
+            if not local_face_path.exists():
+                if extract_face(local_original_path, local_face_path):
+                    used_path = local_face_path
+
+            img_url = "/".join(str(used_path.absolute()).split("/")[-5:])
             if not candidate.get("img_url") or candidate["img_url"] != img_url:
                 logger.info("\tsetting img_url to %s", img_url)
                 candidate["img_url"] = img_url
                 was_changed = True
         else:
             logger.info(
-                "\t%s - already downloaded from %s", local_path.absolute(), remote_url
+                "\t%s - already downloaded from %s",
+                local_original_path.absolute(),
+                remote_url,
             )
 
     return was_changed

@@ -65,14 +65,10 @@ const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
 const text =
   route.params.election === 'senatni-2022'
     ? `
-Vítejte ve Volební kalkulačce pro volby do zastupitelstev měst.
-
-Čeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující strany. Zodpovězení otázek zabere cca 10 minut. Na konci se dozvíte, jak se strany shodují s vašimi názory.
+Čeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující strany. Zodpovězení otázek zabere cca 10 minut. Na konci se dozvíte, jak se kandidáti shodují s vašimi názory.
       `
     : `
-Vítejte ve Volební kalkulačce pro komunální volby 2022.
-
-Čeká vás 30-40 otázek, jejich zodpovězení zabere cca 10 minut. Na konci se dozvíte, v kolika procentech odpovědí se s kandidujícími stranami shodujete v názorech.
+Čeká vás 30-40 otázek, jejich zodpovězení zabere cca 10 minut. Na konci se dozvíte, jak se kandidující strany shodují s vašimi názory.
     `;
 
 const forwardRoute = computed(
@@ -98,6 +94,14 @@ const farthestCompletedStep = ref(
     backRoute.value && backRoute.value.name === appRoutes.question.name ? 4 : 0
   )
 );
+
+const previousButtonTitle = computed(() => {
+  if (currentStep.value === 1) {
+    return 'Změnit obvod';
+  } else {
+    return 'Předchozí';
+  }
+});
 
 const nextButtonTitle = computed(() => {
   if (currentStep.value < stepsCount) {
@@ -145,6 +149,14 @@ const goToQuestions = () => {
   });
 };
 
+const goToDistrictSelection = () => {
+  router.push({
+    name: 'district-selection',
+    params: { ...route.params },
+    query: { ...route.query },
+  });
+};
+
 const handleNextClick = () => {
   farthestCompletedStep.value = Math.max(
     farthestCompletedStep.value,
@@ -159,7 +171,11 @@ const handleNextClick = () => {
 };
 
 const handlePreviousClick = () => {
-  goToStep(currentStep.value - 1);
+  if (currentStep.value === 1) {
+    goToDistrictSelection();
+  } else {
+    goToStep(currentStep.value - 1);
+  }
 };
 </script>
 
@@ -212,9 +228,12 @@ const handlePreviousClick = () => {
       <template #sticky-header>
         <ResponsiveWrapper extra-small small>
           <SecondaryNavigationBar transparent>
-            <template v-if="currentStep > 1" #before>
+            <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
+                <IconComponent
+                  :icon="mdiArrowLeft"
+                  :title="previousButtonTitle"
+                />
               </IconButton>
             </template>
             <template v-if="farthestCompletedStep >= currentStep" #after>
@@ -229,8 +248,11 @@ const handlePreviousClick = () => {
         <StepWrapper>
           <template #before>
             <ResponsiveWrapper medium large extra-large huge>
-              <IconButton v-if="currentStep > 1" @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Předchozí" />
+              <IconButton @click="handlePreviousClick">
+                <IconComponent
+                  :icon="mdiArrowLeft"
+                  :title="previousButtonTitle"
+                />
               </IconButton>
             </ResponsiveWrapper>
           </template>
@@ -281,6 +303,25 @@ const handlePreviousClick = () => {
           </StackComponent>
           <StackComponent v-if="currentStep === 3" spacing="small">
             <BodyText size="medium">
+              Když nemáte názor, nejste si jisti nebo z&nbsp;jiného důvodu
+              nechcete odpovídat, zvolte:
+            </BodyText>
+            <CardComponent
+              corner="bottom-right"
+              border
+              style="align-self: center"
+            >
+              <StackComponent horizontal spacing="small">
+                <IconComponent :icon="vkiLogoNeutral" />
+                <BodyText size="medium">= přeskočit / bez odpovědi</BodyText>
+              </StackComponent>
+            </CardComponent>
+            <BodyText size="medium">
+              Tato otázka se do výpočtu vaší shody nezapočítá.
+            </BodyText>
+          </StackComponent>
+          <StackComponent v-if="currentStep === 4" spacing="small">
+            <BodyText size="medium">
               Pokud vám na daném tématu zvlášť záleží, označte ho hvězdičkou:
             </BodyText>
             <!-- TODO: remove inline styles -->
@@ -301,25 +342,6 @@ const handlePreviousClick = () => {
             </CardComponent>
             <BodyText size="medium">
               Odpověď pak bude mít ve výpočtu shody dvojnásobnou váhu.
-            </BodyText>
-          </StackComponent>
-          <StackComponent v-if="currentStep === 4" spacing="small">
-            <BodyText size="medium">
-              Když nemáte názor, nejste si jisti nebo z&nbsp;jiného důvodu
-              nechcete odpovídat, zvolte:
-            </BodyText>
-            <CardComponent
-              corner="bottom-right"
-              border
-              style="align-self: center"
-            >
-              <StackComponent horizontal spacing="small">
-                <IconComponent :icon="vkiLogoNeutral" />
-                <BodyText size="medium">= přeskočit / bez odpovědi</BodyText>
-              </StackComponent>
-            </CardComponent>
-            <BodyText size="medium">
-              Tato otázka se do výpočtu vaší shody nezapočítá.
             </BodyText>
           </StackComponent>
           <template #after>

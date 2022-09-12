@@ -18,6 +18,10 @@ export interface Party {
    */
   name: string;
   /**
+   * Party short name
+   */
+  short_name?: string;
+  /**
    * Longer description.
    */
   description: string;
