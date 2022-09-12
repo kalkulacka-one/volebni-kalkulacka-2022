@@ -58,7 +58,6 @@ export const decodeResults = (hexString: string) => {
 
 export interface Result {
   count: 0;
-  weight: 0;
   raw_result: number;
   result: number;
   result_percent: number;
@@ -116,7 +115,6 @@ export const calculateRelativeAgreement = (
     if (!relativeAgreement.has(ca.candidate_id)) {
       relativeAgreement.set(ca.candidate_id, {
         count: 0,
-        weight: 0,
         raw_result: 0,
         result: 0.5,
         result_percent: 50,
@@ -134,13 +132,12 @@ export const calculateRelativeAgreement = (
       return;
     }
     const answerRes = calculateAnswerResult(ua, ca, weight);
-    res.count += 1;
-    res.weight += answerRes[0];
+    res.count += answerRes[0];
     res.raw_result += answerRes[1];
   });
   relativeAgreement.forEach((ra) => {
     if (ra.count === 0) return;
-    ra.result = (1 + ra.raw_result / ra.weight) / 2;
+    ra.result = (1 + ra.raw_result / ra.count) / 2;
     ra.result_percent = Math.round(ra.result * 100);
   });
   const result: { cId: string; result: Result }[] = [];
