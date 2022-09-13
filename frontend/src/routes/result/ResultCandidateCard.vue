@@ -79,10 +79,10 @@ const toggleClick = () => {
     </div>
     <div class="text">
       <TitleText class="desktop" tag="p" :size="strong ? 'medium' : 'small'">
-        {{ candidate?.name }}
+        {{ candidate?.short_name }}
       </TitleText>
       <BodyText class="mobile" tag="p" :size="strong ? 'medium' : 'small'">
-        <strong>{{ candidate?.name }}</strong>
+        <strong>{{ candidate?.short_name }}</strong>
       </BodyText>
     </div>
     <div class="progress-bar">
@@ -109,10 +109,7 @@ const toggleClick = () => {
             :alt="'nologo'"
           />
           <BodyText size="medium"
-            >{{ i !== 0 ? ', ' : ''
-            }}{{
-              candidate?.type == 'person' ? party.name : party.short_name
-            }}</BodyText
+            >{{ i !== 0 ? ', ' : '' }}{{ party.name }}</BodyText
           >
         </div>
       </div>
