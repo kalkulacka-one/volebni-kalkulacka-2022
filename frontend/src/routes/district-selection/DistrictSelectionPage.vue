@@ -24,6 +24,7 @@ import EmbedWrapper from '@/components/responsivity/EmbedWrapper.vue';
 import MarkdownIt from '@/components/utilities/MarkdownIt.vue';
 import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
+import { stringToNormalizedHyphenated } from '@/common/utils';
 
 const router = useRouter();
 const route = useRoute();
@@ -44,8 +45,9 @@ const title =
 const text = electionDescription;
 
 const options = electionStore.districts.map((district) => {
+  const normalizedName = stringToNormalizedHyphenated(district.name);
   return {
-    value: district.district_code,
+    value: `${district.district_code}-${normalizedName}`,
     label:
       district.name +
       (district.show_district_code ? ` (${district.district_code})` : ''),
@@ -55,6 +57,7 @@ const options = electionStore.districts.map((district) => {
 const selected = ref((route.params.district as string) || null);
 
 const onSubmit = () => {
+  console.debug(selected);
   if (selected.value) {
     router.push({
       name: appRoutes.guide.name,

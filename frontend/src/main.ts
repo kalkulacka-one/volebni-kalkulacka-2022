@@ -26,6 +26,7 @@ import SharePageVue from './routes/share/SharePage.vue';
 import AboutUsPageVue from './routes/about-us/AboutUsPage.vue';
 import AboutElectionsPageVue from './routes/about-elections/AboutElectionsPage.vue';
 import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
+import { getDistrictCode } from './common/utils';
 
 const RESULT_QUERY_NAME = 'result';
 
@@ -269,10 +270,8 @@ router.beforeEach(async (to, from) => {
   //load calculator data if district different
   if (from.params.district !== to.params.district) {
     if (to.params.district !== undefined) {
-      await store.loadCalculator(
-        to.params.election as string,
-        to.params.district as string
-      );
+      const districtNr = getDistrictCode(to.params.district as string);
+      await store.loadCalculator(to.params.election as string, districtNr);
     }
   }
 

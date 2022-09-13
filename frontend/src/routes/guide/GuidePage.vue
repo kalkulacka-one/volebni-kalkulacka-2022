@@ -41,6 +41,7 @@ import EmbedWrapper from '@/components/responsivity/EmbedWrapper.vue';
 import MarkdownIt from '@/components/utilities/MarkdownIt.vue';
 import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
+import { getDistrictCode } from '@/common/utils';
 
 const router = useRouter();
 const route = useRoute();
@@ -48,7 +49,7 @@ const electionStore = useElectionStore();
 
 const election = electionStore.election as Election;
 const electionName = election.name;
-const districtCode = route.params.district;
+const districtCode = getDistrictCode(route.params.district as string);
 const districtName = electionStore.districts.filter(
   (district) => district.district_code === districtCode
 )[0].name;
