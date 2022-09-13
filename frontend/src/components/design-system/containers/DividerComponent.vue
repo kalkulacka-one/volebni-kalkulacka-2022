@@ -3,19 +3,18 @@ import { computed } from 'vue';
 
 export interface Props {
   weight?: 'light' | 'normal' | 'bold';
-  dotted?: boolean;
+  style?: 'solid' | 'dashed' | 'dotted';
   vertical?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   weight: 'normal',
-  dotted: false,
+  style: 'solid',
   vertical: false,
 });
 
 const classes = computed(() => ({
   [`divider--weight-${props.weight}`]: props.weight,
-  'divider--dotted': props.dotted,
   'divider--vertical': props.vertical,
 }));
 
@@ -30,8 +29,8 @@ const tag = computed(() => (props.vertical ? 'div' : 'hr'));
 .divider {
   margin: 0;
   height: 0;
-  border-style: solid;
   border-color: rgb(var(--color-neutral-border));
+  border-style: v-bind(style);
 
   &--weight {
     &-light {
@@ -48,10 +47,6 @@ const tag = computed(() => (props.vertical ? 'div' : 'hr'));
       border-width: var(--spacing-tiny);
       border-radius: var(--spacing-tiny);
     }
-  }
-
-  &--dotted {
-    border-style: dotted;
   }
 
   &--vertical {
