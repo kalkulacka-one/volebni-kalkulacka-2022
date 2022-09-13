@@ -5,6 +5,7 @@ import {
   mdiShareVariantOutline,
   mdiCloseCircleOutline,
   mdiArrowLeft,
+  mdiArrowRight,
 } from '@mdi/js';
 
 import { appRoutes } from '@/main';
@@ -20,6 +21,7 @@ import type { Election } from '@/types/election';
 import type { CandidateAnswer } from '@/types/candidate-answer';
 
 import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
+import BottomBar from '@/components/design-system/navigation/BottomBar.vue';
 import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
 import IconButton from '@/components/design-system/input/IconButton.vue';
@@ -59,6 +61,14 @@ const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
 const handlePreviousClick = () => {
   router.push({
     name: appRoutes.recap.name,
+    params: { ...route.params },
+    query: { ...route.query },
+  });
+};
+
+const handleShowComparsionClick = () => {
+  router.push({
+    name: appRoutes.comparison.name,
     params: { ...route.params },
     query: { ...route.query },
   });
@@ -188,6 +198,17 @@ const resultsMedicine = calculateRelativeAgreement(
                 Sdílet
               </ButtonComponent>
               -->
+              <ButtonComponent
+                class="desktop"
+                kind="filled"
+                color="primary"
+                @click="handleShowComparsionClick"
+              >
+                Porovnat odpovědi
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
             </template>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
@@ -209,6 +230,24 @@ const resultsMedicine = calculateRelativeAgreement(
             neodpověděli.
           </BodyText>
         </StackComponent>
+        <template #bottom-bar>
+          <ResponsiveWrapper extra-small small>
+            <BottomBar>
+              <div class="bottom-bar-grid">
+                <ButtonComponent
+                  kind="filled"
+                  color="primary"
+                  @click="handleShowComparsionClick"
+                >
+                  Porovnat odpovědi
+                  <template #iconAfter>
+                    <IconComponent :icon="mdiArrowRight" />
+                  </template>
+                </ButtonComponent>
+              </div>
+            </BottomBar>
+          </ResponsiveWrapper>
+        </template>
       </BottomBarWrapper>
     </StickyHeaderLayout>
   </BackgroundComponent>
@@ -233,5 +272,10 @@ const resultsMedicine = calculateRelativeAgreement(
   .main {
     grid-template-columns: 1fr;
   }
+}
+
+.bottom-bar-grid {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 </style>
