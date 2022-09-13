@@ -9,7 +9,10 @@ import {
 
 import { appRoutes } from '@/main';
 import { useElectionStore } from '@/stores/electionStore';
-import { calculateRelativeAgreement } from '@/common/resultParser';
+import {
+  calculateRelativeAgreement,
+  encodeResults,
+} from '@/common/resultParser';
 import { postResults } from '@/common/restApi';
 import { generateShareUrl } from '@/common/share';
 
@@ -73,6 +76,7 @@ onMounted(async () => {
   const response = await postResults();
 });
 
+console.debug(encodeResults(electionStore.answers));
 const resultsGeneral = calculateRelativeAgreement(
   electionStore.calculator?.answers as CandidateAnswer[],
   electionStore.answers
