@@ -20,7 +20,11 @@ const classes = computed(() => ({
 
 <template>
   <div
-    v-if="(currentEmbed && embed === true) || embed === currentEmbed"
+    v-if="
+      (currentEmbed && embed === true) ||
+      embed === currentEmbed ||
+      (!currentEmbed && !embed)
+    "
     :class="['embed-wrapper', classes]"
   >
     <slot />
