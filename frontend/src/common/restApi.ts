@@ -1,4 +1,8 @@
-import { useElectionStore, convertAnswerToStr } from '@/stores/electionStore';
+import {
+  useElectionStore,
+  convertAnswerToStr,
+  convertStrToAnswer,
+} from '@/stores/electionStore';
 import type { AnswerRest } from '@/types/rest/Answer';
 import type { CalculatorRest } from '@/types/rest/Calculator';
 import type { ElectionRest } from '@/types/rest/Election';
@@ -41,7 +45,7 @@ export const getResults = async (resultUuid: string) => {
     return {
       id: x.question_id,
       flag: x.is_important,
-      answer: x.answer,
+      answer: convertStrToAnswer(x.answer),
     };
   });
 };
