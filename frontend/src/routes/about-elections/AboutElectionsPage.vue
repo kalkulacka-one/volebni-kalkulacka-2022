@@ -44,7 +44,7 @@ import ContainerComponent from '@/components/design-system/containers/ContainerC
           jsme shrnuli na této stránce.
         </BodyText>
 
-        <HeadlineText size="medium" tag="h2" id="komunalni">
+        <HeadlineText id="komunalni" size="medium" tag="h2">
           Komunální volby
         </HeadlineText>
         <BodyText size="large">
@@ -141,7 +141,7 @@ import ContainerComponent from '@/components/design-system/containers/ContainerC
           V případě, že je odevzdaná prázdná obálka, je tento hlas neplatný.
         </BodyText>
         <HeadlineText size="medium" tag="h2">
-          <a name="senatni" id="senatni" />Senátní volby
+          <a id="senatni" name="senatni" />Senátní volby
         </HeadlineText>
         <BodyText size="large">
           Senát je horní komorou Parlamentu České republiky. Do Senátu míří ke
