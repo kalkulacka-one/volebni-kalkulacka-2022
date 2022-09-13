@@ -109,7 +109,7 @@ const toggleClick = () => {
             :alt="'nologo'"
           />
           <BodyText size="medium"
-            >{{ i !== 0 ? ', ' : ''
+            >{{ i !== 0 ? ',\u0020' : ''
             }}{{
               candidate?.type == 'person' ? party.name : party.short_name
             }}</BodyText
@@ -187,6 +187,7 @@ const toggleClick = () => {
 }
 
 .result-question-card {
+  max-width: 100%;
   display: grid;
   // grid-template-columns: 4.5rem 1fr 4.5rem auto;
   grid-template-areas:
@@ -194,6 +195,7 @@ const toggleClick = () => {
     'avatar progress-bar percentage toggle'
     'avatar secondary-text percentage toggle';
   grid-template-columns: 2fr 10fr 2fr 1fr;
+
   column-gap: var(--responsive-spacing-medium);
   row-gap: var(--responsive-spacing-small);
 
@@ -204,6 +206,9 @@ const toggleClick = () => {
   }
 
   .text {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
     grid-area: text;
     justify-self: stretch;
   }
