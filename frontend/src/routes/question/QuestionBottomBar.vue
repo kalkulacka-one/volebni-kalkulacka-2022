@@ -59,7 +59,7 @@ console.log(props.answer);
       </StackComponent>
     </ResponsiveWrapper>
     <ResponsiveWrapper extra-small small>
-      <IconButton>
+      <IconButton class="important-button">
         <IconComponent
           :icon="starIcon"
           :color="starColor"
@@ -160,6 +160,10 @@ console.log(props.answer);
       background: rgba(var(--color-neutral-bg-backdrop-hover));
     }
   }
+}
+
+.important-button {
+  justify-self: end;
 }
 
 .in-favour {
