@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { onBeforeMount, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import {
   mdiShareVariantOutline,
@@ -14,8 +14,7 @@ import {
   calculateRelativeAgreement,
   encodeResults,
 } from '@/common/resultParser';
-import { postResults } from '@/common/restApi';
-import { generateShareUrl } from '@/common/share';
+import { generateSocialLink } from '@/common/share';
 
 import type { Election } from '@/types/election';
 import type { CandidateAnswer } from '@/types/candidate-answer';
@@ -74,17 +73,18 @@ const handleShowComparsionClick = () => {
   });
 };
 
-const handleShareClick = async () => {
-  const res = await postResults();
-
-  if (!res?.result_id) {
-    return;
-  }
-  alert(generateShareUrl(res.result_id));
+const showShareModal = ref(false);
+const handleShareClick = () => {
+  showShareModal.value = true;
 };
 
-onMounted(async () => {
-  const response = await postResults();
+const handleCloseShareModal = () => {
+  showShareModal.value = false;
+};
+
+onBeforeMount(async () => {
+  await electionStore.saveResults();
+  console.debug(`Results saved: ${electionStore.resultsUuid}`);
 });
 
 console.debug(encodeResults(electionStore.answers));
@@ -246,6 +246,18 @@ const resultsMedicine = calculateRelativeAgreement(
       </BottomBarWrapper>
     </StickyHeaderLayout>
   </BackgroundComponent>
+  <ModalComponent :close-modal-callback="handleCloseShareModal">
+    <ShareNetwork
+      network="facebook"
+      :url="generateSocialLink('facebook')"
+      title="Say hi to Vite! A brand new, extremely fast development setup for Vue."
+      description="This week, I’d like to introduce you to 'Vite', which means 'Fast'. It’s a brand new development setup created by Evan You."
+      quote="The hot reload is so fast it\'s near instant. - Evan You"
+      hashtags="vuejs,vite"
+    >
+      Share on Facebook
+    </ShareNetwork>
+  </ModalComponent>
 </template>
 
 <style lang="scss" scoped>

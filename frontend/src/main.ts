@@ -27,6 +27,7 @@ import AboutUsPageVue from './routes/about-us/AboutUsPage.vue';
 import AboutElectionsPageVue from './routes/about-elections/AboutElectionsPage.vue';
 import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
 import { getDistrictCode } from './common/utils';
+import VueSocialSharing from 'vue-social-sharing';
 
 const RESULT_QUERY_NAME = 'result';
 
@@ -176,6 +177,10 @@ export const wrappedRoutes = [
 
 //APP creation
 const app = createApp(App);
+//social sharing
+app.use(VueSocialSharing, {
+  /* optional options */
+});
 
 const pinia = createPinia();
 app.use(pinia);
