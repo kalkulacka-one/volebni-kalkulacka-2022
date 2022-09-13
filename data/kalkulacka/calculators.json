@@ -19,10 +19,10 @@
       "id": "komunalni-2022",
       "key": "komunalni-2022",
       "name": "Komunální volby 2022",
-      "description": "K dispozici jsou kalkulačky pro **15** měst České republiky.",
+      "description": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
       "instructions": {
         "header": "Zvolte své město",
-        "step_1_1": "K dispozici jsou kalkulačky pro **15** měst České republiky.",
+        "step_1_1": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
         "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
       },
       "from": "2022-09-23T14:00:00",
@@ -392,6 +392,24 @@
     },
     {
       "election_id": "komunalni-2022",
+      "district_code": "586846",
+      "show_district_code": false,
+      "name": "Jihlava",
+      "description": "Jihlava",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "598917",
+      "show_district_code": false,
+      "name": "Karviná",
+      "description": "Karviná",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "komunalni-2022",
       "district_code": "567442",
       "show_district_code": false,
       "name": "Teplice",
@@ -401,10 +419,64 @@
     },
     {
       "election_id": "komunalni-2022",
+      "district_code": "554961",
+      "show_district_code": false,
+      "name": "Karlovy Vary",
+      "description": "Karlovy Vary",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "562335",
+      "show_district_code": false,
+      "name": "Děčín",
+      "description": "Děčín",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "563510",
+      "show_district_code": false,
+      "name": "Jablonec nad Nisou",
+      "description": "Jablonec nad Nisou",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "561380",
+      "show_district_code": false,
+      "name": "Česká Lípa",
+      "description": "Česká Lípa",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "komunalni-2022",
       "district_code": "590266",
       "show_district_code": false,
       "name": "Třebíč",
       "description": "Třebíč",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "598810",
+      "show_district_code": false,
+      "name": "Třinec",
+      "description": "Třinec",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "549240",
+      "show_district_code": false,
+      "name": "Písek",
+      "description": "Písek",
       "on_hp_from": "2022-09-01T00:00:00",
       "on_hp_to": "2022-09-30T14:00:00"
     }

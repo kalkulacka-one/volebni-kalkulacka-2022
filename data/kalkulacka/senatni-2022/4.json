@@ -21,19 +21,27 @@
   },
   "questions": [
     {
+      "id": "senatni-2022-global-q-28",
+      "name": "Zavedení eura",
+      "title": "ČR by měla zavést společnou evropskou měnu (euro).",
+      "gist": "Eurem platí 19 zemí EU, včetně sousedního Německa, Rakouska a Slovenska. Přijetí eura by snížilo transakční náklady na převod koruny a zjednodušilo zahraniční obchod. Bez eura má země vlastní centrální banku, která má pečovat o cenovou stabilitu.",
+      "detail": "Eurem se platí z okolních zemí v Německu, Rakousku a na Slovensku. V Polsku se platí zlotým. ",
+      "tags": ["zahraničí"]
+    },
+    {
+      "id": "senatni-2022-global-q-52",
+      "name": "Dvoustranné jednání s Ruskem",
+      "title": "ČR by měla o nákupech plynu jednat s Ruskem samostatně.",
+      "gist": "ČR jedná o nákupech plynu z Ruska nyní koordinovaně s většinou EU.",
+      "detail": "",
+      "tags": [""]
+    },
+    {
       "id": "senatni-2022-global-q-1",
       "name": "Zdanění prázdných bytů",
       "title": "Dlouhodobě prázdné byty by měly být více zdaněné.",
-      "gist": "Zastánců zdanění poukazují, že investiční byty křiví trh a vyčerpávají bytové zásoby. Zhoršují se tak šance pro lidi s nízkými a středními příjmy pořídit si vlastní bydlení. Kritici namítají, že zdanění zvýší ceny nemovitostí a nájemní bydlení zdraží. ČR má jednotný výpočet daně a nezohledňuje, kolik jich majitel vlastní a zda jsou dlouhodobě obydlené.",
+      "gist": "Zastánci zdanění poukazují, že investiční byty křiví trh a vyčerpávají bytové zásoby. Zhoršují se tak šance pro lidi s nízkými a středními příjmy pořídit si vlastní bydlení. Kritici namítají, že zdanění zvýší ceny nemovitostí a nájemní bydlení zdraží. ČR má jednotný výpočet daně a nezohledňuje, kolik jich majitel vlastní a zda jsou dlouhodobě obydlené.",
       "detail": "V Česku je jednotný výpočet daně pro všechny byty bez ohledu na to, kolik bytů majitel vlastní a zda jsou dlouhodobě obydlené. Lidé, kteří nemovitosti pronajímají platí také daň z pronájmu nemovitostí. ",
-      "tags": ["bydlení"]
-    },
-    {
-      "id": "senatni-2022-global-q-2",
-      "name": "Regulace nájemného v bytech",
-      "title": "ČR by měla regulovat ceny nájemného u bytů.",
-      "gist": "Nájemné bylo v ČR regulované do roku 2012, nyní je tržní. Např. v Německu nebo Rakousku různé formy regulovaných nájmů existují. Regulace vycházejí z toho, že bydlení je pro lidi nutné a musí být finančně únosné. Žádná regulace naopak upřednostňuje právo majitele volně nakládat se svým majetkem.",
-      "detail": "",
       "tags": ["bydlení"]
     },
     {
@@ -45,12 +53,12 @@
       "tags": ["demokracie"]
     },
     {
-      "id": "senatni-2022-global-q-4",
-      "name": "Rychlovlaky priorita",
-      "title": "Výstavba infrastruktury pro rychlovlaky má být upřednostňována oproti výstavbě další dopravní infrastruktury.",
-      "gist": "Vysokorychlostní tratě mají výrazně zkrátit jízdní dobu, navýšit kapacity železniční sítě a zrychlit spojení. O výstavbě se v Česku hovoří od 90. let, přípravy začaly v posledních letech. Podle kritiků si to vyžádá rozsáhlé pořizovací náklady. Vyšší rychlost také zvyšuje spotřebu elektřiny a provoz je tak dražší.",
-      "detail": "Rychlovlaky by na plánovaných tratích mohly nabírat rychlost až 320 km/h. Jako výhoda se uvádí nejen rychlejší cestování, ale i udržitelnost pro životní prostředí.",
-      "tags": ["doprava"]
+      "id": "senatni-2022-global-q-58",
+      "name": "Zastavování bezvýsledných exekucí",
+      "title": "Dlouhodobě bezvýsledné exekuce se mají zastavovat.",
+      "gist": "",
+      "detail": "",
+      "tags": [""]
     },
     {
       "id": "senatni-2022-global-q-5",
@@ -59,6 +67,14 @@
       "gist": "V současnosti je v ČR standardní věk odchodu do důchodu více než 64 let a postupně se zvyšuje na cílových 65 let.",
       "detail": "",
       "tags": ["důchody"]
+    },
+    {
+      "id": "senatni-2022-global-q-4",
+      "name": "Rychlovlaky priorita",
+      "title": "Výstavba infrastruktury pro rychlovlaky má být upřednostňována oproti výstavbě další dopravní infrastruktury.",
+      "gist": "Vysokorychlostní tratě mají výrazně zkrátit jízdní dobu, navýšit kapacity železniční sítě a zrychlit spojení. O výstavbě se v Česku hovoří od 90. let, přípravy začaly v posledních letech. Podle kritiků si to vyžádá rozsáhlé pořizovací náklady. Vyšší rychlost také zvyšuje spotřebu elektřiny a provoz je tak dražší.",
+      "detail": "Rychlovlaky by na plánovaných tratích mohly nabírat rychlost až 320 km/h. Jako výhoda se uvádí nejen rychlejší cestování, ale i udržitelnost pro životní prostředí.",
+      "tags": ["doprava"]
     },
     {
       "id": "senatni-2022-global-q-6",
@@ -77,12 +93,20 @@
       "tags": ["ekologie"]
     },
     {
-      "id": "senatni-2022-global-q-8",
-      "name": "Daňová progrese zaměstnanců",
-      "title": "Měla by se zvýšit progrese daně z příjmů u lidí (tj. vyšší sazba daně pro vyšší příjmy).",
-      "gist": "V ČR existuje „jednotná daň z příjmu 15 %“. Díky slevě na poplatníka a tzv. solidární dani pro nejvíce vydělávající ovšem jde ve skutečnosti o daň mírně progresivní. Podle odpůrců změny je tato „rovná daň“ spravedlivější. V Německu je zdanění progresivnější než v ČR, na Slovensku je progrese podobná jako v ČR.",
-      "detail": "",
-      "tags": ["ekonomika"]
+      "id": "senatni-2022-global-q-16",
+      "name": "Stejnopohlavní páry: manželství",
+      "title": "Stejnopohlavní páry by měly mít možnost vstupovat do manželství za stejných podmínek jako jiné páry.",
+      "gist": "Lidé v registrovaném partnerství mají v porovnání s manžely omezená práva. Nemají společné jmění, právo na bydlení v obydlí partnera, společné nájemní právo ani nárok na důchod v případě úmrtí jednoho z nich. Pokud zesnulý partner nebyl biologickým rodičem, dítě nemá nárok na sirotčí důchod. Po úmrtí biologického rodiče může být dítě druhému z partnerů odebráno.",
+      "detail": "Od roku 2006, kdy bylo umožněno uzavírat registrovaná partnerství, do konce roku 2019, bylo v Česku registrováno 3 625 párů. Registrace partnerství je od manželství odlišná nejen v právech, ale i v symbolické rovině – probíhá bez svědků, jen s matrikářem.\n\n",
+      "tags": ["rodina"]
+    },
+    {
+      "id": "senatni-2022-global-q-15",
+      "name": "Omezení pracovních agentur",
+      "title": "Působnost pracovních agentur by měla být výrazně omezena.",
+      "gist": "V tento moment není práce agenturních pracovníků nijak regulovaná. Existuje např. návrh, že by podíl agenturních zaměstnanců ve firmách nesměl překročit 10 % lidí pracujících ve firmě.",
+      "detail": "Jedná se o práci, kterou zaměstnanec agentury vykonává práci u zaměstnavatele, ke kterému je zaměstnanec agentury dočasně přidělen. ",
+      "tags": ["práce"]
     },
     {
       "id": "senatni-2022-global-q-9",
@@ -99,14 +123,6 @@
       "gist": "V současné době jsou zhruba 2/3 pachatelů odsouzené za znásilnění k podmínečnému trestu a 1/3 k trestu vězení. Kritici poukazují na to, že nízké tresty jsou neadekvátní vzhledem ke společenské nebezpečnosti činu, ani nereflektují mnohdy doživotní traumata obětí.",
       "detail": "Znásilněním se rozumí čin, kdy pachatel donutí oběť násilím nebo pohrůžkou násilí k pohlavnímu styku, případně k tomuto činu zneužije bezbranost člověka. Policie řeší v průměru asi 2 nahlášené případy denně. Odhad je, že v ČR je ročně spácháno až 12 000 znásilnění.",
       "tags": ["justice"]
-    },
-    {
-      "id": "senatni-2022-global-q-11",
-      "name": "Daň z digitálních služeb",
-      "title": "Google nebo Facebook by měly platit speciální daň ze všech příjmů v ČR.",
-      "gist": "Zdanění digitálních služeb pro velké internetové firmy ze všech jejich příjmů v ČR. Zastánci argumentují nízkými až nulovými daněmi, které tyto velké firmy v ČR platí. Např. v Rakousku, Velké Británii a Turecku, které zavedly obdobnou daň, Google odpovídajícím způsobem zvýšil ceny objednavatelům reklamy.",
-      "detail": "",
-      "tags": ["ekonomika"]
     },
     {
       "id": "senatni-2022-global-q-12",
@@ -133,42 +149,10 @@
       "tags": ["média"]
     },
     {
-      "id": "senatni-2022-global-q-15",
-      "name": "Omezení pracovních agentur",
-      "title": "Působnost pracovních agentur by měla být výrazně omezena.",
-      "gist": "V tento moment není práce agenturních pracovníků nijak regulovaná. Existuje např. návrh, že by podíl agenturních zaměstnanců ve firmách nesměl překročit 10 % lidí pracujících ve firmě.",
-      "detail": "Jedná se o práci, kterou zaměstnanec agentury vykonává práci u zaměstnavatele, ke kterému je zaměstnanec agentury dočasně přidělen. ",
-      "tags": ["práce"]
-    },
-    {
-      "id": "senatni-2022-global-q-16",
-      "name": "Stejnopohlavní páry: manželství",
-      "title": "Stejnopohlavní páry by měly mít možnost vstupovat do manželství za stejných podmínek jako jiné páry.",
-      "gist": "Lidé v registrovaném partnerství mají v porovnání s manžely omezená práva. Nemají společné jmění, právo na bydlení v obydlí partnera, společné nájemní právo ani nárok na důchod v případě úmrtí jednoho z nich. Pokud zesnulý partner nebyl biologickým rodičem, dítě nemá nárok na sirotčí důchod. Po úmrtí biologického rodiče může být dítě druhému z partnerů odebráno.",
-      "detail": "Od roku 2006, kdy bylo umožněno uzavírat registrovaná partnerství, do konce roku 2019, bylo v Česku registrováno 3 625 párů. Registrace partnerství je od manželství odlišná nejen v právech, ale i v symbolické rovině – probíhá bez svědků, jen s matrikářem.\n\n",
-      "tags": ["rodina"]
-    },
-    {
-      "id": "senatni-2022-global-q-17",
-      "name": "Místní příslušnost exekutorů",
-      "title": "Konkurence mezi exekutory by se měla odstranit zavedením místní příslušnosti exekutorů.",
-      "gist": "Zavedení takzvané teritoriality dlouhodobě podporuje Exekutorská komora. Princip místní příslušnosti by podle ní výrazně pomohl stabilitě systému vymáhání práva. Odpůrci teritoriality namítají, že by tím mohlo dojít k poklesu vymahatelnosti dluhů.",
-      "detail": "",
-      "tags": ["sociálno"]
-    },
-    {
       "id": "senatni-2022-global-q-18",
       "name": "1 dlužník = 1 exekutor",
       "title": "U exekucí by mělo platit pravidlo 1 dlužník = 1 exekutor.",
       "gist": "Různé dluhy jednoho dlužníka dnes obvykle vymáhá více exekutorů, čímž vysoce narůstá příslušenství dluhu. Systém 1 dlužník = 1 exekutor by znamenal, že lidé, kteří mají více exekucí, by komunikovali s jedním jim přiděleným exekutorem. Oponenti kritizují, že by to upřednostňovalo jen několik velkých exekutorů.",
-      "detail": "",
-      "tags": ["sociálno"]
-    },
-    {
-      "id": "senatni-2022-global-q-19",
-      "name": "Sociální bydlení",
-      "title": "Nová obecní, státní nebo soukromá výstavba bytů pro veřejnost musí být vždy tvořena alespoň zčásti sociálními byty.",
-      "gist": "",
       "detail": "",
       "tags": ["sociálno"]
     },
@@ -181,20 +165,20 @@
       "tags": ["sociálno"]
     },
     {
+      "id": "senatni-2022-global-q-19",
+      "name": "Sociální bydlení",
+      "title": "Nová obecní, státní nebo soukromá výstavba bytů pro veřejnost musí být vždy tvořena alespoň zčásti sociálními byty.",
+      "gist": "",
+      "detail": "",
+      "tags": ["sociálno"]
+    },
+    {
       "id": "senatni-2022-global-q-21",
       "name": "Decentralizace ČR",
       "title": "Mělo by se zavést pravidlo, že státní instituce budou rozmisťovány rovnoměrně po celém území ČR.",
       "gist": "V ČR je velké množství státních a státem placených institucí v Praze. Naproti tomu v Německu existuje pravidlo, že takové instituce musejí být rozmisťovány rovnoměrně po celé zemi. Podle zastánců decentralizace např. podporuje chudší regiony a posiluje nezávislost kontrolních institucí, podle odpůrců to snižuje efektivitu státní správy.",
       "detail": "",
       "tags": ["státní správa"]
-    },
-    {
-      "id": "senatni-2022-global-q-22",
-      "name": "Kolonizace Marsu",
-      "title": "ČR by se měla více zapojit do snah o kolonizaci Marsu.",
-      "gist": "Dnes je na Marsu pět robotických průzkumných strojů (čtyři americké, jeden čínský). Devět družic krouží kolem Marsu, z toho dvě jsou evropské. USA plánují let lidí na Mars do 10 let, podobné programy mají například Spojené arabské emiráty nebo Čína.",
-      "detail": "",
-      "tags": ["věda a výzkum"]
     },
     {
       "id": "senatni-2022-global-q-23",
@@ -209,14 +193,6 @@
       "name": "Podpora technického vzdělávání",
       "title": "Technické vzdělávání na středních a vysokých školách by mělo být státem podporováno více než jiné obory.",
       "gist": "Zastánci poukazují, že je největší poptávka po technických profesích napříč obory. Odpůrci říkají, že stát nemá měnit podobu školství kvůli momentálním a rychle se měnícím potřebám pracovního trhu.",
-      "detail": "",
-      "tags": ["vzdělávání"]
-    },
-    {
-      "id": "senatni-2022-global-q-25",
-      "name": "Nediferenciace žáků na ZŠ",
-      "title": "Všechny děti by se měly bez ohledu na talent nebo schopnosti vzdělávat společně až do konce povinné školní docházky (do 15 let, základní škola).",
-      "gist": "Dle zastánců vede společná docházka ke snížení nerovnosti ve vzdělání a ke zlepšení výsledků všech žáků. Země jako Finsko žáky neodděluje a má v celosvětových srovnáních nejlepší výsledky ve všech oborech vzdělávání. Kritici společné docházky podporují víceletá gymnázia jako možnost pro nadané žáky.",
       "detail": "",
       "tags": ["vzdělávání"]
     },
@@ -237,86 +213,6 @@
       "tags": ["zahraničí"]
     },
     {
-      "id": "senatni-2022-global-q-28",
-      "name": "Zavedení eura",
-      "title": "ČR by měla zavést společnou evropskou měnu (euro).",
-      "gist": "Eurem platí 19 zemí EU, včetně sousedního Německa, Rakouska a Slovenska. Přijetí eura by snížilo transakční náklady na převod koruny a zjednodušilo zahraniční obchod. Bez eura má země vlastní centrální banku, která má pečovat o cenovou stabilitu.",
-      "detail": "Eurem se platí z okolních zemí v Německu, Rakousku a na Slovensku. V Polsku se platí zlotým. ",
-      "tags": ["zahraničí"]
-    },
-    {
-      "id": "senatni-2022-global-q-29",
-      "name": "Výstup z NATO",
-      "title": "ČR by měla vystoupit z NATO.",
-      "gist": "Severoatlantická aliance (NATO) je mezinárodní vojenský pakt 30 zemí z Evropy a Severní Ameriky. Ze sousedních zemí je v NATO také Německo, Polsko a Slovensko. Rakousko se po 2. světové válce zavázalo k neutralitě. Kvůli ruské invazi na Ukrajinu požádaly o vstup do aliance dosud neutrální Finsko a Švédsko.",
-      "detail": "Severoatlantická aliance (NATO) je mezinárodní vojenský pakt 30 zemí z Evropy a Severní Ameriky. ",
-      "tags": ["zahraničí"]
-    },
-    {
-      "id": "senatni-2022-global-q-30",
-      "name": "ČR v jádru EU",
-      "title": "Místo ČR je v jádru EU.",
-      "gist": "Jako jádro EU se obvykle označují země, které patří a chtějí i v budoucnu patřit do projektů větší integrace EU (dnes např. měna euro nebo Schengenský prostor bez hraničních prostor, do budoucna např. společná armáda).",
-      "detail": "",
-      "tags": ["zahraničí"]
-    },
-    {
-      "id": "senatni-2022-global-q-31",
-      "name": "Podpora zahraniční spolupráce a pomoci",
-      "title": "ČR by měla více finančně podporovat zahraniční rozvojovou spolupráci a humanitární pomoc.",
-      "gist": "ČR dala v roce 2021 na rozvojovou spolupráci a humanitární pomoc v zahraničí zhruba 7,8 miliard Kč. V poměru k HDP je pomoc Česka dlouhodobě jedna z nejnižších ze zemí OECD a činí zhruba třetinu očekávaného cíle zemí EU.",
-      "detail": "",
-      "tags": ["zahraničí"]
-    },
-    {
-      "id": "senatni-2022-global-q-32",
-      "name": "Ohled na rozvojové země",
-      "title": "ČR by měla při přijímání zákonů brát ohled i na rozvojové země (např. v oblasti změn klimatu).",
-      "gist": "Některé zákony přijímané v ČR mají nepřímý dopad i na další země. Např. globální zvyšování hladiny moří dnes probíhá rychlostí asi 1 cm za 3 roky. Zároveň zhruba 1/4 miliardy lidí žije na místech ve výšce méně než 2 metry nad mořem, kde je riziko, že se budou muset přestěhovat/migrovat.",
-      "detail": "",
-      "tags": ["zahraničí"]
-    },
-    {
-      "id": "senatni-2022-global-q-33",
-      "name": "Snazší azyl v ČR",
-      "title": "Udělení azylu v ČR by se mělo usnadnit.",
-      "gist": "Do února 2022 byl počet uprchlíků v Česku v mezinárodním srovnání mimořádně nízký, stejně jako úspěšnost získání azylu (20 %, např. v Rakousku 50 %). Za první dva měsíce od ruské invaze udělila ČR speciální vízum více než 300 tisícům obyvatel Ukrajiny. Jde zhruba o trojnásobek počtu všech žadatelů (úspěšných i neúspěšných) o azyl od roku 1993.",
-      "detail": "",
-      "tags": ["zahraničí"]
-    },
-    {
-      "id": "senatni-2022-global-q-34",
-      "name": "ČR v Schengenu",
-      "title": "ČR by měla zůstat v Schengenském prostoru s volným pohybem občanů EU.",
-      "gist": "Tzv. Schengenský prostor zahrnuje 22 zemí EU a 4 další země. Obyvatelé nemusí při překročení hranic procházet hraniční kontrolou.",
-      "detail": "",
-      "tags": ["zahraničí"]
-    },
-    {
-      "id": "senatni-2022-global-q-35",
-      "name": "Více peněz na armádu",
-      "title": "ČR by měla dávat více peněz na armádu.",
-      "gist": "V roce 2022 dává ČR na obranu cca 88 miliard Kč, což odpovídá asi 1,35 % hrubého domácího produktu (HDP). ČR se zavázala na setkání NATO v roce 2014, že do 10 let bude vydávat na obranu 2 % HDP; průměr v NATO je zhruba 1,7 %.",
-      "detail": "",
-      "tags": ["zahraničí"]
-    },
-    {
-      "id": "senatni-2022-global-q-36",
-      "name": "Volba pohlaví dítěte",
-      "title": "Rodiče v ČR by při umělém oplodnění měli mít možnost si vybrat pohlaví dítěte.",
-      "gist": "ČR podepsala tzv. Oviedskou smlouvu o lidských právech a biomedicíně. Tato mezinárodní smlouva mj. zakazuje výběr pohlaví dítěte při umělém oplodnění (s výjimkou některých prokazatelných dědičných poruch). Výběr pohlaví dítěte je nelegální ve většině světa, výjimkou jsou např. USA.",
-      "detail": "",
-      "tags": ["zdravotnictví"]
-    },
-    {
-      "id": "senatni-2022-global-q-37",
-      "name": "Zavedení soukromého zdravotního pojištění",
-      "title": "Měla by být zavedena možnost soukromého připojištění ke zdravotnímu pojištění.",
-      "gist": "Soukromě připojistit lze v některých státech např. finančně nákladnější postup léčby, nadstandard v nemocnicích nebo doplatky za léky. V ČR to dnes není možné. Rozdělení na standardní a nadstandardní léčbu v roce 2013 zrušil Ústavní soud.",
-      "detail": "",
-      "tags": ["zdravotnictví"]
-    },
-    {
       "id": "senatni-2022-global-q-38",
       "name": "Centralizace specializované lékařské péče",
       "title": "Specializovaná lékařská péče v ČR se má více centralizovat.",
@@ -333,14 +229,6 @@
       "tags": ["zemědělství"]
     },
     {
-      "id": "senatni-2022-global-q-40",
-      "name": "Stop automatickým systémům kontroly",
-      "title": "Mělo by se zastavit používání automatických systémů měření rychlosti a následného vybírání pokut od řidičů.",
-      "gist": "Radar s kamerou změří rychlost, umělá inteligence rozpozná z fotografie SPZ auta, systém zašle pokutu. Lidský dohled nad celým procesem je spíše formální. Systém nerozlišuje společenskou nebezpečnost (např. překročení rychlosti ráno v okolí školy nebo naopak v noci mimo obydlenou část obce). Zastánci systému naopak ukazují na jeho nízké náklady.",
-      "detail": "",
-      "tags": ["AI"]
-    },
-    {
       "id": "senatni-2022-global-q-41",
       "name": "Zákaz automatického rozpoznávání obličeje",
       "title": "Používání systémů automatického rozpoznávání obličeje na veřejných místech by mělo být zakázáno.",
@@ -349,122 +237,42 @@
       "tags": ["AI"]
     },
     {
-      "id": "senatni-2022-global-q-42",
-      "name": "Vstup Ukrajiny do EU",
-      "title": "Ukrajina by měla vstoupit do EU.",
-      "gist": "Podle zastánců Ukrajina do EU politicky i geograficky patří. Odpůrci namítají, že by šlo o provokaci Ruska, příp. že Ukrajina nesplňuje tzv. kodaňská kritéria (má např. jednu z nejvyšších měr korupce) nebo že se rovnováha sil v EU posune na východ, kde některé země v posledních letech ustupují v otázkách právního státu. Senát vydal v červnu 2022 usnesení, v němž apeluje na státy EU, aby udělily Ukrajině status kandidátské země.",
+      "id": "senatni-2022-global-q-35",
+      "name": "Více peněz na armádu",
+      "title": "ČR by měla dávat více peněz na armádu.",
+      "gist": "V roce 2022 dává ČR na obranu cca 88 miliard Kč, což odpovídá asi 1,35 % hrubého domácího produktu (HDP). ČR se zavázala na setkání NATO v roce 2014, že do 10 let bude vydávat na obranu 2 % HDP; průměr v NATO je zhruba 1,7 %.",
       "detail": "",
       "tags": ["zahraničí"]
     },
     {
-      "id": "senatni-2022-global-q-43",
-      "name": "Vstup Ukrajiny do NATO",
-      "title": "Ukrajina by měla vstoupit do NATO.",
-      "gist": "Podle kritiků je příliš nebezpečné, aby aliance sahala až k ruské hranici – Ukrajina má zůstat neutrální. Zastánci říkají, že členské země NATO (Estonsko, Lotyšsko a Norsko) s Ruskem sousedí už nyní a že Ukrajina jako svobodný a suverénní stát nemá Rusku ustupovat. To ji vojensky napadlo a chce mj. zabránit jejímu vstupu do NATO.",
+      "id": "senatni-2022-global-q-31",
+      "name": "Podpora zahraniční spolupráce a pomoci",
+      "title": "ČR by měla více finančně podporovat zahraniční rozvojovou spolupráci a humanitární pomoc.",
+      "gist": "ČR dala v roce 2021 na rozvojovou spolupráci a humanitární pomoc v zahraničí zhruba 7,8 miliard Kč. V poměru k HDP je pomoc Česka dlouhodobě jedna z nejnižších ze zemí OECD a činí zhruba třetinu očekávaného cíle zemí EU.",
       "detail": "",
       "tags": ["zahraničí"]
     },
     {
-      "id": "senatni-2022-global-q-44",
-      "name": "Zastropování cen ruského plynu",
-      "title": "EU by měla zastropovat ceny ruského plynu.",
-      "gist": "Zastánci tak chtějí zmírnit dopady manipulace trhem ze strany ruského prezidenta Vladimira Putina. Odpůrci zmiňují riziko, že Rusko přestane plyn do EU dodávat.",
-      "detail": "",
+      "id": "senatni-2022-global-q-29",
+      "name": "Výstup z NATO",
+      "title": "ČR by měla vystoupit z NATO.",
+      "gist": "Severoatlantická aliance (NATO) je mezinárodní vojenský pakt 30 zemí z Evropy a Severní Ameriky. Ze sousedních zemí je v NATO také Německo, Polsko a Slovensko. Rakousko se po 2. světové válce zavázalo k neutralitě. Kvůli ruské invazi na Ukrajinu požádaly o vstup do aliance dosud neutrální Finsko a Švédsko.",
+      "detail": "Severoatlantická aliance (NATO) je mezinárodní vojenský pakt 30 zemí z Evropy a Severní Ameriky. ",
       "tags": ["zahraničí"]
     },
     {
-      "id": "senatni-2022-global-q-45",
-      "name": "Činnost současného ombudsmana",
-      "title": "Jste spokojeni s dosavadní prací současného veřejného ochránce práv?",
-      "gist": "Kritici poukazují na to, že názory současného ombudsmana neodpovídají poslání úřadu. Mohou podle nich odrazovat oběti od toho, aby u ombudsmana hledaly pomoc. Podle senátního stanoviska se některé výroky staly předmětem veřejných kontroverzí a silné kritiky ze strany institucí a osob zabývajících se ochranou lidských práv. Ombudsman se hájí právem vyjadřovat se.",
+      "id": "senatni-2022-global-q-22",
+      "name": "Kolonizace Marsu",
+      "title": "ČR by se měla více zapojit do snah o kolonizaci Marsu.",
+      "gist": "Dnes je na Marsu pět robotických průzkumných strojů (čtyři americké, jeden čínský). Devět družic krouží kolem Marsu, z toho dvě jsou evropské. USA plánují let lidí na Mars do 10 let, podobné programy mají například Spojené arabské emiráty nebo Čína.",
       "detail": "",
-      "tags": ["lidská práva"]
-    },
-    {
-      "id": "senatni-2022-global-q-46",
-      "name": "Sankce vůči Rusku",
-      "title": "Podporujete, aby Rusko neslo následky za rozpoutání války na Ukrajině?",
-      "gist": "Senát nedávno odhlasoval usnesení, že Rusko musí nést následky za rozpoutání války proti Ukrajině včetně platby reparací, a ruští představitelé, kteří jsou odpovědní za válečné zločiny, musí být postaveni před soud a potrestáni.",
-      "detail": "",
-      "tags": ["zahraničí"]
-    },
-    {
-      "id": "senatni-2022-global-q-47",
-      "name": "Vyjednávání se zástupci Ruska na Krymu",
-      "title": "Souhlasíte s tím, aby čeští zákonodárci vyjednávali s ruskou administrativou na Krymu?",
-      "gist": "Rusko obsadilo ukrajinský Krym roku 2014 a od února vede proti Ukrajině válku.",
-      "detail": "",
-      "tags": ["zahraničí"]
-    },
-    {
-      "id": "senatni-2022-global-q-48",
-      "name": "Ratifikace Istanbulské úmluvy",
-      "title": "Podpořili byste směrnici EU o potírání násilí vůči ženám a domácího násilí?",
-      "gist": "Cílem směrnice je účinně potírat násilí vůči ženám a domácí násilí v celé EU a převzít do českého práva navrhovanou definici násilí na ženách a zavést trestný čin kybernetické pronásledování, obtěžování nebo neodsouhlasené sdílení intimního materiálu například na sociálních sítích. Kritici chtějí otázky trestní odpovědnosti ponechat v rukou členských států EU.",
-      "detail": "",
-      "tags": ["lidská práva"]
-    },
-    {
-      "id": "senatni-2022-global-q-49",
-      "name": "Konec spalování uhlí",
-      "title": "Má podle vás ČR ukončit spalování uhlí dříve než v roce 2033?",
-      "gist": "Ekologové navrhují odklon od spalování uhlí při výrobě energií v roce 2030. K tomu se zavázaly např. Španělsko či Finsko; Spojené království už do roku 2025. Uhelná komise v ČR navrhovala rok 2038. Kvůli současné nejistotě ohledně dodávek plynu energetici připouštějí, že bude v nejbližší době potřeba více uhlí, ovšem krátkodobě.",
-      "detail": "",
-      "tags": ["ekologie"]
-    },
-    {
-      "id": "senatni-2022-global-q-50",
-      "name": "Green Deal",
-      "title": "Podporuji, aby se EU do roku 2050 stala klimaticky neutrální.",
-      "gist": "Podle tzv. Zelené dohody se má v EU do roku 2050 snížit rozdíl mezi vyprodukovanými a spotřebovanými skleníkovými plyny na nulu.",
-      "detail": "",
-      "tags": ["ekologie"]
-    },
-    {
-      "id": "senatni-2022-global-q-51",
-      "name": "Krym součást Ruska",
-      "title": "ČR by měla uznat Krym jako součást Ruska",
-      "gist": "Rusko obsadilo ukrajinský Krym v roce 2014.",
-      "detail": "",
-      "tags": ["zahraničí"]
-    },
-    {
-      "id": "senatni-2022-global-q-52",
-      "name": "Dvoustranné jednání s Ruskem",
-      "title": "ČR by měla o nákupech plynu jednat s Ruskem samostatně.",
-      "gist": "ČR jedná o nákupech plynu z Ruska nyní koordinovaně s většinou EU.",
-      "detail": "",
-      "tags": [""]
+      "tags": ["věda a výzkum"]
     },
     {
       "id": "senatni-2022-global-q-53",
       "name": "Rozšíření NATO o Finsko a Švédsko",
       "title": "Souhlasím, aby se NATO rozšířilo o Finsko a Švédsko.",
       "gist": "Dosud neutrální Finsko a Švédsko požádaly o vstup do aliance kvůli ruské invazi na Ukrajinu. Přístupové dokumenty musí ratifikovat všech 30 aliančních států. Rozšíření schválily obě komory Parlamentu ČR a podepsal prezident.",
-      "detail": "",
-      "tags": [""]
-    },
-    {
-      "id": "senatni-2022-global-q-54",
-      "name": "Zemědělské dotace",
-      "title": "Zemědělské dotace by měly být hlavně pro malé farmy.",
-      "gist": "Nejvyšší kontrolní úřad poukazuje, že rozdělování dotací je v ČR špatně cílené a že dotace inkasují spíše velké koncerny namísto malých a středních podniků. Koncerny se hájí, že mají stejné podmínky jako všichni ostatní. V ČR se zemědělská výroba koncentruje více do velkých firem. V celé EU je průměrná velikost farmy 18 hektarů, v ČR je to 130 hektarů.",
-      "detail": "",
-      "tags": [""]
-    },
-    {
-      "id": "senatni-2022-global-q-55",
-      "name": "Menstruační chudoba",
-      "title": "Místní úřady mají mít zákonnou povinnost poskytovat vložky či tampony bezplatně každému, kdo je potřebuje.",
-      "gist": "Některé ženy, např. samoživitelky, navíc s dospívajícími dcerami, pro svůj nízký příjem nemají přístup k adekvátním menstruačním pomůckám. Zastánci argumentují rovností a důstojností ve společnosti a tím, že toaletní papír či mýdlo jsou ve veřejných budovách běžně dostupné. Odpůrci to považují za finančně nákladné či nespravedlivé vůči lidem, kteří menstruaci nemají.",
-      "detail": "",
-      "tags": [""]
-    },
-    {
-      "id": "senatni-2022-global-q-56",
-      "name": "Dostupnost bydlení",
-      "title": "Měl by vzniknout Státní bytový fond, který by nakupoval a pronajímal byty?",
-      "gist": "Zastánci tvrdí, že krize bydlení se nevyřeší jen tím, že se bude víc stavět. Měl by do toho vstoupit stát a začít na trhu skupovat byty, stavět nové, opravovat zničené budovy, revitalizovat brownfieldy. Odpůrci říkají, že nájemní bydlení by měly nadále pořizovat obce a města nebo soukromníci a že by stát měl zajistit co nejjednodušší převod svých pozemků.",
       "detail": "",
       "tags": [""]
     },
@@ -477,12 +285,76 @@
       "tags": [""]
     },
     {
-      "id": "senatni-2022-global-q-58",
-      "name": "Zastavování bezvýsledných exekucí",
-      "title": "Dlouhodobě bezvýsledné exekuce se mají zastavovat.",
-      "gist": "",
+      "id": "senatni-2022-global-q-42",
+      "name": "Vstup Ukrajiny do EU",
+      "title": "Ukrajina by měla vstoupit do EU.",
+      "gist": "Podle zastánců Ukrajina do EU politicky i geograficky patří. Odpůrci namítají, že by šlo o provokaci Ruska, příp. že Ukrajina nesplňuje tzv. kodaňská kritéria (má např. jednu z nejvyšších měr korupce) nebo že se rovnováha sil v EU posune na východ, kde některé země v posledních letech ustupují v otázkách právního státu. Senát vydal v červnu 2022 usnesení, v němž apeluje na státy EU, aby udělily Ukrajině status kandidátské země.",
+      "detail": "",
+      "tags": ["zahraničí"]
+    },
+    {
+      "id": "senatni-2022-global-q-46",
+      "name": "Sankce vůči Rusku",
+      "title": "Podporujete, aby Rusko neslo následky za rozpoutání války na Ukrajině?",
+      "gist": "Senát nedávno odhlasoval usnesení, že Rusko musí nést následky za rozpoutání války proti Ukrajině včetně platby reparací, a ruští představitelé, kteří jsou odpovědní za válečné zločiny, musí být postaveni před soud a potrestáni.",
+      "detail": "",
+      "tags": ["zahraničí"]
+    },
+    {
+      "id": "senatni-2022-global-q-50",
+      "name": "Green Deal",
+      "title": "Podporuji, aby se EU do roku 2050 stala klimaticky neutrální.",
+      "gist": "Podle tzv. Zelené dohody se má v EU do roku 2050 snížit rozdíl mezi vyprodukovanými a spotřebovanými skleníkovými plyny na nulu.",
+      "detail": "",
+      "tags": ["ekologie"]
+    },
+    {
+      "id": "senatni-2022-global-q-48",
+      "name": "Ratifikace Istanbulské úmluvy",
+      "title": "Podpořili byste směrnici EU o potírání násilí vůči ženám a domácího násilí?",
+      "gist": "Cílem směrnice je účinně potírat násilí vůči ženám a domácí násilí v celé EU a převzít do českého práva navrhovanou definici násilí na ženách a zavést trestný čin kybernetické pronásledování, obtěžování nebo neodsouhlasené sdílení intimního materiálu například na sociálních sítích. Kritici chtějí otázky trestní odpovědnosti ponechat v rukou členských států EU.",
+      "detail": "",
+      "tags": ["lidská práva"]
+    },
+    {
+      "id": "senatni-2022-global-q-51",
+      "name": "Krym součást Ruska",
+      "title": "ČR by měla uznat Krym jako součást Ruska",
+      "gist": "Rusko obsadilo ukrajinský Krym v roce 2014.",
+      "detail": "",
+      "tags": ["zahraničí"]
+    },
+    {
+      "id": "senatni-2022-global-q-45",
+      "name": "Činnost současného ombudsmana",
+      "title": "Jste spokojeni s dosavadní prací současného veřejného ochránce práv?",
+      "gist": "Kritici poukazují na to, že názory současného ombudsmana neodpovídají poslání úřadu. Mohou podle nich odrazovat oběti od toho, aby u ombudsmana hledaly pomoc. Podle senátního stanoviska se některé výroky staly předmětem veřejných kontroverzí a silné kritiky ze strany institucí a osob zabývajících se ochranou lidských práv. Ombudsman se hájí právem vyjadřovat se.",
+      "detail": "",
+      "tags": ["lidská práva"]
+    },
+    {
+      "id": "senatni-2022-global-q-54",
+      "name": "Zemědělské dotace",
+      "title": "Zemědělské dotace by měly být hlavně pro malé farmy.",
+      "gist": "Nejvyšší kontrolní úřad poukazuje, že rozdělování dotací je v ČR špatně cílené a že dotace inkasují spíše velké koncerny namísto malých a středních podniků. Koncerny se hájí, že mají stejné podmínky jako všichni ostatní. V ČR se zemědělská výroba koncentruje více do velkých firem. V celé EU je průměrná velikost farmy 18 hektarů, v ČR je to 130 hektarů.",
       "detail": "",
       "tags": [""]
+    },
+    {
+      "id": "senatni-2022-global-q-8",
+      "name": "Daňová progrese zaměstnanců",
+      "title": "Měla by se zvýšit progrese daně z příjmů u lidí (tj. vyšší sazba daně pro vyšší příjmy).",
+      "gist": "V ČR existuje „jednotná daň z příjmu 15 %“. Díky slevě na poplatníka a tzv. solidární dani pro nejvíce vydělávající ovšem jde ve skutečnosti o daň mírně progresivní. Podle odpůrců změny je tato „rovná daň“ spravedlivější. V Německu je zdanění progresivnější než v ČR, na Slovensku je progrese podobná jako v ČR.",
+      "detail": "",
+      "tags": ["ekonomika"]
+    },
+    {
+      "id": "senatni-2022-global-q-44",
+      "name": "Zastropování cen ruského plynu",
+      "title": "EU by měla zastropovat ceny ruského plynu.",
+      "gist": "Zastánci tak chtějí zmírnit dopady manipulace trhem ze strany ruského prezidenta Vladimira Putina. Odpůrci zmiňují riziko, že Rusko přestane plyn do EU dodávat.",
+      "detail": "",
+      "tags": ["zahraničí"]
     }
   ],
   "candidates": [
@@ -640,18 +512,25 @@
   ],
   "answers": [
     {
+      "id": "senatni-2022-4-a-729274-28",
+      "candidate_id": "senatni-2022-4-c-729274",
+      "question_id": "senatni-2022-global-q-28",
+      "answer": "no",
+      "comment": "Jak je patrné, tak státy, které se vzdaly své národní měny, schudly a s nimi i jejich občané."
+    },
+    {
+      "id": "senatni-2022-4-a-729274-52",
+      "candidate_id": "senatni-2022-4-c-729274",
+      "question_id": "senatni-2022-global-q-52",
+      "answer": "yes",
+      "comment": "Pokud nemáme jinou alternativu, tak ano. Stejně jako to dělají i naši \"spojenci\" z EU."
+    },
+    {
       "id": "senatni-2022-4-a-729274-1",
       "candidate_id": "senatni-2022-4-c-729274",
       "question_id": "senatni-2022-global-q-1",
       "answer": "no",
       "comment": "Nelze někomu určovat, jak má zacházet se svým majetkem. Tohle už tu jednou bylo a nepřineslo to nic dobrého. Dodnes se s tím jako stát potýkáme."
-    },
-    {
-      "id": "senatni-2022-4-a-729274-2",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-2",
-      "answer": "no",
-      "comment": "Pokud se jedná o soukromý bytový fond, tak stát nesmí zasahovat do rozhodnutí majitele. Stát může regulovat jenom to, co skutečně vlastní z více než 50%. "
     },
     {
       "id": "senatni-2022-4-a-729274-3",
@@ -661,11 +540,11 @@
       "comment": "Referendum je nejvyšší formou demokracie a pokud se k těmto principům chceme hlásit, je referendum nedílnou součástí veřejné politiky."
     },
     {
-      "id": "senatni-2022-4-a-729274-4",
+      "id": "senatni-2022-4-a-729274-58",
       "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-4",
-      "answer": "no",
-      "comment": "Infrastrukturu je třeba řešit komplexně s přihlédnutím k možnostem a potřebám každého regionu. Není možné, aby někde jezdil rychlovlak a jinde nejede ani školní autobus a tím pádem dochází k vylidňování malých obcí."
+      "question_id": "senatni-2022-global-q-58",
+      "answer": "yes",
+      "comment": "Kde nic není, ani smrt nebere! Známé pořekadlo."
     },
     {
       "id": "senatni-2022-4-a-729274-5",
@@ -673,6 +552,13 @@
       "question_id": "senatni-2022-global-q-5",
       "answer": "no",
       "comment": "Stárnutí populace sice k těmto úvahám přispívá, ale každý nemá to \"štěstí\", aby měl pevné zdraví potřebné k výkonu práce i po 65 - pátém roku života. Nechal bych to na individuálním posouzení každého jednotlivce. Pokud by tak chtěl udělat stát, tak je nutné k tomu přistoupit velice zodpovědně a třeba zákonem o zdravotním přezkumu každého jednotlivce každých 6 měsíců pro posouzení zdravotního stavu. Samozřejmě by náklady na tyto vyšetření v plné ceně hradil stát!"
+    },
+    {
+      "id": "senatni-2022-4-a-729274-4",
+      "candidate_id": "senatni-2022-4-c-729274",
+      "question_id": "senatni-2022-global-q-4",
+      "answer": "no",
+      "comment": "Infrastrukturu je třeba řešit komplexně s přihlédnutím k možnostem a potřebám každého regionu. Není možné, aby někde jezdil rychlovlak a jinde nejede ani školní autobus a tím pádem dochází k vylidňování malých obcí."
     },
     {
       "id": "senatni-2022-4-a-729274-6",
@@ -689,11 +575,18 @@
       "comment": "Je to nejjednodušší způsob, jak snížit dopad na životní prostředí a recyklaci těchto odpadů."
     },
     {
-      "id": "senatni-2022-4-a-729274-8",
+      "id": "senatni-2022-4-a-729274-16",
       "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-8",
+      "question_id": "senatni-2022-global-q-16",
       "answer": "no",
-      "comment": "Pokud je někdo šikovný, tak zájem státu by měl být ten, aby byl i spokojený. Stát by měl být ten, kdo občany k vyšším výdělkům a tím i k větší pracovitosti motivuje a ne, že je bude trestat za úspěch. Daň 15% je nastavená dobře a každý, kdo vychodil ZŠ ví, že z výdělku 10 000,- Kč je daň 1 500,- Kč a ze 100 000,- Kč je daň 15 000,- Kč, takže ten úspěšnější už vyšší daň odvede a nemusím ho trestat za úspěch a pracovitost. "
+      "comment": "Manželství je odvozeno od svazku muže a ženy - manžel a manželka, což u stejnopohlavních párů je poměrně složité určit a rozdělit. Instituce k této alternativě už existují, jenom by se měly doladit nějaké právní detaily. Nicméně ani církev nepovoluje sňatek stejnopohlavních párů v kostele a to je také jedna z \"podmínek\" běžného manželství - možnost uzavřít církevní sňatek."
+    },
+    {
+      "id": "senatni-2022-4-a-729274-15",
+      "candidate_id": "senatni-2022-4-c-729274",
+      "question_id": "senatni-2022-global-q-15",
+      "answer": "no",
+      "comment": "Na pracovní agentury je navázána spousta lidí, kteří z nějakého důvodu nemohou vykonávat klasický pracovní úvazek a tím by přišli o možnost výdělku. Dalo by se možná zpřísnit v tom, že bez toho jaký úvazek brigádník vykonává, by se odváděli odvody na soc. pojištění a zdr. pojištění v minimální výši."
     },
     {
       "id": "senatni-2022-4-a-729274-9",
@@ -708,13 +601,6 @@
       "question_id": "senatni-2022-global-q-10",
       "answer": "yes",
       "comment": "Je ovšem potřeba, aby se změnila právní legislativa. Nelze jenom někoho nařknout a po prokázání účelového obvinění nechat za sebou zlikvidovaného člověka a dělat, že je to OK. Stejný trest by měl být uložen tomu, kdo druhého obviní a obvinění není prokázáno."
-    },
-    {
-      "id": "senatni-2022-4-a-729274-11",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-11",
-      "answer": "yes",
-      "comment": "Ano, jsou to globální firmy, které určují trh a oni rozhodují o tom jaký obsah povolí, nebo ne. Za tuto svou téměř monopolní pozici je nutné zaplatit exklusivitu na trhu kdekoliv na světě."
     },
     {
       "id": "senatni-2022-4-a-729274-12",
@@ -737,39 +623,11 @@
       "answer": "dont_know"
     },
     {
-      "id": "senatni-2022-4-a-729274-15",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-15",
-      "answer": "no",
-      "comment": "Na pracovní agentury je navázána spousta lidí, kteří z nějakého důvodu nemohou vykonávat klasický pracovní úvazek a tím by přišli o možnost výdělku. Dalo by se možná zpřísnit v tom, že bez toho jaký úvazek brigádník vykonává, by se odváděli odvody na soc. pojištění a zdr. pojištění v minimální výši."
-    },
-    {
-      "id": "senatni-2022-4-a-729274-16",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-16",
-      "answer": "no",
-      "comment": "Manželství je odvozeno od svazku muže a ženy - manžel a manželka, což u stejnopohlavních párů je poměrně složité určit a rozdělit. Instituce k této alternativě už existují, jenom by se měly doladit nějaké právní detaily. Nicméně ani církev nepovoluje sňatek stejnopohlavních párů v kostele a to je také jedna z \"podmínek\" běžného manželství - možnost uzavřít církevní sňatek."
-    },
-    {
-      "id": "senatni-2022-4-a-729274-17",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-17",
-      "answer": "yes",
-      "comment": "Určitě by se tím zlepšila vazba dlužník - exekutor a nemohly by být účtovány nesmyslné platby za \"služební cesty\" exekutora, které je velmi obtížné prokázat a další nesmyslné \"náklady\" na exekuci. Těch věcí je spousta, které by to zlepšilo, ale v pár větách se to nedá shrnout."
-    },
-    {
       "id": "senatni-2022-4-a-729274-18",
       "candidate_id": "senatni-2022-4-c-729274",
       "question_id": "senatni-2022-global-q-18",
       "answer": "yes",
       "comment": "Ušetření peněz dlužníkům, kteří tím, že jsou v exekuci už mají takové problémy, že se do ní dostali."
-    },
-    {
-      "id": "senatni-2022-4-a-729274-19",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-19",
-      "answer": "yes",
-      "comment": "Určitě. Jenom u soukromé bych to nevyžadoval na 100%, ale spíš nějakou investiční pobídkou. U státní a obecní výstavby bych to uzákonil procenty, nebo počtem bytových jednotek, podle typu výstavby."
     },
     {
       "id": "senatni-2022-4-a-729274-20",
@@ -779,17 +637,18 @@
       "comment": "Lidé jsou natolik rozumní, kdy si umí zhodnotit situaci v níž se nachází a sami potom aktivně hledají řešení. Ano, jsou případy imobilních a sociálně vyloučených občanů, ale to se dá zvládnout ve spolupráci s ošetřujícími( obvodními) lékaři a sousedy. Pro lidi bez domova jsou zde neziskové organizace, které za tímto účelem založené a ty potom přistupují k té aktivní formě vyhledávání."
     },
     {
+      "id": "senatni-2022-4-a-729274-19",
+      "candidate_id": "senatni-2022-4-c-729274",
+      "question_id": "senatni-2022-global-q-19",
+      "answer": "yes",
+      "comment": "Určitě. Jenom u soukromé bych to nevyžadoval na 100%, ale spíš nějakou investiční pobídkou. U státní a obecní výstavby bych to uzákonil procenty, nebo počtem bytových jednotek, podle typu výstavby."
+    },
+    {
       "id": "senatni-2022-4-a-729274-21",
       "candidate_id": "senatni-2022-4-c-729274",
       "question_id": "senatni-2022-global-q-21",
       "answer": "yes",
       "comment": "V první řadě by to zvýšilo atraktivitu a důležitost regionů a nové pracovní příležitosti pro vysoce kvalifikované odborníky, kteří tím zajistí i snížení odlivu lidí z \"venkova\"."
-    },
-    {
-      "id": "senatni-2022-4-a-729274-22",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-22",
-      "answer": "dont_know"
     },
     {
       "id": "senatni-2022-4-a-729274-23",
@@ -806,13 +665,6 @@
       "comment": "Nelze to brát ovšem jako mantru. Je potřeba rozvíjet VŠ komplexně. Určitě bych ale snížil o nějaké procento obory humanitních studií a směrů."
     },
     {
-      "id": "senatni-2022-4-a-729274-25",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-25",
-      "answer": "no",
-      "comment": "Nejdéle do konce prvního stupně, se rozpozná schopnost dětí pro učení a to je asi í moment, kdy by měli mít individuální studijní program, který bude respektovat jejich schopnosti a možnosti. Jakékoliv zbytečné další nároky je frustrují a brzdí v činnostech, které by jim mohli pomoci k lepšímu rozvoji. To je bohužel v \"běžné\" škole, vzhledem k povaze základního školství, nemožné."
-    },
-    {
       "id": "senatni-2022-4-a-729274-26",
       "candidate_id": "senatni-2022-4-c-729274",
       "question_id": "senatni-2022-global-q-26",
@@ -825,75 +677,6 @@
       "question_id": "senatni-2022-global-q-27",
       "answer": "yes",
       "comment": "Ano. Tak jek se EU prezentuje v posledních 5 letech, je členství v této instituci pro naše občany neperspektivní."
-    },
-    {
-      "id": "senatni-2022-4-a-729274-28",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-28",
-      "answer": "no",
-      "comment": "Jak je patrné, tak státy, které se vzdaly své národní měny, schudly a s nimi i jejich občané."
-    },
-    {
-      "id": "senatni-2022-4-a-729274-29",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-29",
-      "answer": "yes",
-      "comment": "NATO neplní už dávno úlohu obranného paktu. A teď se to ukazuje znovu."
-    },
-    {
-      "id": "senatni-2022-4-a-729274-30",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-30",
-      "answer": "no",
-      "comment": "Místo ČR je  v srdci Evropy. Určitě ne v \"jádru\" EU."
-    },
-    {
-      "id": "senatni-2022-4-a-729274-31",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-31",
-      "answer": "no",
-      "comment": "Ne, dokud nebude mít vyřešeny své domácí problémy."
-    },
-    {
-      "id": "senatni-2022-4-a-729274-32",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-32",
-      "answer": "yes",
-      "comment": "Ano u zákonů o klimatu ano, ale jinak by měla brát ohled hlavně na své občany."
-    },
-    {
-      "id": "senatni-2022-4-a-729274-33",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-33",
-      "answer": "no",
-      "comment": "Naopak zpřísnit. Už kvůli bezpečnostní situaci v Evropě."
-    },
-    {
-      "id": "senatni-2022-4-a-729274-34",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-34",
-      "answer": "no",
-      "comment": "Volný pohyb osob lze vyjednat s každým státem zvlášť. Navíc Německo teď zrovna mluví o zavedení hraničních kontrol s ČR. Fajn udělejme je také. Zvýšíme tím společně s Němci Maďary, Poláky bezpečnost Evropy v otázce nelegální migrace."
-    },
-    {
-      "id": "senatni-2022-4-a-729274-35",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-35",
-      "answer": "yes",
-      "comment": "Ano. Bojeschopná armáda je potřeba. Hlavně v této době, když nás vlastní vláda a ministryně odzbrojili!"
-    },
-    {
-      "id": "senatni-2022-4-a-729274-36",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-36",
-      "answer": "no",
-      "comment": "Je to smutné, když někdo musí podstoupit umělé oplodnění, ale při přirozeném oplodnění ta šance ovlivnění pohlaví také není. A je to dobře! Nehrajme si na \"bohy\" jenom proto, že to umíme!"
-    },
-    {
-      "id": "senatni-2022-4-a-729274-37",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-37",
-      "answer": "yes"
     },
     {
       "id": "senatni-2022-4-a-729274-38",
@@ -909,92 +692,37 @@
       "answer": "dont_know"
     },
     {
-      "id": "senatni-2022-4-a-729274-40",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-40",
-      "answer": "yes",
-      "comment": "Tato kompetence by měla patřit jen a pouze polici. Dnes jsou systémy, které i bez finančních sankcí dokáží zajistit dodržení nejvyšší povolené rychlosti. Buď jde o bezpečné silnice, nebo o kšeft."
-    },
-    {
       "id": "senatni-2022-4-a-729274-41",
       "candidate_id": "senatni-2022-4-c-729274",
       "question_id": "senatni-2022-global-q-41",
       "answer": "dont_know"
     },
     {
-      "id": "senatni-2022-4-a-729274-42",
+      "id": "senatni-2022-4-a-729274-35",
       "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-42",
-      "answer": "dont_know",
-      "comment": "Ukrajina ať si dělá svou politiku. Mě zajímají občané ČR."
-    },
-    {
-      "id": "senatni-2022-4-a-729274-43",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-43",
-      "answer": "dont_know",
-      "comment": "Jak už jsem psal o otázku výše. Je to jejich rozhodnutí, se všemi plusy i minusy z toho vyplývající. Nejsem kompetentní k tomu, abych dělal Ukrajinskou zahraniční politiku."
-    },
-    {
-      "id": "senatni-2022-4-a-729274-44",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-44",
+      "question_id": "senatni-2022-global-q-35",
       "answer": "yes",
-      "comment": "Ano.  Zastropovat jí, ale musíme především my, jako ČR. "
+      "comment": "Ano. Bojeschopná armáda je potřeba. Hlavně v této době, když nás vlastní vláda a ministryně odzbrojili!"
     },
     {
-      "id": "senatni-2022-4-a-729274-45",
+      "id": "senatni-2022-4-a-729274-31",
       "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-45",
-      "answer": "yes"
-    },
-    {
-      "id": "senatni-2022-4-a-729274-46",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-46",
-      "answer": "yes"
-    },
-    {
-      "id": "senatni-2022-4-a-729274-47",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-47",
-      "answer": "dont_know",
-      "comment": "Proč na Krymu? A o čem?"
-    },
-    {
-      "id": "senatni-2022-4-a-729274-48",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-48",
-      "answer": "yes",
-      "comment": "Ano, ale ta směrnice není jenom o tomto problému."
-    },
-    {
-      "id": "senatni-2022-4-a-729274-49",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-49",
+      "question_id": "senatni-2022-global-q-31",
       "answer": "no",
-      "comment": "V současné situaci a chvíli je to sebevražda."
+      "comment": "Ne, dokud nebude mít vyřešeny své domácí problémy."
     },
     {
-      "id": "senatni-2022-4-a-729274-50",
+      "id": "senatni-2022-4-a-729274-29",
       "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-50",
-      "answer": "no",
-      "comment": "V současné situaci a chvíli je to sebevražda."
-    },
-    {
-      "id": "senatni-2022-4-a-729274-51",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-51",
+      "question_id": "senatni-2022-global-q-29",
       "answer": "yes",
-      "comment": "Stejně jako ČR uznalo Kosovo jako suverénní stát bez souhlasu Srbska. Situace je i okolnosti jsou stejné a pokud si chceme hrát na morálně a korektně se chovající společenství, tak se tak mělo dávno stát."
+      "comment": "NATO neplní už dávno úlohu obranného paktu. A teď se to ukazuje znovu."
     },
     {
-      "id": "senatni-2022-4-a-729274-52",
+      "id": "senatni-2022-4-a-729274-22",
       "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-52",
-      "answer": "yes",
-      "comment": "Pokud nemáme jinou alternativu, tak ano. Stejně jako to dělají i naši \"spojenci\" z EU."
+      "question_id": "senatni-2022-global-q-22",
+      "answer": "dont_know"
     },
     {
       "id": "senatni-2022-4-a-729274-53",
@@ -1004,27 +732,6 @@
       "comment": "Je to věc obou těchto suverénních států."
     },
     {
-      "id": "senatni-2022-4-a-729274-54",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-54",
-      "answer": "dont_know",
-      "comment": "Dotace by neměly být vůbec, ale trh v Evropě je tak pokřivený, že odpověď ANO,NE je velice zavádějící."
-    },
-    {
-      "id": "senatni-2022-4-a-729274-55",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-55",
-      "answer": "no",
-      "comment": "Pak budeme rozdávat ještě boty, kalhoty, košile...... Proboha proberte se! Nejsme ve válce a kdo to tvrdí, tak je válečný štváč a dezinformátor! Premiéra a vládu ČR nevyjímaje."
-    },
-    {
-      "id": "senatni-2022-4-a-729274-56",
-      "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-56",
-      "answer": "dont_know",
-      "comment": "Od toho jsou obce, města. Ty musí vytvořit bytový fond a dát tomu nějaký řád. Včetně sociálního bydlení. Je možné a i dokonce žádoucí přizvat i soukromou sféru."
-    },
-    {
       "id": "senatni-2022-4-a-729274-57",
       "candidate_id": "senatni-2022-4-c-729274",
       "question_id": "senatni-2022-global-q-57",
@@ -1032,11 +739,78 @@
       "comment": "Na Ukrajině ale nezáleží. Rozhodne se jinde a každý to ví."
     },
     {
-      "id": "senatni-2022-4-a-729274-58",
+      "id": "senatni-2022-4-a-729274-42",
       "candidate_id": "senatni-2022-4-c-729274",
-      "question_id": "senatni-2022-global-q-58",
+      "question_id": "senatni-2022-global-q-42",
+      "answer": "dont_know",
+      "comment": "Ukrajina ať si dělá svou politiku. Mě zajímají občané ČR."
+    },
+    {
+      "id": "senatni-2022-4-a-729274-46",
+      "candidate_id": "senatni-2022-4-c-729274",
+      "question_id": "senatni-2022-global-q-46",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-4-a-729274-50",
+      "candidate_id": "senatni-2022-4-c-729274",
+      "question_id": "senatni-2022-global-q-50",
+      "answer": "no",
+      "comment": "V současné situaci a chvíli je to sebevražda."
+    },
+    {
+      "id": "senatni-2022-4-a-729274-48",
+      "candidate_id": "senatni-2022-4-c-729274",
+      "question_id": "senatni-2022-global-q-48",
       "answer": "yes",
-      "comment": "Kde nic není, ani smrt nebere! Známé pořekadlo."
+      "comment": "Ano, ale ta směrnice není jenom o tomto problému."
+    },
+    {
+      "id": "senatni-2022-4-a-729274-51",
+      "candidate_id": "senatni-2022-4-c-729274",
+      "question_id": "senatni-2022-global-q-51",
+      "answer": "yes",
+      "comment": "Stejně jako ČR uznalo Kosovo jako suverénní stát bez souhlasu Srbska. Situace je i okolnosti jsou stejné a pokud si chceme hrát na morálně a korektně se chovající společenství, tak se tak mělo dávno stát."
+    },
+    {
+      "id": "senatni-2022-4-a-729274-45",
+      "candidate_id": "senatni-2022-4-c-729274",
+      "question_id": "senatni-2022-global-q-45",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-4-a-729274-54",
+      "candidate_id": "senatni-2022-4-c-729274",
+      "question_id": "senatni-2022-global-q-54",
+      "answer": "dont_know",
+      "comment": "Dotace by neměly být vůbec, ale trh v Evropě je tak pokřivený, že odpověď ANO,NE je velice zavádějící."
+    },
+    {
+      "id": "senatni-2022-4-a-729274-8",
+      "candidate_id": "senatni-2022-4-c-729274",
+      "question_id": "senatni-2022-global-q-8",
+      "answer": "no",
+      "comment": "Pokud je někdo šikovný, tak zájem státu by měl být ten, aby byl i spokojený. Stát by měl být ten, kdo občany k vyšším výdělkům a tím i k větší pracovitosti motivuje a ne, že je bude trestat za úspěch. Daň 15% je nastavená dobře a každý, kdo vychodil ZŠ ví, že z výdělku 10 000,- Kč je daň 1 500,- Kč a ze 100 000,- Kč je daň 15 000,- Kč, takže ten úspěšnější už vyšší daň odvede a nemusím ho trestat za úspěch a pracovitost. "
+    },
+    {
+      "id": "senatni-2022-4-a-729274-44",
+      "candidate_id": "senatni-2022-4-c-729274",
+      "question_id": "senatni-2022-global-q-44",
+      "answer": "yes",
+      "comment": "Ano.  Zastropovat jí, ale musíme především my, jako ČR. "
+    },
+    {
+      "id": "senatni-2022-4-a-737193-28",
+      "candidate_id": "senatni-2022-4-c-737193",
+      "question_id": "senatni-2022-global-q-28",
+      "answer": "no",
+      "comment": "ČR není absolutně připravená."
+    },
+    {
+      "id": "senatni-2022-4-a-737193-52",
+      "candidate_id": "senatni-2022-4-c-737193",
+      "question_id": "senatni-2022-global-q-52",
+      "answer": "yes"
     },
     {
       "id": "senatni-2022-4-a-737193-1",
@@ -1045,23 +819,16 @@
       "answer": "no"
     },
     {
-      "id": "senatni-2022-4-a-737193-2",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-2",
-      "answer": "yes",
-      "comment": "Cestou zákona o dostupném bydlení. Kde se stát stane konkurentem na trhu "
-    },
-    {
       "id": "senatni-2022-4-a-737193-3",
       "candidate_id": "senatni-2022-4-c-737193",
       "question_id": "senatni-2022-global-q-3",
       "answer": "yes"
     },
     {
-      "id": "senatni-2022-4-a-737193-4",
+      "id": "senatni-2022-4-a-737193-58",
       "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-4",
-      "answer": "no"
+      "question_id": "senatni-2022-global-q-58",
+      "answer": "yes"
     },
     {
       "id": "senatni-2022-4-a-737193-5",
@@ -1069,6 +836,12 @@
       "question_id": "senatni-2022-global-q-5",
       "answer": "no",
       "comment": "Jsem zásadně pro udržení věku 65 let"
+    },
+    {
+      "id": "senatni-2022-4-a-737193-4",
+      "candidate_id": "senatni-2022-4-c-737193",
+      "question_id": "senatni-2022-global-q-4",
+      "answer": "no"
     },
     {
       "id": "senatni-2022-4-a-737193-6",
@@ -1084,10 +857,18 @@
       "answer": "no"
     },
     {
-      "id": "senatni-2022-4-a-737193-8",
+      "id": "senatni-2022-4-a-737193-16",
       "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-8",
-      "answer": "dont_know"
+      "question_id": "senatni-2022-global-q-16",
+      "answer": "no",
+      "comment": "Je to především lobby některých neziskových organizací."
+    },
+    {
+      "id": "senatni-2022-4-a-737193-15",
+      "candidate_id": "senatni-2022-4-c-737193",
+      "question_id": "senatni-2022-global-q-15",
+      "answer": "yes",
+      "comment": "Stát by měl podporovat klasické zaměstnávání na HP. "
     },
     {
       "id": "senatni-2022-4-a-737193-9",
@@ -1100,12 +881,6 @@
       "candidate_id": "senatni-2022-4-c-737193",
       "question_id": "senatni-2022-global-q-10",
       "answer": "no"
-    },
-    {
-      "id": "senatni-2022-4-a-737193-11",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-11",
-      "answer": "yes"
     },
     {
       "id": "senatni-2022-4-a-737193-12",
@@ -1127,37 +902,10 @@
       "comment": "Při aktuálnímu stavu, zcela určitě."
     },
     {
-      "id": "senatni-2022-4-a-737193-15",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-15",
-      "answer": "yes",
-      "comment": "Stát by měl podporovat klasické zaměstnávání na HP. "
-    },
-    {
-      "id": "senatni-2022-4-a-737193-16",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-16",
-      "answer": "no",
-      "comment": "Je to především lobby některých neziskových organizací."
-    },
-    {
-      "id": "senatni-2022-4-a-737193-17",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-17",
-      "answer": "yes"
-    },
-    {
       "id": "senatni-2022-4-a-737193-18",
       "candidate_id": "senatni-2022-4-c-737193",
       "question_id": "senatni-2022-global-q-18",
       "answer": "yes"
-    },
-    {
-      "id": "senatni-2022-4-a-737193-19",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-19",
-      "answer": "yes",
-      "comment": "Ano, ale sociální bydlení musí být vždy doprovázeno sociální prací, doprovázení. Je potřeba především dostupné bydlení."
     },
     {
       "id": "senatni-2022-4-a-737193-20",
@@ -1167,17 +915,17 @@
       "comment": "Nechápu proč? Pokud chtějí pomoci a zároveň jsou ochotni dodržovat pravidla a povinnosti, vyhledají si pomoc sami."
     },
     {
+      "id": "senatni-2022-4-a-737193-19",
+      "candidate_id": "senatni-2022-4-c-737193",
+      "question_id": "senatni-2022-global-q-19",
+      "answer": "yes",
+      "comment": "Ano, ale sociální bydlení musí být vždy doprovázeno sociální prací, doprovázení. Je potřeba především dostupné bydlení."
+    },
+    {
       "id": "senatni-2022-4-a-737193-21",
       "candidate_id": "senatni-2022-4-c-737193",
       "question_id": "senatni-2022-global-q-21",
       "answer": "yes"
-    },
-    {
-      "id": "senatni-2022-4-a-737193-22",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-22",
-      "answer": "no",
-      "comment": "Máme svých starostí dost."
     },
     {
       "id": "senatni-2022-4-a-737193-23",
@@ -1190,12 +938,6 @@
       "id": "senatni-2022-4-a-737193-24",
       "candidate_id": "senatni-2022-4-c-737193",
       "question_id": "senatni-2022-global-q-24",
-      "answer": "yes"
-    },
-    {
-      "id": "senatni-2022-4-a-737193-25",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-25",
       "answer": "yes"
     },
     {
@@ -1213,73 +955,6 @@
       "comment": "Při současné politice EU je to možné řešení pro ČR."
     },
     {
-      "id": "senatni-2022-4-a-737193-28",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-28",
-      "answer": "no",
-      "comment": "ČR není absolutně připravená."
-    },
-    {
-      "id": "senatni-2022-4-a-737193-29",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-29",
-      "answer": "yes",
-      "comment": "Současná politika NATO ČR spíše ohrožuje."
-    },
-    {
-      "id": "senatni-2022-4-a-737193-30",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-30",
-      "answer": "dont_know"
-    },
-    {
-      "id": "senatni-2022-4-a-737193-31",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-31",
-      "answer": "no",
-      "comment": "Měli bychom řešit problémy v ČR."
-    },
-    {
-      "id": "senatni-2022-4-a-737193-32",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-32",
-      "answer": "no"
-    },
-    {
-      "id": "senatni-2022-4-a-737193-33",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-33",
-      "answer": "no"
-    },
-    {
-      "id": "senatni-2022-4-a-737193-34",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-34",
-      "answer": "dont_know",
-      "comment": "Při současné situaci to může ČR přinést problémy."
-    },
-    {
-      "id": "senatni-2022-4-a-737193-35",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-35",
-      "answer": "no",
-      "comment": "Naše armáda není schopná profinancovat 2%HDP. Je to jen odliv financí pro cizí státy."
-    },
-    {
-      "id": "senatni-2022-4-a-737193-36",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-36",
-      "answer": "no",
-      "comment": "Příroda je moudrá."
-    },
-    {
-      "id": "senatni-2022-4-a-737193-37",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-37",
-      "answer": "no",
-      "comment": "Zdravotnictví by mělo být dostupné všem, bez ohledu na stav peněženky"
-    },
-    {
       "id": "senatni-2022-4-a-737193-38",
       "candidate_id": "senatni-2022-4-c-737193",
       "question_id": "senatni-2022-global-q-38",
@@ -1293,15 +968,49 @@
       "answer": "dont_know"
     },
     {
-      "id": "senatni-2022-4-a-737193-40",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-40",
-      "answer": "no"
-    },
-    {
       "id": "senatni-2022-4-a-737193-41",
       "candidate_id": "senatni-2022-4-c-737193",
       "question_id": "senatni-2022-global-q-41",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-4-a-737193-35",
+      "candidate_id": "senatni-2022-4-c-737193",
+      "question_id": "senatni-2022-global-q-35",
+      "answer": "no",
+      "comment": "Naše armáda není schopná profinancovat 2%HDP. Je to jen odliv financí pro cizí státy."
+    },
+    {
+      "id": "senatni-2022-4-a-737193-31",
+      "candidate_id": "senatni-2022-4-c-737193",
+      "question_id": "senatni-2022-global-q-31",
+      "answer": "no",
+      "comment": "Měli bychom řešit problémy v ČR."
+    },
+    {
+      "id": "senatni-2022-4-a-737193-29",
+      "candidate_id": "senatni-2022-4-c-737193",
+      "question_id": "senatni-2022-global-q-29",
+      "answer": "yes",
+      "comment": "Současná politika NATO ČR spíše ohrožuje."
+    },
+    {
+      "id": "senatni-2022-4-a-737193-22",
+      "candidate_id": "senatni-2022-4-c-737193",
+      "question_id": "senatni-2022-global-q-22",
+      "answer": "no",
+      "comment": "Máme svých starostí dost."
+    },
+    {
+      "id": "senatni-2022-4-a-737193-53",
+      "candidate_id": "senatni-2022-4-c-737193",
+      "question_id": "senatni-2022-global-q-53",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-4-a-737193-57",
+      "candidate_id": "senatni-2022-4-c-737193",
+      "question_id": "senatni-2022-global-q-57",
       "answer": "yes"
     },
     {
@@ -1311,47 +1020,9 @@
       "answer": "no"
     },
     {
-      "id": "senatni-2022-4-a-737193-43",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-43",
-      "answer": "no"
-    },
-    {
-      "id": "senatni-2022-4-a-737193-44",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-44",
-      "answer": "no",
-      "comment": "Směšné gesto."
-    },
-    {
-      "id": "senatni-2022-4-a-737193-45",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-45",
-      "answer": "yes"
-    },
-    {
       "id": "senatni-2022-4-a-737193-46",
       "candidate_id": "senatni-2022-4-c-737193",
       "question_id": "senatni-2022-global-q-46",
-      "answer": "no"
-    },
-    {
-      "id": "senatni-2022-4-a-737193-47",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-47",
-      "answer": "no"
-    },
-    {
-      "id": "senatni-2022-4-a-737193-48",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-48",
-      "answer": "no",
-      "comment": "Tato směrnice přinese daleko více problémů než užitku."
-    },
-    {
-      "id": "senatni-2022-4-a-737193-49",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-49",
       "answer": "no"
     },
     {
@@ -1362,22 +1033,23 @@
       "comment": "Zcela nemožné."
     },
     {
+      "id": "senatni-2022-4-a-737193-48",
+      "candidate_id": "senatni-2022-4-c-737193",
+      "question_id": "senatni-2022-global-q-48",
+      "answer": "no",
+      "comment": "Tato směrnice přinese daleko více problémů než užitku."
+    },
+    {
       "id": "senatni-2022-4-a-737193-51",
       "candidate_id": "senatni-2022-4-c-737193",
       "question_id": "senatni-2022-global-q-51",
       "answer": "yes"
     },
     {
-      "id": "senatni-2022-4-a-737193-52",
+      "id": "senatni-2022-4-a-737193-45",
       "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-52",
+      "question_id": "senatni-2022-global-q-45",
       "answer": "yes"
-    },
-    {
-      "id": "senatni-2022-4-a-737193-53",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-53",
-      "answer": "no"
     },
     {
       "id": "senatni-2022-4-a-737193-54",
@@ -1387,29 +1059,28 @@
       "comment": "Podmínky mají platit pro všechny stejně. "
     },
     {
-      "id": "senatni-2022-4-a-737193-55",
+      "id": "senatni-2022-4-a-737193-8",
       "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-55",
+      "question_id": "senatni-2022-global-q-8",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-4-a-737193-44",
+      "candidate_id": "senatni-2022-4-c-737193",
+      "question_id": "senatni-2022-global-q-44",
       "answer": "no",
-      "comment": "A kdo bude posuzovat potřebu?"
+      "comment": "Směšné gesto."
     },
     {
-      "id": "senatni-2022-4-a-737193-56",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-56",
-      "answer": "yes",
-      "comment": "Zákon o dostupném bydlení."
-    },
-    {
-      "id": "senatni-2022-4-a-737193-57",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-57",
+      "id": "senatni-2022-4-a-425473-28",
+      "candidate_id": "senatni-2022-4-c-425473",
+      "question_id": "senatni-2022-global-q-28",
       "answer": "yes"
     },
     {
-      "id": "senatni-2022-4-a-737193-58",
-      "candidate_id": "senatni-2022-4-c-737193",
-      "question_id": "senatni-2022-global-q-58",
+      "id": "senatni-2022-4-a-425473-52",
+      "candidate_id": "senatni-2022-4-c-425473",
+      "question_id": "senatni-2022-global-q-52",
       "answer": "yes"
     },
     {
@@ -1419,27 +1090,27 @@
       "answer": "no"
     },
     {
-      "id": "senatni-2022-4-a-425473-2",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-2",
-      "answer": "yes"
-    },
-    {
       "id": "senatni-2022-4-a-425473-3",
       "candidate_id": "senatni-2022-4-c-425473",
       "question_id": "senatni-2022-global-q-3",
       "answer": "dont_know"
     },
     {
-      "id": "senatni-2022-4-a-425473-4",
+      "id": "senatni-2022-4-a-425473-58",
       "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-4",
+      "question_id": "senatni-2022-global-q-58",
       "answer": "no"
     },
     {
       "id": "senatni-2022-4-a-425473-5",
       "candidate_id": "senatni-2022-4-c-425473",
       "question_id": "senatni-2022-global-q-5",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-4-a-425473-4",
+      "candidate_id": "senatni-2022-4-c-425473",
+      "question_id": "senatni-2022-global-q-4",
       "answer": "no"
     },
     {
@@ -1455,10 +1126,16 @@
       "answer": "yes"
     },
     {
-      "id": "senatni-2022-4-a-425473-8",
+      "id": "senatni-2022-4-a-425473-16",
       "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-8",
-      "answer": "no"
+      "question_id": "senatni-2022-global-q-16",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-4-a-425473-15",
+      "candidate_id": "senatni-2022-4-c-425473",
+      "question_id": "senatni-2022-global-q-15",
+      "answer": "yes"
     },
     {
       "id": "senatni-2022-4-a-425473-9",
@@ -1471,12 +1148,6 @@
       "candidate_id": "senatni-2022-4-c-425473",
       "question_id": "senatni-2022-global-q-10",
       "answer": "yes"
-    },
-    {
-      "id": "senatni-2022-4-a-425473-11",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-11",
-      "answer": "no"
     },
     {
       "id": "senatni-2022-4-a-425473-12",
@@ -1497,27 +1168,15 @@
       "answer": "no"
     },
     {
-      "id": "senatni-2022-4-a-425473-15",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-15",
-      "answer": "yes"
-    },
-    {
-      "id": "senatni-2022-4-a-425473-16",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-16",
-      "answer": "yes"
-    },
-    {
-      "id": "senatni-2022-4-a-425473-17",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-17",
-      "answer": "no"
-    },
-    {
       "id": "senatni-2022-4-a-425473-18",
       "candidate_id": "senatni-2022-4-c-425473",
       "question_id": "senatni-2022-global-q-18",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-4-a-425473-20",
+      "candidate_id": "senatni-2022-4-c-425473",
+      "question_id": "senatni-2022-global-q-20",
       "answer": "no"
     },
     {
@@ -1527,22 +1186,10 @@
       "answer": "dont_know"
     },
     {
-      "id": "senatni-2022-4-a-425473-20",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-20",
-      "answer": "no"
-    },
-    {
       "id": "senatni-2022-4-a-425473-21",
       "candidate_id": "senatni-2022-4-c-425473",
       "question_id": "senatni-2022-global-q-21",
       "answer": "dont_know"
-    },
-    {
-      "id": "senatni-2022-4-a-425473-22",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-22",
-      "answer": "no"
     },
     {
       "id": "senatni-2022-4-a-425473-23",
@@ -1554,12 +1201,6 @@
       "id": "senatni-2022-4-a-425473-24",
       "candidate_id": "senatni-2022-4-c-425473",
       "question_id": "senatni-2022-global-q-24",
-      "answer": "dont_know"
-    },
-    {
-      "id": "senatni-2022-4-a-425473-25",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-25",
       "answer": "dont_know"
     },
     {
@@ -1575,66 +1216,6 @@
       "answer": "dont_know"
     },
     {
-      "id": "senatni-2022-4-a-425473-28",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-28",
-      "answer": "yes"
-    },
-    {
-      "id": "senatni-2022-4-a-425473-29",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-29",
-      "answer": "no"
-    },
-    {
-      "id": "senatni-2022-4-a-425473-30",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-30",
-      "answer": "dont_know"
-    },
-    {
-      "id": "senatni-2022-4-a-425473-31",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-31",
-      "answer": "dont_know"
-    },
-    {
-      "id": "senatni-2022-4-a-425473-32",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-32",
-      "answer": "dont_know"
-    },
-    {
-      "id": "senatni-2022-4-a-425473-33",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-33",
-      "answer": "no"
-    },
-    {
-      "id": "senatni-2022-4-a-425473-34",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-34",
-      "answer": "yes"
-    },
-    {
-      "id": "senatni-2022-4-a-425473-35",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-35",
-      "answer": "yes"
-    },
-    {
-      "id": "senatni-2022-4-a-425473-36",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-36",
-      "answer": "dont_know"
-    },
-    {
-      "id": "senatni-2022-4-a-425473-37",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-37",
-      "answer": "yes"
-    },
-    {
       "id": "senatni-2022-4-a-425473-38",
       "candidate_id": "senatni-2022-4-c-425473",
       "question_id": "senatni-2022-global-q-38",
@@ -1647,16 +1228,46 @@
       "answer": "no"
     },
     {
-      "id": "senatni-2022-4-a-425473-40",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-40",
-      "answer": "no"
-    },
-    {
       "id": "senatni-2022-4-a-425473-41",
       "candidate_id": "senatni-2022-4-c-425473",
       "question_id": "senatni-2022-global-q-41",
       "answer": "no"
+    },
+    {
+      "id": "senatni-2022-4-a-425473-35",
+      "candidate_id": "senatni-2022-4-c-425473",
+      "question_id": "senatni-2022-global-q-35",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-4-a-425473-31",
+      "candidate_id": "senatni-2022-4-c-425473",
+      "question_id": "senatni-2022-global-q-31",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-4-a-425473-29",
+      "candidate_id": "senatni-2022-4-c-425473",
+      "question_id": "senatni-2022-global-q-29",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-4-a-425473-22",
+      "candidate_id": "senatni-2022-4-c-425473",
+      "question_id": "senatni-2022-global-q-22",
+      "answer": "no"
+    },
+    {
+      "id": "senatni-2022-4-a-425473-53",
+      "candidate_id": "senatni-2022-4-c-425473",
+      "question_id": "senatni-2022-global-q-53",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-4-a-425473-57",
+      "candidate_id": "senatni-2022-4-c-425473",
+      "question_id": "senatni-2022-global-q-57",
+      "answer": "dont_know"
     },
     {
       "id": "senatni-2022-4-a-425473-42",
@@ -1665,33 +1276,15 @@
       "answer": "dont_know"
     },
     {
-      "id": "senatni-2022-4-a-425473-43",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-43",
-      "answer": "dont_know"
-    },
-    {
-      "id": "senatni-2022-4-a-425473-44",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-44",
-      "answer": "yes"
-    },
-    {
-      "id": "senatni-2022-4-a-425473-45",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-45",
-      "answer": "no"
-    },
-    {
       "id": "senatni-2022-4-a-425473-46",
       "candidate_id": "senatni-2022-4-c-425473",
       "question_id": "senatni-2022-global-q-46",
       "answer": "yes"
     },
     {
-      "id": "senatni-2022-4-a-425473-47",
+      "id": "senatni-2022-4-a-425473-50",
       "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-47",
+      "question_id": "senatni-2022-global-q-50",
       "answer": "dont_know"
     },
     {
@@ -1701,34 +1294,16 @@
       "answer": "yes"
     },
     {
-      "id": "senatni-2022-4-a-425473-49",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-49",
-      "answer": "no"
-    },
-    {
-      "id": "senatni-2022-4-a-425473-50",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-50",
-      "answer": "dont_know"
-    },
-    {
       "id": "senatni-2022-4-a-425473-51",
       "candidate_id": "senatni-2022-4-c-425473",
       "question_id": "senatni-2022-global-q-51",
       "answer": "dont_know"
     },
     {
-      "id": "senatni-2022-4-a-425473-52",
+      "id": "senatni-2022-4-a-425473-45",
       "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-52",
-      "answer": "yes"
-    },
-    {
-      "id": "senatni-2022-4-a-425473-53",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-53",
-      "answer": "yes"
+      "question_id": "senatni-2022-global-q-45",
+      "answer": "no"
     },
     {
       "id": "senatni-2022-4-a-425473-54",
@@ -1737,28 +1312,30 @@
       "answer": "dont_know"
     },
     {
-      "id": "senatni-2022-4-a-425473-55",
+      "id": "senatni-2022-4-a-425473-8",
       "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-55",
-      "answer": "dont_know"
-    },
-    {
-      "id": "senatni-2022-4-a-425473-56",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-56",
-      "answer": "dont_know"
-    },
-    {
-      "id": "senatni-2022-4-a-425473-57",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-57",
-      "answer": "dont_know"
-    },
-    {
-      "id": "senatni-2022-4-a-425473-58",
-      "candidate_id": "senatni-2022-4-c-425473",
-      "question_id": "senatni-2022-global-q-58",
+      "question_id": "senatni-2022-global-q-8",
       "answer": "no"
+    },
+    {
+      "id": "senatni-2022-4-a-425473-44",
+      "candidate_id": "senatni-2022-4-c-425473",
+      "question_id": "senatni-2022-global-q-44",
+      "answer": "yes"
+    },
+    {
+      "id": "senatni-2022-4-a-248303-28",
+      "candidate_id": "senatni-2022-4-c-248303",
+      "question_id": "senatni-2022-global-q-28",
+      "answer": "no",
+      "comment": "Nejsem pro přijetí EURa, neboť by se ČR stala ještě více závislou na rozhodnutích mimo naši zem. Námitky přívrženců společné měny, že by se nám lépe po Evropě cestovalo s jednotnou měnou, jsou naprosto marginální. Většina starších a bohatších členských zemí EU, jež jsou současně v Eurozóně, je daleko více zadlužena a tyto jejich dluhy by naši občané platit neměli. Samostatná měna je symbolem státu, je to základní nástroj pro zachování naší ekonomické suverenity."
+    },
+    {
+      "id": "senatni-2022-4-a-248303-52",
+      "candidate_id": "senatni-2022-4-c-248303",
+      "question_id": "senatni-2022-global-q-52",
+      "answer": "yes",
+      "comment": "Samostatně jednají s Ruskem i ostatní země v rámci EU např. Německo, Rakousko, Maďarsko a nově také Bulharsko."
     },
     {
       "id": "senatni-2022-4-a-248303-1",
@@ -1768,13 +1345,6 @@
       "comment": "Nelze vyloučit, že je mezi majiteli bytů i řada občanů, kteří jen prostě investovali již zdaněné úspory do budoucna pro zajištění bydlení pro své děti, nebo jen pro uložení svých úspor do bezpečné komodity."
     },
     {
-      "id": "senatni-2022-4-a-248303-2",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-2",
-      "answer": "yes",
-      "comment": "V 90. letech se obce doslova zbavovaly bytového fondu, který na ně stát bezúplatně převedl. Pro sociálně slabé spoluobčany zůstalo bytů s nízkým nájemným naprosté minimum. Jsem proto pro významnější výstavbu sociálních bytů ve vlastnictví obcí s únosným nájemným pro nízkopříjmové obyvatelstvo. Zavést institut místně obvyklého nájemného a dát nájemci právo ho požadovat v nájemní smlouvě (v rozmezí např. max. +10-15 %). Institut místně obvyklého nájemného je zcela přijatelná regulace nájemního bydlení. Samozřejmě sociální a městské bydlení má také svůj význam pro ty, co nemohou platit ani nájemné. "
-    },
-    {
       "id": "senatni-2022-4-a-248303-3",
       "candidate_id": "senatni-2022-4-c-248303",
       "question_id": "senatni-2022-global-q-3",
@@ -1782,11 +1352,10 @@
       "comment": "SPD je stranou přímé demokracie usilující o přijetí zákona o referendu. Občané by měli mít možnost vyjádření se v zásadních otázkách, které se dotýkají celé společnosti, včetně toho, že současně respektuji současný systém parlamentní zastupitelské demokracie. "
     },
     {
-      "id": "senatni-2022-4-a-248303-4",
+      "id": "senatni-2022-4-a-248303-58",
       "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-4",
-      "answer": "no",
-      "comment": "Nelze upřednostňovat jeden typ dopravy před druhým."
+      "question_id": "senatni-2022-global-q-58",
+      "answer": "yes"
     },
     {
       "id": "senatni-2022-4-a-248303-5",
@@ -1794,6 +1363,13 @@
       "question_id": "senatni-2022-global-q-5",
       "answer": "no",
       "comment": "Ne v žádném případě. Obzvláště v situaci, kdy penzijní reforma dvacet let čeká na politickou průchodnost. Naopak u určitých fyzicky náročných profesí a směnového provozu by se měl věk odchodu do důchodu naopak snížit."
+    },
+    {
+      "id": "senatni-2022-4-a-248303-4",
+      "candidate_id": "senatni-2022-4-c-248303",
+      "question_id": "senatni-2022-global-q-4",
+      "answer": "no",
+      "comment": "Nelze upřednostňovat jeden typ dopravy před druhým."
     },
     {
       "id": "senatni-2022-4-a-248303-6",
@@ -1810,11 +1386,17 @@
       "comment": "Dokonce bych přivítala zpět skleněné obaly, i když chápu, že by to bylo ekonomicky náročné, ale určitě zdravotně nezávadné. "
     },
     {
-      "id": "senatni-2022-4-a-248303-8",
+      "id": "senatni-2022-4-a-248303-16",
       "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-8",
-      "answer": "yes",
-      "comment": "SPD prosazuje paušální daň pro živnostníky podle výše obratu, čímž se ušetří administrativní náklady, nicméně vysoce progresivní zdanění fyzických osob mají všechny ekonomicky vyspělejší země v Evropě. V ČR jsme měli progresivní zdanění do roku 2007. V letech 2008 až 2012 jsme jako jediní na světě zavedli dokonce degresivní zdanění, tj. s rostoucími příjmy klesalo daňové zatížení jednotlivců. Občanům to bylo nesprávně vysvětlováno jako proporcionální zdanění s jednotnou sazbou 15 %, přičemž zaměstnancům se zvýšil základ daně na tzv. superhrubou mzdu, takže ve skutečnosti platili 21 % ze své hrubé mzdy. Proto byla zavedena tzv. solidární daň, ovšem jen z příjmů ze zaměstnání a z podnikání, která představovala jen velmi mírnou progresi pro úzkou skupinu vysokopříjmových občanů. Od roku 2021 byla solidární daň z příjmů pro bohaté zrušena. Zavedena byla jiná forma progrese, ale i ta je velmi nízká. Nízká progresivita zdanění znamená rychlejší rozevírání nůžek mezi bohatými a chudými, včetně koncentrace bohatství u stále užší skupiny obyvatel."
+      "question_id": "senatni-2022-global-q-16",
+      "answer": "no",
+      "comment": "Manželství je posvátný svazek muže a ženy, tvořící rodinu. Rodina je od slova rodit, a to homosexuálové nemohou. Rodiči mohou být tudíž jen muž a žena, takto to zařídila příroda. Homosexuální páry mají mít veškerá potřebná vzájemná práva (mezi partnery samotnými navzájem), ale nikoli být legislativně (sociálně) uznáni jako rodiče dětí. Vedlo by to mimo jiné i k výraznému nárůstu výskytu surogátního (náhradního) mateřství, což je krajně diskutabilní a často i společensky nebezpečným jevem. Nechť je upraveno registrované partnerství tak, ať splňuje očekávání všech stran, ať je spravedlivé a rovnocenné hlavně v otázkách majetkových poměrů, dědění partnerů atd."
+    },
+    {
+      "id": "senatni-2022-4-a-248303-15",
+      "candidate_id": "senatni-2022-4-c-248303",
+      "question_id": "senatni-2022-global-q-15",
+      "answer": "dont_know"
     },
     {
       "id": "senatni-2022-4-a-248303-9",
@@ -1829,13 +1411,6 @@
       "question_id": "senatni-2022-global-q-10",
       "answer": "yes",
       "comment": "Obzvláště v případě recidivy"
-    },
-    {
-      "id": "senatni-2022-4-a-248303-11",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-11",
-      "answer": "yes",
-      "comment": "Určitě, je to podnikatelská činnost s tvorbou zisku jako kterákoliv jiná. Digitální daň je zavedena ve Francii i Itálii, nevidím důvod proč by neměla být zavedena i ve zbytku Evropy."
     },
     {
       "id": "senatni-2022-4-a-248303-12",
@@ -1859,31 +1434,17 @@
       "comment": "Jsem dokonce pro zrušení koncesionářských poplatků, neboť ČT čelila kritice obzvláště v objektivitě zahraničního zpravodajství, a na doporučení Evropské komise Rada ČT přiznala, že musí informovat v rámci \"evropského humanismu a tradic\". Pro mě osobně je ČT největší dezinformátor mezi mainstreamovými sdělovacími prostředky."
     },
     {
-      "id": "senatni-2022-4-a-248303-15",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-15",
-      "answer": "dont_know"
-    },
-    {
-      "id": "senatni-2022-4-a-248303-16",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-16",
-      "answer": "no",
-      "comment": "Manželství je posvátný svazek muže a ženy, tvořící rodinu. Rodina je od slova rodit, a to homosexuálové nemohou. Rodiči mohou být tudíž jen muž a žena, takto to zařídila příroda. Homosexuální páry mají mít veškerá potřebná vzájemná práva (mezi partnery samotnými navzájem), ale nikoli být legislativně (sociálně) uznáni jako rodiče dětí. Vedlo by to mimo jiné i k výraznému nárůstu výskytu surogátního (náhradního) mateřství, což je krajně diskutabilní a často i společensky nebezpečným jevem. Nechť je upraveno registrované partnerství tak, ať splňuje očekávání všech stran, ať je spravedlivé a rovnocenné hlavně v otázkách majetkových poměrů, dědění partnerů atd."
-    },
-    {
-      "id": "senatni-2022-4-a-248303-17",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-17",
-      "answer": "no",
-      "comment": "To absolutně nic neřeší. Exekutoři by měli spadat pod státní správu, nikoli fungovat jako soukromý subjekt maximalizující svůj zisk."
-    },
-    {
       "id": "senatni-2022-4-a-248303-18",
       "candidate_id": "senatni-2022-4-c-248303",
       "question_id": "senatni-2022-global-q-18",
       "answer": "yes",
       "comment": "Ale s odkazem na otázku č.17. Zpětným zavedením soudních exekutorů pod kontrolou státu."
+    },
+    {
+      "id": "senatni-2022-4-a-248303-20",
+      "candidate_id": "senatni-2022-4-c-248303",
+      "question_id": "senatni-2022-global-q-20",
+      "answer": "no"
     },
     {
       "id": "senatni-2022-4-a-248303-19",
@@ -1893,21 +1454,9 @@
       "comment": "Byla by to významná pomoc nejen mladým rodinám, které nedosáhnou na vlastní bydlení z důvodu vysokých cen nebo nedostupnosti úvěrů."
     },
     {
-      "id": "senatni-2022-4-a-248303-20",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-20",
-      "answer": "no"
-    },
-    {
       "id": "senatni-2022-4-a-248303-21",
       "candidate_id": "senatni-2022-4-c-248303",
       "question_id": "senatni-2022-global-q-21",
-      "answer": "dont_know"
-    },
-    {
-      "id": "senatni-2022-4-a-248303-22",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-22",
       "answer": "dont_know"
     },
     {
@@ -1925,12 +1474,6 @@
       "comment": "Na našem pracovním trhu významně chybí technické obory."
     },
     {
-      "id": "senatni-2022-4-a-248303-25",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-25",
-      "answer": "no"
-    },
-    {
       "id": "senatni-2022-4-a-248303-26",
       "candidate_id": "senatni-2022-4-c-248303",
       "question_id": "senatni-2022-global-q-26",
@@ -1945,74 +1488,6 @@
       "comment": "K původní ekonomické integraci a bezcelní zóně nebylo výhrad. Avšak po podpisu Lisabonské smlouvy začalo postupně docházet ke ztrátě suverenity jednotlivých zemí EU.\nSliby, jak doženeme mzdy srovnatelné s Německem se nenaplnily ani za 18 let. \nČesko získalo z EU o 936 miliard korun víc, než do něho odvedlo. Vyjádřeno průměrem za 18 let našeho členství je to 52 miliard korun. Tuto sumu získáváme z unijního rozpočtu a touto sumou nás EU zavazuje k plnění mnohdy nesmyslných požadavků. Suma 52 miliard pokryje přibližně 15 dnů celkových výdajů ČR. \nV tomto případě je ještě nutné 15 dnů „očistit“ o náklady na správu spojenou s EU a administrativu, kterou spravuje více ministerstev jako např. zahraničních věcí, pro místní rozvoj, pro evropské záležitosti a další. Bohužel neexistuje jednotná agenda, takže je nutné tyto náklady pouze odhadnout.  V každém případě to ze sumy 52 miliard určitě ukrojí pořádný kus. Takže místo 15 dnů, třeba jen týden a kvůli tomu ztrácíme naši suverenitu, samostatnost a soběstačnost! Za mě osobně bych raději týden hladověla a ponechala si svobodu rozhodování jak, kolik a kam vložím své vydělané peníze. \nAlokovat/přerozdělit v rámci našeho státního rozpočtu cca 66 miliard Kč ročně, které odvádíme, zvládneme určitě sami a smysluplněji bez diktátu Bruselu. \nNavíc podle odhadu samotné Evropské komise stojí členské státy unijní regulace 4 procenta HDP ročně (byrokratické náklady), 200-300 miliard korun. Evropská komise prosadí na každém zasedání Evropského parlamentu tisíce stran nových regulací. Celkově už je to 300 tisíc stran. Aktuální náklady na jednoho občana žijícího v EU dosahují až 80 tisíc korun ročně! \nVýznamnou hrozbou je tlak na vznik evropského federálního státu, nadřazeného jednotlivým státům Evropy. To nesmíme dopustit.\nVolný evropský obchod je ve své podstatě výsledkem existence Evropského hospodářského prostoru, nikoli Evropské unie. Součástí tohoto prostoru jsou i země, které do Unie nepatří, konkrétně Island, Lichtenštejnsko, Norsko a Švýcarsko. Naším cílem by mělo být připojení se k Evropskému společenství volného obchodu EFTA.\n"
     },
     {
-      "id": "senatni-2022-4-a-248303-28",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-28",
-      "answer": "no",
-      "comment": "Nejsem pro přijetí EURa, neboť by se ČR stala ještě více závislou na rozhodnutích mimo naši zem. Námitky přívrženců společné měny, že by se nám lépe po Evropě cestovalo s jednotnou měnou, jsou naprosto marginální. Většina starších a bohatších členských zemí EU, jež jsou současně v Eurozóně, je daleko více zadlužena a tyto jejich dluhy by naši občané platit neměli. Samostatná měna je symbolem státu, je to základní nástroj pro zachování naší ekonomické suverenity."
-    },
-    {
-      "id": "senatni-2022-4-a-248303-29",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-29",
-      "answer": "yes",
-      "comment": "Jsem matka dvou dětí a jednoznačně jsem proti válkám, dodávkám zbraní a veškerému násilí. Jakýkoliv konflikt by měl být řešen mírovou diplomatickou cestou.\nČR by měla zůstat neutrálním státem v srdci Evropy.\nPo skončení \"studené války\" a zániku Varšavské smlouvy, nejenže nedošlo k rozpuštění NATO, ale západ naopak porušil své sliby, že se nebude rozšiřovat směrem na východ. Výsledek tohoto jednání je zřejmý, kdy se NATO celkem v pěti vlnách rozšířilo až k ruským hranicím. Toto je příčinou současné napjaté mezinárodní situace."
-    },
-    {
-      "id": "senatni-2022-4-a-248303-30",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-30",
-      "answer": "no",
-      "comment": "ČR je srdcem Evropy, nikoliv EU"
-    },
-    {
-      "id": "senatni-2022-4-a-248303-31",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-31",
-      "answer": "yes",
-      "comment": "Ale na prvním místě musí zůstat zájmy občanů ČR. Samozřejmě nevylučuji humanitární pomoc v případě různých přírodních katastrof atd. ale tato pomoc musí být přiměřená možnostem naší země."
-    },
-    {
-      "id": "senatni-2022-4-a-248303-32",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-32",
-      "answer": "no",
-      "comment": "Green deal je zeleným šílenstvím, které je nutné jednoznačně odmítnout. Změny klimatu provázejí naší planetu celou historií bez ohledu na lidskou činnost. Samozřejmě, že je nutné být ohleduplný k životnímu prostředí."
-    },
-    {
-      "id": "senatni-2022-4-a-248303-33",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-33",
-      "answer": "no"
-    },
-    {
-      "id": "senatni-2022-4-a-248303-34",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-34",
-      "answer": "dont_know",
-      "comment": "Zavádějící otázka a to proto, že původní myšlenka tzv. \"Schengenu\" se v posledních letech ukazuje jako velmi problematická. Osobně bych neměla nic proti tomu při přejezdu státní hranice ČR ukázat svůj pas, protože tak každý stát v EU má kontrolu nad tím, kdo se pohybuje na jeho území. Což ale myšlenku volného pohybu osob nijak nenarušuje."
-    },
-    {
-      "id": "senatni-2022-4-a-248303-35",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-35",
-      "answer": "yes",
-      "comment": "Silná armáda je jedním ze základních znaků suverenity státu. V žádném případě se však nemá naše armáda zúčastňovat zahraničních misí v zájmu \"kdoví koho\"."
-    },
-    {
-      "id": "senatni-2022-4-a-248303-36",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-36",
-      "answer": "no"
-    },
-    {
-      "id": "senatni-2022-4-a-248303-37",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-37",
-      "answer": "yes",
-      "comment": "Je to otázka k diskuzi, ale muselo by být předem definováno co je standard a co nadstandardní zdravotní péče. "
-    },
-    {
       "id": "senatni-2022-4-a-248303-38",
       "candidate_id": "senatni-2022-4-c-248303",
       "question_id": "senatni-2022-global-q-38",
@@ -2025,118 +1500,43 @@
       "answer": "dont_know"
     },
     {
-      "id": "senatni-2022-4-a-248303-40",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-40",
-      "answer": "dont_know"
-    },
-    {
       "id": "senatni-2022-4-a-248303-41",
       "candidate_id": "senatni-2022-4-c-248303",
       "question_id": "senatni-2022-global-q-41",
       "answer": "yes"
     },
     {
-      "id": "senatni-2022-4-a-248303-42",
+      "id": "senatni-2022-4-a-248303-35",
       "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-42",
-      "answer": "no",
-      "comment": "V žádném případě"
+      "question_id": "senatni-2022-global-q-35",
+      "answer": "yes",
+      "comment": "Silná armáda je jedním ze základních znaků suverenity státu. V žádném případě se však nemá naše armáda zúčastňovat zahraničních misí v zájmu \"kdoví koho\"."
     },
     {
-      "id": "senatni-2022-4-a-248303-43",
+      "id": "senatni-2022-4-a-248303-31",
       "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-43",
-      "answer": "no",
-      "comment": "V žádném případě, neboť by to ještě více ohrozilo systém evropské bezpečnosti."
+      "question_id": "senatni-2022-global-q-31",
+      "answer": "yes",
+      "comment": "Ale na prvním místě musí zůstat zájmy občanů ČR. Samozřejmě nevylučuji humanitární pomoc v případě různých přírodních katastrof atd. ale tato pomoc musí být přiměřená možnostem naší země."
     },
     {
-      "id": "senatni-2022-4-a-248303-44",
+      "id": "senatni-2022-4-a-248303-29",
       "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-44",
-      "answer": "no",
-      "comment": "Je to absolutní nesmysl, protože ceny se stropují u dodavatele, nikoliv u odběratele. Je to stejné jako kdybychom přijeli na čerpací stanici a dožadovali se (zastropovali bychom si) ceny litru benzínu za max 20 Kč, když dodavatel tedy čerpací stanice požaduje cenu 40 Kč. Asi je každému jasné jak bychom pořídili...."
+      "question_id": "senatni-2022-global-q-29",
+      "answer": "yes",
+      "comment": "Jsem matka dvou dětí a jednoznačně jsem proti válkám, dodávkám zbraní a veškerému násilí. Jakýkoliv konflikt by měl být řešen mírovou diplomatickou cestou.\nČR by měla zůstat neutrálním státem v srdci Evropy.\nPo skončení \"studené války\" a zániku Varšavské smlouvy, nejenže nedošlo k rozpuštění NATO, ale západ naopak porušil své sliby, že se nebude rozšiřovat směrem na východ. Výsledek tohoto jednání je zřejmý, kdy se NATO celkem v pěti vlnách rozšířilo až k ruským hranicím. Toto je příčinou současné napjaté mezinárodní situace."
     },
     {
-      "id": "senatni-2022-4-a-248303-45",
+      "id": "senatni-2022-4-a-248303-22",
       "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-45",
+      "question_id": "senatni-2022-global-q-22",
       "answer": "dont_know"
-    },
-    {
-      "id": "senatni-2022-4-a-248303-46",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-46",
-      "answer": "yes",
-      "comment": "Pokud současně USA ponesou stejné následky za rozpoutání válek např. v Íráku, Sýrii, Lybii, Afganistánu a \"humanitárního\" bombardování v Jugoslávii."
-    },
-    {
-      "id": "senatni-2022-4-a-248303-47",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-47",
-      "answer": "yes",
-      "comment": "Protože azimut zahraniční politiky ČR musí být namířen všemi směry v zájmu občanů naší země."
-    },
-    {
-      "id": "senatni-2022-4-a-248303-48",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-48",
-      "answer": "no",
-      "comment": "Domnívám se, že k potírání násilí nepotřebujeme žádnou směrnici EU, že nám vystačí naše vlastní zákony."
-    },
-    {
-      "id": "senatni-2022-4-a-248303-49",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-49",
-      "answer": "no",
-      "comment": "Vzhledem k tomu, že ještě neumíme poručit \"větru a dešti\", resp. aby pravidelně foukal vítr a svítilo slunce je nutné k těmto alternativním zdrojům energie, které navíc nelze skladovat, mít k dispozici stále i ty klasické. "
-    },
-    {
-      "id": "senatni-2022-4-a-248303-50",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-50",
-      "answer": "dont_know",
-      "comment": "Zavádějící otázka - nemám s tím sice problém, ale nesmí to v žádném případě ohrozit životní úroveň a současné sociální standardy v Evropě."
-    },
-    {
-      "id": "senatni-2022-4-a-248303-51",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-51",
-      "answer": "yes",
-      "comment": "V souladu s mezinárodně platnými předpisy proběhlo referendum, které mělo jednoznačný výsledek. "
-    },
-    {
-      "id": "senatni-2022-4-a-248303-52",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-52",
-      "answer": "yes",
-      "comment": "Samostatně jednají s Ruskem i ostatní země v rámci EU např. Německo, Rakousko, Maďarsko a nově také Bulharsko."
     },
     {
       "id": "senatni-2022-4-a-248303-53",
       "candidate_id": "senatni-2022-4-c-248303",
       "question_id": "senatni-2022-global-q-53",
       "answer": "no"
-    },
-    {
-      "id": "senatni-2022-4-a-248303-54",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-54",
-      "answer": "dont_know",
-      "comment": "Nejen evropské dotace přinášejí pokřivení ekonomiky a zkažení férové soutěže. V případě neexistence dotací by se ukázalo, kdo a za jakou cenu umí vyrobit daný výrobek. Obzvláště při dovozu silně dotovaných potravin z jiných zemí jsou čeští zemědělci značně znevýhodněni."
-    },
-    {
-      "id": "senatni-2022-4-a-248303-55",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-55",
-      "answer": "dont_know"
-    },
-    {
-      "id": "senatni-2022-4-a-248303-56",
-      "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-56",
-      "answer": "yes",
-      "comment": "viz předchozí odpověď - startovací byty pro mladé rodiny"
     },
     {
       "id": "senatni-2022-4-a-248303-57",
@@ -2146,10 +1546,66 @@
       "comment": "Válka na Ukrajině je výsledkem selhání velmocí a obávám se, že toto bude logickým vyústěním tohoto konfliktu. USA řadu let ignorovali oprávněné bezpečnostní požadavky RF a to v souladu s oprávněnými požadavky OSN o tom, že bezpečnost jedné země nemůže být nadřazena bezpečnostním zájmům jiné země. Jsem přesvědčena, že pokud by byl prezidentem USA Donald Trump, tak by k žádné válce na Ukrajině nedošlo."
     },
     {
-      "id": "senatni-2022-4-a-248303-58",
+      "id": "senatni-2022-4-a-248303-42",
       "candidate_id": "senatni-2022-4-c-248303",
-      "question_id": "senatni-2022-global-q-58",
-      "answer": "yes"
+      "question_id": "senatni-2022-global-q-42",
+      "answer": "no",
+      "comment": "V žádném případě"
+    },
+    {
+      "id": "senatni-2022-4-a-248303-46",
+      "candidate_id": "senatni-2022-4-c-248303",
+      "question_id": "senatni-2022-global-q-46",
+      "answer": "yes",
+      "comment": "Pokud současně USA ponesou stejné následky za rozpoutání válek např. v Íráku, Sýrii, Lybii, Afganistánu a \"humanitárního\" bombardování v Jugoslávii."
+    },
+    {
+      "id": "senatni-2022-4-a-248303-50",
+      "candidate_id": "senatni-2022-4-c-248303",
+      "question_id": "senatni-2022-global-q-50",
+      "answer": "dont_know",
+      "comment": "Zavádějící otázka - nemám s tím sice problém, ale nesmí to v žádném případě ohrozit životní úroveň a současné sociální standardy v Evropě."
+    },
+    {
+      "id": "senatni-2022-4-a-248303-48",
+      "candidate_id": "senatni-2022-4-c-248303",
+      "question_id": "senatni-2022-global-q-48",
+      "answer": "no",
+      "comment": "Domnívám se, že k potírání násilí nepotřebujeme žádnou směrnici EU, že nám vystačí naše vlastní zákony."
+    },
+    {
+      "id": "senatni-2022-4-a-248303-51",
+      "candidate_id": "senatni-2022-4-c-248303",
+      "question_id": "senatni-2022-global-q-51",
+      "answer": "yes",
+      "comment": "V souladu s mezinárodně platnými předpisy proběhlo referendum, které mělo jednoznačný výsledek. "
+    },
+    {
+      "id": "senatni-2022-4-a-248303-45",
+      "candidate_id": "senatni-2022-4-c-248303",
+      "question_id": "senatni-2022-global-q-45",
+      "answer": "dont_know"
+    },
+    {
+      "id": "senatni-2022-4-a-248303-54",
+      "candidate_id": "senatni-2022-4-c-248303",
+      "question_id": "senatni-2022-global-q-54",
+      "answer": "dont_know",
+      "comment": "Nejen evropské dotace přinášejí pokřivení ekonomiky a zkažení férové soutěže. V případě neexistence dotací by se ukázalo, kdo a za jakou cenu umí vyrobit daný výrobek. Obzvláště při dovozu silně dotovaných potravin z jiných zemí jsou čeští zemědělci značně znevýhodněni."
+    },
+    {
+      "id": "senatni-2022-4-a-248303-8",
+      "candidate_id": "senatni-2022-4-c-248303",
+      "question_id": "senatni-2022-global-q-8",
+      "answer": "yes",
+      "comment": "SPD prosazuje paušální daň pro živnostníky podle výše obratu, čímž se ušetří administrativní náklady, nicméně vysoce progresivní zdanění fyzických osob mají všechny ekonomicky vyspělejší země v Evropě. V ČR jsme měli progresivní zdanění do roku 2007. V letech 2008 až 2012 jsme jako jediní na světě zavedli dokonce degresivní zdanění, tj. s rostoucími příjmy klesalo daňové zatížení jednotlivců. Občanům to bylo nesprávně vysvětlováno jako proporcionální zdanění s jednotnou sazbou 15 %, přičemž zaměstnancům se zvýšil základ daně na tzv. superhrubou mzdu, takže ve skutečnosti platili 21 % ze své hrubé mzdy. Proto byla zavedena tzv. solidární daň, ovšem jen z příjmů ze zaměstnání a z podnikání, která představovala jen velmi mírnou progresi pro úzkou skupinu vysokopříjmových občanů. Od roku 2021 byla solidární daň z příjmů pro bohaté zrušena. Zavedena byla jiná forma progrese, ale i ta je velmi nízká. Nízká progresivita zdanění znamená rychlejší rozevírání nůžek mezi bohatými a chudými, včetně koncentrace bohatství u stále užší skupiny obyvatel."
+    },
+    {
+      "id": "senatni-2022-4-a-248303-44",
+      "candidate_id": "senatni-2022-4-c-248303",
+      "question_id": "senatni-2022-global-q-44",
+      "answer": "no",
+      "comment": "Je to absolutní nesmysl, protože ceny se stropují u dodavatele, nikoliv u odběratele. Je to stejné jako kdybychom přijeli na čerpací stanici a dožadovali se (zastropovali bychom si) ceny litru benzínu za max 20 Kč, když dodavatel tedy čerpací stanice požaduje cenu 40 Kč. Asi je každému jasné jak bychom pořídili...."
     }
   ]
 }
