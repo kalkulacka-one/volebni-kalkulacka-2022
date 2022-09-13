@@ -3,7 +3,7 @@ import ThemeProvider from '@/components/ThemeProvider.vue';
 </script>
 
 <template>
-  <ThemeProvider>
+  <ThemeProvider theme="idnes">
     <slot />
   </ThemeProvider>
 </template>
