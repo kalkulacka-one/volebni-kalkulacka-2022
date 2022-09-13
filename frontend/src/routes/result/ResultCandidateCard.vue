@@ -140,21 +140,35 @@ const toggleClick = () => {
         />
       </IconButton>
     </div>
-    <div v-if="candidate?.motto" v-show="isExpanded" class="expansion">
-      <BodyText size="small"
-        ><strong>Co o sobě kanidát/ka říká</strong></BodyText
-      >
-      <BodyText size="small">{{ candidate?.motto }}</BodyText>
-      <DividerComponent class="divider"></DividerComponent>
-      <ResultCardContacts
-        v-if="candidate?.contact"
-        :contact="candidate?.contact"
-      ></ResultCardContacts>
+    <div
+      v-if="candidate?.motto || candidate?.contact"
+      v-show="isExpanded"
+      class="expansion"
+    >
+      <div v-if="candidate?.motto">
+        <BodyText class="motto-title" size="small"
+          ><strong>Co o sobě kanidát/ka říká</strong></BodyText
+        >
+        <BodyText size="small">{{ candidate?.motto }}</BodyText>
+      </div>
+      <div v-if="candidate?.contact">
+        <DividerComponent class="divider"></DividerComponent>
+        <ResultCardContacts :contact="candidate?.contact"></ResultCardContacts>
+      </div>
     </div>
   </CardComponent>
 </template>
 
 <style lang="scss" scoped>
+.motto-title {
+  margin-bottom: var(--responsive-spacing-extra-small);
+}
+.divider {
+  margin-bottom: var(--responsive-spacing-extra-small);
+  margin-top: var(--responsive-spacing-extra-small);
+  margin-left: 0px;
+  margin-right: 0px;
+}
 .party-wrapper {
   display: flex;
   flex-direction: row;
@@ -179,35 +193,41 @@ const toggleClick = () => {
     'avatar text percentage toggle'
     'avatar progress-bar percentage toggle'
     'avatar secondary-text percentage toggle';
+  grid-template-columns: 2fr 10fr 2fr 1fr;
   column-gap: var(--responsive-spacing-medium);
   row-gap: var(--responsive-spacing-small);
 
   .avatar {
     grid-area: avatar;
     align-self: center;
-    justify-self: center;
+    justify-self: left;
   }
 
   .text {
     grid-area: text;
+    justify-self: stretch;
   }
 
   .progress-bar {
     grid-area: progress-bar;
+    justify-self: stretch;
   }
 
   .secondary-text {
     grid-area: secondary-text;
+    justify-self: left;
   }
 
   .percentage {
     grid-area: percentage;
     align-self: center;
+    justify-self: right;
   }
 
   .toggle {
     grid-area: toggle;
     align-self: center;
+    justify-self: right;
   }
 
   .expansion {
