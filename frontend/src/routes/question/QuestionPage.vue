@@ -26,6 +26,7 @@ import QuestionBottomBar from './QuestionBottomBar.vue';
 import QuestionCard from './QuestionCard.vue';
 import BackgroundComponent from '../../components/design-system/style/BackgroundComponent.vue';
 import StatusBarComponent from '@/components/design-system/other/StatusBarComponent.vue';
+import { getDistrictCode } from '@/common/utils';
 
 const router = useRouter();
 const route = useRoute();
@@ -39,7 +40,7 @@ if (electionStore.calculator === undefined) {
 
 const election = electionStore.election as Election;
 const electionName = election.name;
-const districtCode = route.params.district;
+const districtCode = getDistrictCode(route.params.district as string);
 const districtName = electionStore.districts.filter(
   (district) => district.district_code === districtCode
 )[0].name;
