@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onBeforeMount, onMounted, ref } from 'vue';
+import { onBeforeMount, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 
 import {
@@ -15,7 +15,6 @@ import {
   calculateRelativeAgreement,
   encodeResults,
 } from '@/common/resultParser';
-import { generateSocialLink } from '@/common/share';
 
 import type { Election } from '@/types/election';
 import type { CandidateAnswer } from '@/types/candidate-answer';
@@ -36,8 +35,7 @@ import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
 import ResultCategory from './ResultCategory.vue';
-import ModalComponent from '../../components/design-system/other/ModalComponent.vue';
-import BodyText from '../../components/design-system/typography/BodyText.vue';
+import ResultShareModal from './ResultShareModal.vue';
 import { getDistrictCode } from '@/common/utils';
 
 const router = useRouter();
@@ -77,11 +75,7 @@ const handleShowComparsionClick = () => {
 
 const showShareModal = ref(false);
 const handleShareClick = () => {
-  isShareModalOpen.value = true;
-};
-
-const handleCloseShareModal = () => {
-  isShareModalOpen.value = false;
+  shareModal.value?.open();
 };
 onBeforeMount(async () => {
   await electionStore.saveResults();
@@ -93,6 +87,7 @@ const resultsGeneral = calculateRelativeAgreement(
   electionStore.calculator?.answers as CandidateAnswer[],
   electionStore.answers
 );
+const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
 </script>
 <template>
   <BackgroundComponent :is-image="false">
@@ -151,6 +146,7 @@ const resultsGeneral = calculateRelativeAgreement(
             <TitleText tag="h2" size="medium">Moje shoda</TitleText>
             <template #after>
               <ButtonComponent
+                v-if="electionStore.resultsUuid"
                 kind="link"
                 color="primary"
                 @click="handleShareClick"
@@ -231,13 +227,7 @@ const resultsGeneral = calculateRelativeAgreement(
       </BottomBarWrapper>
     </StickyHeaderLayout>
   </BackgroundComponent>
-  <ModalComponent
-    :close-modal-callback="handleCloseShareModal"
-    :is-modal-open="isShareModalOpen"
-  >
-    <template #title>Share</template>
-    <template #content> </template>
-  </ModalComponent>
+  <ResultShareModal v-if="electionStore.resultsUuid" ref="shareModal" />
 </template>
 
 <style lang="scss" scoped>

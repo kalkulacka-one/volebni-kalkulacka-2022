@@ -11,6 +11,8 @@
 <style scoped lang="scss">
 /* Auto layout */
 .icon-button {
+  height: fit-content;
+  width: fit-content;
   padding: var(--spacing-extra-small);
   background-color: transparent;
   border-radius: 50%;

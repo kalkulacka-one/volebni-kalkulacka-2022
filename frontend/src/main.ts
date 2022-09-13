@@ -294,6 +294,10 @@ router.beforeEach(async (to, from) => {
       store.answers = answers;
       store.answerProgress = store.answers.length - 1;
       hasResultQuery = true;
+    } else {
+      console.warn(
+        `Result hex answer count mismatch ${answers.length} vs ${store.calculator?.questions.length}`
+      );
     }
   }
 

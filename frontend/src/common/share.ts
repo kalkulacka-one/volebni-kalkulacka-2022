@@ -1,7 +1,7 @@
 import type { SocialMediaProps } from '@/components/design-system/icons/SocialMediaIcon.vue';
 import { useElectionStore } from '@/stores/electionStore';
 
-const BASE_URL = 'https://www.volebnikalkulacka.cz/';
+const BASE_URL = 'https://www.volebnikalkulacka.cz';
 
 export const generateShareUrl = (uuid: string) => {
   return `${BASE_URL}/share/${uuid}`;
@@ -9,10 +9,11 @@ export const generateShareUrl = (uuid: string) => {
 
 export const generateSocialLink = (type: 'link' | 'facebook' | 'twitter') => {
   const electionStore = useElectionStore();
-  if (!electionStore.resultsUuid) {
-    throw new Error('Results are not saved. Unable to generate share link');
-  }
   let navUrl = null;
+  if (!electionStore.resultsUuid) {
+    console.error('Results are not saved. Unable to generate share link');
+    return navUrl;
+  }
   switch (type) {
     case 'link':
       navUrl = generateShareUrl(electionStore.resultsUuid);

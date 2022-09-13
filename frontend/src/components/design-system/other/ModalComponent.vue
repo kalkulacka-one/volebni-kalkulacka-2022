@@ -1,56 +1,45 @@
 <script setup lang="ts">
 import IconButton from '../input/IconButton.vue';
-import ThemeProvider from '@/components/ThemeProvider.vue';
 
 import { mdiClose, mdiCloseThick } from '@mdi/js';
 import IconComponent from '../icons/IconComponent.vue';
+import { onMounted, ref } from 'vue';
 
 export interface Props {
   isModalOpen: boolean;
+  teleportSelector: string;
   closeModalCallback(): void;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   isModalOpen: false,
 });
+const isMounted = ref(false);
+onMounted(() => {
+  isMounted.value = true;
+});
 </script>
 
 <template>
-  <Teleport to="body">
-    <ThemeProvider>
-      <div
-        v-if="props.isModalOpen"
-        class="modal-bg"
-        @click="closeModalCallback"
-      >
-        <div class="modal" @click.stop="">
-          <div class="title-wrapper">
-            <IconButton @click="closeModalCallback">
-              <div class="visible-mobile">
-                <IconComponent
-                  :icon="mdiClose"
-                  title="close modal"
-                  size="small"
-                  color="rgb(var(--palette-neutral-30)"
-                />
-              </div>
-              <div class="visible-desktop">
-                <IconComponent
-                  :icon="mdiCloseThick"
-                  title="close modal"
-                  size="medium"
-                  color="rgb(var(--palette-neutral-60)"
-                />
-              </div>
-            </IconButton>
-            <div class="title">
-              <slot name="title" />
-            </div>
+  <Teleport v-if="isMounted" :to="teleportSelector">
+    <div v-if="props.isModalOpen" class="modal-bg" @click="closeModalCallback">
+      <div class="modal" @click.stop="">
+        <div class="title-wrapper">
+          <IconButton @click="closeModalCallback">
+            <IconComponent
+              :icon="mdiClose"
+              title="close modal"
+              size="medium"
+              color="rgb(var(--color-neutral-fg)"
+            />
+          </IconButton>
+          <div class="title">
+            <slot name="title" />
           </div>
-          <slot name="content" />
         </div>
+        <slot name="content" />
       </div>
-    </ThemeProvider>
+    </div>
   </Teleport>
 </template>
 
@@ -77,6 +66,7 @@ const props = withDefaults(defineProps<Props>(), {
   left: 0;
   width: 100vw;
   height: 100vh;
+  z-index: 1000;
 
   display: flex;
   align-items: flex-end;
@@ -92,19 +82,22 @@ const props = withDefaults(defineProps<Props>(), {
 
 .modal {
   width: 100%;
+  margin-left: var(--spacing-small);
+  margin-right: var(--spacing-small);
   padding: var(--spacing-small);
   border-radius: var(--radius-small) var(--radius-small) 0 0;
   background-color: rgb(var(--palette-neutral-100));
 
   @media (min-width: 700px) {
     // TODO: the position of the modal on the screen seems to be broken in the design, needs double check before implementation
-    width: 50rem;
+    width: fit-content;
     max-width: 80vw;
     height: auto;
-    min-height: 80vh;
+    max-height: 80vh;
+    border-radius: var(--radius-small) 0 var(--radius-small) var(--radius-small);
 
     // TODO: the padding in the design seems to be broken, needs double check before implementation
-    padding: 2.5rem 2rem 1.5rem 2.625rem;
+    //padding: 2.5rem 2rem 1.5rem 2.625rem;
   }
 }
 
