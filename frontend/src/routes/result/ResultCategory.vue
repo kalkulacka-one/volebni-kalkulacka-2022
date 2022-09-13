@@ -43,25 +43,27 @@ console.debug(visibleCandidates.value);
       :category="category"
     />
   </StackComponent>
-  <ButtonComponent
-    kind="link"
-    size="medium"
-    class="expand-btn"
-    @click="handleExpandClick"
-  >
-    {{ isExpanded ? 'Skrýt kandidáty' : 'Zobrazit všechny kandidáty' }}
-    <template #iconAfter>
-      <IconComponent
-        :class="[
-          'expand-btn-icon',
-          isExpanded ? 'expand-btn-icon--active' : '',
-        ]"
-        size="medium"
-        :icon="mdiChevronDown"
-        color="rgb(var(--color-neutral-fg))"
-      />
-    </template>
-  </ButtonComponent>
+  <template v-if="props.result.length > maxVisibleCandidates">
+    <ButtonComponent
+      kind="link"
+      size="medium"
+      class="expand-btn"
+      @click="handleExpandClick"
+    >
+      {{ isExpanded ? 'Skrýt kandidáty' : 'Zobrazit všechny kandidáty' }}
+      <template #iconAfter>
+        <IconComponent
+          :class="[
+            'expand-btn-icon',
+            isExpanded ? 'expand-btn-icon--active' : '',
+          ]"
+          size="medium"
+          :icon="mdiChevronDown"
+          color="rgb(var(--color-neutral-fg))"
+        />
+      </template>
+    </ButtonComponent>
+  </template>
 </template>
 
 <style lang="scss" scoped>
