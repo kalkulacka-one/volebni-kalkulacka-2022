@@ -31,6 +31,7 @@ import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
 import ResultCategory from './ResultCategory.vue';
+import BodyText from '../../components/design-system/typography/BodyText.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -188,11 +189,20 @@ const resultsMedicine = calculateRelativeAgreement(
       </template>
       <BottomBarWrapper>
         <StackComponent class="main" spacing="medium">
+          <BodyText class="results-header-note" tag="p" size="medium">
+            <strong>
+              Připravujeme srovnání odpovědí kandidátů, vraťte se brzy!
+            </strong>
+          </BodyText>
           <ResultCategory
             :result="resultsGeneral"
             category="general"
-            :max-visible-candidates="10"
+            :max-visible-candidates="5"
           />
+          <BodyText class="results-footer-note" tag="p" size="medium">
+            Opakovaně jsme oslovili všechny kandidáty, ostatní zatím na otázky
+            neodpověděli.
+          </BodyText>
         </StackComponent>
       </BottomBarWrapper>
     </StickyHeaderLayout>
@@ -200,6 +210,12 @@ const resultsMedicine = calculateRelativeAgreement(
 </template>
 
 <style lang="scss" scoped>
+.results-header-note {
+  text-align: center;
+}
+.results-footer-note {
+  text-align: center;
+}
 .main {
   display: grid;
   grid-template-columns: clamp(32rem, 50vw, 48rem);
