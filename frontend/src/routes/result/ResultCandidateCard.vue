@@ -163,10 +163,10 @@ const toggleClick = () => {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    gap: var(--spacing-extra-small);
+    gap: var(--responsive-spacing-extra-small);
     .party-logo {
-      height: var(--spacing-medium);
-      width: var(--spacing-medium);
+      height: var(--responsive-spacing-medium);
+      width: var(--responsive-spacing-medium);
       object-fit: cover;
     }
   }
@@ -174,13 +174,13 @@ const toggleClick = () => {
 
 .result-question-card {
   display: grid;
-  grid-template-columns: 4.5rem 1fr 4.5rem auto;
+  // grid-template-columns: 4.5rem 1fr 4.5rem auto;
   grid-template-areas:
     'avatar text percentage toggle'
     'avatar progress-bar percentage toggle'
     'avatar secondary-text percentage toggle';
-  column-gap: var(--spacing-medium);
-  row-gap: var(--spacing-small);
+  column-gap: var(--responsive-spacing-medium);
+  row-gap: var(--responsive-spacing-small);
 
   .avatar {
     grid-area: avatar;
@@ -222,16 +222,16 @@ const toggleClick = () => {
       'expansion expansion expansion expansion';
 
     .expansion {
-      margin-top: var(--spacing-medium);
+      margin-top: var(--responsive-spacing-medium);
     }
   }
 
   @media (max-width: 700px) {
     grid-template-columns: 3rem 1fr 4.5rem auto;
-    column-gap: var(--spacing-extra-small);
+    column-gap: var(--responsive-spacing-extra-small);
 
     &--expanded {
-      row-gap: var(--spacing-small);
+      row-gap: var(--responsive-spacing-small);
     }
   }
 

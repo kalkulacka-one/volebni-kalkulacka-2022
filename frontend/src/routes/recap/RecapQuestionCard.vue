@@ -87,6 +87,7 @@ const toggleClick = () => {
         horizontal
         spacing="extra-small"
         spacing-responsive
+        style="flex-wrap: wrap"
       >
         <BodyText size="small">
           {{ currentQuestion }}/{{ questionCount }}
@@ -114,6 +115,7 @@ const toggleClick = () => {
       class="answer"
       horizontal
       :spacing="(isExpanded && 'small') || undefined"
+      spacing-responsive
     >
       <ResponsiveWrapper medium large extra-large huge>
         <ButtonComponent
@@ -217,7 +219,12 @@ const toggleClick = () => {
         />
       </IconButton>
     </div>
-    <StackComponent v-show="isExpanded" class="expansion" spacing="small">
+    <StackComponent
+      v-show="isExpanded"
+      class="expansion"
+      spacing="small"
+      spacing-responsive
+    >
       <BodyText size="medium">{{ question.gist }}</BodyText>
       <CardComponent
         v-if="question.detail"
@@ -233,16 +240,18 @@ const toggleClick = () => {
 <style lang="scss" scoped>
 .recap-question-card {
   display: grid;
-  grid-template-columns: auto 1fr 4.5rem auto;
-  grid-template-rows: 2rem auto;
+  grid-template-columns: min-content 1fr min-content min-content;
+  //grid-template-rows: 2rem auto;
   grid-template-areas:
     'important details answer toggle'
     'important text answer toggle';
-  column-gap: var(--spacing-medium);
+  column-gap: var(--responsive-spacing-medium);
 
   .important {
     grid-area: important;
     align-self: center;
+    margin-right: calc(-0.5 * var(--responsive-spacing-medium));
+    margin-left: calc(-0.5 * var(--responsive-spacing-medium));
   }
 
   .details {
@@ -261,6 +270,8 @@ const toggleClick = () => {
   .toggle {
     grid-area: toggle;
     align-self: center;
+    margin-right: calc(-0.5 * var(--responsive-spacing-medium));
+    margin-left: calc(-0.5 * var(--responsive-spacing-medium));
   }
 
   .expansion {
@@ -278,11 +289,11 @@ const toggleClick = () => {
     .answer {
       display: grid;
       grid-template-columns: auto auto auto;
-      margin-top: var(--spacing-medium);
+      margin-top: var(--responsive-spacing-medium);
     }
 
     .expansion {
-      margin-top: var(--spacing-medium);
+      margin-top: var(--responsive-spacing-medium);
     }
   }
 
@@ -312,7 +323,7 @@ const toggleClick = () => {
         'details details details details details'
         'text text text text text'
         'expansion expansion expansion expansion expansion';
-      row-gap: var(--spacing-small);
+      row-gap: var(--responsive-spacing-small);
 
       .answer,
       .expansion {

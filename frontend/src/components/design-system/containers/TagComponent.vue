@@ -24,6 +24,7 @@ const props = withDefaults(defineProps<Props>(), {
 .tag {
   padding: var(--spacing-tiny) var(--spacing-extra-small);
   border-radius: var(--radius-extra-small);
+  text-align: center;
 
   &--primary {
     background-color: rgb(var(--color-primary-bg));
