@@ -564,7 +564,7 @@ def extract_senatni_question_definitions(
             name=str(row["name"]),
             title=str(row["question"]),
             gist=str(row["description"]),
-            detail=str(row["more info"]),
+            detail=str(row["vysvětlení pojmů"]),
             tags=[str(row["téma"])],
             order=extract_order(row, "order"),
         )
