@@ -126,7 +126,9 @@ export const postResults = async () => {
       }
       return;
     }
+    console.debug(res);
+    const resParsed = (await res.json()) as ResultAddedRest;
     console.debug('POST results success!');
-    return (await res.json()) as ResultAddedRest;
+    return resParsed;
   }
 };
