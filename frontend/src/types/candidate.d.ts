@@ -18,6 +18,10 @@ export interface Candidate {
    */
   name: string;
   /**
+   * Party short name
+   */
+  short_name?: string;
+  /**
    * Candidate type
    */
   type: "party" | "coalition" | "person";

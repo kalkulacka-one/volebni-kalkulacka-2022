@@ -361,6 +361,7 @@
       "name": "Ostravak",
       "type": "party",
       "description": "Ostravak",
+      "short_name": "Ostravak",
       "img_url": "ostravak",
       "contacts": {
         "web": [
@@ -396,6 +397,7 @@
       "name": "Švýcarská demokracie (www.svycarska-demokracie.cz)",
       "type": "party",
       "description": "Švýcarská demokracie (www.svycarska-demokracie.cz)",
+      "short_name": "Švýcarská demokracie",
       "img_url": "švýcar. demokr.",
       "contacts": {
         "web": [
@@ -431,6 +433,7 @@
       "name": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK",
       "type": "party",
       "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK",
+      "short_name": "Sdružení DSZ, NK",
       "img_url": "dsz-nk",
       "contacts": {
         "web": []
@@ -453,6 +456,7 @@
       "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
       "type": "party",
       "description": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+      "short_name": "PŘÍSAHA Roberta Šlachty",
       "img_url": "přísaha",
       "contacts": {
         "web": [
@@ -486,6 +490,7 @@
       "name": "Svoboda a přímá demokracie (SPD)",
       "type": "party",
       "description": "Svoboda a přímá demokracie (SPD)",
+      "short_name": "Svoboda a př. demokracie (SPD)",
       "img_url": "spd",
       "contacts": {
         "web": [
@@ -519,6 +524,7 @@
       "name": "Česká pirátská strana",
       "type": "party",
       "description": "Česká pirátská strana",
+      "short_name": "Česká pirátská strana",
       "img_url": "piráti",
       "contacts": {
         "web": []
@@ -542,6 +548,7 @@
       "name": "STAROSTOVÉ pro OSTRAVU",
       "type": "party",
       "description": "STAROSTOVÉ pro OSTRAVU",
+      "short_name": "STAROSTOVÉ pro OSTRAVU",
       "img_url": "stan-nk",
       "contacts": {
         "web": [
@@ -585,6 +592,7 @@
       "name": "ANO 2011",
       "type": "party",
       "description": "ANO 2011",
+      "short_name": "ANO 2011",
       "img_url": "ano",
       "contacts": {
         "web": []
@@ -608,6 +616,7 @@
       "name": "OSTRAVSKÁ LEVICE — sdružení KSČM a NK: Za VODÁRENSTVÍ VE VLASTNICTVÍ MĚSTA, ne cizinců; Za LEVNOU MHD…",
       "type": "party",
       "description": "OSTRAVSKÁ LEVICE — sdružení KSČM a NK: Za VODÁRENSTVÍ VE VLASTNICTVÍ MĚSTA, ne cizinců; Za LEVNOU MHD…",
+      "short_name": "OSTRAVSKÁ LEVICE",
       "img_url": "ksčm-nk",
       "contacts": {
         "web": []
@@ -631,6 +640,7 @@
       "name": "Česká strana sociálně demokratická a hnutí LEČO - LEPŠÍ A ČISTÁ OSTRAVA",
       "type": "party",
       "description": "Česká strana sociálně demokratická a hnutí LEČO - LEPŠÍ A ČISTÁ OSTRAVA",
+      "short_name": "Koalice ČSSD, LEČO",
       "img_url": "čssd-lečo",
       "contacts": {
         "web": [],
@@ -655,6 +665,7 @@
       "name": "Trikolora a hnutí Zdraví Sport Prosperita",
       "type": "party",
       "description": "Trikolora a hnutí Zdraví Sport Prosperita",
+      "short_name": "PRO Zdraví, Trikolora, NK",
       "img_url": "prozd-trikol-nk",
       "contacts": {
         "web": []
@@ -678,6 +689,7 @@
       "name": "ANO, VRÁTÍME VODU LIDEM, MHD bude zdarma a nezvedneme daně ani poplatky",
       "type": "party",
       "description": "ANO, VRÁTÍME VODU LIDEM, MHD bude zdarma a nezvedneme daně ani poplatky",
+      "short_name": "ANO, VRÁTÍME VODU LIDEM",
       "img_url": "patrioti-nk",
       "contacts": {
         "web": []
@@ -701,6 +713,7 @@
       "name": "Koalice SPOLU (Občanská demokratická strana, KDU-ČSL, TOP 09)",
       "type": "party",
       "description": "Koalice SPOLU (Občanská demokratická strana, KDU-ČSL, TOP 09)",
+      "short_name": "Koalice SPOLU",
       "img_url": "kdu-ods-top 09",
       "contacts": {
         "web": [
@@ -734,6 +747,7 @@
       "name": "Slezská lidem",
       "type": "party",
       "description": "Slezská lidem",
+      "short_name": "Slezská lidem",
       "img_url": "slezská",
       "contacts": {
         "web": []

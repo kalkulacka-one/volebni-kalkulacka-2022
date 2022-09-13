@@ -521,8 +521,8 @@ def extract_senatni_candidates(
             id=candidate_id,
             num=len(candidates) + 1,
             name=name,
-            short_name="",
-            abbreviation="",
+            short_name=name,
+            abbreviation=name,
             description=name,
             secret_code=secret_code,
             important=bool(int(row["important"] or "0")),
@@ -869,6 +869,7 @@ def generate_calculator_dict(election: Election, district: District) -> dict[str
             "name": candidate.name,
             "type": candidate.type.value,
             "description": candidate.description,
+            "short_name": candidate.short_name,
         }  # type: Dict[str, Any]
         add_element(c_dict, "img_url", candidate.logo)
 

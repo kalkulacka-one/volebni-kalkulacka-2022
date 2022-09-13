@@ -14,6 +14,10 @@
       "type": "string",
       "description": "Candidate's name"
     },
+    "short_name": {
+      "type": "string",
+      "description": "Party short name"
+    },
     "type": {
       "type": "string",
       "description": "Candidate type",
