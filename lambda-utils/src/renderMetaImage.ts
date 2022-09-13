@@ -10,7 +10,6 @@ import {Result} from "./utils/dynamoDB";
 
 export const handler: Handler = async (event: APIGatewayEvent): Promise<APIGatewayProxyResult> => {
   try {
-    console.info(event)
     const uuid = event.pathParameters.uuid
 
     const shareData = await new DynamoDB.DocumentClient().get({
@@ -162,7 +161,6 @@ export const handler: Handler = async (event: APIGatewayEvent): Promise<APIGatew
       if (!element) throw new Error('Element #screenshot not found.');
 
       const screenshotBase64 = await element.screenshot({ encoding: 'base64' });
-      console.info(screenshotBase64)
 
       return new Promise((resolve) => {
         resolve({
