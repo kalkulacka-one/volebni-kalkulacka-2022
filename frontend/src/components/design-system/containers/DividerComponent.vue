@@ -4,12 +4,14 @@ import { computed } from 'vue';
 export interface Props {
   weight?: 'light' | 'normal' | 'bold';
   style?: 'solid' | 'dashed' | 'dotted';
+  color?: string;
   vertical?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   weight: 'normal',
   style: 'solid',
+  color: 'rgb(var(--color-neutral-border))',
   vertical: false,
 });
 
@@ -29,8 +31,8 @@ const tag = computed(() => (props.vertical ? 'div' : 'hr'));
 .divider {
   margin: 0;
   height: 0;
-  border-color: rgb(var(--color-neutral-border));
   border-style: v-bind(style);
+  border-color: v-bind(color);
 
   &--weight {
     &-light {
