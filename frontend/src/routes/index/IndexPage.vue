@@ -92,7 +92,9 @@ export default {
                   >K dispozici jsou kalkulačky pro vybraná města.</BodyText
                 >
                 <div class="divider" />
-                <BodyText size="small">Vyplňte si kalkulačku</BodyText>
+                <BodyText size="small"
+                  >Kalkulačku už vyplnilo přes 30 000 lidí.</BodyText
+                >
               </div>
               <ButtonComponent
                 kind="filled"
@@ -124,10 +126,19 @@ export default {
               </div>
               <div class="divider" />
               <BodyText size="small"
-                >Kalkulačku pro senátní volby připravujeme</BodyText
+                >Senátní kalkulačku jsme spustili dnes.</BodyText
               >
-              <ButtonComponent kind="filled" color="neutral" read-only
-                >Připravuje se</ButtonComponent
+              <ButtonComponent
+                color="primary"
+                kind="filled"
+                @click="
+                  router.push({
+                    name: appRoutes.districtSelection.name,
+                    params: { ...route.params, election: 'senatni-2022' },
+                    query: { ...route.query },
+                  })
+                "
+                >Spustit kalkulačku</ButtonComponent
               >
             </div>
           </CardComponent>
