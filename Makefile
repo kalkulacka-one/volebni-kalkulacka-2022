@@ -24,5 +24,5 @@ install-all-backend:
 generate-data:
 	(cd $(BACKEND_DIR); make run-converter run-add-images) && \
 	(cd $(SCHEMAS_DIR); ./validate.sh) && \
-	(cd $(FRONTENT_DIR); npm run parse-schema) && \
+	(cd $(FRONTENT_DIR); npm run parse-data-schema) && \
 	git add $(DATA_DIR);

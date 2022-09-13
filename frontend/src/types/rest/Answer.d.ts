@@ -7,9 +7,11 @@
 
 export type QuestionId = string;
 export type Answer = string;
+export type IsImportant = boolean;
 
 export interface AnswerRest {
   question_id: QuestionId;
   answer: Answer;
+  is_important: IsImportant;
   [k: string]: unknown;
 }
