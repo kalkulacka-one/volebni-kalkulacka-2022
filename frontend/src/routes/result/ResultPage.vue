@@ -37,6 +37,7 @@ import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import ResultCategory from './ResultCategory.vue';
 import ResultShareModal from './ResultShareModal.vue';
 import { getDistrictCode } from '@/common/utils';
+import BodyText from '../../components/design-system/typography/BodyText.vue';
 
 const router = useRouter();
 const route = useRoute();
