@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { onBeforeMount, ref } from 'vue';
+import { onBeforeMount, onMounted, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+
 import {
   mdiShareVariantOutline,
   mdiCloseCircleOutline,
@@ -35,6 +36,7 @@ import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
 import ResultCategory from './ResultCategory.vue';
+import ModalComponent from '../../components/design-system/other/ModalComponent.vue';
 import BodyText from '../../components/design-system/typography/BodyText.vue';
 import { getDistrictCode } from '@/common/utils';
 
@@ -75,13 +77,12 @@ const handleShowComparsionClick = () => {
 
 const showShareModal = ref(false);
 const handleShareClick = () => {
-  showShareModal.value = true;
+  isShareModalOpen.value = true;
 };
 
 const handleCloseShareModal = () => {
-  showShareModal.value = false;
+  isShareModalOpen.value = false;
 };
-
 onBeforeMount(async () => {
   await electionStore.saveResults();
   console.debug(`Results saved: ${electionStore.resultsUuid}`);
@@ -91,19 +92,6 @@ console.debug(encodeResults(electionStore.answers));
 const resultsGeneral = calculateRelativeAgreement(
   electionStore.calculator?.answers as CandidateAnswer[],
   electionStore.answers
-);
-
-const resultsEcology = calculateRelativeAgreement(
-  electionStore.calculator?.answers as CandidateAnswer[],
-  electionStore.answers.filter((x, i) =>
-    electionStore.calculator?.questions[i].tags?.includes('tag01')
-  )
-);
-const resultsMedicine = calculateRelativeAgreement(
-  electionStore.calculator?.answers as CandidateAnswer[],
-  electionStore.answers.filter((x, i) =>
-    electionStore.calculator?.questions[i].tags?.includes('tag02')
-  )
 );
 </script>
 <template>
@@ -162,7 +150,6 @@ const resultsMedicine = calculateRelativeAgreement(
             </template>
             <TitleText tag="h2" size="medium">Moje shoda</TitleText>
             <template #after>
-              <!--
               <ButtonComponent
                 kind="link"
                 color="primary"
@@ -173,7 +160,6 @@ const resultsMedicine = calculateRelativeAgreement(
                 </template>
                 Sdílet
               </ButtonComponent>
-              -->
             </template>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
@@ -186,7 +172,6 @@ const resultsMedicine = calculateRelativeAgreement(
             </template>
             <TitleText tag="h2" size="large">Moje shoda</TitleText>
             <template #after>
-              <!--
               <ButtonComponent
                 kind="link"
                 color="primary"
@@ -246,17 +231,12 @@ const resultsMedicine = calculateRelativeAgreement(
       </BottomBarWrapper>
     </StickyHeaderLayout>
   </BackgroundComponent>
-  <ModalComponent :close-modal-callback="handleCloseShareModal">
-    <ShareNetwork
-      network="facebook"
-      :url="generateSocialLink('facebook')"
-      title="Say hi to Vite! A brand new, extremely fast development setup for Vue."
-      description="This week, I’d like to introduce you to 'Vite', which means 'Fast'. It’s a brand new development setup created by Evan You."
-      quote="The hot reload is so fast it\'s near instant. - Evan You"
-      hashtags="vuejs,vite"
-    >
-      Share on Facebook
-    </ShareNetwork>
+  <ModalComponent
+    :close-modal-callback="handleCloseShareModal"
+    :is-modal-open="isShareModalOpen"
+  >
+    <template #title>Share</template>
+    <template #content> </template>
   </ModalComponent>
 </template>
 
