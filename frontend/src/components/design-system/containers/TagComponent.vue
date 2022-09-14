@@ -3,7 +3,7 @@ import { computed } from 'vue';
 import LabelText from '@/components/design-system/typography/LabelText.vue';
 
 export interface Props {
-  kind: 'neutral' | 'primary' | 'secondary';
+  kind?: 'neutral' | 'primary' | 'secondary';
 }
 const classes = computed(() => [`tag--${props.kind}`]);
 
