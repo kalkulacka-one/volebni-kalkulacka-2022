@@ -96,7 +96,10 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
         background-color="rgb(var(--color-primary-bg))"
       >
         <BodyText size="small" :style="{ 'text-align': 'center' }">
-          <strong>Moje odpovědi</strong>
+          <strong>
+            Moje <br />
+            odpovědi
+          </strong>
         </BodyText>
       </FilledCircle>
     </div>
