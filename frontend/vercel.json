@@ -1,7 +1,5 @@
 {
   "buildCommand": "npm run build:vercel",
-  "headers": [],
-  "redirects": [],
   "rewrites": [
     {
       "source": "/api/:path*",
