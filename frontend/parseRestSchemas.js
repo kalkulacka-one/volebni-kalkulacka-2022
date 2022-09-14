@@ -6,7 +6,7 @@ const path = require('path');
 // compile from file
 
 const BASE_PATH = './src/types/rest';
-const FILE_PATH = './public/dev/volebni-kalkulacka-005-openapi.json';
+const FILE_PATH = './public/dev/volebni-kalkulacka-006-openapi.json';
 const REPLACE_PATTERN = '#/components/schemas/';
 const SUFFIX = '.schema.json';
 
