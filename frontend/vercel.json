@@ -1,5 +1,5 @@
 {
-  "buildCommand": "run-p type-check vite build --mode vercel",
+  "buildCommand": "npm run build:vercel",
   "headers": [],
   "redirects": [],
   "rewrites": [

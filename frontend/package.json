@@ -4,11 +4,13 @@
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
+    "build:vercel": "run-p type-check build-vercel",
     "preview": "vite preview --port 4173",
     "test:unit": "vitest --environment jsdom",
     "test:e2e": "start-server-and-test preview http://localhost:4173/ 'cypress open --e2e'",
     "test:e2e:ci": "start-server-and-test preview http://localhost:4173/ 'cypress run --e2e'",
     "build-only": "vite build",
+    "build-vercel": "vite build --mode vercel",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
