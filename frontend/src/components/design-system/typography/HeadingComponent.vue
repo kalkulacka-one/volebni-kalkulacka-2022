@@ -3,9 +3,9 @@ import HeadlineText from '@/components/design-system/typography/HeadlineText.vue
 import TitleText from '@/components/design-system/typography/TitleText.vue';
 
 export interface Props {
-  tag: 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-  kind: 'title' | 'headline';
-  size: 'extra-small' | 'small' | 'medium' | 'large';
+  tag?: 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  kind?: 'title' | 'headline';
+  size?: 'extra-small' | 'small' | 'medium' | 'large';
 }
 
 const props = withDefaults(defineProps<Props>(), {
