@@ -7,7 +7,7 @@
         { "key": "Access-Control-Allow-Origin", "value": "*" },
         {
           "key": "Access-Control-Allow-Methods",
-          "value": "GET,OPTIONS,PATCH,DELETE,POST,PUT"
+          "value": "*"
         },
         {
           "key": "Access-Control-Allow-Headers",
@@ -18,16 +18,20 @@
   ],
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/api/results",
+      "destination": "https://www.volebnikalkulacka.cz/api/results"
+    },
+    {
+      "source": "/api/results/",
+      "destination": "https://www.volebnikalkulacka.cz/api/results/"
+    },
+    {
+      "source": "/volby/(.*)",
       "destination": "/index.html"
     },
     {
-      "source": "/api/:path*",
-      "destination": "https://volebnikalkulacka.cz/api/:path*"
-    },
-    {
-      "source": "/api/:path*/",
-      "destination": "https://volebnikalkulacka.cz/api/:path*/"
+      "source": "/share/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
