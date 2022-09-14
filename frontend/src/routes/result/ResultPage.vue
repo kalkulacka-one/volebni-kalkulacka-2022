@@ -215,11 +215,6 @@ const resultsMedicine = calculateRelativeAgreement(
       </template>
       <BottomBarWrapper>
         <StackComponent class="main" spacing="medium">
-          <BodyText class="results-header-note" tag="p" size="medium">
-            <strong>
-              Připravujeme srovnání odpovědí kandidátů, vraťte se brzy!
-            </strong>
-          </BodyText>
           <ResultCategory
             :result="resultsGeneral"
             category="general"
