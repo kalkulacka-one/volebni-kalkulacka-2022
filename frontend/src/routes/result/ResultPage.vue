@@ -179,7 +179,6 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                 </template>
                 Sdílet
               </ButtonComponent>
-              -->
               <ButtonComponent
                 class="desktop"
                 kind="filled"
