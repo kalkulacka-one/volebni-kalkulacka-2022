@@ -15,10 +15,15 @@ const esbuildVercel: ESBuildOptions = {
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
-  const esbuildConf = mode === 'vercel' ? esbuildVercel : esbuildProd;
+  const isVercel = process.env.VERCEL === '1';
+  const esbuildConf = isVercel ? esbuildVercel : esbuildProd;
+  console.log(`Deploying on Vercel: ${isVercel}`);
   return {
     plugins: [vue({ include: [/\.vue$/, /\.md$/] }), md()],
     esbuild: esbuildConf,
+    build: {
+      sourcemap: mode !== 'production' || isVercel,
+    },
     server: {
       host: '0.0.0.0',
       port: 5201,

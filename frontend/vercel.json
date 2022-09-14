@@ -1,5 +1,10 @@
 {
-  "buildCommand": "npm run build:vercel",
+  "redirects": [
+    {
+      "source": "/volby/(.*)",
+      "destination": "/index.html"
+    }
+  ],
   "rewrites": [
     {
       "source": "/api/:path*",
@@ -8,10 +13,6 @@
     {
       "source": "/api/:path*/",
       "destination": "https://volebnikalkulacka.cz/api/:path*/"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
     }
   ]
 }
