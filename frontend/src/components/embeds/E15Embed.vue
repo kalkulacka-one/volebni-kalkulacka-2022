@@ -3,7 +3,7 @@ import ThemeProvider from '@/components/ThemeProvider.vue';
 </script>
 
 <template>
-  <ThemeProvider theme="blesk">
+  <ThemeProvider theme="e15">
     <slot />
   </ThemeProvider>
 </template>
