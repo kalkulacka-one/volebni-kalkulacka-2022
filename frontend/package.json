@@ -14,7 +14,8 @@
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
-    "parse-schema": "cp ../data ./public/dev -r && node ./parseSchemas.js"
+    "parse-data-schema": "cp ../data ./public/dev -r && node ./parseSchemas.js",
+    "parse-rest-schema": "node ./parseRestSchemas.js"
   },
   "dependencies": {
     "@mdi/js": "^7.0.96",

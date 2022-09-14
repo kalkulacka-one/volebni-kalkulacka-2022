@@ -7,6 +7,7 @@
 
 export type QuestionId = string;
 export type Answer = string;
+export type IsImportant = boolean;
 export type Answers = AnswerRest[];
 export type CandidateId = string;
 export type Name = string;
@@ -45,6 +46,7 @@ export interface ResultInRest {
 export interface AnswerRest {
   question_id: QuestionId;
   answer: Answer;
+  is_important: IsImportant;
   [k: string]: unknown;
 }
 export interface MatchRest {

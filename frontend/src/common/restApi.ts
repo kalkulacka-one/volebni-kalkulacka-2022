@@ -1,4 +1,8 @@
-import { useElectionStore } from '@/stores/electionStore';
+import {
+  useElectionStore,
+  convertAnswerToStr,
+  convertStrToAnswer,
+} from '@/stores/electionStore';
 import type { AnswerRest } from '@/types/rest/Answer';
 import type { CalculatorRest } from '@/types/rest/Calculator';
 import type { ElectionRest } from '@/types/rest/Election';
@@ -38,11 +42,10 @@ export const getResults = async (resultUuid: string) => {
     result.calculator.district_code
   );
   electionStore.answers = result.answers.map((x) => {
-    const answer = x.answer.split('|');
     return {
       id: x.question_id,
-      flag: answer[0] === '1',
-      answer: parseInt(answer[1]),
+      flag: x.is_important,
+      answer: convertStrToAnswer(x.answer),
     };
   });
 };
@@ -61,7 +64,8 @@ export const postResults = async () => {
     const answers: AnswerRest[] = electionStore.answers.map((x) => {
       return {
         question_id: x.id,
-        answer: `${x.flag ? 1 : 0}|${x.answer}`,
+        answer: convertAnswerToStr(x.answer),
+        is_important: x.flag,
       };
     });
     const ra = calculateRelativeAgreement(

@@ -42,6 +42,7 @@ def get_table():
 class Answer(BaseModel):
     question_id: str
     answer: str
+    is_important: bool
 
 
 class Candidate(BaseModel):

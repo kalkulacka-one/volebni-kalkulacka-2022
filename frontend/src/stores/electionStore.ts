@@ -12,6 +12,30 @@ export enum UserAnswerEnum {
   skip = 3,
 }
 
+export const convertAnswerToStr = (answer: UserAnswerEnum): string => {
+  switch (answer) {
+    case UserAnswerEnum.yes:
+      return 'yes';
+    case UserAnswerEnum.no:
+      return 'no';
+    case UserAnswerEnum.skip:
+      return 'dont_know';
+    default:
+      return 'dont_know';
+  }
+};
+
+export const convertStrToAnswer = (answer: string): UserAnswerEnum => {
+  switch (answer) {
+    case 'yes':
+      return UserAnswerEnum.yes;
+    case 'no':
+      return UserAnswerEnum.no;
+    default:
+      return UserAnswerEnum.skip;
+  }
+};
+
 export interface UserAnswer {
   id: string;
   answer: UserAnswerEnum;

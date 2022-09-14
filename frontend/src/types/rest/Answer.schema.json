@@ -1,9 +1,10 @@
 {
   "title": "AnswerRest",
-  "required": ["question_id", "answer"],
+  "required": ["question_id", "answer", "is_important"],
   "type": "object",
   "properties": {
     "question_id": { "title": "Question Id", "type": "string" },
-    "answer": { "title": "Answer", "type": "string" }
+    "answer": { "title": "Answer", "type": "string" },
+    "is_important": { "title": "Is Important", "type": "boolean" }
   }
 }
