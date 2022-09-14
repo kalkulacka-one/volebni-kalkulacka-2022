@@ -1,6 +1,18 @@
 {
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "status": 200, "dest": "/index.html" }
+  "redirects": [
+    {
+      "source": "/volby/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://volebnikalkulacka.cz/api/:path*"
+    },
+    {
+      "source": "/api/:path*/",
+      "destination": "https://volebnikalkulacka.cz/api/:path*/"
+    }
   ]
 }

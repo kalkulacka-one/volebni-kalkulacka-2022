@@ -12,15 +12,12 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
-origins = [
-    "https://https://kalkulacka.ceskodigital.net",
-    "http://localhost:5201",
-    "http://localhost:8080",
-]
+origin_regex = r"https://volebni-kalkulacka-2022-git-.*\.vercel\.app"
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=[],
+    allow_origin_regex=origin_regex,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
