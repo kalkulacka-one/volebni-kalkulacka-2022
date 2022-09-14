@@ -75,5 +75,6 @@ const textSize = computed(() => {
 .text {
   color: rgb(var(--color-neutral-fg-inverse));
   font-weight: bold;
+  word-break: break-all;
 }
 </style>

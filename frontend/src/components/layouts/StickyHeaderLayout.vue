@@ -26,12 +26,17 @@ import RootLayout from '@/components/layouts/RootLayout.vue';
 
   .header {
     grid-area: header;
+    max-width: 100vw;
+    position: sticky;
+    left: 0;
   }
 
   .sticky-header {
     grid-area: sticky-header;
+    max-width: 100vw;
     position: sticky;
     top: 0;
+    left: 0;
     z-index: 100;
   }
 
