@@ -169,27 +169,29 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
             </template>
             <TitleText tag="h2" size="large">Moje shoda</TitleText>
             <template #after>
-              <ButtonComponent
-                kind="link"
-                color="primary"
-                @click="handleShareClick"
-              >
-                <template #icon>
-                  <IconComponent :icon="mdiShareVariantOutline" />
-                </template>
-                Sdílet
-              </ButtonComponent>
-              <ButtonComponent
-                class="desktop"
-                kind="filled"
-                color="primary"
-                @click="handleShowComparsionClick"
-              >
-                Porovnat odpovědi
-                <template #iconAfter>
-                  <IconComponent :icon="mdiArrowRight" />
-                </template>
-              </ButtonComponent>
+              <div class="navbar-btn-wrapper">
+                <ButtonComponent
+                  kind="link"
+                  color="primary"
+                  @click="handleShareClick"
+                >
+                  <template #icon>
+                    <IconComponent :icon="mdiShareVariantOutline" />
+                  </template>
+                  Sdílet
+                </ButtonComponent>
+                <ButtonComponent
+                  class="desktop"
+                  kind="filled"
+                  color="primary"
+                  @click="handleShowComparsionClick"
+                >
+                  Porovnat odpovědi
+                  <template #iconAfter>
+                    <IconComponent :icon="mdiArrowRight" />
+                  </template>
+                </ButtonComponent>
+              </div>
             </template>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
@@ -234,6 +236,11 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
 </template>
 
 <style lang="scss" scoped>
+.navbar-btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-small);
+}
 .results-header-note {
   text-align: center;
 }
