@@ -116,6 +116,7 @@ export const postResults = async () => {
         'Content-Type': 'application/json',
         // 'Content-Type': 'application/x-www-form-urlencoded',
       },
+      mode: 'no-cors',
       body: JSON.stringify(data),
     });
     if (!res.ok) {
