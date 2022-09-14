@@ -1,6 +1,19 @@
 {
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "status": 200, "dest": "/index.html" }
+  "buildCommand": "run-p type-check vite build --mode vercel",
+  "headers": [],
+  "redirects": [],
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://volebnikalkulacka.cz/api/:path*"
+    },
+    {
+      "source": "/api/:path*/",
+      "destination": "https://volebnikalkulacka.cz/api/:path*/"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
