@@ -83,4 +83,4 @@ jobs:
           aws s3 sync --sse --delete . s3://${{ env.BUCKET }}
       - name: Invalidate CloudFront cache
         run: |
-          aws cloudfront create-invalidation --distribution-id ${{ env.CLOUDFRONT_DEPLOYMENT_ID }} --paths "/*"
+          aws cloudfront create-invalidation --distribution-id ${{ env.CLOUDFRONT_DEPLOYMENT_ID }} --paths "/assets/*" "/index.html" "/images/*" "favicon.ico"

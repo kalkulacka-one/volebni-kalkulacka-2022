@@ -1,26 +1,25 @@
 import { DynamoDB } from "aws-sdk";
 
-import {
-  APIGatewayEvent,
-  Handler,
-  Context,
-  APIGatewayProxyResult,
-} from "aws-lambda";
-import {Result} from "./utils/dynamoDB";
+import { APIGatewayEvent, Handler, Context, APIGatewayProxyResult } from "aws-lambda";
+import { Result } from "./utils/dynamoDB";
 
 export const handler: Handler = async (event: APIGatewayEvent): Promise<APIGatewayProxyResult> => {
   try {
-    const uuid = event.pathParameters.uuid
+    const uuid = event.pathParameters.uuid;
 
-    const shareData = await new DynamoDB.DocumentClient().get({
+    const shareData = await new DynamoDB.DocumentClient()
+      .get({
         TableName: "Results",
         Key: { result_id: uuid },
-      }).promise();
+      })
+      .promise();
 
-    const result = shareData.Item.result as Result
-    const topMatch = result.matches[0]
+    const result = shareData.Item.result as Result;
+    const topMatch = result.matches[0];
 
-    const chromium = await require('@sparticuz/chrome-aws-lambda');
+    const elections = result.calculator.election.id === "senatni-2022" ? "senate" : "muni";
+
+    const chromium = await require("@sparticuz/chrome-aws-lambda");
     const browser = await chromium.puppeteer.launch({
       args: chromium.args,
       defaultViewport: chromium.defaultViewport,
@@ -132,7 +131,7 @@ export const handler: Handler = async (event: APIGatewayEvent): Promise<APIGatew
       }
     </style>
   </head>
-  <body class="senate" id="screenshot">
+  <body class="${elections}" id="screenshot">
     <h1 class="senate">Největší shodu mám s kandidátem</h1>
     <h1 class="muni">Největší shodu mám se stranou</h1>
     <div class="template">
@@ -147,29 +146,29 @@ export const handler: Handler = async (event: APIGatewayEvent): Promise<APIGatew
     <div class="footer">
       Volby <span class="senate">Senát</span
       ><span class="muni">Komunál</span> 2022
-      <span class="where">${result.calculator.election.name}</span><br />
+      <span class="where">${result.calculator.name}</span><br />
       23.—24. 9. 2022
     </div>
   </body>
 </html>`;
 
     try {
-      await page.goto('about:blank');
+      await page.goto("about:blank");
       await page.setContent(html);
 
-      const element = await page.$('#screenshot');
-      if (!element) throw new Error('Element #screenshot not found.');
+      const element = await page.$("#screenshot");
+      if (!element) throw new Error("Element #screenshot not found.");
 
-      const screenshotBase64 = await element.screenshot({ encoding: 'base64' });
+      const screenshotBase64 = await element.screenshot({ encoding: "base64" });
 
       return new Promise((resolve) => {
         resolve({
           statusCode: 200,
           headers: {
-            'Content-Type': 'image/png',
-            'Content-Length': screenshotBase64.length,
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Credential': true,
+            "Content-Type": "image/png",
+            "Content-Length": screenshotBase64.length,
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Credential": true,
           },
           body: screenshotBase64,
           isBase64Encoded: true,
@@ -193,9 +192,9 @@ export const handler: Handler = async (event: APIGatewayEvent): Promise<APIGatew
       resolve({
         statusCode: 404,
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-        body: 'Image not found.',
+        body: "Image not found.",
       });
     });
   }

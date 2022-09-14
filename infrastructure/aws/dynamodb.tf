@@ -11,9 +11,4 @@ resource "aws_dynamodb_table" "dynamodb_table_results" {
   server_side_encryption {
     enabled = true
   }
-
-  ttl {
-    attribute_name = "TimeToExist"
-    enabled        = false
-  }
 }

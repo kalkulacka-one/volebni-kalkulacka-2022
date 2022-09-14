@@ -6,6 +6,42 @@ data "aws_cloudfront_cache_policy" "managed-cache-disabled" {
   name = "Managed-CachingDisabled"
 }
 
+data "aws_cloudfront_cache_policy" "managed-cache-optimal" {
+  name = "Managed-CachingOptimized"
+}
+
+resource "aws_cloudfront_cache_policy" "long-cache" {
+  name        = "Long-Cache"
+  default_ttl = 2630000
+  max_ttl     = 2630000
+  min_ttl     = 2630000
+
+  parameters_in_cache_key_and_forwarded_to_origin {
+    cookies_config {
+      cookie_behavior = "none"
+    }
+    headers_config {
+      header_behavior = "none"
+    }
+    query_strings_config {
+      query_string_behavior = "none"
+    }
+  }
+}
+
+resource "aws_cloudfront_origin_request_policy" "query-cookie" {
+  name = "query-cookie"
+  cookies_config {
+    cookie_behavior = "all"
+  }
+  headers_config {
+    header_behavior = "none"
+  }
+  query_strings_config {
+    query_string_behavior = "all"
+  }
+}
+
 resource "aws_cloudfront_distribution" "distribution" {
   origin {
     domain_name = aws_s3_bucket.frontend.bucket_regional_domain_name
@@ -70,17 +106,8 @@ resource "aws_cloudfront_distribution" "distribution" {
       "GET",
       "HEAD"
     ]
-    target_origin_id = "S3-${aws_s3_bucket.frontend.id}"
-
-    forwarded_values {
-      query_string = false
-      cookies {
-        forward = "none"
-      }
-    }
-    min_ttl                = 0
-    default_ttl            = 86400
-    max_ttl                = 86400
+    target_origin_id       = "S3-${aws_s3_bucket.frontend.id}"
+    cache_policy_id        = data.aws_cloudfront_cache_policy.managed-cache-optimal.id
     compress               = true
     viewer_protocol_policy = "redirect-to-https"
   }
@@ -94,19 +121,8 @@ resource "aws_cloudfront_distribution" "distribution" {
       "GET",
       "HEAD"
     ]
-
-    target_origin_id = "backend"
-
-    forwarded_values {
-      query_string = false
-      cookies {
-        forward = "none"
-      }
-    }
-
-    min_ttl                = 0
-    default_ttl            = 86400
-    max_ttl                = 86400
+    target_origin_id       = "backend"
+    cache_policy_id        = aws_cloudfront_cache_policy.long-cache.id
     compress               = true
     viewer_protocol_policy = "redirect-to-https"
     path_pattern           = "/image/*"
@@ -121,21 +137,11 @@ resource "aws_cloudfront_distribution" "distribution" {
       "GET",
       "HEAD"
     ]
-
-    target_origin_id = "backend"
-
-    forwarded_values {
-      query_string = false
-      cookies {
-        forward = "none"
-      }
-    }
-    min_ttl                = 0
-    default_ttl            = 86400
-    max_ttl                = 86400
+    target_origin_id       = "backend"
+    cache_policy_id        = data.aws_cloudfront_cache_policy.managed-cache-optimal.id
     compress               = true
     viewer_protocol_policy = "redirect-to-https"
-    path_pattern           = "/test/*"
+    path_pattern           = "/share/*"
   }
 
   ordered_cache_behavior {
@@ -147,9 +153,8 @@ resource "aws_cloudfront_distribution" "distribution" {
       "GET",
       "HEAD"
     ]
-    path_pattern     = "/js/script.outbound-links.js"
-    target_origin_id = "plausible.io"
-
+    path_pattern           = "/js/script.outbound-links.js"
+    target_origin_id       = "plausible.io"
     cache_policy_id        = data.aws_cloudfront_cache_policy.managed-cache-disabled.id
     compress               = true
     viewer_protocol_policy = "redirect-to-https"
@@ -163,9 +168,8 @@ resource "aws_cloudfront_distribution" "distribution" {
       "GET",
       "HEAD"
     ]
-    path_pattern     = "/api/event"
-    target_origin_id = "plausible.io"
-
+    path_pattern           = "/api/event"
+    target_origin_id       = "plausible.io"
     cache_policy_id        = data.aws_cloudfront_cache_policy.managed-cache-disabled.id
     compress               = true
     viewer_protocol_policy = "redirect-to-https"
@@ -181,17 +185,8 @@ resource "aws_cloudfront_distribution" "distribution" {
       "GET",
       "HEAD"
     ]
-    target_origin_id = "S3-${aws_s3_bucket.data.id}"
-
-    forwarded_values {
-      query_string = false
-      cookies {
-        forward = "none"
-      }
-    }
-    min_ttl                = 0
-    default_ttl            = 86400
-    max_ttl                = 86400
+    target_origin_id       = "S3-${aws_s3_bucket.data.id}"
+    cache_policy_id        = data.aws_cloudfront_cache_policy.managed-cache-optimal.id
     compress               = true
     viewer_protocol_policy = "redirect-to-https"
   }
@@ -204,19 +199,12 @@ resource "aws_cloudfront_distribution" "distribution" {
       "GET",
       "HEAD"
     ]
-    forwarded_values {
-      query_string = true
-      cookies {
-        forward = "none"
-      }
-    }
-    path_pattern           = "/api*"
-    target_origin_id       = "backend"
-    min_ttl                = 0
-    default_ttl            = 0
-    max_ttl                = 0
-    compress               = true
-    viewer_protocol_policy = "redirect-to-https"
+    path_pattern             = "/api*"
+    target_origin_id         = "backend"
+    origin_request_policy_id = aws_cloudfront_origin_request_policy.query-cookie.id
+    cache_policy_id          = data.aws_cloudfront_cache_policy.managed-cache-disabled.id
+    compress                 = true
+    viewer_protocol_policy   = "redirect-to-https"
   }
 
   price_class = "PriceClass_All"

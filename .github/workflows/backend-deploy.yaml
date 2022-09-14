@@ -1,4 +1,4 @@
-name: "Build backend Docker and deploy to ECR"
+name: "Build backend Docker and deploy to Lambdas"
 on:
   workflow_dispatch:
   push:
