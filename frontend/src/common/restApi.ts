@@ -125,10 +125,16 @@ export const postResults = async () => {
         console.error(res.body);
       }
       return;
+    } else {
+      try {
+        const resParsed = (await res.json()) as ResultAddedRest;
+        console.debug('POST results success!');
+        return resParsed;
+      } catch (error) {
+        console.debug(res);
+        res.text().then((text) => console.debug(text));
+        throw error;
+      }
     }
-    console.debug(res);
-    const resParsed = (await res.json()) as ResultAddedRest;
-    console.debug('POST results success!');
-    return resParsed;
   }
 };

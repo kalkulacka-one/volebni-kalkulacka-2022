@@ -38,6 +38,7 @@ import ResultCategory from './ResultCategory.vue';
 import ResultShareModal from './ResultShareModal.vue';
 import { getDistrictCode } from '@/common/utils';
 import BodyText from '../../components/design-system/typography/BodyText.vue';
+import ErrorModal from '../../components/ErrorModal.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -147,7 +148,6 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
             <TitleText tag="h2" size="medium">Moje shoda</TitleText>
             <template #after>
               <ButtonComponent
-                v-if="electionStore.resultsUuid"
                 kind="link"
                 color="primary"
                 @click="handleShareClick"
@@ -229,6 +229,9 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
     </StickyHeaderLayout>
   </BackgroundComponent>
   <ResultShareModal v-if="electionStore.resultsUuid" ref="shareModal" />
+  <ErrorModal v-else ref="shareModal" title="Něco se pokazilo">
+    Bohužel momentálně nelze sdílet, zkuste to prosím později.
+  </ErrorModal>
 </template>
 
 <style lang="scss" scoped>
