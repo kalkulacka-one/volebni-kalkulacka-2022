@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -283,10 +283,10 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-563889-q-36",
-      "name": "Menstruační pomůcky –vydávání zdarma",
-      "title": "Místní úřady mají mít zákonnou povinnost poskytovat vložky či tampony bezplatně každému, kdo je potřebuje.",
-      "gist": "Některé ženy, např. samoživitelky, navíc s dospívajícími dcerami, pro svůj nízký příjem nemají přístup k adekvátním menstruačním pomůckám. Zastánci argumentují rovností a důstojností ve společnosti a tím, že toaletní papír či mýdlo jsou ve veřejných budovách běžně dostupné. Odpůrci to považují za finančně nákladné či nespravedlivé vůči lidem, kteří menstruaci nemají.",
+      "id": "komunalni-2022-563889-q-10",
+      "name": "Jmenovité výsledky hlasování zastupitelstva",
+      "title": "Hlasování členů zastupitelstva města se má zveřejňovat jmenovitě.",
+      "gist": "Podle zastánců je pro veřejnou kontrolu důležité vidět, jak přesně kdo v zastupitelstvu města hlasuje. Kritici to považují za zbytečné.",
       "detail": "",
       "tags": []
     },
@@ -887,10 +887,10 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-563889-a-401265-36",
+      "id": "komunalni-2022-563889-a-401265-10",
       "candidate_id": "komunalni-2022-563889-c-401265",
-      "question_id": "komunalni-2022-563889-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-563889-q-10",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-563889-a-401265-37",
@@ -1147,10 +1147,10 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-563889-a-323656-36",
+      "id": "komunalni-2022-563889-a-323656-10",
       "candidate_id": "komunalni-2022-563889-c-323656",
-      "question_id": "komunalni-2022-563889-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-563889-q-10",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-563889-a-323656-37",
@@ -1402,10 +1402,10 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-563889-a-690485-36",
+      "id": "komunalni-2022-563889-a-690485-10",
       "candidate_id": "komunalni-2022-563889-c-690485",
-      "question_id": "komunalni-2022-563889-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-563889-q-10",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-563889-a-690485-37",
@@ -1662,9 +1662,9 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-563889-a-184949-36",
+      "id": "komunalni-2022-563889-a-184949-10",
       "candidate_id": "komunalni-2022-563889-c-184949",
-      "question_id": "komunalni-2022-563889-q-36",
+      "question_id": "komunalni-2022-563889-q-10",
       "answer": "yes"
     },
     {
@@ -1934,10 +1934,10 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-563889-a-843854-36",
+      "id": "komunalni-2022-563889-a-843854-10",
       "candidate_id": "komunalni-2022-563889-c-843854",
-      "question_id": "komunalni-2022-563889-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-563889-q-10",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-563889-a-843854-37",
@@ -2198,10 +2198,10 @@
       "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-563889-a-282146-36",
+      "id": "komunalni-2022-563889-a-282146-10",
       "candidate_id": "komunalni-2022-563889-c-282146",
-      "question_id": "komunalni-2022-563889-q-36",
-      "answer": "dont_know"
+      "question_id": "komunalni-2022-563889-q-10",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-563889-a-282146-37",
@@ -2477,11 +2477,11 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-563889-a-188908-36",
+      "id": "komunalni-2022-563889-a-188908-10",
       "candidate_id": "komunalni-2022-563889-c-188908",
-      "question_id": "komunalni-2022-563889-q-36",
-      "answer": "dont_know",
-      "comment": "Nejsme si jisti, že je tuto problematiku nutné řešit zákonem."
+      "question_id": "komunalni-2022-563889-q-10",
+      "answer": "yes",
+      "comment": "Takto to již dnes funguje a rozhodně nechceme nic měnit."
     },
     {
       "id": "komunalni-2022-563889-a-188908-37",
@@ -2755,10 +2755,11 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-563889-a-434921-36",
+      "id": "komunalni-2022-563889-a-434921-10",
       "candidate_id": "komunalni-2022-563889-c-434921",
-      "question_id": "komunalni-2022-563889-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-563889-q-10",
+      "answer": "yes",
+      "comment": "Již nyní je transparentní "
     },
     {
       "id": "komunalni-2022-563889-a-434921-37",
@@ -3024,10 +3025,11 @@
       "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-563889-a-230742-36",
+      "id": "komunalni-2022-563889-a-230742-10",
       "candidate_id": "komunalni-2022-563889-c-230742",
-      "question_id": "komunalni-2022-563889-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-563889-q-10",
+      "answer": "yes",
+      "comment": "V Liberci je zveřejňováno jmenovitě."
     },
     {
       "id": "komunalni-2022-563889-a-230742-37",
@@ -3278,10 +3280,10 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-563889-a-709264-36",
+      "id": "komunalni-2022-563889-a-709264-10",
       "candidate_id": "komunalni-2022-563889-c-709264",
-      "question_id": "komunalni-2022-563889-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-563889-q-10",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-563889-a-709264-37",

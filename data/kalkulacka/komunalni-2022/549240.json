@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -107,10 +107,10 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-549240-q-36",
-      "name": "Menstruační pomůcky –vydávání zdarma",
-      "title": "Místní úřady mají mít zákonnou povinnost poskytovat vložky či tampony bezplatně každému, kdo je potřebuje.",
-      "gist": "Některé ženy, např. samoživitelky, navíc s dospívajícími dcerami, pro svůj nízký příjem nemají přístup k adekvátním menstruačním pomůckám. Zastánci argumentují rovností a důstojností ve společnosti a tím, že toaletní papír či mýdlo jsou ve veřejných budovách běžně dostupné. Odpůrci to považují za finančně nákladné či nespravedlivé vůči lidem, kteří menstruaci nemají.",
+      "id": "komunalni-2022-549240-q-8",
+      "name": "MHD zdarma",
+      "title": "Měla by být městská hromadná doprava pro všechny rezidenty zdarma?",
+      "gist": "Zastánci zrušení jízdného argumentují zlepšením životního prostředí, zklidněním dopravy i úsporami za tisk lístků nebo vedení agendy s vymáháním dlužného jízdného. Odpůrci tvrdí, že se jedná o nehospodárné nakládání s veřejnými prostředky. Podle jiných by to příliš zatížilo městský rozpočet.",
       "detail": "",
       "tags": []
     },
@@ -563,7 +563,8 @@
             "web": []
           }
         }
-      ]
+      ],
+      "motto": "Jsme strana s nejvyšším podílem žen, které v zastupitelstvu schází."
     },
     {
       "id": "komunalni-2022-549240-c-149444",
@@ -687,10 +688,11 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-424512-36",
+      "id": "komunalni-2022-549240-a-424512-8",
       "candidate_id": "komunalni-2022-549240-c-424512",
-      "question_id": "komunalni-2022-549240-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-549240-q-8",
+      "answer": "no",
+      "comment": "Pro seniory a studenty je cena za roční jízdenku 100 Kč, je to víceméně symbolická suma. "
     },
     {
       "id": "komunalni-2022-549240-a-424512-35",
@@ -954,9 +956,9 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-746441-36",
+      "id": "komunalni-2022-549240-a-746441-8",
       "candidate_id": "komunalni-2022-549240-c-746441",
-      "question_id": "komunalni-2022-549240-q-36",
+      "question_id": "komunalni-2022-549240-q-8",
       "answer": "no"
     },
     {
@@ -1211,9 +1213,9 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-332281-36",
+      "id": "komunalni-2022-549240-a-332281-8",
       "candidate_id": "komunalni-2022-549240-c-332281",
-      "question_id": "komunalni-2022-549240-q-36",
+      "question_id": "komunalni-2022-549240-q-8",
       "answer": "no"
     },
     {
@@ -1463,9 +1465,9 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-270780-36",
+      "id": "komunalni-2022-549240-a-270780-8",
       "candidate_id": "komunalni-2022-549240-c-270780",
-      "question_id": "komunalni-2022-549240-q-36",
+      "question_id": "komunalni-2022-549240-q-8",
       "answer": "no"
     },
     {
@@ -1726,10 +1728,11 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-877605-36",
+      "id": "komunalni-2022-549240-a-877605-8",
       "candidate_id": "komunalni-2022-549240-c-877605",
-      "question_id": "komunalni-2022-549240-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-549240-q-8",
+      "answer": "no",
+      "comment": "ano pro žáky ZŠ a studenty SŠ "
     },
     {
       "id": "komunalni-2022-549240-a-877605-35",
@@ -1991,10 +1994,11 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-315187-36",
+      "id": "komunalni-2022-549240-a-315187-8",
       "candidate_id": "komunalni-2022-549240-c-315187",
-      "question_id": "komunalni-2022-549240-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-549240-q-8",
+      "answer": "no",
+      "comment": "Zcela zdarma nikoliv, město vhodnou rozpočtovou odpovědností a dotováním služeb provozu MHD může ovlivňovat výši ceny jízdného, včetně podpory bezplatného využití MHD například žáků a seniorů."
     },
     {
       "id": "komunalni-2022-549240-a-315187-35",
@@ -2259,10 +2263,11 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-549240-a-149444-36",
+      "id": "komunalni-2022-549240-a-149444-8",
       "candidate_id": "komunalni-2022-549240-c-149444",
-      "question_id": "komunalni-2022-549240-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-549240-q-8",
+      "answer": "no",
+      "comment": "Už v současné době je za symbolický poplatek 100,- Kč na rok pro seniory a všechny děti a studenty. Lidé v produktivním věku jsou schopni si minimální částku zaplatit."
     },
     {
       "id": "komunalni-2022-549240-a-149444-35",
@@ -2462,6 +2467,278 @@
       "question_id": "komunalni-2022-549240-q-2",
       "answer": "yes",
       "comment": "Všichni produkujeme odpad a tento je potřeba zpracovat. Poplatek je možno snižovat v závislosti na intenzitě třídění a recyklace, ale úplné zrušení poplatku nedává smysl."
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-48",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-48",
+      "answer": "dont_know",
+      "comment": "Neznáme zájem rodičů v Písku. "
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-47",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-47",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-46",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-46",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-45",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-45",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-44",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-44",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-42",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-42",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-41",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-41",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-40",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-40",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-39",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-39",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-38",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-38",
+      "answer": "dont_know",
+      "comment": "Spíše ano, ale s jasnými pravidly, aby nedocházelo k ohrožování chodů ani samotných řidičů e-koloběžek."
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-37",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-37",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-8",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-8",
+      "answer": "no",
+      "comment": "Domníváme se, že to v současné době, především vzhledem k ceně PHM, není reálné. Zvýhodněni by měli být vždy studenti, děti, důchodci a invalidé, event. i rodiče samoživitelé."
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-35",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-35",
+      "answer": "dont_know",
+      "comment": "Dostupné ano, za příznivou cenu, ale ne zdarma."
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-34",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-34",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-33",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-33",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-32",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-32",
+      "answer": "no",
+      "comment": "Zvýhodněné jízdné ano."
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-31",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-31",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-25",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-25",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-20",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-20",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-21",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-21",
+      "answer": "dont_know",
+      "comment": "Nyní je září. Rozhodnutí by se mělo nechat na listopad. V případě nutnosti by se rozsah osvětlení mohl omezit. "
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-22",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-22",
+      "answer": "no",
+      "comment": "Zcela zdarma ne, za příspěvek ano. "
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-23",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-23",
+      "answer": "dont_know",
+      "comment": "Nutné to jistě není, ale město by tuto myšlenku mohlo lidem představit. "
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-24",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-24",
+      "answer": "dont_know",
+      "comment": "Nejprve by bylo vhodné zajistit parkoviště a parkovací dům, následně parkovací zóny. "
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-27",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-27",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-28",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-28",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-29",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-29",
+      "answer": "dont_know",
+      "comment": "Nemáme dostatek informací, spíše ano."
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-30",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-30",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-4",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-4",
+      "answer": "dont_know"
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-5",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-5",
+      "answer": "yes",
+      "comment": "Bylo by to hezké gesto, mnozí dlužníci o této informaci neví. Pravděpodobně i tak zůstane dost těch, kteří tuto akci neuplatní z různých důvodů."
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-7",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-7",
+      "answer": "dont_know",
+      "comment": "V tento okamžik nemám informace o tom, v jakém rozsahu je tolerován hazard v Písku. Jsme spíše o tlumení takového zájmu."
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-9",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-9",
+      "answer": "yes",
+      "comment": "Bylo by smutné, aby přijel vozíčkář na zastávku, kde nemůže nastoupit do MHD."
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-13",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-13",
+      "answer": "no",
+      "comment": "Pro lidi bez domova by měly tradičně fungovat azylové domy. "
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-14",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-14",
+      "answer": "dont_know",
+      "comment": "Pokud to bude opravdu nutnost, tak ano."
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-15",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-15",
+      "answer": "no"
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-16",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-16",
+      "answer": "yes",
+      "comment": "Částečně ano. Musí se posoudit individuálně, kde se topí zbytečně. "
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-17",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-17",
+      "answer": "yes",
+      "comment": "Rozhodně, děti nemohou za své rodiče. "
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-18",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-18",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-19",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-19",
+      "answer": "yes"
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-1",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-1",
+      "answer": "no",
+      "comment": "Ne, ovšem z podstaty věci vyplývá, že na lukrativním místě si nemůže dovolit bydlet rodina, která na bydlení nemá dostatečné finance. "
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-3",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-3",
+      "answer": "no",
+      "comment": "Záleží na tom, o který stupeň nouze by se jednalo. Domovy pro seniory a nemocnice by měly být vytápěny standardně, jak jen to bude možné. "
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-12",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-12",
+      "answer": "yes",
+      "comment": "Tato činnost poskytuje zábavu malé skupině lidí, kdežto mnohem více lidí a také zvířat vyleká či vystresuje."
+    },
+    {
+      "id": "komunalni-2022-549240-a-772524-2",
+      "candidate_id": "komunalni-2022-549240-c-772524",
+      "question_id": "komunalni-2022-549240-q-2",
+      "answer": "yes"
     }
   ]
 }

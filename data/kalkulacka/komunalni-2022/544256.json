@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -131,10 +131,10 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-544256-q-36",
-      "name": "Menstruační pomůcky –vydávání zdarma",
-      "title": "Místní úřady mají mít zákonnou povinnost poskytovat vložky či tampony bezplatně každému, kdo je potřebuje.",
-      "gist": "Některé ženy, např. samoživitelky, navíc s dospívajícími dcerami, pro svůj nízký příjem nemají přístup k adekvátním menstruačním pomůckám. Zastánci argumentují rovností a důstojností ve společnosti a tím, že toaletní papír či mýdlo jsou ve veřejných budovách běžně dostupné. Odpůrci to považují za finančně nákladné či nespravedlivé vůči lidem, kteří menstruaci nemají.",
+      "id": "komunalni-2022-544256-q-10",
+      "name": "Jmenovité výsledky hlasování zastupitelstva",
+      "title": "Hlasování členů zastupitelstva města se má zveřejňovat jmenovitě.",
+      "gist": "Podle zastánců je pro veřejnou kontrolu důležité vidět, jak přesně kdo v zastupitelstvu města hlasuje. Kritici to považují za zbytečné.",
       "detail": "",
       "tags": []
     },
@@ -753,9 +753,9 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-544256-a-307120-36",
+      "id": "komunalni-2022-544256-a-307120-10",
       "candidate_id": "komunalni-2022-544256-c-307120",
-      "question_id": "komunalni-2022-544256-q-36",
+      "question_id": "komunalni-2022-544256-q-10",
       "answer": "dont_know"
     },
     {
@@ -1009,9 +1009,9 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-544256-a-721258-36",
+      "id": "komunalni-2022-544256-a-721258-10",
       "candidate_id": "komunalni-2022-544256-c-721258",
-      "question_id": "komunalni-2022-544256-q-36",
+      "question_id": "komunalni-2022-544256-q-10",
       "answer": "no"
     },
     {
@@ -1265,10 +1265,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-544256-a-508138-36",
+      "id": "komunalni-2022-544256-a-508138-10",
       "candidate_id": "komunalni-2022-544256-c-508138",
-      "question_id": "komunalni-2022-544256-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-544256-q-10",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-544256-a-508138-35",
@@ -1527,11 +1527,11 @@
       "comment": "Snížené vstupné ano, podporujeme speciální slevy motivující děti a studenty navštěvovat tyto instituce"
     },
     {
-      "id": "komunalni-2022-544256-a-243110-36",
+      "id": "komunalni-2022-544256-a-243110-10",
       "candidate_id": "komunalni-2022-544256-c-243110",
-      "question_id": "komunalni-2022-544256-q-36",
-      "answer": "dont_know",
-      "comment": "Nepřísluší nám hodnotit celostátní legislativu."
+      "question_id": "komunalni-2022-544256-q-10",
+      "answer": "yes",
+      "comment": "Už se tak dávno děje. Jsou také zveřejňovány záznamy jednání. V tomto ohledu je budějovická radnice zcela transparentní. "
     },
     {
       "id": "komunalni-2022-544256-a-243110-35",
@@ -1809,11 +1809,11 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-544256-a-795985-36",
+      "id": "komunalni-2022-544256-a-795985-10",
       "candidate_id": "komunalni-2022-544256-c-795985",
-      "question_id": "komunalni-2022-544256-q-36",
-      "answer": "dont_know",
-      "comment": "Dostávat menstruační pomůcky od úřednic je nedůstojné. Dávalo by smysl rozšířit o tuto nabídku potravinové banky nebo jiné sociální služby (za předpokladu, že by ženy měly možnost volby menstruační pomůcky a nedostaly by je pouze \"na příděl\")."
+      "question_id": "komunalni-2022-544256-q-10",
+      "answer": "yes",
+      "comment": "Tak tomu již je."
     },
     {
       "id": "komunalni-2022-544256-a-795985-35",
@@ -2084,11 +2084,10 @@
       "comment": "Všeobecně bychom chtěli v nejbližším volebním období ukázat obyvatelům benefity cestovního ruchu. Toto může být jednou z možností a zároveň prevencí kriminality a dalších jevů s tím spojených."
     },
     {
-      "id": "komunalni-2022-544256-a-145079-36",
+      "id": "komunalni-2022-544256-a-145079-10",
       "candidate_id": "komunalni-2022-544256-c-145079",
-      "question_id": "komunalni-2022-544256-q-36",
-      "answer": "yes",
-      "comment": "Pomáhat potřebným je nutné, obzvlášť u základních hygienických potřeb. Důležité je, aby nedocházelo ke zneužívání."
+      "question_id": "komunalni-2022-544256-q-10",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-544256-a-145079-35",
@@ -2360,10 +2359,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-544256-a-725515-36",
+      "id": "komunalni-2022-544256-a-725515-10",
       "candidate_id": "komunalni-2022-544256-c-725515",
-      "question_id": "komunalni-2022-544256-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-544256-q-10",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-544256-a-725515-35",
@@ -2614,10 +2613,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-544256-a-313089-36",
+      "id": "komunalni-2022-544256-a-313089-10",
       "candidate_id": "komunalni-2022-544256-c-313089",
-      "question_id": "komunalni-2022-544256-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-544256-q-10",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-544256-a-313089-35",
@@ -2867,10 +2866,10 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-544256-a-135731-36",
+      "id": "komunalni-2022-544256-a-135731-10",
       "candidate_id": "komunalni-2022-544256-c-135731",
-      "question_id": "komunalni-2022-544256-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-544256-q-10",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-544256-a-135731-35",
@@ -3132,10 +3131,11 @@
       "comment": "Město vynakládá nemalé prostředky na údržbu a provozování těchto institucí. Vstup a využívání těchto zařízení musí být náležitě zpoplatněn a to i pro mládež. "
     },
     {
-      "id": "komunalni-2022-544256-a-861576-36",
+      "id": "komunalni-2022-544256-a-861576-10",
       "candidate_id": "komunalni-2022-544256-c-861576",
-      "question_id": "komunalni-2022-544256-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-544256-q-10",
+      "answer": "dont_know",
+      "comment": "Ne nezbytně ve všech případech, ale při klíčových hlasováních, jako je rozpočet města, jeho úpravy, Územní plán, finančně náročné grantové projekty, smlouvy město dlouhodobě zavazující, nebo směna majetku města.  "
     },
     {
       "id": "komunalni-2022-544256-a-861576-35",
@@ -3409,10 +3409,10 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-544256-a-749146-36",
+      "id": "komunalni-2022-544256-a-749146-10",
       "candidate_id": "komunalni-2022-544256-c-749146",
-      "question_id": "komunalni-2022-544256-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-544256-q-10",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-544256-a-749146-35",

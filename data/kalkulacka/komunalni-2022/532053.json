@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -299,10 +299,10 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-532053-q-36",
-      "name": "Menstruační pomůcky –vydávání zdarma",
-      "title": "Místní úřady mají mít zákonnou povinnost poskytovat vložky či tampony bezplatně každému, kdo je potřebuje.",
-      "gist": "Některé ženy, např. samoživitelky, navíc s dospívajícími dcerami, pro svůj nízký příjem nemají přístup k adekvátním menstruačním pomůckám. Zastánci argumentují rovností a důstojností ve společnosti a tím, že toaletní papír či mýdlo jsou ve veřejných budovách běžně dostupné. Odpůrci to považují za finančně nákladné či nespravedlivé vůči lidem, kteří menstruaci nemají.",
+      "id": "komunalni-2022-532053-q-39",
+      "name": "Integrace cizinců",
+      "title": "Město by mělo aktivně prosazovat integraci cizinců žijících ve městě.",
+      "gist": "",
       "detail": "",
       "tags": []
     },
@@ -870,10 +870,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-532053-a-646539-36",
+      "id": "komunalni-2022-532053-a-646539-39",
       "candidate_id": "komunalni-2022-532053-c-646539",
-      "question_id": "komunalni-2022-532053-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-532053-q-39",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-532053-a-646539-37",
@@ -1135,10 +1135,10 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-532053-a-897710-36",
+      "id": "komunalni-2022-532053-a-897710-39",
       "candidate_id": "komunalni-2022-532053-c-897710",
-      "question_id": "komunalni-2022-532053-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-532053-q-39",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-532053-a-897710-37",
@@ -1406,10 +1406,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-532053-a-830763-36",
+      "id": "komunalni-2022-532053-a-830763-39",
       "candidate_id": "komunalni-2022-532053-c-830763",
-      "question_id": "komunalni-2022-532053-q-36",
-      "answer": "dont_know"
+      "question_id": "komunalni-2022-532053-q-39",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-532053-a-830763-37",
@@ -1670,10 +1670,10 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-532053-a-358217-36",
+      "id": "komunalni-2022-532053-a-358217-39",
       "candidate_id": "komunalni-2022-532053-c-358217",
-      "question_id": "komunalni-2022-532053-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-532053-q-39",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-532053-a-358217-37",
@@ -1938,10 +1938,10 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-532053-a-937609-36",
+      "id": "komunalni-2022-532053-a-937609-39",
       "candidate_id": "komunalni-2022-532053-c-937609",
-      "question_id": "komunalni-2022-532053-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-532053-q-39",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-532053-a-937609-37",
@@ -2216,11 +2216,11 @@
       "comment": "Toto by vedlo ke zbytečnému plýtvání. Již nyní existují nástroje, jak pomoci občanům ve finanční tísni. "
     },
     {
-      "id": "komunalni-2022-532053-a-773113-36",
+      "id": "komunalni-2022-532053-a-773113-39",
       "candidate_id": "komunalni-2022-532053-c-773113",
-      "question_id": "komunalni-2022-532053-q-36",
-      "answer": "no",
-      "comment": "Ženy, které skutečně takovou pomoc potřebují, mají již nyní možnost využít finanční pomoci státu, aby si toto zboží zakoupily. Nebo mohou využít například potravinových bank, kde je toto zboží k dispozici.  "
+      "question_id": "komunalni-2022-532053-q-39",
+      "answer": "yes",
+      "comment": "Integrace má smysl zvláště v případě cizinců pocházejících ze zemí, které mají kulturně blízko k ČR. Nicméně město by mělo pečlivě vážit, jak svoje prostředky vynakládá, aby integrace byla úspěšná. Nechceme integraci, která nikam nevede. Nechceme sypat peníze nepotřebným politickým neziskovým organizacím."
     },
     {
       "id": "komunalni-2022-532053-a-773113-37",
@@ -2480,9 +2480,9 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-532053-a-786086-36",
+      "id": "komunalni-2022-532053-a-786086-39",
       "candidate_id": "komunalni-2022-532053-c-786086",
-      "question_id": "komunalni-2022-532053-q-36",
+      "question_id": "komunalni-2022-532053-q-39",
       "answer": "no"
     },
     {
@@ -2733,9 +2733,9 @@
       "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-532053-a-133748-36",
+      "id": "komunalni-2022-532053-a-133748-39",
       "candidate_id": "komunalni-2022-532053-c-133748",
-      "question_id": "komunalni-2022-532053-q-36",
+      "question_id": "komunalni-2022-532053-q-39",
       "answer": "dont_know"
     },
     {
@@ -2989,9 +2989,9 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-532053-a-682005-36",
+      "id": "komunalni-2022-532053-a-682005-39",
       "candidate_id": "komunalni-2022-532053-c-682005",
-      "question_id": "komunalni-2022-532053-q-36",
+      "question_id": "komunalni-2022-532053-q-39",
       "answer": "no"
     },
     {

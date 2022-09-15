@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -139,10 +139,10 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-567442-q-36",
-      "name": "Menstruační pomůcky –vydávání zdarma",
-      "title": "Místní úřady mají mít zákonnou povinnost poskytovat vložky či tampony bezplatně každému, kdo je potřebuje.",
-      "gist": "Některé ženy, např. samoživitelky, navíc s dospívajícími dcerami, pro svůj nízký příjem nemají přístup k adekvátním menstruačním pomůckám. Zastánci argumentují rovností a důstojností ve společnosti a tím, že toaletní papír či mýdlo jsou ve veřejných budovách běžně dostupné. Odpůrci to považují za finančně nákladné či nespravedlivé vůči lidem, kteří menstruaci nemají.",
+      "id": "komunalni-2022-567442-q-40",
+      "name": "Více strážníků",
+      "title": "Mělo by být více městských strážníků?",
+      "gist": "Zastánci uvádějí zvýšení pocitu bezpečí. Odpůrci namítají, že to jsou nyní pro město zbytečné výdaje navíc.",
       "detail": "",
       "tags": []
     },
@@ -608,10 +608,11 @@
       "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-567442-a-731451-36",
+      "id": "komunalni-2022-567442-a-731451-40",
       "candidate_id": "komunalni-2022-567442-c-731451",
-      "question_id": "komunalni-2022-567442-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-567442-q-40",
+      "answer": "yes",
+      "comment": "V některých částech města se lidé necítí bezpečně, což by bylo dobré změnit. "
     },
     {
       "id": "komunalni-2022-567442-a-731451-41",
@@ -864,10 +865,10 @@
       "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-567442-a-472474-36",
+      "id": "komunalni-2022-567442-a-472474-40",
       "candidate_id": "komunalni-2022-567442-c-472474",
-      "question_id": "komunalni-2022-567442-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-567442-q-40",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-567442-a-472474-41",
@@ -1131,10 +1132,10 @@
       "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-567442-a-119103-36",
+      "id": "komunalni-2022-567442-a-119103-40",
       "candidate_id": "komunalni-2022-567442-c-119103",
-      "question_id": "komunalni-2022-567442-q-36",
-      "answer": "dont_know"
+      "question_id": "komunalni-2022-567442-q-40",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-567442-a-119103-41",
@@ -1400,10 +1401,10 @@
       "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-567442-a-593168-36",
+      "id": "komunalni-2022-567442-a-593168-40",
       "candidate_id": "komunalni-2022-567442-c-593168",
-      "question_id": "komunalni-2022-567442-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-567442-q-40",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-567442-a-593168-41",
@@ -1667,10 +1668,10 @@
       "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-567442-a-209742-36",
+      "id": "komunalni-2022-567442-a-209742-40",
       "candidate_id": "komunalni-2022-567442-c-209742",
-      "question_id": "komunalni-2022-567442-q-36",
-      "answer": "dont_know"
+      "question_id": "komunalni-2022-567442-q-40",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-567442-a-209742-41",
@@ -1921,10 +1922,10 @@
       "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-567442-a-843481-36",
+      "id": "komunalni-2022-567442-a-843481-40",
       "candidate_id": "komunalni-2022-567442-c-843481",
-      "question_id": "komunalni-2022-567442-q-36",
-      "answer": "dont_know"
+      "question_id": "komunalni-2022-567442-q-40",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-567442-a-843481-41",

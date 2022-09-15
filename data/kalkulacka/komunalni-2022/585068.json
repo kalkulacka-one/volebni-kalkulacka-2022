@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -219,10 +219,10 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-585068-q-36",
-      "name": "Menstruační pomůcky –vydávání zdarma",
-      "title": "Místní úřady mají mít zákonnou povinnost poskytovat vložky či tampony bezplatně každému, kdo je potřebuje.",
-      "gist": "Některé ženy, např. samoživitelky, navíc s dospívajícími dcerami, pro svůj nízký příjem nemají přístup k adekvátním menstruačním pomůckám. Zastánci argumentují rovností a důstojností ve společnosti a tím, že toaletní papír či mýdlo jsou ve veřejných budovách běžně dostupné. Odpůrci to považují za finančně nákladné či nespravedlivé vůči lidem, kteří menstruaci nemají.",
+      "id": "komunalni-2022-585068-q-8",
+      "name": "MHD zdarma",
+      "title": "Měla by být městská hromadná doprava pro všechny rezidenty zdarma?",
+      "gist": "Zastánci zrušení jízdného argumentují zlepšením životního prostředí, zklidněním dopravy i úsporami za tisk lístků nebo vedení agendy s vymáháním dlužného jízdného. Odpůrci tvrdí, že se jedná o nehospodárné nakládání s veřejnými prostředky. Podle jiných by to příliš zatížilo městský rozpočet.",
       "detail": "",
       "tags": []
     },
@@ -793,11 +793,11 @@
       "comment": "Je to sice intimní téma, kterému se společnost vyhýbá, ale ženy si to nevybraly. Proč musí nést velkou část života tuto zátěž, nejen ve formě bolesti a nepříjemností, ale navíc ještě i finanční? Je ostuda společnosti, tedy zejména mužů, že nechají ženy trpět, místo aby jim pomáhali, kde to jen jde."
     },
     {
-      "id": "komunalni-2022-585068-a-602014-36",
+      "id": "komunalni-2022-585068-a-602014-8",
       "candidate_id": "komunalni-2022-585068-c-602014",
-      "question_id": "komunalni-2022-585068-q-36",
-      "answer": "yes",
-      "comment": "Viz otázka 35."
+      "question_id": "komunalni-2022-585068-q-8",
+      "answer": "no",
+      "comment": "Pro mne osobně je toto klíčové téma, ovšem ukazuje se, že na dopravu zdarma naše společnost ještě dostatečně nevyspěla. Ceny jízdného a formy úhrady musí být ovšem nastaveny tak, aby využití MHD bylo pro všechny první a nejjednodušší volbou. S tím ovšem souvisí řada dalších věcí, jako je právě úroveň této dopravy, tedy její četnost, pohodlí, jednoduchost úhrady, rychlost přepravy a podobně a naopak nevýhody dopravy individuální, která musí být sice možná, ale měla by být oproti hromadné komplikovanější a dražší, tedy volena jen v nutném případě. Cena dopravy je tak jen kamínkem ve složité mozaice, kterou je potřeba poskládat celou."
     },
     {
       "id": "komunalni-2022-585068-a-602014-34",
@@ -1073,10 +1073,11 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-585068-a-919562-36",
+      "id": "komunalni-2022-585068-a-919562-8",
       "candidate_id": "komunalni-2022-585068-c-919562",
-      "question_id": "komunalni-2022-585068-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-585068-q-8",
+      "answer": "no",
+      "comment": "Ne zdarma ale s určitou mírou dotace pro všechny skupiny obyvatelstva, zejména pak děti a seniory."
     },
     {
       "id": "komunalni-2022-585068-a-919562-34",
@@ -1345,10 +1346,10 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-585068-a-121027-36",
+      "id": "komunalni-2022-585068-a-121027-8",
       "candidate_id": "komunalni-2022-585068-c-121027",
-      "question_id": "komunalni-2022-585068-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-585068-q-8",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-585068-a-121027-34",
@@ -1608,11 +1609,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-585068-a-913309-36",
+      "id": "komunalni-2022-585068-a-913309-8",
       "candidate_id": "komunalni-2022-585068-c-913309",
-      "question_id": "komunalni-2022-585068-q-36",
-      "answer": "no",
-      "comment": "Povinnost bezplatného vydávání všem ne, avšak na veřejných toaletách pro bezprostřední potřebu ano"
+      "question_id": "komunalni-2022-585068-q-8",
+      "answer": "no"
     },
     {
       "id": "komunalni-2022-585068-a-913309-34",
@@ -1872,10 +1872,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-585068-a-759713-36",
+      "id": "komunalni-2022-585068-a-759713-8",
       "candidate_id": "komunalni-2022-585068-c-759713",
-      "question_id": "komunalni-2022-585068-q-36",
-      "answer": "dont_know"
+      "question_id": "komunalni-2022-585068-q-8",
+      "answer": "no"
     },
     {
       "id": "komunalni-2022-585068-a-759713-34",
@@ -2139,10 +2139,11 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-585068-a-171901-36",
+      "id": "komunalni-2022-585068-a-171901-8",
       "candidate_id": "komunalni-2022-585068-c-171901",
-      "question_id": "komunalni-2022-585068-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-585068-q-8",
+      "answer": "no",
+      "comment": "Je to otázka budoucnosti "
     },
     {
       "id": "komunalni-2022-585068-a-171901-34",
@@ -2422,10 +2423,11 @@
       "comment": "Jedná se o hygienické prostředky, které má každá individuální."
     },
     {
-      "id": "komunalni-2022-585068-a-456015-36",
+      "id": "komunalni-2022-585068-a-456015-8",
       "candidate_id": "komunalni-2022-585068-c-456015",
-      "question_id": "komunalni-2022-585068-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-585068-q-8",
+      "answer": "no",
+      "comment": "MHD stojí v současné době město více než je polovina rozpočtu na investice. Chceme MHD dále podporovat, musí být dostupná, ale určitá spoluúčast, jako je v současné době, je nutná."
     },
     {
       "id": "komunalni-2022-585068-a-456015-34",
@@ -2700,9 +2702,9 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-585068-a-348037-36",
+      "id": "komunalni-2022-585068-a-348037-8",
       "candidate_id": "komunalni-2022-585068-c-348037",
-      "question_id": "komunalni-2022-585068-q-36",
+      "question_id": "komunalni-2022-585068-q-8",
       "answer": "no"
     },
     {
@@ -2971,9 +2973,9 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-585068-a-880254-36",
+      "id": "komunalni-2022-585068-a-880254-8",
       "candidate_id": "komunalni-2022-585068-c-880254",
-      "question_id": "komunalni-2022-585068-q-36",
+      "question_id": "komunalni-2022-585068-q-8",
       "answer": "no"
     },
     {

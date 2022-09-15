@@ -19,10 +19,10 @@
       "id": "komunalni-2022",
       "key": "komunalni-2022",
       "name": "Komunální volby 2022",
-      "description": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+      "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "instructions": {
         "header": "Zvolte své město",
-        "step_1_1": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+        "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
         "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
       },
       "from": "2022-09-23T14:00:00",
@@ -392,6 +392,15 @@
     },
     {
       "election_id": "komunalni-2022",
+      "district_code": "505927",
+      "show_district_code": false,
+      "name": "Opava",
+      "description": "Opava",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "komunalni-2022",
       "district_code": "586846",
       "show_district_code": false,
       "name": "Jihlava",
@@ -446,6 +455,15 @@
     },
     {
       "election_id": "komunalni-2022",
+      "district_code": "589250",
+      "show_district_code": false,
+      "name": "Prostějov",
+      "description": "Prostějov",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "komunalni-2022",
       "district_code": "561380",
       "show_district_code": false,
       "name": "Česká Lípa",
@@ -468,6 +486,33 @@
       "show_district_code": false,
       "name": "Třinec",
       "description": "Třinec",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "533165",
+      "show_district_code": false,
+      "name": "Kolín",
+      "description": "Kolín",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "539911",
+      "show_district_code": false,
+      "name": "Příbram",
+      "description": "Příbram",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "komunalni-2022",
+      "district_code": "554481",
+      "show_district_code": false,
+      "name": "Cheb",
+      "description": "Cheb",
       "on_hp_from": "2022-09-01T00:00:00",
       "on_hp_to": "2022-09-30T14:00:00"
     },

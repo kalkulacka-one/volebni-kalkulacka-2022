@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -315,10 +315,10 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-561380-q-36",
-      "name": "Menstruační pomůcky –vydávání zdarma",
-      "title": "Místní úřady mají mít zákonnou povinnost poskytovat vložky či tampony bezplatně každému, kdo je potřebuje.",
-      "gist": "Některé ženy, např. samoživitelky, navíc s dospívajícími dcerami, pro svůj nízký příjem nemají přístup k adekvátním menstruačním pomůckám. Zastánci argumentují rovností a důstojností ve společnosti a tím, že toaletní papír či mýdlo jsou ve veřejných budovách běžně dostupné. Odpůrci to považují za finančně nákladné či nespravedlivé vůči lidem, kteří menstruaci nemají.",
+      "id": "komunalni-2022-561380-q-6",
+      "name": "Více kamer",
+      "title": "Měly by být ve městě instalovány další kamery?",
+      "gist": "Zastánci uvádějí zvýšení bezpečnosti problémových lokalit, odpůrci zdůrazňují přílišný zásah do osobních práv a přesun kriminality do jiných míst.",
       "detail": "",
       "tags": []
     },
@@ -898,9 +898,9 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-561380-a-383029-36",
+      "id": "komunalni-2022-561380-a-383029-6",
       "candidate_id": "komunalni-2022-561380-c-383029",
-      "question_id": "komunalni-2022-561380-q-36",
+      "question_id": "komunalni-2022-561380-q-6",
       "answer": "yes"
     },
     {
@@ -1153,11 +1153,10 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-561380-a-180415-36",
+      "id": "komunalni-2022-561380-a-180415-6",
       "candidate_id": "komunalni-2022-561380-c-180415",
-      "question_id": "komunalni-2022-561380-q-36",
-      "answer": "dont_know",
-      "comment": "Jen pro potřebné, ne plošně."
+      "question_id": "komunalni-2022-561380-q-6",
+      "answer": "no"
     },
     {
       "id": "komunalni-2022-561380-a-180415-43",
@@ -1412,10 +1411,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-561380-a-323053-36",
+      "id": "komunalni-2022-561380-a-323053-6",
       "candidate_id": "komunalni-2022-561380-c-323053",
-      "question_id": "komunalni-2022-561380-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-561380-q-6",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-561380-a-323053-43",
@@ -1682,10 +1681,11 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-561380-a-253669-36",
+      "id": "komunalni-2022-561380-a-253669-6",
       "candidate_id": "komunalni-2022-561380-c-253669",
-      "question_id": "komunalni-2022-561380-q-36",
-      "answer": "dont_know"
+      "question_id": "komunalni-2022-561380-q-6",
+      "answer": "yes",
+      "comment": "Více kamer by mělo bát nejenom ve městě, ale také u všech důležitých výjezdů z města. Policii tak např. pomohou dohledat pachatele již při vyjetí z našeho města."
     },
     {
       "id": "komunalni-2022-561380-a-253669-43",
@@ -1937,10 +1937,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-561380-a-400561-36",
+      "id": "komunalni-2022-561380-a-400561-6",
       "candidate_id": "komunalni-2022-561380-c-400561",
-      "question_id": "komunalni-2022-561380-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-561380-q-6",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-561380-a-400561-43",
@@ -2189,10 +2189,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-561380-a-806707-36",
+      "id": "komunalni-2022-561380-a-806707-6",
       "candidate_id": "komunalni-2022-561380-c-806707",
-      "question_id": "komunalni-2022-561380-q-36",
-      "answer": "dont_know"
+      "question_id": "komunalni-2022-561380-q-6",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-561380-a-806707-43",
@@ -2453,11 +2453,10 @@
       "comment": "Napíšete 3 různé druhy. Nelze odpovědět jedním výběrem."
     },
     {
-      "id": "komunalni-2022-561380-a-905610-36",
+      "id": "komunalni-2022-561380-a-905610-6",
       "candidate_id": "komunalni-2022-561380-c-905610",
-      "question_id": "komunalni-2022-561380-q-36",
-      "answer": "no",
-      "comment": "A kdo to bude vydávat?"
+      "question_id": "komunalni-2022-561380-q-6",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-561380-a-905610-43",
@@ -2708,10 +2707,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-561380-a-573275-36",
+      "id": "komunalni-2022-561380-a-573275-6",
       "candidate_id": "komunalni-2022-561380-c-573275",
-      "question_id": "komunalni-2022-561380-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-561380-q-6",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-561380-a-573275-43",
