@@ -114,5 +114,3 @@ resource "aws_lambda_function" "kalkulacka" {
   package_type = "Image"
   image_uri    = "${aws_ecr_repository.backend.repository_url}:latest"
 }
-
-

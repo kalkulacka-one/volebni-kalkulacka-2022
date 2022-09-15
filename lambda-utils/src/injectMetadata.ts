@@ -3,6 +3,7 @@ import fetch from "node-fetch";
 import * as domutils from "domutils";
 
 import { APIGatewayEvent, Handler, Context, APIGatewayProxyResult } from "aws-lambda";
+import { replaceProperty } from "./utils/domHelpers";
 
 const handler: Handler = async (event: APIGatewayEvent): Promise<APIGatewayProxyResult> => {
   const uuid = event.pathParameters.uuid;
@@ -13,25 +14,25 @@ const handler: Handler = async (event: APIGatewayEvent): Promise<APIGatewayProxy
   const metaInDocument = domutils.getElementsByTagName("meta", dom);
 
   metaInDocument.forEach((child) => {
-    if (domutils.hasAttrib(child, "property") && domutils.getAttributeValue(child, "property") === "og:image") {
-      domutils.replaceElement(
-        child,
-        htmlparser2.parseDocument(
-          `<meta property="og:image" content="https://www.volebnikalkulacka.cz/image/${uuid}" />`
-        )
-      );
-    }
-    if (
-      domutils.hasAttrib(child, "property") &&
-      domutils.getAttributeValue(child, "property") === "og:image:secure_url"
-    ) {
-      domutils.replaceElement(
-        child,
-        htmlparser2.parseDocument(
-          `<meta property="og:image" content="https://www.volebnikalkulacka.cz/image/${uuid}" />`
-        )
-      );
-    }
+    replaceProperty(
+      "og:image",
+      child,
+      htmlparser2.parseDocument(`<meta property="og:image" content="https://www.volebnikalkulacka.cz/image/${uuid}" />`)
+    );
+    replaceProperty(
+      "og:image:secure_url",
+      child,
+      htmlparser2.parseDocument(
+        `<meta property="og:image:secure_url" content="https://www.volebnikalkulacka.cz/image/${uuid}" />`
+      )
+    );
+    replaceProperty(
+      "twitter:image",
+      child,
+      htmlparser2.parseDocument(
+        `<meta property="twitter:image" content="https://www.volebnikalkulacka.cz/image/${uuid}" />`
+      )
+    );
   });
 
   const result = domutils.getOuterHTML(dom);

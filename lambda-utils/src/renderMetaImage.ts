@@ -44,7 +44,7 @@ export const handler: Handler = async (event: APIGatewayEvent): Promise<APIGatew
       body {
         font-family: "Radio Canada", sans-serif;
         width: 1200px;
-        height: 630px;       
+        height: 630px;
       }
       body.senate .muni,
       body.muni .senate {
@@ -138,8 +138,8 @@ export const handler: Handler = async (event: APIGatewayEvent): Promise<APIGatew
       <div class="candidate">
         <img src="${topMatch.candidate.logo}" class="avatar" />
         <div class="position">1.</div>
-        <div class="name">${topMatch.candidate.name}</div>
-        <div class="party">${topMatch.candidate.short_name}</div>
+        <div class="name">${topMatch.candidate.short_name}</div>
+        <div class="party">${topMatch.candidate.name}</div>
         <div class="percentage">${topMatch.score}%</div>
       </div>
     </div>
