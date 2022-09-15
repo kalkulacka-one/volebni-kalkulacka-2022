@@ -108,14 +108,14 @@ const breadcrumbs = ref('');
         <ResponsiveWrapper extra-small small>
           <SecondaryNavigationBar centered-title>
             <template #before> </template>
-            <TitleText tag="h2" size="medium">Takhle to vyšlo mě</TitleText>
+            <TitleText tag="h2" size="medium">Takhle to vyšlo mně</TitleText>
             <template #after> </template>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
         <ResponsiveWrapper medium large extra-large huge>
           <SecondaryNavigationBar>
             <template #before> </template>
-            <TitleText tag="h2" size="large">Takhle to vyšlo mě</TitleText>
+            <TitleText tag="h2" size="large">Takhle to vyšlo mně</TitleText>
             <template #after> </template>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
