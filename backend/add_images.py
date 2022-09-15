@@ -98,7 +98,8 @@ def process_senatni(
         remote_url = photos[0]["url"]
         image_suffix = remote_url.split(".")[-1]
         local_original_path = avatar_dir / f"{candidate['id']}-original.{image_suffix}"
-        used_path = local_original_path
+        local_face_path = avatar_dir / f"{candidate['id']}-face.{image_suffix}"
+        used_path = None
         if not local_original_path.exists():
             logger.info(
                 "\t%s - downloading from %s", local_original_path.absolute(), remote_url
@@ -107,22 +108,28 @@ def process_senatni(
             with local_original_path.open("wb") as fh:
                 fh.write(response.content)
 
-            local_face_path = avatar_dir / f"{candidate['id']}-face.{image_suffix}"
             if not local_face_path.exists():
-                if extract_face(local_original_path, local_face_path):
-                    used_path = local_face_path
-
-            img_url = "/".join(str(used_path.absolute()).split("/")[-5:])
-            if not candidate.get("img_url") or candidate["img_url"] != img_url:
-                logger.info("\tsetting img_url to %s", img_url)
-                candidate["img_url"] = img_url
-                was_changed = True
+                extract_face(local_original_path, local_face_path)
         else:
             logger.info(
                 "\t%s - already downloaded from %s",
                 local_original_path.absolute(),
                 remote_url,
             )
+
+        # update JSON file
+        if local_original_path.exists():
+            used_path = local_original_path
+
+        if local_face_path.exists():
+            used_path = local_face_path
+
+        if used_path:
+            img_url = "/".join(str(used_path.absolute()).split("/")[-5:])
+            if not candidate.get("img_url") or candidate["img_url"] != img_url:
+                logger.info("\tsetting img_url to %s", img_url)
+                candidate["img_url"] = img_url
+                was_changed = True
 
     return was_changed
 
