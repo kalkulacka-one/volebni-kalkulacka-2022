@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -299,10 +299,10 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-567027-q-36",
-      "name": "Menstruační pomůcky –vydávání zdarma",
-      "title": "Místní úřady mají mít zákonnou povinnost poskytovat vložky či tampony bezplatně každému, kdo je potřebuje.",
-      "gist": "Některé ženy, např. samoživitelky, navíc s dospívajícími dcerami, pro svůj nízký příjem nemají přístup k adekvátním menstruačním pomůckám. Zastánci argumentují rovností a důstojností ve společnosti a tím, že toaletní papír či mýdlo jsou ve veřejných budovách běžně dostupné. Odpůrci to považují za finančně nákladné či nespravedlivé vůči lidem, kteří menstruaci nemají.",
+      "id": "komunalni-2022-567027-q-39",
+      "name": "Integrace cizinců",
+      "title": "Město by mělo aktivně prosazovat integraci cizinců žijících ve městě.",
+      "gist": "",
       "detail": "",
       "tags": []
     },
@@ -851,11 +851,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-567027-a-138280-36",
+      "id": "komunalni-2022-567027-a-138280-39",
       "candidate_id": "komunalni-2022-567027-c-138280",
-      "question_id": "komunalni-2022-567027-q-36",
-      "answer": "no",
-      "comment": "mohou být výjimky, v případě úřadů sociálního a zdravotního charakteru"
+      "question_id": "komunalni-2022-567027-q-39",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-567027-a-138280-37",
@@ -1115,10 +1114,11 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-567027-a-174115-36",
+      "id": "komunalni-2022-567027-a-174115-39",
       "candidate_id": "komunalni-2022-567027-c-174115",
-      "question_id": "komunalni-2022-567027-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-567027-q-39",
+      "answer": "yes",
+      "comment": "Souhlasíte s integrací bezproblémových cizinců."
     },
     {
       "id": "komunalni-2022-567027-a-174115-37",
@@ -1382,10 +1382,11 @@
       "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-567027-a-645179-36",
+      "id": "komunalni-2022-567027-a-645179-39",
       "candidate_id": "komunalni-2022-567027-c-645179",
-      "question_id": "komunalni-2022-567027-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-567027-q-39",
+      "answer": "yes",
+      "comment": "Aktivní integrace jen s těmi, kteří o to stojí, mají snahu. Ti, kteří nechtějí, nemá smysl do něčeho nutit. Oni sami musí přijmout zákony, pravidla a vzorce chování, které u nás platí. "
     },
     {
       "id": "komunalni-2022-567027-a-645179-37",
@@ -1639,10 +1640,10 @@
       "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-567027-a-678018-36",
+      "id": "komunalni-2022-567027-a-678018-39",
       "candidate_id": "komunalni-2022-567027-c-678018",
-      "question_id": "komunalni-2022-567027-q-36",
-      "answer": "dont_know"
+      "question_id": "komunalni-2022-567027-q-39",
+      "answer": "no"
     },
     {
       "id": "komunalni-2022-567027-a-678018-37",
@@ -1908,11 +1909,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-567027-a-750273-36",
+      "id": "komunalni-2022-567027-a-750273-39",
       "candidate_id": "komunalni-2022-567027-c-750273",
-      "question_id": "komunalni-2022-567027-q-36",
-      "answer": "yes",
-      "comment": "Tuto otázku nemá komunální politik možnost ovlivnit. "
+      "question_id": "komunalni-2022-567027-q-39",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-567027-a-750273-37",
@@ -2193,10 +2193,10 @@
       "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-567027-a-152154-36",
+      "id": "komunalni-2022-567027-a-152154-39",
       "candidate_id": "komunalni-2022-567027-c-152154",
-      "question_id": "komunalni-2022-567027-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-567027-q-39",
+      "answer": "dont_know"
     },
     {
       "id": "komunalni-2022-567027-a-152154-37",
@@ -2461,9 +2461,9 @@
       "comment": "Stále nevěřím v poctivost občanů, že by uvedený fakt, nezneužili."
     },
     {
-      "id": "komunalni-2022-567027-a-399616-36",
+      "id": "komunalni-2022-567027-a-399616-39",
       "candidate_id": "komunalni-2022-567027-c-399616",
-      "question_id": "komunalni-2022-567027-q-36",
+      "question_id": "komunalni-2022-567027-q-39",
       "answer": "no"
     },
     {

@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -347,10 +347,10 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-598917-q-36",
-      "name": "Menstruační pomůcky –vydávání zdarma",
-      "title": "Místní úřady mají mít zákonnou povinnost poskytovat vložky či tampony bezplatně každému, kdo je potřebuje.",
-      "gist": "Některé ženy, např. samoživitelky, navíc s dospívajícími dcerami, pro svůj nízký příjem nemají přístup k adekvátním menstruačním pomůckám. Zastánci argumentují rovností a důstojností ve společnosti a tím, že toaletní papír či mýdlo jsou ve veřejných budovách běžně dostupné. Odpůrci to považují za finančně nákladné či nespravedlivé vůči lidem, kteří menstruaci nemají.",
+      "id": "komunalni-2022-598917-q-39",
+      "name": "Integrace cizinců",
+      "title": "Město by mělo aktivně prosazovat integraci cizinců žijících ve městě.",
+      "gist": "",
       "detail": "",
       "tags": []
     }
@@ -822,10 +822,10 @@
       "comment": "Dlouhodobě se snažíme o větší transparentnost, bohužel bezvýsledně. Kromě zveřejňování jmenovitého hlasování bychom byli i pro online přenosy ze zasedání. V minulosti jsme prosadili přesun zastupitelstva na odpolední hodiny, aby se ho mohlo zúčastnit více občanů."
     },
     {
-      "id": "komunalni-2022-598917-a-410314-36",
+      "id": "komunalni-2022-598917-a-410314-39",
       "candidate_id": "komunalni-2022-598917-c-410314",
-      "question_id": "komunalni-2022-598917-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-598917-q-39",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-598917-a-687752-48",
@@ -1089,10 +1089,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-598917-a-687752-36",
+      "id": "komunalni-2022-598917-a-687752-39",
       "candidate_id": "komunalni-2022-598917-c-687752",
-      "question_id": "komunalni-2022-598917-q-36",
-      "answer": "dont_know"
+      "question_id": "komunalni-2022-598917-q-39",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-598917-a-702950-48",
@@ -1341,9 +1341,9 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-598917-a-702950-36",
+      "id": "komunalni-2022-598917-a-702950-39",
       "candidate_id": "komunalni-2022-598917-c-702950",
-      "question_id": "komunalni-2022-598917-q-36",
+      "question_id": "komunalni-2022-598917-q-39",
       "answer": "no"
     },
     {
@@ -1594,10 +1594,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-598917-a-825401-36",
+      "id": "komunalni-2022-598917-a-825401-39",
       "candidate_id": "komunalni-2022-598917-c-825401",
-      "question_id": "komunalni-2022-598917-q-36",
-      "answer": "dont_know"
+      "question_id": "komunalni-2022-598917-q-39",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-598917-a-191723-48",
@@ -1852,10 +1852,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-598917-a-191723-36",
+      "id": "komunalni-2022-598917-a-191723-39",
       "candidate_id": "komunalni-2022-598917-c-191723",
-      "question_id": "komunalni-2022-598917-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-598917-q-39",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-598917-a-804761-48",
@@ -2109,10 +2109,11 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-598917-a-804761-36",
+      "id": "komunalni-2022-598917-a-804761-39",
       "candidate_id": "komunalni-2022-598917-c-804761",
-      "question_id": "komunalni-2022-598917-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-598917-q-39",
+      "answer": "yes",
+      "comment": "Pouze těm, kteří mají snahu se zapojit do aktivního pracovního a společenského procesu."
     }
   ]
 }

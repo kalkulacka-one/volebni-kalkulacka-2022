@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -307,10 +307,10 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-500496-q-36",
-      "name": "Menstruační pomůcky –vydávání zdarma",
-      "title": "Místní úřady mají mít zákonnou povinnost poskytovat vložky či tampony bezplatně každému, kdo je potřebuje.",
-      "gist": "Některé ženy, např. samoživitelky, navíc s dospívajícími dcerami, pro svůj nízký příjem nemají přístup k adekvátním menstruačním pomůckám. Zastánci argumentují rovností a důstojností ve společnosti a tím, že toaletní papír či mýdlo jsou ve veřejných budovách běžně dostupné. Odpůrci to považují za finančně nákladné či nespravedlivé vůči lidem, kteří menstruaci nemají.",
+      "id": "komunalni-2022-500496-q-10",
+      "name": "Jmenovité výsledky hlasování zastupitelstva",
+      "title": "Hlasování členů zastupitelstva města se má zveřejňovat jmenovitě.",
+      "gist": "Podle zastánců je pro veřejnou kontrolu důležité vidět, jak přesně kdo v zastupitelstvu města hlasuje. Kritici to považují za zbytečné.",
       "detail": "",
       "tags": []
     },
@@ -936,10 +936,11 @@
       "comment": "Je potřeba vyřešit hledisko hygieny."
     },
     {
-      "id": "komunalni-2022-500496-a-120992-36",
+      "id": "komunalni-2022-500496-a-120992-10",
       "candidate_id": "komunalni-2022-500496-c-120992",
-      "question_id": "komunalni-2022-500496-q-36",
-      "answer": "dont_know"
+      "question_id": "komunalni-2022-500496-q-10",
+      "answer": "yes",
+      "comment": "Neměli bychom se ukrývat v anonymitě."
     },
     {
       "id": "komunalni-2022-500496-a-120992-37",
@@ -1196,10 +1197,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-588378-36",
+      "id": "komunalni-2022-500496-a-588378-10",
       "candidate_id": "komunalni-2022-500496-c-588378",
-      "question_id": "komunalni-2022-500496-q-36",
-      "answer": "dont_know"
+      "question_id": "komunalni-2022-500496-q-10",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-500496-a-588378-37",
@@ -1465,10 +1466,10 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-704728-36",
+      "id": "komunalni-2022-500496-a-704728-10",
       "candidate_id": "komunalni-2022-500496-c-704728",
-      "question_id": "komunalni-2022-500496-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-500496-q-10",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-500496-a-704728-37",
@@ -1752,11 +1753,10 @@
       "comment": "Nelze takto plošně říct. Rozhodně by mohly být na základních školách, kde se mohou dívkám hodit."
     },
     {
-      "id": "komunalni-2022-500496-a-527249-36",
+      "id": "komunalni-2022-500496-a-527249-10",
       "candidate_id": "komunalni-2022-500496-c-527249",
-      "question_id": "komunalni-2022-500496-q-36",
-      "answer": "dont_know",
-      "comment": "Tento typ pomoci potřebným může město řešit přes sociální organizaci, charitu nebo spolek. "
+      "question_id": "komunalni-2022-500496-q-10",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-500496-a-527249-37",
@@ -2017,10 +2017,10 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-389711-36",
+      "id": "komunalni-2022-500496-a-389711-10",
       "candidate_id": "komunalni-2022-500496-c-389711",
-      "question_id": "komunalni-2022-500496-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-500496-q-10",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-500496-a-389711-37",
@@ -2277,10 +2277,11 @@
       "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-500496-a-918243-36",
+      "id": "komunalni-2022-500496-a-918243-10",
       "candidate_id": "komunalni-2022-500496-c-918243",
-      "question_id": "komunalni-2022-500496-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-500496-q-10",
+      "answer": "yes",
+      "comment": "Hlasování členů zastupitelstva se již zveřejňuje jmenovitě."
     },
     {
       "id": "komunalni-2022-500496-a-918243-37",
@@ -2530,10 +2531,10 @@
       "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-500496-a-412729-36",
+      "id": "komunalni-2022-500496-a-412729-10",
       "candidate_id": "komunalni-2022-500496-c-412729",
-      "question_id": "komunalni-2022-500496-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-500496-q-10",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-500496-a-412729-37",
@@ -2802,10 +2803,10 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-241472-36",
+      "id": "komunalni-2022-500496-a-241472-10",
       "candidate_id": "komunalni-2022-500496-c-241472",
-      "question_id": "komunalni-2022-500496-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-500496-q-10",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-500496-a-241472-37",
@@ -3056,10 +3057,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-742711-36",
+      "id": "komunalni-2022-500496-a-742711-10",
       "candidate_id": "komunalni-2022-500496-c-742711",
-      "question_id": "komunalni-2022-500496-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-500496-q-10",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-500496-a-742711-37",
@@ -3328,9 +3329,9 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-500496-a-906275-36",
+      "id": "komunalni-2022-500496-a-906275-10",
       "candidate_id": "komunalni-2022-500496-c-906275",
-      "question_id": "komunalni-2022-500496-q-36",
+      "question_id": "komunalni-2022-500496-q-10",
       "answer": "no"
     },
     {
@@ -3591,11 +3592,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-500496-a-538203-36",
+      "id": "komunalni-2022-500496-a-538203-10",
       "candidate_id": "komunalni-2022-500496-c-538203",
-      "question_id": "komunalni-2022-500496-q-36",
-      "answer": "dont_know",
-      "comment": "Je potřeba řešit se státem, nemá být jen povinností samosprávy."
+      "question_id": "komunalni-2022-500496-q-10",
+      "answer": "dont_know"
     },
     {
       "id": "komunalni-2022-500496-a-538203-37",

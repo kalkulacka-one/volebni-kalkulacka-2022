@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -219,10 +219,10 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-555134-q-36",
-      "name": "Menstruační pomůcky –vydávání zdarma",
-      "title": "Místní úřady mají mít zákonnou povinnost poskytovat vložky či tampony bezplatně každému, kdo je potřebuje.",
-      "gist": "Některé ženy, např. samoživitelky, navíc s dospívajícími dcerami, pro svůj nízký příjem nemají přístup k adekvátním menstruačním pomůckám. Zastánci argumentují rovností a důstojností ve společnosti a tím, že toaletní papír či mýdlo jsou ve veřejných budovách běžně dostupné. Odpůrci to považují za finančně nákladné či nespravedlivé vůči lidem, kteří menstruaci nemají.",
+      "id": "komunalni-2022-555134-q-8",
+      "name": "MHD zdarma",
+      "title": "Měla by být městská hromadná doprava pro všechny rezidenty zdarma?",
+      "gist": "Zastánci zrušení jízdného argumentují zlepšením životního prostředí, zklidněním dopravy i úsporami za tisk lístků nebo vedení agendy s vymáháním dlužného jízdného. Odpůrci tvrdí, že se jedná o nehospodárné nakládání s veřejnými prostředky. Podle jiných by to příliš zatížilo městský rozpočet.",
       "detail": "",
       "tags": []
     },
@@ -840,9 +840,9 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-555134-a-915355-36",
+      "id": "komunalni-2022-555134-a-915355-8",
       "candidate_id": "komunalni-2022-555134-c-915355",
-      "question_id": "komunalni-2022-555134-q-36",
+      "question_id": "komunalni-2022-555134-q-8",
       "answer": "no"
     },
     {
@@ -1117,11 +1117,11 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-555134-a-193762-36",
+      "id": "komunalni-2022-555134-a-193762-8",
       "candidate_id": "komunalni-2022-555134-c-193762",
-      "question_id": "komunalni-2022-555134-q-36",
+      "question_id": "komunalni-2022-555134-q-8",
       "answer": "no",
-      "comment": "Tyto pomůcky jsou dostupné v obchodní síti. Zdarma by měly být k použití pouze ve veřejných budovách."
+      "comment": "Plně postačí, pokud bude městská doprava zdarma pro seniory a dotovaná pro děti a studenty."
     },
     {
       "id": "komunalni-2022-555134-a-193762-22",
@@ -1394,11 +1394,10 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-555134-a-188831-36",
+      "id": "komunalni-2022-555134-a-188831-8",
       "candidate_id": "komunalni-2022-555134-c-188831",
-      "question_id": "komunalni-2022-555134-q-36",
-      "answer": "no",
-      "comment": "nutné udělat takový systém, aby fungoval pro sociálně slabší rodiny, plošně ne"
+      "question_id": "komunalni-2022-555134-q-8",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-555134-a-188831-22",
@@ -1661,10 +1660,11 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-555134-a-694313-36",
+      "id": "komunalni-2022-555134-a-694313-8",
       "candidate_id": "komunalni-2022-555134-c-694313",
-      "question_id": "komunalni-2022-555134-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-555134-q-8",
+      "answer": "no",
+      "comment": "Budeme i nadále prosazovat jízdné zdarma pro seniory a významně snížené jízdné pro děti a studenty. Slibovat jízdné zdarma pro všechny by bylo nefér, je to ekonomicky nemožné. "
     },
     {
       "id": "komunalni-2022-555134-a-694313-22",
@@ -1919,10 +1919,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-555134-a-349076-36",
+      "id": "komunalni-2022-555134-a-349076-8",
       "candidate_id": "komunalni-2022-555134-c-349076",
-      "question_id": "komunalni-2022-555134-q-36",
-      "answer": "yes"
+      "question_id": "komunalni-2022-555134-q-8",
+      "answer": "no"
     },
     {
       "id": "komunalni-2022-555134-a-349076-22",
@@ -2199,11 +2199,11 @@
       "comment": "Tento názor se nově vyskytl a zatím k němu neumíme zaujmout postoj. Částečně to dává smysl a částečně je to zvláštní. "
     },
     {
-      "id": "komunalni-2022-555134-a-343643-36",
+      "id": "komunalni-2022-555134-a-343643-8",
       "candidate_id": "komunalni-2022-555134-c-343643",
-      "question_id": "komunalni-2022-555134-q-36",
+      "question_id": "komunalni-2022-555134-q-8",
       "answer": "dont_know",
-      "comment": "Nemáme v tomto jasný názor."
+      "comment": "V této otázce se musíme rozhodovat dle reálných dat. Některé údaje totiž ukazují, že MHD zdarma vyžene některé typy cestujících pryč a naopak další typy o které MHD nestojí(Bezdomovci) natáhne. "
     },
     {
       "id": "komunalni-2022-555134-a-343643-22",
@@ -2468,9 +2468,9 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-555134-a-812723-36",
+      "id": "komunalni-2022-555134-a-812723-8",
       "candidate_id": "komunalni-2022-555134-c-812723",
-      "question_id": "komunalni-2022-555134-q-36",
+      "question_id": "komunalni-2022-555134-q-8",
       "answer": "no"
     },
     {
@@ -2731,10 +2731,11 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-555134-a-280020-36",
+      "id": "komunalni-2022-555134-a-280020-8",
       "candidate_id": "komunalni-2022-555134-c-280020",
-      "question_id": "komunalni-2022-555134-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-555134-q-8",
+      "answer": "no",
+      "comment": "Pro seniory a hendikepované a bezpříspěvkové dárce krve (držitele Zlaté Jánského medaile) ano, to jsme prosadili a trváme na tom. Stejně jako zvýhodněné celoroční jízdné pro žáky základních škol, prodej celoročního jízdného se zněkolikanásobil a motivuje k využívání MHD."
     },
     {
       "id": "komunalni-2022-555134-a-280020-22",

@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -331,10 +331,10 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-563510-q-36",
-      "name": "Menstruační pomůcky –vydávání zdarma",
-      "title": "Místní úřady mají mít zákonnou povinnost poskytovat vložky či tampony bezplatně každému, kdo je potřebuje.",
-      "gist": "Některé ženy, např. samoživitelky, navíc s dospívajícími dcerami, pro svůj nízký příjem nemají přístup k adekvátním menstruačním pomůckám. Zastánci argumentují rovností a důstojností ve společnosti a tím, že toaletní papír či mýdlo jsou ve veřejných budovách běžně dostupné. Odpůrci to považují za finančně nákladné či nespravedlivé vůči lidem, kteří menstruaci nemají.",
+      "id": "komunalni-2022-563510-q-2",
+      "name": "Poplatek za popelnice",
+      "title": "Má město účtovat poplatek za svoz komunálního odpadu?",
+      "gist": "Odpůrci tento poplatek považují za zbytečný; jedná se podle nich jen o jakousi „skrytou“ daň. Zastánci poplatku odmítají takový zásah do rozpočtu města na úkor důležitějších položek, jako přenesení zátěže na město.",
       "detail": "",
       "tags": []
     },
@@ -925,10 +925,11 @@
       "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-563510-a-261835-36",
+      "id": "komunalni-2022-563510-a-261835-2",
       "candidate_id": "komunalni-2022-563510-c-261835",
-      "question_id": "komunalni-2022-563510-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-563510-q-2",
+      "answer": "yes",
+      "comment": "Ano, ale s podmínkou odůvodněné platby (pouze za množství vyprodukovaného odpadu a za\ncenu služby, která je konkurenceschopná). V systému musí dojít ke zvýhodnění občanů, kteří\nvytvářejí minimální odpad, nebo kteří jej třídí. Myšlenka odpadů zdarma je populistická,\nprotože likvidaci odpadů v místě kde vznikají musí stejně někdo uhradit."
     },
     {
       "id": "komunalni-2022-563510-a-261835-1",
@@ -1209,10 +1210,11 @@
       "comment": "půjde-li to zrealizovat"
     },
     {
-      "id": "komunalni-2022-563510-a-614056-36",
+      "id": "komunalni-2022-563510-a-614056-2",
       "candidate_id": "komunalni-2022-563510-c-614056",
-      "question_id": "komunalni-2022-563510-q-36",
-      "answer": "dont_know"
+      "question_id": "komunalni-2022-563510-q-2",
+      "answer": "yes",
+      "comment": "musí, protože každá lidská činnost produkuje odpad a jeho likvidace stojí peníze"
     },
     {
       "id": "komunalni-2022-563510-a-614056-1",
@@ -1473,10 +1475,11 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-563510-a-140770-36",
+      "id": "komunalni-2022-563510-a-140770-2",
       "candidate_id": "komunalni-2022-563510-c-140770",
-      "question_id": "komunalni-2022-563510-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-563510-q-2",
+      "answer": "yes",
+      "comment": "ale výše poplatku nemá být stanovena na tvorbu zisku"
     },
     {
       "id": "komunalni-2022-563510-a-140770-1",
@@ -1725,10 +1728,10 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-563510-a-883338-36",
+      "id": "komunalni-2022-563510-a-883338-2",
       "candidate_id": "komunalni-2022-563510-c-883338",
-      "question_id": "komunalni-2022-563510-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-563510-q-2",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-563510-a-883338-1",
@@ -1992,10 +1995,11 @@
       "comment": "To záleží na konkrétní budově. Spíše dáváme přednost fotovoltaickým střechám. Dnes existují i panely, které jsou součástí krytiny a jsou téměř neviditelné. "
     },
     {
-      "id": "komunalni-2022-563510-a-662237-36",
+      "id": "komunalni-2022-563510-a-662237-2",
       "candidate_id": "komunalni-2022-563510-c-662237",
-      "question_id": "komunalni-2022-563510-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-563510-q-2",
+      "answer": "no",
+      "comment": "V Jablonci máme od ledna nový systém zpoplatnění svozu odpadů. A jak se osvědčil? Za nás vůbec! Naprostý Kocourkov. Nabobtnala nesmyslná a drahá administrativa. A co je nejhorší: nejvíc platí ti poctiví, zatímco nepoctiví se vezou.\n\nProto přicházíme s razantní změnou, která se už osvědčila v řadě měst: kdo poctivě odpad TŘÍDÍ, ten za svoz komunálního odpadu NEPLATÍ. Takový systém je totiž ekologický, administrativně výrazně méně náročný a zároveň i sociálně citlivý."
     },
     {
       "id": "komunalni-2022-563510-a-662237-1",
@@ -2249,10 +2253,10 @@
       "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-563510-a-708081-36",
+      "id": "komunalni-2022-563510-a-708081-2",
       "candidate_id": "komunalni-2022-563510-c-708081",
-      "question_id": "komunalni-2022-563510-q-36",
-      "answer": "dont_know"
+      "question_id": "komunalni-2022-563510-q-2",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-563510-a-708081-1",
@@ -2502,10 +2506,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-563510-a-185818-36",
+      "id": "komunalni-2022-563510-a-185818-2",
       "candidate_id": "komunalni-2022-563510-c-185818",
-      "question_id": "komunalni-2022-563510-q-36",
-      "answer": "dont_know"
+      "question_id": "komunalni-2022-563510-q-2",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-563510-a-185818-1",
@@ -2754,10 +2758,10 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-563510-a-272135-36",
+      "id": "komunalni-2022-563510-a-272135-2",
       "candidate_id": "komunalni-2022-563510-c-272135",
-      "question_id": "komunalni-2022-563510-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-563510-q-2",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-563510-a-272135-1",
@@ -3045,11 +3049,11 @@
       "comment": "Ano, jako doplněk fotovoltaických panelů, které by měly být na střechách především. Je to důležité v rámci zadržování vody i pro snižování teploty ve vlnách veder v létě."
     },
     {
-      "id": "komunalni-2022-563510-a-479108-36",
+      "id": "komunalni-2022-563510-a-479108-2",
       "candidate_id": "komunalni-2022-563510-c-479108",
-      "question_id": "komunalni-2022-563510-q-36",
-      "answer": "dont_know",
-      "comment": "Rozhodnutí není předmětem komunální politiky a těchto voleb."
+      "question_id": "komunalni-2022-563510-q-2",
+      "answer": "yes",
+      "comment": "Platby za odpady musí spravedlivě odrážet, kolik odpadu kdo přesně vyprodukuje."
     },
     {
       "id": "komunalni-2022-563510-a-479108-1",
@@ -3300,10 +3304,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-563510-a-547567-36",
+      "id": "komunalni-2022-563510-a-547567-2",
       "candidate_id": "komunalni-2022-563510-c-547567",
-      "question_id": "komunalni-2022-563510-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-563510-q-2",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-563510-a-547567-1",
@@ -3587,11 +3591,11 @@
       "comment": "Ano, ale ne za každou cenu, pouze tam, kde jsou pro to vhodné podmínky."
     },
     {
-      "id": "komunalni-2022-563510-a-387010-36",
+      "id": "komunalni-2022-563510-a-387010-2",
       "candidate_id": "komunalni-2022-563510-c-387010",
-      "question_id": "komunalni-2022-563510-q-36",
-      "answer": "no",
-      "comment": "Není ve finančních možnostech města hradit náklady na zajištění kompletní poptávky po těchto hygienických potřebách. Pokud by byla tato povinnost uzákoněna, nebude ji možné zvládnout bez finanční injekce ze strany státu."
+      "question_id": "komunalni-2022-563510-q-2",
+      "answer": "yes",
+      "comment": "Poplatek ano, v principu \"Plaťte podle toho, kolik odpadu vytvoříte!\""
     },
     {
       "id": "komunalni-2022-563510-a-387010-1",

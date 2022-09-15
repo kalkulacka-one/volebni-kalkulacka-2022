@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -339,10 +339,10 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554961-q-36",
-      "name": "Menstruační pomůcky –vydávání zdarma",
-      "title": "Místní úřady mají mít zákonnou povinnost poskytovat vložky či tampony bezplatně každému, kdo je potřebuje.",
-      "gist": "Některé ženy, např. samoživitelky, navíc s dospívajícími dcerami, pro svůj nízký příjem nemají přístup k adekvátním menstruačním pomůckám. Zastánci argumentují rovností a důstojností ve společnosti a tím, že toaletní papír či mýdlo jsou ve veřejných budovách běžně dostupné. Odpůrci to považují za finančně nákladné či nespravedlivé vůči lidem, kteří menstruaci nemají.",
+      "id": "komunalni-2022-554961-q-43",
+      "name": "Podpora profesionálního sportu",
+      "title": "Souhlasím, aby město finančně podporovalo profesionální sport ve městě.",
+      "gist": "",
       "detail": "",
       "tags": []
     },
@@ -1002,11 +1002,11 @@
       "comment": "Ekologie, finanční dopad, zrychlení dopravy, zdraví občanů. "
     },
     {
-      "id": "komunalni-2022-554961-a-552603-36",
+      "id": "komunalni-2022-554961-a-552603-43",
       "candidate_id": "komunalni-2022-554961-c-552603",
-      "question_id": "komunalni-2022-554961-q-36",
+      "question_id": "komunalni-2022-554961-q-43",
       "answer": "no",
-      "comment": "Viz. odpověď na otázku číslo 35. "
+      "comment": "Profesionální sportovci nechť se živí ze vstupného. V případě dosažení vynikajících výsledků, kdy budou ochotní reprezentovat město je možné uvažovat o individuálních bonusech. "
     },
     {
       "id": "komunalni-2022-554961-a-552603-2",
@@ -1276,10 +1276,11 @@
       "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-554961-a-774329-36",
+      "id": "komunalni-2022-554961-a-774329-43",
       "candidate_id": "komunalni-2022-554961-c-774329",
-      "question_id": "komunalni-2022-554961-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-554961-q-43",
+      "answer": "yes",
+      "comment": "Podporovat ano, vstupovat vlastnicky nikoliv"
     },
     {
       "id": "komunalni-2022-554961-a-774329-2",
@@ -1547,10 +1548,10 @@
       "comment": "Nelze takto uplatňovat plošně na celé území. V lázeňském území tomu tak je."
     },
     {
-      "id": "komunalni-2022-554961-a-838041-36",
+      "id": "komunalni-2022-554961-a-838041-43",
       "candidate_id": "komunalni-2022-554961-c-838041",
-      "question_id": "komunalni-2022-554961-q-36",
-      "answer": "dont_know"
+      "question_id": "komunalni-2022-554961-q-43",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-554961-a-838041-2",
@@ -1802,10 +1803,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554961-a-971833-36",
+      "id": "komunalni-2022-554961-a-971833-43",
       "candidate_id": "komunalni-2022-554961-c-971833",
-      "question_id": "komunalni-2022-554961-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-554961-q-43",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-554961-a-971833-2",
@@ -2058,10 +2059,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554961-a-928456-36",
+      "id": "komunalni-2022-554961-a-928456-43",
       "candidate_id": "komunalni-2022-554961-c-928456",
-      "question_id": "komunalni-2022-554961-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-554961-q-43",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-554961-a-928456-2",
@@ -2312,9 +2313,9 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554961-a-876399-36",
+      "id": "komunalni-2022-554961-a-876399-43",
       "candidate_id": "komunalni-2022-554961-c-876399",
-      "question_id": "komunalni-2022-554961-q-36",
+      "question_id": "komunalni-2022-554961-q-43",
       "answer": "dont_know"
     },
     {
@@ -2590,11 +2591,11 @@
       "comment": "Městu chybí zejména parkovací kapacity v širším centru, které by mohly pomoci eliminovat dopravu zejména v lázeňském centru."
     },
     {
-      "id": "komunalni-2022-554961-a-260016-36",
+      "id": "komunalni-2022-554961-a-260016-43",
       "candidate_id": "komunalni-2022-554961-c-260016",
-      "question_id": "komunalni-2022-554961-q-36",
-      "answer": "dont_know",
-      "comment": "V okamžiku volně dostupných menstruačních pomůcek na veřejných toaletách je tento krok zbytný."
+      "question_id": "komunalni-2022-554961-q-43",
+      "answer": "no",
+      "comment": "Maximálně formou slevou na nájem městkých sportovišť, případně jen v případě mimořádných sportovních výdajů (např. účast ve volejbalové Lize mistrů)."
     },
     {
       "id": "komunalni-2022-554961-a-260016-2",
@@ -2854,10 +2855,11 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554961-a-298970-36",
+      "id": "komunalni-2022-554961-a-298970-43",
       "candidate_id": "komunalni-2022-554961-c-298970",
-      "question_id": "komunalni-2022-554961-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-554961-q-43",
+      "answer": "no",
+      "comment": "Město se má podílet hlavně na  financování sportování  dětí a mládeže "
     },
     {
       "id": "komunalni-2022-554961-a-298970-2",
@@ -3108,10 +3110,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554961-a-833611-36",
+      "id": "komunalni-2022-554961-a-833611-43",
       "candidate_id": "komunalni-2022-554961-c-833611",
-      "question_id": "komunalni-2022-554961-q-36",
-      "answer": "dont_know"
+      "question_id": "komunalni-2022-554961-q-43",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-554961-a-833611-2",

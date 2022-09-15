@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -299,10 +299,10 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-554804-q-36",
-      "name": "Menstruační pomůcky –vydávání zdarma",
-      "title": "Místní úřady mají mít zákonnou povinnost poskytovat vložky či tampony bezplatně každému, kdo je potřebuje.",
-      "gist": "Některé ženy, např. samoživitelky, navíc s dospívajícími dcerami, pro svůj nízký příjem nemají přístup k adekvátním menstruačním pomůckám. Zastánci argumentují rovností a důstojností ve společnosti a tím, že toaletní papír či mýdlo jsou ve veřejných budovách běžně dostupné. Odpůrci to považují za finančně nákladné či nespravedlivé vůči lidem, kteří menstruaci nemají.",
+      "id": "komunalni-2022-554804-q-9",
+      "name": "Bezbariérové zastávky MHD",
+      "title": "Město by mělo více investovat do zastávek hromadné dopravy, aby byly až na výjimky bezbariérové.",
+      "gist": "",
       "detail": "",
       "tags": []
     },
@@ -969,9 +969,9 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-a-775234-36",
+      "id": "komunalni-2022-554804-a-775234-9",
       "candidate_id": "komunalni-2022-554804-c-775234",
-      "question_id": "komunalni-2022-554804-q-36",
+      "question_id": "komunalni-2022-554804-q-9",
       "answer": "yes"
     },
     {
@@ -1222,10 +1222,10 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-a-894961-36",
+      "id": "komunalni-2022-554804-a-894961-9",
       "candidate_id": "komunalni-2022-554804-c-894961",
-      "question_id": "komunalni-2022-554804-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-554804-q-9",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-554804-a-894961-37",
@@ -1508,11 +1508,11 @@
       "answer": "dont_know"
     },
     {
-      "id": "komunalni-2022-554804-a-265108-36",
+      "id": "komunalni-2022-554804-a-265108-9",
       "candidate_id": "komunalni-2022-554804-c-265108",
-      "question_id": "komunalni-2022-554804-q-36",
-      "answer": "no",
-      "comment": "Systém sociální podpory je dostatečně štědrý a umožňuje pomůcky koupit."
+      "question_id": "komunalni-2022-554804-q-9",
+      "answer": "yes",
+      "comment": "Průběžně město realizuje."
     },
     {
       "id": "komunalni-2022-554804-a-265108-37",
@@ -1783,10 +1783,11 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-a-415562-36",
+      "id": "komunalni-2022-554804-a-415562-9",
       "candidate_id": "komunalni-2022-554804-c-415562",
-      "question_id": "komunalni-2022-554804-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-554804-q-9",
+      "answer": "yes",
+      "comment": "Hlavně využít vždy vypsaných dotačních titulů."
     },
     {
       "id": "komunalni-2022-554804-a-415562-37",
@@ -2057,10 +2058,10 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-a-554883-36",
+      "id": "komunalni-2022-554804-a-554883-9",
       "candidate_id": "komunalni-2022-554804-c-554883",
-      "question_id": "komunalni-2022-554804-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-554804-q-9",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-554804-a-554883-37",
@@ -2311,10 +2312,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-a-418969-36",
+      "id": "komunalni-2022-554804-a-418969-9",
       "candidate_id": "komunalni-2022-554804-c-418969",
-      "question_id": "komunalni-2022-554804-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-554804-q-9",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-554804-a-418969-37",
@@ -2563,10 +2564,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-a-986225-36",
+      "id": "komunalni-2022-554804-a-986225-9",
       "candidate_id": "komunalni-2022-554804-c-986225",
-      "question_id": "komunalni-2022-554804-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-554804-q-9",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-554804-a-986225-37",
@@ -2815,10 +2816,10 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-554804-a-862129-36",
+      "id": "komunalni-2022-554804-a-862129-9",
       "candidate_id": "komunalni-2022-554804-c-862129",
-      "question_id": "komunalni-2022-554804-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-554804-q-9",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-554804-a-862129-37",
@@ -3079,10 +3080,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-a-606320-36",
+      "id": "komunalni-2022-554804-a-606320-9",
       "candidate_id": "komunalni-2022-554804-c-606320",
-      "question_id": "komunalni-2022-554804-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-554804-q-9",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-554804-a-606320-37",
@@ -3331,10 +3332,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-554804-a-118556-36",
+      "id": "komunalni-2022-554804-a-118556-9",
       "candidate_id": "komunalni-2022-554804-c-118556",
-      "question_id": "komunalni-2022-554804-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-554804-q-9",
+      "answer": "yes"
     },
     {
       "id": "komunalni-2022-554804-a-118556-37",

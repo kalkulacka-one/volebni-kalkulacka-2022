@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **23** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -291,10 +291,10 @@
       "tags": []
     },
     {
-      "id": "komunalni-2022-590266-q-36",
-      "name": "Menstruační pomůcky –vydávání zdarma",
-      "title": "Místní úřady mají mít zákonnou povinnost poskytovat vložky či tampony bezplatně každému, kdo je potřebuje.",
-      "gist": "Některé ženy, např. samoživitelky, navíc s dospívajícími dcerami, pro svůj nízký příjem nemají přístup k adekvátním menstruačním pomůckám. Zastánci argumentují rovností a důstojností ve společnosti a tím, že toaletní papír či mýdlo jsou ve veřejných budovách běžně dostupné. Odpůrci to považují za finančně nákladné či nespravedlivé vůči lidem, kteří menstruaci nemají.",
+      "id": "komunalni-2022-590266-q-8",
+      "name": "MHD zdarma",
+      "title": "Měla by být městská hromadná doprava pro všechny rezidenty zdarma?",
+      "gist": "Zastánci zrušení jízdného argumentují zlepšením životního prostředí, zklidněním dopravy i úsporami za tisk lístků nebo vedení agendy s vymáháním dlužného jízdného. Odpůrci tvrdí, že se jedná o nehospodárné nakládání s veřejnými prostředky. Podle jiných by to příliš zatížilo městský rozpočet.",
       "detail": "",
       "tags": []
     },
@@ -922,9 +922,9 @@
       "comment": "nesmyslná otázka: někde symbolické už je, někde není vůbec"
     },
     {
-      "id": "komunalni-2022-590266-a-589003-36",
+      "id": "komunalni-2022-590266-a-589003-8",
       "candidate_id": "komunalni-2022-590266-c-589003",
-      "question_id": "komunalni-2022-590266-q-36",
+      "question_id": "komunalni-2022-590266-q-8",
       "answer": "no"
     },
     {
@@ -1198,10 +1198,11 @@
       "comment": "V Třebíči je snížené vstupné pro děti a studenty běžné."
     },
     {
-      "id": "komunalni-2022-590266-a-860344-36",
+      "id": "komunalni-2022-590266-a-860344-8",
       "candidate_id": "komunalni-2022-590266-c-860344",
-      "question_id": "komunalni-2022-590266-q-36",
-      "answer": "dont_know"
+      "question_id": "komunalni-2022-590266-q-8",
+      "answer": "no",
+      "comment": "Vzhledem k současné energetické krizi považujeme toto téma za nedměrný a neufinancovatelný zásah do rozpočtu města. "
     },
     {
       "id": "komunalni-2022-590266-a-860344-35",
@@ -1479,10 +1480,11 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-590266-a-238616-36",
+      "id": "komunalni-2022-590266-a-238616-8",
       "candidate_id": "komunalni-2022-590266-c-238616",
-      "question_id": "komunalni-2022-590266-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-590266-q-8",
+      "answer": "no",
+      "comment": "Nejsme asociálové, do 18 let věku respektujeme zdarma, stejně jako od 60 let výše, ale výdělečně činná generace by měla přispívat na provoz MHD a tudíž i na její kvalitu."
     },
     {
       "id": "komunalni-2022-590266-a-238616-35",
@@ -1763,10 +1765,11 @@
       "comment": "Pokud bezplatné nebo symbolické vstupné, tak rozhodně nejen pro mládež, ale např. i pro seniory."
     },
     {
-      "id": "komunalni-2022-590266-a-711663-36",
+      "id": "komunalni-2022-590266-a-711663-8",
       "candidate_id": "komunalni-2022-590266-c-711663",
-      "question_id": "komunalni-2022-590266-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-590266-q-8",
+      "answer": "no",
+      "comment": "Hromadná doprava zdarma má své přínosy, ale je to velmi nákladné. I pokud by si to město mohlo dovolit, rozhodně by nemělo jít pouze o rezidenty, ale i o návštěvníky města."
     },
     {
       "id": "komunalni-2022-590266-a-711663-35",
@@ -2019,10 +2022,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-590266-a-166431-36",
+      "id": "komunalni-2022-590266-a-166431-8",
       "candidate_id": "komunalni-2022-590266-c-166431",
-      "question_id": "komunalni-2022-590266-q-36",
-      "answer": "dont_know"
+      "question_id": "komunalni-2022-590266-q-8",
+      "answer": "no"
     },
     {
       "id": "komunalni-2022-590266-a-166431-35",
@@ -2294,11 +2297,11 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-590266-a-900395-36",
+      "id": "komunalni-2022-590266-a-900395-8",
       "candidate_id": "komunalni-2022-590266-c-900395",
-      "question_id": "komunalni-2022-590266-q-36",
+      "question_id": "komunalni-2022-590266-q-8",
       "answer": "no",
-      "comment": "Zcela zcestné uvažování. Když už i prezervativy, lahvinky rumu apod."
+      "comment": "Pro děti do 15ti a dospělé od 65ti."
     },
     {
       "id": "komunalni-2022-590266-a-900395-35",
@@ -2552,9 +2555,9 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-590266-a-180898-36",
+      "id": "komunalni-2022-590266-a-180898-8",
       "candidate_id": "komunalni-2022-590266-c-180898",
-      "question_id": "komunalni-2022-590266-q-36",
+      "question_id": "komunalni-2022-590266-q-8",
       "answer": "no"
     },
     {
@@ -2809,9 +2812,9 @@
       "answer": "no"
     },
     {
-      "id": "komunalni-2022-590266-a-934440-36",
+      "id": "komunalni-2022-590266-a-934440-8",
       "candidate_id": "komunalni-2022-590266-c-934440",
-      "question_id": "komunalni-2022-590266-q-36",
+      "question_id": "komunalni-2022-590266-q-8",
       "answer": "no"
     },
     {
@@ -3071,10 +3074,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-590266-a-378973-36",
+      "id": "komunalni-2022-590266-a-378973-8",
       "candidate_id": "komunalni-2022-590266-c-378973",
-      "question_id": "komunalni-2022-590266-q-36",
-      "answer": "dont_know"
+      "question_id": "komunalni-2022-590266-q-8",
+      "answer": "no"
     },
     {
       "id": "komunalni-2022-590266-a-378973-35",
@@ -3331,10 +3334,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-590266-a-543213-36",
+      "id": "komunalni-2022-590266-a-543213-8",
       "candidate_id": "komunalni-2022-590266-c-543213",
-      "question_id": "komunalni-2022-590266-q-36",
-      "answer": "yes"
+      "question_id": "komunalni-2022-590266-q-8",
+      "answer": "no"
     },
     {
       "id": "komunalni-2022-590266-a-543213-35",
@@ -3588,10 +3591,10 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-590266-a-505803-36",
+      "id": "komunalni-2022-590266-a-505803-8",
       "candidate_id": "komunalni-2022-590266-c-505803",
-      "question_id": "komunalni-2022-590266-q-36",
-      "answer": "dont_know"
+      "question_id": "komunalni-2022-590266-q-8",
+      "answer": "no"
     },
     {
       "id": "komunalni-2022-590266-a-505803-35",
@@ -3856,10 +3859,11 @@
       "answer": "yes"
     },
     {
-      "id": "komunalni-2022-590266-a-160320-36",
+      "id": "komunalni-2022-590266-a-160320-8",
       "candidate_id": "komunalni-2022-590266-c-160320",
-      "question_id": "komunalni-2022-590266-q-36",
-      "answer": "no"
+      "question_id": "komunalni-2022-590266-q-8",
+      "answer": "dont_know",
+      "comment": "Podle ankety kterou jsme dělali, tak většina je pro, ale určitě bychom prosazovali alespoň od 60 let zdarma."
     },
     {
       "id": "komunalni-2022-590266-a-160320-35",
