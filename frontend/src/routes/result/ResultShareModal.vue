@@ -18,13 +18,13 @@ const electionStore = useElectionStore();
 const props = defineProps<ResultShareModalProps>();
 const bestMatch = electionStore.calculator?.candidates.find((x) => {
   if (props.relativeAgreement.length > 0) {
-    x.id === props.relativeAgreement[0].cId;
+    return x.id === props.relativeAgreement[0].cId;
   } else {
     return false;
   }
 });
 const hashTags = ['volby2022', 'volby', 'volebnikalkulacka'].join(',');
-const shareDescription = `Podle Volební kalkulačky mi největší shoda vyšla takhle: ${bestMatch?.name}. Podívejte se na moje výsledky a vyplňte si ji také!`;
+const shareDescription = `Podle Volební kalkulačky mi největší shoda vyšla takhle: ${bestMatch?.short_name}. Podívejte se na moje výsledky a vyplňte si ji také!`;
 const shareLink = ref(null as null | string);
 onMounted(() => {
   shareLink.value = generateSocialLink('link');
