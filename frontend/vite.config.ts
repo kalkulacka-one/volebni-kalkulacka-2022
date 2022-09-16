@@ -47,6 +47,10 @@ export default defineConfig(({ command, mode }) => {
           target: 'https://www.volebnikalkulacka.cz',
           changeOrigin: true,
         },
+        '/image': {
+          target: 'https://www.volebnikalkulacka.cz',
+          changeOrigin: true,
+        },
         '/js/script.outbound-links.js': {
           target: 'https://www.volebnikalkulacka.cz',
           changeOrigin: true,

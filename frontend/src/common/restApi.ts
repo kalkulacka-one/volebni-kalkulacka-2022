@@ -2,6 +2,7 @@ import {
   useElectionStore,
   convertAnswerToStr,
   convertStrToAnswer,
+  UserAnswerEnum,
 } from '@/stores/electionStore';
 import type { AnswerRest } from '@/types/rest/Answer';
 import type { CalculatorRest } from '@/types/rest/Calculator';
@@ -61,7 +62,7 @@ export const postResults = async () => {
     if (!electionStore.election.type) {
       console.warn(`Election type undefined, setting to 'undefined'`);
     }
-    const answers: AnswerRest[] = electionStore.answers.map((x) => {
+    const answers = electionStore.answers.map((x) => {
       return {
         question_id: x.id,
         answer: convertAnswerToStr(x.answer),
@@ -112,8 +113,9 @@ export const postResults = async () => {
     };
     const res = await fetch(endpointUrl, {
       method: 'POST',
+      //mode: 'no-cors',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json; charset=utf-8',
         // 'Content-Type': 'application/x-www-form-urlencoded',
       },
       body: JSON.stringify(data),
@@ -125,8 +127,16 @@ export const postResults = async () => {
         console.error(res.body);
       }
       return;
+    } else {
+      try {
+        const resParsed = (await res.json()) as ResultAddedRest;
+        console.debug('POST results success!');
+        return resParsed;
+      } catch (error) {
+        console.debug(res);
+        res.text().then((text) => console.debug(text));
+        throw error;
+      }
     }
-    console.debug('GET results success!');
-    return (await res.json()) as ResultAddedRest;
   }
 };

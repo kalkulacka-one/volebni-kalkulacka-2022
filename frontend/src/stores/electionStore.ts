@@ -1,9 +1,11 @@
 import { fetchCalculator, fetchElectionData } from '@/common/dataFetch';
+import { postResults } from '@/common/restApi';
 import { appRoutes } from '@/main';
 import type { Calculator } from '@/types/calculator';
 import type { Calculators } from '@/types/calculators';
 import type { Election } from '@/types/election';
 import { defineStore } from 'pinia';
+import { stringifyQuery } from 'vue-router';
 
 export enum UserAnswerEnum {
   undefined = 0,
@@ -50,6 +52,7 @@ export const useElectionStore = defineStore('election', {
       calculator: undefined as Calculator | undefined,
       answers: [] as UserAnswer[],
       answerProgress: -1,
+      resultsUuid: null as null | string,
     };
   },
   getters: {
@@ -126,6 +129,13 @@ export const useElectionStore = defineStore('election', {
           id: x.id as string,
         };
       });
+    },
+    async saveResults() {
+      this.resultsUuid = null;
+      const response = await postResults();
+      if (response?.result_id) {
+        this.resultsUuid = response.result_id;
+      }
     },
     init() {
       this.answerProgress = -1;

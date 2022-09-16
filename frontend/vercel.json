@@ -1,18 +1,45 @@
 {
-  "redirects": [
+  "headers": [
     {
-      "source": "/volby/(.*)",
-      "destination": "/index.html"
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Credentials", "value": "true" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
+        }
+      ]
     }
   ],
   "rewrites": [
     {
-      "source": "/api/:path*",
-      "destination": "https://volebnikalkulacka.cz/api/:path*"
+      "source": "/api/results",
+      "destination": "https://www.volebnikalkulacka.cz/api/results"
     },
     {
-      "source": "/api/:path*/",
-      "destination": "https://volebnikalkulacka.cz/api/:path*/"
+      "source": "/api/results/",
+      "destination": "https://www.volebnikalkulacka.cz/api/results/"
+    },
+    {
+      "source": "/api/results/:uuid",
+      "destination": "https://www.volebnikalkulacka.cz/api/results/:uuid"
+    },
+    {
+      "source": "/image/:uuid",
+      "destination": "https://www.volebnikalkulacka.cz/image/:uuid"
+    },
+    {
+      "source": "/volby/(.*)",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/share/(.*)",
+      "destination": "/index.html"
     }
   ]
 }

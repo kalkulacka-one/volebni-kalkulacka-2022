@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { onBeforeMount, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+
 import {
   mdiShareVariantOutline,
   mdiCloseCircleOutline,
@@ -14,8 +15,6 @@ import {
   calculateRelativeAgreement,
   encodeResults,
 } from '@/common/resultParser';
-import { postResults } from '@/common/restApi';
-import { generateShareUrl } from '@/common/share';
 
 import type { Election } from '@/types/election';
 import type { CandidateAnswer } from '@/types/candidate-answer';
@@ -36,8 +35,10 @@ import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
 import ResultCategory from './ResultCategory.vue';
-import BodyText from '../../components/design-system/typography/BodyText.vue';
+import ResultShareModal from './ResultShareModal.vue';
 import { getDistrictCode } from '@/common/utils';
+import BodyText from '../../components/design-system/typography/BodyText.vue';
+import ErrorModal from '../../components/ErrorModal.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -74,17 +75,13 @@ const handleShowComparsionClick = () => {
   });
 };
 
-const handleShareClick = async () => {
-  const res = await postResults();
-
-  if (!res?.result_id) {
-    return;
-  }
-  alert(generateShareUrl(res.result_id));
+const showShareModal = ref(false);
+const handleShareClick = () => {
+  shareModal.value?.open();
 };
-
-onMounted(async () => {
-  const response = await postResults();
+onBeforeMount(async () => {
+  await electionStore.saveResults();
+  console.debug(`Results saved: ${electionStore.resultsUuid}`);
 });
 
 console.debug(encodeResults(electionStore.answers));
@@ -92,19 +89,7 @@ const resultsGeneral = calculateRelativeAgreement(
   electionStore.calculator?.answers as CandidateAnswer[],
   electionStore.answers
 );
-
-const resultsEcology = calculateRelativeAgreement(
-  electionStore.calculator?.answers as CandidateAnswer[],
-  electionStore.answers.filter((x, i) =>
-    electionStore.calculator?.questions[i].tags?.includes('tag01')
-  )
-);
-const resultsMedicine = calculateRelativeAgreement(
-  electionStore.calculator?.answers as CandidateAnswer[],
-  electionStore.answers.filter((x, i) =>
-    electionStore.calculator?.questions[i].tags?.includes('tag02')
-  )
-);
+const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
 </script>
 <template>
   <BackgroundComponent :is-image="false">
@@ -162,7 +147,6 @@ const resultsMedicine = calculateRelativeAgreement(
             </template>
             <TitleText tag="h2" size="medium">Moje shoda</TitleText>
             <template #after>
-              <!--
               <ButtonComponent
                 kind="link"
                 color="primary"
@@ -173,7 +157,6 @@ const resultsMedicine = calculateRelativeAgreement(
                 </template>
                 Sdílet
               </ButtonComponent>
-              -->
             </template>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
@@ -186,29 +169,29 @@ const resultsMedicine = calculateRelativeAgreement(
             </template>
             <TitleText tag="h2" size="large">Moje shoda</TitleText>
             <template #after>
-              <!--
-              <ButtonComponent
-                kind="link"
-                color="primary"
-                @click="handleShareClick"
-              >
-                <template #icon>
-                  <IconComponent :icon="mdiShareVariantOutline" />
-                </template>
-                Sdílet
-              </ButtonComponent>
-              -->
-              <ButtonComponent
-                class="desktop"
-                kind="filled"
-                color="primary"
-                @click="handleShowComparsionClick"
-              >
-                Porovnat odpovědi
-                <template #iconAfter>
-                  <IconComponent :icon="mdiArrowRight" />
-                </template>
-              </ButtonComponent>
+              <div class="navbar-btn-wrapper">
+                <ButtonComponent
+                  kind="link"
+                  color="primary"
+                  @click="handleShareClick"
+                >
+                  <template #icon>
+                    <IconComponent :icon="mdiShareVariantOutline" />
+                  </template>
+                  Sdílet
+                </ButtonComponent>
+                <ButtonComponent
+                  class="desktop"
+                  kind="filled"
+                  color="primary"
+                  @click="handleShowComparsionClick"
+                >
+                  Porovnat odpovědi
+                  <template #iconAfter>
+                    <IconComponent :icon="mdiArrowRight" />
+                  </template>
+                </ButtonComponent>
+              </div>
             </template>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
@@ -246,9 +229,22 @@ const resultsMedicine = calculateRelativeAgreement(
       </BottomBarWrapper>
     </StickyHeaderLayout>
   </BackgroundComponent>
+  <ResultShareModal
+    v-if="electionStore.resultsUuid"
+    ref="shareModal"
+    :relative-agreement="resultsGeneral"
+  />
+  <ErrorModal v-else ref="shareModal" title="Něco se pokazilo">
+    Bohužel momentálně nelze sdílet, zkuste to prosím později.
+  </ErrorModal>
 </template>
 
 <style lang="scss" scoped>
+.navbar-btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-small);
+}
 .results-header-note {
   text-align: center;
 }
