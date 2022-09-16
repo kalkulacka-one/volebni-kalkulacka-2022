@@ -229,7 +229,11 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
       </BottomBarWrapper>
     </StickyHeaderLayout>
   </BackgroundComponent>
-  <ResultShareModal v-if="electionStore.resultsUuid" ref="shareModal" />
+  <ResultShareModal
+    v-if="electionStore.resultsUuid"
+    ref="shareModal"
+    :relative-agreement="resultsGeneral"
+  />
   <ErrorModal v-else ref="shareModal" title="Něco se pokazilo">
     Bohužel momentálně nelze sdílet, zkuste to prosím později.
   </ErrorModal>

@@ -8,7 +8,23 @@ import { mdiContentCopy } from '@mdi/js';
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
 import IconButton from '../../components/design-system/input/IconButton.vue';
 import TitleText from '../../components/design-system/typography/TitleText.vue';
+import type { RelativeAgreement } from '@/common/resultParser';
+import { useElectionStore } from '@/stores/electionStore';
 
+export interface ResultShareModalProps {
+  relativeAgreement: RelativeAgreement;
+}
+const electionStore = useElectionStore();
+const props = defineProps<ResultShareModalProps>();
+const bestMatch = electionStore.calculator?.candidates.find((x) => {
+  if (props.relativeAgreement.length > 0) {
+    x.id === props.relativeAgreement[0].cId;
+  } else {
+    return false;
+  }
+});
+const hashTags = 'volby2022, volby, volebnikalkulacka';
+const shareDescription = `Podle Volební kalkulačky mi největší shoda vyšla takhle: ${bestMatch?.name}. Podívejte se na moje výsledky a vyplňte si ji také!`;
 const shareLink = ref(null as null | string);
 onMounted(() => (shareLink.value = generateSocialLink('link')));
 const isModalOpen = ref(false);
@@ -54,6 +70,8 @@ const handleCopyClick = () => {
             <ShareNetwork
               title="Volební Kalkulačka"
               network="facebook"
+              :description="shareDescription"
+              :hashtags="hashTags"
               :url="shareLink"
             >
               <ButtonComponent kind="link" size="medium">
@@ -69,6 +87,8 @@ const handleCopyClick = () => {
             <ShareNetwork
               title="Volební Kalkulačka"
               network="twitter"
+              :description="shareDescription"
+              :hashtags="hashTags"
               :url="shareLink"
             >
               <ButtonComponent kind="link" size="medium">

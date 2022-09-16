@@ -64,6 +64,8 @@ export interface Result {
   random: number;
 }
 
+export type RelativeAgreement = { cId: string; result: Result }[];
+
 export const calculateAnswerResult = (
   ua: UserAnswer,
   ca: CandidateAnswer,

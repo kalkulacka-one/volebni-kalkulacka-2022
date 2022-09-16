@@ -22,6 +22,7 @@ import TitleText from '@/components/design-system/typography/TitleText.vue';
 import EmbedWrapper from '@/components/responsivity/EmbedWrapper.vue';
 import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
+import { mdiRepeat } from '@mdi/js';
 
 const route = useRoute();
 const electionStore = useElectionStore();
@@ -71,14 +72,15 @@ const breadcrumbs = ref('');
                   kind="link"
                   @click="
                     router.push({
-                      name: appRoutes.index.name,
+                      name: appRoutes.districtSelection.name,
                       query: { ...route.query },
+                      params: { election: route.params.election },
                     })
                   "
                 >
-                  Zpět na hlavní stránku
+                  Vyplnit znovu
                   <template #iconAfter>
-                    <IconComponent :icon="mdiCloseCircleOutline" />
+                    <IconComponent :icon="mdiRepeat" />
                   </template>
                 </ButtonComponent>
               </ResponsiveWrapper>
@@ -87,16 +89,14 @@ const breadcrumbs = ref('');
                   kind="link"
                   @click="
                     router.push({
-                      name: appRoutes.index.name,
+                      name: appRoutes.districtSelection.name,
                       query: { ...route.query },
+                      params: { election: route.params.election },
                     })
                   "
                 >
                   <template #icon>
-                    <IconComponent
-                      :icon="mdiCloseCircleOutline"
-                      title="Zpět na hlavní stránku"
-                    />
+                    <IconComponent :icon="mdiRepeat" title="Vyplnit znovu" />
                   </template>
                 </ButtonComponent>
               </ResponsiveWrapper>
@@ -122,6 +122,12 @@ const breadcrumbs = ref('');
       </template>
       <BottomBarWrapper>
         <StackComponent class="main" spacing="medium">
+          <BodyText class="results-header-note" tag="p" size="medium">
+            <strong>
+              Pokud si chcete kalkulačku vyplnit také, klikněte na "Vyplnit
+              znovu" v pravém horním rohu.
+            </strong>
+          </BodyText>
           <ResultCategory
             :result="resultsGeneral"
             category="general"
