@@ -1,9 +1,7 @@
 import type { SocialMediaProps } from '@/components/design-system/icons/SocialMediaIcon.vue';
 import { useElectionStore } from '@/stores/electionStore';
 
-//const BASE_URL = 'https://www.volebnikalkulacka.cz';
-const BASE_URL =
-  'https://volebni-kalkulacka-2022-git-social-sharing-ceskodigital.vercel.app';
+const BASE_URL = 'https://www.volebnikalkulacka.cz';
 
 export const generateShareUrl = (uuid: string) => {
   return `${BASE_URL}/share/${uuid}`;
