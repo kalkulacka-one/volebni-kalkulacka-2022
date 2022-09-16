@@ -4,7 +4,7 @@ import { useElectionStore } from '@/stores/electionStore';
 const BASE_URL = 'https://www.volebnikalkulacka.cz';
 
 export const generateShareUrl = (uuid: string) => {
-  return `${BASE_URL}/share/${uuid}`;
+  return `${BASE_URL}/share/${uuid}?utm_campaign=social-share`;
 };
 
 export const generateSocialLink = (type: 'link' | 'facebook' | 'twitter') => {
