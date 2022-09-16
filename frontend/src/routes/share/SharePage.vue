@@ -23,6 +23,7 @@ import EmbedWrapper from '@/components/responsivity/EmbedWrapper.vue';
 import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import { mdiRepeat } from '@mdi/js';
+import BodyText from '../../components/design-system/typography/BodyText.vue';
 
 const route = useRoute();
 const electionStore = useElectionStore();
@@ -56,7 +57,14 @@ watch(isInitialized, (value) => {
     breadcrumbs.value = `${electionName} — ${districtNameWithCode}`;
   }
 });
-
+const handleFillAgainClick = () => {
+  const newRoute = {
+    name: appRoutes.districtSelection.name,
+    query: { ...route.query },
+    params: { election: electionStore.election?.id },
+  };
+  router.push(newRoute);
+};
 const breadcrumbs = ref('');
 </script>
 <template>
@@ -68,16 +76,7 @@ const breadcrumbs = ref('');
           <template #right>
             <EmbedWrapper>
               <ResponsiveWrapper medium large extra-large huge>
-                <ButtonComponent
-                  kind="link"
-                  @click="
-                    router.push({
-                      name: appRoutes.districtSelection.name,
-                      query: { ...route.query },
-                      params: { election: route.params.election },
-                    })
-                  "
-                >
+                <ButtonComponent kind="link" @click="handleFillAgainClick">
                   Vyplnit znovu
                   <template #iconAfter>
                     <IconComponent :icon="mdiRepeat" />
@@ -85,16 +84,7 @@ const breadcrumbs = ref('');
                 </ButtonComponent>
               </ResponsiveWrapper>
               <ResponsiveWrapper extra-small small>
-                <ButtonComponent
-                  kind="link"
-                  @click="
-                    router.push({
-                      name: appRoutes.districtSelection.name,
-                      query: { ...route.query },
-                      params: { election: route.params.election },
-                    })
-                  "
-                >
+                <ButtonComponent kind="link" @click="handleFillAgainClick">
                   <template #icon>
                     <IconComponent :icon="mdiRepeat" title="Vyplnit znovu" />
                   </template>
