@@ -71,7 +71,7 @@ const handleCopyClick = () => {
         <div class="share-wrapper">
           <div class="share-buttons-wrapper">
             <ShareNetwork
-              title="Volební Kalkulačka"
+              title="Volební kalkulačka"
               network="facebook"
               :description="shareDescription"
               :hashtags="hashTags"
@@ -88,9 +88,8 @@ const handleCopyClick = () => {
               </ButtonComponent>
             </ShareNetwork>
             <ShareNetwork
-              title="Volební Kalkulačka"
+              :title="shareDescription"
               network="twitter"
-              :description="shareDescription"
               :hashtags="hashTags"
               :url="shareLink"
             >
