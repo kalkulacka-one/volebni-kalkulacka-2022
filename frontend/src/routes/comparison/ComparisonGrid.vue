@@ -20,6 +20,7 @@ import {
 } from '@/components/design-system/icons';
 
 import QuestionCard from '@/components/QuestionCard.vue';
+import CardComponent from '../../components/design-system/containers/CardComponent.vue';
 
 export interface Props {
   questions: Question[];
@@ -82,7 +83,7 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
         line-style="dotted"
         :color="i === 1 ? 'rgb(var(--color-neutral-border-strong))' : undefined"
         :style="{
-          'grid-column': i,
+          'grid-column': i === 1 ? 1 : 2 * (i - 1),
           'grid-row': `1 / span ${2 * questionCount + 1}`,
         }"
       />
@@ -104,7 +105,10 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
       </FilledCircle>
     </div>
     <template v-for="(candidateId, index) in candidateOrder" :key="candidateId">
-      <div class="header" :style="{ 'grid-column': index + 2, 'grid-row': 1 }">
+      <div
+        class="header"
+        :style="{ 'grid-column': 2 * index + 2, 'grid-row': 1 }"
+      >
         <FilledCircle size="extra-large"
           ><BodyText
             size="extra-small"
@@ -126,7 +130,7 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
       <QuestionCard
         class="question-card"
         :style="{
-          'grid-column': `1 / span ${candidateCount + 1}`,
+          'grid-column': `1 / span ${2 * candidateCount + 1}`,
           'grid-row': 2 * questionIndex + 2,
         }"
         :question="question"
@@ -160,7 +164,7 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
       >
         <div
           :style="{
-            'grid-column': candidateIndex + 2,
+            'grid-column': 2 * candidateIndex + 2,
             'grid-row': 2 * questionIndex + 3,
           }"
         >
@@ -180,6 +184,33 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
             />
           </FilledCircle>
         </div>
+
+        <div
+          v-if="
+            candidateAnswers.filter(
+              (answer) =>
+                answer.candidate_id === candidateId &&
+                answer.question_id === question.id
+            )[0].comment
+          "
+          class="comment"
+          :style="{
+            'grid-column': 2 * candidateIndex + 3,
+            'grid-row': 2 * questionIndex + 3,
+          }"
+        >
+          <CardComponent corner="top-left" padding="small">
+            <BodyText size="small">
+              {{
+                candidateAnswers.filter(
+                  (answer) =>
+                    answer.candidate_id === candidateId &&
+                    answer.question_id === question.id
+                )[0].comment
+              }}
+            </BodyText>
+          </CardComponent>
+        </div>
       </template>
     </template>
   </div>
@@ -198,10 +229,10 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
 .grid {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: min-content;
+  grid-auto-columns: max-content;
   justify-items: center;
-  column-gap: 2rem;
-  row-gap: 2rem;
+  column-gap: var(--responsive-spacing-large);
+  row-gap: var(--responsive-spacing-large);
 }
 
 .column {
@@ -232,5 +263,11 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
 
 .user-header {
   left: calc(var(--responsive-spacing-large) - 18px);
+}
+
+.comment {
+  max-width: calc(6 * var(--spacing-large));
+  margin-top: calc(var(--spacing-extra-large) / 2);
+  margin-left: calc(-1 * var(--responsive-spacing-large));
 }
 </style>
