@@ -97,6 +97,8 @@ class Candidate:
     contact: Optional[str]
     contact_party: Optional[str]
     people: Optional[str]
+    given_name: Optional[str] = None
+    family_name: Optional[str] = None
 
 
 @dataclass
@@ -524,6 +526,8 @@ def extract_senatni_candidates(
             short_name=name,
             abbreviation=name,
             description=name,
+            given_name=str(row["given_name"]),
+            family_name=str(row["family_name"]),
             secret_code=secret_code,
             important=bool(int(row["important"] or "0")),
             type=CandidateType.person,
@@ -872,6 +876,8 @@ def generate_calculator_dict(election: Election, district: District) -> dict[str
             "short_name": candidate.short_name,
         }  # type: Dict[str, Any]
         add_element(c_dict, "img_url", candidate.logo)
+        add_element(c_dict, "given_name", candidate.given_name)
+        add_element(c_dict, "family_name", candidate.family_name)
 
         contacts = generate_contacts(candidate.contacts)
 

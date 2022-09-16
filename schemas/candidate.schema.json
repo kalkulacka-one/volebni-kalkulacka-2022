@@ -18,6 +18,14 @@
       "type": "string",
       "description": "Party short name"
     },
+    "given_name": {
+      "type": "string",
+      "description": "Given name if it makes sense"
+    },
+    "family_name": {
+      "type": "string",
+      "description": "Family name if it makes sense"
+    },
     "type": {
       "type": "string",
       "description": "Candidate type",
