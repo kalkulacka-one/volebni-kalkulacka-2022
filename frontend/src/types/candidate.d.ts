@@ -22,6 +22,14 @@ export interface Candidate {
    */
   short_name?: string;
   /**
+   * Given name if it makes sense
+   */
+  given_name?: string;
+  /**
+   * Family name if it makes sense
+   */
+  family_name?: string;
+  /**
    * Candidate type
    */
   type: "party" | "coalition" | "person";
