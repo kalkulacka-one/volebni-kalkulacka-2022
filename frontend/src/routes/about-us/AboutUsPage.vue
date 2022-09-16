@@ -52,10 +52,10 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
           Českou a slovenskou Volební kalkulačku vyvíjí a provozuje spolek
           KohoVolit.eu již od roku 2006. Celkem jsme vytvořili již přes 30
           volebních kalkulaček pro všechny druhy voleb (evropské, prezidentské,
-          parlamentní, regionální i komunální). Pravidelně také pomáháme tvožit
+          parlamentní, regionální i komunální). Pravidelně také pomáháme tvořit
           kalkulačky v Maďarsku a v dalších zemích. Zatím nejúspěšnější
           kalkulačku před prvním kolem prezidentských voleb v ČR v roce 2018
-          použil více než 1.25 milionu voličů.
+          použil více než 1,25 milionu voličů.
         </BodyText>
         <BodyText size="large">
           KohoVolit.eu vytváří dva druhy kalkulaček: Inventura hlasování
