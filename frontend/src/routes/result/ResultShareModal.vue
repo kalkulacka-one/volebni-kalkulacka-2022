@@ -23,7 +23,12 @@ const bestMatch = electionStore.calculator?.candidates.find((x) => {
     return false;
   }
 });
-const hashTags = ['volby', 'volby2022', 'volebnikalkulacka', 'mojevysledky'].join(',');
+const hashTags = [
+  'volby',
+  'volby2022',
+  'volebnikalkulacka',
+  'mojevysledky',
+].join(',');
 const shareDescription = `Podle Volební kalkulačky mi největší shoda vyšla takhle: ${bestMatch?.short_name}. Podívejte se na moje výsledky a vyplňte si ji také!`;
 const shareLink = ref(null as null | string);
 onMounted(() => {
