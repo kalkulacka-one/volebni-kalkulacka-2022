@@ -2,7 +2,7 @@
 import { onMounted, ref } from 'vue';
 import ModalComponent from '../../components/design-system/other/ModalComponent.vue';
 import ButtonComponent from '../../components/design-system/input/ButtonComponent.vue';
-import { generateSocialLink } from '@/common/share';
+import { generateSocialLink, triggerOgImageGeneration } from '@/common/share';
 import SocialMediaIcon from '../../components/design-system/icons/SocialMediaIcon.vue';
 import { mdiContentCopy } from '@mdi/js';
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
@@ -26,13 +26,16 @@ const bestMatch = electionStore.calculator?.candidates.find((x) => {
 const hashTags = 'volby2022, volby, volebnikalkulacka';
 const shareDescription = `Podle Volební kalkulačky mi největší shoda vyšla takhle: ${bestMatch?.name}. Podívejte se na moje výsledky a vyplňte si ji také!`;
 const shareLink = ref(null as null | string);
-onMounted(() => (shareLink.value = generateSocialLink('link')));
+onMounted(() => {
+  shareLink.value = generateSocialLink('link');
+});
 const isModalOpen = ref(false);
 const handleCloseShareModal = () => {
   isModalOpen.value = false;
 };
 const open = () => {
   console.debug('Opening share modal');
+  triggerOgImageGeneration();
   isModalOpen.value = true;
 };
 defineExpose({ open });

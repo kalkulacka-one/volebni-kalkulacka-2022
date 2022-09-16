@@ -35,3 +35,20 @@ export const generateSocialLink = (type: 'link' | 'facebook' | 'twitter') => {
   }
   return navUrl;
 };
+
+export const triggerOgImageGeneration = async () => {
+  const electionStore = useElectionStore();
+  if (!electionStore.resultsUuid) {
+    console.error('Results are not saved. Unable to generate OG image');
+    return;
+  }
+  const endpointUrl = `/image/${electionStore.resultsUuid}`;
+  const res = await fetch(endpointUrl, {
+    method: 'GET',
+  });
+  if (!res.ok) {
+    console.error(res);
+  } else {
+    console.debug('GET og image success!');
+  }
+};
