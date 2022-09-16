@@ -19,6 +19,7 @@ import InfoBubble from '@/components/InfoBubble.vue';
 import FooterMultiWord from '@/components/FooterMultiWord.vue';
 import DonateBlock from '@/components/DonateBlock.vue';
 import StaticContentLayout from '@/components/layouts/StaticContentLayout.vue';
+import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -41,21 +42,7 @@ export default {
   <BackgroundComponent>
     <StickyHeaderLayout>
       <template #header>
-        <ContainerComponent
-          class="navigation-bar"
-          padding="medium"
-          responsive-padding
-          background="transparent"
-        >
-          <div class="grid">
-            <LogoComponent responsive />
-            <div class="title">
-              <BodyText size="small"> </BodyText>
-            </div>
-            <StackComponent class="right" horizontal spacing="small">
-            </StackComponent>
-          </div>
-        </ContainerComponent>
+        <NavigationBar background="transparent" />
       </template>
       <StaticContentLayout>
         <div class="section-header section">
