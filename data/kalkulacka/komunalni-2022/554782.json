@@ -368,14 +368,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554782-c-540309-p",
+          "id": "party-714",
           "name": "Svobodní",
           "short_name": "Svobodní",
           "abbreviation": "Svobodní",
           "description": "Svobodní",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/714-svobodni-2022.jpg"
         }
       ]
     },
@@ -397,20 +396,31 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554782-c-254716-p",
-          "name": "PRAHA NÁŠ DOMOV",
-          "short_name": "PRAHA NÁŠ DOMOV",
-          "abbreviation": "Rozum+Suver+DOM",
-          "description": "PRAHA NÁŠ DOMOV",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://volimdomov.cz/komunalni-volby-praha/",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/davidtygr.ploc"
-          }
+          "id": "party-137",
+          "name": "ROZUMNÍ",
+          "short_name": "Rozumní",
+          "abbreviation": "Rozumní",
+          "description": "ROZUMNÍ",
+          "contacts": [],
+          "img_url": "data/avatars/parties/137-rozumni.png"
+        },
+        {
+          "id": "party-759",
+          "name": "Česká Suverenita",
+          "short_name": "Suverenita",
+          "abbreviation": "Suverenita",
+          "description": "Česká Suverenita",
+          "contacts": [],
+          "img_url": "data/avatars/parties/759-ceska-suverenita.jpg"
+        },
+        {
+          "id": "party-1221",
+          "name": "DOMOV",
+          "short_name": "DOMOV",
+          "abbreviation": "DOMOV",
+          "description": "DOMOV",
+          "contacts": [],
+          "img_url": "data/avatars/parties/08-12-273304840_313019___up-d958-92.jpg"
         }
       ]
     },
@@ -420,7 +430,7 @@
       "type": "party",
       "description": "Praha bez chaosu",
       "short_name": "Praha bez chaosu",
-      "img_url": "p bez chaosu-nk",
+      "img_url": "data/avatars/komunalni-2022/554782/komunalni-2022-554782-c-856015-original.jpg",
       "contacts": {
         "web": [],
         "facebook": "https://www.facebook.com/pbch.cz",
@@ -428,16 +438,20 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554782-c-856015-p",
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-142",
           "name": "Praha bez chaosu",
           "short_name": "Praha bez chaosu",
-          "abbreviation": "P bez chaosu+NK",
+          "abbreviation": "Praha bez chaosu",
           "description": "Praha bez chaosu",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/pbch.cz",
-            "instagram": "https://www.instagram.com/praha_bez_chaosu/"
-          }
+          "contacts": []
         }
       ]
     },
@@ -447,7 +461,7 @@
       "type": "party",
       "description": "PRAHA SOBĚ",
       "short_name": "PRAHA SOBĚ",
-      "img_url": "praha sobě-nk",
+      "img_url": "data/avatars/komunalni-2022/554782/komunalni-2022-554782-c-550372-original.jpg",
       "contacts": {
         "web": [
           {
@@ -469,30 +483,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554782-c-550372-p",
-          "name": "PRAHA SOBĚ",
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-1180",
+          "name": "Podporujeme občanskou kandidátku PRAHA SOBĚ",
           "short_name": "PRAHA SOBĚ",
-          "abbreviation": "PRAHA SOBĚ+NK",
-          "description": "PRAHA SOBĚ",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://prahasobe.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://www.prahasobe.cz/program",
-                "label": "program"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/Praha_sob%C4%9B",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/PRAHASOBE.CZ/",
-            "twitter": "https://twitter.com/prahasobe?lang=cs",
-            "instagram": "https://www.instagram.com/prahasobe/"
-          }
+          "abbreviation": "PRAHA SOBĚ",
+          "description": "Podporujeme občanskou kandidátku PRAHA SOBĚ",
+          "contacts": [],
+          "img_url": "data/avatars/parties/09-13-24991550_1593948___up-d958-42.jpg"
         }
       ]
     },
@@ -502,7 +507,7 @@
       "type": "party",
       "description": "LEPŠÍ PRAHA PRO PRAŽANY – snížení daně z nemovitých věcí o 50%, městská hromadná doprava zdarma, internet zdarma…",
       "short_name": "LEPŠÍ PRAHA PRO PRAŽANY",
-      "img_url": "nd-ans",
+      "img_url": "data/avatars/komunalni-2022/554782/komunalni-2022-554782-c-917016-original.jpg",
       "contacts": {
         "web": [
           {
@@ -514,20 +519,22 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554782-c-917016-p",
-          "name": "LEPŠÍ PRAHA PRO PRAŽANY – snížení daně z nemovitých věcí o 50%, městská hromadná doprava zdarma, internet zdarma…",
-          "short_name": "LEPŠÍ PRAHA PRO PRAŽANY",
-          "abbreviation": "ND+ANS",
-          "description": "LEPŠÍ PRAHA PRO PRAŽANY – snížení daně z nemovitých věcí o 50%, městská hromadná doprava zdarma, internet zdarma…",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid023ssKDjTLgqzutqXmufV32xHmEJzdvaVZFJUhj5izF34XpjuFtjp7mNg8RtjrUVjCl&id=100011339901189",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/permalink.php?story_fbid=pfbid023ssKDjTLgqzutqXmufV32xHmEJzdvaVZFJUhj5izF34XpjuFtjp7mNg8RtjrUVjCl&id=100011339901189"
-          }
+          "id": "party-79",
+          "name": "Národní demokracie",
+          "short_name": "ND",
+          "abbreviation": "ND",
+          "description": "Národní demokracie",
+          "contacts": [],
+          "img_url": "data/avatars/parties/79-narodni-demokracie.png"
+        },
+        {
+          "id": "party-762",
+          "name": "ALIANCE NÁRODNÍCH SIL",
+          "short_name": "ANS",
+          "abbreviation": "ANS",
+          "description": "ALIANCE NÁRODNÍCH SIL",
+          "contacts": [],
+          "img_url": "data/avatars/parties/762-ans.png"
         }
       ]
     },
@@ -551,22 +558,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554782-c-528817-p",
+          "id": "party-166",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "short_name": "STAN",
           "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.stan-praha.cz/program",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/starostovenezavisli.praha",
-            "twitter": "https://twitter.com/STANPraha",
-            "instagram": "https://instagram.com/stan.praha"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/166-stan.svg"
         }
       ]
     },
@@ -616,25 +614,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554782-c-738486-p",
+          "id": "party-720",
           "name": "Česká pirátská strana",
-          "short_name": "Česká pirátská strana",
+          "short_name": "Piráti",
           "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://praha.pirati.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://praha.pirati.cz/volby/2022-komunalni.html?pohled=program",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/CeskaPiratskaStranaPraha/",
-            "twitter": "https://twitter.com/piratipraha"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/720-pirati.svg"
         }
       ]
     },
@@ -644,7 +630,7 @@
       "type": "party",
       "description": "Motoristé sobě",
       "short_name": "Motoristé sobě",
-      "img_url": "auto",
+      "img_url": "data/avatars/komunalni-2022/554782/komunalni-2022-554782-c-401009-original.jpg",
       "contacts": {
         "web": [
           {
@@ -660,24 +646,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554782-c-401009-p",
+          "id": "party-1178",
           "name": "Motoristé sobě",
-          "short_name": "Motoristé sobě",
+          "short_name": "AUTO",
           "abbreviation": "AUTO",
           "description": "Motoristé sobě",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.motoristesobe.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://motoristesobe.cz/#program",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://facebook.com/motoristesobe"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1178-sncr.jpg"
         }
       ]
     },
@@ -699,20 +674,22 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554782-c-305273-p",
-          "name": "Přísaha s Patrioty",
-          "short_name": "Přísaha s Patrioty",
-          "abbreviation": "PatrČR+PŘÍSAHA",
-          "description": "Přísaha s Patrioty",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.prisaha.cz/praha-magistrat",
-                "label": "web"
-              }
-            ],
-            "facebook": "https://www.facebook.com/myjsmePrisahaPraha"
-          }
+          "id": "party-1004",
+          "name": "Patrioti České republiky",
+          "short_name": "Patrioti ČR",
+          "abbreviation": "Patrioti ČR",
+          "description": "Patrioti České republiky",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1004-patrioti-cr.png"
+        },
+        {
+          "id": "party-1245",
+          "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+          "short_name": "PŘÍSAHA",
+          "abbreviation": "PŘÍSAHA",
+          "description": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+          "contacts": [],
+          "img_url": "data/avatars/parties/prisaha-2.png"
         }
       ]
     },
@@ -728,14 +705,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554782-c-532713-p",
-          "name": "Za bezpečné ulice v Praze",
-          "short_name": "Za bezpečné ulice v Praze",
-          "abbreviation": "DSSS+BEZ-UL",
-          "description": "Za bezpečné ulice v Praze",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-156",
+          "name": "Dělnická strana sociální spravedlnosti",
+          "short_name": "DSSS",
+          "abbreviation": "DSSS",
+          "description": "Dělnická strana sociální spravedlnosti",
+          "contacts": [],
+          "img_url": "data/avatars/parties/156-dsss.svg"
+        },
+        {
+          "id": "party-761",
+          "name": "BEZPEČNÉ ULICE",
+          "short_name": "BEZ-UL",
+          "abbreviation": "BEZ-UL",
+          "description": "BEZPEČNÉ ULICE",
+          "contacts": []
         }
       ]
     },
@@ -751,14 +735,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554782-c-476009-p",
-          "name": "Urza.cz: Nechceme vaše hlasy; ke svobodě se nelze provolit... Máme jinou vizi. Jdeme jinou cestou.",
-          "short_name": "Urza.cz: Nechceme vaše hlasy",
-          "abbreviation": "Nevolte Urza.cz",
-          "description": "Urza.cz: Nechceme vaše hlasy; ke svobodě se nelze provolit... Máme jinou vizi. Jdeme jinou cestou.",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-1250",
+          "name": "Urza.cz: Nechceme vaše hlasy; ke svobodě se nelze provolit… Jdeme jinou cestou — najdete ji na webu www.urza.cz",
+          "short_name": "Nevolte Urza.cz.",
+          "abbreviation": "Nevolte Urza.cz.",
+          "description": "Urza.cz: Nechceme vaše hlasy; ke svobodě se nelze provolit… Jdeme jinou cestou — najdete ji na webu www.urza.cz",
+          "contacts": [],
+          "img_url": "data/avatars/parties/urza.png"
         }
       ]
     },
@@ -780,20 +763,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554782-c-595054-p",
+          "id": "party-47",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "Komunistická str.Čech a Moravy",
+          "short_name": "KSČM",
           "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": {
-            "web": [
-              {
-                "url": "http://praha.kscm.cz",
-                "label": "web"
-              }
-            ],
-            "facebook": "http://facebook.com/kscmpraha"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/47-kscm.svg"
         }
       ]
     },
@@ -803,7 +779,7 @@
       "type": "party",
       "description": "SPOLU pro Prahu (ODS, TOP 09, KDU-ČSL)",
       "short_name": "SPOLU pro Prahu",
-      "img_url": "kdu-ods-top 09",
+      "img_url": "data/avatars/komunalni-2022/554782/komunalni-2022-554782-c-304346-original.png",
       "contacts": {
         "web": [
           {
@@ -821,26 +797,31 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554782-c-304346-p",
-          "name": "SPOLU pro Prahu (ODS, TOP 09, KDU-ČSL)",
-          "short_name": "SPOLU pro Prahu",
-          "abbreviation": "KDU+ODS+TOP 09",
-          "description": "SPOLU pro Prahu (ODS, TOP 09, KDU-ČSL)",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://spoluproprahu22.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://spoluproprahu22.cz/#program",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/spoluproprahu22",
-            "twitter": "https://twitter.com/KoaliceSpoluPha",
-            "instagram": "https://www.instagram.com/spolu_pro_prahu/"
-          }
+          "id": "party-1",
+          "name": "KDU-ČSL",
+          "short_name": "KDU-ČSL",
+          "abbreviation": "KDU-ČSL",
+          "description": "KDU-ČSL",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+        },
+        {
+          "id": "party-53",
+          "name": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
+          "description": "Občanská demokratická strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
+        },
+        {
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
         }
       ]
     },
@@ -850,7 +831,7 @@
       "type": "party",
       "description": "Solidarita – koalice ČSSD, Zelených, Budoucnosti a Idealistů",
       "short_name": "Solidarita - ČSSD,Zel,Bud,Ide",
-      "img_url": "ze-čssd-bud-ide",
+      "img_url": "data/avatars/komunalni-2022/554782/komunalni-2022-554782-c-834158-original.jpg",
       "contacts": {
         "web": [
           {
@@ -872,30 +853,40 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554782-c-834158-p",
-          "name": "Solidarita – koalice ČSSD, Zelených, Budoucnosti a Idealistů",
-          "short_name": "Solidarita - ČSSD,Zel,Bud,Ide",
-          "abbreviation": "Ze+ČSSD+Bud+Ide",
-          "description": "Solidarita – koalice ČSSD, Zelených, Budoucnosti a Idealistů",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://solidarita2022.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://solidarita2022.cz/program/",
-                "label": "program"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/Solidarita_(%C4%8Cesko)",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/solidarita2022",
-            "twitter": "https://twitter.com/solidarita2022",
-            "instagram": "https://www.instagram.com/solidarita2022/"
-          }
+          "id": "party-5",
+          "name": "Strana zelených",
+          "short_name": "Zelení",
+          "abbreviation": "Zelení",
+          "description": "Strana zelených",
+          "contacts": [],
+          "img_url": "data/avatars/parties/5-strana-zelenych-2022.jpg"
+        },
+        {
+          "id": "party-7",
+          "name": "Česká strana sociálně demokratická",
+          "short_name": "ČSSD",
+          "abbreviation": "ČSSD",
+          "description": "Česká strana sociálně demokratická",
+          "contacts": [],
+          "img_url": "data/avatars/parties/7-cssd-2020.png"
+        },
+        {
+          "id": "party-1232",
+          "name": "Budoucnost",
+          "short_name": "Budoucnost",
+          "abbreviation": "Budoucnost",
+          "description": "Budoucnost",
+          "contacts": [],
+          "img_url": "data/avatars/parties/08-11-83514447_1052791___up-d958-68.jpg"
+        },
+        {
+          "id": "party-1233",
+          "name": "Hnutí Idealisté",
+          "short_name": "Idealisté",
+          "abbreviation": "Idealisté",
+          "description": "Hnutí Idealisté",
+          "contacts": [],
+          "img_url": "data/avatars/parties/idealiste-2022.jpg"
         }
       ]
     },
@@ -911,14 +902,39 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554782-c-514272-p",
-          "name": "SPD, Trikolora, Hnutí PES a nezávislí společně pro Prahu",
-          "short_name": "SPD,Trik.,PES a nez. pro Prahu",
-          "abbreviation": "SPD+Trik+PES+NK",
-          "description": "SPD, Trikolora, Hnutí PES a nezávislí společně pro Prahu",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-1114",
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "short_name": "SPD",
+          "abbreviation": "SPD",
+          "description": "Svoboda a přímá demokracie (SPD)",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
+        },
+        {
+          "id": "party-1227",
+          "name": "Trikolora",
+          "short_name": "Trikolora",
+          "abbreviation": "Trikolora",
+          "description": "Trikolora",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1227-trikolora-2022.jpg"
+        },
+        {
+          "id": "party-1244",
+          "name": "Hnutí PES",
+          "short_name": "PES",
+          "abbreviation": "PES",
+          "description": "Hnutí PES",
+          "contacts": [],
+          "img_url": "data/avatars/parties/otevrene-cesko.jpg"
         }
       ]
     },
@@ -928,20 +944,18 @@
       "type": "party",
       "description": "Společnost proti developerské výstavbě v Prokopském údolí",
       "short_name": "Společ.proti výst.v Prok.údolí",
-      "img_url": "spdv",
+      "img_url": "data/avatars/komunalni-2022/554782/komunalni-2022-554782-c-393428-original.jpg",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "komunalni-2022-554782-c-393428-p",
+          "id": "party-1041",
           "name": "Společnost proti developerské výstavbě v Prokopském údolí",
-          "short_name": "Společ.proti výst.v Prok.údolí",
+          "short_name": "SPDV",
           "abbreviation": "SPDV",
           "description": "Společnost proti developerské výstavbě v Prokopském údolí",
-          "contacts": {
-            "web": []
-          }
+          "contacts": []
         }
       ]
     },
@@ -951,7 +965,7 @@
       "type": "party",
       "description": "Volt",
       "short_name": "Volt",
-      "img_url": "včr",
+      "img_url": "data/avatars/komunalni-2022/554782/komunalni-2022-554782-c-174835-original.jpg",
       "contacts": {
         "web": [
           {
@@ -965,22 +979,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554782-c-174835-p",
+          "id": "party-1272",
           "name": "Volt",
-          "short_name": "Volt",
+          "short_name": "VČR",
           "abbreviation": "VČR",
           "description": "Volt",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.voltcesko.org/priority-magistrat-praha-2022",
-                "label": "web"
-              }
-            ],
-            "facebook": "https://www.facebook.com/voltczechia",
-            "twitter": "https://twitter.com/VoltCzechia",
-            "instagram": "https://www.instagram.com/voltcz/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/08-23-b2268260-4e86-47___up-56ca-87.jpg"
         }
       ]
     },
@@ -996,14 +1001,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554782-c-318069-p",
+          "id": "party-1243",
           "name": "DOST",
           "short_name": "DOST",
           "abbreviation": "DOST",
           "description": "DOST",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/08-13-logodost72dpi150___up-5ba1-66.jpg"
         }
       ]
     },
@@ -1019,14 +1023,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554782-c-464824-p",
-          "name": "S.O.S. ZA PRÁVA ZVÍŘAT — Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK",
-          "short_name": "S.O.S. ZA PRÁVA ZVÍŘAT",
-          "abbreviation": "DSZ+NK",
-          "description": "S.O.S. ZA PRÁVA ZVÍŘAT — Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-715",
+          "name": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT",
+          "short_name": "DSZ - ZA PRÁVA ZVÍŘAT",
+          "abbreviation": "DSZ - ZA PRÁVA ZVÍŘAT",
+          "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT",
+          "contacts": [],
+          "img_url": "data/avatars/parties/715-dsz.png"
         }
       ]
     },
@@ -1044,16 +1055,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554782-c-662662-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
+          "short_name": "ANO",
           "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/ANOPraha/",
-            "twitter": "https://twitter.com/PatrikNacher"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ]
     },
@@ -1074,19 +1082,40 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-554782-c-568122-p",
-          "name": "Strana soukromníků ČR, Koruna Česká (monarch. strana Čech, Moravy a Slezska), Konzervat. strana, Klub angaž. nestraníků",
-          "short_name": "Str.soukr. ČR, KČ, KS, KAN",
-          "abbreviation": "KONSKANMonSoukr",
-          "description": "Strana soukromníků ČR, Koruna Česká (monarch. strana Čech, Moravy a Slezska), Konzervat. strana, Klub angaž. nestraníků",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.kan.cz/wp-content/uploads/2022/08/VOLEBNI-PROGRAM-FINAL-S-OBRAZKY.pdf",
-                "label": "program"
-              }
-            ]
-          }
+          "id": "party-24",
+          "name": "Konzervativní strana",
+          "short_name": "KONS",
+          "abbreviation": "KONS",
+          "description": "Konzervativní strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/24-konzervativni-strana.png"
+        },
+        {
+          "id": "party-40",
+          "name": "Klub angažovaných nestraníků",
+          "short_name": "KAN",
+          "abbreviation": "KAN",
+          "description": "Klub angažovaných nestraníků",
+          "contacts": [],
+          "img_url": "data/avatars/parties/40-kan.png"
+        },
+        {
+          "id": "party-55",
+          "name": "Koruna Česká (monarchistická strana Čech, Moravy a Slezska)",
+          "short_name": "Monarchiste.cz",
+          "abbreviation": "Monarchiste.cz",
+          "description": "Koruna Česká (monarchistická strana Čech, Moravy a Slezska)",
+          "contacts": [],
+          "img_url": "data/avatars/parties/55-koruna-ceska.png"
+        },
+        {
+          "id": "party-716",
+          "name": "Strana soukromníků České republiky",
+          "short_name": "Soukromníci",
+          "abbreviation": "Soukromníci",
+          "description": "Strana soukromníků České republiky",
+          "contacts": [],
+          "img_url": "data/avatars/parties/716-sscr-n.jpg"
         }
       ]
     }

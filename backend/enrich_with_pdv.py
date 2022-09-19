@@ -128,12 +128,17 @@ def update_candidate_photo(
     data_dir: Path,
     avatar_dir: Path,
     photos: list[dict[str, Any]],
+    detect_face: bool = False,
 ) -> bool:
     if not photos:
         logger.info("\tSkipping, no photos for %s", candidate_name)
         return False
 
     remote_url = photos[0]["url"]
+    if not remote_url.startswith("http://"):
+        # sometimes there is just local path
+        remote_url = f"https://data.programydovoleb.cz/{remote_url}"
+
     image_suffix = remote_url.split(".")[-1]
     local_original_path = avatar_dir / f"{candidate['id']}-original.{image_suffix}"
     local_face_path = avatar_dir / f"{candidate['id']}-face.{image_suffix}"
@@ -146,7 +151,7 @@ def update_candidate_photo(
         with local_original_path.open("wb") as fh:
             fh.write(response.content)
 
-        if not local_face_path.exists():
+        if detect_face and not local_face_path.exists():
             extract_face(local_original_path, local_face_path)
     else:
         logger.info(
@@ -214,6 +219,7 @@ def process_senatni(
                 data_dir,
                 avatar_dir,
                 candidates_api[candidate_name]["custom"]["photo"],
+                True,
             )
             or was_changed
         )
@@ -232,6 +238,62 @@ def process_senatni(
     return was_changed
 
 
+def process_komunalni(
+    data_json: dict[str, Any],
+    api_json: dict[str, Any],
+    parties: DParties,
+    data_dir: Path,
+    avatar_dir: Path,
+    party_dir: Path,
+) -> bool:
+    was_changed = False
+    api_list = api_json.get("town", {}).get("list")
+    if not api_list:
+        logger.warning("No candidate list in API json: %s", repr(api_json))
+        return was_changed
+
+    candidates_api = {}
+    for item in api_list:
+        main = item["csu"]["main"]
+        candidates_api[main["party_name"].lower()] = item
+
+    for candidate in data_json["candidates"]:
+        candidate_name = candidate["name"].lower()
+        logger.info("Processing candidate: %s", candidate_name)
+        if candidate_name not in candidates_api:
+            logger.error(
+                "Candidate %s not in API. Known candidates: %s",
+                candidate["name"].lower(),
+                list(candidates_api.keys()),
+            )
+            continue
+
+        was_changed = (
+            update_candidate_photo(
+                candidate,
+                candidate_name,
+                data_dir,
+                avatar_dir,
+                candidates_api[candidate_name]["custom"]["logo"],
+                False,
+            )
+            or was_changed
+        )
+
+        was_changed = (
+            update_candidate_parties(
+                candidate,
+                data_dir,
+                party_dir,
+                candidates_api[candidate_name]["csu"]["main"]["party_coalition"],
+                parties,
+            )
+            or was_changed
+        )
+
+    return was_changed
+
+
 def get_dir_mapping(
     dir_name: str,
 ) -> Optional[tuple[str, Callable[[dict, dict, DParties, Path, Path, Path], bool]]]:
@@ -240,10 +302,10 @@ def get_dir_mapping(
             "https://2022.programydovoleb.cz/lib/app/api.php?action=senate/fetch/",
             process_senatni,
         ),
-        # "komunalni-2022": (
-        #     "https://2022.programydovoleb.cz/lib/app/api.php?action=town/fetch/"
-        #     process_komunalni,
-        # ),
+        "komunalni-2022": (
+            "https://2022.programydovoleb.cz/lib/app/api.php?action=town/fetch/",
+            process_komunalni,
+        ),
     }.get(dir_name)
 
 

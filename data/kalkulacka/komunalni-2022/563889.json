@@ -368,14 +368,22 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-563889-c-709264-p",
-          "name": "Trikolora a Soukromníci",
-          "short_name": "Trikolora a Soukromníci",
-          "abbreviation": "Trikol+Soukrom",
-          "description": "Trikolora a Soukromníci",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-716",
+          "name": "Strana soukromníků České republiky",
+          "short_name": "Soukromníci",
+          "abbreviation": "Soukromníci",
+          "description": "Strana soukromníků České republiky",
+          "contacts": [],
+          "img_url": "data/avatars/parties/716-sscr-n.jpg"
+        },
+        {
+          "id": "party-1227",
+          "name": "Trikolora",
+          "short_name": "Trikolora",
+          "abbreviation": "Trikolora",
+          "description": "Trikolora",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1227-trikolora-2022.jpg"
         }
       ],
       "motto": "LIBEREC VŠEM, všem spořádaně žijícím"
@@ -397,19 +405,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-563889-c-434921-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
+          "short_name": "ANO",
           "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.anobudelip.cz/cs/liberecky-kraj/makame/aktuality/novinky/priority-hnuti-ano-v-liberci-48214.shtml",
-                "label": "program"
-              }
-            ]
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ],
       "motto": "Reálné cíle, ne vzdušné zámky"
@@ -433,21 +435,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-563889-c-184949-p",
+          "id": "party-720",
           "name": "Česká pirátská strana",
-          "short_name": "Česká pirátská strana",
+          "short_name": "Piráti",
           "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://liberec.pirati.cz/komunalni-volby-2022/kandidatka-liberec/?view=program",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/piratiliberec",
-            "instagram": "https://www.instagram.com/piratiliberec/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/720-pirati.svg"
         }
       ],
       "motto": "Máme odvahu dělat, co je správné."
@@ -458,7 +452,7 @@
       "type": "party",
       "description": "Starostové pro Liberecký kraj společně s TOP 09 a KDU-ČSL",
       "short_name": "SLK společ. s TOP 09 a KDU-ČSL",
-      "img_url": "kdu-čsl-slk-top",
+      "img_url": "data/avatars/komunalni-2022/563889/komunalni-2022-563889-c-282146-original.jpg",
       "contacts": {
         "web": [
           {
@@ -474,24 +468,31 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-563889-c-282146-p",
-          "name": "Starostové pro Liberecký kraj společně s TOP 09 a KDU-ČSL",
-          "short_name": "SLK společ. s TOP 09 a KDU-ČSL",
-          "abbreviation": "KDU-ČSL+SLK+TOP",
-          "description": "Starostové pro Liberecký kraj společně s TOP 09 a KDU-ČSL",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://starostoveproliberec.cz",
-                "label": "web"
-              },
-              {
-                "url": "https://starostoveproliberec.cz/wp-content/uploads/2022/08/Volebni%CC%81-program-2022.pdf",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/kducslliberec"
-          }
+          "id": "party-1",
+          "name": "KDU-ČSL",
+          "short_name": "KDU-ČSL",
+          "abbreviation": "KDU-ČSL",
+          "description": "KDU-ČSL",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+        },
+        {
+          "id": "party-703",
+          "name": "Starostové pro Liberecký kraj",
+          "short_name": "SLK",
+          "abbreviation": "SLK",
+          "description": "Starostové pro Liberecký kraj",
+          "contacts": [],
+          "img_url": "data/avatars/parties/703-starostove-liberecky.png"
+        },
+        {
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
         }
       ],
       "motto": "Staráme se o město každý den."
@@ -502,7 +503,7 @@
       "type": "party",
       "description": "Liberec otevřený lidem",
       "short_name": "Liberec otevřený lidem",
-      "img_url": "zelení-nk",
+      "img_url": "data/avatars/komunalni-2022/563889/komunalni-2022-563889-c-188908-original.jpg",
       "contacts": {
         "web": [
           {
@@ -515,21 +516,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-563889-c-188908-p",
-          "name": "Liberec otevřený lidem",
-          "short_name": "Liberec otevřený lidem",
-          "abbreviation": "Zelení+NK",
-          "description": "Liberec otevřený lidem",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.liberecotevrenylidem.cz/",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/liberecotevrenylidem/",
-            "twitter": "https://twitter.com/libereclidem"
-          }
+          "id": "party-5",
+          "name": "Strana zelených",
+          "short_name": "Zelení",
+          "abbreviation": "Zelení",
+          "description": "Strana zelených",
+          "contacts": [],
+          "img_url": "data/avatars/parties/5-strana-zelenych-2022.jpg"
+        },
+        {
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
         }
       ],
       "motto": "Máme skutečná řešení pro Liberec. Naše sliby myslíme vážně."
@@ -556,24 +557,30 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-563889-c-230742-p",
-          "name": "ODS společně se Sportovci",
-          "short_name": "ODS společně se Sportovci",
-          "abbreviation": "ODS+USZ+NK",
-          "description": "ODS společně se Sportovci",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://probudimeliberec.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://www.facebook.com/ODSLiberec/posts/pfbid026cXoHrwSfeBsSpmzPintaUkfVwpWAjzkAcgkkun7WzzZw9v9zpaqkwXh8Ypwz9exl",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/ODSLiberec"
-          }
+          "id": "party-53",
+          "name": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
+          "description": "Občanská demokratická strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
+        },
+        {
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-119",
+          "name": "Unie pro sport a zdraví",
+          "short_name": "USZ",
+          "abbreviation": "USZ",
+          "description": "Unie pro sport a zdraví",
+          "contacts": [],
+          "img_url": "data/avatars/parties/119-unie-pro-zdravi-a-sport.png"
         }
       ],
       "motto": "Liberec a jeho obyvatelé jsou pro nás na prvním místě."
@@ -590,14 +597,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-563889-c-843854-p",
+          "id": "party-1265",
           "name": "Právo Respekt Odbornost",
-          "short_name": "Právo Respekt Odbornost",
+          "short_name": "PRO 2022",
           "abbreviation": "PRO 2022",
           "description": "Právo Respekt Odbornost",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/08-11-kgam3hli_400x400___up-d958-50.jpg"
         }
       ],
       "motto": "Řídit město udržitelně, se zdravým rozumem a  ve prospěch jeho obyvatel"
@@ -614,14 +620,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-563889-c-401265-p",
-          "name": "Komunistická strana Čech a Moravy a Podještědská levice",
-          "short_name": "KSČM a Podještědská levice",
-          "abbreviation": "KSČM+NK",
-          "description": "Komunistická strana Čech a Moravy a Podještědská levice",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-47",
+          "name": "Komunistická strana Čech a Moravy",
+          "short_name": "KSČM",
+          "abbreviation": "KSČM",
+          "description": "Komunistická strana Čech a Moravy",
+          "contacts": [],
+          "img_url": "data/avatars/parties/47-kscm.svg"
+        },
+        {
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
         }
       ],
       "motto": "Bydlení a bezpečnost"
@@ -638,14 +651,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-563889-c-323656-p",
+          "id": "party-7",
           "name": "Česká strana sociálně demokratická",
-          "short_name": "Česká str.sociálně demokrat.",
+          "short_name": "ČSSD",
           "abbreviation": "ČSSD",
           "description": "Česká strana sociálně demokratická",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/7-cssd-2020.png"
         }
       ],
       "motto": "S vaši podporou chceme řešit důležité věci pro Liberec"
@@ -656,7 +668,7 @@
       "type": "party",
       "description": "Svoboda a přímá demokracie (SPD)",
       "short_name": "Svoboda a př. demokracie (SPD)",
-      "img_url": "spd",
+      "img_url": "data/avatars/komunalni-2022/563889/komunalni-2022-563889-c-690485-original.jpg",
       "contacts": {
         "web": [
           {
@@ -668,20 +680,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-563889-c-690485-p",
+          "id": "party-1114",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "Svoboda a př. demokracie (SPD)",
+          "short_name": "SPD",
           "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://docs.google.com/document/d/1ifqaDdtXmtEKymcPln57gBTFxe1AL-KpULdFRgZWJKk/edit?usp=sharing",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/spdliberecky"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
         }
       ],
       "motto": "SPD hájí zájmy občanů "

@@ -362,22 +362,19 @@
       "type": "party",
       "description": "Občané městských částí Opavy",
       "short_name": "Občané městských částí Opavy",
-      "img_url": "omčo",
+      "img_url": "data/avatars/komunalni-2022/505927/komunalni-2022-505927-c-724202-original.jpg",
       "contacts": {
         "web": [],
         "facebook": "https://www.facebook.com/obcaneopavy"
       },
       "parties": [
         {
-          "id": "komunalni-2022-505927-c-724202-p",
+          "id": "party-1188",
           "name": "Občané městských částí Opavy",
-          "short_name": "Občané městských částí Opavy",
+          "short_name": "OMČO",
           "abbreviation": "OMČO",
           "description": "Občané městských částí Opavy",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/obcaneopavy"
-          }
+          "contacts": []
         }
       ]
     },
@@ -393,14 +390,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-505927-c-583572-p",
-          "name": "Demokratická strana zelených – ZA PRÁVA ZVÍŘAT — sdružení DSZ – ZA PRÁVA ZVÍŘAT a NK",
-          "short_name": "DSZ – ZA PRÁVA ZVÍŘAT a NK",
-          "abbreviation": "DSZ+NK",
-          "description": "Demokratická strana zelených – ZA PRÁVA ZVÍŘAT — sdružení DSZ – ZA PRÁVA ZVÍŘAT a NK",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-715",
+          "name": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT",
+          "short_name": "DSZ - ZA PRÁVA ZVÍŘAT",
+          "abbreviation": "DSZ - ZA PRÁVA ZVÍŘAT",
+          "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT",
+          "contacts": [],
+          "img_url": "data/avatars/parties/715-dsz.png"
         }
       ],
       "motto": "Na straně těch, co si sami pomoci nedokážou. "
@@ -417,14 +421,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-505927-c-306338-p",
+          "id": "party-7",
           "name": "Česká strana sociálně demokratická",
-          "short_name": "Česká str.sociálně demokrat.",
+          "short_name": "ČSSD",
           "abbreviation": "ČSSD",
           "description": "Česká strana sociálně demokratická",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/7-cssd-2020.png"
         }
       ]
     },
@@ -434,22 +437,29 @@
       "type": "party",
       "description": "Společně pro Opavu (ODS, TOP 09)",
       "short_name": "Spol. pro Opavu (ODS, TOP 09)",
-      "img_url": "ods-top 09",
+      "img_url": "data/avatars/komunalni-2022/505927/komunalni-2022-505927-c-922382-original.jpg",
       "contacts": {
         "web": [],
         "instagram": "https://instagram.com/spolecneproopavu?igshid=YmMyMTA2M2Y="
       },
       "parties": [
         {
-          "id": "komunalni-2022-505927-c-922382-p",
-          "name": "Společně pro Opavu (ODS, TOP 09)",
-          "short_name": "Spol. pro Opavu (ODS, TOP 09)",
-          "abbreviation": "ODS+TOP 09",
-          "description": "Společně pro Opavu (ODS, TOP 09)",
-          "contacts": {
-            "web": [],
-            "instagram": "https://instagram.com/spolecneproopavu?igshid=YmMyMTA2M2Y="
-          }
+          "id": "party-53",
+          "name": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
+          "description": "Občanská demokratická strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
+        },
+        {
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
         }
       ],
       "motto": "Posazujeme zodpovědný a odborný přístup ke správě města."
@@ -466,14 +476,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-505927-c-466013-p",
-          "name": "Změna pro Opavu",
-          "short_name": "Změna pro Opavu",
-          "abbreviation": "Změna+NK",
-          "description": "Změna pro Opavu",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-771",
+          "name": "politické hnutí Změna",
+          "short_name": "Změna",
+          "abbreviation": "Změna",
+          "description": "politické hnutí Změna",
+          "contacts": [],
+          "img_url": "data/avatars/parties/771-zmena.png"
         }
       ],
       "motto": "Pojďme spolu tvořit město ve kterém žijeme."
@@ -490,14 +507,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-505927-c-898202-p",
+          "id": "party-47",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "Komunistická str.Čech a Moravy",
+          "short_name": "KSČM",
           "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/47-kscm.svg"
         }
       ]
     },
@@ -513,14 +529,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-505927-c-110955-p",
+          "id": "party-1",
           "name": "KDU-ČSL",
           "short_name": "KDU-ČSL",
           "abbreviation": "KDU-ČSL",
           "description": "KDU-ČSL",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
         }
       ],
       "motto": "Pracujeme slušně, poctivě, spolehlivě."
@@ -537,14 +552,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-505927-c-319917-p",
+          "id": "party-1227",
           "name": "Trikolora",
           "short_name": "Trikolora",
           "abbreviation": "Trikolora",
           "description": "Trikolora",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1227-trikolora-2022.jpg"
         }
       ],
       "motto": "Chceme, aby se lidé do Opavy rádi vraceli."
@@ -561,14 +575,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-505927-c-736919-p",
-          "name": "Piráti & Opavané",
-          "short_name": "Piráti & Opavané",
-          "abbreviation": "Piráti+NK",
-          "description": "Piráti & Opavané",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-720",
+          "name": "Česká pirátská strana",
+          "short_name": "Piráti",
+          "abbreviation": "Piráti",
+          "description": "Česká pirátská strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/720-pirati.svg"
         }
       ],
       "motto": "Máme odvahu dělat, co je pro Opavu správné."
@@ -594,23 +615,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-505927-c-496785-p",
-          "name": "Zelená pro Opavu",
-          "short_name": "Zelená pro Opavu",
-          "abbreviation": "Zelení+NK",
-          "description": "Zelená pro Opavu",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://zelenaproopavu.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://www.zelenaproopavu.cz/program",
-                "label": "program"
-              }
-            ]
-          }
+          "id": "party-5",
+          "name": "Strana zelených",
+          "short_name": "Zelení",
+          "abbreviation": "Zelení",
+          "description": "Strana zelených",
+          "contacts": [],
+          "img_url": "data/avatars/parties/5-strana-zelenych-2022.jpg"
+        },
+        {
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
         }
       ],
       "motto": "Starejme se o naše město jako o vlastní rodinu."
@@ -621,20 +640,27 @@
       "type": "party",
       "description": "NEZÁVISLÍ pro OPAVU",
       "short_name": "NEZÁVISLÍ pro OPAVU",
-      "img_url": "nez-nk",
+      "img_url": "data/avatars/komunalni-2022/505927/komunalni-2022-505927-c-890740-original.jpg",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "komunalni-2022-505927-c-890740-p",
-          "name": "NEZÁVISLÍ pro OPAVU",
-          "short_name": "NEZÁVISLÍ pro OPAVU",
-          "abbreviation": "NEZ+NK",
-          "description": "NEZÁVISLÍ pro OPAVU",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-88",
+          "name": "NEZÁVISLÍ",
+          "short_name": "Nezávislí",
+          "abbreviation": "Nezávislí",
+          "description": "NEZÁVISLÍ",
+          "contacts": [],
+          "img_url": "data/avatars/parties/88-nez.png"
         }
       ],
       "motto": "chceme stabilní a silné město. Jdeme sloužit městu."
@@ -651,14 +677,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-505927-c-723812-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
+          "short_name": "ANO",
           "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ]
     },
@@ -674,14 +699,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-505927-c-316973-p",
+          "id": "party-1114",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "Svoboda a př. demokracie (SPD)",
+          "short_name": "SPD",
           "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
         }
       ],
       "motto": "Opavané jsou pro nás na prvním místě. "
@@ -692,20 +716,18 @@
       "type": "party",
       "description": "VOLNÝ blok",
       "short_name": "VOLNÝ blok",
-      "img_url": "volný blok",
+      "img_url": "data/avatars/komunalni-2022/505927/komunalni-2022-505927-c-262054-original.jpg",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "komunalni-2022-505927-c-262054-p",
+          "id": "party-1271",
           "name": "VOLNÝ blok",
           "short_name": "VOLNÝ blok",
           "abbreviation": "VOLNÝ blok",
           "description": "VOLNÝ blok",
-          "contacts": {
-            "web": []
-          }
+          "contacts": []
         }
       ]
     }

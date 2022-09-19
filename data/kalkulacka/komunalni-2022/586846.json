@@ -368,14 +368,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-586846-c-379165-p",
+          "id": "party-47",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "Komunistická str.Čech a Moravy",
+          "short_name": "KSČM",
           "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/47-kscm.svg"
         }
       ],
       "motto": "Odbornost, zkušenost, práce pro lidi."
@@ -392,14 +391,12 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-586846-c-398619-p",
+          "id": "party-1280",
           "name": "Malá strana velkých cílů",
-          "short_name": "Malá strana velkých cílů",
+          "short_name": "MSVC",
           "abbreviation": "MSVC",
           "description": "Malá strana velkých cílů",
-          "contacts": {
-            "web": []
-          }
+          "contacts": []
         }
       ]
     },
@@ -415,14 +412,22 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-586846-c-555775-p",
-          "name": "ODS a KDU-ČSL",
-          "short_name": "ODS a KDU-ČSL",
-          "abbreviation": "KDU-ČSL+ODS",
-          "description": "ODS a KDU-ČSL",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-1",
+          "name": "KDU-ČSL",
+          "short_name": "KDU-ČSL",
+          "abbreviation": "KDU-ČSL",
+          "description": "KDU-ČSL",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+        },
+        {
+          "id": "party-53",
+          "name": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
+          "description": "Občanská demokratická strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
         }
       ],
       "motto": "Jediná strana která řeší problémy a je ochotná převzít odpovědnost."
@@ -433,7 +438,7 @@
       "type": "party",
       "description": "Piráti a Fórum Jihlava",
       "short_name": "Piráti a Fórum Jihlava",
-      "img_url": "piráti-nk",
+      "img_url": "data/avatars/komunalni-2022/586846/komunalni-2022-586846-c-783999-original.jpg",
       "contacts": {
         "web": [
           {
@@ -449,24 +454,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-586846-c-783999-p",
-          "name": "Piráti a Fórum Jihlava",
-          "short_name": "Piráti a Fórum Jihlava",
-          "abbreviation": "Piráti+NK",
-          "description": "Piráti a Fórum Jihlava",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://forum-jihlava.pirati.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://forum-jihlava.pirati.cz/nejdulezitejsi-temata-pro-komunalni-volby-2022/",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://facebook.com/pifoJihlava22"
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-720",
+          "name": "Česká pirátská strana",
+          "short_name": "Piráti",
+          "abbreviation": "Piráti",
+          "description": "Česká pirátská strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/720-pirati.svg"
         }
       ],
       "motto": "Jsme hrdé srdce Vysočiny."
@@ -477,20 +479,27 @@
       "type": "party",
       "description": "Jihlava srdcem",
       "short_name": "Jihlava srdcem",
-      "img_url": "svobodní-nk",
+      "img_url": "data/avatars/komunalni-2022/586846/komunalni-2022-586846-c-878763-original.jpg",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "komunalni-2022-586846-c-878763-p",
-          "name": "Jihlava srdcem",
-          "short_name": "Jihlava srdcem",
-          "abbreviation": "Svobodní+NK",
-          "description": "Jihlava srdcem",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-714",
+          "name": "Svobodní",
+          "short_name": "Svobodní",
+          "abbreviation": "Svobodní",
+          "description": "Svobodní",
+          "contacts": [],
+          "img_url": "data/avatars/parties/714-svobodni-2022.jpg"
         }
       ],
       "motto": "Cítit srdcem, myslet hlavou."
@@ -507,14 +516,22 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-586846-c-516439-p",
-          "name": "Svoboda a přímá demokracie (SPD) s podporou Trikolory",
-          "short_name": "SPD s podporou Trikolory",
-          "abbreviation": "SPD+Trikolora",
-          "description": "Svoboda a přímá demokracie (SPD) s podporou Trikolory",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-1114",
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "short_name": "SPD",
+          "abbreviation": "SPD",
+          "description": "Svoboda a přímá demokracie (SPD)",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
+        },
+        {
+          "id": "party-1227",
+          "name": "Trikolora",
+          "short_name": "Trikolora",
+          "abbreviation": "Trikolora",
+          "description": "Trikolora",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1227-trikolora-2022.jpg"
         }
       ],
       "motto": "Odvaha"
@@ -525,20 +542,18 @@
       "type": "party",
       "description": "SPOLEK ZA ZDRAVOU JIHLAVU",
       "short_name": "SPOLEK ZA ZDRAVOU JIHLAVU",
-      "img_url": "szzj",
+      "img_url": "data/avatars/komunalni-2022/586846/komunalni-2022-586846-c-900335-original.jpg",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "komunalni-2022-586846-c-900335-p",
+          "id": "party-1268",
           "name": "SPOLEK ZA ZDRAVOU JIHLAVU",
-          "short_name": "SPOLEK ZA ZDRAVOU JIHLAVU",
+          "short_name": "SZZJ",
           "abbreviation": "SZZJ",
           "description": "SPOLEK ZA ZDRAVOU JIHLAVU",
-          "contacts": {
-            "web": []
-          }
+          "contacts": []
         }
       ]
     },
@@ -548,20 +563,36 @@
       "type": "party",
       "description": "Žijeme Jihlavou",
       "short_name": "Žijeme Jihlavou",
-      "img_url": "zelení-top09-nk",
+      "img_url": "data/avatars/komunalni-2022/586846/komunalni-2022-586846-c-149398-original.jpg",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "komunalni-2022-586846-c-149398-p",
-          "name": "Žijeme Jihlavou",
-          "short_name": "Žijeme Jihlavou",
-          "abbreviation": "Zelení+TOP09+NK",
-          "description": "Žijeme Jihlavou",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-5",
+          "name": "Strana zelených",
+          "short_name": "Zelení",
+          "abbreviation": "Zelení",
+          "description": "Strana zelených",
+          "contacts": [],
+          "img_url": "data/avatars/parties/5-strana-zelenych-2022.jpg"
+        },
+        {
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
         }
       ],
       "motto": "Jsme volebním uskupením, jenž preferuje odbornost spolupráci a progresivní přístup."
@@ -572,20 +603,27 @@
       "type": "party",
       "description": "STAROSTOVÉ A NEZÁVISLÍ KANDIDÁTI",
       "short_name": "STAROSTOVÉ A NK",
-      "img_url": "stan-nk",
+      "img_url": "data/avatars/komunalni-2022/586846/komunalni-2022-586846-c-713735-original.jpg",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "komunalni-2022-586846-c-713735-p",
-          "name": "STAROSTOVÉ A NEZÁVISLÍ KANDIDÁTI",
-          "short_name": "STAROSTOVÉ A NK",
-          "abbreviation": "STAN+NK",
-          "description": "STAROSTOVÉ A NEZÁVISLÍ KANDIDÁTI",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-166",
+          "name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "short_name": "STAN",
+          "abbreviation": "STAN",
+          "description": "STAROSTOVÉ A NEZÁVISLÍ",
+          "contacts": [],
+          "img_url": "data/avatars/parties/166-stan.svg"
         }
       ],
       "motto": "Jihlavě nabízíme odborně i lidsky nejpestřejší tým ze všech."
@@ -602,14 +640,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-586846-c-681882-p",
+          "id": "party-1190",
           "name": "Moravské zemské hnutí",
-          "short_name": "Moravské zemské hnutí",
+          "short_name": "MZH",
           "abbreviation": "MZH",
           "description": "Moravské zemské hnutí",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1190-mzh.png"
         }
       ],
       "motto": "Udělejte něco pro změnu a podpořte svým hlasem lepší život v Jihlavě"
@@ -626,14 +663,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-586846-c-519152-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
+          "short_name": "ANO",
           "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ],
       "motto": "Dáme městu slysl"
@@ -650,14 +686,22 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-586846-c-107994-p",
-          "name": "ČSSD a Levice",
-          "short_name": "ČSSD a Levice",
-          "abbreviation": "ČSSD+Levice",
-          "description": "ČSSD a Levice",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-7",
+          "name": "Česká strana sociálně demokratická",
+          "short_name": "ČSSD",
+          "abbreviation": "ČSSD",
+          "description": "Česká strana sociálně demokratická",
+          "contacts": [],
+          "img_url": "data/avatars/parties/7-cssd-2020.png"
+        },
+        {
+          "id": "party-74",
+          "name": "Levice",
+          "short_name": "Levice",
+          "abbreviation": "Levice",
+          "description": "Levice",
+          "contacts": [],
+          "img_url": "data/avatars/parties/74-levice.jpg"
         }
       ],
       "motto": "Jistota v dobách nejistoty"

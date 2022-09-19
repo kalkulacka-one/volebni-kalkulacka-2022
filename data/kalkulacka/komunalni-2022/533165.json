@@ -368,14 +368,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-533165-c-447119-p",
+          "id": "party-47",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "Komunistická str.Čech a Moravy",
+          "short_name": "KSČM",
           "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/47-kscm.svg"
         }
       ],
       "motto": "číslo 1 mezi stranami, číslo 1 pro občany"
@@ -392,14 +391,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-533165-c-359453-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
+          "short_name": "ANO",
           "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ]
     },
@@ -421,20 +419,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-533165-c-732747-p",
-          "name": "ZMĚNA PRO KOLÍN",
-          "short_name": "ZMĚNA PRO KOLÍN",
-          "abbreviation": "STAN+NK",
-          "description": "ZMĚNA PRO KOLÍN",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.zmenaprokolin.cz/program/",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/ZmenaProKolin"
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-166",
+          "name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "short_name": "STAN",
+          "abbreviation": "STAN",
+          "description": "STAROSTOVÉ A NEZÁVISLÍ",
+          "contacts": [],
+          "img_url": "data/avatars/parties/166-stan.svg"
         }
       ],
       "motto": "Od roku 2010 pracujeme na tom, aby byl Kolín lepším místem pro život."
@@ -457,20 +456,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-533165-c-480055-p",
-          "name": "VOLBA PRO KOLÍN",
-          "short_name": "VOLBA PRO KOLÍN",
-          "abbreviation": "KDU-ČSL+NK",
-          "description": "VOLBA PRO KOLÍN",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://volbaprokolin.cz/program/",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/volbaprokolin"
-          }
+          "id": "party-1",
+          "name": "KDU-ČSL",
+          "short_name": "KDU-ČSL",
+          "abbreviation": "KDU-ČSL",
+          "description": "KDU-ČSL",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+        },
+        {
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
         }
       ],
       "motto": "Jdeme slušně, pracovitě a poctivě."
@@ -493,20 +493,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-533165-c-290359-p",
-          "name": "Kolíňáci",
-          "short_name": "Kolíňáci",
-          "abbreviation": "SD-SN+NK",
-          "description": "Kolíňáci",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://kolinaci.cz/#program",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/kolinaci.cz"
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-143",
+          "name": "Spojení demokraté - Sdružení nezávislých",
+          "short_name": "SD-SN",
+          "abbreviation": "SD-SN",
+          "description": "Spojení demokraté - Sdružení nezávislých",
+          "contacts": [],
+          "img_url": "data/avatars/parties/08-29-sd-sn_logopng___up-d958-99.jpg"
         }
       ]
     },
@@ -522,14 +523,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-533165-c-241611-p",
-          "name": "Platforma pro Kolín s podporou hnutí Přísaha",
-          "short_name": "Platforma pro Kolín",
-          "abbreviation": "PŘÍSAHA+NK",
-          "description": "Platforma pro Kolín s podporou hnutí Přísaha",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-1245",
+          "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+          "short_name": "PŘÍSAHA",
+          "abbreviation": "PŘÍSAHA",
+          "description": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+          "contacts": [],
+          "img_url": "data/avatars/parties/prisaha-2.png"
         }
       ],
       "motto": "Platforma pro Kolín, nová energie pro město."
@@ -556,24 +564,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-533165-c-656909-p",
+          "id": "party-720",
           "name": "Česká pirátská strana",
-          "short_name": "Česká pirátská strana",
+          "short_name": "Piráti",
           "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.vizeprokolin.cz",
-                "label": "web"
-              },
-              {
-                "url": "https://www.vizeprokolin.cz",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/SvataBocek"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/720-pirati.svg"
         }
       ],
       "motto": "Změna v Kolíně již proběhla, nyní je potřeba Vize!"
@@ -584,7 +581,7 @@
       "type": "party",
       "description": "SPOLEČNĚ ODS a TOP 09",
       "short_name": "SPOLEČNĚ ODS a TOP 09",
-      "img_url": "ods-top 09",
+      "img_url": "data/avatars/komunalni-2022/533165/komunalni-2022-533165-c-692233-original.jpg",
       "contacts": {
         "web": [
           {
@@ -597,21 +594,22 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-533165-c-692233-p",
-          "name": "SPOLEČNĚ ODS a TOP 09",
-          "short_name": "SPOLEČNĚ ODS a TOP 09",
-          "abbreviation": "ODS+TOP 09",
-          "description": "SPOLEČNĚ ODS a TOP 09",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://drive.google.com/file/d/19x8KarGQ0F8hkTMeCFSatvr5jSseUXiz/view?fbclid=IwAR2l7HtvMBi8LU2pE4RMjHfDhCy9e_TWS3JslRr8zWxZ7CYb2jElCSLGM-w",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/kolinspolecne",
-            "instagram": "https://instagram.com/kolinspolecne"
-          }
+          "id": "party-53",
+          "name": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
+          "description": "Občanská demokratická strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
+        },
+        {
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
         }
       ],
       "motto": "Zodpovědná strana pro zodpovědné občany pro vývoj města a zkvalitnění života v něm."
@@ -628,14 +626,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-533165-c-121551-p",
-          "name": "Zvíře není věc — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK",
-          "short_name": "Zvíře není věc, sdruž.DSZ a NK",
-          "abbreviation": "DSZ+NK",
-          "description": "Zvíře není věc — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-715",
+          "name": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT",
+          "short_name": "DSZ - ZA PRÁVA ZVÍŘAT",
+          "abbreviation": "DSZ - ZA PRÁVA ZVÍŘAT",
+          "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT",
+          "contacts": [],
+          "img_url": "data/avatars/parties/715-dsz.png"
         }
       ],
       "motto": "Demokratická strana zelených – ZA PRÁVA ZVÍŘAT, bránit slabší z nás dělá silnějšími"

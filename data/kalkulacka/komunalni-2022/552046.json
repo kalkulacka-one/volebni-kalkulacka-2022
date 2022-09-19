@@ -368,14 +368,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-552046-c-653212-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
+          "short_name": "ANO",
           "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ],
       "motto": "Nestačí jen kritizovat nebo stát stranou, je třeba něco dělat."
@@ -405,27 +404,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-552046-c-711686-p",
+          "id": "party-136",
           "name": "Tábor 2020",
-          "short_name": "Tábor 2020",
+          "short_name": "T2020",
           "abbreviation": "T2020",
           "description": "Tábor 2020",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.tabor2020.cz/komunalni-volby-2022/",
-                "label": "web"
-              },
-              {
-                "url": "https://www.tabor2020.cz/komunalni-volby-2022/volebni-program/",
-                "label": "program"
-              },
-              {
-                "url": "https://cs.m.wikipedia.org/wiki/Tábor_2020",
-                "label": "wiki"
-              }
-            ]
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/136-tabor2020.jpg"
         }
       ]
     },
@@ -446,19 +431,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-552046-c-887165-p",
+          "id": "party-720",
           "name": "Česká pirátská strana",
-          "short_name": "Česká pirátská strana",
+          "short_name": "Piráti",
           "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://tabor.pirati.cz/volby/",
-                "label": "program"
-              }
-            ]
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/720-pirati.svg"
         }
       ],
       "motto": "Odvaha dělat věci správně."
@@ -475,14 +454,39 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-552046-c-479115-p",
-          "name": "ŠANCE pro TÁBOR (ČSSD, SPD, KSČM, nezávislí)",
-          "short_name": "ŠANCE pro TÁBOR",
-          "abbreviation": "ČSSDKSČMSPDNK",
-          "description": "ŠANCE pro TÁBOR (ČSSD, SPD, KSČM, nezávislí)",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-7",
+          "name": "Česká strana sociálně demokratická",
+          "short_name": "ČSSD",
+          "abbreviation": "ČSSD",
+          "description": "Česká strana sociálně demokratická",
+          "contacts": [],
+          "img_url": "data/avatars/parties/7-cssd-2020.png"
+        },
+        {
+          "id": "party-47",
+          "name": "Komunistická strana Čech a Moravy",
+          "short_name": "KSČM",
+          "abbreviation": "KSČM",
+          "description": "Komunistická strana Čech a Moravy",
+          "contacts": [],
+          "img_url": "data/avatars/parties/47-kscm.svg"
+        },
+        {
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-1114",
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "short_name": "SPD",
+          "abbreviation": "SPD",
+          "description": "Svoboda a přímá demokracie (SPD)",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
         }
       ]
     },
@@ -503,19 +507,22 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-552046-c-624531-p",
-          "name": "SPOLEČNĚ PRO TÁBOR",
-          "short_name": "SPOLEČNĚ PRO TÁBOR",
-          "abbreviation": "ODS+TOP 09",
-          "description": "SPOLEČNĚ PRO TÁBOR",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://spolecneprotabor.cz/program/",
-                "label": "program"
-              }
-            ]
-          }
+          "id": "party-53",
+          "name": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
+          "description": "Občanská demokratická strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
+        },
+        {
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
         }
       ]
     },
@@ -531,14 +538,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-552046-c-923685-p",
-          "name": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK",
-          "short_name": "DSZ - ZA PRÁVA ZVÍŘAT a NK",
-          "abbreviation": "DSZ+NK",
-          "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-715",
+          "name": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT",
+          "short_name": "DSZ - ZA PRÁVA ZVÍŘAT",
+          "abbreviation": "DSZ - ZA PRÁVA ZVÍŘAT",
+          "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT",
+          "contacts": [],
+          "img_url": "data/avatars/parties/715-dsz.png"
         }
       ],
       "motto": "Chráníme zvířata a jejich práva , zvíře není věc."
@@ -555,14 +569,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-552046-c-605202-p",
-          "name": "KDU-ČSL a nezávislí kandidáti",
-          "short_name": "KDU-ČSL a nezávislí kandidáti",
-          "abbreviation": "KDU-ČSL+NK",
-          "description": "KDU-ČSL a nezávislí kandidáti",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-1",
+          "name": "KDU-ČSL",
+          "short_name": "KDU-ČSL",
+          "abbreviation": "KDU-ČSL",
+          "description": "KDU-ČSL",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+        },
+        {
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
         }
       ],
       "motto": "Nový impuls pro Tábor"
@@ -573,7 +594,7 @@
       "type": "party",
       "description": "JiNAK! - sdružení zelených a nezávislých",
       "short_name": "Sdružení Zelení, NK",
-      "img_url": "zelení-nk",
+      "img_url": "data/avatars/komunalni-2022/552046/komunalni-2022-552046-c-706920-original.jpg",
       "contacts": {
         "web": [
           {
@@ -592,27 +613,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-552046-c-706920-p",
-          "name": "JiNAK! - sdružení zelených a nezávislých",
-          "short_name": "Sdružení Zelení, NK",
-          "abbreviation": "Zelení+NK",
-          "description": "JiNAK! - sdružení zelených a nezávislých",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.taborjinak.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://www.taborjinak.cz/plan-pro-tabor/",
-                "label": "program"
-              },
-              {
-                "url": "https://cs.m.wikipedia.org/wiki/JiNAK!",
-                "label": "wiki"
-              }
-            ]
-          }
+          "id": "party-5",
+          "name": "Strana zelených",
+          "short_name": "Zelení",
+          "abbreviation": "Zelení",
+          "description": "Strana zelených",
+          "contacts": [],
+          "img_url": "data/avatars/parties/5-strana-zelenych-2022.jpg"
+        },
+        {
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
         }
       ],
       "motto": "Kulturně, otevřeně, solidárně, udržitelně!"
@@ -623,7 +638,7 @@
       "type": "party",
       "description": "TÁBOR - NÁŠ DOMOV",
       "short_name": "TÁBOR - NÁŠ DOMOV",
-      "img_url": "domov-nk",
+      "img_url": "data/avatars/komunalni-2022/552046/komunalni-2022-552046-c-892184-original.jpg",
       "contacts": {
         "web": [
           {
@@ -635,20 +650,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-552046-c-892184-p",
-          "name": "TÁBOR - NÁŠ DOMOV",
-          "short_name": "TÁBOR - NÁŠ DOMOV",
-          "abbreviation": "DOMOV+NK",
-          "description": "TÁBOR - NÁŠ DOMOV",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://aliancenarodnichsil.cz/tabor-volby-2022/",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/T%C3%81BOR-N%C3%81%C5%A0-DOMOV-104712775708099"
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-1221",
+          "name": "DOMOV",
+          "short_name": "DOMOV",
+          "abbreviation": "DOMOV",
+          "description": "DOMOV",
+          "contacts": [],
+          "img_url": "data/avatars/parties/08-12-273304840_313019___up-d958-92.jpg"
         }
       ]
     }

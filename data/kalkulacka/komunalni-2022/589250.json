@@ -386,7 +386,7 @@
       "type": "party",
       "description": "NA ROVINU! (STAN, TOP 09, ZELENÍ)",
       "short_name": "NA ROVINU! (STAN,TOP09,ZELENÍ)",
-      "img_url": "zelení-stan-top",
+      "img_url": "data/avatars/komunalni-2022/589250/komunalni-2022-589250-c-845000-original.jpg",
       "contacts": {
         "web": [
           {
@@ -399,21 +399,31 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-589250-c-845000-p",
-          "name": "NA ROVINU! (STAN, TOP 09, ZELENÍ)",
-          "short_name": "NA ROVINU! (STAN,TOP09,ZELENÍ)",
-          "abbreviation": "Zelení+STAN+TOP",
-          "description": "NA ROVINU! (STAN, TOP 09, ZELENÍ)",
-          "contacts": {
-            "web": [
-              {
-                "url": "http://prostejovnarovinu.cz/",
-                "label": "web"
-              }
-            ],
-            "facebook": "https://www.facebook.com/ProstejovNarovinu/",
-            "instagram": "https://www.instagram.com/prostejov_na_rovinu/"
-          }
+          "id": "party-5",
+          "name": "Strana zelených",
+          "short_name": "Zelení",
+          "abbreviation": "Zelení",
+          "description": "Strana zelených",
+          "contacts": [],
+          "img_url": "data/avatars/parties/5-strana-zelenych-2022.jpg"
+        },
+        {
+          "id": "party-166",
+          "name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "short_name": "STAN",
+          "abbreviation": "STAN",
+          "description": "STAROSTOVÉ A NEZÁVISLÍ",
+          "contacts": [],
+          "img_url": "data/avatars/parties/166-stan.svg"
+        },
+        {
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
         }
       ],
       "motto": "Zelený Prostějov. "
@@ -430,14 +440,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-589250-c-210818-p",
+          "id": "party-1114",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "Svoboda a př. demokracie (SPD)",
+          "short_name": "SPD",
           "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
         }
       ],
       "motto": "Volte SPD. Volte bezpečný a prosperující Prostějov."
@@ -448,20 +457,27 @@
       "type": "party",
       "description": "Spojenci pro Prostějov",
       "short_name": "Spojenci pro Prostějov",
-      "img_url": "kdu-čsl-nk",
+      "img_url": "data/avatars/komunalni-2022/589250/komunalni-2022-589250-c-760745-original.jpg",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "komunalni-2022-589250-c-760745-p",
-          "name": "Spojenci pro Prostějov",
-          "short_name": "Spojenci pro Prostějov",
-          "abbreviation": "KDU-ČSL+NK",
-          "description": "Spojenci pro Prostějov",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-1",
+          "name": "KDU-ČSL",
+          "short_name": "KDU-ČSL",
+          "abbreviation": "KDU-ČSL",
+          "description": "KDU-ČSL",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+        },
+        {
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
         }
       ],
       "motto": "Voliči Spojenců, KDU-ČSL chtějí být hrdi na své město"
@@ -478,14 +494,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-589250-c-118812-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
+          "short_name": "ANO",
           "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ]
     },
@@ -501,14 +516,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-589250-c-318819-p",
-          "name": "Občanská demokratická strana spolu s nezávislými osobnostmi města Prostějova",
-          "short_name": "ODS spolu s nezáv.osob.měs.PV",
-          "abbreviation": "ODS+NK",
-          "description": "Občanská demokratická strana spolu s nezávislými osobnostmi města Prostějova",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-53",
+          "name": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
+          "description": "Občanská demokratická strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
+        },
+        {
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
         }
       ],
       "motto": "S vášní pro naše město"
@@ -525,14 +547,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-589250-c-360377-p",
-          "name": "Levicoví občané Prostějova a KSČM",
-          "short_name": "Levicoví občané Prost. a KSČM",
-          "abbreviation": "KSČM+NK",
-          "description": "Levicoví občané Prostějova a KSČM",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-47",
+          "name": "Komunistická strana Čech a Moravy",
+          "short_name": "KSČM",
+          "abbreviation": "KSČM",
+          "description": "Komunistická strana Čech a Moravy",
+          "contacts": [],
+          "img_url": "data/avatars/parties/47-kscm.svg"
+        },
+        {
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
         }
       ],
       "motto": "Jdeme do toho srdcem"
@@ -549,14 +578,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-589250-c-315782-p",
+          "id": "party-720",
           "name": "Česká pirátská strana",
-          "short_name": "Česká pirátská strana",
+          "short_name": "Piráti",
           "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/720-pirati.svg"
         }
       ],
       "motto": "Piráti Prostějov. Máme odvahu vybudovat město, kde budete chtít bydlet."
@@ -567,20 +595,18 @@
       "type": "party",
       "description": "Pévéčko",
       "short_name": "Pévéčko",
-      "img_url": "pv",
+      "img_url": "data/avatars/komunalni-2022/589250/komunalni-2022-589250-c-351128-original.jpg",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "komunalni-2022-589250-c-351128-p",
+          "id": "party-1020",
           "name": "Pévéčko",
-          "short_name": "Pévéčko",
+          "short_name": "PV",
           "abbreviation": "PV",
           "description": "Pévéčko",
-          "contacts": {
-            "web": []
-          }
+          "contacts": []
         }
       ]
     },
@@ -596,14 +622,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-589250-c-346586-p",
+          "id": "party-7",
           "name": "Česká strana sociálně demokratická",
-          "short_name": "Česká str.sociálně demokrat.",
+          "short_name": "ČSSD",
           "abbreviation": "ČSSD",
           "description": "Česká strana sociálně demokratická",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/7-cssd-2020.png"
         }
       ]
     }
