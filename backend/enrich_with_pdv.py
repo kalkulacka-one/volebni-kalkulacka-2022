@@ -36,14 +36,16 @@ def local_path_to_web_path(path: Path, data_dir: Path) -> str:
     )
 
 
-def extract_img_url(party_dir: Path, logo_path: str, data_dir: Path) -> str:
+def extract_img_url(party_dir: Path, logo_path: str, data_dir: Path) -> Optional[str]:
     remote_url = f"https://data.programydovoleb.cz/{logo_path}"
     img_name = logo_path.split("/")[-1]
     local_path = party_dir / img_name
     if not local_path.exists():
         response = requests.get(remote_url)
-        with local_path.open("wb") as fh:
-            fh.write(response.content)
+        logger.warning(
+            "Downloading img_url has failed: %s, %s", response.url, response.status_code
+        )
+        return None
 
     return local_path_to_web_path(local_path, data_dir)
 
@@ -135,7 +137,7 @@ def update_candidate_photo(
         return False
 
     remote_url = photos[0]["url"]
-    if not remote_url.startswith("http://"):
+    if not remote_url.startswith("http"):
         # sometimes there is just local path
         remote_url = f"https://data.programydovoleb.cz/{remote_url}"
 
@@ -148,6 +150,13 @@ def update_candidate_photo(
             "\t%s - downloading from %s", local_original_path.absolute(), remote_url
         )
         response = requests.get(remote_url)
+        if response.status_code != 200:
+            logger.warning(
+                "Downloading of candidate photo has failed: %s, %s",
+                response.url,
+                response.status_code,
+            )
+            return False
         with local_original_path.open("wb") as fh:
             fh.write(response.content)
 
