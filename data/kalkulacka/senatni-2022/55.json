@@ -382,25 +382,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-55-c-716101-p",
+          "id": "party-1265",
           "name": "Právo Respekt Odbornost",
-          "short_name": "Právo Respekt Odbornost",
-          "abbreviation": "Právo Respekt Odbornost",
+          "short_name": "PRO 2022",
+          "abbreviation": "PRO 2022",
           "description": "Právo Respekt Odbornost",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.redovadosenatu.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://stranapro.cz/",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/petrafajmonredova",
-            "instagram": "https://instagram.com/petra_redova_fajmonova"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/08-11-kgam3hli_400x400___up-d958-50.jpg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/55/senatni-2022-55-c-716101-face.jpg"
@@ -425,21 +413,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-55-c-429934-p",
+          "id": "party-166",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "abbreviation": "STAROSTOVÉ A NEZÁVISLÍ",
+          "short_name": "STAN",
+          "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://cs.wikipedia.org/wiki/Radom%C3%ADr_Pavl%C3%AD%C4%8Dek",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/radomir.pavlicek.5",
-            "instagram": "https://www.instagram.com/radomirpavlicek/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/166-stan.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/55/senatni-2022-55-c-429934-face.jpg"
@@ -462,19 +442,22 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-55-c-323222-p",
-          "name": "Koalice Moravského zemského hnutí a politické strany Moravané",
-          "short_name": "Koalice Moravského zemského hnutí a politické strany Moravané",
-          "abbreviation": "Koalice Moravského zemského hnutí a politické strany Moravané",
-          "description": "Koalice Moravského zemského hnutí a politické strany Moravané",
-          "contacts": {
-            "web": [
-              {
-                "url": "http://www.senatorbrno.cz/index.html#content4-g",
-                "label": "program"
-              }
-            ]
-          }
+          "id": "party-83",
+          "name": "Moravané",
+          "short_name": "Moravané",
+          "abbreviation": "Moravané",
+          "description": "Moravané",
+          "contacts": [],
+          "img_url": "data/avatars/parties/83-moravane.png"
+        },
+        {
+          "id": "party-1190",
+          "name": "Moravské zemské hnutí",
+          "short_name": "MZH",
+          "abbreviation": "MZH",
+          "description": "Moravské zemské hnutí",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1190-mzh.png"
         }
       ]
     },
@@ -493,16 +476,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-55-c-248878-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
-          "abbreviation": "ANO 2011",
+          "short_name": "ANO",
+          "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/boreksemraddosenatu",
-            "instagram": "https://www.instagram.com/semradsenat/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ]
     },
@@ -520,15 +500,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-55-c-240503-p",
+          "id": "party-1114",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "Svoboda a přímá demokracie (SPD)",
-          "abbreviation": "Svoboda a přímá demokracie (SPD)",
+          "short_name": "SPD",
+          "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/Akad-arch-Tom%C3%A1%C5%A1-Kotas-SPD-107950361968546"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
         }
       ]
     },
@@ -555,24 +533,31 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-55-c-924292-p",
-          "name": "Koalice SPOLU",
-          "short_name": "Koalice SPOLU",
-          "abbreviation": "Koalice SPOLU",
-          "description": "Koalice SPOLU",
-          "contacts": {
-            "web": [
-              {
-                "url": "http://topferdosenatu.cz/",
-                "label": "program"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/Tom%C3%A1%C5%A1_T%C3%B6pfer",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/topferdosenatu"
-          }
+          "id": "party-1",
+          "name": "KDU-ČSL",
+          "short_name": "KDU-ČSL",
+          "abbreviation": "KDU-ČSL",
+          "description": "KDU-ČSL",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+        },
+        {
+          "id": "party-53",
+          "name": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
+          "description": "Občanská demokratická strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
+        },
+        {
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/55/senatni-2022-55-c-924292-face.jpg"
@@ -591,15 +576,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-55-c-264620-p",
+          "id": "party-47",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "Komunistická strana Čech a Moravy",
-          "abbreviation": "Komunistická strana Čech a Moravy",
+          "short_name": "KSČM",
+          "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/bohumil.smutny"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/47-kscm.svg"
         }
       ]
     }
