@@ -242,6 +242,7 @@ def get_dir_mapping(
         ),
         # "komunalni-2022": (
         #     "https://2022.programydovoleb.cz/lib/app/api.php?action=town/fetch/"
+        #     process_komunalni,
         # ),
     }.get(dir_name)
 
