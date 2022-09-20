@@ -344,7 +344,7 @@
       "id": "senatni-2022-global-q-8",
       "name": "Daňová progrese zaměstnanců",
       "title": "Měla by se zvýšit progrese daně z příjmů u lidí (tj. vyšší sazba daně pro vyšší příjmy).",
-      "gist": "V ČR existuje „jednotná daň z příjmu 15 %“. Díky slevě na poplatníka a tzv. solidární dani pro nejvíce vydělávající ovšem jde ve skutečnosti o daň mírně progresivní. Podle odpůrců změny je tato „rovná daň“ spravedlivější. V Německu je zdanění progresivnější než v ČR, na Slovensku je progrese podobná jako v ČR.",
+      "gist": "V ČR existuje „jednotná daň z příjmu 15 %“. Díky slevě na poplatníka a vyšší sazbě daně pro nejvíce vydělávající ovšem jde ve skutečnosti o daň mírně progresivní. Podle odpůrců změny je tato „rovná daň“ spravedlivější. V Německu je zdanění progresivnější než v ČR, na Slovensku je progrese podobná jako v ČR.",
       "detail": "",
       "tags": ["ekonomika"]
     },
@@ -372,15 +372,12 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-73-c-805498-p",
+          "id": "party-1061",
           "name": "DOMA",
           "short_name": "DOMA",
           "abbreviation": "DOMA",
           "description": "DOMA",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/daniel.pawlas.9, https://www.facebook.com/daniel.pawlas.585"
-          }
+          "contacts": []
         }
       ]
     },
@@ -399,16 +396,31 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-73-c-245847-p",
-          "name": "Koalice SPOLU",
-          "short_name": "Koalice SPOLU",
-          "abbreviation": "Koalice SPOLU",
-          "description": "Koalice SPOLU",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/StachoFolwarczny",
-            "twitter": "https://twitter.com/folfik62"
-          }
+          "id": "party-1",
+          "name": "KDU-ČSL",
+          "short_name": "KDU-ČSL",
+          "abbreviation": "KDU-ČSL",
+          "description": "KDU-ČSL",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+        },
+        {
+          "id": "party-53",
+          "name": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
+          "description": "Občanská demokratická strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
+        },
+        {
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/73/senatni-2022-73-c-245847-face.jpg"
@@ -427,15 +439,22 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-73-c-817015-p",
-          "name": "Koalice ANO 2011 a České strany sociálně demokratické",
-          "short_name": "Koalice ANO 2011 a České strany sociálně demokratické",
-          "abbreviation": "Koalice ANO 2011 a České strany sociálně demokratické",
-          "description": "Koalice ANO 2011 a České strany sociálně demokratické",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/zdenekmatuseksenat"
-          }
+          "id": "party-7",
+          "name": "Česká strana sociálně demokratická",
+          "short_name": "ČSSD",
+          "abbreviation": "ČSSD",
+          "description": "Česká strana sociálně demokratická",
+          "contacts": [],
+          "img_url": "data/avatars/parties/7-cssd-2020.png"
+        },
+        {
+          "id": "party-768",
+          "name": "ANO 2011",
+          "short_name": "ANO",
+          "abbreviation": "ANO",
+          "description": "ANO 2011",
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ]
     },
@@ -452,14 +471,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-73-c-878616-p",
+          "id": "party-1179",
           "name": "BEZPEČNOST, ODPOVĚDNOST, SOLIDARITA",
-          "short_name": "BEZPEČNOST, ODPOVĚDNOST, SOLIDARITA",
-          "abbreviation": "BEZPEČNOST, ODPOVĚDNOST, SOLIDARITA",
+          "short_name": "BOS",
+          "abbreviation": "BOS",
           "description": "BEZPEČNOST, ODPOVĚDNOST, SOLIDARITA",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1179-hnuti-bos.png"
         }
       ]
     },
@@ -488,26 +506,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-73-c-866259-p",
+          "id": "party-1278",
           "name": "Hnutí NEJ",
-          "short_name": "Hnutí NEJ",
-          "abbreviation": "Hnutí NEJ",
+          "short_name": "NEJ",
+          "abbreviation": "NEJ",
           "description": "Hnutí NEJ",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.petrhamrozi.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://www.petrhamrozi.cz/program",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://m.facebook.com/petr.hamrozi",
-            "twitter": "https://mobile.twitter.com/PetrHamrozi",
-            "instagram": "https://www.instagram.com/petrhamrozi/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/09-03-277787241_107524___up-d958-53.jpg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/73/senatni-2022-73-c-866259-face.jpg"
@@ -532,21 +537,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-73-c-795375-p",
+          "id": "party-88",
           "name": "NEZÁVISLÍ",
-          "short_name": "NEZÁVISLÍ",
-          "abbreviation": "NEZÁVISLÍ",
+          "short_name": "Nezávislí",
+          "abbreviation": "Nezávislí",
           "description": "NEZÁVISLÍ",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://petr-gawlas.cz/",
-                "label": "web"
-              }
-            ],
-            "facebook": "https://www.facebook.com/petr.gawlas",
-            "instagram": "https://www.instagram.com/petrgawlas/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/88-nez.png"
         }
       ],
       "img_url": "data/avatars/senatni-2022/73/senatni-2022-73-c-795375-face.jpg"
@@ -1363,25 +1360,27 @@
       "id": "senatni-2022-73-a-817015-52",
       "candidate_id": "senatni-2022-73-c-817015",
       "question_id": "senatni-2022-global-q-52",
-      "answer": "no"
+      "answer": "yes",
+      "comment": "Jde o to "
     },
     {
       "id": "senatni-2022-73-a-817015-1",
       "candidate_id": "senatni-2022-73-c-817015",
       "question_id": "senatni-2022-global-q-1",
-      "answer": "no"
+      "answer": "no",
+      "comment": "Normálně zdaněné dle zákona ano. Více dle mého ne"
     },
     {
       "id": "senatni-2022-73-a-817015-3",
       "candidate_id": "senatni-2022-73-c-817015",
       "question_id": "senatni-2022-global-q-3",
-      "answer": "yes"
+      "answer": "no"
     },
     {
       "id": "senatni-2022-73-a-817015-58",
       "candidate_id": "senatni-2022-73-c-817015",
       "question_id": "senatni-2022-global-q-58",
-      "answer": "no"
+      "answer": "yes"
     },
     {
       "id": "senatni-2022-73-a-817015-5",
@@ -1399,7 +1398,7 @@
       "id": "senatni-2022-73-a-817015-6",
       "candidate_id": "senatni-2022-73-c-817015",
       "question_id": "senatni-2022-global-q-6",
-      "answer": "yes"
+      "answer": "no"
     },
     {
       "id": "senatni-2022-73-a-817015-7",
@@ -1411,19 +1410,21 @@
       "id": "senatni-2022-73-a-817015-16",
       "candidate_id": "senatni-2022-73-c-817015",
       "question_id": "senatni-2022-global-q-16",
-      "answer": "dont_know"
+      "answer": "no",
+      "comment": "Nevím, že bychom tu měli více typů manželství. Já znám pouze manželství mezi mužem a ženou."
     },
     {
       "id": "senatni-2022-73-a-817015-15",
       "candidate_id": "senatni-2022-73-c-817015",
       "question_id": "senatni-2022-global-q-15",
-      "answer": "no"
+      "answer": "yes"
     },
     {
       "id": "senatni-2022-73-a-817015-9",
       "candidate_id": "senatni-2022-73-c-817015",
       "question_id": "senatni-2022-global-q-9",
-      "answer": "no"
+      "answer": "yes",
+      "comment": "Muselo by být přesně dáno co je vlastní spotřeba."
     },
     {
       "id": "senatni-2022-73-a-817015-10",
@@ -1435,19 +1436,20 @@
       "id": "senatni-2022-73-a-817015-12",
       "candidate_id": "senatni-2022-73-c-817015",
       "question_id": "senatni-2022-global-q-12",
-      "answer": "dont_know"
+      "answer": "no"
     },
     {
       "id": "senatni-2022-73-a-817015-13",
       "candidate_id": "senatni-2022-73-c-817015",
       "question_id": "senatni-2022-global-q-13",
-      "answer": "dont_know"
+      "answer": "yes"
     },
     {
       "id": "senatni-2022-73-a-817015-14",
       "candidate_id": "senatni-2022-73-c-817015",
       "question_id": "senatni-2022-global-q-14",
-      "answer": "no"
+      "answer": "yes",
+      "comment": "Z ČT se stala \" soukromá televize, která ukazuje jenom to co ji vyhovuje"
     },
     {
       "id": "senatni-2022-73-a-817015-18",
@@ -1459,7 +1461,8 @@
       "id": "senatni-2022-73-a-817015-20",
       "candidate_id": "senatni-2022-73-c-817015",
       "question_id": "senatni-2022-global-q-20",
-      "answer": "dont_know"
+      "answer": "no",
+      "comment": "Já si myslím, že toto je každého věc. Chceš tak zažádej. Buď dostaneš dávky a nebo ne"
     },
     {
       "id": "senatni-2022-73-a-817015-19",
@@ -1471,25 +1474,26 @@
       "id": "senatni-2022-73-a-817015-21",
       "candidate_id": "senatni-2022-73-c-817015",
       "question_id": "senatni-2022-global-q-21",
-      "answer": "no"
+      "answer": "yes"
     },
     {
       "id": "senatni-2022-73-a-817015-23",
       "candidate_id": "senatni-2022-73-c-817015",
       "question_id": "senatni-2022-global-q-23",
-      "answer": "yes"
+      "answer": "no",
+      "comment": "Pokud bude zajištěno obrovské zabezpečení A kdo by tyto informace zpracovával, protože z emailu bude jasné jak kdo volil. Nemám zájem někomu ukazovat jak volím. To je moje věc"
     },
     {
       "id": "senatni-2022-73-a-817015-24",
       "candidate_id": "senatni-2022-73-c-817015",
       "question_id": "senatni-2022-global-q-24",
-      "answer": "yes"
+      "answer": "no"
     },
     {
       "id": "senatni-2022-73-a-817015-26",
       "candidate_id": "senatni-2022-73-c-817015",
       "question_id": "senatni-2022-global-q-26",
-      "answer": "no"
+      "answer": "yes"
     },
     {
       "id": "senatni-2022-73-a-817015-27",
@@ -1513,7 +1517,8 @@
       "id": "senatni-2022-73-a-817015-41",
       "candidate_id": "senatni-2022-73-c-817015",
       "question_id": "senatni-2022-global-q-41",
-      "answer": "no"
+      "answer": "yes",
+      "comment": "Musely by být stanoveny přesné podmínky proč tam ty kamery jsou."
     },
     {
       "id": "senatni-2022-73-a-817015-35",
@@ -1525,7 +1530,7 @@
       "id": "senatni-2022-73-a-817015-31",
       "candidate_id": "senatni-2022-73-c-817015",
       "question_id": "senatni-2022-global-q-31",
-      "answer": "dont_know"
+      "answer": "yes"
     },
     {
       "id": "senatni-2022-73-a-817015-29",
@@ -1537,7 +1542,7 @@
       "id": "senatni-2022-73-a-817015-22",
       "candidate_id": "senatni-2022-73-c-817015",
       "question_id": "senatni-2022-global-q-22",
-      "answer": "dont_know"
+      "answer": "no"
     },
     {
       "id": "senatni-2022-73-a-817015-53",
@@ -1555,7 +1560,7 @@
       "id": "senatni-2022-73-a-817015-42",
       "candidate_id": "senatni-2022-73-c-817015",
       "question_id": "senatni-2022-global-q-42",
-      "answer": "dont_know"
+      "answer": "yes"
     },
     {
       "id": "senatni-2022-73-a-817015-46",
@@ -1573,7 +1578,8 @@
       "id": "senatni-2022-73-a-817015-48",
       "candidate_id": "senatni-2022-73-c-817015",
       "question_id": "senatni-2022-global-q-48",
-      "answer": "yes"
+      "answer": "no",
+      "comment": "Máme svoje směrnice a paragrafy"
     },
     {
       "id": "senatni-2022-73-a-817015-51",
@@ -1585,7 +1591,7 @@
       "id": "senatni-2022-73-a-817015-45",
       "candidate_id": "senatni-2022-73-c-817015",
       "question_id": "senatni-2022-global-q-45",
-      "answer": "dont_know"
+      "answer": "yes"
     },
     {
       "id": "senatni-2022-73-a-817015-54",
@@ -1603,7 +1609,7 @@
       "id": "senatni-2022-73-a-817015-44",
       "candidate_id": "senatni-2022-73-c-817015",
       "question_id": "senatni-2022-global-q-44",
-      "answer": "yes"
+      "answer": "no"
     }
   ]
 }

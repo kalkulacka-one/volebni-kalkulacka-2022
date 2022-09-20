@@ -344,7 +344,7 @@
       "id": "senatni-2022-global-q-8",
       "name": "Daňová progrese zaměstnanců",
       "title": "Měla by se zvýšit progrese daně z příjmů u lidí (tj. vyšší sazba daně pro vyšší příjmy).",
-      "gist": "V ČR existuje „jednotná daň z příjmu 15 %“. Díky slevě na poplatníka a tzv. solidární dani pro nejvíce vydělávající ovšem jde ve skutečnosti o daň mírně progresivní. Podle odpůrců změny je tato „rovná daň“ spravedlivější. V Německu je zdanění progresivnější než v ČR, na Slovensku je progrese podobná jako v ČR.",
+      "gist": "V ČR existuje „jednotná daň z příjmu 15 %“. Díky slevě na poplatníka a vyšší sazbě daně pro nejvíce vydělávající ovšem jde ve skutečnosti o daň mírně progresivní. Podle odpůrců změny je tato „rovná daň“ spravedlivější. V Německu je zdanění progresivnější než v ČR, na Slovensku je progrese podobná jako v ČR.",
       "detail": "",
       "tags": ["ekonomika"]
     },
@@ -381,24 +381,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-40-c-392078-p",
+          "id": "party-1",
           "name": "KDU-ČSL",
           "short_name": "KDU-ČSL",
           "abbreviation": "KDU-ČSL",
           "description": "KDU-ČSL",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://prochazkadosenatu.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://prochazkadosenatu.cz/#mepriority",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/kandidatsesrdcem"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
         }
       ]
     },
@@ -421,20 +410,22 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-40-c-500322-p",
-          "name": "Koalice České strany sociálně demokratické a ANO 2011",
-          "short_name": "Koalice České strany sociálně demokratické a ANO 2011",
-          "abbreviation": "Koalice České strany sociálně demokratické a ANO 2011",
-          "description": "Koalice České strany sociálně demokratické a ANO 2011",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://cs.wikipedia.org/wiki/Jarom%C3%ADr_Strnad",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/senatorstrnad/"
-          }
+          "id": "party-7",
+          "name": "Česká strana sociálně demokratická",
+          "short_name": "ČSSD",
+          "abbreviation": "ČSSD",
+          "description": "Česká strana sociálně demokratická",
+          "contacts": [],
+          "img_url": "data/avatars/parties/7-cssd-2020.png"
+        },
+        {
+          "id": "party-768",
+          "name": "ANO 2011",
+          "short_name": "ANO",
+          "abbreviation": "ANO",
+          "description": "ANO 2011",
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ]
     },
@@ -459,22 +450,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-40-c-914940-p",
+          "id": "party-53",
           "name": "Občanská demokratická strana",
-          "short_name": "Občanská demokratická strana",
-          "abbreviation": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://vasekatka.cz/",
-                "label": "web"
-              }
-            ],
-            "facebook": "https://www.facebook.com/daczickakaterina/",
-            "twitter": "https://twitter.com/KDaczicka",
-            "instagram": "https://www.instagram.com/katerinadaczicka/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
         }
       ]
     },
@@ -497,20 +479,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-40-c-602069-p",
+          "id": "party-47",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "Komunistická strana Čech a Moravy",
-          "abbreviation": "Komunistická strana Čech a Moravy",
+          "short_name": "KSČM",
+          "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": {
-            "web": [
-              {
-                "url": "http://jirireichel.cz/",
-                "label": "web"
-              }
-            ],
-            "facebook": "https://www.facebook.com/Ji%C5%99%C3%AD-Reichel-kandid%C3%A1t-do-Sen%C3%A1tu-%C4%8CR-106733458746528"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/47-kscm.svg"
         }
       ]
     },
@@ -533,20 +508,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-40-c-815996-p",
+          "id": "party-166",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "abbreviation": "STAROSTOVÉ A NEZÁVISLÍ",
+          "short_name": "STAN",
+          "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://cs.wikipedia.org/wiki/Lud%C4%9Bk_Jeni%C5%A1ta",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/profile.php?id=100005614817356"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/166-stan.svg"
         }
       ]
     },
@@ -563,14 +531,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-40-c-516282-p",
+          "id": "party-1114",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "Svoboda a přímá demokracie (SPD)",
-          "abbreviation": "Svoboda a přímá demokracie (SPD)",
+          "short_name": "SPD",
+          "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
         }
       ]
     },
@@ -599,26 +566,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-40-c-353870-p",
+          "id": "party-714",
           "name": "Svobodní",
           "short_name": "Svobodní",
           "abbreviation": "Svobodní",
           "description": "Svobodní",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.jiri-strachota.cz",
-                "label": "web"
-              },
-              {
-                "url": "https://www.jiri-strachota.cz/co-chci-do-senatu-prinest/",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/jiri.strachota.svobodni",
-            "twitter": "https://twitter.com/jiristrachota",
-            "instagram": "https://www.instagram.com/jiri.strachota/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/714-svobodni-2022.jpg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/40/senatni-2022-40-c-353870-face.jpg"

@@ -344,7 +344,7 @@
       "id": "senatni-2022-global-q-8",
       "name": "Daňová progrese zaměstnanců",
       "title": "Měla by se zvýšit progrese daně z příjmů u lidí (tj. vyšší sazba daně pro vyšší příjmy).",
-      "gist": "V ČR existuje „jednotná daň z příjmu 15 %“. Díky slevě na poplatníka a tzv. solidární dani pro nejvíce vydělávající ovšem jde ve skutečnosti o daň mírně progresivní. Podle odpůrců změny je tato „rovná daň“ spravedlivější. V Německu je zdanění progresivnější než v ČR, na Slovensku je progrese podobná jako v ČR.",
+      "gist": "V ČR existuje „jednotná daň z příjmu 15 %“. Díky slevě na poplatníka a vyšší sazbě daně pro nejvíce vydělávající ovšem jde ve skutečnosti o daň mírně progresivní. Podle odpůrců změny je tato „rovná daň“ spravedlivější. V Německu je zdanění progresivnější než v ČR, na Slovensku je progrese podobná jako v ČR.",
       "detail": "",
       "tags": ["ekonomika"]
     },
@@ -377,20 +377,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-64-c-337974-p",
+          "id": "party-47",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "Komunistická strana Čech a Moravy",
-          "abbreviation": "Komunistická strana Čech a Moravy",
+          "short_name": "KSČM",
+          "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.ladislavsupina.cz/#mojepriority",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/ladislavsupina"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/47-kscm.svg"
         }
       ]
     },
@@ -434,15 +427,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-64-c-419952-p",
+          "id": "party-88",
           "name": "NEZÁVISLÍ",
-          "short_name": "NEZÁVISLÍ",
-          "abbreviation": "NEZÁVISLÍ",
+          "short_name": "Nezávislí",
+          "abbreviation": "Nezávislí",
           "description": "NEZÁVISLÍ",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/ludek.sarman.7"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/88-nez.png"
         }
       ],
       "img_url": "data/avatars/senatni-2022/64/senatni-2022-64-c-419952-face.jpg"
@@ -466,20 +457,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-64-c-542456-p",
+          "id": "party-1227",
           "name": "Trikolora",
           "short_name": "Trikolora",
           "abbreviation": "Trikolora",
           "description": "Trikolora",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://hustakovamiroslava.cz/moje-priority/",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/profile.php?id=100083011057007"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1227-trikolora-2022.jpg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/64/senatni-2022-64-c-542456-face.jpg"
@@ -507,24 +491,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-64-c-298500-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
-          "abbreviation": "ANO 2011",
+          "short_name": "ANO",
+          "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": [
-              {
-                "url": "http://www.ladislav-vaclavec.cz/2022/08/14/oznameni-kandidatury-do-senatu-cr/",
-                "label": "program"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/Ladislav_V%C3%A1clavec",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/ladavaclavec"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/64/senatni-2022-64-c-298500-face.jpg"
@@ -552,24 +525,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-64-c-419215-p",
+          "id": "party-1245",
           "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
-          "short_name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
-          "abbreviation": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+          "short_name": "PŘÍSAHA",
+          "abbreviation": "PŘÍSAHA",
           "description": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.prisaha.cz/senat-2022",
-                "label": "program"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/Anton%C3%ADn_Stan%C4%9Bk",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://m.facebook.com/stanek.antonin/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/prisaha-2.png"
         }
       ],
       "img_url": "data/avatars/senatni-2022/64/senatni-2022-64-c-419215-face.jpg"

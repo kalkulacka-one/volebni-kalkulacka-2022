@@ -344,7 +344,7 @@
       "id": "senatni-2022-global-q-8",
       "name": "Daňová progrese zaměstnanců",
       "title": "Měla by se zvýšit progrese daně z příjmů u lidí (tj. vyšší sazba daně pro vyšší příjmy).",
-      "gist": "V ČR existuje „jednotná daň z příjmu 15 %“. Díky slevě na poplatníka a tzv. solidární dani pro nejvíce vydělávající ovšem jde ve skutečnosti o daň mírně progresivní. Podle odpůrců změny je tato „rovná daň“ spravedlivější. V Německu je zdanění progresivnější než v ČR, na Slovensku je progrese podobná jako v ČR.",
+      "gist": "V ČR existuje „jednotná daň z příjmu 15 %“. Díky slevě na poplatníka a vyšší sazbě daně pro nejvíce vydělávající ovšem jde ve skutečnosti o daň mírně progresivní. Podle odpůrců změny je tato „rovná daň“ spravedlivější. V Německu je zdanění progresivnější než v ČR, na Slovensku je progrese podobná jako v ČR.",
       "detail": "",
       "tags": ["ekonomika"]
     },
@@ -378,21 +378,40 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-13-c-440713-p",
-          "name": "Tábor 2020 a SPOLU - Občanská demokratická strana, KDU-ČSL, TOP 09",
-          "short_name": "Tábor 2020 a SPOLU - Občanská demokratická strana, KDU-ČSL, TOP 09",
-          "abbreviation": "Tábor 2020 a SPOLU - Občanská demokratická strana, KDU-ČSL, TOP 09",
-          "description": "Tábor 2020 a SPOLU - Občanská demokratická strana, KDU-ČSL, TOP 09",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://cs.wikipedia.org/wiki/Marek_Slab%C3%BD",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/SlabyMarek",
-            "instagram": "https://www.instagram.com/marekslaby22/"
-          }
+          "id": "party-1",
+          "name": "KDU-ČSL",
+          "short_name": "KDU-ČSL",
+          "abbreviation": "KDU-ČSL",
+          "description": "KDU-ČSL",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+        },
+        {
+          "id": "party-53",
+          "name": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
+          "description": "Občanská demokratická strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
+        },
+        {
+          "id": "party-136",
+          "name": "Tábor 2020",
+          "short_name": "T2020",
+          "abbreviation": "T2020",
+          "description": "Tábor 2020",
+          "contacts": [],
+          "img_url": "data/avatars/parties/136-tabor2020.jpg"
+        },
+        {
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
         }
       ]
     },
@@ -411,16 +430,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-13-c-203124-p",
+          "id": "party-720",
           "name": "Česká pirátská strana",
-          "short_name": "Česká pirátská strana",
-          "abbreviation": "Česká pirátská strana",
+          "short_name": "Piráti",
+          "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/martinkakona",
-            "twitter": "https://twitter.com/MKakona"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/720-pirati.svg"
         }
       ]
     },
@@ -442,19 +458,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-13-c-941147-p",
+          "id": "party-766",
           "name": "JIHOČEŠI 2012",
-          "short_name": "JIHOČEŠI 2012",
-          "abbreviation": "JIHOČEŠI 2012",
+          "short_name": "JIH 12",
+          "abbreviation": "JIH 12",
           "description": "JIHOČEŠI 2012",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://cs.wikipedia.org/wiki/Jaroslav_V%C4%9Btrovsk%C3%BD",
-                "label": "wiki"
-              }
-            ]
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/766-jihocesi.png"
         }
       ],
       "img_url": "data/avatars/senatni-2022/13/senatni-2022-13-c-941147-face.jpg"
@@ -484,26 +494,12 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-13-c-420091-p",
-          "name": "JIŘÍ MACHAČ",
-          "short_name": "JIŘÍ MACHAČ",
-          "abbreviation": "JIŘÍ MACHAČ",
-          "description": "JIŘÍ MACHAČ",
-          "contacts": {
-            "web": [
-              {
-                "url": "http://cechynasdomov.webnode.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://cechynasdomov.webnode.cz/program-do-senatnich-voleb/",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/Ji%C5%99%C3%AD-Macha%C4%8D-kandid%C3%A1t-do-Sen%C3%A1tu-111834351508657/",
-            "twitter": "https://twitter.com/jirimachac_",
-            "instagram": "https://instagram.com/jirimachac_"
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
         }
       ],
       "img_url": "data/avatars/senatni-2022/13/senatni-2022-13-c-420091-original.jpg"
@@ -522,15 +518,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-13-c-940838-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
-          "abbreviation": "ANO 2011",
+          "short_name": "ANO",
+          "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/profile.php?id=100010001926506"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ]
     },
@@ -547,14 +541,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-13-c-338969-p",
+          "id": "party-166",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "abbreviation": "STAROSTOVÉ A NEZÁVISLÍ",
+          "short_name": "STAN",
+          "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/166-stan.svg"
         }
       ]
     },
@@ -577,20 +570,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-13-c-459651-p",
+          "id": "party-714",
           "name": "Svobodní",
           "short_name": "Svobodní",
           "abbreviation": "Svobodní",
           "description": "Svobodní",
-          "contacts": {
-            "web": [
-              {
-                "url": "http://evzenzadrazil.cz/",
-                "label": "web"
-              }
-            ],
-            "facebook": "http://facebook.com/evzenzadrazil.cz/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/714-svobodni-2022.jpg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/13/senatni-2022-13-c-459651-face.jpg"
@@ -609,15 +595,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-13-c-267821-p",
+          "id": "party-7",
           "name": "Česká strana sociálně demokratická",
-          "short_name": "Česká strana sociálně demokratická",
-          "abbreviation": "Česká strana sociálně demokratická",
+          "short_name": "ČSSD",
+          "abbreviation": "ČSSD",
           "description": "Česká strana sociálně demokratická",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/olga.bastlova"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/7-cssd-2020.png"
         }
       ],
       "img_url": "data/avatars/senatni-2022/13/senatni-2022-13-c-267821-original.jpg"
@@ -635,14 +619,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-13-c-545048-p",
+          "id": "party-1114",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "Svoboda a přímá demokracie (SPD)",
-          "abbreviation": "Svoboda a přímá demokracie (SPD)",
+          "short_name": "SPD",
+          "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
         }
       ]
     }

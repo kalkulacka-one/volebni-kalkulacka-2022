@@ -344,7 +344,7 @@
       "id": "senatni-2022-global-q-8",
       "name": "Daňová progrese zaměstnanců",
       "title": "Měla by se zvýšit progrese daně z příjmů u lidí (tj. vyšší sazba daně pro vyšší příjmy).",
-      "gist": "V ČR existuje „jednotná daň z příjmu 15 %“. Díky slevě na poplatníka a tzv. solidární dani pro nejvíce vydělávající ovšem jde ve skutečnosti o daň mírně progresivní. Podle odpůrců změny je tato „rovná daň“ spravedlivější. V Německu je zdanění progresivnější než v ČR, na Slovensku je progrese podobná jako v ČR.",
+      "gist": "V ČR existuje „jednotná daň z příjmu 15 %“. Díky slevě na poplatníka a vyšší sazbě daně pro nejvíce vydělávající ovšem jde ve skutečnosti o daň mírně progresivní. Podle odpůrců změny je tato „rovná daň“ spravedlivější. V Německu je zdanění progresivnější než v ČR, na Slovensku je progrese podobná jako v ČR.",
       "detail": "",
       "tags": ["ekonomika"]
     },
@@ -378,21 +378,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-4-c-871435-p",
+          "id": "party-143",
           "name": "Spojení demokraté - Sdružení nezávislých",
-          "short_name": "Spojení demokraté - Sdružení nezávislých",
-          "abbreviation": "Spojení demokraté - Sdružení nezávislých",
+          "short_name": "SD-SN",
+          "abbreviation": "SD-SN",
           "description": "Spojení demokraté - Sdružení nezávislých",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://alenadernerova.cz/",
-                "label": "web"
-              }
-            ],
-            "facebook": "https://www.facebook.com/dernerovapolitik",
-            "twitter": "https://twitter.com/DernerovaAlena"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/08-29-sd-sn_logopng___up-d958-99.jpg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/4/senatni-2022-4-c-871435-face.jpg"
@@ -418,22 +410,12 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-4-c-737193-p",
+          "id": "party-80",
           "name": "Nezávislý kandidát",
-          "short_name": "Nezávislý kandidát",
-          "abbreviation": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
           "description": "Nezávislý kandidát",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://cs.wikipedia.org/wiki/Hana_Aulick%C3%A1_J%C3%ADrovcov%C3%A1",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/Ing-Hana-Aulick%C3%A1-J%C3%ADrovcov%C3%A1-politi%C4%8Dka-109984501682257",
-            "twitter": "https://twitter.com/HJirovcova",
-            "instagram": "https://www.instagram.com/aulickajirovcova/"
-          }
+          "contacts": []
         }
       ]
     },
@@ -451,15 +433,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-4-c-248303-p",
+          "id": "party-1114",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "Svoboda a přímá demokracie (SPD)",
-          "abbreviation": "Svoboda a přímá demokracie (SPD)",
+          "short_name": "SPD",
+          "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/Ivana-Turkov%C3%A1-SPD-102412049180933"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/4/senatni-2022-4-c-248303-face.jpg"
@@ -478,15 +458,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-4-c-729274-p",
+          "id": "party-79",
           "name": "Národní demokracie",
-          "short_name": "Národní demokracie",
-          "abbreviation": "Národní demokracie",
+          "short_name": "ND",
+          "abbreviation": "ND",
           "description": "Národní demokracie",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/profile.php?id=100008528281083"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/79-narodni-demokracie.png"
         }
       ]
     },
@@ -509,20 +487,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-4-c-425473-p",
+          "id": "party-1175",
           "name": "ProMOST",
           "short_name": "ProMOST",
           "abbreviation": "ProMOST",
           "description": "ProMOST",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://cs.wikipedia.org/wiki/Jan_Paparega",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/Jan-Paparega-109431260876425"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1175-promost.png"
         }
       ]
     }

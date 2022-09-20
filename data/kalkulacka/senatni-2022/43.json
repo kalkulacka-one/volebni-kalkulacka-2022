@@ -344,7 +344,7 @@
       "id": "senatni-2022-global-q-8",
       "name": "Daňová progrese zaměstnanců",
       "title": "Měla by se zvýšit progrese daně z příjmů u lidí (tj. vyšší sazba daně pro vyšší příjmy).",
-      "gist": "V ČR existuje „jednotná daň z příjmu 15 %“. Díky slevě na poplatníka a tzv. solidární dani pro nejvíce vydělávající ovšem jde ve skutečnosti o daň mírně progresivní. Podle odpůrců změny je tato „rovná daň“ spravedlivější. V Německu je zdanění progresivnější než v ČR, na Slovensku je progrese podobná jako v ČR.",
+      "gist": "V ČR existuje „jednotná daň z příjmu 15 %“. Díky slevě na poplatníka a vyšší sazbě daně pro nejvíce vydělávající ovšem jde ve skutečnosti o daň mírně progresivní. Podle odpůrců změny je tato „rovná daň“ spravedlivější. V Německu je zdanění progresivnější než v ČR, na Slovensku je progrese podobná jako v ČR.",
       "detail": "",
       "tags": ["ekonomika"]
     },
@@ -371,14 +371,12 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-43-c-191288-p",
+          "id": "party-80",
           "name": "Nezávislý kandidát",
-          "short_name": "Nezávislý kandidát",
-          "abbreviation": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
           "description": "Nezávislý kandidát",
-          "contacts": {
-            "web": []
-          }
+          "contacts": []
         }
       ]
     },
@@ -405,24 +403,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-43-c-143881-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
-          "abbreviation": "ANO 2011",
+          "short_name": "ANO",
+          "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.charvatmartin.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/Martin_Charv%C3%A1t",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/MartinCharvatPCE"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/43/senatni-2022-43-c-143881-face.jpg"
@@ -440,14 +427,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-43-c-849519-p",
+          "id": "party-1114",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "Svoboda a přímá demokracie (SPD)",
-          "abbreviation": "Svoboda a přímá demokracie (SPD)",
+          "short_name": "SPD",
+          "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
         }
       ]
     },
@@ -479,29 +465,21 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-43-c-742106-p",
-          "name": "KDU-ČSL a Nestraníci",
-          "short_name": "KDU-ČSL a Nestraníci",
-          "abbreviation": "KDU-ČSL a Nestraníci",
-          "description": "KDU-ČSL a Nestraníci",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://milusehorska.com/",
-                "label": "web"
-              },
-              {
-                "url": "https://milusehorska.com/me-priority",
-                "label": "program"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/Milu%C5%A1e_Horsk%C3%A1",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/milusehorska",
-            "instagram": "https://www.instagram.com/miluse_horska/"
-          }
+          "id": "party-1",
+          "name": "KDU-ČSL",
+          "short_name": "KDU-ČSL",
+          "abbreviation": "KDU-ČSL",
+          "description": "KDU-ČSL",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+        },
+        {
+          "id": "party-181",
+          "name": "Nestraníci",
+          "short_name": "NK",
+          "abbreviation": "NK",
+          "description": "Nestraníci",
+          "contacts": []
         }
       ],
       "img_url": "data/avatars/senatni-2022/43/senatni-2022-43-c-742106-face.jpg"
@@ -529,24 +507,22 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-43-c-191858-p",
-          "name": "Společně pro prosperující Pardubicko - ČSSD v koalici se Stranou soukromníků České republiky a s podporou uskupení 3PK, hnutí Pardubáci společně a Patrioti Pardubic",
-          "short_name": "Společně pro prosperující Pardubicko - ČSSD v koalici se Stranou soukromníků České republiky a s podporou uskupení 3PK, hnutí Pardubáci společně a Patrioti Pardubic",
-          "abbreviation": "Společně pro prosperující Pardubicko - ČSSD v koalici se Stranou soukromníků České republiky a s podporou uskupení 3PK, hnutí Pardubáci společně a Patrioti Pardubic",
-          "description": "Společně pro prosperující Pardubicko - ČSSD v koalici se Stranou soukromníků České republiky a s podporou uskupení 3PK, hnutí Pardubáci společně a Patrioti Pardubic",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.ningerdosenatu.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/Vladim%C3%ADr_Ninger",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/MUDrNinger"
-          }
+          "id": "party-7",
+          "name": "Česká strana sociálně demokratická",
+          "short_name": "ČSSD",
+          "abbreviation": "ČSSD",
+          "description": "Česká strana sociálně demokratická",
+          "contacts": [],
+          "img_url": "data/avatars/parties/7-cssd-2020.png"
+        },
+        {
+          "id": "party-716",
+          "name": "Strana soukromníků České republiky",
+          "short_name": "Soukromníci",
+          "abbreviation": "Soukromníci",
+          "description": "Strana soukromníků České republiky",
+          "contacts": [],
+          "img_url": "data/avatars/parties/716-sscr-n.jpg"
         }
       ]
     },
@@ -563,14 +539,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-43-c-650117-p",
+          "id": "party-1179",
           "name": "BEZPEČNOST, ODPOVĚDNOST, SOLIDARITA",
-          "short_name": "BEZPEČNOST, ODPOVĚDNOST, SOLIDARITA",
-          "abbreviation": "BEZPEČNOST, ODPOVĚDNOST, SOLIDARITA",
+          "short_name": "BOS",
+          "abbreviation": "BOS",
           "description": "BEZPEČNOST, ODPOVĚDNOST, SOLIDARITA",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1179-hnuti-bos.png"
         }
       ]
     }

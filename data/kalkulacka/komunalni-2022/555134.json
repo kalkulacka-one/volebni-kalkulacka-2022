@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -362,7 +362,7 @@
       "type": "party",
       "description": "SPOLU (ODS, KDU-ČSL, TOP 09)",
       "short_name": "SPOLU (ODS, KDU-ČSL, TOP 09)",
-      "img_url": "kdu-ods-top 09",
+      "img_url": "data/avatars/komunalni-2022/555134/komunalni-2022-555134-c-915355-original.png",
       "contacts": {
         "web": [
           {
@@ -379,25 +379,31 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-555134-c-915355-p",
-          "name": "SPOLU (ODS, KDU-ČSL, TOP 09)",
-          "short_name": "SPOLU (ODS, KDU-ČSL, TOP 09)",
-          "abbreviation": "KDU+ODS+TOP 09",
-          "description": "SPOLU (ODS, KDU-ČSL, TOP 09)",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://spolu-pardubice.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://spolu-pardubice.cz/volebni-program",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/spoluPardubice",
-            "instagram": "https://www.instagram.com/spolupardubice/"
-          }
+          "id": "party-1",
+          "name": "KDU-ČSL",
+          "short_name": "KDU-ČSL",
+          "abbreviation": "KDU-ČSL",
+          "description": "KDU-ČSL",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+        },
+        {
+          "id": "party-53",
+          "name": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
+          "description": "Občanská demokratická strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
+        },
+        {
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
         }
       ],
       "motto": "Pravá volba pro Pardubice."
@@ -408,7 +414,7 @@
       "type": "party",
       "description": "Piráti: 42projektu.cz",
       "short_name": "Piráti: 42projektu.cz",
-      "img_url": "zelení-piráti",
+      "img_url": "data/avatars/komunalni-2022/555134/komunalni-2022-555134-c-349076-original.jpg",
       "contacts": {
         "web": [
           {
@@ -424,24 +430,22 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-555134-c-349076-p",
-          "name": "Piráti: 42projektu.cz",
-          "short_name": "Piráti: 42projektu.cz",
-          "abbreviation": "Zelení+Piráti",
-          "description": "Piráti: 42projektu.cz",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://42projektu.cz",
-                "label": "web"
-              },
-              {
-                "url": "https://42projektu.cz",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/zeleni.pardubice"
-          }
+          "id": "party-5",
+          "name": "Strana zelených",
+          "short_name": "Zelení",
+          "abbreviation": "Zelení",
+          "description": "Strana zelených",
+          "contacts": [],
+          "img_url": "data/avatars/parties/5-strana-zelenych-2022.jpg"
+        },
+        {
+          "id": "party-720",
+          "name": "Česká pirátská strana",
+          "short_name": "Piráti",
+          "abbreviation": "Piráti",
+          "description": "Česká pirátská strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/720-pirati.svg"
         }
       ],
       "motto": "Moderní, středově liberální strana přinášející konkrétní projekty pro Pardubice"
@@ -452,7 +456,7 @@
       "type": "party",
       "description": "Žijeme Pardubice",
       "short_name": "Žijeme Pardubice",
-      "img_url": "čssd-pp21-nk",
+      "img_url": "data/avatars/komunalni-2022/555134/komunalni-2022-555134-c-280020-original.jpg",
       "contacts": {
         "web": [
           {
@@ -465,21 +469,29 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-555134-c-280020-p",
-          "name": "Žijeme Pardubice",
-          "short_name": "Žijeme Pardubice",
-          "abbreviation": "ČSSD+PP21+NK",
-          "description": "Žijeme Pardubice",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://zijemepardubice.cz/",
-                "label": "web"
-              }
-            ],
-            "facebook": "https://www.facebook.com/zijemepardubice/",
-            "instagram": "https://www.instagram.com/zijemepardubice/"
-          }
+          "id": "party-7",
+          "name": "Česká strana sociálně demokratická",
+          "short_name": "ČSSD",
+          "abbreviation": "ČSSD",
+          "description": "Česká strana sociálně demokratická",
+          "contacts": [],
+          "img_url": "data/avatars/parties/7-cssd-2020.png"
+        },
+        {
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-1266",
+          "name": "ProPce21",
+          "short_name": "PP21",
+          "abbreviation": "PP21",
+          "description": "ProPce21",
+          "contacts": []
         }
       ],
       "motto": "Zkušenost. Odvaha. Rovnováha. Takové chceme Pardubice. Takoví jsme my. "
@@ -526,7 +538,7 @@
       "type": "party",
       "description": "ANO 2011",
       "short_name": "ANO 2011",
-      "img_url": "ano",
+      "img_url": "data/avatars/komunalni-2022/555134/komunalni-2022-555134-c-694313-original.jpg",
       "contacts": {
         "web": [
           {
@@ -538,20 +550,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-555134-c-694313-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
+          "short_name": "ANO",
           "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.anopardubice.cz/",
-                "label": "web"
-              }
-            ],
-            "facebook": "https://www.facebook.com/AnoPardubice"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ],
       "motto": "Budujeme lepší Pardubice"
@@ -568,14 +573,30 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-555134-c-193762-p",
-          "name": "SPD a nezávislí s podporou Trikolory",
-          "short_name": "SPD a nezáv. s podp. Trikolory",
-          "abbreviation": "SPD+Trikol+NK",
-          "description": "SPD a nezávislí s podporou Trikolory",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-1114",
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "short_name": "SPD",
+          "abbreviation": "SPD",
+          "description": "Svoboda a přímá demokracie (SPD)",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
+        },
+        {
+          "id": "party-1227",
+          "name": "Trikolora",
+          "short_name": "Trikolora",
+          "abbreviation": "Trikolora",
+          "description": "Trikolora",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1227-trikolora-2022.jpg"
         }
       ],
       "motto": "Tým plný odborníků, kteří vyřeší všechny Vaše problémy."
@@ -586,7 +607,7 @@
       "type": "party",
       "description": "SPOLEČNĚ PRO PARDUBICE (Pardubáci společně, Sdružení pro Pardubice, Pardubice pro lidi)",
       "short_name": "SPOLEČNĚ PRO PARDUBICE",
-      "img_url": "snk ed-vč-ppl",
+      "img_url": "data/avatars/komunalni-2022/555134/komunalni-2022-555134-c-812723-original.jpg",
       "contacts": {
         "web": [
           {
@@ -602,24 +623,30 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-555134-c-812723-p",
-          "name": "SPOLEČNĚ PRO PARDUBICE (Pardubáci společně, Sdružení pro Pardubice, Pardubice pro lidi)",
-          "short_name": "SPOLEČNĚ PRO PARDUBICE",
-          "abbreviation": "SNK ED+VČ+PPL",
-          "description": "SPOLEČNĚ PRO PARDUBICE (Pardubáci společně, Sdružení pro Pardubice, Pardubice pro lidi)",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://spolecnepropardubice.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://spolecnepropardubice.cz/program/",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/spolecnepropardubice/"
-          }
+          "id": "party-129",
+          "name": "SNK Evropští demokraté",
+          "short_name": "SNK ED",
+          "abbreviation": "SNK ED",
+          "description": "SNK Evropští demokraté",
+          "contacts": [],
+          "img_url": "data/avatars/parties/129-snk-ed.png"
+        },
+        {
+          "id": "party-770",
+          "name": "VÝCHODOČEŠI",
+          "short_name": "VČ",
+          "abbreviation": "VČ",
+          "description": "VÝCHODOČEŠI",
+          "contacts": [],
+          "img_url": "data/avatars/parties/770-vychodocesi.png"
+        },
+        {
+          "id": "party-790",
+          "name": "Pardubice pro lidi",
+          "short_name": "PPL",
+          "abbreviation": "PPL",
+          "description": "Pardubice pro lidi",
+          "contacts": []
         }
       ],
       "motto": "Jsme jediné ryze pardubické uskupení."
@@ -636,14 +663,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-555134-c-918217-p",
+          "id": "party-47",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "Komunistická str.Čech a Moravy",
+          "short_name": "KSČM",
           "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/47-kscm.svg"
         }
       ]
     },
@@ -665,20 +691,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-555134-c-188831-p",
+          "id": "party-166",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "short_name": "STAN",
           "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.klickpardubicim.cz/programove-priority/",
-                "label": "web"
-              }
-            ],
-            "facebook": "https://www.facebook.com/klickpardubicim"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/166-stan.svg"
         }
       ],
       "motto": "Kandidaturu bereme jako službu občanům, máme vztah k městu a jasnou vizi pro rozvoj Pardubic"

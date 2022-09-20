@@ -344,7 +344,7 @@
       "id": "senatni-2022-global-q-8",
       "name": "Daňová progrese zaměstnanců",
       "title": "Měla by se zvýšit progrese daně z příjmů u lidí (tj. vyšší sazba daně pro vyšší příjmy).",
-      "gist": "V ČR existuje „jednotná daň z příjmu 15 %“. Díky slevě na poplatníka a tzv. solidární dani pro nejvíce vydělávající ovšem jde ve skutečnosti o daň mírně progresivní. Podle odpůrců změny je tato „rovná daň“ spravedlivější. V Německu je zdanění progresivnější než v ČR, na Slovensku je progrese podobná jako v ČR.",
+      "gist": "V ČR existuje „jednotná daň z příjmu 15 %“. Díky slevě na poplatníka a vyšší sazbě daně pro nejvíce vydělávající ovšem jde ve skutečnosti o daň mírně progresivní. Podle odpůrců změny je tato „rovná daň“ spravedlivější. V Německu je zdanění progresivnější než v ČR, na Slovensku je progrese podobná jako v ČR.",
       "detail": "",
       "tags": ["ekonomika"]
     },
@@ -385,28 +385,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-10-c-908666-p",
+          "id": "party-1",
           "name": "KDU-ČSL",
           "short_name": "KDU-ČSL",
           "abbreviation": "KDU-ČSL",
           "description": "KDU-ČSL",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.hunes.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://www.hunes.cz/proc-kandiduji-do-senatu",
-                "label": "program"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/Robert_Hune%C5%A1",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/Robert-Hune%C5%A1-do-sen%C3%A1tu-273339916189874/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
         }
       ]
     },
@@ -435,26 +420,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-10-c-593117-p",
+          "id": "party-53",
           "name": "Občanská demokratická strana",
-          "short_name": "Občanská demokratická strana",
-          "abbreviation": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.tomasjirsa.cz/co-prosazuji",
-                "label": "program"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/Tom%C3%A1%C5%A1_Jirsa",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/Tomas.Jirsa.senatorem",
-            "twitter": "https://twitter.com/Tomas_Jirsa",
-            "instagram": "https://www.instagram.com/senator_tomasjirsa/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/10/senatni-2022-10-c-593117-face.jpg"
@@ -483,25 +455,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-10-c-974997-p",
+          "id": "party-88",
           "name": "NEZÁVISLÍ",
-          "short_name": "NEZÁVISLÍ",
-          "abbreviation": "NEZÁVISLÍ",
+          "short_name": "Nezávislí",
+          "abbreviation": "Nezávislí",
           "description": "NEZÁVISLÍ",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.daliboruhlir.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://www.daliboruhlir.cz/",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/daliboruhlir.cz/",
-            "instagram": "https://www.instagram.com/dalibor.uhlir/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/88-nez.png"
         }
       ]
     },
@@ -518,14 +478,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-10-c-488789-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
-          "abbreviation": "ANO 2011",
+          "short_name": "ANO",
+          "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ]
     },
@@ -543,15 +502,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-10-c-310539-p",
+          "id": "party-1114",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "Svoboda a přímá demokracie (SPD)",
-          "abbreviation": "Svoboda a přímá demokracie (SPD)",
+          "short_name": "SPD",
+          "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/vaclav.mikes.33"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
         }
       ]
     }

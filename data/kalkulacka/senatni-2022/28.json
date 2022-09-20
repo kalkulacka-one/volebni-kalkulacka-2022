@@ -344,7 +344,7 @@
       "id": "senatni-2022-global-q-8",
       "name": "Daňová progrese zaměstnanců",
       "title": "Měla by se zvýšit progrese daně z příjmů u lidí (tj. vyšší sazba daně pro vyšší příjmy).",
-      "gist": "V ČR existuje „jednotná daň z příjmu 15 %“. Díky slevě na poplatníka a tzv. solidární dani pro nejvíce vydělávající ovšem jde ve skutečnosti o daň mírně progresivní. Podle odpůrců změny je tato „rovná daň“ spravedlivější. V Německu je zdanění progresivnější než v ČR, na Slovensku je progrese podobná jako v ČR.",
+      "gist": "V ČR existuje „jednotná daň z příjmu 15 %“. Díky slevě na poplatníka a vyšší sazbě daně pro nejvíce vydělávající ovšem jde ve skutečnosti o daň mírně progresivní. Podle odpůrců změny je tato „rovná daň“ spravedlivější. V Německu je zdanění progresivnější než v ČR, na Slovensku je progrese podobná jako v ČR.",
       "detail": "",
       "tags": ["ekonomika"]
     },
@@ -386,29 +386,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-28-c-454822-p",
+          "id": "party-721",
           "name": "TOP 09",
           "short_name": "TOP 09",
           "abbreviation": "TOP 09",
           "description": "TOP 09",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.zdeneksarapatka.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://www.zdeneksarapatka.cz/",
-                "label": "program"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/Zden%C4%9Bk_%C5%A0arapatka",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/zsarapatka",
-            "twitter": "https://twitter.com/zdeneksarapatka"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/28/senatni-2022-28-c-454822-face.jpg"
@@ -434,22 +418,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-28-c-553512-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
-          "abbreviation": "ANO 2011",
+          "short_name": "ANO",
+          "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://cs.wikipedia.org/wiki/Andrea_Brzobohat%C3%A1",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/andreabrzobohataano",
-            "twitter": "https://twitter.com/brzobohataandy",
-            "instagram": "https://www.instagram.com/brzobohataandrea/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/28/senatni-2022-28-c-553512-face.jpg"
@@ -467,14 +442,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-28-c-720036-p",
+          "id": "party-1275",
           "name": "ZA SPORT A ZDRAVÝ MĚLNÍK",
-          "short_name": "ZA SPORT A ZDRAVÝ MĚLNÍK",
-          "abbreviation": "ZA SPORT A ZDRAVÝ MĚLNÍK",
+          "short_name": "ZSZME",
+          "abbreviation": "ZSZME",
           "description": "ZA SPORT A ZDRAVÝ MĚLNÍK",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/08-29-logo63png___up-d958-24.jpg"
         }
       ]
     },
@@ -507,30 +481,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-28-c-289041-p",
+          "id": "party-166",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "abbreviation": "STAROSTOVÉ A NEZÁVISLÍ",
+          "short_name": "STAN",
+          "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": {
-            "web": [
-              {
-                "url": "http://petr-holecek.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://petr-holecek.cz/#program",
-                "label": "program"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/Petr_Hole%C4%8Dek",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/SenatorPetrHolecek",
-            "twitter": "https://twitter.com/holecek_p",
-            "instagram": "https://www.instagram.com/holecek_petr_stan/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/166-stan.svg"
         }
       ]
     },
@@ -554,21 +511,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-28-c-704700-p",
+          "id": "party-53",
           "name": "Občanská demokratická strana",
-          "short_name": "Občanská demokratická strana",
-          "abbreviation": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://cs.wikipedia.org/wiki/Jarmila_Smotlachov%C3%A1",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/smotlachovaj",
-            "instagram": "https://www.instagram.com/smotlachovaj/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
         }
       ]
     },
@@ -586,15 +535,12 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-28-c-972909-p",
+          "id": "party-1247",
           "name": "Manifest.cz - Pravá Svoboda a Prosperita",
-          "short_name": "Manifest.cz - Pravá Svoboda a Prosperita",
-          "abbreviation": "Manifest.cz - Pravá Svoboda a Prosperita",
+          "short_name": "Manifest.cz",
+          "abbreviation": "Manifest.cz",
           "description": "Manifest.cz - Pravá Svoboda a Prosperita",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/karen.pumrova.3"
-          }
+          "contacts": []
         }
       ]
     },
@@ -613,16 +559,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-28-c-205170-p",
+          "id": "party-1265",
           "name": "Právo Respekt Odbornost",
-          "short_name": "Právo Respekt Odbornost",
-          "abbreviation": "Právo Respekt Odbornost",
+          "short_name": "PRO 2022",
+          "abbreviation": "PRO 2022",
           "description": "Právo Respekt Odbornost",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/ivan.novesky",
-            "twitter": "https://twitter.com/IvanNovesky"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/08-11-kgam3hli_400x400___up-d958-50.jpg"
         }
       ]
     }
