@@ -19,10 +19,10 @@
       "id": "komunalni-2022",
       "key": "komunalni-2022",
       "name": "Komunální volby 2022",
-      "description": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
+      "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "instructions": {
         "header": "Zvolte své město",
-        "step_1_1": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
+        "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
         "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
       },
       "from": "2022-09-23T14:00:00",
@@ -374,15 +374,6 @@
     },
     {
       "election_id": "komunalni-2022",
-      "district_code": "555088",
-      "show_district_code": false,
-      "name": "Havířov",
-      "description": "Havířov",
-      "on_hp_from": "2022-09-01T00:00:00",
-      "on_hp_to": "2022-09-30T14:00:00"
-    },
-    {
-      "election_id": "komunalni-2022",
       "district_code": "532053",
       "show_district_code": false,
       "name": "Kladno",
@@ -405,15 +396,6 @@
       "show_district_code": false,
       "name": "Opava",
       "description": "Opava",
-      "on_hp_from": "2022-09-01T00:00:00",
-      "on_hp_to": "2022-09-30T14:00:00"
-    },
-    {
-      "election_id": "komunalni-2022",
-      "district_code": "598003",
-      "show_district_code": false,
-      "name": "Frýdek-Místek",
-      "description": "Frýdek-Místek",
       "on_hp_from": "2022-09-01T00:00:00",
       "on_hp_to": "2022-09-30T14:00:00"
     },
@@ -446,15 +428,6 @@
     },
     {
       "election_id": "komunalni-2022",
-      "district_code": "562971",
-      "show_district_code": false,
-      "name": "Chomutov",
-      "description": "Chomutov",
-      "on_hp_from": "2022-09-01T00:00:00",
-      "on_hp_to": "2022-09-30T14:00:00"
-    },
-    {
-      "election_id": "komunalni-2022",
       "district_code": "554961",
       "show_district_code": false,
       "name": "Karlovy Vary",
@@ -482,28 +455,10 @@
     },
     {
       "election_id": "komunalni-2022",
-      "district_code": "535419",
-      "show_district_code": false,
-      "name": "Mladá Boleslav",
-      "description": "Mladá Boleslav",
-      "on_hp_from": "2022-09-01T00:00:00",
-      "on_hp_to": "2022-09-30T14:00:00"
-    },
-    {
-      "election_id": "komunalni-2022",
       "district_code": "589250",
       "show_district_code": false,
       "name": "Prostějov",
       "description": "Prostějov",
-      "on_hp_from": "2022-09-01T00:00:00",
-      "on_hp_to": "2022-09-30T14:00:00"
-    },
-    {
-      "election_id": "komunalni-2022",
-      "district_code": "511382",
-      "show_district_code": false,
-      "name": "Přerov",
-      "description": "Přerov",
       "on_hp_from": "2022-09-01T00:00:00",
       "on_hp_to": "2022-09-30T14:00:00"
     },
@@ -531,24 +486,6 @@
       "show_district_code": false,
       "name": "Třinec",
       "description": "Třinec",
-      "on_hp_from": "2022-09-01T00:00:00",
-      "on_hp_to": "2022-09-30T14:00:00"
-    },
-    {
-      "election_id": "komunalni-2022",
-      "district_code": "552046",
-      "show_district_code": false,
-      "name": "Tábor",
-      "description": "Tábor",
-      "on_hp_from": "2022-09-01T00:00:00",
-      "on_hp_to": "2022-09-30T14:00:00"
-    },
-    {
-      "election_id": "komunalni-2022",
-      "district_code": "593711",
-      "show_district_code": false,
-      "name": "Znojmo",
-      "description": "Znojmo",
       "on_hp_from": "2022-09-01T00:00:00",
       "on_hp_to": "2022-09-30T14:00:00"
     },

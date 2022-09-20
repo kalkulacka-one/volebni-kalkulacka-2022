@@ -385,13 +385,28 @@
       },
       "parties": [
         {
-          "id": "party-1",
+          "id": "senatni-2022-10-c-908666-p",
           "name": "KDU-ČSL",
           "short_name": "KDU-ČSL",
           "abbreviation": "KDU-ČSL",
           "description": "KDU-ČSL",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.hunes.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://www.hunes.cz/proc-kandiduji-do-senatu",
+                "label": "program"
+              },
+              {
+                "url": "https://cs.wikipedia.org/wiki/Robert_Hune%C5%A1",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/Robert-Hune%C5%A1-do-sen%C3%A1tu-273339916189874/"
+          }
         }
       ]
     },
@@ -420,13 +435,26 @@
       },
       "parties": [
         {
-          "id": "party-53",
+          "id": "senatni-2022-10-c-593117-p",
           "name": "Občanská demokratická strana",
-          "short_name": "ODS",
-          "abbreviation": "ODS",
+          "short_name": "Občanská demokratická strana",
+          "abbreviation": "Občanská demokratická strana",
           "description": "Občanská demokratická strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.tomasjirsa.cz/co-prosazuji",
+                "label": "program"
+              },
+              {
+                "url": "https://cs.wikipedia.org/wiki/Tom%C3%A1%C5%A1_Jirsa",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/Tomas.Jirsa.senatorem",
+            "twitter": "https://twitter.com/Tomas_Jirsa",
+            "instagram": "https://www.instagram.com/senator_tomasjirsa/"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/10/senatni-2022-10-c-593117-face.jpg"
@@ -455,13 +483,25 @@
       },
       "parties": [
         {
-          "id": "party-88",
+          "id": "senatni-2022-10-c-974997-p",
           "name": "NEZÁVISLÍ",
-          "short_name": "Nezávislí",
-          "abbreviation": "Nezávislí",
+          "short_name": "NEZÁVISLÍ",
+          "abbreviation": "NEZÁVISLÍ",
           "description": "NEZÁVISLÍ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/88-nez.png"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.daliboruhlir.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://www.daliboruhlir.cz/",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/daliboruhlir.cz/",
+            "instagram": "https://www.instagram.com/dalibor.uhlir/"
+          }
         }
       ]
     },
@@ -478,13 +518,14 @@
       },
       "parties": [
         {
-          "id": "party-768",
+          "id": "senatni-2022-10-c-488789-p",
           "name": "ANO 2011",
-          "short_name": "ANO",
-          "abbreviation": "ANO",
+          "short_name": "ANO 2011",
+          "abbreviation": "ANO 2011",
           "description": "ANO 2011",
-          "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ]
     },
@@ -502,13 +543,15 @@
       },
       "parties": [
         {
-          "id": "party-1114",
+          "id": "senatni-2022-10-c-310539-p",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "SPD",
-          "abbreviation": "SPD",
+          "short_name": "Svoboda a přímá demokracie (SPD)",
+          "abbreviation": "Svoboda a přímá demokracie (SPD)",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/vaclav.mikes.33"
+          }
         }
       ]
     }

@@ -386,13 +386,29 @@
       },
       "parties": [
         {
-          "id": "party-721",
+          "id": "senatni-2022-28-c-454822-p",
           "name": "TOP 09",
           "short_name": "TOP 09",
           "abbreviation": "TOP 09",
           "description": "TOP 09",
-          "contacts": [],
-          "img_url": "data/avatars/parties/721-top09.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.zdeneksarapatka.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://www.zdeneksarapatka.cz/",
+                "label": "program"
+              },
+              {
+                "url": "https://cs.wikipedia.org/wiki/Zden%C4%9Bk_%C5%A0arapatka",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/zsarapatka",
+            "twitter": "https://twitter.com/zdeneksarapatka"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/28/senatni-2022-28-c-454822-face.jpg"
@@ -418,13 +434,22 @@
       },
       "parties": [
         {
-          "id": "party-768",
+          "id": "senatni-2022-28-c-553512-p",
           "name": "ANO 2011",
-          "short_name": "ANO",
-          "abbreviation": "ANO",
+          "short_name": "ANO 2011",
+          "abbreviation": "ANO 2011",
           "description": "ANO 2011",
-          "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://cs.wikipedia.org/wiki/Andrea_Brzobohat%C3%A1",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/andreabrzobohataano",
+            "twitter": "https://twitter.com/brzobohataandy",
+            "instagram": "https://www.instagram.com/brzobohataandrea/"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/28/senatni-2022-28-c-553512-face.jpg"
@@ -442,13 +467,14 @@
       },
       "parties": [
         {
-          "id": "party-1275",
+          "id": "senatni-2022-28-c-720036-p",
           "name": "ZA SPORT A ZDRAVÝ MĚLNÍK",
-          "short_name": "ZSZME",
-          "abbreviation": "ZSZME",
+          "short_name": "ZA SPORT A ZDRAVÝ MĚLNÍK",
+          "abbreviation": "ZA SPORT A ZDRAVÝ MĚLNÍK",
           "description": "ZA SPORT A ZDRAVÝ MĚLNÍK",
-          "contacts": [],
-          "img_url": "data/avatars/parties/08-29-logo63png___up-d958-24.jpg"
+          "contacts": {
+            "web": []
+          }
         }
       ]
     },
@@ -481,13 +507,30 @@
       },
       "parties": [
         {
-          "id": "party-166",
+          "id": "senatni-2022-28-c-289041-p",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAN",
-          "abbreviation": "STAN",
+          "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "abbreviation": "STAROSTOVÉ A NEZÁVISLÍ",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/166-stan.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "http://petr-holecek.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://petr-holecek.cz/#program",
+                "label": "program"
+              },
+              {
+                "url": "https://cs.wikipedia.org/wiki/Petr_Hole%C4%8Dek",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/SenatorPetrHolecek",
+            "twitter": "https://twitter.com/holecek_p",
+            "instagram": "https://www.instagram.com/holecek_petr_stan/"
+          }
         }
       ]
     },
@@ -511,13 +554,21 @@
       },
       "parties": [
         {
-          "id": "party-53",
+          "id": "senatni-2022-28-c-704700-p",
           "name": "Občanská demokratická strana",
-          "short_name": "ODS",
-          "abbreviation": "ODS",
+          "short_name": "Občanská demokratická strana",
+          "abbreviation": "Občanská demokratická strana",
           "description": "Občanská demokratická strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://cs.wikipedia.org/wiki/Jarmila_Smotlachov%C3%A1",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/smotlachovaj",
+            "instagram": "https://www.instagram.com/smotlachovaj/"
+          }
         }
       ]
     },
@@ -535,12 +586,15 @@
       },
       "parties": [
         {
-          "id": "party-1247",
+          "id": "senatni-2022-28-c-972909-p",
           "name": "Manifest.cz - Pravá Svoboda a Prosperita",
-          "short_name": "Manifest.cz",
-          "abbreviation": "Manifest.cz",
+          "short_name": "Manifest.cz - Pravá Svoboda a Prosperita",
+          "abbreviation": "Manifest.cz - Pravá Svoboda a Prosperita",
           "description": "Manifest.cz - Pravá Svoboda a Prosperita",
-          "contacts": []
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/karen.pumrova.3"
+          }
         }
       ]
     },
@@ -559,13 +613,16 @@
       },
       "parties": [
         {
-          "id": "party-1265",
+          "id": "senatni-2022-28-c-205170-p",
           "name": "Právo Respekt Odbornost",
-          "short_name": "PRO 2022",
-          "abbreviation": "PRO 2022",
+          "short_name": "Právo Respekt Odbornost",
+          "abbreviation": "Právo Respekt Odbornost",
           "description": "Právo Respekt Odbornost",
-          "contacts": [],
-          "img_url": "data/avatars/parties/08-11-kgam3hli_400x400___up-d958-50.jpg"
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/ivan.novesky",
+            "twitter": "https://twitter.com/IvanNovesky"
+          }
         }
       ]
     }

@@ -22,8 +22,8 @@ install-all-backend:
 	make install-all
 
 generate-data:
-	(cd $(BACKEND_DIR); make run-generate-data) && \
+	(cd $(BACKEND_DIR); make run-converter run-add-images) && \
 	(cd $(SCHEMAS_DIR); ./validate.sh) && \
 	(cd $(FRONTENT_DIR); npm run parse-data-schema) && \
 	git add $(DATA_DIR) && \
-	git commit -a;
+	git commit -a

@@ -382,21 +382,25 @@
       },
       "parties": [
         {
-          "id": "party-1",
-          "name": "KDU-ČSL",
-          "short_name": "KDU-ČSL",
-          "abbreviation": "KDU-ČSL",
-          "description": "KDU-ČSL",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
-        },
-        {
-          "id": "party-1228",
-          "name": "Společně pro kraj",
-          "short_name": "SproK",
-          "abbreviation": "SproK",
-          "description": "Společně pro kraj",
-          "contacts": []
+          "id": "senatni-2022-46-c-367047-p",
+          "name": "Společně pro kraj a KDU-ČSL",
+          "short_name": "Společně pro kraj a KDU-ČSL",
+          "abbreviation": "Společně pro kraj a KDU-ČSL",
+          "description": "Společně pro kraj a KDU-ČSL",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.fialadosenatu.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://cs.wikipedia.org/wiki/Petr_Fiala_(region%C3%A1ln%C3%AD_politik)",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/petrfialaletohrad/",
+            "twitter": "https://twitter.com/petrfiala68"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/46/senatni-2022-46-c-367047-face.jpg"
@@ -439,13 +443,15 @@
       },
       "parties": [
         {
-          "id": "party-768",
+          "id": "senatni-2022-46-c-490291-p",
           "name": "ANO 2011",
-          "short_name": "ANO",
-          "abbreviation": "ANO",
+          "short_name": "ANO 2011",
+          "abbreviation": "ANO 2011",
           "description": "ANO 2011",
-          "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/groups/339050501225275/user/100003277729229/"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/46/senatni-2022-46-c-490291-original.jpg"

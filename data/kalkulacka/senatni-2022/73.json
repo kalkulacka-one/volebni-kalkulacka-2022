@@ -372,12 +372,15 @@
       },
       "parties": [
         {
-          "id": "party-1061",
+          "id": "senatni-2022-73-c-805498-p",
           "name": "DOMA",
           "short_name": "DOMA",
           "abbreviation": "DOMA",
           "description": "DOMA",
-          "contacts": []
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/daniel.pawlas.9, https://www.facebook.com/daniel.pawlas.585"
+          }
         }
       ]
     },
@@ -396,31 +399,16 @@
       },
       "parties": [
         {
-          "id": "party-1",
-          "name": "KDU-ČSL",
-          "short_name": "KDU-ČSL",
-          "abbreviation": "KDU-ČSL",
-          "description": "KDU-ČSL",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
-        },
-        {
-          "id": "party-53",
-          "name": "Občanská demokratická strana",
-          "short_name": "ODS",
-          "abbreviation": "ODS",
-          "description": "Občanská demokratická strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
-        },
-        {
-          "id": "party-721",
-          "name": "TOP 09",
-          "short_name": "TOP 09",
-          "abbreviation": "TOP 09",
-          "description": "TOP 09",
-          "contacts": [],
-          "img_url": "data/avatars/parties/721-top09.svg"
+          "id": "senatni-2022-73-c-245847-p",
+          "name": "Koalice SPOLU",
+          "short_name": "Koalice SPOLU",
+          "abbreviation": "Koalice SPOLU",
+          "description": "Koalice SPOLU",
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/StachoFolwarczny",
+            "twitter": "https://twitter.com/folfik62"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/73/senatni-2022-73-c-245847-face.jpg"
@@ -439,22 +427,15 @@
       },
       "parties": [
         {
-          "id": "party-7",
-          "name": "Česká strana sociálně demokratická",
-          "short_name": "ČSSD",
-          "abbreviation": "ČSSD",
-          "description": "Česká strana sociálně demokratická",
-          "contacts": [],
-          "img_url": "data/avatars/parties/7-cssd-2020.png"
-        },
-        {
-          "id": "party-768",
-          "name": "ANO 2011",
-          "short_name": "ANO",
-          "abbreviation": "ANO",
-          "description": "ANO 2011",
-          "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "id": "senatni-2022-73-c-817015-p",
+          "name": "Koalice ANO 2011 a České strany sociálně demokratické",
+          "short_name": "Koalice ANO 2011 a České strany sociálně demokratické",
+          "abbreviation": "Koalice ANO 2011 a České strany sociálně demokratické",
+          "description": "Koalice ANO 2011 a České strany sociálně demokratické",
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/zdenekmatuseksenat"
+          }
         }
       ]
     },
@@ -471,13 +452,14 @@
       },
       "parties": [
         {
-          "id": "party-1179",
+          "id": "senatni-2022-73-c-878616-p",
           "name": "BEZPEČNOST, ODPOVĚDNOST, SOLIDARITA",
-          "short_name": "BOS",
-          "abbreviation": "BOS",
+          "short_name": "BEZPEČNOST, ODPOVĚDNOST, SOLIDARITA",
+          "abbreviation": "BEZPEČNOST, ODPOVĚDNOST, SOLIDARITA",
           "description": "BEZPEČNOST, ODPOVĚDNOST, SOLIDARITA",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1179-hnuti-bos.png"
+          "contacts": {
+            "web": []
+          }
         }
       ]
     },
@@ -506,13 +488,26 @@
       },
       "parties": [
         {
-          "id": "party-1278",
+          "id": "senatni-2022-73-c-866259-p",
           "name": "Hnutí NEJ",
-          "short_name": "NEJ",
-          "abbreviation": "NEJ",
+          "short_name": "Hnutí NEJ",
+          "abbreviation": "Hnutí NEJ",
           "description": "Hnutí NEJ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/09-03-277787241_107524___up-d958-53.jpg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.petrhamrozi.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://www.petrhamrozi.cz/program",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://m.facebook.com/petr.hamrozi",
+            "twitter": "https://mobile.twitter.com/PetrHamrozi",
+            "instagram": "https://www.instagram.com/petrhamrozi/"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/73/senatni-2022-73-c-866259-face.jpg"
@@ -537,13 +532,21 @@
       },
       "parties": [
         {
-          "id": "party-88",
+          "id": "senatni-2022-73-c-795375-p",
           "name": "NEZÁVISLÍ",
-          "short_name": "Nezávislí",
-          "abbreviation": "Nezávislí",
+          "short_name": "NEZÁVISLÍ",
+          "abbreviation": "NEZÁVISLÍ",
           "description": "NEZÁVISLÍ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/88-nez.png"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://petr-gawlas.cz/",
+                "label": "web"
+              }
+            ],
+            "facebook": "https://www.facebook.com/petr.gawlas",
+            "instagram": "https://www.instagram.com/petrgawlas/"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/73/senatni-2022-73-c-795375-face.jpg"

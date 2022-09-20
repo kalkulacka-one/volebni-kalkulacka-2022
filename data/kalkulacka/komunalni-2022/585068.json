@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -371,13 +371,17 @@
       },
       "parties": [
         {
-          "id": "party-53",
+          "id": "komunalni-2022-585068-c-759713-p",
           "name": "Občanská demokratická strana",
-          "short_name": "ODS",
+          "short_name": "Občanská demokratická strana",
           "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
+          "contacts": {
+            "web": [],
+            "facebook": "https://facebook.com/golan.tomas",
+            "twitter": "https://twitter.com/golan_tomas",
+            "instagram": "https://www.instagram.com/tomasgolansenator/"
+          }
         }
       ],
       "motto": "Budoucnost pro Zlín"
@@ -388,7 +392,7 @@
       "type": "party",
       "description": "ROZHÝBEJME ZLÍN",
       "short_name": "ROZHÝBEJME ZLÍN",
-      "img_url": "data/avatars/komunalni-2022/585068/komunalni-2022-585068-c-880254-original.jpg",
+      "img_url": "trikolora-nk",
       "contacts": {
         "web": [
           {
@@ -405,21 +409,25 @@
       },
       "parties": [
         {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
-        },
-        {
-          "id": "party-1227",
-          "name": "Trikolora",
-          "short_name": "Trikolora",
-          "abbreviation": "Trikolora",
-          "description": "Trikolora",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1227-trikolora-2022.jpg"
+          "id": "komunalni-2022-585068-c-880254-p",
+          "name": "ROZHÝBEJME ZLÍN",
+          "short_name": "ROZHÝBEJME ZLÍN",
+          "abbreviation": "Trikolora+NK",
+          "description": "ROZHÝBEJME ZLÍN",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.rozhybejmezlin.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://www.rozhybejmezlin.cz/program",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/rozhybejmezlin.cz/",
+            "instagram": "https://instagram.com/rozhybejme.zlin?igshid=YmMyMTA2M2Y="
+          }
         }
       ],
       "motto": "Chceme živé město pro všechny, bezpečné město pomáhající potřebným."
@@ -430,27 +438,20 @@
       "type": "party",
       "description": "Zlín sobě",
       "short_name": "Zlín sobě",
-      "img_url": "data/avatars/komunalni-2022/585068/komunalni-2022-585068-c-121027-original.jpg",
+      "img_url": "čssd-nk",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "party-7",
-          "name": "Česká strana sociálně demokratická",
-          "short_name": "ČSSD",
-          "abbreviation": "ČSSD",
-          "description": "Česká strana sociálně demokratická",
-          "contacts": [],
-          "img_url": "data/avatars/parties/7-cssd-2020.png"
-        },
-        {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
+          "id": "komunalni-2022-585068-c-121027-p",
+          "name": "Zlín sobě",
+          "short_name": "Zlín sobě",
+          "abbreviation": "ČSSD+NK",
+          "description": "Zlín sobě",
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Když vláda selhává, Zlín sobě pomáhá!!!"
@@ -467,13 +468,14 @@
       },
       "parties": [
         {
-          "id": "party-720",
+          "id": "komunalni-2022-585068-c-602014-p",
           "name": "Česká pirátská strana",
-          "short_name": "Piráti",
+          "short_name": "Česká pirátská strana",
           "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/720-pirati.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Jediná liberální strana v našem městě, tedy jediná možná cesta do budoucnosti."
@@ -484,7 +486,7 @@
       "type": "party",
       "description": "Zlín 21",
       "short_name": "Zlín 21",
-      "img_url": "data/avatars/komunalni-2022/585068/komunalni-2022-585068-c-171901-original.jpg",
+      "img_url": "z21",
       "contacts": {
         "web": [
           {
@@ -498,12 +500,22 @@
       },
       "parties": [
         {
-          "id": "party-797",
+          "id": "komunalni-2022-585068-c-171901-p",
           "name": "Zlín 21",
-          "short_name": "Z21",
+          "short_name": "Zlín 21",
           "abbreviation": "Z21",
           "description": "Zlín 21",
-          "contacts": []
+          "contacts": {
+            "web": [
+              {
+                "url": "https://zlin21.cz/",
+                "label": "web"
+              }
+            ],
+            "facebook": "https://www.facebook.com/zlin21/",
+            "twitter": "https://twitter.com/21Zlin",
+            "instagram": "https://www.instagram.com/hnuti_zlin21"
+          }
         }
       ],
       "motto": "Dobrá volba pro občany "
@@ -520,13 +532,14 @@
       },
       "parties": [
         {
-          "id": "party-166",
+          "id": "komunalni-2022-585068-c-919562-p",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAN",
+          "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
           "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/166-stan.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Chceme rodinné, bezpečné a zelené město. To vše na základě zdravé ekonomiky bez nepřiměřeného zadlužování. Neslibujeme nesplnitelné a víme, co chceme!"
@@ -543,13 +556,14 @@
       },
       "parties": [
         {
-          "id": "party-1114",
+          "id": "komunalni-2022-585068-c-348037-p",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "SPD",
+          "short_name": "Svoboda a př. demokracie (SPD)",
           "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "SPD - Zlín-  přívětivější místo pro život obyčejných lidí."
@@ -560,19 +574,20 @@
       "type": "party",
       "description": "ANO 2011",
       "short_name": "ANO 2011",
-      "img_url": "data/avatars/komunalni-2022/585068/komunalni-2022-585068-c-456015-original.jpg",
+      "img_url": "ano",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "party-768",
+          "id": "komunalni-2022-585068-c-456015-p",
           "name": "ANO 2011",
-          "short_name": "ANO",
+          "short_name": "ANO 2011",
           "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Rozvoj města a spokojenost obyvatel je naše priorita."
@@ -589,30 +604,14 @@
       },
       "parties": [
         {
-          "id": "party-1",
-          "name": "KDU-ČSL",
-          "short_name": "KDU-ČSL",
-          "abbreviation": "KDU-ČSL",
-          "description": "KDU-ČSL",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
-        },
-        {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
-        },
-        {
-          "id": "party-721",
-          "name": "TOP 09",
-          "short_name": "TOP 09",
-          "abbreviation": "TOP 09",
-          "description": "TOP 09",
-          "contacts": [],
-          "img_url": "data/avatars/parties/721-top09.svg"
+          "id": "komunalni-2022-585068-c-913309-p",
+          "name": "KDU-ČSL s podporou TOP 09 a nezávislých kandidátů",
+          "short_name": "KDU-ČSL s podporou TOP 09 a NK",
+          "abbreviation": "KDUČSL+TOP09+NK",
+          "description": "KDU-ČSL s podporou TOP 09 a nezávislých kandidátů",
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "KDU-ČSL s podporou TOP 09 a NK"

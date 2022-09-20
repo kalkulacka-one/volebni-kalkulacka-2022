@@ -377,13 +377,20 @@
       },
       "parties": [
         {
-          "id": "party-47",
+          "id": "senatni-2022-64-c-337974-p",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "KSČM",
-          "abbreviation": "KSČM",
+          "short_name": "Komunistická strana Čech a Moravy",
+          "abbreviation": "Komunistická strana Čech a Moravy",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": [],
-          "img_url": "data/avatars/parties/47-kscm.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.ladislavsupina.cz/#mojepriority",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/ladislavsupina"
+          }
         }
       ]
     },
@@ -427,13 +434,15 @@
       },
       "parties": [
         {
-          "id": "party-88",
+          "id": "senatni-2022-64-c-419952-p",
           "name": "NEZÁVISLÍ",
-          "short_name": "Nezávislí",
-          "abbreviation": "Nezávislí",
+          "short_name": "NEZÁVISLÍ",
+          "abbreviation": "NEZÁVISLÍ",
           "description": "NEZÁVISLÍ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/88-nez.png"
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/ludek.sarman.7"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/64/senatni-2022-64-c-419952-face.jpg"
@@ -457,13 +466,20 @@
       },
       "parties": [
         {
-          "id": "party-1227",
+          "id": "senatni-2022-64-c-542456-p",
           "name": "Trikolora",
           "short_name": "Trikolora",
           "abbreviation": "Trikolora",
           "description": "Trikolora",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1227-trikolora-2022.jpg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://hustakovamiroslava.cz/moje-priority/",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/profile.php?id=100083011057007"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/64/senatni-2022-64-c-542456-face.jpg"
@@ -491,13 +507,24 @@
       },
       "parties": [
         {
-          "id": "party-768",
+          "id": "senatni-2022-64-c-298500-p",
           "name": "ANO 2011",
-          "short_name": "ANO",
-          "abbreviation": "ANO",
+          "short_name": "ANO 2011",
+          "abbreviation": "ANO 2011",
           "description": "ANO 2011",
-          "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "http://www.ladislav-vaclavec.cz/2022/08/14/oznameni-kandidatury-do-senatu-cr/",
+                "label": "program"
+              },
+              {
+                "url": "https://cs.wikipedia.org/wiki/Ladislav_V%C3%A1clavec",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/ladavaclavec"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/64/senatni-2022-64-c-298500-face.jpg"
@@ -525,13 +552,24 @@
       },
       "parties": [
         {
-          "id": "party-1245",
+          "id": "senatni-2022-64-c-419215-p",
           "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
-          "short_name": "PŘÍSAHA",
-          "abbreviation": "PŘÍSAHA",
+          "short_name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
+          "abbreviation": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
           "description": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
-          "contacts": [],
-          "img_url": "data/avatars/parties/prisaha-2.png"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.prisaha.cz/senat-2022",
+                "label": "program"
+              },
+              {
+                "url": "https://cs.wikipedia.org/wiki/Anton%C3%ADn_Stan%C4%9Bk",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://m.facebook.com/stanek.antonin/"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/64/senatni-2022-64-c-419215-face.jpg"

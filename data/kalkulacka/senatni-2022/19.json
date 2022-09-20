@@ -382,13 +382,25 @@
       },
       "parties": [
         {
-          "id": "party-714",
+          "id": "senatni-2022-19-c-420727-p",
           "name": "Svobodní",
           "short_name": "Svobodní",
           "abbreviation": "Svobodní",
           "description": "Svobodní",
-          "contacts": [],
-          "img_url": "data/avatars/parties/714-svobodni-2022.jpg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://davidbohbot.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://cs.wikipedia.org/wiki/David_Bohbot",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/bezpecnostniexpert",
+            "instagram": "https://www.instagram.com/bohbot_david/"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/19/senatni-2022-19-c-420727-original.jpg"
@@ -407,13 +419,15 @@
       },
       "parties": [
         {
-          "id": "party-1114",
+          "id": "senatni-2022-19-c-746291-p",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "SPD",
-          "abbreviation": "SPD",
+          "short_name": "Svoboda a přímá demokracie (SPD)",
+          "abbreviation": "Svoboda a přímá demokracie (SPD)",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/milanu925"
+          }
         }
       ]
     },
@@ -432,13 +446,16 @@
       },
       "parties": [
         {
-          "id": "party-1244",
+          "id": "senatni-2022-19-c-999606-p",
           "name": "Hnutí PES",
-          "short_name": "PES",
-          "abbreviation": "PES",
+          "short_name": "Hnutí PES",
+          "abbreviation": "Hnutí PES",
           "description": "Hnutí PES",
-          "contacts": [],
-          "img_url": "data/avatars/parties/otevrene-cesko.jpg"
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/sarka.oharkova.3",
+            "instagram": "https://www.instagram.com/senatorkasarka/"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/19/senatni-2022-19-c-999606-face.jpg"
@@ -463,13 +480,21 @@
       },
       "parties": [
         {
-          "id": "party-7",
+          "id": "senatni-2022-19-c-325120-p",
           "name": "Česká strana sociálně demokratická",
-          "short_name": "ČSSD",
-          "abbreviation": "ČSSD",
+          "short_name": "Česká strana sociálně demokratická",
+          "abbreviation": "Česká strana sociálně demokratická",
           "description": "Česká strana sociálně demokratická",
-          "contacts": [],
-          "img_url": "data/avatars/parties/7-cssd-2020.png"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://cs.wikipedia.org/wiki/Vladim%C3%ADr_%C5%A0pidla",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/spidla.aneb.zdroje.jsou/",
+            "twitter": "https://twitter.com/vladimir_spidla"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/19/senatni-2022-19-c-325120-face.jpg"
@@ -493,30 +518,20 @@
       },
       "parties": [
         {
-          "id": "party-5",
-          "name": "Strana zelených",
-          "short_name": "Zelení",
-          "abbreviation": "Zelení",
-          "description": "Strana zelených",
-          "contacts": [],
-          "img_url": "data/avatars/parties/5-strana-zelenych-2022.jpg"
-        },
-        {
-          "id": "party-195",
-          "name": "Hnutí pro Prahu 11",
-          "short_name": "HPP 11",
-          "abbreviation": "HPP 11",
-          "description": "Hnutí pro Prahu 11",
-          "contacts": []
-        },
-        {
-          "id": "party-1187",
-          "name": "SEN 21",
-          "short_name": "SEN 21",
-          "abbreviation": "SEN 21",
-          "description": "SEN 21",
-          "contacts": [],
-          "img_url": "data/avatars/parties/08-30-iwbpfxeg_400x400___up-4fcd-68.jpg"
+          "id": "senatni-2022-19-c-107153-p",
+          "name": "KOS do Senátu",
+          "short_name": "KOS do Senátu",
+          "abbreviation": "KOS do Senátu",
+          "description": "KOS do Senátu",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://cs.wikipedia.org/wiki/Ladislav_Kos",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/ladislav.kos.senat/"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/19/senatni-2022-19-c-107153-face.jpg"
@@ -536,13 +551,16 @@
       },
       "parties": [
         {
-          "id": "party-2",
+          "id": "senatni-2022-19-c-517013-p",
           "name": "Česká strana národně sociální",
-          "short_name": "ČSNS",
-          "abbreviation": "ČSNS",
+          "short_name": "Česká strana národně sociální",
+          "abbreviation": "Česká strana národně sociální",
           "description": "Česká strana národně sociální",
-          "contacts": [],
-          "img_url": "data/avatars/parties/2-csns.png"
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/robert.vasicek79",
+            "twitter": "https://twitter.com/robertvasicek79"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/19/senatni-2022-19-c-517013-face.jpg"
@@ -576,12 +594,30 @@
       },
       "parties": [
         {
-          "id": "party-80",
+          "id": "senatni-2022-19-c-358095-p",
           "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
+          "short_name": "Nezávislý kandidát",
+          "abbreviation": "Nezávislý kandidát",
           "description": "Nezávislý kandidát",
-          "contacts": []
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.tomashudecek.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://www.tomashudecek.cz/temata/",
+                "label": "program"
+              },
+              {
+                "url": "https://cs.wikipedia.org/wiki/Tom%C3%A1%C5%A1_Hude%C4%8Dek",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/tomas.hudecek2/?ref=pages_you_manage",
+            "twitter": "https://twitter.com/hudecektomas?lang=en",
+            "instagram": "https://www.instagram.com/hudecektomas/?hl=en"
+          }
         }
       ]
     },
@@ -606,31 +642,22 @@
       },
       "parties": [
         {
-          "id": "party-1",
-          "name": "KDU-ČSL",
-          "short_name": "KDU-ČSL",
-          "abbreviation": "KDU-ČSL",
-          "description": "KDU-ČSL",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
-        },
-        {
-          "id": "party-53",
-          "name": "Občanská demokratická strana",
-          "short_name": "ODS",
-          "abbreviation": "ODS",
-          "description": "Občanská demokratická strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
-        },
-        {
-          "id": "party-721",
-          "name": "TOP 09",
-          "short_name": "TOP 09",
-          "abbreviation": "TOP 09",
-          "description": "TOP 09",
-          "contacts": [],
-          "img_url": "data/avatars/parties/721-top09.svg"
+          "id": "senatni-2022-19-c-388017-p",
+          "name": "SPOLU (ODS, TOP 09, KDU-ČSL)",
+          "short_name": "SPOLU (ODS, TOP 09, KDU-ČSL)",
+          "abbreviation": "SPOLU (ODS, TOP 09, KDU-ČSL)",
+          "description": "SPOLU (ODS, TOP 09, KDU-ČSL)",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://cs.wikipedia.org/wiki/Hana_Kordov%C3%A1_Marvanov%C3%A1",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/HanaKordovaMarvanova",
+            "twitter": "https://twitter.com/HanaMarvanova",
+            "instagram": "https://www.instagram.com/hanak_marvanova/"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/19/senatni-2022-19-c-388017-face.jpg"

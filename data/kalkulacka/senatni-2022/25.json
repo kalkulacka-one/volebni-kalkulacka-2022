@@ -372,13 +372,15 @@
       },
       "parties": [
         {
-          "id": "party-2",
+          "id": "senatni-2022-25-c-842348-p",
           "name": "Česká strana národně sociální",
-          "short_name": "ČSNS",
-          "abbreviation": "ČSNS",
+          "short_name": "Česká strana národně sociální",
+          "abbreviation": "Česká strana národně sociální",
           "description": "Česká strana národně sociální",
-          "contacts": [],
-          "img_url": "data/avatars/parties/2-csns.png"
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/JarDvorak"
+          }
         }
       ]
     },
@@ -398,13 +400,17 @@
       },
       "parties": [
         {
-          "id": "party-7",
+          "id": "senatni-2022-25-c-377248-p",
           "name": "Česká strana sociálně demokratická",
-          "short_name": "ČSSD",
-          "abbreviation": "ČSSD",
+          "short_name": "Česká strana sociálně demokratická",
+          "abbreviation": "Česká strana sociálně demokratická",
           "description": "Česká strana sociálně demokratická",
-          "contacts": [],
-          "img_url": "data/avatars/parties/7-cssd-2020.png"
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/petr.pavlik.3154",
+            "twitter": "https://twitter.com/PetrPavlik9",
+            "instagram": "https://www.instagram.com/petr.pavlik.3154/"
+          }
         }
       ]
     },
@@ -421,12 +427,14 @@
       },
       "parties": [
         {
-          "id": "party-1247",
+          "id": "senatni-2022-25-c-678819-p",
           "name": "Manifest.cz - Pravá Svoboda a Prosperita",
-          "short_name": "Manifest.cz",
-          "abbreviation": "Manifest.cz",
+          "short_name": "Manifest.cz - Pravá Svoboda a Prosperita",
+          "abbreviation": "Manifest.cz - Pravá Svoboda a Prosperita",
           "description": "Manifest.cz - Pravá Svoboda a Prosperita",
-          "contacts": []
+          "contacts": {
+            "web": []
+          }
         }
       ]
     },
@@ -455,40 +463,26 @@
       },
       "parties": [
         {
-          "id": "party-1",
-          "name": "KDU-ČSL",
-          "short_name": "KDU-ČSL",
-          "abbreviation": "KDU-ČSL",
-          "description": "KDU-ČSL",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
-        },
-        {
-          "id": "party-53",
-          "name": "Občanská demokratická strana",
-          "short_name": "ODS",
-          "abbreviation": "ODS",
-          "description": "Občanská demokratická strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
-        },
-        {
-          "id": "party-166",
-          "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAN",
-          "abbreviation": "STAN",
-          "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/166-stan.svg"
-        },
-        {
-          "id": "party-721",
-          "name": "TOP 09",
-          "short_name": "TOP 09",
-          "abbreviation": "TOP 09",
-          "description": "TOP 09",
-          "contacts": [],
-          "img_url": "data/avatars/parties/721-top09.svg"
+          "id": "senatni-2022-25-c-813666-p",
+          "name": "SPOLU (ODS, KDU-ČSL, TOP 09) a Starostové",
+          "short_name": "SPOLU (ODS, KDU-ČSL, TOP 09) a Starostové",
+          "abbreviation": "SPOLU (ODS, KDU-ČSL, TOP 09) a Starostové",
+          "description": "SPOLU (ODS, KDU-ČSL, TOP 09) a Starostové",
+          "contacts": {
+            "web": [
+              {
+                "url": "http://www.jiri-ruzicka.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://cs.wikipedia.org/wiki/Ji%C5%99%C3%AD_R%C5%AF%C5%BEi%C4%8Dka_(pedagog)",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/ruzickadosenatu",
+            "twitter": "https://twitter.com/ruzickavsenatu",
+            "instagram": "https://www.instagram.com/ruzicka_jiri/"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/25/senatni-2022-25-c-813666-face.jpg"
@@ -506,13 +500,14 @@
       },
       "parties": [
         {
-          "id": "party-137",
+          "id": "senatni-2022-25-c-426167-p",
           "name": "ROZUMNÍ",
-          "short_name": "Rozumní",
-          "abbreviation": "Rozumní",
+          "short_name": "ROZUMNÍ",
+          "abbreviation": "ROZUMNÍ",
           "description": "ROZUMNÍ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/137-rozumni.png"
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/25/senatni-2022-25-c-426167-original.jpg"
@@ -546,13 +541,30 @@
       },
       "parties": [
         {
-          "id": "party-1187",
+          "id": "senatni-2022-25-c-630845-p",
           "name": "SEN 21",
           "short_name": "SEN 21",
           "abbreviation": "SEN 21",
           "description": "SEN 21",
-          "contacts": [],
-          "img_url": "data/avatars/parties/08-30-iwbpfxeg_400x400___up-4fcd-68.jpg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.lenkadosenatu.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://www.lenkadosenatu.cz/program/",
+                "label": "program"
+              },
+              {
+                "url": "https://cs.wikipedia.org/wiki/Lenka_Helena_Koenigsmark",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/LenkaHelenaKoenigsmark",
+            "twitter": "https://twitter.com/LKoenigsmark",
+            "instagram": "https://www.instagram.com/maxmilion_and_me/"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/25/senatni-2022-25-c-630845-face.jpg"
@@ -570,13 +582,14 @@
       },
       "parties": [
         {
-          "id": "party-1265",
-          "name": "Právo Respekt Odbornost",
+          "id": "senatni-2022-25-c-188521-p",
+          "name": "PRO 2022",
           "short_name": "PRO 2022",
           "abbreviation": "PRO 2022",
-          "description": "Právo Respekt Odbornost",
-          "contacts": [],
-          "img_url": "data/avatars/parties/08-11-kgam3hli_400x400___up-d958-50.jpg"
+          "description": "PRO 2022",
+          "contacts": {
+            "web": []
+          }
         }
       ]
     },
@@ -605,13 +618,26 @@
       },
       "parties": [
         {
-          "id": "party-720",
+          "id": "senatni-2022-25-c-290001-p",
           "name": "Česká pirátská strana",
-          "short_name": "Piráti",
-          "abbreviation": "Piráti",
+          "short_name": "Česká pirátská strana",
+          "abbreviation": "Česká pirátská strana",
           "description": "Česká pirátská strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/720-pirati.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://danabalcarova.cz/program/",
+                "label": "program"
+              },
+              {
+                "url": "https://cs.wikipedia.org/wiki/Dana_Balcarov%C3%A1",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/dana.balcarova",
+            "twitter": "https://twitter.com/DanaBalcarova",
+            "instagram": "https://www.instagram.com/dana_balcarova/"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/25/senatni-2022-25-c-290001-face.jpg"

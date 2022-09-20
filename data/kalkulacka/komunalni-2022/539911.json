@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -368,13 +368,14 @@
       },
       "parties": [
         {
-          "id": "party-768",
+          "id": "komunalni-2022-539911-c-690545-p",
           "name": "ANO 2011",
-          "short_name": "ANO",
+          "short_name": "ANO 2011",
           "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ]
     },
@@ -390,13 +391,14 @@
       },
       "parties": [
         {
-          "id": "party-1114",
+          "id": "komunalni-2022-539911-c-928263-p",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "SPD",
+          "short_name": "Svoboda a př. demokracie (SPD)",
           "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "SPD - Rodina na prvním místě."
@@ -407,7 +409,7 @@
       "type": "party",
       "description": "Česká pirátská strana",
       "short_name": "Česká pirátská strana",
-      "img_url": "data/avatars/komunalni-2022/539911/komunalni-2022-539911-c-835803-original.jpg",
+      "img_url": "piráti",
       "contacts": {
         "web": [
           {
@@ -423,13 +425,24 @@
       },
       "parties": [
         {
-          "id": "party-720",
+          "id": "komunalni-2022-539911-c-835803-p",
           "name": "Česká pirátská strana",
-          "short_name": "Piráti",
+          "short_name": "Česká pirátská strana",
           "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/720-pirati.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://pribram.pirati.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://pribram.pirati.cz/program-2022/",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/PribramPirati"
+          }
         }
       ],
       "motto": "Máme odvahu měnit věci, myslíme na mladé! "
@@ -440,27 +453,20 @@
       "type": "party",
       "description": "ČSSD a Přátelé",
       "short_name": "ČSSD a Přátelé",
-      "img_url": "data/avatars/komunalni-2022/539911/komunalni-2022-539911-c-967823-original.jpg",
+      "img_url": "čssd-nk",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "party-7",
-          "name": "Česká strana sociálně demokratická",
-          "short_name": "ČSSD",
-          "abbreviation": "ČSSD",
-          "description": "Česká strana sociálně demokratická",
-          "contacts": [],
-          "img_url": "data/avatars/parties/7-cssd-2020.png"
-        },
-        {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
+          "id": "komunalni-2022-539911-c-967823-p",
+          "name": "ČSSD a Přátelé",
+          "short_name": "ČSSD a Přátelé",
+          "abbreviation": "ČSSD+NK",
+          "description": "ČSSD a Přátelé",
+          "contacts": {
+            "web": []
+          }
         }
       ]
     },
@@ -476,13 +482,14 @@
       },
       "parties": [
         {
-          "id": "party-53",
+          "id": "komunalni-2022-539911-c-746189-p",
           "name": "Občanská demokratická strana",
-          "short_name": "ODS",
+          "short_name": "Občanská demokratická strana",
           "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ]
     },
@@ -503,21 +510,19 @@
       },
       "parties": [
         {
-          "id": "party-1",
-          "name": "KDU-ČSL",
-          "short_name": "KDU-ČSL",
-          "abbreviation": "KDU-ČSL",
-          "description": "KDU-ČSL",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
-        },
-        {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
+          "id": "komunalni-2022-539911-c-163633-p",
+          "name": "KDU-ČSL a nezávislí kandidáti",
+          "short_name": "KDU-ČSL a nezávislí kandidáti",
+          "abbreviation": "KDU-ČSL+NK",
+          "description": "KDU-ČSL a nezávislí kandidáti",
+          "contacts": {
+            "web": [
+              {
+                "url": "http://kdupribram.cz/index.php/clanky/clanky-kategorie/priority-volebniho-programu-kdu-csl-pro-komunalni-volby-v-pribrami-v-roce-2022-perspektiva-pro-vsechny.html",
+                "label": "program"
+              }
+            ]
+          }
         }
       ],
       "motto": "Prosperita pro všechny."
@@ -535,39 +540,15 @@
       },
       "parties": [
         {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
-        },
-        {
-          "id": "party-166",
-          "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAN",
-          "abbreviation": "STAN",
-          "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/166-stan.svg"
-        },
-        {
-          "id": "party-721",
-          "name": "TOP 09",
-          "short_name": "TOP 09",
-          "abbreviation": "TOP 09",
-          "description": "TOP 09",
-          "contacts": [],
-          "img_url": "data/avatars/parties/721-top09.svg"
-        },
-        {
-          "id": "party-1220",
-          "name": "HLAS",
-          "short_name": "Hlas",
-          "abbreviation": "Hlas",
-          "description": "HLAS",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1220-hnuti-hlas-2.png"
+          "id": "komunalni-2022-539911-c-529696-p",
+          "name": "SPOJENCI - TOP 09, STAROSTOVÉ A NEZÁVISLÍ, POLITICKÉ HNUTÍ HLAS, SOS PŘÍBRAM A NEZÁVISLÍ KANDIDÁTI",
+          "short_name": "SP-T09,ST,P.H.HL,SOSPŘ, AN.KA.",
+          "abbreviation": "STAN+TOP+Hl+NK",
+          "description": "SPOJENCI - TOP 09, STAROSTOVÉ A NEZÁVISLÍ, POLITICKÉ HNUTÍ HLAS, SOS PŘÍBRAM A NEZÁVISLÍ KANDIDÁTI",
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/spojencipribram/"
+          }
         }
       ],
       "motto": "Naše kandidátka je sestavena z lidí se zkušenostmi a odborností řídit naše město."
@@ -584,30 +565,14 @@
       },
       "parties": [
         {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
-        },
-        {
-          "id": "party-129",
-          "name": "SNK Evropští demokraté",
-          "short_name": "SNK ED",
-          "abbreviation": "SNK ED",
-          "description": "SNK Evropští demokraté",
-          "contacts": [],
-          "img_url": "data/avatars/parties/129-snk-ed.png"
-        },
-        {
-          "id": "party-1245",
-          "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
-          "short_name": "PŘÍSAHA",
-          "abbreviation": "PŘÍSAHA",
-          "description": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
-          "contacts": [],
-          "img_url": "data/avatars/parties/prisaha-2.png"
+          "id": "komunalni-2022-539911-c-743793-p",
+          "name": "Příbramáci pro Příbram a Přísaha - občanské hnutí Roberta Šlachty",
+          "short_name": "Příb.p.Příb.aPřís.-obč.hn.R.Š.",
+          "abbreviation": "SNKED+PŘÍSAH+NK",
+          "description": "Příbramáci pro Příbram a Přísaha - občanské hnutí Roberta Šlachty",
+          "contacts": {
+            "web": []
+          }
         }
       ]
     },
@@ -623,20 +588,14 @@
       },
       "parties": [
         {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
-        },
-        {
-          "id": "party-181",
-          "name": "Nestraníci",
-          "short_name": "NK",
-          "abbreviation": "NK",
-          "description": "Nestraníci",
-          "contacts": []
+          "id": "komunalni-2022-539911-c-169921-p",
+          "name": "PŘÍBRAM 2030 (Nestraníci)",
+          "short_name": "PŘÍBRAM 2030 (Nestraníci)",
+          "abbreviation": "Nestraníci+NK",
+          "description": "PŘÍBRAM 2030 (Nestraníci)",
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Příbram 2030 prosazuje rozumné hospodaření, čisté prostředí, dobré bydlení a vzdělávání."
@@ -647,7 +606,7 @@
       "type": "party",
       "description": "Šance pro Příbram",
       "short_name": "Šance pro Příbram",
-      "img_url": "data/avatars/komunalni-2022/539911/komunalni-2022-539911-c-235005-original.jpg",
+      "img_url": "monarchiste-nk",
       "contacts": {
         "web": [
           {
@@ -658,21 +617,19 @@
       },
       "parties": [
         {
-          "id": "party-55",
-          "name": "Koruna Česká (monarchistická strana Čech, Moravy a Slezska)",
-          "short_name": "Monarchiste.cz",
-          "abbreviation": "Monarchiste.cz",
-          "description": "Koruna Česká (monarchistická strana Čech, Moravy a Slezska)",
-          "contacts": [],
-          "img_url": "data/avatars/parties/55-koruna-ceska.png"
-        },
-        {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
+          "id": "komunalni-2022-539911-c-235005-p",
+          "name": "Šance pro Příbram",
+          "short_name": "Šance pro Příbram",
+          "abbreviation": "Monarchiste+NK",
+          "description": "Šance pro Příbram",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://sancepropribram.cz/",
+                "label": "web"
+              }
+            ]
+          }
         }
       ],
       "motto": "Nepropásněte šanci na změnu. Správná volba je na dosah ruky."
@@ -689,13 +646,14 @@
       },
       "parties": [
         {
-          "id": "party-47",
+          "id": "komunalni-2022-539911-c-929443-p",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "KSČM",
+          "short_name": "Komunistická str.Čech a Moravy",
           "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": [],
-          "img_url": "data/avatars/parties/47-kscm.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Strana, která má zdravý rozum."
@@ -712,13 +670,14 @@
       },
       "parties": [
         {
-          "id": "party-156",
+          "id": "komunalni-2022-539911-c-629364-p",
           "name": "Dělnická strana sociální spravedlnosti",
-          "short_name": "DSSS",
+          "short_name": "Dělnic.str.sociální spravedl.",
           "abbreviation": "DSSS",
           "description": "Dělnická strana sociální spravedlnosti",
-          "contacts": [],
-          "img_url": "data/avatars/parties/156-dsss.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Bezpečné ulice. Bez feťáků. Pro pořádek. Proti nepřizpůsobivým. "
