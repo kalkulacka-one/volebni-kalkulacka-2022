@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -368,14 +368,22 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-567442-c-593168-p",
-          "name": "ODS spolu s TOP 09",
-          "short_name": "ODS spolu s TOP 09",
-          "abbreviation": "ODS+TOP 09",
-          "description": "ODS spolu s TOP 09",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-53",
+          "name": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
+          "description": "Občanská demokratická strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
+        },
+        {
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
         }
       ],
       "motto": "Vaše jistota, naše odpovědnost"
@@ -392,14 +400,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-567442-c-472474-p",
+          "id": "party-1114",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "Svoboda a př. demokracie (SPD)",
+          "short_name": "SPD",
           "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
         }
       ],
       "motto": "Vize, práce, zkušenosti"
@@ -416,14 +423,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-567442-c-843481-p",
+          "id": "party-785",
           "name": "Zdraví Sport Prosperita",
-          "short_name": "Zdraví Sport Prosperita",
+          "short_name": "PRO Zdraví",
           "abbreviation": "PRO Zdraví",
           "description": "Zdraví Sport Prosperita",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/785-pro-zdravi-a-sport.jpg"
         }
       ],
       "motto": "Tepličáci, kteří chtějí, aby se tady dobře žilo"
@@ -440,14 +446,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-567442-c-209742-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
+          "short_name": "ANO",
           "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ],
       "motto": "Máme krásné lázeňské město a znalosti a prostředky na rozvoj"
@@ -464,14 +469,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-567442-c-731451-p",
+          "id": "party-47",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "Komunistická str.Čech a Moravy",
+          "short_name": "KSČM",
           "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/47-kscm.svg"
         }
       ],
       "motto": "Jediný politik, kterému můžete věřit, jste vy sami. A proto jsem zde i já. "
@@ -482,7 +486,7 @@
       "type": "party",
       "description": "VOLBA PRO! TEPLICE",
       "short_name": "VOLBA PRO! TEPLICE",
-      "img_url": "kdu-zel-pir-nk",
+      "img_url": "data/avatars/komunalni-2022/567442/komunalni-2022-567442-c-119103-original.jpg",
       "contacts": {
         "web": [
           {
@@ -495,21 +499,39 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-567442-c-119103-p",
-          "name": "VOLBA PRO! TEPLICE",
-          "short_name": "VOLBA PRO! TEPLICE",
-          "abbreviation": "KDU+Zel+Pir+NK",
-          "description": "VOLBA PRO! TEPLICE",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.volbaproteplice.cz/",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/search/top?q=volba%20pro%20teplice",
-            "instagram": "https://instagram.com/volbaproteplice?igshid=YmMyMTA2M2Y="
-          }
+          "id": "party-1",
+          "name": "KDU-ČSL",
+          "short_name": "KDU-ČSL",
+          "abbreviation": "KDU-ČSL",
+          "description": "KDU-ČSL",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+        },
+        {
+          "id": "party-5",
+          "name": "Strana zelených",
+          "short_name": "Zelení",
+          "abbreviation": "Zelení",
+          "description": "Strana zelených",
+          "contacts": [],
+          "img_url": "data/avatars/parties/5-strana-zelenych-2022.jpg"
+        },
+        {
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-720",
+          "name": "Česká pirátská strana",
+          "short_name": "Piráti",
+          "abbreviation": "Piráti",
+          "description": "Česká pirátská strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/720-pirati.svg"
         }
       ],
       "motto": "Lidé, kterým věříte."

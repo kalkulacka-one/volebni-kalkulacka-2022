@@ -371,14 +371,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-79-c-228951-p",
+          "id": "party-166",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "abbreviation": "STAROSTOVÉ A NEZÁVISLÍ",
+          "short_name": "STAN",
+          "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/166-stan.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/79/senatni-2022-79-c-228951-original.jpg"
@@ -410,28 +409,31 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-79-c-231466-p",
-          "name": "SPOLU (ODS + KDU-ČSL + TOP 09)",
-          "short_name": "SPOLU (ODS + KDU-ČSL + TOP 09)",
-          "abbreviation": "SPOLU (ODS + KDU-ČSL + TOP 09)",
-          "description": "SPOLU (ODS + KDU-ČSL + TOP 09)",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://evarajchmanova.cz/hodoninsko/",
-                "label": "program"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/Eva_Rajchmanov%C3%A1",
-                "label": "wiki"
-              },
-              {
-                "url": "https://www.linkedin.com/in/eva-rajchmanova/",
-                "label": "linkedin"
-              }
-            ],
-            "facebook": "https://www.facebook.com/RajchmanovaEva/"
-          }
+          "id": "party-1",
+          "name": "KDU-ČSL",
+          "short_name": "KDU-ČSL",
+          "abbreviation": "KDU-ČSL",
+          "description": "KDU-ČSL",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+        },
+        {
+          "id": "party-53",
+          "name": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
+          "description": "Občanská demokratická strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
+        },
+        {
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
         }
       ]
     },
@@ -449,15 +451,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-79-c-623931-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
-          "abbreviation": "ANO 2011",
+          "short_name": "ANO",
+          "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/profile.php?id=100082698219514"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ]
     },
@@ -475,15 +475,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-79-c-410558-p",
+          "id": "party-47",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "Komunistická strana Čech a Moravy",
-          "abbreviation": "Komunistická strana Čech a Moravy",
+          "short_name": "KSČM",
+          "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/profile.php?id=100000634963687"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/47-kscm.svg"
         }
       ]
     },
@@ -510,24 +508,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-79-c-771797-p",
+          "id": "party-720",
           "name": "Česká pirátská strana",
-          "short_name": "Česká pirátská strana",
-          "abbreviation": "Česká pirátská strana",
+          "short_name": "Piráti",
+          "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://ivovasicek.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://ivovasicek.cz/",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/ivovasicekpolitik"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/720-pirati.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/79/senatni-2022-79-c-771797-face.jpg"
@@ -546,15 +533,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-79-c-266442-p",
+          "id": "party-1114",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "Svoboda a přímá demokracie (SPD)",
-          "abbreviation": "Svoboda a přímá demokracie (SPD)",
+          "short_name": "SPD",
+          "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/vitezslav.krabicka"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
         }
       ]
     },
@@ -577,20 +562,22 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-79-c-811606-p",
-          "name": "Koalice Moravského zemského hnutí a politické strany Moravané",
-          "short_name": "Koalice Moravského zemského hnutí a politické strany Moravané",
-          "abbreviation": "Koalice Moravského zemského hnutí a politické strany Moravané",
-          "description": "Koalice Moravského zemského hnutí a politické strany Moravané",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://cs.wikipedia.org/wiki/Zbyn%C4%9Bk_Pasty%C5%99%C3%ADk",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/zbynekdosenatu/"
-          }
+          "id": "party-83",
+          "name": "Moravané",
+          "short_name": "Moravané",
+          "abbreviation": "Moravané",
+          "description": "Moravané",
+          "contacts": [],
+          "img_url": "data/avatars/parties/83-moravane.png"
+        },
+        {
+          "id": "party-1190",
+          "name": "Moravské zemské hnutí",
+          "short_name": "MZH",
+          "abbreviation": "MZH",
+          "description": "Moravské zemské hnutí",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1190-mzh.png"
         }
       ],
       "img_url": "data/avatars/senatni-2022/79/senatni-2022-79-c-811606-original.jpg"

@@ -55,13 +55,16 @@ poetry-run-api:
 poetry-run-converter:
 	poetry run ./converter.py
 
-poetry-run-add-images:
-	poetry run ./add_images.py
+poetry-run-enrich-with-pdv:
+	poetry run ./enrich_with_pdv.py
 
 run-api-docker: docker-run
 run-api-poetry: poetry-run-api
 run-converter: poetry-run-converter
-run-add-images: poetry-run-add-images
+run-add-images: poetry-run-enrich-with-pdv
+run-enrich-with-pdv: poetry-run-enrich-with-pdv
+
+run-generate-data: poetry-run-converter poetry-run-enrich-with-pdv
 
 run-localstack:
 	# https://localstack.cloud/

@@ -373,16 +373,12 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-1-c-965208-p",
+          "id": "party-80",
           "name": "Nezávislý kandidát",
-          "short_name": "Nezávislý kandidát",
-          "abbreviation": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
           "description": "Nezávislý kandidát",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/pavel.petricko.9",
-            "instagram": "https://www.instagram.com/pavelpetricko1951/"
-          }
+          "contacts": []
         }
       ]
     },
@@ -400,15 +396,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-1-c-872946-p",
+          "id": "party-1114",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "Svoboda a přímá demokracie (SPD)",
-          "abbreviation": "Svoboda a přímá demokracie (SPD)",
+          "short_name": "SPD",
+          "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/eva.chromcova"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
         }
       ]
     },
@@ -436,25 +430,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-1-c-107987-p",
+          "id": "party-720",
           "name": "Česká pirátská strana",
-          "short_name": "Česká pirátská strana",
-          "abbreviation": "Česká pirátská strana",
+          "short_name": "Piráti",
+          "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://bohdan.vanek.pirati.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://bohdan.vanek.pirati.cz/#priority",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/Pirat.Bohdan.Vanek",
-            "twitter": "https://twitter.com/BohdanVanek"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/720-pirati.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/1/senatni-2022-1-c-107987-original.jpg"
@@ -473,15 +455,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-1-c-578851-p",
+          "id": "party-1244",
           "name": "Hnutí PES",
-          "short_name": "Hnutí PES",
-          "abbreviation": "Hnutí PES",
+          "short_name": "PES",
+          "abbreviation": "PES",
           "description": "Hnutí PES",
-          "contacts": {
-            "web": [],
-            "instagram": "https://www.instagram.com/senatorbedrich/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/otevrene-cesko.jpg"
         }
       ]
     },
@@ -500,16 +480,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-1-c-128673-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
-          "abbreviation": "ANO 2011",
+          "short_name": "ANO",
+          "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/mudrveraprochazkova",
-            "instagram": "https://www.instagram.com/prochazkova548/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/1/senatni-2022-1-c-128673-face.jpg"
@@ -535,22 +512,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-1-c-329053-p",
+          "id": "party-182",
           "name": "Karlovarská občanská alternativa",
-          "short_name": "Karlovarská občanská alternativa",
-          "abbreviation": "Karlovarská občanská alternativa",
+          "short_name": "KOA",
+          "abbreviation": "KOA",
           "description": "Karlovarská občanská alternativa",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://cs.wikipedia.org/wiki/Petr_Kulh%C3%A1nek_(politik)",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/coolhanek",
-            "twitter": "https://twitter.com/kulhanek_p",
-            "instagram": "https://www.instagram.com/petr.cool.hanek/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/182-koa.png"
         }
       ],
       "img_url": "data/avatars/senatni-2022/1/senatni-2022-1-c-329053-original.jpg"
@@ -568,14 +536,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-1-c-200693-p",
+          "id": "party-715",
           "name": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT",
-          "short_name": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT",
-          "abbreviation": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT",
+          "short_name": "DSZ - ZA PRÁVA ZVÍŘAT",
+          "abbreviation": "DSZ - ZA PRÁVA ZVÍŘAT",
           "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/715-dsz.png"
         }
       ]
     },
@@ -595,17 +562,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-1-c-174710-p",
+          "id": "party-1270",
           "name": "SRDCEM PRO ...",
           "short_name": "SRDCEM PRO ...",
           "abbreviation": "SRDCEM PRO ...",
           "description": "SRDCEM PRO ...",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/petr.ajsman",
-            "twitter": "https://twitter.com/PAjsman",
-            "instagram": "https://www.instagram.com/ajsmi76/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/08-29-280683022_527062___up-d958-14.jpg"
         }
       ]
     },
@@ -628,20 +591,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-1-c-755869-p",
+          "id": "party-1118",
           "name": "Volba pro kraj",
-          "short_name": "Volba pro kraj",
-          "abbreviation": "Volba pro kraj",
+          "short_name": "VOK",
+          "abbreviation": "VOK",
           "description": "Volba pro kraj",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://vokk.cz/senat-2022/",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/starostamalecek/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1118-vok-2.png"
         }
       ]
     },
@@ -674,30 +630,31 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-1-c-306348-p",
-          "name": "SPOLU (ODS + KDU-ČSL + TOP 09)",
-          "short_name": "SPOLU (ODS + KDU-ČSL + TOP 09)",
-          "abbreviation": "SPOLU (ODS + KDU-ČSL + TOP 09)",
-          "description": "SPOLU (ODS + KDU-ČSL + TOP 09)",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.slavikletidosenatu.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://www.slavikletidosenatu.cz/moje-preference/",
-                "label": "program"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/V%C3%A1clav_Slav%C3%ADk_(1973)",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/starostazlutice",
-            "twitter": "https://twitter.com/SZlutice",
-            "instagram": "https://www.instagram.com/vaclav.slavik/"
-          }
+          "id": "party-1",
+          "name": "KDU-ČSL",
+          "short_name": "KDU-ČSL",
+          "abbreviation": "KDU-ČSL",
+          "description": "KDU-ČSL",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+        },
+        {
+          "id": "party-53",
+          "name": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
+          "description": "Občanská demokratická strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
+        },
+        {
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/1/senatni-2022-1-c-306348-face.jpg"
@@ -727,26 +684,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-1-c-742303-p",
+          "id": "party-166",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "abbreviation": "STAROSTOVÉ A NEZÁVISLÍ",
+          "short_name": "STAN",
+          "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": {
-            "web": [
-              {
-                "url": "http://www.janhornik.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/Jan_Horn%C3%ADk",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://m.facebook.com/SenatorJanHornik/",
-            "twitter": "https://mobile.twitter.com/JanHornk4",
-            "instagram": "https://www.instagram.com/janhornik/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/166-stan.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/1/senatni-2022-1-c-742303-face.jpg"

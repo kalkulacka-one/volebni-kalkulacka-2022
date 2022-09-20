@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -378,24 +378,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-582786-c-895801-p",
-          "name": "ČSSD VAŠI STAROSTOVÉ",
-          "short_name": "ČSSD VAŠI STAROSTOVÉ",
-          "abbreviation": "ČSSD+NK",
-          "description": "ČSSD VAŠI STAROSTOVÉ",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.vasistarostove.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://www.vasistarostove.cz/program",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/CssdBrnoMesto"
-          }
+          "id": "party-7",
+          "name": "Česká strana sociálně demokratická",
+          "short_name": "ČSSD",
+          "abbreviation": "ČSSD",
+          "description": "Česká strana sociálně demokratická",
+          "contacts": [],
+          "img_url": "data/avatars/parties/7-cssd-2020.png"
+        },
+        {
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
         }
       ],
       "motto": "ČSSD bojuje za sociální spravedlnost - za solidarita proti chamtivosti. "
@@ -406,7 +403,7 @@
       "type": "party",
       "description": "Brno Brňankám a Brňanům! (B3!)",
       "short_name": "Brno Brňankám a Brňanům! (B3!)",
-      "img_url": "levice-nk",
+      "img_url": "data/avatars/komunalni-2022/582786/komunalni-2022-582786-c-380850-original.jpg",
       "contacts": {
         "web": [
           {
@@ -423,25 +420,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-582786-c-380850-p",
-          "name": "Brno Brňankám a Brňanům! (B3!)",
-          "short_name": "Brno Brňankám a Brňanům! (B3!)",
-          "abbreviation": "Levice+NK",
-          "description": "Brno Brňankám a Brňanům! (B3!)",
-          "contacts": {
-            "web": [
-              {
-                "url": "http://www.brno-b3.cz/",
-                "label": "web"
-              },
-              {
-                "url": "http://www.brno-b3.cz/program/",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/Brno.B3/",
-            "instagram": "https://www.instagram.com/brno.b3/"
-          }
+          "id": "party-74",
+          "name": "Levice",
+          "short_name": "Levice",
+          "abbreviation": "Levice",
+          "description": "Levice",
+          "contacts": [],
+          "img_url": "data/avatars/parties/74-levice.jpg"
+        },
+        {
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
         }
       ],
       "motto": "Vracíme Brno lidem, kteří v něm žijí a milují ho."
@@ -459,15 +452,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-582786-c-395398-p",
+          "id": "party-720",
           "name": "Česká pirátská strana",
-          "short_name": "Česká pirátská strana",
+          "short_name": "Piráti",
           "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
-          "contacts": {
-            "web": [],
-            "twitter": "https://twitter.com/MarekLahoda"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/720-pirati.svg"
         }
       ],
       "motto": "Odvaha dělat, co je správné."
@@ -478,7 +469,7 @@
       "type": "party",
       "description": "Zelení a Žít Brno s podporou Idealistů",
       "short_name": "Zelení a Žít Brno s podpor. Id",
-      "img_url": "zelen-žtb-ideal",
+      "img_url": "data/avatars/komunalni-2022/582786/komunalni-2022-582786-c-658413-original.jpg",
       "contacts": {
         "web": [],
         "facebook": "https://www.facebook.com/idealistehnuti",
@@ -486,16 +477,31 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-582786-c-658413-p",
-          "name": "Zelení a Žít Brno s podporou Idealistů",
-          "short_name": "Zelení a Žít Brno s podpor. Id",
-          "abbreviation": "Zelen+ŽTB+Ideal",
-          "description": "Zelení a Žít Brno s podporou Idealistů",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/idealistehnuti",
-            "instagram": "https://www.instagram.com/zelenebrno/"
-          }
+          "id": "party-5",
+          "name": "Strana zelených",
+          "short_name": "Zelení",
+          "abbreviation": "Zelení",
+          "description": "Strana zelených",
+          "contacts": [],
+          "img_url": "data/avatars/parties/5-strana-zelenych-2022.jpg"
+        },
+        {
+          "id": "party-1026",
+          "name": "“Žít Brno“",
+          "short_name": "ŽTB",
+          "abbreviation": "ŽTB",
+          "description": "“Žít Brno“",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1026-ztb.png"
+        },
+        {
+          "id": "party-1233",
+          "name": "Hnutí Idealisté",
+          "short_name": "Idealisté",
+          "abbreviation": "Idealisté",
+          "description": "Hnutí Idealisté",
+          "contacts": [],
+          "img_url": "data/avatars/parties/idealiste-2022.jpg"
         }
       ],
       "motto": "Město přívětivé a přátelské pro všechny."
@@ -558,26 +564,22 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-582786-c-778616-p",
-          "name": "Brno Plus a Svobodní",
-          "short_name": "Brno Plus a Svobodní",
-          "abbreviation": "Svobodní+Brno+",
-          "description": "Brno Plus a Svobodní",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.brnoplus.cz/brno2022",
-                "label": "web"
-              },
-              {
-                "url": "https://www.brnoplus.cz/brno2022",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/brnoplus",
-            "twitter": "https://twitter.com/brnoplus",
-            "instagram": "https://www.instagram.com/brnoplus/"
-          }
+          "id": "party-714",
+          "name": "Svobodní",
+          "short_name": "Svobodní",
+          "abbreviation": "Svobodní",
+          "description": "Svobodní",
+          "contacts": [],
+          "img_url": "data/avatars/parties/714-svobodni-2022.jpg"
+        },
+        {
+          "id": "party-1200",
+          "name": "Brno Plus",
+          "short_name": "Brno+",
+          "abbreviation": "Brno+",
+          "description": "Brno Plus",
+          "contacts": [],
+          "img_url": "data/avatars/parties/brno-plus.jpg"
         }
       ],
       "motto": "Spory primátorky Vaňkové a náměstka Hladíka poškozují Brno. Proto jsme tady my, Třetí síla pro Brno."
@@ -594,14 +596,39 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-582786-c-197622-p",
-          "name": "SPD, TRIKOLORA, MORAVANÉ a nezávislí",
-          "short_name": "SPD,TRIKOLORA,MORAVANÉ a NK",
-          "abbreviation": "Mor+SPD+Trik+NK",
-          "description": "SPD, TRIKOLORA, MORAVANÉ a nezávislí",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-83",
+          "name": "Moravané",
+          "short_name": "Moravané",
+          "abbreviation": "Moravané",
+          "description": "Moravané",
+          "contacts": [],
+          "img_url": "data/avatars/parties/83-moravane.png"
+        },
+        {
+          "id": "party-1114",
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "short_name": "SPD",
+          "abbreviation": "SPD",
+          "description": "Svoboda a přímá demokracie (SPD)",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
+        },
+        {
+          "id": "party-1227",
+          "name": "Trikolora",
+          "short_name": "Trikolora",
+          "abbreviation": "Trikolora",
+          "description": "Trikolora",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1227-trikolora-2022.jpg"
         }
       ],
       "motto": "Udělejme z Brna nejlepší místo k životu."
@@ -627,23 +654,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-582786-c-475575-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
+          "short_name": "ANO",
           "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://tn.nova.cz/zpravodajstvi/clanek/468178-vse-o-komunalnich-volbach-2022-termin-system-kandidati-pruzkumy",
-                "label": "web"
-              },
-              {
-                "url": "https://www.renecerny.cz/n%C3%A1%C5%A1-program",
-                "label": "program"
-              }
-            ]
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ],
       "motto": "Chceme znovu rozjet Brno."
@@ -669,23 +686,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-582786-c-119941-p",
+          "id": "party-1245",
           "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
-          "short_name": "PŘÍSAHA Roberta Šlachty",
+          "short_name": "PŘÍSAHA",
           "abbreviation": "PŘÍSAHA",
           "description": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.prisaha.cz/jihomoravsky-kraj",
-                "label": "web"
-              },
-              {
-                "url": "https://www.prisaha.cz/program-brno-magistrat",
-                "label": "program"
-              }
-            ]
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/prisaha-2.png"
         }
       ]
     },
@@ -701,14 +708,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-582786-c-467949-p",
-          "name": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT – sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK",
-          "short_name": "DSZ - ZA PRÁVA ZVÍŘAT a NK",
-          "abbreviation": "DSZ+NK",
-          "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT – sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-715",
+          "name": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT",
+          "short_name": "DSZ - ZA PRÁVA ZVÍŘAT",
+          "abbreviation": "DSZ - ZA PRÁVA ZVÍŘAT",
+          "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT",
+          "contacts": [],
+          "img_url": "data/avatars/parties/715-dsz.png"
         }
       ],
       "motto": "NEPŘIHLÍŽEJME UTRPENÍ, ZVÍŘE NENÍ VĚC!  MLUVÍME ZA TY, KTEŘÍ SAMI NEMOHOU.  DSZ - ZA PRÁVA ZVÍŘAT — ochrana zvířat a jejich práv"
@@ -719,7 +733,7 @@
       "type": "party",
       "description": "SPOLEČNĚ - ODS a TOP 09",
       "short_name": "SPOLEČNĚ - ODS a TOP 09",
-      "img_url": "ods-top 09",
+      "img_url": "data/avatars/komunalni-2022/582786/komunalni-2022-582786-c-524545-original.jpg",
       "contacts": {
         "web": [
           {
@@ -734,23 +748,22 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-582786-c-524545-p",
-          "name": "SPOLEČNĚ - ODS a TOP 09",
-          "short_name": "SPOLEČNĚ - ODS a TOP 09",
-          "abbreviation": "ODS+TOP 09",
-          "description": "SPOLEČNĚ - ODS a TOP 09",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.brnonejlepsiadresa.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://www.brnonejlepsiadresa.cz/#program",
-                "label": "program"
-              }
-            ]
-          }
+          "id": "party-53",
+          "name": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
+          "description": "Občanská demokratická strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
+        },
+        {
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
         }
       ],
       "motto": "Brno je nejlepší adresa. Společně to zvládneme. ODS a TOP 09"
@@ -761,22 +774,47 @@
       "type": "party",
       "description": "RESTART PRO BRNO",
       "short_name": "RESTART PRO BRNO",
-      "img_url": "ksčmspozsuvdom",
+      "img_url": "data/avatars/komunalni-2022/582786/komunalni-2022-582786-c-726436-original.jpg",
       "contacts": {
         "web": [],
         "facebook": "https://www.facebook.com/Restart-pro-Brno-103632592357718/"
       },
       "parties": [
         {
-          "id": "komunalni-2022-582786-c-726436-p",
-          "name": "RESTART PRO BRNO",
-          "short_name": "RESTART PRO BRNO",
-          "abbreviation": "KSČMSPOZSuvDOM",
-          "description": "RESTART PRO BRNO",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/Restart-pro-Brno-103632592357718/"
-          }
+          "id": "party-47",
+          "name": "Komunistická strana Čech a Moravy",
+          "short_name": "KSČM",
+          "abbreviation": "KSČM",
+          "description": "Komunistická strana Čech a Moravy",
+          "contacts": [],
+          "img_url": "data/avatars/parties/47-kscm.svg"
+        },
+        {
+          "id": "party-724",
+          "name": "Strana Práv Občanů ZEMANOVCI",
+          "short_name": "SPOZ",
+          "abbreviation": "SPOZ",
+          "description": "Strana Práv Občanů ZEMANOVCI",
+          "contacts": [],
+          "img_url": "data/avatars/parties/724-spoz.png"
+        },
+        {
+          "id": "party-759",
+          "name": "Česká Suverenita",
+          "short_name": "Suverenita",
+          "abbreviation": "Suverenita",
+          "description": "Česká Suverenita",
+          "contacts": [],
+          "img_url": "data/avatars/parties/759-ceska-suverenita.jpg"
+        },
+        {
+          "id": "party-1221",
+          "name": "DOMOV",
+          "short_name": "DOMOV",
+          "abbreviation": "DOMOV",
+          "description": "DOMOV",
+          "contacts": [],
+          "img_url": "data/avatars/parties/08-12-273304840_313019___up-d958-92.jpg"
         }
       ]
     },
@@ -792,14 +830,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-582786-c-625869-p",
+          "id": "party-1223",
           "name": "JSI PRO? Jistota Solidarita Investice pro budoucnost",
-          "short_name": "JSI PRO?Jist.Solid.In.pro bud.",
+          "short_name": "JSI PRO?",
           "abbreviation": "JSI PRO?",
           "description": "JSI PRO? Jistota Solidarita Investice pro budoucnost",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1223-jsi-pro.jpg"
         }
       ]
     },
@@ -809,7 +846,7 @@
       "type": "party",
       "description": "Fakt Brno",
       "short_name": "Fakt Brno",
-      "img_url": "fakt brno",
+      "img_url": "data/avatars/komunalni-2022/582786/komunalni-2022-582786-c-919557-original.jpg",
       "contacts": {
         "web": [
           {
@@ -827,26 +864,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-582786-c-919557-p",
+          "id": "party-1246",
           "name": "Fakt Brno",
           "short_name": "Fakt Brno",
           "abbreviation": "Fakt Brno",
           "description": "Fakt Brno",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.faktbrno.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://www.faktbrno.cz/vize-a-program",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/faktbrno/",
-            "twitter": "https://twitter.com/pokorny_fyzik",
-            "instagram": "https://www.instagram.com/faktbrno/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/08-30-288509729_392146___up-4fcd-99.jpg"
         }
       ],
       "motto": "Nové lokální hnutí. Přitáhneme nápady ze zahraničí, zazeleníme město!"

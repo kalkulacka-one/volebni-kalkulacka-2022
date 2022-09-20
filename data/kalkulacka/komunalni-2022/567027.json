@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -368,14 +368,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-567027-c-976572-p",
+          "id": "party-47",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "Komunistická str.Čech a Moravy",
+          "short_name": "KSČM",
           "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/47-kscm.svg"
         }
       ]
     },
@@ -391,14 +390,22 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-567027-c-678018-p",
-          "name": "Svoboda a přímá demokracie (SPD) s podporou Trikolory",
-          "short_name": "SPD s podporou Trikolory",
-          "abbreviation": "SPD+Trikolora",
-          "description": "Svoboda a přímá demokracie (SPD) s podporou Trikolory",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-1114",
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "short_name": "SPD",
+          "abbreviation": "SPD",
+          "description": "Svoboda a přímá demokracie (SPD)",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
+        },
+        {
+          "id": "party-1227",
+          "name": "Trikolora",
+          "short_name": "Trikolora",
+          "abbreviation": "Trikolora",
+          "description": "Trikolora",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1227-trikolora-2022.jpg"
         }
       ],
       "motto": "Společě můžeme být slyšet, Společně a transparentněarentní"
@@ -421,20 +428,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-567027-c-431322-p",
+          "id": "party-1175",
           "name": "ProMOST",
           "short_name": "ProMOST",
           "abbreviation": "ProMOST",
           "description": "ProMOST",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://promost.cz/program/",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://facebook.com/promost.cz"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1175-promost.png"
         }
       ]
     },
@@ -450,14 +450,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-567027-c-174115-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
+          "short_name": "ANO",
           "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ],
       "motto": "Budeme spolupracovat ve všech oblastech důležitých pro naše město."
@@ -474,14 +473,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-567027-c-138280-p",
+          "id": "party-734",
           "name": "Občané městu, město občanům",
-          "short_name": "Občané městu, město občanům",
+          "short_name": "OMMO",
           "abbreviation": "OMMO",
           "description": "Občané městu, město občanům",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/09-05-ommo_kruh1-pro-w___up-d958-59.jpg"
         }
       ],
       "motto": "politické hnutí orientované na sociální a ekologický rozměr, akcentující veřejný zájem a odpovědné individuální nasazení"
@@ -498,14 +496,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-567027-c-454542-p",
+          "id": "party-7",
           "name": "Česká strana sociálně demokratická",
-          "short_name": "Česká str.sociálně demokrat.",
+          "short_name": "ČSSD",
           "abbreviation": "ČSSD",
           "description": "Česká strana sociálně demokratická",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/7-cssd-2020.png"
         }
       ]
     },
@@ -521,14 +518,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-567027-c-645179-p",
-          "name": "ODS a NEZÁVISLÍ",
-          "short_name": "ODS a NEZÁVISLÍ",
-          "abbreviation": "ODS+NK",
-          "description": "ODS a NEZÁVISLÍ",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-53",
+          "name": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
+          "description": "Občanská demokratická strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
+        },
+        {
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
         }
       ],
       "motto": "Volte lidi, které znáte"
@@ -539,7 +543,7 @@
       "type": "party",
       "description": "Piráti a Zelení pro Most",
       "short_name": "Piráti a Zelení pro Most",
-      "img_url": "zelení-piráti",
+      "img_url": "data/avatars/komunalni-2022/567027/komunalni-2022-567027-c-750273-original.jpg",
       "contacts": {
         "web": [
           {
@@ -551,20 +555,22 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-567027-c-750273-p",
-          "name": "Piráti a Zelení pro Most",
-          "short_name": "Piráti a Zelení pro Most",
-          "abbreviation": "Zelení+Piráti",
-          "description": "Piráti a Zelení pro Most",
-          "contacts": {
-            "web": [
-              {
-                "url": "http://piratizelenimost.cz/",
-                "label": "web"
-              }
-            ],
-            "facebook": "https://www.facebook.com/piratiazelenipromost/"
-          }
+          "id": "party-5",
+          "name": "Strana zelených",
+          "short_name": "Zelení",
+          "abbreviation": "Zelení",
+          "description": "Strana zelených",
+          "contacts": [],
+          "img_url": "data/avatars/parties/5-strana-zelenych-2022.jpg"
+        },
+        {
+          "id": "party-720",
+          "name": "Česká pirátská strana",
+          "short_name": "Piráti",
+          "abbreviation": "Piráti",
+          "description": "Česká pirátská strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/720-pirati.svg"
         }
       ],
       "motto": "Máme odvahu měnit Most k lepšímu! Volte č.8! !"
@@ -575,7 +581,7 @@
       "type": "party",
       "description": "Sdružení Mostečané Mostu",
       "short_name": "Sdružení Mostečané Mostu",
-      "img_url": "ns-nk",
+      "img_url": "data/avatars/komunalni-2022/567027/komunalni-2022-567027-c-152154-original.jpg",
       "contacts": {
         "web": [
           {
@@ -586,19 +592,20 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-567027-c-152154-p",
-          "name": "Sdružení Mostečané Mostu",
-          "short_name": "Sdružení Mostečané Mostu",
-          "abbreviation": "NS+NK",
-          "description": "Sdružení Mostečané Mostu",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://mostecane.cz/",
-                "label": "web"
-              }
-            ]
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-1017",
+          "name": "NOVÝ SEVER",
+          "short_name": "NS",
+          "abbreviation": "NS",
+          "description": "NOVÝ SEVER",
+          "contacts": []
         }
       ],
       "motto": "Strana, která konečně vyřeší problémové občany."
@@ -615,14 +622,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-567027-c-399616-p",
-          "name": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK",
-          "short_name": "DSZ-ZPZ-SDSZ-ZPZaNK",
-          "abbreviation": "DSZ+NK",
-          "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-715",
+          "name": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT",
+          "short_name": "DSZ - ZA PRÁVA ZVÍŘAT",
+          "abbreviation": "DSZ - ZA PRÁVA ZVÍŘAT",
+          "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT",
+          "contacts": [],
+          "img_url": "data/avatars/parties/715-dsz.png"
         }
       ],
       "motto": "Ať už konečně vládne \"selský\" rozum."
