@@ -378,13 +378,21 @@
       },
       "parties": [
         {
-          "id": "party-143",
+          "id": "senatni-2022-4-c-871435-p",
           "name": "Spojení demokraté - Sdružení nezávislých",
-          "short_name": "SD-SN",
-          "abbreviation": "SD-SN",
+          "short_name": "Spojení demokraté - Sdružení nezávislých",
+          "abbreviation": "Spojení demokraté - Sdružení nezávislých",
           "description": "Spojení demokraté - Sdružení nezávislých",
-          "contacts": [],
-          "img_url": "data/avatars/parties/08-29-sd-sn_logopng___up-d958-99.jpg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://alenadernerova.cz/",
+                "label": "web"
+              }
+            ],
+            "facebook": "https://www.facebook.com/dernerovapolitik",
+            "twitter": "https://twitter.com/DernerovaAlena"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/4/senatni-2022-4-c-871435-face.jpg"
@@ -410,12 +418,22 @@
       },
       "parties": [
         {
-          "id": "party-80",
+          "id": "senatni-2022-4-c-737193-p",
           "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
+          "short_name": "Nezávislý kandidát",
+          "abbreviation": "Nezávislý kandidát",
           "description": "Nezávislý kandidát",
-          "contacts": []
+          "contacts": {
+            "web": [
+              {
+                "url": "https://cs.wikipedia.org/wiki/Hana_Aulick%C3%A1_J%C3%ADrovcov%C3%A1",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/Ing-Hana-Aulick%C3%A1-J%C3%ADrovcov%C3%A1-politi%C4%8Dka-109984501682257",
+            "twitter": "https://twitter.com/HJirovcova",
+            "instagram": "https://www.instagram.com/aulickajirovcova/"
+          }
         }
       ]
     },
@@ -433,13 +451,15 @@
       },
       "parties": [
         {
-          "id": "party-1114",
+          "id": "senatni-2022-4-c-248303-p",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "SPD",
-          "abbreviation": "SPD",
+          "short_name": "Svoboda a přímá demokracie (SPD)",
+          "abbreviation": "Svoboda a přímá demokracie (SPD)",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/Ivana-Turkov%C3%A1-SPD-102412049180933"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/4/senatni-2022-4-c-248303-face.jpg"
@@ -458,13 +478,15 @@
       },
       "parties": [
         {
-          "id": "party-79",
+          "id": "senatni-2022-4-c-729274-p",
           "name": "Národní demokracie",
-          "short_name": "ND",
-          "abbreviation": "ND",
+          "short_name": "Národní demokracie",
+          "abbreviation": "Národní demokracie",
           "description": "Národní demokracie",
-          "contacts": [],
-          "img_url": "data/avatars/parties/79-narodni-demokracie.png"
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/profile.php?id=100008528281083"
+          }
         }
       ]
     },
@@ -487,13 +509,20 @@
       },
       "parties": [
         {
-          "id": "party-1175",
+          "id": "senatni-2022-4-c-425473-p",
           "name": "ProMOST",
           "short_name": "ProMOST",
           "abbreviation": "ProMOST",
           "description": "ProMOST",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1175-promost.png"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://cs.wikipedia.org/wiki/Jan_Paparega",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/Jan-Paparega-109431260876425"
+          }
         }
       ]
     }

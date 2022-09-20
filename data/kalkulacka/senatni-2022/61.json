@@ -381,13 +381,24 @@
       },
       "parties": [
         {
-          "id": "party-83",
+          "id": "senatni-2022-61-c-131643-p",
           "name": "Moravané",
           "short_name": "Moravané",
           "abbreviation": "Moravané",
           "description": "Moravané",
-          "contacts": [],
-          "img_url": "data/avatars/parties/83-moravane.png"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://ctiradmusil.cz",
+                "label": "web"
+              },
+              {
+                "url": "http://www.moravane.cz/domains/moravane.cz/o-nas/program",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/ctirad.musil"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/61/senatni-2022-61-c-131643-face.jpg"
@@ -405,13 +416,14 @@
       },
       "parties": [
         {
-          "id": "party-1265",
+          "id": "senatni-2022-61-c-504062-p",
           "name": "Právo Respekt Odbornost",
-          "short_name": "PRO 2022",
-          "abbreviation": "PRO 2022",
+          "short_name": "Právo Respekt Odbornost",
+          "abbreviation": "Právo Respekt Odbornost",
           "description": "Právo Respekt Odbornost",
-          "contacts": [],
-          "img_url": "data/avatars/parties/08-11-kgam3hli_400x400___up-d958-50.jpg"
+          "contacts": {
+            "web": []
+          }
         }
       ]
     },
@@ -446,13 +458,32 @@
       },
       "parties": [
         {
-          "id": "party-166",
+          "id": "senatni-2022-61-c-330603-p",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAN",
-          "abbreviation": "STAN",
+          "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "abbreviation": "STAROSTOVÉ A NEZÁVISLÍ",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/166-stan.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.michal-malacka.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://www.michal-malacka.cz/vize-pro-olomoucko/",
+                "label": "program"
+              },
+              {
+                "url": "https://cs.wikipedia.org/wiki/Michal_Malacka",
+                "label": "wiki"
+              },
+              {
+                "url": "https://cz.linkedin.com/in/michal-malacka-52b17258?original_referer=https%3A%2F%2Fwww.google.com%2F",
+                "label": "linkedin"
+              }
+            ],
+            "facebook": "https://www.facebook.com/michal.malacka/"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/61/senatni-2022-61-c-330603-face.jpg"
@@ -472,13 +503,16 @@
       },
       "parties": [
         {
-          "id": "party-768",
+          "id": "senatni-2022-61-c-290618-p",
           "name": "ANO 2011",
-          "short_name": "ANO",
-          "abbreviation": "ANO",
+          "short_name": "ANO 2011",
+          "abbreviation": "ANO 2011",
           "description": "ANO 2011",
-          "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/milanbrazdil2022",
+            "instagram": "https://www.instagram.com/airrescuedoctor/"
+          }
         }
       ]
     },
@@ -510,13 +544,29 @@
       },
       "parties": [
         {
-          "id": "party-1",
+          "id": "senatni-2022-61-c-836627-p",
           "name": "KDU-ČSL",
           "short_name": "KDU-ČSL",
           "abbreviation": "KDU-ČSL",
           "description": "KDU-ČSL",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://lumir-kantor.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://lumir-kantor.cz/volby-2022/",
+                "label": "program"
+              },
+              {
+                "url": "https://cs.wikipedia.org/wiki/Lum%C3%ADr_Kantor",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/lumirkantor",
+            "twitter": "https://twitter.com/KantorLumir"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/61/senatni-2022-61-c-836627-face.jpg"
@@ -544,13 +594,24 @@
       },
       "parties": [
         {
-          "id": "party-720",
+          "id": "senatni-2022-61-c-146752-p",
           "name": "Česká pirátská strana",
-          "short_name": "Piráti",
-          "abbreviation": "Piráti",
+          "short_name": "Česká pirátská strana",
+          "abbreviation": "Česká pirátská strana",
           "description": "Česká pirátská strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/720-pirati.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.vaclav-ranc.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://www.vaclav-ranc.cz/",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/vaclav.ranc.75"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/61/senatni-2022-61-c-146752-face.jpg"
@@ -579,13 +640,25 @@
       },
       "parties": [
         {
-          "id": "party-53",
+          "id": "senatni-2022-61-c-405277-p",
           "name": "Občanská demokratická strana",
-          "short_name": "ODS",
-          "abbreviation": "ODS",
+          "short_name": "Občanská demokratická strana",
+          "abbreviation": "Občanská demokratická strana",
           "description": "Občanská demokratická strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://cestmirdosenatu.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://www.cestmirdosenatu.cz",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/cestmirdosenatu",
+            "instagram": "https://www.instagram.com/cestmir_neoral/"
+          }
         }
       ]
     },
@@ -618,13 +691,30 @@
       },
       "parties": [
         {
-          "id": "party-1227",
+          "id": "senatni-2022-61-c-202876-p",
           "name": "Trikolora",
           "short_name": "Trikolora",
           "abbreviation": "Trikolora",
           "description": "Trikolora",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1227-trikolora-2022.jpg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://zuzanamajerova.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://zuzanamajerova.cz/moje-priority/",
+                "label": "program"
+              },
+              {
+                "url": "https://cs.wikipedia.org/wiki/Zuzana_Majerov%C3%A1_Zahradn%C3%ADkov%C3%A1",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/zuzanamajerova.cz",
+            "twitter": "https://twitter.com/MajerovaZ",
+            "instagram": "https://www.instagram.com/zuzana_majerova_trikolora/"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/61/senatni-2022-61-c-202876-face.jpg"

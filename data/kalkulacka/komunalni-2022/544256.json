@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -375,13 +375,21 @@
       },
       "parties": [
         {
-          "id": "party-720",
+          "id": "komunalni-2022-544256-c-795985-p",
           "name": "Česká pirátská strana",
-          "short_name": "Piráti",
+          "short_name": "Česká pirátská strana",
           "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/720-pirati.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://cb.pirati.cz/volby-2022/kandidatka/?view=program",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/PiratiCB",
+            "instagram": "https://www.instagram.com/piraticb/"
+          }
         }
       ],
       "motto": "Máme odvahu dělat, co je správné"
@@ -398,21 +406,14 @@
       },
       "parties": [
         {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
-        },
-        {
-          "id": "party-137",
-          "name": "ROZUMNÍ",
-          "short_name": "Rozumní",
-          "abbreviation": "Rozumní",
-          "description": "ROZUMNÍ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/137-rozumni.png"
+          "id": "komunalni-2022-544256-c-725515-p",
+          "name": "Českobudějovičtí ROZUMNĚ NAŠTVANÍ",
+          "short_name": "Českobuděj. ROZUMNĚ NAŠTVANÍ",
+          "abbreviation": "Rozumní+NK",
+          "description": "Českobudějovičtí ROZUMNĚ NAŠTVANÍ",
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Rozumná a účinná řešení pro České Budějovice"
@@ -430,21 +431,15 @@
       },
       "parties": [
         {
-          "id": "party-47",
-          "name": "Komunistická strana Čech a Moravy",
-          "short_name": "KSČM",
-          "abbreviation": "KSČM",
-          "description": "Komunistická strana Čech a Moravy",
-          "contacts": [],
-          "img_url": "data/avatars/parties/47-kscm.svg"
-        },
-        {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
+          "id": "komunalni-2022-544256-c-307120-p",
+          "name": "KSČM fungující Budějce",
+          "short_name": "KSČM fungující Budějce",
+          "abbreviation": "KSČM+NK",
+          "description": "KSČM fungující Budějce",
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/OV-KS%C4%8CM-%C4%8Cesk%C3%A9-Bud%C4%9Bjovice-112568740670438/"
+          }
         }
       ],
       "motto": "Vše dělat pro lidi."
@@ -461,21 +456,14 @@
       },
       "parties": [
         {
-          "id": "party-7",
-          "name": "Česká strana sociálně demokratická",
-          "short_name": "ČSSD",
-          "abbreviation": "ČSSD",
-          "description": "Česká strana sociálně demokratická",
-          "contacts": [],
-          "img_url": "data/avatars/parties/7-cssd-2020.png"
-        },
-        {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
+          "id": "komunalni-2022-544256-c-145079-p",
+          "name": "ČSSD a NEZÁVISLÉ OSOBNOSTI",
+          "short_name": "ČSSD a NEZÁVISLÉ OSOBNOSTI",
+          "abbreviation": "ČSSD+NK",
+          "description": "ČSSD a NEZÁVISLÉ OSOBNOSTI",
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Vytvořme lepší město na horší časy."
@@ -498,13 +486,20 @@
       },
       "parties": [
         {
-          "id": "party-166",
+          "id": "komunalni-2022-544256-c-508138-p",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAN",
+          "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
           "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/166-stan.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.stancb.cz/",
+                "label": "web"
+              }
+            ],
+            "facebook": "https://www.facebook.com/stanbudejce/"
+          }
         }
       ],
       "motto": "Nebudeme dělat NIC...co Vám bránilo užívat života"
@@ -515,7 +510,7 @@
       "type": "party",
       "description": "OBČANÉ PRO BUDĚJOVICE",
       "short_name": "OBČANÉ PRO BUDĚJOVICE",
-      "img_url": "data/avatars/komunalni-2022/544256/komunalni-2022-544256-c-243110-original.jpg",
+      "img_url": "hopb-jih 12-nk",
       "contacts": {
         "web": [
           {
@@ -528,30 +523,21 @@
       },
       "parties": [
         {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
-        },
-        {
-          "id": "party-753",
-          "name": "Občané pro Budějovice",
-          "short_name": "HOPB",
-          "abbreviation": "HOPB",
-          "description": "Občané pro Budějovice",
-          "contacts": [],
-          "img_url": "data/avatars/parties/753-hopb.png"
-        },
-        {
-          "id": "party-766",
-          "name": "JIHOČEŠI 2012",
-          "short_name": "JIH 12",
-          "abbreviation": "JIH 12",
-          "description": "JIHOČEŠI 2012",
-          "contacts": [],
-          "img_url": "data/avatars/parties/766-jihocesi.png"
+          "id": "komunalni-2022-544256-c-243110-p",
+          "name": "OBČANÉ PRO BUDĚJOVICE",
+          "short_name": "OBČANÉ PRO BUDĚJOVICE",
+          "abbreviation": "HOPB+JIH 12+NK",
+          "description": "OBČANÉ PRO BUDĚJOVICE",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.obcaneprobudejovice.cz/",
+                "label": "web"
+              }
+            ],
+            "facebook": "https://www.facebook.com/Obcane.pro.Budejovice",
+            "instagram": "https://www.instagram.com/obcaneprobudejovice/"
+          }
         }
       ],
       "motto": "Nejsilnější nezávislé hnutí ve městě."
@@ -569,13 +555,15 @@
       },
       "parties": [
         {
-          "id": "party-768",
+          "id": "komunalni-2022-544256-c-721258-p",
           "name": "ANO 2011",
-          "short_name": "ANO",
+          "short_name": "ANO 2011",
           "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/ANO.Budejce"
+          }
         }
       ],
       "motto": "ANO jsme za jedno"
@@ -592,13 +580,14 @@
       },
       "parties": [
         {
-          "id": "party-53",
+          "id": "komunalni-2022-544256-c-749146-p",
           "name": "Občanská demokratická strana",
-          "short_name": "ODS",
+          "short_name": "Občanská demokratická strana",
           "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Jediný tým, který plní sliby"
@@ -616,22 +605,15 @@
       },
       "parties": [
         {
-          "id": "party-1",
-          "name": "KDU-ČSL",
-          "short_name": "KDU-ČSL",
-          "abbreviation": "KDU-ČSL",
-          "description": "KDU-ČSL",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
-        },
-        {
-          "id": "party-721",
-          "name": "TOP 09",
-          "short_name": "TOP 09",
-          "abbreviation": "TOP 09",
-          "description": "TOP 09",
-          "contacts": [],
-          "img_url": "data/avatars/parties/721-top09.svg"
+          "id": "komunalni-2022-544256-c-861576-p",
+          "name": "KDU-ČSL a TOP 09 - Společně pro Budějovice",
+          "short_name": "Společně pro Budějovice",
+          "abbreviation": "KDU-ČSL+TOP 09",
+          "description": "KDU-ČSL a TOP 09 - Společně pro Budějovice",
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/spolecneprocb/"
+          }
         }
       ],
       "motto": "Uskupení dvou stran, založené na tradici, odpovědnosti a prosperitě."
@@ -648,13 +630,14 @@
       },
       "parties": [
         {
-          "id": "party-1114",
+          "id": "komunalni-2022-544256-c-313089-p",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "SPD",
+          "short_name": "Svoboda a př. demokracie (SPD)",
           "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Ne občan k městu,ale město k občanovi"
@@ -665,27 +648,20 @@
       "type": "party",
       "description": "Budějce srdcem a rozumem",
       "short_name": "Budějce srdcem a rozumem",
-      "img_url": "data/avatars/komunalni-2022/544256/komunalni-2022-544256-c-135731-original.jpg",
+      "img_url": "svobodní-nk",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
-        },
-        {
-          "id": "party-714",
-          "name": "Svobodní",
-          "short_name": "Svobodní",
-          "abbreviation": "Svobodní",
-          "description": "Svobodní",
-          "contacts": [],
-          "img_url": "data/avatars/parties/714-svobodni-2022.jpg"
+          "id": "komunalni-2022-544256-c-135731-p",
+          "name": "Budějce srdcem a rozumem",
+          "short_name": "Budějce srdcem a rozumem",
+          "abbreviation": "Svobodní+NK",
+          "description": "Budějce srdcem a rozumem",
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Aby v Českých Budějovicích chtěl žít opět každý!"

@@ -372,13 +372,15 @@
       },
       "parties": [
         {
-          "id": "party-1114",
+          "id": "senatni-2022-34-c-879839-p",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "SPD",
-          "abbreviation": "SPD",
+          "short_name": "Svoboda a přímá demokracie (SPD)",
+          "abbreviation": "Svoboda a přímá demokracie (SPD)",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/spdliberecky"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/34/senatni-2022-34-c-879839-face.jpg"
@@ -408,31 +410,26 @@
       },
       "parties": [
         {
-          "id": "party-1",
-          "name": "KDU-ČSL",
-          "short_name": "KDU-ČSL",
-          "abbreviation": "KDU-ČSL",
-          "description": "KDU-ČSL",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
-        },
-        {
-          "id": "party-53",
-          "name": "Občanská demokratická strana",
-          "short_name": "ODS",
-          "abbreviation": "ODS",
-          "description": "Občanská demokratická strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
-        },
-        {
-          "id": "party-721",
-          "name": "TOP 09",
-          "short_name": "TOP 09",
-          "abbreviation": "TOP 09",
-          "description": "TOP 09",
-          "contacts": [],
-          "img_url": "data/avatars/parties/721-top09.svg"
+          "id": "senatni-2022-34-c-936940-p",
+          "name": "SPOLU",
+          "short_name": "SPOLU",
+          "abbreviation": "SPOLU",
+          "description": "SPOLU",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://martinadosenatu.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://martinadosenatu.cz/#priority",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/martinamotshagensenat",
+            "twitter": "https://twitter.com/martinasenat",
+            "instagram": "https://www.instagram.com/martinamot/"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/34/senatni-2022-34-c-936940-face.jpg"
@@ -466,13 +463,30 @@
       },
       "parties": [
         {
-          "id": "party-703",
+          "id": "senatni-2022-34-c-474514-p",
           "name": "Starostové pro Liberecký kraj",
-          "short_name": "SLK",
-          "abbreviation": "SLK",
+          "short_name": "Starostové pro Liberecký kraj",
+          "abbreviation": "Starostové pro Liberecký kraj",
           "description": "Starostové pro Liberecký kraj",
-          "contacts": [],
-          "img_url": "data/avatars/parties/703-starostove-liberecky.png"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://michaelcanov.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://michaelcanov.cz/volebni-program-2022/",
+                "label": "program"
+              },
+              {
+                "url": "https://cs.wikipedia.org/wiki/Michael_Canov",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/canovmichael",
+            "twitter": "https://twitter.com/MichaelCanov",
+            "instagram": "https://www.instagram.com/canovmichael/"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/34/senatni-2022-34-c-474514-face.jpg"
@@ -501,13 +515,25 @@
       },
       "parties": [
         {
-          "id": "party-768",
+          "id": "senatni-2022-34-c-990991-p",
           "name": "ANO 2011",
-          "short_name": "ANO",
-          "abbreviation": "ANO",
+          "short_name": "ANO 2011",
+          "abbreviation": "ANO 2011",
           "description": "ANO 2011",
-          "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://radkadosenatu.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://radkadosenatu.cz/budu-prosazovat/",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/radkadosenatu",
+            "instagram": "https://www.instagram.com/louckovakotasova/"
+          }
         }
       ]
     }

@@ -377,13 +377,20 @@
       },
       "parties": [
         {
-          "id": "party-166",
+          "id": "senatni-2022-76-c-132112-p",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAN",
-          "abbreviation": "STAN",
+          "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "abbreviation": "STAROSTOVÉ A NEZÁVISLÍ",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/166-stan.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://cs.m.wikipedia.org/wiki/Rudolf_Seifert",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/StarostaSeifert/"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/76/senatni-2022-76-c-132112-face.jpg"
@@ -401,13 +408,14 @@
       },
       "parties": [
         {
-          "id": "party-1114",
+          "id": "senatni-2022-76-c-592201-p",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "SPD",
-          "abbreviation": "SPD",
+          "short_name": "Svoboda a přímá demokracie (SPD)",
+          "abbreviation": "Svoboda a přímá demokracie (SPD)",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ]
     },
@@ -425,13 +433,15 @@
       },
       "parties": [
         {
-          "id": "party-768",
+          "id": "senatni-2022-76-c-623635-p",
           "name": "ANO 2011",
-          "short_name": "ANO",
-          "abbreviation": "ANO",
+          "short_name": "ANO 2011",
+          "abbreviation": "ANO 2011",
           "description": "ANO 2011",
-          "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/pluharovalucie"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/76/senatni-2022-76-c-623635-face.jpg"
@@ -460,13 +470,25 @@
       },
       "parties": [
         {
-          "id": "party-7",
+          "id": "senatni-2022-76-c-179826-p",
           "name": "Česká strana sociálně demokratická",
-          "short_name": "ČSSD",
-          "abbreviation": "ČSSD",
+          "short_name": "Česká strana sociálně demokratická",
+          "abbreviation": "Česká strana sociálně demokratická",
           "description": "Česká strana sociálně demokratická",
-          "contacts": [],
-          "img_url": "data/avatars/parties/7-cssd-2020.png"
+          "contacts": {
+            "web": [
+              {
+                "url": "http://www.sehnalova.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://cs.wikipedia.org/wiki/Olga_Sehnalov%C3%A1",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/OlgaSehnalova/",
+            "twitter": "https://twitter.com/OlgaSehnalova"
+          }
         }
       ]
     },
@@ -498,31 +520,29 @@
       },
       "parties": [
         {
-          "id": "party-1",
-          "name": "KDU-ČSL",
-          "short_name": "KDU-ČSL",
-          "abbreviation": "KDU-ČSL",
-          "description": "KDU-ČSL",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
-        },
-        {
-          "id": "party-53",
-          "name": "Občanská demokratická strana",
-          "short_name": "ODS",
-          "abbreviation": "ODS",
-          "description": "Občanská demokratická strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
-        },
-        {
-          "id": "party-721",
-          "name": "TOP 09",
-          "short_name": "TOP 09",
-          "abbreviation": "TOP 09",
-          "description": "TOP 09",
-          "contacts": [],
-          "img_url": "data/avatars/parties/721-top09.svg"
+          "id": "senatni-2022-76-c-651961-p",
+          "name": "SPOLU (ODS + KDU-ČSL + TOP 09)",
+          "short_name": "SPOLU (ODS + KDU-ČSL + TOP 09)",
+          "abbreviation": "SPOLU (ODS + KDU-ČSL + TOP 09)",
+          "description": "SPOLU (ODS + KDU-ČSL + TOP 09)",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://sarkajelinkova.eu/",
+                "label": "web"
+              },
+              {
+                "url": "https://sarkajelinkova.eu/images/program.pdf",
+                "label": "program"
+              },
+              {
+                "url": "https://cs.wikipedia.org/wiki/%C5%A0%C3%A1rka_Jel%C3%ADnkov%C3%A1",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/jelinkova.sarka/",
+            "twitter": "https://twitter.com/jelinkovakdu?lang=cs"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/76/senatni-2022-76-c-651961-face.jpg"
@@ -545,13 +565,19 @@
       },
       "parties": [
         {
-          "id": "party-88",
+          "id": "senatni-2022-76-c-161118-p",
           "name": "NEZÁVISLÍ",
-          "short_name": "Nezávislí",
-          "abbreviation": "Nezávislí",
+          "short_name": "NEZÁVISLÍ",
+          "abbreviation": "NEZÁVISLÍ",
           "description": "NEZÁVISLÍ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/88-nez.png"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://cs.wikipedia.org/wiki/Jana_Hamplov%C3%A1",
+                "label": "wiki"
+              }
+            ]
+          }
         }
       ]
     }

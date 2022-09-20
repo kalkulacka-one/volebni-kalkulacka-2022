@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -362,7 +362,7 @@
       "type": "party",
       "description": "Občanská demokratická strana",
       "short_name": "Občanská demokratická strana",
-      "img_url": "data/avatars/komunalni-2022/562335/komunalni-2022-562335-c-395483-original.jpg",
+      "img_url": "ods",
       "contacts": {
         "web": [
           {
@@ -379,13 +379,25 @@
       },
       "parties": [
         {
-          "id": "party-53",
+          "id": "komunalni-2022-562335-c-395483-p",
           "name": "Občanská demokratická strana",
-          "short_name": "ODS",
+          "short_name": "Občanská demokratická strana",
           "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.ods.cz/ms.decin/volby2022/komunalni/2300-decin",
+                "label": "web"
+              },
+              {
+                "url": "https://www.ods.cz/ms.decin/volby2022/clanek/23109-komunalni-volby-2022-volebni-program-pro-decin",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/ODSDecin",
+            "instagram": "https://www.instagram.com/ods_decin/"
+          }
         }
       ],
       "motto": "V Děčíně jsme doma - společně s vámi"
@@ -402,13 +414,14 @@
       },
       "parties": [
         {
-          "id": "party-1114",
+          "id": "komunalni-2022-562335-c-471202-p",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "SPD",
+          "short_name": "Svoboda a př. demokracie (SPD)",
           "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ]
     },
@@ -424,21 +437,14 @@
       },
       "parties": [
         {
-          "id": "party-156",
-          "name": "Dělnická strana sociální spravedlnosti",
-          "short_name": "DSSS",
-          "abbreviation": "DSSS",
-          "description": "Dělnická strana sociální spravedlnosti",
-          "contacts": [],
-          "img_url": "data/avatars/parties/156-dsss.svg"
-        },
-        {
-          "id": "party-761",
-          "name": "BEZPEČNÉ ULICE",
-          "short_name": "BEZ-UL",
-          "abbreviation": "BEZ-UL",
-          "description": "BEZPEČNÉ ULICE",
-          "contacts": []
+          "id": "komunalni-2022-562335-c-232636-p",
+          "name": "Severočeši Děčín",
+          "short_name": "Severočeši Děčín",
+          "abbreviation": "DSSS+BEZ-UL",
+          "description": "Severočeši Děčín",
+          "contacts": {
+            "web": []
+          }
         }
       ]
     },
@@ -454,21 +460,14 @@
       },
       "parties": [
         {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
-        },
-        {
-          "id": "party-166",
-          "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAN",
-          "abbreviation": "STAN",
-          "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/166-stan.svg"
+          "id": "komunalni-2022-562335-c-328876-p",
+          "name": "Živý Děčín - STAN",
+          "short_name": "Živý Děčín - STAN",
+          "abbreviation": "STAN+NK",
+          "description": "Živý Děčín - STAN",
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Oživení našeho města, aby nás opět bylo 50 tisíc. "
@@ -485,13 +484,14 @@
       },
       "parties": [
         {
-          "id": "party-47",
+          "id": "komunalni-2022-562335-c-810714-p",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "KSČM",
+          "short_name": "Komunistická str.Čech a Moravy",
           "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": [],
-          "img_url": "data/avatars/parties/47-kscm.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ]
     },
@@ -501,7 +501,7 @@
       "type": "party",
       "description": "Česká strana sociálně demokratická",
       "short_name": "Česká str.sociálně demokrat.",
-      "img_url": "data/avatars/komunalni-2022/562335/komunalni-2022-562335-c-666575-original.jpg",
+      "img_url": "čssd",
       "contacts": {
         "web": [
           {
@@ -517,13 +517,24 @@
       },
       "parties": [
         {
-          "id": "party-7",
+          "id": "komunalni-2022-562335-c-666575-p",
           "name": "Česká strana sociálně demokratická",
-          "short_name": "ČSSD",
+          "short_name": "Česká str.sociálně demokrat.",
           "abbreviation": "ČSSD",
           "description": "Česká strana sociálně demokratická",
-          "contacts": [],
-          "img_url": "data/avatars/parties/7-cssd-2020.png"
+          "contacts": {
+            "web": [
+              {
+                "url": "http://www.socdemdecin.cz/cssd-decin-komunalni-volby-2022/",
+                "label": "web"
+              },
+              {
+                "url": "https://www.facebook.com/socdemdecin/posts/pfbid0vMSv8TwuLnmws3YGd34yMePZoeKiUMvXZ3J37q26ipaYhmXhUvMhZ72AFMr62irsl",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/socdemdecin"
+          }
         }
       ],
       "motto": "Neslibujeme co nemůžeme splnit. S vámi tvoříme Děčín. Spolu jsme silnější. "
@@ -551,13 +562,25 @@
       },
       "parties": [
         {
-          "id": "party-720",
+          "id": "komunalni-2022-562335-c-381880-p",
           "name": "Česká pirátská strana",
-          "short_name": "Piráti",
+          "short_name": "Česká pirátská strana",
           "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/720-pirati.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.piratidecin.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://www.piratidecin.cz/program",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/piratidecin/",
+            "instagram": "https://www.instagram.com/piratidecin/"
+          }
         }
       ],
       "motto": "Naší prioritou jsou občané města Děčína. "
@@ -568,7 +591,7 @@
       "type": "party",
       "description": "Náš Děčín",
       "short_name": "Náš Děčín",
-      "img_url": "data/avatars/komunalni-2022/562335/komunalni-2022-562335-c-632156-original.jpg",
+      "img_url": "praha-prozdraví",
       "contacts": {
         "web": [
           {
@@ -580,21 +603,20 @@
       },
       "parties": [
         {
-          "id": "party-142",
-          "name": "Praha bez chaosu",
-          "short_name": "Praha bez chaosu",
-          "abbreviation": "Praha bez chaosu",
-          "description": "Praha bez chaosu",
-          "contacts": []
-        },
-        {
-          "id": "party-785",
-          "name": "Zdraví Sport Prosperita",
-          "short_name": "PRO Zdraví",
-          "abbreviation": "PRO Zdraví",
-          "description": "Zdraví Sport Prosperita",
-          "contacts": [],
-          "img_url": "data/avatars/parties/785-pro-zdravi-a-sport.jpg"
+          "id": "komunalni-2022-562335-c-632156-p",
+          "name": "Náš Děčín",
+          "short_name": "Náš Děčín",
+          "abbreviation": "Praha+PROZdraví",
+          "description": "Náš Děčín",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.nasdecin.cz/",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/nasdecin/"
+          }
         }
       ],
       "motto": "“Nešířit a nepodporovat negativní postoje, energii, komentáře. Bez znalosti věci a souvislostí nekritizovat.”"
@@ -611,13 +633,14 @@
       },
       "parties": [
         {
-          "id": "party-768",
+          "id": "komunalni-2022-562335-c-272858-p",
           "name": "ANO 2011",
-          "short_name": "ANO",
+          "short_name": "ANO 2011",
           "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Strana, která je ve vedení města úspěšně už 8 let."
@@ -628,27 +651,20 @@
       "type": "party",
       "description": "Volba pro Děčín",
       "short_name": "Volba pro Děčín",
-      "img_url": "data/avatars/komunalni-2022/562335/komunalni-2022-562335-c-266644-original.jpg",
+      "img_url": "mhnhrm-nk",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
-        },
-        {
-          "id": "party-112",
-          "name": "MÍSTNÍ HNUTÍ NEZÁVISLÝCH ZA HARMONICKÝ ROZVOJ OBCÍ A MĚST",
-          "short_name": "MHNHRM",
-          "abbreviation": "MHNHRM",
-          "description": "MÍSTNÍ HNUTÍ NEZÁVISLÝCH ZA HARMONICKÝ ROZVOJ OBCÍ A MĚST",
-          "contacts": [],
-          "img_url": "data/avatars/parties/112-hnhrm.png"
+          "id": "komunalni-2022-562335-c-266644-p",
+          "name": "Volba pro Děčín",
+          "short_name": "Volba pro Děčín",
+          "abbreviation": "MHNHRM+NK",
+          "description": "Volba pro Děčín",
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Děčín nás spojuje, jsme Vaše Volba!"
@@ -670,22 +686,19 @@
       },
       "parties": [
         {
-          "id": "party-714",
-          "name": "Svobodní",
-          "short_name": "Svobodní",
-          "abbreviation": "Svobodní",
-          "description": "Svobodní",
-          "contacts": [],
-          "img_url": "data/avatars/parties/714-svobodni-2022.jpg"
-        },
-        {
-          "id": "party-1227",
-          "name": "Trikolora",
-          "short_name": "Trikolora",
-          "abbreviation": "Trikolora",
-          "description": "Trikolora",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1227-trikolora-2022.jpg"
+          "id": "komunalni-2022-562335-c-932150-p",
+          "name": "Trikolora a Svobodní",
+          "short_name": "Trikolora a Svobodní",
+          "abbreviation": "Svobod+Trikolor",
+          "description": "Trikolora a Svobodní",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://mcusercontent.com/555e5e99b7fce955e6ae17596/files/f9fa4135-8e85-6ff2-ff91-cb1378e9c3b9/program_2022.pdf",
+                "label": "program"
+              }
+            ]
+          }
         }
       ],
       "motto": "Trikolora a Svobodní jako jediní svou účastí na pódiu plně podpořili protivládní demonstraci 3.9.2022 na Václavském náměstí"

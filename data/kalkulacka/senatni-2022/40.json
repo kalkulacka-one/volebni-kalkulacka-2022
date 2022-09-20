@@ -381,13 +381,24 @@
       },
       "parties": [
         {
-          "id": "party-1",
+          "id": "senatni-2022-40-c-392078-p",
           "name": "KDU-ČSL",
           "short_name": "KDU-ČSL",
           "abbreviation": "KDU-ČSL",
           "description": "KDU-ČSL",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://prochazkadosenatu.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://prochazkadosenatu.cz/#mepriority",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/kandidatsesrdcem"
+          }
         }
       ]
     },
@@ -410,22 +421,20 @@
       },
       "parties": [
         {
-          "id": "party-7",
-          "name": "Česká strana sociálně demokratická",
-          "short_name": "ČSSD",
-          "abbreviation": "ČSSD",
-          "description": "Česká strana sociálně demokratická",
-          "contacts": [],
-          "img_url": "data/avatars/parties/7-cssd-2020.png"
-        },
-        {
-          "id": "party-768",
-          "name": "ANO 2011",
-          "short_name": "ANO",
-          "abbreviation": "ANO",
-          "description": "ANO 2011",
-          "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "id": "senatni-2022-40-c-500322-p",
+          "name": "Koalice České strany sociálně demokratické a ANO 2011",
+          "short_name": "Koalice České strany sociálně demokratické a ANO 2011",
+          "abbreviation": "Koalice České strany sociálně demokratické a ANO 2011",
+          "description": "Koalice České strany sociálně demokratické a ANO 2011",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://cs.wikipedia.org/wiki/Jarom%C3%ADr_Strnad",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/senatorstrnad/"
+          }
         }
       ]
     },
@@ -450,13 +459,22 @@
       },
       "parties": [
         {
-          "id": "party-53",
+          "id": "senatni-2022-40-c-914940-p",
           "name": "Občanská demokratická strana",
-          "short_name": "ODS",
-          "abbreviation": "ODS",
+          "short_name": "Občanská demokratická strana",
+          "abbreviation": "Občanská demokratická strana",
           "description": "Občanská demokratická strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://vasekatka.cz/",
+                "label": "web"
+              }
+            ],
+            "facebook": "https://www.facebook.com/daczickakaterina/",
+            "twitter": "https://twitter.com/KDaczicka",
+            "instagram": "https://www.instagram.com/katerinadaczicka/"
+          }
         }
       ]
     },
@@ -479,13 +497,20 @@
       },
       "parties": [
         {
-          "id": "party-47",
+          "id": "senatni-2022-40-c-602069-p",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "KSČM",
-          "abbreviation": "KSČM",
+          "short_name": "Komunistická strana Čech a Moravy",
+          "abbreviation": "Komunistická strana Čech a Moravy",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": [],
-          "img_url": "data/avatars/parties/47-kscm.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "http://jirireichel.cz/",
+                "label": "web"
+              }
+            ],
+            "facebook": "https://www.facebook.com/Ji%C5%99%C3%AD-Reichel-kandid%C3%A1t-do-Sen%C3%A1tu-%C4%8CR-106733458746528"
+          }
         }
       ]
     },
@@ -508,13 +533,20 @@
       },
       "parties": [
         {
-          "id": "party-166",
+          "id": "senatni-2022-40-c-815996-p",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAN",
-          "abbreviation": "STAN",
+          "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "abbreviation": "STAROSTOVÉ A NEZÁVISLÍ",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/166-stan.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://cs.wikipedia.org/wiki/Lud%C4%9Bk_Jeni%C5%A1ta",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/profile.php?id=100005614817356"
+          }
         }
       ]
     },
@@ -531,13 +563,14 @@
       },
       "parties": [
         {
-          "id": "party-1114",
+          "id": "senatni-2022-40-c-516282-p",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "SPD",
-          "abbreviation": "SPD",
+          "short_name": "Svoboda a přímá demokracie (SPD)",
+          "abbreviation": "Svoboda a přímá demokracie (SPD)",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ]
     },
@@ -566,13 +599,26 @@
       },
       "parties": [
         {
-          "id": "party-714",
+          "id": "senatni-2022-40-c-353870-p",
           "name": "Svobodní",
           "short_name": "Svobodní",
           "abbreviation": "Svobodní",
           "description": "Svobodní",
-          "contacts": [],
-          "img_url": "data/avatars/parties/714-svobodni-2022.jpg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.jiri-strachota.cz",
+                "label": "web"
+              },
+              {
+                "url": "https://www.jiri-strachota.cz/co-chci-do-senatu-prinest/",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/jiri.strachota.svobodni",
+            "twitter": "https://twitter.com/jiristrachota",
+            "instagram": "https://www.instagram.com/jiri.strachota/"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/40/senatni-2022-40-c-353870-face.jpg"
