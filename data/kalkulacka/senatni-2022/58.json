@@ -386,29 +386,40 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-58-c-381319-p",
-          "name": "Brno je můj vesmír",
-          "short_name": "Brno je můj vesmír",
-          "abbreviation": "Brno je můj vesmír",
-          "description": "Brno je můj vesmír",
-          "contacts": {
-            "web": [
-              {
-                "url": "http://www.brnojemujvesmir.cz",
-                "label": "web"
-              },
-              {
-                "url": "https://www.brnojemujvesmir.cz/orbitalni-draha/",
-                "label": "program"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/Ji%C5%99%C3%AD_Du%C5%A1ek_(astronom)",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/brnojemujvesmir/",
-            "twitter": "https://twitter.com/JiDusek"
-          }
+          "id": "party-7",
+          "name": "Česká strana sociálně demokratická",
+          "short_name": "ČSSD",
+          "abbreviation": "ČSSD",
+          "description": "Česká strana sociálně demokratická",
+          "contacts": [],
+          "img_url": "data/avatars/parties/7-cssd-2020.png"
+        },
+        {
+          "id": "party-53",
+          "name": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
+          "description": "Občanská demokratická strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
+        },
+        {
+          "id": "party-1197",
+          "name": "Vaši starostové",
+          "short_name": "Vas",
+          "abbreviation": "Vas",
+          "description": "Vaši starostové",
+          "contacts": [],
+          "img_url": "data/avatars/parties/08-30-116711815_412336___up-4fcd-48.jpg"
+        },
+        {
+          "id": "party-1246",
+          "name": "Fakt Brno",
+          "short_name": "Fakt Brno",
+          "abbreviation": "Fakt Brno",
+          "description": "Fakt Brno",
+          "contacts": [],
+          "img_url": "data/avatars/parties/08-30-288509729_392146___up-4fcd-99.jpg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/58/senatni-2022-58-c-381319-face.jpg"
@@ -442,30 +453,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-58-c-296693-p",
+          "id": "party-1187",
           "name": "SEN 21",
           "short_name": "SEN 21",
           "abbreviation": "SEN 21",
           "description": "SEN 21",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://brnenskysenator.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://brnenskysenator.cz/volebni-program/",
-                "label": "program"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/Petr_Kunc",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/petr.kunc.zidenice",
-            "twitter": "https://twitter.com/kunc_zidenice",
-            "instagram": "https://instagram.com/petrkunc.cz"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/08-30-iwbpfxeg_400x400___up-4fcd-68.jpg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/58/senatni-2022-58-c-296693-face.jpg"
@@ -483,14 +477,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-58-c-663420-p",
+          "id": "party-1221",
           "name": "DOMOV",
           "short_name": "DOMOV",
           "abbreviation": "DOMOV",
           "description": "DOMOV",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/08-12-273304840_313019___up-d958-92.jpg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/58/senatni-2022-58-c-663420-face.jpg"
@@ -522,28 +515,31 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-58-c-995955-p",
-          "name": "Koalice SPD, Trikolora, Moravané",
-          "short_name": "Koalice SPD, Trikolora, Moravané",
-          "abbreviation": "Koalice SPD, Trikolora, Moravané",
-          "description": "Koalice SPD, Trikolora, Moravané",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://zdenekkoudelka.cz/www/index.php",
-                "label": "web"
-              },
-              {
-                "url": "https://volimtrikoloru.cz/volby-2022/zdenek-koudelka-kandidat-do-senatu/",
-                "label": "program"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/Zden%C4%9Bk_Koudelka",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/rektor.zdenekkoudelka/"
-          }
+          "id": "party-83",
+          "name": "Moravané",
+          "short_name": "Moravané",
+          "abbreviation": "Moravané",
+          "description": "Moravané",
+          "contacts": [],
+          "img_url": "data/avatars/parties/83-moravane.png"
+        },
+        {
+          "id": "party-1114",
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "short_name": "SPD",
+          "abbreviation": "SPD",
+          "description": "Svoboda a přímá demokracie (SPD)",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
+        },
+        {
+          "id": "party-1227",
+          "name": "Trikolora",
+          "short_name": "Trikolora",
+          "abbreviation": "Trikolora",
+          "description": "Trikolora",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1227-trikolora-2022.jpg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/58/senatni-2022-58-c-995955-face.jpg"
@@ -577,30 +573,22 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-58-c-630883-p",
-          "name": "SPOLEČNĚ - TOP 09, KDU-ČSL",
-          "short_name": "SPOLEČNĚ - TOP 09, KDU-ČSL",
-          "abbreviation": "SPOLEČNĚ - TOP 09, KDU-ČSL",
-          "description": "SPOLEČNĚ - TOP 09, KDU-ČSL",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.sedlacek-architekt.cz",
-                "label": "web"
-              },
-              {
-                "url": "https://www.sedlacek-architekt.cz/temata",
-                "label": "program"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/Michal_Sedl%C3%A1%C4%8Dek_(architekt)",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/michalsedlacekbrno/",
-            "twitter": "https://twitter.com/michalms",
-            "instagram": "https://www.instagram.com/sedlacek.michal2016/"
-          }
+          "id": "party-1",
+          "name": "KDU-ČSL",
+          "short_name": "KDU-ČSL",
+          "abbreviation": "KDU-ČSL",
+          "description": "KDU-ČSL",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+        },
+        {
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/58/senatni-2022-58-c-630883-face.jpg"
@@ -625,21 +613,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-58-c-260752-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
-          "abbreviation": "ANO 2011",
+          "short_name": "ANO",
+          "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://cs.wikipedia.org/wiki/Petr_Vok%C5%99%C3%A1l",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/vokralp/",
-            "twitter": "https://twitter.com/pvokral"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ]
     }

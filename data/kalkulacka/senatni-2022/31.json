@@ -387,30 +387,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-31-c-665893-p",
+          "id": "party-1012",
           "name": "ÚSTECKÉ FÓRUM OBČANŮ",
-          "short_name": "ÚSTECKÉ FÓRUM OBČANŮ",
-          "abbreviation": "ÚSTECKÉ FÓRUM OBČANŮ",
+          "short_name": "UFO",
+          "abbreviation": "UFO",
           "description": "ÚSTECKÉ FÓRUM OBČANŮ",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.ufo-usti.cz/senatni-volby/",
-                "label": "web"
-              },
-              {
-                "url": "https://www.ufo-usti.cz/senatni-volby/",
-                "label": "program"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/V%C4%9Bra_Nechybov%C3%A1",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/vera.nechybova1",
-            "twitter": "https://twitter.com/VeraNechybova",
-            "instagram": "https://www.instagram.com/veranechybovasenatorkou/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1012-ufo.png"
         }
       ],
       "img_url": "data/avatars/senatni-2022/31/senatni-2022-31-c-665893-face.jpg"
@@ -439,25 +422,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-31-c-165219-p",
+          "id": "party-1187",
           "name": "SEN 21",
           "short_name": "SEN 21",
           "abbreviation": "SEN 21",
           "description": "SEN 21",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://martinkrsek.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://martinkrsek.cz/#priority",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/echtkrsek",
-            "instagram": "https://www.instagram.com/echtkrsek/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/08-30-iwbpfxeg_400x400___up-4fcd-68.jpg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/31/senatni-2022-31-c-165219-original.jpg"
@@ -482,21 +453,22 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-31-c-619365-p",
-          "name": "SPOLEČNĚ - TOP 09, KDU-ČSL",
-          "short_name": "SPOLEČNĚ - TOP 09, KDU-ČSL",
-          "abbreviation": "SPOLEČNĚ - TOP 09, KDU-ČSL",
-          "description": "SPOLEČNĚ - TOP 09, KDU-ČSL",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://cs.wikipedia.org/wiki/Alfr%C3%A9d_Dytrt",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://m.facebook.com/AlfredDytrtSenat/",
-            "instagram": "https://instagram.com/alfred_dytrt"
-          }
+          "id": "party-1",
+          "name": "KDU-ČSL",
+          "short_name": "KDU-ČSL",
+          "abbreviation": "KDU-ČSL",
+          "description": "KDU-ČSL",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+        },
+        {
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/31/senatni-2022-31-c-619365-face.jpg"
@@ -515,15 +487,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-31-c-246453-p",
+          "id": "party-137",
           "name": "ROZUMNÍ",
-          "short_name": "ROZUMNÍ",
-          "abbreviation": "ROZUMNÍ",
+          "short_name": "Rozumní",
+          "abbreviation": "Rozumní",
           "description": "ROZUMNÍ",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/jan.beer.39"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/137-rozumni.png"
         }
       ],
       "img_url": "data/avatars/senatni-2022/31/senatni-2022-31-c-246453-face.jpg"
@@ -553,26 +523,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-31-c-699892-p",
+          "id": "party-53",
           "name": "Občanská demokratická strana",
-          "short_name": "Občanská demokratická strana",
-          "abbreviation": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://balejdosenatu.cz/#ws-block-features-with-aside-cta-3-cols-2PAntY0a",
-                "label": "program"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/Martin_Balej",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/balej.martin",
-            "twitter": "https://twitter.com/martin_balej",
-            "instagram": "https://www.instagram.com/martin.balej/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
         }
       ]
     },
@@ -600,25 +557,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-31-c-800949-p",
+          "id": "party-1265",
           "name": "Právo Respekt Odbornost",
-          "short_name": "Právo Respekt Odbornost",
-          "abbreviation": "Právo Respekt Odbornost",
+          "short_name": "PRO 2022",
+          "abbreviation": "PRO 2022",
           "description": "Právo Respekt Odbornost",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://teleckydosenatu.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://teleckydosenatu.cz/program-pro-ustecko/",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/JaroslavTeleckySenat",
-            "instagram": "https://www.instagram.com/jaroslav_telecky/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/08-11-kgam3hli_400x400___up-d958-50.jpg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/31/senatni-2022-31-c-800949-face.jpg"
@@ -637,15 +582,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-31-c-163515-p",
+          "id": "party-1114",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "Svoboda a přímá demokracie (SPD)",
-          "abbreviation": "Svoboda a přímá demokracie (SPD)",
+          "short_name": "SPD",
+          "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/rene.hladik.1"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
         }
       ]
     },
@@ -667,19 +610,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-31-c-570575-p",
+          "id": "party-47",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "Komunistická strana Čech a Moravy",
-          "abbreviation": "Komunistická strana Čech a Moravy",
+          "short_name": "KSČM",
+          "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://webmium.blob.core.windows.net/users/109550/assets/0f5245822845c80fdd1b2d4d4760e673/miloslavbuldra.pdf",
-                "label": "program"
-              }
-            ]
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/47-kscm.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/31/senatni-2022-31-c-570575-face.jpg"
@@ -698,15 +635,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-31-c-392644-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
-          "abbreviation": "ANO 2011",
+          "short_name": "ANO",
+          "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/Ano2011UstinadLabem/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ]
     }

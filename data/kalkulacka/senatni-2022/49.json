@@ -372,15 +372,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-49-c-631671-p",
+          "id": "party-1114",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "Svoboda a přímá demokracie (SPD)",
-          "abbreviation": "Svoboda a přímá demokracie (SPD)",
+          "short_name": "SPD",
+          "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/RokosJiri"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
         }
       ]
     },
@@ -398,15 +396,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-49-c-770071-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
-          "abbreviation": "ANO 2011",
+          "short_name": "ANO",
+          "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/zirovnickydosenatu/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ]
     },
@@ -423,14 +419,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-49-c-523550-p",
+          "id": "party-716",
           "name": "Strana soukromníků České republiky",
-          "short_name": "Strana soukromníků České republiky",
-          "abbreviation": "Strana soukromníků České republiky",
+          "short_name": "Soukromníci",
+          "abbreviation": "Soukromníci",
           "description": "Strana soukromníků České republiky",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/716-sscr-n.jpg"
         }
       ]
     },
@@ -454,21 +449,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-49-c-229934-p",
+          "id": "party-720",
           "name": "Česká pirátská strana",
-          "short_name": "Česká pirátská strana",
-          "abbreviation": "Česká pirátská strana",
+          "short_name": "Piráti",
+          "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://filipvitek.cz/",
-                "label": "web"
-              }
-            ],
-            "facebook": "https://www.facebook.com/FilipVitekDoSenatu",
-            "twitter": "https://twitter.com/filipeskamoter"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/720-pirati.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/49/senatni-2022-49-c-229934-face.jpg"
@@ -491,19 +478,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-49-c-439462-p",
+          "id": "party-166",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "abbreviation": "STAROSTOVÉ A NEZÁVISLÍ",
+          "short_name": "STAN",
+          "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://cs.wikipedia.org/wiki/Drago_Sukalovsk%C3%BD",
-                "label": "wiki"
-              }
-            ]
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/166-stan.svg"
         }
       ]
     },
@@ -534,28 +515,31 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-49-c-744028-p",
-          "name": "SPOLU (ODS + KDU-ČSL + TOP 09)",
-          "short_name": "SPOLU (ODS + KDU-ČSL + TOP 09)",
-          "abbreviation": "SPOLU (ODS + KDU-ČSL + TOP 09)",
-          "description": "SPOLU (ODS + KDU-ČSL + TOP 09)",
-          "contacts": {
-            "web": [
-              {
-                "url": "http://www.jaromiravitkova.cz/",
-                "label": "web"
-              },
-              {
-                "url": "http://jaromiravitkova.cz/volby-2022/temata/#1",
-                "label": "program"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/Jarom%C3%ADra_V%C3%ADtkov%C3%A1",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/jaromiravitkovasenatorka.cz/"
-          }
+          "id": "party-1",
+          "name": "KDU-ČSL",
+          "short_name": "KDU-ČSL",
+          "abbreviation": "KDU-ČSL",
+          "description": "KDU-ČSL",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+        },
+        {
+          "id": "party-53",
+          "name": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
+          "description": "Občanská demokratická strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
+        },
+        {
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/49/senatni-2022-49-c-744028-face.jpg"
@@ -579,20 +563,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-49-c-882688-p",
+          "id": "party-7",
           "name": "Česká strana sociálně demokratická",
-          "short_name": "Česká strana sociálně demokratická",
-          "abbreviation": "Česká strana sociálně demokratická",
+          "short_name": "ČSSD",
+          "abbreviation": "ČSSD",
           "description": "Česká strana sociálně demokratická",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.wetterdosenatu.cz/",
-                "label": "web"
-              }
-            ],
-            "facebook": "https://www.facebook.com/zdenekwetterdosenatu/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/7-cssd-2020.png"
         }
       ]
     }

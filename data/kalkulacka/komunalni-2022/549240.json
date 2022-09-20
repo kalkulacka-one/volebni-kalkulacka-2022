@@ -368,14 +368,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-549240-c-315187-p",
+          "id": "party-720",
           "name": "Česká pirátská strana",
-          "short_name": "Česká pirátská strana",
+          "short_name": "Piráti",
           "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/720-pirati.svg"
         }
       ],
       "motto": "Naším cílem je obec, kde může každý člověk prožít svůj život svobodně a naplno."
@@ -392,14 +391,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-549240-c-332281-p",
+          "id": "party-53",
           "name": "Občanská demokratická strana",
-          "short_name": "Občanská demokratická strana",
+          "short_name": "ODS",
           "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
         }
       ],
       "motto": "Strana pro normální, klidný život ve městě"
@@ -416,14 +414,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-549240-c-270780-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
+          "short_name": "ANO",
           "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ],
       "motto": "Problémy musíme řešit, nikoliv odkládat. "
@@ -484,14 +481,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-549240-c-471937-p",
-          "name": "Hlas Písku",
-          "short_name": "Hlas Písku",
-          "abbreviation": "ČSSD+NK",
-          "description": "Hlas Písku",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-7",
+          "name": "Česká strana sociálně demokratická",
+          "short_name": "ČSSD",
+          "abbreviation": "ČSSD",
+          "description": "Česká strana sociálně demokratická",
+          "contacts": [],
+          "img_url": "data/avatars/parties/7-cssd-2020.png"
+        },
+        {
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
         }
       ],
       "motto": "HLAS Písku - Hlas pro naše město"
@@ -508,14 +512,22 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-549240-c-424512-p",
-          "name": "PRO PÍSEK",
-          "short_name": "PRO PÍSEK",
-          "abbreviation": "TOP 09+JIH 12",
-          "description": "PRO PÍSEK",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
+        },
+        {
+          "id": "party-766",
+          "name": "JIHOČEŠI 2012",
+          "short_name": "JIH 12",
+          "abbreviation": "JIH 12",
+          "description": "JIHOČEŠI 2012",
+          "contacts": [],
+          "img_url": "data/avatars/parties/766-jihocesi.png"
         }
       ],
       "motto": "Máme skvělý tým - PRO PÍSEK!"
@@ -532,14 +544,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-549240-c-669759-p",
+          "id": "party-47",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "Komunistická str.Čech a Moravy",
+          "short_name": "KSČM",
           "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/47-kscm.svg"
         }
       ]
     },
@@ -555,14 +566,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-549240-c-772524-p",
-          "name": "Demokratická strana zelených - za práva zvířat a spravedlnost v Písku",
-          "short_name": "Za práva zvířat a spravedlnost",
-          "abbreviation": "DSZ+NK",
-          "description": "Demokratická strana zelených - za práva zvířat a spravedlnost v Písku",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-715",
+          "name": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT",
+          "short_name": "DSZ - ZA PRÁVA ZVÍŘAT",
+          "abbreviation": "DSZ - ZA PRÁVA ZVÍŘAT",
+          "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT",
+          "contacts": [],
+          "img_url": "data/avatars/parties/715-dsz.png"
         }
       ],
       "motto": "Jsme strana s nejvyšším podílem žen, které v zastupitelstvu schází."
@@ -579,14 +597,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-549240-c-149444-p",
+          "id": "party-1",
           "name": "KDU-ČSL",
           "short_name": "KDU-ČSL",
           "abbreviation": "KDU-ČSL",
           "description": "KDU-ČSL",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
         }
       ],
       "motto": "Chceme politiku užitečnou pro všechny, se smysluplnou vizí do budoucna"
@@ -597,22 +614,29 @@
       "type": "party",
       "description": "VAŠE VOLBA",
       "short_name": "VAŠE VOLBA",
-      "img_url": "vpm-stan",
+      "img_url": "data/avatars/komunalni-2022/549240/komunalni-2022-549240-c-877605-original.jpg",
       "contacts": {
         "web": [],
         "facebook": "https://www.facebook.com/vasevolbapisek"
       },
       "parties": [
         {
-          "id": "komunalni-2022-549240-c-877605-p",
-          "name": "VAŠE VOLBA",
-          "short_name": "VAŠE VOLBA",
-          "abbreviation": "VPM+STAN",
-          "description": "VAŠE VOLBA",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/vasevolbapisek"
-          }
+          "id": "party-113",
+          "name": "Volba pro město",
+          "short_name": "VPM",
+          "abbreviation": "VPM",
+          "description": "Volba pro město",
+          "contacts": [],
+          "img_url": "data/avatars/parties/113-vpm.png"
+        },
+        {
+          "id": "party-166",
+          "name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "short_name": "STAN",
+          "abbreviation": "STAN",
+          "description": "STAROSTOVÉ A NEZÁVISLÍ",
+          "contacts": [],
+          "img_url": "data/avatars/parties/166-stan.svg"
         }
       ],
       "motto": "Aby se Vám v Písku dobře žilo"

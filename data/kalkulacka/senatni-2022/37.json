@@ -379,22 +379,31 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-37-c-828456-p",
-          "name": "SPOLU – ODS, KDU-ČSL, TOP 09",
-          "short_name": "SPOLU – ODS, KDU-ČSL, TOP 09",
-          "abbreviation": "SPOLU – ODS, KDU-ČSL, TOP 09",
-          "description": "SPOLU – ODS, KDU-ČSL, TOP 09",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://cs.wikipedia.org/wiki/Tom%C3%A1%C5%A1_Czernin",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/tomasczernin",
-            "twitter": "https://twitter.com/TomasCzernin?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
-            "instagram": "https://www.instagram.com/tomas_czernin/"
-          }
+          "id": "party-1",
+          "name": "KDU-ČSL",
+          "short_name": "KDU-ČSL",
+          "abbreviation": "KDU-ČSL",
+          "description": "KDU-ČSL",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+        },
+        {
+          "id": "party-53",
+          "name": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
+          "description": "Občanská demokratická strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
+        },
+        {
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/37/senatni-2022-37-c-828456-face.jpg"
@@ -424,26 +433,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-37-c-844780-p",
+          "id": "party-714",
           "name": "Svobodní",
           "short_name": "Svobodní",
           "abbreviation": "Svobodní",
           "description": "Svobodní",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://renefranek.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/Ren%C3%A9_Fran%C4%9Bk",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "http://facebook.com/renefranek.cz/",
-            "twitter": "https://twitter.com/ReneFranek",
-            "instagram": "https://www.instagram.com/renefranek_cz/?hl=cs"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/714-svobodni-2022.jpg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/37/senatni-2022-37-c-844780-face.jpg"
@@ -467,20 +463,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-37-c-383315-p",
+          "id": "party-47",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "Komunistická strana Čech a Moravy",
-          "abbreviation": "Komunistická strana Čech a Moravy",
+          "short_name": "KSČM",
+          "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://cs.wikipedia.org/wiki/V%C3%A1clav_Ort",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/profile.php?id=100082449587302"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/47-kscm.svg"
         }
       ]
     },
@@ -513,30 +502,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-37-c-664833-p",
+          "id": "party-720",
           "name": "Česká pirátská strana",
-          "short_name": "Česká pirátská strana",
-          "abbreviation": "Česká pirátská strana",
+          "short_name": "Piráti",
+          "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://martamartinova.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://martamartinova.cz/program-pro-senatni-volby/",
-                "label": "program"
-              },
-              {
-                "url": "http://linkedin.com/in/marta-martinov%C3%A1-00268853",
-                "label": "linkedin"
-              }
-            ],
-            "facebook": "https://www.facebook.com/marta.martinova.kostomlaty",
-            "twitter": "https://www.twitter.com/MartaMartinov1/",
-            "instagram": "https://www.instagram.com/martinova_marta/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/720-pirati.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/37/senatni-2022-37-c-664833-original.jpg"
@@ -560,20 +532,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-37-c-957667-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
-          "abbreviation": "ANO 2011",
+          "short_name": "ANO",
+          "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.jaromirdedecek.cz/budu-prosazovat/",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/jaromirdedecek2022"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/37/senatni-2022-37-c-957667-original.jpg"
@@ -598,21 +563,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-37-c-593846-p",
+          "id": "party-1114",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "Svoboda a přímá demokracie (SPD)",
-          "abbreviation": "Svoboda a přímá demokracie (SPD)",
+          "short_name": "SPD",
+          "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.facebook.com/eva.kotyzova/posts/pfbid0pPPYBHucnq7Toi3VJSreknNJR3ozYa9m6LKoJZQqCEz7v1huA5brVyj9bDNgeiV2l",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/eva.kotyzova",
-            "instagram": "https://www.instagram.com/ekotyzova/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/37/senatni-2022-37-c-593846-face.jpg"
@@ -642,26 +599,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-37-c-116316-p",
+          "id": "party-166",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "abbreviation": "STAROSTOVÉ A NEZÁVISLÍ",
+          "short_name": "STAN",
+          "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://danakracikova.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://danakracikova.cz/",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/KracikovaDana/",
-            "twitter": "https://twitter.com/dana_kracikova",
-            "instagram": "https://www.instagram.com/dana_kracikova_starostka/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/166-stan.svg"
         }
       ]
     }

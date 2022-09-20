@@ -368,14 +368,12 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-562971-c-802989-p",
+          "id": "party-1063",
           "name": "Moderní společnost",
-          "short_name": "Moderní společnost",
+          "short_name": "MODES",
           "abbreviation": "MODES",
           "description": "Moderní společnost",
-          "contacts": {
-            "web": []
-          }
+          "contacts": []
         }
       ]
     },
@@ -385,7 +383,7 @@
       "type": "party",
       "description": "CHOMUTOVSKÁ KOALICE",
       "short_name": "CHOMUTOVSKÁ KOALICE",
-      "img_url": "ls-nk",
+      "img_url": "data/avatars/komunalni-2022/562971/komunalni-2022-562971-c-935978-original.jpg",
       "contacts": {
         "web": [
           {
@@ -402,25 +400,20 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-562971-c-935978-p",
-          "name": "CHOMUTOVSKÁ KOALICE",
-          "short_name": "CHOMUTOVSKÁ KOALICE",
-          "abbreviation": "LS+NK",
-          "description": "CHOMUTOVSKÁ KOALICE",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://chomutovska-koalice.cz",
-                "label": "web"
-              },
-              {
-                "url": "https://www.chomutovska-koalice.cz",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://https://www.facebook.com/cv.koalice",
-            "instagram": "https://www.instagram.com/chomutovska.koalice"
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-1259",
+          "name": "LEPŠÍ SEVER",
+          "short_name": "LS",
+          "abbreviation": "LS",
+          "description": "LEPŠÍ SEVER",
+          "contacts": []
         }
       ],
       "motto": "Přišel čas na lepší Chomutov."
@@ -431,20 +424,28 @@
       "type": "party",
       "description": "Svoboda a přímá demokracie (SPD) s podporou PRO",
       "short_name": "SPD s podporou PRO",
-      "img_url": "spd-pro 2022",
+      "img_url": "data/avatars/komunalni-2022/562971/komunalni-2022-562971-c-843823-original.jpg",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "komunalni-2022-562971-c-843823-p",
-          "name": "Svoboda a přímá demokracie (SPD) s podporou PRO",
-          "short_name": "SPD s podporou PRO",
-          "abbreviation": "SPD+PRO 2022",
-          "description": "Svoboda a přímá demokracie (SPD) s podporou PRO",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-1114",
+          "name": "Svoboda a přímá demokracie (SPD)",
+          "short_name": "SPD",
+          "abbreviation": "SPD",
+          "description": "Svoboda a přímá demokracie (SPD)",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
+        },
+        {
+          "id": "party-1265",
+          "name": "Právo Respekt Odbornost",
+          "short_name": "PRO 2022",
+          "abbreviation": "PRO 2022",
+          "description": "Právo Respekt Odbornost",
+          "contacts": [],
+          "img_url": "data/avatars/parties/08-11-kgam3hli_400x400___up-d958-50.jpg"
         }
       ]
     },
@@ -454,20 +455,54 @@
       "type": "party",
       "description": "PRO Chomutov",
       "short_name": "PRO Chomutov",
-      "img_url": "kdupirtopjsprnk",
+      "img_url": "data/avatars/komunalni-2022/562971/komunalni-2022-562971-c-751007-original.jpg",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "komunalni-2022-562971-c-751007-p",
-          "name": "PRO Chomutov",
-          "short_name": "PRO Chomutov",
-          "abbreviation": "KDUPirTOPJsPrNK",
-          "description": "PRO Chomutov",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-1",
+          "name": "KDU-ČSL",
+          "short_name": "KDU-ČSL",
+          "abbreviation": "KDU-ČSL",
+          "description": "KDU-ČSL",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+        },
+        {
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-720",
+          "name": "Česká pirátská strana",
+          "short_name": "Piráti",
+          "abbreviation": "Piráti",
+          "description": "Česká pirátská strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/720-pirati.svg"
+        },
+        {
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
+        },
+        {
+          "id": "party-1126",
+          "name": "JsmePRO!",
+          "short_name": "JsmePRO!",
+          "abbreviation": "JsmePRO!",
+          "description": "JsmePRO!",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1126-jsme-pro-kraj.png"
         }
       ],
       "motto": "PROžít Chomutov společně, spokojeně, férově, v zeleni i na sídlišti."
@@ -485,15 +520,30 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-562971-c-684379-p",
-          "name": "ZA BEZPEČNÝ DOMOV",
-          "short_name": "ZA BEZPEČNÝ DOMOV",
-          "abbreviation": "Suver+BEZUL+DOM",
-          "description": "ZA BEZPEČNÝ DOMOV",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/Paik01"
-          }
+          "id": "party-759",
+          "name": "Česká Suverenita",
+          "short_name": "Suverenita",
+          "abbreviation": "Suverenita",
+          "description": "Česká Suverenita",
+          "contacts": [],
+          "img_url": "data/avatars/parties/759-ceska-suverenita.jpg"
+        },
+        {
+          "id": "party-761",
+          "name": "BEZPEČNÉ ULICE",
+          "short_name": "BEZ-UL",
+          "abbreviation": "BEZ-UL",
+          "description": "BEZPEČNÉ ULICE",
+          "contacts": []
+        },
+        {
+          "id": "party-1221",
+          "name": "DOMOV",
+          "short_name": "DOMOV",
+          "abbreviation": "DOMOV",
+          "description": "DOMOV",
+          "contacts": [],
+          "img_url": "data/avatars/parties/08-12-273304840_313019___up-d958-92.jpg"
         }
       ]
     },
@@ -509,14 +559,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-562971-c-212153-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
+          "short_name": "ANO",
           "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ],
       "motto": "Slušně, hospodárně a bezpečně"
@@ -533,14 +582,12 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-562971-c-771803-p",
+          "id": "party-1269",
           "name": "Správná volba PRO Zdraví a Sport",
-          "short_name": "Spr. volba PRO Zdraví a Sport",
+          "short_name": "SV PRO ZS",
           "abbreviation": "SV PRO ZS",
           "description": "Správná volba PRO Zdraví a Sport",
-          "contacts": {
-            "web": []
-          }
+          "contacts": []
         }
       ]
     },
@@ -556,14 +603,12 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-562971-c-244152-p",
+          "id": "party-1017",
           "name": "NOVÝ SEVER",
-          "short_name": "NOVÝ SEVER",
+          "short_name": "NS",
           "abbreviation": "NS",
           "description": "NOVÝ SEVER",
-          "contacts": {
-            "web": []
-          }
+          "contacts": []
         }
       ]
     },
@@ -579,14 +624,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-562971-c-740224-p",
+          "id": "party-53",
           "name": "Občanská demokratická strana",
-          "short_name": "Občanská demokratická strana",
+          "short_name": "ODS",
           "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
         }
       ],
       "motto": "Řízení města efektivně a bez dluhů"
@@ -603,14 +647,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-562971-c-229623-p",
+          "id": "party-47",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "Komunistická str.Čech a Moravy",
+          "short_name": "KSČM",
           "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/47-kscm.svg"
         }
       ]
     },
@@ -626,14 +669,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-562971-c-716252-p",
+          "id": "party-166",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "short_name": "STAN",
           "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/166-stan.svg"
         }
       ],
       "motto": "Nově do voleb s novými lidmi."

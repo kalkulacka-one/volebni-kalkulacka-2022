@@ -377,20 +377,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-67-c-965702-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
-          "abbreviation": "ANO 2011",
+          "short_name": "ANO",
+          "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://cs.wikipedia.org/wiki/Jarom%C3%ADr_Radkovsk%C3%BD",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/search/top/?q=Jarom%C3%ADr%09Radkovsk%C3%BD%20ano"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ]
     },
@@ -419,26 +412,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-67-c-301471-p",
+          "id": "party-1227",
           "name": "Trikolora",
           "short_name": "Trikolora",
           "abbreviation": "Trikolora",
           "description": "Trikolora",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://jan-muzik.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://volimtrikoloru.cz/volby-2022/jan-muzik-kandidat-do-senatu/",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/mgr.jan.muzik/",
-            "twitter": "https://twitter.com/MgrJanMuzik",
-            "instagram": "https://www.instagram.com/mgr_jan_muzik/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1227-trikolora-2022.jpg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/67/senatni-2022-67-c-301471-face.jpg"
@@ -466,24 +446,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-67-c-775013-p",
+          "id": "party-5",
           "name": "Strana zelených",
-          "short_name": "Strana zelených",
-          "abbreviation": "Strana zelených",
+          "short_name": "Zelení",
+          "abbreviation": "Zelení",
           "description": "Strana zelených",
-          "contacts": {
-            "web": [
-              {
-                "url": "http://petr-orel.cz/prispevky/aktualitynazory/",
-                "label": "web"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/Petr_Orel",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/orelsenator"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/5-strana-zelenych-2022.jpg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/67/senatni-2022-67-c-775013-face.jpg"
@@ -512,25 +481,31 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-67-c-405244-p",
-          "name": "SPOLU (ODS + KDU-ČSL + TOP 09)",
-          "short_name": "SPOLU (ODS + KDU-ČSL + TOP 09)",
-          "abbreviation": "SPOLU (ODS + KDU-ČSL + TOP 09)",
-          "description": "SPOLU (ODS + KDU-ČSL + TOP 09)",
-          "contacts": {
-            "web": [
-              {
-                "url": "http://www.ivanavanova.cz/",
-                "label": "web"
-              },
-              {
-                "url": "http://www.ivanavanova.cz/aktualita/muj-program-zaridim-aby-se-nam-tady-dobre-zilo.html",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/IvanaVanovaPoliticka",
-            "twitter": "https://twitter.com/VanovaVova1"
-          }
+          "id": "party-1",
+          "name": "KDU-ČSL",
+          "short_name": "KDU-ČSL",
+          "abbreviation": "KDU-ČSL",
+          "description": "KDU-ČSL",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+        },
+        {
+          "id": "party-53",
+          "name": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
+          "description": "Občanská demokratická strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
+        },
+        {
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/67/senatni-2022-67-c-405244-face.jpg"
@@ -548,14 +523,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-67-c-745404-p",
+          "id": "party-1114",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "Svoboda a přímá demokracie (SPD)",
-          "abbreviation": "Svoboda a přímá demokracie (SPD)",
+          "short_name": "SPD",
+          "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
         }
       ]
     },
@@ -573,15 +547,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-67-c-175924-p",
+          "id": "party-7",
           "name": "Česká strana sociálně demokratická",
-          "short_name": "Česká strana sociálně demokratická",
-          "abbreviation": "Česká strana sociálně demokratická",
+          "short_name": "ČSSD",
+          "abbreviation": "ČSSD",
           "description": "Česká strana sociálně demokratická",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/dana.vahalova/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/7-cssd-2020.png"
         }
       ]
     },
@@ -599,15 +571,12 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-67-c-129902-p",
-          "name": "Nezávislý Kandidát",
-          "short_name": "Nezávislý Kandidát",
-          "abbreviation": "Nezávislý Kandidát",
-          "description": "Nezávislý Kandidát",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/leo.luzar"
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
         }
       ],
       "img_url": "data/avatars/senatni-2022/67/senatni-2022-67-c-129902-face.jpg"

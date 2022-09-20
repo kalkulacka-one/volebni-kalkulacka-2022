@@ -372,15 +372,12 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-22-c-972050-p",
-          "name": "NEZÁVISLÍ PRO PRAHU 10 – HNUTÍ PRO LEPŠÍ DESÍTKU",
-          "short_name": "NEZÁVISLÍ PRO PRAHU 10 – HNUTÍ PRO LEPŠÍ DESÍTKU",
-          "abbreviation": "NEZÁVISLÍ PRO PRAHU 10 – HNUTÍ PRO LEPŠÍ DESÍTKU",
-          "description": "NEZÁVISLÍ PRO PRAHU 10 – HNUTÍ PRO LEPŠÍ DESÍTKU",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/Bohumil-Zoufal%C3%ADk-202898533222807/?_rdr"
-          }
+          "id": "party-1043",
+          "name": "NEZÁVISLÍ PRO PRAHU 10 - HNUTÍ PRO LEPŠÍ DESÍTKU",
+          "short_name": "NPP10-HPLD",
+          "abbreviation": "NPP10-HPLD",
+          "description": "NEZÁVISLÍ PRO PRAHU 10 - HNUTÍ PRO LEPŠÍ DESÍTKU",
+          "contacts": []
         }
       ]
     },
@@ -413,30 +410,40 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-22-c-371682-p",
-          "name": "RENATA CHMELOVÁ DO SENÁTU: VLASTA a STAN s podporou LES, Zelených a SEN 21",
-          "short_name": "RENATA CHMELOVÁ DO SENÁTU: VLASTA a STAN s podporou LES, Zelených a SEN 21",
-          "abbreviation": "RENATA CHMELOVÁ DO SENÁTU: VLASTA a STAN s podporou LES, Zelených a SEN 21",
-          "description": "RENATA CHMELOVÁ DO SENÁTU: VLASTA a STAN s podporou LES, Zelených a SEN 21",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://renatachmelova.cz/?fbclid=IwAR1LR6wBKKg3Cty7Cq6qLBE1GeQphJVGsrRoOzCOMr8iiTDhyInGvJVJzU0",
-                "label": "web"
-              },
-              {
-                "url": "https://renatachmelova.cz/",
-                "label": "program"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/Renata_Chmelov%C3%A1",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/senatorkarenata",
-            "twitter": "https://twitter.com/SenatorkaRenata",
-            "instagram": "https://www.instagram.com/senatorkarenata/"
-          }
+          "id": "party-5",
+          "name": "Strana zelených",
+          "short_name": "Zelení",
+          "abbreviation": "Zelení",
+          "description": "Strana zelených",
+          "contacts": [],
+          "img_url": "data/avatars/parties/5-strana-zelenych-2022.jpg"
+        },
+        {
+          "id": "party-166",
+          "name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "short_name": "STAN",
+          "abbreviation": "STAN",
+          "description": "STAROSTOVÉ A NEZÁVISLÍ",
+          "contacts": [],
+          "img_url": "data/avatars/parties/166-stan.svg"
+        },
+        {
+          "id": "party-795",
+          "name": "Liberálně ekologická strana",
+          "short_name": "LES",
+          "abbreviation": "LES",
+          "description": "Liberálně ekologická strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/795-les.png"
+        },
+        {
+          "id": "party-1187",
+          "name": "SEN 21",
+          "short_name": "SEN 21",
+          "abbreviation": "SEN 21",
+          "description": "SEN 21",
+          "contacts": [],
+          "img_url": "data/avatars/parties/08-30-iwbpfxeg_400x400___up-4fcd-68.jpg"
         }
       ],
       "img_url": "data/avatars/senatni-2022/22/senatni-2022-22-c-371682-original.jpg"
@@ -468,28 +475,31 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-22-c-549994-p",
-          "name": "SPOLU – ODS, KDU-ČSL, TOP 09",
-          "short_name": "SPOLU – ODS, KDU-ČSL, TOP 09",
-          "abbreviation": "SPOLU – ODS, KDU-ČSL, TOP 09",
-          "description": "SPOLU – ODS, KDU-ČSL, TOP 09",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://janpirk.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://janpirk.cz/#program",
-                "label": "program"
-              },
-              {
-                "url": "https://cs.wikipedia.org/wiki/Jan_Pirk",
-                "label": "wiki"
-              }
-            ],
-            "facebook": "https://www.facebook.com/profpirk"
-          }
+          "id": "party-1",
+          "name": "KDU-ČSL",
+          "short_name": "KDU-ČSL",
+          "abbreviation": "KDU-ČSL",
+          "description": "KDU-ČSL",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+        },
+        {
+          "id": "party-53",
+          "name": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
+          "description": "Občanská demokratická strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
+        },
+        {
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
         }
       ]
     },
@@ -506,14 +516,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-22-c-878037-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
-          "abbreviation": "ANO 2011",
+          "short_name": "ANO",
+          "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ]
     },
@@ -531,15 +540,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-22-c-762354-p",
+          "id": "party-7",
           "name": "Česká strana sociálně demokratická",
-          "short_name": "Česká strana sociálně demokratická",
-          "abbreviation": "Česká strana sociálně demokratická",
+          "short_name": "ČSSD",
+          "abbreviation": "ČSSD",
           "description": "Česká strana sociálně demokratická",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/stepan.kavur"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/7-cssd-2020.png"
         }
       ]
     },
@@ -557,15 +564,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-22-c-357855-p",
+          "id": "party-1114",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "Svoboda a přímá demokracie (SPD)",
-          "abbreviation": "Svoboda a přímá demokracie (SPD)",
+          "short_name": "SPD",
+          "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/jirikobza.cz/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
         }
       ]
     }

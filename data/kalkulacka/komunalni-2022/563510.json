@@ -362,20 +362,19 @@
       "type": "party",
       "description": "Svoboda a přímá demokracie (SPD)",
       "short_name": "Svoboda a př. demokracie (SPD)",
-      "img_url": "spd",
+      "img_url": "data/avatars/komunalni-2022/563510/komunalni-2022-563510-c-272135-original.jpg",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "komunalni-2022-563510-c-272135-p",
+          "id": "party-1114",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "Svoboda a př. demokracie (SPD)",
+          "short_name": "SPD",
           "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/1114-spd.svg"
         }
       ],
       "motto": "Jsme proti zdražování a válce"
@@ -392,14 +391,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-563510-c-883338-p",
+          "id": "party-1265",
           "name": "Právo Respekt Odbornost",
-          "short_name": "Právo Respekt Odbornost",
+          "short_name": "PRO 2022",
           "abbreviation": "PRO 2022",
           "description": "Právo Respekt Odbornost",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/08-11-kgam3hli_400x400___up-d958-50.jpg"
         }
       ],
       "motto": "Řídit město s ODBORNOSTÍ a Respektem k lidem a PRÁVU !"
@@ -422,20 +420,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-563510-c-387010-p",
+          "id": "party-703",
           "name": "Starostové pro Liberecký kraj",
-          "short_name": "Starostové pro Liberecký kraj",
+          "short_name": "SLK",
           "abbreviation": "SLK",
           "description": "Starostové pro Liberecký kraj",
-          "contacts": {
-            "web": [
-              {
-                "url": "http://starostovejablonec.cz/",
-                "label": "web"
-              }
-            ],
-            "facebook": "https://www.facebook.com/StarostoveJablonec/"
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/703-starostove-liberecky.png"
         }
       ],
       "motto": "Jablonec má na víc!"
@@ -446,7 +437,7 @@
       "type": "party",
       "description": "Pro Jablonec",
       "short_name": "Pro Jablonec",
-      "img_url": "nbplk-nk",
+      "img_url": "data/avatars/komunalni-2022/563510/komunalni-2022-563510-c-547567-original.jpg",
       "contacts": {
         "web": [
           {
@@ -462,24 +453,20 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-563510-c-547567-p",
-          "name": "Pro Jablonec",
-          "short_name": "Pro Jablonec",
-          "abbreviation": "NBPLK+NK",
-          "description": "Pro Jablonec",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://www.projablonec.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://www.projablonec.cz/program/",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/NBPLK/"
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-780",
+          "name": "Nová budoucnost pro Liberecký kraj",
+          "short_name": "NBPLK",
+          "abbreviation": "NBPLK",
+          "description": "Nová budoucnost pro Liberecký kraj",
+          "contacts": []
         }
       ],
       "motto": "Jsme tu PRO JABLONEC"
@@ -496,14 +483,21 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-563510-c-140770-p",
-          "name": "Piráti a nezávislí",
-          "short_name": "Piráti a nezávislí",
-          "abbreviation": "Piráti+NK",
-          "description": "Piráti a nezávislí",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-720",
+          "name": "Česká pirátská strana",
+          "short_name": "Piráti",
+          "abbreviation": "Piráti",
+          "description": "Česká pirátská strana",
+          "contacts": [],
+          "img_url": "data/avatars/parties/720-pirati.svg"
         }
       ],
       "motto": "Umíme si představit lepší Jablonec a máme odvahu na tom pracovat"
@@ -520,14 +514,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-563510-c-185818-p",
+          "id": "party-53",
           "name": "Občanská demokratická strana",
-          "short_name": "Občanská demokratická strana",
+          "short_name": "ODS",
           "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/53-ods.svg"
         }
       ],
       "motto": "Zodpovědný přístup pro Jablonec nad Nisou"
@@ -544,14 +537,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-563510-c-614056-p",
+          "id": "party-47",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "Komunistická str.Čech a Moravy",
+          "short_name": "KSČM",
           "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/47-kscm.svg"
         }
       ],
       "motto": "\"Jsme připraveni prosazovat potřeby občanů\""
@@ -562,20 +554,27 @@
       "type": "party",
       "description": "DOMOV NAD NISOU",
       "short_name": "DOMOV NAD NISOU",
-      "img_url": "nez-nk",
+      "img_url": "data/avatars/komunalni-2022/563510/komunalni-2022-563510-c-261835-original.jpg",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "komunalni-2022-563510-c-261835-p",
-          "name": "DOMOV NAD NISOU",
-          "short_name": "DOMOV NAD NISOU",
-          "abbreviation": "NEZ+NK",
-          "description": "DOMOV NAD NISOU",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-88",
+          "name": "NEZÁVISLÍ",
+          "short_name": "Nezávislí",
+          "abbreviation": "Nezávislí",
+          "description": "NEZÁVISLÍ",
+          "contacts": [],
+          "img_url": "data/avatars/parties/88-nez.png"
         }
       ],
       "motto": "DOMOV NAD NISOU"
@@ -586,22 +585,28 @@
       "type": "party",
       "description": "Křížek pro LEVNÉ ENERGIE z městské elektrárny, ODPADY ZDARMA (kdo třídí, neplatí), dostupné PARKOVÁNÍ, POŘÁDEK a BEZP…",
       "short_name": "JS, AJ a TOP 09",
-      "img_url": "top 09-nk",
+      "img_url": "data/avatars/komunalni-2022/563510/komunalni-2022-563510-c-662237-original.jpg",
       "contacts": {
         "web": [],
         "facebook": "https://www.facebook.com/KrizekPro"
       },
       "parties": [
         {
-          "id": "komunalni-2022-563510-c-662237-p",
-          "name": "Křížek pro LEVNÉ ENERGIE z městské elektrárny, ODPADY ZDARMA (kdo třídí, neplatí), dostupné PARKOVÁNÍ, POŘÁDEK a BEZP…",
-          "short_name": "JS, AJ a TOP 09",
-          "abbreviation": "TOP 09+NK",
-          "description": "Křížek pro LEVNÉ ENERGIE z městské elektrárny, ODPADY ZDARMA (kdo třídí, neplatí), dostupné PARKOVÁNÍ, POŘÁDEK a BEZP…",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/KrizekPro"
-          }
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
+        },
+        {
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "data/avatars/parties/721-top09.svg"
         }
       ],
       "motto": "Jediná strana s opravdu jasným programem a zkušenými lidmi"
@@ -618,14 +623,13 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-563510-c-708081-p",
+          "id": "party-768",
           "name": "ANO 2011",
-          "short_name": "ANO 2011",
+          "short_name": "ANO",
           "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "data/avatars/parties/768-ano.svg"
         }
       ],
       "motto": "Hnutí ANO, to je „Zdravé, bezpečné, komunikující a krásné město“ "
@@ -636,7 +640,7 @@
       "type": "party",
       "description": "Společně pro Jablonec",
       "short_name": "Společně pro Jablonec",
-      "img_url": "kdučsl-zel.-nk",
+      "img_url": "data/avatars/komunalni-2022/563510/komunalni-2022-563510-c-479108-original.jpg",
       "contacts": {
         "web": [
           {
@@ -652,24 +656,30 @@
       },
       "parties": [
         {
-          "id": "komunalni-2022-563510-c-479108-p",
-          "name": "Společně pro Jablonec",
-          "short_name": "Společně pro Jablonec",
-          "abbreviation": "KDUČSL+Zel.+NK",
-          "description": "Společně pro Jablonec",
-          "contacts": {
-            "web": [
-              {
-                "url": "https://spolecneprojablonec.cz/",
-                "label": "web"
-              },
-              {
-                "url": "https://spolecneprojablonec.cz/program",
-                "label": "program"
-              }
-            ],
-            "facebook": "https://www.facebook.com/SpolecneProJablonec/"
-          }
+          "id": "party-1",
+          "name": "KDU-ČSL",
+          "short_name": "KDU-ČSL",
+          "abbreviation": "KDU-ČSL",
+          "description": "KDU-ČSL",
+          "contacts": [],
+          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+        },
+        {
+          "id": "party-5",
+          "name": "Strana zelených",
+          "short_name": "Zelení",
+          "abbreviation": "Zelení",
+          "description": "Strana zelených",
+          "contacts": [],
+          "img_url": "data/avatars/parties/5-strana-zelenych-2022.jpg"
+        },
+        {
+          "id": "party-80",
+          "name": "Nezávislý kandidát",
+          "short_name": "nezávislý kandidát",
+          "abbreviation": "nezávislý kandidát",
+          "description": "Nezávislý kandidát",
+          "contacts": []
         }
       ],
       "motto": "Společně pro Jablonec. Dáme hlas vaší čtvrti."
