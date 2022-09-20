@@ -371,12 +371,14 @@
       },
       "parties": [
         {
-          "id": "party-159",
+          "id": "senatni-2022-70-c-523255-p",
           "name": "Strana státu přímé demokracie - Strana práce",
-          "short_name": "SSPD-SP",
-          "abbreviation": "SSPD-SP",
+          "short_name": "Strana státu přímé demokracie - Strana práce",
+          "abbreviation": "Strana státu přímé demokracie - Strana práce",
           "description": "Strana státu přímé demokracie - Strana práce",
-          "contacts": []
+          "contacts": {
+            "web": []
+          }
         }
       ]
     },
@@ -404,31 +406,25 @@
       },
       "parties": [
         {
-          "id": "party-1",
-          "name": "KDU-ČSL",
-          "short_name": "KDU-ČSL",
-          "abbreviation": "KDU-ČSL",
-          "description": "KDU-ČSL",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
-        },
-        {
-          "id": "party-53",
-          "name": "Občanská demokratická strana",
-          "short_name": "ODS",
-          "abbreviation": "ODS",
-          "description": "Občanská demokratická strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
-        },
-        {
-          "id": "party-721",
-          "name": "TOP 09",
-          "short_name": "TOP 09",
-          "abbreviation": "TOP 09",
-          "description": "TOP 09",
-          "contacts": [],
-          "img_url": "data/avatars/parties/721-top09.svg"
+          "id": "senatni-2022-70-c-894640-p",
+          "name": "Koalice SPOLU",
+          "short_name": "Koalice SPOLU",
+          "abbreviation": "Koalice SPOLU",
+          "description": "Koalice SPOLU",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://zdeneknytra.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://cs.wikipedia.org/wiki/Zden%C4%9Bk_Nytra",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/senatornytra/",
+            "twitter": "https://twitter.com/ZdenekNytra"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/70/senatni-2022-70-c-894640-face.jpg"
@@ -447,13 +443,15 @@
       },
       "parties": [
         {
-          "id": "party-785",
+          "id": "senatni-2022-70-c-397158-p",
           "name": "Zdraví Sport Prosperita",
-          "short_name": "PRO Zdraví",
-          "abbreviation": "PRO Zdraví",
+          "short_name": "Zdraví Sport Prosperita",
+          "abbreviation": "Zdraví Sport Prosperita",
           "description": "Zdraví Sport Prosperita",
-          "contacts": [],
-          "img_url": "data/avatars/parties/785-pro-zdravi-a-sport.jpg"
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/liana.janackova.1"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/70/senatni-2022-70-c-397158-face.jpg"
@@ -471,13 +469,14 @@
       },
       "parties": [
         {
-          "id": "party-768",
+          "id": "senatni-2022-70-c-550066-p",
           "name": "ANO 2011",
-          "short_name": "ANO",
-          "abbreviation": "ANO",
+          "short_name": "ANO 2011",
+          "abbreviation": "ANO 2011",
           "description": "ANO 2011",
-          "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ]
     },
@@ -504,13 +503,24 @@
       },
       "parties": [
         {
-          "id": "party-1114",
+          "id": "senatni-2022-70-c-254017-p",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "SPD",
-          "abbreviation": "SPD",
+          "short_name": "Svoboda a přímá demokracie (SPD)",
+          "abbreviation": "Svoboda a přímá demokracie (SPD)",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://peterharvanek.cz/senat.html",
+                "label": "web"
+              },
+              {
+                "url": "https://peterharvanek.cz/senat.html",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/pharvanek"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/70/senatni-2022-70-c-254017-face.jpg"
@@ -528,13 +538,14 @@
       },
       "parties": [
         {
-          "id": "party-166",
+          "id": "senatni-2022-70-c-635788-p",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAN",
-          "abbreviation": "STAN",
+          "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
+          "abbreviation": "STAROSTOVÉ A NEZÁVISLÍ",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/166-stan.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ]
     },
@@ -551,13 +562,14 @@
       },
       "parties": [
         {
-          "id": "party-1265",
+          "id": "senatni-2022-70-c-938712-p",
           "name": "Právo Respekt Odbornost",
-          "short_name": "PRO 2022",
-          "abbreviation": "PRO 2022",
+          "short_name": "Právo Respekt Odbornost",
+          "abbreviation": "Právo Respekt Odbornost",
           "description": "Právo Respekt Odbornost",
-          "contacts": [],
-          "img_url": "data/avatars/parties/08-11-kgam3hli_400x400___up-d958-50.jpg"
+          "contacts": {
+            "web": []
+          }
         }
       ]
     }

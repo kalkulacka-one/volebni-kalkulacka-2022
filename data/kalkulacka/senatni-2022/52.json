@@ -371,13 +371,14 @@
       },
       "parties": [
         {
-          "id": "party-1221",
+          "id": "senatni-2022-52-c-787854-p",
           "name": "DOMOV",
           "short_name": "DOMOV",
           "abbreviation": "DOMOV",
           "description": "DOMOV",
-          "contacts": [],
-          "img_url": "data/avatars/parties/08-12-273304840_313019___up-d958-92.jpg"
+          "contacts": {
+            "web": []
+          }
         }
       ]
     },
@@ -396,13 +397,16 @@
       },
       "parties": [
         {
-          "id": "party-1265",
+          "id": "senatni-2022-52-c-975208-p",
           "name": "Právo Respekt Odbornost",
-          "short_name": "PRO 2022",
-          "abbreviation": "PRO 2022",
+          "short_name": "Právo Respekt Odbornost",
+          "abbreviation": "Právo Respekt Odbornost",
           "description": "Právo Respekt Odbornost",
-          "contacts": [],
-          "img_url": "data/avatars/parties/08-11-kgam3hli_400x400___up-d958-50.jpg"
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/TomasNielsen22",
+            "twitter": "https://twitter.com/TomasNielsen1"
+          }
         }
       ]
     },
@@ -426,31 +430,21 @@
       },
       "parties": [
         {
-          "id": "party-1",
-          "name": "KDU-ČSL",
-          "short_name": "KDU-ČSL",
-          "abbreviation": "KDU-ČSL",
-          "description": "KDU-ČSL",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
-        },
-        {
-          "id": "party-53",
-          "name": "Občanská demokratická strana",
-          "short_name": "ODS",
-          "abbreviation": "ODS",
-          "description": "Občanská demokratická strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
-        },
-        {
-          "id": "party-721",
-          "name": "TOP 09",
-          "short_name": "TOP 09",
-          "abbreviation": "TOP 09",
-          "description": "TOP 09",
-          "contacts": [],
-          "img_url": "data/avatars/parties/721-top09.svg"
+          "id": "senatni-2022-52-c-406075-p",
+          "name": "Koalice SPOLU s podporou Starostů pro občany",
+          "short_name": "Koalice SPOLU s podporou Starostů pro občany",
+          "abbreviation": "Koalice SPOLU s podporou Starostů pro občany",
+          "description": "Koalice SPOLU s podporou Starostů pro občany",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://cs.wikipedia.org/wiki/Milo%C5%A1_Vystr%C4%8Dil",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/milosvystrcil",
+            "twitter": "https://twitter.com/vystrcil_milos/"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/52/senatni-2022-52-c-406075-face.jpg"
@@ -468,13 +462,14 @@
       },
       "parties": [
         {
-          "id": "party-1114",
+          "id": "senatni-2022-52-c-520609-p",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "SPD",
-          "abbreviation": "SPD",
+          "short_name": "Svoboda a přímá demokracie (SPD)",
+          "abbreviation": "Svoboda a přímá demokracie (SPD)",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ]
     },
@@ -496,13 +491,19 @@
       },
       "parties": [
         {
-          "id": "party-47",
+          "id": "senatni-2022-52-c-829521-p",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "KSČM",
-          "abbreviation": "KSČM",
+          "short_name": "Komunistická strana Čech a Moravy",
+          "abbreviation": "Komunistická strana Čech a Moravy",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": [],
-          "img_url": "data/avatars/parties/47-kscm.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://cs.wikipedia.org/wiki/Josef_Pavl%C3%ADk",
+                "label": "wiki"
+              }
+            ]
+          }
         }
       ]
     },
@@ -520,13 +521,15 @@
       },
       "parties": [
         {
-          "id": "party-768",
+          "id": "senatni-2022-52-c-800084-p",
           "name": "ANO 2011",
-          "short_name": "ANO",
-          "abbreviation": "ANO",
+          "short_name": "ANO 2011",
+          "abbreviation": "ANO 2011",
           "description": "ANO 2011",
-          "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/anotohlejejihlava/"
+          }
         }
       ]
     }

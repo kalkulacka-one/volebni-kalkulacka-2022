@@ -387,13 +387,30 @@
       },
       "parties": [
         {
-          "id": "party-47",
+          "id": "senatni-2022-7-c-883400-p",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "KSČM",
-          "abbreviation": "KSČM",
+          "short_name": "Komunistická strana Čech a Moravy",
+          "abbreviation": "Komunistická strana Čech a Moravy",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": [],
-          "img_url": "data/avatars/parties/47-kscm.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://valenta.estranky.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://www.kscm.cz/cs/aktualne/team_members/phdr-ing-mgr-et-mgr-jiri-valenta-dba/",
+                "label": "program"
+              },
+              {
+                "url": "https://cs.wikipedia.org/wiki/Ji%C5%99%C3%AD_Valenta_(politik)",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/jiri.valenta.plzen",
+            "twitter": "https://twitter.com/JiValenta",
+            "instagram": "https://www.instagram.com/valenta1965/"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/7/senatni-2022-7-c-883400-face.jpg"
@@ -417,13 +434,20 @@
       },
       "parties": [
         {
-          "id": "party-1114",
+          "id": "senatni-2022-7-c-401024-p",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "SPD",
-          "abbreviation": "SPD",
+          "short_name": "Svoboda a přímá demokracie (SPD)",
+          "abbreviation": "Svoboda a přímá demokracie (SPD)",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://cs.wikipedia.org/wiki/Jan_K%C5%AFrka",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/SPD-Plze%C5%88-m%C4%9Bsto-1927335734168406/"
+          }
         }
       ]
     },
@@ -452,13 +476,26 @@
       },
       "parties": [
         {
-          "id": "party-1014",
+          "id": "senatni-2022-7-c-519910-p",
           "name": "PRO PLZEŇ",
           "short_name": "PRO PLZEŇ",
           "abbreviation": "PRO PLZEŇ",
           "description": "PRO PLZEŇ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1014-proplzen.png"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.sramek2022.cz/",
+                "label": "program"
+              },
+              {
+                "url": "https://cs.wikipedia.org/wiki/Pavel_%C5%A0r%C3%A1mek",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/sramekpavel",
+            "twitter": "https://twitter.com/Sramek_Pavel",
+            "instagram": "https://www.instagram.com/sramek_pavel/"
+          }
         }
       ]
     },
@@ -482,22 +519,21 @@
       },
       "parties": [
         {
-          "id": "party-166",
-          "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAN",
-          "abbreviation": "STAN",
-          "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/166-stan.svg"
-        },
-        {
-          "id": "party-1022",
-          "name": "Občané patrioti",
-          "short_name": "OPAT",
-          "abbreviation": "OPAT",
-          "description": "Občané patrioti",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1022-opat.png"
+          "id": "senatni-2022-7-c-801538-p",
+          "name": "Václav Chaloupek do Senátu - koalice OPAT a STAN",
+          "short_name": "Václav Chaloupek do Senátu - koalice OPAT a STAN",
+          "abbreviation": "Václav Chaloupek do Senátu - koalice OPAT a STAN",
+          "description": "Václav Chaloupek do Senátu - koalice OPAT a STAN",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://cs.wikipedia.org/wiki/V%C3%A1clav_Chaloupek",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/VaclavChaloupek",
+            "twitter": "https://twitter.com/VaclavChaloupek"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/7/senatni-2022-7-c-801538-face.jpg"
@@ -530,12 +566,29 @@
       },
       "parties": [
         {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
+          "id": "senatni-2022-7-c-582714-p",
+          "name": "JUDr. Daniela Kovářová",
+          "short_name": "JUDr. Daniela Kovářová",
+          "abbreviation": "JUDr. Daniela Kovářová",
+          "description": "JUDr. Daniela Kovářová",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.daniela2022.cz/",
+                "label": "web"
+              },
+              {
+                "url": "https://www.daniela2022.cz/cs/na-tom-trvam",
+                "label": "program"
+              },
+              {
+                "url": "https://cs.wikipedia.org/wiki/Daniela_Kov%C3%A1%C5%99ov%C3%A1",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/daniela.kovarova.advokatka/",
+            "twitter": "https://twitter.com/DanielaKovarova"
+          }
         }
       ],
       "img_url": "data/avatars/senatni-2022/7/senatni-2022-7-c-582714-original.jpg"
@@ -559,13 +612,20 @@
       },
       "parties": [
         {
-          "id": "party-768",
+          "id": "senatni-2022-7-c-161426-p",
           "name": "ANO 2011",
-          "short_name": "ANO",
-          "abbreviation": "ANO",
+          "short_name": "ANO 2011",
+          "abbreviation": "ANO 2011",
           "description": "ANO 2011",
-          "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://cs.wikipedia.org/wiki/Josef_V%C3%A1%C5%88a",
+                "label": "wiki"
+              }
+            ],
+            "facebook": "https://www.facebook.com/josefvanadosenatu"
+          }
         }
       ]
     },
@@ -584,31 +644,16 @@
       },
       "parties": [
         {
-          "id": "party-1",
-          "name": "KDU-ČSL",
-          "short_name": "KDU-ČSL",
-          "abbreviation": "KDU-ČSL",
-          "description": "KDU-ČSL",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
-        },
-        {
-          "id": "party-53",
-          "name": "Občanská demokratická strana",
-          "short_name": "ODS",
-          "abbreviation": "ODS",
-          "description": "Občanská demokratická strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
-        },
-        {
-          "id": "party-721",
-          "name": "TOP 09",
-          "short_name": "TOP 09",
-          "abbreviation": "TOP 09",
-          "description": "TOP 09",
-          "contacts": [],
-          "img_url": "data/avatars/parties/721-top09.svg"
+          "id": "senatni-2022-7-c-189360-p",
+          "name": "SPOLU— ODS, KDU-ČSL, TOP 09",
+          "short_name": "SPOLU— ODS, KDU-ČSL, TOP 09",
+          "abbreviation": "SPOLU— ODS, KDU-ČSL, TOP 09",
+          "description": "SPOLU— ODS, KDU-ČSL, TOP 09",
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/naxerakarel",
+            "instagram": "https://www.instagram.com/karelnaxera/"
+          }
         }
       ]
     }

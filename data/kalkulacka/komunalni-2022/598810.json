@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -362,28 +362,20 @@
       "type": "party",
       "description": "SPOLEČNĚ PRO TŘINEC",
       "short_name": "SPOLEČNĚ PRO TŘINEC",
-      "img_url": "data/avatars/komunalni-2022/598810/komunalni-2022-598810-c-693283-original.jpg",
+      "img_url": "ods-top 09",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "party-53",
-          "name": "Občanská demokratická strana",
-          "short_name": "ODS",
-          "abbreviation": "ODS",
-          "description": "Občanská demokratická strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
-        },
-        {
-          "id": "party-721",
-          "name": "TOP 09",
-          "short_name": "TOP 09",
-          "abbreviation": "TOP 09",
-          "description": "TOP 09",
-          "contacts": [],
-          "img_url": "data/avatars/parties/721-top09.svg"
+          "id": "komunalni-2022-598810-c-693283-p",
+          "name": "SPOLEČNĚ PRO TŘINEC",
+          "short_name": "SPOLEČNĚ PRO TŘINEC",
+          "abbreviation": "ODS+TOP 09",
+          "description": "SPOLEČNĚ PRO TŘINEC",
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Poctivá práce, rozumná řešení "
@@ -394,7 +386,7 @@
       "type": "party",
       "description": "NEZÁVISLÍ",
       "short_name": "NEZÁVISLÍ",
-      "img_url": "data/avatars/komunalni-2022/598810/komunalni-2022-598810-c-395216-original.jpg",
+      "img_url": "nez",
       "contacts": {
         "web": [
           {
@@ -406,13 +398,20 @@
       },
       "parties": [
         {
-          "id": "party-88",
+          "id": "komunalni-2022-598810-c-395216-p",
           "name": "NEZÁVISLÍ",
-          "short_name": "Nezávislí",
-          "abbreviation": "Nezávislí",
+          "short_name": "NEZÁVISLÍ",
+          "abbreviation": "NEZ",
           "description": "NEZÁVISLÍ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/88-nez.png"
+          "contacts": {
+            "web": [
+              {
+                "url": "http://nezavisli-trinec.unas.cz/k/Program.html",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/HnutiNezavisliTrinec/"
+          }
         }
       ]
     },
@@ -422,27 +421,20 @@
       "type": "party",
       "description": "OSOBNOSTI PRO TŘINEC",
       "short_name": "OSOBNOSTI PRO TŘINEC",
-      "img_url": "data/avatars/komunalni-2022/598810/komunalni-2022-598810-c-308831-original.jpg",
+      "img_url": "stan-nk",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
-        },
-        {
-          "id": "party-166",
-          "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAN",
-          "abbreviation": "STAN",
-          "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/166-stan.svg"
+          "id": "komunalni-2022-598810-c-308831-p",
+          "name": "OSOBNOSTI PRO TŘINEC",
+          "short_name": "OSOBNOSTI PRO TŘINEC",
+          "abbreviation": "STAN+NK",
+          "description": "OSOBNOSTI PRO TŘINEC",
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "S Vaším hlasem budeme i nadále měnit Třinec"
@@ -453,27 +445,20 @@
       "type": "party",
       "description": "ČSSD a nezávislí kandidáti",
       "short_name": "ČSSD a nezávislí kandidáti",
-      "img_url": "data/avatars/komunalni-2022/598810/komunalni-2022-598810-c-868351-original.jpg",
+      "img_url": "čssd-nk",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "party-7",
-          "name": "Česká strana sociálně demokratická",
-          "short_name": "ČSSD",
-          "abbreviation": "ČSSD",
-          "description": "Česká strana sociálně demokratická",
-          "contacts": [],
-          "img_url": "data/avatars/parties/7-cssd-2020.png"
-        },
-        {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
+          "id": "komunalni-2022-598810-c-868351-p",
+          "name": "ČSSD a nezávislí kandidáti",
+          "short_name": "ČSSD a nezávislí kandidáti",
+          "abbreviation": "ČSSD+NK",
+          "description": "ČSSD a nezávislí kandidáti",
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Třinec si zaslouží změnu"
@@ -484,19 +469,20 @@
       "type": "party",
       "description": "ANO 2011",
       "short_name": "ANO 2011",
-      "img_url": "data/avatars/komunalni-2022/598810/komunalni-2022-598810-c-666483-original.jpg",
+      "img_url": "ano",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "party-768",
+          "id": "komunalni-2022-598810-c-666483-p",
           "name": "ANO 2011",
-          "short_name": "ANO",
+          "short_name": "ANO 2011",
           "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Rozhodujte společně s námi "
@@ -507,7 +493,7 @@
       "type": "party",
       "description": "Česká pirátská strana",
       "short_name": "Česká pirátská strana",
-      "img_url": "data/avatars/komunalni-2022/598810/komunalni-2022-598810-c-929291-original.jpg",
+      "img_url": "piráti",
       "contacts": {
         "web": [
           {
@@ -518,13 +504,19 @@
       },
       "parties": [
         {
-          "id": "party-720",
+          "id": "komunalni-2022-598810-c-929291-p",
           "name": "Česká pirátská strana",
-          "short_name": "Piráti",
+          "short_name": "Česká pirátská strana",
           "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/720-pirati.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://trinec.pirati.cz/volby-trinec-2022/kandidati/?view=program",
+                "label": "program"
+              }
+            ]
+          }
         }
       ],
       "motto": "Odvaha dělat v Třinci věci správně."
@@ -535,7 +527,7 @@
       "type": "party",
       "description": "KDU-ČSL",
       "short_name": "KDU-ČSL",
-      "img_url": "data/avatars/komunalni-2022/598810/komunalni-2022-598810-c-982553-original.jpg",
+      "img_url": "kdu-čsl",
       "contacts": {
         "web": [
           {
@@ -548,13 +540,21 @@
       },
       "parties": [
         {
-          "id": "party-1",
+          "id": "komunalni-2022-598810-c-982553-p",
           "name": "KDU-ČSL",
           "short_name": "KDU-ČSL",
           "abbreviation": "KDU-ČSL",
           "description": "KDU-ČSL",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "http://www.trinec.kdu.cz/o-nas-(1)/volebni-program",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/kducsltrinec",
+            "instagram": "https://www.instagram.com/kducsltrinec/"
+          }
         }
       ],
       "motto": "KDU-ČSL v Třinci chce Více pomáhat, než vládnout"

@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -362,7 +362,7 @@
       "type": "party",
       "description": "ÚSTECKÉ FÓRUM OBČANŮ",
       "short_name": "ÚSTECKÉ FÓRUM OBČANŮ",
-      "img_url": "data/avatars/komunalni-2022/554804/komunalni-2022-554804-c-415562-original.jpg",
+      "img_url": "ufo",
       "contacts": {
         "web": [
           {
@@ -373,13 +373,19 @@
       },
       "parties": [
         {
-          "id": "party-1012",
+          "id": "komunalni-2022-554804-c-415562-p",
           "name": "ÚSTECKÉ FÓRUM OBČANŮ",
-          "short_name": "UFO",
+          "short_name": "ÚSTECKÉ FÓRUM OBČANŮ",
           "abbreviation": "UFO",
           "description": "ÚSTECKÉ FÓRUM OBČANŮ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1012-ufo.png"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.ufo-usti.cz/kandidati/",
+                "label": "web"
+              }
+            ]
+          }
         }
       ],
       "motto": "Jsme sdružení ústeckých patriotů -Ústí je náš domov!"
@@ -390,7 +396,7 @@
       "type": "party",
       "description": "Vaše Ústí",
       "short_name": "Vaše Ústí",
-      "img_url": "data/avatars/komunalni-2022/554804/komunalni-2022-554804-c-606320-original.jpg",
+      "img_url": "vú",
       "contacts": {
         "web": [
           {
@@ -402,13 +408,20 @@
       },
       "parties": [
         {
-          "id": "party-1128",
+          "id": "komunalni-2022-554804-c-606320-p",
           "name": "Vaše Ústí",
-          "short_name": "VÚ",
+          "short_name": "Vaše Ústí",
           "abbreviation": "VÚ",
           "description": "Vaše Ústí",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1128-vase-usti.png"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.vaseusti.cz/",
+                "label": "web"
+              }
+            ],
+            "facebook": "https://www.facebook.com/vasemestonasestarost"
+          }
         }
       ],
       "motto": "Děláme Ústí lepší. Slušně a poctivě."
@@ -425,13 +438,14 @@
       },
       "parties": [
         {
-          "id": "party-53",
+          "id": "komunalni-2022-554804-c-265108-p",
           "name": "Občanská demokratická strana",
-          "short_name": "ODS",
+          "short_name": "Občanská demokratická strana",
           "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Lepší volba v Ústí v těchto volbách opravdu není!"
@@ -442,7 +456,7 @@
       "type": "party",
       "description": "STAROSTOVÉ A NEZÁVISLÍ",
       "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
-      "img_url": "data/avatars/komunalni-2022/554804/komunalni-2022-554804-c-986225-original.jpg",
+      "img_url": "stan",
       "contacts": {
         "web": [
           {
@@ -453,13 +467,19 @@
       },
       "parties": [
         {
-          "id": "party-166",
+          "id": "komunalni-2022-554804-c-986225-p",
           "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAN",
+          "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
           "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/166-stan.svg"
+          "contacts": {
+            "web": [
+              {
+                "url": "http://www.stanusti.cz/Nas-program.html",
+                "label": "program"
+              }
+            ]
+          }
         }
       ],
       "motto": "Vyřešíme nahromaděné problémy z minulosti a přicházíme s jasnou vizí dalšího rozvoje."
@@ -470,26 +490,20 @@
       "type": "party",
       "description": "Aliance pro Ústí",
       "short_name": "Aliance pro Ústí",
-      "img_url": "data/avatars/komunalni-2022/554804/komunalni-2022-554804-c-287190-original.jpg",
+      "img_url": "manifest.cz-nk",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
-        },
-        {
-          "id": "party-1247",
-          "name": "Manifest.cz - Pravá Svoboda a Prosperita",
-          "short_name": "Manifest.cz",
-          "abbreviation": "Manifest.cz",
-          "description": "Manifest.cz - Pravá Svoboda a Prosperita",
-          "contacts": []
+          "id": "komunalni-2022-554804-c-287190-p",
+          "name": "Aliance pro Ústí",
+          "short_name": "Aliance pro Ústí",
+          "abbreviation": "Manifest.cz+NK",
+          "description": "Aliance pro Ústí",
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Pojďme měnit Ústí"
@@ -506,13 +520,14 @@
       },
       "parties": [
         {
-          "id": "party-768",
+          "id": "komunalni-2022-554804-c-554883-p",
           "name": "ANO 2011",
-          "short_name": "ANO",
+          "short_name": "ANO 2011",
           "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Strana, za kterou jsou vidět výsledky otevřená i pro jiné názory"
@@ -529,13 +544,14 @@
       },
       "parties": [
         {
-          "id": "party-785",
+          "id": "komunalni-2022-554804-c-118556-p",
           "name": "Zdraví Sport Prosperita",
-          "short_name": "PRO Zdraví",
+          "short_name": "Zdraví Sport Prosperita",
           "abbreviation": "PRO Zdraví",
           "description": "Zdraví Sport Prosperita",
-          "contacts": [],
-          "img_url": "data/avatars/parties/785-pro-zdravi-a-sport.jpg"
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "máme nejkvalitněší kandidáty"
@@ -546,28 +562,20 @@
       "type": "party",
       "description": "Svoboda a přímá demokracie (SPD) s podporou politické strany Trikolora",
       "short_name": "Koalice SPD, Trikolora",
-      "img_url": "data/avatars/komunalni-2022/554804/komunalni-2022-554804-c-862129-original.jpg",
+      "img_url": "spd-trikolóra",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "party-1114",
-          "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "SPD",
-          "abbreviation": "SPD",
-          "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
-        },
-        {
-          "id": "party-1227",
-          "name": "Trikolora",
-          "short_name": "Trikolora",
-          "abbreviation": "Trikolora",
-          "description": "Trikolora",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1227-trikolora-2022.jpg"
+          "id": "komunalni-2022-554804-c-862129-p",
+          "name": "Svoboda a přímá demokracie (SPD) s podporou politické strany Trikolora",
+          "short_name": "Koalice SPD, Trikolora",
+          "abbreviation": "SPD+Trikolora",
+          "description": "Svoboda a přímá demokracie (SPD) s podporou politické strany Trikolora",
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Pro SPD je ČR a slušný občan na prvním místě"
@@ -578,7 +586,7 @@
       "type": "party",
       "description": "Za lepší Střekov",
       "short_name": "Za lepší Střekov",
-      "img_url": "data/avatars/komunalni-2022/554804/komunalni-2022-554804-c-320927-original.jpg",
+      "img_url": "zls",
       "contacts": {
         "web": [
           {
@@ -589,12 +597,19 @@
       },
       "parties": [
         {
-          "id": "party-1195",
+          "id": "komunalni-2022-554804-c-320927-p",
           "name": "Za lepší Střekov",
-          "short_name": "ZLS",
+          "short_name": "Za lepší Střekov",
           "abbreviation": "ZLS",
           "description": "Za lepší Střekov",
-          "contacts": []
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.zalepsistrekov.cz/",
+                "label": "web"
+              }
+            ]
+          }
         }
       ]
     },
@@ -604,7 +619,7 @@
       "type": "party",
       "description": "PRO! Ústí",
       "short_name": "PRO! Ústí",
-      "img_url": "data/avatars/komunalni-2022/554804/komunalni-2022-554804-c-418969-original.jpg",
+      "img_url": "zel.-piráti-nk",
       "contacts": {
         "web": [
           {
@@ -616,30 +631,20 @@
       },
       "parties": [
         {
-          "id": "party-5",
-          "name": "Strana zelených",
-          "short_name": "Zelení",
-          "abbreviation": "Zelení",
-          "description": "Strana zelených",
-          "contacts": [],
-          "img_url": "data/avatars/parties/5-strana-zelenych-2022.jpg"
-        },
-        {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
-        },
-        {
-          "id": "party-720",
-          "name": "Česká pirátská strana",
-          "short_name": "Piráti",
-          "abbreviation": "Piráti",
-          "description": "Česká pirátská strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/720-pirati.svg"
+          "id": "komunalni-2022-554804-c-418969-p",
+          "name": "PRO! Ústí",
+          "short_name": "PRO! Ústí",
+          "abbreviation": "Zel.+Piráti+NK",
+          "description": "PRO! Ústí",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://prousti.cz/",
+                "label": "web"
+              }
+            ],
+            "facebook": "https://www.facebook.com/hnutiprousti/"
+          }
         }
       ],
       "motto": "Aby Ústí bylo město, kde se dobře žije udržitelným způsobem."
@@ -656,13 +661,14 @@
       },
       "parties": [
         {
-          "id": "party-47",
+          "id": "komunalni-2022-554804-c-627274-p",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "KSČM",
+          "short_name": "Komunistická str.Čech a Moravy",
           "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": [],
-          "img_url": "data/avatars/parties/47-kscm.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ]
     },
@@ -672,7 +678,7 @@
       "type": "party",
       "description": "SPOLEČNĚ Ústí nad Labem",
       "short_name": "SPOLEČNĚ Ústí nad Labem",
-      "img_url": "data/avatars/komunalni-2022/554804/komunalni-2022-554804-c-894961-original.jpg",
+      "img_url": "kdučsl-top09-nk",
       "contacts": {
         "web": [
           {
@@ -689,30 +695,25 @@
       },
       "parties": [
         {
-          "id": "party-1",
-          "name": "KDU-ČSL",
-          "short_name": "KDU-ČSL",
-          "abbreviation": "KDU-ČSL",
-          "description": "KDU-ČSL",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
-        },
-        {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
-        },
-        {
-          "id": "party-721",
-          "name": "TOP 09",
-          "short_name": "TOP 09",
-          "abbreviation": "TOP 09",
-          "description": "TOP 09",
-          "contacts": [],
-          "img_url": "data/avatars/parties/721-top09.svg"
+          "id": "komunalni-2022-554804-c-894961-p",
+          "name": "SPOLEČNĚ Ústí nad Labem",
+          "short_name": "SPOLEČNĚ Ústí nad Labem",
+          "abbreviation": "KDUČSL+TOP09+NK",
+          "description": "SPOLEČNĚ Ústí nad Labem",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://spolecne-usti.cz",
+                "label": "web"
+              },
+              {
+                "url": "https://spolecne-usti.cz/cs/program",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/spolecneUSTI",
+            "instagram": "https://www.instagram.com/spolecne_usti/"
+          }
         }
       ],
       "motto": "Společně po lepších cestách!"
@@ -735,13 +736,20 @@
       },
       "parties": [
         {
-          "id": "party-1245",
+          "id": "komunalni-2022-554804-c-775234-p",
           "name": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
-          "short_name": "PŘÍSAHA",
+          "short_name": "PŘÍSAHA Roberta Šlachty",
           "abbreviation": "PŘÍSAHA",
           "description": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
-          "contacts": [],
-          "img_url": "data/avatars/parties/prisaha-2.png"
+          "contacts": {
+            "web": [
+              {
+                "url": "https://www.prisaha.cz/usti-nad-labem",
+                "label": "web"
+              }
+            ],
+            "facebook": "https://www.facebook.com/PrisahaUsti"
+          }
         }
       ],
       "motto": "Jsme Přísaha v Ústí nad Labem. Tady jsme doma a tady to máme rádi, proto jdeme do politiky a chceme, aby platil stejný metr pro všechny."

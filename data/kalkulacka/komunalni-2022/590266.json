@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -362,27 +362,20 @@
       "type": "party",
       "description": "Třebíč můj domov",
       "short_name": "Třebíč můj domov",
-      "img_url": "data/avatars/komunalni-2022/590266/komunalni-2022-590266-c-860344-original.jpg",
+      "img_url": "snk ed-nk",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
-        },
-        {
-          "id": "party-129",
-          "name": "SNK Evropští demokraté",
-          "short_name": "SNK ED",
-          "abbreviation": "SNK ED",
-          "description": "SNK Evropští demokraté",
-          "contacts": [],
-          "img_url": "data/avatars/parties/129-snk-ed.png"
+          "id": "komunalni-2022-590266-c-860344-p",
+          "name": "Třebíč můj domov",
+          "short_name": "Třebíč můj domov",
+          "abbreviation": "SNK ED+NK",
+          "description": "Třebíč můj domov",
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Děláme to, co říkáme. Pokračujeme v tom, co má smysl."
@@ -393,7 +386,7 @@
       "type": "party",
       "description": "Třebíč Občanům!",
       "short_name": "Třebíč Občanům!",
-      "img_url": "data/avatars/komunalni-2022/590266/komunalni-2022-590266-c-378973-original.jpg",
+      "img_url": "kan-nk",
       "contacts": {
         "web": [
           {
@@ -411,21 +404,26 @@
       },
       "parties": [
         {
-          "id": "party-40",
-          "name": "Klub angažovaných nestraníků",
-          "short_name": "KAN",
-          "abbreviation": "KAN",
-          "description": "Klub angažovaných nestraníků",
-          "contacts": [],
-          "img_url": "data/avatars/parties/40-kan.png"
-        },
-        {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
+          "id": "komunalni-2022-590266-c-378973-p",
+          "name": "Třebíč Občanům!",
+          "short_name": "Třebíč Občanům!",
+          "abbreviation": "KAN+NK",
+          "description": "Třebíč Občanům!",
+          "contacts": {
+            "web": [
+              {
+                "url": "https://trebicobcanum.net/",
+                "label": "web"
+              },
+              {
+                "url": "https://trebicobcanum.net/volebni-program/",
+                "label": "program"
+              }
+            ],
+            "facebook": "https://www.facebook.com/trebicobcanum",
+            "twitter": "https://twitter.com/trebicobcanum",
+            "instagram": "https://www.instagram.com/trebic_obcanum/"
+          }
         }
       ],
       "motto": "Změna, to jsme my! Spokojené bydlení - obchvat Třebíče - transparentní radnice."
@@ -436,19 +434,20 @@
       "type": "party",
       "description": "ANO 2011",
       "short_name": "ANO 2011",
-      "img_url": "data/avatars/komunalni-2022/590266/komunalni-2022-590266-c-505803-original.jpg",
+      "img_url": "ano",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "party-768",
+          "id": "komunalni-2022-590266-c-505803-p",
           "name": "ANO 2011",
-          "short_name": "ANO",
+          "short_name": "ANO 2011",
           "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Pojďte do toho s námi, aby bylo líp."
@@ -459,19 +458,20 @@
       "type": "party",
       "description": "Občané patrioti",
       "short_name": "Občané patrioti",
-      "img_url": "data/avatars/komunalni-2022/590266/komunalni-2022-590266-c-238616-original.jpg",
+      "img_url": "opat",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "party-1022",
+          "id": "komunalni-2022-590266-c-238616-p",
           "name": "Občané patrioti",
-          "short_name": "OPAT",
+          "short_name": "Občané patrioti",
           "abbreviation": "OPAT",
           "description": "Občané patrioti",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1022-opat.png"
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Nekandidujeme proto, abychom si přilepšili, ale abychom  sloužili a pomáhali městu a jeho občanům. Nejsme totiž  politici, jsme patrioti."
@@ -488,21 +488,14 @@
       },
       "parties": [
         {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
-        },
-        {
-          "id": "party-720",
-          "name": "Česká pirátská strana",
-          "short_name": "Piráti",
-          "abbreviation": "Piráti",
-          "description": "Česká pirátská strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/720-pirati.svg"
+          "id": "komunalni-2022-590266-c-543213-p",
+          "name": "PIRÁTI A NEZÁVISLÍ",
+          "short_name": "PIRÁTI A NEZÁVISLÍ",
+          "abbreviation": "Piráti+NK",
+          "description": "PIRÁTI A NEZÁVISLÍ",
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Máme odvahu oživit Třebíč."
@@ -519,13 +512,14 @@
       },
       "parties": [
         {
-          "id": "party-1",
+          "id": "komunalni-2022-590266-c-763579-p",
           "name": "KDU-ČSL",
           "short_name": "KDU-ČSL",
           "abbreviation": "KDU-ČSL",
           "description": "KDU-ČSL",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ]
     },
@@ -541,21 +535,14 @@
       },
       "parties": [
         {
-          "id": "party-7",
-          "name": "Česká strana sociálně demokratická",
-          "short_name": "ČSSD",
-          "abbreviation": "ČSSD",
-          "description": "Česká strana sociálně demokratická",
-          "contacts": [],
-          "img_url": "data/avatars/parties/7-cssd-2020.png"
-        },
-        {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
+          "id": "komunalni-2022-590266-c-160320-p",
+          "name": "TSD - Třebíč sociálně demokratická",
+          "short_name": "TSD-Třebíč sociálně demokrat.",
+          "abbreviation": "ČSSD+NK",
+          "description": "TSD - Třebíč sociálně demokratická",
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Naše motto je spokojený občan ve zdravém městě."
@@ -572,13 +559,14 @@
       },
       "parties": [
         {
-          "id": "party-47",
+          "id": "komunalni-2022-590266-c-875906-p",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "KSČM",
+          "short_name": "Komunistická str.Čech a Moravy",
           "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": [],
-          "img_url": "data/avatars/parties/47-kscm.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ]
     },
@@ -594,21 +582,14 @@
       },
       "parties": [
         {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
-        },
-        {
-          "id": "party-1221",
-          "name": "DOMOV",
-          "short_name": "DOMOV",
-          "abbreviation": "DOMOV",
-          "description": "DOMOV",
-          "contacts": [],
-          "img_url": "data/avatars/parties/08-12-273304840_313019___up-d958-92.jpg"
+          "id": "komunalni-2022-590266-c-900395-p",
+          "name": "Domov pro Třebíč",
+          "short_name": "Domov pro Třebíč",
+          "abbreviation": "DOMOV+NK",
+          "description": "Domov pro Třebíč",
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Náš DOMOV je Třebíč. Ne Brusel, Tchaj-wan, Kyjev"
@@ -619,19 +600,20 @@
       "type": "party",
       "description": "TOP 09",
       "short_name": "TOP 09",
-      "img_url": "data/avatars/komunalni-2022/590266/komunalni-2022-590266-c-711663-original.jpg",
+      "img_url": "top 09",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "party-721",
+          "id": "komunalni-2022-590266-c-711663-p",
           "name": "TOP 09",
           "short_name": "TOP 09",
           "abbreviation": "TOP 09",
           "description": "TOP 09",
-          "contacts": [],
-          "img_url": "data/avatars/parties/721-top09.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Máme vizi: město pro lidi"
@@ -648,22 +630,14 @@
       },
       "parties": [
         {
-          "id": "party-1114",
-          "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "SPD",
-          "abbreviation": "SPD",
-          "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
-        },
-        {
-          "id": "party-1227",
-          "name": "Trikolora",
-          "short_name": "Trikolora",
-          "abbreviation": "Trikolora",
-          "description": "Trikolora",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1227-trikolora-2022.jpg"
+          "id": "komunalni-2022-590266-c-166431-p",
+          "name": "Svoboda a přímá demokracie (SPD) s podporou Trikolory",
+          "short_name": "SPD s podporou Trikolory",
+          "abbreviation": "SPD+Trikolora",
+          "description": "Svoboda a přímá demokracie (SPD) s podporou Trikolory",
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Poctivou prací dokážeme heslo lepší Třebíč dovést ke spokojenosti všech."
@@ -674,27 +648,20 @@
       "type": "party",
       "description": "PRO TŘEBÍČ",
       "short_name": "PRO TŘEBÍČ",
-      "img_url": "data/avatars/komunalni-2022/590266/komunalni-2022-590266-c-180898-original.jpg",
+      "img_url": "stan-nk",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
-        },
-        {
-          "id": "party-166",
-          "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAN",
-          "abbreviation": "STAN",
-          "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/166-stan.svg"
+          "id": "komunalni-2022-590266-c-180898-p",
+          "name": "PRO TŘEBÍČ",
+          "short_name": "PRO TŘEBÍČ",
+          "abbreviation": "STAN+NK",
+          "description": "PRO TŘEBÍČ",
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Činy místo slov."
@@ -705,27 +672,20 @@
       "type": "party",
       "description": "Občanská demokratická strana a Ta naše Třebíč",
       "short_name": "ODS a TnT",
-      "img_url": "data/avatars/komunalni-2022/590266/komunalni-2022-590266-c-934440-original.jpg",
+      "img_url": "ods-tnt",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "party-53",
-          "name": "Občanská demokratická strana",
-          "short_name": "ODS",
-          "abbreviation": "ODS",
-          "description": "Občanská demokratická strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
-        },
-        {
-          "id": "party-1025",
-          "name": "Ta naše Třebíč",
-          "short_name": "TnT",
-          "abbreviation": "TnT",
-          "description": "Ta naše Třebíč",
-          "contacts": []
+          "id": "komunalni-2022-590266-c-934440-p",
+          "name": "Občanská demokratická strana a Ta naše Třebíč",
+          "short_name": "ODS a TnT",
+          "abbreviation": "ODS+TnT",
+          "description": "Občanská demokratická strana a Ta naše Třebíč",
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Společně za Třebíč, společně za Vás."
@@ -736,27 +696,20 @@
       "type": "party",
       "description": "Břehy",
       "short_name": "Břehy",
-      "img_url": "data/avatars/komunalni-2022/590266/komunalni-2022-590266-c-589003-original.jpg",
+      "img_url": "zelení-nk",
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "party-5",
-          "name": "Strana zelených",
-          "short_name": "Zelení",
-          "abbreviation": "Zelení",
-          "description": "Strana zelených",
-          "contacts": [],
-          "img_url": "data/avatars/parties/5-strana-zelenych-2022.jpg"
-        },
-        {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
+          "id": "komunalni-2022-590266-c-589003-p",
+          "name": "Břehy",
+          "short_name": "Břehy",
+          "abbreviation": "Zelení+NK",
+          "description": "Břehy",
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Město nedědíme po předcích, půjčujeme si je od svých dětí."

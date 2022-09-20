@@ -8,10 +8,10 @@
     "id": "komunalni-2022",
     "key": "komunalni-2022",
     "name": "Komunální volby 2022",
-    "description": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
+    "description": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
     "instructions": {
       "header": "Zvolte své město",
-      "step_1_1": "K dispozici jsou kalkulačky pro **35** měst České republiky.",
+      "step_1_1": "K dispozici jsou kalkulačky pro **28** měst České republiky.",
       "step_2_1": "\nČeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující\nstrany. Zodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte, jak se strany shodují s Vašimi názory.\n                "
     },
     "from": "2022-09-23T14:00:00",
@@ -368,13 +368,14 @@
       },
       "parties": [
         {
-          "id": "party-768",
+          "id": "komunalni-2022-554481-c-523408-p",
           "name": "ANO 2011",
-          "short_name": "ANO",
+          "short_name": "ANO 2011",
           "abbreviation": "ANO",
           "description": "ANO 2011",
-          "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "S námi bude líp!"
@@ -391,13 +392,14 @@
       },
       "parties": [
         {
-          "id": "party-53",
+          "id": "komunalni-2022-554481-c-357413-p",
           "name": "Občanská demokratická strana",
-          "short_name": "ODS",
+          "short_name": "Občanská demokratická strana",
           "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Zodpovědní, slušní, bez předsedků. Pro společný Cheb."
@@ -408,7 +410,7 @@
       "type": "party",
       "description": "VOLBA PRO MĚSTO CHEB",
       "short_name": "VOLBA PRO MĚSTO CHEB",
-      "img_url": "data/avatars/komunalni-2022/554481/komunalni-2022-554481-c-906107-original.jpg",
+      "img_url": "stan-nk",
       "contacts": {
         "web": [
           {
@@ -420,21 +422,20 @@
       },
       "parties": [
         {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
-        },
-        {
-          "id": "party-166",
-          "name": "STAROSTOVÉ A NEZÁVISLÍ",
-          "short_name": "STAN",
-          "abbreviation": "STAN",
-          "description": "STAROSTOVÉ A NEZÁVISLÍ",
-          "contacts": [],
-          "img_url": "data/avatars/parties/166-stan.svg"
+          "id": "komunalni-2022-554481-c-906107-p",
+          "name": "VOLBA PRO MĚSTO CHEB",
+          "short_name": "VOLBA PRO MĚSTO CHEB",
+          "abbreviation": "STAN+NK",
+          "description": "VOLBA PRO MĚSTO CHEB",
+          "contacts": {
+            "web": [
+              {
+                "url": "http://vpmcheb.cz/",
+                "label": "web"
+              }
+            ],
+            "facebook": "https://www.facebook.com/VPM-Volba-pro-m%C4%9Bsto-1411303629140476"
+          }
         }
       ],
       "motto": "Vylepšujeme Postupně Město - VPM"
@@ -451,13 +452,14 @@
       },
       "parties": [
         {
-          "id": "party-720",
+          "id": "komunalni-2022-554481-c-295770-p",
           "name": "Česká pirátská strana",
-          "short_name": "Piráti",
+          "short_name": "Česká pirátská strana",
           "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
-          "contacts": [],
-          "img_url": "data/avatars/parties/720-pirati.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ]
     },
@@ -473,13 +475,14 @@
       },
       "parties": [
         {
-          "id": "party-47",
+          "id": "komunalni-2022-554481-c-933475-p",
           "name": "Komunistická strana Čech a Moravy",
-          "short_name": "KSČM",
+          "short_name": "Komunistická str.Čech a Moravy",
           "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
-          "contacts": [],
-          "img_url": "data/avatars/parties/47-kscm.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "KSČM je tradiční stranou v městském zastupitelstvu a vždy prosazovala a chránila zájmy obyvatel i města."
@@ -497,13 +500,15 @@
       },
       "parties": [
         {
-          "id": "party-1118",
+          "id": "komunalni-2022-554481-c-261938-p",
           "name": "Volba pro kraj",
-          "short_name": "VOK",
+          "short_name": "Volba pro kraj",
           "abbreviation": "VOK",
           "description": "Volba pro kraj",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1118-vok-2.png"
+          "contacts": {
+            "web": [],
+            "facebook": "https://www.facebook.com/vokcheb/"
+          }
         }
       ],
       "motto": "Vstřícně, Obětavě, Kvalitně, VOK."
@@ -520,13 +525,14 @@
       },
       "parties": [
         {
-          "id": "party-1114",
+          "id": "komunalni-2022-554481-c-668721-p",
           "name": "Svoboda a přímá demokracie (SPD)",
-          "short_name": "SPD",
+          "short_name": "Svoboda a př. demokracie (SPD)",
           "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Lepší budoucnost pro naše město."
@@ -543,21 +549,14 @@
       },
       "parties": [
         {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
-        },
-        {
-          "id": "party-715",
-          "name": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT",
-          "short_name": "DSZ - ZA PRÁVA ZVÍŘAT",
-          "abbreviation": "DSZ - ZA PRÁVA ZVÍŘAT",
-          "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT",
-          "contacts": [],
-          "img_url": "data/avatars/parties/715-dsz.png"
+          "id": "komunalni-2022-554481-c-470199-p",
+          "name": "Demokratická strana zelených – ZA PRÁVA ZVÍŘAT — sdružení DSZ – ZA PRÁVA ZVÍŘAT a NK",
+          "short_name": "DSZ – ZA PRÁVA ZVÍŘAT a NK",
+          "abbreviation": "DSZ+NK",
+          "description": "Demokratická strana zelených – ZA PRÁVA ZVÍŘAT — sdružení DSZ – ZA PRÁVA ZVÍŘAT a NK",
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Nepřehlížejme utrpení zvířat"
@@ -574,39 +573,14 @@
       },
       "parties": [
         {
-          "id": "party-1",
-          "name": "KDU-ČSL",
-          "short_name": "KDU-ČSL",
-          "abbreviation": "KDU-ČSL",
-          "description": "KDU-ČSL",
-          "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
-        },
-        {
-          "id": "party-5",
-          "name": "Strana zelených",
-          "short_name": "Zelení",
-          "abbreviation": "Zelení",
-          "description": "Strana zelených",
-          "contacts": [],
-          "img_url": "data/avatars/parties/5-strana-zelenych-2022.jpg"
-        },
-        {
-          "id": "party-80",
-          "name": "Nezávislý kandidát",
-          "short_name": "nezávislý kandidát",
-          "abbreviation": "nezávislý kandidát",
-          "description": "Nezávislý kandidát",
-          "contacts": []
-        },
-        {
-          "id": "party-721",
-          "name": "TOP 09",
-          "short_name": "TOP 09",
-          "abbreviation": "TOP 09",
-          "description": "TOP 09",
-          "contacts": [],
-          "img_url": "data/avatars/parties/721-top09.svg"
+          "id": "komunalni-2022-554481-c-969613-p",
+          "name": "Koalice pro Cheb",
+          "short_name": "Koalice pro Cheb",
+          "abbreviation": "KDU+Zel+TOP+NK",
+          "description": "Koalice pro Cheb",
+          "contacts": {
+            "web": []
+          }
         }
       ],
       "motto": "Chceme město, které pomáhá svým občanům"
