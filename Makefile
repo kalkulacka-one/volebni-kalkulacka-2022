@@ -26,4 +26,4 @@ generate-data:
 	(cd $(SCHEMAS_DIR); ./validate.sh) && \
 	(cd $(FRONTENT_DIR); npm run parse-data-schema) && \
 	git add $(DATA_DIR) && \
-	git commit -a $(DATA_DIR);
+	git commit -a;
