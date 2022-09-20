@@ -97,7 +97,11 @@ const toggleClick = () => {
     </div>
     <div class="secondary-text">
       <div class="party-wrapper">
-        <BodyText size="medium">{{ candidate?.name }}</BodyText>
+        <BodyText size="medium">{{
+          candidate?.parties?.length
+            ? candidate.parties[0].name
+            : candidate?.name
+        }}</BodyText>
         <!--
         <div
           v-for="(party, i) in candidate?.parties"
