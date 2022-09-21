@@ -66,15 +66,19 @@ const toggleClick = () => {
         :size="order === 1 ? 'extra-large' : 'large'"
         :background-color="`rgb(var(${primaryColor}))`"
       >
-        {{ order }}.
+        <BodyText size="large" color="rgb(var(--color-neutral-fg-inverse))">
+          <strong>{{ order }}.</strong>
+        </BodyText>
       </FilledCircle>
     </div>
     <div class="avatar mobile">
       <FilledCircle
-        :size="order === 1 ? 'large' : 'medium'"
+        :size="order === 1 ? 'medium' : 'small'"
         :background-color="`rgb(var(${primaryColor}))`"
       >
-        {{ order }}.
+        <BodyText size="medium" color="rgb(var(--color-neutral-fg-inverse))">
+          <strong>{{ order }}.</strong>
+        </BodyText>
       </FilledCircle>
     </div>
     <div class="text">
