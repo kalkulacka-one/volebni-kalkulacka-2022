@@ -1,6 +1,13 @@
 @import '@/assets/breakpoints.scss';
 
 *:deep() {
+  // Sizings
+  // -------
+  --sizing-small: 1rem; // ≈ 16 px
+  --sizing-medium: 1.5rem; // ≈ 24 px
+  --sizing-large: 2.5rem; // ≈ 40 px
+  --sizing-extra-large: 3.5rem; // ≈ 56 px
+
   // Spacings
   // --------
   --spacing-pico: 0.0625em;
