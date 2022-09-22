@@ -39,6 +39,7 @@ import ResultShareModal from './ResultShareModal.vue';
 import { getDistrictCode } from '@/common/utils';
 import BodyText from '../../components/design-system/typography/BodyText.vue';
 import ErrorModal from '../../components/ErrorModal.vue';
+import DonateBlock from '../../components/DonateBlock.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -207,6 +208,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
             Opakovaně jsme oslovili všechny kandidáty, ostatní zatím na otázky
             neodpověděli.
           </BodyText>
+          <DonateBlock />
         </StackComponent>
         <template #bottom-bar>
           <ResponsiveWrapper extra-small small>
