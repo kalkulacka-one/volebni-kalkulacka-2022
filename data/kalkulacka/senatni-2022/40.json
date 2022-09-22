@@ -387,7 +387,7 @@
           "abbreviation": "KDU-ČSL",
           "description": "KDU-ČSL",
           "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+          "img_url": "/data/avatars/parties/1-kdu-csl.svg"
         }
       ]
     },
@@ -416,7 +416,7 @@
           "abbreviation": "ČSSD",
           "description": "Česká strana sociálně demokratická",
           "contacts": [],
-          "img_url": "data/avatars/parties/7-cssd-2020.png"
+          "img_url": "/data/avatars/parties/7-cssd-2020.png"
         },
         {
           "id": "party-768",
@@ -425,7 +425,7 @@
           "abbreviation": "ANO",
           "description": "ANO 2011",
           "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "img_url": "/data/avatars/parties/768-ano.svg"
         }
       ]
     },
@@ -456,7 +456,7 @@
           "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
           "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
+          "img_url": "/data/avatars/parties/53-ods.svg"
         }
       ]
     },
@@ -485,7 +485,7 @@
           "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
           "contacts": [],
-          "img_url": "data/avatars/parties/47-kscm.svg"
+          "img_url": "/data/avatars/parties/47-kscm.svg"
         }
       ]
     },
@@ -514,9 +514,10 @@
           "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
           "contacts": [],
-          "img_url": "data/avatars/parties/166-stan.svg"
+          "img_url": "/data/avatars/parties/166-stan.svg"
         }
-      ]
+      ],
+      "img_url": "/data/avatars/senatni-2022/40/senatni-2022-40-c-815996-face.jpg"
     },
     {
       "id": "senatni-2022-40-c-516282",
@@ -537,7 +538,7 @@
           "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
+          "img_url": "/data/avatars/parties/1114-spd.svg"
         }
       ]
     },
@@ -572,10 +573,10 @@
           "abbreviation": "Svobodní",
           "description": "Svobodní",
           "contacts": [],
-          "img_url": "data/avatars/parties/714-svobodni-2022.jpg"
+          "img_url": "/data/avatars/parties/714-svobodni-2022.jpg"
         }
       ],
-      "img_url": "data/avatars/senatni-2022/40/senatni-2022-40-c-353870-face.jpg"
+      "img_url": "/data/avatars/senatni-2022/40/senatni-2022-40-c-353870-face.jpg"
     }
   ],
   "answers": [

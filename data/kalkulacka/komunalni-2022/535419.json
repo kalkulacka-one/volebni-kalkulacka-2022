@@ -362,7 +362,6 @@
       "type": "party",
       "description": "Levicoví občané",
       "short_name": "Levicoví občané",
-      "img_url": "ksčm-nk",
       "contacts": {
         "web": []
       },
@@ -374,7 +373,7 @@
           "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
           "contacts": [],
-          "img_url": "data/avatars/parties/47-kscm.svg"
+          "img_url": "/data/avatars/parties/47-kscm.svg"
         },
         {
           "id": "party-80",
@@ -393,7 +392,6 @@
       "type": "party",
       "description": "ANO 2011 + Volba pro Mladou Boleslav",
       "short_name": "Ano 2011+Volba pro Ml.Boleslav",
-      "img_url": "vpmb-ano",
       "contacts": {
         "web": []
       },
@@ -416,7 +414,6 @@
       "type": "party",
       "description": "Občanská demokratická strana, TOP 09 a nezávislí kandidáti",
       "short_name": "ODS, TOP 09 a nez. Kandidáti",
-      "img_url": "ods-top 09-nk",
       "contacts": {
         "web": [
           {
@@ -433,7 +430,7 @@
           "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
           "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
+          "img_url": "/data/avatars/parties/53-ods.svg"
         },
         {
           "id": "party-80",
@@ -450,7 +447,7 @@
           "abbreviation": "TOP 09",
           "description": "TOP 09",
           "contacts": [],
-          "img_url": "data/avatars/parties/721-top09.svg"
+          "img_url": "/data/avatars/parties/721-top09.svg"
         }
       ]
     },
@@ -460,7 +457,6 @@
       "type": "party",
       "description": "Svoboda a přímá demokracie (SPD)",
       "short_name": "Svoboda a př. demokracie (SPD)",
-      "img_url": "spd",
       "contacts": {
         "web": []
       },
@@ -472,7 +468,7 @@
           "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
+          "img_url": "/data/avatars/parties/1114-spd.svg"
         }
       ]
     },
@@ -482,7 +478,6 @@
       "type": "party",
       "description": "KRÁSNÁ MLADÁ BOLESLAV",
       "short_name": "KRÁSNÁ MLADÁ BOLESLAV",
-      "img_url": "data/avatars/komunalni-2022/535419/komunalni-2022-535419-c-680014-original.jpg",
       "contacts": {
         "web": []
       },
@@ -502,9 +497,10 @@
           "abbreviation": "APB",
           "description": "Aliance pro budoucnost",
           "contacts": [],
-          "img_url": "data/avatars/parties/09-13-159559574_117099___up-d958-55.jpg"
+          "img_url": "/data/avatars/parties/09-13-159559574_117099___up-d958-55.jpg"
         }
-      ]
+      ],
+      "img_url": "/data/avatars/komunalni-2022/535419/komunalni-2022-535419-c-680014-original.jpg"
     },
     {
       "id": "komunalni-2022-535419-c-651475",
@@ -512,7 +508,6 @@
       "type": "party",
       "description": "HLAS PRO BOLESLAV",
       "short_name": "HLAS PRO BOLESLAV",
-      "img_url": "data/avatars/komunalni-2022/535419/komunalni-2022-535419-c-651475-original.jpg",
       "contacts": {
         "web": []
       },
@@ -524,7 +519,7 @@
           "abbreviation": "ČSSD",
           "description": "Česká strana sociálně demokratická",
           "contacts": [],
-          "img_url": "data/avatars/parties/7-cssd-2020.png"
+          "img_url": "/data/avatars/parties/7-cssd-2020.png"
         },
         {
           "id": "party-80",
@@ -535,7 +530,8 @@
           "contacts": []
         }
       ],
-      "motto": "Máme odvahu zajistit pořádek a bezpečí"
+      "motto": "Máme odvahu zajistit pořádek a bezpečí",
+      "img_url": "/data/avatars/komunalni-2022/535419/komunalni-2022-535419-c-651475-original.jpg"
     },
     {
       "id": "komunalni-2022-535419-c-174626",
@@ -543,7 +539,6 @@
       "type": "party",
       "description": "STAROSTOVÉ A NEZÁVISLÍ",
       "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
-      "img_url": "stan",
       "contacts": {
         "web": []
       },
@@ -555,7 +550,7 @@
           "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
           "contacts": [],
-          "img_url": "data/avatars/parties/166-stan.svg"
+          "img_url": "/data/avatars/parties/166-stan.svg"
         }
       ],
       "motto": "Lidi, které znáte"
@@ -566,7 +561,6 @@
       "type": "party",
       "description": "ŠANCE PRO MLADOU BOLESLAV (KOALICE STRANY ZELENÝCH A KDU-ČSL)",
       "short_name": "ŠANCE PRO MB (KDU-ČSL, Zelení)",
-      "img_url": "kdu-čsl-zelení",
       "contacts": {
         "web": []
       },
@@ -578,7 +572,7 @@
           "abbreviation": "KDU-ČSL",
           "description": "KDU-ČSL",
           "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+          "img_url": "/data/avatars/parties/1-kdu-csl.svg"
         },
         {
           "id": "party-5",
@@ -587,7 +581,7 @@
           "abbreviation": "Zelení",
           "description": "Strana zelených",
           "contacts": [],
-          "img_url": "data/avatars/parties/5-strana-zelenych-2022.jpg"
+          "img_url": "/data/avatars/parties/5-strana-zelenych-2022.jpg"
         }
       ],
       "motto": "ŠANCE PRO MLADOU BOLESLAV (Zelení a KDU-ČSL): Na každém nám záleží. My jsme tu pro vás."

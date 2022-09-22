@@ -362,7 +362,6 @@
       "type": "party",
       "description": "HRADEC ROZUMEM",
       "short_name": "HRADEC ROZUMEM",
-      "img_url": "data/avatars/komunalni-2022/569810/komunalni-2022-569810-c-760916-original.jpg",
       "contacts": {
         "web": []
       },
@@ -382,7 +381,7 @@
           "abbreviation": "Svobodní",
           "description": "Svobodní",
           "contacts": [],
-          "img_url": "data/avatars/parties/714-svobodni-2022.jpg"
+          "img_url": "/data/avatars/parties/714-svobodni-2022.jpg"
         },
         {
           "id": "party-1265",
@@ -391,10 +390,11 @@
           "abbreviation": "PRO 2022",
           "description": "Právo Respekt Odbornost",
           "contacts": [],
-          "img_url": "data/avatars/parties/08-11-kgam3hli_400x400___up-d958-50.jpg"
+          "img_url": "/data/avatars/parties/08-11-kgam3hli_400x400___up-d958-50.jpg"
         }
       ],
-      "motto": "Spokojený občan a prosperující město na prvním místě."
+      "motto": "Spokojený občan a prosperující město na prvním místě.",
+      "img_url": "/data/avatars/komunalni-2022/569810/komunalni-2022-569810-c-760916-original.jpg"
     },
     {
       "id": "komunalni-2022-569810-c-244511",
@@ -402,7 +402,6 @@
       "type": "party",
       "description": "Česká strana sociálně demokratická s podporou nezávislých",
       "short_name": "ČSSD s podporou nezávislých",
-      "img_url": "čssd-nk",
       "contacts": {
         "web": []
       },
@@ -414,7 +413,7 @@
           "abbreviation": "ČSSD",
           "description": "Česká strana sociálně demokratická",
           "contacts": [],
-          "img_url": "data/avatars/parties/7-cssd-2020.png"
+          "img_url": "/data/avatars/parties/7-cssd-2020.png"
         },
         {
           "id": "party-80",
@@ -433,7 +432,6 @@
       "type": "party",
       "description": "ROMA LUMA",
       "short_name": "ROMA LUMA",
-      "img_url": "luma",
       "contacts": {
         "web": []
       },
@@ -455,7 +453,6 @@
       "type": "party",
       "description": "HRADEČÁCI",
       "short_name": "HRADEČÁCI",
-      "img_url": "data/avatars/komunalni-2022/569810/komunalni-2022-569810-c-748887-original.jpg",
       "contacts": {
         "web": []
       },
@@ -469,7 +466,8 @@
           "contacts": []
         }
       ],
-      "motto": "Město lidem"
+      "motto": "Město lidem",
+      "img_url": "/data/avatars/komunalni-2022/569810/komunalni-2022-569810-c-748887-original.jpg"
     },
     {
       "id": "komunalni-2022-569810-c-841188",
@@ -477,7 +475,6 @@
       "type": "party",
       "description": "Svoboda a přímá demokracie (SPD)",
       "short_name": "Svoboda a př. demokracie (SPD)",
-      "img_url": "data/avatars/komunalni-2022/569810/komunalni-2022-569810-c-841188-original.jpg",
       "contacts": {
         "web": []
       },
@@ -489,10 +486,11 @@
           "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
+          "img_url": "/data/avatars/parties/1114-spd.svg"
         }
       ],
-      "motto": "Chceme bezpečí, krásu a prosperitu pro naše město. "
+      "motto": "Chceme bezpečí, krásu a prosperitu pro naše město. ",
+      "img_url": "/data/avatars/komunalni-2022/569810/komunalni-2022-569810-c-841188-original.jpg"
     },
     {
       "id": "komunalni-2022-569810-c-813906",
@@ -500,7 +498,6 @@
       "type": "party",
       "description": "Hradečtí kantoři a Nestraníci",
       "short_name": "Hradečtí kantoři a Nestraníci",
-      "img_url": "data/avatars/komunalni-2022/569810/komunalni-2022-569810-c-813906-original.jpg",
       "contacts": {
         "web": []
       },
@@ -522,7 +519,8 @@
           "contacts": []
         }
       ],
-      "motto": "Hradečtí kantoři a Nestraníci = Hradec Králové nově"
+      "motto": "Hradečtí kantoři a Nestraníci = Hradec Králové nově",
+      "img_url": "/data/avatars/komunalni-2022/569810/komunalni-2022-569810-c-813906-original.jpg"
     },
     {
       "id": "komunalni-2022-569810-c-938535",
@@ -530,7 +528,6 @@
       "type": "party",
       "description": "STAROSTOVÉ A NEZÁVISLÍ",
       "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
-      "img_url": "stan",
       "contacts": {
         "web": [
           {
@@ -554,7 +551,7 @@
           "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
           "contacts": [],
-          "img_url": "data/avatars/parties/166-stan.svg"
+          "img_url": "/data/avatars/parties/166-stan.svg"
         }
       ],
       "motto": "Otevřená radnice, komunikace, naslouchání občanům, Občan jako partner města"
@@ -565,7 +562,6 @@
       "type": "party",
       "description": "Hradecký demokratický klub a TOP 09 s podporou Hradeckých patriotů a LES",
       "short_name": "HDK a TOP 09 s podp. HP a LES",
-      "img_url": "top-les-hp-hdk",
       "contacts": {
         "web": [
           {
@@ -588,7 +584,7 @@
           "abbreviation": "TOP 09",
           "description": "TOP 09",
           "contacts": [],
-          "img_url": "data/avatars/parties/721-top09.svg"
+          "img_url": "/data/avatars/parties/721-top09.svg"
         },
         {
           "id": "party-795",
@@ -597,7 +593,7 @@
           "abbreviation": "LES",
           "description": "Liberálně ekologická strana",
           "contacts": [],
-          "img_url": "data/avatars/parties/795-les.png"
+          "img_url": "/data/avatars/parties/795-les.png"
         },
         {
           "id": "party-1016",
@@ -614,7 +610,7 @@
           "abbreviation": "HDK",
           "description": "Hradecký demokratický klub",
           "contacts": [],
-          "img_url": "data/avatars/parties/1049-hdk.png"
+          "img_url": "/data/avatars/parties/1049-hdk.png"
         }
       ],
       "motto": "Jasná a moderní vize, jak proměnit Hradec v lepší místo pro život."
@@ -625,7 +621,6 @@
       "type": "party",
       "description": "Změna pro Hradec a Zelení",
       "short_name": "Změna pro Hradec a Zelení",
-      "img_url": "data/avatars/komunalni-2022/569810/komunalni-2022-569810-c-956549-original.jpg",
       "contacts": {
         "web": [
           {
@@ -643,7 +638,7 @@
           "abbreviation": "Zelení",
           "description": "Strana zelených",
           "contacts": [],
-          "img_url": "data/avatars/parties/5-strana-zelenych-2022.jpg"
+          "img_url": "/data/avatars/parties/5-strana-zelenych-2022.jpg"
         },
         {
           "id": "party-80",
@@ -654,7 +649,8 @@
           "contacts": []
         }
       ],
-      "motto": "Jsme kandidátka pro otevřené, zelené, bezpečné, kulturní a vzdělané město "
+      "motto": "Jsme kandidátka pro otevřené, zelené, bezpečné, kulturní a vzdělané město ",
+      "img_url": "/data/avatars/komunalni-2022/569810/komunalni-2022-569810-c-956549-original.jpg"
     },
     {
       "id": "komunalni-2022-569810-c-589869",
@@ -662,7 +658,6 @@
       "type": "party",
       "description": "Komunistická strana Čech a Moravy",
       "short_name": "Komunistická str.Čech a Moravy",
-      "img_url": "ksčm",
       "contacts": {
         "web": []
       },
@@ -674,7 +669,7 @@
           "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
           "contacts": [],
-          "img_url": "data/avatars/parties/47-kscm.svg"
+          "img_url": "/data/avatars/parties/47-kscm.svg"
         }
       ]
     },
@@ -684,7 +679,6 @@
       "type": "party",
       "description": "ANO 2011",
       "short_name": "ANO 2011",
-      "img_url": "ano",
       "contacts": {
         "web": []
       },
@@ -696,7 +690,7 @@
           "abbreviation": "ANO",
           "description": "ANO 2011",
           "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "img_url": "/data/avatars/parties/768-ano.svg"
         }
       ],
       "motto": "Chceme řešit obyčejné věci na něž Hradečáci denně narážejí."
@@ -707,7 +701,6 @@
       "type": "party",
       "description": "Občanská demokratická strana",
       "short_name": "Občanská demokratická strana",
-      "img_url": "ods",
       "contacts": {
         "web": []
       },
@@ -719,7 +712,7 @@
           "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
           "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
+          "img_url": "/data/avatars/parties/53-ods.svg"
         }
       ],
       "motto": "Podpora všemu smysluplnému, ale realistickému s ohledem na rozpočet města"
@@ -730,7 +723,6 @@
       "type": "party",
       "description": "ROZVÍJÍME HRADEC - NOVÁ HRADECKÁ OBČANSKÁ KANDIDÁTKA",
       "short_name": "ROZVÍJÍME HRADEC - NOVÁ H.O.K.",
-      "img_url": "data/avatars/komunalni-2022/569810/komunalni-2022-569810-c-803953-original.jpg",
       "contacts": {
         "web": [
           {
@@ -758,7 +750,8 @@
           "contacts": []
         }
       ],
-      "motto": "Kvalitní kandidáti se zkušenostmi, pevnými názory a moderními vizemi pro město"
+      "motto": "Kvalitní kandidáti se zkušenostmi, pevnými názory a moderními vizemi pro město",
+      "img_url": "/data/avatars/komunalni-2022/569810/komunalni-2022-569810-c-803953-original.jpg"
     },
     {
       "id": "komunalni-2022-569810-c-982677",
@@ -766,7 +759,6 @@
       "type": "party",
       "description": "Česká pirátská strana",
       "short_name": "Česká pirátská strana",
-      "img_url": "piráti",
       "contacts": {
         "web": []
       },
@@ -778,7 +770,7 @@
           "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
           "contacts": [],
-          "img_url": "data/avatars/parties/720-pirati.svg"
+          "img_url": "/data/avatars/parties/720-pirati.svg"
         }
       ],
       "motto": "Piráti mají odvahu dělat, co je správné."
@@ -789,7 +781,6 @@
       "type": "party",
       "description": "Koalice pro Hradec",
       "short_name": "Koalice pro Hradec",
-      "img_url": "data/avatars/komunalni-2022/569810/komunalni-2022-569810-c-278614-original.jpg",
       "contacts": {
         "web": [],
         "twitter": "https://twitter.com/koaliceHK"
@@ -802,7 +793,7 @@
           "abbreviation": "KDU-ČSL",
           "description": "KDU-ČSL",
           "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+          "img_url": "/data/avatars/parties/1-kdu-csl.svg"
         },
         {
           "id": "party-80",
@@ -813,7 +804,8 @@
           "contacts": []
         }
       ],
-      "motto": "Hradec pro všechny, všichni pro Hradec."
+      "motto": "Hradec pro všechny, všichni pro Hradec.",
+      "img_url": "/data/avatars/komunalni-2022/569810/komunalni-2022-569810-c-278614-original.jpg"
     }
   ],
   "answers": [

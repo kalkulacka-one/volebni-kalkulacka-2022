@@ -362,7 +362,6 @@
       "type": "party",
       "description": "ANO 2011",
       "short_name": "ANO 2011",
-      "img_url": "ano",
       "contacts": {
         "web": []
       },
@@ -374,7 +373,7 @@
           "abbreviation": "ANO",
           "description": "ANO 2011",
           "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "img_url": "/data/avatars/parties/768-ano.svg"
         }
       ],
       "motto": "Nestačí jen kritizovat nebo stát stranou, je třeba něco dělat."
@@ -385,7 +384,6 @@
       "type": "party",
       "description": "Tábor 2020",
       "short_name": "Tábor 2020",
-      "img_url": "t2020",
       "contacts": {
         "web": [
           {
@@ -410,7 +408,7 @@
           "abbreviation": "T2020",
           "description": "Tábor 2020",
           "contacts": [],
-          "img_url": "data/avatars/parties/136-tabor2020.jpg"
+          "img_url": "/data/avatars/parties/136-tabor2020.jpg"
         }
       ]
     },
@@ -420,7 +418,6 @@
       "type": "party",
       "description": "Česká pirátská strana",
       "short_name": "Česká pirátská strana",
-      "img_url": "piráti",
       "contacts": {
         "web": [
           {
@@ -437,7 +434,7 @@
           "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
           "contacts": [],
-          "img_url": "data/avatars/parties/720-pirati.svg"
+          "img_url": "/data/avatars/parties/720-pirati.svg"
         }
       ],
       "motto": "Odvaha dělat věci správně."
@@ -448,7 +445,6 @@
       "type": "party",
       "description": "ŠANCE pro TÁBOR (ČSSD, SPD, KSČM, nezávislí)",
       "short_name": "ŠANCE pro TÁBOR",
-      "img_url": "čssdksčmspdnk",
       "contacts": {
         "web": []
       },
@@ -460,7 +456,7 @@
           "abbreviation": "ČSSD",
           "description": "Česká strana sociálně demokratická",
           "contacts": [],
-          "img_url": "data/avatars/parties/7-cssd-2020.png"
+          "img_url": "/data/avatars/parties/7-cssd-2020.png"
         },
         {
           "id": "party-47",
@@ -469,7 +465,7 @@
           "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
           "contacts": [],
-          "img_url": "data/avatars/parties/47-kscm.svg"
+          "img_url": "/data/avatars/parties/47-kscm.svg"
         },
         {
           "id": "party-80",
@@ -486,7 +482,7 @@
           "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
+          "img_url": "/data/avatars/parties/1114-spd.svg"
         }
       ]
     },
@@ -496,7 +492,6 @@
       "type": "party",
       "description": "SPOLEČNĚ PRO TÁBOR",
       "short_name": "SPOLEČNĚ PRO TÁBOR",
-      "img_url": "ods-top 09",
       "contacts": {
         "web": [
           {
@@ -513,7 +508,7 @@
           "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
           "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
+          "img_url": "/data/avatars/parties/53-ods.svg"
         },
         {
           "id": "party-721",
@@ -522,7 +517,7 @@
           "abbreviation": "TOP 09",
           "description": "TOP 09",
           "contacts": [],
-          "img_url": "data/avatars/parties/721-top09.svg"
+          "img_url": "/data/avatars/parties/721-top09.svg"
         }
       ]
     },
@@ -532,7 +527,6 @@
       "type": "party",
       "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK",
       "short_name": "DSZ - ZA PRÁVA ZVÍŘAT a NK",
-      "img_url": "dsz-nk",
       "contacts": {
         "web": []
       },
@@ -552,7 +546,7 @@
           "abbreviation": "DSZ - ZA PRÁVA ZVÍŘAT",
           "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT",
           "contacts": [],
-          "img_url": "data/avatars/parties/715-dsz.png"
+          "img_url": "/data/avatars/parties/715-dsz.png"
         }
       ],
       "motto": "Chráníme zvířata a jejich práva , zvíře není věc."
@@ -563,7 +557,6 @@
       "type": "party",
       "description": "KDU-ČSL a nezávislí kandidáti",
       "short_name": "KDU-ČSL a nezávislí kandidáti",
-      "img_url": "kdu-čsl-nk",
       "contacts": {
         "web": []
       },
@@ -575,7 +568,7 @@
           "abbreviation": "KDU-ČSL",
           "description": "KDU-ČSL",
           "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+          "img_url": "/data/avatars/parties/1-kdu-csl.svg"
         },
         {
           "id": "party-80",
@@ -594,7 +587,6 @@
       "type": "party",
       "description": "JiNAK! - sdružení zelených a nezávislých",
       "short_name": "Sdružení Zelení, NK",
-      "img_url": "data/avatars/komunalni-2022/552046/komunalni-2022-552046-c-706920-original.jpg",
       "contacts": {
         "web": [
           {
@@ -619,7 +611,7 @@
           "abbreviation": "Zelení",
           "description": "Strana zelených",
           "contacts": [],
-          "img_url": "data/avatars/parties/5-strana-zelenych-2022.jpg"
+          "img_url": "/data/avatars/parties/5-strana-zelenych-2022.jpg"
         },
         {
           "id": "party-80",
@@ -630,7 +622,8 @@
           "contacts": []
         }
       ],
-      "motto": "Kulturně, otevřeně, solidárně, udržitelně!"
+      "motto": "Kulturně, otevřeně, solidárně, udržitelně!",
+      "img_url": "/data/avatars/komunalni-2022/552046/komunalni-2022-552046-c-706920-original.jpg"
     },
     {
       "id": "komunalni-2022-552046-c-892184",
@@ -638,7 +631,6 @@
       "type": "party",
       "description": "TÁBOR - NÁŠ DOMOV",
       "short_name": "TÁBOR - NÁŠ DOMOV",
-      "img_url": "data/avatars/komunalni-2022/552046/komunalni-2022-552046-c-892184-original.jpg",
       "contacts": {
         "web": [
           {
@@ -664,9 +656,10 @@
           "abbreviation": "DOMOV",
           "description": "DOMOV",
           "contacts": [],
-          "img_url": "data/avatars/parties/08-12-273304840_313019___up-d958-92.jpg"
+          "img_url": "/data/avatars/parties/08-12-273304840_313019___up-d958-92.jpg"
         }
-      ]
+      ],
+      "img_url": "/data/avatars/komunalni-2022/552046/komunalni-2022-552046-c-892184-original.jpg"
     }
   ],
   "answers": [

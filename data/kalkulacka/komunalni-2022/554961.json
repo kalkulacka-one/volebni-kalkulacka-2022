@@ -362,7 +362,6 @@
       "type": "party",
       "description": "ANO 2011",
       "short_name": "ANO 2011",
-      "img_url": "ano",
       "contacts": {
         "web": []
       },
@@ -374,7 +373,7 @@
           "abbreviation": "ANO",
           "description": "ANO 2011",
           "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "img_url": "/data/avatars/parties/768-ano.svg"
         }
       ],
       "motto": "Zájmy občanů jsou pro nás na 1.místě"
@@ -385,7 +384,6 @@
       "type": "party",
       "description": "Česká strana sociálně demokratická",
       "short_name": "Česká str.sociálně demokrat.",
-      "img_url": "čssd",
       "contacts": {
         "web": []
       },
@@ -397,7 +395,7 @@
           "abbreviation": "ČSSD",
           "description": "Česká strana sociálně demokratická",
           "contacts": [],
-          "img_url": "data/avatars/parties/7-cssd-2020.png"
+          "img_url": "/data/avatars/parties/7-cssd-2020.png"
         }
       ]
     },
@@ -407,7 +405,6 @@
       "type": "party",
       "description": "Karlovarská občanská alternativa",
       "short_name": "Karlovar.občanská alternativa",
-      "img_url": "koa",
       "contacts": {
         "web": [
           {
@@ -424,7 +421,7 @@
           "abbreviation": "KOA",
           "description": "Karlovarská občanská alternativa",
           "contacts": [],
-          "img_url": "data/avatars/parties/182-koa.png"
+          "img_url": "/data/avatars/parties/182-koa.png"
         }
       ],
       "motto": "Volební hnutí s názorem, naší předností je nezávislost na lobbistických skupinách"
@@ -435,7 +432,6 @@
       "type": "party",
       "description": "SRDCEM PRO VARY",
       "short_name": "SRDCEM PRO VARY",
-      "img_url": "data/avatars/komunalni-2022/554961/komunalni-2022-554961-c-774329-original.jpg",
       "contacts": {
         "web": []
       },
@@ -455,10 +451,11 @@
           "abbreviation": "SRDCEM PRO ...",
           "description": "SRDCEM PRO ...",
           "contacts": [],
-          "img_url": "data/avatars/parties/08-29-280683022_527062___up-d958-14.jpg"
+          "img_url": "/data/avatars/parties/08-29-280683022_527062___up-d958-14.jpg"
         }
       ],
-      "motto": "SRDCEM PRO VARY"
+      "motto": "SRDCEM PRO VARY",
+      "img_url": "/data/avatars/komunalni-2022/554961/komunalni-2022-554961-c-774329-original.jpg"
     },
     {
       "id": "komunalni-2022-554961-c-762265",
@@ -466,7 +463,6 @@
       "type": "party",
       "description": "Spojené Síly",
       "short_name": "Spojené Síly",
-      "img_url": "bez-ul-pes",
       "contacts": {
         "web": []
       },
@@ -486,7 +482,7 @@
           "abbreviation": "PES",
           "description": "Hnutí PES",
           "contacts": [],
-          "img_url": "data/avatars/parties/otevrene-cesko.jpg"
+          "img_url": "/data/avatars/parties/otevrene-cesko.jpg"
         }
       ]
     },
@@ -496,7 +492,6 @@
       "type": "party",
       "description": "PŘÍSAHA - občanské hnutí Roberta Šlachty, strana Právo Respekt Odbornost a nezávislí kandidáti",
       "short_name": "PŘÍSAHA - občanské hnutí Roberta Šlachty, strana Právo Respekt Odbornost a nezávislí kandidáti",
-      "img_url": "přís-pro2022-nk",
       "contacts": {
         "web": [
           {
@@ -521,7 +516,7 @@
           "abbreviation": "PŘÍSAHA",
           "description": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
           "contacts": [],
-          "img_url": "data/avatars/parties/prisaha-2.png"
+          "img_url": "/data/avatars/parties/prisaha-2.png"
         },
         {
           "id": "party-1265",
@@ -530,7 +525,7 @@
           "abbreviation": "PRO 2022",
           "description": "Právo Respekt Odbornost",
           "contacts": [],
-          "img_url": "data/avatars/parties/08-11-kgam3hli_400x400___up-d958-50.jpg"
+          "img_url": "/data/avatars/parties/08-11-kgam3hli_400x400___up-d958-50.jpg"
         }
       ],
       "motto": "Vzkřísíme veterinární pohotovost, která pět let nikoho nezajímala. "
@@ -541,7 +536,6 @@
       "type": "party",
       "description": "STAROSTOVÉ A NEZÁVISLÍ",
       "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
-      "img_url": "stan",
       "contacts": {
         "web": []
       },
@@ -553,7 +547,7 @@
           "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
           "contacts": [],
-          "img_url": "data/avatars/parties/166-stan.svg"
+          "img_url": "/data/avatars/parties/166-stan.svg"
         }
       ],
       "motto": "Jsme nová energie města. Chceme Vary živé, moderní a soběstačné."
@@ -564,7 +558,6 @@
       "type": "party",
       "description": "SPOLU (ODS, KDU-ČSL, TOP 09)",
       "short_name": "SPOLU (ODS, KDU-ČSL, TOP 09)",
-      "img_url": "data/avatars/komunalni-2022/554961/komunalni-2022-554961-c-838041-original.png",
       "contacts": {
         "web": [],
         "facebook": "https://www.facebook.com/vanecek.jiri73/"
@@ -577,7 +570,7 @@
           "abbreviation": "KDU-ČSL",
           "description": "KDU-ČSL",
           "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+          "img_url": "/data/avatars/parties/1-kdu-csl.svg"
         },
         {
           "id": "party-53",
@@ -586,7 +579,7 @@
           "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
           "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
+          "img_url": "/data/avatars/parties/53-ods.svg"
         },
         {
           "id": "party-721",
@@ -595,10 +588,11 @@
           "abbreviation": "TOP 09",
           "description": "TOP 09",
           "contacts": [],
-          "img_url": "data/avatars/parties/721-top09.svg"
+          "img_url": "/data/avatars/parties/721-top09.svg"
         }
       ],
-      "motto": "SPOLU - vime, co chceme a víme, jak toho dosáhnou"
+      "motto": "SPOLU - vime, co chceme a víme, jak toho dosáhnou",
+      "img_url": "/data/avatars/komunalni-2022/554961/komunalni-2022-554961-c-838041-original.png"
     },
     {
       "id": "komunalni-2022-554961-c-478898",
@@ -606,7 +600,6 @@
       "type": "party",
       "description": "Trikolora",
       "short_name": "Trikolora",
-      "img_url": "trikolora",
       "contacts": {
         "web": []
       },
@@ -618,7 +611,7 @@
           "abbreviation": "Trikolora",
           "description": "Trikolora",
           "contacts": [],
-          "img_url": "data/avatars/parties/1227-trikolora-2022.jpg"
+          "img_url": "/data/avatars/parties/1227-trikolora-2022.jpg"
         }
       ]
     },
@@ -628,7 +621,6 @@
       "type": "party",
       "description": "Komunistická strana Čech a Moravy",
       "short_name": "Komunistická str.Čech a Moravy",
-      "img_url": "ksčm",
       "contacts": {
         "web": []
       },
@@ -640,7 +632,7 @@
           "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
           "contacts": [],
-          "img_url": "data/avatars/parties/47-kscm.svg"
+          "img_url": "/data/avatars/parties/47-kscm.svg"
         }
       ],
       "motto": "Město v zájmu jeho občanů"
@@ -651,7 +643,6 @@
       "type": "party",
       "description": "Karlovaráci",
       "short_name": "Karlovaráci",
-      "img_url": "kvc",
       "contacts": {
         "web": [
           {
@@ -673,7 +664,7 @@
           "abbreviation": "KVC",
           "description": "Karlovaráci",
           "contacts": [],
-          "img_url": "data/avatars/parties/1028-karlovaraci.jpg"
+          "img_url": "/data/avatars/parties/1028-karlovaraci.jpg"
         }
       ],
       "motto": "Karlovaráci - žijeme tu s Vámi"
@@ -684,7 +675,6 @@
       "type": "party",
       "description": "Svoboda a přímá demokracie (SPD)",
       "short_name": "Svoboda a př. demokracie (SPD)",
-      "img_url": "spd",
       "contacts": {
         "web": []
       },
@@ -696,7 +686,7 @@
           "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
+          "img_url": "/data/avatars/parties/1114-spd.svg"
         }
       ]
     },
@@ -706,7 +696,6 @@
       "type": "party",
       "description": "Česká pirátská strana",
       "short_name": "Česká pirátská strana",
-      "img_url": "piráti",
       "contacts": {
         "web": [
           {
@@ -728,7 +717,7 @@
           "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
           "contacts": [],
-          "img_url": "data/avatars/parties/720-pirati.svg"
+          "img_url": "/data/avatars/parties/720-pirati.svg"
         }
       ],
       "motto": "\"I ty jsi tohle město!\""

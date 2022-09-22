@@ -362,7 +362,6 @@
       "type": "party",
       "description": "ZNOJEMSKÁ KOALICE ČSSD+KSČM+ZEMANOVCI",
       "short_name": "ZNOJEMSKÁ KOALICE",
-      "img_url": "čssd-ksčm-spoz",
       "contacts": {
         "web": [],
         "facebook": "https://www.facebook.com/KOALICEZnojmo"
@@ -387,7 +386,6 @@
       "type": "party",
       "description": "ANO 2011",
       "short_name": "ANO 2011",
-      "img_url": "ano",
       "contacts": {
         "web": [],
         "facebook": "https://www.facebook.com/znojmobudelip"
@@ -400,7 +398,7 @@
           "abbreviation": "ANO",
           "description": "ANO 2011",
           "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "img_url": "/data/avatars/parties/768-ano.svg"
         }
       ]
     },
@@ -410,7 +408,6 @@
       "type": "party",
       "description": "SPD a nezávislé osobnosti",
       "short_name": "SPD a nezávislé osobnosti",
-      "img_url": "spd-nk",
       "contacts": {
         "web": []
       },
@@ -430,7 +427,7 @@
           "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
+          "img_url": "/data/avatars/parties/1114-spd.svg"
         }
       ]
     },
@@ -440,7 +437,6 @@
       "type": "party",
       "description": "Znojmáci - Znojmo srdcem a rozumem",
       "short_name": "Znojmáci",
-      "img_url": "data/avatars/komunalni-2022/593711/komunalni-2022-593711-c-284183-original.jpg",
       "contacts": {
         "web": [],
         "facebook": "https://www.facebook.com/znojmacisrdcem"
@@ -461,9 +457,10 @@
           "abbreviation": "Svobodní",
           "description": "Svobodní",
           "contacts": [],
-          "img_url": "data/avatars/parties/714-svobodni-2022.jpg"
+          "img_url": "/data/avatars/parties/714-svobodni-2022.jpg"
         }
-      ]
+      ],
+      "img_url": "/data/avatars/komunalni-2022/593711/komunalni-2022-593711-c-284183-original.jpg"
     },
     {
       "id": "komunalni-2022-593711-c-675084",
@@ -471,7 +468,6 @@
       "type": "party",
       "description": "TOP 09",
       "short_name": "TOP 09",
-      "img_url": "top 09",
       "contacts": {
         "web": [],
         "facebook": "https://www.facebook.com/TOP09Znojmo"
@@ -484,7 +480,7 @@
           "abbreviation": "TOP 09",
           "description": "TOP 09",
           "contacts": [],
-          "img_url": "data/avatars/parties/721-top09.svg"
+          "img_url": "/data/avatars/parties/721-top09.svg"
         }
       ],
       "motto": "Chceme, aby se Znojmo stalo TOP adresou pro život."
@@ -495,7 +491,6 @@
       "type": "party",
       "description": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
       "short_name": "PŘÍSAHA Roberta Šlachty",
-      "img_url": "přísaha",
       "contacts": {
         "web": []
       },
@@ -507,7 +502,7 @@
           "abbreviation": "PŘÍSAHA",
           "description": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
           "contacts": [],
-          "img_url": "data/avatars/parties/prisaha-2.png"
+          "img_url": "/data/avatars/parties/prisaha-2.png"
         }
       ]
     },
@@ -517,7 +512,6 @@
       "type": "party",
       "description": "ODS + KDU-ČSL SPOLU",
       "short_name": "ODS + KDU-ČSL SPOLU",
-      "img_url": "kdu-čsl-ods",
       "contacts": {
         "web": [],
         "facebook": "https://www.facebook.com/ODSzaZnojmo"
@@ -542,7 +536,6 @@
       "type": "party",
       "description": "PRO ZNOJMO s podporou Starostů a nezávislých a Moravského zemského hnutí",
       "short_name": "PRO ZNOJMO",
-      "img_url": "stan-mzh-nk",
       "contacts": {
         "web": [],
         "facebook": "https://www.facebook.com/proznojmo"
@@ -563,7 +556,7 @@
           "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
           "contacts": [],
-          "img_url": "data/avatars/parties/166-stan.svg"
+          "img_url": "/data/avatars/parties/166-stan.svg"
         },
         {
           "id": "party-1190",
@@ -572,7 +565,7 @@
           "abbreviation": "MZH",
           "description": "Moravské zemské hnutí",
           "contacts": [],
-          "img_url": "data/avatars/parties/1190-mzh.png"
+          "img_url": "/data/avatars/parties/1190-mzh.png"
         }
       ],
       "motto": "\"Máme klíč k lépe fungujícímu Znojmu\""
@@ -583,7 +576,6 @@
       "type": "party",
       "description": "Naše Znojmo",
       "short_name": "Naše Znojmo",
-      "img_url": "som-nk",
       "contacts": {
         "web": []
       },
@@ -603,7 +595,7 @@
           "abbreviation": "SOM",
           "description": "Starostové a osobnosti pro Moravu",
           "contacts": [],
-          "img_url": "data/avatars/parties/158-starostove-morava.png"
+          "img_url": "/data/avatars/parties/158-starostove-morava.png"
         }
       ],
       "motto": "O naše občany se postaráme. Znojmo je a bude přívětivé město pro život."
@@ -614,7 +606,6 @@
       "type": "party",
       "description": "Česká pirátská strana",
       "short_name": "Česká pirátská strana",
-      "img_url": "data/avatars/komunalni-2022/593711/komunalni-2022-593711-c-132801-original.jpg",
       "contacts": {
         "web": [
           {
@@ -636,10 +627,11 @@
           "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
           "contacts": [],
-          "img_url": "data/avatars/parties/720-pirati.svg"
+          "img_url": "/data/avatars/parties/720-pirati.svg"
         }
       ],
-      "motto": "Máme odvahu dělat, co je správné."
+      "motto": "Máme odvahu dělat, co je správné.",
+      "img_url": "/data/avatars/komunalni-2022/593711/komunalni-2022-593711-c-132801-original.jpg"
     },
     {
       "id": "komunalni-2022-593711-c-186364",
@@ -647,7 +639,6 @@
       "type": "party",
       "description": "DOMOV",
       "short_name": "DOMOV",
-      "img_url": "domov",
       "contacts": {
         "web": []
       },
@@ -659,7 +650,7 @@
           "abbreviation": "DOMOV",
           "description": "DOMOV",
           "contacts": [],
-          "img_url": "data/avatars/parties/08-12-273304840_313019___up-d958-92.jpg"
+          "img_url": "/data/avatars/parties/08-12-273304840_313019___up-d958-92.jpg"
         }
       ],
       "motto": "Chceme radnici bez lží, podvodů a starých politických struktur."

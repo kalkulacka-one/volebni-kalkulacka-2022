@@ -362,7 +362,6 @@
       "type": "party",
       "description": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
       "short_name": "PŘÍSAHA Roberta Šlachty",
-      "img_url": "přísaha",
       "contacts": {
         "web": [
           {
@@ -379,7 +378,7 @@
           "abbreviation": "PŘÍSAHA",
           "description": "PŘÍSAHA - občanské hnutí Roberta Šlachty",
           "contacts": [],
-          "img_url": "data/avatars/parties/prisaha-2.png"
+          "img_url": "/data/avatars/parties/prisaha-2.png"
         }
       ],
       "motto": "Nová síla pro Českou Lípu"
@@ -390,7 +389,6 @@
       "type": "party",
       "description": "Česká strana sociálně demokratická",
       "short_name": "Česká str.sociálně demokrat.",
-      "img_url": "čssd",
       "contacts": {
         "web": []
       },
@@ -402,7 +400,7 @@
           "abbreviation": "ČSSD",
           "description": "Česká strana sociálně demokratická",
           "contacts": [],
-          "img_url": "data/avatars/parties/7-cssd-2020.png"
+          "img_url": "/data/avatars/parties/7-cssd-2020.png"
         }
       ]
     },
@@ -412,7 +410,6 @@
       "type": "party",
       "description": "ŽIVÁ LÍPA",
       "short_name": "ŽIVÁ LÍPA",
-      "img_url": "data/avatars/komunalni-2022/561380/komunalni-2022-561380-c-383029-original.jpg",
       "contacts": {
         "web": [
           {
@@ -439,10 +436,11 @@
           "abbreviation": "SLK",
           "description": "Starostové pro Liberecký kraj",
           "contacts": [],
-          "img_url": "data/avatars/parties/703-starostove-liberecky.png"
+          "img_url": "/data/avatars/parties/703-starostove-liberecky.png"
         }
       ],
-      "motto": "Z České Lípy chceme společně se sousedy vytvořit sebevědomé a atraktivní město s hrdými obyvateli."
+      "motto": "Z České Lípy chceme společně se sousedy vytvořit sebevědomé a atraktivní město s hrdými obyvateli.",
+      "img_url": "/data/avatars/komunalni-2022/561380/komunalni-2022-561380-c-383029-original.jpg"
     },
     {
       "id": "komunalni-2022-561380-c-180415",
@@ -450,7 +448,6 @@
       "type": "party",
       "description": "Česká pirátská strana",
       "short_name": "Česká pirátská strana",
-      "img_url": "data/avatars/komunalni-2022/561380/komunalni-2022-561380-c-180415-original.jpg",
       "contacts": {
         "web": []
       },
@@ -462,10 +459,11 @@
           "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
           "contacts": [],
-          "img_url": "data/avatars/parties/720-pirati.svg"
+          "img_url": "/data/avatars/parties/720-pirati.svg"
         }
       ],
-      "motto": "Máme odvahu dělat, co je správné!"
+      "motto": "Máme odvahu dělat, co je správné!",
+      "img_url": "/data/avatars/komunalni-2022/561380/komunalni-2022-561380-c-180415-original.jpg"
     },
     {
       "id": "komunalni-2022-561380-c-806707",
@@ -473,7 +471,6 @@
       "type": "party",
       "description": "PRO Českou Lípu",
       "short_name": "PRO Českou Lípu",
-      "img_url": "data/avatars/komunalni-2022/561380/komunalni-2022-561380-c-806707-original.jpg",
       "contacts": {
         "web": []
       },
@@ -495,7 +492,8 @@
           "contacts": []
         }
       ],
-      "motto": "Zkušenosti pro vás!"
+      "motto": "Zkušenosti pro vás!",
+      "img_url": "/data/avatars/komunalni-2022/561380/komunalni-2022-561380-c-806707-original.jpg"
     },
     {
       "id": "komunalni-2022-561380-c-905610",
@@ -503,7 +501,6 @@
       "type": "party",
       "description": "DOMOV",
       "short_name": "DOMOV",
-      "img_url": "domov",
       "contacts": {
         "web": []
       },
@@ -515,7 +512,7 @@
           "abbreviation": "DOMOV",
           "description": "DOMOV",
           "contacts": [],
-          "img_url": "data/avatars/parties/08-12-273304840_313019___up-d958-92.jpg"
+          "img_url": "/data/avatars/parties/08-12-273304840_313019___up-d958-92.jpg"
         }
       ],
       "motto": "Jde nám o to, aby se v České Lípě lépe žilo."
@@ -526,7 +523,6 @@
       "type": "party",
       "description": "Trikolora",
       "short_name": "Trikolora",
-      "img_url": "trikolora",
       "contacts": {
         "web": []
       },
@@ -538,7 +534,7 @@
           "abbreviation": "Trikolora",
           "description": "Trikolora",
           "contacts": [],
-          "img_url": "data/avatars/parties/1227-trikolora-2022.jpg"
+          "img_url": "/data/avatars/parties/1227-trikolora-2022.jpg"
         }
       ]
     },
@@ -548,7 +544,6 @@
       "type": "party",
       "description": "Svobodní",
       "short_name": "Svobodní",
-      "img_url": "svobodní",
       "contacts": {
         "web": []
       },
@@ -560,7 +555,7 @@
           "abbreviation": "Svobodní",
           "description": "Svobodní",
           "contacts": [],
-          "img_url": "data/avatars/parties/714-svobodni-2022.jpg"
+          "img_url": "/data/avatars/parties/714-svobodni-2022.jpg"
         }
       ],
       "motto": "Rovná práva a příležitosti pro všechny. Nic v životě není zadarmo."
@@ -571,7 +566,6 @@
       "type": "party",
       "description": "ANO 2011",
       "short_name": "ANO 2011",
-      "img_url": "ano",
       "contacts": {
         "web": []
       },
@@ -583,7 +577,7 @@
           "abbreviation": "ANO",
           "description": "ANO 2011",
           "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "img_url": "/data/avatars/parties/768-ano.svg"
         }
       ]
     },
@@ -593,7 +587,6 @@
       "type": "party",
       "description": "Komunistická strana Čech a Moravy",
       "short_name": "Komunistická str.Čech a Moravy",
-      "img_url": "ksčm",
       "contacts": {
         "web": []
       },
@@ -605,7 +598,7 @@
           "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
           "contacts": [],
-          "img_url": "data/avatars/parties/47-kscm.svg"
+          "img_url": "/data/avatars/parties/47-kscm.svg"
         }
       ]
     },
@@ -615,7 +608,6 @@
       "type": "party",
       "description": "SPOLU",
       "short_name": "SPOLU",
-      "img_url": "data/avatars/komunalni-2022/561380/komunalni-2022-561380-c-253669-original.png",
       "contacts": {
         "web": []
       },
@@ -627,7 +619,7 @@
           "abbreviation": "KDU-ČSL",
           "description": "KDU-ČSL",
           "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+          "img_url": "/data/avatars/parties/1-kdu-csl.svg"
         },
         {
           "id": "party-53",
@@ -636,7 +628,7 @@
           "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
           "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
+          "img_url": "/data/avatars/parties/53-ods.svg"
         },
         {
           "id": "party-721",
@@ -645,10 +637,11 @@
           "abbreviation": "TOP 09",
           "description": "TOP 09",
           "contacts": [],
-          "img_url": "data/avatars/parties/721-top09.svg"
+          "img_url": "/data/avatars/parties/721-top09.svg"
         }
       ],
-      "motto": "Naše město zlepšíme jedině spolu!"
+      "motto": "Naše město zlepšíme jedině spolu!",
+      "img_url": "/data/avatars/komunalni-2022/561380/komunalni-2022-561380-c-253669-original.png"
     },
     {
       "id": "komunalni-2022-561380-c-323053",
@@ -656,7 +649,6 @@
       "type": "party",
       "description": "Svoboda a přímá demokracie (SPD)",
       "short_name": "Svoboda a př. demokracie (SPD)",
-      "img_url": "spd",
       "contacts": {
         "web": [
           {
@@ -673,7 +665,7 @@
           "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
+          "img_url": "/data/avatars/parties/1114-spd.svg"
         }
       ],
       "motto": "Jediná strana, která není poznamenána korupcí."

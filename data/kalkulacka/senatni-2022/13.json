@@ -384,7 +384,7 @@
           "abbreviation": "KDU-ČSL",
           "description": "KDU-ČSL",
           "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+          "img_url": "/data/avatars/parties/1-kdu-csl.svg"
         },
         {
           "id": "party-53",
@@ -393,7 +393,7 @@
           "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
           "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
+          "img_url": "/data/avatars/parties/53-ods.svg"
         },
         {
           "id": "party-136",
@@ -402,7 +402,7 @@
           "abbreviation": "T2020",
           "description": "Tábor 2020",
           "contacts": [],
-          "img_url": "data/avatars/parties/136-tabor2020.jpg"
+          "img_url": "/data/avatars/parties/136-tabor2020.jpg"
         },
         {
           "id": "party-721",
@@ -411,7 +411,7 @@
           "abbreviation": "TOP 09",
           "description": "TOP 09",
           "contacts": [],
-          "img_url": "data/avatars/parties/721-top09.svg"
+          "img_url": "/data/avatars/parties/721-top09.svg"
         }
       ]
     },
@@ -436,9 +436,10 @@
           "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
           "contacts": [],
-          "img_url": "data/avatars/parties/720-pirati.svg"
+          "img_url": "/data/avatars/parties/720-pirati.svg"
         }
-      ]
+      ],
+      "img_url": "/data/avatars/senatni-2022/13/senatni-2022-13-c-203124-face.jpg"
     },
     {
       "id": "senatni-2022-13-c-941147",
@@ -464,10 +465,10 @@
           "abbreviation": "JIH 12",
           "description": "JIHOČEŠI 2012",
           "contacts": [],
-          "img_url": "data/avatars/parties/766-jihocesi.png"
+          "img_url": "/data/avatars/parties/766-jihocesi.png"
         }
       ],
-      "img_url": "data/avatars/senatni-2022/13/senatni-2022-13-c-941147-face.jpg"
+      "img_url": "/data/avatars/senatni-2022/13/senatni-2022-13-c-941147-face.jpg"
     },
     {
       "id": "senatni-2022-13-c-420091",
@@ -502,7 +503,7 @@
           "contacts": []
         }
       ],
-      "img_url": "data/avatars/senatni-2022/13/senatni-2022-13-c-420091-original.jpg"
+      "img_url": "/data/avatars/senatni-2022/13/senatni-2022-13-c-420091-original.jpg"
     },
     {
       "id": "senatni-2022-13-c-940838",
@@ -524,7 +525,7 @@
           "abbreviation": "ANO",
           "description": "ANO 2011",
           "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "img_url": "/data/avatars/parties/768-ano.svg"
         }
       ]
     },
@@ -547,9 +548,10 @@
           "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
           "contacts": [],
-          "img_url": "data/avatars/parties/166-stan.svg"
+          "img_url": "/data/avatars/parties/166-stan.svg"
         }
-      ]
+      ],
+      "img_url": "/data/avatars/senatni-2022/13/senatni-2022-13-c-338969-face.jpg"
     },
     {
       "id": "senatni-2022-13-c-459651",
@@ -576,10 +578,10 @@
           "abbreviation": "Svobodní",
           "description": "Svobodní",
           "contacts": [],
-          "img_url": "data/avatars/parties/714-svobodni-2022.jpg"
+          "img_url": "/data/avatars/parties/714-svobodni-2022.jpg"
         }
       ],
-      "img_url": "data/avatars/senatni-2022/13/senatni-2022-13-c-459651-face.jpg"
+      "img_url": "/data/avatars/senatni-2022/13/senatni-2022-13-c-459651-face.jpg"
     },
     {
       "id": "senatni-2022-13-c-267821",
@@ -601,10 +603,10 @@
           "abbreviation": "ČSSD",
           "description": "Česká strana sociálně demokratická",
           "contacts": [],
-          "img_url": "data/avatars/parties/7-cssd-2020.png"
+          "img_url": "/data/avatars/parties/7-cssd-2020.png"
         }
       ],
-      "img_url": "data/avatars/senatni-2022/13/senatni-2022-13-c-267821-original.jpg"
+      "img_url": "/data/avatars/senatni-2022/13/senatni-2022-13-c-267821-face.jpg"
     },
     {
       "id": "senatni-2022-13-c-545048",
@@ -625,7 +627,7 @@
           "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
+          "img_url": "/data/avatars/parties/1114-spd.svg"
         }
       ]
     }

@@ -362,7 +362,6 @@
       "type": "party",
       "description": "Komunistická strana Čech a Moravy",
       "short_name": "Komunistická str.Čech a Moravy",
-      "img_url": "ksčm",
       "contacts": {
         "web": []
       },
@@ -374,7 +373,7 @@
           "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
           "contacts": [],
-          "img_url": "data/avatars/parties/47-kscm.svg"
+          "img_url": "/data/avatars/parties/47-kscm.svg"
         }
       ]
     },
@@ -384,7 +383,6 @@
       "type": "party",
       "description": "Svoboda a přímá demokracie (SPD) s podporou Trikolory",
       "short_name": "SPD s podporou Trikolory",
-      "img_url": "spd-trikolora",
       "contacts": {
         "web": []
       },
@@ -396,7 +394,7 @@
           "abbreviation": "SPD",
           "description": "Svoboda a přímá demokracie (SPD)",
           "contacts": [],
-          "img_url": "data/avatars/parties/1114-spd.svg"
+          "img_url": "/data/avatars/parties/1114-spd.svg"
         },
         {
           "id": "party-1227",
@@ -405,7 +403,7 @@
           "abbreviation": "Trikolora",
           "description": "Trikolora",
           "contacts": [],
-          "img_url": "data/avatars/parties/1227-trikolora-2022.jpg"
+          "img_url": "/data/avatars/parties/1227-trikolora-2022.jpg"
         }
       ],
       "motto": "Společě můžeme být slyšet, Společně a transparentněarentní"
@@ -416,7 +414,6 @@
       "type": "party",
       "description": "ProMOST",
       "short_name": "ProMOST",
-      "img_url": "promost",
       "contacts": {
         "web": [
           {
@@ -434,7 +431,7 @@
           "abbreviation": "ProMOST",
           "description": "ProMOST",
           "contacts": [],
-          "img_url": "data/avatars/parties/1175-promost.png"
+          "img_url": "/data/avatars/parties/1175-promost.png"
         }
       ]
     },
@@ -444,7 +441,6 @@
       "type": "party",
       "description": "ANO 2011",
       "short_name": "ANO 2011",
-      "img_url": "ano",
       "contacts": {
         "web": []
       },
@@ -456,7 +452,7 @@
           "abbreviation": "ANO",
           "description": "ANO 2011",
           "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "img_url": "/data/avatars/parties/768-ano.svg"
         }
       ],
       "motto": "Budeme spolupracovat ve všech oblastech důležitých pro naše město."
@@ -467,7 +463,6 @@
       "type": "party",
       "description": "Občané městu, město občanům",
       "short_name": "Občané městu, město občanům",
-      "img_url": "ommo",
       "contacts": {
         "web": []
       },
@@ -479,7 +474,7 @@
           "abbreviation": "OMMO",
           "description": "Občané městu, město občanům",
           "contacts": [],
-          "img_url": "data/avatars/parties/09-05-ommo_kruh1-pro-w___up-d958-59.jpg"
+          "img_url": "/data/avatars/parties/09-05-ommo_kruh1-pro-w___up-d958-59.jpg"
         }
       ],
       "motto": "politické hnutí orientované na sociální a ekologický rozměr, akcentující veřejný zájem a odpovědné individuální nasazení"
@@ -490,7 +485,6 @@
       "type": "party",
       "description": "Česká strana sociálně demokratická",
       "short_name": "Česká str.sociálně demokrat.",
-      "img_url": "čssd",
       "contacts": {
         "web": []
       },
@@ -502,7 +496,7 @@
           "abbreviation": "ČSSD",
           "description": "Česká strana sociálně demokratická",
           "contacts": [],
-          "img_url": "data/avatars/parties/7-cssd-2020.png"
+          "img_url": "/data/avatars/parties/7-cssd-2020.png"
         }
       ]
     },
@@ -512,7 +506,6 @@
       "type": "party",
       "description": "ODS a NEZÁVISLÍ",
       "short_name": "ODS a NEZÁVISLÍ",
-      "img_url": "ods-nk",
       "contacts": {
         "web": []
       },
@@ -524,7 +517,7 @@
           "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
           "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
+          "img_url": "/data/avatars/parties/53-ods.svg"
         },
         {
           "id": "party-80",
@@ -543,7 +536,6 @@
       "type": "party",
       "description": "Piráti a Zelení pro Most",
       "short_name": "Piráti a Zelení pro Most",
-      "img_url": "data/avatars/komunalni-2022/567027/komunalni-2022-567027-c-750273-original.jpg",
       "contacts": {
         "web": [
           {
@@ -561,7 +553,7 @@
           "abbreviation": "Zelení",
           "description": "Strana zelených",
           "contacts": [],
-          "img_url": "data/avatars/parties/5-strana-zelenych-2022.jpg"
+          "img_url": "/data/avatars/parties/5-strana-zelenych-2022.jpg"
         },
         {
           "id": "party-720",
@@ -570,10 +562,11 @@
           "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
           "contacts": [],
-          "img_url": "data/avatars/parties/720-pirati.svg"
+          "img_url": "/data/avatars/parties/720-pirati.svg"
         }
       ],
-      "motto": "Máme odvahu měnit Most k lepšímu! Volte č.8! !"
+      "motto": "Máme odvahu měnit Most k lepšímu! Volte č.8! !",
+      "img_url": "/data/avatars/komunalni-2022/567027/komunalni-2022-567027-c-750273-original.jpg"
     },
     {
       "id": "komunalni-2022-567027-c-152154",
@@ -581,7 +574,6 @@
       "type": "party",
       "description": "Sdružení Mostečané Mostu",
       "short_name": "Sdružení Mostečané Mostu",
-      "img_url": "data/avatars/komunalni-2022/567027/komunalni-2022-567027-c-152154-original.jpg",
       "contacts": {
         "web": [
           {
@@ -608,7 +600,8 @@
           "contacts": []
         }
       ],
-      "motto": "Strana, která konečně vyřeší problémové občany."
+      "motto": "Strana, která konečně vyřeší problémové občany.",
+      "img_url": "/data/avatars/komunalni-2022/567027/komunalni-2022-567027-c-152154-original.jpg"
     },
     {
       "id": "komunalni-2022-567027-c-399616",
@@ -616,7 +609,6 @@
       "type": "party",
       "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK",
       "short_name": "DSZ-ZPZ-SDSZ-ZPZaNK",
-      "img_url": "dsz-nk",
       "contacts": {
         "web": []
       },
@@ -636,7 +628,7 @@
           "abbreviation": "DSZ - ZA PRÁVA ZVÍŘAT",
           "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT",
           "contacts": [],
-          "img_url": "data/avatars/parties/715-dsz.png"
+          "img_url": "/data/avatars/parties/715-dsz.png"
         }
       ],
       "motto": "Ať už konečně vládne \"selský\" rozum."

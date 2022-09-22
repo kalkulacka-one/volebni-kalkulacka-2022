@@ -362,7 +362,6 @@
       "type": "party",
       "description": "Česká pirátská strana",
       "short_name": "Česká pirátská strana",
-      "img_url": "piráti",
       "contacts": {
         "web": []
       },
@@ -374,7 +373,7 @@
           "abbreviation": "Piráti",
           "description": "Česká pirátská strana",
           "contacts": [],
-          "img_url": "data/avatars/parties/720-pirati.svg"
+          "img_url": "/data/avatars/parties/720-pirati.svg"
         }
       ],
       "motto": "Naším cílem je obec, kde může každý člověk prožít svůj život svobodně a naplno."
@@ -385,7 +384,6 @@
       "type": "party",
       "description": "Občanská demokratická strana",
       "short_name": "Občanská demokratická strana",
-      "img_url": "ods",
       "contacts": {
         "web": []
       },
@@ -397,7 +395,7 @@
           "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
           "contacts": [],
-          "img_url": "data/avatars/parties/53-ods.svg"
+          "img_url": "/data/avatars/parties/53-ods.svg"
         }
       ],
       "motto": "Strana pro normální, klidný život ve městě"
@@ -408,7 +406,6 @@
       "type": "party",
       "description": "ANO 2011",
       "short_name": "ANO 2011",
-      "img_url": "ano",
       "contacts": {
         "web": []
       },
@@ -420,7 +417,7 @@
           "abbreviation": "ANO",
           "description": "ANO 2011",
           "contacts": [],
-          "img_url": "data/avatars/parties/768-ano.svg"
+          "img_url": "/data/avatars/parties/768-ano.svg"
         }
       ],
       "motto": "Problémy musíme řešit, nikoliv odkládat. "
@@ -431,7 +428,6 @@
       "type": "party",
       "description": "PÍSEK SRDCEM A ROZUMEM = Písek sobě + Svobodní + Písecký patrioti + Trikolora + nezávislí kandidáti: Spojili jsme se…",
       "short_name": "PÍSEK SRDCEM A ROZUMEM",
-      "img_url": "svob-trikol-nk",
       "contacts": {
         "web": [
           {
@@ -475,7 +471,6 @@
       "type": "party",
       "description": "Hlas Písku",
       "short_name": "Hlas Písku",
-      "img_url": "čssd-nk",
       "contacts": {
         "web": []
       },
@@ -487,7 +482,7 @@
           "abbreviation": "ČSSD",
           "description": "Česká strana sociálně demokratická",
           "contacts": [],
-          "img_url": "data/avatars/parties/7-cssd-2020.png"
+          "img_url": "/data/avatars/parties/7-cssd-2020.png"
         },
         {
           "id": "party-80",
@@ -506,7 +501,6 @@
       "type": "party",
       "description": "PRO PÍSEK",
       "short_name": "PRO PÍSEK",
-      "img_url": "top 09-jih 12",
       "contacts": {
         "web": []
       },
@@ -518,7 +512,7 @@
           "abbreviation": "TOP 09",
           "description": "TOP 09",
           "contacts": [],
-          "img_url": "data/avatars/parties/721-top09.svg"
+          "img_url": "/data/avatars/parties/721-top09.svg"
         },
         {
           "id": "party-766",
@@ -527,7 +521,7 @@
           "abbreviation": "JIH 12",
           "description": "JIHOČEŠI 2012",
           "contacts": [],
-          "img_url": "data/avatars/parties/766-jihocesi.png"
+          "img_url": "/data/avatars/parties/766-jihocesi.png"
         }
       ],
       "motto": "Máme skvělý tým - PRO PÍSEK!"
@@ -538,7 +532,6 @@
       "type": "party",
       "description": "Komunistická strana Čech a Moravy",
       "short_name": "Komunistická str.Čech a Moravy",
-      "img_url": "ksčm",
       "contacts": {
         "web": []
       },
@@ -550,7 +543,7 @@
           "abbreviation": "KSČM",
           "description": "Komunistická strana Čech a Moravy",
           "contacts": [],
-          "img_url": "data/avatars/parties/47-kscm.svg"
+          "img_url": "/data/avatars/parties/47-kscm.svg"
         }
       ]
     },
@@ -560,7 +553,6 @@
       "type": "party",
       "description": "Demokratická strana zelených - za práva zvířat a spravedlnost v Písku",
       "short_name": "Za práva zvířat a spravedlnost",
-      "img_url": "dsz-nk",
       "contacts": {
         "web": []
       },
@@ -580,7 +572,7 @@
           "abbreviation": "DSZ - ZA PRÁVA ZVÍŘAT",
           "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT",
           "contacts": [],
-          "img_url": "data/avatars/parties/715-dsz.png"
+          "img_url": "/data/avatars/parties/715-dsz.png"
         }
       ],
       "motto": "Jsme strana s nejvyšším podílem žen, které v zastupitelstvu schází."
@@ -591,7 +583,6 @@
       "type": "party",
       "description": "KDU-ČSL",
       "short_name": "KDU-ČSL",
-      "img_url": "kdu-čsl",
       "contacts": {
         "web": []
       },
@@ -603,7 +594,7 @@
           "abbreviation": "KDU-ČSL",
           "description": "KDU-ČSL",
           "contacts": [],
-          "img_url": "data/avatars/parties/1-kdu-csl.svg"
+          "img_url": "/data/avatars/parties/1-kdu-csl.svg"
         }
       ],
       "motto": "Chceme politiku užitečnou pro všechny, se smysluplnou vizí do budoucna"
@@ -614,7 +605,6 @@
       "type": "party",
       "description": "VAŠE VOLBA",
       "short_name": "VAŠE VOLBA",
-      "img_url": "data/avatars/komunalni-2022/549240/komunalni-2022-549240-c-877605-original.jpg",
       "contacts": {
         "web": [],
         "facebook": "https://www.facebook.com/vasevolbapisek"
@@ -627,7 +617,7 @@
           "abbreviation": "VPM",
           "description": "Volba pro město",
           "contacts": [],
-          "img_url": "data/avatars/parties/113-vpm.png"
+          "img_url": "/data/avatars/parties/113-vpm.png"
         },
         {
           "id": "party-166",
@@ -636,10 +626,11 @@
           "abbreviation": "STAN",
           "description": "STAROSTOVÉ A NEZÁVISLÍ",
           "contacts": [],
-          "img_url": "data/avatars/parties/166-stan.svg"
+          "img_url": "/data/avatars/parties/166-stan.svg"
         }
       ],
-      "motto": "Aby se Vám v Písku dobře žilo"
+      "motto": "Aby se Vám v Písku dobře žilo",
+      "img_url": "/data/avatars/komunalni-2022/549240/komunalni-2022-549240-c-877605-original.jpg"
     }
   ],
   "answers": [
