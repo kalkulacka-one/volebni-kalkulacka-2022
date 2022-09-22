@@ -16,7 +16,7 @@ import ResultCardContacts from './ResultCardContacts.vue';
 import SimpleProgress from '../../components/design-system/indicators/SimpleProgress.vue';
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
 
-import FilledCircle from '@/components/design-system/containers/FilledCircle.vue';
+import AvatarComponent from '@/components/design-system/other/AvatarComponent.vue';
 
 export interface ResultCandidateCardProps {
   order: number;
@@ -62,20 +62,58 @@ const toggleClick = () => {
     padding="small"
   >
     <div class="avatar desktop">
-      <FilledCircle
+      <AvatarComponent
         :size="order === 1 ? 'extra-large' : 'large'"
-        :background-color="`rgb(var(${primaryColor}))`"
+        :background-color="
+          order === 1
+            ? 'rgb(var(--palette-primary-50))'
+            : 'rgb(var(--palette-primary-90))'
+        "
+        :background-image="
+          candidate?.img_url ||
+          (candidate?.parties?.length === 1
+            ? candidate?.parties[0].img_url
+            : undefined)
+        "
       >
-        {{ order }}.
-      </FilledCircle>
+        <BodyText
+          :size="order === 1 ? 'large' : 'medium'"
+          :color="
+            order === 1
+              ? 'rgb(var(--color-neutral-fg-inverse))'
+              : 'rgb(var(--color-neutral-fg))'
+          "
+        >
+          <strong>{{ order }}.</strong>
+        </BodyText>
+      </AvatarComponent>
     </div>
     <div class="avatar mobile">
-      <FilledCircle
-        :size="order === 1 ? 'large' : 'medium'"
-        :background-color="`rgb(var(${primaryColor}))`"
+      <AvatarComponent
+        :size="order === 1 ? 'medium' : 'small'"
+        :background-color="
+          order === 1
+            ? 'rgb(var(--palette-primary-50))'
+            : 'rgb(var(--palette-primary-90))'
+        "
+        :background-image="
+          candidate?.img_url ||
+          (candidate?.parties?.length === 1
+            ? candidate?.parties[0].img_url
+            : undefined)
+        "
       >
-        {{ order }}.
-      </FilledCircle>
+        <BodyText
+          :size="order === 1 ? 'medium' : 'small'"
+          :color="
+            order === 1
+              ? 'rgb(var(--color-neutral-fg-inverse))'
+              : 'rgb(var(--color-neutral-fg))'
+          "
+        >
+          <strong>{{ order }}.</strong>
+        </BodyText>
+      </AvatarComponent>
     </div>
     <div class="text">
       <TitleText class="desktop" tag="p" :size="strong ? 'medium' : 'small'">
@@ -111,7 +149,7 @@ const toggleClick = () => {
           <img
             v-if="party.img_url"
             class="party-logo"
-            :src="party.img_url"
+            :src="`/${party.img_url}`"
             :alt="'nologo'"
           />
           <BodyText size="medium"
@@ -206,7 +244,7 @@ const toggleClick = () => {
   .avatar {
     grid-area: avatar;
     align-self: center;
-    justify-self: left;
+    justify-self: right;
   }
 
   .text {

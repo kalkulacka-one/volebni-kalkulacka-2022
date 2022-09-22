@@ -155,6 +155,7 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
                 answers.filter((answer) => answer.id === question.id)[0].answer
               )
             "
+            color="rgb(var(--color-neutral-fg-inverse))"
           />
         </FilledCircle>
       </div>
@@ -181,6 +182,7 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
                 answer.candidate_id === candidateId &&
                 answer.question_id === question.id
             )[0].answer as string)"
+              color="rgb(var(--color-neutral-fg-inverse))"
             />
           </FilledCircle>
         </div>
