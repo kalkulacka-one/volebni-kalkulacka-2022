@@ -114,7 +114,7 @@ export default {
               </div>
               <div class="divider" />
               <BodyText size="small"
-                >Senátní kalkulačku už vyplnilo přes 40 tisíc lidí.</BodyText
+                >Senátní kalkulačku už vyplnilo přes 25 tisíc lidí.</BodyText
               >
               <ButtonComponent
                 color="primary"
