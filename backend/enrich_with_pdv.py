@@ -33,7 +33,7 @@ def local_path_to_web_path(path: Path, data_dir: Path) -> str:
         ]
     )
 
-    return "/".join(
+    return "/" + "/".join(
         [
             str(data_dir.absolute()).split("/")[-1],
             str(path.absolute())[len(common) + 1 :],
@@ -104,35 +104,53 @@ def extract_face(source: Path, target: Path) -> bool:
         image = cv2.imread(str(source.absolute()))
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-        # Detect faces in the image
-        faces = faceCascade.detectMultiScale(
-            gray,
-            scaleFactor=1.1,
-            minNeighbors=5,
-            minSize=(30, 30)
-            # flags = cv2.CV_HAAR_SCALE_IMAGE
-        )
+        for scale_factor in [1.1, 1.2, 1.4, 0.9]:
+            # Detect faces in the image
+            faces = faceCascade.detectMultiScale(
+                gray,
+                scaleFactor=scale_factor,
+                minNeighbors=5,
+                minSize=(30, 30)
+                # flags = cv2.CV_HAAR_SCALE_IMAGE
+            )
 
-        logger.info("Found %d faces in %s", len(faces), source)
-        if len(faces) != 1:
-            return False
-        (x, y, w, h) = faces[0]
-        left = int(x - 0.2 * w)
-        right = int(x + 1.2 * w)
-        top = int(y - 0.32 * h)
-        bottom = int(y + 1.20 * h)
-        cropped = image[top:bottom, left:right]
-        # based on figma there is 72x72 and 48x48 version
-        new_width = 96
-        new_height = int(1 / ((right - left) / new_width) * (bottom - top))
-        resized = cv2.resize(
-            cropped, (new_height, new_width), interpolation=cv2.INTER_LINEAR
-        )
-        cv2.imwrite(str(target.absolute()), resized)
-        return True
+            logger.info(
+                "Found %d faces in %s with scale factor %f",
+                len(faces),
+                source,
+                scale_factor,
+            )
+            if len(faces) != 1:
+                continue
+            (x, y, w, h) = faces[0]
+            left = int(x - 0.22 * w)
+            right = int(x + 1.22 * w)
+            top = int(y - 0.30 * h)
+            bottom = int(y + 1.14 * h)
+            cropped = image[top:bottom, left:right]
+            # based on figma there is 72x72 and 48x48 version
+            new_width = 96
+            new_height = int(1 / ((right - left) / new_width) * (bottom - top))
+            logger.info(
+                "Face %s extracted: %d,%d => %d, %d (%.3f, %.3f)",
+                source,
+                w,
+                h,
+                new_width,
+                new_height,
+                w / new_width,
+                h / new_height,
+            )
+            resized = cv2.resize(
+                cropped, (new_height, new_width), interpolation=cv2.INTER_LINEAR
+            )
+            cv2.imwrite(str(target.absolute()), resized)
+            return True
     except cv2.error as e:
         logger.error("Cannot generate face from %s, %s", source, e)
         return False
+
+    return False
 
 
 def update_candidate_photo(
@@ -171,13 +189,32 @@ def update_candidate_photo(
         with local_original_path.open("wb") as fh:
             fh.write(response.content)
 
-        if detect_face and not local_face_path.exists():
-            extract_face(local_original_path, local_face_path)
     else:
         logger.info(
             "\t%s - already downloaded from %s",
             local_original_path.absolute(),
             remote_url,
+        )
+
+    if detect_face:
+        if not local_face_path.exists():
+            logger.info(
+                "\t%s - extracting face from %s",
+                local_face_path.absolute(),
+                local_original_path.absolute(),
+            )
+            extract_face(local_original_path, local_face_path)
+        else:
+            logger.info(
+                "\t%s - already extracted face from %s",
+                local_face_path.absolute(),
+                local_original_path.absolute(),
+            )
+    else:
+        logger.info(
+            "\t%s - skipping extracting face from %s",
+            local_face_path.absolute(),
+            local_original_path.absolute(),
         )
 
     # update JSON file
@@ -366,7 +403,7 @@ def process(calculators_dir: Path, data_dir: Path, dir_name: str, parties: DPart
 
         if was_changed:
             with data_file.open("w") as fh:
-                json.dump(data_json, fh, indent=2, ensure_ascii=False, sort_keys=True)
+                json.dump(data_json, fh, indent=2, ensure_ascii=False)
 
 
 def load_parties() -> DParties:
