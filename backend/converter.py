@@ -1039,10 +1039,12 @@ if __name__ == "__main__":
             calculator_dict = generate_calculator_dict(election, district)
             calculator_file = election_root / f"{district.code}.json"
             with calculator_file.open(mode="w", encoding="utf-8") as fh:
-                json.dump(calculator_dict, fh, indent=2, ensure_ascii=False)
+                json.dump(
+                    calculator_dict, fh, indent=2, ensure_ascii=False, sort_keys=True
+                )
                 logger.info("Calculator file stored into %s", calculator_file)
 
     calculators_file = output_root / "calculators.json"
     with calculators_file.open(mode="w", encoding="utf-8") as fh:
-        json.dump(calculators_dict, fh, indent=2, ensure_ascii=False)
+        json.dump(calculators_dict, fh, indent=2, ensure_ascii=False, sort_keys=True)
         logger.info("Index stored into %s", calculators_file)

@@ -366,7 +366,7 @@ def process(calculators_dir: Path, data_dir: Path, dir_name: str, parties: DPart
 
         if was_changed:
             with data_file.open("w") as fh:
-                json.dump(data_json, fh, indent=2, ensure_ascii=False)
+                json.dump(data_json, fh, indent=2, ensure_ascii=False, sort_keys=True)
 
 
 def load_parties() -> DParties:
