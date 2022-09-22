@@ -80,7 +80,8 @@ export default {
                 >
                 <div class="divider" />
                 <BodyText size="small"
-                  >Komunální kalkulačku už vyplnilo přes 100 tisíc lidí.</BodyText
+                  >Komunální kalkulačku už vyplnilo přes 100 tisíc
+                  lidí.</BodyText
                 >
               </div>
               <ButtonComponent
