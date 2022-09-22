@@ -80,7 +80,7 @@ export default {
                 >
                 <div class="divider" />
                 <BodyText size="small"
-                  >Kalkulačku už vyplnilo přes 30 000 lidí.</BodyText
+                  >Komunální kalkulačku už vyplnilo přes 100 tisíc lidí.</BodyText
                 >
               </div>
               <ButtonComponent
@@ -113,7 +113,7 @@ export default {
               </div>
               <div class="divider" />
               <BodyText size="small"
-                >Senátní kalkulačku jsme spustili dnes.</BodyText
+                >Senátní kalkulačku už vyplnilo přes 40 tisíc lidí.</BodyText
               >
               <ButtonComponent
                 color="primary"
