@@ -362,7 +362,6 @@
       "type": "party",
       "description": "ANO 2011",
       "short_name": "ANO 2011",
-      "img_url": "ano",
       "contacts": {
         "web": []
       },
@@ -384,7 +383,6 @@
       "type": "party",
       "description": "Česká pirátská strana",
       "short_name": "Česká pirátská strana",
-      "img_url": "piráti",
       "contacts": {
         "web": []
       },
@@ -407,7 +405,6 @@
       "type": "party",
       "description": "Česká strana sociálně demokratická",
       "short_name": "Česká str.sociálně demokrat.",
-      "img_url": "čssd",
       "contacts": {
         "web": []
       },
@@ -430,7 +427,6 @@
       "type": "party",
       "description": "Komunistická strana Čech a Moravy",
       "short_name": "Komunistická str.Čech a Moravy",
-      "img_url": "ksčm",
       "contacts": {
         "web": []
       },
@@ -453,7 +449,6 @@
       "type": "party",
       "description": "Svoboda a přímá demokracie (SPD)",
       "short_name": "Svoboda a př. demokracie (SPD)",
-      "img_url": "spd",
       "contacts": {
         "web": []
       },
@@ -476,7 +471,6 @@
       "type": "party",
       "description": "SPOLU",
       "short_name": "SPOLU",
-      "img_url": "data/avatars/komunalni-2022/598917/komunalni-2022-598917-c-191723-original.png",
       "contacts": {
         "web": [
           {
@@ -514,7 +508,8 @@
           "img_url": "data/avatars/parties/721-top09.svg"
         }
       ],
-      "motto": "Pojďme spolu změnit město"
+      "motto": "Pojďme spolu změnit město",
+      "img_url": "data/avatars/komunalni-2022/598917/komunalni-2022-598917-c-191723-original.png"
     },
     {
       "id": "komunalni-2022-598917-c-825401",
@@ -522,7 +517,6 @@
       "type": "party",
       "description": "STAROSTOVÉ A NEZÁVISLÍ",
       "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
-      "img_url": "stan",
       "contacts": {
         "web": [
           {

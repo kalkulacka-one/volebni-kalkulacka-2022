@@ -362,7 +362,6 @@
       "type": "party",
       "description": "Česká pirátská strana",
       "short_name": "Česká pirátská strana",
-      "img_url": "piráti",
       "contacts": {
         "web": [
           {
@@ -392,7 +391,6 @@
       "type": "party",
       "description": "Českobudějovičtí ROZUMNĚ NAŠTVANÍ",
       "short_name": "Českobuděj. ROZUMNĚ NAŠTVANÍ",
-      "img_url": "rozumní-nk",
       "contacts": {
         "web": []
       },
@@ -423,7 +421,6 @@
       "type": "party",
       "description": "KSČM fungující Budějce",
       "short_name": "KSČM fungující Budějce",
-      "img_url": "ksčm-nk",
       "contacts": {
         "web": [],
         "facebook": "https://www.facebook.com/OV-KS%C4%8CM-%C4%8Cesk%C3%A9-Bud%C4%9Bjovice-112568740670438/"
@@ -455,7 +452,6 @@
       "type": "party",
       "description": "ČSSD a NEZÁVISLÉ OSOBNOSTI",
       "short_name": "ČSSD a NEZÁVISLÉ OSOBNOSTI",
-      "img_url": "čssd-nk",
       "contacts": {
         "web": []
       },
@@ -486,7 +482,6 @@
       "type": "party",
       "description": "STAROSTOVÉ A NEZÁVISLÍ",
       "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
-      "img_url": "stan",
       "contacts": {
         "web": [
           {
@@ -515,7 +510,6 @@
       "type": "party",
       "description": "OBČANÉ PRO BUDĚJOVICE",
       "short_name": "OBČANÉ PRO BUDĚJOVICE",
-      "img_url": "data/avatars/komunalni-2022/544256/komunalni-2022-544256-c-243110-original.jpg",
       "contacts": {
         "web": [
           {
@@ -554,7 +548,8 @@
           "img_url": "data/avatars/parties/766-jihocesi.png"
         }
       ],
-      "motto": "Nejsilnější nezávislé hnutí ve městě."
+      "motto": "Nejsilnější nezávislé hnutí ve městě.",
+      "img_url": "data/avatars/komunalni-2022/544256/komunalni-2022-544256-c-243110-original.jpg"
     },
     {
       "id": "komunalni-2022-544256-c-721258",
@@ -562,7 +557,6 @@
       "type": "party",
       "description": "ANO 2011",
       "short_name": "ANO 2011",
-      "img_url": "ano",
       "contacts": {
         "web": [],
         "facebook": "https://www.facebook.com/ANO.Budejce"
@@ -586,7 +580,6 @@
       "type": "party",
       "description": "Občanská demokratická strana",
       "short_name": "Občanská demokratická strana",
-      "img_url": "ods",
       "contacts": {
         "web": []
       },
@@ -609,7 +602,6 @@
       "type": "party",
       "description": "KDU-ČSL a TOP 09 - Společně pro Budějovice",
       "short_name": "Společně pro Budějovice",
-      "img_url": "kdu-čsl-top 09",
       "contacts": {
         "web": [],
         "facebook": "https://www.facebook.com/spolecneprocb/"
@@ -642,7 +634,6 @@
       "type": "party",
       "description": "Svoboda a přímá demokracie (SPD)",
       "short_name": "Svoboda a př. demokracie (SPD)",
-      "img_url": "spd",
       "contacts": {
         "web": []
       },
@@ -665,7 +656,6 @@
       "type": "party",
       "description": "Budějce srdcem a rozumem",
       "short_name": "Budějce srdcem a rozumem",
-      "img_url": "data/avatars/komunalni-2022/544256/komunalni-2022-544256-c-135731-original.jpg",
       "contacts": {
         "web": []
       },
@@ -688,7 +678,8 @@
           "img_url": "data/avatars/parties/714-svobodni-2022.jpg"
         }
       ],
-      "motto": "Aby v Českých Budějovicích chtěl žít opět každý!"
+      "motto": "Aby v Českých Budějovicích chtěl žít opět každý!",
+      "img_url": "data/avatars/komunalni-2022/544256/komunalni-2022-544256-c-135731-original.jpg"
     }
   ],
   "answers": [

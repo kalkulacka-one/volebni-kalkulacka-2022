@@ -358,7 +358,7 @@ def extract_komunalni_candidates(
             secret_code=secret_code,
             important=bool(int(row["important"] or "0")),
             type=CandidateType.party,
-            logo=str(row["logo"]) or None,
+            logo=None,  # logo never contains valid value => ignore - str(row["logo"])
             contact=str(row["contact 1"]) or None,
             contact_party=str(row["contact party"]) or None,
             contacts=contacts,
@@ -531,7 +531,7 @@ def extract_senatni_candidates(
             secret_code=secret_code,
             important=bool(int(row["important"] or "0")),
             type=CandidateType.person,
-            logo=str(row["photo"]) or None,
+            logo=None,  # photo never contains valid value => ignore str(row["photo"])
             contact=str(row["contact 1"]) or None,
             contact_party=str(row["contact party"]) or None,
             contacts=contacts,

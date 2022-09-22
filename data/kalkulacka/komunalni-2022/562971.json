@@ -362,7 +362,6 @@
       "type": "party",
       "description": "Moderní společnost",
       "short_name": "Moderní společnost",
-      "img_url": "modes",
       "contacts": {
         "web": []
       },
@@ -383,7 +382,6 @@
       "type": "party",
       "description": "CHOMUTOVSKÁ KOALICE",
       "short_name": "CHOMUTOVSKÁ KOALICE",
-      "img_url": "data/avatars/komunalni-2022/562971/komunalni-2022-562971-c-935978-original.jpg",
       "contacts": {
         "web": [
           {
@@ -416,7 +414,8 @@
           "contacts": []
         }
       ],
-      "motto": "Přišel čas na lepší Chomutov."
+      "motto": "Přišel čas na lepší Chomutov.",
+      "img_url": "data/avatars/komunalni-2022/562971/komunalni-2022-562971-c-935978-original.jpg"
     },
     {
       "id": "komunalni-2022-562971-c-843823",
@@ -424,7 +423,6 @@
       "type": "party",
       "description": "Svoboda a přímá demokracie (SPD) s podporou PRO",
       "short_name": "SPD s podporou PRO",
-      "img_url": "data/avatars/komunalni-2022/562971/komunalni-2022-562971-c-843823-original.jpg",
       "contacts": {
         "web": []
       },
@@ -447,7 +445,8 @@
           "contacts": [],
           "img_url": "data/avatars/parties/08-11-kgam3hli_400x400___up-d958-50.jpg"
         }
-      ]
+      ],
+      "img_url": "data/avatars/komunalni-2022/562971/komunalni-2022-562971-c-843823-original.jpg"
     },
     {
       "id": "komunalni-2022-562971-c-751007",
@@ -455,7 +454,6 @@
       "type": "party",
       "description": "PRO Chomutov",
       "short_name": "PRO Chomutov",
-      "img_url": "data/avatars/komunalni-2022/562971/komunalni-2022-562971-c-751007-original.jpg",
       "contacts": {
         "web": []
       },
@@ -505,7 +503,8 @@
           "img_url": "data/avatars/parties/1126-jsme-pro-kraj.png"
         }
       ],
-      "motto": "PROžít Chomutov společně, spokojeně, férově, v zeleni i na sídlišti."
+      "motto": "PROžít Chomutov společně, spokojeně, férově, v zeleni i na sídlišti.",
+      "img_url": "data/avatars/komunalni-2022/562971/komunalni-2022-562971-c-751007-original.jpg"
     },
     {
       "id": "komunalni-2022-562971-c-684379",
@@ -513,7 +512,6 @@
       "type": "party",
       "description": "ZA BEZPEČNÝ DOMOV",
       "short_name": "ZA BEZPEČNÝ DOMOV",
-      "img_url": "suver-bezul-dom",
       "contacts": {
         "web": [],
         "facebook": "https://www.facebook.com/Paik01"
@@ -553,7 +551,6 @@
       "type": "party",
       "description": "ANO 2011",
       "short_name": "ANO 2011",
-      "img_url": "ano",
       "contacts": {
         "web": []
       },
@@ -576,7 +573,6 @@
       "type": "party",
       "description": "Správná volba PRO Zdraví a Sport",
       "short_name": "Spr. volba PRO Zdraví a Sport",
-      "img_url": "sv pro zs",
       "contacts": {
         "web": []
       },
@@ -597,7 +593,6 @@
       "type": "party",
       "description": "NOVÝ SEVER",
       "short_name": "NOVÝ SEVER",
-      "img_url": "ns",
       "contacts": {
         "web": []
       },
@@ -618,7 +613,6 @@
       "type": "party",
       "description": "Občanská demokratická strana",
       "short_name": "Občanská demokratická strana",
-      "img_url": "ods",
       "contacts": {
         "web": []
       },
@@ -641,7 +635,6 @@
       "type": "party",
       "description": "Komunistická strana Čech a Moravy",
       "short_name": "Komunistická str.Čech a Moravy",
-      "img_url": "ksčm",
       "contacts": {
         "web": []
       },
@@ -663,7 +656,6 @@
       "type": "party",
       "description": "STAROSTOVÉ A NEZÁVISLÍ",
       "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
-      "img_url": "stan",
       "contacts": {
         "web": []
       },

@@ -362,7 +362,6 @@
       "type": "party",
       "description": "Komunistická strana Čech a Moravy",
       "short_name": "Komunistická str.Čech a Moravy",
-      "img_url": "ksčm",
       "contacts": {
         "web": []
       },
@@ -385,7 +384,6 @@
       "type": "party",
       "description": "Malá strana velkých cílů",
       "short_name": "Malá strana velkých cílů",
-      "img_url": "msvc",
       "contacts": {
         "web": []
       },
@@ -406,7 +404,6 @@
       "type": "party",
       "description": "ODS a KDU-ČSL",
       "short_name": "ODS a KDU-ČSL",
-      "img_url": "kdu-čsl-ods",
       "contacts": {
         "web": []
       },
@@ -438,7 +435,6 @@
       "type": "party",
       "description": "Piráti a Fórum Jihlava",
       "short_name": "Piráti a Fórum Jihlava",
-      "img_url": "data/avatars/komunalni-2022/586846/komunalni-2022-586846-c-783999-original.jpg",
       "contacts": {
         "web": [
           {
@@ -471,7 +467,8 @@
           "img_url": "data/avatars/parties/720-pirati.svg"
         }
       ],
-      "motto": "Jsme hrdé srdce Vysočiny."
+      "motto": "Jsme hrdé srdce Vysočiny.",
+      "img_url": "data/avatars/komunalni-2022/586846/komunalni-2022-586846-c-783999-original.jpg"
     },
     {
       "id": "komunalni-2022-586846-c-878763",
@@ -479,7 +476,6 @@
       "type": "party",
       "description": "Jihlava srdcem",
       "short_name": "Jihlava srdcem",
-      "img_url": "data/avatars/komunalni-2022/586846/komunalni-2022-586846-c-878763-original.jpg",
       "contacts": {
         "web": []
       },
@@ -502,7 +498,8 @@
           "img_url": "data/avatars/parties/714-svobodni-2022.jpg"
         }
       ],
-      "motto": "Cítit srdcem, myslet hlavou."
+      "motto": "Cítit srdcem, myslet hlavou.",
+      "img_url": "data/avatars/komunalni-2022/586846/komunalni-2022-586846-c-878763-original.jpg"
     },
     {
       "id": "komunalni-2022-586846-c-516439",
@@ -510,7 +507,6 @@
       "type": "party",
       "description": "Svoboda a přímá demokracie (SPD) s podporou Trikolory",
       "short_name": "SPD s podporou Trikolory",
-      "img_url": "spd-trikolora",
       "contacts": {
         "web": []
       },
@@ -542,7 +538,6 @@
       "type": "party",
       "description": "SPOLEK ZA ZDRAVOU JIHLAVU",
       "short_name": "SPOLEK ZA ZDRAVOU JIHLAVU",
-      "img_url": "data/avatars/komunalni-2022/586846/komunalni-2022-586846-c-900335-original.jpg",
       "contacts": {
         "web": []
       },
@@ -555,7 +550,8 @@
           "description": "SPOLEK ZA ZDRAVOU JIHLAVU",
           "contacts": []
         }
-      ]
+      ],
+      "img_url": "data/avatars/komunalni-2022/586846/komunalni-2022-586846-c-900335-original.jpg"
     },
     {
       "id": "komunalni-2022-586846-c-149398",
@@ -563,7 +559,6 @@
       "type": "party",
       "description": "Žijeme Jihlavou",
       "short_name": "Žijeme Jihlavou",
-      "img_url": "data/avatars/komunalni-2022/586846/komunalni-2022-586846-c-149398-original.jpg",
       "contacts": {
         "web": []
       },
@@ -595,7 +590,8 @@
           "img_url": "data/avatars/parties/721-top09.svg"
         }
       ],
-      "motto": "Jsme volebním uskupením, jenž preferuje odbornost spolupráci a progresivní přístup."
+      "motto": "Jsme volebním uskupením, jenž preferuje odbornost spolupráci a progresivní přístup.",
+      "img_url": "data/avatars/komunalni-2022/586846/komunalni-2022-586846-c-149398-original.jpg"
     },
     {
       "id": "komunalni-2022-586846-c-713735",
@@ -603,7 +599,6 @@
       "type": "party",
       "description": "STAROSTOVÉ A NEZÁVISLÍ KANDIDÁTI",
       "short_name": "STAROSTOVÉ A NK",
-      "img_url": "data/avatars/komunalni-2022/586846/komunalni-2022-586846-c-713735-original.jpg",
       "contacts": {
         "web": []
       },
@@ -626,7 +621,8 @@
           "img_url": "data/avatars/parties/166-stan.svg"
         }
       ],
-      "motto": "Jihlavě nabízíme odborně i lidsky nejpestřejší tým ze všech."
+      "motto": "Jihlavě nabízíme odborně i lidsky nejpestřejší tým ze všech.",
+      "img_url": "data/avatars/komunalni-2022/586846/komunalni-2022-586846-c-713735-original.jpg"
     },
     {
       "id": "komunalni-2022-586846-c-681882",
@@ -634,7 +630,6 @@
       "type": "party",
       "description": "Moravské zemské hnutí",
       "short_name": "Moravské zemské hnutí",
-      "img_url": "mzh",
       "contacts": {
         "web": []
       },
@@ -657,7 +652,6 @@
       "type": "party",
       "description": "ANO 2011",
       "short_name": "ANO 2011",
-      "img_url": "ano",
       "contacts": {
         "web": []
       },
@@ -680,7 +674,6 @@
       "type": "party",
       "description": "ČSSD a Levice",
       "short_name": "ČSSD a Levice",
-      "img_url": "čssd-levice",
       "contacts": {
         "web": []
       },

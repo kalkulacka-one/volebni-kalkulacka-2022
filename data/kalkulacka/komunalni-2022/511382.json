@@ -362,7 +362,6 @@
       "type": "party",
       "description": "ANO 2011",
       "short_name": "ANO 2011",
-      "img_url": "ano",
       "contacts": {
         "web": []
       },
@@ -384,7 +383,6 @@
       "type": "party",
       "description": "Společně pro Přerov - koalice politického hnutí Změna a NEZÁVISLÉ VOLBY",
       "short_name": "Společně pro Přerov",
-      "img_url": "data/avatars/komunalni-2022/511382/komunalni-2022-511382-c-228551-original.jpg",
       "contacts": {
         "web": []
       },
@@ -408,7 +406,8 @@
           "img_url": "data/avatars/parties/771-zmena.png"
         }
       ],
-      "motto": "Naše vize: Přerov, nejlepší město na Hané do roku 2034."
+      "motto": "Naše vize: Přerov, nejlepší město na Hané do roku 2034.",
+      "img_url": "data/avatars/komunalni-2022/511382/komunalni-2022-511382-c-228551-original.jpg"
     },
     {
       "id": "komunalni-2022-511382-c-715671",
@@ -416,7 +415,6 @@
       "type": "party",
       "description": "STAROSTOVÉ A NEZÁVISLÍ",
       "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
-      "img_url": "stan",
       "contacts": {
         "web": []
       },
@@ -439,7 +437,6 @@
       "type": "party",
       "description": "Česká strana sociálně demokratická",
       "short_name": "Česká str.sociálně demokrat.",
-      "img_url": "čssd",
       "contacts": {
         "web": []
       },
@@ -462,7 +459,6 @@
       "type": "party",
       "description": "Svoboda a přímá demokracie (SPD)",
       "short_name": "Svoboda a př. demokracie (SPD)",
-      "img_url": "spd",
       "contacts": {
         "web": []
       },
@@ -484,7 +480,6 @@
       "type": "party",
       "description": "Za prosperitu města Přerova a jeho místních částí",
       "short_name": "Za prosperitu města Přerova",
-      "img_url": "data/avatars/komunalni-2022/511382/komunalni-2022-511382-c-516200-original.jpg",
       "contacts": {
         "web": []
       },
@@ -506,7 +501,8 @@
           "contacts": [],
           "img_url": "data/avatars/parties/88-nez.png"
         }
-      ]
+      ],
+      "img_url": "data/avatars/komunalni-2022/511382/komunalni-2022-511382-c-516200-original.jpg"
     },
     {
       "id": "komunalni-2022-511382-c-608981",
@@ -514,7 +510,6 @@
       "type": "party",
       "description": "Komunistická strana Čech a Moravy",
       "short_name": "Komunistická str.Čech a Moravy",
-      "img_url": "ksčm",
       "contacts": {
         "web": []
       },
@@ -537,7 +532,6 @@
       "type": "party",
       "description": "Pomáháme městu - ODS a nezávislé osobnosti",
       "short_name": "Pomáháme městu - ODS a nez.os.",
-      "img_url": "ods-nk",
       "contacts": {
         "web": []
       },
@@ -567,7 +561,6 @@
       "type": "party",
       "description": "Srdce Přerova",
       "short_name": "Srdce Přerova",
-      "img_url": "data/avatars/komunalni-2022/511382/komunalni-2022-511382-c-636621-original.jpg",
       "contacts": {
         "web": []
       },
@@ -590,7 +583,8 @@
           "img_url": "data/avatars/parties/716-sscr-n.jpg"
         }
       ],
-      "motto": "politika jako služba, ne šikana. "
+      "motto": "politika jako služba, ne šikana. ",
+      "img_url": "data/avatars/komunalni-2022/511382/komunalni-2022-511382-c-636621-original.jpg"
     },
     {
       "id": "komunalni-2022-511382-c-757784",
@@ -598,7 +592,6 @@
       "type": "party",
       "description": "Piráti - ODVAHA ZMĚNIT PŘEROV",
       "short_name": "Piráti - ODVAHA ZMĚNIT PŘEROV",
-      "img_url": "piráti-nk",
       "contacts": {
         "web": [
           {
@@ -635,7 +628,6 @@
       "type": "party",
       "description": "KDU-ČSL a TOP 09",
       "short_name": "KDU-ČSL a TOP 09",
-      "img_url": "kdu-čsl-top 09",
       "contacts": {
         "web": []
       },

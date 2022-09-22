@@ -362,7 +362,6 @@
       "type": "party",
       "description": "ANO 2011",
       "short_name": "ANO 2011",
-      "img_url": "ano",
       "contacts": {
         "web": []
       },
@@ -384,7 +383,6 @@
       "type": "party",
       "description": "Svoboda a přímá demokracie (SPD)",
       "short_name": "Svoboda a př. demokracie (SPD)",
-      "img_url": "spd",
       "contacts": {
         "web": []
       },
@@ -407,7 +405,6 @@
       "type": "party",
       "description": "Česká pirátská strana",
       "short_name": "Česká pirátská strana",
-      "img_url": "data/avatars/komunalni-2022/539911/komunalni-2022-539911-c-835803-original.jpg",
       "contacts": {
         "web": [
           {
@@ -432,7 +429,8 @@
           "img_url": "data/avatars/parties/720-pirati.svg"
         }
       ],
-      "motto": "Máme odvahu měnit věci, myslíme na mladé! "
+      "motto": "Máme odvahu měnit věci, myslíme na mladé! ",
+      "img_url": "data/avatars/komunalni-2022/539911/komunalni-2022-539911-c-835803-original.jpg"
     },
     {
       "id": "komunalni-2022-539911-c-967823",
@@ -440,7 +438,6 @@
       "type": "party",
       "description": "ČSSD a Přátelé",
       "short_name": "ČSSD a Přátelé",
-      "img_url": "data/avatars/komunalni-2022/539911/komunalni-2022-539911-c-967823-original.jpg",
       "contacts": {
         "web": []
       },
@@ -462,7 +459,8 @@
           "description": "Nezávislý kandidát",
           "contacts": []
         }
-      ]
+      ],
+      "img_url": "data/avatars/komunalni-2022/539911/komunalni-2022-539911-c-967823-original.jpg"
     },
     {
       "id": "komunalni-2022-539911-c-746189",
@@ -470,7 +468,6 @@
       "type": "party",
       "description": "Občanská demokratická strana",
       "short_name": "Občanská demokratická strana",
-      "img_url": "ods",
       "contacts": {
         "web": []
       },
@@ -492,7 +489,6 @@
       "type": "party",
       "description": "KDU-ČSL a nezávislí kandidáti",
       "short_name": "KDU-ČSL a nezávislí kandidáti",
-      "img_url": "kdu-čsl-nk",
       "contacts": {
         "web": [
           {
@@ -528,7 +524,6 @@
       "type": "party",
       "description": "SPOJENCI - TOP 09, STAROSTOVÉ A NEZÁVISLÍ, POLITICKÉ HNUTÍ HLAS, SOS PŘÍBRAM A NEZÁVISLÍ KANDIDÁTI",
       "short_name": "SP-T09,ST,P.H.HL,SOSPŘ, AN.KA.",
-      "img_url": "stan-top-hl-nk",
       "contacts": {
         "web": [],
         "facebook": "https://www.facebook.com/spojencipribram/"
@@ -578,7 +573,6 @@
       "type": "party",
       "description": "Příbramáci pro Příbram a Přísaha - občanské hnutí Roberta Šlachty",
       "short_name": "Příb.p.Příb.aPřís.-obč.hn.R.Š.",
-      "img_url": "snked-přísah-nk",
       "contacts": {
         "web": []
       },
@@ -617,7 +611,6 @@
       "type": "party",
       "description": "PŘÍBRAM 2030 (Nestraníci)",
       "short_name": "PŘÍBRAM 2030 (Nestraníci)",
-      "img_url": "nestraníci-nk",
       "contacts": {
         "web": []
       },
@@ -647,7 +640,6 @@
       "type": "party",
       "description": "Šance pro Příbram",
       "short_name": "Šance pro Příbram",
-      "img_url": "data/avatars/komunalni-2022/539911/komunalni-2022-539911-c-235005-original.jpg",
       "contacts": {
         "web": [
           {
@@ -675,7 +667,8 @@
           "contacts": []
         }
       ],
-      "motto": "Nepropásněte šanci na změnu. Správná volba je na dosah ruky."
+      "motto": "Nepropásněte šanci na změnu. Správná volba je na dosah ruky.",
+      "img_url": "data/avatars/komunalni-2022/539911/komunalni-2022-539911-c-235005-original.jpg"
     },
     {
       "id": "komunalni-2022-539911-c-929443",
@@ -683,7 +676,6 @@
       "type": "party",
       "description": "Komunistická strana Čech a Moravy",
       "short_name": "Komunistická str.Čech a Moravy",
-      "img_url": "ksčm",
       "contacts": {
         "web": []
       },
@@ -706,7 +698,6 @@
       "type": "party",
       "description": "Dělnická strana sociální spravedlnosti",
       "short_name": "Dělnic.str.sociální spravedl.",
-      "img_url": "dsss",
       "contacts": {
         "web": []
       },

@@ -362,7 +362,6 @@
       "type": "party",
       "description": "Svoboda a přímá demokracie (SPD)",
       "short_name": "Svoboda a př. demokracie (SPD)",
-      "img_url": "spd",
       "contacts": {
         "web": []
       },
@@ -384,7 +383,6 @@
       "type": "party",
       "description": "Naše Město F-M",
       "short_name": "Naše Město F-M",
-      "img_url": "data/avatars/komunalni-2022/598003/komunalni-2022-598003-c-473858-original.jpg",
       "contacts": {
         "web": [
           {
@@ -403,7 +401,8 @@
           "description": "Naše Město F-M",
           "contacts": []
         }
-      ]
+      ],
+      "img_url": "data/avatars/komunalni-2022/598003/komunalni-2022-598003-c-473858-original.jpg"
     },
     {
       "id": "komunalni-2022-598003-c-800798",
@@ -411,7 +410,6 @@
       "type": "party",
       "description": "SPOLU - KDU-ČSL, ODS, TOP 09",
       "short_name": "SPOLU - KDU-ČSL, ODS, TOP 09",
-      "img_url": "data/avatars/komunalni-2022/598003/komunalni-2022-598003-c-800798-original.jpg",
       "contacts": {
         "web": [],
         "facebook": "https://www.facebook.com/top09fm/"
@@ -445,7 +443,8 @@
           "img_url": "data/avatars/parties/721-top09.svg"
         }
       ],
-      "motto": "Chceme z Frýdku-Místku dobrou adresu pro život."
+      "motto": "Chceme z Frýdku-Místku dobrou adresu pro život.",
+      "img_url": "data/avatars/komunalni-2022/598003/komunalni-2022-598003-c-800798-original.jpg"
     },
     {
       "id": "komunalni-2022-598003-c-801995",
@@ -453,7 +452,6 @@
       "type": "party",
       "description": "ANO 2011",
       "short_name": "ANO 2011",
-      "img_url": "ano",
       "contacts": {
         "web": []
       },
@@ -475,7 +473,6 @@
       "type": "party",
       "description": "Frýdečané a Místečané",
       "short_name": "Frýdečané a Místečané",
-      "img_url": "data/avatars/komunalni-2022/598003/komunalni-2022-598003-c-769376-original.jpg",
       "contacts": {
         "web": []
       },
@@ -489,7 +486,8 @@
           "contacts": []
         }
       ],
-      "motto": "Racionální zvažování problémů a jasná vize rozvoje města."
+      "motto": "Racionální zvažování problémů a jasná vize rozvoje města.",
+      "img_url": "data/avatars/komunalni-2022/598003/komunalni-2022-598003-c-769376-original.jpg"
     },
     {
       "id": "komunalni-2022-598003-c-866050",
@@ -497,7 +495,6 @@
       "type": "party",
       "description": "Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK",
       "short_name": "DSZ-ZA PRÁVA ZVÍŘAT-DSZ A NK",
-      "img_url": "dsz-nk",
       "contacts": {
         "web": []
       },
@@ -528,7 +525,6 @@
       "type": "party",
       "description": "Česká pirátská strana",
       "short_name": "Česká pirátská strana",
-      "img_url": "piráti",
       "contacts": {
         "web": []
       },
@@ -551,7 +547,6 @@
       "type": "party",
       "description": "Přátelé FM",
       "short_name": "Přátelé FM",
-      "img_url": "data/avatars/komunalni-2022/598003/komunalni-2022-598003-c-876925-original.jpg",
       "contacts": {
         "web": []
       },
@@ -574,7 +569,8 @@
           "contacts": [],
           "img_url": "data/avatars/parties/08-14-aacdf5e0-4d6b-4d___up-d958-32.jpg"
         }
-      ]
+      ],
+      "img_url": "data/avatars/komunalni-2022/598003/komunalni-2022-598003-c-876925-original.jpg"
     },
     {
       "id": "komunalni-2022-598003-c-246532",
@@ -582,7 +578,6 @@
       "type": "party",
       "description": "Komunistická strana Čech a Moravy",
       "short_name": "Komunistická str.Čech a Moravy",
-      "img_url": "ksčm",
       "contacts": {
         "web": []
       },

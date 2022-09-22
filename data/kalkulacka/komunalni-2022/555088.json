@@ -362,7 +362,6 @@
       "type": "party",
       "description": "ANO 2011",
       "short_name": "ANO 2011",
-      "img_url": "ano",
       "contacts": {
         "web": []
       },
@@ -384,7 +383,6 @@
       "type": "party",
       "description": "Partneři za Havířov",
       "short_name": "Partneři za Havířov",
-      "img_url": "přísaha",
       "contacts": {
         "web": [
           {
@@ -421,7 +419,6 @@
       "type": "party",
       "description": "HAVÍŘOV SOBĚ - sdružení hnutí NEZÁVISLÍ, strany Patrioti České republiky, spolku Životice Sobě a nezávislých kandidátů",
       "short_name": "HAVÍŘOV SOBĚ",
-      "img_url": "data/avatars/komunalni-2022/555088/komunalni-2022-555088-c-824293-original.jpg",
       "contacts": {
         "web": [
           {
@@ -457,7 +454,8 @@
           "contacts": [],
           "img_url": "data/avatars/parties/1004-patrioti-cr.png"
         }
-      ]
+      ],
+      "img_url": "data/avatars/komunalni-2022/555088/komunalni-2022-555088-c-824293-original.jpg"
     },
     {
       "id": "komunalni-2022-555088-c-659291",
@@ -465,7 +463,6 @@
       "type": "party",
       "description": "Česká pirátská strana",
       "short_name": "Česká pirátská strana",
-      "img_url": "piráti",
       "contacts": {
         "web": [],
         "facebook": "https://www.facebook.com/piratihavirov"
@@ -489,7 +486,6 @@
       "type": "party",
       "description": "Česká strana sociálně demokratická a osobnosti města",
       "short_name": "ČSSD a osobnosti města",
-      "img_url": "čssd-nk",
       "contacts": {
         "web": []
       },
@@ -519,7 +515,6 @@
       "type": "party",
       "description": "Hnutí pro Havířov",
       "short_name": "Hnutí pro Havířov",
-      "img_url": "data/avatars/komunalni-2022/555088/komunalni-2022-555088-c-806350-original.jpg",
       "contacts": {
         "web": []
       },
@@ -533,7 +528,8 @@
           "contacts": []
         }
       ],
-      "motto": "24 let Pracujeme a žijeme pro Havířov, nejsme spojení s celostátní politikou."
+      "motto": "24 let Pracujeme a žijeme pro Havířov, nejsme spojení s celostátní politikou.",
+      "img_url": "data/avatars/komunalni-2022/555088/komunalni-2022-555088-c-806350-original.jpg"
     },
     {
       "id": "komunalni-2022-555088-c-836700",
@@ -541,7 +537,6 @@
       "type": "party",
       "description": "Svoboda a přímá demokracie (SPD)",
       "short_name": "Svoboda a př. demokracie (SPD)",
-      "img_url": "spd",
       "contacts": {
         "web": []
       },
@@ -563,7 +558,6 @@
       "type": "party",
       "description": "Havířov náš domov",
       "short_name": "Havířov náš domov",
-      "img_url": "domov-nk",
       "contacts": {
         "web": []
       },
@@ -593,7 +587,6 @@
       "type": "party",
       "description": "SPOLU plus - ODS, KDU-ČSL, TOP 09, STAN",
       "short_name": "SPOLU+ ODS,KDU-ČSL,TOP09,STAN",
-      "img_url": "data/avatars/komunalni-2022/555088/komunalni-2022-555088-c-197775-original.png",
       "contacts": {
         "web": []
       },
@@ -635,7 +628,8 @@
           "img_url": "data/avatars/parties/721-top09.svg"
         }
       ],
-      "motto": "Dobrý tým, rozumná řešení."
+      "motto": "Dobrý tým, rozumná řešení.",
+      "img_url": "data/avatars/komunalni-2022/555088/komunalni-2022-555088-c-197775-original.png"
     },
     {
       "id": "komunalni-2022-555088-c-524394",
@@ -643,7 +637,6 @@
       "type": "party",
       "description": "Komunistická strana Čech a Moravy",
       "short_name": "Komunistická str.Čech a Moravy",
-      "img_url": "ksčm",
       "contacts": {
         "web": []
       },
