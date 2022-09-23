@@ -53,11 +53,10 @@ const mapAnswerToIcon = (answer: string | UserAnswerEnum) => {
     case undefined:
       return vkiLogoNeutral;
     default:
-      // eslint-disable-next-line no-undef, prettier/prettier
-      if (newrelic)
-        newrelic.noticeError(
-          new Error(`Unexpected answer value: \`${answer}\``)
-        );
+      // eslint-disable-next-line no-undef
+      newrelic?.noticeError(
+        new Error(`Unexpected answer value: \`${answer}\``)
+      );
       return vkiLogoNeutral;
   }
 };
@@ -76,11 +75,10 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
     case undefined:
       return 'neutral';
     default:
-      // eslint-disable-next-line no-undef, prettier/prettier
-      if (newrelic)
-        newrelic.noticeError(
-          new Error(`Unexpected answer value: \`${answer}\``)
-        );
+      // eslint-disable-next-line no-undef
+      newrelic?.noticeError(
+        new Error(`Unexpected answer value: \`${answer}\``)
+      );
       return 'neutral';
   }
 };
