@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onBeforeMount, ref } from 'vue';
+import { computed, onBeforeMount, ref, type ComputedRef, type Ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 
 import {
@@ -39,11 +39,14 @@ import ResultShareModal from './ResultShareModal.vue';
 import { getDistrictCode } from '@/common/utils';
 import BodyText from '../../components/design-system/typography/BodyText.vue';
 import ErrorModal from '../../components/ErrorModal.vue';
+import CheckboxComponent from '../../components/design-system/input/CheckboxComponent.vue';
 
 const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
-
+const hasActiveCandidates = electionStore.calculator?.candidates.some(
+  (x) => x.is_active
+);
 const election = electionStore.election as Election;
 const electionName = election.name;
 const districtCode = getDistrictCode(route.params.district as string);
@@ -75,7 +78,6 @@ const handleShowComparsionClick = () => {
   });
 };
 
-const showShareModal = ref(false);
 const handleShareClick = () => {
   shareModal.value?.open();
 };
@@ -85,10 +87,34 @@ onBeforeMount(async () => {
 });
 
 console.debug(encodeResults(electionStore.answers));
-const resultsGeneral = calculateRelativeAgreement(
-  electionStore.calculator?.answers as CandidateAnswer[],
-  electionStore.answers
-);
+
+const candidateAnswers: CandidateAnswer[] =
+  electionStore.calculator?.answers || [];
+
+const showOnlyActiveCandidates = ref(false);
+const filteredCandidateAnswers: Ref<CandidateAnswer[]> = ref(candidateAnswers);
+const handleActiveCandidatesClicked = (isActive: boolean) => {
+  showOnlyActiveCandidates.value = isActive;
+  if (showOnlyActiveCandidates.value) {
+    filteredCandidateAnswers.value = filteredCandidateAnswers.value.filter(
+      (x) => {
+        return electionStore.calculator?.candidates.find(
+          (cnd) => x.candidate_id === cnd.id && cnd.is_active
+        );
+      }
+    );
+  } else if (electionStore.calculator?.answers) {
+    filteredCandidateAnswers.value = candidateAnswers;
+  }
+};
+
+const resultsGeneral = computed(() => {
+  const ra = calculateRelativeAgreement(
+    filteredCandidateAnswers.value,
+    electionStore.answers
+  );
+  return ra;
+});
 const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
 </script>
 <template>
@@ -198,6 +224,13 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
       </template>
       <BottomBarWrapper>
         <StackComponent class="main" spacing="medium">
+          <CheckboxComponent
+            v-if="hasActiveCandidates"
+            group-name="test"
+            @update:check="handleActiveCandidatesClicked"
+          >
+            Pouze postupující kandidáti
+          </CheckboxComponent>
           <ResultCategory
             :result="resultsGeneral"
             category="general"
