@@ -531,6 +531,7 @@ def extract_senatni_candidates(
             family_name=str(row["family_name"]),
             secret_code=secret_code,
             important=bool(int(row["important"] or "0")),
+            is_active=bool(int(row["active"] or "1")),
             type=CandidateType.person,
             logo=None,  # photo never contains valid value => ignore str(row["photo"])
             contact=str(row["contact 1"]) or None,
