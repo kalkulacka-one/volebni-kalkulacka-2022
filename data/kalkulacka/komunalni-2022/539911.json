@@ -362,6 +362,7 @@
       "type": "party",
       "description": "ANO 2011",
       "short_name": "ANO 2011",
+      "is_active": true,
       "contacts": {
         "web": []
       },
@@ -383,6 +384,7 @@
       "type": "party",
       "description": "Svoboda a přímá demokracie (SPD)",
       "short_name": "Svoboda a př. demokracie (SPD)",
+      "is_active": true,
       "contacts": {
         "web": []
       },
@@ -405,6 +407,7 @@
       "type": "party",
       "description": "Česká pirátská strana",
       "short_name": "Česká pirátská strana",
+      "is_active": true,
       "contacts": {
         "web": [
           {
@@ -438,6 +441,7 @@
       "type": "party",
       "description": "ČSSD a Přátelé",
       "short_name": "ČSSD a Přátelé",
+      "is_active": true,
       "contacts": {
         "web": []
       },
@@ -468,6 +472,7 @@
       "type": "party",
       "description": "Občanská demokratická strana",
       "short_name": "Občanská demokratická strana",
+      "is_active": true,
       "contacts": {
         "web": []
       },
@@ -489,6 +494,7 @@
       "type": "party",
       "description": "KDU-ČSL a nezávislí kandidáti",
       "short_name": "KDU-ČSL a nezávislí kandidáti",
+      "is_active": true,
       "contacts": {
         "web": [
           {
@@ -524,6 +530,7 @@
       "type": "party",
       "description": "SPOJENCI - TOP 09, STAROSTOVÉ A NEZÁVISLÍ, POLITICKÉ HNUTÍ HLAS, SOS PŘÍBRAM A NEZÁVISLÍ KANDIDÁTI",
       "short_name": "SP-T09,ST,P.H.HL,SOSPŘ, AN.KA.",
+      "is_active": true,
       "contacts": {
         "web": [],
         "facebook": "https://www.facebook.com/spojencipribram/"
@@ -573,6 +580,7 @@
       "type": "party",
       "description": "Příbramáci pro Příbram a Přísaha - občanské hnutí Roberta Šlachty",
       "short_name": "Příb.p.Příb.aPřís.-obč.hn.R.Š.",
+      "is_active": true,
       "contacts": {
         "web": []
       },
@@ -611,6 +619,7 @@
       "type": "party",
       "description": "PŘÍBRAM 2030 (Nestraníci)",
       "short_name": "PŘÍBRAM 2030 (Nestraníci)",
+      "is_active": true,
       "contacts": {
         "web": []
       },
@@ -640,6 +649,7 @@
       "type": "party",
       "description": "Šance pro Příbram",
       "short_name": "Šance pro Příbram",
+      "is_active": true,
       "contacts": {
         "web": [
           {
@@ -676,6 +686,7 @@
       "type": "party",
       "description": "Komunistická strana Čech a Moravy",
       "short_name": "Komunistická str.Čech a Moravy",
+      "is_active": true,
       "contacts": {
         "web": []
       },
@@ -698,6 +709,7 @@
       "type": "party",
       "description": "Dělnická strana sociální spravedlnosti",
       "short_name": "Dělnic.str.sociální spravedl.",
+      "is_active": true,
       "contacts": {
         "web": []
       },

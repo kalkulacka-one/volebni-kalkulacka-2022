@@ -43,6 +43,10 @@
       "type": "string",
       "description": "Image"
     },
+    "is_active": {
+      "type": "boolean",
+      "description": "Is candidate active? This is useful for second round."
+    },
     "contact": {
       "$ref": "https://kalkulacka.ceskodigital.net/schemas/contact.schema.json"
     },

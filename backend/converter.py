@@ -97,6 +97,7 @@ class Candidate:
     contact: Optional[str]
     contact_party: Optional[str]
     people: Optional[str]
+    is_active: bool = True
     given_name: Optional[str] = None
     family_name: Optional[str] = None
 
@@ -874,6 +875,7 @@ def generate_calculator_dict(election: Election, district: District) -> dict[str
             "type": candidate.type.value,
             "description": candidate.description,
             "short_name": candidate.short_name,
+            "is_active": candidate.is_active,
         }  # type: Dict[str, Any]
         add_element(c_dict, "img_url", candidate.logo)
         add_element(c_dict, "given_name", candidate.given_name)
