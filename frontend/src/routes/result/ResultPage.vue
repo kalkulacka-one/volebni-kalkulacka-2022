@@ -44,9 +44,7 @@ import CheckboxComponent from '../../components/design-system/input/CheckboxComp
 const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
-const hasActiveCandidates = electionStore.calculator?.candidates.some(
-  (x) => x.is_active
-);
+
 const election = electionStore.election as Election;
 const electionName = election.name;
 const districtCode = getDistrictCode(route.params.district as string);
@@ -91,11 +89,14 @@ console.debug(encodeResults(electionStore.answers));
 const candidateAnswers: CandidateAnswer[] =
   electionStore.calculator?.answers || [];
 
-const showOnlyActiveCandidates = ref(false);
+const hasActiveCandidatesBtn = electionStore.calculator?.candidates.some(
+  (x) => !x.is_active
+);
+const showNotActiveCandidates = ref(false);
 const filteredCandidateAnswers: Ref<CandidateAnswer[]> = ref(candidateAnswers);
 const handleActiveCandidatesClicked = (isActive: boolean) => {
-  showOnlyActiveCandidates.value = isActive;
-  if (showOnlyActiveCandidates.value) {
+  showNotActiveCandidates.value = isActive;
+  if (!showNotActiveCandidates.value) {
     filteredCandidateAnswers.value = filteredCandidateAnswers.value.filter(
       (x) => {
         return electionStore.calculator?.candidates.find(
@@ -107,6 +108,7 @@ const handleActiveCandidatesClicked = (isActive: boolean) => {
     filteredCandidateAnswers.value = candidateAnswers;
   }
 };
+handleActiveCandidatesClicked(false);
 
 const resultsGeneral = computed(() => {
   const ra = calculateRelativeAgreement(
@@ -225,11 +227,11 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
       <BottomBarWrapper>
         <StackComponent class="main" spacing="medium">
           <CheckboxComponent
-            v-if="hasActiveCandidates"
+            v-if="hasActiveCandidatesBtn"
             group-name="test"
             @update:check="handleActiveCandidatesClicked"
           >
-            Pouze postupující kandidáti
+            Zobrazit nepostupující kandidáty
           </CheckboxComponent>
           <ResultCategory
             :result="resultsGeneral"
