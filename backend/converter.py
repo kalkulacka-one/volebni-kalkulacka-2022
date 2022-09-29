@@ -871,7 +871,6 @@ def generate_calculator_dict(election: Election, district: District) -> dict[str
         )
     candidates = election.candidates[district]
     for candidate in candidates.values():
-        logger.info("Generating: %s => %s", candidate.name, candidate.active)
         c_dict = {
             "id": candidate.id,
             "name": candidate.name,
