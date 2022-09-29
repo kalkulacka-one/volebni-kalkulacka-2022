@@ -32,10 +32,37 @@
   "calculators": [
     {
       "election_id": "senatni-2022",
+      "district_code": "1",
+      "show_district_code": true,
+      "name": "Karlovy Vary",
+      "description": "Karlovy Vary",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "senatni-2022",
       "district_code": "4",
       "show_district_code": true,
       "name": "Most",
       "description": "Most",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "7",
+      "show_district_code": true,
+      "name": "Plzeň - město",
+      "description": "Plzeň - město",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "10",
+      "show_district_code": true,
+      "name": "Český Krumlov",
+      "description": "Český Krumlov",
       "on_hp_from": "2022-09-01T00:00:00",
       "on_hp_to": "2022-09-30T14:00:00"
     },
@@ -50,10 +77,64 @@
     },
     {
       "election_id": "senatni-2022",
+      "district_code": "16",
+      "show_district_code": true,
+      "name": "Beroun",
+      "description": "Beroun",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "19",
+      "show_district_code": true,
+      "name": "Praha 11",
+      "description": "Praha 11",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "senatni-2022",
       "district_code": "22",
       "show_district_code": true,
       "name": "Praha 10",
       "description": "Praha 10",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "25",
+      "show_district_code": true,
+      "name": "Praha 6",
+      "description": "Praha 6",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "28",
+      "show_district_code": true,
+      "name": "Mělník",
+      "description": "Mělník",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "31",
+      "show_district_code": true,
+      "name": "Ústí nad Labem",
+      "description": "Ústí nad Labem",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "34",
+      "show_district_code": true,
+      "name": "Liberec",
+      "description": "Liberec",
       "on_hp_from": "2022-09-01T00:00:00",
       "on_hp_to": "2022-09-30T14:00:00"
     },
@@ -77,10 +158,46 @@
     },
     {
       "election_id": "senatni-2022",
+      "district_code": "43",
+      "show_district_code": true,
+      "name": "Pardubice",
+      "description": "Pardubice",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "senatni-2022",
       "district_code": "46",
       "show_district_code": true,
       "name": "Ústí nad Orlicí",
       "description": "Ústí nad Orlicí",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "49",
+      "show_district_code": true,
+      "name": "Blansko",
+      "description": "Blansko",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "52",
+      "show_district_code": true,
+      "name": "Jihlava",
+      "description": "Jihlava",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "55",
+      "show_district_code": true,
+      "name": "Brno - město",
+      "description": "Brno - město",
       "on_hp_from": "2022-09-01T00:00:00",
       "on_hp_to": "2022-09-30T14:00:00"
     },
@@ -95,10 +212,64 @@
     },
     {
       "election_id": "senatni-2022",
+      "district_code": "61",
+      "show_district_code": true,
+      "name": "Olomouc",
+      "description": "Olomouc",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "64",
+      "show_district_code": true,
+      "name": "Bruntál",
+      "description": "Bruntál",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "senatni-2022",
       "district_code": "67",
       "show_district_code": true,
       "name": "Nový Jičín",
       "description": "Nový Jičín",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "70",
+      "show_district_code": true,
+      "name": "Ostrava - město",
+      "description": "Ostrava - město",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "73",
+      "show_district_code": true,
+      "name": "Frýdek-Místek",
+      "description": "Frýdek-Místek",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "76",
+      "show_district_code": true,
+      "name": "Kroměříž",
+      "description": "Kroměříž",
+      "on_hp_from": "2022-09-01T00:00:00",
+      "on_hp_to": "2022-09-30T14:00:00"
+    },
+    {
+      "election_id": "senatni-2022",
+      "district_code": "79",
+      "show_district_code": true,
+      "name": "Hodonín",
+      "description": "Hodonín",
       "on_hp_from": "2022-09-01T00:00:00",
       "on_hp_to": "2022-09-30T14:00:00"
     },
