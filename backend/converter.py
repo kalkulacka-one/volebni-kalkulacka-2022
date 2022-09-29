@@ -520,6 +520,7 @@ def extract_senatni_candidates(
         name = f"{row['given_name']} {row['family_name']}"
         candidate_id = gen_candidate_id(election, district, secret_code)
         contacts = extract_contacts(row)
+        is_active = bool(int(str(row["active"]) or "1"))
         candidate = Candidate(
             id=candidate_id,
             num=len(candidates) + 1,
@@ -530,8 +531,8 @@ def extract_senatni_candidates(
             given_name=str(row["given_name"]),
             family_name=str(row["family_name"]),
             secret_code=secret_code,
-            important=bool(int(row["important"] or "0")),
-            is_active=bool(int(row["active"] or "1")),
+            important=bool(int(str(row["important"]) or "0")),
+            is_active=is_active,
             type=CandidateType.person,
             logo=None,  # photo never contains valid value => ignore str(row["photo"])
             contact=str(row["contact 1"]) or None,
