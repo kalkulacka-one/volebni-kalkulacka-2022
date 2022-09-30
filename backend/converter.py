@@ -90,6 +90,7 @@ class Candidate:
     description: str
     secret_code: str
     important: bool
+    active: bool
     type: CandidateType
     parties: list[Party]
     contacts: Contacts
@@ -97,7 +98,6 @@ class Candidate:
     contact: Optional[str]
     contact_party: Optional[str]
     people: Optional[str]
-    is_active: bool = True
     given_name: Optional[str] = None
     family_name: Optional[str] = None
 
@@ -358,6 +358,7 @@ def extract_komunalni_candidates(
             description=str(row["name"]),
             secret_code=secret_code,
             important=bool(int(row["important"] or "0")),
+            active=True,
             type=CandidateType.party,
             logo=None,  # logo never contains valid value => ignore - str(row["logo"])
             contact=str(row["contact 1"]) or None,
@@ -391,7 +392,7 @@ def extract_answers(
     # TODO: We are relaying on fixed column order
 
     mapping = {}  # type: Dict[int, str]
-    for row in sheet.get_all_records(election):
+    for row in sheet.get_all_records():
         ts = datetime.strptime(str(row["Timestamp"]), "%m/%d/%Y %H:%M:%S")
         candidate_name = str(row.get("Jméno kandidáta:", row.get("Jméno strany:")))
         filled_by = str(row["Jméno osoby, která vyplňuje dotazník:"])
@@ -520,6 +521,7 @@ def extract_senatni_candidates(
         name = f"{row['given_name']} {row['family_name']}"
         candidate_id = gen_candidate_id(election, district, secret_code)
         contacts = extract_contacts(row)
+        is_active = bool(int(str(row["active_candidate"]) or "1"))
         candidate = Candidate(
             id=candidate_id,
             num=len(candidates) + 1,
@@ -530,7 +532,8 @@ def extract_senatni_candidates(
             given_name=str(row["given_name"]),
             family_name=str(row["family_name"]),
             secret_code=secret_code,
-            important=bool(int(row["important"] or "0")),
+            important=bool(int(str(row["important"]) or "0")),
+            active=is_active,
             type=CandidateType.person,
             logo=None,  # photo never contains valid value => ignore str(row["photo"])
             contact=str(row["contact 1"]) or None,
@@ -550,7 +553,6 @@ def extract_senatni_candidates(
         )
         candidates[secret_code] = candidate
     logger.info("Extraction candidates: %d", len(candidates))
-
     return candidates
 
 
@@ -875,7 +877,7 @@ def generate_calculator_dict(election: Election, district: District) -> dict[str
             "type": candidate.type.value,
             "description": candidate.description,
             "short_name": candidate.short_name,
-            "is_active": candidate.is_active,
+            "is_active": candidate.active,
         }  # type: Dict[str, Any]
         add_element(c_dict, "img_url", candidate.logo)
         add_element(c_dict, "given_name", candidate.given_name)
