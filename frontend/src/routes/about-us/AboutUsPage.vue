@@ -133,6 +133,42 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
           osobami. V tom případě je pořadí stran či osob při zobrazení výsledné
           shody určeno náhodně.
         </BodyText>
+        <TitleText size="large" tag="h2">
+          Podpora u volební kalkulačky pro Prahu 2022
+        </TitleText>
+        <BodyText size="large">
+          Volební kalkulačka vznikla ve spolupráci se spolkem
+          <a href="https://arnika.org/">
+            <img
+              src="https://arnika.org/templates/arnika/img/arnika-org-logo.svg"
+              alt="Arnika"
+              width="50"
+          /></a>
+        </BodyText>
+        <BodyText size="large">
+          Projekt podpořila Nadace OSF v rámci programu Active Citizens Fund,
+          jehož cílem je podpora občanské společnosti a posílení kapacit
+          neziskových organizací. Cílem programu je dále inspirace k aktivnímu
+          občanství a pomoc znevýhodněným skupinám. Program Active Citizens Fund
+          vstoupil do České republiky v září roku 2019 s cílem podpořit
+          neziskové organizace nehledě na jejich velikost a zkušenosti. V České
+          republice jej spravuje konsorcium, které tvoří Nadace OSF, Výbor dobré
+          vůle – Nadace Olgy Havlové a Skautský institut. Program je realizován
+          v rámci Fondů EHP a Norska 2014–2021. Prostřednictvím Fondů EHP a
+          Norska přispívají státy Island, Lichtenštejnsko a Norsko ke snižování
+          ekonomických a sociálních rozdílů v Evropském hospodářském prostoru
+          (EHP) a k posilování spolupráce s 15 evropskými státy. Důležitým
+          posláním programu je také spolupráce mezi Českou republikou a
+          dárcovskými státy. Jde o spolupráci mezi českými neziskovými
+          organizacemi a organizacemi z Islandu, Lichtenštejnska a Norska.
+        </BodyText>
+        <BodyText size="large">
+          <img
+            src="https://michalskop-github-io.azureedge.net/documents/volebni-kalkulacka/images/partners/2022/ACF_slogan_1.png"
+            alt="Active Citizens Fund"
+            style="width: 100%"
+          />
+        </BodyText>
       </StackComponent>
       <DonateBlock />
       <FooterMultiWord />
