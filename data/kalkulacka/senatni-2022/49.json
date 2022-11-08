@@ -364,6 +364,7 @@
       "type": "person",
       "description": "Jiří Rokos",
       "short_name": "Jiří Rokos",
+      "is_active": false,
       "given_name": "Jiří",
       "family_name": "Rokos",
       "contacts": {
@@ -388,6 +389,7 @@
       "type": "person",
       "description": "Antonín Žirovnický",
       "short_name": "Antonín Žirovnický",
+      "is_active": true,
       "given_name": "Antonín",
       "family_name": "Žirovnický",
       "contacts": {
@@ -412,6 +414,7 @@
       "type": "person",
       "description": "Martin Sklář",
       "short_name": "Martin Sklář",
+      "is_active": false,
       "given_name": "Martin",
       "family_name": "Sklář",
       "contacts": {
@@ -435,6 +438,7 @@
       "type": "person",
       "description": "Filip Vítek",
       "short_name": "Filip Vítek",
+      "is_active": false,
       "given_name": "Filip",
       "family_name": "Vítek",
       "contacts": {
@@ -466,6 +470,7 @@
       "type": "person",
       "description": "Drago Sukalovský",
       "short_name": "Drago Sukalovský",
+      "is_active": false,
       "given_name": "Drago",
       "family_name": "Sukalovský",
       "contacts": {
@@ -495,6 +500,7 @@
       "type": "person",
       "description": "Jaromíra Vítková",
       "short_name": "Jaromíra Vítková",
+      "is_active": true,
       "given_name": "Jaromíra",
       "family_name": "Vítková",
       "contacts": {
@@ -551,6 +557,7 @@
       "type": "person",
       "description": "Zdeněk Wetter",
       "short_name": "Zdeněk Wetter",
+      "is_active": false,
       "given_name": "Zdeněk",
       "family_name": "Wetter",
       "contacts": {

@@ -364,6 +364,7 @@
       "type": "person",
       "description": "Tomáš Czernin",
       "short_name": "Tomáš Czernin",
+      "is_active": true,
       "given_name": "Tomáš",
       "family_name": "Czernin",
       "contacts": {
@@ -414,6 +415,7 @@
       "type": "person",
       "description": "René Franěk",
       "short_name": "René Franěk",
+      "is_active": false,
       "given_name": "René",
       "family_name": "Franěk",
       "contacts": {
@@ -450,6 +452,7 @@
       "type": "person",
       "description": "Václav Ort",
       "short_name": "Václav Ort",
+      "is_active": false,
       "given_name": "Václav",
       "family_name": "Ort",
       "contacts": {
@@ -479,6 +482,7 @@
       "type": "person",
       "description": "Marta Martinová",
       "short_name": "Marta Martinová",
+      "is_active": false,
       "given_name": "Marta",
       "family_name": "Martinová",
       "contacts": {
@@ -519,6 +523,7 @@
       "type": "person",
       "description": "Jaromír Dědeček",
       "short_name": "Jaromír Dědeček",
+      "is_active": true,
       "given_name": "Jaromír",
       "family_name": "Dědeček",
       "contacts": {
@@ -549,6 +554,7 @@
       "type": "person",
       "description": "Eva Kotyzová",
       "short_name": "Eva Kotyzová",
+      "is_active": false,
       "given_name": "Eva",
       "family_name": "Kotyzová",
       "contacts": {
@@ -580,6 +586,7 @@
       "type": "person",
       "description": "Dana Kracíková",
       "short_name": "Dana Kracíková",
+      "is_active": false,
       "given_name": "Dana",
       "family_name": "Kracíková",
       "contacts": {

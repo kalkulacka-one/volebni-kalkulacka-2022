@@ -156,6 +156,10 @@ export interface Candidate {
    * Image
    */
   img_url?: string;
+  /**
+   * Is candidate active? This is useful for second round.
+   */
+  is_active?: boolean;
   contact?: Contact;
   /**
    * If the type is party, then this array should have single element. If the type is coalition, then there should be multiple parties. If the type is party, then there should be at most one party.

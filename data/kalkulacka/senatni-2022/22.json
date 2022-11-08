@@ -364,6 +364,7 @@
       "type": "person",
       "description": "Bohumil Zoufalík",
       "short_name": "Bohumil Zoufalík",
+      "is_active": true,
       "given_name": "Bohumil",
       "family_name": "Zoufalík",
       "contacts": {
@@ -387,6 +388,7 @@
       "type": "person",
       "description": "Renata Chmelová",
       "short_name": "Renata Chmelová",
+      "is_active": true,
       "given_name": "Renata",
       "family_name": "Chmelová",
       "contacts": {
@@ -454,6 +456,7 @@
       "type": "person",
       "description": "Jan Pirk",
       "short_name": "Jan Pirk",
+      "is_active": false,
       "given_name": "Jan",
       "family_name": "Pirk",
       "contacts": {
@@ -509,6 +512,7 @@
       "type": "person",
       "description": "Helena Leisztner",
       "short_name": "Helena Leisztner",
+      "is_active": false,
       "given_name": "Helena",
       "family_name": "Leisztner",
       "contacts": {
@@ -532,6 +536,7 @@
       "type": "person",
       "description": "Štěpán Kavur",
       "short_name": "Štěpán Kavur",
+      "is_active": false,
       "given_name": "Štěpán",
       "family_name": "Kavur",
       "contacts": {
@@ -556,6 +561,7 @@
       "type": "person",
       "description": "Jiří Kobza",
       "short_name": "Jiří Kobza",
+      "is_active": false,
       "given_name": "Jiří",
       "family_name": "Kobza",
       "contacts": {

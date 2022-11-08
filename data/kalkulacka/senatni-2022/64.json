@@ -364,6 +364,7 @@
       "type": "person",
       "description": "Ladislav Šupina",
       "short_name": "Ladislav Šupina",
+      "is_active": false,
       "given_name": "Ladislav",
       "family_name": "Šupina",
       "contacts": {
@@ -393,6 +394,7 @@
       "type": "person",
       "description": "Pavla Löwenthalová",
       "short_name": "Pavla Löwenthalová",
+      "is_active": false,
       "given_name": "Pavla",
       "family_name": "Löwenthalová",
       "contacts": {
@@ -401,15 +403,31 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-64-c-188030-p",
-          "name": "SPOLU",
-          "short_name": "SPOLU",
-          "abbreviation": "SPOLU",
-          "description": "SPOLU",
-          "contacts": {
-            "web": [],
-            "facebook": "https://www.facebook.com/PavlaLowenthalovaKandidat64"
-          }
+          "id": "party-1",
+          "name": "KDU-ČSL",
+          "short_name": "KDU-ČSL",
+          "abbreviation": "KDU-ČSL",
+          "description": "KDU-ČSL",
+          "contacts": [],
+          "img_url": "/data/avatars/parties/1-kdu-csl.svg"
+        },
+        {
+          "id": "party-53",
+          "name": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
+          "description": "Občanská demokratická strana",
+          "contacts": [],
+          "img_url": "/data/avatars/parties/53-ods.svg"
+        },
+        {
+          "id": "party-721",
+          "name": "TOP 09",
+          "short_name": "TOP 09",
+          "abbreviation": "TOP 09",
+          "description": "TOP 09",
+          "contacts": [],
+          "img_url": "/data/avatars/parties/721-top09.svg"
         }
       ]
     },
@@ -419,6 +437,7 @@
       "type": "person",
       "description": "Luděk Šarman",
       "short_name": "Luděk Šarman",
+      "is_active": false,
       "given_name": "Luděk",
       "family_name": "Šarman",
       "contacts": {
@@ -444,6 +463,7 @@
       "type": "person",
       "description": "Miroslava Hustáková",
       "short_name": "Miroslava Hustáková",
+      "is_active": false,
       "given_name": "Miroslava",
       "family_name": "Hustáková",
       "contacts": {
@@ -474,6 +494,7 @@
       "type": "person",
       "description": "Ladislav Václavec",
       "short_name": "Ladislav Václavec",
+      "is_active": true,
       "given_name": "Ladislav",
       "family_name": "Václavec",
       "contacts": {
@@ -508,6 +529,7 @@
       "type": "person",
       "description": "Antonín Staněk",
       "short_name": "Antonín Staněk",
+      "is_active": false,
       "given_name": "Antonín",
       "family_name": "Staněk",
       "contacts": {

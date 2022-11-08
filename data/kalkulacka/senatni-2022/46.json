@@ -364,6 +364,7 @@
       "type": "person",
       "description": "Petr Fiala",
       "short_name": "Petr Fiala",
+      "is_active": true,
       "given_name": "Petr",
       "family_name": "Fiala",
       "contacts": {
@@ -407,6 +408,7 @@
       "type": "person",
       "description": "Josef Kopecký",
       "short_name": "Josef Kopecký",
+      "is_active": false,
       "given_name": "Josef",
       "family_name": "Kopecký",
       "contacts": {
@@ -414,14 +416,13 @@
       },
       "parties": [
         {
-          "id": "senatni-2022-46-c-835047-p",
+          "id": "party-53",
           "name": "Občanská demokratická strana",
-          "short_name": "Občanská demokratická strana",
-          "abbreviation": "Občanská demokratická strana",
+          "short_name": "ODS",
+          "abbreviation": "ODS",
           "description": "Občanská demokratická strana",
-          "contacts": {
-            "web": []
-          }
+          "contacts": [],
+          "img_url": "/data/avatars/parties/53-ods.svg"
         }
       ]
     },
@@ -431,6 +432,7 @@
       "type": "person",
       "description": "Stanislav Ešner",
       "short_name": "Stanislav Ešner",
+      "is_active": false,
       "given_name": "Stanislav",
       "family_name": "Ešner",
       "contacts": {

@@ -364,6 +364,7 @@
       "type": "person",
       "description": "Pavel Petričko",
       "short_name": "Pavel Petričko",
+      "is_active": false,
       "given_name": "Pavel",
       "family_name": "Petričko",
       "contacts": {
@@ -388,6 +389,7 @@
       "type": "person",
       "description": "Eva Chromcová",
       "short_name": "Eva Chromcová",
+      "is_active": true,
       "given_name": "Eva",
       "family_name": "Chromcová",
       "contacts": {
@@ -412,6 +414,7 @@
       "type": "person",
       "description": "Bohdan Vaněk",
       "short_name": "Bohdan Vaněk",
+      "is_active": false,
       "given_name": "Bohdan",
       "family_name": "Vaněk",
       "contacts": {
@@ -447,6 +450,7 @@
       "type": "person",
       "description": "Bedřich Šmudla",
       "short_name": "Bedřich Šmudla",
+      "is_active": false,
       "given_name": "Bedřich",
       "family_name": "Šmudla",
       "contacts": {
@@ -471,6 +475,7 @@
       "type": "person",
       "description": "Věra Procházková",
       "short_name": "Věra Procházková",
+      "is_active": true,
       "given_name": "Věra",
       "family_name": "Procházková",
       "contacts": {
@@ -497,6 +502,7 @@
       "type": "person",
       "description": "Petr Kulhánek",
       "short_name": "Petr Kulhánek",
+      "is_active": false,
       "given_name": "Petr",
       "family_name": "Kulhánek",
       "contacts": {
@@ -529,6 +535,7 @@
       "type": "person",
       "description": "Jan Havel",
       "short_name": "Jan Havel",
+      "is_active": false,
       "given_name": "Jan",
       "family_name": "Havel",
       "contacts": {
@@ -552,6 +559,7 @@
       "type": "person",
       "description": "Petr Ajšman",
       "short_name": "Petr Ajšman",
+      "is_active": false,
       "given_name": "Petr",
       "family_name": "Ajšman",
       "contacts": {
@@ -578,6 +586,7 @@
       "type": "person",
       "description": "Martin Maleček",
       "short_name": "Martin Maleček",
+      "is_active": false,
       "given_name": "Martin",
       "family_name": "Maleček",
       "contacts": {
@@ -607,6 +616,7 @@
       "type": "person",
       "description": "Václav Slavík",
       "short_name": "Václav Slavík",
+      "is_active": false,
       "given_name": "Václav",
       "family_name": "Slavík",
       "contacts": {
@@ -665,6 +675,7 @@
       "type": "person",
       "description": "Jan Horník",
       "short_name": "Jan Horník",
+      "is_active": false,
       "given_name": "Jan",
       "family_name": "Horník",
       "contacts": {

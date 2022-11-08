@@ -364,6 +364,7 @@
       "type": "person",
       "description": "Rudolf Seifert",
       "short_name": "Rudolf Seifert",
+      "is_active": false,
       "given_name": "Rudolf",
       "family_name": "Seifert",
       "contacts": {
@@ -394,6 +395,7 @@
       "type": "person",
       "description": "Stanislav Skála",
       "short_name": "Stanislav Skála",
+      "is_active": false,
       "given_name": "Stanislav",
       "family_name": "Skála",
       "contacts": {
@@ -417,6 +419,7 @@
       "type": "person",
       "description": "Lucie Pluhařová",
       "short_name": "Lucie Pluhařová",
+      "is_active": true,
       "given_name": "Lucie",
       "family_name": "Pluhařová",
       "contacts": {
@@ -442,6 +445,7 @@
       "type": "person",
       "description": "Olga Sehnalová",
       "short_name": "Olga Sehnalová",
+      "is_active": false,
       "given_name": "Olga",
       "family_name": "Sehnalová",
       "contacts": {
@@ -476,6 +480,7 @@
       "type": "person",
       "description": "Šárka Jelínková",
       "short_name": "Šárka Jelínková",
+      "is_active": false,
       "given_name": "Šárka",
       "family_name": "Jelínková",
       "contacts": {
@@ -533,6 +538,7 @@
       "type": "person",
       "description": "Jana Zwyrtek Hamplová",
       "short_name": "Jana Zwyrtek Hamplová",
+      "is_active": true,
       "given_name": "Jana",
       "family_name": "Zwyrtek Hamplová",
       "contacts": {

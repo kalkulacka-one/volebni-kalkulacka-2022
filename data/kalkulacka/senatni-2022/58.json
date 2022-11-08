@@ -364,6 +364,7 @@
       "type": "person",
       "description": "Jiří Dušek",
       "short_name": "Jiří Dušek",
+      "is_active": true,
       "given_name": "Jiří",
       "family_name": "Dušek",
       "contacts": {
@@ -430,6 +431,7 @@
       "type": "person",
       "description": "Petr Kunc",
       "short_name": "Petr Kunc",
+      "is_active": false,
       "given_name": "Petr",
       "family_name": "Kunc",
       "contacts": {
@@ -470,6 +472,7 @@
       "type": "person",
       "description": "Lucie Zajícová",
       "short_name": "Lucie Zajícová",
+      "is_active": false,
       "given_name": "Lucie",
       "family_name": "Zajícová",
       "contacts": {
@@ -494,6 +497,7 @@
       "type": "person",
       "description": "Zdeněk Koudelka",
       "short_name": "Zdeněk Koudelka",
+      "is_active": false,
       "given_name": "Zdeněk",
       "family_name": "Koudelka",
       "contacts": {
@@ -550,6 +554,7 @@
       "type": "person",
       "description": "Michal Sedláček",
       "short_name": "Michal Sedláček",
+      "is_active": false,
       "given_name": "Michal",
       "family_name": "Sedláček",
       "contacts": {
@@ -599,6 +604,7 @@
       "type": "person",
       "description": "Petr Vokřál",
       "short_name": "Petr Vokřál",
+      "is_active": true,
       "given_name": "Petr",
       "family_name": "Vokřál",
       "contacts": {

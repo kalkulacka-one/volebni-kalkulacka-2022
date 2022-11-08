@@ -364,6 +364,7 @@
       "type": "person",
       "description": "Michal Auředník",
       "short_name": "Michal Auředník",
+      "is_active": false,
       "given_name": "Michal",
       "family_name": "Auředník",
       "contacts": {
@@ -389,6 +390,7 @@
       "type": "person",
       "description": "Janis Sidovský",
       "short_name": "Janis Sidovský",
+      "is_active": true,
       "given_name": "Janis",
       "family_name": "Sidovský",
       "contacts": {
@@ -438,6 +440,7 @@
       "type": "person",
       "description": "Jiří Oberfalzer",
       "short_name": "Jiří Oberfalzer",
+      "is_active": true,
       "given_name": "Jiří",
       "family_name": "Oberfalzer",
       "contacts": {
@@ -487,6 +490,7 @@
       "type": "person",
       "description": "Martin Karim",
       "short_name": "Martin Karim",
+      "is_active": false,
       "given_name": "Martin",
       "family_name": "Karim",
       "contacts": {

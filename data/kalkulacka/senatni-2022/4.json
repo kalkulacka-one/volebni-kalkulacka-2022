@@ -364,6 +364,7 @@
       "type": "person",
       "description": "Alena Dernerová",
       "short_name": "Alena Dernerová",
+      "is_active": true,
       "given_name": "Alena",
       "family_name": "Dernerová",
       "contacts": {
@@ -395,6 +396,7 @@
       "type": "person",
       "description": "Hana Aulická Jírovcová",
       "short_name": "Hana Aulická Jírovcová",
+      "is_active": false,
       "given_name": "Hana",
       "family_name": "Aulická Jírovcová",
       "contacts": {
@@ -425,6 +427,7 @@
       "type": "person",
       "description": "Ivana Turková",
       "short_name": "Ivana Turková",
+      "is_active": false,
       "given_name": "Ivana",
       "family_name": "Turková",
       "contacts": {
@@ -450,6 +453,7 @@
       "type": "person",
       "description": "Michal Moravec",
       "short_name": "Michal Moravec",
+      "is_active": false,
       "given_name": "Michal",
       "family_name": "Moravec",
       "contacts": {
@@ -474,6 +478,7 @@
       "type": "person",
       "description": "Jan Paparega",
       "short_name": "Jan Paparega",
+      "is_active": true,
       "given_name": "Jan",
       "family_name": "Paparega",
       "contacts": {

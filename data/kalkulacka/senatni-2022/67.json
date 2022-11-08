@@ -364,6 +364,7 @@
       "type": "person",
       "description": "Jaromír Radkovský",
       "short_name": "Jaromír Radkovský",
+      "is_active": true,
       "given_name": "Jaromír",
       "family_name": "Radkovský",
       "contacts": {
@@ -393,6 +394,7 @@
       "type": "person",
       "description": "Jan Mužík",
       "short_name": "Jan Mužík",
+      "is_active": false,
       "given_name": "Jan",
       "family_name": "Mužík",
       "contacts": {
@@ -429,6 +431,7 @@
       "type": "person",
       "description": "Petr Orel",
       "short_name": "Petr Orel",
+      "is_active": false,
       "given_name": "Petr",
       "family_name": "Orel",
       "contacts": {
@@ -463,6 +466,7 @@
       "type": "person",
       "description": "Ivana Váňová",
       "short_name": "Ivana Váňová",
+      "is_active": true,
       "given_name": "Ivana",
       "family_name": "Váňová",
       "contacts": {
@@ -516,6 +520,7 @@
       "type": "person",
       "description": "Pavel Liška",
       "short_name": "Pavel Liška",
+      "is_active": false,
       "given_name": "Pavel",
       "family_name": "Liška",
       "contacts": {
@@ -539,6 +544,7 @@
       "type": "person",
       "description": "Dana Váhalová",
       "short_name": "Dana Váhalová",
+      "is_active": false,
       "given_name": "Dana",
       "family_name": "Váhalová",
       "contacts": {
@@ -563,6 +569,7 @@
       "type": "person",
       "description": "Leo Luzar",
       "short_name": "Leo Luzar",
+      "is_active": false,
       "given_name": "Leo",
       "family_name": "Luzar",
       "contacts": {

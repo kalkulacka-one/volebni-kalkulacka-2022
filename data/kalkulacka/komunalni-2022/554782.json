@@ -362,6 +362,7 @@
       "type": "party",
       "description": "Svobodní",
       "short_name": "Svobodní",
+      "is_active": true,
       "contacts": {
         "web": []
       },
@@ -383,6 +384,7 @@
       "type": "party",
       "description": "PRAHA NÁŠ DOMOV",
       "short_name": "PRAHA NÁŠ DOMOV",
+      "is_active": true,
       "contacts": {
         "web": [
           {
@@ -428,6 +430,7 @@
       "type": "party",
       "description": "Praha bez chaosu",
       "short_name": "Praha bez chaosu",
+      "is_active": true,
       "contacts": {
         "web": [],
         "facebook": "https://www.facebook.com/pbch.cz",
@@ -459,6 +462,7 @@
       "type": "party",
       "description": "PRAHA SOBĚ",
       "short_name": "PRAHA SOBĚ",
+      "is_active": true,
       "contacts": {
         "web": [
           {
@@ -505,6 +509,7 @@
       "type": "party",
       "description": "LEPŠÍ PRAHA PRO PRAŽANY – snížení daně z nemovitých věcí o 50%, městská hromadná doprava zdarma, internet zdarma…",
       "short_name": "LEPŠÍ PRAHA PRO PRAŽANY",
+      "is_active": true,
       "contacts": {
         "web": [
           {
@@ -542,6 +547,7 @@
       "type": "party",
       "description": "STAROSTOVÉ A NEZÁVISLÍ",
       "short_name": "STAROSTOVÉ A NEZÁVISLÍ",
+      "is_active": true,
       "contacts": {
         "web": [
           {
@@ -571,19 +577,19 @@
       "type": "party",
       "description": "Volte Pravý Blok - stranu za ODVOLATELNOST politiků a státních úředníků PŘÍMO OBČANY",
       "short_name": "Volte Pr.Blok www.cibulka.net",
+      "is_active": true,
       "contacts": {
         "web": []
       },
       "parties": [
         {
-          "id": "komunalni-2022-554782-c-684523-p",
-          "name": "Volte Pravý Blok - stranu za ODVOLATELNOST politiků a státních úředníků PŘÍMO OBČANY",
-          "short_name": "Volte Pr.Blok www.cibulka.net",
-          "abbreviation": "PB",
-          "description": "Volte Pravý Blok - stranu za ODVOLATELNOST politiků a státních úředníků PŘÍMO OBČANY",
-          "contacts": {
-            "web": []
-          }
+          "id": "party-98",
+          "name": "Volte Pravý Blok-stranu za ODVOLAT.polit.,NÍZKÉ daně,VYROVN.rozp.,MIN.byrokr.,SPRAV.just.,PŘÍMOU demokr. WWW.CIBULKA.NET",
+          "short_name": "Volte Pravý Blok www.cibulka.net",
+          "abbreviation": "Volte Pravý Blok www.cibulka.net",
+          "description": "Volte Pravý Blok-stranu za ODVOLAT.polit.,NÍZKÉ daně,VYROVN.rozp.,MIN.byrokr.,SPRAV.just.,PŘÍMOU demokr. WWW.CIBULKA.NET",
+          "contacts": [],
+          "img_url": "/data/avatars/parties/98-pravy-blok.jpg"
         }
       ]
     },
@@ -593,6 +599,7 @@
       "type": "party",
       "description": "Česká pirátská strana",
       "short_name": "Česká pirátská strana",
+      "is_active": true,
       "contacts": {
         "web": [
           {
@@ -625,6 +632,7 @@
       "type": "party",
       "description": "Motoristé sobě",
       "short_name": "Motoristé sobě",
+      "is_active": true,
       "contacts": {
         "web": [
           {
@@ -657,6 +665,7 @@
       "type": "party",
       "description": "Přísaha s Patrioty",
       "short_name": "Přísaha s Patrioty",
+      "is_active": true,
       "contacts": {
         "web": [
           {
@@ -693,6 +702,7 @@
       "type": "party",
       "description": "Za bezpečné ulice v Praze",
       "short_name": "Za bezpečné ulice v Praze",
+      "is_active": true,
       "contacts": {
         "web": []
       },
@@ -722,6 +732,7 @@
       "type": "party",
       "description": "Urza.cz: Nechceme vaše hlasy; ke svobodě se nelze provolit... Máme jinou vizi. Jdeme jinou cestou.",
       "short_name": "Urza.cz: Nechceme vaše hlasy",
+      "is_active": true,
       "contacts": {
         "web": []
       },
@@ -743,6 +754,7 @@
       "type": "party",
       "description": "Komunistická strana Čech a Moravy",
       "short_name": "Komunistická str.Čech a Moravy",
+      "is_active": true,
       "contacts": {
         "web": [
           {
@@ -770,6 +782,7 @@
       "type": "party",
       "description": "SPOLU pro Prahu (ODS, TOP 09, KDU-ČSL)",
       "short_name": "SPOLU pro Prahu",
+      "is_active": true,
       "contacts": {
         "web": [
           {
@@ -822,6 +835,7 @@
       "type": "party",
       "description": "Solidarita – koalice ČSSD, Zelených, Budoucnosti a Idealistů",
       "short_name": "Solidarita - ČSSD,Zel,Bud,Ide",
+      "is_active": true,
       "contacts": {
         "web": [
           {
@@ -887,6 +901,7 @@
       "type": "party",
       "description": "SPD, Trikolora, Hnutí PES a nezávislí společně pro Prahu",
       "short_name": "SPD,Trik.,PES a nez. pro Prahu",
+      "is_active": true,
       "contacts": {
         "web": []
       },
@@ -934,6 +949,7 @@
       "type": "party",
       "description": "Společnost proti developerské výstavbě v Prokopském údolí",
       "short_name": "Společ.proti výst.v Prok.údolí",
+      "is_active": true,
       "contacts": {
         "web": []
       },
@@ -955,6 +971,7 @@
       "type": "party",
       "description": "Volt",
       "short_name": "Volt",
+      "is_active": true,
       "contacts": {
         "web": [
           {
@@ -985,6 +1002,7 @@
       "type": "party",
       "description": "DOST",
       "short_name": "DOST",
+      "is_active": true,
       "contacts": {
         "web": []
       },
@@ -1006,6 +1024,7 @@
       "type": "party",
       "description": "S.O.S. ZA PRÁVA ZVÍŘAT — Demokratická strana zelených - ZA PRÁVA ZVÍŘAT — sdružení DSZ - ZA PRÁVA ZVÍŘAT a NK",
       "short_name": "S.O.S. ZA PRÁVA ZVÍŘAT",
+      "is_active": true,
       "contacts": {
         "web": []
       },
@@ -1035,6 +1054,7 @@
       "type": "party",
       "description": "ANO 2011",
       "short_name": "ANO 2011",
+      "is_active": true,
       "contacts": {
         "web": [],
         "facebook": "https://www.facebook.com/ANOPraha/",
@@ -1058,6 +1078,7 @@
       "type": "party",
       "description": "Strana soukromníků ČR, Koruna Česká (monarch. strana Čech, Moravy a Slezska), Konzervat. strana, Klub angaž. nestraníků",
       "short_name": "Str.soukr. ČR, KČ, KS, KAN",
+      "is_active": true,
       "contacts": {
         "web": [
           {
