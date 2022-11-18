@@ -29,6 +29,7 @@
     "@types/jsdom": "^16.2.14",
     "@types/markdown-it": "^12.2.3",
     "@types/node": "^16.11.45",
+    "@vercel/node": "^2.6.3",
     "@vitejs/plugin-vue": "^3.0.1",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^11.0.0",

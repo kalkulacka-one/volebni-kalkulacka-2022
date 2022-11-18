@@ -137,3 +137,6 @@ coverage_html/
 .terraform
 .terraform.lock.hcl
 *.tfvars
+
+.vercel
+node_modules
