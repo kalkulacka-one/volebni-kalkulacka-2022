@@ -13,7 +13,7 @@ let importWrapper = async () => await import(`./WebProvider.vue`);
 
 if (props.embed) {
   importWrapper = async () =>
-    await import(`./embeds/${capitalize(camelize(props.embed))}Embed.vue`);
+    await import(`../../embeds/${capitalize(camelize(props.embed))}Embed.vue`);
 }
 
 const Wrapper = shallowRef((await importWrapper()).default);

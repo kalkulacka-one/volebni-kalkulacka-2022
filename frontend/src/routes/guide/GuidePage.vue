@@ -37,7 +37,7 @@ import {
   vkiStarFilled,
 } from '@/components/design-system/icons';
 
-import EmbedWrapper from '@/components/responsivity/EmbedWrapper.vue';
+import EmbedWrapper from '@/components/utilities/embedding/EmbedWrapper.vue';
 import MarkdownIt from '@/components/utilities/MarkdownIt.vue';
 import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
