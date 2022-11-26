@@ -19,6 +19,7 @@ import InfoBubble from '@/components/InfoBubble.vue';
 import FooterMultiWord from '@/components/FooterMultiWord.vue';
 import DonateBlock from '@/components/DonateBlock.vue';
 import StaticContentLayout from '@/components/layouts/StaticContentLayout.vue';
+import MasonryGrid from '@/components/design-system/layout/MasonryGrid.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 
 const router = useRouter();
@@ -67,67 +68,6 @@ export default {
                   >Více o volbách</ButtonComponent
                 >
               </div>
-            </div>
-          </CardComponent>
-          <CardComponent corner="top-right" padding="small" border shadow>
-            <div class="card-content">
-              <div class="card-content-text">
-                <TitleText tag="h3" size="medium"
-                  >Komunální volby 2022</TitleText
-                >
-                <BodyText size="medium"
-                  >K dispozici jsou kalkulačky pro vybraná města.</BodyText
-                >
-                <div class="divider" />
-                <BodyText size="small"
-                  >Komunální kalkulačku už vyplnilo přes 100 tisíc
-                  lidí.</BodyText
-                >
-              </div>
-              <ButtonComponent
-                kind="filled"
-                color="primary"
-                @click="
-                  router.push({
-                    name: appRoutes.districtSelection.name,
-                    params: { ...route.params, election: 'komunalni-2022' },
-                    query: { ...route.query },
-                  })
-                "
-                >Spustit kalkulačku</ButtonComponent
-              >
-            </div>
-          </CardComponent>
-          <CardComponent corner="top-left" padding="small" border shadow>
-            <div class="card-content">
-              <div class="card-content-text">
-                <TitleText tag="h3" size="medium">Senátní volby 2022</TitleText>
-                <BodyText size="medium"
-                  >Pro jednotlivé volební obvody.</BodyText
-                >
-                <BodyText size="medium"
-                  ><a
-                    href="https://2022.programydovoleb.cz/senatni-volby#kde-se-letos-voli"
-                    >Více o senátních obvodech</a
-                  ></BodyText
-                >
-              </div>
-              <div class="divider" />
-              <BodyText size="small"
-                >Senátní kalkulačku už vyplnilo přes 25 tisíc lidí.</BodyText
-              >
-              <ButtonComponent
-                color="primary"
-                kind="filled"
-                @click="
-                  router.push({
-                    name: appRoutes.districtSelection.name,
-                    params: { ...route.params, election: 'senatni-2022' },
-                    query: { ...route.query },
-                  })
-                "
-                >Spustit kalkulačku</ButtonComponent
-              >
             </div>
           </CardComponent>
         </div>
@@ -189,6 +129,76 @@ export default {
           ></ButtonComponent>
         </StackComponent>
         <DonateBlock />
+        <StackComponent spacing="large">
+          <TitleText size="large" tag="h2">
+            Volební kalkulačky k už proběhlým volbám
+          </TitleText>
+          <MasonryGrid style="align-self: stretch;">
+            <CardComponent corner="top-right" padding="small" border shadow>
+              <div class="card-content">
+                <div class="card-content-text">
+                  <TitleText tag="h3" size="medium"
+                    >Komunální volby 2022</TitleText
+                  >
+                  <BodyText size="medium"
+                    >K dispozici jsou kalkulačky pro vybraná města.</BodyText
+                  >
+                  <div class="divider" />
+                  <BodyText size="small"
+                    >Komunální kalkulačku vyplnilo přes 100 tisíc
+                    lidí.</BodyText
+                  >
+                </div>
+                <ButtonComponent
+                  kind="outlined"
+                  color="primary"
+                  @click="
+                    router.push({
+                      name: appRoutes.districtSelection.name,
+                      params: { ...route.params, election: 'komunalni-2022' },
+                      query: { ...route.query },
+                    })
+                  "
+                  >Spustit kalkulačku</ButtonComponent
+                >
+              </div>
+            </CardComponent>
+            <CardComponent corner="top-left" padding="small" border shadow>
+              <div class="card-content">
+                <div class="card-content-text">
+                  <TitleText tag="h3" size="medium"
+                    >Senátní volby 2022</TitleText
+                  >
+                  <BodyText size="medium"
+                    >Pro jednotlivé volební obvody.</BodyText
+                  >
+                  <BodyText size="medium"
+                    ><a
+                      href="https://2022.programydovoleb.cz/senatni-volby#kde-se-letos-voli"
+                      >Více o senátních obvodech</a
+                    ></BodyText
+                  >
+                </div>
+                <div class="divider" />
+                <BodyText size="small"
+                  >Senátní kalkulačku vyplnilo přes 25 tisíc lidí.</BodyText
+                >
+                <ButtonComponent
+                  color="primary"
+                  kind="outlined"
+                  @click="
+                    router.push({
+                      name: appRoutes.districtSelection.name,
+                      params: { ...route.params, election: 'senatni-2022' },
+                      query: { ...route.query },
+                    })
+                  "
+                  >Spustit kalkulačku</ButtonComponent
+                >
+              </div>
+            </CardComponent>
+          </MasonryGrid>
+        </StackComponent>
       </StaticContentLayout>
       <FooterMultiWord class="section" />
     </StickyHeaderLayout>
