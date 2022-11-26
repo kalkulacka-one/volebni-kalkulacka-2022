@@ -53,21 +53,51 @@ export default {
             corner="top-left"
           >
             <div class="card-content">
-              <HeadlineText tag="h1" size="medium"
-                >Aktuální volební kalkulačky</HeadlineText
-              >
+              <HeadlineText tag="h1" size="medium">
+                Volební kalkulačka pro prezidentské volby?
+              </HeadlineText>
               <div class="card-content-text">
-                <BodyText size="medium"
-                  >pro nadcházející komunální a senátní volby
-                  <b>23. 9. 2022 –24. 9. 2022</b></BodyText
-                >
+                <BodyText size="medium">
+                  Volební kalkulačku pro prezidentské volby, které proběhnou
+                  <b>13.&nbsp;a&nbsp;14.&nbsp;ledna 2023</b>, pro vás právě
+                  chystáme a&nbsp;spustíme ji před Vánoci.
+                </BodyText>
                 <ButtonComponent
                   kind="link"
                   color="primary"
-                  @click="router.push(appRoutes.aboutElections)"
-                  >Více o volbách</ButtonComponent
+                  tag="a"
+                  href="https://twitter.com/intent/follow?screen_name=ceskodigital"
+                  style="align-self: start"
                 >
+                  Sledovat Česko.Digital na Twitteru
+                </ButtonComponent>
               </div>
+            </div>
+          </CardComponent>
+          <CardComponent padding="small" corner="top-left" border shadow>
+            <div class="card-content">
+              <TitleText tag="h2" size="large">Kdo kandiduje</TitleText>
+              <BodyText size="medium">
+                25. listopadu Ministerstvo vnitra zveřejnilo seznam kandidátů,
+                kteří splnili zákonné podmínky a budou se ucházet o funkci
+                prezidenta:
+                <ul>
+                  <li>Andrej Babiš</li>
+                  <li>Jaroslav Bašta</li>
+                  <li>Pavel Fischer</li>
+                  <li>Marek Hilšer</li>
+                  <li>Danuše Nerudová</li>
+                  <li>Petr Pavel</li>
+                  <li>Denisa Rohanová</li>
+                  <li>Josef Středula</li>
+                  <li>Tomáš Zima</li>
+                </ul>
+                Více o kandidátech se dozvíte na
+                <a href="https://prezident2023.programydovoleb.cz">
+                  programydovoleb.cz
+                </a>
+                .
+              </BodyText>
             </div>
           </CardComponent>
         </div>
@@ -133,7 +163,7 @@ export default {
           <TitleText size="large" tag="h2">
             Volební kalkulačky k už proběhlým volbám
           </TitleText>
-          <MasonryGrid style="align-self: stretch;">
+          <MasonryGrid style="align-self: stretch">
             <CardComponent corner="top-right" padding="small" border shadow>
               <div class="card-content">
                 <div class="card-content-text">
@@ -208,7 +238,7 @@ export default {
 <style scoped lang="scss">
 .section-header {
   display: grid;
-  grid-template-columns: 1.2fr repeat(2, 1fr);
+  grid-template-columns: 1.2fr repeat(1, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 16px;
   grid-row-gap: 16px;
