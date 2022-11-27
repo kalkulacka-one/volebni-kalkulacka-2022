@@ -19,6 +19,7 @@ import InfoBubble from '@/components/InfoBubble.vue';
 import FooterMultiWord from '@/components/FooterMultiWord.vue';
 import DonateBlock from '@/components/DonateBlock.vue';
 import StaticContentLayout from '@/components/layouts/StaticContentLayout.vue';
+import MasonryGrid from '@/components/design-system/layout/MasonryGrid.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 
 const router = useRouter();
@@ -52,82 +53,51 @@ export default {
             corner="top-left"
           >
             <div class="card-content">
-              <HeadlineText tag="h1" size="medium"
-                >Aktuální volební kalkulačky</HeadlineText
-              >
+              <HeadlineText tag="h1" size="medium">
+                Volební kalkulačka pro prezidentské volby?
+              </HeadlineText>
               <div class="card-content-text">
-                <BodyText size="medium"
-                  >pro nadcházející komunální a senátní volby
-                  <b>23. 9. 2022 –24. 9. 2022</b></BodyText
-                >
+                <BodyText size="medium">
+                  Volební kalkulačku pro prezidentské volby, které proběhnou
+                  <b>13.&nbsp;a&nbsp;14.&nbsp;ledna 2023</b>, pro vás právě
+                  chystáme a&nbsp;spustíme ji před Vánoci.
+                </BodyText>
                 <ButtonComponent
                   kind="link"
                   color="primary"
-                  @click="router.push(appRoutes.aboutElections)"
-                  >Více o volbách</ButtonComponent
+                  tag="a"
+                  href="https://twitter.com/intent/follow?screen_name=ceskodigital"
+                  style="align-self: start"
                 >
+                  Sledovat Česko.Digital na Twitteru
+                </ButtonComponent>
               </div>
             </div>
           </CardComponent>
-          <CardComponent corner="top-right" padding="small" border shadow>
+          <CardComponent padding="small" corner="top-left" border shadow>
             <div class="card-content">
-              <div class="card-content-text">
-                <TitleText tag="h3" size="medium"
-                  >Komunální volby 2022</TitleText
-                >
-                <BodyText size="medium"
-                  >K dispozici jsou kalkulačky pro vybraná města.</BodyText
-                >
-                <div class="divider" />
-                <BodyText size="small"
-                  >Komunální kalkulačku už vyplnilo přes 100 tisíc
-                  lidí.</BodyText
-                >
-              </div>
-              <ButtonComponent
-                kind="filled"
-                color="primary"
-                @click="
-                  router.push({
-                    name: appRoutes.districtSelection.name,
-                    params: { ...route.params, election: 'komunalni-2022' },
-                    query: { ...route.query },
-                  })
-                "
-                >Spustit kalkulačku</ButtonComponent
-              >
-            </div>
-          </CardComponent>
-          <CardComponent corner="top-left" padding="small" border shadow>
-            <div class="card-content">
-              <div class="card-content-text">
-                <TitleText tag="h3" size="medium">Senátní volby 2022</TitleText>
-                <BodyText size="medium"
-                  >Pro jednotlivé volební obvody.</BodyText
-                >
-                <BodyText size="medium"
-                  ><a
-                    href="https://2022.programydovoleb.cz/senatni-volby#kde-se-letos-voli"
-                    >Více o senátních obvodech</a
-                  ></BodyText
-                >
-              </div>
-              <div class="divider" />
-              <BodyText size="small"
-                >Senátní kalkulačku už vyplnilo přes 25 tisíc lidí.</BodyText
-              >
-              <ButtonComponent
-                color="primary"
-                kind="filled"
-                @click="
-                  router.push({
-                    name: appRoutes.districtSelection.name,
-                    params: { ...route.params, election: 'senatni-2022' },
-                    query: { ...route.query },
-                  })
-                "
-                >Spustit kalkulačku</ButtonComponent
-              >
+              <TitleText tag="h2" size="large">Kdo kandiduje</TitleText>
+              <BodyText size="medium">
+                25. listopadu Ministerstvo vnitra zveřejnilo seznam kandidátů,
+                kteří splnili zákonné podmínky a budou se ucházet o funkci
+                prezidenta:
+                <ul>
+                  <li>Andrej Babiš</li>
+                  <li>Jaroslav Bašta</li>
+                  <li>Pavel Fischer</li>
+                  <li>Marek Hilšer</li>
+                  <li>Danuše Nerudová</li>
+                  <li>Petr Pavel</li>
+                  <li>Denisa Rohanová</li>
+                  <li>Josef Středula</li>
+                  <li>Tomáš Zima</li>
+                </ul>
+                Více o kandidátech se dozvíte na
+                <a href="https://prezident2023.programydovoleb.cz">
+                  programydovoleb.cz
+                </a>
+                .
+              </BodyText>
             </div>
           </CardComponent>
         </div>
@@ -189,6 +159,76 @@ export default {
           ></ButtonComponent>
         </StackComponent>
         <DonateBlock />
+        <StackComponent spacing="large">
+          <TitleText size="large" tag="h2">
+            Volební kalkulačky k už proběhlým volbám
+          </TitleText>
+          <MasonryGrid style="align-self: stretch">
+            <CardComponent corner="top-right" padding="small" border shadow>
+              <div class="card-content">
+                <div class="card-content-text">
+                  <TitleText tag="h3" size="medium"
+                    >Komunální volby 2022</TitleText
+                  >
+                  <BodyText size="medium"
+                    >K dispozici jsou kalkulačky pro vybraná města.</BodyText
+                  >
+                  <div class="divider" />
+                  <BodyText size="small"
+                    >Komunální kalkulačku vyplnilo přes 100 tisíc
+                    lidí.</BodyText
+                  >
+                </div>
+                <ButtonComponent
+                  kind="outlined"
+                  color="primary"
+                  @click="
+                    router.push({
+                      name: appRoutes.districtSelection.name,
+                      params: { ...route.params, election: 'komunalni-2022' },
+                      query: { ...route.query },
+                    })
+                  "
+                  >Spustit kalkulačku</ButtonComponent
+                >
+              </div>
+            </CardComponent>
+            <CardComponent corner="top-left" padding="small" border shadow>
+              <div class="card-content">
+                <div class="card-content-text">
+                  <TitleText tag="h3" size="medium"
+                    >Senátní volby 2022</TitleText
+                  >
+                  <BodyText size="medium"
+                    >Pro jednotlivé volební obvody.</BodyText
+                  >
+                  <BodyText size="medium"
+                    ><a
+                      href="https://2022.programydovoleb.cz/senatni-volby#kde-se-letos-voli"
+                      >Více o senátních obvodech</a
+                    ></BodyText
+                  >
+                </div>
+                <div class="divider" />
+                <BodyText size="small"
+                  >Senátní kalkulačku vyplnilo přes 25 tisíc lidí.</BodyText
+                >
+                <ButtonComponent
+                  color="primary"
+                  kind="outlined"
+                  @click="
+                    router.push({
+                      name: appRoutes.districtSelection.name,
+                      params: { ...route.params, election: 'senatni-2022' },
+                      query: { ...route.query },
+                    })
+                  "
+                  >Spustit kalkulačku</ButtonComponent
+                >
+              </div>
+            </CardComponent>
+          </MasonryGrid>
+        </StackComponent>
       </StaticContentLayout>
       <FooterMultiWord class="section" />
     </StickyHeaderLayout>
@@ -198,7 +238,7 @@ export default {
 <style scoped lang="scss">
 .section-header {
   display: grid;
-  grid-template-columns: 1.2fr repeat(2, 1fr);
+  grid-template-columns: 1.2fr repeat(1, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 16px;
   grid-row-gap: 16px;
