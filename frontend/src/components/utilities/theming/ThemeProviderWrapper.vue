@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref, provide } from 'vue';
 
-import ThemeProvider from '@/components/ThemeProvider.vue';
-import { ThemeKey } from '@/components/ThemeKey';
+import ThemeProvider from '@/components/utilities/theming/ThemeProvider.vue';
+import { ThemeKey } from '@/components/utilities/theming/ThemeKey';
 
 export interface Props {
   initialTheme?: string;

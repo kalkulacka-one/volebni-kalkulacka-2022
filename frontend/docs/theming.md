@@ -12,17 +12,17 @@ Themes are actually Vue components which define CSS variables. Themes live in `@
 
 ## Theme provider
 
-The app is wrapped in a [theme provider](../src/components/ThemeProvider.vue) component, which provides the theme (= CSS variables) set by the `theme` prop to all other components nested within the provider.
+The app is wrapped in a [theme provider](../src/components/utilities/theming/ThemeProvider.vue) component, which provides the theme (= CSS variables) set by the `theme` prop to all other components nested within the provider.
 
 ### Theme provider wrapper & switcher
 
-The [theme provider wrapper component](../src/components/ThemeProviderWrapper.vue) also manages a state and provides a method to switch themes. To set the initial theme, you can provide it with an `initial-theme` prop.
+The [theme provider wrapper component](../src/components/utilities/theming/ThemeProviderWrapper.vue) also manages a state and provides a method to switch themes. To set the initial theme, you can provide it with an `initial-theme` prop.
 
 To switch the theme, you need to inject the variable and call switch method provided with the snake-cased theme name:
 
 ```typescript
 import { inject } from 'vue';
-import { ThemeKey } from './ThemeKey';
+import { ThemeKey } from '@/components/utilities/theming/ThemeKey';
 
 const theme = inject(ThemeKey);
 

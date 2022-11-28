@@ -10,7 +10,7 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 const importTheme = async () =>
-  await import(`./themes/${capitalize(camelize(props.theme))}Theme.vue`);
+  await import(`../../themes/${capitalize(camelize(props.theme))}Theme.vue`);
 
 const Theme = shallowRef((await importTheme()).default);
 
