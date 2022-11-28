@@ -13,6 +13,7 @@ env:
   serviceName: "backend"
 jobs:
   deploy:
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-18.04
     steps:
       - name: "Checkout"
