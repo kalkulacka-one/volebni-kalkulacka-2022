@@ -1,32 +1,22 @@
 <script setup lang="ts">
-import { shallowRef, watchEffect, capitalize, camelize } from 'vue';
+import { camelize, capitalize, defineAsyncComponent } from 'vue';
 
 export interface Props {
   embed?: string;
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  embed: undefined,
-});
+const props = defineProps<Props>();
 
-let importWrapper = async () => await import(`./WebProvider.vue`);
+const importEmbed = () =>
+  props.embed !== undefined
+    ? import(`../../embeds/${capitalize(camelize(props.embed))}Embed.vue`)
+    : import('./WebProvider.vue');
 
-if (props.embed) {
-  importWrapper = async () =>
-    await import(`../../embeds/${capitalize(camelize(props.embed))}Embed.vue`);
-}
-
-const Wrapper = shallowRef((await importWrapper()).default);
-
-watchEffect(async () => {
-  Wrapper.value = (await importWrapper()).default;
-});
+const Embed = defineAsyncComponent(() => importEmbed());
 </script>
 
 <template>
-  <component :is="Wrapper" class="embed-provider">
-    <slot />
-  </component>
+  <component :is="Embed" class="embed-provider" />
 </template>
 
 <style scoped lang="scss">
