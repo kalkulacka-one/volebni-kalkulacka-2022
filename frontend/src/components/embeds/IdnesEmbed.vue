@@ -4,6 +4,6 @@ import ThemeProvider from '@/components/utilities/theming/ThemeProvider.vue';
 
 <template>
   <ThemeProvider theme="idnes">
-    <slot />
+    <router-view />
   </ThemeProvider>
 </template>
