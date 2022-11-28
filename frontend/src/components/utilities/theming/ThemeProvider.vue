@@ -1,5 +1,11 @@
 <script setup lang="ts">
-import { shallowRef, watchEffect, capitalize, camelize } from 'vue';
+import {
+  camelize,
+  capitalize,
+  defineAsyncComponent,
+  shallowRef,
+  watch,
+} from 'vue';
 
 export interface Props {
   theme?: string;
@@ -9,13 +15,13 @@ const props = withDefaults(defineProps<Props>(), {
   theme: 'default',
 });
 
-const importTheme = async () =>
-  await import(`../../themes/${capitalize(camelize(props.theme))}Theme.vue`);
+const importTheme = (theme: string) =>
+  import(`../../themes/${capitalize(camelize(theme))}Theme.vue`);
 
-const Theme = shallowRef((await importTheme()).default);
+const Theme = shallowRef(defineAsyncComponent(() => importTheme(props.theme)));
 
-watchEffect(async () => {
-  Theme.value = (await importTheme()).default;
+watch(props, () => {
+  Theme.value = defineAsyncComponent(() => importTheme(props.theme));
 });
 </script>
 
