@@ -21,7 +21,7 @@ import SecondaryNavigationBar from '@/components/design-system/navigation/Second
 import TitleText from '@/components/design-system/typography/TitleText.vue';
 
 import EmbedWrapper from '@/components/utilities/embedding/EmbedWrapper.vue';
-import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
+import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
 import ComparisonGrid from './ComparisonGrid.vue';

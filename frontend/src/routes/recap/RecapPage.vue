@@ -24,7 +24,7 @@ import TitleText from '@/components/design-system/typography/TitleText.vue';
 import { vkiLogoPercent } from '@/components/design-system/icons';
 
 import EmbedWrapper from '@/components/utilities/embedding/EmbedWrapper.vue';
-import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
+import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
 import RecapQuestionCard from './RecapQuestionCard.vue';

@@ -21,7 +21,7 @@ import {
   vkiStarFilled,
 } from '@/components/design-system/icons';
 
-import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
+import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 
 export interface Props {
   question: Question;

@@ -17,7 +17,7 @@ import ButtonComponent from '@/components/design-system/input/ButtonComponent.vu
 import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
-import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
+import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
 import StepWrapper from '@/components/design-system/layout/StepWrapper.vue';
 
