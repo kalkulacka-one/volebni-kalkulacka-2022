@@ -10,14 +10,7 @@ export interface Props {
   huge?: boolean;
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  extraSmall: false,
-  small: false,
-  medium: false,
-  large: false,
-  extraLarge: false,
-  huge: false,
-});
+const props = defineProps<Props>();
 
 const classes = computed(() => ({
   'responsive-wrapper--extra-small': props.extraSmall,
