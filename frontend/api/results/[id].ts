@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { PrismaClient, Prisma } from '@prisma/client';
+import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
@@ -9,7 +9,7 @@ export default async function (req: VercelRequest, res: VercelResponse) {
   const resultId = req.query.id as string;
   if (req.method === 'GET') {
     const result = await prisma.result.findFirst({
-      where: { id: BigInt(resultId) },
+      where: { id: resultId },
     });
     res.json(result);
   } else {

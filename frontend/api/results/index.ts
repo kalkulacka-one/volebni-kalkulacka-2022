@@ -9,7 +9,7 @@ export default async function (req: VercelRequest, res: VercelResponse) {
     console.log(req.body);
     // const { value } = req.body;
 
-    var json = req.body as Prisma.JsonObject;
+    const json = req.body as Prisma.JsonObject;
 
     const result = await prisma.result.create({
       data: {
