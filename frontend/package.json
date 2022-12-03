@@ -17,7 +17,7 @@
     "parse-data-schema": "cp ../data ./public/dev -r && node ./parseSchemas.js",
     "parse-rest-schema": "node ./parseRestSchemas.js",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook:build": "storybook build"
   },
   "dependencies": {
     "@mdi/js": "^7.0.96",
