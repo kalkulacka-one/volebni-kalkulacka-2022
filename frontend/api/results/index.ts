@@ -16,7 +16,7 @@ export default async function (req: VercelRequest, res: VercelResponse) {
         value: json,
       },
     });
-    res.json(result);
+    res.json(result.id);
   } else {
     throw new Error(
       `The HTTP ${req.method} method is not supported at this route.`
