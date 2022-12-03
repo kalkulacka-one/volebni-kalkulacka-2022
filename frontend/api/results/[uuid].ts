@@ -12,7 +12,11 @@ export default async function (req: VercelRequest, res: VercelResponse) {
     const result = await prisma.result.findFirst({
       where: { id: resultId },
     });
-    return res.json(result);
+    if (result === null) {
+      return res.status(404).json({ error: `Result ${resultId} not found` });
+    } else {
+      return res.json(result);
+    }
   } else {
     throw new Error(
       `The HTTP ${req.method} method is not supported at this route.`
