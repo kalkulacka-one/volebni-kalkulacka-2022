@@ -4,9 +4,6 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 export default async function (req: VercelRequest, res: VercelResponse) {
-  console.log(req.method);
-  console.log(req.query.uuid);
-  // const { value } = req.body;
   const resultId = req.query.uuid as string;
   if (req.method === 'GET') {
     const result = await prisma.result.findFirst({
