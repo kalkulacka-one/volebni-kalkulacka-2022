@@ -5,6 +5,8 @@ const prisma = new PrismaClient();
 
 export default async function (req: VercelRequest, res: VercelResponse) {
   console.log(req.method);
+  res.json({ ok: 'ok' });
+  /*
   // const { value } = req.body;
   const resultId = req.query.id as string;
   if (req.method === 'GET') {
@@ -17,4 +19,5 @@ export default async function (req: VercelRequest, res: VercelResponse) {
       `The HTTP ${req.method} method is not supported at this route.`
     );
   }
+  */
 }
