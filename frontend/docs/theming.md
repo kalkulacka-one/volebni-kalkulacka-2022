@@ -60,7 +60,7 @@ and `@/components/themes/MyAwesomeTheme.scss` file, then import the default them
 
 ## Theme provider
 
-The app is wrapped in a theme provider component ([`@/components/utilities/theming/ThemeProvider.vue`](../src/components/utilities/theming/ThemeProvider.vue)), which provides the theme (= CSS variables) set by the `theme` prop to all other components nested within the provider.
+The app is wrapped in a theme provider component ([`@/components/utilities/theming/ThemeProvider.vue`](../src/components/utilities/theming/ThemeProvider.vue)), which provides the theme (= CSS variables) set by the `theme` prop to all other components nested within the provider. It also adds `theme-provider` and `theme-provider--my-awesome-theme` classes to the renderless (`display: contents;`) wrapper.
 
 ### Theme provider wrapper & switcher
 
