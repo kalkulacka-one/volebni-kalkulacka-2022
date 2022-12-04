@@ -42,7 +42,7 @@ To create a new theme, simply create a new file in `@/components/themes/MyAwesom
 and `@/components/themes/MyAwesomeTheme.scss` file, then import the default theme and override any of the CSS variables you want, for example:
 
 ```scss
-@import './DefaultTheme.scss';
+@import '@/components/themes/DefaultTheme.scss';
 
 *:deep() {
   // Override any of the default theme variables here
