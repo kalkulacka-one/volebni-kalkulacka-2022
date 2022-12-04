@@ -58,6 +58,17 @@ and `@/components/themes/MyAwesomeTheme.scss` file, then import the default them
 }
 ```
 
+In case you also want to change the background color, it is unfortunately not possible to use the theme CSS variable here. You have to add the following definition on top of the `@/components/themes/MyAwesomeTheme.vue` file:
+
+```vue
+<script setup lang="ts">
+const body = document.querySelector('body');
+if (body != null) {
+  body.style.backgroundColor = 'rgb(248, 247, 247)';
+}
+</script>
+```
+
 ## Theme provider
 
 The app is wrapped in a theme provider component ([`@/components/utilities/theming/ThemeProvider.vue`](../src/components/utilities/theming/ThemeProvider.vue)), which provides the theme (= CSS variables) set by the `theme` prop to all other components nested within the provider. It also adds `theme-provider` and `theme-provider--my-awesome-theme` classes to the renderless (`display: contents;`) wrapper.
