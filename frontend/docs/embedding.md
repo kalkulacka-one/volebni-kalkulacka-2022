@@ -102,7 +102,7 @@ Embeds work very similarly to the [theming](theming.md).
 
 ### Embed provider
 
-Embed provider ([`@/components/utilities/embedding/EmbedProvider.vue`](../src/components/utilities/embedding/EmbedProvider.vue)) is a renderless (`display: contents;`) component which lazy-loads the wrapper component from `@/embeds` folder if provided by the `embed` prop or the ([`@/components/utilities/embedding/WebProvider.vue`](../src/components/utilities/embedding/WebProvider.vue) component if not.
+Embed provider ([`@/components/utilities/embedding/EmbedProvider.vue`](../src/components/utilities/embedding/EmbedProvider.vue)) is a renderless (`display: contents;`) component which lazy-loads the wrapper component from `@/embeds` folder if provided by the `embed` prop or the ([`@/components/utilities/embedding/WebProvider.vue`](../src/components/utilities/embedding/WebProvider.vue) component if not. It also adds `embed-provider` and `embed-provider--web-provider` or `embed-provider--my-awesome-embed` classes to the wrapper.
 
 ### Embed provider wrapper
 
