@@ -1,6 +1,10 @@
 @import '@/assets/breakpoints.scss';
 
 *:deep() {
+  // ↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+  // ↓ DEPRECATED ↓
+  // ↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
   // Sizings
   // -------
   --sizing-small: 1rem; // ≈ 16 px
@@ -58,6 +62,10 @@
   --radius-small: var(--spacing-small);
   --radius-medium: var(--spacing-medium);
   --radius-large: var(--spacing-large);
+
+  // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+  // ↑ DEPRECATED ↑
+  // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
   // Color palette
   // -------------
