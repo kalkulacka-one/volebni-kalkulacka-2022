@@ -8,17 +8,17 @@ Volební kalkulačka, nová verze s Česko.Digital v roce 2022
 2. Install hooks - `pre-commit install` or `make pre-commit-install`
 3. Run `pre-commit` on existing code, to make sure, that it works - `make pre-commit-run-all`
 
-## Backend
-
-Backend uses Python and FastAPI framework.
-
-[README](backend/README.md)
-
 ## Frontend
 
 Frontend is SPA Vue.js application.
 
 [README](frontend/README.md)
+
+## Generator
+
+Generator uses Python and FastAPI framework.
+
+[README](generator/README.md)
 
 ## Infrastructure
 

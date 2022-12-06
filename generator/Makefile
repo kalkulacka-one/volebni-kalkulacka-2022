@@ -1,4 +1,4 @@
-SCRIPTS=main.py
+SCRIPTS=main.py enrich_with_pdv.py converter.py
 PROJECT_DIR=kalkulacka
 TEST_DIR=tests
 
