@@ -179,7 +179,17 @@ def convert_answer(a: str) -> Optional[str]:
 
 
 def convert_comment(c: str) -> Optional[str]:
-    # sometimes is value in empty column 0, so we should handle it
+    """
+    Sometimes is value in empty column 0, so we should handle it
+
+    >>> convert_comment("") is None
+    True
+    >>> convert_comment("0") is None
+    True
+    >>> convert_comment("AAA")
+    'AAA'
+    """
+
     if c in {"0", ""}:
         return None
     return c

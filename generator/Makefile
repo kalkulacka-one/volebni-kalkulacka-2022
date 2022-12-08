@@ -1,5 +1,5 @@
 SCRIPTS=main.py enrich_with_pdv.py converter.py
-PROJECT_DIR=kalkulacka
+PROJECT_DIR=generator
 TEST_DIR=tests
 
 POETRY=poetry
