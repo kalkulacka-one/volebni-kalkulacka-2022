@@ -76,6 +76,30 @@
   --base-large: 2.5rem; // ~ 40 px
   --base-extra-large: 3.5rem; // ~ 56 px
 
+  // - semantic spacings
+  //   - gap
+  //     1. small
+  --gap-small: calc(var(--base-small) / 2); // ~ 8 px
+  --responsive-gap-small: var(--gap-extra-small);
+  //     2. medium
+  --gap-medium: var(--base-small); // ~ 16 px
+  --responsive-gap-medium: var(--gap-medium);
+  @media (max-width: calc($breakpoint-extra-small - 1px)) {
+    --responsive-gap-medium: var(--gap-small);
+  }
+  //     3. large
+  --gap-large: calc(var(--base-small) * 2); // ~ 32 px
+  --responsive-gap-large: var(--gap-large);
+  @media (max-width: calc($breakpoint-extra-small - 1px)) {
+    --responsive-gap-large: var(--gap-small);
+  }
+  //     4. extra large
+  --gap-extra-large: calc(var(--base-small) * 4); // ~ 64 px
+  --responsive-gap-extra-large: var(--gap-extra-large);
+  @media (max-width: calc($breakpoint-extra-small - 1px)) {
+    --responsive-gap-extra-large: var(--gap-small);
+  }
+
   // Color palette
   // -------------
   // Neutral colors
