@@ -23,6 +23,48 @@ color: rgba(var(--color-primary-fg), var(--transparency-10));
 
 Always use tokens for sizing, colors and typography, never hardcoded values. Also be cautious to use the semantic variables when appropriate, not the palette values.
 
+### Sizing & spacing tokens
+
+Various sizing & spacing tokens are defined in the default theme ([`@/components/themes/DefaultTheme.scss`](../src/components/themes/DefaultTheme.scss)). Almost always use the semantic tokens, and the [responsive ones](./responsivity.md#using-responsive-css-variables), not the base values. Base values are derived from the base font size set in [`@/assets/main.css`](../src/assets/main.css).
+
+To use a sizing token within a component, simply use the CSS variable:
+
+```vue
+<style lang="scss" scoped>
+.my-awesome-container {
+  padding: var(--responsive-gap-large);
+}
+</style>
+```
+
+The semantic variables have also types defined in [`@/components/design-system/configurations/sizing-and-spacing.ts`](../src/components/design-system/configurations/sizing-and-spacing.ts), which should be used when a variable is used as a prop in a component:
+
+```vue
+<script setup lang="ts">
+import type { Gap } from '@/components/design-system/configurations/sizing-and-spacing';
+
+export interface Props {
+  padding: Gap;
+}
+
+defineProps<Props>();
+</script>
+```
+
+In case you want to restrict the allowed values, simply list them as an intersection type:
+
+```vue
+<script setup lang="ts">
+import type { Gap } from '@/components/design-system/configurations/sizing-and-spacing';
+
+export interface Props {
+  padding: Gap & ('medium' | 'large');
+}
+
+defineProps<Props>();
+</script>
+```
+
 ## Themes
 
 Themes are actually Vue components which define CSS variables. Themes live in `@/components/themes` folder.
