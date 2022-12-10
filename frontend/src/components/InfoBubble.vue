@@ -14,7 +14,7 @@ const imageUrl = computed(() => `/images/${props.image}`);
 <template>
   <div class="test">
     <img class="image" :src="imageUrl" />
-    <CardComponent corner="top-left" padding="small">
+    <CardComponent corner="top-left" padding="medium">
       <slot />
     </CardComponent>
   </div>

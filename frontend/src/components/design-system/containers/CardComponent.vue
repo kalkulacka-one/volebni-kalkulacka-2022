@@ -1,56 +1,89 @@
 <script setup lang="ts">
+import type {
+  Radius,
+  Gap,
+} from '@/components/design-system/configurations/sizing-and-spacing';
+
 import { computed } from 'vue';
 
 export interface Props {
-  radius?: 'small' | 'large';
-  corner: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+  backgroundColor?: string;
   border?: boolean;
   borderKind?: 'normal' | 'strong';
+  borderRadius?: Radius;
+  corner: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+  padding?: Gap & ('medium' | 'large');
+  paddingAsymmetric?: boolean;
+  responsive?: boolean;
   shadow?: boolean;
-  padding?: 'small' | 'medium' | 'large';
-  paddingResponsive?: boolean;
-  backgroundColor?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  radius: 'small',
+  backgroundColor: 'rgb(var(--color-neutral-bg-container))',
   border: false,
   borderKind: 'normal',
+  // eslint-disable-next-line vue/require-valid-default-prop
+  borderRadius: 'small',
+  // eslint-disable-next-line vue/require-valid-default-prop
+  padding: 'medium',
+  responsive: true,
   shadow: false,
-  padding: 'small',
-  paddingResponsive: false,
-  backgroundColor: 'rgb(var(--color-neutral-bg-container))',
+});
+
+const responsivePrefix = props.responsive ? 'responsive-' : '';
+
+const border = computed(() => {
+  return {
+    width: props.border ? `var(--${responsivePrefix}border-thin)` : 0,
+    radius: `var(--${responsivePrefix}radius-${props.borderRadius})`,
+  };
+});
+
+const padding = computed(() => {
+  let horizontal = `var(--${responsivePrefix}gap-${props.padding})`;
+  let vertical = `var(--${responsivePrefix}gap-${props.padding})`;
+
+  if (props.paddingAsymmetric) {
+    horizontal = `2 * var(--${responsivePrefix}gap-${props.padding})`;
+  }
+
+  if (props.border) {
+    horizontal = `${horizontal} - ${border.value.width}`;
+    vertical = `${vertical} - ${border.value.width}`;
+  }
+
+  return {
+    horizontal: `calc(${horizontal})`,
+    vertical: `calc(${vertical})`,
+  };
 });
 
 const classes = computed(() => ({
-  [`card--radius-${props.radius}`]: props.radius,
   [`card--corner-${props.corner}`]: props.corner,
   'card--border': props.border,
   [`card--border-${props.borderKind}`]: props.border,
   'card--shadow': props.shadow,
-  [`card--padding-${props.padding}${
-    props.paddingResponsive ? `-responsive` : ''
-  }`]: props.padding,
 }));
 </script>
 
 <template>
-  <div :class="classes" :style="{ 'background-color': backgroundColor }">
+  <div
+    :class="['card', classes]"
+    :style="{ 'background-color': backgroundColor }"
+  >
     <slot />
   </div>
 </template>
 
 <style scoped lang="scss">
 .card {
-  &--radius {
-    &-small {
-      border-radius: var(--radius-small);
-    }
-
-    &-large {
-      border-radius: var(--radius-large);
-    }
-  }
+  border-style: solid;
+  border-width: v-bind('border.width');
+  border-radius: v-bind('border.radius');
+  padding-top: v-bind('padding.vertical');
+  padding-right: v-bind('padding.horizontal');
+  padding-bottom: v-bind('padding.vertical');
+  padding-left: v-bind('padding.horizontal');
 
   &--corner {
     &-top-left {
@@ -71,9 +104,6 @@ const classes = computed(() => ({
   }
 
   &--border {
-    border-style: solid;
-    border-width: var(--spacing-pico);
-
     &-normal {
       border-color: rgb(var(--color-neutral-border));
     }
@@ -87,38 +117,6 @@ const classes = computed(() => ({
     // TODO: Add shadow to theme
     box-shadow: 6px 8px 0px 0px
       rgba(var(--color-neutral-shadow), var(--transparency-20));
-  }
-
-  &--padding {
-    &-small {
-      padding: var(--spacing-small);
-
-      &-responsive {
-        padding: var(--responsive-spacing-small);
-      }
-    }
-
-    &-medium {
-      padding: var(--spacing-medium);
-
-      &-responsive {
-        padding: var(--responsive-spacing-medium);
-      }
-    }
-
-    &-large {
-      padding-top: var(--spacing-large);
-      padding-bottom: var(--spacing-large);
-      padding-left: calc(2 * var(--spacing-large));
-      padding-right: calc(2 * var(--spacing-large));
-
-      &-responsive {
-        padding-top: var(--responsive-spacing-large);
-        padding-bottom: var(--responsive-spacing-large);
-        padding-left: var(--responsive-spacing-2-large);
-        padding-right: var(--responsive-spacing-2-large);
-      }
-    }
   }
 }
 </style>
