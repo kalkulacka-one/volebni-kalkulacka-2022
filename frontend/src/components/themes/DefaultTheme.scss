@@ -77,6 +77,16 @@
   --base-extra-large: 3.5rem; // ~ 56 px
 
   // - semantic sizings
+  //   - border
+  //     1. thin
+  --border-thin: calc(var(--base-small) / 16); // ~ 1 px
+  --responsive-border-thin: var(--border-thin);
+  //     2. medium
+  --border-medium: calc(var(--base-small) / 8); // ~ 2 px
+  --responsive-border-medium: var(--border-medium);
+  //     3. thick
+  --border-thick: calc(var(--base-small) / 4); // ~ 4 px
+  --responsive-border-thick: var(--border-thick);
   //   - radius
   //     1. small
   --radius-small: calc(var(--base-small) / 2); // ~ 8 px
