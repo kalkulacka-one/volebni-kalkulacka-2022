@@ -76,6 +76,18 @@
   --base-large: 2.5rem; // ~ 40 px
   --base-extra-large: 3.5rem; // ~ 56 px
 
+  // - semantic sizings
+  //   - radius
+  //     1. small
+  --radius-small: calc(var(--base-small) / 2); // ~ 8 px
+  --responsive-radius-small: var(--radius-extra-small);
+  //     2. medium
+  --radius-medium: var(--base-small); // ~ 16 px
+  --responsive-radius-medium: var(--radius-medium);
+  //     3. large
+  --radius-large: calc(var(--base-small) * 2); // ~ 32 px
+  --responsive-radius-large: var(--radius-large);
+
   // - semantic spacings
   //   - gap
   //     1. small
