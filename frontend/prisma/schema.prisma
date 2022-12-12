@@ -10,27 +10,18 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Post {
-  id        BigInt   @id @default(autoincrement())
-  title     String   @unique @db.String(255)
-  createdAt DateTime @default(now()) @db.Timestamp(6)
-  content   String?
-  published Boolean  @default(false)
-  authorId  BigInt
-  User      User     @relation(fields: [authorId], references: [id], onDelete: NoAction, onUpdate: NoAction)
-}
-
-model Profile {
-  id     BigInt  @id @default(autoincrement())
-  bio    String?
-  userId BigInt  @unique
-  User   User    @relation(fields: [userId], references: [id], onDelete: NoAction, onUpdate: NoAction)
-}
-
 model User {
-  id      BigInt   @id @default(autoincrement())
-  name    String?  @db.String(255)
-  email   String   @unique @db.String(255)
-  Post    Post[]
-  Profile Profile?
+  id             BigInt   @id @default(autoincrement())
+  name           String?  @db.String(255)
+  email          String   @unique @db.String(255)
+  authProvider   String?   @db.String(32)
+  authProviderId String?   @db.String(255)
+  Result         Result[]
+}
+
+model Result {
+  id       BigInt @id @default(autoincrement())
+  resultId String @db.String(255)
+  userId   BigInt
+  User     User   @relation(fields: [userId], references: [id], onDelete: NoAction, onUpdate: NoAction)
 }
