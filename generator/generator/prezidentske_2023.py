@@ -34,7 +34,7 @@ def extract_election_prezidentske(
             InstructionKey.HEADER: "Zvolte svůj senátní obvod",
             InstructionKey.STEP_1_1: "Letos se volí v třetině obvodů v rámci ČR.",
             InstructionKey.STEP_1_2: "Více o senátních obvodech",
-            InstructionKey.STEP_1_LINK: "https://2022.programydovoleb.cz/senatni-volby",
+            InstructionKey.STEP_1_LINK: "https://programydovoleb.cz/",
             InstructionKey.STEP_2_1: """
 Odpovězte na 40 otázek.
 Na stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.
@@ -55,9 +55,7 @@ jak se kandidáti shodují s Vašimi názory.
     # load file
     doc_candidates = gc.open_by_key(key_candidates)
     sheet_candidates = doc_candidates.worksheet("candidates")
-    # read existing districts
 
-    # for each district load set of candidates
     logger.info("Loading list of candidates")
     election.add_candidates(
         district_global,
@@ -74,7 +72,7 @@ jak se kandidáti shodují s Vašimi názory.
     doc_questions = gc.open_by_key(key_questions)
     sheet_questions = doc_questions.worksheet("OTÁZKY")
 
-    question_definitions = extract_senatni_question_definitions(
+    question_definitions = extract_prezidentske_question_definitions(
         sheet_questions,
         election,
         district_global,
@@ -122,7 +120,7 @@ def extract_prezidentske_candidates(
     return candidates
 
 
-def extract_senatni_question_definitions(
+def extract_prezidentske_question_definitions(
     sheet: Worksheet,
     election: Election,
     district: District,
