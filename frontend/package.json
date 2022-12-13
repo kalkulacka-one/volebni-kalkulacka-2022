@@ -15,7 +15,9 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
     "parse-data-schema": "cp ../data ./public/dev -r && node ./parseSchemas.js",
-    "parse-rest-schema": "node ./parseRestSchemas.js"
+    "parse-rest-schema": "node ./parseRestSchemas.js",
+    "storybook": "storybook dev -p 6006",
+    "storybook:build": "storybook build"
   },
   "dependencies": {
     "@mdi/js": "^7.0.96",
@@ -27,6 +29,12 @@
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
+    "@storybook/addon-essentials": "^v7.0.0-beta.3",
+    "@storybook/addon-interactions": "^v7.0.0-beta.3",
+    "@storybook/addon-links": "^v7.0.0-beta.3",
+    "@storybook/testing-library": "^0.0.13",
+    "@storybook/vue3": "^v7.0.0-beta.3",
+    "@storybook/vue3-vite": "^v7.0.0-beta.3",
     "@types/jsdom": "^16.2.14",
     "@types/markdown-it": "^12.2.3",
     "@types/node": "^16.11.45",
@@ -39,6 +47,7 @@
     "cypress": "^10.3.0",
     "eslint": "^8.5.0",
     "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-storybook": "^0.6.7",
     "eslint-plugin-vue": "^9.0.0",
     "jsdom": "^20.0.0",
     "json-schema-to-typescript": "^11.0.2",
@@ -48,6 +57,7 @@
     "sass": "^1.54.3",
     "sass-loader": "^13.0.2",
     "start-server-and-test": "^1.14.0",
+    "storybook": "^v7.0.0-beta.3",
     "typescript": "~4.7.4",
     "vite": "^3.0.1",
     "vite-plugin-md": "^0.20.4",
