@@ -8,7 +8,7 @@ import App from './App.vue';
 
 import './assets/main.css';
 
-import EmbedProviderWrapper from '@/components/EmbedProviderWrapper.vue';
+import EmbedProviderWrapper from '@/components/utilities/embedding/EmbedProviderWrapper.vue';
 
 //routes
 import GuidePageVue from './routes/guide/GuidePage.vue';

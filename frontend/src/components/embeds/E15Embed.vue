@@ -4,6 +4,6 @@ import ThemeProvider from '@/components/utilities/theming/ThemeProvider.vue';
 
 <template>
   <ThemeProvider theme="e15">
-    <slot />
+    <router-view />
   </ThemeProvider>
 </template>

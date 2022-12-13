@@ -20,7 +20,7 @@ import NavigationBar from '@/components/design-system/navigation/NavigationBar.v
 import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
 import TitleText from '@/components/design-system/typography/TitleText.vue';
 
-import EmbedWrapper from '@/components/responsivity/EmbedWrapper.vue';
+import EmbedWrapper from '@/components/utilities/embedding/EmbedWrapper.vue';
 import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 

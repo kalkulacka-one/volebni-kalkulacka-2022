@@ -2,8 +2,9 @@
 import { computed, provide } from 'vue';
 import { useRoute } from 'vue-router';
 
-import EmbedProvider from '@/components/EmbedProvider.vue';
-import { EmbedKey } from '@/components/EmbedKey';
+import { EmbedKey } from '@/components/utilities/embedding/EmbedKey';
+
+import EmbedProvider from '@/components/utilities/embedding/EmbedProvider.vue';
 
 const route = useRoute();
 
@@ -14,6 +15,6 @@ provide(EmbedKey, embed.value);
 
 <template>
   <EmbedProvider :embed="embed">
-    <router-view />
+    <slot />
   </EmbedProvider>
 </template>

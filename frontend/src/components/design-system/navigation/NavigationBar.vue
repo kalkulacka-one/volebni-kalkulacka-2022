@@ -6,7 +6,7 @@ import StackComponent from '@/components/design-system/layout/StackComponent.vue
 import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 
-import EmbedWrapper from '@/components/responsivity/EmbedWrapper.vue';
+import EmbedWrapper from '@/components/utilities/embedding/EmbedWrapper.vue';
 import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
 
 export interface Props {

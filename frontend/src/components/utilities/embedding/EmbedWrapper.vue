@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, inject } from 'vue';
 
-import { EmbedKey } from '@/components/EmbedKey';
+import { EmbedKey } from '@/components/utilities/embedding/EmbedKey';
 
 export interface Props {
   embed?: boolean | string;
