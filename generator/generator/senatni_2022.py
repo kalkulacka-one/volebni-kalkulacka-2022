@@ -1,5 +1,6 @@
 from datetime import datetime
 import time
+from typing import Optional
 
 from gspread import Client
 from gspread import Worksheet
@@ -21,6 +22,103 @@ from generator.types import InstructionKey
 from generator.types import Party
 from generator.types import QuestionDefinition
 from generator.types import SheetRow
+
+
+def extract_election_senat(
+    gc: Client, row: SheetRow, wait: int, election: Optional[Election] = None
+) -> Election:
+    election = Election(
+        id="senatni-2022",
+        key="senatni-2022",
+        name="Senátní volby 2022",
+        description="Letos se volí v třetině obvodů v rámci ČR.",
+        voting_from=datetime(2022, 9, 23, 14, 0, 0),
+        voting_to=datetime(2022, 9, 24, 14, 0, 0),
+        instructions={
+            InstructionKey.HEADER: "Zvolte svůj senátní obvod",
+            InstructionKey.STEP_1_1: "Letos se volí v třetině obvodů v rámci ČR.",
+            InstructionKey.STEP_1_2: "Více o senátních obvodech",
+            InstructionKey.STEP_1_LINK: "https://2022.programydovoleb.cz/senatni-volby",
+            InstructionKey.STEP_2_1: """
+Odpovězte na 40 otázek.
+Na stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.
+Zodpovězení otázek zabere cca 10 minut.
+Na konci se dozvíte,
+jak se kandidáti shodují s Vašimi názory.
+            """,
+        },
+    )
+
+    url_candidates = str(row["kandidáti"])
+    key_candidates = extract_key(url_candidates)
+    # load file
+    doc_candidates = gc.open_by_key(key_candidates)
+    sheet_candidates = doc_candidates.worksheet("candidates")
+    # read existing districts
+    logger.info("Loading districts")
+    election.add_districts(extract_senatni_districts(sheet_candidates, election))
+    time.sleep(wait)
+
+    # for each district load set of candidates
+    logger.info("Loading list of candidates")
+    for pos, district in enumerate(election.districts.values()):
+        logger.info("\t%d: Extracting candidates for district: %s", pos, district)
+        election.add_candidates(
+            district, extract_senatni_candidates(sheet_candidates, election, district)
+        )
+
+    time.sleep(wait)
+
+    url_questions = str(row["otázky originál"])
+    key_questions = extract_key(url_questions)
+    logger.info("Loading questions from URL %s (%s)", url_questions, key_questions)
+
+    # load file
+    doc_questions = gc.open_by_key(key_questions)
+    sheet_questions = doc_questions.worksheet("OTÁZKY")
+    district_global = District(
+        gen_district_id(election, "global"), "global", "global", "global", True
+    )
+    question_definitions = extract_senatni_question_definitions(
+        sheet_questions,
+        election,
+        district_global,
+    )
+
+    # for each district load set of questions
+    logger.info("Loading question definitions")
+    for pos, district in enumerate(election.districts.values()):
+        logger.info(
+            "\t%d: Extracting question definitions for district: %s", pos, district
+        )
+        if not district.active:
+            logger.info("Skipping loading questions for district %s", district)
+            continue
+        election.add_question_definitions(
+            district,
+            question_definitions,
+        )
+    time.sleep(wait)
+
+    logger.info("Extracting answers")
+    url_answers = str(row["odpovědi"])
+    key_answers = extract_key(url_answers)
+    # load file
+    doc_answers = gc.open_by_key(key_answers)
+    sheet_answers = doc_answers.worksheet("Form Responses 1")
+
+    for district in election.districts.values():
+        if not district.active:
+            logger.info("Skipping loading questions for district %s", district)
+            continue
+        candidates = election.candidates[district]
+        answers = extract_answers(sheet_answers, election, district)
+        election.add_answers(
+            district, {c: a for c, a in answers.items() if c in candidates}
+        )
+        time.sleep(wait)
+
+    return election
 
 
 def extract_senatni_districts(
@@ -116,98 +214,3 @@ def extract_senatni_question_definitions(
         definitions.append(definition)
     logger.info("Extracted question definitions: %d", len(definitions))
     return reorder_question_definitions(definitions)
-
-
-def extract_election_senat(gc: Client, row: SheetRow, wait: int) -> Election:
-    election = Election(
-        id="senatni-2022",
-        key="senatni-2022",
-        name="Senátní volby 2022",
-        description="Letos se volí v třetině obvodů v rámci ČR.",
-        voting_from=datetime(2022, 9, 23, 14, 0, 0),
-        voting_to=datetime(2022, 9, 24, 14, 0, 0),
-        instructions={
-            InstructionKey.HEADER: "Zvolte svůj senátní obvod",
-            InstructionKey.STEP_1_1: "Letos se volí v třetině obvodů v rámci ČR.",
-            InstructionKey.STEP_1_2: "Více o senátních obvodech",
-            InstructionKey.STEP_1_LINK: "https://2022.programydovoleb.cz/senatni-volby",
-            InstructionKey.STEP_2_1: """
-Odpovězte na 40 otázek.
-Na stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.
-Zodpovězení otázek zabere cca 10 minut.
-Na konci se dozvíte,
-jak se kandidáti shodují s Vašimi názory.
-            """,
-        },
-    )
-
-    url_candidates = str(row["kandidáti"])
-    key_candidates = extract_key(url_candidates)
-    # load file
-    doc_candidates = gc.open_by_key(key_candidates)
-    sheet_candidates = doc_candidates.worksheet("candidates")
-    # read existing districts
-    logger.info("Loading districts")
-    election.add_districts(extract_senatni_districts(sheet_candidates, election))
-    time.sleep(wait)
-
-    # for each district load set of candidates
-    logger.info("Loading list of candidates")
-    for pos, district in enumerate(election.districts.values()):
-        logger.info("\t%d: Extracting candidates for district: %s", pos, district)
-        election.add_candidates(
-            district, extract_senatni_candidates(sheet_candidates, election, district)
-        )
-
-    time.sleep(wait)
-
-    url_questions = str(row["otázky originál"])
-    key_questions = extract_key(url_questions)
-    logger.info("Loading questions from URL %s (%s)", url_questions, key_questions)
-
-    # load file
-    doc_questions = gc.open_by_key(key_questions)
-    sheet_questions = doc_questions.worksheet("OTÁZKY")
-    district_global = District(
-        gen_district_id(election, "global"), "global", "global", "global", True
-    )
-    question_definitions = extract_senatni_question_definitions(
-        sheet_questions,
-        election,
-        district_global,
-    )
-
-    # for each district load set of questions
-    logger.info("Loading question definitions")
-    for pos, district in enumerate(election.districts.values()):
-        logger.info(
-            "\t%d: Extracting question definitions for district: %s", pos, district
-        )
-        if not district.active:
-            logger.info("Skipping loading questions for district %s", district)
-            continue
-        election.add_question_definitions(
-            district,
-            question_definitions,
-        )
-    time.sleep(wait)
-
-    logger.info("Extracting answers")
-    url_answers = str(row["odpovědi"])
-    key_answers = extract_key(url_answers)
-    # load file
-    doc_answers = gc.open_by_key(key_answers)
-    sheet_answers = doc_answers.worksheet("Form Responses 1")
-
-    for district in election.districts.values():
-        if not district.active:
-            logger.info("Skipping loading questions for district %s", district)
-            continue
-        candidates = election.candidates[district]
-        answers = extract_answers(sheet_answers, election, district)
-        election.add_answers(
-            district, {c: a for c, a in answers.items() if c in candidates}
-        )
-        time.sleep(wait)
-
-    return election

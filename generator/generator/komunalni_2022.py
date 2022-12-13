@@ -1,5 +1,6 @@
 from datetime import datetime
 import time
+from typing import Optional
 
 from gspread import Client
 from gspread import Worksheet
@@ -23,7 +24,20 @@ from generator.types import QuestionDefinition
 from generator.types import SheetRow
 
 
-def extract_election_komunalni(gc: Client, row: SheetRow, wait: int) -> Election:
+def extract_election_komunalni(
+    gc: Client, row: SheetRow, wait: int, election: Optional[Election] = None
+) -> Election:
+    name = str(row["name"])
+
+    if election is None:
+        return _extract_election_komunalni(gc, row, wait=wait)
+    else:
+        time.sleep(wait)
+        return _update_election_komunalni(gc, row, name, election)
+        return election
+
+
+def _extract_election_komunalni(gc: Client, row: SheetRow, wait: int) -> Election:
     election = Election(
         id="komunalni-2022",
         key="komunalni-2022",
@@ -219,7 +233,7 @@ def extract_komunalni_candidates(
     return candidates
 
 
-def update_election_komunalni(
+def _update_election_komunalni(
     gc: Client, row: SheetRow, name: str, election: Election
 ) -> Election:
     # now read answers for different cities
