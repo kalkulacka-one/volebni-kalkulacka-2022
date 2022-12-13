@@ -196,3 +196,14 @@ def gen_candidate_id(election: Election, district: District, code: str) -> str:
 
 def gen_answer_id(election: Election, district: District, code: str, num: int) -> str:
     return gen_id(election, district, f"a-{code}-{num}")
+
+
+@dataclass()
+class QuestionDefinitionColumnNames:
+    id: str = "id"
+    name: str = "name"
+    title: str = "question"
+    gist: str = "description"
+    detail: str = "vysvětlení pojmů"
+    tags: str = "téma"
+    order: str = "order"

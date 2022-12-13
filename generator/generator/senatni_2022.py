@@ -7,20 +7,16 @@ from gspread import Worksheet
 
 from generator import logger
 from generator.extract_helpers import extract_answers
-from generator.extract_helpers import extract_contacts
+from generator.extract_helpers import extract_candidate
 from generator.extract_helpers import extract_key
-from generator.extract_helpers import extract_order
-from generator.extract_helpers import reorder_question_definitions
+from generator.extract_helpers import extract_question_definitions
 from generator.types import Candidate
-from generator.types import CandidateType
 from generator.types import District
 from generator.types import Election
-from generator.types import gen_candidate_id
 from generator.types import gen_district_id
-from generator.types import gen_question_id
 from generator.types import InstructionKey
-from generator.types import Party
 from generator.types import QuestionDefinition
+from generator.types import QuestionDefinitionColumnNames
 from generator.types import SheetRow
 
 
@@ -153,41 +149,9 @@ def extract_senatni_candidates(
     for row in sheet.get_all_records():
         if str(row["obvod"]) != district.code:
             continue
-        secret_code = str(row["code"])
-        name = f"{row['given_name']} {row['family_name']}"
-        candidate_id = gen_candidate_id(election, district, secret_code)
-        contacts = extract_contacts(row)
-        is_active = bool(int(str(row["active_candidate"]) or "1"))
-        candidate = Candidate(
-            id=candidate_id,
-            num=len(candidates) + 1,
-            name=name,
-            short_name=name,
-            abbreviation=name,
-            description=name,
-            given_name=str(row["given_name"]),
-            family_name=str(row["family_name"]),
-            secret_code=secret_code,
-            important=bool(int(str(row["important"]) or "0")),
-            active=is_active,
-            type=CandidateType.person,
-            logo=None,  # photo never contains valid value => ignore str(row["photo"])
-            contact=str(row["contact 1"]) or None,
-            contact_party=str(row["contact party"]) or None,
-            contacts=contacts,
-            people=None,
-            parties=[
-                Party(
-                    id=f"{candidate_id}-p",
-                    name=str(row["party"]),
-                    short_name=str(row["party"]),
-                    abbreviation=str(row["party"]),
-                    description=str(row["party"]),
-                    contacts=contacts,
-                )
-            ],
-        )
-        candidates[secret_code] = candidate
+        candidate = extract_candidate(row, len(candidates) + 1, election, district)
+
+        candidates[candidate.secret_code] = candidate
     logger.info("Extraction candidates: %d", len(candidates))
     return candidates
 
@@ -197,20 +161,17 @@ def extract_senatni_question_definitions(
     election: Election,
     district: District,
 ) -> list[QuestionDefinition]:
-    logger.info("Extracting question definitions")
-    definitions: list[QuestionDefinition] = []
-    for row in sheet.get_all_records():
-        q_num = int(row["id"])
-        definition = QuestionDefinition(
-            id=gen_question_id(election, district, q_num),
-            num=q_num,
-            name=str(row["name"]),
-            title=str(row["question"]),
-            gist=str(row["description"]),
-            detail=str(row["vysvětlení pojmů"]),
-            tags=[str(row["téma"])],
-            order=extract_order(row, "order"),
-        )
-        definitions.append(definition)
-    logger.info("Extracted question definitions: %d", len(definitions))
-    return reorder_question_definitions(definitions)
+    return extract_question_definitions(
+        sheet=sheet,
+        election=election,
+        district=district,
+        columns=QuestionDefinitionColumnNames(
+            id="id",
+            name="name",
+            title="question",
+            gist="description",
+            detail="vysvětlení pojmů",
+            tags="téma",
+            order="order",
+        ),
+    )

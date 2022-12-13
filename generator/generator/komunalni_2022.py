@@ -10,6 +10,7 @@ from generator.extract_helpers import extract_answers
 from generator.extract_helpers import extract_contacts
 from generator.extract_helpers import extract_key
 from generator.extract_helpers import extract_order
+from generator.extract_helpers import extract_question_definitions
 from generator.extract_helpers import reorder_question_definitions
 from generator.types import Candidate
 from generator.types import CandidateType
@@ -21,6 +22,7 @@ from generator.types import gen_question_id
 from generator.types import InstructionKey
 from generator.types import Party
 from generator.types import QuestionDefinition
+from generator.types import QuestionDefinitionColumnNames
 from generator.types import SheetRow
 
 
@@ -159,6 +161,21 @@ def extract_komunalni_question_definitions(
     election: Election,
     district: District,
 ) -> list[QuestionDefinition]:
+    return extract_question_definitions(
+        sheet=sheet,
+        election=election,
+        district=district,
+        columns=QuestionDefinitionColumnNames(
+            id="číslo",
+            name="jméno otázky",
+            title="otázka",
+            gist="popis",
+            detail="vysvětlení pojmů",
+            tags="tagy",
+            order="order",
+        ),
+    )
+
     logger.info("Extracting question definitions")
     definitions: list[QuestionDefinition] = []
     for row in sheet.get_all_records(
