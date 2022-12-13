@@ -57,7 +57,7 @@ const toggleClick = () => {
     corner="top-left"
     border
     shadow
-    padding="small"
+    padding="medium"
   >
     <div class="important">
       <ResponsiveWrapper medium large extra-large huge>

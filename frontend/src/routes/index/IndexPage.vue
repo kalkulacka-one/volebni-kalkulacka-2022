@@ -48,7 +48,7 @@ export default {
       <StaticContentLayout>
         <div class="section-header section">
           <CardComponent
-            padding="small"
+            padding="medium"
             background-color="transparent"
             corner="top-left"
           >
@@ -74,7 +74,7 @@ export default {
               </div>
             </div>
           </CardComponent>
-          <CardComponent padding="small" corner="top-left" border shadow>
+          <CardComponent padding="medium" corner="top-left" border shadow>
             <div class="card-content">
               <TitleText tag="h2" size="large">Kdo kandiduje</TitleText>
               <BodyText size="medium">
@@ -164,7 +164,7 @@ export default {
             Volební kalkulačky k už proběhlým volbám
           </TitleText>
           <MasonryGrid style="align-self: stretch">
-            <CardComponent corner="top-right" padding="small" border shadow>
+            <CardComponent corner="top-right" padding="medium" border shadow>
               <div class="card-content">
                 <div class="card-content-text">
                   <TitleText tag="h3" size="medium"
@@ -193,7 +193,7 @@ export default {
                 >
               </div>
             </CardComponent>
-            <CardComponent corner="top-left" padding="small" border shadow>
+            <CardComponent corner="top-left" padding="medium" border shadow>
               <div class="card-content">
                 <div class="card-content-text">
                   <TitleText tag="h3" size="medium"

@@ -211,7 +211,7 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
             'grid-row': 2 * questionIndex + 3,
           }"
         >
-          <CardComponent corner="top-left" padding="small">
+          <CardComponent corner="top-left" padding="medium">
             <BodyText size="small">
               {{
                 candidateAnswers.filter(

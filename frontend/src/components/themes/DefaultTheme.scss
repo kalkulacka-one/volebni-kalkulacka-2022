@@ -1,6 +1,10 @@
 @import '@/assets/breakpoints.scss';
 
 *:deep() {
+  // ↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+  // ↓ DEPRECATED ↓
+  // ↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
   // Sizings
   // -------
   --sizing-small: 1rem; // ≈ 16 px
@@ -58,6 +62,65 @@
   --radius-small: var(--spacing-small);
   --radius-medium: var(--spacing-medium);
   --radius-large: var(--spacing-large);
+
+  // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+  // ↑ DEPRECATED ↑
+  // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+
+  // Sizing & spacing
+  // ----------------
+
+  // - base units
+  --base-small: 1rem; // ~ 16 px
+  --base-medium: 1.5rem; // ~ 24 px
+  --base-large: 2.5rem; // ~ 40 px
+  --base-extra-large: 3.5rem; // ~ 56 px
+
+  // - semantic sizings
+  //   - border
+  //     1. thin
+  --border-thin: calc(var(--base-small) / 16); // ~ 1 px
+  --responsive-border-thin: var(--border-thin);
+  //     2. medium
+  --border-medium: calc(var(--base-small) / 8); // ~ 2 px
+  --responsive-border-medium: var(--border-medium);
+  //     3. thick
+  --border-thick: calc(var(--base-small) / 4); // ~ 4 px
+  --responsive-border-thick: var(--border-thick);
+  //   - radius
+  //     1. small
+  --radius-small: calc(var(--base-small) / 2); // ~ 8 px
+  --responsive-radius-small: var(--radius-extra-small);
+  //     2. medium
+  --radius-medium: var(--base-small); // ~ 16 px
+  --responsive-radius-medium: var(--radius-medium);
+  //     3. large
+  --radius-large: calc(var(--base-small) * 2); // ~ 32 px
+  --responsive-radius-large: var(--radius-large);
+
+  // - semantic spacings
+  //   - gap
+  //     1. small
+  --gap-small: calc(var(--base-small) / 2); // ~ 8 px
+  --responsive-gap-small: var(--gap-extra-small);
+  //     2. medium
+  --gap-medium: var(--base-small); // ~ 16 px
+  --responsive-gap-medium: var(--gap-medium);
+  @media (max-width: calc($breakpoint-extra-small - 1px)) {
+    --responsive-gap-medium: var(--gap-small);
+  }
+  //     3. large
+  --gap-large: calc(var(--base-small) * 2); // ~ 32 px
+  --responsive-gap-large: var(--gap-large);
+  @media (max-width: calc($breakpoint-extra-small - 1px)) {
+    --responsive-gap-large: var(--gap-small);
+  }
+  //     4. extra large
+  --gap-extra-large: calc(var(--base-small) * 4); // ~ 64 px
+  --responsive-gap-extra-large: var(--gap-extra-large);
+  @media (max-width: calc($breakpoint-extra-small - 1px)) {
+    --responsive-gap-extra-large: var(--gap-small);
+  }
 
   // Color palette
   // -------------

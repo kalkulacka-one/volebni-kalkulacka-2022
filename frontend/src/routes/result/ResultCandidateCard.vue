@@ -59,7 +59,7 @@ const toggleClick = () => {
     corner="top-left"
     border
     shadow
-    padding="small"
+    padding="medium"
   >
     <div class="avatar desktop">
       <AvatarComponent
