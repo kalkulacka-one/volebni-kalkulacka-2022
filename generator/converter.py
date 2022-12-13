@@ -39,7 +39,10 @@ if __name__ == "__main__":
         default="../data/kalkulacka",
     )
     parser.add_argument(
-        "--keys", help="List of keys that should be extracted.", nargs="+", default=[]
+        "--elections",
+        help="List of elections that should be extracted.",
+        nargs="+",
+        default=[],
     )
 
     # TODO: there should be some sheet or additional parameters
@@ -49,7 +52,7 @@ if __name__ == "__main__":
 
     logger.info(
         f"Convert: wait={args.wait}; doc-key={args.doc_key}; output={args.output}; "
-        f"keys={args.keys}"
+        f"elections={args.elections}"
     )
 
     gc = service_account()
@@ -58,10 +61,15 @@ if __name__ == "__main__":
     doc_overview = gc.open_by_key(args.doc_key)
     city_started = False
     for rec in doc_overview.worksheet("Sheet1").get_all_records():
-        key = str(rec["key"])
-        if key not in args.keys:
-            logger.warning(f"Found key '{key}', not in {args.keys} => skipping")
+        key = str(rec["volby"])
+        if args.elections and key not in args.elections:
+            logger.warning(f"Found key '{key}', not in {args.elections} => skipping")
             continue
+        if args.elections:
+            logger.info(f"Found key '{key}', in {args.elections} => processing")
+        if not args.elections:
+            logger.info(f"Found key '{key}', all keys are valid => processing")
+
         elections[key] = EXTRACT[key](gc, rec, args.wait, elections.get(key))
 
     # produce output file
