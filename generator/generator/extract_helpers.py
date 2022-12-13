@@ -37,16 +37,29 @@ def extract_key(url: str) -> Optional[str]:
     return None
 
 
+def get_s(row: SheetRow, key: str) -> Optional[str]:
+    if key not in row:
+        return None
+    return str(row[key]) or None
+
+
+def get_sf(row: SheetRow, key: str) -> Optional[str]:
+    res = get_s(row, key)
+    if not res:
+        res = get_s(row, f"{key}:")
+    return res
+
+
 def extract_contacts(row: SheetRow) -> Contacts:
     return Contacts(
-        fb=str(row["fb"]) or None,
-        tw=str(row["tw"]) or None,
-        ig=str(row["ig"]) or None,
-        wiki=str(row["wiki"]) or None,
-        web=str(row["web"]) or None,
-        yt=str(row["yt"]) or None,
-        program=str(row["program"]) or None,
-        linkedin=str(row["linkedin"]) or None,
+        fb=get_s(row, "fb"),
+        tw=get_s(row, "tw"),
+        ig=get_s(row, "ig"),
+        wiki=get_s(row, "wiki"),
+        web=get_s(row, "web"),
+        yt=get_s(row, "yt"),
+        program=get_s(row, "program"),
+        linkedin=get_s(row, "linkedin"),
     )
 
 
@@ -102,8 +115,10 @@ def extract_answers(
     for row in sheet.get_all_records():
         ts = datetime.strptime(str(row["Timestamp"]), "%m/%d/%Y %H:%M:%S")
         candidate_name = str(row.get("Jméno kandidáta:", row.get("Jméno strany:")))
-        filled_by = str(row["Jméno osoby, která vyplňuje dotazník:"])
-        secret_code = str(row["Bezpečnostní kód:"])
+        filled_by = get_sf(row, "Jméno osoby, která vyplňuje dotazník")
+        assert filled_by is not None
+        secret_code = get_sf(row, "Bezpečnostní kód")
+        assert secret_code is not None
         motto = str(row.get('Vaše charakteristika ("bio", "motto"):', "")) or None
         answers: list[QuestionAnswer] = []
 
@@ -210,6 +225,18 @@ def extract_candidate(
     candidate_id = gen_candidate_id(election, district, secret_code)
     contacts = extract_contacts(row)
     is_active = bool(int(str(row["active_candidate"]) or "1"))
+    parties = []
+    if "party" in row:
+        parties.append(
+            Party(
+                id=f"{candidate_id}-p",
+                name=str(row["party"]),
+                short_name=str(row["party"]),
+                abbreviation=str(row["party"]),
+                description=str(row["party"]),
+                contacts=contacts,
+            )
+        )
     return Candidate(
         id=candidate_id,
         num=pos,
@@ -220,24 +247,15 @@ def extract_candidate(
         given_name=str(row["given_name"]),
         family_name=str(row["family_name"]),
         secret_code=secret_code,
-        important=bool(int(str(row["important"]) or "0")),
+        important=bool(int(get_s(row, "important") or "0")),
         active=is_active,
         type=CandidateType.person,
         logo=None,  # photo never contains valid value => ignore str(row["photo"])
-        contact=str(row["contact 1"]) or None,
-        contact_party=str(row["contact party"]) or None,
+        contact=get_s(row, "contact 1"),
+        contact_party=get_s(row, "contact party"),
         contacts=contacts,
         people=None,
-        parties=[
-            Party(
-                id=f"{candidate_id}-p",
-                name=str(row["party"]),
-                short_name=str(row["party"]),
-                abbreviation=str(row["party"]),
-                description=str(row["party"]),
-                contacts=contacts,
-            )
-        ],
+        parties=parties,
     )
 
 
@@ -250,7 +268,7 @@ def extract_question_definitions(
     logger.info("Extracting question definitions")
     definitions: list[QuestionDefinition] = []
     for row in sheet.get_all_records(
-        expected_headers=asdict(columns).keys(),
+        expected_headers=asdict(columns).values(),
     ):
         q_num = int(row[columns.id])
         definition = QuestionDefinition(

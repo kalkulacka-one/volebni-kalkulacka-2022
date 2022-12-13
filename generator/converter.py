@@ -10,13 +10,15 @@ from gspread import service_account
 from generator import logger
 from generator.generate import generate
 from generator.komunalni_2022 import extract_election_komunalni
-from generator.senatni_2022 import extract_election_senat
+from generator.prezidentske_2023 import extract_election_prezidentske
+from generator.senatni_2022 import extract_election_senatni
 from generator.types import Election
 from generator.types import SheetRow
 
 EXTRACT = {
-    "senatni-2022": extract_election_senat,
+    "senatni-2022": extract_election_senatni,
     "komunalni-2022": extract_election_komunalni,
+    "prezidentske-2023-kolo-1": extract_election_prezidentske,
 }  # type: Dict[str, Callable[[Client, SheetRow, int, Optional[Election]], Election]]
 
 

@@ -20,16 +20,16 @@ from generator.types import QuestionDefinitionColumnNames
 from generator.types import SheetRow
 
 
-def extract_election_senatni(
+def extract_election_prezidentske(
     gc: Client, row: SheetRow, wait: int, election: Optional[Election] = None
 ) -> Election:
     election = Election(
-        id="senatni-2022",
-        key="senatni-2022",
-        name="Senátní volby 2022",
-        description="Letos se volí v třetině obvodů v rámci ČR.",
-        voting_from=datetime(2022, 9, 23, 14, 0, 0),
-        voting_to=datetime(2022, 9, 24, 14, 0, 0),
+        id="prezidentske-2023-kolo-1",
+        key="prezidentske-2023-kolo-1",
+        name="Prezidentske volby 2023",
+        description="Prezidentske volby v ČR.",
+        voting_from=datetime(2023, 1, 13, 14, 0, 0),
+        voting_to=datetime(2023, 1, 14, 14, 0, 0),
         instructions={
             InstructionKey.HEADER: "Zvolte svůj senátní obvod",
             InstructionKey.STEP_1_1: "Letos se volí v třetině obvodů v rámci ČR.",
@@ -45,23 +45,24 @@ jak se kandidáti shodují s Vašimi názory.
         },
     )
 
+    district_global = District(
+        gen_district_id(election, "global"), "global", "global", "global", True
+    )
+    election.add_districts({district_global.code: district_global})
+
     url_candidates = str(row["kandidáti"])
     key_candidates = extract_key(url_candidates)
     # load file
     doc_candidates = gc.open_by_key(key_candidates)
     sheet_candidates = doc_candidates.worksheet("candidates")
     # read existing districts
-    logger.info("Loading districts")
-    election.add_districts(extract_senatni_districts(sheet_candidates, election))
-    time.sleep(wait)
 
     # for each district load set of candidates
     logger.info("Loading list of candidates")
-    for pos, district in enumerate(election.districts.values()):
-        logger.info("\t%d: Extracting candidates for district: %s", pos, district)
-        election.add_candidates(
-            district, extract_senatni_candidates(sheet_candidates, election, district)
-        )
+    election.add_candidates(
+        district_global,
+        extract_prezidentske_candidates(sheet_candidates, election, district_global),
+    )
 
     time.sleep(wait)
 
@@ -72,9 +73,7 @@ jak se kandidáti shodují s Vašimi názory.
     # load file
     doc_questions = gc.open_by_key(key_questions)
     sheet_questions = doc_questions.worksheet("OTÁZKY")
-    district_global = District(
-        gen_district_id(election, "global"), "global", "global", "global", True
-    )
+
     question_definitions = extract_senatni_question_definitions(
         sheet_questions,
         election,
@@ -83,17 +82,10 @@ jak se kandidáti shodují s Vašimi názory.
 
     # for each district load set of questions
     logger.info("Loading question definitions")
-    for pos, district in enumerate(election.districts.values()):
-        logger.info(
-            "\t%d: Extracting question definitions for district: %s", pos, district
-        )
-        if not district.active:
-            logger.info("Skipping loading questions for district %s", district)
-            continue
-        election.add_question_definitions(
-            district,
-            question_definitions,
-        )
+    election.add_question_definitions(
+        district_global,
+        question_definitions,
+    )
     time.sleep(wait)
 
     logger.info("Extracting answers")
@@ -117,38 +109,12 @@ jak se kandidáti shodují s Vašimi názory.
     return election
 
 
-def extract_senatni_districts(
-    sheet: Worksheet,
-    election: Election,
-) -> dict[str, District]:
-    logger.info("Extracting districts for election %s", election)
-    districts: dict[str, District] = {}
-    for row in sheet.get_all_records():
-        code = str(row["obvod"])
-        if code not in districts:
-            active = str(row["active"]).strip()
-            districts[code] = District(
-                id=gen_district_id(election, code),
-                name=str(row["obvod_name"]),
-                description=str(row["obvod_description"]),
-                code=code,
-                show_code=True,
-                active=bool(int(active)) if active else False,
-                on_hp_from=datetime(2022, 9, 1, 0, 0, 0),
-                on_hp_to=datetime(2022, 9, 30, 14, 0, 0),
-            )
-
-    return districts
-
-
-def extract_senatni_candidates(
+def extract_prezidentske_candidates(
     sheet: Worksheet, election: Election, district: District
 ) -> dict[str, Candidate]:
     logger.info("Extracting candidates")
     candidates: dict[str, Candidate] = {}
     for row in sheet.get_all_records():
-        if str(row["obvod"]) != district.code:
-            continue
         candidate = extract_candidate(row, len(candidates) + 1, election, district)
 
         candidates[candidate.secret_code] = candidate
@@ -170,7 +136,7 @@ def extract_senatni_question_definitions(
             name="name",
             title="question",
             gist="description",
-            detail="vysvětlení pojmů",
+            detail="note",
             tags="téma",
             order="order",
         ),
