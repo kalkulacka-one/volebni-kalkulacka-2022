@@ -337,4 +337,4 @@ router.beforeEach(async (to, from) => {
 
 app.use(router);
 
-app.mount('body');
+app.mount('#app');
