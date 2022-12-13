@@ -7,7 +7,7 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 
 import EmbedWrapper from '@/components/utilities/embedding/EmbedWrapper.vue';
-import ResponsiveWrapper from '@/components/responsivity/ResponsiveWrapper.vue';
+import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 
 export interface Props {
   padding?: 'small' | 'medium' | 'large';
