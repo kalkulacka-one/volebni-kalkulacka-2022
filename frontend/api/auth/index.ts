@@ -30,24 +30,28 @@ passport.use(
       ) {
         return cb(null, false, { message: 'No email provided' });
       }
-      const email = profile.emails[0].value;
-      const user = await prisma.user.upsert({
-        where: {
-          email: email,
-        },
-        update: {
-          authProvider: 'facebook',
-          authProviderId: profile.id,
-          name: profile.displayName,
-        },
-        create: {
-          email: email,
-          name: profile.displayName,
-          authProvider: 'facebook',
-          authProviderId: profile.id,
-        },
-      });
-      return cb(null, user);
+      try {
+        const email = profile.emails[0].value;
+        const user = await prisma.user.upsert({
+          where: {
+            email: email,
+          },
+          update: {
+            authProvider: 'facebook',
+            authProviderId: profile.id,
+            name: profile.displayName,
+          },
+          create: {
+            email: email,
+            name: profile.displayName,
+            authProvider: 'facebook',
+            authProviderId: profile.id,
+          },
+        });
+        return cb(null, user);
+      } catch (err) {
+        return cb(err);
+      }
     }
   )
 );
