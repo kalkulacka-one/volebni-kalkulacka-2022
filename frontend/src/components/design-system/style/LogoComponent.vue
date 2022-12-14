@@ -68,6 +68,7 @@ const handleClick = () => {
           :fill="props.monochromatic || 'rgb(var(--color-secondary-fg))'"
         />
       </svg>
+      <a href="/api/auth/facebook">Login with facebook</a>
     </div>
     <div
       v-if="props.text"

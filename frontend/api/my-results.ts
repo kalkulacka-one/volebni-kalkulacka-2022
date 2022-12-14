@@ -12,9 +12,10 @@ function authUser(req: VercelRequest, res: VercelResponse) {
   const token = req.headers.authorization?.split(' ')[1];
   const secret = process.env.JWT_SECRET as string;
   const userData = verify(token as string, secret) as { userId: string };
-  return prisma.user.findUniqueOrThrow({where: {id: BigInt(userData.userId)}});
+  return prisma.user.findUniqueOrThrow({
+    where: { id: BigInt(userData.userId) },
+  });
 }
-
 
 export default async function (req: VercelRequest, res: VercelResponse) {
   try {
@@ -24,15 +25,19 @@ export default async function (req: VercelRequest, res: VercelResponse) {
       const results = await prisma.result.findMany({
         where: {
           userId: user.id,
-        }
+        },
       });
-      res.send({ results: results })
+      res.send({ results: results });
     }
     if (req.method === 'POST') {
-      await prisma.result.create({data: {userId: user.id, resultId: req.body.resultId}})
-      res.status(201)
+      await prisma.result.create({
+        data: { userId: user.id, resultId: req.body.resultId },
+      });
+      res.status(201);
     }
   } catch (err) {
-    return res.status(401).send({ error: 'Unauthorized' })
+    return res
+      .status(401)
+      .send({ error: 'Unauthorized', msg: err.message, stack: err.stack });
   }
 }
