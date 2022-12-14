@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { inject } from 'vue';
 import type { Question } from '@/types/question';
 
 import AccordionComponent from '@/components/design-system/containers/AccordionComponent.vue';
@@ -9,7 +8,8 @@ import CardComponent from '@/components/design-system/containers/CardComponent.v
 import HeadingComponent from '@/components/design-system/typography/HeadingComponent.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import TagComponent from '@/components/design-system/containers/TagComponent.vue';
-import { ToggleKey } from '@/components/design-system/containers/AccordionKey';
+
+import TestComponent from './TestComponent.vue';
 
 export interface Props {
   question: Question;
@@ -18,9 +18,6 @@ export interface Props {
 }
 
 defineProps<Props>();
-
-const toggleAccordion = inject(ToggleKey);
-console.log('toggle', toggleAccordion);
 </script>
 
 <template>
@@ -59,7 +56,7 @@ console.log('toggle', toggleAccordion);
 
       <AccordionHeadlessComponent>
         <template #toggle>
-          <button @click="() => toggleAccordion">CCC</button>
+          <TestComponent />
         </template>
         <template #collapsedVisible> DDD </template>
         <template #uncollapsedVisible> EEE </template>
