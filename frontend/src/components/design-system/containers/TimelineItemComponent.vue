@@ -31,5 +31,11 @@
     height: calc(100% - var(--base-smaller));
     width: 1px;
   }
+
+  &:last-of-type {
+    &:after {
+      content: none;
+    }
+  }
 }
 </style>
