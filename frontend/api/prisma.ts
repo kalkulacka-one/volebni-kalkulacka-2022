@@ -1,12 +1,12 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Prisma } from '@prisma/client';
-import * as prisma from '../src/server/prisma';
+import { prisma } from '../src/server/prisma';
 
 export default async function (req: VercelRequest, res: VercelResponse) {
   const { name = 'World' } = req.query;
 
   try {
-    await prisma.prisma.user.create({
+    await prisma.user.create({
       data: {
         name: `${name}`,
         email: `${name}@prisma.io`,
@@ -25,6 +25,6 @@ export default async function (req: VercelRequest, res: VercelResponse) {
     res.send(`An unexpected error occured: ${e}`);
   }
 
-  const allUsers = await prisma.prisma.user.findMany({});
+  const allUsers = await prisma.user.findMany({});
   res.send(allUsers.map((user) => user.name));
 }
