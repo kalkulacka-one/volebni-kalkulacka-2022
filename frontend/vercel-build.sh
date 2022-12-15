@@ -1,6 +1,5 @@
 #!/bin/bash
 
-echo $VERCEL_GIT_COMMIT_REF
 
 if [[ $VERCEL_ENV == "production" ]]; then
   prisma generate && prisma migrate deploy && npm run build && cp -r ../data ./dist/
