@@ -1,100 +1,147 @@
 import passport from 'passport';
-import { PrismaClient, Prisma } from '@prisma/client';
+import { PrismaClient } from '@prisma/client';
 import { sign } from 'jsonwebtoken';
 import express, { Express, Request, Response, NextFunction } from 'express';
 import { Strategy as FacebookStrategy } from 'passport-facebook';
+import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
+import { Strategy as TwitterStrategy } from 'passport-twitter';
 
 const app: Express = express();
-const prisma = new PrismaClient();
 
+// Monkey patch BigInt toJSON to return a string.
+// https://github.com/GoogleChromeLabs/jsbi/issues/30
 (BigInt.prototype as any).toJSON = function () {
   return this.toString();
 };
 
 const BASE_URL = process.env['BASE_URL'] || 'http://localhost:3000';
 
-passport.use(
-  new FacebookStrategy(
-    {
-      clientID: process.env['FACEBOOK_ID'] || '',
-      clientSecret: process.env['FACEBOOK_SECRET'] || '',
-      callbackURL: `${BASE_URL}/api/auth/facebook/callback`,
-      profileFields: ['id', 'displayName', 'email'],
+const providers = {
+  facebook: {
+    strategy: () => {
+      return new FacebookStrategy(
+        {
+          clientID: process.env['FACEBOOK_CLIENT_ID'] as string,
+          clientSecret: process.env['FACEBOOK_CLIENT_SECRET'] as string,
+          profileFields: ['id', 'displayName', 'email'],
+          callbackURL: `${BASE_URL}/api/auth/facebook/callback`,
+        },
+        getStrategyCallback('facebook')
+      );
     },
-    async (accessToken, refreshToken, profile, cb) => {
-      console.warn('profile', profile);
-      if (
-        !profile.emails ||
-        !profile.emails.length ||
-        !profile.emails[0].value
-      ) {
-        return cb(null, false, { message: 'No email provided' });
-      }
-      try {
-        const email = profile.emails[0].value;
-        const user = await prisma.user.upsert({
-          where: {
-            email: email,
-          },
-          update: {
-            authProvider: 'facebook',
-            authProviderId: profile.id,
-            name: profile.displayName,
-          },
-          create: {
-            email: email,
-            name: profile.displayName,
-            authProvider: 'facebook',
-            authProviderId: profile.id,
-          },
-        });
-        return cb(null, user);
-      } catch (err) {
-        return cb(err);
-      }
-    }
-  )
-);
-
-const loginFacebook = (req: Request, res: Response, next: NextFunction) => {
-  passport.authenticate('facebook', { session: false }, (err, user, info) => {
-    if (err || !user) {
-      return res.redirect('/' + '/?error=' + info.message);
-    }
-    req.login(user, { session: false }, (err) => {
-      if (err) {
-        res.status(400).send({ err });
-      }
-      const payload = {
-        iss: BASE_URL,
-        sub: user.id,
-        email: user.email,
-        firstName: user.firstName,
-        lastName: user.lastName,
-      };
-      const token = sign(payload, process.env.JWT_SECRET as string);
-      const cookiePayload = { user, token };
-      res.cookie('auth', JSON.stringify(cookiePayload), {
-        domain: process.env.DOMAIN_NAME,
-      });
-      res.redirect(process.env.VERCEL_URL + '/?login=loginsuccess');
-    });
-  })(req, res, next);
+    enabled:
+      process.env['FACEBOOK_CLIENT_ID'] &&
+      process.env['FACEBOOK_CLIENT_SECRET'],
+  },
+  google: {
+    strategy: () => {
+      return new GoogleStrategy(
+        {
+          clientID: process.env['GOOGLE_CLIENT_ID'] as string,
+          clientSecret: process.env['GOOGLE_CLIENT_SECRET'] as string,
+          callbackURL: `${BASE_URL}/api/auth/google/callback`,
+        },
+        getStrategyCallback('google')
+      );
+    },
+    enabled:
+      process.env['GOOGLE_CLIENT_ID'] && process.env['GOOGLE_CLIENT_SECRET'],
+  },
+  twitter: {
+    strategy: () => {
+      return new TwitterStrategy(
+        {
+          consumerKey: process.env['TWITTER_CONSUMER_KEY'] as string,
+          consumerSecret: process.env['TWITTER_CONSUMER_SECRET'] as string,
+          callbackURL: `${BASE_URL}/api/auth/twitter/callback`,
+        },
+        getStrategyCallback('twitter')
+      );
+    },
+    enabled:
+      process.env['TWITTER_CONSUMER_KEY'] &&
+      process.env['TWITTER_CONSUMER_SECRET'],
+  },
 };
 
-app.get(
-  '/api/auth/facebook',
-  passport.authenticate('facebook', { scope: ['email'] })
-);
+const getStrategyCallback = (strategy: string) => {
+  return async (accessToken: string, refreshToken: string, profile, cb) => {
+    //   console.warn('profile', profile);
+    if (!profile.emails || !profile.emails.length || !profile.emails[0].value) {
+      return cb(null, false, { message: 'No email provided' });
+    }
+    try {
+      const prisma = new PrismaClient();
+      const email = profile.emails[0].value;
+      const user = await prisma.user.upsert({
+        where: {
+          email: email,
+        },
+        update: {
+          authProvider: strategy,
+          authProviderId: profile.id,
+          name: profile.displayName,
+        },
+        create: {
+          email: email,
+          name: profile.displayName,
+          authProvider: strategy,
+          authProviderId: profile.id,
+        },
+      });
+      return cb(null, user);
+    } catch (err) {
+      return cb(err);
+    }
+  };
+};
 
-app.get('/api/auth/facebook/callback', loginFacebook);
+const loginWith = (provider: string) => {
+  return (req: Request, res: Response, next: NextFunction) => {
+    passport.authenticate(provider, { session: false }, (err, user, info) => {
+      if (err || !user) {
+        return res.redirect('/' + '/?error=' + info.message);
+      }
+      req.login(user, { session: false }, (err) => {
+        if (err) {
+          return res.status(400).send({ err });
+        }
+        try {
+          const payload = {
+            iss: BASE_URL,
+            sub: user.id,
+            email: user.email,
+            firstName: user.firstName,
+            lastName: user.lastName,
+          };
+          const token = sign(payload, process.env.JWT_SECRET as string);
+          const cookiePayload = { user, token };
+          res.cookie('auth', JSON.stringify(cookiePayload), {
+            domain: process.env.DOMAIN_NAME,
+          });
+        } catch (err) {
+          return res.status(400).send({ err });
+        }
+        res.redirect(BASE_URL + '/?login=loginsuccess');
+      });
+    })(req, res, next);
+  };
+};
 
-app.get('/api/auth/ddd', (req, res) => {
-  res.end(`ddd`);
-});
+for (const provider in providers) {
+  if (providers[provider].enabled) {
+    // Initialize routes for each provider
+    passport.use(providers[provider].strategy());
+    app.get(
+      `/api/auth/${provider}`,
+      passport.authenticate(provider, { scope: ['email'] })
+    );
+    app.get(`/api/auth/${provider}/callback`, loginWith(provider));
+  }
+}
 
 app.get('/*', (req, res) => {
-  res.end(`Hello! Go to item: ${req.url}`);
+  res.status(404).end(`404 - ${req.url}`);
 });
 
 module.exports = app;
