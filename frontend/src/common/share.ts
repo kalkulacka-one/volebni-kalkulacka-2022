@@ -1,10 +1,11 @@
 import type { SocialMediaProps } from '@/components/design-system/icons/SocialMediaIcon.vue';
 import { useElectionStore } from '@/stores/electionStore';
 
-const BASE_URL = 'https://www.volebnikalkulacka.cz';
-
+const PUBLIC_URL =
+  import.meta.env.VITE_PUBLIC_URL ||
+  `https://${import.meta.env.VITE_VERCEL_URL}`;
 export const generateShareUrl = (uuid: string) => {
-  return `${BASE_URL}/share/${uuid}?utm_campaign=social-share`;
+  return `${PUBLIC_URL}/share/${uuid}?utm_campaign=social-share`;
 };
 
 export const generateSocialLink = (type: 'link' | 'facebook' | 'twitter') => {
