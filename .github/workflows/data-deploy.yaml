@@ -2,11 +2,7 @@ name: "Sync data to S3"
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - "data/**"
+
 env:
   bucket: ${{ secrets.DATA_BUCKET_NAME }}
   cloudFrontDeploymentId: ${{ secrets.CLOUDFRONT_DEPLOYMENT_ID }}
