@@ -6,5 +6,5 @@ if [[ $VERCEL_ENV == "production" ]]; then
 else
   echo "Building for \`$VERCEL_ENV\` environment, using a clean database for \`$VERCEL_GIT_COMMIT_REF\` branch"
   export DATABASE_URL="$DATABASE_URL_BASE/$VERCEL_GIT_COMMIT_REF"
-  prisma generate && prisma migrate reset --force && npm run build && cp -r ../data ./dist/
+  prisma generate && prisma migrate reset --force && npm run build-only -- --mode $VERCEL_ENV && cp -r ../data ./dist/
 fi
