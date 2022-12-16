@@ -2,22 +2,23 @@
 import { computed } from 'vue';
 
 import ButtonText from '@/components/design-system/typography/ButtonText.vue';
+import { Color, Kind, Size, Tag } from './ButtonComponent.types';
 
 export interface Props {
-  tag?: 'button' | 'a';
+  tag?: Tag;
   href?: string;
-  kind: 'link' | 'outlined' | 'filled' | 'answer';
-  size?: 'medium' | 'small';
-  color?: 'neutral' | 'primary' | 'secondary' | 'white' | 'facebook';
+  kind: Kind;
+  size?: Size;
+  color?: Color;
   selected?: boolean;
   readOnly?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  tag: 'button',
+  tag: Tag.Button,
   href: undefined,
-  size: 'medium',
-  color: 'neutral',
+  size: Size.Medium,
+  color: Color.Neutral,
   selected: false,
   readOnly: false,
 });
