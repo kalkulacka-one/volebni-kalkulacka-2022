@@ -6,6 +6,7 @@ import { Strategy as FacebookStrategy } from 'passport-facebook';
 import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 import { Strategy as TwitterStrategy } from 'passport-twitter';
 import { patchBigInt } from '../../api-lib/utils';
+import { prisma } from '../../src/server/prisma';
 
 const app: Express = express();
 
@@ -68,7 +69,6 @@ const getStrategyCallback = (strategy: string) => {
       return cb(null, false, { message: 'No email provided' });
     }
     try {
-      const prisma = new PrismaClient();
       const email = profile.emails[0].value;
       const user = await prisma.user.upsert({
         where: {

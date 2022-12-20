@@ -3,9 +3,9 @@ import { verify } from 'jsonwebtoken';
 import { patchBigInt } from '../api-lib/utils';
 import { PrismaClient } from '@prisma/client';
 import { authUser } from '../api-lib/auth';
+import { prisma } from '../src/server/prisma';
 
 patchBigInt();
-const prisma = new PrismaClient();
 
 export default async function (req: VercelRequest, res: VercelResponse) {
   try {

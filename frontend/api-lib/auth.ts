@@ -1,8 +1,6 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { PrismaClient, Prisma } from '@prisma/client';
+import type { VercelRequest } from '@vercel/node';
 import { verify } from 'jsonwebtoken';
-
-const prisma = new PrismaClient();
+import { prisma } from '../src/server/prisma';
 
 export function authUser(req: VercelRequest) {
   const tokenString = req.cookies.auth;

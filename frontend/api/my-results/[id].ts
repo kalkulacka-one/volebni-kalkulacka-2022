@@ -1,7 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { PrismaClient } from '@prisma/client';
-
-const prisma = new PrismaClient();
+import { prisma } from '../../src/server/prisma';
 
 export default async function (req: VercelRequest, res: VercelResponse) {
   const resultId = req.query.id as string;
