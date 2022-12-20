@@ -3,17 +3,12 @@ import { computed } from 'vue';
 
 import ButtonText from '@/components/design-system/typography/ButtonText.vue';
 
-export type Color = 'neutral' | 'primary' | 'secondary' | 'white' | 'facebook';
-export type Kind = 'link' | 'outlined' | 'filled' | 'answer';
-export type Size = 'medium' | 'small';
-export type Tag = 'a' | 'button';
-
 export interface Props {
-  tag?: Tag;
+  tag?: 'button' | 'a';
   href?: string;
-  kind: Kind;
-  size?: Size;
-  color?: Color;
+  kind: 'link' | 'outlined' | 'filled' | 'answer';
+  size?: 'medium' | 'small';
+  color?: 'neutral' | 'primary' | 'secondary' | 'white' | 'facebook';
   selected?: boolean;
   readOnly?: boolean;
 }
