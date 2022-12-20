@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { ref } from 'vue';
 import LabelText from '@/components/design-system/typography/LabelText.vue';
 
 export interface Props {
@@ -13,38 +13,12 @@ const props = withDefaults(defineProps<Props>(), {
   checked: false,
 });
 
-// var prev = null;
-// const handleChange = (e) => {
-//   (prev) ? console.log('prev', prev) : null;
-
-//   if(e.target !== prev) {
-//       prev = e.target;
-//   }
-
-//   console.log("e", this);
-// };
-
-const handleClick = (e) => {
-  console.log(e);
-  isChecked.value = e.target.checked;
-};
-
 const isChecked = ref(props.checked);
-const input = ref(null);
-
-watch(
-  input,
-  (input, prev) => {
-    console.log('now, prevCount', input.checked, prev);
-  },
-  { deep: true }
-);
 </script>
 
 <template>
   <li class="pill-group__item">
-    <label class="pill" :class="{ 'pill--active': isChecked }">
-      {{ isChecked }}
+    <label class="pill">
       <input
         ref="input"
         class="pill-input"
@@ -53,7 +27,7 @@ watch(
         :name="props.groupName"
         :checked="isChecked"
       />
-      <LabelText>
+      <LabelText class="pill-label">
         <slot />
       </LabelText>
     </label>
@@ -64,23 +38,40 @@ watch(
 .pill-group__item {
   display: block;
 }
-.pill-input {
-  // visibility: hidden;
-}
 .pill {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+.pill-input {
+  position: absolute;
   display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
   border-color: rgb(var(--color-neutral-border));
   border-radius: var(--radius-medium);
   border-style: solid;
   border-width: var(--spacing-pico);
   background-color: rgb(var(--color-neutral-bg));
-  color: rgb(var(--color-neutral-fg));
-  padding: var(--spacing-extra-small) var(--spacing-small);
+  appearance: none;
 
-  &--active {
+  &:checked {
     border-color: rgb(var(--color-neutral-border-strong));
     background-color: rgb(var(--color-neutral-bg-active));
     color: rgb(var(--color-neutral-fg-inverse));
+
+    & + .pill-label {
+      color: white;
+    }
   }
+}
+.pill-label {
+  position: relative;
+  top: 0;
+  left: 0;
+  color: rgb(var(--color-neutral-fg));
+  padding: var(--spacing-extra-small) var(--spacing-small);
+  z-index: 10;
 }
 </style>
