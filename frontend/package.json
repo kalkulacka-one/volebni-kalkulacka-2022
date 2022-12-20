@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@mdi/js": "^7.0.96",
-    "@prisma/client": "^4.6.1",
+    "@prisma/client": "^4.7.1",
     "jsonwebtoken": "^8.5.1",
     "pinia": "^2.0.20",
     "vue": "^3.2.37",
@@ -66,7 +66,7 @@
     "passport-twitter": "^1.0.4",
     "prettier": "^2.5.1",
     "prettier-plugin-sh": "^0.12.8",
-    "prisma": "^4.6.1",
+    "prisma": "^4.7.1",
     "sass": "^1.54.3",
     "sass-loader": "^13.0.2",
     "start-server-and-test": "^1.14.0",
