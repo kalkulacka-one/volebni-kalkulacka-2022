@@ -15,4 +15,5 @@ export default async function (req: VercelRequest, res: VercelResponse) {
     console.log(err);
     return res.status(401).send({ error: 'Unauthorized', msg: err.message });
   }
+  res.status(404).send({ error: 'Not found' });
 }
