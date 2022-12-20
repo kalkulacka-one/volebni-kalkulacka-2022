@@ -49,7 +49,8 @@ jobs:
       - name: Run unit tests
         run: |
           npm run test:unit
-      - name: Run end-to-end tests
+      - if: false
+        name: Run end-to-end tests
         run: |
           npm run test:e2e:ci
       - if: github.ref == 'refs/heads/main'
