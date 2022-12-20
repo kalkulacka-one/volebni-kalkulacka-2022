@@ -5,14 +5,11 @@ import express, { Express, Request, Response, NextFunction } from 'express';
 import { Strategy as FacebookStrategy } from 'passport-facebook';
 import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 import { Strategy as TwitterStrategy } from 'passport-twitter';
+import { patchBigInt } from '../../api-lib/utils';
 
 const app: Express = express();
 
-// Monkey patch BigInt toJSON to return a string.
-// https://github.com/GoogleChromeLabs/jsbi/issues/30
-(BigInt.prototype as any).toJSON = function () {
-  return this.toString();
-};
+patchBigInt();
 
 const BASE_URL = process.env['BASE_URL'] || 'http://localhost:3000';
 
@@ -114,11 +111,17 @@ const loginWith = (provider: string) => {
             firstName: user.firstName,
             lastName: user.lastName,
           };
-          const token = sign(payload, process.env.JWT_SECRET as string);
-          const cookiePayload = { user, token };
+          const token = sign(payload, process.env.JWT_SECRET as string, {
+            expiresIn: process.env.JWT_EXPIRES_IN || '7d',
+          });
+          const cookiePayload = { token };
           res.cookie('auth', JSON.stringify(cookiePayload), {
             domain: process.env.DOMAIN_NAME,
+            secure: process.env.NODE_ENV === 'production',
+            httpOnly: true,
+            sameSite: 'strict',
           });
+          res.cookie('user', JSON.stringify(user));
         } catch (err) {
           return res.status(400).send({ err });
         }
