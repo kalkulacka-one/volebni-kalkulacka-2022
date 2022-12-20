@@ -1,5 +1,4 @@
 import passport from 'passport';
-import { PrismaClient } from '@prisma/client';
 import { sign } from 'jsonwebtoken';
 import express, { Express, Request, Response, NextFunction } from 'express';
 import { Strategy as FacebookStrategy } from 'passport-facebook';

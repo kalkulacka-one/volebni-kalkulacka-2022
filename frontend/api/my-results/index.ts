@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { PrismaClient, Prisma } from '@prisma/client';
+import { Prisma } from '@prisma/client';
 import { authUser } from '../../api-lib/auth';
 import { patchBigInt } from '../../api-lib/utils';
 import { prisma } from '../../src/server/prisma';

@@ -1,9 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { verify } from 'jsonwebtoken';
 import { patchBigInt } from '../api-lib/utils';
-import { PrismaClient } from '@prisma/client';
 import { authUser } from '../api-lib/auth';
-import { prisma } from '../src/server/prisma';
 
 patchBigInt();
 
