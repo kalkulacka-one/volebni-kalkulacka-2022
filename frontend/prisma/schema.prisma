@@ -14,14 +14,15 @@ model User {
   id             BigInt   @id @default(autoincrement())
   name           String?  @db.String(255)
   email          String   @unique @db.String(255)
-  authProvider   String?   @db.String(32)
-  authProviderId String?   @db.String(255)
-  Result         Result[]
+  authProvider   String?  @db.String(32)
+  authProviderId String?  @db.String(255)
+  results        Result[]
 }
 
 model Result {
-  id       BigInt @id @default(autoincrement())
-  resultId String @db.String(255)
-  userId   BigInt
-  User     User   @relation(fields: [userId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  id        BigInt   @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  value     Json
+  userId    BigInt?
+  User      User?    @relation(fields: [userId], references: [id], onDelete: NoAction, onUpdate: NoAction)
 }
