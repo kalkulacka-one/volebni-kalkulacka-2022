@@ -2,35 +2,53 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { PrismaClient, Prisma } from '@prisma/client';
 import { authUser } from '../../api-lib/auth';
 import { patchBigInt } from '../../api-lib/utils';
+import { prisma } from '../../src/server/prisma';
 
 patchBigInt();
-const prisma = new PrismaClient();
 
 export default async function (req: VercelRequest, res: VercelResponse) {
   if (req.method === 'POST') {
     const value = req.body.value as Prisma.JsonObject;
     const id = req.body.id;
-    const userId = req.body.userId;
+    let userId = req.body.userId;
 
     if (userId) {
-      // If userId is provided, check that the user is authorized
+      // If userId is provided, check that the user is authorized and matches the userId
       try {
-        const user = authUser(req);
+        userId = BigInt(userId);
+        const user = await authUser(req);
+        if (user.id !== userId) throw new Error('Unauthorized');
       } catch (err) {
         return res
           .status(401)
           .send({ error: 'Unauthorized', msg: err.message });
       }
-      // data = {...data, userId: userId};
     }
 
     if (!id) {
       // Create new result
-      const createInput: Prisma.ResultCreateInput = {
+      let createInput: Prisma.ResultCreateInput = {
         value: value,
       };
+      if (userId) {
+        createInput = { ...createInput, User: { connect: { id: userId } } };
+      }
       const result = await prisma.result.create({ data: createInput });
-      return res.json(result.id);
+      return res.json(result);
+    } else {
+      // Update existing result
+      let updateInput: Prisma.ResultUpdateInput = {};
+      if (value) {
+        updateInput = { ...updateInput, value: value };
+      }
+      if (userId) {
+        updateInput = { ...updateInput, User: { connect: { id: userId } } };
+      }
+      const result = await prisma.result.update({
+        where: { id: BigInt(id) },
+        data: updateInput,
+      });
+      return res.json(result);
     }
   } else {
     throw new Error(
