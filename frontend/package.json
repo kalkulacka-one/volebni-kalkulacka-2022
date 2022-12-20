@@ -1,6 +1,7 @@
 {
   "name": "volebni-kalkulacka-2022-frontend",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
