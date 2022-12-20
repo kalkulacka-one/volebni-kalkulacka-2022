@@ -33,7 +33,9 @@ defineEmits(['update:modelValue']);
     }"
   >
     <BodyText size="small" class="label">
-      {{ label }}
+      <span>
+        {{ label }}
+      </span>
     </BodyText>
 
     <IconComponent :icon="icon" class="input-icon" v-if="icon" />
@@ -67,8 +69,21 @@ defineEmits(['update:modelValue']);
   .label,
   .error {
     position: absolute;
-    background-color: white;
     padding: 0 4px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background-color: white;
+    }
+
+    & > * {
+      position: relative;
+      z-index: 50;
+    }
   }
 
   .label {
@@ -79,6 +94,10 @@ defineEmits(['update:modelValue']);
     line-height: var(--typography-body-extra-small-line-height);
     font-weight: 700;
     color: rgb(var(--color-neutral-fg));
+
+    &::before {
+      bottom: 0;
+    }
   }
 
   .error {
@@ -86,6 +105,10 @@ defineEmits(['update:modelValue']);
     bottom: calc((var(--base-small) / 2) * -1);
     font-size: var(--typography-body-small-size);
     color: rgb(var(--color-secondary-fg-strong));
+
+    &::before {
+      top: 0;
+    }
 
     .icon {
       margin-left: calc(var(--base-small) / 4);
@@ -106,12 +129,12 @@ defineEmits(['update:modelValue']);
     &:hover {
       border-color: rgb(var(--color-neutral-border-hover));
     }
+    &:active {
+      border-color: rgb(var(--color-neutral-border-active));
+    }
     &:disabled {
       background-color: white;
       border-color: rgb(var(--color-neutral-border-disabled));
-    }
-    &:active {
-      border-color: rgb(var(--color-neutral-border-active));
     }
   }
 }
