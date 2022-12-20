@@ -2,7 +2,11 @@
 import { computed } from 'vue';
 
 import ButtonText from '@/components/design-system/typography/ButtonText.vue';
-import { Color, Kind, Size, Tag } from './ButtonComponent.types';
+
+export type Color = 'neutral' | 'primary' | 'secondary' | 'white' | 'facebook';
+export type Kind = 'link' | 'outlined' | 'filled' | 'answer';
+export type Size = 'medium' | 'small';
+export type Tag = 'a' | 'button';
 
 export interface Props {
   tag?: Tag;
@@ -15,10 +19,10 @@ export interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  tag: Tag.Button,
+  tag: 'button',
   href: undefined,
-  size: Size.Medium,
-  color: Color.Neutral,
+  size: 'medium',
+  color: 'neutral',
   selected: false,
   readOnly: false,
 });

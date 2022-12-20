@@ -3,8 +3,6 @@ import type { Meta, StoryFn } from '@storybook/vue3';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import SocialMediaIcon from '@/components/design-system/icons/SocialMediaIcon.vue';
-import { Color, Kind, Size, Tag } from './ButtonComponent.types';
-import { mdiChevronDown } from '@mdi/js';
 
 export default {
   title: 'Input/ButtonComponent',
@@ -15,25 +13,25 @@ export default {
   },
   argTypes: {
     color: {
-      options: Color,
+      options: ['neutral', 'primary', 'secondary', 'white', 'facebook'],
       control: {
         type: 'select',
       },
     },
     kind: {
-      options: Kind,
+      options: ['link', 'outlined', 'filled', 'answer'],
       control: {
         type: 'select',
       },
     },
     size: {
-      options: Size,
+      options: ['medium', 'small'],
       control: {
         type: 'select',
       },
     },
     tag: {
-      options: Tag,
+      options: ['a', 'button'],
       control: {
         type: 'select',
       },
@@ -76,56 +74,56 @@ const Template: StoryFn<typeof ButtonComponent> = (args) => ({
 
 export const PrimaryFilled = Template.bind({});
 PrimaryFilled.args = {
-  color: Color.Primary,
-  kind: Kind.Filled,
+  color: 'primary',
+  kind: 'filled',
 };
 
 export const SecondaryFilled = Template.bind({});
 SecondaryFilled.args = {
-  color: Color.Secondary,
-  kind: Kind.Filled,
+  color: 'secondary',
+  kind: 'filled',
 };
 
 export const NeutralFilled = Template.bind({});
 NeutralFilled.args = {
-  color: Color.Neutral,
-  kind: Kind.Filled,
+  color: 'neutral',
+  kind: 'filled',
 };
 
 export const PrimaryOutlined = Template.bind({});
 PrimaryOutlined.args = {
-  color: Color.Primary,
-  kind: Kind.Outlined,
+  color: 'primary',
+  kind: 'outlined',
 };
 
 export const SecondaryOutlined = Template.bind({});
 SecondaryOutlined.args = {
-  color: Color.Secondary,
-  kind: Kind.Outlined,
+  color: 'secondary',
+  kind: 'outlined',
 };
 
 export const NeutralOutlined = Template.bind({});
 NeutralOutlined.args = {
-  color: Color.Neutral,
-  kind: Kind.Outlined,
+  color: 'neutral',
+  kind: 'outlined',
 };
 
 export const PrimaryLink = Template.bind({});
 PrimaryLink.args = {
-  color: Color.Primary,
-  kind: Kind.Link,
+  color: 'primary',
+  kind: 'link',
 };
 
 export const SecondaryLink = Template.bind({});
 SecondaryLink.args = {
-  color: Color.Secondary,
-  kind: Kind.Link,
+  color: 'secondary',
+  kind: 'link',
 };
 
 export const NeutralLink = Template.bind({});
 NeutralLink.args = {
-  color: Color.Neutral,
-  kind: Kind.Link,
+  color: 'neutral',
+  kind: 'link',
 };
 
 export const Facebook: StoryFn<typeof ButtonComponent> = (args) => ({
@@ -145,8 +143,8 @@ export const Facebook: StoryFn<typeof ButtonComponent> = (args) => ({
   `,
 });
 Facebook.args = {
-  color: Color.Facebook,
-  kind: Kind.Filled,
+  color: 'facebook',
+  kind: 'filled',
 };
 
 export const Google: StoryFn<typeof ButtonComponent> = (args) => ({
@@ -166,8 +164,8 @@ export const Google: StoryFn<typeof ButtonComponent> = (args) => ({
   `,
 });
 Google.args = {
-  color: Color.White,
-  kind: Kind.Filled,
+  color: 'white',
+  kind: 'filled',
 };
 
 export const Twitter: StoryFn<typeof ButtonComponent> = (args) => ({
@@ -187,8 +185,8 @@ export const Twitter: StoryFn<typeof ButtonComponent> = (args) => ({
   `,
 });
 Twitter.args = {
-  color: Color.Primary,
-  kind: Kind.Filled,
+  color: 'primary',
+  kind: 'filled',
 };
 
 export const Apple: StoryFn<typeof ButtonComponent> = (args) => ({
@@ -208,6 +206,6 @@ export const Apple: StoryFn<typeof ButtonComponent> = (args) => ({
   `,
 });
 Apple.args = {
-  color: Color.Neutral,
-  kind: Kind.Filled,
+  color: 'neutral',
+  kind: 'filled',
 };
