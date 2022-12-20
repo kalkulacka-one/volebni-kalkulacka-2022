@@ -62,6 +62,7 @@ defineEmits(['update:modelValue']);
 </template>
 
 <style scoped lang="scss">
+// TODO remove white bgr input color
 .input-wrapper {
   position: relative;
   display: grid;
