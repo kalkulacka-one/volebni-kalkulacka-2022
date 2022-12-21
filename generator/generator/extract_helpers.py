@@ -1,17 +1,26 @@
+from dataclasses import asdict
 from datetime import datetime
 import re
 from typing import Any, Dict, Optional
 
 from gspread import Worksheet
+from main import ElectionType
 
 from generator import logger
+from generator.types import Candidate
 from generator.types import CandidateAnswers
+from generator.types import CandidateType
 from generator.types import Contacts
 from generator.types import District
 from generator.types import Election
+from generator.types import ElectionMetadata
 from generator.types import gen_answer_id
+from generator.types import gen_candidate_id
+from generator.types import gen_question_id
+from generator.types import Party
 from generator.types import QuestionAnswer
 from generator.types import QuestionDefinition
+from generator.types import QuestionDefinitionColumnNames
 from generator.types import SheetRow
 
 GOOGLE_SHEET_URL_REGEX = re.compile("https://docs.google.com/spreadsheets/d/([^/]+)/.*")
@@ -30,16 +39,29 @@ def extract_key(url: str) -> Optional[str]:
     return None
 
 
+def get_s(row: SheetRow, key: str) -> Optional[str]:
+    if key not in row:
+        return None
+    return str(row[key]) or None
+
+
+def get_sf(row: SheetRow, key: str) -> Optional[str]:
+    res = get_s(row, key)
+    if not res:
+        res = get_s(row, f"{key}:")
+    return res
+
+
 def extract_contacts(row: SheetRow) -> Contacts:
     return Contacts(
-        fb=str(row["fb"]) or None,
-        tw=str(row["tw"]) or None,
-        ig=str(row["ig"]) or None,
-        wiki=str(row["wiki"]) or None,
-        web=str(row["web"]) or None,
-        yt=str(row["yt"]) or None,
-        program=str(row["program"]) or None,
-        linkedin=str(row["linkedin"]) or None,
+        fb=get_s(row, "fb"),
+        tw=get_s(row, "tw"),
+        ig=get_s(row, "ig"),
+        wiki=get_s(row, "wiki"),
+        web=get_s(row, "web"),
+        yt=get_s(row, "yt"),
+        program=get_s(row, "program"),
+        linkedin=get_s(row, "linkedin"),
     )
 
 
@@ -95,8 +117,10 @@ def extract_answers(
     for row in sheet.get_all_records():
         ts = datetime.strptime(str(row["Timestamp"]), "%m/%d/%Y %H:%M:%S")
         candidate_name = str(row.get("Jméno kandidáta:", row.get("Jméno strany:")))
-        filled_by = str(row["Jméno osoby, která vyplňuje dotazník:"])
-        secret_code = str(row["Bezpečnostní kód:"])
+        filled_by = get_sf(row, "Jméno osoby, která vyplňuje dotazník")
+        assert filled_by is not None
+        secret_code = get_sf(row, "Bezpečnostní kód") or get_sf(row, "Bezpěčnostní kód")
+        assert secret_code is not None, row
         motto = str(row.get('Vaše charakteristika ("bio", "motto"):', "")) or None
         answers: list[QuestionAnswer] = []
 
@@ -193,3 +217,100 @@ def convert_comment(c: str) -> Optional[str]:
     if c in {"0", ""}:
         return None
     return c
+
+
+def extract_candidate(
+    row: SheetRow, pos: int, election: Election, district: District
+) -> Candidate:
+    secret_code = str(row["code"])
+    name = f"{row['given_name']} {row['family_name']}"
+    candidate_id = gen_candidate_id(election, district, secret_code)
+    contacts = extract_contacts(row)
+    is_active = bool(int(str(row["active_candidate"]) or "1"))
+    parties = []
+    if "party" in row:
+        parties.append(
+            Party(
+                id=f"{candidate_id}-p",
+                name=str(row["party"]),
+                short_name=str(row["party"]),
+                abbreviation=str(row["party"]),
+                description=str(row["party"]),
+                contacts=contacts,
+            )
+        )
+    return Candidate(
+        id=candidate_id,
+        num=pos,
+        name=name,
+        short_name=name,
+        abbreviation=name,
+        description=name,
+        given_name=str(row["given_name"]),
+        family_name=str(row["family_name"]),
+        secret_code=secret_code,
+        important=bool(int(get_s(row, "important") or "0")),
+        active=is_active,
+        type=CandidateType.person,
+        logo=None,  # photo never contains valid value => ignore str(row["photo"])
+        contact=get_s(row, "contact 1"),
+        contact_party=get_s(row, "contact party"),
+        contacts=contacts,
+        people=None,
+        parties=parties,
+    )
+
+
+def extract_question_definitions(
+    sheet: Worksheet,
+    election: Election,
+    district: District,
+    columns: QuestionDefinitionColumnNames,
+) -> list[QuestionDefinition]:
+    logger.info("Extracting question definitions")
+    definitions: list[QuestionDefinition] = []
+    for row in sheet.get_all_records(
+        expected_headers=asdict(columns).values(),
+    ):
+        q_num = int(row[columns.id])
+        definition = QuestionDefinition(
+            id=gen_question_id(election, district, q_num),
+            num=q_num,
+            name=str(row[columns.name]),
+            title=str(row[columns.title]),
+            gist=str(row[columns.gist]),
+            detail=str(row[columns.detail]),
+            tags=[s.strip() for s in str(row[columns.tags]).split(",")]
+            if str(row[columns.tags]).strip()
+            else [],
+            order=extract_order(row, columns.order),
+        )
+        definitions.append(definition)
+    logger.info("Extracted question definitions: %d", len(definitions))
+    return reorder_question_definitions(definitions)
+
+
+def extract_metadata(
+    sheet: Worksheet,
+    key: str,
+) -> ElectionMetadata:
+    # get first row
+    row = sheet.get_all_records()[0]
+    logger.info("Extracting metadata for %s", key)
+
+    instructions = {}
+    for k, v in row.items():
+        if k.startswith("instructions_"):
+            instructions[k.replace("instructions_", "")] = v
+
+    return ElectionMetadata(
+        key=key,
+        name=row["name"],
+        election_type=ElectionType(row["type"]),
+        description=row["description"],
+        voting_from=datetime.fromisoformat(row["voting_from"]),
+        voting_to=datetime.fromisoformat(row["voting_to"]),
+        on_hp_from=datetime.fromisoformat(row["on_hp_from"]),
+        on_hp_to=datetime.fromisoformat(row["on_hp_to"]),
+        instructions=instructions,
+    )

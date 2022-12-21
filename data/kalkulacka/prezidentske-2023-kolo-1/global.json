@@ -1,0 +1,219 @@
+{
+  "id": "prezidentske-2023-kolo-1-global",
+  "name": "global",
+  "description": "global",
+  "district_code": "global",
+  "show_district_code": true,
+  "election": {
+    "id": "prezidentske-2023-kolo-1",
+    "key": "prezidentske-2023-kolo-1",
+    "name": "Prezidentské volby 2023 - 1. kolo",
+    "description": "Letos se volí v prezidentských volbách.",
+    "instructions": {
+      "header": "Prezidentske - header",
+      "step_1_1": "",
+      "step_1_2": "",
+      "step_1_link": "",
+      "step_2_1": "Prezidentske - 2_2"
+    },
+    "from": "2023-01-13T14:00:00",
+    "to": "2023-01-14T14:00:00"
+  },
+  "questions": [
+    {
+      "id": "prezidentske-2023-kolo-1-global-q-4",
+      "name": "Rychlovlaky priorita",
+      "title": "Výstavba infrastruktury pro rychlovlaky má být upřednostňována oproti výstavbě další dopravní infrastruktury.",
+      "gist": "Vysokorychlostní tratě mají výrazně zkrátit jízdní dobu, navýšit kapacity železniční sítě a zrychlit spojení. O výstavbě se v Česku hovoří od 90. let, přípravy začaly v posledních letech. Podle kritiků si to vyžádá rozsáhlé pořizovací náklady. Vyšší rychlost také zvyšuje spotřebu elektřiny a provoz je tak dražší.",
+      "detail": "",
+      "tags": ["doprava"]
+    },
+    {
+      "id": "prezidentske-2023-kolo-1-global-q-3",
+      "name": "Celostátní referendum",
+      "title": "Měla by se uzákonit možnost celostátního referenda vypisovaného na základě petice.",
+      "gist": "V ČR je možné vyhlásit celostátní referendum pouze tehdy, pokud o něm rozhodne Parlament. Např. na Slovensku je to možné po shromáždění 350 000 podpisů, v „referendovém“ Švýcarsku je třeba 50 000 podpisů.",
+      "detail": "",
+      "tags": ["demokracie"]
+    },
+    {
+      "id": "prezidentske-2023-kolo-1-global-q-1",
+      "name": "Zdanění prázdných bytů",
+      "title": "Dlouhodobě prázdné byty by měly být více zdaněné.",
+      "gist": "Zastánci zdanění poukazují, že investiční byty křiví trh a vyčerpávají bytové zásoby. Zhoršují se tak šance pro lidi s nízkými a středními příjmy pořídit si vlastní bydlení. Kritici namítají, že zdanění zvýší ceny nemovitostí a nájemní bydlení zdraží. ČR má jednotný výpočet daně a nezohledňuje, kolik jich majitel vlastní a zda jsou dlouhodobě obydlené.",
+      "detail": "",
+      "tags": ["bydlení"]
+    }
+  ],
+  "candidates": [
+    {
+      "id": "prezidentske-2023-kolo-1-global-c-935631",
+      "name": "Petr Pavel",
+      "type": "person",
+      "description": "Petr Pavel",
+      "short_name": "Petr Pavel",
+      "is_active": false,
+      "given_name": "Petr",
+      "family_name": "Pavel",
+      "contacts": {
+        "web": []
+      },
+      "parties": []
+    },
+    {
+      "id": "prezidentske-2023-kolo-1-global-c-904458",
+      "name": "Andrej Babiš",
+      "type": "person",
+      "description": "Andrej Babiš",
+      "short_name": "Andrej Babiš",
+      "is_active": false,
+      "given_name": "Andrej",
+      "family_name": "Babiš",
+      "contacts": {
+        "web": []
+      },
+      "parties": []
+    },
+    {
+      "id": "prezidentske-2023-kolo-1-global-c-728980",
+      "name": "Danuše Nerudová",
+      "type": "person",
+      "description": "Danuše Nerudová",
+      "short_name": "Danuše Nerudová",
+      "is_active": false,
+      "given_name": "Danuše",
+      "family_name": "Nerudová",
+      "contacts": {
+        "web": []
+      },
+      "parties": []
+    },
+    {
+      "id": "prezidentske-2023-kolo-1-global-c-784509",
+      "name": "Josef Středula",
+      "type": "person",
+      "description": "Josef Středula",
+      "short_name": "Josef Středula",
+      "is_active": false,
+      "given_name": "Josef",
+      "family_name": "Středula",
+      "contacts": {
+        "web": []
+      },
+      "parties": []
+    },
+    {
+      "id": "prezidentske-2023-kolo-1-global-c-879071",
+      "name": "Marek Hilšer",
+      "type": "person",
+      "description": "Marek Hilšer",
+      "short_name": "Marek Hilšer",
+      "is_active": false,
+      "given_name": "Marek",
+      "family_name": "Hilšer",
+      "contacts": {
+        "web": []
+      },
+      "parties": []
+    },
+    {
+      "id": "prezidentske-2023-kolo-1-global-c-291038",
+      "name": "Pavel Fischer",
+      "type": "person",
+      "description": "Pavel Fischer",
+      "short_name": "Pavel Fischer",
+      "is_active": false,
+      "given_name": "Pavel",
+      "family_name": "Fischer",
+      "contacts": {
+        "web": []
+      },
+      "parties": []
+    },
+    {
+      "id": "prezidentske-2023-kolo-1-global-c-800655",
+      "name": "Jaroslav Bašta",
+      "type": "person",
+      "description": "Jaroslav Bašta",
+      "short_name": "Jaroslav Bašta",
+      "is_active": false,
+      "given_name": "Jaroslav",
+      "family_name": "Bašta",
+      "contacts": {
+        "web": []
+      },
+      "parties": [],
+      "motto": "SPD forever."
+    },
+    {
+      "id": "prezidentske-2023-kolo-1-global-c-427663",
+      "name": "Tomáš Zima",
+      "type": "person",
+      "description": "Tomáš Zima",
+      "short_name": "Tomáš Zima",
+      "is_active": false,
+      "given_name": "Tomáš",
+      "family_name": "Zima",
+      "contacts": {
+        "web": []
+      },
+      "parties": []
+    },
+    {
+      "id": "prezidentske-2023-kolo-1-global-c-497739",
+      "name": "Karel Diviš",
+      "type": "person",
+      "description": "Karel Diviš",
+      "short_name": "Karel Diviš",
+      "is_active": false,
+      "given_name": "Karel",
+      "family_name": "Diviš",
+      "contacts": {
+        "web": []
+      },
+      "parties": [],
+      "motto": "Jsem boží."
+    }
+  ],
+  "answers": [
+    {
+      "id": "prezidentske-2023-kolo-1-global-a-497739-4",
+      "candidate_id": "prezidentske-2023-kolo-1-global-c-497739",
+      "question_id": "prezidentske-2023-kolo-1-global-q-4",
+      "answer": "yes",
+      "comment": "Yes, please."
+    },
+    {
+      "id": "prezidentske-2023-kolo-1-global-a-497739-3",
+      "candidate_id": "prezidentske-2023-kolo-1-global-c-497739",
+      "question_id": "prezidentske-2023-kolo-1-global-q-3",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-kolo-1-global-a-497739-1",
+      "candidate_id": "prezidentske-2023-kolo-1-global-c-497739",
+      "question_id": "prezidentske-2023-kolo-1-global-q-1",
+      "answer": "yes",
+      "comment": "Test only"
+    },
+    {
+      "id": "prezidentske-2023-kolo-1-global-a-800655-4",
+      "candidate_id": "prezidentske-2023-kolo-1-global-c-800655",
+      "question_id": "prezidentske-2023-kolo-1-global-q-4",
+      "answer": "dont_know"
+    },
+    {
+      "id": "prezidentske-2023-kolo-1-global-a-800655-3",
+      "candidate_id": "prezidentske-2023-kolo-1-global-c-800655",
+      "question_id": "prezidentske-2023-kolo-1-global-q-3",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-kolo-1-global-a-800655-1",
+      "candidate_id": "prezidentske-2023-kolo-1-global-c-800655",
+      "question_id": "prezidentske-2023-kolo-1-global-q-1",
+      "answer": "no",
+      "comment": "SPD, SPD, co si počnem bez tebe."
+    }
+  ]
+}
