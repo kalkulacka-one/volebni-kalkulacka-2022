@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+
+import { appRoutes } from '@/main';
 
 import ContainerComponent from '@/components/design-system/containers/ContainerComponent.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
@@ -23,6 +26,8 @@ const props = withDefaults(defineProps<Props>(), {
   centeredTitle: false,
 });
 
+const indexPage = computed(() => useRoute().path === '/');
+
 const classes = computed(() => ({
   'navigation-bar--centered-title': props.centeredTitle,
 }));
@@ -42,10 +47,10 @@ const background = computed(() =>
     <div class="logo">
       <EmbedWrapper>
         <ResponsiveWrapper extra-small small>
-          <LogoComponent :text="false" />
+          <LogoComponent :text="false" :link="!indexPage" />
         </ResponsiveWrapper>
         <ResponsiveWrapper medium large extra-large huge>
-          <LogoComponent />
+          <LogoComponent :link="!indexPage" />
         </ResponsiveWrapper>
       </EmbedWrapper>
       <EmbedWrapper embed>
