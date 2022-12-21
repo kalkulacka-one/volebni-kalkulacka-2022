@@ -1,6 +1,7 @@
 import vkiCheckbox from './vkiCheckbox';
 import vkiCheckboxChecked from './vkiCheckboxChecked';
 import vkiCheckboxIndeterminate from './vkiCheckboxIndeterminate';
+import vkiEnvelopeOutlined from './vkiEnvelopeOutlined';
 import vkiLogoAgainst from './vkiLogoAgainst';
 import vkiLogoCircle from './vkiLogoCircle';
 import vkiLogoInFavour from './vkiLogoInFavour';
@@ -13,6 +14,7 @@ export {
   vkiCheckbox,
   vkiCheckboxChecked,
   vkiCheckboxIndeterminate,
+  vkiEnvelopeOutlined,
   vkiLogoAgainst,
   vkiLogoCircle,
   vkiLogoInFavour,

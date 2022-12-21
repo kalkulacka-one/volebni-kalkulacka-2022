@@ -8,7 +8,7 @@ export interface Props {
   href?: string;
   kind: 'link' | 'outlined' | 'filled' | 'answer';
   size?: 'medium' | 'small';
-  color?: 'neutral' | 'primary' | 'secondary';
+  color?: 'neutral' | 'primary' | 'secondary' | 'white' | 'facebook';
   selected?: boolean;
   readOnly?: boolean;
 }
@@ -122,6 +122,38 @@ const computedSize = computed(() =>
       .button--selected,
       &:not(.button--read-only):active {
         color: rgb(var(--color-secondary-fg-active));
+      }
+    }
+
+    &.button--facebook {
+      color: #1877f2;
+      border: none;
+
+      @media (hover: hover) {
+        &:not(.button--read-only):hover {
+          color: #166fe5;
+        }
+      }
+
+      .button--selected,
+      &:not(.button--read-only):active {
+        color: #1877f2;
+      }
+    }
+
+    &.button--white {
+      color: white;
+      border: none;
+
+      @media (hover: hover) {
+        &:not(.button--read-only):hover {
+          color: white;
+        }
+      }
+
+      .button--selected,
+      &:not(.button--read-only):active {
+        color: white;
       }
     }
 
@@ -241,6 +273,44 @@ const computedSize = computed(() =>
       }
     }
 
+    &.button--facebook {
+      color: #1877f2;
+      background-color: transparent;
+      border-color: #1877f2;
+
+      @media (hover: hover) {
+        &:not(.button--read-only):hover {
+          color: #166fe5;
+          border-color: #166fe5;
+        }
+      }
+
+      .button--selected,
+      &:not(.button--read-only):active {
+        color: #1877f2;
+        border-color: #1877f2;
+      }
+    }
+
+    &.button--white {
+      color: white;
+      background-color: transparent;
+      border-color: white;
+
+      @media (hover: hover) {
+        &:not(.button--read-only):hover {
+          color: white;
+          border-color: white;
+        }
+      }
+
+      .button--selected,
+      &:not(.button--read-only):active {
+        color: white;
+        border-color: white;
+      }
+    }
+
     &:disabled {
       background-color: transparent;
       color: rgb(var(--color-neutral-fg-disabled));
@@ -310,6 +380,44 @@ const computedSize = computed(() =>
       &:not(.button--read-only):active {
         color: rgb(var(--color-secondary-fg-inverse));
         background-color: rgb(var(--color-secondary-bg-strong));
+      }
+    }
+
+    &.button--facebook {
+      background-color: #1877f2;
+      color: white;
+      border-color: transparent;
+
+      @media (hover: hover) {
+        &:not(.button--read-only):hover {
+          color: white;
+          background-color: #166fe5;
+        }
+      }
+
+      .button--selected,
+      &:not(.button--read-only):active {
+        color: white;
+        background-color: #1877f2;
+      }
+    }
+
+    &.button--white {
+      background-color: white;
+      color: rgb(var(--palette-neutral-40));
+      border-color: transparent;
+
+      @media (hover: hover) {
+        &:not(.button--read-only):hover {
+          background-color: white;
+          color: rgb(var(--palette-neutral-30));
+        }
+      }
+
+      .button--selected,
+      &:not(.button--read-only):active {
+        background-color: white;
+        color: rgb(var(--palette-neutral-10));
       }
     }
   }
