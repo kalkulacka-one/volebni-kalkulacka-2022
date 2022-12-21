@@ -15,6 +15,15 @@ enum ResultSource {
   EMBED
 }
 
+model User {
+  id             String   @id @default(cuid())
+  name           String?  @db.String(255)
+  email          String   @unique @db.String(255)
+  authProvider   String?  @db.String(32)
+  authProviderId String?  @db.String(255)
+  results        Result[]
+}
+
 model Result {
   id             String       @id @default(cuid())
   updateToken    String       @default(cuid())
@@ -22,4 +31,6 @@ model Result {
   source         ResultSource @default(WEB)
   embedSourceUrl String?
   value          Json
+  userId         String?
+  user           User?        @relation(fields: [userId], references: [id])
 }

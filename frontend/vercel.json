@@ -17,6 +17,7 @@
     }
   ],
   "rewrites": [
+    { "source": "/api/auth/(.*)", "destination": "/api/auth" },
     {
       "source": "/api/results",
       "destination": "https://www.volebnikalkulacka.cz/api/results"
