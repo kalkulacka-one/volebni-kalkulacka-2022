@@ -83,10 +83,27 @@ const handleClick = () => {
   display: flex;
   align-items: center;
 
+  .logo--text {
+    transition: color 0.3s ease-in;
+  }
+
+  svg * {
+    transition: fill 0.3s ease-in;
+  }
+
   &--link:hover {
     cursor: pointer;
+
+    .logo--text {
+      color: rgb(var(--color-neutral-fg));
+    }
+
+    svg * {
+      fill: rgb(var(--color-neutral-fg));
+    }
   }
 }
+
 .logo {
   &--small {
     width: 5.953rem;
@@ -112,20 +129,10 @@ const handleClick = () => {
       font-size: var(--typography-body-small-size);
       margin-left: 0.563rem;
     }
-
-    &:hover {
-      color: rgb(var(--color-neutral-fg));
-      transition: color 0.3s ease-in;
-    }
   }
 
   &--monochromatic {
     color: rgb(var(--color-neutral-fg));
-  }
-
-  svg:hover * {
-    fill: rgb(var(--color-neutral-fg));
-    transition: fill 0.3s ease-in;
   }
 }
 </style>
