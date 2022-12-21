@@ -1,4 +1,3 @@
-from datetime import datetime
 import time
 from typing import Optional
 
@@ -16,10 +15,10 @@ from generator.types import Candidate
 from generator.types import CandidateType
 from generator.types import District
 from generator.types import Election
+from generator.types import ElectionMetadata
 from generator.types import gen_candidate_id
 from generator.types import gen_district_id
 from generator.types import gen_question_id
-from generator.types import InstructionKey
 from generator.types import Party
 from generator.types import QuestionDefinition
 from generator.types import QuestionDefinitionColumnNames
@@ -27,35 +26,33 @@ from generator.types import SheetRow
 
 
 def extract_election_komunalni(
-    gc: Client, row: SheetRow, wait: int, election: Optional[Election] = None
+    gc: Client,
+    row: SheetRow,
+    metadata: ElectionMetadata,
+    wait: int,
+    election: Optional[Election] = None,
 ) -> Election:
     name = str(row["name"])
 
     if election is None:
-        return _extract_election_komunalni(gc, row, wait=wait)
+        return _extract_election_komunalni(gc, row, metadata, wait=wait)
     else:
         time.sleep(wait)
         return _update_election_komunalni(gc, row, name, election)
         return election
 
 
-def _extract_election_komunalni(gc: Client, row: SheetRow, wait: int) -> Election:
+def _extract_election_komunalni(
+    gc: Client, row: SheetRow, metadata: ElectionMetadata, wait: int
+) -> Election:
     election = Election(
-        id="komunalni-2022",
-        key="komunalni-2022",
-        name="Komunální volby 2022",
-        description="PLACEHOLDER",
-        voting_from=datetime(2022, 9, 23, 14, 0, 0),
-        voting_to=datetime(2022, 9, 24, 14, 0, 0),
-        instructions={
-            InstructionKey.HEADER: "Zvolte své město",
-            InstructionKey.STEP_1_1: "PLACEHOLDER",
-            InstructionKey.STEP_2_1: """
-Čeká vás 30-40 otázek. Na stejné otázky nám odpověděly kandidující
-strany. Zodpovězení otázek zabere cca 10 minut.
-Na konci se dozvíte, jak se strany shodují s Vašimi názory.
-                """,
-        },
+        id=metadata.key,
+        key=metadata.key,
+        name=metadata.name,
+        description=metadata.description,
+        voting_from=metadata.voting_from,
+        voting_to=metadata.voting_to,
+        instructions=metadata.instructions,
     )
 
     url_questions = str(row["otázky originál"])
@@ -68,7 +65,9 @@ Na konci se dozvíte, jak se strany shodují s Vašimi názory.
     # read existing districts
     logger.info("Loading districts")
     election.add_districts(
-        extract_komunalni_districts(doc_questions.worksheet("seznam"), election)
+        extract_komunalni_districts(
+            doc_questions.worksheet("seznam"), election, metadata
+        )
     )
     time.sleep(wait)
 
@@ -118,7 +117,7 @@ Na konci se dozvíte, jak se strany shodují s Vašimi názory.
         f"K dispozici jsou kalkulačky pro **{num_active_districts}** "
         "měst České republiky."
     )
-    election.instructions[InstructionKey.STEP_1_1] = election.description
+    election.instructions["step_1_1"] = election.description
 
     return election
 
@@ -126,6 +125,7 @@ Na konci se dozvíte, jak se strany shodují s Vašimi názory.
 def extract_komunalni_districts(
     sheet: Worksheet,
     election: Election,
+    metadata: ElectionMetadata,
 ) -> dict[str, District]:
     logger.info("Extracting districts for election %s", election)
     districts: dict[str, District] = {}
@@ -146,8 +146,8 @@ def extract_komunalni_districts(
             show_code=False,
             description=str(row["description"]),
             active=bool(int(active)) if active else False,
-            on_hp_from=datetime(2022, 9, 1, 0, 0, 0),
-            on_hp_to=datetime(2022, 9, 30, 14, 0, 0),
+            on_hp_from=metadata.on_hp_from,
+            on_hp_to=metadata.on_hp_to,
         )
         logger.info("\tExtracted district: %s", district)
         districts[str(row["město"])] = district

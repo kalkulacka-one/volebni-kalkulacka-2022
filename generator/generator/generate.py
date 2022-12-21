@@ -66,7 +66,7 @@ def generate_election_dict(election: Election) -> dict[str, Any]:
         "key": election.key,
         "name": election.name,
         "description": election.description,
-        "instructions": {k.value: v for k, v in election.instructions.items()},
+        "instructions": {k: v for k, v in election.instructions.items()},
     }  # type: Dict[str, Any]
     add_element(
         d, "from", election.voting_from.isoformat() if election.voting_from else None

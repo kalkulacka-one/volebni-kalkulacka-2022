@@ -8,18 +8,21 @@ from gspread import Client
 from gspread import service_account
 
 from generator import logger
+from generator.extract_helpers import extract_metadata
 from generator.generate import generate
 from generator.komunalni_2022 import extract_election_komunalni
 from generator.prezidentske_2023 import extract_election_prezidentske
 from generator.senatni_2022 import extract_election_senatni
 from generator.types import Election
+from generator.types import ElectionMetadata
 from generator.types import SheetRow
 
+C = Callable[[Client, SheetRow, ElectionMetadata, int, Optional[Election]], Election]
 EXTRACT = {
     "senatni-2022": extract_election_senatni,
     "komunalni-2022": extract_election_komunalni,
     "prezidentske-2023-kolo-1": extract_election_prezidentske,
-}  # type: Dict[str, Callable[[Client, SheetRow, int, Optional[Election]], Election]]
+}  # type: Dict[str, C]
 
 
 if __name__ == "__main__":
@@ -60,6 +63,7 @@ if __name__ == "__main__":
     gc = service_account()
 
     elections: dict[str, Election] = {}
+    metadata: dict[str, ElectionMetadata] = {}
     doc_overview = gc.open_by_key(args.doc_key)
     city_started = False
     for rec in doc_overview.worksheet("Sheet1").get_all_records():
@@ -72,7 +76,12 @@ if __name__ == "__main__":
         if not args.elections:
             logger.info(f"Found key '{key}', all keys are valid => processing")
 
-        elections[key] = EXTRACT[key](gc, rec, args.wait, elections.get(key))
+        if key not in metadata:
+            metadata[key] = extract_metadata(doc_overview.worksheet(key), key)
+
+        elections[key] = EXTRACT[key](
+            gc, rec, metadata[key], args.wait, elections.get(key)
+        )
 
     # produce output file
     output_root = Path(args.output)

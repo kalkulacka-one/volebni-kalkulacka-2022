@@ -4,6 +4,7 @@ import re
 from typing import Any, Dict, Optional
 
 from gspread import Worksheet
+from main import ElectionType
 
 from generator import logger
 from generator.types import Candidate
@@ -12,6 +13,7 @@ from generator.types import CandidateType
 from generator.types import Contacts
 from generator.types import District
 from generator.types import Election
+from generator.types import ElectionMetadata
 from generator.types import gen_answer_id
 from generator.types import gen_candidate_id
 from generator.types import gen_question_id
@@ -117,8 +119,8 @@ def extract_answers(
         candidate_name = str(row.get("Jméno kandidáta:", row.get("Jméno strany:")))
         filled_by = get_sf(row, "Jméno osoby, která vyplňuje dotazník")
         assert filled_by is not None
-        secret_code = get_sf(row, "Bezpečnostní kód")
-        assert secret_code is not None
+        secret_code = get_sf(row, "Bezpečnostní kód") or get_sf(row, "Bezpěčnostní kód")
+        assert secret_code is not None, row
         motto = str(row.get('Vaše charakteristika ("bio", "motto"):', "")) or None
         answers: list[QuestionAnswer] = []
 
@@ -286,3 +288,29 @@ def extract_question_definitions(
         definitions.append(definition)
     logger.info("Extracted question definitions: %d", len(definitions))
     return reorder_question_definitions(definitions)
+
+
+def extract_metadata(
+    sheet: Worksheet,
+    key: str,
+) -> ElectionMetadata:
+    # get first row
+    row = sheet.get_all_records()[0]
+    logger.info("Extracting metadata for %s", key)
+
+    instructions = {}
+    for k, v in row.items():
+        if k.startswith("instructions_"):
+            instructions[k.replace("instructions_", "")] = v
+
+    return ElectionMetadata(
+        key=key,
+        name=row["name"],
+        election_type=ElectionType(row["type"]),
+        description=row["description"],
+        voting_from=datetime.fromisoformat(row["voting_from"]),
+        voting_to=datetime.fromisoformat(row["voting_to"]),
+        on_hp_from=datetime.fromisoformat(row["on_hp_from"]),
+        on_hp_to=datetime.fromisoformat(row["on_hp_to"]),
+        instructions=instructions,
+    )

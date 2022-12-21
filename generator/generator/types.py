@@ -4,6 +4,8 @@ from datetime import datetime
 from enum import Enum
 from typing import Any, Optional
 
+from main import ElectionType
+
 from generator import logger
 
 SheetRow = dict[str, Any]
@@ -102,14 +104,6 @@ class CandidateAnswers:
     motto: Optional[str] = None
 
 
-class InstructionKey(Enum):
-    HEADER = "header"
-    STEP_1_1 = "step_1_1"
-    STEP_1_2 = "step_1_2"
-    STEP_1_LINK = "step_1_link"
-    STEP_2_1 = "step_2_1"
-
-
 class Election:
     def __init__(
         self,
@@ -120,7 +114,7 @@ class Election:
         description: str,
         voting_from: datetime,
         voting_to: datetime,
-        instructions: dict[InstructionKey, str],
+        instructions: dict[str, str],
     ) -> None:
         self.id = id
         self.key = key
@@ -176,6 +170,19 @@ class Election:
 
     def __str__(self) -> str:
         return f"Election(id='{self.id}', key='{self.key}', name='{self.name}')"
+
+
+@dataclass
+class ElectionMetadata:
+    key: str
+    name: str
+    election_type: ElectionType
+    description: str
+    voting_from: datetime
+    voting_to: datetime
+    on_hp_from: datetime
+    on_hp_to: datetime
+    instructions: dict[str, str]
 
 
 def gen_district_id(election: Election, code: str) -> str:

@@ -7,14 +7,14 @@
   "election": {
     "id": "prezidentske-2023-kolo-1",
     "key": "prezidentske-2023-kolo-1",
-    "name": "Prezidentske volby 2023",
-    "description": "Prezidentske volby v ČR.",
+    "name": "Prezidentské volby 2023 - 1. kolo",
+    "description": "Letos se volí v prezidentských volbách.",
     "instructions": {
-      "header": "Zvolte svůj senátní obvod",
-      "step_1_1": "Letos se volí v třetině obvodů v rámci ČR.",
-      "step_1_2": "Více o senátních obvodech",
-      "step_1_link": "https://2022.programydovoleb.cz/senatni-volby",
-      "step_2_1": "\nOdpovězte na 40 otázek.\nNa stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.\nZodpovězení otázek zabere cca 10 minut.\nNa konci se dozvíte,\njak se kandidáti shodují s Vašimi názory.\n            "
+      "header": "Prezidentske - header",
+      "step_1_1": "",
+      "step_1_2": "",
+      "step_1_link": "",
+      "step_2_1": "Prezidentske - 2_2"
     },
     "from": "2023-01-13T14:00:00",
     "to": "2023-01-14T14:00:00"
@@ -142,7 +142,8 @@
       "contacts": {
         "web": []
       },
-      "parties": []
+      "parties": [],
+      "motto": "SPD forever."
     },
     {
       "id": "prezidentske-2023-kolo-1-global-c-427663",
@@ -160,18 +161,59 @@
     },
     {
       "id": "prezidentske-2023-kolo-1-global-c-497739",
-      "name": "Denisa Rohanová",
+      "name": "Karel Diviš",
       "type": "person",
-      "description": "Denisa Rohanová",
-      "short_name": "Denisa Rohanová",
+      "description": "Karel Diviš",
+      "short_name": "Karel Diviš",
       "is_active": false,
-      "given_name": "Denisa",
-      "family_name": "Rohanová",
+      "given_name": "Karel",
+      "family_name": "Diviš",
       "contacts": {
         "web": []
       },
-      "parties": []
+      "parties": [],
+      "motto": "Jsem boží."
     }
   ],
-  "answers": []
+  "answers": [
+    {
+      "id": "prezidentske-2023-kolo-1-global-a-497739-4",
+      "candidate_id": "prezidentske-2023-kolo-1-global-c-497739",
+      "question_id": "prezidentske-2023-kolo-1-global-q-4",
+      "answer": "yes",
+      "comment": "Yes, please."
+    },
+    {
+      "id": "prezidentske-2023-kolo-1-global-a-497739-3",
+      "candidate_id": "prezidentske-2023-kolo-1-global-c-497739",
+      "question_id": "prezidentske-2023-kolo-1-global-q-3",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-kolo-1-global-a-497739-1",
+      "candidate_id": "prezidentske-2023-kolo-1-global-c-497739",
+      "question_id": "prezidentske-2023-kolo-1-global-q-1",
+      "answer": "yes",
+      "comment": "Test only"
+    },
+    {
+      "id": "prezidentske-2023-kolo-1-global-a-800655-4",
+      "candidate_id": "prezidentske-2023-kolo-1-global-c-800655",
+      "question_id": "prezidentske-2023-kolo-1-global-q-4",
+      "answer": "dont_know"
+    },
+    {
+      "id": "prezidentske-2023-kolo-1-global-a-800655-3",
+      "candidate_id": "prezidentske-2023-kolo-1-global-c-800655",
+      "question_id": "prezidentske-2023-kolo-1-global-q-3",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-kolo-1-global-a-800655-1",
+      "candidate_id": "prezidentske-2023-kolo-1-global-c-800655",
+      "question_id": "prezidentske-2023-kolo-1-global-q-1",
+      "answer": "no",
+      "comment": "SPD, SPD, co si počnem bez tebe."
+    }
+  ]
 }

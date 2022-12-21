@@ -1,4 +1,3 @@
-from datetime import datetime
 import time
 from typing import Optional
 
@@ -13,40 +12,38 @@ from generator.extract_helpers import extract_question_definitions
 from generator.types import Candidate
 from generator.types import District
 from generator.types import Election
+from generator.types import ElectionMetadata
 from generator.types import gen_district_id
-from generator.types import InstructionKey
 from generator.types import QuestionDefinition
 from generator.types import QuestionDefinitionColumnNames
 from generator.types import SheetRow
 
 
 def extract_election_prezidentske(
-    gc: Client, row: SheetRow, wait: int, election: Optional[Election] = None
+    gc: Client,
+    row: SheetRow,
+    metadata: ElectionMetadata,
+    wait: int,
+    election: Optional[Election] = None,
 ) -> Election:
     election = Election(
-        id="prezidentske-2023-kolo-1",
-        key="prezidentske-2023-kolo-1",
-        name="Prezidentske volby 2023",
-        description="Prezidentske volby v ČR.",
-        voting_from=datetime(2023, 1, 13, 14, 0, 0),
-        voting_to=datetime(2023, 1, 14, 14, 0, 0),
-        instructions={
-            InstructionKey.HEADER: "Zvolte svůj senátní obvod",
-            InstructionKey.STEP_1_1: "Letos se volí v třetině obvodů v rámci ČR.",
-            InstructionKey.STEP_1_2: "Více o senátních obvodech",
-            InstructionKey.STEP_1_LINK: "https://programydovoleb.cz/",
-            InstructionKey.STEP_2_1: """
-Odpovězte na 40 otázek.
-Na stejné otázky odpověděli kandidáti na senátory ve vašem volebním obvodu.
-Zodpovězení otázek zabere cca 10 minut.
-Na konci se dozvíte,
-jak se kandidáti shodují s Vašimi názory.
-            """,
-        },
+        id=metadata.key,
+        key=metadata.key,
+        name=metadata.name,
+        description=metadata.description,
+        voting_from=metadata.voting_from,
+        voting_to=metadata.voting_to,
+        instructions=metadata.instructions,
     )
 
     district_global = District(
-        gen_district_id(election, "global"), "global", "global", "global", True
+        gen_district_id(election, "global"),
+        "global",
+        "global",
+        "global",
+        True,
+        on_hp_from=metadata.on_hp_from,
+        on_hp_to=metadata.on_hp_to,
     )
     election.add_districts({district_global.code: district_global})
 
