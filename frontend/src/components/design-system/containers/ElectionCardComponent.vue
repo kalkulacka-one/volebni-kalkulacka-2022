@@ -17,15 +17,16 @@ import {
 } from '@mdi/js';
 
 export interface Props {
-  candidates?: object | null;
-  electionName?: string;
-  electionDateFrom?: string;
-  electionDateTo?: string;
-  updated?: string;
+  // TODO
+  candidates?: any;
+  electionName?: string | null;
+  electionDateFrom?: string | null;
+  electionDateTo?: string | null;
+  updated?: string | null;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  candidates: null,
+  candidates: [],
   electionDateFrom: null,
   electionDateTo: null,
   updated: null,
@@ -33,7 +34,7 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <CardComponent padding="large" border shadow>
+  <CardComponent padding="large" border shadow corner="bottom-right">
     <StackComponent spacing="medium">
       <div>
         <TitleText tag="h4" size="small">{{ electionName }}</TitleText>
@@ -76,18 +77,21 @@ const props = withDefaults(defineProps<Props>(), {
             <TitleText size="small" tag="h5">{{ candidate.name }}</TitleText>
 
             <SimpleProgress
-              :value="candidate.percentage"
+              :id="'candidate' + idx"
+              :value="candidate?.percentage"
               color-primary="rgb(var(--palette-primary-50))"
               color-secondary="rgb(var(--color-neutral-bg))"
               :max="100"
               height="2px"
             />
-            <BodyText size="extra-small">{{ candidate.party }}</BodyText>
+            <BodyText v-if="candidate" size="extra-small">{{
+              candidate.party
+            }}</BodyText>
           </StackComponent>
 
-          <TitleText size="medium" tag="h2"
-            >{{ candidate.percentage }}&nbsp;%</TitleText
-          >
+          <TitleText size="medium" tag="h2">
+            {{ candidate.percentage }}&nbsp;%
+          </TitleText>
         </StackComponent>
       </template>
 
@@ -108,7 +112,7 @@ const props = withDefaults(defineProps<Props>(), {
         </ButtonComponent>
       </ResponsiveWrapper>
 
-      <ResponsiveWrapper medium large extra-large>
+      <ResponsiveWrapper medium large extra-large huge>
         <StackComponent horizontal spacing="medium" centered class="full-width">
           <ButtonComponent
             v-if="candidates"
@@ -226,7 +230,7 @@ const props = withDefaults(defineProps<Props>(), {
         </BodyText>
       </ResponsiveWrapper>
 
-      <ResponsiveWrapper v-if="updated" medium large extra-large>
+      <ResponsiveWrapper v-if="updated" medium large extra-large huge>
         <BodyText
           size="extra-small"
           color="rgb(var(--color-neutral-fg-muted))"
