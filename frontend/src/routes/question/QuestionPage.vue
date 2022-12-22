@@ -211,7 +211,7 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
               />
             </IconButton>
           </template>
-          <template v-if="answeredQuestionsCount >= currentQuestion" #after>
+          <template #after>
             <IconButton @click="handleNextClick">
               <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
             </IconButton>
@@ -249,10 +249,7 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
             />
             <template #after>
               <ResponsiveWrapper medium large extra-large huge>
-                <IconButton
-                  v-if="answeredQuestionsCount >= currentQuestion"
-                  @click="handleNextClick"
-                >
+                <IconButton @click="handleNextClick">
                   <IconComponent
                     :icon="mdiArrowRight"
                     :title="nextButtonTitle"
