@@ -26,7 +26,7 @@ export interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  candidates: [],
+  candidates: null,
   electionDateFrom: null,
   electionDateTo: null,
   updated: null,
