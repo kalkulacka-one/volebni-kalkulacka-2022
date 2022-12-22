@@ -10,16 +10,17 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-enum ResultSource {
+enum AnswersSource {
   WEB
   EMBED
 }
 
-model Result {
+model Answers {
   id             String       @id @default(cuid())
   updateToken    String       @default(cuid())
   createdAt      DateTime     @default(now())
-  source         ResultSource @default(WEB)
-  embedSourceUrl String?
+  source         AnswersSource @default(WEB)
+  embedName String?
+  calculatorId   String
   value          Json
 }

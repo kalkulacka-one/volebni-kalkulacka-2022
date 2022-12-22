@@ -5,9 +5,9 @@ import { errorRespond, respond404 } from '../../src/server/errors';
 export default async function (req: VercelRequest, res: VercelResponse) {
   const resultId = req.query.id as string;
   if (req.method === 'GET') {
-    const result = await prisma.result.findUnique({
+    const result = await prisma.answers.findUnique({
       where: { id: resultId },
-      select: { id: true, value: true, createdAt: true },
+      select: { id: true, value: true, createdAt: true, calculatorId: true },
     });
     if (result === null) {
       return respond404(res, 'answer', resultId);
@@ -17,7 +17,7 @@ export default async function (req: VercelRequest, res: VercelResponse) {
   } else if (req.method === 'PATCH') {
     const value = req.body.value;
     const updateToken = req.body.updateToken;
-    const existingResult = await prisma.result.findUnique({
+    const existingResult = await prisma.answers.findUnique({
       where: { id: resultId },
     });
 
@@ -34,12 +34,12 @@ export default async function (req: VercelRequest, res: VercelResponse) {
       );
     }
 
-    const result = await prisma.result.update({
+    const result = await prisma.answers.update({
       where: { id: resultId },
       data: {
         value: value,
         source: req.body.embedSourceUrl,
-        embedSourceUrl: req.body.embedSourceUrl,
+        embedName: req.body.embedSourceUrl,
       },
     });
     return res.json(result);

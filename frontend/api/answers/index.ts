@@ -5,11 +5,12 @@ import { prisma } from '../../src/server/prisma';
 export default async function (req: VercelRequest, res: VercelResponse) {
   if (req.method === 'POST') {
     const value = req.body.value as Prisma.JsonObject;
-    const result = await prisma.result.create({
+    const result = await prisma.answers.create({
       data: {
         value: value,
         source: req.body.source,
-        embedSourceUrl: req.body.embedSourceUrl,
+        embedName: req.body.embedName,
+        calculatorId: req.body.calculatorId,
       },
     });
     return res.json(result);
