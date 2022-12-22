@@ -31,6 +31,7 @@ export default defineConfig(({ command, mode }) => {
         '/data': {
           //target: 'http://127.0.0.1:5201/dev',
           target: 'https://www.volebnikalkulacka.cz',
+          ws: true,
           changeOrigin: true,
           cookieDomainRewrite: { '*': '' },
           configure: (proxy) =>

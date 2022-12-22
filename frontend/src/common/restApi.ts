@@ -51,6 +51,8 @@ export const getResults = async (resultUuid: string) => {
   });
 };
 
+export const patchResults = async () => {};
+
 export const postResults = async () => {
   const endpointUrl = BASE_URL + '/api/results/';
   const electionStore = useElectionStore();

@@ -1,5 +1,6 @@
 import { fetchCalculator, fetchElectionData } from '@/common/dataFetch';
 import { postResults } from '@/common/restApi';
+import { encodeResults } from '@/common/resultParser';
 import { appRoutes } from '@/main';
 import type { Calculator } from '@/types/calculator';
 import type { Calculators } from '@/types/calculators';
@@ -53,6 +54,7 @@ export const useElectionStore = defineStore('election', {
       answers: [] as UserAnswer[],
       answerProgress: -1,
       resultsUuid: null as null | string,
+      encodedResults: null as null | string,
     };
   },
   getters: {
@@ -131,14 +133,31 @@ export const useElectionStore = defineStore('election', {
       });
     },
     async saveResults() {
-      this.resultsUuid = null;
-      const response = await postResults();
-      if (response?.result_id) {
-        this.resultsUuid = response.result_id;
+      //if results already saved do not save them again
+      const newEncodedResults = encodeResults(this.answers);
+      //return if results already saved and answers are the same
+      if (newEncodedResults === this.encodedResults && this.resultsUuid) {
+        console.debug('Results are already saved.');
+        return;
+      }
+      //patch if results already saved but answers differ
+      else if (this.resultsUuid) {
+        console.debug('Results are already saved but they differ. Patching...');
+      }
+      //post new reults if results not yet saved
+      else {
+        console.debug('Results not saved. Posting...');
+        this.resultsUuid = null;
+        const response = await postResults();
+        if (response?.result_id) {
+          this.resultsUuid = response.result_id;
+        }
       }
     },
     init() {
       this.answerProgress = -1;
+      this.encodedResults = null;
+      this.resultsUuid = null;
       this.answers = [];
     },
   },
