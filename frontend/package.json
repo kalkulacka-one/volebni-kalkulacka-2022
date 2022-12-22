@@ -21,8 +21,8 @@
     "preview": "vite preview --port 4173",
     "storybook:build": "storybook build",
     "storybook": "storybook dev -p 6006",
-    "test:e2e:ci": "start-server-and-test preview http://localhost:4173/ 'cypress run --e2e'",
-    "test:e2e": "start-server-and-test preview http://localhost:4173/ 'cypress open --e2e'",
+    "test:e2e:ci": "start-server-and-test preview http://localhost:4173/ \"cypress run --e2e\"",
+    "test:e2e": "start-server-and-test preview http://localhost:4173/ \"cypress open --e2e\"",
     "test:unit": "vitest --environment jsdom",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
   },
