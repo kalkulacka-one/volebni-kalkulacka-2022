@@ -7,7 +7,13 @@ export default async function (req: VercelRequest, res: VercelResponse) {
   if (req.method === 'GET') {
     const result = await prisma.answers.findUnique({
       where: { id: resultId },
-      select: { id: true, value: true, createdAt: true, calculatorId: true },
+      select: {
+        id: true,
+        value: true,
+        createdAt: true,
+        updatedAt: true,
+        calculatorId: true,
+      },
     });
     if (result === null) {
       return respond404(res, 'answer', resultId);

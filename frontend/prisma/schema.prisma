@@ -16,11 +16,12 @@ enum AnswersSource {
 }
 
 model Answers {
-  id             String       @id @default(cuid())
-  updateToken    String       @default(cuid())
-  createdAt      DateTime     @default(now())
-  source         AnswersSource @default(WEB)
-  embedName String?
-  calculatorId   String
-  value          Json
+  id           String        @id @default(cuid())
+  updateToken  String        @default(cuid())
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  source       AnswersSource @default(WEB)
+  embedName    String?
+  calculatorId String
+  value        Json
 }
