@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "build-only:preview": "vite build --mode preview",
     "build-only": "vite build",
     "build-vercel": "vite build --mode vercel",
+    "build:preview": "run-p type-check build-only:preview",
     "build:vercel": "bash ./vercel-build.sh",
     "build": "run-p type-check build-only",
     "dev:copy-data": "cp -r ../data ./public/",
