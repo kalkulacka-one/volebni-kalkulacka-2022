@@ -54,13 +54,13 @@ export default {
           >
             <div class="card-content">
               <HeadlineText tag="h1" size="medium">
-                Volební kalkulačka pro prezidentské volby?
+                Volební kalkulačka pro prezidentské volby
               </HeadlineText>
               <div class="card-content-text">
                 <BodyText size="medium">
                   Volební kalkulačku pro prezidentské volby, které proběhnou
                   <b>13.&nbsp;a&nbsp;14.&nbsp;ledna 2023</b>, pro vás právě
-                  chystáme a&nbsp;spustíme ji před Vánoci.
+                  chystáme.
                 </BodyText>
                 <ButtonComponent
                   kind="link"
@@ -78,17 +78,16 @@ export default {
             <div class="card-content">
               <TitleText tag="h2" size="large">Kdo kandiduje</TitleText>
               <BodyText size="medium">
-                25. listopadu Ministerstvo vnitra zveřejnilo seznam kandidátů,
-                kteří splnili zákonné podmínky a budou se ucházet o funkci
-                prezidenta:
+                Ministerstvo vnitra zveřejnilo seznam kandidátů, kteří splnili
+                zákonné podmínky a budou se ucházet o funkci prezidenta:
                 <ul>
                   <li>Andrej Babiš</li>
                   <li>Jaroslav Bašta</li>
+                  <li>Karel Diviš</li>
                   <li>Pavel Fischer</li>
                   <li>Marek Hilšer</li>
                   <li>Danuše Nerudová</li>
                   <li>Petr Pavel</li>
-                  <li>Denisa Rohanová</li>
                   <li>Josef Středula</li>
                   <li>Tomáš Zima</li>
                 </ul>
