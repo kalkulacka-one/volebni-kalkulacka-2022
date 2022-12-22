@@ -111,7 +111,14 @@ const goToGuide = (params: RouteParams) => {
   });
 };
 
+const handleSkip = () => {
+  if (electionStore.answers[questionNr.value].answer === 0) {
+    handleAnswerClick(UserAnswerEnum.skip);
+  }
+};
+
 const handleNextClick = () => {
+  handleSkip();
   if (currentQuestion.value < questionCount.value) {
     goToQuestion(currentQuestion.value + 1);
   } else {
