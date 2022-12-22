@@ -43,11 +43,12 @@ export default defineConfig(({ command, mode }) => {
                 }),
             }
           : undefined,
-        '/api': {
-          //target: 'http://127.0.0.1:8080',
-          target: 'https://www.volebnikalkulacka.cz',
-          changeOrigin: true,
-        },
+        '/api': process.env.API_PROXY
+          ? {
+              target: process.env.API_PROXY,
+              changeOrigin: true,
+            }
+          : undefined,
         '/image': {
           target: 'https://www.volebnikalkulacka.cz',
           changeOrigin: true,
