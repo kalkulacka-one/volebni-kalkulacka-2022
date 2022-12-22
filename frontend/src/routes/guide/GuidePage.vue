@@ -147,6 +147,8 @@ const goToStep = (number: number) => {
 };
 
 const goToQuestions = () => {
+  // Initialize store here
+  electionStore.init();
   router.push({
     name: 'question',
     params: { ...route.params, nr: 'first' },

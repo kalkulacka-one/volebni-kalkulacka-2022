@@ -88,47 +88,42 @@ export const useElectionStore = defineStore('election', {
     async loadElection(electionId: string) {
       this.districts = [];
       this.election = undefined;
-      this.init();
       let electionData = undefined;
       try {
         electionData = await fetchElectionData(electionId);
       } catch (error) {
         console.error(error);
       }
-      if (electionData?.election === undefined) {
-        return {
-          name: appRoutes.error.name,
-          params: { case: 'api-error-election' },
-        };
+      if (electionData?.election !== undefined) {
+        this.districts = electionData.districts;
+        this.election = electionData.election;
+        console.debug('Election fetch complete!');
+      } else {
+        console.warn('Election data are undefined!');
       }
-      console.debug('Election fetch complete!');
-      this.districts = electionData.districts;
-      this.election = electionData.election;
     },
     async loadCalculator(electionId: string, districtId: string) {
       this.calculator = undefined;
-      this.init();
       let calculator = undefined;
       try {
         calculator = await fetchCalculator(electionId, districtId);
       } catch (error) {
         console.error(error);
       }
-      if (calculator === undefined) {
-        return {
-          name: appRoutes.error.name,
-          params: { case: 'api-error-district' },
-        };
+
+      if (calculator !== undefined) {
+        this.calculator = calculator;
+        this.answers = calculator.questions.map((x) => {
+          return {
+            answer: UserAnswerEnum.undefined,
+            flag: false,
+            id: x.id as string,
+          };
+        });
+        console.debug('District fetch complete!');
+      } else {
+        console.warn('District data are undefined!');
       }
-      console.debug('District fetch complete!');
-      this.calculator = calculator;
-      this.answers = calculator.questions.map((x) => {
-        return {
-          answer: UserAnswerEnum.undefined,
-          flag: false,
-          id: x.id as string,
-        };
-      });
     },
     async saveResults() {
       this.resultsUuid = null;
@@ -138,8 +133,8 @@ export const useElectionStore = defineStore('election', {
       }
     },
     init() {
+      console.debug('Initializing store ...');
       this.answerProgress = -1;
-      this.answers = [];
     },
   },
 });
