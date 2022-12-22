@@ -123,31 +123,6 @@ console.log(props.answer);
         Jsem proti
       </ButtonComponent>
     </ResponsiveWrapper>
-    <ResponsiveWrapper extra-small small>
-      <ButtonComponent
-        class="skip"
-        kind="answer"
-        :selected="answer.answer === UserAnswerEnum.skip"
-        @click="skipClick"
-      >
-        <template #icon>
-          <IconComponent :icon="vkiLogoNeutral" title="Přeskočit" />
-        </template>
-      </ButtonComponent>
-    </ResponsiveWrapper>
-    <ResponsiveWrapper medium large extra-large huge>
-      <ButtonComponent
-        class="skip"
-        kind="answer"
-        :selected="answer.answer === UserAnswerEnum.skip"
-        @click="skipClick"
-      >
-        <template #icon>
-          <IconComponent :icon="vkiLogoNeutral" />
-        </template>
-        Přeskočit
-      </ButtonComponent>
-    </ResponsiveWrapper>
   </BottomBar>
 </template>
 
