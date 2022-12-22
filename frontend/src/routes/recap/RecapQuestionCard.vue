@@ -152,22 +152,23 @@ const toggleClick = () => {
           </template>
           <template v-if="isExpanded" #default>Jsem proti</template>
         </ButtonComponent>
-        <ButtonComponent
-          v-show="answer.answer === UserAnswerEnum.skip || isExpanded"
-          class="skip"
-          kind="answer"
-          :selected="answer.answer === UserAnswerEnum.skip && isExpanded"
-          :read-only="!isExpanded"
-          @click="skipClick"
-        >
-          <template #icon>
-            <IconComponent
-              :icon="vkiLogoNeutral"
-              :title="isExpanded ? 'Bez odpovědi' : undefined"
-            />
-          </template>
-          <template v-if="isExpanded" #default>Bez odpovědi</template>
-        </ButtonComponent>
+        <template v-if="!isExpanded">
+          <ButtonComponent
+            v-show="answer.answer === UserAnswerEnum.skip || isExpanded"
+            class="skip"
+            kind="answer"
+            :selected="answer.answer === UserAnswerEnum.skip && isExpanded"
+            :read-only="!isExpanded"
+            @click="skipClick"
+          >
+            <template #icon>
+              <IconComponent
+                :icon="vkiLogoNeutral"
+                :title="isExpanded ? 'Bez odpovědi' : undefined"
+              />
+            </template>
+          </ButtonComponent>
+        </template>
       </ResponsiveWrapper>
       <ResponsiveWrapper extra-small small>
         <ButtonComponent
