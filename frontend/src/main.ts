@@ -36,7 +36,9 @@ export const questionGuard = (
   _from: RouteLocationNormalized
 ) => {
   const store = useElectionStore();
-  if (to.params.nr === 'first') {
+
+  //assign one if nr is missing
+  if (!to.params.nr || to.params.nr === 'first') {
     to.params.nr = '1';
     return to;
   } else if (to.params.nr === 'last') {
@@ -116,7 +118,7 @@ export const appRoutes = {
   guide: {
     name: 'guide',
     path: '/volby/:election/:district/navod/:step?',
-    alias: '/volby/:election/:district/navod',
+    alias: '/volby/:election/:district',
     component: GuidePageVue,
     meta: {
       title: 'Návod - Volební Kalkulačka',
@@ -124,7 +126,7 @@ export const appRoutes = {
   },
   question: {
     name: 'question',
-    path: '/volby/:election/:district/otazka/:nr',
+    path: '/volby/:election/:district/otazka/:nr?',
     component: QuestionPageVue,
     meta: {
       title: 'Otázka $$ - Volební Kalkulačka',
@@ -164,7 +166,10 @@ export const appRoutes = {
       title: 'Moje výsledky - Volební Kalkulačka',
     },
   },
-  fallback: { path: '/:catchAll(.*)', redirect: '/' },
+  fallback: {
+    path: '/:catchAll(.*)',
+    redirect: '/error/not-found',
+  },
 };
 
 export const wrappedRoutes = [
@@ -266,17 +271,37 @@ router.beforeEach(async (to, from) => {
     )} ${Object.values(to.params)}`
   );
   const store = useElectionStore();
-  //load election if different
-  if (from.params.election !== to.params.election) {
-    if (to.params.election !== undefined) {
-      await store.loadElection(to.params.election as string);
+
+  //load election if election in store is different
+  if (
+    to.params.election !== undefined &&
+    to.params.election !== store.election?.id
+  ) {
+    console.debug(
+      `Election IDs ${to.params.election} !== ${store.election?.id}. Fetching ...`
+    );
+    await store.loadElection(to.params.election as string);
+    if (store?.election === undefined) {
+      return {
+        name: appRoutes.error.name,
+        params: { case: 'api-error-election' },
+      };
     }
   }
-  //load calculator data if district different
-  if (from.params.district !== to.params.district) {
-    if (to.params.district !== undefined) {
-      const districtNr = getDistrictCode(to.params.district as string);
+  //load calculator data if district in store different
+  if (to.params.district !== undefined) {
+    const districtNr = getDistrictCode(to.params.district as string);
+    if (districtNr !== store.calculator?.district_code) {
+      console.debug(
+        `District codes ${districtNr} !== ${store.calculator?.district_code}. Fetching ...`
+      );
       await store.loadCalculator(to.params.election as string, districtNr);
+      if (store?.calculator === undefined) {
+        return {
+          name: appRoutes.error.name,
+          params: { case: 'api-error-calculator' },
+        };
+      }
     }
   }
 
@@ -315,19 +340,6 @@ router.beforeEach(async (to, from) => {
     );
     return {
       name: appRoutes.districtSelection.name,
-      params: { ...to.params },
-    };
-  } else if (
-    // route to guide if district and election specified
-    from.params.district !== to.params.district &&
-    to.params.election !== undefined &&
-    to.params.district !== undefined &&
-    //to.name !== appRoutes.question.name &&
-    to.name !== appRoutes.guide.name
-  ) {
-    console.debug(`Re-routing to guide: ${Object.values(to.params)}`);
-    return {
-      name: appRoutes.guide.name,
       params: { ...to.params },
     };
   } else {
