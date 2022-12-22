@@ -38,8 +38,6 @@ export default async function (req: VercelRequest, res: VercelResponse) {
       where: { id: resultId },
       data: {
         value: value,
-        source: req.body.embedSourceUrl,
-        embedName: req.body.embedSourceUrl,
       },
     });
     return res.json(result);
