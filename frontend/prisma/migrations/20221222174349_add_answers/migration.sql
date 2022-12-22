@@ -7,7 +7,7 @@
 
 */
 -- CreateEnum
-CREATE TYPE "AnswersSource" AS ENUM ('WEB', 'EMBED');
+CREATE TYPE "AnswersSource" AS ENUM ('web', 'embed');
 
 -- DropForeignKey
 ALTER TABLE "Post" DROP CONSTRAINT "Post_authorId_fkey";
@@ -29,7 +29,8 @@ CREATE TABLE "Answers" (
     "id" STRING NOT NULL,
     "updateToken" STRING NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "source" "AnswersSource" NOT NULL DEFAULT 'WEB',
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+    "source" "AnswersSource" NOT NULL DEFAULT 'web',
     "embedName" STRING,
     "calculatorId" STRING NOT NULL,
     "value" JSONB NOT NULL,
