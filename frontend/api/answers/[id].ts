@@ -1,5 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { prisma } from '../../src/server/prisma';
+import { errorRespond, respond404 } from '../../src/server/errors';
 
 export default async function (req: VercelRequest, res: VercelResponse) {
   const resultId = req.query.id as string;
@@ -9,7 +10,7 @@ export default async function (req: VercelRequest, res: VercelResponse) {
       select: { id: true, value: true, createdAt: true },
     });
     if (result === null) {
-      return res.status(404).json({ error: `Result ${resultId} not found` });
+      return respond404(res, 'answer', resultId);
     } else {
       return res.json(result);
     }
@@ -21,10 +22,16 @@ export default async function (req: VercelRequest, res: VercelResponse) {
     });
 
     if (existingResult === null) {
-      return res.status(404).json({ error: `Result ${resultId} not found` });
+      return respond404(res, 'answer', resultId);
     }
     if (existingResult.updateToken !== updateToken) {
-      return res.status(403).json({ error: `Invalid update token` });
+      return errorRespond(
+        res,
+        403,
+        'https://volebnikalkulacka.cz/api/errors/invalid-update-token',
+        'Invalid update token',
+        'updateToken from body does not match the updateToken of the existing answer'
+      );
     }
 
     const result = await prisma.result.update({
