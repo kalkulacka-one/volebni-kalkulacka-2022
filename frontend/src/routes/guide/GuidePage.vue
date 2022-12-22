@@ -104,13 +104,13 @@ const previousButtonTitle = computed(() => {
   if (currentStep.value === 1) {
     return 'Změnit obvod';
   } else {
-    return 'Předchozí';
+    return 'Předchozí krok';
   }
 });
 
 const nextButtonTitle = computed(() => {
   if (currentStep.value < stepsCount) {
-    return 'Další';
+    return 'Další krok';
   } else {
     return 'První otázka';
   }
