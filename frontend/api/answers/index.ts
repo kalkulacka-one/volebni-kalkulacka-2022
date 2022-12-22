@@ -1,6 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Prisma } from '@prisma/client';
 import { prisma } from '../../src/server/prisma';
+import { respond405 } from '../../src/server/errors';
 
 export default async function (req: VercelRequest, res: VercelResponse) {
   if (req.method === 'POST') {
@@ -15,8 +16,6 @@ export default async function (req: VercelRequest, res: VercelResponse) {
     });
     return res.json(result);
   } else {
-    throw new Error(
-      `The HTTP ${req.method} method is not supported at this route.`
-    );
+    respond405(res, req.method);
   }
 }

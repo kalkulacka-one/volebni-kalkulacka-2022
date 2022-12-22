@@ -29,3 +29,13 @@ export const respond404 = (
     `${subject} ${id} not found.`
   );
 };
+
+export const respond405 = (res: VercelResponse, method = 'none') => {
+  return errorRespond(
+    res,
+    405,
+    'https://volebnikalkulacka.cz/api/errors/method-not-allowed',
+    `Method not allowed`,
+    `The HTTP ${method} method is not supported at this route.`
+  );
+};
