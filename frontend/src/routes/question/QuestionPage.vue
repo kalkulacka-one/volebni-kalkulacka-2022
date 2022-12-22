@@ -76,7 +76,7 @@ const previousButtonTitle = computed(() => {
   if (currentQuestion.value === 1) {
     return 'Návod';
   } else {
-    return 'Předchozí';
+    return 'Předchozí otázka';
   }
 });
 
@@ -84,7 +84,7 @@ const nextButtonTitle = computed(() => {
   if (currentQuestion.value === questionCount.value) {
     return 'Rekapitulace';
   } else {
-    return 'Další';
+    return 'Další otázka';
   }
 });
 
