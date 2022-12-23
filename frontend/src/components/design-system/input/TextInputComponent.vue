@@ -38,7 +38,7 @@ defineEmits(['update:modelValue']);
       </span>
     </BodyText>
 
-    <IconComponent :icon="icon" class="input-icon" v-if="icon" />
+    <IconComponent v-if="icon" :icon="icon" class="input-icon" />
 
     <input
       type="text"
@@ -51,7 +51,7 @@ defineEmits(['update:modelValue']);
       "
     />
 
-    <StackComponent horizontal centered class="error" v-if="error">
+    <StackComponent v-if="error" horizontal centered class="error">
       <BodyText size="small" color="rgb(var(--color-secondary-fg-strong))">
         {{ error }}
       </BodyText>

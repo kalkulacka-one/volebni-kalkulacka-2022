@@ -128,11 +128,11 @@ export const useElectionStore = defineStore('election', {
         console.warn('District data are undefined!');
       }
     },
-    async saveResults(currentEmbed: string = 'web') {
+    async saveResults(currentEmbed = 'web') {
       //if results already saved do not save them again
       const newEncodedResults = encodeResults(this.answers);
       //return if results already saved and answers are the same
-      let response = {
+      const response = {
         action: 'unknown',
         response: null as any,
       };
