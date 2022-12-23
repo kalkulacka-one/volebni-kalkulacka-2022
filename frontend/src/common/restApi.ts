@@ -2,23 +2,18 @@ import {
   useElectionStore,
   convertAnswerToStr,
   convertStrToAnswer,
-  UserAnswerEnum,
 } from '@/stores/electionStore';
-import type { AnswerRest } from '@/types/rest/Answer';
 import type { CalculatorRest } from '@/types/rest/Calculator';
 import type { ElectionRest } from '@/types/rest/Election';
-import type { ResultAddedRest } from '@/types/rest/ResultAdded';
 import type { Matches, ResultInRest } from '@/types/rest/ResultIn';
 import type { ResultOutRest } from '@/types/rest/ResultOut';
 import { calculateRelativeAgreement } from './resultParser';
 
 //const BASE_URL = 'https://kalkulacka.ceskodigital.cz';
 //const BASE_URL = 'http://localhost:8080';
-//const BASE_URL = '';
-const BASE_URL =
-  'https://volebni-kalkulacka-2022-ofzsih6xv-ceskodigital.vercel.app/';
+const BASE_URL = '';
 
-const buildResultData = () => {
+const buildResultData = (): ResultInRest => {
   const electionStore = useElectionStore();
   if (!electionStore.calculator) {
     throw new Error('Calculator undefined');
@@ -72,16 +67,16 @@ const buildResultData = () => {
     district_code: electionStore.calculator.district_code,
     election: election,
   };
-  const data: ResultInRest = {
+  const values: ResultInRest = {
     answers: answers,
     matches: matches,
     calculator: calculator,
   };
-  return data;
+  return values;
 };
 
-export const getResults = async (resultUuid: string) => {
-  const endpointUrl = BASE_URL + `/api/results/${resultUuid}`;
+export const getResults = async (resultId: string) => {
+  const endpointUrl = BASE_URL + `/api/answers/${resultId}`;
   const electionStore = useElectionStore();
   const res = await fetch(endpointUrl, {
     method: 'GET',
@@ -115,9 +110,18 @@ export const getResults = async (resultUuid: string) => {
   });
 };
 
-export const patchResults = async (resultUuid: string) => {
-  const endpointUrl = BASE_URL + `/api/results/${resultUuid}`;
-  const data = buildResultData();
+export const patchResults = async (
+  resultId: string,
+  updateToken: string,
+  currentEmbed: string
+) => {
+  const endpointUrl = BASE_URL + `/api/answers/${resultId}`;
+  const values = buildResultData();
+  const data = {
+    value: values,
+    source: currentEmbed,
+    updateToken: updateToken,
+  };
   const res = await fetch(endpointUrl, {
     method: 'PATCH',
     headers: {
@@ -134,7 +138,7 @@ export const patchResults = async (resultUuid: string) => {
     return;
   } else {
     try {
-      const resParsed = (await res.json()) as ResultAddedRest;
+      const resParsed = (await res.json()) as { [k: string]: any };
       console.debug('PATCH results success!');
       return resParsed;
     } catch (error) {
@@ -145,9 +149,14 @@ export const patchResults = async (resultUuid: string) => {
   }
 };
 
-export const postResults = async () => {
-  const endpointUrl = BASE_URL + '/api/results/';
-  const data = buildResultData();
+export const postResults = async (currentEmbed: string) => {
+  const endpointUrl = BASE_URL + '/api/answers';
+  const values = buildResultData();
+  const data = {
+    value: values,
+    source: currentEmbed,
+    calculatorId: values.calculator.id,
+  };
   const res = await fetch(endpointUrl, {
     method: 'POST',
     //mode: 'no-cors',
@@ -165,7 +174,7 @@ export const postResults = async () => {
     return;
   } else {
     try {
-      const resParsed = (await res.json()) as ResultAddedRest;
+      const resParsed = (await res.json()) as { [k: string]: any };
       console.debug('POST results success!');
       return resParsed;
     } catch (error) {

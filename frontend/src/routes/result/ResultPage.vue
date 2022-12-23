@@ -41,6 +41,10 @@ import BodyText from '../../components/design-system/typography/BodyText.vue';
 import ErrorModal from '../../components/ErrorModal.vue';
 import DonateBlock from '../../components/DonateBlock.vue';
 import CheckboxComponent from '../../components/design-system/input/CheckboxComponent.vue';
+import { inject } from 'vue';
+import { EmbedKey } from '@/components/utilities/embedding/EmbedKey';
+
+const currentEmbed = inject(EmbedKey);
 
 const router = useRouter();
 const route = useRoute();
@@ -81,8 +85,9 @@ const handleShareClick = () => {
   shareModal.value?.open();
 };
 onBeforeMount(async () => {
-  await electionStore.saveResults();
-  console.debug(`Results saved: ${electionStore.resultsUuid}`);
+  const res = await electionStore.saveResults(currentEmbed);
+  console.debug(`Results saved.`);
+  console.debug(res);
 });
 
 console.debug(encodeResults(electionStore.answers));
@@ -267,7 +272,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
     </StickyHeaderLayout>
   </BackgroundComponent>
   <ResultShareModal
-    v-if="electionStore.resultsUuid"
+    v-if="electionStore.resultsId"
     ref="shareModal"
     :relative-agreement="resultsGeneral"
   />
