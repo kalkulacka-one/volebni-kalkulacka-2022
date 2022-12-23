@@ -23,5 +23,5 @@ model Answers {
   source       AnswersSource @default(web)
   embedName    String?
   calculatorId String
-  value        Json
+  answers      Json
 }
