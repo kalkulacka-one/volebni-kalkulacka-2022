@@ -24,4 +24,5 @@ model Answers {
   embedName    String?
   calculatorId String
   answers      Json
+  matches      Json
 }
