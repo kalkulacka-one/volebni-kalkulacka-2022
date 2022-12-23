@@ -106,16 +106,11 @@ export const getResults = async (resultId: string) => {
   });
 };
 
-export const patchResults = async (
-  resultId: string,
-  updateToken: string,
-  currentEmbed: string
-) => {
+export const patchResults = async (resultId: string, updateToken: string) => {
   const endpointUrl = BASE_URL + `/api/answers/${resultId}`;
   const values = buildResultData();
   const data = {
     ...values,
-    source: currentEmbed,
     updateToken: updateToken,
   };
   const res = await fetch(endpointUrl, {

@@ -143,11 +143,7 @@ export const useElectionStore = defineStore('election', {
       //patch if results already saved but answers differ
       else if (this.resultsId && this.resultsUpdateToken) {
         console.debug('Results changed. Patching...');
-        const res = await patchResults(
-          this.resultsId,
-          this.resultsUpdateToken,
-          currentEmbed
-        );
+        const res = await patchResults(this.resultsId, this.resultsUpdateToken);
         this.resultsId = res?.id ? (res.id as string) : null;
         this.resultsUpdateToken = res?.updateToken
           ? (res.updateToken as string)
