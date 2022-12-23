@@ -88,20 +88,25 @@ export const getResults = async (resultId: string) => {
   if (!res.ok) {
     if (res.status === 422) {
       console.error(await res.json());
+      throw new Error('API call FAILED with 422!');
     } else {
       console.error(res.body);
+      throw new Error(`API call FAILED with ${res.status}!`);
     }
-    return;
   }
   console.debug('GET results success!');
-  const result = (await res.json()) as ResultOutRest;
+  const resParsed = await res.json();
+  if (!resParsed.id || !resParsed.value) {
+    throw new Error(`API call response not valid!`);
+  }
+  const values: ResultOutRest = resParsed.value;
   //load election
-  await electionStore.loadElection(result.calculator.election.id);
+  await electionStore.loadElection(values.calculator.election.id);
   await electionStore.loadCalculator(
-    result.calculator.election.id,
-    result.calculator.district_code
+    values.calculator.election.id,
+    values.calculator.district_code
   );
-  electionStore.answers = result.answers.map((x) => {
+  electionStore.answers = values.answers.map((x) => {
     return {
       id: x.question_id,
       flag: x.is_important,
@@ -132,10 +137,11 @@ export const patchResults = async (
   if (!res.ok) {
     if (res.status === 422) {
       console.error(await res.json());
+      throw new Error('API call FAILED with 422!');
     } else {
       console.error(res.body);
+      throw new Error(`API call FAILED with ${res.status}!`);
     }
-    return;
   } else {
     try {
       const resParsed = (await res.json()) as { [k: string]: any };
@@ -168,10 +174,11 @@ export const postResults = async (currentEmbed: string) => {
   if (!res.ok) {
     if (res.status === 422) {
       console.error(await res.json());
+      throw new Error('API call FAILED with 422!');
     } else {
       console.error(res.body);
+      throw new Error(`API call FAILED with ${res.status}!`);
     }
-    return;
   } else {
     try {
       const resParsed = (await res.json()) as { [k: string]: any };

@@ -30,7 +30,7 @@ export default defineConfig(({ command, mode }) => {
       proxy: {
         '/data': {
           //target: 'http://127.0.0.1:5201/dev',
-          target: 'https://www.volebnikalkulacka.cz',
+          target: 'https://volebni-kalkulacka-2022.vercel.app',
           changeOrigin: true,
           cookieDomainRewrite: { '*': '' },
           configure: (proxy) =>
