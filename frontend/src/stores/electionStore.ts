@@ -173,6 +173,10 @@ export const useElectionStore = defineStore('election', {
     },
     init() {
       console.debug('Initializing store ...');
+      this.answers.forEach((x) => {
+        x.answer = UserAnswerEnum.undefined;
+        x.flag = false;
+      });
       this.answerProgress = -1;
       this.encodedResults = null;
       this.resultsUpdateToken = null;
