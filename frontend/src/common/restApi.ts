@@ -141,12 +141,13 @@ export const patchResults = async (resultId: string, updateToken: string) => {
   }
 };
 
-export const postResults = async (currentEmbed: string) => {
+export const postResults = async (currentEmbed: string | undefined) => {
   const endpointUrl = BASE_URL + '/api/answers';
   const values = buildResultData();
   const data = {
     ...values,
-    source: currentEmbed,
+    source: currentEmbed ? 'embed' : 'web',
+    embedName: currentEmbed || undefined,
   };
   const res = await fetch(endpointUrl, {
     method: 'POST',
