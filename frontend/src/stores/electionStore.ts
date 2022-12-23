@@ -132,12 +132,10 @@ export const useElectionStore = defineStore('election', {
       const newEncodedResults = encodeResults(this.answers);
       //return if results already saved and answers are the same
       if (newEncodedResults === this.encodedResults && this.resultsUuid) {
-        console.debug('Results are already saved.');
-        return;
+        return false;
       }
       //patch if results already saved but answers differ
       else if (this.resultsUuid) {
-        console.debug('Results are already saved but they differ. Patching...');
       }
       //post new reults if results not yet saved
       else {
@@ -148,6 +146,8 @@ export const useElectionStore = defineStore('election', {
           this.resultsUuid = response.result_id;
         }
       }
+      this.encodedResults = newEncodedResults;
+      return true;
     },
     init() {
       console.debug('Initializing store ...');

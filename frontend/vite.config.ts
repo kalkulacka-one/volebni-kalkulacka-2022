@@ -29,9 +29,8 @@ export default defineConfig(({ command, mode }) => {
       port: 5201,
       proxy: {
         '/data': {
-          //target: 'http://127.0.0.1:5201/dev',
-          target: 'https://www.volebnikalkulacka.cz',
-          ws: true,
+          target: 'http://127.0.0.1:5201/dev',
+          //target: 'https://www.volebnikalkulacka.cz',
           changeOrigin: true,
           cookieDomainRewrite: { '*': '' },
           configure: (proxy) =>
@@ -45,7 +44,8 @@ export default defineConfig(({ command, mode }) => {
         },
         '/api': {
           //target: 'http://127.0.0.1:8080',
-          target: 'https://www.volebnikalkulacka.cz',
+          target:
+            'https://volebni-kalkulacka-2022-ofzsih6xv-ceskodigital.vercel.app/',
           changeOrigin: true,
         },
         '/image': {
