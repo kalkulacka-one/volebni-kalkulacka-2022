@@ -9,7 +9,7 @@ export default async function (req: VercelRequest, res: VercelResponse) {
       where: { id: resultId },
       select: {
         id: true,
-        value: true,
+        answers: true,
         createdAt: true,
         updatedAt: true,
         calculatorId: true,
@@ -21,7 +21,7 @@ export default async function (req: VercelRequest, res: VercelResponse) {
       return res.json(result);
     }
   } else if (req.method === 'PATCH') {
-    const value = req.body.value;
+    const answers = req.body.answers;
     const updateToken = req.body.updateToken;
     const existingResult = await prisma.answers.findUnique({
       where: { id: resultId },
@@ -43,7 +43,7 @@ export default async function (req: VercelRequest, res: VercelResponse) {
     const result = await prisma.answers.update({
       where: { id: resultId },
       data: {
-        value: value,
+        answers: answers,
       },
     });
     return res.json(result);
