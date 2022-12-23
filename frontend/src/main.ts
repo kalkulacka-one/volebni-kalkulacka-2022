@@ -56,7 +56,7 @@ export const districtSelectionGuard = (
   _from: RouteLocationNormalized
 ) => {
   const store = useElectionStore();
-  if (store.districts.length < 2) {
+  if (store.districts.length === 1) {
     const normalizedName = stringToNormalizedHyphenated(
       store.districts[0].name
     );
