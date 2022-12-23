@@ -8,6 +8,7 @@ import type { ElectionRest } from '@/types/rest/Election';
 import type { Matches, ResultInRest } from '@/types/rest/ResultIn';
 import type { ResultOutRest } from '@/types/rest/ResultOut';
 import { calculateRelativeAgreement } from './resultParser';
+import type { Answers } from '@prisma/client';
 
 //const BASE_URL = 'https://kalkulacka.ceskodigital.cz';
 //const BASE_URL = 'http://localhost:8080';
@@ -95,11 +96,12 @@ export const getResults = async (resultId: string) => {
     }
   }
   console.debug('GET results success!');
-  const resParsed = await res.json();
+  //not completely true as there is a select used see api/answers/[id].ts
+  const resParsed: Answers = await res.json();
   if (!resParsed.id || !resParsed.value) {
     throw new Error(`API call response not valid!`);
   }
-  const values: ResultOutRest = resParsed.value;
+  const values: ResultOutRest = resParsed.value as ResultOutRest;
   //load election
   await electionStore.loadElection(values.calculator.election.id);
   await electionStore.loadCalculator(
@@ -144,7 +146,7 @@ export const patchResults = async (
     }
   } else {
     try {
-      const resParsed = (await res.json()) as { [k: string]: any };
+      const resParsed: Answers = await res.json();
       console.debug('PATCH results success!');
       return resParsed;
     } catch (error) {
@@ -181,7 +183,7 @@ export const postResults = async (currentEmbed: string) => {
     }
   } else {
     try {
-      const resParsed = (await res.json()) as { [k: string]: any };
+      const resParsed: Answers = await res.json();
       console.debug('POST results success!');
       return resParsed;
     } catch (error) {
