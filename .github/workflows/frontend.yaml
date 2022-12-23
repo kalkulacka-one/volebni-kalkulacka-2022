@@ -53,7 +53,7 @@ jobs:
         name: Run end-to-end tests
         run: |
           npm run test:e2e:ci
-      - if: github.ref == 'refs/heads/main'
+      - if: github.ref == 'refs/heads/aws'
         name: Upload build
         uses: actions/upload-artifact@v3
         with:
