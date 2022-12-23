@@ -85,7 +85,7 @@ const handleShareClick = () => {
   shareModal.value?.open();
 };
 onBeforeMount(async () => {
-  const res = await electionStore.saveResults(currentEmbed);
+  const res = await electionStore.saveResults({ embedName: currentEmbed });
   console.debug(`Results saved.`);
   console.debug(res);
 });

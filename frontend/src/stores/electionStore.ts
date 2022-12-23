@@ -128,7 +128,7 @@ export const useElectionStore = defineStore('election', {
         console.warn('District data are undefined!');
       }
     },
-    async saveResults(currentEmbed: string | undefined) {
+    async saveResults({ embedName }: { embedName: string | undefined }) {
       //if results already saved do not save them again
       const newEncodedResults = encodeResults(this.answers);
       //return if results already saved and answers are the same
@@ -156,7 +156,7 @@ export const useElectionStore = defineStore('election', {
         console.debug('Results not saved. Posting...');
         this.resultsId = null;
         this.resultsUpdateToken = null;
-        const res = await postResults(currentEmbed);
+        const res = await postResults({ embedName });
         this.resultsId = res?.id ? (res.id as string) : null;
         this.resultsUpdateToken = res?.updateToken
           ? (res.updateToken as string)
