@@ -28,25 +28,27 @@ export default defineConfig(({ command, mode }) => {
       host: '0.0.0.0',
       port: 5201,
       proxy: {
-        '/data': {
-          //target: 'http://127.0.0.1:5201/dev',
-          target: 'https://www.volebnikalkulacka.cz',
-          changeOrigin: true,
-          cookieDomainRewrite: { '*': '' },
-          configure: (proxy) =>
-            proxy.on('proxyRes', (proxyRes, req, res) => {
-              if (proxyRes.headers['set-cookie']) {
-                proxyRes.headers['set-cookie'][0] = proxyRes.headers[
-                  'set-cookie'
-                ][0].replace('; Secure', '');
-              }
-            }),
-        },
-        '/api': {
-          //target: 'http://127.0.0.1:8080',
-          target: 'https://www.volebnikalkulacka.cz',
-          changeOrigin: true,
-        },
+        '/data': process.env.DATA_PROXY
+          ? {
+              target: process.env.DATA_PROXY,
+              changeOrigin: true,
+              cookieDomainRewrite: { '*': '' },
+              configure: (proxy) =>
+                proxy.on('proxyRes', (proxyRes, req, res) => {
+                  if (proxyRes.headers['set-cookie']) {
+                    proxyRes.headers['set-cookie'][0] = proxyRes.headers[
+                      'set-cookie'
+                    ][0].replace('; Secure', '');
+                  }
+                }),
+            }
+          : undefined,
+        '/api': process.env.API_PROXY
+          ? {
+              target: process.env.API_PROXY,
+              changeOrigin: true,
+            }
+          : undefined,
         '/image': {
           target: 'https://www.volebnikalkulacka.cz',
           changeOrigin: true,
