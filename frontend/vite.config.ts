@@ -29,8 +29,8 @@ export default defineConfig(({ command, mode }) => {
       port: 5201,
       proxy: {
         '/data': {
-          target: 'http://127.0.0.1:5201/dev',
-          //target: 'https://www.volebnikalkulacka.cz',
+          //target: 'http://127.0.0.1:5201/dev',
+          target: 'https://www.volebnikalkulacka.cz',
           changeOrigin: true,
           cookieDomainRewrite: { '*': '' },
           configure: (proxy) =>
