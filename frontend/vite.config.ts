@@ -44,7 +44,8 @@ export default defineConfig(({ command, mode }) => {
         },
         '/api': {
           //target: 'http://127.0.0.1:8080',
-          target: 'https://volebni-kalkulacka-2022.vercel.app',
+          target:
+            'https://volebni-kalkulacka-2022-ns1ni0pth-ceskodigital.vercel.app',
           changeOrigin: true,
         },
         '/image': {

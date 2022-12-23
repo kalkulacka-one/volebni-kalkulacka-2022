@@ -9,12 +9,13 @@ import type { Matches, ResultInRest } from '@/types/rest/ResultIn';
 import type { ResultOutRest } from '@/types/rest/ResultOut';
 import { calculateRelativeAgreement } from './resultParser';
 import type { Answers } from '@prisma/client';
+import type { Answer } from '@/types/rest/Answer';
 
 //const BASE_URL = 'https://kalkulacka.ceskodigital.cz';
 //const BASE_URL = 'http://localhost:8080';
 const BASE_URL = '';
 
-const buildResultData = (): ResultInRest => {
+const buildResultData = () => {
   const electionStore = useElectionStore();
   if (!electionStore.calculator) {
     throw new Error('Calculator undefined');
@@ -53,25 +54,12 @@ const buildResultData = (): ResultInRest => {
       score: x.result.result_percent,
     };
   });
-
-  const election: ElectionRest = {
-    id: electionStore.election.id,
-    key: electionStore.election.key,
-    name: electionStore.election.name,
-    description: electionStore.election.description,
-    type: electionStore.election.type || 'undefined',
-  };
-  const calculator: CalculatorRest = {
-    id: electionStore.calculator?.id,
-    name: electionStore.calculator.name,
-    description: electionStore.calculator.description,
-    district_code: electionStore.calculator.district_code,
-    election: election,
-  };
-  const values: ResultInRest = {
+  const values = {
     answers: answers,
     matches: matches,
-    calculator: calculator,
+    calculatorId: electionStore.calculator.id,
+    districtId: electionStore.calculator.district_code,
+    electionId: electionStore.election.id,
   };
   return values;
 };
@@ -98,17 +86,18 @@ export const getResults = async (resultId: string) => {
   console.debug('GET results success!');
   //not completely true as there is a select used see api/answers/[id].ts
   const resParsed: Answers = await res.json();
-  if (!resParsed.id || !resParsed.value) {
+  if (!resParsed.id || !resParsed.answers) {
     throw new Error(`API call response not valid!`);
   }
-  const values: ResultOutRest = resParsed.value as ResultOutRest;
   //load election
-  await electionStore.loadElection(values.calculator.election.id);
+  await electionStore.loadElection(resParsed.electionId);
   await electionStore.loadCalculator(
-    values.calculator.election.id,
-    values.calculator.district_code
+    resParsed.electionId,
+    resParsed.districtId
   );
-  electionStore.answers = values.answers.map((x) => {
+  electionStore.answers = (
+    resParsed.answers as ReturnType<typeof buildResultData>['answers']
+  ).map((x) => {
     return {
       id: x.question_id,
       flag: x.is_important,
@@ -125,7 +114,7 @@ export const patchResults = async (
   const endpointUrl = BASE_URL + `/api/answers/${resultId}`;
   const values = buildResultData();
   const data = {
-    value: values,
+    ...values,
     source: currentEmbed,
     updateToken: updateToken,
   };
@@ -161,9 +150,8 @@ export const postResults = async (currentEmbed: string) => {
   const endpointUrl = BASE_URL + '/api/answers';
   const values = buildResultData();
   const data = {
-    value: values,
+    ...values,
     source: currentEmbed,
-    calculatorId: values.calculator.id,
   };
   const res = await fetch(endpointUrl, {
     method: 'POST',
