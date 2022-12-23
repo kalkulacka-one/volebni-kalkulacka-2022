@@ -26,7 +26,7 @@ import SharePageVue from './routes/share/SharePage.vue';
 import AboutUsPageVue from './routes/about-us/AboutUsPage.vue';
 import AboutElectionsPageVue from './routes/about-elections/AboutElectionsPage.vue';
 import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
-import { getDistrictCode } from './common/utils';
+import { getDistrictCode, stringToNormalizedHyphenated } from './common/utils';
 import VueSocialSharing from 'vue-social-sharing';
 
 const RESULT_QUERY_NAME = 'result';
@@ -36,7 +36,6 @@ export const questionGuard = (
   _from: RouteLocationNormalized
 ) => {
   const store = useElectionStore();
-
   //assign one if nr is missing
   if (!to.params.nr || to.params.nr === 'first') {
     to.params.nr = '1';
@@ -50,6 +49,24 @@ export const questionGuard = (
     console.warn(`Wrong question route ${to.path}`);
     return false;
   }
+};
+
+export const districtSelectionGuard = (
+  to: RouteLocationNormalized,
+  _from: RouteLocationNormalized
+) => {
+  const store = useElectionStore();
+  if (store.districts.length < 2) {
+    const normalizedName = stringToNormalizedHyphenated(
+      store.districts[0].name
+    );
+    const districtName = `${store.districts[0].district_code}-${normalizedName}`;
+    return {
+      name: appRoutes.guide.name,
+      params: { ...to.params, district: districtName },
+    };
+  }
+  return to;
 };
 
 const resultsProcessor = (
@@ -114,6 +131,7 @@ export const appRoutes = {
     meta: {
       title: 'Volební Kalkulačka',
     },
+    beforeEnter: districtSelectionGuard,
   },
   guide: {
     name: 'guide',

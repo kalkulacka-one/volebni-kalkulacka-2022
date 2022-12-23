@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
+import { onBeforeRouteUpdate, useRoute, useRouter } from 'vue-router';
 import { mdiCloseCircleOutline } from '@mdi/js';
 
-import { appRoutes } from '@/main';
+import { appRoutes, districtSelectionGuard } from '@/main';
 import { useElectionStore } from '@/stores/electionStore';
 
 import type { Election } from '@/types/election';
@@ -29,6 +29,8 @@ import { stringToNormalizedHyphenated } from '@/common/utils';
 const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
+
+onBeforeRouteUpdate(districtSelectionGuard);
 
 const election = electionStore.election as Election;
 const electionName = election.name;
