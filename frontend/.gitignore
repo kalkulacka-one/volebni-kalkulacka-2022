@@ -1,4 +1,4 @@
-public/dev/
+public/data
 
 # Logs
 logs
@@ -28,3 +28,4 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+.vercel
