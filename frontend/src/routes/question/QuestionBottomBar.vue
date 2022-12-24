@@ -67,30 +67,56 @@ const starIcon = computed(() =>
           />
         </IconButton>
       </ResponsiveWrapper>
-      <ButtonComponent
-        class="in-favour"
-        kind="answer"
-        color="primary"
-        :selected="answer.answer === UserAnswerEnum.yes"
-        @click="yesClick"
-      >
-        <template #icon>
-          <IconComponent :icon="vkiLogoInFavour" />
-        </template>
-        Jsem pro
-      </ButtonComponent>
-      <ButtonComponent
-        class="against"
-        kind="answer"
-        color="secondary"
-        :selected="answer.answer === UserAnswerEnum.no"
-        @click="noClick"
-      >
-        <template #icon>
-          <IconComponent :icon="vkiLogoAgainst" />
-        </template>
-        Jsem proti
-      </ButtonComponent>
+      <ResponsiveWrapper small medium large extra-large huge>
+        <ButtonComponent
+          class="in-favour"
+          kind="answer"
+          color="primary"
+          :selected="answer.answer === UserAnswerEnum.yes"
+          @click="yesClick"
+        >
+          <template #icon>
+            <IconComponent :icon="vkiLogoInFavour" />
+          </template>
+          Jsem pro
+        </ButtonComponent>
+        <ButtonComponent
+          class="against"
+          kind="answer"
+          color="secondary"
+          :selected="answer.answer === UserAnswerEnum.no"
+          @click="noClick"
+        >
+          <template #icon>
+            <IconComponent :icon="vkiLogoAgainst" />
+          </template>
+          Jsem proti
+        </ButtonComponent>
+      </ResponsiveWrapper>
+      <ResponsiveWrapper extra-small>
+        <ButtonComponent
+          class="in-favour"
+          kind="answer"
+          color="primary"
+          :selected="answer.answer === UserAnswerEnum.yes"
+          @click="yesClick"
+        >
+          <template #icon>
+            <IconComponent :icon="vkiLogoInFavour" />
+          </template>
+        </ButtonComponent>
+        <ButtonComponent
+          class="against"
+          kind="answer"
+          color="secondary"
+          :selected="answer.answer === UserAnswerEnum.no"
+          @click="noClick"
+        >
+          <template #icon>
+            <IconComponent :icon="vkiLogoAgainst" />
+          </template>
+        </ButtonComponent>
+      </ResponsiveWrapper>
     </div>
   </BottomBar>
 </template>
@@ -99,7 +125,7 @@ const starIcon = computed(() =>
 @import '@/assets/breakpoints.scss';
 
 .bottom-bar {
-  display: grid;
+  display: flex;
   justify-content: center;
 }
 
@@ -145,6 +171,7 @@ const starIcon = computed(() =>
 
 @media (max-width: calc($breakpoint-extra-small - 1px)) {
   .grid {
+    width: 100%;
     grid-template-columns: min-content 1fr 1fr;
   }
 

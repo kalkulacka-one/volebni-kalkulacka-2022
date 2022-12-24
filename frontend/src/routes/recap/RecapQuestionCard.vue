@@ -123,7 +123,7 @@ const toggleClick = () => {
           class="in-favour"
           kind="answer"
           color="primary"
-          :selected="answer.answer === UserAnswerEnum.yes && isExpanded"
+          :selected="answer.answer === UserAnswerEnum.yes"
           :read-only="!isExpanded"
           @click="yesClick"
         >
@@ -140,7 +140,7 @@ const toggleClick = () => {
           class="against"
           kind="answer"
           color="secondary"
-          :selected="answer.answer === UserAnswerEnum.no && isExpanded"
+          :selected="answer.answer === UserAnswerEnum.no"
           :read-only="!isExpanded"
           @click="noClick"
         >
@@ -173,7 +173,7 @@ const toggleClick = () => {
           class="in-favour"
           kind="answer"
           color="primary"
-          :selected="answer.answer === UserAnswerEnum.yes && isExpanded"
+          :selected="answer.answer === UserAnswerEnum.yes"
           :read-only="!isExpanded"
           @click="yesClick"
         >
@@ -189,7 +189,7 @@ const toggleClick = () => {
           class="against"
           kind="answer"
           color="secondary"
-          :selected="answer.answer === UserAnswerEnum.no && isExpanded"
+          :selected="answer.answer === UserAnswerEnum.no"
           :read-only="!isExpanded"
           @click="noClick"
         >
