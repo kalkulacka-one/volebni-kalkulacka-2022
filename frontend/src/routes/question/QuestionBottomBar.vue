@@ -15,7 +15,6 @@ import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 import {
   vkiLogoInFavour,
   vkiLogoAgainst,
-  vkiLogoNeutral,
   vkiStarOutlined,
   vkiStarFilled,
 } from '@/components/design-system/icons';
