@@ -7,5 +7,6 @@
 <style scoped lang="scss">
 .root-layout {
   display: grid;
+  min-height: 100%;
 }
 </style>
