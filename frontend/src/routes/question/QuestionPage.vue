@@ -112,7 +112,9 @@ const goToGuide = (params: RouteParams) => {
 };
 
 const handleSkip = () => {
-  if (electionStore.answers[questionNr.value].answer === UserAnswerEnum.skip) {
+  if (
+    electionStore.answers[questionNr.value].answer === UserAnswerEnum.undefined
+  ) {
     handleAnswerClick(UserAnswerEnum.skip);
   }
 };
