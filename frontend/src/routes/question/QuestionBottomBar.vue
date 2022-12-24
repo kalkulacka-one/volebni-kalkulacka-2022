@@ -33,55 +33,40 @@ const starColor = computed(() =>
 const starIcon = computed(() =>
   props.answer.flag ? vkiStarFilled : vkiStarOutlined
 );
-
-console.log(props.answer);
 </script>
 
 <template>
   <BottomBar class="bottom-bar">
-    <ResponsiveWrapper medium large extra-large huge>
-      <StackComponent
-        horizontal
-        centered
-        class="important-button"
-        @click="starClick"
-      >
-        <IconButton>
+    <div class="grid">
+      <ResponsiveWrapper large extra-large huge>
+        <StackComponent
+          horizontal
+          centered
+          class="important"
+          @click="starClick"
+        >
+          <IconButton>
+            <IconComponent
+              :icon="starIcon"
+              :color="starColor"
+              size="large"
+              title="Pro mě důležité"
+            />
+          </IconButton>
+          <BodyText class="star-text" size="medium">Pro mě důležité</BodyText>
+        </StackComponent>
+      </ResponsiveWrapper>
+      <ResponsiveWrapper extra-small small medium>
+        <IconButton class="important">
           <IconComponent
             :icon="starIcon"
             :color="starColor"
             size="large"
             title="Pro mě důležité"
+            @click="starClick"
           />
         </IconButton>
-        <BodyText class="star-text" size="medium">Pro mě důležité</BodyText>
-      </StackComponent>
-    </ResponsiveWrapper>
-    <ResponsiveWrapper extra-small small>
-      <IconButton class="important-button">
-        <IconComponent
-          :icon="starIcon"
-          :color="starColor"
-          size="large"
-          title="Pro mě důležité"
-          @click="starClick"
-        />
-      </IconButton>
-    </ResponsiveWrapper>
-    <ResponsiveWrapper extra-small>
-      <ButtonComponent
-        class="in-favour"
-        kind="answer"
-        color="primary"
-        :selected="answer.answer === UserAnswerEnum.yes"
-        @click="yesClick"
-      >
-        <template #icon>
-          <IconComponent :icon="vkiLogoInFavour" title="Jsem pro" />
-        </template>
-      </ButtonComponent>
-    </ResponsiveWrapper>
-    <ResponsiveWrapper small medium large extra-large huge>
+      </ResponsiveWrapper>
       <ButtonComponent
         class="in-favour"
         kind="answer"
@@ -94,21 +79,6 @@ console.log(props.answer);
         </template>
         Jsem pro
       </ButtonComponent>
-    </ResponsiveWrapper>
-    <ResponsiveWrapper extra-small>
-      <ButtonComponent
-        class="against"
-        kind="answer"
-        color="secondary"
-        :selected="answer.answer === UserAnswerEnum.no"
-        @click="noClick"
-      >
-        <template #icon>
-          <IconComponent :icon="vkiLogoAgainst" title="Jsem proti" />
-        </template>
-      </ButtonComponent>
-    </ResponsiveWrapper>
-    <ResponsiveWrapper small medium large extra-large huge>
       <ButtonComponent
         class="against"
         kind="answer"
@@ -121,12 +91,33 @@ console.log(props.answer);
         </template>
         Jsem proti
       </ButtonComponent>
-    </ResponsiveWrapper>
+    </div>
   </BottomBar>
 </template>
 
 <style lang="scss" scoped>
-.important-button {
+@import '@/assets/breakpoints.scss';
+
+.bottom-bar {
+  display: grid;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  width: clamp(32rem, 50vw, 48rem);
+  grid-template-columns: auto 1fr 1fr;
+  grid-template-areas: 'important in-favour against';
+  align-items: center;
+  justify-content: center;
+  gap: var(--responsive-gap-medium);
+}
+
+.important {
+  grid-area: important;
+  justify-self: start;
+  margin-right: var(--responsive-optional-gap-large);
+
   &:hover {
     cursor: pointer;
 
@@ -136,23 +127,30 @@ console.log(props.answer);
   }
 }
 
-.important-button {
-  justify-self: end;
-}
-
 .in-favour {
-  justify-self: end;
+  grid-area: in-favour;
+  justify-self: stretch;
 }
 
 .against {
-  justify-self: start;
+  grid-area: against;
+  justify-self: stretch;
 }
 
-.bottom-bar {
-  display: grid;
-  grid-template-columns: auto max-content max-content auto;
-  gap: var(--responsive-spacing-large);
-  justify-items: center;
-  align-items: center;
+@media (max-width: calc($breakpoint-large - 1px)) {
+  .grid {
+    width: auto;
+  }
+}
+
+@media (max-width: calc($breakpoint-extra-small - 1px)) {
+  .grid {
+    grid-template-columns: min-content 1fr 1fr;
+  }
+
+  .in-favour,
+  .against {
+    justify-self: stretch;
+  }
 }
 </style>
