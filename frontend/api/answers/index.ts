@@ -5,12 +5,16 @@ import { respond405 } from '../../src/server/errors';
 
 export default async function (req: VercelRequest, res: VercelResponse) {
   if (req.method === 'POST') {
-    const value = req.body.value as Prisma.JsonObject;
+    const answers = req.body.answers as Prisma.JsonObject;
+    const matches = req.body.matches as Prisma.JsonObject;
     const result = await prisma.answers.create({
       data: {
-        value: value,
+        answers: answers,
+        matches: matches,
         source: req.body.source,
         embedName: req.body.embedName,
+        electionId: req.body.electionId,
+        districtId: req.body.districtId,
         calculatorId: req.body.calculatorId,
       },
     });
