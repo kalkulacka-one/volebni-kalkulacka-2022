@@ -17,7 +17,7 @@ const props = withDefaults(defineProps<Props>(), {
   blueBlobX: "5%",
   blueBlobY: "10%",
   redBlobX: "50%",
-  redBlobY: "10%",
+  redBlobY: "20%",
   blobsHeight: "80%"
 });
 
