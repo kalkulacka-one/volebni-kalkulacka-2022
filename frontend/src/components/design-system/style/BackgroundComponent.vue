@@ -4,6 +4,7 @@ import { EmbedKey } from '@/components/utilities/embedding/EmbedKey';
 
 export interface Props {
   hasBlobs?: boolean;
+  blobsHeight?: string;
   redBlobX?: string;
   redBlobY?: string;
   blueBlobX?: string;
@@ -15,6 +16,7 @@ const props = withDefaults(defineProps<Props>(), {
   blueBlobY: "10%",
   redBlobX: "50%",
   redBlobY: "10%",
+  blobsHeight: "80%",
 });
 
 const classes = computed(() => ({
