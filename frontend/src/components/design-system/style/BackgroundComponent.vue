@@ -9,6 +9,8 @@ export interface Props {
   redBlobY?: string;
   blueBlobX?: string;
   blueBlobY?: string;
+
+  // TODO: add responsivity
 }
 const props = withDefaults(defineProps<Props>(), {
   hasBlobs: true,
@@ -54,7 +56,7 @@ const currentEmbed = inject(EmbedKey);
 
   .blue-blob,
   .red-blob {
-    width: v-bind('props.blobsHeight');
+    height: v-bind('props.blobsHeight');
     position: fixed;
     filter: blur(120px);
   }
