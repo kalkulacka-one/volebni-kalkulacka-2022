@@ -19,10 +19,6 @@ const props = withDefaults(defineProps<Props>(), {
   blobsHeight: "80%",
 });
 
-const classes = computed(() => ({
-  'without-background': !props.hasBlobs,
-}));
-
 const currentEmbed = inject(EmbedKey);
 </script>
 
