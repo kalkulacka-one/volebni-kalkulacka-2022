@@ -50,12 +50,12 @@ const currentEmbed = inject(EmbedKey);
   position: absolute;
   width: 100%;
   height: 100%;
+  z-index: -1;
 
   .blue-blob,
   .red-blob {
     width: v-bind('props.blobsHeight');
     position: fixed;
-    z-index: -1;
     filter: blur(120px);
   }
 
