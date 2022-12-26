@@ -16,7 +16,7 @@ const props = withDefaults(defineProps<Props>(), {
   blueBlobY: "10%",
   redBlobX: "50%",
   redBlobY: "10%",
-  blobsHeight: "80%",
+  blobsHeight: "80%"
 });
 
 const currentEmbed = inject(EmbedKey);
@@ -27,10 +27,12 @@ const currentEmbed = inject(EmbedKey);
     <slot />
   </template>
   <template v-else>
-    <div :class="['background', classes]">
+    <div class="has-background">
       <template v-if="props.hasBlobs">
-        <img src="@/assets/background/blue-blob.svg" class="blue-blob"/>
-        <img src="@/assets/background/red-blob.svg" class="red-blob"/>
+        <div class="blobs">
+          <img src="@/assets/background/blue-blob.svg" class="blue-blob"/>
+          <img src="@/assets/background/red-blob.svg" class="red-blob"/>
+        </div>
       </template>
       <slot />
     </div>
@@ -38,7 +40,7 @@ const currentEmbed = inject(EmbedKey);
 </template>
 
 <style scoped lang="scss">
-.background {
+.blobs {
   display: grid;
   width: 100%;
   height: 100%;
