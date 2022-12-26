@@ -47,6 +47,7 @@ const currentEmbed = inject(EmbedKey);
 
   .blue-blob,
   .red-blob {
+    width: v-bind('props.blobsHeight');
     position: fixed;
     z-index: -1;
     filter: blur(120px);
@@ -60,44 +61,6 @@ const currentEmbed = inject(EmbedKey);
   .red-blob {
     left: v-bind('props.redBlobX');
     top: v-bind('props.redBlobY');
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .background {
-    display: grid;
-    background-repeat: no-repeat;
-    background-position: left -49px top 112px, right -49px top 289px;
-
-    .blue-rounded-spot,
-    .red-rounded-spot,
-    .white-rounded-spot,
-    .gray-rounded-spot {
-      display: none;
-    }
-
-    >.blue-spot,
-    >.red-spot {
-      display: block;
-    }
-
-    >.blue-spot {
-      background-image: url(@/assets/background/spot_blue.svg);
-      width: 30%;
-      height: 20%;
-      inset: 152px auto auto 170px;
-    }
-
-    >.red-spot {
-      background-image: url(@/assets/background/spot_red.svg);
-      width: 217px;
-      height: 227px;
-      inset: 247px auto auto 170px;
-    }
-  }
-
-  .without-background {
-    background-image: none;
   }
 }
 </style>
