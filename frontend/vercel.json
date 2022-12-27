@@ -34,12 +34,8 @@
       "destination": "https://www.volebnikalkulacka.cz/image/:uuid"
     },
     {
-      "source": "/volby/(.*)",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/share/(.*)",
-      "destination": "/index.html"
+      "source": "/(.*)",
+      "destination": "/"
     }
   ],
   "trailingSlash": false
