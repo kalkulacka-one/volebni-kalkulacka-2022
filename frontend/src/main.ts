@@ -18,6 +18,7 @@ import ResultPageVue from './routes/result/ResultPage.vue';
 import RecapPageVue from './routes/recap/RecapPage.vue';
 import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
+import QuestionsMethodologyPageVue from './routes/questions-methodology/QuestionsMethodologyPageVue.vue';
 import { useElectionStore } from './stores/electionStore';
 import { createPinia } from 'pinia';
 import ErrorPageVue from './routes/error/ErrorPage.vue';
@@ -96,6 +97,14 @@ export const appRoutes = {
     component: DataProtectionPageVue,
     meta: {
       title: 'Ochrana dat',
+    },
+  },
+  questionsMethodology: {
+    name: 'metodika-tvorby-otazek',
+    path: '/metodika-tvorby-otazek',
+    component: QuestionsMethodologyPageVue,
+    meta: {
+      title: 'Metodika tvorby otázek',
     },
   },
   error: {

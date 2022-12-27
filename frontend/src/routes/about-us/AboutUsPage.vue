@@ -83,16 +83,14 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
 
         <TitleText size="large" tag="h2"> Jak tvoříme otázky </TitleText>
         <BodyText size="large">
-          Obzvláště v názorovém testu ("volební kalkulačce") jsou výběr a
-          formulace otázek zcela klíčovými prvky. Proto se řídíme přísnou
-          metodikou výběru a tvorby otázek, o které se můžete dočíst více
-          <a
-            href="https://docs.google.com/document/d/1oynFiteoe34D0gEgDE-mowndTx8vSK4TwfyBXmA5uRc/edit"
-          >
-            zde </a
-          >.</BodyText
-        >
-        <BodyText size="large">
+          Obzvláště v názorovém testu ("volební kalkulačce") je výběr a
+          formulace otázek klíčovým místem tvorby kalkulačky. Z důvodu
+          tranpsarentnosti zde uvádíme náš dokument, kterým se při tvorbě otázek
+          řídíme:
+          <router-link to="/metodika-tvorby-otazek">
+            Metodika výběru témat a tvorby otázek
+          </router-link></BodyText
+        ><BodyText size="large">
           V naprosté většině případů názorového testu ("volební kalkulačky")
           stranám nebo kandidátům posíláme více otázek, než kolik se použije ve
           výsledné kalkulačce. Obvykle se vyřadí otázky, kde je u kandidátů
