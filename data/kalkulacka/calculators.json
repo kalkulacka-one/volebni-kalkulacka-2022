@@ -46,9 +46,9 @@
       "to": "2022-01-14T14:00:00"
     },
     {
-      "id": "prezidentske-2023-kolo-1",
-      "key": "prezidentske-2023-kolo-1",
-      "name": "Prezidentské volby 2023 - 1. kolo",
+      "id": "prezidentske-2023",
+      "key": "prezidentske-2023",
+      "name": "Prezidentské volby 2023",
       "description": "Letos se volí v prezidentských volbách.",
       "instructions": {
         "header": "Prezidentske - header",
@@ -622,19 +622,55 @@
     },
     {
       "election_id": "prezidentske-2023-kolo-test",
-      "district_code": "global",
-      "show_district_code": true,
-      "name": "global",
-      "description": "global",
+      "district_code": "pro-kazdeho-1-kolo",
+      "show_district_code": false,
+      "name": "Pro každého",
+      "description": "Kalkulačka vhodná pro všechny občany.",
       "on_hp_from": "2022-09-03T14:00:00",
       "on_hp_to": "2022-01-24T14:00:00"
     },
     {
-      "election_id": "prezidentske-2023-kolo-1",
-      "district_code": "global",
-      "show_district_code": true,
-      "name": "global",
-      "description": "global",
+      "election_id": "prezidentske-2023-kolo-test",
+      "district_code": "pro-politicke-nadsence-1-kolo",
+      "show_district_code": false,
+      "name": "Pro politické nadšence",
+      "description": "Kalkulačka vhodná pro všechny politické nadšence.",
+      "on_hp_from": "2022-09-03T14:00:00",
+      "on_hp_to": "2022-01-24T14:00:00"
+    },
+    {
+      "election_id": "prezidentske-2023-kolo-test",
+      "district_code": "pro-mladistve-1-kolo",
+      "show_district_code": false,
+      "name": "Pro mladistvé",
+      "description": "Kalkulačka vhodná pro všechny mladistvé občany.",
+      "on_hp_from": "2022-09-03T14:00:00",
+      "on_hp_to": "2022-01-24T14:00:00"
+    },
+    {
+      "election_id": "prezidentske-2023",
+      "district_code": "pro-kazdeho-1-kolo",
+      "show_district_code": false,
+      "name": "Pro každého",
+      "description": "Kalkulačka vhodná pro všechny občany.",
+      "on_hp_from": "2022-09-03T14:00:00",
+      "on_hp_to": "2023-01-24T14:00:00"
+    },
+    {
+      "election_id": "prezidentske-2023",
+      "district_code": "pro-politicke-nadsence-1-kolo",
+      "show_district_code": false,
+      "name": "Pro politické nadšence",
+      "description": "Kalkulačka vhodná pro všechny politické nadšence.",
+      "on_hp_from": "2022-09-03T14:00:00",
+      "on_hp_to": "2023-01-24T14:00:00"
+    },
+    {
+      "election_id": "prezidentske-2023",
+      "district_code": "pro-mladistve-1-kolo",
+      "show_district_code": false,
+      "name": "Pro mladistvé",
+      "description": "Kalkulačka vhodná pro všechny mladistvé občany.",
       "on_hp_from": "2022-09-03T14:00:00",
       "on_hp_to": "2023-01-24T14:00:00"
     }
