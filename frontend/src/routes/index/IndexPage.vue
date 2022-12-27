@@ -107,7 +107,22 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
         <BodyText size="small" tag="h2">
           Základní kalkulačka Prezident 2023<br />40 otázek, cca 10 minut
         </BodyText>
-        <ButtonComponent kind="filled" color="primary" tag="a">
+        <ButtonComponent
+          kind="filled"
+          color="primary"
+          tag="a"
+          @click="
+            router.push({
+              name: appRoutes.guide.name,
+              params: {
+                ...route.params,
+                election: 'prezidentske-2023',
+                district: 'pro-kazdeho-1-kolo',
+              },
+              query: { ...route.query },
+            })
+          "
+        >
           Spustit kalkulačku
           <template #iconAfter>
             <IconComponent :icon="mdiArrowRight" />
@@ -136,7 +151,22 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
             <BodyText size="small">
               Všech 100 otázek, které jsme položili prezidentským kandidátům.
             </BodyText>
-            <ButtonComponent kind="outlined" color="primary" tag="a">
+            <ButtonComponent
+              kind="outlined"
+              color="primary"
+              tag="a"
+              @click="
+                router.push({
+                  name: appRoutes.guide.name,
+                  params: {
+                    ...route.params,
+                    election: 'prezidentske-2023',
+                    district: 'pro-politicke-nadsence-1-kolo',
+                  },
+                  query: { ...route.query },
+                })
+              "
+            >
               Spustit kalkulačku
               <template #iconAfter>
                 <IconComponent :icon="mdiArrowRight" />
@@ -161,7 +191,22 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
               Otázky, které rezonují mladou generací.<br />Připravilo sdružení
               Názory politiků.
             </BodyText>
-            <ButtonComponent kind="outlined" color="primary" tag="a">
+            <ButtonComponent
+              kind="outlined"
+              color="primary"
+              tag="a"
+              @click="
+                router.push({
+                  name: appRoutes.guide.name,
+                  params: {
+                    ...route.params,
+                    election: 'prezidentske-2023',
+                    district: 'pro-mladistve-1-kolo',
+                  },
+                  query: { ...route.query },
+                })
+              "
+            >
               Spustit kalkulačku
               <template #iconAfter>
                 <IconComponent :icon="mdiArrowRight" />
