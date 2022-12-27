@@ -18,28 +18,9 @@
   ],
   "rewrites": [
     {
-      "source": "/api/results",
-      "destination": "https://www.volebnikalkulacka.cz/api/results"
-    },
-    {
-      "source": "/api/results/",
-      "destination": "https://www.volebnikalkulacka.cz/api/results/"
-    },
-    {
-      "source": "/api/results/:uuid",
-      "destination": "https://www.volebnikalkulacka.cz/api/results/:uuid"
-    },
-    {
-      "source": "/image/:uuid",
-      "destination": "https://www.volebnikalkulacka.cz/image/:uuid"
-    },
-    {
-      "source": "/volby/(.*)",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/share/(.*)",
-      "destination": "/index.html"
+      "source": "/(.*)",
+      "destination": "/"
     }
-  ]
+  ],
+  "trailingSlash": false
 }
