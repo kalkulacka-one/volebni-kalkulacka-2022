@@ -71,23 +71,8 @@ export default {
         </ButtonComponent>
       </StackComponent>
       <div class="other-calcs">
-        <CardComponent corner="top-left" padding="large" border borderRadius="large" shadow class="other-calc-card calc-youth">
-          <StackComponent spacing="small" centered>
-            <BodyText size="medium" tag="h2">
-              <strong>Kalkulačka pro mladé</strong><br> Prezident 2023
-            </BodyText>
-            <BodyText size="small">
-              Otázky, které rezonují mladou generací.
-            </BodyText>
-            <ButtonComponent kind="outlined" color="primary" tag="a">
-              Spustit kalkulačku
-              <template #iconAfter>
-                <IconComponent :icon="mdiArrowRight" />
-              </template>
-            </ButtonComponent>
-          </StackComponent>
-        </CardComponent>
-        <CardComponent corner="bottom-left" padding="large" border borderRadius="large" shadow class="other-calc-card calc-ultimate">
+        <CardComponent corner="bottom-left" padding="large" border borderRadius="large" shadow
+          class="other-calc-card calc-ultimate">
           <StackComponent spacing="small" centered>
             <BodyText size="medium" tag="h2">
               <strong>Kalkulačka pro nadšence</strong><br> Prezident 2023
@@ -97,6 +82,23 @@ export default {
             </BodyText>
             <ButtonComponent kind="outlined" color="primary" tag="a">
               Spustit kalkulačku
+              <template #iconAfter>
+                <IconComponent :icon="mdiArrowRight" />
+              </template>
+            </ButtonComponent>
+          </StackComponent>
+        </CardComponent>
+        <CardComponent corner="top-left" padding="large" border borderRadius="large" shadow
+          class="other-calc-card calc-youth">
+          <StackComponent spacing="small" centered>
+            <BodyText size="medium" tag="h2">
+              <strong>Kalkulačka pro mladé</strong><br> Názory politiků
+            </BodyText>
+            <BodyText size="small">
+              Otázky, které rezonují mladou generací.<br>Připravilo sdružení Názory politiků.
+            </BodyText>
+            <ButtonComponent kind="outlined" color="primary" tag="a">
+              Přejít
               <template #iconAfter>
                 <IconComponent :icon="mdiArrowRight" />
               </template>
@@ -115,7 +117,7 @@ export default {
         </ButtonComponent>
       </StackComponent>
       <StackComponent class="section" spacing="small" centered>
-        <div ref="info"></div>
+
         <TitleText size="large" tag="h2">Jak kalkulačka vzniká?</TitleText>
         <BodyText size="medium">Volební kalkulačka je projekt neziskové organizace KohoVolit.eu a
           je nestranným pomocníkem při Vašem rozhodování koho volit.</BodyText>
@@ -147,6 +149,7 @@ export default {
       </StackComponent>
       <DonateBlock />
       <StackComponent spacing="large">
+        <div ref="info"></div>
         <TitleText size="large" tag="h2">
           Volební kalkulačky k už proběhlým volbám
         </TitleText>
@@ -218,9 +221,12 @@ export default {
     gap: 24px;
   }
 
-  .other-calcs > * {
+  .other-calcs>* {
     width: 100%;
     padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .blob1 {
@@ -239,8 +245,9 @@ export default {
     grid-template-columns: repeat(12, minmax(0, 1fr));
 
     .other-calcs {
-      display: contents;
-      padding: 0;
+      grid-row: 6/8;
+      grid-column: 2/12;
+      grid-template-columns: 1fr 1fr;
     }
 
     .calc-main {
@@ -248,38 +255,17 @@ export default {
       grid-column: 2/12;
       margin-bottom: 16px;
     }
-
-    .calc-youth,
-    .calc-ultimate {
-      grid-row: 6/7;
-      height: 100%;
-    }
-
-    .calc-youth {
-      grid-column: 2/7;
-    }
-
-    .calc-ultimate {
-      grid-column: 7/12;
-    }
   }
 
   @media (min-width: 992px) {
-    .calc-youth {
-      grid-column: 3/7;
-    }
-
-    .calc-ultimate {
-      grid-column: 7/11;
+    .other-calcs {
+      grid-column: 3/11;
     }
   }
-  @media (min-width: 1200px) {
-    .calc-youth {
-      grid-column: 4/7;
-    }
 
-    .calc-ultimate {
-      grid-column: 7/10;
+  @media (min-width: 1200px) {
+    .other-calcs {
+      grid-column: 4/10;
     }
   }
 }
