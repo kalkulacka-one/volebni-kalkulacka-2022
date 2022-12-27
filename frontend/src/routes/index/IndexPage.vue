@@ -127,7 +127,7 @@ export default {
               Otázky, které rezonují mladou generací.<br>Připravilo sdružení Názory politiků.
             </BodyText>
             <ButtonComponent kind="outlined" color="primary" tag="a">
-              Přejít
+              Spustit kalkulačku
               <template #iconAfter>
                 <IconComponent :icon="mdiArrowRight" />
               </template>
