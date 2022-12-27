@@ -43,7 +43,7 @@ export default {
 <template>
   <StickyHeaderLayout>
     <template #header>
-      <NavigationBar transparent />
+      <NavigationBar transparent style="position: fixed" />
     </template>
     <div class="prezident-hero">
       <BlobComponent color="blue" class="blob1" />
@@ -207,6 +207,7 @@ export default {
   display: grid;
   column-gap: 24px;
   overflow: hidden;
+  padding-top: 50px;
 
   .calc-main {
     text-align: center;
