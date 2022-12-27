@@ -56,19 +56,19 @@ const currentEmbed = inject(EmbedKey);
 
   .blue-blob,
   .red-blob {
-    height: v-bind('props.blobsHeight');
+    height: v-bind('blobsHeight');
     position: fixed;
     filter: blur(120px);
   }
 
   .blue-blob {
-    left: v-bind('props.blueBlobX');
-    top: v-bind('props.blueBlobY');
+    left: v-bind('blueBlobX');
+    top: v-bind('blueBlobY');
   }
 
   .red-blob {
-    left: v-bind('props.redBlobX');
-    top: v-bind('props.redBlobY');
+    left: v-bind('redBlobX');
+    top: v-bind('redBlobY');
   }
 }
 </style>
