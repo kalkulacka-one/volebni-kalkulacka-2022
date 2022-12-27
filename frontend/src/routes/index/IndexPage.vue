@@ -1,25 +1,18 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 
 import { appRoutes } from '@/main';
 
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
-import ContainerComponent from '@/components/design-system/containers/ContainerComponent.vue';
-import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
 import CardComponent from '@/components/design-system/containers/CardComponent.vue';
 import StackComponent from '../../components/design-system/layout/StackComponent.vue';
 import BodyText from '../../components/design-system/typography/BodyText.vue';
 import ButtonComponent from '../../components/design-system/input/ButtonComponent.vue';
-import BackgroundComponent from '../../components/design-system/style/BackgroundComponent.vue';
 import TitleText from '@/components/design-system/typography/TitleText.vue';
 import HeadlineText from '@/components/design-system/typography/HeadlineText.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
-import {
-  mdiArrowBottomRight,
-  mdiArrowDown,
-  mdiArrowRight,
-  mdiLink,
-} from '@mdi/js';
+import { mdiArrowDown, mdiArrowRight } from '@mdi/js';
 import InfoBubble from '@/components/InfoBubble.vue';
 import FooterMultiWord from '@/components/FooterMultiWord.vue';
 import DonateBlock from '@/components/DonateBlock.vue';
@@ -30,19 +23,9 @@ import BlobComponent from '@/components/design-system/style/BlobComponent.vue';
 
 const router = useRouter();
 const route = useRoute();
-</script>
-
-<script lang="ts">
-import { ref } from 'vue';
 
 const info = ref<HTMLElement | null>(null);
-export default {
-  methods: {
-    scrollDown() {
-      info.value?.scrollIntoView({ behavior: 'smooth' });
-    },
-  },
-};
+const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
 </script>
 
 <template>
