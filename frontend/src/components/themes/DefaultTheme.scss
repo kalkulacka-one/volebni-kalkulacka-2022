@@ -104,7 +104,7 @@
   //   - gap
   //     1. small
   --gap-small: calc(var(--base-small) / 2); // ~ 8 px
-  --responsive-gap-small: var(--gap-extra-small);
+  --responsive-gap-small: var(--gap-small);
   //     2. medium
   --gap-medium: var(--base-small); // ~ 16 px
   --responsive-gap-medium: var(--gap-medium);
@@ -122,6 +122,27 @@
   --responsive-gap-extra-large: var(--gap-extra-large);
   @media (max-width: calc($breakpoint-extra-small - 1px)) {
     --responsive-gap-extra-large: var(--gap-small);
+  }
+  //   - optional gap
+  //     1. small
+  --responsive-optional-gap-small: 0;
+  //     2. medium
+  --responsive-optional-gap-medium: var(--gap-medium);
+  @media (max-width: calc($breakpoint-extra-small - 1px)) {
+    --responsive-optional-gap-medium: 0;
+  }
+  //     3. large
+  --responsive-optional-gap-large: var(--gap-large);
+  @media (max-width: calc($breakpoint-medium - 1px)) {
+    --responsive-optional-gap-large: var(--gap-medium);
+  }
+  @media (max-width: calc($breakpoint-extra-small - 1px)) {
+    --responsive-optional-gap-large: 0;
+  }
+  //     4. extra large
+  --responsive-optional-gap-extra-large: var(--gap-extra-large);
+  @media (max-width: calc($breakpoint-extra-small - 1px)) {
+    --responsive-optional-gap-extra-large: 0;
   }
 
   // Color palette

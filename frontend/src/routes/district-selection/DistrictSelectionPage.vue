@@ -46,8 +46,11 @@ const text = electionDescription;
 
 const options = electionStore.districts.map((district) => {
   const normalizedName = stringToNormalizedHyphenated(district.name);
+  const path = Number(district.district_code)
+    ? `${district.district_code}-${normalizedName}`
+    : district.district_code;
   return {
-    value: `${district.district_code}-${normalizedName}`,
+    value: path,
     label:
       district.name +
       (district.show_district_code ? ` (${district.district_code})` : ''),

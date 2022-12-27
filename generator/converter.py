@@ -21,7 +21,8 @@ C = Callable[[Client, SheetRow, ElectionMetadata, int, Optional[Election]], Elec
 EXTRACT = {
     "senatni-2022": extract_election_senatni,
     "komunalni-2022": extract_election_komunalni,
-    "prezidentske-2023-kolo-1": extract_election_prezidentske,
+    "prezidentske-2023": extract_election_prezidentske,
+    "prezidentske-2023-kolo-test": extract_election_prezidentske,
 }  # type: Dict[str, C]
 
 
@@ -31,7 +32,7 @@ if __name__ == "__main__":
         "--wait",
         type=float,
         help="Wait the specified number of seconds between requests to Google Sheet",
-        default=5.0,
+        default=10.0,
     )
     parser.add_argument(
         "--doc-key",

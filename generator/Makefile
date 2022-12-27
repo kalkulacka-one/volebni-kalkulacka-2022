@@ -53,7 +53,7 @@ poetry-run-api:
 	poetry run uvicorn main:app --reload --host $(API_HOST) --port $(API_PORT)
 
 poetry-run-converter:
-	poetry run ./converter.py
+	poetry run ./converter.py --wait 10
 
 poetry-run-enrich-with-pdv:
 	poetry run ./enrich_with_pdv.py

@@ -18,6 +18,7 @@ import ResultPageVue from './routes/result/ResultPage.vue';
 import RecapPageVue from './routes/recap/RecapPage.vue';
 import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
+import QuestionsMethodologyPageVue from './routes/questions-methodology/QuestionsMethodologyPageVue.vue';
 import { useElectionStore } from './stores/electionStore';
 import { createPinia } from 'pinia';
 import ErrorPageVue from './routes/error/ErrorPage.vue';
@@ -42,7 +43,8 @@ export const questionGuard = (
     to.params.nr = '1';
     return to;
   } else if (to.params.nr === 'last') {
-    to.params.nr = `${store.answerProgress + 1}`;
+    to.params.nr =
+      store.answerProgress > -1 ? `${store.answerProgress + 1}` : '1';
     return to;
   }
   const questionNr = parseInt(to.params.nr as string);
@@ -95,6 +97,14 @@ export const appRoutes = {
     component: DataProtectionPageVue,
     meta: {
       title: 'Ochrana dat',
+    },
+  },
+  questionsMethodology: {
+    name: 'metodika-tvorby-otazek',
+    path: '/metodika-tvorby-otazek',
+    component: QuestionsMethodologyPageVue,
+    meta: {
+      title: 'Metodika tvorby otázek',
     },
   },
   error: {
