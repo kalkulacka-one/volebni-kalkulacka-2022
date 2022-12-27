@@ -53,7 +53,7 @@ def extract_election_prezidentske(
             District(
                 gen_district_id(election, "pro-politicke-nadsence-1-kolo"),
                 "Pro politické nadšence",
-                "Kalkulačka vhodná pro všechny politické nadšence",
+                "Kalkulačka vhodná pro všechny politické nadšence.",
                 "pro-politicke-nadsence-1-kolo",
                 False,
                 on_hp_from=metadata.on_hp_from,
@@ -64,7 +64,7 @@ def extract_election_prezidentske(
         (
             District(
                 gen_district_id(election, "pro-mladistve-1-kolo"),
-                "Pro mladistve",
+                "Pro mladistvé",
                 "Kalkulačka vhodná pro všechny mladistvé občany.",
                 "pro-mladistve-1-kolo",
                 False,
