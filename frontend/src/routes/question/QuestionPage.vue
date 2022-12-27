@@ -76,7 +76,7 @@ const previousButtonTitle = computed(() => {
   if (currentQuestion.value === 1) {
     return 'Návod';
   } else {
-    return 'Předchozí';
+    return 'Předchozí otázka';
   }
 });
 
@@ -84,7 +84,7 @@ const nextButtonTitle = computed(() => {
   if (currentQuestion.value === questionCount.value) {
     return 'Rekapitulace';
   } else {
-    return 'Další';
+    return 'Další otázka';
   }
 });
 
@@ -111,7 +111,16 @@ const goToGuide = (params: RouteParams) => {
   });
 };
 
+const handleSkip = () => {
+  if (
+    electionStore.answers[questionNr.value].answer === UserAnswerEnum.undefined
+  ) {
+    handleAnswerClick(UserAnswerEnum.skip);
+  }
+};
+
 const handleNextClick = () => {
+  handleSkip();
   if (currentQuestion.value < questionCount.value) {
     goToQuestion(currentQuestion.value + 1);
   } else {
@@ -211,7 +220,7 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
               />
             </IconButton>
           </template>
-          <template v-if="answeredQuestionsCount >= currentQuestion" #after>
+          <template #after>
             <IconButton @click="handleNextClick">
               <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
             </IconButton>
@@ -249,10 +258,7 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
             />
             <template #after>
               <ResponsiveWrapper medium large extra-large huge>
-                <IconButton
-                  v-if="answeredQuestionsCount >= currentQuestion"
-                  @click="handleNextClick"
-                >
+                <IconButton @click="handleNextClick">
                   <IconComponent
                     :icon="mdiArrowRight"
                     :title="nextButtonTitle"

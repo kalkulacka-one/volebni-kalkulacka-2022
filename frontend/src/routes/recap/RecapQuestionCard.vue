@@ -117,13 +117,13 @@ const toggleClick = () => {
       :spacing="(isExpanded && 'small') || undefined"
       spacing-responsive
     >
-      <ResponsiveWrapper medium large extra-large huge>
+      <ResponsiveWrapper small medium large extra-large huge>
         <ButtonComponent
           v-show="answer.answer === UserAnswerEnum.yes || isExpanded"
           class="in-favour"
           kind="answer"
           color="primary"
-          :selected="answer.answer === UserAnswerEnum.yes && isExpanded"
+          :selected="answer.answer === UserAnswerEnum.yes"
           :read-only="!isExpanded"
           @click="yesClick"
         >
@@ -140,7 +140,7 @@ const toggleClick = () => {
           class="against"
           kind="answer"
           color="secondary"
-          :selected="answer.answer === UserAnswerEnum.no && isExpanded"
+          :selected="answer.answer === UserAnswerEnum.no"
           :read-only="!isExpanded"
           @click="noClick"
         >
@@ -153,11 +153,10 @@ const toggleClick = () => {
           <template v-if="isExpanded" #default>Jsem proti</template>
         </ButtonComponent>
         <ButtonComponent
-          v-show="answer.answer === UserAnswerEnum.skip || isExpanded"
+          v-show="answer.answer === UserAnswerEnum.skip && !isExpanded"
           class="skip"
           kind="answer"
-          :selected="answer.answer === UserAnswerEnum.skip && isExpanded"
-          :read-only="!isExpanded"
+          :read-only="true"
           @click="skipClick"
         >
           <template #icon>
@@ -166,21 +165,23 @@ const toggleClick = () => {
               :title="isExpanded ? 'Bez odpovědi' : undefined"
             />
           </template>
-          <template v-if="isExpanded" #default>Bez odpovědi</template>
         </ButtonComponent>
       </ResponsiveWrapper>
-      <ResponsiveWrapper extra-small small>
+      <ResponsiveWrapper extra-small>
         <ButtonComponent
           v-show="answer.answer === UserAnswerEnum.yes || isExpanded"
           class="in-favour"
           kind="answer"
           color="primary"
-          :selected="answer.answer === UserAnswerEnum.yes && isExpanded"
+          :selected="answer.answer === UserAnswerEnum.yes"
           :read-only="!isExpanded"
           @click="yesClick"
         >
           <template #icon>
-            <IconComponent :icon="vkiLogoInFavour" title="Jsem pro" />
+            <IconComponent
+              :icon="vkiLogoInFavour"
+              :title="isExpanded ? 'Jsem pro' : undefined"
+            />
           </template>
         </ButtonComponent>
         <ButtonComponent
@@ -188,24 +189,29 @@ const toggleClick = () => {
           class="against"
           kind="answer"
           color="secondary"
-          :selected="answer.answer === UserAnswerEnum.no && isExpanded"
+          :selected="answer.answer === UserAnswerEnum.no"
           :read-only="!isExpanded"
           @click="noClick"
         >
           <template #icon>
-            <IconComponent :icon="vkiLogoAgainst" title="Jsem proti" />
+            <IconComponent
+              :icon="vkiLogoAgainst"
+              :title="isExpanded ? 'Jsem proti' : undefined"
+            />
           </template>
         </ButtonComponent>
         <ButtonComponent
-          v-show="answer.answer === UserAnswerEnum.skip || isExpanded"
+          v-show="answer.answer === UserAnswerEnum.skip && !isExpanded"
           class="skip"
           kind="answer"
-          :selected="answer.answer === UserAnswerEnum.skip && isExpanded"
-          :read-only="!isExpanded"
+          :read-only="true"
           @click="skipClick"
         >
           <template #icon>
-            <IconComponent :icon="vkiLogoNeutral" title="Bez odpovědi" />
+            <IconComponent
+              :icon="vkiLogoNeutral"
+              :title="isExpanded ? 'Bez odpovědi' : undefined"
+            />
           </template>
         </ButtonComponent>
       </ResponsiveWrapper>
@@ -279,7 +285,7 @@ const toggleClick = () => {
   }
 
   &--expanded {
-    grid-template-rows: 2rem auto auto auto;
+    grid-template-rows: 2rem auto auto;
     grid-template-areas:
       'important details whitespace toggle'
       'important text whitespace toggle'
@@ -288,7 +294,7 @@ const toggleClick = () => {
 
     .answer {
       display: grid;
-      grid-template-columns: auto auto auto;
+      grid-template-columns: auto auto;
       margin-top: var(--responsive-spacing-medium);
     }
 
@@ -316,8 +322,8 @@ const toggleClick = () => {
     }
 
     &--expanded {
-      grid-template-columns: repeat(5, auto);
-      grid-template-rows: auto auto auto auto auto;
+      grid-template-columns: auto 1fr 1fr auto;
+      grid-template-rows: repeat(5, auto);
       grid-template-areas:
         'important answer answer answer toggle'
         'details details details details details'
