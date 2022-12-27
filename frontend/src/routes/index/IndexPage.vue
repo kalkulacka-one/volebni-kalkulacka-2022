@@ -43,17 +43,46 @@ export default {
 <template>
   <StickyHeaderLayout>
     <template #header>
-      <NavigationBar transparent style="position: fixed" />
+      <NavigationBar transparent style="position: absolute" />
     </template>
     <div class="prezident-hero">
       <BlobComponent color="blue" class="blob1" />
       <BlobComponent color="red" class="blob2" />
       <StackComponent spacing="medium" centered class="calc-main">
-        <BodyText size="large" tag="h1">
+        <BodyText size="medium" tag="h1">
           <b>1. kolo prezidentských voleb</b><br>
           13.–14. ledna 2023
           <br>
         </BodyText>
+        <div class="avatars">
+          <div class="avatar">
+            <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+          </div>
+          <div class="avatar">
+            <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+          </div>
+          <div class="avatar">
+            <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+          </div>
+          <div class="avatar">
+            <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+          </div>
+          <div class="avatar">
+            <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+          </div>
+          <div class="avatar">
+            <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+          </div>
+          <div class="avatar">
+            <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+          </div>
+          <div class="avatar">
+            <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+          </div>
+          <div class="avatar">
+            <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+          </div>
+        </div>
         <HeadlineText tag="p" size="small">
           <span style="color: rgb(var(--color-neutral-fg));">
             9 kandidátů.<br>
@@ -208,6 +237,31 @@ export default {
   column-gap: 24px;
   overflow: hidden;
   padding-top: 50px;
+
+  .avatars {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    width: 100%;
+  }
+
+  .avatar {
+    position: relative;
+    width: 100%;
+
+    &:after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    >img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
 
   .calc-main {
     text-align: center;
