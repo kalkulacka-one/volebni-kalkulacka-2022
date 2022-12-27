@@ -59,7 +59,7 @@ export default {
           Kdo z&nbsp;nich bude reprezentovat vaše&nbsp;názory?
         </HeadlineText>
         <BodyText size="small" tag="h2">
-          Základní kalkulačka, 40 otázek, cca 10 minut
+          Základní kalkulačka Prezident 2023<br>40 otázek, cca 10 minut
         </BodyText>
         <ButtonComponent kind="filled" color="primary" tag="a">
           Spustit kalkulačku
@@ -67,34 +67,38 @@ export default {
             <IconComponent :icon="mdiArrowRight" />
           </template>
         </ButtonComponent>
-        <StackComponent spacing="small" centered>
-          <BodyText size="medium" tag="h2">
-            <b>Kalkulačka pro mladé</b><br>
-          </BodyText>
-          <BodyText size="small">
-            Otázky, které rezonují mladou generací.
-          </BodyText>
-          <ButtonComponent kind="outlined" color="primary" tag="a">
-            Spustit kalkulačku
-            <template #iconAfter>
-              <IconComponent :icon="mdiArrowRight" />
-            </template>
-          </ButtonComponent>
-        </StackComponent>
-        <StackComponent spacing="small" centered>
-          <BodyText size="medium" tag="h2">
-            <b>Kalkulačka pro nadšence</b><br>
-          </BodyText>
-          <BodyText size="small">
-            Všech 100 otázek, které jsme položili prezidentským kandidátům.
-          </BodyText>
-          <ButtonComponent kind="outlined" color="primary" tag="a">
-            Spustit kalkulačku
-            <template #iconAfter>
-              <IconComponent :icon="mdiArrowRight" />
-            </template>
-          </ButtonComponent>
-        </StackComponent>
+        <CardComponent corner="top-left" padding="large" border shadow class="other-calc-card">
+          <StackComponent spacing="small" centered>
+            <BodyText size="medium" tag="h2">
+              <strong>Kalkulačka pro mladé</strong><br> Prezident 2023
+            </BodyText>
+            <BodyText size="small">
+              Otázky, které rezonují mladou generací.
+            </BodyText>
+            <ButtonComponent kind="outlined" color="primary" tag="a">
+              Spustit kalkulačku
+              <template #iconAfter>
+                <IconComponent :icon="mdiArrowRight" />
+              </template>
+            </ButtonComponent>
+          </StackComponent>
+        </CardComponent>
+        <CardComponent corner="top-left" padding="large" border shadow class="other-calc-card">
+          <StackComponent spacing="small" centered>
+            <BodyText size="medium" tag="h2">
+              <strong>Kalkulačka pro nadšence</strong> Prezident 2023
+            </BodyText>
+            <BodyText size="small">
+              Všech 100 otázek, které jsme položili prezidentským kandidátům.
+            </BodyText>
+            <ButtonComponent kind="outlined" color="primary" tag="a">
+              Spustit kalkulačku
+              <template #iconAfter>
+                <IconComponent :icon="mdiArrowRight" />
+              </template>
+            </ButtonComponent>
+          </StackComponent>
+        </CardComponent>
 
       </StackComponent>
     </div>
@@ -243,6 +247,11 @@ export default {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  
+  .other-calc-card {
+    padding: 16px;
+    width: 80%;
+  }
 
   .text {
     text-align: center;
