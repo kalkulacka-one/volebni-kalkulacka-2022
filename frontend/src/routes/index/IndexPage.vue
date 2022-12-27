@@ -48,7 +48,7 @@ export default {
     <div class="prezident-hero">
       <BlobComponent color="blue" class="blob1" />
       <BlobComponent color="red" class="blob2" />
-      <StackComponent spacing="medium" centered class="text">
+      <StackComponent spacing="medium" centered class="calc-main">
         <BodyText size="large" tag="h1">
           <b>1. kolo prezidentských voleb</b><br>
           13.–14. ledna 2023
@@ -58,7 +58,7 @@ export default {
           <span style="color: rgb(var(--color-neutral-fg));">
             9 kandidátů.<br>
           </span>
-          Kdo z&nbsp;nich bude reprezentovat vaše&nbsp;názory?
+          Kdo z&nbsp;nich bude reprezentovat<br>vaše&nbsp;názory?
         </HeadlineText>
         <BodyText size="small" tag="h2">
           Základní kalkulačka Prezident 2023<br>40 otázek, cca 10 minut
@@ -69,7 +69,9 @@ export default {
             <IconComponent :icon="mdiArrowRight" />
           </template>
         </ButtonComponent>
-        <CardComponent corner="top-left" padding="large" border shadow class="other-calc-card">
+      </StackComponent>
+      <div class="other-calcs">
+        <CardComponent corner="top-left" padding="large" border borderRadius="large" shadow class="other-calc-card calc-youth">
           <StackComponent spacing="small" centered>
             <BodyText size="medium" tag="h2">
               <strong>Kalkulačka pro mladé</strong><br> Prezident 2023
@@ -85,7 +87,7 @@ export default {
             </ButtonComponent>
           </StackComponent>
         </CardComponent>
-        <CardComponent corner="top-left" padding="large" border shadow class="other-calc-card">
+        <CardComponent corner="bottom-left" padding="large" border borderRadius="large" shadow class="other-calc-card calc-ultimate">
           <StackComponent spacing="small" centered>
             <BodyText size="medium" tag="h2">
               <strong>Kalkulačka pro nadšence</strong><br> Prezident 2023
@@ -101,9 +103,9 @@ export default {
             </ButtonComponent>
           </StackComponent>
         </CardComponent>
-
-      </StackComponent>
+      </div>
     </div>
+
     <StaticContentLayout>
       <div class="section-header section">
         <CardComponent padding="medium" background-color="transparent" corner="top-left">
@@ -244,6 +246,7 @@ export default {
 
 <style scoped lang="scss">
 .prezident-hero {
+  box-sizing: border-box;
   position: relative;
   max-width: 100%;
   display: flex;
@@ -251,19 +254,23 @@ export default {
   justify-content: center;
   flex-direction: column;
   overflow: hidden;
-  
-  .other-calc-card {
-    padding: 16px;
-    width: 80%;
+
+  .calc-main {
+    text-align: center;
+    padding: 24px;
   }
 
-  .text {
+  .other-calcs {
+    width: 100%;
+    padding: 24px;
     text-align: center;
-    padding: 16px;
+    display: grid;
+    grid-row-gap: 24px;
+  }
 
-    @media (min-width: 768px) {
-      max-width: 70%;
-    }
+  .other-calcs > * {
+    width: 100%;
+    padding: 16px;
   }
 
   .blob1 {
@@ -277,8 +284,56 @@ export default {
     top: 10%;
   }
 
-}
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-column-gap: 24px;
 
+    .other-calcs {
+      display: contents;
+      padding: 0;
+    }
+
+    .calc-main {
+      grid-row: 3/5;
+      grid-column: 2/12;
+      margin-bottom: 16px;
+    }
+
+    .calc-youth,
+    .calc-ultimate {
+      grid-row: 6/7;
+      height: 100%;
+    }
+
+    .calc-youth {
+      grid-column: 2/7;
+    }
+
+    .calc-ultimate {
+      grid-column: 7/12;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .calc-youth {
+      grid-column: 3/7;
+    }
+
+    .calc-ultimate {
+      grid-column: 7/11;
+    }
+  }
+  @media (min-width: 1200px) {
+    .calc-youth {
+      grid-column: 4/7;
+    }
+
+    .calc-ultimate {
+      grid-column: 7/10;
+    }
+  }
+}
 
 .section-header {
   display: grid;
