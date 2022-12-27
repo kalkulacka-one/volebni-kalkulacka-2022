@@ -14,11 +14,11 @@ export interface Props {
 }
 const props = withDefaults(defineProps<Props>(), {
   hasBlobs: true,
-  blueBlobX: "5%",
-  blueBlobY: "10%",
-  redBlobX: "50%",
-  redBlobY: "20%",
-  blobsHeight: "80%"
+  blueBlobX: '5%',
+  blueBlobY: '10%',
+  redBlobX: '50%',
+  redBlobY: '20%',
+  blobsHeight: '80%',
 });
 
 const currentEmbed = inject(EmbedKey);
@@ -32,8 +32,8 @@ const currentEmbed = inject(EmbedKey);
     <div class="background">
       <template v-if="props.hasBlobs">
         <div class="blobs">
-          <img src="@/assets/background/blue-blob.svg" class="blue-blob"/>
-          <img src="@/assets/background/red-blob.svg" class="red-blob"/>
+          <img src="@/assets/background/blue-blob.svg" class="blue-blob" />
+          <img src="@/assets/background/red-blob.svg" class="red-blob" />
         </div>
       </template>
       <slot />
