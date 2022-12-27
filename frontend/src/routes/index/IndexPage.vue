@@ -141,7 +141,7 @@ export default {
           corner="bottom-left"
           padding="large"
           border
-          borderRadius="large"
+          border-radius="large"
           shadow
           class="other-calc-card calc-ultimate"
         >
@@ -165,7 +165,7 @@ export default {
           corner="top-left"
           padding="large"
           border
-          borderRadius="large"
+          border-radius="large"
           shadow
           class="other-calc-card calc-youth"
         >
