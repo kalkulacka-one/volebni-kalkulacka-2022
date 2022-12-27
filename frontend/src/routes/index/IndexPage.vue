@@ -46,11 +46,28 @@ export default {
       <NavigationBar />
     </template>
     <div class="prezident-hero">
-      <BodyText size="medium">Kalkulačka pro prezidentské volby 2023 <b>13.–14. ledna</b></BodyText>
-      <HeadlineText tag="h1" size="medium" class="title">
-        Který prezidentský kandidát bude nejlépe reprezentovat vaše názory?
-      </HeadlineText>
-      <ButtonComponent color="primary" kind="filled" @click="">Spustit Kalkulačku</ButtonComponent>
+      <StackComponent spacing="medium" centered class="text">
+        <BodyText size="medium" tag="h1">
+          Kalkulačky pro
+          <b>1. kolo prezidentských voleb</b>
+          13.–14. ledna 2023
+          <br>
+        </BodyText>
+        <HeadlineText tag="p" size="small">
+          <span style="color: rgb(var(--color-neutral-fg));">
+            9 kandidátů.
+          </span>
+          Kdo z nich bude reprezentovat vaše názory?
+        </HeadlineText>
+
+        <ButtonComponent kind="filled" color="primary" tag="a">
+          Spustit kalkulačku
+          <template #iconAfter>
+            <IconComponent :icon="mdiArrowRight" />
+          </template>
+        </ButtonComponent>
+
+      </StackComponent>
     </div>
     <StaticContentLayout>
       <div class="section-header section">
@@ -193,16 +210,16 @@ export default {
 <style scoped lang="scss">
 .prezident-hero {
   background-color: rgb(var(--color-neutral-bg-container));
-  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 
-  .title {
+  .text {
     text-align: center;
     padding: 16px;
-    @media (min-width: 768px)  {
+
+    @media (min-width: 768px) {
       max-width: 50%;
     }
   }

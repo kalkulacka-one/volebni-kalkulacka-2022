@@ -1,6 +1,6 @@
 <script setup lang="ts">
 export interface Props {
-  tag?: 'p' | 'span';
+  tag?: 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   size: 'extra-small' | 'small' | 'medium' | 'large';
   color?: string;
 }
@@ -21,6 +21,7 @@ withDefaults(defineProps<Props>(), {
 * {
   margin: 0;
   font-family: var(--typography-body-family);
+  font-weight: normal;
   color: v-bind(color);
 }
 
