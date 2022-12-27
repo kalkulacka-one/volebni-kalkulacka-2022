@@ -234,6 +234,17 @@ def update_candidate_photo(
     return False
 
 
+def process_prezidentske(
+    data_json: dict[str, Any],
+    api_json: dict[str, Any],
+    parties: DParties,
+    data_dir: Path,
+    avatar_dir: Path,
+    party_dir: Path,
+) -> bool:
+    return True
+
+
 def process_senatni(
     data_json: dict[str, Any],
     api_json: dict[str, Any],
@@ -363,6 +374,16 @@ def get_dir_mapping(
             "https://2022.programydovoleb.cz/lib/app/api.php?action=town/fetch/",
             process_komunalni,
         ),
+        "prezidentske-2023-kolo-1": (
+            "https://prezident2023.programydovoleb.cz/"
+            "lib/app/api.php?action=candidate/fetch/",
+            process_prezidentske,
+        ),
+        "prezidentske-2023-kolo-test": (
+            "https://prezident2023.programydovoleb.cz/"
+            "lib/app/api.php?action=candidate/fetch/",
+            process_prezidentske,
+        ),
     }.get(dir_name)
 
 
@@ -406,10 +427,12 @@ def process(calculators_dir: Path, data_dir: Path, dir_name: str, parties: DPart
                 json.dump(data_json, fh, indent=2, ensure_ascii=False)
 
 
-def load_parties() -> DParties:
-    response = requests.get(
-        "https://2022.programydovoleb.cz/lib/app/api.php?action=party/list"
+def load_parties(subdomain: str) -> DParties:
+    url = (
+        f"https://{subdomain}.programydovoleb.cz/lib/app/api.php?action=candidate/list"
     )
+    logger.info("Loading parties from %s", url)
+    response = requests.get(url)
     if response.status_code != 200:
         logger.warning(
             "API call has failed: %s, %s", response.url, response.status_code
@@ -418,7 +441,7 @@ def load_parties() -> DParties:
     api_json = response.json()
     parties = {}
     for p in api_json["list"]:
-        parties[p["reg"]] = p
+        parties[p["csu"]["main"]["id"]] = p
 
     return parties
 
@@ -430,13 +453,20 @@ if __name__ == "__main__":
         help="Output folder",
         default="../data/",
     )
+    parser.add_argument("--pattern", help="Directory pattern", default="*")
+    parser.add_argument(
+        "--subdomain",
+        help="Subdomain at programydovoleb.cz",
+        default="prezidentske2023",
+    )
 
     args = parser.parse_args()
     data_dir = Path(args.data)
     calculators_dir = data_dir / "kalkulacka"
 
-    parties = load_parties()
+    parties = load_parties(args.subdomain)
 
-    for p in calculators_dir.glob("*"):
+    for p in calculators_dir.glob(args.pattern):
+        logger.info(p)
         if p.is_dir():
             process(calculators_dir, data_dir, p.name, parties)
