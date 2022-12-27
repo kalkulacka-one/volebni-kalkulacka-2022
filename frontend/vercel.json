@@ -41,5 +41,6 @@
       "source": "/share/(.*)",
       "destination": "/index.html"
     }
-  ]
+  ],
+  "trailingSlash": false
 }
