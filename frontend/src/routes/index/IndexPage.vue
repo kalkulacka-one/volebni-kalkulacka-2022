@@ -48,41 +48,41 @@ export default {
     <div class="prezident-hero">
       <BlobComponent color="blue" class="blob1" />
       <BlobComponent color="red" class="blob2" />
+      <div class="avatars">
+        <div class="avatar pavel-fischer">
+          <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+        </div>
+        <div class="avatar shift jaroslav-basta">
+          <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+        </div>
+        <div class="avatar shift josef-stredula">
+          <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+        </div>
+        <div class="avatar petr-pavel">
+          <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+        </div>
+        <div class="avatar shift tomas-zima">
+          <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+        </div>
+        <div class="avatar danuse-nerudova">
+          <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+        </div>
+        <div class="avatar andrej-babis">
+          <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+        </div>
+        <div class="avatar shift karel-divis">
+          <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+        </div>
+        <div class="avatar shift marek-hilser">
+          <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+        </div>
+      </div>
       <StackComponent spacing="medium" centered class="calc-main">
         <BodyText size="medium" tag="h1">
           <b>1. kolo prezidentských voleb</b><br>
           13.–14. ledna 2023
           <br>
         </BodyText>
-        <div class="avatars">
-          <div class="avatar">
-            <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
-          </div>
-          <div class="avatar">
-            <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
-          </div>
-          <div class="avatar">
-            <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
-          </div>
-          <div class="avatar">
-            <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
-          </div>
-          <div class="avatar">
-            <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
-          </div>
-          <div class="avatar">
-            <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
-          </div>
-          <div class="avatar">
-            <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
-          </div>
-          <div class="avatar">
-            <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
-          </div>
-          <div class="avatar">
-            <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
-          </div>
-        </div>
         <HeadlineText tag="p" size="small">
           <span style="color: rgb(var(--color-neutral-fg));">
             9 kandidátů.<br>
@@ -236,12 +236,10 @@ export default {
   display: grid;
   column-gap: 24px;
   overflow: hidden;
-  padding-top: 50px;
+  padding-top: 100px;
 
   .avatars {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    width: 100%;
+    display: none;
   }
 
   .avatar {
@@ -252,6 +250,7 @@ export default {
       content: "";
       display: block;
       padding-bottom: 100%;
+      padding-left: 100%;
     }
 
     >img {
@@ -260,6 +259,7 @@ export default {
       height: 100%;
       border-radius: 50%;
       object-fit: cover;
+      left: 0;
     }
   }
 
@@ -299,16 +299,70 @@ export default {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
 
+    .calc-main {
+      grid-row: 1/6;
+      grid-column: 4/10;
+      margin-bottom: 16px;
+    }
+
     .other-calcs {
-      grid-row: 6/8;
+      grid-row: 6;
       grid-column: 2/12;
       grid-template-columns: 1fr 1fr;
     }
 
-    .calc-main {
-      grid-row: 3/5;
-      grid-column: 2/12;
-      margin-bottom: 16px;
+    .avatars {
+      display: contents;
+
+      .avatar.shift {
+        top: -50%;
+      }
+
+      .pavel-fischer {
+        grid-row: 2;
+        grid-column: 1;
+      }
+
+      .jaroslav-basta {
+        grid-row: 3;
+        grid-column: 2;
+      }
+
+      .josef-stredula {
+        grid-row: 4;
+        grid-column: 1;
+      }
+
+      .petr-pavel {
+        grid-row: 4;
+        grid-column: 2;
+      }
+
+      .tomas-zima {
+        grid-row: 4;
+        grid-column: 3;
+      }
+
+      .danuse-nerudova {
+        grid-row: 4;
+        grid-column: 10;
+      }
+
+      .andrej-babis {
+        grid-row: 2;
+        grid-column: 11;
+      }
+
+      .karel-divis {
+        grid-row: 4;
+        grid-column: 11;
+      }
+
+      .marek-hilser {
+        grid-row: 3;
+        grid-column: 12;
+      }
+
     }
   }
 
