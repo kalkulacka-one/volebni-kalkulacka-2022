@@ -50,31 +50,31 @@ export default {
       <BlobComponent color="red" class="blob2" />
       <div class="avatars">
         <div class="avatar pavel-fischer">
-          <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+          <img alt="Fotografie – Pavel Fischer" src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
         </div>
         <div class="avatar shift jaroslav-basta">
-          <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+          <img alt="Fotografie – Jaroslav Bašta" src="https://data.programydovoleb.cz/lide/uploads/basta-jaroslavjpg___up_1626355989_4fcd45fdffc5edb54030ac215b59b26a.jpg" />
         </div>
         <div class="avatar shift josef-stredula">
-          <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+          <img alt="Fotografie – Josef Středula" src="https://data.programydovoleb.cz/volby/p/2023/kandidat/12-07-screenshot-2022-___up-4fcd-78.jpg" />
         </div>
         <div class="avatar petr-pavel">
-          <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+          <img alt="Fotografie – Petr Pavel" src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-22-screenshot-2022-___up-ccd4-54.jpg" />
         </div>
         <div class="avatar shift tomas-zima">
-          <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+          <img alt="Fotografie – Tomáš Zima" src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-tomas_zima_cropp___up-ccd4-89.jpg" />
         </div>
         <div class="avatar danuse-nerudova">
-          <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+          <img alt="Fotografie – Danuše Nerudová" src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-23-screenshot-2022-___up-ccd4-11.jpg" />
         </div>
         <div class="avatar andrej-babis">
-          <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+          <img alt="Fotografie – Andrej Babiš" src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-1920px-andrej_ba___up-ccd4-85.jpg" />
         </div>
         <div class="avatar shift karel-divis">
-          <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+          <img alt="Fotografie – Karel Diviš" src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-25-screenshot-2022-___up-4fcd-80.jpg" />
         </div>
         <div class="avatar shift marek-hilser">
-          <img src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+          <img alt="Fotografie – Marek Hilšer" src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-marek_hilser_fot___up-ccd4-26.jpg" />
         </div>
       </div>
       <StackComponent spacing="medium" centered class="calc-main">
@@ -260,6 +260,7 @@ export default {
       border-radius: 50%;
       object-fit: cover;
       left: 0;
+      box-shadow: 0px 8px 32px rgba(var(--color-neutral-fg), 0.1);
     }
   }
 
