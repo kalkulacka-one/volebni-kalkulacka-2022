@@ -36,70 +36,103 @@ def extract_election_prezidentske(
         instructions=metadata.instructions,
     )
 
-    district_global = District(
-        gen_district_id(election, "global"),
-        "global",
-        "global",
-        "global",
-        True,
-        on_hp_from=metadata.on_hp_from,
-        on_hp_to=metadata.on_hp_to,
-    )
-    election.add_districts({district_global.code: district_global})
+    districts_with_sheets = [
+        (
+            District(
+                gen_district_id(election, "pro-kazdeho-1-kolo"),
+                "Pro každého",
+                "Kalkulačka vhodná pro všechny občany.",
+                "pro-kazdeho-1-kolo",
+                False,
+                on_hp_from=metadata.on_hp_from,
+                on_hp_to=metadata.on_hp_to,
+            ),
+            "classic",
+        ),
+        (
+            District(
+                gen_district_id(election, "pro-politicke-nadsence-1-kolo"),
+                "Pro politické nadšence",
+                "Kalkulačka vhodná pro všechny politické nadšence",
+                "pro-politicke-nadsence-1-kolo",
+                False,
+                on_hp_from=metadata.on_hp_from,
+                on_hp_to=metadata.on_hp_to,
+            ),
+            "ultimate",
+        ),
+        (
+            District(
+                gen_district_id(election, "pro-mladistve-1-kolo"),
+                "Pro mladistve",
+                "Kalkulačka vhodná pro všechny mladistvé občany.",
+                "pro-mladistve-1-kolo",
+                False,
+                on_hp_from=metadata.on_hp_from,
+                on_hp_to=metadata.on_hp_to,
+            ),
+            "young",
+        ),
+    ]
 
-    url_candidates = str(row["kandidáti"])
-    key_candidates = extract_key(url_candidates)
-    # load file
-    doc_candidates = gc.open_by_key(key_candidates)
-    sheet_candidates = doc_candidates.worksheet("candidates")
+    for ds in districts_with_sheets:
+        district = ds[0]
+        sheet_name = ds[1]
+        election.add_districts({district.code: district})
 
-    logger.info("Loading list of candidates")
-    election.add_candidates(
-        district_global,
-        extract_prezidentske_candidates(sheet_candidates, election, district_global),
-    )
+        url_candidates = str(row["kandidáti"])
+        key_candidates = extract_key(url_candidates)
+        # load file
+        doc_candidates = gc.open_by_key(key_candidates)
+        sheet_candidates = doc_candidates.worksheet("candidates")
 
-    time.sleep(wait)
+        logger.info("Loading list of candidates")
+        election.add_candidates(
+            district,
+            extract_prezidentske_candidates(sheet_candidates, election, district),
+        )
 
-    url_questions = str(row["otázky originál"])
-    key_questions = extract_key(url_questions)
-    logger.info("Loading questions from URL %s (%s)", url_questions, key_questions)
+        time.sleep(wait)
 
-    # load file
-    doc_questions = gc.open_by_key(key_questions)
-    sheet_questions = doc_questions.worksheet("classic")
+        url_questions = str(row["otázky originál"])
+        key_questions = extract_key(url_questions)
+        logger.info("Loading questions from URL %s (%s)", url_questions, key_questions)
 
-    question_definitions = extract_prezidentske_question_definitions(
-        sheet_questions,
-        election,
-        district_global,
-    )
+        # load file
+        doc_questions = gc.open_by_key(key_questions)
+        sheet_questions = doc_questions.worksheet(sheet_name)
 
-    # for each district load set of questions
-    logger.info("Loading question definitions")
-    election.add_question_definitions(
-        district_global,
-        question_definitions,
-    )
-    time.sleep(wait)
+        question_definitions = extract_prezidentske_question_definitions(
+            sheet_questions,
+            election,
+            district,
+        )
 
-    logger.info("Extracting answers")
-    url_answers = str(row["odpovědi"])
-    key_answers = extract_key(url_answers)
-    # load file
-    doc_answers = gc.open_by_key(key_answers)
-    sheet_answers = doc_answers.worksheet("Form Responses 1")
-
-    for district in election.districts.values():
-        if not district.active:
-            logger.info("Skipping loading questions for district %s", district)
-            continue
-        candidates = election.candidates[district]
-        answers = extract_answers(sheet_answers, election, district)
-        election.add_answers(
-            district, {c: a for c, a in answers.items() if c in candidates}
+        # for each district load set of questions
+        logger.info("Loading question definitions")
+        election.add_question_definitions(
+            district,
+            question_definitions,
         )
         time.sleep(wait)
+
+        logger.info("Extracting answers")
+        url_answers = str(row["odpovědi"])
+        key_answers = extract_key(url_answers)
+        # load file
+        doc_answers = gc.open_by_key(key_answers)
+        sheet_answers = doc_answers.worksheet("Form Responses 1")
+
+        for district in election.districts.values():
+            if not district.active:
+                logger.info("Skipping loading questions for district %s", district)
+                continue
+            candidates = election.candidates[district]
+            answers = extract_answers(sheet_answers, election, district)
+            election.add_answers(
+                district, {c: a for c, a in answers.items() if c in candidates}
+            )
+            time.sleep(wait)
 
     return election
 
