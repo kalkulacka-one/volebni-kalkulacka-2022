@@ -42,7 +42,7 @@ const currentEmbed = inject(EmbedKey);
 </template>
 
 <style scoped lang="scss">
-.has-background {
+.background {
   display: grid;
   width: 100%;
   height: 100%;
