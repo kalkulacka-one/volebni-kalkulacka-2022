@@ -303,8 +303,8 @@ const handlePreviousClick = () => {
                 1&nbsp;bod ztratí.
               </BodyText>
               <BodyText size="medium">
-                Pokud kandidát nebo strana odpověděli neutrálně, otázka se
-                započítá se ziskem 0&nbsp;bodů.
+                Pokud kandidát nebo strana na otázku neodpověděli, započítá se
+                ziskem 0&nbsp;bodů.
               </BodyText>
             </StackComponent>
           </StackComponent>
@@ -335,7 +335,7 @@ const handlePreviousClick = () => {
           <StackComponent v-if="currentStep === 4" spacing="small">
             <BodyText size="medium">
               Když nemáte názor, nejste si jisti nebo z&nbsp;jiného důvodu
-              nechcete odpovídat, zvolte:
+              nechcete odpovídat, můžete otázku přeskočit šipkou napravo.
             </BodyText>
             <CardComponent
               corner="bottom-right"
@@ -343,8 +343,8 @@ const handlePreviousClick = () => {
               style="align-self: center"
             >
               <StackComponent horizontal spacing="small">
-                <IconComponent :icon="vkiLogoNeutral" />
-                <BodyText size="medium">= přeskočit / bez odpovědi</BodyText>
+                <IconComponent :icon="mdiArrowRight" />
+                <BodyText size="medium">= přeskočit</BodyText>
               </StackComponent>
             </CardComponent>
             <BodyText size="medium">
