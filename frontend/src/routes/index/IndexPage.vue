@@ -247,7 +247,7 @@ export default {
   display: grid;
   column-gap: 24px;
   overflow: hidden;
-  padding-top: 100px;
+  padding-top: 10%;
 
   .avatars {
     display: none;
