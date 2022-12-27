@@ -7,5 +7,11 @@ export const stringToNormalizedHyphenated = (str: string) => {
 };
 
 export const getDistrictCode = (districtParam: string) => {
-  return districtParam.split('\u002D')[0];
+  const districtNumber = districtParam.split('\u002D')[0];
+
+  if (Number(districtNumber)) {
+    return districtNumber;
+  } else {
+    return districtParam;
+  }
 };

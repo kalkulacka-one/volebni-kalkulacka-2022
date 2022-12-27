@@ -39,39 +39,49 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
       <StackComponent spacing="large" class="section">
         <HeadlineText tag="h1" size="large">O kalkulačce</HeadlineText>
         <BodyText size="large">
+          Co je vlastně volební kalkulačka? Jak ji lze použít a jak funguje? Kdo
+          za ní stojí? Jak se tvoří a vyhodnocují otázky? O tom všem se dozvíte
+          níže.
+        </BodyText>
+
+        <TitleText size="large" tag="h2"> Co je volební kalkulačka </TitleText>
+        <BodyText size="large">
           Volební kalkulačka® (anglicky voting advice application) je
           jednoduchý, zpravidla internetový test porovnávající Vaše politické
           postoje s postoji politických stran či osob (zákonodárců, kandidátů ve
           volbách atd.). Více o historii volebních kalkulaček a o úspěšných
-          příkladech ze světa se můžete dočíst na
-          <a href="https://cs.wikipedia.org/wiki/Volebn%C3%AD_kalkulačka"
-            >Wikipedii</a
-          >.
+          příkladech ze světa se můžete dočíst na Wikipedii.
         </BodyText>
+
+        <TitleText size="large" tag="h2">
+          Kdo a jak volební kalkulačku tvoří
+        </TitleText>
         <BodyText size="large">
           Českou a slovenskou Volební kalkulačku vyvíjí a provozuje spolek
-          KohoVolit.eu již od roku 2006. Celkem jsme vytvořili již přes 30
-          volebních kalkulaček pro všechny druhy voleb (evropské, prezidentské,
+          <a href="https://kohovolit.eu/">KohoVolit.eu</a>
+          již od roku 2006. Celkem jsme vytvořili již přes 30 volebních
+          kalkulaček pro všechny druhy voleb (evropské, prezidentské,
           parlamentní, regionální i komunální). Pravidelně také pomáháme tvořit
           kalkulačky v Maďarsku a v dalších zemích. Zatím nejúspěšnější
           kalkulačku před prvním kolem prezidentských voleb v ČR v roce 2018
           použil více než 1,25 milionu voličů.
         </BodyText>
         <BodyText size="large">
-          KohoVolit.eu vytváří dva druhy kalkulaček: Inventura hlasování
-          porovnává Vaše odpovědi s reálnými hlasováními v zákonodárném sboru za
-          uplynulé funkční období. Volební kalkulačka (názorový test) porovnává
-          Vaše odpovědi s odpověďmi, které nám poskytly samotné politické strany
-          či kandidáti ve volbách. Pokud některá strana či kandidát v názorovém
-          testu chybí, je to vždy proto, že jsme neobdrželi odpovědi.
+          <a href="https://kohovolit.eu/">KohoVolit.eu</a> vytváří dva druhy
+          kalkulaček:
         </BodyText>
         <BodyText size="large">
-          Použitá loga politických stran a fotografie osob pochází z webových
-          stránek politických stran, z Wikipedie nebo z webových stránek
-          příslušeného zastupitelského sboru.
+          Inventura hlasování porovnává Vaše odpovědi s reálnými hlasováními v
+          zákonodárném sboru za uplynulé funkční období.
+        </BodyText>
+        <BodyText size="large">
+          Volební kalkulačka (názorový test) porovnává Vaše odpovědi s
+          odpověďmi, které nám poskytly samotné politické strany či kandidáti ve
+          volbách. Pokud některá strana či kandidát v názorovém testu chybí, je
+          to vždy proto, že jsme neobdrželi odpovědi.
         </BodyText>
 
-        <TitleText size="large" tag="h2"> Tvorba otázek </TitleText>
+        <TitleText size="large" tag="h2"> Jak tvoříme otázky </TitleText>
         <BodyText size="large">
           Obzvláště v názorovém testu ("volební kalkulačce") je výběr a
           formulace otázek klíčovým místem tvorby kalkulačky. Z důvodu
@@ -89,9 +99,8 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
           příp. na něj přijdeme sami až po odeslání), a otázky, které jsou
           podobné jako jiné.
         </BodyText>
-        <TitleText size="large" tag="h2">
-          Popis výpočtu shody se stranou nebo kandidátem
-        </TitleText>
+
+        <TitleText size="large" tag="h2"> Jak vyhodnocujeme shodu </TitleText>
         <BodyText size="large">
           Otázka, u níž neodpovíte „Ano“ či „Ne“, se do výpočtu nezahrnuje.
           Pokud na otázku odpovíte „Ano“, strany či kandidáti, kteří rovněž
@@ -131,35 +140,7 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
           osobami. V tom případě je pořadí stran či osob při zobrazení výsledné
           shody určeno náhodně.
         </BodyText>
-        <TitleText size="large" tag="h2">
-          Podpora u volební kalkulačky pro Prahu 2022
-        </TitleText>
-        <BodyText size="large">
-          Volební kalkulačka vznikla ve spolupráci se spolkem
-          <a href="https://arnika.org/">
-            <img
-              src="https://arnika.org/templates/arnika/img/arnika-org-logo.svg"
-              alt="Arnika"
-              width="50"
-          /></a>
-        </BodyText>
-        <BodyText size="large">
-          Projekt podpořila Nadace OSF v rámci programu Active Citizens Fund,
-          jehož cílem je podpora občanské společnosti a posílení kapacit
-          neziskových organizací. Cílem programu je dále inspirace k aktivnímu
-          občanství a pomoc znevýhodněným skupinám. Program Active Citizens Fund
-          vstoupil do České republiky v září roku 2019 s cílem podpořit
-          neziskové organizace nehledě na jejich velikost a zkušenosti. V České
-          republice jej spravuje konsorcium, které tvoří Nadace OSF, Výbor dobré
-          vůle – Nadace Olgy Havlové a Skautský institut. Program je realizován
-          v rámci Fondů EHP a Norska 2014–2021. Prostřednictvím Fondů EHP a
-          Norska přispívají státy Island, Lichtenštejnsko a Norsko ke snižování
-          ekonomických a sociálních rozdílů v Evropském hospodářském prostoru
-          (EHP) a k posilování spolupráce s 15 evropskými státy. Důležitým
-          posláním programu je také spolupráce mezi Českou republikou a
-          dárcovskými státy. Jde o spolupráci mezi českými neziskovými
-          organizacemi a organizacemi z Islandu, Lichtenštejnska a Norska.
-        </BodyText>
+
         <BodyText size="large">
           <img
             src="https://michalskop-github-io.azureedge.net/documents/volebni-kalkulacka/images/partners/2022/ACF_slogan_1.png"

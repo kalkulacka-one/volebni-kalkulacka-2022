@@ -21,7 +21,7 @@ C = Callable[[Client, SheetRow, ElectionMetadata, int, Optional[Election]], Elec
 EXTRACT = {
     "senatni-2022": extract_election_senatni,
     "komunalni-2022": extract_election_komunalni,
-    "prezidentske-2023-kolo-1": extract_election_prezidentske,
+    "prezidentske-2023": extract_election_prezidentske,
     "prezidentske-2023-kolo-test": extract_election_prezidentske,
 }  # type: Dict[str, C]
 

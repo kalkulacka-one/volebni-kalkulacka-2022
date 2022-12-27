@@ -11,23 +11,23 @@ export const generateShareUrl = (uuid: string) => {
 export const generateSocialLink = (type: 'link' | 'facebook' | 'twitter') => {
   const electionStore = useElectionStore();
   let navUrl = null;
-  if (!electionStore.resultsUuid) {
+  if (!electionStore.resultsId) {
     console.error('Results are not saved. Unable to generate share link');
     return navUrl;
   }
   switch (type) {
     case 'link':
-      navUrl = generateShareUrl(electionStore.resultsUuid);
+      navUrl = generateShareUrl(electionStore.resultsId);
       break;
     case 'facebook':
       navUrl =
         'https://www.facebook.com/sharer/sharer.php?u=' +
-        generateShareUrl(electionStore.resultsUuid);
+        generateShareUrl(electionStore.resultsId);
       break;
     case 'twitter':
       navUrl =
         'https://twitter.com/intent/tweet?text=' +
-        generateShareUrl(electionStore.resultsUuid);
+        generateShareUrl(electionStore.resultsId);
       break;
     default:
       break;
@@ -37,11 +37,11 @@ export const generateSocialLink = (type: 'link' | 'facebook' | 'twitter') => {
 
 export const triggerOgImageGeneration = async () => {
   const electionStore = useElectionStore();
-  if (!electionStore.resultsUuid) {
+  if (!electionStore.resultsId) {
     console.error('Results are not saved. Unable to generate OG image');
     return;
   }
-  const endpointUrl = `/image/${electionStore.resultsUuid}`;
+  const endpointUrl = `/image/${electionStore.resultsId}`;
   const res = await fetch(endpointUrl, {
     method: 'GET',
   });
