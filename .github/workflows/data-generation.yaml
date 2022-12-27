@@ -1,6 +1,5 @@
 name: Generate JSON data from from Google Sheets
-on:
-  pull_request:
+on: push
 jobs:
   test:
     name: Test
