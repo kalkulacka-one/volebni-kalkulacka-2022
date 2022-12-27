@@ -56,7 +56,7 @@ export default {
         </BodyText>
         <HeadlineText tag="p" size="small">
           <span style="color: rgb(var(--color-neutral-fg));">
-            9 kandidátů.
+            9 kandidátů.<br>
           </span>
           Kdo z&nbsp;nich bude reprezentovat vaše&nbsp;názory?
         </HeadlineText>
@@ -244,10 +244,13 @@ export default {
 
 <style scoped lang="scss">
 .prezident-hero {
+  position: relative;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  overflow: hidden;
   
   .other-calc-card {
     padding: 16px;
@@ -259,14 +262,15 @@ export default {
     padding: 16px;
 
     @media (min-width: 768px) {
-      max-width: 50%;
+      max-width: 70%;
     }
   }
-  
+
   .blob1 {
     position: absolute;
     left: 10%;
   }
+
   .blob2 {
     position: absolute;
     right: 10%;
