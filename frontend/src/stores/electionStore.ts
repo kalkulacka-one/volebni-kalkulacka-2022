@@ -1,5 +1,6 @@
 import { fetchCalculator, fetchElectionData } from '@/common/dataFetch';
-import { postResults } from '@/common/restApi';
+import { patchResults, postResults } from '@/common/restApi';
+import { encodeResults } from '@/common/resultParser';
 import { appRoutes } from '@/main';
 import type { Calculator } from '@/types/calculator';
 import type { Calculators } from '@/types/calculators';
@@ -52,7 +53,9 @@ export const useElectionStore = defineStore('election', {
       calculator: undefined as Calculator | undefined,
       answers: [] as UserAnswer[],
       answerProgress: -1,
-      resultsUuid: null as null | string,
+      resultsId: null as null | string,
+      resultsUpdateToken: null as null | string,
+      encodedResults: null as null | string,
     };
   },
   getters: {
@@ -125,16 +128,55 @@ export const useElectionStore = defineStore('election', {
         console.warn('District data are undefined!');
       }
     },
-    async saveResults() {
-      this.resultsUuid = null;
-      const response = await postResults();
-      if (response?.result_id) {
-        this.resultsUuid = response.result_id;
+    async saveResults({ embedName }: { embedName: string | undefined }) {
+      //if results already saved do not save them again
+      const newEncodedResults = encodeResults(this.answers);
+      //return if results already saved and answers are the same
+      const response = {
+        action: 'unknown',
+        response: null as any,
+      };
+      if (newEncodedResults === this.encodedResults && this.resultsId) {
+        response.action = 'no-action';
+        console.debug('Results already saved.');
       }
+      //patch if results already saved but answers differ
+      else if (this.resultsId && this.resultsUpdateToken) {
+        console.debug('Results changed. Patching...');
+        const res = await patchResults(this.resultsId, this.resultsUpdateToken);
+        this.resultsId = res?.id ? (res.id as string) : null;
+        this.resultsUpdateToken = res?.updateToken
+          ? (res.updateToken as string)
+          : null;
+        response.action = 'update';
+        response.response = res;
+      }
+      //post new reults if results not yet saved
+      else {
+        console.debug('Results not saved. Posting...');
+        this.resultsId = null;
+        this.resultsUpdateToken = null;
+        const res = await postResults({ embedName });
+        this.resultsId = res?.id ? (res.id as string) : null;
+        this.resultsUpdateToken = res?.updateToken
+          ? (res.updateToken as string)
+          : null;
+        response.action = 'save';
+        response.response = res;
+      }
+      this.encodedResults = newEncodedResults;
+      return response;
     },
     init() {
       console.debug('Initializing store ...');
+      this.answers.forEach((x) => {
+        x.answer = UserAnswerEnum.undefined;
+        x.flag = false;
+      });
       this.answerProgress = -1;
+      this.encodedResults = null;
+      this.resultsUpdateToken = null;
+      this.resultsId = null;
     },
   },
 });

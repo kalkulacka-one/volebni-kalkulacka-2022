@@ -6,8 +6,6 @@ import { ref, watch, type Ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import ResultCategory from '../result/ResultCategory.vue';
 
-import { mdiCloseCircleOutline } from '@mdi/js';
-
 import { appRoutes } from '@/main';
 
 import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';

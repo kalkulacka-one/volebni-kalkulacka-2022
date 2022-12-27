@@ -42,7 +42,8 @@ export const questionGuard = (
     to.params.nr = '1';
     return to;
   } else if (to.params.nr === 'last') {
-    to.params.nr = `${store.answerProgress + 1}`;
+    to.params.nr =
+      store.answerProgress > -1 ? `${store.answerProgress + 1}` : '1';
     return to;
   }
   const questionNr = parseInt(to.params.nr as string);
