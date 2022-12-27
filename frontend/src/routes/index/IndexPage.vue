@@ -249,10 +249,8 @@ export default {
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  display: grid;
+  column-gap: 24px;
   overflow: hidden;
 
   .calc-main {
@@ -265,7 +263,7 @@ export default {
     padding: 24px;
     text-align: center;
     display: grid;
-    grid-row-gap: 24px;
+    gap: 24px;
   }
 
   .other-calcs > * {
@@ -287,7 +285,6 @@ export default {
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
-    grid-column-gap: 24px;
 
     .other-calcs {
       display: contents;
