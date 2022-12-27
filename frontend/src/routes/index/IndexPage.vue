@@ -108,11 +108,9 @@ export default {
 
     <StaticContentLayout>
       <StackComponent class="section" spacing="large" centered>
-        <BodyText size="medium">Zjistěte během 10 minut, s jakými politiky se názorově shodujete v&nbsp;aktuálních
-          otázkách.</BodyText>
         <ButtonComponent kind="link" @click="scrollDown">
           <div class="button-content">
-            Více o kalkulačce<IconComponent :icon="mdiArrowDown"></IconComponent>
+            Starší kalkulačky<IconComponent :icon="mdiArrowDown"></IconComponent>
           </div>
         </ButtonComponent>
       </StackComponent>
