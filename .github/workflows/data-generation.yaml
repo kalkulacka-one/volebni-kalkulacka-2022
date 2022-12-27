@@ -14,8 +14,8 @@ jobs:
         uses: snok/install-poetry@v1
 #      - name: Install Poetry
 #        run: pipx install poetry
-       - name: Setup Python
-         uses: actions/setup-python@v4
-         with:
-           python-version: 3.11
-           cache: poetry
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+          cache: poetry
