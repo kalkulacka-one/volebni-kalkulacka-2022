@@ -43,10 +43,16 @@ export default {
 <template>
   <StickyHeaderLayout>
     <template #header>
-      <NavigationBar background="transparent" />
+      <NavigationBar />
     </template>
+    <div class="prezident-hero">
+      <BodyText size="medium">Kalkulačka pro prezidentské volby 2023 <b>13.–14. ledna</b></BodyText>
+      <HeadlineText tag="h1" size="medium" class="title">
+        Který prezidentský kandidát bude nejlépe reprezentovat vaše názory?
+      </HeadlineText>
+      <ButtonComponent color="primary" kind="filled" @click="">Spustit Kalkulačku</ButtonComponent>
+    </div>
     <StaticContentLayout>
-      <BlobComponent color="red"/>
       <div class="section-header section">
         <CardComponent padding="medium" background-color="transparent" corner="top-left">
           <div class="card-content">
@@ -185,6 +191,24 @@ export default {
 </template>
 
 <style scoped lang="scss">
+.prezident-hero {
+  background-color: rgb(var(--color-neutral-bg-container));
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .title {
+    text-align: center;
+    padding: 16px;
+    @media (min-width: 768px)  {
+      max-width: 50%;
+    }
+  }
+}
+
+
 .section-header {
   display: grid;
   grid-template-columns: 1.2fr repeat(1, 1fr);

@@ -28,5 +28,6 @@ const blobUrl = () => {
 <style scoped lang="scss">
 .blob {
     filter: blur(120px);
+    z-index: -1;
 }
 </style>
