@@ -29,7 +29,7 @@ const currentEmbed = inject(EmbedKey);
     <slot />
   </template>
   <template v-else>
-    <div class="has-background">
+    <div class="background">
       <template v-if="props.hasBlobs">
         <div class="blobs">
           <img src="@/assets/background/blue-blob.svg" class="blue-blob"/>
@@ -42,7 +42,7 @@ const currentEmbed = inject(EmbedKey);
 </template>
 
 <style scoped lang="scss">
-.has-background {
+.background {
   display: grid;
   width: 100%;
   height: 100%;
