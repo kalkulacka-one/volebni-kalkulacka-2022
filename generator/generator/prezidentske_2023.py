@@ -67,7 +67,7 @@ def extract_election_prezidentske(
 
     # load file
     doc_questions = gc.open_by_key(key_questions)
-    sheet_questions = doc_questions.worksheet("Sheet1")
+    sheet_questions = doc_questions.worksheet("classic")
 
     question_definitions = extract_prezidentske_question_definitions(
         sheet_questions,
@@ -131,7 +131,7 @@ def extract_prezidentske_question_definitions(
             name="name",
             title="question",
             gist="description",
-            detail="name eng",
+            detail="detail",
             tags="tags",
             order="order",
         ),
