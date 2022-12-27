@@ -14,7 +14,12 @@ import BackgroundComponent from '../../components/design-system/style/Background
 import TitleText from '@/components/design-system/typography/TitleText.vue';
 import HeadlineText from '@/components/design-system/typography/HeadlineText.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
-import { mdiArrowBottomRight, mdiArrowDown, mdiArrowRight, mdiLink } from '@mdi/js';
+import {
+  mdiArrowBottomRight,
+  mdiArrowDown,
+  mdiArrowRight,
+  mdiLink,
+} from '@mdi/js';
 import InfoBubble from '@/components/InfoBubble.vue';
 import FooterMultiWord from '@/components/FooterMultiWord.vue';
 import DonateBlock from '@/components/DonateBlock.vue';
@@ -50,56 +55,74 @@ export default {
       <BlobComponent color="red" class="blob2" />
       <div class="avatars">
         <div class="avatar pavel-fischer">
-          <img alt="Fotografie – Pavel Fischer"
-            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg" />
+          <img
+            alt="Fotografie – Pavel Fischer"
+            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg"
+          />
         </div>
         <div class="avatar shift jaroslav-basta">
-          <img alt="Fotografie – Jaroslav Bašta"
-            src="https://data.programydovoleb.cz/lide/uploads/basta-jaroslavjpg___up_1626355989_4fcd45fdffc5edb54030ac215b59b26a.jpg" />
+          <img
+            alt="Fotografie – Jaroslav Bašta"
+            src="https://data.programydovoleb.cz/lide/uploads/basta-jaroslavjpg___up_1626355989_4fcd45fdffc5edb54030ac215b59b26a.jpg"
+          />
         </div>
         <div class="avatar shift josef-stredula">
-          <img alt="Fotografie – Josef Středula"
-            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/12-07-screenshot-2022-___up-4fcd-78.jpg" />
+          <img
+            alt="Fotografie – Josef Středula"
+            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/12-07-screenshot-2022-___up-4fcd-78.jpg"
+          />
         </div>
         <div class="avatar petr-pavel">
-          <img alt="Fotografie – Petr Pavel"
-            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-22-screenshot-2022-___up-ccd4-54.jpg" />
+          <img
+            alt="Fotografie – Petr Pavel"
+            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-22-screenshot-2022-___up-ccd4-54.jpg"
+          />
         </div>
         <div class="avatar shift tomas-zima">
-          <img alt="Fotografie – Tomáš Zima"
-            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-tomas_zima_cropp___up-ccd4-89.jpg" />
+          <img
+            alt="Fotografie – Tomáš Zima"
+            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-tomas_zima_cropp___up-ccd4-89.jpg"
+          />
         </div>
         <div class="avatar danuse-nerudova">
-          <img alt="Fotografie – Danuše Nerudová"
-            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-23-screenshot-2022-___up-ccd4-11.jpg" />
+          <img
+            alt="Fotografie – Danuše Nerudová"
+            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-23-screenshot-2022-___up-ccd4-11.jpg"
+          />
         </div>
         <div class="avatar andrej-babis">
-          <img alt="Fotografie – Andrej Babiš"
-            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-1920px-andrej_ba___up-ccd4-85.jpg" />
+          <img
+            alt="Fotografie – Andrej Babiš"
+            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-1920px-andrej_ba___up-ccd4-85.jpg"
+          />
         </div>
         <div class="avatar shift karel-divis">
-          <img alt="Fotografie – Karel Diviš"
-            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-25-screenshot-2022-___up-4fcd-80.jpg" />
+          <img
+            alt="Fotografie – Karel Diviš"
+            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-25-screenshot-2022-___up-4fcd-80.jpg"
+          />
         </div>
         <div class="avatar shift marek-hilser">
-          <img alt="Fotografie – Marek Hilšer"
-            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-marek_hilser_fot___up-ccd4-26.jpg" />
+          <img
+            alt="Fotografie – Marek Hilšer"
+            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-marek_hilser_fot___up-ccd4-26.jpg"
+          />
         </div>
       </div>
       <StackComponent spacing="medium" centered class="calc-main">
         <BodyText size="medium" tag="h1">
-          <b>1. kolo prezidentských voleb</b><br>
+          <b>1. kolo prezidentských voleb</b><br />
           13.–14. ledna 2023
-          <br>
+          <br />
         </BodyText>
         <HeadlineText tag="p" size="small">
-          <span style="color: rgb(var(--color-neutral-fg));">
-            9 kandidátů.<br>
+          <span style="color: rgb(var(--color-neutral-fg))">
+            9 kandidátů.<br />
           </span>
-          Kdo z&nbsp;nich bude reprezentovat<br>vaše&nbsp;názory?
+          Kdo z&nbsp;nich bude reprezentovat<br />vaše&nbsp;názory?
         </HeadlineText>
         <BodyText size="small" tag="h2">
-          Základní kalkulačka Prezident 2023<br>40 otázek, cca 10 minut
+          Základní kalkulačka Prezident 2023<br />40 otázek, cca 10 minut
         </BodyText>
         <ButtonComponent kind="filled" color="primary" tag="a">
           Spustit kalkulačku
@@ -108,15 +131,24 @@ export default {
           </template>
         </ButtonComponent>
         <BodyText size="small">
-          <a href="https://programydovoleb.cz/">Kdo kandiduje (Programy do voleb) </a>
+          <a href="https://programydovoleb.cz/"
+            >Kdo kandiduje (Programy do voleb)
+          </a>
         </BodyText>
       </StackComponent>
       <div class="other-calcs">
-        <CardComponent corner="bottom-left" padding="large" border borderRadius="large" shadow
-          class="other-calc-card calc-ultimate">
+        <CardComponent
+          corner="bottom-left"
+          padding="large"
+          border
+          borderRadius="large"
+          shadow
+          class="other-calc-card calc-ultimate"
+        >
           <StackComponent spacing="small" centered>
             <BodyText size="medium" tag="h2">
-              <strong>Kalkulačka pro nadšence</strong><br> Prezident 2023
+              <strong>Kalkulačka pro nadšence</strong><br />
+              Prezident 2023
             </BodyText>
             <BodyText size="small">
               Všech 100 otázek, které jsme položili prezidentským kandidátům.
@@ -129,14 +161,22 @@ export default {
             </ButtonComponent>
           </StackComponent>
         </CardComponent>
-        <CardComponent corner="top-left" padding="large" border borderRadius="large" shadow
-          class="other-calc-card calc-youth">
+        <CardComponent
+          corner="top-left"
+          padding="large"
+          border
+          borderRadius="large"
+          shadow
+          class="other-calc-card calc-youth"
+        >
           <StackComponent spacing="small" centered>
             <BodyText size="medium" tag="h2">
-              <strong>Kalkulačka pro mladé</strong><br> Prezident 2023
+              <strong>Kalkulačka pro mladé</strong><br />
+              Prezident 2023
             </BodyText>
             <BodyText size="small">
-              Otázky, které rezonují mladou generací.<br>Připravilo sdružení Názory politiků.
+              Otázky, které rezonují mladou generací.<br />Připravilo sdružení
+              Názory politiků.
             </BodyText>
             <ButtonComponent kind="outlined" color="primary" tag="a">
               Spustit kalkulačku
@@ -159,28 +199,39 @@ export default {
     <StaticContentLayout>
       <StackComponent class="section" spacing="small" centered>
         <TitleText size="large" tag="h2">Jak kalkulačka vzniká?</TitleText>
-        <BodyText size="medium">Volební kalkulačka je projekt neziskové organizace KohoVolit.eu a
-          je nestranným pomocníkem při Vašem rozhodování koho volit.</BodyText>
+        <BodyText size="medium"
+          >Volební kalkulačka je projekt neziskové organizace KohoVolit.eu a je
+          nestranným pomocníkem při Vašem rozhodování koho volit.</BodyText
+        >
         <div class="info-bubbles-grid section">
           <InfoBubble image="info-1.png">
-            <BodyText size="small">Připravíme zhruba 40 otázek na aktuální politická
-              témata.</BodyText>
+            <BodyText size="small"
+              >Připravíme zhruba 40 otázek na aktuální politická
+              témata.</BodyText
+            >
           </InfoBubble>
           <InfoBubble image="info-2.png">
-            <BodyText size="small">Otázky položíme všem kandidátům / stranám.</BodyText>
+            <BodyText size="small"
+              >Otázky položíme všem kandidátům / stranám.</BodyText
+            >
           </InfoBubble>
           <InfoBubble image="info-3.png">
-            <BodyText size="small">Dostaneme od většiny z nich odpovědi.</BodyText>
+            <BodyText size="small"
+              >Dostaneme od většiny z nich odpovědi.</BodyText
+            >
           </InfoBubble>
           <InfoBubble image="info-4.png">
-            <BodyText size="small">Volební kalkulačka vám s nimi spočítá názorovou
-              shodu.</BodyText>
+            <BodyText size="small"
+              >Volební kalkulačka vám s nimi spočítá názorovou shodu.</BodyText
+            >
           </InfoBubble>
         </div>
       </StackComponent>
       <StackComponent class="section" spacing="large" centered>
-        <BodyText size="medium">Volební kalkulačka je pouze informační služba a není jejím cílem
-          dávat konkrétní volební doporučení.</BodyText>
+        <BodyText size="medium"
+          >Volební kalkulačka je pouze informační služba a není jejím cílem
+          dávat konkrétní volební doporučení.</BodyText
+        >
         <ButtonComponent kind="link" @click="router.push('/o-nas')">
           <div class="button-content">
             Zjistit více<IconComponent :icon="mdiArrowRight"></IconComponent>
@@ -197,38 +248,61 @@ export default {
           <CardComponent corner="top-right" padding="medium" border shadow>
             <div class="card-content">
               <div class="card-content-text">
-                <TitleText tag="h3" size="medium">Komunální volby 2022</TitleText>
-                <BodyText size="medium">K dispozici jsou kalkulačky pro vybraná města.</BodyText>
+                <TitleText tag="h3" size="medium"
+                  >Komunální volby 2022</TitleText
+                >
+                <BodyText size="medium"
+                  >K dispozici jsou kalkulačky pro vybraná města.</BodyText
+                >
                 <div class="divider" />
-                <BodyText size="small">Komunální kalkulačku vyplnilo přes 100 tisíc
-                  lidí.</BodyText>
+                <BodyText size="small"
+                  >Komunální kalkulačku vyplnilo přes 100 tisíc lidí.</BodyText
+                >
               </div>
-              <ButtonComponent kind="outlined" color="primary" @click="
-  router.push({
-    name: appRoutes.districtSelection.name,
-    params: { ...route.params, election: 'komunalni-2022' },
-    query: { ...route.query },
-  })
-">Spustit kalkulačku</ButtonComponent>
+              <ButtonComponent
+                kind="outlined"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.districtSelection.name,
+                    params: { ...route.params, election: 'komunalni-2022' },
+                    query: { ...route.query },
+                  })
+                "
+                >Spustit kalkulačku</ButtonComponent
+              >
             </div>
           </CardComponent>
           <CardComponent corner="top-left" padding="medium" border shadow>
             <div class="card-content">
               <div class="card-content-text">
                 <TitleText tag="h3" size="medium">Senátní volby 2022</TitleText>
-                <BodyText size="medium">Pro jednotlivé volební obvody.</BodyText>
-                <BodyText size="medium"><a href="https://2022.programydovoleb.cz/senatni-volby#kde-se-letos-voli">Více o
-                    senátních obvodech</a></BodyText>
+                <BodyText size="medium"
+                  >Pro jednotlivé volební obvody.</BodyText
+                >
+                <BodyText size="medium"
+                  ><a
+                    href="https://2022.programydovoleb.cz/senatni-volby#kde-se-letos-voli"
+                    >Více o senátních obvodech</a
+                  ></BodyText
+                >
               </div>
               <div class="divider" />
-              <BodyText size="small">Senátní kalkulačku vyplnilo přes 25 tisíc lidí.</BodyText>
-              <ButtonComponent color="primary" kind="outlined" @click="
-  router.push({
-    name: appRoutes.districtSelection.name,
-    params: { ...route.params, election: 'senatni-2022' },
-    query: { ...route.query },
-  })
-                  ">Spustit kalkulačku</ButtonComponent>
+              <BodyText size="small"
+                >Senátní kalkulačku vyplnilo přes 25 tisíc lidí.</BodyText
+              >
+              <ButtonComponent
+                color="primary"
+                kind="outlined"
+                @click="
+                  router.push({
+                    name: appRoutes.districtSelection.name,
+                    params: { ...route.params, election: 'senatni-2022' },
+                    query: { ...route.query },
+                  })
+                "
+                >Spustit kalkulačku</ButtonComponent
+              >
             </div>
           </CardComponent>
         </MasonryGrid>
@@ -236,7 +310,6 @@ export default {
     </StaticContentLayout>
     <FooterMultiWord class="section" />
   </StickyHeaderLayout>
-
 </template>
 
 <style scoped lang="scss">
@@ -258,13 +331,13 @@ export default {
     width: 100%;
 
     &:after {
-      content: "";
+      content: '';
       display: block;
       padding-bottom: 100%;
       padding-left: 100%;
     }
 
-    >img {
+    > img {
       position: absolute;
       width: 100%;
       height: 100%;
@@ -288,7 +361,7 @@ export default {
     gap: 24px;
   }
 
-  .other-calcs>* {
+  .other-calcs > * {
     width: 100%;
     padding: 16px;
     display: flex;
@@ -375,7 +448,6 @@ export default {
         grid-row: 3;
         grid-column: 12;
       }
-
     }
   }
 
