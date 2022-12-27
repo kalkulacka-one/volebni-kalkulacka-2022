@@ -43,9 +43,11 @@ export default {
 <template>
   <StickyHeaderLayout>
     <template #header>
-      <NavigationBar />
+      <NavigationBar transparent />
     </template>
     <div class="prezident-hero">
+      <BlobComponent color="blue" class="blob1" />
+      <BlobComponent color="red" class="blob2" />
       <StackComponent spacing="medium" centered class="text">
         <BodyText size="large" tag="h1">
           <b>1. kolo prezidentských voleb</b><br>
@@ -86,7 +88,7 @@ export default {
         <CardComponent corner="top-left" padding="large" border shadow class="other-calc-card">
           <StackComponent spacing="small" centered>
             <BodyText size="medium" tag="h2">
-              <strong>Kalkulačka pro nadšence</strong> Prezident 2023
+              <strong>Kalkulačka pro nadšence</strong><br> Prezident 2023
             </BodyText>
             <BodyText size="small">
               Všech 100 otázek, které jsme položili prezidentským kandidátům.
@@ -242,7 +244,6 @@ export default {
 
 <style scoped lang="scss">
 .prezident-hero {
-  background-color: rgb(var(--color-neutral-bg-container));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -261,6 +262,17 @@ export default {
       max-width: 50%;
     }
   }
+  
+  .blob1 {
+    position: absolute;
+    left: 10%;
+  }
+  .blob2 {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+  }
+
 }
 
 
