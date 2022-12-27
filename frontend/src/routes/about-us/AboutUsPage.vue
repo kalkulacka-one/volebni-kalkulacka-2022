@@ -87,9 +87,9 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
           formulace otázek klíčovým místem tvorby kalkulačky. Z důvodu
           tranpsarentnosti zde uvádíme náš dokument, kterým se při tvorbě otázek
           řídíme:
-          <a href="/metodika-tvorby-otazek">
+          <router-link to="/metodika-tvorby-otazek">
             Metodika výběru témat a tvorby otázek
-          </a></BodyText
+          </router-link></BodyText
         ><BodyText size="large">
           V naprosté většině případů názorového testu ("volební kalkulačky")
           stranám nebo kandidátům posíláme více otázek, než kolik se použije ve
