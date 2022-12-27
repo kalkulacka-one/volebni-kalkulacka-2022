@@ -47,9 +47,8 @@ export default {
     </template>
     <div class="prezident-hero">
       <StackComponent spacing="medium" centered class="text">
-        <BodyText size="medium" tag="h1">
-          Kalkulačky pro
-          <b>1. kolo prezidentských voleb</b>
+        <BodyText size="large" tag="h1">
+          <b>1. kolo prezidentských voleb</b><br>
           13.–14. ledna 2023
           <br>
         </BodyText>
@@ -57,15 +56,45 @@ export default {
           <span style="color: rgb(var(--color-neutral-fg));">
             9 kandidátů.
           </span>
-          Kdo z nich bude reprezentovat vaše názory?
+          Kdo z&nbsp;nich bude reprezentovat vaše&nbsp;názory?
         </HeadlineText>
-
+        <BodyText size="small" tag="h2">
+          Základní kalkulačka, 40 otázek, cca 10 minut
+        </BodyText>
         <ButtonComponent kind="filled" color="primary" tag="a">
           Spustit kalkulačku
           <template #iconAfter>
             <IconComponent :icon="mdiArrowRight" />
           </template>
         </ButtonComponent>
+        <StackComponent spacing="small" centered>
+          <BodyText size="medium" tag="h2">
+            <b>Kalkulačka pro mladé</b><br>
+          </BodyText>
+          <BodyText size="small">
+            Otázky, které rezonují mladou generací.
+          </BodyText>
+          <ButtonComponent kind="outlined" color="primary" tag="a">
+            Spustit kalkulačku
+            <template #iconAfter>
+              <IconComponent :icon="mdiArrowRight" />
+            </template>
+          </ButtonComponent>
+        </StackComponent>
+        <StackComponent spacing="small" centered>
+          <BodyText size="medium" tag="h2">
+            <b>Kalkulačka pro nadšence</b><br>
+          </BodyText>
+          <BodyText size="small">
+            Všech 100 otázek, které jsme položili prezidentským kandidátům.
+          </BodyText>
+          <ButtonComponent kind="outlined" color="primary" tag="a">
+            Spustit kalkulačku
+            <template #iconAfter>
+              <IconComponent :icon="mdiArrowRight" />
+            </template>
+          </ButtonComponent>
+        </StackComponent>
 
       </StackComponent>
     </div>
