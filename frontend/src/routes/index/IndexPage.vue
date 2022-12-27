@@ -107,52 +107,6 @@ export default {
     </div>
 
     <StaticContentLayout>
-      <div class="section-header section">
-        <CardComponent padding="medium" background-color="transparent" corner="top-left">
-          <div class="card-content">
-            <HeadlineText tag="h1" size="medium">
-              Volební kalkulačka pro prezidentské volby
-            </HeadlineText>
-            <div class="card-content-text">
-              <BodyText size="medium">
-                Volební kalkulačku pro prezidentské volby, které proběhnou
-                <b>13.&nbsp;a&nbsp;14.&nbsp;ledna 2023</b>, pro vás právě
-                chystáme.
-              </BodyText>
-              <ButtonComponent kind="link" color="primary" tag="a"
-                href="https://twitter.com/intent/follow?screen_name=ceskodigital" style="align-self: start">
-                Sledovat Česko.Digital na Twitteru
-              </ButtonComponent>
-            </div>
-          </div>
-        </CardComponent>
-        <CardComponent padding="medium" corner="top-left" border shadow>
-          <div class="card-content">
-            <TitleText tag="h2" size="large">Kdo kandiduje</TitleText>
-            <BodyText size="medium">
-              Ministerstvo vnitra zveřejnilo seznam kandidátů, kteří splnili
-              zákonné podmínky a budou se ucházet o funkci prezidenta:
-              <ul>
-                <li>Andrej Babiš</li>
-                <li>Jaroslav Bašta</li>
-                <li>Karel Diviš</li>
-                <li>Pavel Fischer</li>
-                <li>Marek Hilšer</li>
-                <li>Danuše Nerudová</li>
-                <li>Petr Pavel</li>
-                <li>Josef Středula</li>
-                <li>Tomáš Zima</li>
-              </ul>
-              Více o kandidátech se dozvíte na
-              <a href="https://prezident2023.programydovoleb.cz">
-                programydovoleb.cz
-              </a>
-              .
-            </BodyText>
-          </div>
-        </CardComponent>
-      </div>
-
       <StackComponent class="section" spacing="large" centered>
         <BodyText size="medium">Zjistěte během 10 minut, s jakými politiky se názorově shodujete v&nbsp;aktuálních
           otázkách.</BodyText>
