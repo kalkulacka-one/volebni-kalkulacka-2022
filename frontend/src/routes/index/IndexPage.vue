@@ -93,7 +93,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
         </div>
       </div>
       <StackComponent spacing="medium" centered class="calc-main">
-        <BodyText size="medium" tag="h1">
+        <BodyText size="medium" tag="h1" color="fg-strong">
           <b>1. kolo prezidentských voleb</b><br />
           13.–14. ledna 2023
           <br />
