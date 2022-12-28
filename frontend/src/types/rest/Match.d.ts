@@ -13,7 +13,7 @@ export type Logo = string;
 export type Score = number;
 
 export interface MatchRest {
-  candidate: CandidateRest;
+  candidateId: CandidateId;
   score: Score;
   [k: string]: unknown;
 }
