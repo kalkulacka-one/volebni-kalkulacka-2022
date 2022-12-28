@@ -28,11 +28,13 @@ export const convertAnswerToBool = (
   }
 };
 
-export const convertStrToAnswer = (answer: string): UserAnswerEnum => {
+export const convertBoolToAnswer = (
+  answer: boolean | undefined
+): UserAnswerEnum => {
   switch (answer) {
-    case 'yes':
+    case true:
       return UserAnswerEnum.yes;
-    case 'no':
+    case false:
       return UserAnswerEnum.no;
     default:
       return UserAnswerEnum.skip;

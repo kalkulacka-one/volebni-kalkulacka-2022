@@ -1,6 +1,6 @@
 import {
   useElectionStore,
-  convertStrToAnswer,
+  convertBoolToAnswer,
   convertAnswerToBool,
   UserAnswerEnum,
 } from '@/stores/electionStore';
@@ -101,7 +101,7 @@ export const getResults = async (resultId: string) => {
     return {
       id: x.question_id,
       flag: x.is_important,
-      answer: convertStrToAnswer(x.answer),
+      answer: convertBoolToAnswer(x.answer),
     };
   });
 };
