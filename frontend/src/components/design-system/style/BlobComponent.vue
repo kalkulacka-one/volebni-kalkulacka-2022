@@ -8,11 +8,6 @@ const props = withDefaults(defineProps<Props>(), {
   color: 'blue',
 });
 
-const blobUrl = () => {
-  if (props.color == 'blue') {
-    return './assets/background/blue-blob.svg';
-  } else return './assets/background/red-blob.svg';
-};
 </script>
 
 <template>
