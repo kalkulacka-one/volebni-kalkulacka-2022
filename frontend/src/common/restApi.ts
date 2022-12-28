@@ -35,10 +35,10 @@ const buildResultData = () => {
       if (x.answer == UserAnswerEnum.yes || x.answer == UserAnswerEnum.no) {
         return {
           ...{
-            question_id: x.id,
+            questionId: x.id,
             answer: convertAnswerToBool(x.answer),
           },
-          ...(x.flag ? { is_important: x.flag } : {}),
+          ...(x.flag ? { isImportant: x.flag } : {}),
         };
       }
     })
@@ -55,7 +55,7 @@ const buildResultData = () => {
       throw new Error(`Unknown candidate ${x.cId}`);
     }
     return {
-      candidate_id: candidate.id,
+      candidateId: candidate.id,
       score: x.result.result_percent,
     };
   });
@@ -104,8 +104,8 @@ export const getResults = async (resultId: string) => {
     resParsed.answers as ReturnType<typeof buildResultData>['answers']
   ).map((x) => {
     return {
-      id: x.question_id,
-      flag: x.is_important || false,
+      id: x.questionId,
+      flag: x.isImportant || false,
       answer: convertBoolToAnswer(x.answer),
     };
   });
