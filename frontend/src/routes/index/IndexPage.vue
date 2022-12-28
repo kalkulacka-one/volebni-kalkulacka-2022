@@ -49,7 +49,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
           Kdo z&nbsp;nich bude reprezentovat<br />vaše&nbsp;názory?
         </HeadlineText>
         <BodyText size="small" tag="h2">
-          Základní kalkulačka Prezident 2023<br />40 otázek, cca 10 minut
+          Volební kalkulačka Prezident 2023<br />42 otázek, cca 10 minut
         </BodyText>
         <ButtonComponent
           kind="filled"
@@ -149,7 +149,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
               Prezident 2023
             </BodyText>
             <BodyText size="small">
-              Všech 100 otázek, které jsme položili prezidentským kandidátům.
+              Všech 98 otázek, které jsme položili prezidentským kandidátům.
             </BodyText>
             <ButtonComponent
               kind="outlined"
@@ -188,8 +188,11 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
               Prezident 2023
             </BodyText>
             <BodyText size="small">
-              Otázky, které rezonují mladou generací.<br />Připravilo sdružení
-              Názory politiků.
+              Otázky, které rezonují mladou generací.<br />
+              Ve spolupráci s projektem
+              <a href="https://www.nazorypolitiku.cz" target="_blank">
+                Názory politiků </a
+              >.
             </BodyText>
             <ButtonComponent
               kind="outlined"
