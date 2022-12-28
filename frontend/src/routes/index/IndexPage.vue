@@ -351,18 +351,18 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
   padding-top: 10%;
 
   .avatars {
-      display: grid;
-      grid-template-columns: repeat(9,1fr);
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
 
-      .avatar {
-        width: 80%;
-        left: 10%;
+    .avatar {
+      width: 80%;
+      left: 10%;
 
-        &.shift {
-          top: -25%;
-        }
+      &.shift {
+        top: -25%;
       }
     }
+  }
 
   .avatar {
     position: relative;

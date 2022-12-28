@@ -7,7 +7,6 @@ export interface Props {
 const props = withDefaults(defineProps<Props>(), {
   color: 'blue',
 });
-
 </script>
 
 <template>
