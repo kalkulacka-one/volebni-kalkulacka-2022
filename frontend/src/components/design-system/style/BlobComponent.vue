@@ -29,7 +29,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 <style scoped lang="scss">
 .blob {
-  filter: blur(120px);
+  filter: blur(32px);
   z-index: -1;
 }
 </style>
