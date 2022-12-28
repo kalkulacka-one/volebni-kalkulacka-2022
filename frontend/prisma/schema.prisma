@@ -18,8 +18,8 @@ enum AnswersSource {
 model Answers {
   id           String        @id @default(uuid())
   updateToken  String        @default(cuid())
-  createdAt    DateTime      @default(now())
-  updatedAt    DateTime      @updatedAt
+  createdAt    DateTime      @default(now()) @db.Timestamptz()
+  updatedAt    DateTime      @updatedAt @db.Timestamptz()
   source       AnswersSource @default(web)
   embedName    String?
   calculatorId String
