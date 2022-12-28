@@ -253,10 +253,6 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
             category="general"
             :max-visible-candidates="5"
           />
-          <BodyText class="results-footer-note" tag="p" size="medium">
-            Opakovaně jsme oslovili všechny kandidáty, ostatní zatím na otázky
-            neodpověděli.
-          </BodyText>
           <DonateBlock />
         </StackComponent>
         <template #bottom-bar>
