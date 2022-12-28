@@ -13,8 +13,6 @@ export default async function (req: VercelRequest, res: VercelResponse) {
         matches: true,
         createdAt: true,
         updatedAt: true,
-        electionId: true,
-        districtId: true,
         calculatorId: true,
       },
     });

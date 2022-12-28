@@ -13,8 +13,6 @@ export default async function (req: VercelRequest, res: VercelResponse) {
         matches: matches,
         source: req.body.source,
         embedName: req.body.embedName,
-        electionId: req.body.electionId,
-        districtId: req.body.districtId,
         calculatorId: req.body.calculatorId,
       },
     });
