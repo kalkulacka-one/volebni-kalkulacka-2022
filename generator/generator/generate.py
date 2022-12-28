@@ -26,6 +26,7 @@ def generate(output_root: Path, elections: dict[str, Election]) -> None:
                 )
                 continue
             calc_dict = {
+                "calculator_id": district.id,
                 "election_id": election.id,
                 "district_code": district.code,
                 "show_district_code": district.show_code,
