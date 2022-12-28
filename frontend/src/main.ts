@@ -72,7 +72,7 @@ export const appRoutes = {
     path: '/',
     component: IndexPageVue,
     meta: {
-      title: 'Volební Kalkulačka',
+      title: 'Volební kalkulačka',
     },
   },
   aboutUs: {
@@ -113,7 +113,7 @@ export const appRoutes = {
     props: true,
     component: ErrorPageVue,
     meta: {
-      title: 'Error - Volební Kalkulačka',
+      title: 'Error - Volební kalkulačka',
     },
   },
   districtSelection: {
@@ -122,7 +122,7 @@ export const appRoutes = {
     alias: '/volby/:election',
     component: DistrictSelectionPageVue,
     meta: {
-      title: 'Volební Kalkulačka',
+      title: 'Volební kalkulačka',
     },
   },
   guide: {
@@ -131,7 +131,7 @@ export const appRoutes = {
     alias: '/volby/:election/:district',
     component: GuidePageVue,
     meta: {
-      title: 'Návod - Volební Kalkulačka',
+      title: 'Návod - Volební kalkulačka',
     },
   },
   question: {
@@ -139,7 +139,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/otazka/:nr?',
     component: QuestionPageVue,
     meta: {
-      title: 'Otázka $$ - Volební Kalkulačka',
+      title: 'Otázka $$ - Volební kalkulačka',
       hasNumber: true,
     },
     beforeEnter: questionGuard,
@@ -149,7 +149,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/rekapitulace',
     component: RecapPageVue,
     meta: {
-      title: 'Rekapitulace - Volební Kalkulačka',
+      title: 'Rekapitulace - Volební kalkulačka',
     },
   },
   result: {
@@ -157,7 +157,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/vysledek',
     component: ResultPageVue,
     meta: {
-      title: 'Výsledky - Volební Kalkulačka',
+      title: 'Výsledky - Volební kalkulačka',
     },
   },
   comparison: {
@@ -165,7 +165,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/srovnani',
     component: ComparisonPageVue,
     meta: {
-      title: 'Porovnaní - Volební Kalkulačka',
+      title: 'Porovnaní - Volební kalkulačka',
     },
   },
   share: {
@@ -173,7 +173,7 @@ export const appRoutes = {
     path: '/share/:uuid',
     component: SharePageVue,
     meta: {
-      title: 'Moje výsledky - Volební Kalkulačka',
+      title: 'Moje výsledky - Volební kalkulačka',
     },
   },
   fallback: {
