@@ -274,7 +274,7 @@ def extract_question_definitions(
     ):
         q_num = int(row[columns.id])
         definition = QuestionDefinition(
-            id=gen_question_id(election, district, q_num),
+            id=get_s(row, "uuid") or gen_question_id(election, district, q_num),
             num=q_num,
             name=str(row[columns.name]),
             title=str(row[columns.title]),
