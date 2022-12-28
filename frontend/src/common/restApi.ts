@@ -53,8 +53,6 @@ const buildResultData = () => {
     answers: answers,
     matches: matches,
     calculatorId: electionStore.calculator.id,
-    districtId: electionStore.calculator.district_code,
-    electionId: electionStore.election.id,
   };
   return values;
 };
