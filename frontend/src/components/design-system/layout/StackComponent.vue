@@ -6,6 +6,7 @@ export interface Props {
   spacing?: 'extra-small' | 'small' | 'medium' | 'large';
   spacingResponsive?: boolean;
   centered?: boolean;
+  wrap?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -22,6 +23,7 @@ const classes = computed(() => ({
     props.spacingResponsive ? `-responsive` : ''
   }`]: props.spacing,
   'stack--centered': props.centered,
+  'stack--wrap': props.wrap,
 }));
 </script>
 
@@ -80,6 +82,10 @@ const classes = computed(() => ({
 
   &--centered {
     align-items: center;
+  }
+
+  &--wrap {
+    flex-wrap: wrap;
   }
 }
 </style>

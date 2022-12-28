@@ -28,7 +28,13 @@ defineProps<Props>();
     padding-asymmetric
   >
     <StackComponent spacing="small" spacing-responsive>
-      <StackComponent horizontal centered spacing="small" spacing-responsive>
+      <StackComponent
+        horizontal
+        centered
+        spacing="small"
+        wrap
+        spacing-responsive
+      >
         <BodyText size="small">
           {{ currentQuestion }}/{{ questionCount }}
         </BodyText>
