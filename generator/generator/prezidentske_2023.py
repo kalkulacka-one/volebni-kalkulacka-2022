@@ -52,9 +52,9 @@ def extract_election_prezidentske(
         (
             District(
                 '575a8e7b-b2a5-4257-9a61-c25db4242403',
-                "Pro politické nadšence",
+                "Pro nadšence",
                 "Kalkulačka vhodná pro všechny politické nadšence.",
-                "pro-politicke-nadsence-1-kolo",
+                "pro-nadsence",
                 False,
                 on_hp_from=metadata.on_hp_from,
                 on_hp_to=metadata.on_hp_to,

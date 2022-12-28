@@ -161,7 +161,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
                   params: {
                     ...route.params,
                     election: 'prezidentske-2023',
-                    district: 'pro-politicke-nadsence-1-kolo',
+                    district: 'pro-politicke-nadsence',
                   },
                   query: { ...route.query },
                 })
