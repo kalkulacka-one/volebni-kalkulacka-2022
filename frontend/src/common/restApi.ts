@@ -44,13 +44,7 @@ const buildResultData = () => {
       throw new Error(`Unknown candidate ${x.cId}`);
     }
     return {
-      candidate: {
-        candidate_id: candidate.id,
-        name: candidate.name,
-        short_name: candidate.name,
-        abbreviation: candidate.name,
-        logo: candidate.img_url || '',
-      },
+      candidate_id: candidate.id,
       score: x.result.result_percent,
     };
   });
