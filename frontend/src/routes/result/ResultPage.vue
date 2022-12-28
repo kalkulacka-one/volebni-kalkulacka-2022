@@ -182,7 +182,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
               </IconButton>
             </template>
             <TitleText tag="h2" size="medium">Moje shoda</TitleText>
-            <template #after>
+            <template v-if="election.key === 'prezidentske-2023'" #after>
               <ButtonComponent
                 kind="link"
                 color="primary"
@@ -207,6 +207,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
             <template #after>
               <div class="navbar-btn-wrapper">
                 <ButtonComponent
+                  v-if="election.key === 'prezidentske-2023'"
                   kind="link"
                   color="primary"
                   @click="handleShareClick"
