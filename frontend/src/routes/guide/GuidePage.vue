@@ -85,7 +85,7 @@ Vítejte ve Volební kalkulačce pro prezidentské volby 2023.
 Čeká vás 98 otázek. Na stejné otázky nám odpověděly kandidující osobnosti. Zodpovězení otázek zabere zhruba 10 minut. Na konci se dozvíte, jak se jednotliví kandidáti a kandidátky shodují s vašimi názory.
     `
     : route.params.election === 'prezidentske-2023' &&
-      route.params.district === 'pro-mladistve-1-kolo'
+      route.params.district === 'pro-mlade'
     ? `
 Vítejte ve Volební kalkulačce pro prezidentské volby 2023.
 

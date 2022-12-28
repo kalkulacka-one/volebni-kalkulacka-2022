@@ -64,9 +64,9 @@ def extract_election_prezidentske(
         (
             District(
                 'b82ed10e-72b3-4a3c-8019-e024fd8c1ea4',
-                "Pro mladistvé",
-                "Kalkulačka vhodná pro všechny mladistvé občany.",
-                "pro-mladistve-1-kolo",
+                "Pro mladé",
+                "Kalkulačka vhodná pro všechny mladé občany.",
+                "pro-mlade",
                 False,
                 on_hp_from=metadata.on_hp_from,
                 on_hp_to=metadata.on_hp_to,
