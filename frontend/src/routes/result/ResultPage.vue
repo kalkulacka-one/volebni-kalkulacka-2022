@@ -97,14 +97,20 @@ console.debug(encodeResults(electionStore.answers));
 const candidateAnswers: CandidateAnswer[] =
   electionStore.calculator?.answers || [];
 
-const hasActiveCandidatesBtn = electionStore.calculator?.candidates.some(
-  (x) => !x.is_active
-);
+const hasAllCandidatesInactive =
+  electionStore.calculator?.candidates.filter(
+    (candidate) => !candidate.is_active
+  ).length === electionStore.calculator?.candidates.length;
+
+const hasActiveCandidatesBtn = hasAllCandidatesInactive
+  ? false
+  : electionStore.calculator?.candidates.some((x) => !x.is_active);
+
 const showNotActiveCandidates = ref(false);
 const filteredCandidateAnswers: Ref<CandidateAnswer[]> = ref(candidateAnswers);
 const handleActiveCandidatesClicked = (isActive: boolean) => {
   showNotActiveCandidates.value = isActive;
-  if (!showNotActiveCandidates.value) {
+  if (!hasAllCandidatesInactive && !showNotActiveCandidates.value) {
     filteredCandidateAnswers.value = filteredCandidateAnswers.value.filter(
       (x) => {
         return electionStore.calculator?.candidates.find(
@@ -132,7 +138,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
     <StickyHeaderLayout>
       <template #header>
         <NavigationBar>
-          <template #title>{{ breadcrumbs }}</template>
+          <template #title>{{ hasAllCandidatesInactive }}</template>
           <template #right>
             <EmbedWrapper>
               <ResponsiveWrapper medium large extra-large huge>
