@@ -42,7 +42,7 @@ def extract_election_prezidentske(
                 '2e0e6853-4305-4dec-abdc-a47d458b1b95',
                 "Pro každého",
                 "Kalkulačka vhodná pro všechny občany.",
-                "pro-kazdeho-1-kolo",
+                "1-kolo",
                 False,
                 on_hp_from=metadata.on_hp_from,
                 on_hp_to=metadata.on_hp_to,
