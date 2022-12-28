@@ -34,9 +34,11 @@ const buildResultData = () => {
     .map((x) => {
       if (x.answer == UserAnswerEnum.yes || x.answer == UserAnswerEnum.no) {
         return {
-          question_id: x.id,
-          answer: convertAnswerToBool(x.answer),
-          is_important: x.flag,
+          ...{
+            question_id: x.id,
+            answer: convertAnswerToBool(x.answer),
+          },
+          ...(x.flag ? { is_important: x.flag } : {}),
         };
       }
     })
