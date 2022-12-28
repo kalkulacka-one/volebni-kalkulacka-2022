@@ -25,7 +25,8 @@ const bestMatch = electionStore.calculator?.candidates.find((x) => {
 });
 const hashTags = [
   'volby',
-  'volby2022',
+  'volby2023',
+  'prezidentskevolby',
   'volebnikalkulacka',
   'mojevysledky',
 ].join(',');
