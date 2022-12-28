@@ -36,64 +36,8 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
     <div class="prezident-hero">
       <BlobComponent color="blue" class="blob1" />
       <BlobComponent color="red" class="blob2" />
-      <div class="avatars">
-        <div class="avatar pavel-fischer">
-          <img
-            alt="Fotografie – Pavel Fischer"
-            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg"
-          />
-        </div>
-        <div class="avatar shift jaroslav-basta">
-          <img
-            alt="Fotografie – Jaroslav Bašta"
-            src="https://data.programydovoleb.cz/lide/uploads/basta-jaroslavjpg___up_1626355989_4fcd45fdffc5edb54030ac215b59b26a.jpg"
-          />
-        </div>
-        <div class="avatar shift josef-stredula">
-          <img
-            alt="Fotografie – Josef Středula"
-            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/12-07-screenshot-2022-___up-4fcd-78.jpg"
-          />
-        </div>
-        <div class="avatar petr-pavel">
-          <img
-            alt="Fotografie – Petr Pavel"
-            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-22-screenshot-2022-___up-ccd4-54.jpg"
-          />
-        </div>
-        <div class="avatar shift tomas-zima">
-          <img
-            alt="Fotografie – Tomáš Zima"
-            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-tomas_zima_cropp___up-ccd4-89.jpg"
-          />
-        </div>
-        <div class="avatar danuse-nerudova">
-          <img
-            alt="Fotografie – Danuše Nerudová"
-            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-23-screenshot-2022-___up-ccd4-11.jpg"
-          />
-        </div>
-        <div class="avatar andrej-babis">
-          <img
-            alt="Fotografie – Andrej Babiš"
-            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-1920px-andrej_ba___up-ccd4-85.jpg"
-          />
-        </div>
-        <div class="avatar shift karel-divis">
-          <img
-            alt="Fotografie – Karel Diviš"
-            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-25-screenshot-2022-___up-4fcd-80.jpg"
-          />
-        </div>
-        <div class="avatar shift marek-hilser">
-          <img
-            alt="Fotografie – Marek Hilšer"
-            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-marek_hilser_fot___up-ccd4-26.jpg"
-          />
-        </div>
-      </div>
       <StackComponent spacing="medium" centered class="calc-main">
-        <BodyText size="medium" tag="h1">
+        <BodyText size="medium" tag="h1" color="fg-strong">
           <b>1. kolo prezidentských voleb</b><br />
           13.–14. ledna 2023
           <br />
@@ -129,11 +73,67 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
           </template>
         </ButtonComponent>
         <BodyText size="small">
-          <a href="https://programydovoleb.cz/"
+          <a href="https://prezident2023.programydovoleb.cz/"
             >Kdo kandiduje (Programy do voleb)
           </a>
         </BodyText>
       </StackComponent>
+      <div class="avatars">
+        <div class="avatar pavel-fischer">
+          <img
+            alt="Fotografie – Pavel Fischer"
+            src="@/assets/prezidenti-2023/pavel-fischer.jpg"
+          />
+        </div>
+        <div class="avatar shift jaroslav-basta">
+          <img
+            alt="Fotografie – Jaroslav Bašta"
+            src="@/assets/prezidenti-2023/jaroslav-basta.jpg"
+          />
+        </div>
+        <div class="avatar shift josef-stredula">
+          <img
+            alt="Fotografie – Josef Středula"
+            src="@/assets/prezidenti-2023/josef-stredula.jpg"
+          />
+        </div>
+        <div class="avatar petr-pavel">
+          <img
+            alt="Fotografie – Petr Pavel"
+            src="@/assets/prezidenti-2023/petr-pavel.jpg"
+          />
+        </div>
+        <div class="avatar shift tomas-zima">
+          <img
+            alt="Fotografie – Tomáš Zima"
+            src="@/assets/prezidenti-2023/tomas-zima.jpg"
+          />
+        </div>
+        <div class="avatar danuse-nerudova">
+          <img
+            alt="Fotografie – Danuše Nerudová"
+            src="@/assets/prezidenti-2023/danuse-nerudova.jpg"
+          />
+        </div>
+        <div class="avatar andrej-babis">
+          <img
+            alt="Fotografie – Andrej Babiš"
+            src="@/assets/prezidenti-2023/andrej-babis.jpg"
+          />
+        </div>
+        <div class="avatar shift karel-divis">
+          <img
+            alt="Fotografie – Karel Diviš"
+            src="@/assets/prezidenti-2023/karel-divis.jpg"
+          />
+        </div>
+        <div class="avatar shift marek-hilser">
+          <img
+            alt="Fotografie – Marek Hilšer"
+            src="@/assets/prezidenti-2023/marek-hilser.jpg"
+          />
+        </div>
+      </div>
       <div class="other-calcs">
         <CardComponent
           corner="bottom-left"
@@ -144,7 +144,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
           class="other-calc-card calc-ultimate"
         >
           <StackComponent spacing="small" centered>
-            <BodyText size="medium" tag="h2">
+            <BodyText size="medium" tag="h2" color="fg-strong">
               <strong>Kalkulačka pro nadšence</strong><br />
               Prezident 2023
             </BodyText>
@@ -183,7 +183,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
           class="other-calc-card calc-youth"
         >
           <StackComponent spacing="small" centered>
-            <BodyText size="medium" tag="h2">
+            <BodyText size="medium" tag="h2" color="fg-strong">
               <strong>Kalkulačka pro mladé</strong><br />
               Prezident 2023
             </BodyText>
@@ -351,7 +351,17 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
   padding-top: 10%;
 
   .avatars {
-    display: none;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+
+    .avatar {
+      width: 80%;
+      left: 10%;
+
+      &.shift {
+        top: -25%;
+      }
+    }
   }
 
   .avatar {
@@ -428,8 +438,13 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
     .avatars {
       display: contents;
 
-      .avatar.shift {
-        top: -50%;
+      .avatar {
+        width: 100%;
+        left: 0;
+
+        &.shift {
+          top: -50%;
+        }
       }
 
       .pavel-fischer {

@@ -7,12 +7,6 @@ export interface Props {
 const props = withDefaults(defineProps<Props>(), {
   color: 'blue',
 });
-
-const blobUrl = () => {
-  if (props.color == 'blue') {
-    return './assets/background/blue-blob.svg';
-  } else return './assets/background/red-blob.svg';
-};
 </script>
 
 <template>
@@ -34,7 +28,7 @@ const blobUrl = () => {
 
 <style scoped lang="scss">
 .blob {
-  filter: blur(120px);
+  filter: blur(32px);
   z-index: -1;
 }
 </style>
