@@ -138,7 +138,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
     <StickyHeaderLayout>
       <template #header>
         <NavigationBar>
-          <template #title>{{ hasAllCandidatesInactive }}</template>
+          <template #title>{{ breadcrumbs }}</template>
           <template #right>
             <EmbedWrapper>
               <ResponsiveWrapper medium large extra-large huge>
