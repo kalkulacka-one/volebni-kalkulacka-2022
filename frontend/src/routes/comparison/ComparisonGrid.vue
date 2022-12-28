@@ -259,7 +259,7 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
 
 .question-card {
   justify-self: start;
-  max-width: clamp(32rem, 50vw, 48rem);
+  max-width: calc(100vw - 2*var(--responsive-spacing-large));
 }
 
 .question-card,
