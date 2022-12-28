@@ -130,10 +130,10 @@ const toggleClick = () => {
           <template #icon>
             <IconComponent
               :icon="vkiLogoInFavour"
-              :title="isExpanded ? 'Jsem pro' : undefined"
+              :title="isExpanded ? 'Ano' : undefined"
             />
           </template>
-          <template v-if="isExpanded" #default>Jsem pro</template>
+          <template v-if="isExpanded" #default>Ano</template>
         </ButtonComponent>
         <ButtonComponent
           v-show="answer.answer === UserAnswerEnum.no || isExpanded"
@@ -147,10 +147,10 @@ const toggleClick = () => {
           <template #icon>
             <IconComponent
               :icon="vkiLogoAgainst"
-              :title="isExpanded ? 'Jsem proti' : undefined"
+              :title="isExpanded ? 'Ne' : undefined"
             />
           </template>
-          <template v-if="isExpanded" #default>Jsem proti</template>
+          <template v-if="isExpanded" #default>Ne</template>
         </ButtonComponent>
         <ButtonComponent
           v-show="answer.answer === UserAnswerEnum.skip && !isExpanded"
@@ -180,7 +180,7 @@ const toggleClick = () => {
           <template #icon>
             <IconComponent
               :icon="vkiLogoInFavour"
-              :title="isExpanded ? 'Jsem pro' : undefined"
+              :title="isExpanded ? 'Ano' : undefined"
             />
           </template>
         </ButtonComponent>
@@ -196,7 +196,7 @@ const toggleClick = () => {
           <template #icon>
             <IconComponent
               :icon="vkiLogoAgainst"
-              :title="isExpanded ? 'Jsem proti' : undefined"
+              :title="isExpanded ? 'Ne' : undefined"
             />
           </template>
         </ButtonComponent>

@@ -78,7 +78,7 @@ const starIcon = computed(() =>
           <template #icon>
             <IconComponent :icon="vkiLogoInFavour" />
           </template>
-          Jsem pro
+          Ano
         </ButtonComponent>
         <ButtonComponent
           class="against"
@@ -90,7 +90,7 @@ const starIcon = computed(() =>
           <template #icon>
             <IconComponent :icon="vkiLogoAgainst" />
           </template>
-          Jsem proti
+          Ne
         </ButtonComponent>
       </ResponsiveWrapper>
       <ResponsiveWrapper extra-small>
