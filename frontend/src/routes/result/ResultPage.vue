@@ -85,9 +85,11 @@ const handleShareClick = () => {
   shareModal.value?.open();
 };
 onBeforeMount(async () => {
-  const res = await electionStore.saveResults({ embedName: currentEmbed });
-  console.debug(`Results saved.`);
-  console.debug(res);
+  if (election.key === 'prezidentske-2023') {
+    const res = await electionStore.saveResults({ embedName: currentEmbed });
+    console.debug(`Results saved.`);
+    console.debug(res);
+  }
 });
 
 console.debug(encodeResults(electionStore.answers));
@@ -180,7 +182,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
               </IconButton>
             </template>
             <TitleText tag="h2" size="medium">Moje shoda</TitleText>
-            <template #after>
+            <template v-if="election.key === 'prezidentske-2023'" #after>
               <ButtonComponent
                 kind="link"
                 color="primary"
@@ -205,6 +207,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
             <template #after>
               <div class="navbar-btn-wrapper">
                 <ButtonComponent
+                  v-if="election.key === 'prezidentske-2023'"
                   kind="link"
                   color="primary"
                   @click="handleShareClick"
