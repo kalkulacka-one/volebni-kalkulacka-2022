@@ -40,7 +40,7 @@ def extract_election_prezidentske(
         (
             District(
                 '2e0e6853-4305-4dec-abdc-a47d458b1b95',
-                "Pro každého",
+                "1. kolo",
                 "Kalkulačka vhodná pro všechny občany.",
                 "1-kolo",
                 False,
