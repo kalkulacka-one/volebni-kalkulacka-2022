@@ -144,7 +144,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
           class="other-calc-card calc-ultimate"
         >
           <StackComponent spacing="small" centered>
-            <BodyText size="medium" tag="h2">
+            <BodyText size="medium" tag="h2" color="fg-strong">
               <strong>Kalkulačka pro nadšence</strong><br />
               Prezident 2023
             </BodyText>
@@ -183,7 +183,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
           class="other-calc-card calc-youth"
         >
           <StackComponent spacing="small" centered>
-            <BodyText size="medium" tag="h2">
+            <BodyText size="medium" tag="h2" color="fg-strong">
               <strong>Kalkulačka pro mladé</strong><br />
               Prezident 2023
             </BodyText>
