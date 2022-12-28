@@ -87,25 +87,14 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
 <template>
   <div class="grid">
     <template v-for="i in candidateCount + 1" :key="i">
-      <DividerComponent
-        :class="['line', i === 1 ? 'user-line' : '']"
-        vertical
-        line-style="dotted"
-        :color="i === 1 ? 'rgb(var(--color-neutral-border-strong))' : undefined"
-        :style="{
-          'grid-column': i === 1 ? 1 : 2 * (i - 1),
-          'grid-row': `1 / span ${2 * questionCount + 1}`,
-        }"
-      />
+      <DividerComponent :class="['line', i === 1 ? 'user-line' : '']" vertical line-style="dotted"
+        :color="i === 1 ? 'rgb(var(--color-neutral-border-strong))' : undefined" :style="{
+  'grid-column': i === 1 ? 1 : 2 * (i - 1),
+  'grid-row': `1 / span ${2 * questionCount + 1}`,
+}" />
     </template>
-    <div
-      class="header user-header user-answers"
-      :style="{ 'grid-column': 1, 'grid-row': 1, 'z-index': 999 }"
-    >
-      <FilledCircle
-        size="extra-large"
-        background-color="rgb(var(--color-primary-bg))"
-      >
+    <div class="header user-header user-answers" :style="{ 'grid-column': 1, 'grid-row': 1, 'z-index': 999 }">
+      <FilledCircle size="extra-large" background-color="rgb(var(--color-primary-bg))">
         <BodyText size="small" :style="{ 'text-align': 'center' }">
           <strong>
             Moje <br />
@@ -115,110 +104,74 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
       </FilledCircle>
     </div>
     <template v-for="(candidateId, index) in candidateOrder" :key="candidateId">
-      <div
-        class="header"
-        :style="{ 'grid-column': 2 * index + 2, 'grid-row': 1 }"
-      >
-        <FilledCircle size="extra-large"
-          ><BodyText
-            size="extra-small"
-            color="rgb(var(--color-neutral-fg-inverse))"
-            :style="{ 'text-align': 'center' }"
-          >
+      <div class="header" :style="{ 'grid-column': 2 * index + 2, 'grid-row': 1 }">
+        <FilledCircle size="extra-large" style="padding: var(--spacing-extra-small)">
+          <BodyText size="extra-small" color="rgb(var(--color-neutral-fg-inverse))" :style="{ 'text-align': 'center' }">
             <strong>
               {{
-                candidates.filter(
-                  (candidate) => candidate.id === candidateId
-                )[0].short_name
-              }}</strong
-            >
+    candidates.filter(
+      (candidate) => candidate.id === candidateId
+    )[0].short_name
+}}</strong>
           </BodyText>
         </FilledCircle>
       </div>
     </template>
     <template v-for="(question, questionIndex) in questions" :key="question.id">
-      <QuestionCard
-        class="question-card"
-        :style="{
-          'grid-column': `1 / span ${2 * candidateCount + 1}`,
-          'grid-row': 2 * questionIndex + 2,
-        }"
-        :question="question"
-        :current-question="questionIndex + 1"
-        :question-count="questionCount"
-      />
-      <div
-        class="user-answers"
-        :style="{
-          'grid-column': 1,
-          'grid-row': 2 * questionIndex + 3,
-        }"
-      >
-        <FilledCircle
-          :background-color="`rgb(var(--color-${mapAnswerToColor(
-            answers.filter((answer) => answer.id === question.id)[0].answer
-          )}-bg-strong))`"
-        >
-          <IconComponent
-            :icon="
-              mapAnswerToIcon(
-                answers.filter((answer) => answer.id === question.id)[0].answer
-              )
-            "
-            color="rgb(var(--color-neutral-fg-inverse))"
-          />
+      <QuestionCard class="question-card" :style="{
+  'grid-column': `1 / span ${2 * candidateCount + 1}`,
+  'grid-row': 2 * questionIndex + 2,
+}" :question="question" :current-question="questionIndex + 1" :question-count="questionCount" />
+      <div class="user-answers" :style="{
+  'grid-column': 1,
+  'grid-row': 2 * questionIndex + 3,
+}">
+        <FilledCircle :background-color="`rgb(var(--color-${mapAnswerToColor(
+  answers.filter((answer) => answer.id === question.id)[0].answer
+)}-bg-strong))`">
+          <IconComponent :icon="
+  mapAnswerToIcon(
+    answers.filter((answer) => answer.id === question.id)[0].answer
+  )
+" color="rgb(var(--color-neutral-fg-inverse))" />
         </FilledCircle>
       </div>
-      <template
-        v-for="(candidateId, candidateIndex) in candidateOrder"
-        :key="candidateId"
-      >
-        <div
-          :style="{
-            'grid-column': 2 * candidateIndex + 2,
-            'grid-row': 2 * questionIndex + 3,
-          }"
-        >
-          <FilledCircle
-            :background-color="`rgb(var(--color-${mapAnswerToColor(candidateAnswers.filter(
-              (answer) =>
-                answer.candidate_id === candidateId &&
-                answer.question_id === question.id
-            )[0].answer as string)}-bg-strong))`"
-          >
-            <IconComponent
-              :icon="mapAnswerToIcon(candidateAnswers.filter(
-              (answer) =>
-                answer.candidate_id === candidateId &&
-                answer.question_id === question.id
-            )[0].answer as string)"
-              color="rgb(var(--color-neutral-fg-inverse))"
-            />
+      <template v-for="(candidateId, candidateIndex) in candidateOrder" :key="candidateId">
+        <div :style="{
+  'grid-column': 2 * candidateIndex + 2,
+  'grid-row': 2 * questionIndex + 3,
+}">
+          <FilledCircle :background-color="`rgb(var(--color-${mapAnswerToColor(candidateAnswers.filter(
+  (answer) =>
+    answer.candidate_id === candidateId &&
+    answer.question_id === question.id
+)[0].answer as string)}-bg-strong))`">
+            <IconComponent :icon="mapAnswerToIcon(candidateAnswers.filter(
+  (answer) =>
+    answer.candidate_id === candidateId &&
+    answer.question_id === question.id
+)[0].answer as string)" color="rgb(var(--color-neutral-fg-inverse))" />
           </FilledCircle>
         </div>
 
-        <div
-          v-if="
-            candidateAnswers.filter(
-              (answer) =>
-                answer.candidate_id === candidateId &&
-                answer.question_id === question.id
-            )[0].comment
-          "
-          class="comment"
-          :style="{
-            'grid-column': 2 * candidateIndex + 3,
-            'grid-row': 2 * questionIndex + 3,
-          }"
-        >
+        <div v-if="
+  candidateAnswers.filter(
+    (answer) =>
+      answer.candidate_id === candidateId &&
+      answer.question_id === question.id
+  )[0].comment
+" class="comment" :style="{
+  'grid-column': 2 * candidateIndex + 3,
+  'grid-row': 2 * questionIndex + 3,
+}">
           <CardComponent corner="top-left" padding="medium">
             <BodyText size="small">
               {{
-                candidateAnswers.filter(
-                  (answer) =>
-                    answer.candidate_id === candidateId &&
-                    answer.question_id === question.id
-                )[0].comment
+    candidateAnswers.filter(
+      (answer) =>
+        answer.candidate_id === candidateId &&
+        answer.question_id === question.id
+    )[0].comment
               }}
             </BodyText>
           </CardComponent>
@@ -231,10 +184,7 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
 <style lang="scss" scoped>
 .header {
   position: sticky;
-  top: calc(
-    2 * var(--responsive-spacing-large) + var(--spacing-medium) + 2 *
-      var(--spacing-extra-small) + var(--responsive-spacing-large)
-  );
+  top: calc(2 * var(--responsive-spacing-large) + var(--spacing-medium) + 2 * var(--spacing-extra-small) + var(--responsive-spacing-large));
   z-index: 100;
 }
 
