@@ -85,9 +85,11 @@ const handleShareClick = () => {
   shareModal.value?.open();
 };
 onBeforeMount(async () => {
-  const res = await electionStore.saveResults({ embedName: currentEmbed });
-  console.debug(`Results saved.`);
-  console.debug(res);
+  if (election.key === 'prezidentske-2023') {
+    const res = await electionStore.saveResults({ embedName: currentEmbed });
+    console.debug(`Results saved.`);
+    console.debug(res);
+  }
 });
 
 console.debug(encodeResults(electionStore.answers));
