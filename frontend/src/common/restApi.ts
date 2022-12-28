@@ -1,7 +1,8 @@
 import {
   useElectionStore,
-  convertAnswerToStr,
-  convertStrToAnswer,
+  convertBoolToAnswer,
+  convertAnswerToBool,
+  UserAnswerEnum,
 } from '@/stores/electionStore';
 import type { CalculatorRest } from '@/types/rest/Calculator';
 import type { ElectionRest } from '@/types/rest/Election';
@@ -26,13 +27,20 @@ const buildResultData = () => {
   if (!electionStore.election.type) {
     console.warn(`Election type undefined, setting to 'undefined'`);
   }
-  const answers = electionStore.answers.map((x) => {
-    return {
-      question_id: x.id,
-      answer: convertAnswerToStr(x.answer),
-      is_important: x.flag,
-    };
-  });
+  function notEmpty<TValue>(value: TValue | null | undefined): value is TValue {
+    return value !== undefined;
+  }
+  const answers = electionStore.answers
+    .map((x) => {
+      if (x.answer == UserAnswerEnum.yes || x.answer == UserAnswerEnum.no) {
+        return {
+          question_id: x.id,
+          answer: convertAnswerToBool(x.answer),
+          is_important: x.flag,
+        };
+      }
+    })
+    .filter(notEmpty);
   const ra = calculateRelativeAgreement(
     electionStore.calculator.answers,
     electionStore.answers
@@ -96,7 +104,7 @@ export const getResults = async (resultId: string) => {
     return {
       id: x.question_id,
       flag: x.is_important,
-      answer: convertStrToAnswer(x.answer),
+      answer: convertBoolToAnswer(x.answer),
     };
   });
 };

@@ -15,24 +15,26 @@ export enum UserAnswerEnum {
   skip = 3,
 }
 
-export const convertAnswerToStr = (answer: UserAnswerEnum): string => {
+export const convertAnswerToBool = (
+  answer: UserAnswerEnum
+): boolean | undefined => {
   switch (answer) {
     case UserAnswerEnum.yes:
-      return 'yes';
+      return true;
     case UserAnswerEnum.no:
-      return 'no';
-    case UserAnswerEnum.skip:
-      return 'dont_know';
+      return false;
     default:
-      return 'dont_know';
+      return undefined;
   }
 };
 
-export const convertStrToAnswer = (answer: string): UserAnswerEnum => {
+export const convertBoolToAnswer = (
+  answer: boolean | undefined
+): UserAnswerEnum => {
   switch (answer) {
-    case 'yes':
+    case true:
       return UserAnswerEnum.yes;
-    case 'no':
+    case false:
       return UserAnswerEnum.no;
     default:
       return UserAnswerEnum.skip;
