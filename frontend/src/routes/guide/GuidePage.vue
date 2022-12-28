@@ -235,7 +235,7 @@ const handlePreviousClick = () => {
       <template #sticky-header>
         <ResponsiveWrapper extra-small small>
           <SecondaryNavigationBar transparent>
-            <template #before>
+            <template v-if="currentStep > 1" #before>
               <IconButton @click="handlePreviousClick">
                 <IconComponent
                   :icon="mdiArrowLeft"
@@ -255,7 +255,7 @@ const handlePreviousClick = () => {
         <StepWrapper centered>
           <template #before>
             <ResponsiveWrapper medium large extra-large huge>
-              <IconButton @click="handlePreviousClick">
+              <IconButton v-if="currentStep > 1" @click="handlePreviousClick">
                 <IconComponent
                   :icon="mdiArrowLeft"
                   :title="previousButtonTitle"
