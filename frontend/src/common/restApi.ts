@@ -105,7 +105,7 @@ export const getResults = async (resultId: string) => {
   ).map((x) => {
     return {
       id: x.question_id,
-      flag: x.is_important,
+      flag: x.is_important || false,
       answer: convertBoolToAnswer(x.answer),
     };
   });
