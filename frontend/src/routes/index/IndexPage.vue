@@ -82,55 +82,55 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
         <div class="avatar pavel-fischer">
           <img
             alt="Fotografie – Pavel Fischer"
-            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-lossy-page1-1691___up-ccd4-51.jpg"
+            src="@/assets/prezidenti-2023/pavel-fischer.jpg"
           />
         </div>
         <div class="avatar shift jaroslav-basta">
           <img
             alt="Fotografie – Jaroslav Bašta"
-            src="https://data.programydovoleb.cz/lide/uploads/basta-jaroslavjpg___up_1626355989_4fcd45fdffc5edb54030ac215b59b26a.jpg"
+            src="@/assets/prezidenti-2023/jaroslav-basta.jpg"
           />
         </div>
         <div class="avatar shift josef-stredula">
           <img
             alt="Fotografie – Josef Středula"
-            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/12-07-screenshot-2022-___up-4fcd-78.jpg"
+            src="@/assets/prezidenti-2023/josef-stredula.jpg"
           />
         </div>
         <div class="avatar petr-pavel">
           <img
             alt="Fotografie – Petr Pavel"
-            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-22-screenshot-2022-___up-ccd4-54.jpg"
+            src="@/assets/prezidenti-2023/petr-pavel.jpg"
           />
         </div>
         <div class="avatar shift tomas-zima">
           <img
             alt="Fotografie – Tomáš Zima"
-            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-tomas_zima_cropp___up-ccd4-89.jpg"
+            src="@/assets/prezidenti-2023/tomas-zima.jpg"
           />
         </div>
         <div class="avatar danuse-nerudova">
           <img
             alt="Fotografie – Danuše Nerudová"
-            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-23-screenshot-2022-___up-ccd4-11.jpg"
+            src="@/assets/prezidenti-2023/danuse-nerudova.jpg"
           />
         </div>
         <div class="avatar andrej-babis">
           <img
             alt="Fotografie – Andrej Babiš"
-            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-1920px-andrej_ba___up-ccd4-85.jpg"
+            src="@/assets/prezidenti-2023/andrej-babis.jpg"
           />
         </div>
         <div class="avatar shift karel-divis">
           <img
             alt="Fotografie – Karel Diviš"
-            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-25-screenshot-2022-___up-4fcd-80.jpg"
+            src="@/assets/prezidenti-2023/karel-divis.jpg"
           />
         </div>
         <div class="avatar shift marek-hilser">
           <img
             alt="Fotografie – Marek Hilšer"
-            src="https://data.programydovoleb.cz/volby/p/2023/kandidat/10-10-marek_hilser_fot___up-ccd4-26.jpg"
+            src="@/assets/prezidenti-2023/marek-hilser.jpg"
           />
         </div>
       </div>
