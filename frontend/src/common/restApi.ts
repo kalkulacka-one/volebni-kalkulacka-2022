@@ -27,17 +27,20 @@ const buildResultData = () => {
   if (!electionStore.election.type) {
     console.warn(`Election type undefined, setting to 'undefined'`);
   }
-  const answers = electionStore.answers.map((x) => {
-    if (x.answer == UserAnswerEnum.yes || x.answer == UserAnswerEnum.no) {
-      return {
-        question_id: x.id,
-        answer: convertAnswerToBool(x.answer),
-        is_important: x.flag,
-      };
-    } else {
-      return undefined;
-    }
-  });
+  function notEmpty<TValue>(value: TValue | null | undefined): value is TValue {
+    return value !== undefined;
+  }
+  const answers = electionStore.answers
+    .map((x) => {
+      if (x.answer == UserAnswerEnum.yes || x.answer == UserAnswerEnum.no) {
+        return {
+          question_id: x.id,
+          answer: convertAnswerToBool(x.answer),
+          is_important: x.flag,
+        };
+      }
+    })
+    .filter(notEmpty);
   const ra = calculateRelativeAgreement(
     electionStore.calculator.answers,
     electionStore.answers
@@ -55,7 +58,7 @@ const buildResultData = () => {
     };
   });
   const values = {
-    answers: answers.filter(Boolean),
+    answers: answers,
     matches: matches,
     calculatorId: electionStore.calculator.id,
   };
