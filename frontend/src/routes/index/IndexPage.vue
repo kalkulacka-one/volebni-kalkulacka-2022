@@ -189,7 +189,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
             </BodyText>
             <BodyText size="small">
               Otázky, které rezonují mladou generací.<br />
-              Ve spolupráci se sdružením Názory politiků.
+              Ve spolupráci s projektem Názory politiků.
             </BodyText>
             <ButtonComponent
               kind="outlined"
