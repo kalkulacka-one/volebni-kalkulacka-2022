@@ -50,7 +50,7 @@ export interface AnswerRest {
   [k: string]: unknown;
 }
 export interface MatchRest {
-  candidate: CandidateRest;
+  candidate_id: CandidateId;
   score: Score;
   [k: string]: unknown;
 }
