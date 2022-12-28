@@ -129,7 +129,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
           </template>
         </ButtonComponent>
         <BodyText size="small">
-          <a href="https://programydovoleb.cz/"
+          <a href="https://prezident2023.programydovoleb.cz/"
             >Kdo kandiduje (Programy do voleb)
           </a>
         </BodyText>
