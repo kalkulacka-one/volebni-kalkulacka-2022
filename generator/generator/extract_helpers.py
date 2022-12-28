@@ -224,7 +224,7 @@ def extract_candidate(
 ) -> Candidate:
     secret_code = str(row["code"])
     name = f"{row['given_name']} {row['family_name']}"
-    candidate_id = gen_candidate_id(election, district, secret_code)
+    candidate_id = get_s(row, "uuid") or gen_candidate_id(election, district, secret_code)
     contacts = extract_contacts(row)
     is_active = bool(int(str(row["active_candidate"]) or "1"))
     parties = []
