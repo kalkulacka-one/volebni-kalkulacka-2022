@@ -36,6 +36,48 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
     <div class="prezident-hero">
       <BlobComponent color="blue" class="blob1" />
       <BlobComponent color="red" class="blob2" />
+      <StackComponent spacing="medium" centered class="calc-main">
+        <BodyText size="medium" tag="h1" color="fg-strong">
+          <b>1. kolo prezidentských voleb</b><br />
+          13.–14. ledna 2023
+          <br />
+        </BodyText>
+        <HeadlineText tag="p" size="small">
+          <span style="color: rgb(var(--color-neutral-fg))">
+            9 kandidátů.<br />
+          </span>
+          Kdo z&nbsp;nich bude reprezentovat<br />vaše&nbsp;názory?
+        </HeadlineText>
+        <BodyText size="small" tag="h2">
+          Základní kalkulačka Prezident 2023<br />40 otázek, cca 10 minut
+        </BodyText>
+        <ButtonComponent
+          kind="filled"
+          color="primary"
+          tag="a"
+          @click="
+            router.push({
+              name: appRoutes.guide.name,
+              params: {
+                ...route.params,
+                election: 'prezidentske-2023',
+                district: 'pro-kazdeho-1-kolo',
+              },
+              query: { ...route.query },
+            })
+          "
+        >
+          Spustit kalkulačku
+          <template #iconAfter>
+            <IconComponent :icon="mdiArrowRight" />
+          </template>
+        </ButtonComponent>
+        <BodyText size="small">
+          <a href="https://prezident2023.programydovoleb.cz/"
+            >Kdo kandiduje (Programy do voleb)
+          </a>
+        </BodyText>
+      </StackComponent>
       <div class="avatars">
         <div class="avatar pavel-fischer">
           <img
@@ -92,48 +134,6 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
           />
         </div>
       </div>
-      <StackComponent spacing="medium" centered class="calc-main">
-        <BodyText size="medium" tag="h1" color="fg-strong">
-          <b>1. kolo prezidentských voleb</b><br />
-          13.–14. ledna 2023
-          <br />
-        </BodyText>
-        <HeadlineText tag="p" size="small">
-          <span style="color: rgb(var(--color-neutral-fg))">
-            9 kandidátů.<br />
-          </span>
-          Kdo z&nbsp;nich bude reprezentovat<br />vaše&nbsp;názory?
-        </HeadlineText>
-        <BodyText size="small" tag="h2">
-          Základní kalkulačka Prezident 2023<br />40 otázek, cca 10 minut
-        </BodyText>
-        <ButtonComponent
-          kind="filled"
-          color="primary"
-          tag="a"
-          @click="
-            router.push({
-              name: appRoutes.guide.name,
-              params: {
-                ...route.params,
-                election: 'prezidentske-2023',
-                district: 'pro-kazdeho-1-kolo',
-              },
-              query: { ...route.query },
-            })
-          "
-        >
-          Spustit kalkulačku
-          <template #iconAfter>
-            <IconComponent :icon="mdiArrowRight" />
-          </template>
-        </ButtonComponent>
-        <BodyText size="small">
-          <a href="https://prezident2023.programydovoleb.cz/"
-            >Kdo kandiduje (Programy do voleb)
-          </a>
-        </BodyText>
-      </StackComponent>
       <div class="other-calcs">
         <CardComponent
           corner="bottom-left"
@@ -351,8 +351,18 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
   padding-top: 10%;
 
   .avatars {
-    display: none;
-  }
+      display: grid;
+      grid-template-columns: repeat(9,1fr);
+
+      .avatar {
+        width: 80%;
+        left: 10%;
+
+        &.shift {
+          top: -25%;
+        }
+      }
+    }
 
   .avatar {
     position: relative;
@@ -428,8 +438,13 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
     .avatars {
       display: contents;
 
-      .avatar.shift {
-        top: -50%;
+      .avatar {
+        width: 100%;
+        left: 0;
+
+        &.shift {
+          top: -50%;
+        }
       }
 
       .pavel-fischer {
