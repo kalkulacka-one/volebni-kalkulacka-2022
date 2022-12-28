@@ -22,8 +22,6 @@ model Answers {
   updatedAt    DateTime      @updatedAt
   source       AnswersSource @default(web)
   embedName    String?
-  electionId   String
-  districtId   String
   calculatorId String
   answers      Json
   matches      Json
