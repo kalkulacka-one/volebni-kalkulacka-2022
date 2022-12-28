@@ -194,7 +194,7 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
   grid-auto-columns: max-content;
   justify-items: center;
   column-gap: var(--responsive-spacing-large);
-  row-gap: var(--responsive-spacing-large);
+  row-gap: var(--spacing-medium);
 }
 
 .column {
