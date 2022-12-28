@@ -136,7 +136,9 @@ const toggleClick = () => {
     <div class="secondary-text">
       <div class="party-wrapper">
         <BodyText size="medium">{{
-          candidate?.type == 'person'
+          candidate?.type == 'person' &&
+          candidate?.parties &&
+          candidate?.parties.length > 0
             ? candidate?.parties?.[0].name
             : candidate?.name
         }}</BodyText>
