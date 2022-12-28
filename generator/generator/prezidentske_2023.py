@@ -39,7 +39,7 @@ def extract_election_prezidentske(
     districts_with_sheets = [
         (
             District(
-                gen_district_id(election, "pro-kazdeho-1-kolo"),
+                '2e0e6853-4305-4dec-abdc-a47d458b1b95',
                 "Pro každého",
                 "Kalkulačka vhodná pro všechny občany.",
                 "pro-kazdeho-1-kolo",
@@ -51,7 +51,7 @@ def extract_election_prezidentske(
         ),
         (
             District(
-                gen_district_id(election, "pro-politicke-nadsence-1-kolo"),
+                '575a8e7b-b2a5-4257-9a61-c25db4242403',
                 "Pro politické nadšence",
                 "Kalkulačka vhodná pro všechny politické nadšence.",
                 "pro-politicke-nadsence-1-kolo",
@@ -63,7 +63,7 @@ def extract_election_prezidentske(
         ),
         (
             District(
-                gen_district_id(election, "pro-mladistve-1-kolo"),
+                'b82ed10e-72b3-4a3c-8019-e024fd8c1ea4',
                 "Pro mladistvé",
                 "Kalkulačka vhodná pro všechny mladistvé občany.",
                 "pro-mladistve-1-kolo",
