@@ -191,7 +191,7 @@ const toggleClick = () => {
     >
       <div v-if="candidate?.motto">
         <BodyText class="motto-title" size="small"
-          ><strong>Co o sobě kanidát/ka říká</strong></BodyText
+          ><strong>Co o sobě kandidát/ka říká</strong></BodyText
         >
         <BodyText size="small">{{ candidate?.motto }}</BodyText>
       </div>
