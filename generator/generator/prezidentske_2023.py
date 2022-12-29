@@ -40,9 +40,9 @@ def extract_election_prezidentske(
         (
             District(
                 '2e0e6853-4305-4dec-abdc-a47d458b1b95',
-                "Pro každého",
+                "1. kolo",
                 "Kalkulačka vhodná pro všechny občany.",
-                "pro-kazdeho-1-kolo",
+                "pro-kazdeho",
                 False,
                 on_hp_from=metadata.on_hp_from,
                 on_hp_to=metadata.on_hp_to,
@@ -52,9 +52,9 @@ def extract_election_prezidentske(
         (
             District(
                 '575a8e7b-b2a5-4257-9a61-c25db4242403',
-                "Pro politické nadšence",
+                "Pro nadšence",
                 "Kalkulačka vhodná pro všechny politické nadšence.",
-                "pro-politicke-nadsence-1-kolo",
+                "pro-nadsence",
                 False,
                 on_hp_from=metadata.on_hp_from,
                 on_hp_to=metadata.on_hp_to,
@@ -64,9 +64,9 @@ def extract_election_prezidentske(
         (
             District(
                 'b82ed10e-72b3-4a3c-8019-e024fd8c1ea4',
-                "Pro mladistvé",
-                "Kalkulačka vhodná pro všechny mladistvé občany.",
-                "pro-mladistve-1-kolo",
+                "Pro mladé",
+                "Kalkulačka vhodná pro všechny mladé občany.",
+                "pro-mlade",
                 False,
                 on_hp_from=metadata.on_hp_from,
                 on_hp_to=metadata.on_hp_to,
