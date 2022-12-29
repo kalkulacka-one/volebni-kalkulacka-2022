@@ -1,0 +1,21 @@
+@import '@/components/themes/DefaultTheme.scss';
+
+*:deep() {
+  // Override any of the default theme variables here
+
+  // Color palette
+  // -------------
+  // Primary colors
+  --palette-primary-10: 15, 16, 20;
+  --palette-primary-30: 29, 31, 39;
+  --palette-primary-50: 44, 47, 59;
+  --palette-primary-70: 114, 116, 124;
+  --palette-primary-90: 185, 186, 190;
+
+  // Secondary colors
+  --palette-secondary-10: 75, 3, 8;
+  --palette-secondary-30: 149, 7, 15;
+  --palette-secondary-50: 224, 10, 23;
+  --palette-secondary-70: 234, 92, 100;
+  --palette-secondary-90: 245, 173, 178;
+}
