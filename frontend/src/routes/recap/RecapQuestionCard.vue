@@ -285,7 +285,7 @@ const toggleClick = () => {
   }
 
   &--expanded {
-    grid-template-rows: 2rem auto auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
       'important details whitespace toggle'
       'important text whitespace toggle'
