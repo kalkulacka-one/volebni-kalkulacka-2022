@@ -121,9 +121,9 @@
       ]
     },
     {
-      "id": "5262167a-9ceb-450c-a954-3f876c4e7047",
-      "name": "Konkurzy do Rady ČNB",
-      "title": "Na výběr členů Bankovní rady České národní banky mají být vypisována veřejná výběrová řízení.",
+      "id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
+      "name": "Výběr Rady ČNB",
+      "title": "O výběru členů Bankovní rady České národní banky má i nadále rozhodovat pouze prezident/ka.",
       "gist": "Prezident/ka dle Ústavy jmenuje členy Bankovní rady ČNB (skupinu 7 lidí, která ČNB řídí). Způsob jejich výběru je dnes zcela v jeho/její pravomoci. Dosavadní čeští prezidenti členy Bankovní rady vždy vybírali neveřejně.",
       "detail": "",
       "tags": [
@@ -151,13 +151,14 @@
       ]
     },
     {
-      "id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
-      "name": "Výběr Rady ČNB",
-      "title": "O výběru členů Bankovní rady České národní banky má i nadále rozhodovat pouze prezident/ka.",
-      "gist": "Prezident/ka dle Ústavy jmenuje členy Bankovní rady ČNB (skupinu 7 lidí, která ČNB řídí). Způsob jejich výběru je dnes zcela v jeho/její pravomoci. Dosavadní čeští prezidenti členy Bankovní rady vždy vybírali neveřejně.",
+      "id": "e8e00d29-4c70-4074-b4e8-5d1b21dbd6f4",
+      "name": "Obchod a lidská práva",
+      "title": "ČR by měla usilovat o udržování obchodních vztahů i se zeměmi, které porušují lidská práva.",
+      "gist": "",
       "detail": "",
       "tags": [
-        "pravomoci prezidenta/ky"
+        "osobnost",
+        "politické postoje"
       ]
     },
     {
@@ -168,7 +169,7 @@
       "detail": "",
       "tags": [
         "osobnost",
-        "polit. postoje"
+        "politické postoje"
       ]
     },
     {
@@ -179,7 +180,7 @@
       "detail": "",
       "tags": [
         "osobnost",
-        "polit. postoje"
+        "politické postoje"
       ]
     },
     {
@@ -190,29 +191,7 @@
       "detail": "",
       "tags": [
         "osobnost",
-        "polit. postoje"
-      ]
-    },
-    {
-      "id": "e8e00d29-4c70-4074-b4e8-5d1b21dbd6f4",
-      "name": "Obchod a lidská práva",
-      "title": "ČR by měla usilovat o udržování obchodních vztahů i se zeměmi, které porušují lidská práva.",
-      "gist": "",
-      "detail": "",
-      "tags": [
-        "osobnost",
-        "polit. postoje"
-      ]
-    },
-    {
-      "id": "f58c1d9b-a3da-4416-85c9-5ca4a7474fed",
-      "name": "Zrušení Senátu",
-      "title": "Podpořil/a byste zrušení Senátu?",
-      "gist": "",
-      "detail": "",
-      "tags": [
-        "osobnost",
-        "polit. postoje"
+        "politické postoje"
       ]
     },
     {
@@ -223,29 +202,18 @@
       "detail": "",
       "tags": [
         "osobnost",
-        "polit. postoje"
+        "politické postoje"
       ]
     },
     {
-      "id": "d69f0bc2-58cd-4737-b244-61db4503af3e",
-      "name": "Evropská integrace",
-      "title": "Měly by spolu členské státy EU více spolupracovat a pokračovat v prohlubování integrace?",
+      "id": "f58c1d9b-a3da-4416-85c9-5ca4a7474fed",
+      "name": "Zrušení Senátu",
+      "title": "Podpořil/a byste zrušení Senátu?",
       "gist": "",
       "detail": "",
       "tags": [
         "osobnost",
-        "polit. postoje"
-      ]
-    },
-    {
-      "id": "ea7a0ffd-b55e-4a07-a189-373c59dc339f",
-      "name": "ČR – neutrální",
-      "title": "Prezident/ka by se měl/a snažit, aby bylo Česko ve vztahu ke světu co nejvíc neutrální.",
-      "gist": "",
-      "detail": "",
-      "tags": [
-        "osobnost",
-        "polit. postoje"
+        "politické postoje"
       ]
     },
     {
@@ -256,7 +224,39 @@
       "detail": "",
       "tags": [
         "osobnost",
-        "polit. postoje"
+        "politické postoje"
+      ]
+    },
+    {
+      "id": "d69f0bc2-58cd-4737-b244-61db4503af3e",
+      "name": "Evropská integrace",
+      "title": "Měly by spolu členské státy EU více spolupracovat a pokračovat v prohlubování integrace?",
+      "gist": "",
+      "detail": "",
+      "tags": [
+        "osobnost",
+        "politické postoje"
+      ]
+    },
+    {
+      "id": "ea7a0ffd-b55e-4a07-a189-373c59dc339f",
+      "name": "ČR – neutrální",
+      "title": "Prezident/ka by se měl/a snažit, aby bylo Česko ve vztahu ke světu co nejvíc neutrální.",
+      "gist": "",
+      "detail": "",
+      "tags": [
+        "osobnost",
+        "politické postoje"
+      ]
+    },
+    {
+      "id": "5262167a-9ceb-450c-a954-3f876c4e7047",
+      "name": "Konkurzy do Rady ČNB",
+      "title": "Na výběr členů Bankovní rady České národní banky mají být vypisována veřejná výběrová řízení.",
+      "gist": "Prezident/ka dle Ústavy jmenuje členy Bankovní rady ČNB (skupinu 7 lidí, která ČNB řídí). Způsob jejich výběru je dnes zcela v jeho/její pravomoci. Dosavadní čeští prezidenti členy Bankovní rady vždy vybírali neveřejně.",
+      "detail": "",
+      "tags": [
+        "pravomoci prezidenta/ky"
       ]
     },
     {
@@ -292,8 +292,8 @@
     },
     {
       "id": "9645804f-41bd-4d8c-90ed-93af3644a778",
-      "name": "Jmenování profesorů/ek",
-      "title": "Prezident/ka má mít právo odmítnout kandidát/ky na titul profesora navržené vysokými školami.",
+      "name": "Jmenování profesorů/profesorek",
+      "title": "Prezident/ka má mít právo odmítnout kandidáty/ky na titul profesora navržené vysokými školami.",
       "gist": "Návrh podává univerzitní vědecká rada ministerstvu, to ji postupuje prezidentovi. Miloš Zeman některé navržené odmítl jmenovat, ale soudy rozhodly ve prospěch kandidátů na profesory.",
       "detail": "",
       "tags": [
@@ -328,7 +328,7 @@
       "detail": "",
       "tags": [
         "osobnost",
-        "polit. postoje"
+        "politické postoje"
       ]
     },
     {
@@ -339,7 +339,7 @@
       "detail": "",
       "tags": [
         "osobnost",
-        "polit. postoje"
+        "politické postoje"
       ]
     },
     {
@@ -350,7 +350,7 @@
       "detail": "",
       "tags": [
         "osobnost",
-        "polit. postoje"
+        "politické postoje"
       ]
     },
     {
@@ -361,7 +361,7 @@
       "detail": "",
       "tags": [
         "osobnost",
-        "polit. postoje"
+        "politické postoje"
       ]
     },
     {
@@ -372,7 +372,7 @@
       "detail": "",
       "tags": [
         "osobnost",
-        "polit. postoje"
+        "politické postoje"
       ]
     },
     {
@@ -383,7 +383,7 @@
       "detail": "",
       "tags": [
         "osobnost",
-        "polit. postoje"
+        "politické postoje"
       ]
     },
     {
@@ -394,7 +394,7 @@
       "detail": "",
       "tags": [
         "osobnost",
-        "polit. postoje"
+        "politické postoje"
       ]
     },
     {
@@ -405,7 +405,7 @@
       "detail": "",
       "tags": [
         "osobnost",
-        "polit. postoje"
+        "politické postoje"
       ]
     },
     {
@@ -416,7 +416,7 @@
       "detail": "",
       "tags": [
         "osobnost",
-        "polit. postoje"
+        "politické postoje"
       ]
     },
     {
@@ -427,7 +427,7 @@
       "detail": "",
       "tags": [
         "osobnost",
-        "polit. postoje"
+        "politické postoje"
       ]
     },
     {
@@ -438,7 +438,7 @@
       "detail": "",
       "tags": [
         "osobnost",
-        "polit. postoje"
+        "politické postoje"
       ]
     },
     {
@@ -460,7 +460,7 @@
       "detail": "",
       "tags": [
         "osobnost",
-        "polit. postoje"
+        "politické postoje"
       ]
     }
   ],
@@ -673,10 +673,10 @@
       "answer": "no"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-784509-41",
+      "id": "prezidentske-2023-pro-kazdeho-a-784509-66",
       "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
-      "question_id": "5262167a-9ceb-450c-a954-3f876c4e7047",
-      "answer": "no"
+      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
+      "answer": "yes"
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-784509-74",
@@ -691,10 +691,11 @@
       "answer": "yes"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-784509-66",
+      "id": "prezidentske-2023-pro-kazdeho-a-784509-63",
       "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
-      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
-      "answer": "yes"
+      "question_id": "e8e00d29-4c70-4074-b4e8-5d1b21dbd6f4",
+      "answer": "yes",
+      "comment": "Ale musí být podmíněno mezinárodními sankcemi."
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-784509-64",
@@ -715,11 +716,10 @@
       "answer": "no"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-784509-63",
+      "id": "prezidentske-2023-pro-kazdeho-a-784509-52",
       "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
-      "question_id": "e8e00d29-4c70-4074-b4e8-5d1b21dbd6f4",
-      "answer": "yes",
-      "comment": "Ale musí být podmíněno mezinárodními sankcemi."
+      "question_id": "e7d47997-486e-48d7-b3f6-ab55ce71072b",
+      "answer": "yes"
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-784509-31",
@@ -728,10 +728,11 @@
       "answer": "no"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-784509-52",
+      "id": "prezidentske-2023-pro-kazdeho-a-784509-56",
       "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
-      "question_id": "e7d47997-486e-48d7-b3f6-ab55ce71072b",
-      "answer": "yes"
+      "question_id": "02cbfbbb-8569-4a23-9241-135fa392f5b7",
+      "answer": "no",
+      "comment": "Shodný názor by neměl být automatický, ale měly by k tomu obě strany směřovat."
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-784509-85",
@@ -746,11 +747,10 @@
       "answer": "no"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-784509-56",
+      "id": "prezidentske-2023-pro-kazdeho-a-784509-41",
       "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
-      "question_id": "02cbfbbb-8569-4a23-9241-135fa392f5b7",
-      "answer": "no",
-      "comment": "Shodný názor by neměl být automatický, ale měly by k tomu obě strany směřovat."
+      "question_id": "5262167a-9ceb-450c-a954-3f876c4e7047",
+      "answer": "no"
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-784509-24",
@@ -935,11 +935,11 @@
       "comment": "Měl by postupovat podle znění Ústavy a zákonů - odpovědnost navrhovat soudce má ministerstvo spravedlnosti a prezident je následně jmenuje. Pouze v krajním případě, kdy kandidát nesplňuje elementární předpoklady pro výkon funkce, by měl mít prezident možnost vyjádřit pochybnosti."
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-935631-41",
+      "id": "prezidentske-2023-pro-kazdeho-a-935631-66",
       "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
-      "question_id": "5262167a-9ceb-450c-a954-3f876c4e7047",
+      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
       "answer": "no",
-      "comment": "Ale celý proces by měl být maximálně transparentní, aby veřejnost znala kdo a podle jakých kritérií je jmenován."
+      "comment": "Určitá forma spolurozhodování například se Senátem by byla na místě, protože jde o důležité funkce, na kterých by měla existovat širší shoda."
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-935631-74",
@@ -956,11 +956,11 @@
       "comment": "Důležitá je schopnost designovaného premiéra sestavit stabilní vládu s důvěrou poslanecké sněmovny, tedy opřenou o alespoň 101 hlasů poslanců."
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-935631-66",
+      "id": "prezidentske-2023-pro-kazdeho-a-935631-63",
       "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
-      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
-      "answer": "no",
-      "comment": "Určitá forma spolurozhodování například se Senátem by byla na místě, protože jde o důležité funkce, na kterých by měla existovat širší shoda."
+      "question_id": "e8e00d29-4c70-4074-b4e8-5d1b21dbd6f4",
+      "answer": "yes",
+      "comment": "Na prosazování lidských práv nesmíme rezignovat a jejich dodržování je potřeba prosazovat. Pokud je ale obchodování nutné s ohledem na závislost na nějaké surovině či technologii, musíme takové vztahy udržovat."
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-935631-64",
@@ -982,11 +982,11 @@
       "answer": "no"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-935631-63",
+      "id": "prezidentske-2023-pro-kazdeho-a-935631-52",
       "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
-      "question_id": "e8e00d29-4c70-4074-b4e8-5d1b21dbd6f4",
+      "question_id": "e7d47997-486e-48d7-b3f6-ab55ce71072b",
       "answer": "yes",
-      "comment": "Na prosazování lidských práv nesmíme rezignovat a jejich dodržování je potřeba prosazovat. Pokud je ale obchodování nutné s ohledem na závislost na nějaké surovině či technologii, musíme takové vztahy udržovat."
+      "comment": "Prezident se může setkávat s kýmkoli, kdo hodnotově odpovídá našemu vidění světa."
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-935631-31",
@@ -996,11 +996,11 @@
       "comment": "Senát mnohokrát prokázal svoji funkci jako pojistka demokratického systému."
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-935631-52",
+      "id": "prezidentske-2023-pro-kazdeho-a-935631-56",
       "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
-      "question_id": "e7d47997-486e-48d7-b3f6-ab55ce71072b",
-      "answer": "yes",
-      "comment": "Prezident se může setkávat s kýmkoli, kdo hodnotově odpovídá našemu vidění světa."
+      "question_id": "02cbfbbb-8569-4a23-9241-135fa392f5b7",
+      "answer": "no",
+      "comment": "Ve vnitřní politice není nutné, aby měl prezident shodný názor s vládou, pokud jde o zahraniční politiku, měla by být koordinovaná se všemi ústavními činiteli."
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-935631-85",
@@ -1017,11 +1017,11 @@
       "comment": "Protože nejsme neutrální zemí, jsme zemí demokratickou, tak je v pořádku, abychom se otevřeně hlásili ke straně demokracie, svobody a lidských práv."
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-935631-56",
+      "id": "prezidentske-2023-pro-kazdeho-a-935631-41",
       "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
-      "question_id": "02cbfbbb-8569-4a23-9241-135fa392f5b7",
+      "question_id": "5262167a-9ceb-450c-a954-3f876c4e7047",
       "answer": "no",
-      "comment": "Ve vnitřní politice není nutné, aby měl prezident shodný názor s vládou, pokud jde o zahraniční politiku, měla by být koordinovaná se všemi ústavními činiteli."
+      "comment": "Ale celý proces by měl být maximálně transparentní, aby veřejnost znala kdo a podle jakých kritérií je jmenován."
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-935631-24",
@@ -1213,10 +1213,10 @@
       "comment": "Prezident může odmítnou návrh výhradně na základě rozporu kandidáta se zákonem."
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-427663-41",
+      "id": "prezidentske-2023-pro-kazdeho-a-427663-66",
       "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
-      "question_id": "5262167a-9ceb-450c-a954-3f876c4e7047",
-      "answer": "no"
+      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
+      "answer": "yes"
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-427663-74",
@@ -1231,10 +1231,11 @@
       "answer": "yes"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-427663-66",
+      "id": "prezidentske-2023-pro-kazdeho-a-427663-63",
       "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
-      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
-      "answer": "yes"
+      "question_id": "e8e00d29-4c70-4074-b4e8-5d1b21dbd6f4",
+      "answer": "yes",
+      "comment": "Většina zemí na světě nejsou demokracie. Pokud konkrétní obchodní vztahy slouží k udržení otevřeného světa, pak není důvod jim bránit. Je třeba využít všechny možnosti k udržení propojeného světa. Současně si samozřejmě musíme dávat pozor, abychom se nestali ve strategických surovinách či zboží závislí na zemích, které toho mohou zneužít."
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-427663-64",
@@ -1256,11 +1257,10 @@
       "answer": "no"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-427663-63",
+      "id": "prezidentske-2023-pro-kazdeho-a-427663-52",
       "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
-      "question_id": "e8e00d29-4c70-4074-b4e8-5d1b21dbd6f4",
-      "answer": "yes",
-      "comment": "Většina zemí na světě nejsou demokracie. Pokud konkrétní obchodní vztahy slouží k udržení otevřeného světa, pak není důvod jim bránit. Je třeba využít všechny možnosti k udržení propojeného světa. Současně si samozřejmě musíme dávat pozor, abychom se nestali ve strategických surovinách či zboží závislí na zemích, které toho mohou zneužít."
+      "question_id": "e7d47997-486e-48d7-b3f6-ab55ce71072b",
+      "answer": "yes"
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-427663-31",
@@ -1269,10 +1269,11 @@
       "answer": "no"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-427663-52",
+      "id": "prezidentske-2023-pro-kazdeho-a-427663-56",
       "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
-      "question_id": "e7d47997-486e-48d7-b3f6-ab55ce71072b",
-      "answer": "yes"
+      "question_id": "02cbfbbb-8569-4a23-9241-135fa392f5b7",
+      "answer": "no",
+      "comment": "Ve výjimečných a zásadních případech, není-li možná dohoda, musí prezident jednat podle svého svědomí a prezidentského slibu."
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-427663-85",
@@ -1288,11 +1289,10 @@
       "comment": "Jsme součástí EU a NATO, nejsme neutrální země"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-427663-56",
+      "id": "prezidentske-2023-pro-kazdeho-a-427663-41",
       "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
-      "question_id": "02cbfbbb-8569-4a23-9241-135fa392f5b7",
-      "answer": "no",
-      "comment": "Ve výjimečných a zásadních případech, není-li možná dohoda, musí prezident jednat podle svého svědomí a prezidentského slibu."
+      "question_id": "5262167a-9ceb-450c-a954-3f876c4e7047",
+      "answer": "no"
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-427663-24",
@@ -1483,10 +1483,10 @@
       "answer": "no"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-800655-41",
+      "id": "prezidentske-2023-pro-kazdeho-a-800655-66",
       "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
-      "question_id": "5262167a-9ceb-450c-a954-3f876c4e7047",
-      "answer": "no"
+      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
+      "answer": "yes"
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-800655-74",
@@ -1502,9 +1502,9 @@
       "answer": "yes"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-800655-66",
+      "id": "prezidentske-2023-pro-kazdeho-a-800655-63",
       "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
-      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
+      "question_id": "e8e00d29-4c70-4074-b4e8-5d1b21dbd6f4",
       "answer": "yes"
     },
     {
@@ -1527,10 +1527,11 @@
       "answer": "yes"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-800655-63",
+      "id": "prezidentske-2023-pro-kazdeho-a-800655-52",
       "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
-      "question_id": "e8e00d29-4c70-4074-b4e8-5d1b21dbd6f4",
-      "answer": "yes"
+      "question_id": "e7d47997-486e-48d7-b3f6-ab55ce71072b",
+      "answer": "no",
+      "comment": "Proč pouze s ním? jsme snad většinově budhisté?"
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-800655-31",
@@ -1539,11 +1540,10 @@
       "answer": "yes"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-800655-52",
+      "id": "prezidentske-2023-pro-kazdeho-a-800655-56",
       "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
-      "question_id": "e7d47997-486e-48d7-b3f6-ab55ce71072b",
-      "answer": "no",
-      "comment": "Proč pouze s ním? jsme snad většinově budhisté?"
+      "question_id": "02cbfbbb-8569-4a23-9241-135fa392f5b7",
+      "answer": "no"
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-800655-85",
@@ -1560,9 +1560,9 @@
       "comment": "S ohledem na náš export"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-800655-56",
+      "id": "prezidentske-2023-pro-kazdeho-a-800655-41",
       "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
-      "question_id": "02cbfbbb-8569-4a23-9241-135fa392f5b7",
+      "question_id": "5262167a-9ceb-450c-a954-3f876c4e7047",
       "answer": "no"
     },
     {
@@ -1754,10 +1754,10 @@
       "comment": "Je to obdobná situace jako u jmenování ministrů. Prezident disponuje informacemi např. od tajných služeb. "
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-497739-41",
+      "id": "prezidentske-2023-pro-kazdeho-a-497739-66",
       "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
-      "question_id": "5262167a-9ceb-450c-a954-3f876c4e7047",
-      "answer": "no"
+      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
+      "answer": "yes"
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-497739-74",
@@ -1773,10 +1773,11 @@
       "answer": "yes"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-497739-66",
+      "id": "prezidentske-2023-pro-kazdeho-a-497739-63",
       "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
-      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
-      "answer": "yes"
+      "question_id": "e8e00d29-4c70-4074-b4e8-5d1b21dbd6f4",
+      "answer": "yes",
+      "comment": "Většina zemí světa má nižší standardy lidských práv než západní svět. Spíš se snažme ve vzájemném kontaktu tamní poměry zlepšovat. "
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-497739-64",
@@ -1798,11 +1799,11 @@
       "answer": "no"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-497739-63",
+      "id": "prezidentske-2023-pro-kazdeho-a-497739-52",
       "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
-      "question_id": "e8e00d29-4c70-4074-b4e8-5d1b21dbd6f4",
-      "answer": "yes",
-      "comment": "Většina zemí světa má nižší standardy lidských práv než západní svět. Spíš se snažme ve vzájemném kontaktu tamní poměry zlepšovat. "
+      "question_id": "e7d47997-486e-48d7-b3f6-ab55ce71072b",
+      "answer": "dont_know",
+      "comment": "Zahraniční politiku určuje primárně vláda a prezident má danou linii dodržovat. "
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-497739-31",
@@ -1811,11 +1812,11 @@
       "answer": "no"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-497739-52",
+      "id": "prezidentske-2023-pro-kazdeho-a-497739-56",
       "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
-      "question_id": "e7d47997-486e-48d7-b3f6-ab55ce71072b",
-      "answer": "dont_know",
-      "comment": "Zahraniční politiku určuje primárně vláda a prezident má danou linii dodržovat. "
+      "question_id": "02cbfbbb-8569-4a23-9241-135fa392f5b7",
+      "answer": "no",
+      "comment": "Shoda má být zejména u zahraniční politiky. V domácí má naopak přímo volený prezident být protivahou vlády. "
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-497739-85",
@@ -1832,11 +1833,10 @@
       "comment": "Ve střední Evropě nelze být neutrální a naše historie to mnohokrát ukázala. "
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-497739-56",
+      "id": "prezidentske-2023-pro-kazdeho-a-497739-41",
       "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
-      "question_id": "02cbfbbb-8569-4a23-9241-135fa392f5b7",
-      "answer": "no",
-      "comment": "Shoda má být zejména u zahraniční politiky. V domácí má naopak přímo volený prezident být protivahou vlády. "
+      "question_id": "5262167a-9ceb-450c-a954-3f876c4e7047",
+      "answer": "no"
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-497739-24",
@@ -2024,10 +2024,10 @@
       "answer": "yes"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-728980-41",
+      "id": "prezidentske-2023-pro-kazdeho-a-728980-66",
       "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
-      "question_id": "5262167a-9ceb-450c-a954-3f876c4e7047",
-      "answer": "yes"
+      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
+      "answer": "no"
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-728980-74",
@@ -2043,9 +2043,9 @@
       "comment": "Toho, kdo má největší šanci sestavit stabilní vládu."
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-728980-66",
+      "id": "prezidentske-2023-pro-kazdeho-a-728980-63",
       "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
-      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
+      "question_id": "e8e00d29-4c70-4074-b4e8-5d1b21dbd6f4",
       "answer": "no"
     },
     {
@@ -2067,10 +2067,10 @@
       "answer": "yes"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-728980-63",
+      "id": "prezidentske-2023-pro-kazdeho-a-728980-52",
       "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
-      "question_id": "e8e00d29-4c70-4074-b4e8-5d1b21dbd6f4",
-      "answer": "no"
+      "question_id": "e7d47997-486e-48d7-b3f6-ab55ce71072b",
+      "answer": "yes"
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-728980-31",
@@ -2079,10 +2079,11 @@
       "answer": "no"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-728980-52",
+      "id": "prezidentske-2023-pro-kazdeho-a-728980-56",
       "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
-      "question_id": "e7d47997-486e-48d7-b3f6-ab55ce71072b",
-      "answer": "yes"
+      "question_id": "02cbfbbb-8569-4a23-9241-135fa392f5b7",
+      "answer": "yes",
+      "comment": "ANO, pokud tyto postoje vlády neohrožují demokracii, bezpečnost státu a lidská práva"
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-728980-85",
@@ -2097,11 +2098,10 @@
       "answer": "no"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-728980-56",
+      "id": "prezidentske-2023-pro-kazdeho-a-728980-41",
       "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
-      "question_id": "02cbfbbb-8569-4a23-9241-135fa392f5b7",
-      "answer": "yes",
-      "comment": "ANO, pokud tyto postoje vlády neohrožují demokracii, bezpečnost státu a lidská práva"
+      "question_id": "5262167a-9ceb-450c-a954-3f876c4e7047",
+      "answer": "yes"
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-728980-24",
@@ -2280,10 +2280,10 @@
       "answer": "yes"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-879071-41",
+      "id": "prezidentske-2023-pro-kazdeho-a-879071-66",
       "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
-      "question_id": "5262167a-9ceb-450c-a954-3f876c4e7047",
-      "answer": "no"
+      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
+      "answer": "yes"
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-879071-74",
@@ -2298,10 +2298,10 @@
       "answer": "yes"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-879071-66",
+      "id": "prezidentske-2023-pro-kazdeho-a-879071-63",
       "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
-      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
-      "answer": "yes"
+      "question_id": "e8e00d29-4c70-4074-b4e8-5d1b21dbd6f4",
+      "answer": "no"
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-879071-64",
@@ -2322,10 +2322,10 @@
       "answer": "no"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-879071-63",
+      "id": "prezidentske-2023-pro-kazdeho-a-879071-52",
       "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
-      "question_id": "e8e00d29-4c70-4074-b4e8-5d1b21dbd6f4",
-      "answer": "no"
+      "question_id": "e7d47997-486e-48d7-b3f6-ab55ce71072b",
+      "answer": "yes"
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-879071-31",
@@ -2334,10 +2334,11 @@
       "answer": "no"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-879071-52",
+      "id": "prezidentske-2023-pro-kazdeho-a-879071-56",
       "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
-      "question_id": "e7d47997-486e-48d7-b3f6-ab55ce71072b",
-      "answer": "yes"
+      "question_id": "02cbfbbb-8569-4a23-9241-135fa392f5b7",
+      "answer": "yes",
+      "comment": "Prezident má respektovat postoje vlády. Mohou ale nastat extrémní situace, kdy prezident musí odmítnout postoje vlády. Například pokud by bylo ohroženo demokratické zřízení státu nebo porušována Ústava. "
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-879071-85",
@@ -2352,11 +2353,10 @@
       "answer": "no"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-879071-56",
+      "id": "prezidentske-2023-pro-kazdeho-a-879071-41",
       "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
-      "question_id": "02cbfbbb-8569-4a23-9241-135fa392f5b7",
-      "answer": "yes",
-      "comment": "Prezident má respektovat postoje vlády. Mohou ale nastat extrémní situace, kdy prezident musí odmítnout postoje vlády. Například pokud by bylo ohroženo demokratické zřízení státu nebo porušována Ústava. "
+      "question_id": "5262167a-9ceb-450c-a954-3f876c4e7047",
+      "answer": "no"
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-879071-24",
@@ -2536,10 +2536,10 @@
       "answer": "yes"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-291038-41",
+      "id": "prezidentske-2023-pro-kazdeho-a-291038-66",
       "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
-      "question_id": "5262167a-9ceb-450c-a954-3f876c4e7047",
-      "answer": "no"
+      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
+      "answer": "yes"
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-291038-74",
@@ -2555,10 +2555,11 @@
       "comment": "Prezident může usilovat o to nalézt alternativní variantu, například pověřit šéfa seskupení politických stran koalice, z nichž žádná sice nebude vítězem, ale dohromady dají v parlamentu většinu. "
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-291038-66",
+      "id": "prezidentske-2023-pro-kazdeho-a-291038-63",
       "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
-      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
-      "answer": "yes"
+      "question_id": "e8e00d29-4c70-4074-b4e8-5d1b21dbd6f4",
+      "answer": "yes",
+      "comment": "Neměli bychom ale rezignovat na to, že i při obchodních vztazích je potřeba důležitost dodržování lidských práv připomínat"
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-291038-64",
@@ -2579,11 +2580,11 @@
       "answer": "yes"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-291038-63",
+      "id": "prezidentske-2023-pro-kazdeho-a-291038-52",
       "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
-      "question_id": "e8e00d29-4c70-4074-b4e8-5d1b21dbd6f4",
+      "question_id": "e7d47997-486e-48d7-b3f6-ab55ce71072b",
       "answer": "yes",
-      "comment": "Neměli bychom ale rezignovat na to, že i při obchodních vztazích je potřeba důležitost dodržování lidských práv připomínat"
+      "comment": "Tibetský dalajláma je duchovní autorita a jako prezident bych se s ním chtěl setkat."
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-291038-31",
@@ -2592,11 +2593,11 @@
       "answer": "no"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-291038-52",
+      "id": "prezidentske-2023-pro-kazdeho-a-291038-56",
       "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
-      "question_id": "e7d47997-486e-48d7-b3f6-ab55ce71072b",
-      "answer": "yes",
-      "comment": "Tibetský dalajláma je duchovní autorita a jako prezident bych se s ním chtěl setkat."
+      "question_id": "02cbfbbb-8569-4a23-9241-135fa392f5b7",
+      "answer": "no",
+      "comment": "Prezident má za úkol reprezentovat stát navenek. Takže by měl umět prezentovat nejen postoje vlády, ale v případě, že je to vhodné, v duchu loajality a spolupráce s vládou připojit i své osobní hledisko.  "
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-291038-85",
@@ -2613,11 +2614,10 @@
       "comment": "Nejsme neutrální země. Naše ústava má v sobě silný hodnotový náboj. Dělali bychom chybu, pokud bychom na to nebrali ohled i v zahraniční politice. Přišli bychom o spojence. "
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-291038-56",
+      "id": "prezidentske-2023-pro-kazdeho-a-291038-41",
       "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
-      "question_id": "02cbfbbb-8569-4a23-9241-135fa392f5b7",
-      "answer": "no",
-      "comment": "Prezident má za úkol reprezentovat stát navenek. Takže by měl umět prezentovat nejen postoje vlády, ale v případě, že je to vhodné, v duchu loajality a spolupráce s vládou připojit i své osobní hledisko.  "
+      "question_id": "5262167a-9ceb-450c-a954-3f876c4e7047",
+      "answer": "no"
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-291038-24",
@@ -2800,10 +2800,10 @@
       "answer": "yes"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-904458-41",
+      "id": "prezidentske-2023-pro-kazdeho-a-904458-66",
       "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
-      "question_id": "5262167a-9ceb-450c-a954-3f876c4e7047",
-      "answer": "no"
+      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
+      "answer": "yes"
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-904458-74",
@@ -2818,9 +2818,9 @@
       "answer": "yes"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-904458-66",
+      "id": "prezidentske-2023-pro-kazdeho-a-904458-63",
       "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
-      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
+      "question_id": "e8e00d29-4c70-4074-b4e8-5d1b21dbd6f4",
       "answer": "yes"
     },
     {
@@ -2842,9 +2842,9 @@
       "answer": "yes"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-904458-63",
+      "id": "prezidentske-2023-pro-kazdeho-a-904458-52",
       "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
-      "question_id": "e8e00d29-4c70-4074-b4e8-5d1b21dbd6f4",
+      "question_id": "e7d47997-486e-48d7-b3f6-ab55ce71072b",
       "answer": "yes"
     },
     {
@@ -2854,10 +2854,10 @@
       "answer": "yes"
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-904458-52",
+      "id": "prezidentske-2023-pro-kazdeho-a-904458-56",
       "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
-      "question_id": "e7d47997-486e-48d7-b3f6-ab55ce71072b",
-      "answer": "yes"
+      "question_id": "02cbfbbb-8569-4a23-9241-135fa392f5b7",
+      "answer": "no"
     },
     {
       "id": "prezidentske-2023-pro-kazdeho-a-904458-85",
@@ -2873,9 +2873,9 @@
       "comment": "Členství v NATO a EU je nezpochybnitelné."
     },
     {
-      "id": "prezidentske-2023-pro-kazdeho-a-904458-56",
+      "id": "prezidentske-2023-pro-kazdeho-a-904458-41",
       "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
-      "question_id": "02cbfbbb-8569-4a23-9241-135fa392f5b7",
+      "question_id": "5262167a-9ceb-450c-a954-3f876c4e7047",
       "answer": "no"
     },
     {
