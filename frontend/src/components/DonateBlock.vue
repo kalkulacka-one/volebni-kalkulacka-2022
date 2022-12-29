@@ -24,8 +24,8 @@ export default {
     <StackComponent spacing="small">
       <TitleText size="large" tag="h2">Podpořte tvorbu kalkulaček</TitleText>
       <BodyText size="medium"
-        >Líbí se vám projekt Volební kalkulačka? Budeme rádi pokud nás podpoříte
-        a umožníte nám pokračovat v jejich tvorbě.</BodyText
+        >Líbí se vám projekt Volební kalkulačka? Budeme rádi, pokud nás
+        podpoříte a umožníte nám pokračovat v jejich tvorbě.</BodyText
       >
     </StackComponent>
     <div class="donation" data-darujme-widget-token="w2acrk0w61fgr3so">
