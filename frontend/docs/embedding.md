@@ -4,7 +4,7 @@ Volební kalkulačka is optimized for embedding to other websites by design. Tha
 
 ## How to use embeds
 
-To create an embed, create a new file in `@/components/embeds/MyAwesomeEmbed.vue` (filename always has to end with `Embed` and be CamelCased):
+To create an embed, create a new file in `@/components/embeds/MyAwesomeEmbed.vue` (filename always has to end with `Embed` and be PascalCased):
 
 ```vue
 <script setup lang="ts">
