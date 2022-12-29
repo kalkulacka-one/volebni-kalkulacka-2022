@@ -69,7 +69,7 @@ defineProps<Props>();
 
 Themes are actually Vue components which define CSS variables. Themes live in `@/components/themes` folder.
 
-To create a new theme, simply create a new file in `@/components/themes/MyAwesomeTheme.vue` (filename always has to end with `Theme` and be CamelCased):
+To create a new theme, simply create a new file in `@/components/themes/MyAwesomeTheme.vue` (filename always has to end with `Theme` and be PascalCased):
 
 ```vue
 <template>
