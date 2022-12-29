@@ -119,8 +119,11 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
         class="header"
         :style="{ 'grid-column': 2 * index + 2, 'grid-row': 1 }"
       >
-        <FilledCircle size="extra-large"
-          ><BodyText
+        <FilledCircle
+          size="extra-large"
+          style="padding: var(--spacing-extra-small)"
+        >
+          <BodyText
             size="extra-small"
             color="rgb(var(--color-neutral-fg-inverse))"
             :style="{ 'text-align': 'center' }"
@@ -181,17 +184,17 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
         >
           <FilledCircle
             :background-color="`rgb(var(--color-${mapAnswerToColor(candidateAnswers.filter(
-              (answer) =>
-                answer.candidate_id === candidateId &&
-                answer.question_id === question.id
-            )[0].answer as string)}-bg-strong))`"
+  (answer) =>
+    answer.candidate_id === candidateId &&
+    answer.question_id === question.id
+)[0].answer as string)}-bg-strong))`"
           >
             <IconComponent
               :icon="mapAnswerToIcon(candidateAnswers.filter(
-              (answer) =>
-                answer.candidate_id === candidateId &&
-                answer.question_id === question.id
-            )[0].answer as string)"
+  (answer) =>
+    answer.candidate_id === candidateId &&
+    answer.question_id === question.id
+)[0].answer as string)"
               color="rgb(var(--color-neutral-fg-inverse))"
             />
           </FilledCircle>
@@ -244,7 +247,7 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
   grid-auto-columns: max-content;
   justify-items: center;
   column-gap: var(--responsive-spacing-large);
-  row-gap: var(--responsive-spacing-large);
+  row-gap: var(--spacing-medium);
 }
 
 .column {
@@ -259,7 +262,7 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
 
 .question-card {
   justify-self: start;
-  max-width: clamp(32rem, 50vw, 48rem);
+  max-width: calc(100vw - 2 * var(--responsive-spacing-large));
 }
 
 .question-card,
