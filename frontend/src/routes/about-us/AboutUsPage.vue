@@ -59,7 +59,7 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
         <BodyText size="large">
           Českou a slovenskou Volební kalkulačku vyvíjí a provozuje spolek
           <a href="https://kohovolit.eu/">KohoVolit.eu</a>
-          již od roku 2006. Celkem jsme vytvořili již přes 30 volebních
+          již od roku 2006. Celkem jsme vytvořili již přes 100 volebních
           kalkulaček pro všechny druhy voleb (evropské, prezidentské,
           parlamentní, regionální i komunální). Pravidelně také pomáháme tvořit
           kalkulačky v Maďarsku a v dalších zemích. Zatím nejúspěšnější
@@ -71,14 +71,14 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
           kalkulaček:
         </BodyText>
         <BodyText size="large">
-          Inventura hlasování porovnává Vaše odpovědi s reálnými hlasováními v
-          zákonodárném sboru za uplynulé funkční období.
-        </BodyText>
-        <BodyText size="large">
           Volební kalkulačka (názorový test) porovnává Vaše odpovědi s
           odpověďmi, které nám poskytly samotné politické strany či kandidáti ve
           volbách. Pokud některá strana či kandidát v názorovém testu chybí, je
           to vždy proto, že jsme neobdrželi odpovědi.
+        </BodyText>
+        <BodyText size="large">
+          Inventura hlasování porovnává Vaše odpovědi s reálnými hlasováními v
+          zákonodárném sboru za uplynulé funkční období.
         </BodyText>
 
         <TitleText size="large" tag="h2"> Jak tvoříme otázky </TitleText>
@@ -139,6 +139,141 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
           Může se stát, že Vám vyjde stejná shoda se dvěma nebo více stranami či
           osobami. V tom případě je pořadí stran či osob při zobrazení výsledné
           shody určeno náhodně.
+        </BodyText>
+        <TitleText size="large" tag="h2">
+          Současnou Volební kalkulačku připravili
+        </TitleText>
+        <BodyText size="large">
+          <ul>
+            <li>
+              <a
+                href="https://www.seznamzpravy.cz/autor/michal-skop-1250/"
+                target="_blank"
+                >Michal Škop</a
+              >
+              - KohoVolit.eu
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/lucie-zatorska-81714350/"
+                target="_blank"
+                >Lucie Zátorská</a
+              >
+              - Scrum Master
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/mwenisch/" target="_blank"
+                >Martin Wenisch</a
+              >
+              - mentor Česko.Digital
+            </li>
+            <li>
+              <a
+                href="https://www.seznamzpravy.cz/autor/katerina-mahdalova-815"
+                target="_blank"
+                >Kateřina Mahdalová</a
+              >
+              - obsah a komunikace
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/mwenisch/" target="_blank"
+                >Gabriela Chladilová</a
+              >
+              - Support Česko.Digital
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/klara-scholleova/"
+                target="_blank"
+                >Klára Schoelleová</a
+              >
+              - UX/UI
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/natalia-bebjakova/"
+                target="_blank"
+                >Natália Bebjaková</a
+              >
+              - UX/UI
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/krystofk/" target="_blank"
+                >Kryštof Korb</a
+              >
+              - Tech Team
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/ondrej-kyjanek-b24832a3/"
+                target="_blank"
+                >Ondřej Kyjánek</a
+              >
+              - Tech Team
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/pavel-vojacek-14420713/"
+                target="_blank"
+                >Pavel Vojáček</a
+              >
+              - Tech Team
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/martin-ladeck%C3%BD-9366ba5/"
+                target="_blank"
+                >Martin Ladecký</a
+              >
+              - Tech Team
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/martinmajlis/"
+                target="_blank"
+                >Martin Majliš</a
+              >
+              - Tech Team
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/tiborkulcar/" target="_blank"
+                >Tibur Kulčár</a
+              >
+              - Tech Team
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/lukasprikryl/"
+                target="_blank"
+                >Lukáš Přikryl</a
+              >
+              - Marketing Lead
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/pavla-radkova/"
+                target="_blank"
+                >Pavla Řádková</a
+              >
+              - UX Research
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/klara-vostinakova/"
+                target="_blank"
+                >Klára Vostiňáková</a
+              >
+              - komunikace
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/doroteja-stamenova-03a50924/"
+                target="_blank"
+                >Doroteja Stamenova</a
+              >
+              - UX/UI
+            </li>
+          </ul>
         </BodyText>
 
         <BodyText size="large">
