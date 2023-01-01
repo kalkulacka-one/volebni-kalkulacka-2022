@@ -77,6 +77,9 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
             >Kdo kandiduje (Programy do voleb)
           </a>
         </BodyText>
+        <BodyText size="small">
+          Volební kalkulačku už vyplnilo přes 250 tisíc lidí.
+        </BodyText>
       </StackComponent>
       <div class="avatars">
         <div class="avatar pavel-fischer">
