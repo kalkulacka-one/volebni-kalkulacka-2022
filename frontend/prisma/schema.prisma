@@ -25,4 +25,17 @@ model Answers {
   calculatorId String
   answers      Json
   matches      Json
+  userId       String?
+  User         User?         @relation(fields: [userId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model User {
+  id             String    @id @default(uuid())
+  name           String?   @db.String(255)
+  email          String    @unique @db.String(255)
+  authProvider   String?   @db.String(32)
+  authProviderId String?   @db.String(255)
+  createdAt      DateTime  @default(now()) @db.Timestamptz()
+  updatedAt      DateTime  @updatedAt @db.Timestamptz()
+  Result         Answers[]
 }

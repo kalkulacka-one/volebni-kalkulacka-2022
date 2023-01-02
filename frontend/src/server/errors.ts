@@ -51,6 +51,16 @@ export const respond400 = (res: VercelResponse, message: string) => {
   );
 };
 
+export const respond401 = (res: VercelResponse, message = '') => {
+  return errorRespond(
+    res,
+    401,
+    'https://volebnikalkulacka.cz/api/errors/unauthorized',
+    'Unauthorized',
+    message
+  );
+};
+
 export const prismaErrorHandler = (res: VercelResponse) => {
   return (
     err:
