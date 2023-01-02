@@ -22,6 +22,7 @@ export default async function (req: VercelRequest, res: VercelResponse) {
     const body = getBody(req, res);
     const answers = body.answers as Prisma.JsonObject;
     const matches = body.matches as Prisma.JsonObject;
+    const user = await authUser(req, res);
     const result = await prisma.answers
       .create({
         data: {
