@@ -43,6 +43,10 @@ export default defineConfig(({ command, mode }) => {
                 }),
             }
           : undefined,
+        // '^/api/auth/.*': process.env.API_PROXY ? {
+        //   target: process.env.API_PROXY + '/api/auth/',
+        //   changeOrigin: true,
+        // } : {target: '/api/auth/'},
         '/api': process.env.API_PROXY
           ? {
               target: process.env.API_PROXY,
