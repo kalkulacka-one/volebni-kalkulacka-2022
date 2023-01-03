@@ -20,11 +20,7 @@ export const errorRespond = (
   });
 };
 
-export const respond404 = (
-  res: VercelResponse,
-  subject: string,
-  id: string = ''
-) => {
+export const respond404 = (res: VercelResponse, subject: string, id = '') => {
   return errorRespond(
     res,
     404,
