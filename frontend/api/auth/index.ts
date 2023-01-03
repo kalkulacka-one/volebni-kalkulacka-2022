@@ -8,6 +8,7 @@ import type { Profile } from 'passport';
 import { prisma } from '../../src/server/prisma';
 import { assignAnswerToUser } from '../answers';
 import ms from 'ms';
+import { respond404 } from '../../src/server/errors';
 
 const app: Express = express();
 
@@ -104,7 +105,7 @@ const callback = (provider: string) => {
   return (req: Request, res: Response, next: NextFunction) => {
     passport.authenticate(provider, { session: false }, (err, user, info) => {
       if (err || !user) {
-        return res.redirect('/' + '/?error=' + err?.message);
+        return res.redirect('/' + '?error=' + err?.message);
       }
       req.login(user, { session: false }, (err) => {
         if (err) {
@@ -204,7 +205,7 @@ app.get('/api/auth/logout', (req, res) => {
 });
 
 app.get('/*', (req, res) => {
-  res.status(404).end(`404 - ${req.url}`);
+  respond404(res, req.url);
 });
 
 module.exports = app;
