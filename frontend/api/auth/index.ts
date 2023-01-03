@@ -12,7 +12,10 @@ import { respond404 } from '../../src/server/errors';
 
 const app: Express = express();
 
-const BASE_URL = process.env['BASE_URL'] || 'http://localhost:3000';
+const BASE_URL =
+  process.env['VITE_PUBLIC_URL'] ||
+  process.env['BASE_URL'] ||
+  'http://localhost:3000';
 
 const providers = {
   facebook: {
