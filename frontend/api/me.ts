@@ -9,27 +9,26 @@ import {
 } from '../src/server/errors';
 
 export default async function (req: VercelRequest, res: VercelResponse) {
-  let user: void | User | null;
+  let auth: null | { user: User; exp: number } = null;
   try {
-    user = await authUser(req, res);
+    auth = await authUser(req, res);
   } catch (err) {
     return respond401(res);
   }
-
-  if (!user) {
+  if (!auth) {
     return respond401(res, 'User not found.');
   }
 
   if (req.method === 'GET') {
-    return res.send({ user: user });
+    return res.send(auth);
   } else if (req.method === 'DELETE') {
     await prisma
       .$transaction([
         prisma.answers.updateMany({
-          where: { userId: user.id },
+          where: { userId: auth.user.id },
           data: { userId: null },
         }),
-        prisma.user.delete({ where: { id: user.id } }),
+        prisma.user.delete({ where: { id: auth.user.id } }),
       ])
       .catch(prismaErrorHandler(res));
     return res.status(204).send(null);
