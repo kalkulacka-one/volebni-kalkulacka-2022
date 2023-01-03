@@ -13,7 +13,14 @@ export default {
   },
   argTypes: {
     color: {
-      options: ['neutral', 'primary', 'secondary', 'white', 'facebook'],
+      options: [
+        'neutral',
+        'primary',
+        'secondary',
+        'white',
+        'facebook',
+        'twitter',
+      ],
       control: {
         type: 'select',
       },
@@ -124,6 +131,28 @@ export const NeutralLink = Template.bind({});
 NeutralLink.args = {
   color: 'neutral',
   kind: 'link',
+};
+
+export const WithIconLeft: StoryFn<typeof ButtonComponent> = (args) => ({
+  components: { ButtonComponent, SocialMediaIcon },
+  setup() {
+    return { args };
+  },
+  template: `
+    <ButtonComponent v-bind="args" style="width: 100%">
+      <template #iconAfter>
+        <SocialMediaIcon type="facebook" color="white" />
+      </template>
+      <template #default>
+        Facebook
+      </template>
+    </ButtonComponent>
+  `,
+});
+
+WithIconLeft.args = {
+  color: 'neutral',
+  kind: 'filled',
 };
 
 export const Facebook: StoryFn<typeof ButtonComponent> = (args) => ({

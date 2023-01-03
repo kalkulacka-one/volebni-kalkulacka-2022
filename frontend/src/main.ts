@@ -27,6 +27,7 @@ import SharePageVue from './routes/share/SharePage.vue';
 import AboutUsPageVue from './routes/about-us/AboutUsPage.vue';
 import AboutElectionsPageVue from './routes/about-elections/AboutElectionsPage.vue';
 import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
+import RegisterPageVue from './routes/profile/RegisterPageVue.vue';
 import { getDistrictCode } from './common/utils';
 import VueSocialSharing from 'vue-social-sharing';
 
@@ -174,6 +175,14 @@ export const appRoutes = {
     component: SharePageVue,
     meta: {
       title: 'Moje výsledky - Volební kalkulačka',
+    },
+  },
+  register: {
+    name: 'register',
+    path: '/register',
+    component: RegisterPageVue,
+    meta: {
+      title: 'Registrace - Volební kalkulačka',
     },
   },
   fallback: {

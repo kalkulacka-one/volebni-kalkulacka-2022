@@ -1,18 +1,20 @@
 <script setup lang="ts">
 export interface Props {
-  tag?: 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  tag?: 'p' | 'span' | 'strong' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   size: 'extra-small' | 'small' | 'medium' | 'large';
   color?: string;
+  strong?: boolean;
 }
 
 withDefaults(defineProps<Props>(), {
   tag: 'p',
   color: 'rgb(var(--color-neutral-fg))',
+  strong: false,
 });
 </script>
 
 <template>
-  <component :is="tag" :class="[size]">
+  <component :is="tag" :class="[size, { strong: strong }]">
     <slot />
   </component>
 </template>
@@ -60,5 +62,9 @@ withDefaults(defineProps<Props>(), {
   font-size: var(--typography-body-large-size);
   line-height: var(--typography-body-large-line-height);
   letter-spacing: var(--typography-body-large-letter-spacing);
+}
+
+.strong {
+  font-weight: 700;
 }
 </style>

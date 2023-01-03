@@ -8,7 +8,13 @@ export interface Props {
   href?: string;
   kind: 'link' | 'outlined' | 'filled' | 'answer';
   size?: 'medium' | 'small';
-  color?: 'neutral' | 'primary' | 'secondary' | 'white' | 'facebook';
+  color?:
+    | 'neutral'
+    | 'primary'
+    | 'secondary'
+    | 'white'
+    | 'facebook'
+    | 'twitter';
   selected?: boolean;
   readOnly?: boolean;
 }
@@ -59,7 +65,7 @@ const computedSize = computed(() =>
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   line-height: 0;
   padding: 0;
   cursor: pointer;
@@ -168,7 +174,7 @@ const computedSize = computed(() =>
       }
 
       &--after {
-        margin-left: var(--spacing-extra-small);
+        margin-left: auto;
       }
     }
   }
@@ -198,7 +204,7 @@ const computedSize = computed(() =>
       }
 
       &--after {
-        margin-left: var(--spacing-small);
+        margin-left: auto;
       }
     }
   }
@@ -289,6 +295,25 @@ const computedSize = computed(() =>
       &:not(.button--read-only):active {
         color: #1877f2;
         border-color: #1877f2;
+      }
+    }
+
+    &.button--twitter {
+      color: rgb(29, 155, 240);
+      background-color: transparent;
+      border-color: rgb(29, 155, 240);
+
+      @media (hover: hover) {
+        &:not(.button--read-only):hover {
+          color: rgb(26, 140, 216);
+          border-color: rgb(26, 140, 216);
+        }
+      }
+
+      .button--selected,
+      &:not(.button--read-only):active {
+        color: rgb(26, 140, 216);
+        border-color: rgb(26, 140, 216);
       }
     }
 
@@ -402,6 +427,25 @@ const computedSize = computed(() =>
       }
     }
 
+    &.button--twitter {
+      color: white;
+      background-color: rgb(29, 155, 240);
+      border-color: transparent;
+
+      @media (hover: hover) {
+        &:not(.button--read-only):hover {
+          color: white;
+          background-color: rgb(26, 140, 216);
+        }
+      }
+
+      .button--selected,
+      &:not(.button--read-only):active {
+        color: white;
+        background-color: rgb(26, 140, 216);
+      }
+    }
+
     &.button--white {
       background-color: white;
       color: rgb(var(--palette-neutral-40));
@@ -451,7 +495,7 @@ const computedSize = computed(() =>
       }
 
       &--after {
-        margin-left: var(--spacing-medium);
+        margin-left: auto;
       }
     }
 
