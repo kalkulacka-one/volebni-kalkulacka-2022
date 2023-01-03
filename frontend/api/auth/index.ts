@@ -6,6 +6,7 @@ import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 import { Strategy as TwitterStrategy } from 'passport-twitter';
 import type { Profile } from 'passport';
 import { prisma } from '../../src/server/prisma';
+import ms from 'ms';
 
 const app: Express = express();
 
@@ -120,11 +121,15 @@ const loginWith = (provider: string) => {
             expiresIn: process.env.JWT_EXPIRES_IN || '7d',
           });
           const cookiePayload = { token };
+          const expiresInDate = new Date(
+            Date.now() + ms(process.env.JWT_EXPIRES_IN || '7d')
+          );
           res.cookie('auth', JSON.stringify(cookiePayload), {
             domain: process.env.DOMAIN_NAME,
             secure: process.env.NODE_ENV === 'production',
             httpOnly: true,
             sameSite: 'strict',
+            expires: expiresInDate,
           });
         } catch (err) {
           return res.status(400).send({ err });
