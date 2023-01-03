@@ -185,6 +185,22 @@ for (const provider in providers) {
   }
 }
 
+app.get('/api/auth/logout', (req, res) => {
+  let redirect = req.query.returnTo;
+  if (typeof redirect !== 'string' || !redirect.startsWith('/')) {
+    redirect = '/';
+  } else {
+    redirect = decodeURIComponent(redirect);
+  }
+  res.clearCookie('auth', {
+    domain: process.env.DOMAIN_NAME,
+    secure: process.env.NODE_ENV === 'production',
+    httpOnly: true,
+    sameSite: 'strict',
+  });
+  res.redirect(decodeURIComponent(redirect));
+});
+
 app.get('/*', (req, res) => {
   res.status(404).end(`404 - ${req.url}`);
 });
