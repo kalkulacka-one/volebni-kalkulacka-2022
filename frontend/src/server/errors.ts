@@ -20,7 +20,7 @@ export const errorRespond = (
   });
 };
 
-export const respond404 = (res: VercelResponse, subject: string, id = '') => {
+export const respond404 = (res: VResponse, subject: string, id = '') => {
   return errorRespond(
     res,
     404,
@@ -56,6 +56,16 @@ export const respond401 = (res: VResponse, message = '') => {
     401,
     'https://volebnikalkulacka.cz/api/errors/unauthorized',
     'Unauthorized',
+    message
+  );
+};
+
+export const respond500 = (res: VResponse, message = '') => {
+  return errorRespond(
+    res,
+    500,
+    'https://volebnikalkulacka.cz/api/errors/internal-server-error',
+    'Internal server error',
     message
   );
 };
