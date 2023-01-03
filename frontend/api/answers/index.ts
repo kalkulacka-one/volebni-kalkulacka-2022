@@ -2,7 +2,11 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 import type { Prisma } from '@prisma/client';
 import { prisma, getBody } from '../../src/server/prisma';
 import { authUser } from '../../src/server/auth';
-import { respond405, prismaErrorHandler } from '../../src/server/errors';
+import {
+  respond405,
+  prismaErrorHandler,
+  respond401,
+} from '../../src/server/errors';
 
 export async function assignAnswerToUser(
   answerId: string,
@@ -28,11 +32,20 @@ export async function assignAnswerToUser(
 }
 
 export default async function (req: VercelRequest, res: VercelResponse) {
-  if (req.method === 'POST') {
+  const user = await authUser(req, res);
+  if (req.method === 'GET') {
+    if (!user) {
+      console.log('User not found');
+      return respond401(res);
+    }
+    const answers = await prisma.answers.findMany({
+      where: { userId: user.id },
+    });
+    return res.json(answers);
+  } else if (req.method === 'POST') {
     const body = getBody(req, res);
     const answers = body.answers as Prisma.JsonObject;
     const matches = body.matches as Prisma.JsonObject;
-    const user = await authUser(req, res);
     const result = await prisma.answers
       .create({
         data: {
