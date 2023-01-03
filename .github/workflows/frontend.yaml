@@ -23,7 +23,7 @@ jobs:
       - name: Get NPM cache folder path
         id: npm-cache-folder
         run: |
-          echo "::set-output name=path::$(npm config get cache)"
+          echo "path=$(npm config get cache)" >> $GITHUB_OUTPUT
       - name: Set up NPM cache
         uses: actions/cache@v3
         id: npm-cache
