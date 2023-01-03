@@ -6,6 +6,7 @@ import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 import { Strategy as TwitterStrategy } from 'passport-twitter';
 import type { Profile } from 'passport';
 import { prisma } from '../../src/server/prisma';
+import { assignAnswerToUser } from '../answers';
 import ms from 'ms';
 
 const app: Express = express();
@@ -99,7 +100,7 @@ const getStrategyCallback = (strategy: string) => {
   };
 };
 
-const loginWith = (provider: string) => {
+const callback = (provider: string) => {
   return (req: Request, res: Response, next: NextFunction) => {
     passport.authenticate(provider, { session: false }, (err, user, info) => {
       if (err || !user) {
@@ -134,9 +135,44 @@ const loginWith = (provider: string) => {
         } catch (err) {
           return res.status(400).send({ err });
         }
-        res.redirect(BASE_URL + '/?login=loginsuccess');
+
+        try {
+          const { state } = req.query;
+          if (state) {
+            const { returnTo, updateToken, answerId } = JSON.parse(
+              Buffer.from(state as string, 'base64').toString()
+            );
+            if (updateToken && answerId) {
+              assignAnswerToUser(answerId, updateToken, user.id);
+            }
+            if (typeof returnTo === 'string' && returnTo.startsWith('/')) {
+              return res.redirect(returnTo);
+            }
+          }
+        } catch {
+          // just redirect normally below
+        }
+        res.redirect('/?login=loginsuccess-default');
       });
     })(req, res, next);
+  };
+};
+
+const authenticate = (options) => {
+  return (req: Request, res: Response, next: NextFunction) => {
+    const { provider } = options;
+    const { returnTo, updateToken, answerId } = req.query;
+    const state =
+      returnTo || (updateToken && answerId)
+        ? Buffer.from(
+            JSON.stringify({ returnTo, updateToken, answerId })
+          ).toString('base64')
+        : undefined;
+    const authenticator = passport.authenticate(provider, {
+      scope: ['email'],
+      state,
+    });
+    return authenticator(req, res, next);
   };
 };
 
@@ -144,11 +180,8 @@ for (const provider in providers) {
   if (providers[provider].enabled) {
     // Initialize routes for each provider
     passport.use(providers[provider].strategy());
-    app.get(
-      `/api/auth/${provider}`,
-      passport.authenticate(provider, { scope: ['email'] })
-    );
-    app.get(`/api/auth/${provider}/callback`, loginWith(provider));
+    app.get(`/api/auth/${provider}`, authenticate({ provider }));
+    app.get(`/api/auth/${provider}/callback`, callback(provider));
   }
 }
 
