@@ -142,25 +142,31 @@ const handleStarClick = () => electionStore.flipAnswerFlag(questionNr.value);
 //internally questions start at 0
 const questionNr = computed(() => parseInt(route.params['nr'] as string) - 1);
 const handleAnswerClick = (answer: UserAnswerEnum) => {
-  electionStore.setAnswer(questionNr.value, answer);
-  if (questionNr.value - 1 === electionStore.answerProgress) {
-    electionStore.incrementAnswerProgress();
+  const currentAnswer = electionStore.answers[questionNr.value].answer;
+  if (answer === currentAnswer) {
+    electionStore.setAnswer(questionNr.value, UserAnswerEnum.skip);
+  } else {
+    electionStore.setAnswer(questionNr.value, answer);
+
+    if (questionNr.value - 1 === electionStore.answerProgress) {
+      electionStore.incrementAnswerProgress();
+    }
+    const newRoute = {
+      name: appRoutes.question.name,
+      params: { ...route.params, nr: questionNr.value + 2 },
+      query: { ...route.query },
+    };
+    if (
+      electionStore.answerProgress === questionNr.value &&
+      electionStore.answerProgress > electionStore.questionCount - 2
+    ) {
+      newRoute.name = appRoutes.recap.name;
+    }
+    console.debug(
+      `answer ${UserAnswerEnum[answer]}, current: ${questionNr.value}, progress: ${electionStore.answerProgress}`
+    );
+    router.push(newRoute);
   }
-  const newRoute = {
-    name: appRoutes.question.name,
-    params: { ...route.params, nr: questionNr.value + 2 },
-    query: { ...route.query },
-  };
-  if (
-    electionStore.answerProgress === questionNr.value &&
-    electionStore.answerProgress > electionStore.questionCount - 2
-  ) {
-    newRoute.name = appRoutes.recap.name;
-  }
-  console.debug(
-    `answer ${UserAnswerEnum[answer]}, current: ${questionNr.value}, progress: ${electionStore.answerProgress}`
-  );
-  router.push(newRoute);
 };
 </script>
 
