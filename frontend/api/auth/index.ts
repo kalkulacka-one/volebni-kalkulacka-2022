@@ -127,6 +127,7 @@ const callback = (provider: string) => {
           );
           res.cookie('auth', JSON.stringify(cookiePayload), {
             domain: process.env.DOMAIN_NAME,
+            path: '/api',
             secure: process.env.NODE_ENV === 'production',
             httpOnly: true,
             sameSite: 'strict',
@@ -194,6 +195,7 @@ app.get('/api/auth/logout', (req, res) => {
   }
   res.clearCookie('auth', {
     domain: process.env.DOMAIN_NAME,
+    path: '/api',
     secure: process.env.NODE_ENV === 'production',
     httpOnly: true,
     sameSite: 'strict',
