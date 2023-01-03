@@ -1,8 +1,11 @@
 import type { VercelResponse } from '@vercel/node';
 import { Prisma } from '@prisma/client';
+import type { Response } from 'express';
+
+type VResponse = VercelResponse | Response;
 
 export const errorRespond = (
-  res: VercelResponse,
+  res: VResponse,
   status: number,
   type: string,
   title: string,
@@ -20,18 +23,18 @@ export const errorRespond = (
 export const respond404 = (
   res: VercelResponse,
   subject: string,
-  id: string
+  id: string = ''
 ) => {
   return errorRespond(
     res,
     404,
     'https://volebnikalkulacka.cz/api/errors/result-not-found',
     `${subject} not found`,
-    `${subject} ${id} not found.`
+    `${subject} - ${id} not found.`
   );
 };
 
-export const respond405 = (res: VercelResponse, method = 'none') => {
+export const respond405 = (res: VResponse, method = 'none') => {
   return errorRespond(
     res,
     405,
@@ -41,7 +44,7 @@ export const respond405 = (res: VercelResponse, method = 'none') => {
   );
 };
 
-export const respond400 = (res: VercelResponse, message: string) => {
+export const respond400 = (res: VResponse, message: string) => {
   return errorRespond(
     res,
     400,
@@ -51,7 +54,7 @@ export const respond400 = (res: VercelResponse, message: string) => {
   );
 };
 
-export const respond401 = (res: VercelResponse, message = '') => {
+export const respond401 = (res: VResponse, message = '') => {
   return errorRespond(
     res,
     401,
@@ -61,7 +64,7 @@ export const respond401 = (res: VercelResponse, message = '') => {
   );
 };
 
-export const prismaErrorHandler = (res: VercelResponse) => {
+export const prismaErrorHandler = (res: VResponse) => {
   return (
     err:
       | Prisma.PrismaClientValidationError
