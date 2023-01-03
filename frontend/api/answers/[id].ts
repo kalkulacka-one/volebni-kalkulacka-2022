@@ -36,16 +36,14 @@ export default async function (req: VercelRequest, res: VercelResponse) {
     const matches = body.matches;
     const updateToken = req.body.updateToken;
     const existingResult = await prisma.answers
-      .findUnique({
+      .findUniqueOrThrow({
         where: { id: resultId },
       })
       .catch(prismaErrorHandler(res));
 
-    if (existingResult === null) {
+    if (!existingResult) {
       return respond404(res, 'answer', resultId);
-    }
-
-    if (existingResult?.userId && !auth) {
+    } else if (existingResult?.userId && !auth) {
       return errorRespond(
         res,
         401,
