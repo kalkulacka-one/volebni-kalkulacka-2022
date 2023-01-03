@@ -32,14 +32,13 @@ export async function assignAnswerToUser(
 }
 
 export default async function (req: VercelRequest, res: VercelResponse) {
-  const user = await authUser(req, res);
+  const auth = await authUser(req, res);
   if (req.method === 'GET') {
-    if (!user) {
-      console.log('User not found');
+    if (!auth?.user) {
       return respond401(res);
     }
     const answers = await prisma.answers.findMany({
-      where: { userId: user.id },
+      where: { userId: auth.user.id },
     });
     return res.json(answers);
   } else if (req.method === 'POST') {
@@ -54,7 +53,7 @@ export default async function (req: VercelRequest, res: VercelResponse) {
           source: req.body.source,
           embedName: req.body.embedName,
           calculatorId: req.body.calculatorId,
-          userId: user?.id,
+          userId: auth?.user?.id,
         },
       })
       .catch(prismaErrorHandler(res));
