@@ -71,7 +71,7 @@ const initials = computed(() => {
     });
     return letters;
   }
-  return;
+  return null;
 });
 </script>
 
