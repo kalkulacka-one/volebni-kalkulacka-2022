@@ -12,10 +12,13 @@ import { respond404 } from '../../src/server/errors';
 
 const app: Express = express();
 
-const BASE_URL =
-  process.env['VITE_PUBLIC_URL'] ||
-  process.env['BASE_URL'] ||
-  'http://localhost:3000';
+if (process.env.VERCEL_ENV === 'preview') {
+  process.env[
+    'BASE_URL'
+  ] = `https://volebni-kalkulacka-2022-git-${process.env.VERCEL_GIT_COMMIT_REF}-ceskodigital.vercel.app`;
+}
+
+const BASE_URL = process.env['BASE_URL'] || 'http://localhost:3000';
 
 const providers = {
   facebook: {
