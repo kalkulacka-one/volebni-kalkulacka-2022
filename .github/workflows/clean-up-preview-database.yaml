@@ -1,0 +1,44 @@
+name: "Clean up preview database"
+on:
+  pull_request:
+    types: [closed]
+jobs:
+  clean-up:
+    name: Clean up preview database
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+      - name: Get NPM cache folder path
+        id: npm-cache-folder
+        run: |
+          echo "path=$(npm config get cache)" >> $GITHUB_OUTPUT
+      - name: Set up NPM cache
+        uses: actions/cache@v3
+        id: npm-cache
+        env:
+          cache-name: frontend-node-modules
+        with:
+          path: ${{ steps.npm-cache-folder.outputs.path }}
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ env.cache-name }}-
+      - name: Install dependencies
+        run: |
+          npm ci
+      - name: Prepare database name
+        id: database-name
+        run: |
+          export BRANCH_NAME=${GITHUB_HEAD_REF##*/}
+          export BRANCH_NAME_SHA=$(echo -n $BRANCH_NAME | openssl dgst -sha256 | sed 's/^.* //')
+          echo "branch_name_sha=$BRANCH_NAME_SHA" >> $GITHUB_OUTPUT
+      - name: Drop preview database
+        env:
+          DATABASE_URL: ${{ secrets.PREVIEW_DATABASE_URL_BASE }}
+        run: |
+          echo 'DROP DATABASE "${{ steps.database-name.outputs.branch_name_sha }}";' | npx prisma db execute --stdin
