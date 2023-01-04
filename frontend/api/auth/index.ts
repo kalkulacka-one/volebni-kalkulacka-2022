@@ -14,6 +14,7 @@ import { respond404 } from '../../src/server/errors';
 const app: Express = express();
 
 const PUBLIC_URL = getPublicUrl();
+const OAUTH_CALLBACK_URL = process.env.OAUTH_CALLBACK_URL || PUBLIC_URL;
 
 const providers = {
   facebook: {
@@ -23,7 +24,7 @@ const providers = {
           clientID: process.env['FACEBOOK_CLIENT_ID'] as string,
           clientSecret: process.env['FACEBOOK_CLIENT_SECRET'] as string,
           profileFields: ['id', 'displayName', 'email', 'gender'],
-          callbackURL: `${PUBLIC_URL}/api/auth/facebook/callback`,
+          callbackURL: `${OAUTH_CALLBACK_URL}/api/auth/facebook/callback`,
         },
         getStrategyCallback('facebook')
       );
@@ -38,7 +39,7 @@ const providers = {
         {
           clientID: process.env['GOOGLE_CLIENT_ID'] as string,
           clientSecret: process.env['GOOGLE_CLIENT_SECRET'] as string,
-          callbackURL: `${PUBLIC_URL}/api/auth/google/callback`,
+          callbackURL: `${OAUTH_CALLBACK_URL}/api/auth/google/callback`,
         },
         getStrategyCallback('google')
       );
@@ -53,7 +54,7 @@ const providers = {
         {
           consumerKey: process.env['TWITTER_CONSUMER_KEY'] as string,
           consumerSecret: process.env['TWITTER_CONSUMER_SECRET'] as string,
-          callbackURL: `${PUBLIC_URL}/api/auth/twitter/callback`,
+          callbackURL: `${OAUTH_CALLBACK_URL}/api/auth/twitter/callback`,
         },
         getStrategyCallback('twitter')
       );
