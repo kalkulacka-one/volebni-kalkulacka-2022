@@ -55,9 +55,7 @@ const onSubmit = (e: Event) => {
           <CardComponent
             corner="top-left"
             padding="medium"
-            border
-            border-radius="medium"
-            shadow
+            backgroundColor="transparent"
             class="form-wrapper"
           >
             <StackComponent spacing="large" centered>
