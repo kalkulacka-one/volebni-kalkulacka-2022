@@ -12,7 +12,7 @@
     "dev:db:migrate": "dotenv -c development -- bash -c \"npx prisma migrate dev && npx prisma generate\"",
     "dev:db:reset": "dotenv -c development -- bash -c \"npx prisma migrate reset && npx prisma generate\"",
     "dev:db:studio": "dotenv -c development -- npx prisma studio",
-    "dev:vercel": "dotenv -c development -- bash -c \"npm run dev:copy-data && cd .. && vercel dev --local-config ./frontend/vercel.development.json\"",
+    "dev:vercel": "dotenv -c development -- bash -c \"npm run dev:copy-data && cd .. && vercel dev --local-config ./vercel.development.json\"",
     "dev": "dotenv -c development -- bash -c \"npm run dev:copy-data && vite\"",
     "lint:fix": "npm run lint -- --fix",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore",
