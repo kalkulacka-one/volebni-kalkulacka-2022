@@ -22,12 +22,11 @@ const router = useRouter();
 
 const handlePreviousClick = () => router.go(-1);
 
-const handleGoToRegisterClick = () => {
-  router.push(appRoutes.register);
-};
+const handleGoToRegisterClick = () => router.push(appRoutes.register);
 
 const onSubmit = (e: Event) => {
   console.log('Form submitted: ', e);
+  router.push(appRoutes.emailSent);
 };
 </script>
 
