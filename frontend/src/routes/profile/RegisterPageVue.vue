@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
+import { appRoutes } from '@/main';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
 import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
@@ -12,11 +13,21 @@ import SecondaryNavigationBar from '@/components/design-system/navigation/Second
 import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import { mdiArrowLeft, mdiEmailOutline } from '@mdi/js';
-import SocialMediaIcon from '@/components/design-system/icons/SocialMediaIcon.vue';
+import SocialMediaConnectComponent from './SocialMediaConnectComponent.vue';
 
 const router = useRouter();
 
 const handlePreviousClick = () => router.go(-1);
+const handleGoToFormClick = () => {
+  router.push({
+    name: appRoutes.registerForm.name,
+  });
+};
+const handleGoToLoginClick = () => {
+  router.push({
+    name: appRoutes.login.name,
+  });
+};
 </script>
 
 <template>
@@ -46,30 +57,19 @@ const handlePreviousClick = () => router.go(-1);
       <StackComponent spacing="large" class="section" centered>
         <StackComponent spacing="small" centered>
           <TitleText tag="p" size="medium">Vytvořit profil</TitleText>
-          <BodyText tag="strong" strong size="small"
-            >Sledujte názorový vývoj ve svém profilu</BodyText
-          >
+          <BodyText tag="strong" strong size="small">
+            Sledujte názorový vývoj ve svém profilu
+          </BodyText>
         </StackComponent>
         <StackComponent spacing="medium" centered>
-          <ButtonComponent kind="filled" color="white" class="w-full">
-            <template #icon>
-              <SocialMediaIcon type="google" />
-            </template>
-            Pokračovat přes Google
-          </ButtonComponent>
-          <ButtonComponent kind="filled" color="facebook" class="w-full">
-            <template #icon>
-              <SocialMediaIcon type="facebook" color="white" />
-            </template>
-            Pokračovat přes Facebook
-          </ButtonComponent>
-          <ButtonComponent kind="filled" color="neutral" class="w-full">
-            <template #icon>
-              <SocialMediaIcon type="twitter" color="white" />
-            </template>
-            Pokračovat přes Twitter
-          </ButtonComponent>
-          <ButtonComponent kind="outlined" color="neutral" class="w-full">
+          <SocialMediaConnectComponent />
+
+          <ButtonComponent
+            kind="outlined"
+            color="neutral"
+            class="w-full"
+            @click="handleGoToFormClick"
+          >
             <template #icon>
               <IconComponent :icon="mdiEmailOutline" />
             </template>
@@ -78,7 +78,11 @@ const handlePreviousClick = () => router.go(-1);
         </StackComponent>
         <StackComponent horizontal centered spacing="extra-small">
           <BodyText size="medium" strong>Už máte profil?</BodyText>
-          <ButtonComponent kind="link" color="primary">
+          <ButtonComponent
+            kind="link"
+            color="primary"
+            @click="handleGoToLoginClick"
+          >
             Přihlašte se
           </ButtonComponent>
         </StackComponent>

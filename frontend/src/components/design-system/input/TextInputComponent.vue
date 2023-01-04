@@ -5,19 +5,22 @@ import StackComponent from '@/components/design-system/layout/StackComponent.vue
 import { mdiAlertOutline } from '@mdi/js';
 
 export interface Props {
-  disabled: boolean;
-  groupName: string;
-  icon: string;
-  label: string | null;
+  disabled?: boolean;
+  groupName?: string;
+  icon?: string;
+  label?: string | null;
   modelValue: string | null;
-  placeholder: string;
-  value: string;
-  error: string | null;
+  placeholder?: string;
+  value?: string;
+  error?: string | null;
+  type?: string | null;
+  required?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   modelValue: null,
   error: null,
+  required: false,
 });
 
 defineEmits(['update:modelValue']);
@@ -41,11 +44,12 @@ defineEmits(['update:modelValue']);
     <IconComponent v-if="icon" :icon="icon" class="input-icon" />
 
     <input
-      type="text"
+      :type="props.type ? props.type : 'text'"
       :value="value"
       :name="props.groupName"
       :placeholder="placeholder"
       :disabled="disabled"
+      :required="required"
       @input="
         $emit('update:modelValue', ($event.target as HTMLInputElement).value)
       "

@@ -28,6 +28,11 @@ import AboutUsPageVue from './routes/about-us/AboutUsPage.vue';
 import AboutElectionsPageVue from './routes/about-elections/AboutElectionsPage.vue';
 import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
 import RegisterPageVue from './routes/profile/RegisterPageVue.vue';
+import LoginPageVue from './routes/profile/LoginPageVue.vue';
+import RegisterFormPageVue from './routes/profile/RegisterFormPageVue.vue';
+import ConsentPageVue from './routes/profile/ConsentPageVue.vue';
+import WelcomePageVue from './routes/profile/WelcomePageVue.vue';
+
 import { getDistrictCode } from './common/utils';
 import VueSocialSharing from 'vue-social-sharing';
 
@@ -177,12 +182,44 @@ export const appRoutes = {
       title: 'Moje výsledky - Volební kalkulačka',
     },
   },
+  login: {
+    name: 'login',
+    path: '/login',
+    component: LoginPageVue,
+    meta: {
+      title: 'Přihlášení - Volební kalkulačka',
+    },
+  },
   register: {
     name: 'register',
     path: '/register',
     component: RegisterPageVue,
     meta: {
       title: 'Registrace - Volební kalkulačka',
+    },
+  },
+  registerForm: {
+    name: 'register-form',
+    path: '/register-form',
+    component: RegisterFormPageVue,
+    meta: {
+      title: 'Registrační formulář - Volební kalkulačka',
+    },
+  },
+  consent: {
+    name: 'consent',
+    path: '/consent',
+    component: ConsentPageVue,
+    meta: {
+      title: 'Souhlas se zpracováním osobních údajů - Volební kalkulačka',
+    },
+  },
+  welcome: {
+    name: 'welcome',
+    path: '/welcome',
+    component: WelcomePageVue,
+    meta: {
+      title: 'Vítejte ve svém profilu - Volební kalkulačka',
     },
   },
   fallback: {

@@ -4,17 +4,28 @@ export interface Props {
   size: 'extra-small' | 'small' | 'medium' | 'large';
   color?: string;
   strong?: boolean;
+  centered?: boolean;
 }
 
 withDefaults(defineProps<Props>(), {
   tag: 'p',
   color: 'rgb(var(--color-neutral-fg))',
   strong: false,
+  centered: false,
 });
 </script>
 
 <template>
-  <component :is="tag" :class="[size, { strong: strong }]">
+  <component
+    :is="tag"
+    :class="[
+      size,
+      {
+        strong: strong,
+        centered: centered,
+      },
+    ]"
+  >
     <slot />
   </component>
 </template>
@@ -66,5 +77,9 @@ withDefaults(defineProps<Props>(), {
 
 .strong {
   font-weight: 700;
+}
+
+.centered {
+  text-align: center;
 }
 </style>
