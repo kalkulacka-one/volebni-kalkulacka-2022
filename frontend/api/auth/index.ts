@@ -74,9 +74,28 @@ const getStrategyCallback = (strategy: string) => {
     cb: (error: any, user?: any, info?: any) => void
   ) => {
     if (!profile.emails || !profile.emails.length || !profile.emails[0].value) {
-      return cb({ error: 'No email on facebook profile' }, false, {
-        message: 'No email provided',
-      });
+      // This is for facebook user, which doesn't have email
+      try {
+        const user = await prisma.user.upsert({
+          where: {
+            authProviderId: profile.id,
+          },
+          update: {
+            authProvider: strategy,
+            authProviderId: profile.id,
+            name: profile.displayName,
+          },
+          create: {
+            email: null,
+            name: profile.displayName,
+            authProvider: strategy,
+            authProviderId: profile.id,
+          },
+        });
+        return cb(null, user);
+      } catch (err) {
+        return cb(err);
+      }
     }
     try {
       const email = profile.emails[0].value;
