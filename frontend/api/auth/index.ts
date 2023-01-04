@@ -6,19 +6,14 @@ import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 import { Strategy as TwitterStrategy } from 'passport-twitter';
 import type { Profile } from 'passport';
 import { prisma } from '../../src/server/prisma';
+import { getPublicUrl } from '../../src/server/utils';
 import { assignAnswerToUser } from '../answers';
 import ms from 'ms';
 import { respond404 } from '../../src/server/errors';
 
 const app: Express = express();
 
-if (process.env.VERCEL_ENV === 'preview') {
-  process.env[
-    'BASE_URL'
-  ] = `https://volebni-kalkulacka-2022-git-${process.env.VERCEL_GIT_COMMIT_REF}-ceskodigital.vercel.app`;
-}
-
-const BASE_URL = process.env['BASE_URL'] || 'http://localhost:3000';
+const PUBLIC_URL = getPublicUrl();
 
 const providers = {
   facebook: {
@@ -28,7 +23,7 @@ const providers = {
           clientID: process.env['FACEBOOK_CLIENT_ID'] as string,
           clientSecret: process.env['FACEBOOK_CLIENT_SECRET'] as string,
           profileFields: ['id', 'displayName', 'email', 'gender'],
-          callbackURL: `${BASE_URL}/api/auth/facebook/callback`,
+          callbackURL: `${PUBLIC_URL}/api/auth/facebook/callback`,
         },
         getStrategyCallback('facebook')
       );
@@ -43,7 +38,7 @@ const providers = {
         {
           clientID: process.env['GOOGLE_CLIENT_ID'] as string,
           clientSecret: process.env['GOOGLE_CLIENT_SECRET'] as string,
-          callbackURL: `${BASE_URL}/api/auth/google/callback`,
+          callbackURL: `${PUBLIC_URL}/api/auth/google/callback`,
         },
         getStrategyCallback('google')
       );
@@ -58,7 +53,7 @@ const providers = {
         {
           consumerKey: process.env['TWITTER_CONSUMER_KEY'] as string,
           consumerSecret: process.env['TWITTER_CONSUMER_SECRET'] as string,
-          callbackURL: `${BASE_URL}/api/auth/twitter/callback`,
+          callbackURL: `${PUBLIC_URL}/api/auth/twitter/callback`,
         },
         getStrategyCallback('twitter')
       );
@@ -115,11 +110,12 @@ const callback = (provider: string) => {
       }
       req.login(user, { session: false }, (err) => {
         if (err) {
-          return res.status(400).send({ err });
+          console.error(err);
+          return res.status(400).send({ err: err?.message || err });
         }
         try {
           const payload = {
-            iss: BASE_URL,
+            iss: PUBLIC_URL,
             sub: user.id,
             email: user.email,
             firstName: user.firstName,
@@ -141,7 +137,8 @@ const callback = (provider: string) => {
             expires: expiresInDate,
           });
         } catch (err) {
-          return res.status(400).send({ err });
+          console.error(err);
+          return res.status(400).send({ err: err?.message || err });
         }
 
         try {
