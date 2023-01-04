@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { mdiArrowLeft, mdiArrowRight } from '@mdi/js';
 import { appRoutes } from '@/main';
@@ -17,12 +18,18 @@ import TextInputComponent from '@/components/design-system/input/TextInputCompon
 import TitleText from '@/components/design-system/typography/TitleText.vue';
 
 const router = useRouter();
+const consent = ref(false);
+const emailAddress = ref('');
 
 const handlePreviousClick = () => router.go(-1);
+
 const handleGoToLoginClick = () => router.push(appRoutes.login.name);
 
+const handleEmailSubmitClick = () => (consent.value = true);
+
 const onSubmit = (e: Event) => {
-  router.push(appRoutes.consent);
+  console.log(emailAddress);
+  router.push(appRoutes.emailSent);
 };
 </script>
 
@@ -50,11 +57,19 @@ const onSubmit = (e: Event) => {
         </ResponsiveWrapper>
       </template>
 
-      <form id="register-form" ref="form" @submit.prevent="(e) => onSubmit(e)">
-        <StackComponent spacing="large" class="section" centered>
-          <TitleText tag="p" size="medium"> Vytvořit profil </TitleText>
+      <StackComponent spacing="large" class="section" centered>
+        <TitleText tag="p" size="medium">
+          <template v-if="!consent">Vytvořit profil</template>
+          <template v-if="consent">Profil slouží jenom Vám</template>
+        </TitleText>
 
+        <form
+          id="register-form"
+          ref="form"
+          @submit.prevent="(e) => onSubmit(e)"
+        >
           <CardComponent
+            v-show="!consent"
             corner="top-left"
             padding="medium"
             border
@@ -69,10 +84,16 @@ const onSubmit = (e: Event) => {
                 type="email"
                 placeholder="E-mail"
                 class="w-full"
-                modelValue="registration"
+                :value="emailAddress"
+                v-model="emailAddress"
               />
 
-              <ButtonComponent kind="filled" color="primary" class="w-full">
+              <ButtonComponent
+                kind="filled"
+                color="primary"
+                class="w-full"
+                @click.prevent="handleEmailSubmitClick"
+              >
                 Pokračovat
                 <template #iconAfter>
                   <IconComponent :icon="mdiArrowRight" />
@@ -81,18 +102,46 @@ const onSubmit = (e: Event) => {
             </StackComponent>
           </CardComponent>
 
-          <StackComponent horizontal centered spacing="extra-small">
-            <BodyText size="medium" strong>Už máte profil?</BodyText>
-            <ButtonComponent
-              kind="link"
-              color="primary"
-              @click="handleGoToLoginClick"
-            >
-              Přihlašte se
-            </ButtonComponent>
-          </StackComponent>
+          <CardComponent
+            v-show="consent"
+            corner="top-left"
+            padding="medium"
+            backgroundColor="transparent"
+            class="form-wrapper"
+          >
+            <StackComponent spacing="large" centered>
+              <img
+                src="/images/register-safety.png"
+                width="72"
+                height="72"
+                alt=""
+              />
+              <BodyText tag="p" size="small" centered>
+                Vaše osobní ůdaje nebudeme nikde šířit. Vytvořením profilu
+                souhlasíte se zpracováním osobních ůdajů.
+              </BodyText>
+
+              <ButtonComponent kind="filled" color="primary" class="w-full">
+                Vytvořit profil
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </StackComponent>
+          </CardComponent>
+        </form>
+
+        <StackComponent horizontal centered spacing="extra-small">
+          <BodyText size="medium" strong>Už máte profil?</BodyText>
+          <ButtonComponent
+            kind="link"
+            color="primary"
+            @click="handleGoToLoginClick"
+          >
+            Přihlašte se
+          </ButtonComponent>
         </StackComponent>
-      </form>
+      </StackComponent>
     </StickyHeaderLayout>
   </BackgroundComponent>
 </template>

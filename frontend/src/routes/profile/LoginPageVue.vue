@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { mdiArrowLeft, mdiArrowRight } from '@mdi/js';
 import { appRoutes } from '@/main';
@@ -12,13 +13,13 @@ import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
-import StaticContentLayout from '@/components/layouts/StaticContentLayout.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import SocialMediaConnectComponent from './SocialMediaConnectComponent.vue';
 import TitleText from '@/components/design-system/typography/TitleText.vue';
 import TextInputComponent from '@/components/design-system/input/TextInputComponent.vue';
 
 const router = useRouter();
+const emailAddress = ref('');
 
 const handlePreviousClick = () => router.go(-1);
 
@@ -86,7 +87,8 @@ const onSubmit = (e: Event) => {
                 type="email"
                 placeholder="E-mail"
                 class="w-full"
-                modelValue="registration"
+                :value="emailAddress"
+                v-model="emailAddress"
               />
 
               <ButtonComponent kind="filled" color="primary" class="w-full">
