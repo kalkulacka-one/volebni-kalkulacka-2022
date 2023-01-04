@@ -8,29 +8,6 @@ import {
   respond401,
 } from '../../src/server/errors';
 
-export async function assignAnswerToUser(
-  answerId: string,
-  usersUpdateToken: string,
-  userId: string
-) {
-  try {
-    const { updateToken } = await prisma.answers.findUniqueOrThrow({
-      where: { id: answerId },
-      select: { updateToken: true },
-    });
-    if (updateToken === usersUpdateToken) {
-      await prisma.answers.update({
-        where: { id: answerId },
-        data: { userId: userId },
-      });
-      return true;
-    }
-  } catch (err) {
-    console.error(err);
-    return false;
-  }
-}
-
 export default async function (req: VercelRequest, res: VercelResponse) {
   const auth = await authUser(req, res);
   if (req.method === 'GET') {

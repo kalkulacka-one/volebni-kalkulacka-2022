@@ -7,7 +7,7 @@ import { Strategy as TwitterStrategy } from 'passport-twitter';
 import type { Profile } from 'passport';
 import { prisma } from '../../src/server/prisma';
 import { getPublicUrl } from '../../src/server/utils';
-import { assignAnswerToUser } from '../answers';
+import { assignAnswerToUser } from '../../src/server/answers';
 import ms from 'ms';
 import { respond404 } from '../../src/server/errors';
 
@@ -148,7 +148,7 @@ const callback = (provider: string) => {
               Buffer.from(state as string, 'base64').toString()
             );
             if (updateToken && answerId) {
-              assignAnswerToUser(answerId, updateToken, user.id);
+              assignAnswerToUser({ answerId, updateToken, userId: user.id });
             }
             if (typeof returnTo === 'string' && returnTo.startsWith('/')) {
               return res.redirect(returnTo);
