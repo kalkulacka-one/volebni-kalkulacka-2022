@@ -31,6 +31,7 @@ import RegisterPageVue from './routes/profile/RegisterPageVue.vue';
 import LoginPageVue from './routes/profile/LoginPageVue.vue';
 import RegisterFormPageVue from './routes/profile/RegisterFormPageVue.vue';
 import ConsentPageVue from './routes/profile/ConsentPageVue.vue';
+import EmailSentPageVue from './routes/profile/EmailSentPageVue.vue';
 import WelcomePageVue from './routes/profile/WelcomePageVue.vue';
 
 import { getDistrictCode } from './common/utils';
@@ -212,6 +213,14 @@ export const appRoutes = {
     component: ConsentPageVue,
     meta: {
       title: 'Souhlas se zpracováním osobních údajů - Volební kalkulačka',
+    },
+  },
+  emailSent: {
+    name: 'email-sent',
+    path: '/email-sent',
+    component: EmailSentPageVue,
+    meta: {
+      title: 'Ověřovací e-mail byl odeslán - Volební kalkulačka',
     },
   },
   welcome: {

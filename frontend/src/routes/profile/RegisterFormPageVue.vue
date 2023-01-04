@@ -19,11 +19,7 @@ import TitleText from '@/components/design-system/typography/TitleText.vue';
 const router = useRouter();
 
 const handlePreviousClick = () => router.go(-1);
-const handleGoToLoginClick = () => {
-  router.push({
-    name: appRoutes.login.name,
-  });
-};
+const handleGoToLoginClick = () => router.push(appRoutes.login.name);
 
 const onSubmit = (e: Event) => {
   router.push(appRoutes.consent);

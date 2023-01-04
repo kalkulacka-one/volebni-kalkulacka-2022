@@ -18,6 +18,7 @@ import TitleText from '@/components/design-system/typography/TitleText.vue';
 const router = useRouter();
 
 const handlePreviousClick = () => router.go(-1);
+const handleConfirmClick = () => router.push(appRoutes.emailSent);
 
 const onSubmit = (e: Event) => {
   console.log('Form submitted: ', e);
@@ -70,7 +71,12 @@ const onSubmit = (e: Event) => {
                 souhlasíte se zpracováním osobních ůdajů.
               </BodyText>
 
-              <ButtonComponent kind="filled" color="primary" class="w-full">
+              <ButtonComponent
+                @click="handleConfirmClick"
+                kind="filled"
+                color="primary"
+                class="w-full"
+              >
                 Vytvořit profil
                 <template #iconAfter>
                   <IconComponent :icon="mdiArrowRight" />
