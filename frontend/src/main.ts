@@ -21,7 +21,7 @@ import DistrictSelectionPageVue from './routes/district-selection/DistrictSelect
 import QuestionsMethodologyPageVue from './routes/questions-methodology/QuestionsMethodologyPageVue.vue';
 import { useElectionStore } from './stores/electionStore';
 import { createPinia } from 'pinia';
-import ErrorPageVue from './routes/error/ErrorPage.vue';
+import ErrorPageVue, { ErrorPageEnum } from './routes/error/ErrorPage.vue';
 import { decodeResults, encodeResults } from './common/resultParser';
 import SharePageVue from './routes/share/SharePage.vue';
 import AboutUsPageVue from './routes/about-us/AboutUsPage.vue';
@@ -294,7 +294,12 @@ router.beforeEach(async (to, from) => {
     if (store?.election === undefined) {
       return {
         name: appRoutes.error.name,
-        params: { case: 'api-error-election' },
+        params: {
+          case: ErrorPageEnum.NotFound,
+        },
+        state: {
+          extraInfo: `Election fetch failed. Election: ${to.params.election}`,
+        },
       };
     }
   }
@@ -309,7 +314,12 @@ router.beforeEach(async (to, from) => {
       if (store?.calculator === undefined) {
         return {
           name: appRoutes.error.name,
-          params: { case: 'api-error-calculator' },
+          params: {
+            case: ErrorPageEnum.NotFound,
+          },
+          state: {
+            extraInfo: `Calculator fetch failed. Election: ${to.params.election}, districtNr: ${districtNr}`,
+          },
         };
       }
     }
