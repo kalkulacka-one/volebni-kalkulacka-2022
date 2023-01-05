@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 
 import { appRoutes } from '@/main';
 
@@ -45,6 +45,12 @@ const classes = computed(() => ({
 const background = computed(() =>
   props.transparent ? 'transparent' : undefined
 );
+
+const router = useRouter();
+
+const handleRegisterClick = () => router.push(appRoutes.register);
+
+const handleLoginClick = () => router.push(appRoutes.login);
 </script>
 
 <template>
@@ -118,13 +124,22 @@ const background = computed(() =>
           spacing="medium"
         >
           <ResponsiveWrapper medium large extra-large huge>
-            <ButtonComponent kind="link">Vytvořit účet</ButtonComponent>
-            <ButtonComponent kind="outlined" size="small"
+            <ButtonComponent kind="link" @click="handleRegisterClick"
+              >Vytvořit účet</ButtonComponent
+            >
+            <ButtonComponent
+              kind="outlined"
+              size="small"
+              @click="handleLoginClick"
               >Přihlásit se</ButtonComponent
             >
           </ResponsiveWrapper>
           <ResponsiveWrapper extra-small small>
-            <ButtonComponent kind="link" color="primary" size="small"
+            <ButtonComponent
+              kind="link"
+              color="primary"
+              size="small"
+              @click="handleLoginClick"
               >Přihlásit se</ButtonComponent
             >
           </ResponsiveWrapper>

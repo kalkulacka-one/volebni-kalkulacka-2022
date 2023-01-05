@@ -31,7 +31,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
 <template>
   <StickyHeaderLayout>
     <template #header>
-      <NavigationBar transparent style="position: absolute" />
+      <NavigationBar transparent withAccount />
     </template>
     <div class="prezident-hero">
       <BlobComponent color="blue" class="blob1" />
@@ -351,7 +351,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
   display: grid;
   column-gap: 24px;
   overflow: hidden;
-  padding-top: 10%;
+  padding-top: 7%;
 
   .avatars {
     display: grid;
