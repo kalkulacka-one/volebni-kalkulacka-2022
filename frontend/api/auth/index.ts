@@ -73,7 +73,8 @@ const getStrategyCallback = (strategy: string) => {
     profile: Profile,
     cb: (error: any, user?: any, info?: any) => void
   ) => {
-    if (!profile.emails || !profile.emails.length || !profile.emails[0].value) {
+    const email = profile.emails && profile.emails[0].value;
+    if (!email) {
       // This is for facebook user, which doesn't have email
       try {
         const user = await prisma.user.upsert({
@@ -98,7 +99,6 @@ const getStrategyCallback = (strategy: string) => {
       }
     }
     try {
-      const email = profile.emails[0].value;
       const user = await prisma.user.upsert({
         where: {
           email: email,
@@ -117,7 +117,24 @@ const getStrategyCallback = (strategy: string) => {
       });
       return cb(null, user);
     } catch (err) {
-      return cb(err);
+      try {
+        // Existing user currently stored without email now returning with email
+        // Edge case - handled here
+        const user = await prisma.user.update({
+          where: {
+            authProviderId: profile.id,
+          },
+          data: {
+            email: email,
+            name: profile.displayName,
+            authProvider: strategy,
+            authProviderId: profile.id,
+          },
+        });
+        return cb(null, user);
+      } catch (err) {
+        return cb(err);
+      }
     }
   };
 };
