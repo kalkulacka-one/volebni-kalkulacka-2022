@@ -1,16 +1,18 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { verify } from 'jsonwebtoken';
 import { prisma } from './prisma';
-import { prismaErrorHandler } from './errors';
 import type { User } from '@prisma/client';
-import { getPublicUrl } from './utils';
 
 export async function authUser(
   req: VercelRequest,
   res: VercelResponse
 ): Promise<{ user: User; exp: number } | null> {
   const tokenString = req.cookies.auth;
-  const PUBLIC_URL = getPublicUrl();
+  const PUBLIC_URL = process.env.PUBLIC_URL
+    ? process.env.PUBLIC_URL
+    : process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : null;
   if (!tokenString) {
     return null;
   }

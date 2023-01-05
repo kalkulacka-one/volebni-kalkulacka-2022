@@ -6,15 +6,22 @@ import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 import { Strategy as TwitterStrategy } from 'passport-twitter';
 import type { Profile } from 'passport';
 import { prisma } from '../../src/server/prisma';
-import { getPublicUrl } from '../../src/server/utils';
 import { assignAnswerToUser } from '../../src/server/answers';
 import ms from 'ms';
 import { respond404 } from '../../src/server/errors';
 
 const app: Express = express();
 
-const PUBLIC_URL = getPublicUrl();
+const PUBLIC_URL = process.env.PUBLIC_URL
+  ? process.env.PUBLIC_URL
+  : process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : null;
 const OAUTH_CALLBACK_URL = process.env.OAUTH_CALLBACK_URL || PUBLIC_URL;
+
+if (!PUBLIC_URL) {
+  throw new Error('PUBLIC_URL is not defined');
+}
 
 const providers = {
   facebook: {
