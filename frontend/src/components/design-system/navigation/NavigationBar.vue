@@ -33,7 +33,6 @@ const props = withDefaults(defineProps<Props>(), {
   paddingResponsive: true,
   transparent: false,
   centeredTitle: false,
-  user: null,
   withAccount: false,
 });
 
