@@ -1,7 +1,8 @@
 import { UserAnswerEnum, type UserAnswer } from '@/stores/electionStore';
 import type { CandidateAnswer } from '@/types/calculator';
+import seedrandom from 'seedrandom';
 const HEX_VERSIONS = [0];
-
+const RAND_SEED = Math.random().toString();
 /*
 Answers are encoded as follows:
 - 1st two bits are answer type as in UserAnswerEnum
@@ -113,6 +114,7 @@ export const calculateRelativeAgreement = (
   weight = 2
 ) => {
   const relativeAgreement = new Map<string, Result>();
+  const rnd = seedrandom(RAND_SEED);
   candidateAnswers.forEach((ca) => {
     if (!relativeAgreement.has(ca.candidate_id)) {
       relativeAgreement.set(ca.candidate_id, {
@@ -120,7 +122,7 @@ export const calculateRelativeAgreement = (
         raw_result: 0,
         result: 0.5,
         result_percent: 50,
-        random: Math.random(),
+        random: rnd(),
       });
     }
     const res = relativeAgreement.get(ca.candidate_id) as Result;
