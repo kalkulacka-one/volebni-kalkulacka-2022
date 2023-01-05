@@ -9,12 +9,14 @@ export interface Props {
   size?: 'small' | 'medium' | 'large' | 'extra-large';
   backgroundColor?: string;
   backgroundImage?: string;
+  name?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 'medium',
   backgroundColor: 'rgb(var(--color-neutral-bg-strong))',
   backgroundImage: undefined,
+  name: undefined,
 });
 
 const slots = useSlots();
@@ -57,6 +59,20 @@ const badgeMasks = {
 };
 
 const badgeMask = computed(() => badgeMasks[props.size]);
+
+const initials = computed(() => {
+  if (props.name) {
+    const parts = props.name.split(' ');
+    let letters = '';
+    parts.forEach((part) => {
+      if (part.length > 0 && part !== '') {
+        letters += part[0];
+      }
+    });
+    return letters;
+  }
+  return null;
+});
 </script>
 
 <template>
@@ -71,6 +87,11 @@ const badgeMask = computed(() => badgeMasks[props.size]);
       </template>
       <template v-if="!hasBadge">
         <slot />
+      </template>
+      <template v-if="!backgroundImage && name">
+        <BodyText size="small" class="initials">
+          {{ initials }}
+        </BodyText>
       </template>
     </FilledCircle>
     <FilledCircle
@@ -139,6 +160,10 @@ const badgeMask = computed(() => badgeMasks[props.size]);
       top: calc(var(--sin-45deg) * (3 * var(--spacing-medium)) / -1.99);
       left: calc(var(--sin-45deg) * (3 * var(--spacing-medium)) / -1.99);
     }
+  }
+
+  .initials {
+    text-transform: uppercase;
   }
 }
 </style>

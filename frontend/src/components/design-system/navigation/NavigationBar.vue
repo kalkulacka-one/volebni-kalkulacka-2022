@@ -4,6 +4,8 @@ import { useRoute } from 'vue-router';
 
 import { appRoutes } from '@/main';
 
+import AvatarComponent from '@/components/design-system/other/AvatarComponent.vue';
+import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
 import ContainerComponent from '@/components/design-system/containers/ContainerComponent.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
@@ -12,11 +14,18 @@ import BodyText from '@/components/design-system/typography/BodyText.vue';
 import EmbedWrapper from '@/components/utilities/embedding/EmbedWrapper.vue';
 import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 
+export interface User {
+  name: string;
+  img_url?: string | undefined;
+}
+
 export interface Props {
   padding?: 'small' | 'medium' | 'large';
   paddingResponsive?: boolean;
   transparent?: boolean;
   centeredTitle?: boolean;
+  user?: User;
+  withAccount?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -24,9 +33,10 @@ const props = withDefaults(defineProps<Props>(), {
   paddingResponsive: true,
   transparent: false,
   centeredTitle: false,
+  withAccount: false,
 });
 
-const indexPage = computed(() => useRoute().path === '/');
+const indexPage = computed(() => useRoute()?.path === '/');
 
 const classes = computed(() => ({
   'navigation-bar--centered-title': props.centeredTitle,
@@ -92,7 +102,34 @@ const background = computed(() =>
       spacing="medium"
       spacing-responsive
     >
-      <slot name="right" />
+      <slot name="right">
+        <AvatarComponent
+          v-if="withAccount && user"
+          size="small"
+          background-color="rgb(var(--palette-primary-90))"
+          :background-image="user.img_url ? user.img_url : undefined"
+          :name="user.name"
+        />
+        <StackComponent
+          v-if="withAccount && !user"
+          class="right"
+          horizontal
+          centered
+          spacing="medium"
+        >
+          <ResponsiveWrapper medium large extra-large huge>
+            <ButtonComponent kind="link">Vytvořit účet</ButtonComponent>
+            <ButtonComponent kind="outlined" size="small"
+              >Přihlásit se</ButtonComponent
+            >
+          </ResponsiveWrapper>
+          <ResponsiveWrapper extra-small small>
+            <ButtonComponent kind="link" color="primary" size="small"
+              >Přihlásit se</ButtonComponent
+            >
+          </ResponsiveWrapper>
+        </StackComponent>
+      </slot>
     </StackComponent>
   </ContainerComponent>
 </template>
@@ -104,6 +141,7 @@ const background = computed(() =>
   grid-template-areas: 'logo title right';
   align-items: center;
   gap: var(--responsive-spacing-large);
+  width: 100%;
 
   .logo {
     grid-area: logo;
