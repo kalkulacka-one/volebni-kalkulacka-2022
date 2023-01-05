@@ -185,7 +185,7 @@ export const appRoutes = {
   },
   login: {
     name: 'login',
-    path: '/login',
+    path: '/prihlaseni',
     component: LoginPageVue,
     meta: {
       title: 'Přihlášení - Volební kalkulačka',
@@ -193,7 +193,7 @@ export const appRoutes = {
   },
   register: {
     name: 'register',
-    path: '/register',
+    path: '/registrace',
     component: RegisterPageVue,
     meta: {
       title: 'Registrace - Volební kalkulačka',
@@ -201,7 +201,7 @@ export const appRoutes = {
   },
   registerForm: {
     name: 'register-form',
-    path: '/register-form',
+    path: '/registracni-formular',
     component: RegisterFormPageVue,
     meta: {
       title: 'Registrační formulář - Volební kalkulačka',
@@ -209,7 +209,7 @@ export const appRoutes = {
   },
   consent: {
     name: 'consent',
-    path: '/consent',
+    path: '/souhlas-se-zpracovanim-osobnich-udaju',
     component: ConsentPageVue,
     meta: {
       title: 'Souhlas se zpracováním osobních údajů - Volební kalkulačka',
@@ -217,7 +217,7 @@ export const appRoutes = {
   },
   emailSent: {
     name: 'email-sent',
-    path: '/email-sent',
+    path: '/email-odeslan',
     component: EmailSentPageVue,
     meta: {
       title: 'Ověřovací e-mail byl odeslán - Volební kalkulačka',
@@ -225,7 +225,7 @@ export const appRoutes = {
   },
   welcome: {
     name: 'welcome',
-    path: '/welcome',
+    path: '/vitejte',
     component: WelcomePageVue,
     meta: {
       title: 'Vítejte ve svém profilu - Volební kalkulačka',
