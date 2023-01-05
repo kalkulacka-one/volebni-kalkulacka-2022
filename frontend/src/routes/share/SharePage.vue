@@ -22,6 +22,7 @@ import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import { mdiRepeat } from '@mdi/js';
 import BodyText from '../../components/design-system/typography/BodyText.vue';
+import { ErrorPageEnum } from '../error/ErrorPage.vue';
 
 const route = useRoute();
 const electionStore = useElectionStore();
@@ -29,15 +30,28 @@ const resultsGeneral: Ref<ReturnType<typeof calculateRelativeAgreement>> = ref(
   []
 );
 const isInitialized = ref(false);
-getResults(route.params.uuid as string).then(() => {
-  if (electionStore.calculator) {
-    resultsGeneral.value = calculateRelativeAgreement(
-      electionStore.calculator.answers,
-      electionStore.answers
-    );
-    isInitialized.value = true;
-  }
-});
+getResults(route.params.uuid as string)
+  .then(() => {
+    if (electionStore.calculator) {
+      resultsGeneral.value = calculateRelativeAgreement(
+        electionStore.calculator.answers,
+        electionStore.answers
+      );
+      isInitialized.value = true;
+    }
+  })
+  .catch((err) => {
+    console.error(`getResults failed! ${err}`);
+    router.push({
+      name: appRoutes.error.name,
+      params: {
+        case: ErrorPageEnum.NotFound,
+      },
+      state: {
+        extraInfo: err,
+      },
+    });
+  });
 const router = useRouter();
 watch(isInitialized, (value) => {
   if (value) {

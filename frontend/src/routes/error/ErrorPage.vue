@@ -57,15 +57,19 @@ const pageInfo = computed(() => {
       break;
   }
   //extra info is passed as router state as described here: https://github.com/vuejs/router/blob/main/packages/router/CHANGELOG.md#414-2022-08-22
+  const redirectUrl =
+    route.redirectedFrom?.fullPath.toString() ||
+    router.options.history.state.back?.toString() ||
+    '';
   console.warn(`
     ErroPage: ${props.case},
-    redirected from: ${route.redirectedFrom?.fullPath}
+    redirected from: ${redirectUrl}
     extra info: ${router.options.history.state.extraInfo}
   `);
   // eslint-disable-next-line no-undef
   newrelic?.noticeError(`ErrorPage ${props.case}`, {
     redirectedFrom: route.redirectedFrom?.fullPath || '',
-    extraInfo: (router.options.history.state.extraInfo as string) || '',
+    extraInfo: redirectUrl || '',
   });
   return {
     header: header,
