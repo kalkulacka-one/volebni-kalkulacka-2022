@@ -51,7 +51,7 @@ const onSubmit = (e: Event) => {
       <form id="register-form" ref="form" @submit.prevent="(e) => onSubmit(e)">
         <StackComponent spacing="large" class="section" centered>
           <TitleText tag="p" size="medium">
-            Zkontrolujte si e-mailovou schránku
+            Registrace čeká na Vaše potvrzení
           </TitleText>
           <img
             src="/images/register-safety.png"
@@ -72,21 +72,21 @@ const onSubmit = (e: Event) => {
                 size="medium"
                 color="rgb(var(--palette-neutral-10))"
               >
-                Registrace byla úspěšně dokončena. Do vaší e-mailové schránky
-                jsme Vám zaslali e-mail s ověřovacím odkazem. Pro dokončení
-                registrace klikněte na odkaz v e-mailu.
+                Registrace je téměř u konce. Do Vaší e-mailové schránky jsme Vám
+                zaslali e-mail s ověřovacím odkazem. Registraci úspěšně
+                dokončíte po kliknutí na něj.
               </BodyText>
 
               <BodyText
                 tag="p"
-                size="small"
+                size="medium"
                 color="rgb(var(--palette-neutral-10))"
               >
                 Pokud jste e-mail s ověřovacím odkazem neobdrželi, zkontrolujte
-                prosím složku se spamem nebo nevyžádanou poštou. Pokud jste v
+                prosím složku spamu nebo nevyžádanou poštu. Pokud jste ani v
                 těchto složkách e-mail s ověřovacím odkazem nenašli, kontaktujte
-                nás prosím na uvedených kontaktech a rádi Vám pomůžeme s
-                ověřením e-mailové adresy.
+                nás prosím na uvedených kontaktech. Rádi Vám s ověřením
+                e-mailové adresy a dokončením registrace pomůžeme.
               </BodyText>
             </StackComponent>
           </CardComponent>
