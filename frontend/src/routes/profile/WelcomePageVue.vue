@@ -50,15 +50,11 @@ const onSubmit = (e: Event) => {
 
       <form id="register-form" ref="form" @submit.prevent="(e) => onSubmit(e)">
         <StackComponent spacing="large" class="section" centered>
+          <img src="/images/logo-symboly.png" width="76" height="16" alt="" />
+
           <TitleText tag="p" size="medium">
             Vítejte ve svém profilu!
           </TitleText>
-          <img
-            src="/images/register-safety.png"
-            width="72"
-            height="72"
-            alt=""
-          />
 
           <CardComponent
             corner="top-left"
@@ -68,7 +64,17 @@ const onSubmit = (e: Event) => {
             shadow
             class="form-wrapper"
           >
-            <StackComponent spacing="small">
+            <StackComponent spacing="extra-small">
+              <BodyText
+                tag="p"
+                size="extra-small"
+                color="rgb(var(--palette-neutral-10))"
+                strong
+                class="title"
+              >
+                Co v něm najdete
+              </BodyText>
+
               <BodyText
                 tag="p"
                 size="small"
@@ -76,19 +82,39 @@ const onSubmit = (e: Event) => {
               >
                 <ul class="list">
                   <li>Historie vašich volebních kalkulaček</li>
-                  <li>Upozornění na nadcházející volby</li>
-                  <li>Možnost ukládat vlastní volební preference</li>
                 </ul>
               </BodyText>
 
-              <ButtonComponent kind="filled" color="primary" class="w-full">
-                Přejít do profilu
-                <template #iconAfter>
-                  <IconComponent :icon="mdiArrowRight" />
-                </template>
-              </ButtonComponent>
+              <BodyText
+                tag="p"
+                size="extra-small"
+                color="rgb(var(--palette-neutral-10))"
+                strong
+                class="title"
+              >
+                Co chystáme pro příště
+              </BodyText>
+
+              <BodyText
+                tag="p"
+                size="small"
+                color="rgb(var(--palette-neutral-10))"
+              >
+                <ul class="list">
+                  <!-- <li>Upozornění na nadcházející volby</li> -->
+                  <li class="bw">Možnost ukládat vlastní volební preference</li>
+                </ul>
+              </BodyText>
             </StackComponent>
           </CardComponent>
+          <div class="form-wrapper">
+            <ButtonComponent kind="filled" color="primary" class="w-full">
+              Přejít do profilu
+              <template #iconAfter>
+                <IconComponent :icon="mdiArrowRight" />
+              </template>
+            </ButtonComponent>
+          </div>
         </StackComponent>
       </form>
     </StickyHeaderLayout>
@@ -104,6 +130,11 @@ const onSubmit = (e: Event) => {
   width: 100%;
 }
 
+.title {
+  margin-top: 0.4rem;
+  text-transform: uppercase;
+}
+
 .list {
   list-style: none;
   margin: 0;
@@ -115,6 +146,10 @@ const onSubmit = (e: Event) => {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACSSURBVHgB7ZLNDYJAEEYfxrOxBEuxBEqgA8cKpAQ6UDuxIxN+T7BAIBw2BBIYAod9ye5hDt+bzAw4HMdB0gD5X+3yCQ0kezX/G86COm24pAaJP6hzzHApbjzzh1b4yJJLH1NF/eLGwzEhVF+iS8AiJAm7Di2J6sxtycJwjzkJXiv4Ne++bixTks1OcZDEPg7HbtTzP1VP7kNJjgAAAABJRU5ErkJggg==');
     background-repeat: no-repeat;
     background-position: left center;
+
+    &.bw {
+      filter: grayscale(1);
+    }
   }
 }
 </style>

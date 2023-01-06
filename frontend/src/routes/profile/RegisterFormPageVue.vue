@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import { mdiArrowLeft, mdiArrowRight } from '@mdi/js';
+import { mdiArrowLeft, mdiArrowRight, mdiEmailOutline } from '@mdi/js';
 import { appRoutes } from '@/main';
 
 import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
@@ -63,6 +63,15 @@ const onSubmit = (e: Event) => {
           <template v-if="consent">Profil slouží jenom Vám</template>
         </TitleText>
 
+        <BodyText strong size="medium">
+          Zadajte svoji emailovou adresu
+        </BodyText>
+
+        <BodyText tag="p" size="medium" class="form-wrapper" centered>
+          Do e-mailové schránky Vám zašleme e-mail s ověřovacím odkazem.
+          Registraci úspěšně dokončíte po kliknutí na něj.
+        </BodyText>
+
         <form
           id="register-form"
           ref="form"
@@ -86,6 +95,7 @@ const onSubmit = (e: Event) => {
                 class="w-full"
                 :value="emailAddress"
                 v-model="emailAddress"
+                :icon="mdiEmailOutline"
               />
 
               <ButtonComponent
@@ -94,7 +104,7 @@ const onSubmit = (e: Event) => {
                 class="w-full"
                 @click.prevent="handleEmailSubmitClick"
               >
-                Pokračovat
+                Zaslat potvrdzovací email
                 <template #iconAfter>
                   <IconComponent :icon="mdiArrowRight" />
                 </template>
