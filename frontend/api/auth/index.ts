@@ -8,7 +8,11 @@ import type { Profile } from 'passport';
 import { prisma } from '../../src/server/prisma';
 import { assignAnswerToUser } from '../../src/server/answers';
 import ms from 'ms';
-import { respond404 } from '../../src/server/errors';
+import {
+  respond404,
+  respond500,
+  errorRespondBody,
+} from '../../src/server/errors';
 import { sendEmail } from '../../src/server/mailing';
 
 const app: Express = express();
@@ -181,16 +185,30 @@ const getMagicLogin = () => {
   });
 };
 
+const authErrorRedirect = (err: Error, res: Response) => {
+  console.error(err);
+  const errJson = errorRespondBody(
+    401,
+    'https://volebnikalkulacka.cz/api/errors/authetication-error',
+    'Authentication error',
+    typeof err
+  );
+  return res.redirect('/' + '?error=' + JSON.stringify(errJson));
+};
+
 const callback = (provider: string) => {
   return (req: Request, res: Response, next: NextFunction) => {
     passport.authenticate(provider, { session: false }, (err, user, info) => {
-      if (err || !user) {
-        return res.redirect('/' + '?error=' + err?.message);
+      if (err) {
+        return authErrorRedirect(err, res);
+      }
+      if (!user) {
+        const err = new Error('No user found or created');
+        return authErrorRedirect(err, res);
       }
       req.login(user, { session: false }, (err) => {
         if (err) {
-          console.error(err);
-          return res.status(400).send({ err: err?.message || err });
+          return authErrorRedirect(err, res);
         }
         try {
           const payload = {
@@ -214,8 +232,9 @@ const callback = (provider: string) => {
             expires: expiresInDate,
           });
         } catch (err) {
-          console.error(err);
-          return res.status(400).send({ err: err?.message || err });
+          if (err) {
+            return authErrorRedirect(err, res);
+          }
         }
 
         try {
@@ -234,7 +253,7 @@ const callback = (provider: string) => {
         } catch {
           // just redirect normally below
         }
-        res.redirect('/?login=loginsuccess-default');
+        res.redirect('/');
       });
     })(req, res, next);
   };
@@ -301,4 +320,8 @@ app.get('/*', (req, res) => {
   respond404(res, req.url);
 });
 
-export default app;
+app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+  respond500(res, err.message);
+});
+
+module.exports = app;

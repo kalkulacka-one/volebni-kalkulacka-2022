@@ -4,6 +4,20 @@ import type { Response } from 'express';
 
 type VResponse = VercelResponse | Response;
 
+export const errorRespondBody = (
+  status: number,
+  type: string,
+  title: string,
+  detail?: string
+) => {
+  return {
+    type: type,
+    status: status,
+    title: title,
+    detail: detail,
+  };
+};
+
 export const errorRespond = (
   res: VResponse,
   status: number,
@@ -12,12 +26,8 @@ export const errorRespond = (
   detail?: string
 ) => {
   res.setHeader('Content-Type', 'application/problem+json');
-  return res.status(status).json({
-    type: type,
-    status: status,
-    title: title,
-    detail: detail,
-  });
+  const body = errorRespondBody(status, type, title, detail);
+  return res.status(status).json(body);
 };
 
 export const respond404 = (res: VResponse, subject: string, id = '') => {
