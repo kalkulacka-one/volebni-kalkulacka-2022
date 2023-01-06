@@ -43,14 +43,6 @@ export default async function (req: VercelRequest, res: VercelResponse) {
 
     if (!existingResult) {
       return respond404(res, 'answer', resultId);
-    } else if (existingResult?.userId && !auth) {
-      return errorRespond(
-        res,
-        401,
-        'https://volebnikalkulacka.cz/api/errors/invalid-user',
-        'Invalid user',
-        'You need to log in to update this answer'
-      );
     } else if (auth && existingResult?.userId !== auth.user.id) {
       return errorRespond(
         res,
@@ -59,7 +51,15 @@ export default async function (req: VercelRequest, res: VercelResponse) {
         'Invalid user',
         'User is not the owner of the answer'
       );
-    } else if (existingResult?.updateToken !== updateToken) {
+    } else if (!auth && existingResult?.userId) {
+      return errorRespond(
+        res,
+        401,
+        'https://volebnikalkulacka.cz/api/errors/invalid-user',
+        'Invalid user',
+        'You need to log in to update this answer'
+      );
+    } else if (!auth && existingResult?.updateToken !== updateToken) {
       return errorRespond(
         res,
         401,
