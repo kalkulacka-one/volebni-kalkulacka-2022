@@ -191,7 +191,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
               Otázky, které rezonují mladou generací.<br />
               Ve spolupráci s projektem
               <a href="https://www.nazorypolitiku.cz" target="_blank">
-                Názory politiků </a
+                NázoryPolitiků.cz </a
               >.
             </BodyText>
             <ButtonComponent
