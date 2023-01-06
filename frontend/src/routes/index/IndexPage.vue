@@ -77,6 +77,9 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
             >Kdo kandiduje (Programy do voleb)
           </a>
         </BodyText>
+        <BodyText size="small">
+          Volební kalkulačku už vyplnilo přes 500 tisíc lidí.
+        </BodyText>
       </StackComponent>
       <div class="avatars">
         <div class="avatar pavel-fischer">
@@ -143,7 +146,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
           shadow
           class="other-calc-card calc-ultimate"
         >
-          <StackComponent spacing="small" centered>
+          <StackComponent spacing="small" centered space-between>
             <BodyText size="medium" tag="h2" color="fg-strong">
               <strong>Kalkulačka pro nadšence</strong><br />
               Prezident 2023
@@ -182,7 +185,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
           shadow
           class="other-calc-card calc-youth"
         >
-          <StackComponent spacing="small" centered>
+          <StackComponent spacing="small" centered space-between>
             <BodyText size="medium" tag="h2" color="fg-strong">
               <strong>Kalkulačka pro mladé</strong><br />
               Prezident 2023
@@ -405,9 +408,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
   .other-calcs > * {
     width: 100%;
     padding: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
   }
 
   .blob1 {
