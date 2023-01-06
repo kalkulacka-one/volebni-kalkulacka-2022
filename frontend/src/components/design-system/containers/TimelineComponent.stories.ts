@@ -33,7 +33,7 @@ export const WithCards: StoryFn<typeof TimelineComponent> = () => ({
           </div>
         </CardComponent>
       </TimelineItemComponent>
-      <TimelineItemComponent>
+      <TimelineItemComponent last>
         <CardComponent corner="top-right" padding="medium" border shadow>
           <div class="card-content">
             <TitleText size="extra-small" tag="h5">Tohle je poslední položka</TitleText>

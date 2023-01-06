@@ -2,7 +2,7 @@
 import { computed } from 'vue';
 
 export interface Props {
-  size?: 'medium' | 'large';
+  size?: 'small' | 'medium' | 'large';
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -32,6 +32,10 @@ const classes = computed(() => ({
 
   &--medium {
     max-width: 670px;
+  }
+
+  &--small {
+    max-width: 380px;
   }
 }
 </style>

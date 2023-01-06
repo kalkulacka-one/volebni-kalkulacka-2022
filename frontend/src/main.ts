@@ -30,6 +30,7 @@ import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.v
 import { getDistrictCode } from './common/utils';
 import VueSocialSharing from 'vue-social-sharing';
 import ProfilePageVue from './routes/profile/ProfilePage.vue';
+import ProfileSettingsPageVue from './routes/profile/ProfileSettingsPage.vue';
 
 const RESULT_QUERY_NAME = 'result';
 
@@ -183,6 +184,14 @@ export const appRoutes = {
     component: ProfilePageVue,
     meta: {
       title: 'Můj profil - Volební kalkulačka',
+    },
+  },
+  profileSettings: {
+    name: 'profile-settings',
+    path: '/nastaveni-profilu',
+    component: ProfileSettingsPageVue,
+    meta: {
+      title: 'Nastavení profilu - Volební kalkulačka',
     },
   },
   fallback: {
