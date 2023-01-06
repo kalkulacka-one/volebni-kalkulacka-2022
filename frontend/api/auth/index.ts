@@ -150,6 +150,17 @@ const getMagicLogin = () => {
   if (!process.env.MAGIC_LINK_SECRET) {
     throw new Error('MAGIC_LINK_SECRET is not defined');
   }
+  const emailBody = `<html>
+    <body style="font-family: sans-serif; align: center">
+      <p>Děkujeme za přihlášení!</p>
+      <p>Prosíme potvrďte emailovou adresu kliknutím na link níže:</p>
+      <p>
+        <a href="{{confirmationLink}}" style="display: inline-block; text-decoration:none; border: none; border-radius: 4px; color: white; background-color: #0070f4; padding: 12px 20px; font-size: 16px; cursor: pointer;">
+          Ověřit email
+        </a>
+      </p>
+    </body>
+  </html>`;
   return new MagicLoginStrategy({
     callbackUrl: `${OAUTH_CALLBACK_URL}/api/auth/magiclogin/callback`,
     secret: process.env.MAGIC_LINK_SECRET,
@@ -157,8 +168,8 @@ const getMagicLogin = () => {
       await sendEmail(
         destination,
         'Volební kalkulačka - přihlášení',
-        `Click this link to finish logging in: <a href="${href}" target="_blank">HERE</a>`,
-        `Click this link to finish logging in: ${href}`
+        emailBody.replace('{{confirmationLink}}', href),
+        `Prosíme potvrďte emailovou adresu otevřením adresy: ${href}`
       );
     },
     verify: (payload, cb) => {
