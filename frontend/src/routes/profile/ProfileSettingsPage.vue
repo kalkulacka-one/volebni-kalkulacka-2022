@@ -123,7 +123,7 @@ const onSubmit = (e: Event) => {
             </BodyText>
 
             <BodyText size="small">
-              Přectěte si o tom na <a href="">Zásady ochrany dat</a>
+              Přectěte si o tom na <a href=".">Zásady ochrany dat</a>
             </BodyText>
           </StackComponent>
 

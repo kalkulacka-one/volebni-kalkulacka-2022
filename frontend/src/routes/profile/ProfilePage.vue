@@ -74,7 +74,7 @@ const electionData = {
         </ResponsiveWrapper>
 
         <TimelineComponent class="w-full">
-          <TimelineItemComponent v-for="a in 1">
+          <TimelineItemComponent v-for="a in 1" v-bind:key="a">
             <ElectionCardComponent
               :electionName="electionData.electionName"
               :electionDateFrom="electionData.electionDateFrom"
