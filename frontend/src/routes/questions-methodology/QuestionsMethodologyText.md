@@ -177,7 +177,7 @@ může poškodit panorama Prahy.
 <IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Hlasovali byste za (myšleno ironicky) návrh barevně
 napovídat poslancům, jak hlasovat?
 
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Hlasovali byste pro zákon “Václav Havel se zasloužil o 
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Hlasovali byste pro zákon “Václav Havel se zasloužil o
 svobodu a demokracii.”?
 
 </StackComponent>
