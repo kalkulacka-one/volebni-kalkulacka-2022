@@ -7,6 +7,9 @@ import {
 } from '@/components/design-system/icons';
 </script>
 
+<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Nevyhovující příklad
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Vyhovující příklad
+
 ## 1. Otázka se musí týkat toho, co mají zvolení politici šanci ovlivnit.
 
 <IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> ČR by měla vystoupit z EU. (otázka v krajských volbách)
