@@ -9,7 +9,7 @@ import SocialMediaIcon from '@/components/design-system/icons/SocialMediaIcon.vu
     color="white"
     class="w-full"
     tag="a"
-    href="/api/auth/google"
+    href="/api/auth/google?returnTo=/vitejte"
   >
     <template #icon>
       <SocialMediaIcon type="google" />
@@ -21,7 +21,7 @@ import SocialMediaIcon from '@/components/design-system/icons/SocialMediaIcon.vu
     color="facebook"
     class="w-full"
     tag="a"
-    href="/api/auth/facebook"
+    href="/api/auth/facebook?returnTo=/vitejte"
   >
     <template #icon>
       <SocialMediaIcon type="facebook" color="white" />
@@ -34,7 +34,7 @@ import SocialMediaIcon from '@/components/design-system/icons/SocialMediaIcon.vu
     color="neutral"
     class="w-full"
     tag="a"
-    href="/api/auth/twitter"
+    href="/api/auth/twitter?returnTo=/vitejte"
   >
     <template #icon>
       <SocialMediaIcon type="twitter" color="white" />
