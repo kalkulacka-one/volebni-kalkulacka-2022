@@ -26,7 +26,7 @@ const router = useRouter();
 const route = useRoute();
 const userStore = useUserStore();
 
-const user = userStore.user;
+const user = userStore.user?.user;
 const info = ref<HTMLElement | null>(null);
 const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
 </script>
@@ -34,7 +34,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
 <template>
   <StickyHeaderLayout>
     <template #header>
-      <NavigationBar transparent withAccount :user="user" />
+      <NavigationBar transparent with-account :user="user" />
     </template>
     <div class="prezident-hero">
       <BlobComponent color="blue" class="blob1" />

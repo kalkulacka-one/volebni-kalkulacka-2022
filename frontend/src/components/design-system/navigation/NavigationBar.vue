@@ -14,23 +14,14 @@ import BodyText from '@/components/design-system/typography/BodyText.vue';
 import EmbedWrapper from '@/components/utilities/embedding/EmbedWrapper.vue';
 import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 
-export interface User {
-  id?: string;
-  name?: string;
-  email?: string;
-  authProvider?: string;
-  authProviderId?: string;
-  createdAt?: string;
-  updatedAt?: string;
-  img_url?: string;
-}
+import type { User } from '@/stores/userStore';
 
 export interface Props {
   padding?: 'small' | 'medium' | 'large';
   paddingResponsive?: boolean;
   transparent?: boolean;
   centeredTitle?: boolean;
-  user?: User | null;
+  user?: User;
   withAccount?: boolean;
 }
 
@@ -39,7 +30,7 @@ const props = withDefaults(defineProps<Props>(), {
   paddingResponsive: true,
   transparent: false,
   centeredTitle: false,
-  withAccount: false,
+  user: undefined,
 });
 
 const indexPage = computed(() => useRoute()?.path === '/');
