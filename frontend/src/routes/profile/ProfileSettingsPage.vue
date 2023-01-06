@@ -69,7 +69,6 @@ const onSubmit = (e: Event) => {
             @submit.prevent="(e) => onSubmit(e)"
           >
             <CardComponent
-              v-show="!consent"
               corner="top-left"
               padding="medium"
               border
@@ -98,12 +97,7 @@ const onSubmit = (e: Event) => {
                   :icon="mdiEmailOutline"
                 />
 
-                <ButtonComponent
-                  kind="filled"
-                  color="primary"
-                  class="w-full"
-                  @click.prevent="handleEmailSubmitClick"
-                >
+                <ButtonComponent kind="filled" color="primary" class="w-full">
                   Uložit změny
                 </ButtonComponent>
               </StackComponent>
@@ -111,7 +105,7 @@ const onSubmit = (e: Event) => {
           </form>
 
           <img
-            src="/images/register-safety.png"
+            src="/images/profile-security.png"
             width="32"
             height="32"
             alt=""
