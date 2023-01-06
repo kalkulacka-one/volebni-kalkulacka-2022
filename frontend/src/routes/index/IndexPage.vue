@@ -26,7 +26,7 @@ const router = useRouter();
 const route = useRoute();
 const userStore = useUserStore();
 
-const user = userStore.user?.user;
+const user = userStore.user;
 const info = ref<HTMLElement | null>(null);
 const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
 </script>

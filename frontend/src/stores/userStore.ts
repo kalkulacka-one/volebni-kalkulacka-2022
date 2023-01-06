@@ -11,17 +11,18 @@ export interface User {
   img_url?: string;
 }
 
-export type AuthResponse = { user: User; exp: string };
-
 export const useUserStore = defineStore('user', {
   state: () => ({
-    user: null as AuthResponse | null,
+    user: null as User | null,
   }),
   getters: {},
   actions: {
     async fetchUser() {
       const res = await fetch('http://localhost:3000/api/users/me');
-
+      if (!res.ok) {
+        this.user = null;
+        return;
+      }
       const response = await res.json();
       this.user = response.user ? response.user : null;
     },
