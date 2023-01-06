@@ -19,7 +19,7 @@ import {
 
 <IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Chtěl/a bych, aby se v příštích volbách Praha vrátila k
 
-systému jediného volebního obvodu (otázka v pražských volbách)
+systému jediného volebního obvodu. (otázka v pražských volbách)
 
 ## 2. Na otázku musí jít odpovědět ano i ne a neměla by navádět k odpovědi.
 
