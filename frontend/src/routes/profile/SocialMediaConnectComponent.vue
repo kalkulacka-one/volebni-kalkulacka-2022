@@ -4,19 +4,37 @@ import SocialMediaIcon from '@/components/design-system/icons/SocialMediaIcon.vu
 </script>
 
 <template>
-  <ButtonComponent kind="filled" color="white" class="w-full">
+  <ButtonComponent
+    kind="filled"
+    color="white"
+    class="w-full"
+    tag="a"
+    href="/api/auth/google"
+  >
     <template #icon>
       <SocialMediaIcon type="google" />
     </template>
     Pokračovat přes Google
   </ButtonComponent>
-  <ButtonComponent kind="filled" color="facebook" class="w-full">
+  <ButtonComponent
+    kind="filled"
+    color="facebook"
+    class="w-full"
+    tag="a"
+    href="/api/auth/facebook"
+  >
     <template #icon>
       <SocialMediaIcon type="facebook" color="white" />
     </template>
     Pokračovat přes Facebook
   </ButtonComponent>
-  <ButtonComponent kind="filled" color="neutral" class="w-full">
+  <ButtonComponent
+    kind="filled"
+    color="neutral"
+    class="w-full"
+    tag="a"
+    href="/api/auth/twitter"
+  >
     <template #icon>
       <SocialMediaIcon type="twitter" color="white" />
     </template>

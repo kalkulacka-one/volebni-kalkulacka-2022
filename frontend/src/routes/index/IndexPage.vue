@@ -20,10 +20,13 @@ import StaticContentLayout from '@/components/layouts/StaticContentLayout.vue';
 import MasonryGrid from '@/components/design-system/layout/MasonryGrid.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 import BlobComponent from '@/components/design-system/style/BlobComponent.vue';
+import { useUserStore } from '@/stores/userStore';
 
 const router = useRouter();
 const route = useRoute();
+const userStore = useUserStore();
 
+const user = userStore.user;
 const info = ref<HTMLElement | null>(null);
 const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
 </script>
@@ -31,7 +34,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
 <template>
   <StickyHeaderLayout>
     <template #header>
-      <NavigationBar transparent withAccount />
+      <NavigationBar transparent withAccount :user="user" />
     </template>
     <div class="prezident-hero">
       <BlobComponent color="blue" class="blob1" />

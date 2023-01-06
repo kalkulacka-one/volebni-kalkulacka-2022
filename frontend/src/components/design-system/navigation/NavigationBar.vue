@@ -15,8 +15,14 @@ import EmbedWrapper from '@/components/utilities/embedding/EmbedWrapper.vue';
 import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 
 export interface User {
-  name: string;
-  img_url?: string | undefined;
+  id?: string;
+  name?: string;
+  email?: string;
+  authProvider?: string;
+  authProviderId?: string;
+  createdAt?: string;
+  updatedAt?: string;
+  img_url?: string;
 }
 
 export interface Props {
@@ -24,7 +30,7 @@ export interface Props {
   paddingResponsive?: boolean;
   transparent?: boolean;
   centeredTitle?: boolean;
-  user?: User;
+  user?: User | null;
   withAccount?: boolean;
 }
 
@@ -114,7 +120,7 @@ const handleLoginClick = () => router.push(appRoutes.login);
           size="small"
           background-color="rgb(var(--palette-primary-90))"
           :background-image="user.img_url ? user.img_url : undefined"
-          :name="user.name"
+          :name="user.name ? user.name : user.email"
         />
         <StackComponent
           v-if="withAccount && !user"

@@ -20,6 +20,7 @@ import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
 import QuestionsMethodologyPageVue from './routes/questions-methodology/QuestionsMethodologyPageVue.vue';
 import { useElectionStore } from './stores/electionStore';
+import { useUserStore } from './stores/userStore';
 import { createPinia } from 'pinia';
 import ErrorPageVue from './routes/error/ErrorPage.vue';
 import { decodeResults, encodeResults } from './common/resultParser';
@@ -73,6 +74,16 @@ const resultsProcessor = (
   }
 };
 
+export const checkAuth = (
+  to: RouteLocationNormalized,
+  _from: RouteLocationNormalized
+) => {
+  const store = useUserStore();
+  const user = store.fetchUser();
+
+  return user;
+};
+
 export const appRoutes = {
   index: {
     name: 'index', //only for testing purposes
@@ -81,6 +92,7 @@ export const appRoutes = {
     meta: {
       title: 'Volební kalkulačka',
     },
+    beforeEnter: checkAuth,
   },
   aboutUs: {
     name: 'o-nas',
