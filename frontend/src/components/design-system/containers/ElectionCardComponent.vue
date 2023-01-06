@@ -119,7 +119,6 @@ const props = withDefaults(defineProps<Props>(), {
             kind="outlined"
             color="neutral"
             size="medium"
-            class="full-width"
           >
             Celé výsledky kalkulačky
             <template #iconAfter>
@@ -129,13 +128,7 @@ const props = withDefaults(defineProps<Props>(), {
               />
             </template>
           </ButtonComponent>
-          <ButtonComponent
-            v-else
-            kind="filled"
-            color="primary"
-            size="medium"
-            class="full-width"
-          >
+          <ButtonComponent v-else kind="filled" color="primary" size="medium">
             Vyplnit kalkulačku
             <template #iconAfter>
               <IconComponent
@@ -146,6 +139,7 @@ const props = withDefaults(defineProps<Props>(), {
           </ButtonComponent>
 
           <CardComponent
+            v-if="false"
             padding="medium"
             border
             corner="bottom-left"
@@ -200,6 +194,7 @@ const props = withDefaults(defineProps<Props>(), {
 
       <ResponsiveWrapper extra-small small>
         <CardComponent
+          v-if="false"
           padding="medium"
           border
           corner="bottom-left"
