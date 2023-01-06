@@ -62,12 +62,13 @@ const onSubmit = (e: Event) => {
         <StackComponent spacing="medium" centered class="form-wrapper">
           <SocialMediaConnectComponent />
 
-          <BodyText size="small">
+          <BodyText size="small" v-if="false">
             Nebo se přihlašte pomocí přihlašovacích ůdajů
           </BodyText>
         </StackComponent>
 
         <form
+          v-if="false"
           id="register-form"
           ref="form"
           @submit.prevent="(e) => onSubmit(e)"

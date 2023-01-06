@@ -65,6 +65,7 @@ const handleGoToLoginClick = () => {
           <SocialMediaConnectComponent />
 
           <ButtonComponent
+            v-if="false"
             kind="outlined"
             color="neutral"
             class="w-full"
@@ -92,9 +93,6 @@ const handleGoToLoginClick = () => {
 </template>
 
 <style lang="scss" scoped>
-.section {
-}
-
 .w-full {
   width: 100%;
 }

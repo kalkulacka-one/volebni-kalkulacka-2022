@@ -29,6 +29,7 @@ import SocialMediaIcon from '@/components/design-system/icons/SocialMediaIcon.vu
     Pokračovat přes Facebook
   </ButtonComponent>
   <ButtonComponent
+    v-if="false"
     kind="filled"
     color="neutral"
     class="w-full"
