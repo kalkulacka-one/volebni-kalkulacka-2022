@@ -1,5 +1,6 @@
 <script setup>
 import IconBadge from '@/components/design-system/icons/IconBadge.vue'
+import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 
 import {
   vkiLogoInFavour,
@@ -7,11 +8,17 @@ import {
 } from '@/components/design-system/icons';
 </script>
 
+<StackComponent spacing="extra-small">
+
 <IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Nevyhovující příklad
 
 <IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Vyhovující příklad
 
+</StackComponent>
+
 ## 1. Otázka se musí týkat toho, co mají zvolení politici šanci ovlivnit.
+
+<StackComponent spacing="extra-small">
 
 <IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> ČR by měla vystoupit z EU. (otázka v krajských volbách)
 
@@ -20,9 +27,15 @@ import {
 <IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Chtěl/a bych, aby se v příštích volbách Praha vrátila k
 systému jediného volebního obvodu. (otázka v pražských volbách)
 
+</StackComponent>
+
 ## 2. Na otázku musí jít odpovědět ano i ne a neměla by navádět k odpovědi.
 
 Při tvorbě si musíme umět představit lidi, kteří vybírají obě varianty odpovědi, ano i ne. Z otázky by také nemělo být poznat, jak na ni odpovídá sám autor otázky.
+
+<br />
+
+<StackComponent spacing="extra-small">
 
 <IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Měla by se zlepšit dopravní situace v městských částech
 Považský Chlmec a Vranie?
@@ -36,11 +49,17 @@ předpokladu, že “každý” ví, o co jde, diskutovalo se o tom po městě h
 <IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Mělo by se alespoň 1% z rozpočtu města určeného na dopravu
 vyčlenit na cyklistickou dopravu?
 
+</StackComponent>
+
 ## 3. Otázky mají být důležité
 
 Bereme např. v potaz, na co vydává dané zastupitelstvo/parlament nejvíce veřejných peněz.
 
 Témata vybíráme tak, aby byla relevantní pro všechny skupiny voličů (věkové, příjmové, zájmové).
+
+<br />
+
+<StackComponent spacing="extra-small">
 
 <IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Mělo se město omluvit pí. Lorenzové a p. Cejthamrovi za
 výroky, které při této konfrontaci byly vysloveny?
@@ -50,9 +69,15 @@ druhého pilíře?
 
 <IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Hlasovali byste za důvěru vládě a permanentní euroval?
 
+</StackComponent>
+
 ## 4. Otázka má být co nejkonkrétnější
 
 Jde nám o to, aby se dala odpověď zkontrolovat po 4 letech/na konci volebního období.
+
+<br />
+
+<StackComponent spacing="extra-small">
 
 <IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Měla by sa zahušťovat výstavba v centru města?
 
@@ -62,35 +87,36 @@ vést rychlodráha. (správně by bylo: Budu prosazovat/chci, aby se rychlodráh
 <IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Měla by se zvýšit dotace pro MHD minimálně o 10% oproti roku
 2010?
 
+</StackComponent>
+
 ## 5. Otázka musí být krátká a srozumitelná
 
 Chceme, aby tázaný/á otázky opravdu pročetl/a a porozuměl/a jim. Formulujeme je tedy o max. délce 20 slov, případný popis omezujeme na 50 slov.
 
-<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Hlasovali byste pro:
+<br />
 
- 	zrušení sociálního příplatku pro sólo rodiče,
+<StackComponent spacing="extra-small">
 
- 	redukci dávky – porodného jen na nízkopříjmové rodiče,
-
- 	jednotnou celkovou vyplacenou částku rodičovského příspěvku (220 000) a větší
-
-	flexibilitu ve volbě výše a délky RP,
-
- 	snížení příspěvku na péči,
-
- 	snížení podpory v nezaměstnanosti a zrušení možnosti minimálního přivýdělku k
-
- 	podpoře,
-
- 	zavedení příspěvku pro začínající podnikatele/ky,
-
- 	zpřísnění podmínek nároku na nemocenské a mateřskou u OSVČ?
+<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Hlasovali byste pro:  
+zrušení sociálního příplatku pro sólo rodiče,  
+redukci dávky – porodného jen na nízkopříjmové rodiče,  
+jednotnou celkovou vyplacenou částku rodičovského příspěvku (220 000) a větší flexibilitu ve volbě výše a délky RP,  
+snížení příspěvku na péči,  
+snížení podpory v nezaměstnanosti a zrušení možnosti minimálního přivýdělku k podpoře,  
+zavedení příspěvku pro začínající podnikatele/ky,  
+zpřísnění podmínek nároku na nemocenské a mateřskou u OSVČ?
 
 <IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Souhlasím se zavedením turniketů do metra.
+
+</StackComponent>
 
 ## 6. Otázky s popisem musejí dávat smysl i bez něj
 
 Velký počet lidí totiž čte pouze otázku samotnou, ne její popis. Může se take stát, že popis na mobilním zařízení nezobrazí.
+
+<br />
+
+<StackComponent spacing="extra-small">
 
 <IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Hlasovali by ste za zrušení garancie a automatický vstup do
 druhého pilíře?
@@ -100,12 +126,18 @@ druhého pilíře?
 <IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Souhlasím se zpoplatněním vjezdu automobilů do centra města,
 například formou mýtného.
 
+</StackComponent>
+
 ## 7. Upřednostňujeme otázky v pozitivním tvaru, vyhýbáme se matoucí dvojité negaci.
 
 Z příkladu níže je viditelné, že dvojitá negace je zavádějící a nepřesná.
 
+<br />
+
 <IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Na Vysočině by úložiště jaderného odpadu nemělo vzniknout za
 žádnou cenu.
+
+<br />
 
 Zde totiž není jasné, s čím tázaný/á nesouhlasí:
 
@@ -115,7 +147,11 @@ b) nesouhlasím, mělo by vzniknout.
 
 Správně formulována otázka by měla znít: “Měl by kraj učinit vše proti vzniku úložiště jaderného odpadu?”)
 
+<br />
+
 <IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Střední školy by se měly nadále slučovat do větších celků.
+
+<br />
 
 Nikoliv “Střední školy už by se nadále neměly slučovat do větších celků”.
 
@@ -123,15 +159,25 @@ Nikoliv “Střední školy už by se nadále neměly slučovat do větších ce
 
 Otázky píšeme tak, aby ji a tématu porozuměli různé společenské skupiny.
 
+<br />
+
+<StackComponent spacing="extra-small">
+
 <IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Nový územní plán musí regulovat výškovou výstavbu, která
 může poškodit panorama Prahy.
 
 <IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Výstavba mrakodrapů v historickém centru má být zakázána.
 
+</StackComponent>
+
 ## 9. Vybíráme i otázky, které jsou zajímavé, i když ne zcela důležité.
+
+<StackComponent spacing="extra-small">
 
 <IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Hlasovali byste za (myšleno ironicky) návrh barevně
 napovídat poslancům, jak hlasovat?
 
 <IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Hlasovali byste pro zákon “Václav Havel se zasloužil o 
 svobodu a demokracii.”?
+
+</StackComponent>
