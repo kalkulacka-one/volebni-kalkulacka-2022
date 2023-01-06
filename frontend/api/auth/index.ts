@@ -3,7 +3,6 @@ import { sign } from 'jsonwebtoken';
 import express, { Express, Request, Response, NextFunction } from 'express';
 import { Strategy as FacebookStrategy } from 'passport-facebook';
 import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
-import { Strategy as TwitterStrategy } from '@superfaceai/passport-twitter-oauth2';
 import type { Profile } from 'passport';
 import { prisma } from '../../src/server/prisma';
 import { assignAnswerToUser } from '../../src/server/answers';
@@ -53,23 +52,6 @@ const providers = {
     },
     enabled: !!(
       process.env['GOOGLE_CLIENT_ID'] && process.env['GOOGLE_CLIENT_SECRET']
-    ),
-  },
-  twitter: {
-    strategy: () => {
-      return new TwitterStrategy(
-        {
-          clientType: 'confidential',
-          clientID: process.env['TWITTER_CLIENT_ID'] as string,
-          clientSecret: process.env['TWITTER_CONSUMER_SECRET'] as string,
-          callbackURL: `${OAUTH_CALLBACK_URL}/api/auth/twitter/callback`,
-        },
-        getStrategyCallback('twitter')
-      );
-    },
-    enabled: !!(
-      process.env['TWITTER_CONSUMER_KEY'] &&
-      process.env['TWITTER_CONSUMER_SECRET']
     ),
   },
 };
