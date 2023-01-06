@@ -46,6 +46,7 @@ const providers = {
           clientID: process.env['GOOGLE_CLIENT_ID'] as string,
           clientSecret: process.env['GOOGLE_CLIENT_SECRET'] as string,
           callbackURL: `${OAUTH_CALLBACK_URL}/api/auth/google/callback`,
+          scope: ['profile', 'email'],
         },
         getStrategyCallback('google')
       );
@@ -201,7 +202,6 @@ const authenticate = (options) => {
           ).toString('base64')
         : undefined;
     const authenticator = passport.authenticate(provider, {
-      scope: ['email'],
       state,
     });
     return authenticator(req, res, next);
