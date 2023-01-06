@@ -240,7 +240,11 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
         </ResponsiveWrapper>
       </template>
       <BottomBarWrapper>
-        <StackComponent class="main" spacing="medium">
+        <StackComponent
+          v-if="electionStore.answerCount > 0"
+          class="main"
+          spacing="medium"
+        >
           <CheckboxComponent
             v-if="hasActiveCandidatesBtn"
             group-name="test"
@@ -255,6 +259,20 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           />
           <DonateBlock />
         </StackComponent>
+        <StackComponent v-else class="main" spacing="medium">
+          <BodyText tag="p" size="large">
+            <strong>
+              Neodpověděli jste na žádnou otázku a nelze tedy zobrazit žádný
+              výsledek!
+            </strong>
+          </BodyText>
+          <BodyText tag="p" size="medium">
+            Můžete si zobrazit jak odpovídali kandidáti nebo se vrátit a
+            odpovědět alespoň na jednu otázku "Ano" nebo "Ne".
+          </BodyText>
+          <DonateBlock />
+        </StackComponent>
+
         <template #bottom-bar>
           <ResponsiveWrapper extra-small small>
             <BottomBar>

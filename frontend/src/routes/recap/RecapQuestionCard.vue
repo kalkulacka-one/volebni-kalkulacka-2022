@@ -125,7 +125,7 @@ const toggleClick = () => {
           color="primary"
           :selected="answer.answer === UserAnswerEnum.yes"
           :read-only="!isExpanded"
-          @click="yesClick"
+          @click="() => (isExpanded ? yesClick() : undefined)"
         >
           <template #icon>
             <IconComponent
@@ -142,7 +142,7 @@ const toggleClick = () => {
           color="secondary"
           :selected="answer.answer === UserAnswerEnum.no"
           :read-only="!isExpanded"
-          @click="noClick"
+          @click="() => (isExpanded ? noClick() : undefined)"
         >
           <template #icon>
             <IconComponent
@@ -157,7 +157,6 @@ const toggleClick = () => {
           class="skip"
           kind="answer"
           :read-only="true"
-          @click="skipClick"
         >
           <template #icon>
             <IconComponent
@@ -175,7 +174,7 @@ const toggleClick = () => {
           color="primary"
           :selected="answer.answer === UserAnswerEnum.yes"
           :read-only="!isExpanded"
-          @click="yesClick"
+          @click="() => (isExpanded ? yesClick() : undefined)"
         >
           <template #icon>
             <IconComponent
@@ -191,7 +190,7 @@ const toggleClick = () => {
           color="secondary"
           :selected="answer.answer === UserAnswerEnum.no"
           :read-only="!isExpanded"
-          @click="noClick"
+          @click="() => (isExpanded ? yesClick() : undefined)"
         >
           <template #icon>
             <IconComponent
@@ -205,7 +204,6 @@ const toggleClick = () => {
           class="skip"
           kind="answer"
           :read-only="true"
-          @click="skipClick"
         >
           <template #icon>
             <IconComponent

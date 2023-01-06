@@ -75,7 +75,11 @@ const handleStarClick = (index: number) => {
   electionStore.flipAnswerFlag(index);
 };
 const handleAnswerClick = (index: number, answer: UserAnswerEnum) => {
-  electionStore.setAnswer(index, answer);
+  if (electionStore.answers[index].answer === answer) {
+    electionStore.setAnswer(index, UserAnswerEnum.skip);
+  } else {
+    electionStore.setAnswer(index, answer);
+  }
 };
 const isCardHidden = (index: number) => {
   return !(
