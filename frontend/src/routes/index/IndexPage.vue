@@ -78,7 +78,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
           </a>
         </BodyText>
         <BodyText size="small">
-          Volební kalkulačku už vyplnilo přes 250 tisíc lidí.
+          Volební kalkulačku už vyplnilo přes 500 tisíc lidí.
         </BodyText>
       </StackComponent>
       <div class="avatars">
