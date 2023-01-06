@@ -36,12 +36,12 @@ const props = withDefaults(defineProps<Props>(), {
 <template>
   <CardComponent padding="large" border shadow corner="bottom-right">
     <StackComponent spacing="medium">
-      <div>
+      <StackComponent spacing="extra-small">
         <TitleText tag="h4" size="small">{{ electionName }}</TitleText>
         <BodyText size="small"
           >{{ electionDateFrom }} - {{ electionDateTo }}</BodyText
         >
-      </div>
+      </StackComponent>
 
       <hr v-if="!candidates" class="ruler" />
 
