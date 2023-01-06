@@ -25,5 +25,8 @@ withDefaults(defineProps<Props>(), {
   padding: var(--spacing-extra-small);
   border-radius: 50%;
   background-color: v-bind(backgroundColor);
+  aspect-ratio: 1 / 1;
+  width: max-content;
+  display: inline-block;
 }
 </style>

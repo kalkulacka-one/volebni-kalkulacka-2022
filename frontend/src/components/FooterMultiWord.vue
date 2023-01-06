@@ -55,6 +55,11 @@ const router = useRouter();
                   >O volební kalkulačce</BodyText
                 ></router-link
               >
+              <router-link to="/metodika-tvorby-otazek"
+                ><BodyText size="small"
+                  >Metodika tvorby otázek</BodyText
+                ></router-link
+              >
             </StackComponent>
           </StackComponent>
         </div>
