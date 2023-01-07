@@ -75,11 +75,11 @@ const getStrategyCallback = (strategy: string) => {
           update: {
             authProvider: strategy,
             authProviderId: profile.id,
-            name: profile.displayName,
+            displayName: profile.displayName,
           },
           create: {
             email: null,
-            name: profile.displayName,
+            displayName: profile.displayName,
             authProvider: strategy,
             authProviderId: profile.id,
           },
@@ -97,11 +97,11 @@ const getStrategyCallback = (strategy: string) => {
         update: {
           authProvider: strategy,
           authProviderId: profile.id,
-          name: profile.displayName,
+          displayName: profile.displayName,
         },
         create: {
           email: email,
-          name: profile.displayName,
+          displayName: profile.displayName,
           authProvider: strategy,
           authProviderId: profile.id,
         },
@@ -117,7 +117,7 @@ const getStrategyCallback = (strategy: string) => {
           },
           data: {
             email: email,
-            name: profile.displayName,
+            displayName: profile.displayName,
             authProvider: strategy,
             authProviderId: profile.id,
           },
@@ -146,8 +146,6 @@ const callback = (provider: string) => {
             iss: PUBLIC_URL,
             sub: user.id,
             email: user.email || undefined,
-            firstName: user.firstName,
-            lastName: user.lastName,
           };
           const token = sign(payload, process.env.JWT_SECRET as string, {
             expiresIn: process.env.JWT_EXPIRES_IN || '7d',
