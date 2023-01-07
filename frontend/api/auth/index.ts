@@ -203,6 +203,7 @@ const authenticate = (options) => {
         : undefined;
     const authenticator = passport.authenticate(provider, {
       state,
+      scope: provider === 'facebook' ? ['email', 'public_profile'] : undefined,
     });
     return authenticator(req, res, next);
   };
