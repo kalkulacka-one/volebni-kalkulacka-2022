@@ -237,4 +237,4 @@ app.get('/*', (req, res) => {
   respond404(res, req.url);
 });
 
-module.exports = app;
+export default app;
