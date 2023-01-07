@@ -29,7 +29,7 @@ const providers = {
         {
           clientID: process.env['FACEBOOK_CLIENT_ID'] as string,
           clientSecret: process.env['FACEBOOK_CLIENT_SECRET'] as string,
-          profileFields: ['id', 'displayName', 'email', 'gender'],
+          profileFields: ['id', 'displayName', 'email'],
           callbackURL: `${OAUTH_CALLBACK_URL}/api/auth/facebook/callback`,
         },
         getStrategyCallback('facebook')
