@@ -22,14 +22,8 @@ export default async function (req: VercelRequest, res: VercelResponse) {
   if (req.method === 'GET') {
     return res.send(auth);
   } else if (req.method === 'DELETE') {
-    await prisma
-      .$transaction([
-        prisma.answers.updateMany({
-          where: { userId: auth.user.id },
-          data: { userId: null },
-        }),
-        prisma.user.delete({ where: { id: auth.user.id } }),
-      ])
+    await prisma.user
+      .delete({ where: { id: auth.user.id } })
       .catch(prismaErrorHandler(res));
     return res.status(204).send(null);
   }
