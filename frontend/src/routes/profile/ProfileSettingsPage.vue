@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import {
+  mdiAccountOutline,
   mdiArrowLeft,
   mdiTrashCanOutline,
   mdiEmailOutline,
@@ -83,7 +84,7 @@ const onSubmit = (e: Event) => {
                   class="w-full"
                   :value="fullName"
                   v-model="fullName"
-                  :icon="mdiEmailOutline"
+                  :icon="mdiAccountOutline"
                 />
 
                 <TextInputComponent
