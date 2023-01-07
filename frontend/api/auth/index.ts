@@ -145,7 +145,7 @@ const callback = (provider: string) => {
           const payload = {
             iss: PUBLIC_URL,
             sub: user.id,
-            email: user.email,
+            email: user.email || undefined,
             firstName: user.firstName,
             lastName: user.lastName,
           };
