@@ -20,6 +20,7 @@ import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
 import QuestionsMethodologyPageVue from './routes/questions-methodology/QuestionsMethodologyPageVue.vue';
 import { useElectionStore } from './stores/electionStore';
+import { useUserStore } from './stores/userStore';
 import { createPinia } from 'pinia';
 import ErrorPageVue, { ErrorPageEnum } from './routes/error/ErrorPage.vue';
 import { decodeResults, encodeResults } from './common/resultParser';
@@ -29,6 +30,12 @@ import AboutElectionsPageVue from './routes/about-elections/AboutElectionsPage.v
 import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
 import { getDistrictCode } from './common/utils';
 import VueSocialSharing from 'vue-social-sharing';
+import RegisterPageVue from './routes/profile/RegisterPageVue.vue';
+import LoginPageVue from './routes/profile/LoginPageVue.vue';
+import RegisterFormPageVue from './routes/profile/RegisterFormPageVue.vue';
+import ConsentPageVue from './routes/profile/ConsentPageVue.vue';
+import EmailSentPageVue from './routes/profile/EmailSentPageVue.vue';
+import WelcomePageVue from './routes/profile/WelcomePageVue.vue';
 
 const RESULT_QUERY_NAME = 'result';
 
@@ -66,6 +73,16 @@ const resultsProcessor = (
   }
 };
 
+export const checkAuth = (
+  to: RouteLocationNormalized,
+  _from: RouteLocationNormalized
+) => {
+  const store = useUserStore();
+  const user = store.fetchUser();
+
+  return user;
+};
+
 export const appRoutes = {
   index: {
     name: 'index', //only for testing purposes
@@ -74,6 +91,7 @@ export const appRoutes = {
     meta: {
       title: 'Volební kalkulačka',
     },
+    beforeEnter: checkAuth,
   },
   aboutUs: {
     name: 'o-nas',
@@ -174,6 +192,54 @@ export const appRoutes = {
     component: SharePageVue,
     meta: {
       title: 'Moje výsledky - Volební kalkulačka',
+    },
+  },
+  login: {
+    name: 'login',
+    path: '/prihlaseni',
+    component: LoginPageVue,
+    meta: {
+      title: 'Přihlášení - Volební kalkulačka',
+    },
+  },
+  register: {
+    name: 'register',
+    path: '/registrace',
+    component: RegisterPageVue,
+    meta: {
+      title: 'Registrace - Volební kalkulačka',
+    },
+  },
+  registerForm: {
+    name: 'register-form',
+    path: '/registracni-formular',
+    component: RegisterFormPageVue,
+    meta: {
+      title: 'Registrační formulář - Volební kalkulačka',
+    },
+  },
+  consent: {
+    name: 'consent',
+    path: '/souhlas-se-zpracovanim-osobnich-udaju',
+    component: ConsentPageVue,
+    meta: {
+      title: 'Souhlas se zpracováním osobních údajů - Volební kalkulačka',
+    },
+  },
+  emailSent: {
+    name: 'email-sent',
+    path: '/email-odeslan',
+    component: EmailSentPageVue,
+    meta: {
+      title: 'Ověřovací e-mail byl odeslán - Volební kalkulačka',
+    },
+  },
+  welcome: {
+    name: 'welcome',
+    path: '/vitejte',
+    component: WelcomePageVue,
+    meta: {
+      title: 'Vítejte ve svém profilu - Volební kalkulačka',
     },
   },
   fallback: {

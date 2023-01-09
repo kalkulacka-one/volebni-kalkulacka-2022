@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 
 import { appRoutes } from '@/main';
 
@@ -14,10 +14,7 @@ import BodyText from '@/components/design-system/typography/BodyText.vue';
 import EmbedWrapper from '@/components/utilities/embedding/EmbedWrapper.vue';
 import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 
-export interface User {
-  name: string;
-  img_url?: string | undefined;
-}
+import type { User } from '@/stores/userStore';
 
 export interface Props {
   padding?: 'small' | 'medium' | 'large';
@@ -33,7 +30,7 @@ const props = withDefaults(defineProps<Props>(), {
   paddingResponsive: true,
   transparent: false,
   centeredTitle: false,
-  withAccount: false,
+  user: undefined,
 });
 
 const indexPage = computed(() => useRoute()?.path === '/');
@@ -45,6 +42,12 @@ const classes = computed(() => ({
 const background = computed(() =>
   props.transparent ? 'transparent' : undefined
 );
+
+const router = useRouter();
+
+const handleRegisterClick = () => router.push(appRoutes.register);
+
+const handleLoginClick = () => router.push(appRoutes.login);
 </script>
 
 <template>
@@ -108,7 +111,7 @@ const background = computed(() =>
           size="small"
           background-color="rgb(var(--palette-primary-90))"
           :background-image="user.img_url ? user.img_url : undefined"
-          :name="user.name"
+          :name="user.name ? user.name : user.email"
         />
         <StackComponent
           v-if="withAccount && !user"
@@ -118,13 +121,22 @@ const background = computed(() =>
           spacing="medium"
         >
           <ResponsiveWrapper medium large extra-large huge>
-            <ButtonComponent kind="link">Vytvořit účet</ButtonComponent>
-            <ButtonComponent kind="outlined" size="small"
+            <ButtonComponent kind="link" @click="handleRegisterClick"
+              >Vytvořit účet</ButtonComponent
+            >
+            <ButtonComponent
+              kind="outlined"
+              size="small"
+              @click="handleLoginClick"
               >Přihlásit se</ButtonComponent
             >
           </ResponsiveWrapper>
           <ResponsiveWrapper extra-small small>
-            <ButtonComponent kind="link" color="primary" size="small"
+            <ButtonComponent
+              kind="link"
+              color="primary"
+              size="small"
+              @click="handleLoginClick"
               >Přihlásit se</ButtonComponent
             >
           </ResponsiveWrapper>
