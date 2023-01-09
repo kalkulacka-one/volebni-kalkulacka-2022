@@ -38,6 +38,7 @@ const providers = {
     enabled: !!(
       process.env['FACEBOOK_CLIENT_ID'] && process.env['FACEBOOK_CLIENT_SECRET']
     ),
+    scope: ['email', 'public_profile'],
   },
   google: {
     strategy: () => {
@@ -54,6 +55,7 @@ const providers = {
     enabled: !!(
       process.env['GOOGLE_CLIENT_ID'] && process.env['GOOGLE_CLIENT_SECRET']
     ),
+    scope: ['profile', 'email'],
   },
 };
 
@@ -201,7 +203,7 @@ const authenticate = (options) => {
         : undefined;
     const authenticator = passport.authenticate(provider, {
       state,
-      scope: provider === 'facebook' ? ['email', 'public_profile'] : undefined,
+      scope: provider.scope,
     });
     return authenticator(req, res, next);
   };
