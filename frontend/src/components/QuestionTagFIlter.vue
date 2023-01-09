@@ -2,11 +2,15 @@
 import { useElectionStore } from '@/stores/electionStore';
 import { ref, watch } from 'vue';
 
+import PillGroupComponent from '@/components/design-system/input/PillGroupComponent.vue';
+import PillGroupItemComponent from '@/components/design-system/input/PillGroupItemComponent.vue';
+import TitleText from './design-system/typography/TitleText.vue';
+
 export interface Props {
   modelValue?: Set<string>;
 }
 
-const props = defineProps<Props>();
+defineProps<Props>();
 const emit = defineEmits(['update:modelValue']);
 
 const electionStore = useElectionStore();
@@ -20,16 +24,22 @@ const onSelectAllClicked = (event: MouseEvent) => {
   } else {
     selectedTags.value.clear();
   }
-  console.debug(selectedTags.value);
 };
 
-watch(selectedTags, (newValue, oldValue) => {
-  emit('update:modelValue', selectedTags);
-});
+watch(
+  selectedTags,
+  (newValue, oldValue) => {
+    emit('update:modelValue', newValue);
+  },
+  { deep: true, immediate: true }
+);
 </script>
 
 <template>
-  <form class="filter-menu">
+  <form>
+    <TitleText class="tag-filter-title" tag="h3" size="small">
+      Filtrovat podle témat
+    </TitleText>
     <pill-group-component>
       <pill-group-item-component
         key="select-all"
@@ -54,3 +64,8 @@ watch(selectedTags, (newValue, oldValue) => {
     </pill-group-component>
   </form>
 </template>
+<style lang="scss" scoped>
+.tag-filter-title {
+  padding-bottom: var(--spacing-small);
+}
+</style>

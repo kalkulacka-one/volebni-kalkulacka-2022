@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRoute, useRouter } from 'vue-router';
-import { mdiCloseCircleOutline, mdiArrowLeft } from '@mdi/js';
+import { mdiCloseCircleOutline, mdiArrowLeft, mdiTune } from '@mdi/js';
 
 import { appRoutes } from '@/main';
 import { useElectionStore } from '@/stores/electionStore';
@@ -27,9 +27,8 @@ import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import ComparisonGrid from './ComparisonGrid.vue';
 import ContainerComponent from '../../components/design-system/containers/ContainerComponent.vue';
 
-import PillGroupComponent from '@/components/design-system/input/PillGroupComponent.vue';
-import PillGroupItemComponent from '@/components/design-system/input/PillGroupItemComponent.vue';
 import { ref } from 'vue';
+import QuestionTagFilter from '@/components/QuestionTagFIlter.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -59,20 +58,12 @@ const handlePreviousClick = () => {
   });
 };
 
+const filterMenuIsVisible = ref(false);
+
 const questions = electionStore.calculator?.questions as Question[];
 const answers = electionStore.answers;
 const candidates = electionStore?.calculator?.candidates as Candidate[];
 const candidateAnswers = electionStore.calculator?.answers as CandidateAnswer[];
-const onSelectAllClicked = (event: MouseEvent) => {
-  if ((event.target as HTMLInputElement).checked) {
-    electionStore.uniqueQuestionTags.forEach((x) => {
-      selectedTags.value.add(x);
-    });
-  } else {
-    selectedTags.value.clear();
-  }
-  console.debug(selectedTags.value);
-};
 </script>
 
 <template>
@@ -130,7 +121,22 @@ const onSelectAllClicked = (event: MouseEvent) => {
               </IconButton>
             </template>
             <TitleText tag="h2" size="medium">Porovnání</TitleText>
+            <template #after>
+              <ButtonComponent
+                kind="link"
+                @click="filterMenuIsVisible = !filterMenuIsVisible"
+              >
+                <template #icon>
+                  <IconComponent :icon="mdiTune" title="Nastavit porovnání" />
+                </template>
+              </ButtonComponent>
+            </template>
           </SecondaryNavigationBar>
+          <QuestionTagFilter
+            v-show="filterMenuIsVisible"
+            v-model="selectedTags"
+            class="filter-menu"
+          />
         </ResponsiveWrapper>
         <ResponsiveWrapper medium large extra-large huge>
           <SecondaryNavigationBar>
@@ -140,31 +146,23 @@ const onSelectAllClicked = (event: MouseEvent) => {
               </IconButton>
             </template>
             <TitleText tag="h2" size="large">Porovnání</TitleText>
+            <template #after>
+              <ButtonComponent
+                kind="link"
+                @click="filterMenuIsVisible = !filterMenuIsVisible"
+              >
+                Nastavit porovnání
+                <template #iconAfter>
+                  <IconComponent :icon="mdiTune" />
+                </template>
+              </ButtonComponent>
+            </template>
           </SecondaryNavigationBar>
-          <form class="filter-menu">
-            <pill-group-component>
-              <pill-group-item-component
-                key="select-all"
-                type="checkbox"
-                group-name="select-all"
-                :checked="true"
-                @click="onSelectAllClicked"
-              >
-                Vybrat vše
-              </pill-group-item-component>
-              <pill-group-item-component
-                v-for="(tag, idx) in electionStore.uniqueQuestionTags"
-                :key="idx"
-                v-model="selectedTags"
-                type="checkbox"
-                :group-name="tag"
-                :value="tag"
-                :checked="selectedTags.has(tag)"
-              >
-                {{ tag }}
-              </pill-group-item-component>
-            </pill-group-component>
-          </form>
+          <QuestionTagFilter
+            v-show="filterMenuIsVisible"
+            v-model="selectedTags"
+            class="filter-menu"
+          />
         </ResponsiveWrapper>
       </template>
       <BottomBarWrapper>
@@ -195,6 +193,7 @@ const onSelectAllClicked = (event: MouseEvent) => {
 }*/
 .filter-menu {
   padding: var(--spacing-large);
+  padding-top: 0;
   background: rgb(var(--color-neutral-bg-container));
 }
 </style>

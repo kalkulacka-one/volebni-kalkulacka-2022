@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 
 import type { Question } from '@/types/question';
 import type { Candidate } from '@/types/candidate';
@@ -31,17 +31,15 @@ export interface Props {
 }
 
 const props = defineProps<Props>();
-
 const isQuestionInTagSet = (question: Question) => {
-  if (props.selectedTags) {
-    return (
-      question.tags?.find((tag) => {
-        return props.selectedTags?.has(tag);
-      }) !== undefined
-    );
-  } else {
+  if (!props.selectedTags) {
     return true;
   }
+  return (
+    question.tags?.find((tag) => {
+      return props.selectedTags?.has(tag);
+    }) !== undefined
+  );
 };
 
 const questionsToShow = computed(() =>
@@ -97,10 +95,23 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
       return 'neutral';
   }
 };
+const calculateStickeHeaderPos = () => {
+  const bot = document
+    .getElementsByClassName('sticky-header')[0]
+    ?.getBoundingClientRect().bottom;
+  const headers = document.querySelectorAll('#comparison-grid > .header');
+  for (let index = 0; index < headers.length; index++) {
+    const element = headers[index] as HTMLElement;
+    element.style.top = `${bot}px`;
+  }
+};
+window.onload = calculateStickeHeaderPos;
+window.onresize = calculateStickeHeaderPos;
+window.onscroll = calculateStickeHeaderPos;
 </script>
 
 <template>
-  <div class="grid">
+  <div id="comparison-grid" class="grid">
     <template v-for="i in candidateCount + 1" :key="i">
       <DividerComponent
         :class="['line', i === 1 ? 'user-line' : '']"
@@ -249,11 +260,12 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
 
 <style lang="scss" scoped>
 .header {
+  padding-top: var(--spacing-extra-small);
   position: sticky;
-  top: calc(
-    2 * var(--responsive-spacing-large) + var(--spacing-medium) + 2 *
-      var(--spacing-extra-small) + var(--responsive-spacing-large)
-  );
+  // top: calc(
+  //   2 * var(--responsive-spacing-large) + var(--spacing-medium) + 2 *
+  //     var(--spacing-extra-small) + var(--responsive-spacing-large)
+  // );
   z-index: 100;
 }
 
@@ -272,6 +284,7 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
 }
 
 .line {
+  margin-top: var(--spacing-extra-small);
   grid-row: 1 / span 2;
   justify-self: center;
 }
