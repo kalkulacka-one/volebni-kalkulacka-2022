@@ -1,19 +1,32 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed } from 'vue';
 import LabelText from '@/components/design-system/typography/LabelText.vue';
 
 export interface Props {
   groupName: string;
+  type: 'radio' | 'checkbox';
   value?: string;
   checked?: boolean;
+  modelValue?: Set<string>;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   value: 'on',
   checked: false,
+  modelValue: undefined,
 });
 
-const isChecked = ref(props.checked);
+const isChecked = computed(() => props.checked);
+
+const emit = defineEmits(['update:modelValue']);
+const onInput = (payload: Event) => {
+  if (props.modelValue?.has((payload.target as HTMLInputElement).value)) {
+    props.modelValue.delete((payload.target as HTMLInputElement).value);
+  } else {
+    props.modelValue?.add((payload.target as HTMLInputElement).value);
+  }
+  emit('update:modelValue', props.modelValue);
+};
 </script>
 
 <template>
@@ -22,10 +35,11 @@ const isChecked = ref(props.checked);
       <input
         ref="input"
         class="pill-input"
-        type="radio"
+        :type="props.type"
         :value="value || 'on'"
         :name="props.groupName"
         :checked="isChecked"
+        @input="onInput"
       />
       <LabelText class="pill-label">
         <slot />

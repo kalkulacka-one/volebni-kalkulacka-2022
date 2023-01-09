@@ -22,10 +22,8 @@ const props = withDefaults(defineProps<Props>(), {
   backgroundColor: 'rgb(var(--color-neutral-bg-container))',
   border: false,
   borderKind: 'normal',
-  // eslint-disable-next-line vue/require-valid-default-prop
   borderRadius: 'small',
-  // eslint-disable-next-line vue/require-valid-default-prop
-  padding: 'medium',
+  padding: Object('medium') as Props['padding'],
   responsive: true,
   shadow: false,
 });

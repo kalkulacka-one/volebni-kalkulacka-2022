@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { Question } from '@/types/question';
 
-import AccordionComponent from '@/components/design-system/containers/AccordionComponent.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 import CardComponent from '@/components/design-system/containers/CardComponent.vue';
 import HeadingComponent from '@/components/design-system/typography/HeadingComponent.vue';
@@ -23,7 +22,7 @@ defineProps<Props>();
     corner="top-left"
     border
     shadow
-    padding="medium"
+    :padding="Object('medium')"
     padding-responsive
     padding-asymmetric
   >

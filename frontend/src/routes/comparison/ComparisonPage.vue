@@ -27,6 +27,10 @@ import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import ComparisonGrid from './ComparisonGrid.vue';
 import ContainerComponent from '../../components/design-system/containers/ContainerComponent.vue';
 
+import PillGroupComponent from '@/components/design-system/input/PillGroupComponent.vue';
+import PillGroupItemComponent from '@/components/design-system/input/PillGroupItemComponent.vue';
+import { ref } from 'vue';
+
 const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
@@ -45,6 +49,7 @@ const districtNameWithCode = showDistrictCode
   : districtName;
 
 const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
+const selectedTags = ref(new Set<string>(electionStore.uniqueQuestionTags));
 
 const handlePreviousClick = () => {
   router.push({
@@ -58,6 +63,16 @@ const questions = electionStore.calculator?.questions as Question[];
 const answers = electionStore.answers;
 const candidates = electionStore?.calculator?.candidates as Candidate[];
 const candidateAnswers = electionStore.calculator?.answers as CandidateAnswer[];
+const onSelectAllClicked = (event: MouseEvent) => {
+  if ((event.target as HTMLInputElement).checked) {
+    electionStore.uniqueQuestionTags.forEach((x) => {
+      selectedTags.value.add(x);
+    });
+  } else {
+    selectedTags.value.clear();
+  }
+  console.debug(selectedTags.value);
+};
 </script>
 
 <template>
@@ -126,6 +141,30 @@ const candidateAnswers = electionStore.calculator?.answers as CandidateAnswer[];
             </template>
             <TitleText tag="h2" size="large">Porovnání</TitleText>
           </SecondaryNavigationBar>
+          <form class="filter-menu">
+            <pill-group-component>
+              <pill-group-item-component
+                key="select-all"
+                type="checkbox"
+                group-name="select-all"
+                :checked="true"
+                @click="onSelectAllClicked"
+              >
+                Vybrat vše
+              </pill-group-item-component>
+              <pill-group-item-component
+                v-for="(tag, idx) in electionStore.uniqueQuestionTags"
+                :key="idx"
+                v-model="selectedTags"
+                type="checkbox"
+                :group-name="tag"
+                :value="tag"
+                :checked="selectedTags.has(tag)"
+              >
+                {{ tag }}
+              </pill-group-item-component>
+            </pill-group-component>
+          </form>
         </ResponsiveWrapper>
       </template>
       <BottomBarWrapper>
@@ -140,6 +179,7 @@ const candidateAnswers = electionStore.calculator?.answers as CandidateAnswer[];
               :answers="answers"
               :candidates="candidates"
               :candidate-answers="candidateAnswers"
+              :selected-tags="selectedTags"
             />
           </ContainerComponent>
         </div>
@@ -153,4 +193,8 @@ const candidateAnswers = electionStore.calculator?.answers as CandidateAnswer[];
   max-width: 100vw;
   overflow-x: scroll;
 }*/
+.filter-menu {
+  padding: var(--spacing-large);
+  background: rgb(var(--color-neutral-bg-container));
+}
 </style>

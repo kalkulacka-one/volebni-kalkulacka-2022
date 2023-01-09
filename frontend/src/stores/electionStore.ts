@@ -58,6 +58,7 @@ export const useElectionStore = defineStore('election', {
       resultsId: null as null | string,
       resultsUpdateToken: null as null | string,
       encodedResults: null as null | string,
+      uniqueQuestionTags: new Set<string>(),
     };
   },
   getters: {
@@ -121,6 +122,9 @@ export const useElectionStore = defineStore('election', {
       if (calculator !== undefined) {
         this.calculator = calculator;
         this.answers = calculator.questions.map((x) => {
+          x.tags?.forEach((tag) => {
+            this.uniqueQuestionTags.add(tag);
+          });
           return {
             answer: UserAnswerEnum.undefined,
             flag: false,
@@ -181,6 +185,7 @@ export const useElectionStore = defineStore('election', {
       this.encodedResults = null;
       this.resultsUpdateToken = null;
       this.resultsId = null;
+      this.uniqueQuestionTags.clear();
     },
   },
 });

@@ -27,11 +27,26 @@ export interface Props {
   answers: UserAnswer[];
   candidates: Candidate[];
   candidateAnswers: CandidateAnswer[];
+  selectedTags?: Set<string>;
 }
 
 const props = defineProps<Props>();
 
-const questionCount = computed(() => props.questions.length);
+const isQuestionInTagSet = (question: Question) => {
+  if (props.selectedTags) {
+    return (
+      question.tags?.find((tag) => {
+        return props.selectedTags?.has(tag);
+      }) !== undefined
+    );
+  } else {
+    return true;
+  }
+};
+
+const questionsToShow = computed(() =>
+  props.questions.filter((x) => isQuestionInTagSet(x))
+);
 const results = calculateRelativeAgreement(
   props.candidateAnswers,
   props.answers
@@ -94,7 +109,7 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
         :color="i === 1 ? 'rgb(var(--color-neutral-border-strong))' : undefined"
         :style="{
           'grid-column': i === 1 ? 1 : 2 * (i - 1),
-          'grid-row': `1 / span ${2 * questionCount + 1}`,
+          'grid-row': `1 / span ${2 * questionsToShow.length + 1}`,
         }"
       />
     </template>
@@ -139,7 +154,10 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
         </FilledCircle>
       </div>
     </template>
-    <template v-for="(question, questionIndex) in questions" :key="question.id">
+    <template
+      v-for="(question, questionIndex) in questionsToShow"
+      :key="question.id"
+    >
       <QuestionCard
         class="question-card"
         :style="{
@@ -148,7 +166,7 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
         }"
         :question="question"
         :current-question="questionIndex + 1"
-        :question-count="questionCount"
+        :question-count="questionsToShow.length"
       />
       <div
         class="user-answers"
@@ -183,18 +201,16 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
           }"
         >
           <FilledCircle
-            :background-color="`rgb(var(--color-${mapAnswerToColor(candidateAnswers.filter(
-  (answer) =>
-    answer.candidate_id === candidateId &&
-    answer.question_id === question.id
-)[0].answer as string)}-bg-strong))`"
+            :background-color="`rgb(var(--color-${mapAnswerToColor(candidateAnswers.filter((answer) =>
+                answer.candidate_id === candidateId &&
+                answer.question_id === question.id
+            )[0].answer as string)}-bg-strong))`"
           >
             <IconComponent
-              :icon="mapAnswerToIcon(candidateAnswers.filter(
-  (answer) =>
-    answer.candidate_id === candidateId &&
-    answer.question_id === question.id
-)[0].answer as string)"
+              :icon="mapAnswerToIcon(candidateAnswers.filter((answer) =>
+                  answer.candidate_id === candidateId &&
+                  answer.question_id === question.id
+              )[0].answer as string)"
               color="rgb(var(--color-neutral-fg-inverse))"
             />
           </FilledCircle>
@@ -214,7 +230,7 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
             'grid-row': 2 * questionIndex + 3,
           }"
         >
-          <CardComponent corner="top-left" padding="medium">
+          <CardComponent corner="top-left" :padding="Object('medium')">
             <BodyText size="small">
               {{
                 candidateAnswers.filter(
