@@ -13,7 +13,7 @@ const config: StorybookConfig = {
     name: '@storybook/vue3-vite',
   },
   docs: {
-    autodocs: true,
+    autodocs: false,
   },
 };
 module.exports = config;
