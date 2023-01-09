@@ -285,9 +285,17 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
             <template #before>
               <ResponsiveWrapper medium large extra-large huge>
                 <ButtonComponent kind="link" @click="handlePreviousClick">
-                  {{ previousButtonTitle }}
+                  <ResponsiveWrapper large>
+                    {{ previousButtonShortTitle }}
+                  </ResponsiveWrapper>
+                  <ResponsiveWrapper extra-large huge>
+                    {{ previousButtonTitle }}
+                  </ResponsiveWrapper>
                   <template #icon>
-                    <IconComponent :icon="mdiArrowLeft" />
+                    <IconComponent
+                      :icon="mdiArrowLeft"
+                      :title="previousButtonTitle"
+                    />
                   </template>
                 </ButtonComponent>
               </ResponsiveWrapper>
@@ -300,9 +308,17 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
             <template #after>
               <ResponsiveWrapper medium large extra-large huge>
                 <ButtonComponent kind="link" @click="handleNextClick">
-                  {{ nextButtonTitle }}
+                  <ResponsiveWrapper large>
+                    {{ nextButtonShortTitle }}
+                  </ResponsiveWrapper>
+                  <ResponsiveWrapper extra-large huge>
+                    {{ nextButtonTitle }}
+                  </ResponsiveWrapper>
                   <template #iconAfter>
-                    <IconComponent :icon="mdiArrowRight" />
+                    <IconComponent
+                      :icon="mdiArrowRight"
+                      :title="nextButtonTitle"
+                    />
                   </template>
                 </ButtonComponent>
               </ResponsiveWrapper>
