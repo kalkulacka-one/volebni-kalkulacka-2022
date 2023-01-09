@@ -191,9 +191,9 @@ const callback = (provider: string) => {
   };
 };
 
-const authenticate = (options) => {
+const authenticate = (options: { provider: string; scope: string[] }) => {
   return (req: Request, res: Response, next: NextFunction) => {
-    const { provider } = options;
+    const { provider, scope } = options;
     const { returnTo, updateToken, answerId } = req.query;
     const state =
       returnTo || (updateToken && answerId)
@@ -203,7 +203,7 @@ const authenticate = (options) => {
         : undefined;
     const authenticator = passport.authenticate(provider, {
       state,
-      scope: provider.scope,
+      scope,
     });
     return authenticator(req, res, next);
   };
@@ -213,7 +213,8 @@ for (const provider in providers) {
   if (providers[provider].enabled) {
     // Initialize routes for each provider
     passport.use(providers[provider].strategy());
-    app.get(`/api/auth/${provider}`, authenticate({ provider }));
+    const scope = providers[provider].scope;
+    app.get(`/api/auth/${provider}`, authenticate({ provider, scope }));
     app.get(`/api/auth/${provider}/callback`, callback(provider));
   }
 }
