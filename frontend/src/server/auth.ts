@@ -19,7 +19,7 @@ export async function authUser(
   try {
     const parsed = JSON.parse(tokenString);
     const token = parsed.token;
-    const secret = process.env.JWT_SECRET as string;
+    const secret = Buffer.from(process.env.JWT_SECRET as string, 'base64');
     const { sub, exp, iss } = verify(token as string, secret) as {
       sub: string;
       exp: number;

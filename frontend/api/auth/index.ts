@@ -151,9 +151,13 @@ const callback = (provider: string) => {
             sub: user.id,
             email: user.email || undefined,
           };
-          const token = sign(payload, process.env.JWT_SECRET as string, {
-            expiresIn: process.env.JWT_EXPIRES_IN || '7d',
-          });
+          const token = sign(
+            payload,
+            Buffer.from(process.env.JWT_SECRET as string, 'base64'),
+            {
+              expiresIn: process.env.JWT_EXPIRES_IN || '7d',
+            }
+          );
           const cookiePayload = { token };
           const expiresInDate = new Date(
             Date.now() + ms(process.env.JWT_EXPIRES_IN || '7d')
