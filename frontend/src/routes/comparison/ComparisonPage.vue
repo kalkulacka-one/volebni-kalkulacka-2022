@@ -28,7 +28,8 @@ import ComparisonGrid from './ComparisonGrid.vue';
 import ContainerComponent from '../../components/design-system/containers/ContainerComponent.vue';
 
 import { ref } from 'vue';
-import QuestionTagFilter from '@/components/QuestionTagFIlter.vue';
+import QuestionTagFilter from '@/components/QuestionTagFilter.vue';
+import QuestionCandidateFilter from '@/components/QuestionCandidateFilter.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -49,6 +50,7 @@ const districtNameWithCode = showDistrictCode
 
 const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
 const selectedTags = ref(new Set<string>(electionStore.uniqueQuestionTags));
+const selectedCandidateIds = ref(new Set<string>());
 
 const handlePreviousClick = () => {
   router.push({
@@ -163,6 +165,11 @@ const candidateAnswers = electionStore.calculator?.answers as CandidateAnswer[];
             v-model="selectedTags"
             class="filter-menu"
           />
+          <QuestionCandidateFilter
+            v-show="filterMenuIsVisible"
+            v-model="selectedCandidateIds"
+            class="filter-menu"
+          />
         </ResponsiveWrapper>
       </template>
       <BottomBarWrapper>
@@ -178,6 +185,7 @@ const candidateAnswers = electionStore.calculator?.answers as CandidateAnswer[];
               :candidates="candidates"
               :candidate-answers="candidateAnswers"
               :selected-tags="selectedTags"
+              :selected-candidate-ids="selectedCandidateIds"
             />
           </ContainerComponent>
         </div>

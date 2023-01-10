@@ -15,20 +15,22 @@ const emit = defineEmits(['update:modelValue']);
 
 const electionStore = useElectionStore();
 
-const uniqueTags = electionStore.uniqueQuestionTags;
-const selectedTags = ref(new Set<string>(electionStore.uniqueQuestionTags));
+const uniqueCandidateIds = new Set<string>(
+  electionStore.calculator?.candidates.map((x) => x.id)
+);
+const selectedCandidateIds = ref(new Set<string>(uniqueCandidateIds));
 const onSelectAllClicked = (event: MouseEvent) => {
   if ((event.target as HTMLInputElement).checked) {
-    electionStore.uniqueQuestionTags.forEach((x) => {
-      selectedTags.value.add(x);
+    uniqueCandidateIds.forEach((x) => {
+      selectedCandidateIds.value.add(x);
     });
   } else {
-    selectedTags.value.clear();
+    selectedCandidateIds.value.clear();
   }
 };
 
 watch(
-  selectedTags,
+  selectedCandidateIds,
   (newValue, oldValue) => {
     emit('update:modelValue', newValue);
   },
@@ -39,7 +41,7 @@ watch(
 <template>
   <form>
     <TitleText class="tag-filter-title" tag="h3" size="small">
-      Filtrovat podle témat
+      Filtrovat podle kandidujících
     </TitleText>
     <pill-group-component>
       <pill-group-item-component
@@ -52,15 +54,18 @@ watch(
         Vybrat vše
       </pill-group-item-component>
       <pill-group-item-component
-        v-for="(tag, idx) in uniqueTags"
+        v-for="(candidateId, idx) in uniqueCandidateIds"
         :key="idx"
-        v-model="selectedTags"
+        v-model="selectedCandidateIds"
         type="checkbox"
-        :group-name="tag"
-        :value="tag"
-        :checked="selectedTags.has(tag)"
+        :group-name="candidateId"
+        :value="candidateId"
+        :checked="selectedCandidateIds.has(candidateId)"
       >
-        {{ tag }}
+        {{
+          electionStore.calculator?.candidates.find((x) => x.id === candidateId)
+            ?.name
+        }}
       </pill-group-item-component>
     </pill-group-component>
   </form>

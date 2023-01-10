@@ -112,6 +112,7 @@ export const useElectionStore = defineStore('election', {
     },
     async loadCalculator(electionId: string, districtId: string) {
       this.calculator = undefined;
+      this.uniqueQuestionTags.clear();
       let calculator = undefined;
       try {
         calculator = await fetchCalculator(electionId, districtId);
@@ -185,7 +186,6 @@ export const useElectionStore = defineStore('election', {
       this.encodedResults = null;
       this.resultsUpdateToken = null;
       this.resultsId = null;
-      this.uniqueQuestionTags.clear();
     },
   },
 });

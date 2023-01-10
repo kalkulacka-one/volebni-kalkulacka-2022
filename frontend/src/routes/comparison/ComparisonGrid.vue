@@ -28,6 +28,7 @@ export interface Props {
   candidates: Candidate[];
   candidateAnswers: CandidateAnswer[];
   selectedTags?: Set<string>;
+  selectedCandidateIds?: Set<string>;
 }
 
 const props = defineProps<Props>();
@@ -42,15 +43,32 @@ const isQuestionInTagSet = (question: Question) => {
   );
 };
 
+const isCandidateInCandidateSet = (candidate: Candidate) => {
+  if (!props.selectedCandidateIds) {
+    return true;
+  } else {
+    return props.selectedCandidateIds?.has(candidate.id);
+  }
+};
+
 const questionsToShow = computed(() =>
   props.questions.filter((x) => isQuestionInTagSet(x))
 );
+const candidatesToShow = computed(() =>
+  props.candidates.filter((x) => isCandidateInCandidateSet(x))
+);
+console.debug(candidatesToShow);
 const results = calculateRelativeAgreement(
   props.candidateAnswers,
   props.answers
 );
-const candidateOrder = results.map((response) => response.cId);
-const candidateCount = computed(() => candidateOrder.length);
+const candidateOrder = computed(() =>
+  results
+    .filter((x) =>
+      props.selectedCandidateIds ? props.selectedCandidateIds.has(x.cId) : true
+    )
+    .map((response) => response.cId)
+);
 
 const mapAnswerToIcon = (answer: string | UserAnswerEnum) => {
   switch (answer) {
@@ -95,6 +113,8 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
       return 'neutral';
   }
 };
+
+//this ensures stickiness of the header
 const calculateStickeHeaderPos = () => {
   const bot = document
     .getElementsByClassName('sticky-header')[0]
@@ -112,7 +132,7 @@ window.onscroll = calculateStickeHeaderPos;
 
 <template>
   <div id="comparison-grid" class="grid">
-    <template v-for="i in candidateCount + 1" :key="i">
+    <template v-for="i in candidateOrder.length + 1" :key="i">
       <DividerComponent
         :class="['line', i === 1 ? 'user-line' : '']"
         vertical
@@ -156,7 +176,7 @@ window.onscroll = calculateStickeHeaderPos;
           >
             <strong>
               {{
-                candidates.filter(
+                candidatesToShow.filter(
                   (candidate) => candidate.id === candidateId
                 )[0].short_name
               }}</strong
@@ -172,7 +192,7 @@ window.onscroll = calculateStickeHeaderPos;
       <QuestionCard
         class="question-card"
         :style="{
-          'grid-column': `1 / span ${2 * candidateCount + 1}`,
+          'grid-column': `1 / span ${2 * candidateOrder.length + 1}`,
           'grid-row': 2 * questionIndex + 2,
         }"
         :question="question"
