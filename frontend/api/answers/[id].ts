@@ -1,5 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { prisma, getBody } from '../../src/server/prisma';
+import { authUser } from '../../src/server/auth';
 import {
   errorRespond,
   respond404,
@@ -29,23 +30,39 @@ export default async function (req: VercelRequest, res: VercelResponse) {
       return res.json(result);
     }
   } else if (req.method === 'PATCH') {
+    const auth = await authUser(req, res);
     const body = getBody(req, res);
     const answers = body.answers;
     const matches = body.matches;
     const updateToken = req.body.updateToken;
     const existingResult = await prisma.answers
-      .findUnique({
+      .findUniqueOrThrow({
         where: { id: resultId },
       })
       .catch(prismaErrorHandler(res));
 
-    if (existingResult === null) {
+    if (!existingResult) {
       return respond404(res, 'answer', resultId);
-    }
-    if (existingResult?.updateToken !== updateToken) {
+    } else if (auth && existingResult?.userId !== auth.user.id) {
       return errorRespond(
         res,
         403,
+        'https://volebnikalkulacka.cz/api/errors/invalid-user',
+        'Invalid user',
+        'User is not the owner of the answer'
+      );
+    } else if (!auth && existingResult?.userId) {
+      return errorRespond(
+        res,
+        401,
+        'https://volebnikalkulacka.cz/api/errors/invalid-user',
+        'Invalid user',
+        'You need to log in to update this answer'
+      );
+    } else if (!auth && existingResult?.updateToken !== updateToken) {
+      return errorRespond(
+        res,
+        401,
         'https://volebnikalkulacka.cz/api/errors/invalid-update-token',
         'Invalid update token',
         'updateToken from body does not match the updateToken of the existing answer'
@@ -58,6 +75,7 @@ export default async function (req: VercelRequest, res: VercelResponse) {
         data: {
           answers: answers,
           matches: matches,
+          userId: auth?.user?.id,
         },
       })
       .catch(prismaErrorHandler(res));
