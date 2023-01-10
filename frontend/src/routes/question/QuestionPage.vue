@@ -73,17 +73,24 @@ const currentQuestionNr = computed(
 
 const previousButtonTitle = computed(() => {
   if (currentQuestionNr.value === 0) {
-    return 'Návod';
+    return { long: 'Návod', short: 'Návod' };
   } else {
-    return 'Předchozí otázka';
+    return { long: 'Předchozí otázka', short: 'Předchozí' };
   }
 });
 
 const nextButtonTitle = computed(() => {
   if (currentQuestionNr.value + 1 < questionCount.value) {
-    return 'Další otázka';
+    if (
+      electionStore.answers[currentQuestionNr.value].answer ===
+      UserAnswerEnum.skip
+    ) {
+      return { long: 'Přeskočit otázku', short: 'Přeskočit' };
+    } else {
+      return { long: 'Další otázka', short: 'Další' };
+    }
   } else {
-    return 'Rekapitulace';
+    return { long: 'Rekapitulace', short: 'Rekapitulace' };
   }
 });
 
@@ -189,17 +196,20 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
       <ResponsiveWrapper extra-small small>
         <SecondaryNavigationBar transparent>
           <template #before>
-            <IconButton @click="handlePreviousClick">
-              <IconComponent
-                :icon="mdiArrowLeft"
-                :title="previousButtonTitle"
-              />
-            </IconButton>
+            <ButtonComponent kind="link" @click="handlePreviousClick">
+              {{ previousButtonTitle.short }}
+              <template #icon>
+                <IconComponent :icon="mdiArrowLeft" />
+              </template>
+            </ButtonComponent>
           </template>
           <template #after>
-            <IconButton @click="handleNextClick">
-              <IconComponent :icon="mdiArrowRight" :title="nextButtonTitle" />
-            </IconButton>
+            <ButtonComponent kind="link" @click="handleNextClick">
+              {{ nextButtonTitle.short }}
+              <template #iconAfter>
+                <IconComponent :icon="mdiArrowRight" />
+              </template>
+            </ButtonComponent>
           </template>
         </SecondaryNavigationBar>
       </ResponsiveWrapper>
@@ -219,12 +229,20 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
           <StepWrapper centered>
             <template #before>
               <ResponsiveWrapper medium large extra-large huge>
-                <IconButton @click="handlePreviousClick">
-                  <IconComponent
-                    :icon="mdiArrowLeft"
-                    :title="previousButtonTitle"
-                  />
-                </IconButton>
+                <ButtonComponent kind="link" @click="handlePreviousClick">
+                  <ResponsiveWrapper large>
+                    {{ previousButtonTitle.short }}
+                  </ResponsiveWrapper>
+                  <ResponsiveWrapper extra-large huge>
+                    {{ previousButtonTitle.long }}
+                  </ResponsiveWrapper>
+                  <template #icon>
+                    <IconComponent
+                      :icon="mdiArrowLeft"
+                      :title="previousButtonTitle.long"
+                    />
+                  </template>
+                </ButtonComponent>
               </ResponsiveWrapper>
             </template>
             <QuestionCard
@@ -234,12 +252,20 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
             />
             <template #after>
               <ResponsiveWrapper medium large extra-large huge>
-                <IconButton @click="handleNextClick">
-                  <IconComponent
-                    :icon="mdiArrowRight"
-                    :title="nextButtonTitle"
-                  />
-                </IconButton>
+                <ButtonComponent kind="link" @click="handleNextClick">
+                  <ResponsiveWrapper large>
+                    {{ nextButtonTitle.short }}
+                  </ResponsiveWrapper>
+                  <ResponsiveWrapper extra-large huge>
+                    {{ nextButtonTitle.long }}
+                  </ResponsiveWrapper>
+                  <template #iconAfter>
+                    <IconComponent
+                      :icon="mdiArrowRight"
+                      :title="nextButtonTitle.long"
+                    />
+                  </template>
+                </ButtonComponent>
               </ResponsiveWrapper>
             </template>
           </StepWrapper>

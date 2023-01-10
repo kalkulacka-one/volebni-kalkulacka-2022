@@ -87,9 +87,11 @@ Vítejte ve Volební kalkulačce pro prezidentské volby 2023.
     : route.params.election === 'prezidentske-2023' &&
       route.params.district === 'pro-mlade'
     ? `
-Vítejte ve Volební kalkulačce pro prezidentské volby 2023.
+Volební kalkulačka pro mladé byla vytvořena ve **spolupráci s projektem [NázoryPolitiků.cz](https://www.nazorypolitiku.cz)**.
 
-Čeká vás 16 otázek. Na stejné otázky nám odpověděly kandidující osobnosti. Zodpovězení otázek zabere zhruba 10 minut. Na konci se dozvíte, jak se jednotliví kandidáti a kandidátky shodují s vašimi názory.
+Projekt vznikl v roce 2020 jako iniciativa středoškolských studentů. Tým se z původní dvojice rozrostl na **15 studentů, kteří se snaží pomáhat voličům** orientovat se v názorech kandidátů. Za **3 roky** pomohl projekt s rozhodováním více než **100 000 voličů**.
+
+Na základě průzkumů a po konzultacích se sociology bylo vybráno **16 otázek, které mládež a prvovoliči považují za stěžejní témata** voleb. Naší vizí je přinést věcnost a přehlednost do politiky, zvýšit volební účast a podpořit tak demokracii.
     `
     : `
 Vítejte ve Volební kalkulačce pro komunální volby 2022.

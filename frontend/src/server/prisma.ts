@@ -1,5 +1,8 @@
 import { PrismaClient } from '@prisma/client';
+import type { VercelResponse, VercelRequest } from '@vercel/node';
 import { createHash } from 'crypto';
+
+import { respond400 } from './errors';
 
 export const patchBigInt = () => {
   // Monkey patch BigInt toJSON to return a string.
@@ -27,3 +30,12 @@ export const prisma = new PrismaClient({
     },
   },
 });
+
+export const getBody = (req: VercelRequest, res: VercelResponse) => {
+  try {
+    return req.body;
+  } catch (e) {
+    respond400(res, 'JSON malformed.');
+    throw e;
+  }
+};
