@@ -28,8 +28,8 @@ import ComparisonGrid from './ComparisonGrid.vue';
 import ContainerComponent from '../../components/design-system/containers/ContainerComponent.vue';
 
 import { ref } from 'vue';
-import QuestionTagFilter from '@/components/QuestionTagFilter.vue';
 import QuestionCandidateFilter from '@/components/QuestionCandidateFilter.vue';
+import QuestionTagFilter from '@/components/QuestionTagFIlter.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -137,6 +137,11 @@ const candidateAnswers = electionStore.calculator?.answers as CandidateAnswer[];
           <QuestionTagFilter
             v-show="filterMenuIsVisible"
             v-model="selectedTags"
+            class="filter-menu"
+          />
+          <QuestionCandidateFilter
+            v-show="filterMenuIsVisible"
+            v-model="selectedCandidateIds"
             class="filter-menu"
           />
         </ResponsiveWrapper>
