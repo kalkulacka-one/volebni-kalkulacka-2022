@@ -196,8 +196,8 @@ window.onscroll = calculateStickeHeaderPos;
           'grid-row': 2 * questionIndex + 2,
         }"
         :question="question"
-        :current-question="questionIndex + 1"
-        :question-count="questionsToShow.length"
+        :current-question="questions.findIndex((x) => x.id === question.id) + 1"
+        :question-count="$props.questions.length"
       />
       <div
         class="user-answers"
