@@ -37,7 +37,7 @@ import SocialMediaIcon from '@/components/design-system/icons/SocialMediaIcon.vu
     href="/api/auth/twitter?returnTo=/vitejte"
   >
     <template #icon>
-      <SocialMediaIcon type="twitter" color="white" />
+      <SocialMediaIcon type="twitter-color" color="white" />
     </template>
     Pokračovat přes Twitter
   </ButtonComponent>

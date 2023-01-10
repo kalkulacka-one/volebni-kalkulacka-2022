@@ -205,7 +205,7 @@ export const Twitter: StoryFn<typeof ButtonComponent> = (args) => ({
   template: `
     <ButtonComponent v-bind="args">
       <template #icon>
-        <SocialMediaIcon type="twitter" color="white" />
+        <SocialMediaIcon type="twitter-color" color="white" />
       </template>
       <template #default>
       Twitter
