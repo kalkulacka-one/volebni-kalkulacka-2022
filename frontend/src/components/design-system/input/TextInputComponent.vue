@@ -41,7 +41,12 @@ defineEmits(['update:modelValue']);
       </span>
     </BodyText>
 
-    <IconComponent v-if="icon" :icon="icon" class="input-icon" />
+    <IconComponent
+      v-if="icon"
+      :icon="icon"
+      class="input-icon"
+      color="rgb(var(--color-neutral-fg-muted))"
+    />
 
     <input
       :type="props.type ? props.type : 'text'"

@@ -36,6 +36,8 @@ import RegisterFormPageVue from './routes/profile/RegisterFormPageVue.vue';
 import ConsentPageVue from './routes/profile/ConsentPageVue.vue';
 import EmailSentPageVue from './routes/profile/EmailSentPageVue.vue';
 import WelcomePageVue from './routes/profile/WelcomePageVue.vue';
+import ProfilePageVue from './routes/profile/ProfilePage.vue';
+import ProfileSettingsPageVue from './routes/profile/ProfileSettingsPage.vue';
 
 const RESULT_QUERY_NAME = 'result';
 
@@ -240,6 +242,20 @@ export const appRoutes = {
     component: WelcomePageVue,
     meta: {
       title: 'Vítejte ve svém profilu - Volební kalkulačka',
+  profile: {
+    name: 'profile',
+    path: '/muj-profil',
+    component: ProfilePageVue,
+    meta: {
+      title: 'Můj profil - Volební kalkulačka',
+    },
+  },
+  profileSettings: {
+    name: 'profile-settings',
+    path: '/nastaveni-profilu',
+    component: ProfileSettingsPageVue,
+    meta: {
+      title: 'Nastavení profilu - Volební kalkulačka',
     },
   },
   fallback: {
