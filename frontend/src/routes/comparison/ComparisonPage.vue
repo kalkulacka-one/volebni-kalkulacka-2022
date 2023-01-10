@@ -29,7 +29,7 @@ import ContainerComponent from '../../components/design-system/containers/Contai
 
 import { ref } from 'vue';
 import QuestionCandidateFilter from '@/components/QuestionCandidateFilter.vue';
-import QuestionTagFilter from '@/components/QuestionTagFIlter.vue';
+import QuestionTagFilter from '@/components/QuestionTagFilter.vue';
 
 const router = useRouter();
 const route = useRoute();
