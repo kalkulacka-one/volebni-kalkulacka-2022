@@ -21,7 +21,7 @@ export interface Props {
   paddingResponsive?: boolean;
   transparent?: boolean;
   centeredTitle?: boolean;
-  user?: User;
+  user?: User | null;
   withAccount?: boolean;
 }
 
