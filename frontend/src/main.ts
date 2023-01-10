@@ -242,6 +242,8 @@ export const appRoutes = {
     component: WelcomePageVue,
     meta: {
       title: 'Vítejte ve svém profilu - Volební kalkulačka',
+    },
+  },
   profile: {
     name: 'profile',
     path: '/muj-profil',
