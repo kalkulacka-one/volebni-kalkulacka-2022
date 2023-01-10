@@ -27,8 +27,8 @@ const providers = {
     strategy: () => {
       return new FacebookStrategy(
         {
-          clientID: process.env['FACEBOOK_CLIENT_ID'] as string,
-          clientSecret: process.env['FACEBOOK_CLIENT_SECRET'] as string,
+          clientID: process.env['OAUTH_FACEBOOK_CLIENT_ID'] as string,
+          clientSecret: process.env['OAUTH_FACEBOOK_CLIENT_SECRET'] as string,
           profileFields: ['id', 'displayName', 'email'],
           callbackURL: `${OAUTH_CALLBACK_URL}/api/auth/facebook/callback`,
         },
@@ -36,7 +36,8 @@ const providers = {
       );
     },
     enabled: !!(
-      process.env['FACEBOOK_CLIENT_ID'] && process.env['FACEBOOK_CLIENT_SECRET']
+      process.env['OAUTH_FACEBOOK_CLIENT_ID'] &&
+      process.env['OAUTH_FACEBOOK_CLIENT_SECRET']
     ),
     scope: ['email', 'public_profile'],
   },
@@ -44,8 +45,8 @@ const providers = {
     strategy: () => {
       return new GoogleStrategy(
         {
-          clientID: process.env['GOOGLE_CLIENT_ID'] as string,
-          clientSecret: process.env['GOOGLE_CLIENT_SECRET'] as string,
+          clientID: process.env['OAUTH_GOOGLE_CLIENT_ID'] as string,
+          clientSecret: process.env['OAUTH_GOOGLE_CLIENT_SECRET'] as string,
           callbackURL: `${OAUTH_CALLBACK_URL}/api/auth/google/callback`,
           scope: ['profile', 'email'],
         },
@@ -53,7 +54,8 @@ const providers = {
       );
     },
     enabled: !!(
-      process.env['GOOGLE_CLIENT_ID'] && process.env['GOOGLE_CLIENT_SECRET']
+      process.env['OAUTH_GOOGLE_CLIENT_ID'] &&
+      process.env['OAUTH_GOOGLE_CLIENT_SECRET']
     ),
     scope: ['profile', 'email'],
   },
