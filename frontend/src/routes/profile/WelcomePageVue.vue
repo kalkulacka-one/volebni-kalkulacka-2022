@@ -108,7 +108,12 @@ const onSubmit = (e: Event) => {
             </StackComponent>
           </CardComponent>
           <div class="form-wrapper">
-            <ButtonComponent kind="filled" color="primary" class="w-full">
+            <ButtonComponent
+              kind="filled"
+              color="primary"
+              class="w-full"
+              @click="router.push('/muj-profil')"
+            >
               Přejít do profilu
               <template #iconAfter>
                 <IconComponent :icon="mdiArrowRight" />
