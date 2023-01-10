@@ -71,7 +71,7 @@ To run also backend serverless functions locally, you can use [Vercel CLI](https
   cp .env.development.local.example .env.development.local
   ```
 
-- [ ] Paste the connection string (without `/defaultdb?sslmode=verify-full`) to the `DATABASE_URL_BASE` variable
+- [ ] Paste the connection string (without `/defaultdb?sslmode=verify-full`) to the `DATABASE_URL_BASE` variable and uncomment `DATABASE_NAME`, `DATABASE_URL_BASE` and `DATABASE_URL` variables
 
   ```sh
   …
