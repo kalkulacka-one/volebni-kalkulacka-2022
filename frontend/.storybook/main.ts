@@ -1,5 +1,4 @@
 import type { StorybookConfig } from '@storybook/types';
-
 const config: StorybookConfig = {
   stories: [
     '../src/components/**/*.mdx',
@@ -13,6 +12,8 @@ const config: StorybookConfig = {
   framework: {
     name: '@storybook/vue3-vite',
   },
+  docs: {
+    autodocs: false,
+  },
 };
-
 module.exports = config;
