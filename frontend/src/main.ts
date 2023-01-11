@@ -85,6 +85,18 @@ export const checkAuth = (
   return user;
 };
 
+export const loadAnswers = (
+  to: RouteLocationNormalized,
+  _from: RouteLocationNormalized
+) => {
+  return checkAuth(to, _from).then(() => {
+    const store = useUserStore();
+    const answers = store.fetchAnswers();
+
+    return answers;
+  });
+};
+
 export const appRoutes = {
   index: {
     name: 'index', //only for testing purposes
@@ -251,6 +263,7 @@ export const appRoutes = {
     meta: {
       title: 'Můj profil - Volební kalkulačka',
     },
+    beforeEnter: loadAnswers,
   },
   profileSettings: {
     name: 'profile-settings',
@@ -259,6 +272,7 @@ export const appRoutes = {
     meta: {
       title: 'Nastavení profilu - Volební kalkulačka',
     },
+    beforeEnter: checkAuth,
   },
   fallback: {
     path: '/:catchAll(.*)',

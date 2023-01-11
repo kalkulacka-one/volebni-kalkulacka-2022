@@ -1,4 +1,8 @@
-import { fetchCalculator, fetchElectionData } from '@/common/dataFetch';
+import {
+  fetchCalculator,
+  fetchCalculators,
+  fetchElectionData,
+} from '@/common/dataFetch';
 import { patchResults, postResults } from '@/common/restApi';
 import { encodeResults } from '@/common/resultParser';
 import { appRoutes } from '@/main';
@@ -114,6 +118,36 @@ export const useElectionStore = defineStore('election', {
       let calculator = undefined;
       try {
         calculator = await fetchCalculator(electionId, districtId);
+      } catch (error) {
+        console.error(error);
+      }
+
+      if (calculator !== undefined) {
+        this.calculator = calculator;
+        this.answers = calculator.questions.map((x) => {
+          return {
+            answer: UserAnswerEnum.undefined,
+            flag: false,
+            id: x.id as string,
+          };
+        });
+        console.debug('District fetch complete!');
+      } else {
+        console.warn('District data are undefined!');
+      }
+    },
+    async loadCalculatorById(calculatorId: string) {
+      this.calculator = undefined;
+      let calculator = undefined;
+      try {
+        const calculators = await fetchCalculators();
+        const calc = calculators.find((c) => calculatorId === c.calculator_id);
+        if (calc) {
+          calculator = await fetchCalculator(
+            calc.election_id,
+            calc.district_code
+          );
+        }
       } catch (error) {
         console.error(error);
       }

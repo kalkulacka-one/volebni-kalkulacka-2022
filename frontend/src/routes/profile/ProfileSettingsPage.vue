@@ -27,6 +27,7 @@ import StaticContentLayout from '@/components/layouts/StaticContentLayout.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import TextInputComponent from '@/components/design-system/input/TextInputComponent.vue';
 import TitleText from '@/components/design-system/typography/TitleText.vue';
+import { useUserStore } from '@/stores/userStore';
 
 const router = useRouter();
 
@@ -41,6 +42,9 @@ const onSubmit = (e: Event) => {
   console.log(emailAddress, e);
   router.push(appRoutes.profileSettings);
 };
+
+const userStore = useUserStore();
+const user = userStore.user;
 </script>
 
 <template>
@@ -82,8 +86,8 @@ const onSubmit = (e: Event) => {
                   type="text"
                   placeholder="Jan Novák"
                   class="w-full"
-                  :value="fullName"
-                  v-model="fullName"
+                  :value="user.displayName"
+                  v-model="user.displayName"
                   :icon="mdiAccountOutline"
                 />
 
@@ -93,8 +97,8 @@ const onSubmit = (e: Event) => {
                   type="email"
                   placeholder="E-mail"
                   class="w-full"
-                  :value="emailAddress"
-                  v-model="emailAddress"
+                  :value="user.email"
+                  v-model="user.email"
                   :icon="mdiEmailOutline"
                 />
 

@@ -48,6 +48,7 @@ const router = useRouter();
 const handleRegisterClick = () => router.push(appRoutes.register);
 
 const handleLoginClick = () => router.push(appRoutes.login);
+const handleAvatarClick = () => router.push(appRoutes.profile);
 </script>
 
 <template>
@@ -111,7 +112,9 @@ const handleLoginClick = () => router.push(appRoutes.login);
           size="small"
           background-color="rgb(var(--palette-primary-90))"
           :background-image="user.img_url ? user.img_url : undefined"
-          :name="user.name ? user.name : user.email"
+          :name="user.displayName ? user.displayName : user.email"
+          @click="handleAvatarClick"
+          class="user-avatar"
         />
         <StackComponent
           v-if="withAccount && !user"
@@ -173,5 +176,9 @@ const handleLoginClick = () => router.push(appRoutes.login);
     grid-area: right;
     justify-content: end;
   }
+}
+
+.user-avatar {
+  cursor: pointer;
 }
 </style>

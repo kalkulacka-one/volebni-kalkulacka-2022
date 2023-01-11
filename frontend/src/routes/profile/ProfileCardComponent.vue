@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useRoute, useRouter } from 'vue-router';
 import { mdiCogOutline } from '@mdi/js';
+
+import { appRoutes } from '@/main';
 
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
@@ -17,6 +20,9 @@ const props = withDefaults(defineProps<Props>(), {
   name: '',
   email: '',
 });
+
+const router = useRouter();
+const handleSettingsClick = () => router.push(appRoutes.profileSettings);
 </script>
 
 <template>
@@ -36,7 +42,7 @@ const props = withDefaults(defineProps<Props>(), {
         </BodyText>
       </StackComponent>
 
-      <ButtonComponent tag="a" kind="link" href=".">
+      <ButtonComponent kind="link" @click.prevent="handleSettingsClick">
         <IconComponent
           :icon="mdiCogOutline"
           size="medium"

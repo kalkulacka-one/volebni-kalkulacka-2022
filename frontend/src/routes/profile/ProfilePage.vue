@@ -2,7 +2,7 @@
 import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 import DonateBlock from '@/components/DonateBlock.vue';
-import ElectionCardComponent from '@/components/design-system/containers/ElectionCardComponent.vue';
+import ElectionCardWrapperComponent from './ElectionCardWrapperComponent.vue';
 import FooterMultiWord from '@/components/FooterMultiWord.vue';
 import HeadlineText from '@/components/design-system/typography/HeadlineText.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
@@ -13,27 +13,16 @@ import StaticContentLayout from '@/components/layouts/StaticContentLayout.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import TimelineComponent from '@/components/design-system/containers/TimelineComponent.vue';
 import TimelineItemComponent from '@/components/design-system/containers/TimelineItemComponent.vue';
+import { useUserStore } from '@/stores/userStore';
 
-const electionData = {
-  electionName: 'Senátní volby',
-  electionDateFrom: '23.',
-  electionDateTo: '24. září 2023',
-  candidates: [
-    {
-      name: 'Miluše Politická',
-      party: 'Koalice pro práva občanů',
-      percentage: 95,
-      image: 'https://thispersondoesnotexist.com/image',
-    },
-    {
-      name: 'Petr Apolitický',
-      party: 'Koalice pro práva občanů',
-      percentage: 93,
-      image: 'https://thispersondoesnotexist.com/image',
-    },
-  ],
-  updated: '12. 3. 2023',
-};
+const userStore = useUserStore();
+const user = userStore.user;
+const answers = userStore.answers;
+console.log('answers', answers);
+
+// const electionData = getElection();
+
+// console.log('electionData', electionData)
 </script>
 
 <template>
@@ -48,8 +37,8 @@ const electionData = {
       <ResponsiveWrapper extra-small small>
         <StackComponent spacing="medium">
           <ProfileCardComponent
-            name="Jan Novák"
-            email="jannovak@gmail.com"
+            :name="user?.displayName"
+            :email="user?.email"
             class="w-full"
           />
 
@@ -69,19 +58,28 @@ const electionData = {
           >
             <HeadlineText tag="h1" size="small"> Moje kalkulačky </HeadlineText>
 
-            <ProfileCardComponent name="Jan Novák" email="jannovak@gmail.com" />
+            <ProfileCardComponent
+              :name="user?.displayName"
+              :email="user?.email"
+            />
           </StackComponent>
         </ResponsiveWrapper>
 
+        <ul>
+          {{
+            answers.length
+          }}
+          <li v-for="answer in answers">
+            {{ answer.calculatorId }}
+          </li>
+        </ul>
+
         <TimelineComponent class="w-full">
-          <TimelineItemComponent v-for="a in 1" v-bind:key="a">
-            <ElectionCardComponent
-              :electionName="electionData.electionName"
-              :electionDateFrom="electionData.electionDateFrom"
-              :electionDateTo="electionData.electionDateTo"
-              :candidates="electionData.candidates"
-              :updated="electionData.updated"
-            />
+          <TimelineItemComponent
+            v-for="(answer, idx) in answers"
+            v-bind:key="idx"
+          >
+            <ElectionCardWrapperComponent :answer="answer" />
           </TimelineItemComponent>
 
           <TimelineItemComponent last>
