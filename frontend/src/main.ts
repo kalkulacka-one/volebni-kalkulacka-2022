@@ -20,6 +20,7 @@ import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
 import QuestionsMethodologyPageVue from './routes/questions-methodology/QuestionsMethodologyPageVue.vue';
 import { useElectionStore } from './stores/electionStore';
+import { useUserStore } from './stores/userStore';
 import { createPinia } from 'pinia';
 import ErrorPageVue, { ErrorPageEnum } from './routes/error/ErrorPage.vue';
 import { decodeResults, encodeResults } from './common/resultParser';
@@ -270,6 +271,11 @@ router.beforeEach((to, from, next) => {
     .forEach((tag) => document.head.appendChild(tag));
 
   next();
+});
+
+router.beforeEach(() => {
+  const store = useUserStore();
+  store.fetchUser();
 });
 
 //handles changing of election and district and fetching data
