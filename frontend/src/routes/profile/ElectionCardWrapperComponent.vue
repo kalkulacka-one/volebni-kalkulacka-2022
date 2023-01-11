@@ -1,5 +1,10 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import {
+  fetchCalculator,
+  fetchCalculators,
+  fetchElectionData,
+} from '@/common/dataFetch';
+import { computed, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { mdiCogOutline } from '@mdi/js';
 
@@ -16,25 +21,33 @@ const props = withDefaults(defineProps<Props>(), {
   answer: undefined,
 });
 
+const election = ref();
 const electionStore = useElectionStore();
-const election = await electionStore.loadCalculatorById(
-  props.answer.calculatorId
+// const election = await electionStore.loadCalculatorById(props.answer.calculatorId).then((r) => console.log('rmmmmmmmmmmmmmmmm', r));
+
+const calculators = await fetchCalculators();
+const calc = calculators.find(
+  (c) => props.answer.calculatorId === c.calculator_id
 );
 
-console.log('election', election);
+if (calc) {
+  const calculator = await fetchCalculator(
+    calc.election_id,
+    calc.district_code
+  );
+  console.log(calculator.election);
+  const { election } = calculator;
+}
 </script>
 
 <template>
   <pre>
-      {{ JSON.stringify(election) }}
-    </pre
-  >
-
+    {{ calculator }}
+  </pre>
   <ElectionCardComponent
-    v-if="election"
-    :electionName="election.election.name"
-    :electionDateFrom="election.election.from"
-    :electionDateTo="election.election.to"
+    :electionName="election.name"
+    :electionDateFrom="election.from"
+    :electionDateTo="election.to"
     :candidates="answer?.answers.length > 0 ? answer?.answers : undefined"
     :updated="answer?.id"
   />
