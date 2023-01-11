@@ -88,8 +88,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
             src="@/assets/prezidenti-2023/cand-pavel-fischer-1x.jpg"
             srcset="
               @/assets/prezidenti-2023/cand-pavel-fischer-1x.webp,
-              @/assets/prezidenti-2023/cand-pavel-fischer-2x.webp 2x,
-              @/assets/prezidenti-2023/cand-pavel-fischer-3x.webp 3x
+              @/assets/prezidenti-2023/cand-pavel-fischer-2x.webp 2x
             "
           />
         </div>
@@ -99,8 +98,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
             src="@/assets/prezidenti-2023/cand-jaroslav-basta-1x.jpg"
             srcset="
               @/assets/prezidenti-2023/cand-jaroslav-basta-1x.webp,
-              @/assets/prezidenti-2023/cand-jaroslav-basta-2x.webp 2x,
-              @/assets/prezidenti-2023/cand-jaroslav-basta-3x.webp 3x
+              @/assets/prezidenti-2023/cand-jaroslav-basta-2x.webp 2x
             "
           />
         </div>
@@ -110,8 +108,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
             src="@/assets/prezidenti-2023/cand-josef-stredula-1x.jpg"
             srcset="
               @/assets/prezidenti-2023/cand-josef-stredula-1x.webp,
-              @/assets/prezidenti-2023/cand-josef-stredula-2x.webp 2x,
-              @/assets/prezidenti-2023/cand-josef-stredula-3x.webp 3x
+              @/assets/prezidenti-2023/cand-josef-stredula-2x.webp 2x
             "
           />
         </div>
@@ -121,8 +118,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
             src="@/assets/prezidenti-2023/cand-petr-pavel-1x.jpg"
             srcset="
               @/assets/prezidenti-2023/cand-petr-pavel-1x.webp,
-              @/assets/prezidenti-2023/cand-petr-pavel-2x.webp 2x,
-              @/assets/prezidenti-2023/cand-petr-pavel-3x.webp 3x
+              @/assets/prezidenti-2023/cand-petr-pavel-2x.webp 2x
             "
           />
         </div>
@@ -132,8 +128,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
             src="@/assets/prezidenti-2023/cand-tomas-zima-1x.jpg"
             srcset="
               @/assets/prezidenti-2023/cand-tomas-zima-1x.webp,
-              @/assets/prezidenti-2023/cand-tomas-zima-2x.webp 2x,
-              @/assets/prezidenti-2023/cand-tomas-zima-3x.webp 3x
+              @/assets/prezidenti-2023/cand-tomas-zima-2x.webp 2x
             "
           />
         </div>
@@ -143,8 +138,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
             src="@/assets/prezidenti-2023/cand-danuse-nerudova-1x.jpg"
             srcset="
               @/assets/prezidenti-2023/cand-danuse-nerudova-1x.webp,
-              @/assets/prezidenti-2023/cand-danuse-nerudova-2x.webp 2x,
-              @/assets/prezidenti-2023/cand-danuse-nerudova-3x.webp 3x
+              @/assets/prezidenti-2023/cand-danuse-nerudova-2x.webp 2x
             "
           />
         </div>
@@ -154,8 +148,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
             src="@/assets/prezidenti-2023/cand-andrej-babis-1x.jpg"
             srcset="
               @/assets/prezidenti-2023/cand-andrej-babis-1x.webp,
-              @/assets/prezidenti-2023/cand-andrej-babis-2x.webp 2x,
-              @/assets/prezidenti-2023/cand-andrej-babis-3x.webp 3x
+              @/assets/prezidenti-2023/cand-andrej-babis-2x.webp 2x
             "
           />
         </div>
@@ -165,8 +158,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
             src="@/assets/prezidenti-2023/cand-karel-divis-1x.jpg"
             srcset="
               @/assets/prezidenti-2023/cand-karel-divis-1x.webp,
-              @/assets/prezidenti-2023/cand-karel-divis-2x.webp 2x,
-              @/assets/prezidenti-2023/cand-karel-divis-3x.webp 3x
+              @/assets/prezidenti-2023/cand-karel-divis-2x.webp 2x
             "
           />
         </div>
@@ -176,8 +168,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
             src="@/assets/prezidenti-2023/cand-marek-hilser-1x.jpg"
             srcset="
               @/assets/prezidenti-2023/cand-marek-hilser-1x.webp,
-              @/assets/prezidenti-2023/cand-marek-hilser-2x.webp 2x,
-              @/assets/prezidenti-2023/cand-marek-hilser-3x.webp 3x
+              @/assets/prezidenti-2023/cand-marek-hilser-2x.webp 2x
             "
           />
         </div>
