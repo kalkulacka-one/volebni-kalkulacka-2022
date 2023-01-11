@@ -44,6 +44,61 @@ import ContainerComponent from '@/components/design-system/containers/ContainerC
           jsme shrnuli na této stránce.
         </BodyText>
 
+        <HeadlineText id="prezidentske" size="medium" tag="h2"
+          >Prezidentské volby</HeadlineText
+        >
+        <BodyText size="large">
+          Prezidentské volby probíhají jednou za 5 let. Prezidenta volí v přímé
+          volbě občané starší 18 let. Jde o populární a zároveň jednoduché
+          volby. Prezidentem se stane ten kandidát, který získá víc než 50 %
+          hlasů voličů, kteří v daném kole odevzdají svůj hlas.
+        </BodyText>
+        <TitleText size="large" tag="h3">Koho volíme</TitleText>
+        <BodyText size="large">
+          V prezidentských volbách se volí prezident/prezidentka České
+          republiky. Prezident reprezentuje naši zemi vůči ostatním státům i ve
+          vnitřních vztazích. Z hlediska protokolu jde o hlavního ústavního
+          činitele. Prezident má podle Ústavy České republiky pravomoce
+          vztahující se ke všem větvím zákonodárné moci v České republice –
+          zákonodárné, výkonné i soudní. Dále například jmenuje prezidenta a
+          viceprezidenta Nejvyššího kontrolního úřadu a také členy Bankovní rady
+          České národní banky. Prezident také může udělovat milost, má právo
+          veta a může vyhlásit amnestii. Dále je vrchním velitelem ozbrojených
+          sil. Kritéria kandidatury jsou stejná jako v případě voleb do Senátu.
+          Kandidát musí mít právo volit a dosáhnout věku 40 let. Nikdo nemůže
+          být zvolen víc než dvakrát za sebou. Podmínkou kandidatury je buď 50
+          000 podpisů občanů, nebo nejméně 20 poslanců či 10 senátorů na
+          kandidátní listině.
+        </BodyText>
+
+        <TitleText size="large" tag="h3">Průběh voleb</TitleText>
+        <BodyText size="large">
+          Každý kandidát má jeden hlasovací lístek. Pokud v prvním kole voleb
+          nikdo nedosáhne nadpoloviční většiny platných hlasů oprávněných
+          voličů, koná se druhé kolo, zpravidla o dva týdny později. Do druhého
+          kola postoupí dva nejúspěšnější kandidáti. Vítězem druhého kola je
+          kandidát, který obdrží vyšší počet platných hlasů.
+        </BodyText>
+
+        <TitleText size="large" tag="h3">Volby a finance</TitleText>
+        <BodyText size="large">
+          Každý kandidát má povinnost zřídit transparentní účet, na kterém
+          zaznamenává veškeré transakce spojené s volební kampaní. Výdaje na
+          volební kampaň nesmí přesáhnout částku 40 000 000 Kč vč. DPH,
+          účastnil-li se kandidát pouze prvního kola, a 50 000 000 Kč včetně
+          DPH, účastnil-li se kandidát prvního i druhého kola volby.
+        </BodyText>
+        <TitleText size="large" tag="h3"
+          >Nejčastější důvody neplatných hlasů</TitleText
+        >
+        <BodyText size="large">
+          Ve volbách je možné volit jen jednoho kandidáta. Pokud jsou v obálce
+          hlasovací lístky pro dva a více kandidátů, hlas je neplatný. Hlas se
+          musí odevzdat v úředně označené obálce, kterou dostanete přímo ve
+          volební místnosti. V případě odevzdání prázdné obálky je hlas
+          neplatný.
+        </BodyText>
+
         <HeadlineText id="komunalni" size="medium" tag="h2">
           Komunální volby
         </HeadlineText>
