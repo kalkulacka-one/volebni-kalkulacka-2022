@@ -53,9 +53,7 @@ import ContainerComponent from '@/components/design-system/containers/ContainerC
           volby. Prezidentem se stane ten kandidát, který získá víc než 50 %
           hlasů voličů, kteří v daném kole odevzdají svůj hlas.
         </BodyText>
-        <HeadlineText id="komunalni" size="small" tag="h3"
-          >Koho volíme</HeadlineText
-        >
+        <TitleText size="medium" tag="h3">Koho volíme</TitleText>
         <BodyText size="large">
           V prezidentských volbách se volí prezident/prezidentka České
           republiky. Prezident reprezentuje naši zemi vůči ostatním státům i ve
@@ -73,9 +71,7 @@ import ContainerComponent from '@/components/design-system/containers/ContainerC
           kandidátní listině.
         </BodyText>
 
-        <HeadlineText id="komunalni" size="small" tag="h3"
-          >Průběh voleb</HeadlineText
-        >
+        <TitleText size="medium" tag="h3">Průběh voleb</TitleText>
         <BodyText size="large">
           Každý kandidát má jeden hlasovací lístek. Pokud v prvním kole voleb
           nikdo nedosáhne nadpoloviční většiny platných hlasů oprávněných
@@ -84,9 +80,7 @@ import ContainerComponent from '@/components/design-system/containers/ContainerC
           kandidát, který obdrží vyšší počet platných hlasů.
         </BodyText>
 
-        <HeadlineText id="komunalni" size="small" tag="h3"
-          >Volby a finance</HeadlineText
-        >
+        <TitleText size="medium" tag="h3">Volby a finance</TitleText>
         <BodyText size="large">
           Každý kandidát má povinnost zřídit transparentní účet, na kterém
           zaznamenává veškeré transakce spojené s volební kampaní. Výdaje na
@@ -94,8 +88,8 @@ import ContainerComponent from '@/components/design-system/containers/ContainerC
           účastnil-li se kandidát pouze prvního kola, a 50 000 000 Kč včetně
           DPH, účastnil-li se kandidát prvního i druhého kola volby.
         </BodyText>
-        <HeadlineText id="komunalni" size="small" tag="h3"
-          >Nejčastější důvody neplatných hlasů</HeadlineText
+        <TitleText size="medium" tag="h3"
+          >Nejčastější důvody neplatných hlasů</TitleText
         >
         <BodyText size="large">
           Ve volbách je možné volit jen jednoho kandidáta. Pokud jsou v obálce
