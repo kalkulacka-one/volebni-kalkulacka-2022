@@ -7,6 +7,7 @@ import {
   mdiCloseCircleOutline,
   mdiArrowLeft,
   mdiArrowRight,
+  mdiAccountCircleOutline,
 } from '@mdi/js';
 
 import { appRoutes } from '@/main';
@@ -269,6 +270,50 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           class="main"
           spacing="medium"
         >
+          <CardComponent
+            corner="bottom-left"
+            style="max-width: 32rem; justify-self: center"
+          >
+            <StackComponent centered spacing="medium">
+              <StackComponent spacing="medium">
+                <TitleText tag="p" size="medium">
+                  Sledujte, jak se Vaše názory a výsledky (ne)mění v čase.
+                </TitleText>
+                <BodyText tag="p" size="medium">
+                  Uložte si kalkulačku a vyplňte ji klidně vícekrát, a to pro
+                  každé volby. Pro zobrazení výsledku je nutné odpovědět alespoň
+                  na 1 otázku
+                </BodyText>
+              </StackComponent>
+              <ButtonComponent
+                kind="outlined"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.register.name,
+                    params: {
+                      ...route.params,
+                    },
+                    query: {
+                      ...route.query,
+                      returnPath: router.resolve({
+                        name: appRoutes.share.name,
+                        params: { uuid: electionStore.resultsId },
+                        query: { ...route.query },
+                      }).path,
+                      calculatorId: electionStore.calculator?.id,
+                      updateToken: electionStore.resultsUpdateToken,
+                    },
+                  })
+                "
+              >
+                <template #icon>
+                  <IconComponent :icon="mdiAccountCircleOutline" />
+                </template>
+                Vytvořit profil
+              </ButtonComponent>
+            </StackComponent>
+          </CardComponent>
           <CheckboxComponent
             v-if="hasActiveCandidatesBtn"
             group-name="test"
