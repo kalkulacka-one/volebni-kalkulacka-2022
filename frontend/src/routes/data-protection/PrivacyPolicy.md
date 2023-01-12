@@ -8,7 +8,7 @@ Pokud si ve Volební kalkulačce vytvoříte **uživatelský profil**, budou ulo
 
 - e-mailová adresa,
 - jméno a příjmení (dobrovolný údaj),
-- adresa trvalého bydliště (dobrovolný údaj), 
+- adresa trvalého bydliště (dobrovolný údaj),
 - údaje o Vašich odpovědích a odvozených preferencích.
 
 Tyto osobní údaje budeme zpracovávat pro splnění smlouvy, konkrétně pro vedení uživatelského profilu s Vámi, a to do okamžiku zrušení Vašeho uživatelského profilu. Údaje o Vašich odpovědích a odvozených preferencích budeme současně zpracovávat na základě Vašeho souhlasu jako výjimky pro zpracování zvláštní kategorie údajů.
@@ -23,7 +23,7 @@ Tyto osobní údaje budeme zpracovávat pro splnění smlouvy, konkrétně pro u
 
 V případě **sdílení Vašich odpovědí** budeme dále sdělovat údaje o Vašich odpovědích a odvozených preferencích. Tyto údaje budeme zpracovávat na základě Vašeho souhlasu, a to za účelem sdílení Vašich odpovědí, po dobu 1 měsíce od provedení sdílení.
 
-V případě udělení souhlasu pro **příležitostné zasílání propagačních sdělení** uložíme Vaši e-mailovou adresu a budeme ji zpracovávat pro tyto účely. Dozvíte se tak například o spuštění Volební kalkulačky pro nadcházející volby. Souhlas je možno kdykoliv zrušit a na uvedených kontaktech nebo přímo v zaslaném e-mailu. Osobní údaje zpracováváme do odvolání Vašeho souhlasu. 
+V případě udělení souhlasu pro **příležitostné zasílání propagačních sdělení** uložíme Vaši e-mailovou adresu a budeme ji zpracovávat pro tyto účely. Dozvíte se tak například o spuštění Volební kalkulačky pro nadcházející volby. Souhlas je možno kdykoliv zrušit a na uvedených kontaktech nebo přímo v zaslaném e-mailu. Osobní údaje zpracováváme do odvolání Vašeho souhlasu.
 
 ## Z jakých zdrojů osobní údaje získáváme?
 
@@ -31,7 +31,7 @@ Osobní údaje, které zpracováváme, pocházejí především od Vás samotný
 
 Další osobní údaje získáváme v rámci naší činnosti, přičemž se jedná zejména o odvozené údaje z Vámi poskytnutých údajů, zejména údaje o Vaší předpokládané volební preferenci a shodě s preferencemi vybraného kandidáta.
 
-Další osobní údaje můžeme získávat od třetích osob, například při přihlašování do Volební kalkulačky přes služby třetích osob. 
+Další osobní údaje můžeme získávat od třetích osob, například při přihlašování do Volební kalkulačky přes služby třetích osob.
 
 ## Jaká máte práva při zpracování osobních údajů?
 
@@ -46,10 +46,10 @@ V souvislosti se zpracováním Vašich osobních údajů Vám konkrétně nále�
 2. Právo na přístup
 
    Máte právo získat od nás potvrzení, zda zpracováváme Vaše osobní údaje či nikoli.
-  
-   Pokud Vaše osobní údaje zpracováváme, máte současně právo požadovat přístup k informacím o účelu a rozsahu zpracování, příjemcích údajů, době zpracování, právu na opravu, výmaz, omezení zpracování a podání námitky proti zpracování, právu podat stížnost u dozorového úřadu a o zdrojích osobních údajů (tyto informace již jsou uvedeny v tomto dokumentu). 
-  
-   Stejně tak nás můžete požádat o kopii zpracovávaných osobních údajů. První kopii poskytujeme bezplatně, další již mohou být zpoplatněny. Rozsah poskytnutých údajů může být omezen tak, aby nedošlo k zásahu do práv a svobod jiných osob. 
+
+   Pokud Vaše osobní údaje zpracováváme, máte současně právo požadovat přístup k informacím o účelu a rozsahu zpracování, příjemcích údajů, době zpracování, právu na opravu, výmaz, omezení zpracování a podání námitky proti zpracování, právu podat stížnost u dozorového úřadu a o zdrojích osobních údajů (tyto informace již jsou uvedeny v tomto dokumentu).
+
+   Stejně tak nás můžete požádat o kopii zpracovávaných osobních údajů. První kopii poskytujeme bezplatně, další již mohou být zpoplatněny. Rozsah poskytnutých údajů může být omezen tak, aby nedošlo k zásahu do práv a svobod jiných osob.
 
 3. Právo na opravu
 
@@ -72,10 +72,10 @@ V souvislosti se zpracováním Vašich osobních údajů Vám konkrétně nále�
    zpracování je v rozporu s právními předpisy a místo výmazu budete požadovat omezení zpracování osobních údajů;  
    Vaše osobní údaje již nepotřebujeme pro účely, pro které byly získány či zpracovávány, avšak Vy je požadujete pro určení, výkon nebo obhajobu právních nároků;  
    vznesli jste námitku proti zpracování osobních údajů; v takovém případě můžete požadovat omezení zpracování do doby ověření, zda naše oprávněné zájmy převažují.
-  
+
 6. Právo na přenositelnost
-  
-   Máte právo získat kopii Vašich osobních údajů, které zpracováváme automatizovaně na základě Vašeho souhlasu nebo pro splnění smlouvy. Tyto údaje předáme v běžně používaném a strojově čitelném formátu Vám či Vámi určenému správci, pokud to je technicky proveditelné. Rozsah poskytnutých údajů může být omezen tak, aby nedošlo k zásahu do práv a svobod jiných osob.  
+
+   Máte právo získat kopii Vašich osobních údajů, které zpracováváme automatizovaně na základě Vašeho souhlasu nebo pro splnění smlouvy. Tyto údaje předáme v běžně používaném a strojově čitelném formátu Vám či Vámi určenému správci, pokud to je technicky proveditelné. Rozsah poskytnutých údajů může být omezen tak, aby nedošlo k zásahu do práv a svobod jiných osob.
 
 7. Právo vznést námitku proti zpracování
 
@@ -83,4 +83,4 @@ V souvislosti se zpracováním Vašich osobních údajů Vám konkrétně nále�
 
 8. Právo podat stížnost
 
-   Vedle možnosti uplatnění práv uvedené výše také můžete podat stížnost u příslušného dozorového úřadu, kterým je Úřadu pro ochranu osobních údajů sídlící na adrese Pplk. Sochora 27, 170 00 Praha 7. 
+   Vedle možnosti uplatnění práv uvedené výše také můžete podat stížnost u příslušného dozorového úřadu, kterým je Úřadu pro ochranu osobních údajů sídlící na adrese Pplk. Sochora 27, 170 00 Praha 7.
