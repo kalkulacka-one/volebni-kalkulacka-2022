@@ -77,7 +77,7 @@ const handlePreviousClick = () => {
 const handleStartClick = () => {
   router.push({
     name: appRoutes.question.name,
-    params: { ...route.params, nr: 'first' },
+    params: { ...route.params, nr: 1 },
     query: { ...route.query },
   });
 };
@@ -275,8 +275,31 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                 Pro zobrazení výsledku je nutné odpovědět alespoň na 1 otázku
               </TitleText>
               <BodyText tag="p" size="medium">
-                Vraťte se na začátek a odpovězte alespoň na 1 otázku nebo si
-                můžete zobrazit porovnání, jak odpovídali jednotliví kandidáti.
+                Můžete se
+                <a
+                  :href="
+                    router.resolve({
+                      name: appRoutes.question.name,
+                      params: { ...route.params, nr: 1 },
+                      query: { ...route.query },
+                    }).path
+                  "
+                  @click.prevent="handleStartClick"
+                  >vrátit na začátek</a
+                >
+                a odpovědět na minimálně 1 otázku, nebo si
+                <a
+                  :href="
+                    router.resolve({
+                      name: appRoutes.comparison.name,
+                      params: { ...route.params },
+                      query: { ...route.query },
+                    }).path
+                  "
+                  @click.prevent="handleShowComparsionClick"
+                >
+                  zobrazit porovnání odpovědí kandidátů </a
+                >.
               </BodyText>
               <StackComponent horizontal spacing="medium">
                 <ButtonComponent
