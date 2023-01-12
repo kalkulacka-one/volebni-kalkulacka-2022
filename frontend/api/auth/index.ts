@@ -134,13 +134,20 @@ const getStrategyCallback = (strategy: string) => {
   };
 };
 
+const redirectAfterCallback = (returnTo: string, res: Response) => {
+  if (typeof returnTo === 'string' && returnTo.startsWith('/')) {
+    return res.redirect(returnTo);
+  }
+  return res.redirect('/');
+};
+
 const callback = (provider: string) => {
   return (req: Request, res: Response, next: NextFunction) => {
     passport.authenticate(provider, { session: false }, (err, user, info) => {
       if (err || !user) {
         return res.redirect('/' + '?error=' + err?.message);
       }
-      req.login(user, { session: false }, (err) => {
+      req.login(user, { session: false }, async (err) => {
         if (err) {
           console.error(err);
           return res.status(400).send({ err: err?.message || err });
@@ -175,23 +182,21 @@ const callback = (provider: string) => {
           return res.status(400).send({ err: err?.message || err });
         }
 
-        try {
-          const { state } = req.query;
-          if (state) {
-            const { returnTo, updateToken, answerId } = JSON.parse(
-              Buffer.from(state as string, 'base64').toString()
-            );
-            if (updateToken && answerId) {
-              assignAnswerToUser({ answerId, updateToken, userId: user.id });
-            }
-            if (typeof returnTo === 'string' && returnTo.startsWith('/')) {
-              return res.redirect(returnTo);
-            }
+        const { state } = req.query;
+        if (state) {
+          const { returnTo, updateToken, answerId } = JSON.parse(
+            Buffer.from(state as string, 'base64').toString()
+          );
+          if (updateToken && answerId) {
+            await assignAnswerToUser({
+              answerId,
+              updateToken,
+              userId: user.id,
+            });
           }
-        } catch {
-          // just redirect normally below
+          return redirectAfterCallback(returnTo, res);
         }
-        res.redirect('/?login=loginsuccess-default');
+        redirectAfterCallback('/', res);
       });
     })(req, res, next);
   };

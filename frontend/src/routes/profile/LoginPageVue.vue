@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import { mdiCloseCircleOutline } from '@mdi/js';
 import { appRoutes } from '@/main';
@@ -16,6 +17,39 @@ import TitleText from '@/components/design-system/typography/TitleText.vue';
 
 const router = useRouter();
 const route = useRoute();
+
+const returnPath = computed(() => route.query.returnPath as string);
+const answerId = computed(() => route.query.answerId as string);
+const updateToken = computed(() => route.query.updateToken as string);
+
+const href = ({
+  provider,
+  returnPath,
+  answerId,
+  updateToken,
+}: {
+  provider: string;
+  returnPath?: string;
+  answerId?: string;
+  updateToken?: string;
+}) => {
+  // TODO: PUBLIC_URL
+  const PUBLIC_URL =
+    import.meta.env.VITE_PUBLIC_URL ||
+    `https://${import.meta.env.VITE_VERCEL_URL}`;
+  const url = new URL(`/api/auth/${provider}`, PUBLIC_URL);
+
+  if (returnPath) {
+    url.searchParams.append('returnTo', returnPath);
+  }
+
+  if (answerId && updateToken) {
+    url.searchParams.append('answerId', answerId);
+    url.searchParams.append('updateToken', updateToken);
+  }
+
+  return url.href;
+};
 
 // TODO: see https://stackoverflow.com/questions/62358716/check-if-there-is-a-previous-page-in-vue-route
 const handleClose = () => {
@@ -49,7 +83,24 @@ const handleGoToRegisterClick = () => router.push(appRoutes.register);
           <TitleText tag="p" size="medium">Přihlásit se</TitleText>
         </StackComponent>
         <StackComponent spacing="medium" centered>
-          <SocialMediaConnectComponent />
+          <SocialMediaConnectComponent
+            :google-url="
+              href({
+                provider: 'google',
+                returnPath,
+                answerId,
+                updateToken,
+              })
+            "
+            :facebook-url="
+              href({
+                provider: 'facebook',
+                returnPath,
+                answerId,
+                updateToken,
+              })
+            "
+          />
         </StackComponent>
         <StackComponent centered spacing="extra-small">
           <BodyText size="medium">Ještě nemáte profil?</BodyText>

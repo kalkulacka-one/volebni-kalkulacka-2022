@@ -7,6 +7,7 @@ import {
   mdiCloseCircleOutline,
   mdiArrowLeft,
   mdiArrowRight,
+  mdiAccountCircleOutline,
 } from '@mdi/js';
 
 import { appRoutes } from '@/main';
@@ -53,6 +54,8 @@ const route = useRoute();
 const electionStore = useElectionStore();
 
 const userStore = useUserStore();
+
+const user = computed(() => userStore.user);
 
 const election = electionStore.election as Election;
 const electionName = election.name;
@@ -114,6 +117,29 @@ onBeforeMount(async () => {
       });
     }
   }
+});
+
+const signUpParams = computed(() => {
+  const returnPath = router.resolve({
+    name: appRoutes.share.name,
+    params: { uuid: electionStore.resultsId },
+  }).path;
+
+  return {
+    name: appRoutes.register.name,
+    params: {
+      ...route.params,
+    },
+    query: {
+      returnPath,
+      answerId: electionStore.resultsId,
+      updateToken: electionStore.resultsUpdateToken,
+    },
+  };
+});
+
+const signUpPath = computed(() => {
+  return router.resolve(signUpParams.value).fullPath;
 });
 
 console.debug(encodeResults(electionStore.answers));
@@ -281,6 +307,34 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
             category="general"
             :max-visible-candidates="5"
           />
+          <CardComponent
+            v-if="!user && election.key === 'prezidentske-2023'"
+            corner="bottom-left"
+            style="max-width: 32rem; justify-self: center"
+          >
+            <StackComponent centered spacing="medium">
+              <StackComponent spacing="medium">
+                <TitleText tag="p" size="medium">
+                  Sledujte, jak se Vaše názory a výsledky (ne)mění v čase.
+                </TitleText>
+                <BodyText tag="p" size="medium">
+                  Uložte si kalkulačku a vyplňte ji klidně vícekrát, a to pro
+                  každé volby.
+                </BodyText>
+              </StackComponent>
+              <ButtonComponent
+                kind="outlined"
+                color="primary"
+                :href="signUpPath"
+                target="_blank"
+              >
+                <template #icon>
+                  <IconComponent :icon="mdiAccountCircleOutline" />
+                </template>
+                Vytvořit profil
+              </ButtonComponent>
+            </StackComponent>
+          </CardComponent>
           <DonateBlock />
         </StackComponent>
         <StackComponent v-else class="main" spacing="medium">
