@@ -45,10 +45,7 @@ console.log(
 <template>
   <ElectionCardComponent
     :electionName="election?.name"
-    :electionDateFrom="election?.from"
-    :electionDateTo="election?.to"
     :candidates="answer?.matches.length > 0 ? answer?.matches : undefined"
-    :updated="answer?.updatedAt"
     :district="calculator?.district_code"
     :election="calculator?.election_id"
   />

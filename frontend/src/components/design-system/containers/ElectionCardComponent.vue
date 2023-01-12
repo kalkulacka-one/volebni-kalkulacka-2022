@@ -97,9 +97,9 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
     <StackComponent spacing="medium">
       <div>
         <TitleText tag="h4" size="small">{{ electionName }}</TitleText>
-        <BodyText size="small"
-          >{{ electionDateFrom }} - {{ electionDateTo }}</BodyText
-        >
+        <BodyText size="small" v-if="electionDateFrom && electionDateTo">
+          {{ electionDateFrom }} - {{ electionDateTo }}
+        </BodyText>
       </div>
 
       <hr v-if="!candidates" class="ruler" />
@@ -216,7 +216,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
         </ButtonComponent>
       </StackComponent>
 
-      <hr v-if="candidates" class="ruler" />
+      <hr v-if="false" class="ruler" />
 
       <ResponsiveWrapper extra-small small>
         <CardComponent
