@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 
 import type { Question } from '@/types/question';
 import type { Candidate } from '@/types/candidate';
@@ -27,17 +27,48 @@ export interface Props {
   answers: UserAnswer[];
   candidates: Candidate[];
   candidateAnswers: CandidateAnswer[];
+  selectedTags?: Set<string>;
+  selectedCandidateIds?: Set<string>;
 }
 
 const props = defineProps<Props>();
+const isQuestionInTagSet = (question: Question) => {
+  if (!props.selectedTags) {
+    return true;
+  }
+  return (
+    question.tags?.find((tag) => {
+      return props.selectedTags?.has(tag);
+    }) !== undefined
+  );
+};
 
-const questionCount = computed(() => props.questions.length);
+const isCandidateInCandidateSet = (candidate: Candidate) => {
+  if (!props.selectedCandidateIds) {
+    return true;
+  } else {
+    return props.selectedCandidateIds?.has(candidate.id);
+  }
+};
+
+const questionsToShow = computed(() =>
+  props.questions.filter((x) => isQuestionInTagSet(x))
+);
+const candidatesToShow = computed(() =>
+  props.candidates.filter((x) => isCandidateInCandidateSet(x))
+);
+console.debug(candidatesToShow);
 const results = calculateRelativeAgreement(
   props.candidateAnswers,
   props.answers
 );
-const candidateOrder = results.map((response) => response.cId);
-const candidateCount = computed(() => candidateOrder.length);
+const candidateOrder = computed(() =>
+  results
+    .filter((x) =>
+      props.selectedCandidateIds ? props.selectedCandidateIds.has(x.cId) : true
+    )
+    .map((response) => response.cId)
+);
 
 const mapAnswerToIcon = (answer: string | UserAnswerEnum) => {
   switch (answer) {
@@ -82,11 +113,26 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
       return 'neutral';
   }
 };
+
+//this ensures stickiness of the header
+const calculateStickeHeaderPos = () => {
+  const bot = document
+    .getElementsByClassName('sticky-header')[0]
+    ?.getBoundingClientRect().bottom;
+  const headers = document.querySelectorAll('#comparison-grid > .header');
+  for (let index = 0; index < headers.length; index++) {
+    const element = headers[index] as HTMLElement;
+    element.style.top = `${bot}px`;
+  }
+};
+window.onload = calculateStickeHeaderPos;
+window.onresize = calculateStickeHeaderPos;
+window.onscroll = calculateStickeHeaderPos;
 </script>
 
 <template>
-  <div class="grid">
-    <template v-for="i in candidateCount + 1" :key="i">
+  <div id="comparison-grid" class="grid">
+    <template v-for="i in candidateOrder.length + 1" :key="i">
       <DividerComponent
         :class="['line', i === 1 ? 'user-line' : '']"
         vertical
@@ -94,7 +140,7 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
         :color="i === 1 ? 'rgb(var(--color-neutral-border-strong))' : undefined"
         :style="{
           'grid-column': i === 1 ? 1 : 2 * (i - 1),
-          'grid-row': `1 / span ${2 * questionCount + 1}`,
+          'grid-row': `1 / span ${2 * questionsToShow.length + 1}`,
         }"
       />
     </template>
@@ -130,7 +176,7 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
           >
             <strong>
               {{
-                candidates.filter(
+                candidatesToShow.filter(
                   (candidate) => candidate.id === candidateId
                 )[0].short_name
               }}</strong
@@ -139,16 +185,19 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
         </FilledCircle>
       </div>
     </template>
-    <template v-for="(question, questionIndex) in questions" :key="question.id">
+    <template
+      v-for="(question, questionIndex) in questionsToShow"
+      :key="question.id"
+    >
       <QuestionCard
         class="question-card"
         :style="{
-          'grid-column': `1 / span ${2 * candidateCount + 1}`,
+          'grid-column': `1 / span ${2 * candidateOrder.length + 1}`,
           'grid-row': 2 * questionIndex + 2,
         }"
         :question="question"
-        :current-question="questionIndex + 1"
-        :question-count="questionCount"
+        :current-question="questions.findIndex((x) => x.id === question.id) + 1"
+        :question-count="$props.questions.length"
       />
       <div
         class="user-answers"
@@ -183,18 +232,16 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
           }"
         >
           <FilledCircle
-            :background-color="`rgb(var(--color-${mapAnswerToColor(candidateAnswers.filter(
-  (answer) =>
-    answer.candidate_id === candidateId &&
-    answer.question_id === question.id
-)[0].answer as string)}-bg-strong))`"
+            :background-color="`rgb(var(--color-${mapAnswerToColor(candidateAnswers.filter((answer) =>
+                answer.candidate_id === candidateId &&
+                answer.question_id === question.id
+            )[0].answer as string)}-bg-strong))`"
           >
             <IconComponent
-              :icon="mapAnswerToIcon(candidateAnswers.filter(
-  (answer) =>
-    answer.candidate_id === candidateId &&
-    answer.question_id === question.id
-)[0].answer as string)"
+              :icon="mapAnswerToIcon(candidateAnswers.filter((answer) =>
+                  answer.candidate_id === candidateId &&
+                  answer.question_id === question.id
+              )[0].answer as string)"
               color="rgb(var(--color-neutral-fg-inverse))"
             />
           </FilledCircle>
@@ -214,7 +261,7 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
             'grid-row': 2 * questionIndex + 3,
           }"
         >
-          <CardComponent corner="top-left" padding="medium">
+          <CardComponent corner="top-left" :padding="Object('medium')">
             <BodyText size="small">
               {{
                 candidateAnswers.filter(
@@ -233,11 +280,12 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
 
 <style lang="scss" scoped>
 .header {
+  padding-top: var(--spacing-extra-small);
   position: sticky;
-  top: calc(
-    2 * var(--responsive-spacing-large) + var(--spacing-medium) + 2 *
-      var(--spacing-extra-small) + var(--responsive-spacing-large)
-  );
+  // top: calc(
+  //   2 * var(--responsive-spacing-large) + var(--spacing-medium) + 2 *
+  //     var(--spacing-extra-small) + var(--responsive-spacing-large)
+  // );
   z-index: 100;
 }
 
@@ -256,6 +304,7 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
 }
 
 .line {
+  margin-top: var(--spacing-extra-small);
   grid-row: 1 / span 2;
   justify-self: center;
 }

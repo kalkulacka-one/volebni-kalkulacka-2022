@@ -85,55 +85,91 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
         <div class="avatar pavel-fischer">
           <img
             alt="Fotografie – Pavel Fischer"
-            src="@/assets/prezidenti-2023/pavel-fischer.jpg"
+            src="@/assets/prezidenti-2023/cand-pavel-fischer-1x.jpg"
+            srcset="
+              @/assets/prezidenti-2023/cand-pavel-fischer-1x.webp,
+              @/assets/prezidenti-2023/cand-pavel-fischer-2x.webp 2x
+            "
           />
         </div>
         <div class="avatar shift jaroslav-basta">
           <img
             alt="Fotografie – Jaroslav Bašta"
-            src="@/assets/prezidenti-2023/jaroslav-basta.jpg"
+            src="@/assets/prezidenti-2023/cand-jaroslav-basta-1x.jpg"
+            srcset="
+              @/assets/prezidenti-2023/cand-jaroslav-basta-1x.webp,
+              @/assets/prezidenti-2023/cand-jaroslav-basta-2x.webp 2x
+            "
           />
         </div>
         <div class="avatar shift josef-stredula">
           <img
             alt="Fotografie – Josef Středula"
-            src="@/assets/prezidenti-2023/josef-stredula.jpg"
+            src="@/assets/prezidenti-2023/cand-josef-stredula-1x.jpg"
+            srcset="
+              @/assets/prezidenti-2023/cand-josef-stredula-1x.webp,
+              @/assets/prezidenti-2023/cand-josef-stredula-2x.webp 2x
+            "
           />
         </div>
         <div class="avatar petr-pavel">
           <img
             alt="Fotografie – Petr Pavel"
-            src="@/assets/prezidenti-2023/petr-pavel.jpg"
+            src="@/assets/prezidenti-2023/cand-petr-pavel-1x.jpg"
+            srcset="
+              @/assets/prezidenti-2023/cand-petr-pavel-1x.webp,
+              @/assets/prezidenti-2023/cand-petr-pavel-2x.webp 2x
+            "
           />
         </div>
         <div class="avatar shift tomas-zima">
           <img
             alt="Fotografie – Tomáš Zima"
-            src="@/assets/prezidenti-2023/tomas-zima.jpg"
+            src="@/assets/prezidenti-2023/cand-tomas-zima-1x.jpg"
+            srcset="
+              @/assets/prezidenti-2023/cand-tomas-zima-1x.webp,
+              @/assets/prezidenti-2023/cand-tomas-zima-2x.webp 2x
+            "
           />
         </div>
         <div class="avatar danuse-nerudova">
           <img
             alt="Fotografie – Danuše Nerudová"
-            src="@/assets/prezidenti-2023/danuse-nerudova.jpg"
+            src="@/assets/prezidenti-2023/cand-danuse-nerudova-1x.jpg"
+            srcset="
+              @/assets/prezidenti-2023/cand-danuse-nerudova-1x.webp,
+              @/assets/prezidenti-2023/cand-danuse-nerudova-2x.webp 2x
+            "
           />
         </div>
         <div class="avatar andrej-babis">
           <img
             alt="Fotografie – Andrej Babiš"
-            src="@/assets/prezidenti-2023/andrej-babis.jpg"
+            src="@/assets/prezidenti-2023/cand-andrej-babis-1x.jpg"
+            srcset="
+              @/assets/prezidenti-2023/cand-andrej-babis-1x.webp,
+              @/assets/prezidenti-2023/cand-andrej-babis-2x.webp 2x
+            "
           />
         </div>
         <div class="avatar shift karel-divis">
           <img
             alt="Fotografie – Karel Diviš"
-            src="@/assets/prezidenti-2023/karel-divis.jpg"
+            src="@/assets/prezidenti-2023/cand-karel-divis-1x.jpg"
+            srcset="
+              @/assets/prezidenti-2023/cand-karel-divis-1x.webp,
+              @/assets/prezidenti-2023/cand-karel-divis-2x.webp 2x
+            "
           />
         </div>
         <div class="avatar shift marek-hilser">
           <img
             alt="Fotografie – Marek Hilšer"
-            src="@/assets/prezidenti-2023/marek-hilser.jpg"
+            src="@/assets/prezidenti-2023/cand-marek-hilser-1x.jpg"
+            srcset="
+              @/assets/prezidenti-2023/cand-marek-hilser-1x.webp,
+              @/assets/prezidenti-2023/cand-marek-hilser-2x.webp 2x
+            "
           />
         </div>
       </div>

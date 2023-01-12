@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRoute, useRouter } from 'vue-router';
-import { mdiCloseCircleOutline, mdiArrowLeft } from '@mdi/js';
+import { mdiCloseCircleOutline, mdiArrowLeft, mdiTune } from '@mdi/js';
 
 import { appRoutes } from '@/main';
 import { useElectionStore } from '@/stores/electionStore';
@@ -27,6 +27,10 @@ import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import ComparisonGrid from './ComparisonGrid.vue';
 import ContainerComponent from '../../components/design-system/containers/ContainerComponent.vue';
 
+import { ref } from 'vue';
+import QuestionCandidateFilter from '@/components/QuestionCandidateFilter.vue';
+import QuestionTagFilter from '@/components/QuestionTagFilter.vue';
+
 const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
@@ -45,6 +49,8 @@ const districtNameWithCode = showDistrictCode
   : districtName;
 
 const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
+const selectedTags = ref(new Set<string>(electionStore.uniqueQuestionTags));
+const selectedCandidateIds = ref(new Set<string>());
 
 const handlePreviousClick = () => {
   router.push({
@@ -53,6 +59,8 @@ const handlePreviousClick = () => {
     query: { ...route.query },
   });
 };
+
+const filterMenuIsVisible = ref(false);
 
 const questions = electionStore.calculator?.questions as Question[];
 const answers = electionStore.answers;
@@ -115,7 +123,27 @@ const candidateAnswers = electionStore.calculator?.answers as CandidateAnswer[];
               </IconButton>
             </template>
             <TitleText tag="h2" size="medium">Porovnání</TitleText>
+            <template #after>
+              <ButtonComponent
+                kind="link"
+                @click="filterMenuIsVisible = !filterMenuIsVisible"
+              >
+                <template #icon>
+                  <IconComponent :icon="mdiTune" title="Nastavit porovnání" />
+                </template>
+              </ButtonComponent>
+            </template>
           </SecondaryNavigationBar>
+          <QuestionTagFilter
+            v-show="filterMenuIsVisible"
+            v-model="selectedTags"
+            class="filter-menu"
+          />
+          <QuestionCandidateFilter
+            v-show="filterMenuIsVisible"
+            v-model="selectedCandidateIds"
+            class="filter-menu"
+          />
         </ResponsiveWrapper>
         <ResponsiveWrapper medium large extra-large huge>
           <SecondaryNavigationBar>
@@ -125,7 +153,28 @@ const candidateAnswers = electionStore.calculator?.answers as CandidateAnswer[];
               </IconButton>
             </template>
             <TitleText tag="h2" size="large">Porovnání</TitleText>
+            <template #after>
+              <ButtonComponent
+                kind="link"
+                @click="filterMenuIsVisible = !filterMenuIsVisible"
+              >
+                Nastavit porovnání
+                <template #iconAfter>
+                  <IconComponent :icon="mdiTune" />
+                </template>
+              </ButtonComponent>
+            </template>
           </SecondaryNavigationBar>
+          <QuestionTagFilter
+            v-show="filterMenuIsVisible"
+            v-model="selectedTags"
+            class="filter-menu"
+          />
+          <QuestionCandidateFilter
+            v-show="filterMenuIsVisible"
+            v-model="selectedCandidateIds"
+            class="filter-menu"
+          />
         </ResponsiveWrapper>
       </template>
       <BottomBarWrapper>
@@ -140,6 +189,8 @@ const candidateAnswers = electionStore.calculator?.answers as CandidateAnswer[];
               :answers="answers"
               :candidates="candidates"
               :candidate-answers="candidateAnswers"
+              :selected-tags="selectedTags"
+              :selected-candidate-ids="selectedCandidateIds"
             />
           </ContainerComponent>
         </div>
@@ -153,4 +204,9 @@ const candidateAnswers = electionStore.calculator?.answers as CandidateAnswer[];
   max-width: 100vw;
   overflow-x: scroll;
 }*/
+.filter-menu {
+  padding: var(--spacing-large);
+  padding-top: 0;
+  background: rgb(var(--color-neutral-bg-container));
+}
 </style>

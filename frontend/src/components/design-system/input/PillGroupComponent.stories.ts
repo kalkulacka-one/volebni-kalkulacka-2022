@@ -29,6 +29,7 @@ export const PillGroup: StoryFn<typeof PillGroupComponent> = (args) => ({
      <pill-group-item-component
       v-for="(item, idx) in args.items"
       :value="item.value"
+      type="checkbox"
       :groupName="args.groupName"
       :checked="idx === 0"
       :key="idx"

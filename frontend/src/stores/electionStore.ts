@@ -54,6 +54,7 @@ export const useElectionStore = defineStore('election', {
       resultsId: null as null | string,
       resultsUpdateToken: null as null | string,
       encodedResults: null as null | string,
+      uniqueQuestionTags: new Set<string>(),
     };
   },
   getters: {
@@ -105,6 +106,7 @@ export const useElectionStore = defineStore('election', {
     },
     async loadCalculator(electionId: string, districtId: string) {
       this.calculator = undefined;
+      this.uniqueQuestionTags.clear();
       let calculator = undefined;
       try {
         calculator = await fetchCalculator(electionId, districtId);
@@ -115,6 +117,9 @@ export const useElectionStore = defineStore('election', {
       if (calculator !== undefined) {
         this.calculator = calculator;
         this.answers = calculator.questions.map((x) => {
+          x.tags?.forEach((tag) => {
+            this.uniqueQuestionTags.add(tag);
+          });
           return {
             answer: UserAnswerEnum.skip,
             flag: false,

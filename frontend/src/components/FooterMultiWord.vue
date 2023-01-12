@@ -32,6 +32,15 @@ const router = useRouter();
               <router-link
                 :to="{
                   name: 'o-volbach',
+                  hash: '#prezidentske',
+                }"
+                ><BodyText size="small"
+                  >Prezidentské volby</BodyText
+                ></router-link
+              >
+              <router-link
+                :to="{
+                  name: 'o-volbach',
                   hash: '#komunalni',
                 }"
                 ><BodyText size="small">Komunální volby</BodyText></router-link
