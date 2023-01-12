@@ -98,17 +98,21 @@ const handleShareClick = () => {
 };
 onBeforeMount(async () => {
   if (election.key === 'prezidentske-2023') {
-    let user;
-    if (userStore.user === undefined) {
-      user = userStore.$subscribe(async (mutation, state) => {
-        return state.user;
+    if (userStore.user || userStore.user === null) {
+      const res = await electionStore.saveResults({
+        embedName: currentEmbed,
+        user: userStore.user as User | null | undefined,
+      });
+      console.debug(res);
+    } else {
+      userStore.$subscribe(async (mutation, state) => {
+        const res = await electionStore.saveResults({
+          embedName: currentEmbed,
+          user: state.user as User | null | undefined,
+        });
+        console.debug(res);
       });
     }
-    const res = await electionStore.saveResults({
-      embedName: currentEmbed,
-      user: user as User | null | undefined,
-    });
-    console.debug(res);
   }
 });
 
