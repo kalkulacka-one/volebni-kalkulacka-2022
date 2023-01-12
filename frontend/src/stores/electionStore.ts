@@ -139,7 +139,14 @@ export const useElectionStore = defineStore('election', {
         action: 'unknown',
         response: null as any,
       };
-      if (newEncodedResults === this.encodedResults && this.resultsId) {
+      const answersCount = this.answers.length;
+      const answeredAnswersCount = this.answers.filter(
+        (answer) => answer.answer === UserAnswerEnum.skip
+      ).length;
+      if (answersCount === answeredAnswersCount) {
+        response.action = 'no-action';
+        console.debug('No question answered.');
+      } else if (newEncodedResults === this.encodedResults && this.resultsId) {
         response.action = 'no-action';
         console.debug('Results already saved.');
       }

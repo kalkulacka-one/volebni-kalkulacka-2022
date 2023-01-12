@@ -96,7 +96,6 @@ const handleShareClick = () => {
 onBeforeMount(async () => {
   if (election.key === 'prezidentske-2023') {
     const res = await electionStore.saveResults({ embedName: currentEmbed });
-    console.debug(`Results saved.`);
     console.debug(res);
   }
 });
