@@ -11,7 +11,7 @@ import ElectionCardComponent from '@/components/design-system/containers/Electio
 export interface Answer {
   id: string;
   calculatorId: string;
-  answers: { answer: Boolean; questionId: string };
+  answers: { answer: boolean; questionId: string };
   matches: { candidateId: string; score: number };
   createdAt: Date;
   updatedAt: string;
