@@ -55,6 +55,8 @@ const electionStore = useElectionStore();
 
 const userStore = useUserStore();
 
+const user = computed(() => userStore.user);
+
 const election = electionStore.election as Election;
 const electionName = election.name;
 const districtCode = getDistrictCode(route.params.district as string);
@@ -294,6 +296,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           spacing="medium"
         >
           <CardComponent
+            v-if="!user"
             corner="bottom-left"
             style="max-width: 32rem; justify-self: center"
           >
