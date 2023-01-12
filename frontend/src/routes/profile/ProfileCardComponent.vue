@@ -4,6 +4,8 @@ import { mdiLogout } from '@mdi/js';
 
 import { appRoutes } from '@/main';
 
+import { useUserStore } from '@/stores/userStore';
+
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
 import CardComponent from '@/components/design-system/containers/CardComponent.vue';
@@ -22,9 +24,12 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 const router = useRouter();
+const userStore = useUserStore();
+
 const handleLogout = async () => {
   const response = await fetch('/api/auth/logout');
   if (response.ok) {
+    userStore.fetchUser();
     router.push(appRoutes.index);
   } else {
     throw Error('Logout failed');
