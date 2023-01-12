@@ -1,10 +1,21 @@
 <script setup lang="ts">
+import { computed, ref, type Ref } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+import { appRoutes } from '@/main';
+import { useElectionStore } from '@/stores/electionStore';
+import {
+  calculateRelativeAgreement,
+  encodeResults,
+} from '@/common/resultParser';
+import type { CandidateAnswer } from '@/types/candidate-answer';
+
 import AvatarComponent from '@/components/design-system/other/AvatarComponent.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
 import CardComponent from '@/components/design-system/containers/CardComponent.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
+import ResultShareModal from '@/routes/result/ResultShareModal.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import SimpleProgress from '@/components/design-system/indicators/SimpleProgress.vue';
 import TitleText from '@/components/design-system/typography/TitleText.vue';
@@ -15,7 +26,6 @@ import {
   mdiReload,
   mdiShareVariantOutline,
 } from '@mdi/js';
-
 export interface Props {
   // TODO
   candidates?: any;
@@ -23,6 +33,9 @@ export interface Props {
   electionDateFrom?: string | null;
   electionDateTo?: string | null;
   updated?: string | null;
+  district?: string | null;
+  election?: string | null;
+  uuid?: string | null;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -31,6 +44,52 @@ const props = withDefaults(defineProps<Props>(), {
   electionDateTo: null,
   updated: null,
 });
+
+const router = useRouter();
+const route = useRoute();
+
+const handleResultsClick = () => {
+  router.push({
+    name: appRoutes.share.name,
+    params: {
+      ...route.params,
+      uuid: props.uuid,
+    },
+    query: { ...route.query },
+  });
+};
+
+const handleVoteClick = () => {
+  router.push({
+    name: appRoutes.guide.name,
+    params: {
+      ...route.params,
+      election: props.election,
+      district: props.district,
+    },
+    query: { ...route.query },
+  });
+};
+
+const electionStore = useElectionStore();
+
+const candidateAnswers: CandidateAnswer[] =
+  electionStore.calculator?.answers || [];
+
+const filteredCandidateAnswers: Ref<CandidateAnswer[]> = ref(candidateAnswers);
+
+const handleShareClick = () => {
+  shareModal.value?.open();
+};
+const resultsGeneral = computed(() => {
+  const ra = calculateRelativeAgreement(
+    filteredCandidateAnswers.value,
+    electionStore.answers
+  );
+  return ra;
+});
+
+const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
 </script>
 
 <template>
@@ -38,62 +97,12 @@ const props = withDefaults(defineProps<Props>(), {
     <StackComponent spacing="medium">
       <div>
         <TitleText tag="h4" size="small">{{ electionName }}</TitleText>
-        <BodyText size="small"
-          >{{ electionDateFrom }} - {{ electionDateTo }}</BodyText
-        >
+        <BodyText size="small" v-if="electionDateFrom && electionDateTo">
+          {{ electionDateFrom }} - {{ electionDateTo }}
+        </BodyText>
       </div>
 
       <hr v-if="!candidates" class="ruler" />
-
-      <template v-if="candidates">
-        <StackComponent
-          v-for="(candidate, idx) in candidates"
-          horizontal
-          spacing="small"
-          centered
-          :key="idx"
-          class="full-width"
-        >
-          <AvatarComponent
-            :backgroundImage="candidate.image"
-            :backgroundColor="
-              idx == 0
-                ? 'rgb(var(--color-primary-bg-strong))'
-                : 'rgb(var(--color-primary-bg))'
-            "
-          >
-            <BodyText
-              size="small"
-              :color="
-                idx === 0
-                  ? 'rgb(var(--palette-neutral-100))'
-                  : 'rgb(var(--color-primary-fg-strong))'
-              "
-              >{{ idx + 1 }}</BodyText
-            >
-          </AvatarComponent>
-
-          <StackComponent spacing="extra-small" class="full-width">
-            <TitleText size="small" tag="h5">{{ candidate.name }}</TitleText>
-
-            <SimpleProgress
-              :id="'candidate' + idx"
-              :value="candidate?.percentage"
-              color-primary="rgb(var(--palette-primary-50))"
-              color-secondary="rgb(var(--color-neutral-bg))"
-              :max="100"
-              height="2px"
-            />
-            <BodyText v-if="candidate" size="extra-small">{{
-              candidate.party
-            }}</BodyText>
-          </StackComponent>
-
-          <TitleText size="medium" tag="h2">
-            {{ candidate.percentage }}&nbsp;%
-          </TitleText>
-        </StackComponent>
-      </template>
 
       <ResponsiveWrapper extra-small small>
         <ButtonComponent
@@ -101,6 +110,7 @@ const props = withDefaults(defineProps<Props>(), {
           color="neutral"
           size="small"
           class="full-width"
+          @click.prevent="handleResultsClick"
         >
           Celé výsledky kalkulačky
           <template #iconAfter>
@@ -119,6 +129,7 @@ const props = withDefaults(defineProps<Props>(), {
             kind="outlined"
             color="neutral"
             size="medium"
+            @click.prevent="handleResultsClick"
           >
             Celé výsledky kalkulačky
             <template #iconAfter>
@@ -128,7 +139,13 @@ const props = withDefaults(defineProps<Props>(), {
               />
             </template>
           </ButtonComponent>
-          <ButtonComponent v-else kind="filled" color="primary" size="medium">
+          <ButtonComponent
+            v-else
+            kind="filled"
+            color="primary"
+            size="medium"
+            @click.prevent="handleVoteClick"
+          >
             Vyplnit kalkulačku
             <template #iconAfter>
               <IconComponent
@@ -170,7 +187,11 @@ const props = withDefaults(defineProps<Props>(), {
         centered
         class="full-width"
       >
-        <ButtonComponent kind="link" size="small">
+        <ButtonComponent
+          kind="link"
+          size="small"
+          @click.prevent="handleVoteClick"
+        >
           Vyplnit znova
           <template #iconAfter>
             <IconComponent
@@ -182,7 +203,13 @@ const props = withDefaults(defineProps<Props>(), {
         <ResponsiveWrapper extra-small small>
           <div class="stretch" />
         </ResponsiveWrapper>
-        <ButtonComponent kind="link" color="primary" size="small">
+        <ButtonComponent
+          v-if="false"
+          kind="link"
+          color="primary"
+          size="small"
+          @click.prevent="handleShareClick"
+        >
           Sdílet shodu
           <template #iconAfter>
             <IconComponent :icon="mdiShareVariantOutline" />
@@ -190,7 +217,7 @@ const props = withDefaults(defineProps<Props>(), {
         </ButtonComponent>
       </StackComponent>
 
-      <hr v-if="candidates" class="ruler" />
+      <hr v-if="false" class="ruler" />
 
       <ResponsiveWrapper extra-small small>
         <CardComponent
@@ -236,6 +263,11 @@ const props = withDefaults(defineProps<Props>(), {
       </ResponsiveWrapper>
     </StackComponent>
   </CardComponent>
+  <ResultShareModal
+    v-if="electionStore.resultsId"
+    ref="shareModal"
+    :relative-agreement="resultsGeneral"
+  />
 </template>
 
 <style scoped lang="scss">
