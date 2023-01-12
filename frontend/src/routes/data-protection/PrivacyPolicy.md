@@ -41,46 +41,46 @@ V souvislosti se zpracováním Vašich osobních údajů Vám konkrétně nále�
 
 1. Právo odvolat souhlas
 
-  Máte právo kdykoli odvolat souhlas se zpracováním osobních údajů. Toto můžete učinit odesláním e-mailu na naši adresu. Odvolání souhlasu však nemá vliv na oprávněnost zpracování před udělením takového souhlasu.
+   Máte právo kdykoli odvolat souhlas se zpracováním osobních údajů. Toto můžete učinit odesláním e-mailu na naši adresu. Odvolání souhlasu však nemá vliv na oprávněnost zpracování před udělením takového souhlasu.
 
 2. Právo na přístup
 
-  Máte právo získat od nás potvrzení, zda zpracováváme Vaše osobní údaje či nikoli.
+   Máte právo získat od nás potvrzení, zda zpracováváme Vaše osobní údaje či nikoli.
   
-  Pokud Vaše osobní údaje zpracováváme, máte současně právo požadovat přístup k informacím o účelu a rozsahu zpracování, příjemcích údajů, době zpracování, právu na opravu, výmaz, omezení zpracování a podání námitky proti zpracování, právu podat stížnost u dozorového úřadu a o zdrojích osobních údajů (tyto informace již jsou uvedeny v tomto dokumentu). 
+   Pokud Vaše osobní údaje zpracováváme, máte současně právo požadovat přístup k informacím o účelu a rozsahu zpracování, příjemcích údajů, době zpracování, právu na opravu, výmaz, omezení zpracování a podání námitky proti zpracování, právu podat stížnost u dozorového úřadu a o zdrojích osobních údajů (tyto informace již jsou uvedeny v tomto dokumentu). 
   
-  Stejně tak nás můžete požádat o kopii zpracovávaných osobních údajů. První kopii poskytujeme bezplatně, další již mohou být zpoplatněny. Rozsah poskytnutých údajů může být omezen tak, aby nedošlo k zásahu do práv a svobod jiných osob. 
+   Stejně tak nás můžete požádat o kopii zpracovávaných osobních údajů. První kopii poskytujeme bezplatně, další již mohou být zpoplatněny. Rozsah poskytnutých údajů může být omezen tak, aby nedošlo k zásahu do práv a svobod jiných osob. 
 
 3. Právo na opravu
 
-  Máte právo požadovat od nás opravu nepřesných osobních údajů, které se Vás týkají. Podle účelu zpracování můžete mít také právo na doplnění neúplných osobních údajů, a to i poskytnutím dodatečného prohlášení.
+   Máte právo požadovat od nás opravu nepřesných osobních údajů, které se Vás týkají. Podle účelu zpracování můžete mít také právo na doplnění neúplných osobních údajů, a to i poskytnutím dodatečného prohlášení.
 
 4. Právo na výmaz
 
-  Máte právo požadovat výmaz Vašich osobních údajů, a to v případech, kdy:  
-  Vaše osobní údaje již nepotřebujeme pro účely, pro které byly získány či zpracovávány;  
-  odvoláte souhlas, na základě kterého byly osobní údaje zpracovány, a neexistuje žádný další důvod pro jejich zpracování;
-  vznesete námitku proti zpracování a neexistují další převažující důvody pro zpracování, popř. vznesete námitku proti zpracování za účelem přímého marketingu;
-  osobní údaje jsou zpracovávány v rozporu s právními předpisy.
+   Máte právo požadovat výmaz Vašich osobních údajů, a to v případech, kdy:  
+   Vaše osobní údaje již nepotřebujeme pro účely, pro které byly získány či zpracovávány;  
+   odvoláte souhlas, na základě kterého byly osobní údaje zpracovány, a neexistuje žádný další důvod pro jejich zpracování;
+   vznesete námitku proti zpracování a neexistují další převažující důvody pro zpracování, popř. vznesete námitku proti zpracování za účelem přímého marketingu;
+   osobní údaje jsou zpracovávány v rozporu s právními předpisy.
 
-  Toto právo však nemůžete uplatnit v případě, kdy je zpracování potřebné pro splnění našich právních povinností či nám svěřených úkolů ve veřejném zájmu nebo pro určení, výkon či obhajobu právních nároků.
+   Toto právo však nemůžete uplatnit v případě, kdy je zpracování potřebné pro splnění našich právních povinností či nám svěřených úkolů ve veřejném zájmu nebo pro určení, výkon či obhajobu právních nároků.
 
 5. Právo na omezení zpracování
 
-  Máte právo požadovat omezení zpracování Vašich osobních údajů, a to v případech, kdy:  
-  popíráte přesnost Vašich osobních údajů; v takovém případě můžete požadovat omezení zpracování do doby ověření přesnosti osobních údajů;  
-  zpracování je v rozporu s právními předpisy a místo výmazu budete požadovat omezení zpracování osobních údajů;  
-  Vaše osobní údaje již nepotřebujeme pro účely, pro které byly získány či zpracovávány, avšak Vy je požadujete pro určení, výkon nebo obhajobu právních nároků;  
-  vznesli jste námitku proti zpracování osobních údajů; v takovém případě můžete požadovat omezení zpracování do doby ověření, zda naše oprávněné zájmy převažují.
+   Máte právo požadovat omezení zpracování Vašich osobních údajů, a to v případech, kdy:  
+   popíráte přesnost Vašich osobních údajů; v takovém případě můžete požadovat omezení zpracování do doby ověření přesnosti osobních údajů;  
+   zpracování je v rozporu s právními předpisy a místo výmazu budete požadovat omezení zpracování osobních údajů;  
+   Vaše osobní údaje již nepotřebujeme pro účely, pro které byly získány či zpracovávány, avšak Vy je požadujete pro určení, výkon nebo obhajobu právních nároků;  
+   vznesli jste námitku proti zpracování osobních údajů; v takovém případě můžete požadovat omezení zpracování do doby ověření, zda naše oprávněné zájmy převažují.
   
 6. Právo na přenositelnost
   
-  Máte právo získat kopii Vašich osobních údajů, které zpracováváme automatizovaně na základě Vašeho souhlasu nebo pro splnění smlouvy. Tyto údaje předáme v běžně používaném a strojově čitelném formátu Vám či Vámi určenému správci, pokud to je technicky proveditelné. Rozsah poskytnutých údajů může být omezen tak, aby nedošlo k zásahu do práv a svobod jiných osob.  
+   Máte právo získat kopii Vašich osobních údajů, které zpracováváme automatizovaně na základě Vašeho souhlasu nebo pro splnění smlouvy. Tyto údaje předáme v běžně používaném a strojově čitelném formátu Vám či Vámi určenému správci, pokud to je technicky proveditelné. Rozsah poskytnutých údajů může být omezen tak, aby nedošlo k zásahu do práv a svobod jiných osob.  
 
 7. Právo vznést námitku proti zpracování
 
-  Máte právo vznést námitku proti zpracování Vašich osobních údajů, které zpracováváme na základě našeho oprávněného zájmu. Vaše údaje přestaneme zpracovávat, pokud neexistují další převažující důvody pro zpracování či pokud není zpracování potřebné pro určení, výkon nebo obhajobu právních nároků, popř. pokud vznesete námitku proti zpracování za účelem přímého marketingu.
+   Máte právo vznést námitku proti zpracování Vašich osobních údajů, které zpracováváme na základě našeho oprávněného zájmu. Vaše údaje přestaneme zpracovávat, pokud neexistují další převažující důvody pro zpracování či pokud není zpracování potřebné pro určení, výkon nebo obhajobu právních nároků, popř. pokud vznesete námitku proti zpracování za účelem přímého marketingu.
 
 8. Právo podat stížnost
 
-  Vedle možnosti uplatnění práv uvedené výše také můžete podat stížnost u příslušného dozorového úřadu, kterým je Úřadu pro ochranu osobních údajů sídlící na adrese Pplk. Sochora 27, 170 00 Praha 7. 
+   Vedle možnosti uplatnění práv uvedené výše také můžete podat stížnost u příslušného dozorového úřadu, kterým je Úřadu pro ochranu osobních údajů sídlící na adrese Pplk. Sochora 27, 170 00 Praha 7. 
