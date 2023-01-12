@@ -8,6 +8,7 @@ export interface User {
   email?: string;
   id?: string;
   updatedAt?: string;
+  img_url?: string;
 }
 
 export const useUserStore = defineStore('user', {
