@@ -29,16 +29,27 @@ const calculators = await fetchCalculators();
 const calculator = calculators.find(
   (c) => props.answer.calculatorId === c.calculator_id
 );
+
 const { election } = await fetchCalculator(
   calculator.election_id,
   calculator.district_code
+);
+
+const isFilled = props.answer?.answers.length > 0 ? true : false;
+const districts = {
+  'pro-kazdeho': '',
+  'pro-nadsence': ' pro nadšence',
+  'pro-mlade': ' pro mladé',
+};
+const name = computed(
+  () => election?.name + districts[calculator?.district_code]
 );
 </script>
 
 <template>
   <ElectionCardComponent
-    :electionName="election?.name"
-    :candidates="answer?.matches.length > 0 ? answer?.matches : undefined"
+    :electionName="name"
+    :candidates="isFilled"
     :district="calculator?.district_code"
     :election="calculator?.election_id"
     :uuid="answer?.id"

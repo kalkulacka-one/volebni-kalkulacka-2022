@@ -23,7 +23,6 @@ const user = computed(() => userStore.user);
 
 const res = await fetch('/api/answers');
 const answers = await res.json();
-console.log(answers);
 </script>
 
 <template>
