@@ -134,6 +134,13 @@ const getStrategyCallback = (strategy: string) => {
   };
 };
 
+const redirectAfterCallback = (returnTo: string, res: Response) => {
+  if (typeof returnTo === 'string' && returnTo.startsWith('/')) {
+    return res.redirect(returnTo);
+  }
+  return res.redirect('/');
+};
+
 const callback = (provider: string) => {
   return (req: Request, res: Response, next: NextFunction) => {
     passport.authenticate(provider, { session: false }, (err, user, info) => {
@@ -182,16 +189,20 @@ const callback = (provider: string) => {
               Buffer.from(state as string, 'base64').toString()
             );
             if (updateToken && answerId) {
-              assignAnswerToUser({ answerId, updateToken, userId: user.id });
-            }
-            if (typeof returnTo === 'string' && returnTo.startsWith('/')) {
-              return res.redirect(returnTo);
+              assignAnswerToUser({
+                answerId,
+                updateToken,
+                userId: user.id,
+              }).then(() => {
+                redirectAfterCallback(returnTo, res);
+              });
+            } else {
+              redirectAfterCallback(returnTo, res);
             }
           }
         } catch {
-          // just redirect normally below
+          redirectAfterCallback('/', res);
         }
-        res.redirect('/?login=loginsuccess-default');
       });
     })(req, res, next);
   };
