@@ -44,6 +44,7 @@ const name = computed(() => `${election?.name} (${calculator?.name})`);
     :district="calculator?.district_code"
     :election="calculator?.election_id"
     :uuid="answer?.id"
+    :candidates="true"
   />
 </template>
 
