@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+import { appRoutes } from '@/main';
 
 import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
@@ -23,6 +25,9 @@ const user = computed(() => userStore.user);
 
 const res = await fetch('/api/answers');
 const answers = await res.json();
+
+const router = useRouter();
+if (!userStore.user) router.push(appRoutes.login);
 </script>
 
 <template>
