@@ -132,7 +132,7 @@ const signUpParams = computed(() => {
     },
     query: {
       returnPath,
-      calculatorId: electionStore.calculator?.id,
+      answerId: electionStore.resultsId,
       updateToken: electionStore.resultsUpdateToken,
     },
   };

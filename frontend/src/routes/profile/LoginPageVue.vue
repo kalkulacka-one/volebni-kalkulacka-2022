@@ -19,18 +19,18 @@ const router = useRouter();
 const route = useRoute();
 
 const returnPath = computed(() => route.query.returnPath as string);
-const calculatorId = computed(() => route.query.calculatorId as string);
+const answerId = computed(() => route.query.answerId as string);
 const updateToken = computed(() => route.query.updateToken as string);
 
 const href = ({
   provider,
   returnPath,
-  calculatorId,
+  answerId,
   updateToken,
 }: {
   provider: string;
   returnPath?: string;
-  calculatorId?: string;
+  answerId?: string;
   updateToken?: string;
 }) => {
   // TODO: PUBLIC_URL
@@ -43,8 +43,8 @@ const href = ({
     url.searchParams.append('returnTo', returnPath);
   }
 
-  if (calculatorId && updateToken) {
-    url.searchParams.append('calculatorId', calculatorId);
+  if (answerId && updateToken) {
+    url.searchParams.append('answerId', answerId);
     url.searchParams.append('updateToken', updateToken);
   }
 
@@ -88,7 +88,7 @@ const handleGoToRegisterClick = () => router.push(appRoutes.register);
               href({
                 provider: 'google',
                 returnPath,
-                calculatorId,
+                answerId,
                 updateToken,
               })
             "
@@ -96,7 +96,7 @@ const handleGoToRegisterClick = () => router.push(appRoutes.register);
               href({
                 provider: 'facebook',
                 returnPath,
-                calculatorId,
+                answerId,
                 updateToken,
               })
             "
