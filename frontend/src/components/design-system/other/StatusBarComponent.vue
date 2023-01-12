@@ -9,10 +9,7 @@ export interface Props {
 
 defineProps<Props>();
 
-const classes = [
-  'status-bar-primary',
-  'status-bar-secondary',
-];
+const classes = ['status-bar-primary', 'status-bar-secondary'];
 </script>
 
 <template>
