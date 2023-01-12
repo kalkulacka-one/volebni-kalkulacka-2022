@@ -32,6 +32,7 @@ import { getDistrictCode } from './common/utils';
 import VueSocialSharing from 'vue-social-sharing';
 import RegisterPageVue from './routes/profile/RegisterPageVue.vue';
 import LoginPageVue from './routes/profile/LoginPageVue.vue';
+import ProfilePageVue from './routes/profile/ProfilePage.vue';
 
 const RESULT_QUERY_NAME = 'result';
 
@@ -192,6 +193,14 @@ export const appRoutes = {
     component: RegisterPageVue,
     meta: {
       title: 'Registrace - Volební kalkulačka',
+    },
+  },
+  profile: {
+    name: 'profile',
+    path: '/muj-profil',
+    component: ProfilePageVue,
+    meta: {
+      title: 'Můj profil - Volební kalkulačka',
     },
   },
   fallback: {
