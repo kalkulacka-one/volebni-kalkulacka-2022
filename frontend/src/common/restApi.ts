@@ -111,7 +111,13 @@ export const getResults = async (resultId: string) => {
   });
 };
 
-export const patchResults = async (resultId: string, updateToken: string) => {
+export const patchResults = async ({
+  resultId,
+  updateToken,
+}: {
+  resultId: string;
+  updateToken?: string;
+}) => {
   const endpointUrl = BASE_URL + `/api/answers/${resultId}`;
   const values = buildResultData();
   const data = {
