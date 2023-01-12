@@ -308,7 +308,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
             :max-visible-candidates="5"
           />
           <CardComponent
-            v-if="!user"
+            v-if="!user && election.key === 'prezidentske-2023'"
             corner="bottom-left"
             style="max-width: 32rem; justify-self: center"
           >
