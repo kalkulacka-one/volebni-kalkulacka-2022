@@ -6,6 +6,7 @@ export interface Props {
   spacing?: 'extra-small' | 'small' | 'medium' | 'large';
   spacingResponsive?: boolean;
   centered?: boolean;
+  stretched?: boolean;
   spaceBetween?: boolean;
   wrap?: boolean;
 }
@@ -15,6 +16,7 @@ const props = withDefaults(defineProps<Props>(), {
   spacing: undefined,
   spacingResponsive: false,
   centered: false,
+  stretched: false,
 });
 
 const classes = computed(() => ({
@@ -24,6 +26,7 @@ const classes = computed(() => ({
     props.spacingResponsive ? `-responsive` : ''
   }`]: props.spacing,
   'stack--centered': props.centered,
+  'stack--stretched': props.stretched,
   'stack--space-between': props.spaceBetween,
   'stack--wrap': props.wrap,
 }));
@@ -84,6 +87,10 @@ const classes = computed(() => ({
 
   &--centered {
     align-items: center;
+  }
+
+  &--stretched {
+    align-items: stretch;
   }
 
   &--space-between {

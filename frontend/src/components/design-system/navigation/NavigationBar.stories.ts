@@ -55,7 +55,7 @@ LoggedIn.args = {
   withAccount: true,
   transparent: true,
   user: {
-    name: 'Gina Charming',
+    displayName: 'Gina Charming',
     img_url: 'https://thispersondoesnotexist.com/image',
   },
 };
@@ -64,7 +64,7 @@ export const LoggedInNoAvatar = Template.bind({});
 LoggedInNoAvatar.args = {
   withAccount: true,
   user: {
-    name: 'Gina Charming',
+    displayName: 'Gina Charming',
     img_url: undefined,
   },
 };
