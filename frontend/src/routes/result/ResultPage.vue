@@ -295,6 +295,18 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           class="main"
           spacing="medium"
         >
+          <CheckboxComponent
+            v-if="hasActiveCandidatesBtn"
+            group-name="test"
+            @update:check="handleActiveCandidatesClicked"
+          >
+            Zobrazit nepostupující kandidáty
+          </CheckboxComponent>
+          <ResultCategory
+            :result="resultsGeneral"
+            category="general"
+            :max-visible-candidates="5"
+          />
           <CardComponent
             v-if="!user"
             corner="bottom-left"
@@ -323,18 +335,6 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
               </ButtonComponent>
             </StackComponent>
           </CardComponent>
-          <CheckboxComponent
-            v-if="hasActiveCandidatesBtn"
-            group-name="test"
-            @update:check="handleActiveCandidatesClicked"
-          >
-            Zobrazit nepostupující kandidáty
-          </CheckboxComponent>
-          <ResultCategory
-            :result="resultsGeneral"
-            category="general"
-            :max-visible-candidates="5"
-          />
           <DonateBlock />
         </StackComponent>
         <StackComponent v-else class="main" spacing="medium">
