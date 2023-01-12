@@ -23,6 +23,7 @@ export interface Props {
   centeredTitle?: boolean;
   user?: User | null;
   withAccount?: boolean;
+  withLogo?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -31,6 +32,7 @@ const props = withDefaults(defineProps<Props>(), {
   transparent: false,
   centeredTitle: false,
   user: undefined,
+  withLogo: true,
 });
 
 const indexPage = computed(() => useRoute()?.path === '/');
@@ -58,7 +60,7 @@ const handleAvatarClick = () => router.push(appRoutes.profile);
     :padding="padding"
     :padding-responsive="paddingResponsive"
   >
-    <div class="logo">
+    <div v-if="withLogo" class="logo">
       <EmbedWrapper>
         <ResponsiveWrapper extra-small small>
           <LogoComponent :text="false" :link="!indexPage" />
