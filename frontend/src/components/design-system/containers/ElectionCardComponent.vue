@@ -64,7 +64,7 @@ const handleVoteClick = () => {
     name: appRoutes.guide.name,
     params: {
       ...route.params,
-      uuid: props.election,
+      election: props.election,
       district: props.district,
     },
     query: { ...route.query },
@@ -204,6 +204,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           <div class="stretch" />
         </ResponsiveWrapper>
         <ButtonComponent
+          v-if="false"
           kind="link"
           color="primary"
           size="small"
