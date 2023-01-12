@@ -1,0 +1,57 @@
+<script setup lang="ts">
+import { computed, ref } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+import { mdiCogOutline } from '@mdi/js';
+
+import { fetchCalculator, fetchCalculators } from '@/common/dataFetch';
+import { appRoutes } from '@/main';
+
+import ElectionCardComponent from '@/components/design-system/containers/ElectionCardComponent.vue';
+
+export interface Answer {
+  id: string;
+  calculatorId: string;
+  answers: { answer: Boolean; questionId: string };
+  matches: { candidateId: string; score: number };
+  createdAt: Date;
+  updatedAt: string;
+}
+
+export interface Props {
+  answer: Answer;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  answer: undefined,
+});
+
+const calculators = await fetchCalculators();
+const calculator = calculators.find(
+  (c) => props.answer.calculatorId === c.calculator_id
+);
+const { election } = await fetchCalculator(
+  calculator.election_id,
+  calculator.district_code
+);
+console.log(
+  calculators,
+  calculator,
+  election,
+  props.answer,
+  props.answer?.matches
+);
+</script>
+
+<template>
+  <ElectionCardComponent
+    :electionName="election?.name"
+    :electionDateFrom="election?.from"
+    :electionDateTo="election?.to"
+    :candidates="answer?.matches.length > 0 ? answer?.matches : undefined"
+    :updated="answer?.updatedAt"
+    :district="calculator?.district_code"
+    :election="calculator?.election_id"
+  />
+</template>
+
+<style scoped lang="scss"></style>
