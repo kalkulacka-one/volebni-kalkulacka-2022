@@ -54,7 +54,6 @@ const electionStore = useElectionStore();
 
 const userStore = useUserStore();
 
-const user = computed(() => userStore.user);
 const election = electionStore.election as Election;
 const electionName = election.name;
 const districtCode = getDistrictCode(route.params.district as string);
@@ -99,12 +98,15 @@ const handleShareClick = () => {
 };
 onBeforeMount(async () => {
   if (election.key === 'prezidentske-2023') {
-    const user = await userStore.$subscribe(async (mutation, state) => {
-      return state.user;
-    });
+    let user;
+    if (userStore.user === undefined) {
+      user = userStore.$subscribe(async (mutation, state) => {
+        return state.user;
+      });
+    }
     const res = await electionStore.saveResults({
       embedName: currentEmbed,
-      user: user as User,
+      user: user as User | null | undefined,
     });
     console.debug(res);
   }
