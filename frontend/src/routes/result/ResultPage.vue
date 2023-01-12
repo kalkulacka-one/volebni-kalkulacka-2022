@@ -117,6 +117,29 @@ onBeforeMount(async () => {
   }
 });
 
+const signUpParams = computed(() => {
+  const returnPath = router.resolve({
+    name: appRoutes.share.name,
+    params: { uuid: electionStore.resultsId },
+  }).path;
+
+  return {
+    name: appRoutes.register.name,
+    params: {
+      ...route.params,
+    },
+    query: {
+      returnPath,
+      calculatorId: electionStore.calculator?.id,
+      updateToken: electionStore.resultsUpdateToken,
+    },
+  };
+});
+
+const signUpPath = computed(() => {
+  return router.resolve(signUpParams.value).fullPath;
+});
+
 console.debug(encodeResults(electionStore.answers));
 
 const candidateAnswers: CandidateAnswer[] =
@@ -281,31 +304,14 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                 </TitleText>
                 <BodyText tag="p" size="medium">
                   Uložte si kalkulačku a vyplňte ji klidně vícekrát, a to pro
-                  každé volby. Pro zobrazení výsledku je nutné odpovědět alespoň
-                  na 1 otázku
+                  každé volby.
                 </BodyText>
               </StackComponent>
               <ButtonComponent
                 kind="outlined"
                 color="primary"
-                @click="
-                  router.push({
-                    name: appRoutes.register.name,
-                    params: {
-                      ...route.params,
-                    },
-                    query: {
-                      ...route.query,
-                      returnPath: router.resolve({
-                        name: appRoutes.share.name,
-                        params: { uuid: electionStore.resultsId },
-                        query: { ...route.query },
-                      }).path,
-                      calculatorId: electionStore.calculator?.id,
-                      updateToken: electionStore.resultsUpdateToken,
-                    },
-                  })
-                "
+                :href="signUpPath"
+                target="_blank"
               >
                 <template #icon>
                   <IconComponent :icon="mdiAccountCircleOutline" />
