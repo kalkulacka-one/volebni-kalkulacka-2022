@@ -33,13 +33,6 @@ const { election } = await fetchCalculator(
   calculator.election_id,
   calculator.district_code
 );
-console.log(
-  calculators,
-  calculator,
-  election,
-  props.answer,
-  props.answer?.matches
-);
 </script>
 
 <template>
@@ -48,6 +41,7 @@ console.log(
     :candidates="answer?.matches.length > 0 ? answer?.matches : undefined"
     :district="calculator?.district_code"
     :election="calculator?.election_id"
+    :uuid="answer?.id"
   />
 </template>
 

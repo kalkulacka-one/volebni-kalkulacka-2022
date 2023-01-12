@@ -35,6 +35,7 @@ export interface Props {
   updated?: string | null;
   district?: string | null;
   election?: string | null;
+  uuid?: string | null;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -49,11 +50,10 @@ const route = useRoute();
 
 const handleResultsClick = () => {
   router.push({
-    name: appRoutes.result.name,
+    name: appRoutes.share.name,
     params: {
       ...route.params,
-      election: props.election,
-      district: props.district,
+      uuid: props.uuid,
     },
     query: { ...route.query },
   });
@@ -64,7 +64,7 @@ const handleVoteClick = () => {
     name: appRoutes.guide.name,
     params: {
       ...route.params,
-      election: props.election,
+      uuid: props.election,
       district: props.district,
     },
     query: { ...route.query },
