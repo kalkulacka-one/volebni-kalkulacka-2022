@@ -13,7 +13,7 @@ export interface User {
 
 export const useUserStore = defineStore('user', {
   state: () => ({
-    user: null as User | null,
+    user: undefined as User | undefined | null,
   }),
   actions: {
     async fetchUser() {

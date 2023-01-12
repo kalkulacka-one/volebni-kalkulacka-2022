@@ -300,11 +300,6 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
-router.beforeEach(() => {
-  const store = useUserStore();
-  store.fetchUser();
-});
-
 //handles changing of election and district and fetching data
 router.beforeEach(async (to, from) => {
   console.debug(
