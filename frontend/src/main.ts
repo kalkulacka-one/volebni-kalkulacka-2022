@@ -30,6 +30,8 @@ import AboutElectionsPageVue from './routes/about-elections/AboutElectionsPage.v
 import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
 import { getDistrictCode } from './common/utils';
 import VueSocialSharing from 'vue-social-sharing';
+import RegisterPageVue from './routes/profile/RegisterPageVue.vue';
+import LoginPageVue from './routes/profile/LoginPageVue.vue';
 
 const RESULT_QUERY_NAME = 'result';
 
@@ -174,6 +176,22 @@ export const appRoutes = {
     component: SharePageVue,
     meta: {
       title: 'Moje výsledky - Volební kalkulačka',
+    },
+  },
+  login: {
+    name: 'login',
+    path: '/prihlaseni',
+    component: LoginPageVue,
+    meta: {
+      title: 'Přihlášení - Volební kalkulačka',
+    },
+  },
+  register: {
+    name: 'register',
+    path: '/registrace',
+    component: RegisterPageVue,
+    meta: {
+      title: 'Registrace - Volební kalkulačka',
     },
   },
   fallback: {
