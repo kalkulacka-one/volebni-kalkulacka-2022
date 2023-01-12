@@ -22,6 +22,7 @@ import type { CandidateAnswer } from '@/types/candidate-answer';
 import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
 import BottomBar from '@/components/design-system/navigation/BottomBar.vue';
 import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper.vue';
+import CardComponent from '@/components/design-system/containers/CardComponent.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
 import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
@@ -69,6 +70,14 @@ const handlePreviousClick = () => {
   router.push({
     name: appRoutes.recap.name,
     params: { ...route.params },
+    query: { ...route.query },
+  });
+};
+
+const handleStartClick = () => {
+  router.push({
+    name: appRoutes.question.name,
+    params: { ...route.params, nr: 'first' },
     query: { ...route.query },
   });
 };
@@ -260,16 +269,41 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           <DonateBlock />
         </StackComponent>
         <StackComponent v-else class="main" spacing="medium">
-          <BodyText tag="p" size="large">
-            <strong>
-              Neodpověděli jste na žádnou otázku a nelze tedy zobrazit žádný
-              výsledek!
-            </strong>
-          </BodyText>
-          <BodyText tag="p" size="medium">
-            Můžete si zobrazit jak odpovídali kandidáti nebo se vrátit a
-            odpovědět alespoň na jednu otázku "Ano" nebo "Ne".
-          </BodyText>
+          <CardComponent corner="bottom-left">
+            <StackComponent spacing="medium">
+              <BodyText tag="p" size="large">
+                <strong>
+                  Bez odpovědi alespoň na 1 otázku nelze zobrazit výsledek.
+                </strong>
+              </BodyText>
+              <BodyText tag="p" size="medium">
+                Vraťte se na začátek a odpovězte alespoň na 1 otázku nebo si
+                můžete zobrazit porovnání, jak odpovídali jednotliví kandidáti.
+              </BodyText>
+              <StackComponent horizontal spacing="medium">
+                <ButtonComponent
+                  kind="outlined"
+                  color="primary"
+                  @click="handleStartClick"
+                >
+                  Vyplnit kalkulačku
+                  <template #iconAfter>
+                    <IconComponent :icon="mdiArrowRight" />
+                  </template>
+                </ButtonComponent>
+                <ButtonComponent
+                  kind="outlined"
+                  color="primary"
+                  @click="handleShowComparsionClick"
+                >
+                  Odpovědi kandidátů
+                  <template #iconAfter>
+                    <IconComponent :icon="mdiArrowRight" />
+                  </template>
+                </ButtonComponent>
+              </StackComponent>
+            </StackComponent>
+          </CardComponent>
           <DonateBlock />
         </StackComponent>
 
