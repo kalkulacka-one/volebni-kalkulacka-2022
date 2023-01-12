@@ -1,7 +1,17 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { computed } from 'vue';
+
+export interface Props {
+  last?: boolean;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  last: false,
+});
+</script>
 
 <template>
-  <li class="timeline-item">
+  <li :class="['timeline-item', { 'timeline-item--last': props.last }]">
     <slot />
   </li>
 </template>
@@ -36,6 +46,10 @@
     &:after {
       content: none;
     }
+  }
+
+  &--last {
+    padding: 1.5rem 0.5rem 0;
   }
 }
 </style>
