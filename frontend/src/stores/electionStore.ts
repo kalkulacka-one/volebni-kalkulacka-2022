@@ -143,7 +143,7 @@ export const useElectionStore = defineStore('election', {
         const res = await fetch('/api/answers');
         const answers = await res.json();
         const calculatorAnswers = answers.filter(
-          (answer) => answer.calculatorId === this.calculator?.id
+          (answer: any) => answer.calculatorId === this.calculator?.id
         );
         if (calculatorAnswers.length > 0) {
           this.resultsId = calculatorAnswers[0].id;
