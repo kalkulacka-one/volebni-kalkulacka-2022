@@ -14,23 +14,13 @@ defineProps<Props>();
 
 <template>
   <StackComponent spacing="medium" stretched>
-    <ButtonComponent
-      kind="filled"
-      color="white"
-      tag="a"
-      :href="googleUrl"
-    >
+    <ButtonComponent kind="filled" color="white" tag="a" :href="googleUrl">
       <template #icon>
         <SocialMediaIcon type="google" />
       </template>
       Pokračovat přes Google
     </ButtonComponent>
-    <ButtonComponent
-      kind="filled"
-      color="facebook"
-      tag="a"
-      :href="facebookUrl"
-    >
+    <ButtonComponent kind="filled" color="facebook" tag="a" :href="facebookUrl">
       <template #icon>
         <SocialMediaIcon type="facebook" color="white" />
       </template>

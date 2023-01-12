@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import { appRoutes } from '@/main';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
@@ -15,6 +16,39 @@ import SocialMediaConnectComponent from './SocialMediaConnectComponent.vue';
 
 const router = useRouter();
 const route = useRoute();
+
+const returnPath = computed(() => route.query.returnPath as string);
+const calculatorId = computed(() => route.query.calculatorId as string);
+const updateToken = computed(() => route.query.updateToken as string);
+
+const href = ({
+  provider,
+  returnPath,
+  calculatorId,
+  updateToken,
+}: {
+  provider: string;
+  returnPath?: string;
+  calculatorId?: string;
+  updateToken?: string;
+}) => {
+  // TODO: PUBLIC_URL
+  const PUBLIC_URL =
+    import.meta.env.VITE_PUBLIC_URL ||
+    `https://${import.meta.env.VITE_VERCEL_URL}`;
+  const url = new URL(`/api/auth/${provider}`, PUBLIC_URL);
+
+  if (returnPath) {
+    url.searchParams.append('returnTo', returnPath);
+  }
+
+  if (calculatorId && updateToken) {
+    url.searchParams.append('calculatorId', calculatorId);
+    url.searchParams.append('updateToken', updateToken);
+  }
+
+  return url.href;
+};
 
 // TODO: see https://stackoverflow.com/questions/62358716/check-if-there-is-a-previous-page-in-vue-route
 const handleClose = () => {
@@ -47,7 +81,24 @@ const handleGoToLoginClick = () => router.push(appRoutes.login);
           </BodyText>
         </StackComponent>
         <StackComponent spacing="medium" centered>
-          <SocialMediaConnectComponent />
+          <SocialMediaConnectComponent
+            :google-url="
+              href({
+                provider: 'google',
+                returnPath,
+                calculatorId,
+                updateToken,
+              })
+            "
+            :facebook-url="
+              href({
+                provider: 'facebook',
+                returnPath,
+                calculatorId,
+                updateToken,
+              })
+            "
+          />
         </StackComponent>
         <StackComponent centered spacing="extra-small">
           <BodyText size="medium">Už máte profil?</BodyText>
