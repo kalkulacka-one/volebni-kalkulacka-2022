@@ -22,6 +22,7 @@ import type { CandidateAnswer } from '@/types/candidate-answer';
 import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
 import BottomBar from '@/components/design-system/navigation/BottomBar.vue';
 import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper.vue';
+import CardComponent from '@/components/design-system/containers/CardComponent.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
 import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
@@ -69,6 +70,14 @@ const handlePreviousClick = () => {
   router.push({
     name: appRoutes.recap.name,
     params: { ...route.params },
+    query: { ...route.query },
+  });
+};
+
+const handleStartClick = () => {
+  router.push({
+    name: appRoutes.question.name,
+    params: { ...route.params, nr: 1 },
     query: { ...route.query },
   });
 };
@@ -240,7 +249,11 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
         </ResponsiveWrapper>
       </template>
       <BottomBarWrapper>
-        <StackComponent class="main" spacing="medium">
+        <StackComponent
+          v-if="electionStore.answerCount > 0"
+          class="main"
+          spacing="medium"
+        >
           <CheckboxComponent
             v-if="hasActiveCandidatesBtn"
             group-name="test"
@@ -255,6 +268,66 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           />
           <DonateBlock />
         </StackComponent>
+        <StackComponent v-else class="main" spacing="medium">
+          <CardComponent corner="bottom-left">
+            <StackComponent spacing="medium">
+              <TitleText tag="p" size="medium">
+                Pro zobrazení výsledku je nutné odpovědět alespoň na 1 otázku
+              </TitleText>
+              <BodyText tag="p" size="medium">
+                Můžete se
+                <a
+                  :href="
+                    router.resolve({
+                      name: appRoutes.question.name,
+                      params: { ...route.params, nr: 1 },
+                      query: { ...route.query },
+                    }).path
+                  "
+                  @click.prevent="handleStartClick"
+                  >vrátit na začátek</a
+                >
+                a odpovědět na minimálně 1 otázku, nebo si
+                <a
+                  :href="
+                    router.resolve({
+                      name: appRoutes.comparison.name,
+                      params: { ...route.params },
+                      query: { ...route.query },
+                    }).path
+                  "
+                  @click.prevent="handleShowComparsionClick"
+                >
+                  zobrazit porovnání odpovědí kandidátů </a
+                >.
+              </BodyText>
+              <StackComponent horizontal spacing="medium">
+                <ButtonComponent
+                  kind="outlined"
+                  color="primary"
+                  @click="handleStartClick"
+                >
+                  Vyplnit kalkulačku
+                  <template #iconAfter>
+                    <IconComponent :icon="mdiArrowRight" />
+                  </template>
+                </ButtonComponent>
+                <ButtonComponent
+                  kind="outlined"
+                  color="primary"
+                  @click="handleShowComparsionClick"
+                >
+                  Odpovědi kandidátů
+                  <template #iconAfter>
+                    <IconComponent :icon="mdiArrowRight" />
+                  </template>
+                </ButtonComponent>
+              </StackComponent>
+            </StackComponent>
+          </CardComponent>
+          <DonateBlock />
+        </StackComponent>
+
         <template #bottom-bar>
           <ResponsiveWrapper extra-small small>
             <BottomBar>

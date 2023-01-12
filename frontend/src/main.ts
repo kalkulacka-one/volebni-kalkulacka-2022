@@ -43,8 +43,7 @@ export const questionGuard = (
     to.params.nr = '1';
     return to;
   } else if (to.params.nr === 'last') {
-    to.params.nr =
-      store.answerProgress > -1 ? `${store.answerProgress + 1}` : '1';
+    to.params.nr = `${store.questionCount}`;
     return to;
   }
   const questionNr = parseInt(to.params.nr as string);
@@ -337,7 +336,6 @@ router.beforeEach(async (to, from) => {
         x.id = store.calculator?.questions[i].id as string;
       });
       store.answers = answers;
-      store.answerProgress = store.answers.length - 1;
       hasResultQuery = true;
     } else {
       console.warn(

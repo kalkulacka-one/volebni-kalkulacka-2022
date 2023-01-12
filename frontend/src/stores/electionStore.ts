@@ -1,15 +1,12 @@
 import { fetchCalculator, fetchElectionData } from '@/common/dataFetch';
 import { patchResults, postResults } from '@/common/restApi';
 import { encodeResults } from '@/common/resultParser';
-import { appRoutes } from '@/main';
 import type { Calculator } from '@/types/calculator';
 import type { Calculators } from '@/types/calculators';
 import type { Election } from '@/types/election';
 import { defineStore } from 'pinia';
-import { stringifyQuery } from 'vue-router';
 
 export enum UserAnswerEnum {
-  undefined = 0,
   yes = 1,
   no = 2,
   skip = 3,
@@ -54,7 +51,6 @@ export const useElectionStore = defineStore('election', {
       districts: [] as Calculators['calculators'],
       calculator: undefined as Calculator | undefined,
       answers: [] as UserAnswer[],
-      answerProgress: -1,
       resultsId: null as null | string,
       resultsUpdateToken: null as null | string,
       encodedResults: null as null | string,
@@ -70,17 +66,15 @@ export const useElectionStore = defineStore('election', {
       }
     },
     answerCount: (state) => {
-      let count = 0;
-      state.answers.forEach((element) => {
-        if (element.answer !== UserAnswerEnum.undefined) count++;
-      });
-      return count;
+      return state.answers.reduce((total, x) => {
+        if (x.answer === UserAnswerEnum.yes || x.answer === UserAnswerEnum.no) {
+          total++;
+        }
+        return total;
+      }, 0);
     },
   },
   actions: {
-    incrementAnswerProgress() {
-      if (this.answerProgress < this.questionCount - 1) this.answerProgress++;
-    },
     flipAnswerFlag(questionNr: number) {
       if (questionNr < this.answers.length) {
         this.answers[questionNr].flag = !this.answers[questionNr].flag;
@@ -127,7 +121,7 @@ export const useElectionStore = defineStore('election', {
             this.uniqueQuestionTags.add(tag);
           });
           return {
-            answer: UserAnswerEnum.undefined,
+            answer: UserAnswerEnum.skip,
             flag: false,
             id: x.id as string,
           };
@@ -179,10 +173,9 @@ export const useElectionStore = defineStore('election', {
     init() {
       console.debug('Initializing store ...');
       this.answers.forEach((x) => {
-        x.answer = UserAnswerEnum.undefined;
+        x.answer = UserAnswerEnum.skip;
         x.flag = false;
       });
-      this.answerProgress = -1;
       this.encodedResults = null;
       this.resultsUpdateToken = null;
       this.resultsId = null;

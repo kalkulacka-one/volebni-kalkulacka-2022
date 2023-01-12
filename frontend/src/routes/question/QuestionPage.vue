@@ -66,64 +66,38 @@ const backRoute = computed(
 );
 
 const questionCount = computed(() => electionStore.questionCount);
-const currentQuestion = computed(() => parseInt(route.params['nr'] as string));
-const answeredQuestions = computed(() =>
-  electionStore.answers.filter((answer) => answer.answer !== 0)
+//internally questions start at 0
+const currentQuestionNr = computed(
+  () => parseInt(route.params['nr'] as string) - 1
 );
-const answeredQuestionsCount = computed(() => answeredQuestions.value.length);
-
-const previousButtonShortTitle = computed(() => {
-  if (currentQuestion.value === 1) {
-    return 'Návod';
-  } else {
-    return 'Předchozí';
-  }
-});
-
-const nextButtonShortTitle = computed(() => {
-  if (currentQuestion.value === questionCount.value) {
-    return 'Rekapitulace';
-  } else {
-    if (
-      [UserAnswerEnum.undefined, UserAnswerEnum.skip].includes(
-        electionStore.answers[questionNr.value].answer
-      )
-    ) {
-      return 'Přeskočit';
-    } else {
-      return 'Další';
-    }
-  }
-});
 
 const previousButtonTitle = computed(() => {
-  if (currentQuestion.value === 1) {
-    return 'Návod';
+  if (currentQuestionNr.value === 0) {
+    return { long: 'Návod', short: 'Návod' };
   } else {
-    return 'Předchozí otázka';
+    return { long: 'Předchozí otázka', short: 'Předchozí' };
   }
 });
 
 const nextButtonTitle = computed(() => {
-  if (currentQuestion.value === questionCount.value) {
-    return 'Rekapitulace';
-  } else {
+  if (currentQuestionNr.value + 1 < questionCount.value) {
     if (
-      [UserAnswerEnum.undefined, UserAnswerEnum.skip].includes(
-        electionStore.answers[questionNr.value].answer
-      )
+      electionStore.answers[currentQuestionNr.value].answer ===
+      UserAnswerEnum.skip
     ) {
-      return 'Přeskočit otázku';
+      return { long: 'Přeskočit otázku', short: 'Přeskočit' };
     } else {
-      return 'Další otázka';
+      return { long: 'Další otázka', short: 'Další' };
     }
+  } else {
+    return { long: 'Rekapitulace', short: 'Rekapitulace' };
   }
 });
 
 const goToQuestion = (number: number) => {
   router.push({
     name: appRoutes.question.name,
-    params: { ...route.params, nr: number },
+    params: { ...route.params, nr: number + 1 },
     query: { ...route.query },
   });
 };
@@ -143,61 +117,32 @@ const goToGuide = (params: RouteParams) => {
   });
 };
 
-const handleSkip = () => {
-  if (
-    electionStore.answers[questionNr.value].answer === UserAnswerEnum.undefined
-  ) {
-    handleAnswerClick(UserAnswerEnum.skip);
-  }
-};
-
 const handleNextClick = () => {
-  handleSkip();
-  if (currentQuestion.value < questionCount.value) {
-    goToQuestion(currentQuestion.value + 1);
+  if (currentQuestionNr.value + 1 < questionCount.value) {
+    goToQuestion(currentQuestionNr.value + 1);
   } else {
     goToRecap();
   }
 };
 
 const handlePreviousClick = () => {
-  if (currentQuestion.value === 1) {
+  if (currentQuestionNr.value === 0) {
     const params = (backRoute.value && backRoute.value.params) || {};
     goToGuide(params);
   } else {
-    goToQuestion(currentQuestion.value - 1);
+    goToQuestion(currentQuestionNr.value - 1);
   }
 };
 
-const handleStarClick = () => electionStore.flipAnswerFlag(questionNr.value);
-
-//internally questions start at 0
-const questionNr = computed(() => parseInt(route.params['nr'] as string) - 1);
+const handleStarClick = () =>
+  electionStore.flipAnswerFlag(currentQuestionNr.value);
 const handleAnswerClick = (answer: UserAnswerEnum) => {
-  const currentAnswer = electionStore.answers[questionNr.value].answer;
+  const currentAnswer = electionStore.answers[currentQuestionNr.value].answer;
   if (answer === currentAnswer) {
-    electionStore.setAnswer(questionNr.value, UserAnswerEnum.skip);
+    electionStore.setAnswer(currentQuestionNr.value, UserAnswerEnum.skip);
   } else {
-    electionStore.setAnswer(questionNr.value, answer);
-
-    if (questionNr.value - 1 === electionStore.answerProgress) {
-      electionStore.incrementAnswerProgress();
-    }
-    const newRoute = {
-      name: appRoutes.question.name,
-      params: { ...route.params, nr: questionNr.value + 2 },
-      query: { ...route.query },
-    };
-    if (
-      electionStore.answerProgress === questionNr.value &&
-      electionStore.answerProgress > electionStore.questionCount - 2
-    ) {
-      newRoute.name = appRoutes.recap.name;
-    }
-    console.debug(
-      `answer ${UserAnswerEnum[answer]}, current: ${questionNr.value}, progress: ${electionStore.answerProgress}`
-    );
-    router.push(newRoute);
+    electionStore.setAnswer(currentQuestionNr.value, answer);
+    handleNextClick();
   }
 };
 </script>
@@ -252,7 +197,7 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
         <SecondaryNavigationBar transparent>
           <template #before>
             <ButtonComponent kind="link" @click="handlePreviousClick">
-              {{ previousButtonShortTitle }}
+              {{ previousButtonTitle.short }}
               <template #icon>
                 <IconComponent :icon="mdiArrowLeft" />
               </template>
@@ -260,7 +205,7 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
           </template>
           <template #after>
             <ButtonComponent kind="link" @click="handleNextClick">
-              {{ nextButtonShortTitle }}
+              {{ nextButtonTitle.short }}
               <template #iconAfter>
                 <IconComponent :icon="mdiArrowRight" />
               </template>
@@ -274,9 +219,9 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
         <ResponsiveWrapper extra-small>
           <StepWrapper>
             <QuestionCard
-              :current-question="currentQuestion"
+              :current-question="currentQuestionNr + 1"
               :question-count="electionStore.questionCount"
-              :question="(electionStore.calculator?.questions[questionNr] as Question)"
+              :question="(electionStore.calculator?.questions[currentQuestionNr] as Question)"
             />
           </StepWrapper>
         </ResponsiveWrapper>
@@ -286,38 +231,38 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
               <ResponsiveWrapper medium large extra-large huge>
                 <ButtonComponent kind="link" @click="handlePreviousClick">
                   <ResponsiveWrapper large>
-                    {{ previousButtonShortTitle }}
+                    {{ previousButtonTitle.short }}
                   </ResponsiveWrapper>
                   <ResponsiveWrapper extra-large huge>
-                    {{ previousButtonTitle }}
+                    {{ previousButtonTitle.long }}
                   </ResponsiveWrapper>
                   <template #icon>
                     <IconComponent
                       :icon="mdiArrowLeft"
-                      :title="previousButtonTitle"
+                      :title="previousButtonTitle.long"
                     />
                   </template>
                 </ButtonComponent>
               </ResponsiveWrapper>
             </template>
             <QuestionCard
-              :current-question="currentQuestion"
+              :current-question="currentQuestionNr + 1"
               :question-count="electionStore.questionCount"
-              :question="(electionStore.calculator?.questions[questionNr] as Question)"
+              :question="(electionStore.calculator?.questions[currentQuestionNr] as Question)"
             />
             <template #after>
               <ResponsiveWrapper medium large extra-large huge>
                 <ButtonComponent kind="link" @click="handleNextClick">
                   <ResponsiveWrapper large>
-                    {{ nextButtonShortTitle }}
+                    {{ nextButtonTitle.short }}
                   </ResponsiveWrapper>
                   <ResponsiveWrapper extra-large huge>
-                    {{ nextButtonTitle }}
+                    {{ nextButtonTitle.long }}
                   </ResponsiveWrapper>
                   <template #iconAfter>
                     <IconComponent
                       :icon="mdiArrowRight"
-                      :title="nextButtonTitle"
+                      :title="nextButtonTitle.long"
                     />
                   </template>
                 </ButtonComponent>
@@ -330,10 +275,10 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
         <StatusBarComponent
           :total-question="electionStore.questionCount"
           :answers="electionStore.answers"
-          :current-question="questionNr"
+          :current-question="currentQuestionNr"
         />
         <QuestionBottomBar
-          :answer="electionStore.answers[questionNr]"
+          :answer="electionStore.answers[currentQuestionNr]"
           :star-click="handleStarClick"
           :yes-click="() => handleAnswerClick(UserAnswerEnum.yes)"
           :no-click="() => handleAnswerClick(UserAnswerEnum.no)"

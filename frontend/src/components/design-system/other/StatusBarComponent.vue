@@ -9,11 +9,7 @@ export interface Props {
 
 defineProps<Props>();
 
-const classes = [
-  'status-bar-primary',
-  'status-bar-secondary',
-  'status-bar-neutral',
-];
+const classes = ['status-bar-primary', 'status-bar-secondary'];
 </script>
 
 <template>
@@ -31,8 +27,6 @@ const classes = [
             ? classes[0]
             : question.answer === UserAnswerEnum.no
             ? classes[1]
-            : question.answer === UserAnswerEnum.skip
-            ? classes[2]
             : '',
           index === currentQuestion ? 'active' : '',
         ]"
@@ -52,7 +46,6 @@ const classes = [
     height: 0.5rem;
   }
 
-  &-neutral,
   &.active {
     background-color: rgb(var(--color-neutral-bg-active));
   }
