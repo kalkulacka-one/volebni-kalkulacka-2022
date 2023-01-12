@@ -271,11 +271,9 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
         <StackComponent v-else class="main" spacing="medium">
           <CardComponent corner="bottom-left">
             <StackComponent spacing="medium">
-              <BodyText tag="p" size="large">
-                <strong>
-                  Bez odpovědi alespoň na 1 otázku nelze zobrazit výsledek.
-                </strong>
-              </BodyText>
+              <TitleText tag="p" size="medium">
+                Pro zobrazení výsledku je nutné odpovědět alespoň na 1 otázku
+              </TitleText>
               <BodyText tag="p" size="medium">
                 Vraťte se na začátek a odpovězte alespoň na 1 otázku nebo si
                 můžete zobrazit porovnání, jak odpovídali jednotliví kandidáti.
