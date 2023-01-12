@@ -11,6 +11,7 @@ import {
 
 import { appRoutes } from '@/main';
 import { useElectionStore } from '@/stores/electionStore';
+import { useUserStore, type User } from '@/stores/userStore';
 import {
   calculateRelativeAgreement,
   encodeResults,
@@ -51,6 +52,9 @@ const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
 
+const userStore = useUserStore();
+
+const user = computed(() => userStore.user);
 const election = electionStore.election as Election;
 const electionName = election.name;
 const districtCode = getDistrictCode(route.params.district as string);
@@ -95,7 +99,13 @@ const handleShareClick = () => {
 };
 onBeforeMount(async () => {
   if (election.key === 'prezidentske-2023') {
-    const res = await electionStore.saveResults({ embedName: currentEmbed });
+    const user = await userStore.$subscribe(async (mutation, state) => {
+      return state.user;
+    });
+    const res = await electionStore.saveResults({
+      embedName: currentEmbed,
+      user: user as User,
+    });
     console.debug(res);
   }
 });
