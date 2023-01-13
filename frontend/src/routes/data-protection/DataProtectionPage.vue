@@ -10,6 +10,8 @@ import StackComponent from '@/components/design-system/layout/StackComponent.vue
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 import ContainerComponent from '@/components/design-system/containers/ContainerComponent.vue';
 import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
+
+import PrivacyPolicy from './PrivacyPolicy.md';
 </script>
 
 <template>
@@ -37,8 +39,8 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
     <StaticContentLayout>
       <StackComponent spacing="large" class="section">
         <HeadlineText tag="h1" size="large">Ochrana dat</HeadlineText>
-        <BodyText size="large">
-          Volební Kalkulačka nepoužívá cookies a nesbírá žádná osobní data.
+        <BodyText size="medium">
+          <PrivacyPolicy />
         </BodyText>
       </StackComponent>
       <DonateBlock />
