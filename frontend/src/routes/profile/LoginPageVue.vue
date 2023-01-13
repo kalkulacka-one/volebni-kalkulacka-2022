@@ -112,6 +112,13 @@ const handleGoToRegisterClick = () => router.push(appRoutes.register);
             Vytvořit profil
           </ButtonComponent>
         </StackComponent>
+        <BodyText size="small">
+          Přihlášením udělujete souhlas se zpracováním osobních údajů v souladu
+          se
+          <router-link to="/ochrana-dat"
+            >zásadami ochrany osobních údajů</router-link
+          >.
+        </BodyText>
       </StackComponent>
     </StickyHeaderLayout>
   </BackgroundComponent>

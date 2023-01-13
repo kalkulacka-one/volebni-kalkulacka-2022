@@ -110,6 +110,13 @@ const handleGoToLoginClick = () => router.push(appRoutes.login);
             Přihlásit se
           </ButtonComponent>
         </StackComponent>
+        <BodyText size="small">
+          Registrací udělujete souhlas se zpracováním osobních údajů v souladu
+          se
+          <router-link to="/ochrana-dat"
+            >zásadami ochrany osobních údajů</router-link
+          >.
+        </BodyText>
       </StackComponent>
     </StickyHeaderLayout>
   </BackgroundComponent>
