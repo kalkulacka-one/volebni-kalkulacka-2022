@@ -41,13 +41,13 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
       <BlobComponent color="red" class="blob2" />
       <StackComponent spacing="medium" centered class="calc-main">
         <BodyText size="medium" tag="h1" color="fg-strong">
-          <b>1. kolo prezidentských voleb</b><br />
-          13.–14. ledna 2023
+          <b>2. kolo prezidentských voleb</b><br />
+          27.–28. ledna 2023
           <br />
         </BodyText>
         <HeadlineText tag="p" size="small">
           <span style="color: rgb(var(--color-neutral-fg))">
-            9 kandidátů.<br />
+            Petr Pavel × Andrej Babiš<br />
           </span>
           Kdo z&nbsp;nich bude reprezentovat<br />vaše&nbsp;názory?
         </HeadlineText>
@@ -493,16 +493,22 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
       .pavel-fischer {
         grid-row: 2;
         grid-column: 1;
+        filter: grayscale(100%);
+        opacity: 60%;
       }
 
       .jaroslav-basta {
         grid-row: 3;
         grid-column: 2;
+        filter: grayscale(100%);
+        opacity: 60%;
       }
 
       .josef-stredula {
         grid-row: 4;
         grid-column: 1;
+        filter: grayscale(100%);
+        opacity: 60%;
       }
 
       .petr-pavel {
@@ -513,11 +519,15 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
       .tomas-zima {
         grid-row: 4;
         grid-column: 3;
+        filter: grayscale(100%);
+        opacity: 60%;
       }
 
       .danuse-nerudova {
         grid-row: 4;
         grid-column: 10;
+        filter: grayscale(100%);
+        opacity: 60%;
       }
 
       .andrej-babis {
@@ -528,11 +538,15 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
       .karel-divis {
         grid-row: 4;
         grid-column: 11;
+        filter: grayscale(100%);
+        opacity: 60%;
       }
 
       .marek-hilser {
         grid-row: 3;
         grid-column: 12;
+        filter: grayscale(100%);
+        opacity: 60%;
       }
     }
   }
