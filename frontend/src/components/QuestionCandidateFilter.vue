@@ -15,10 +15,23 @@ const emit = defineEmits(['update:modelValue']);
 
 const electionStore = useElectionStore();
 
-const uniqueCandidateIds = new Set<string>(
-  electionStore.calculator?.candidates.map((x) => x.id)
+const candidates = electionStore.calculator?.candidates;
+
+const uniqueCandidateIds = new Set<string>(candidates?.map((x) => x.id));
+const defaultSelectedCandidateIds = new Set<string>(
+  candidates
+    ?.filter((x) => {
+      if (
+        x.id === 'b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac' ||
+        x.id === '2752996f-d64b-4b5d-a925-1ec063178838'
+      ) {
+        return x;
+      }
+    })
+    .map((x) => x.id)
 );
-const selectedCandidateIds = ref(new Set<string>(uniqueCandidateIds));
+
+const selectedCandidateIds = ref(new Set<string>(defaultSelectedCandidateIds));
 const onSelectAllClicked = (event: MouseEvent) => {
   if ((event.target as HTMLInputElement).checked) {
     uniqueCandidateIds.forEach((x) => {
