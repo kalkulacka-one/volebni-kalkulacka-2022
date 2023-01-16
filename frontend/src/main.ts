@@ -97,10 +97,7 @@ export const appRoutes = {
   dataProtection: {
     name: 'ochrana-dat',
     path: '/ochrana-dat',
-    alias: [
-      '/soukromi',
-      '/podminky'
-    ],
+    alias: ['/soukromi', '/podminky'],
     component: DataProtectionPageVue,
     meta: {
       title: 'Ochrana dat',
