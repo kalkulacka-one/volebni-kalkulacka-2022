@@ -78,6 +78,13 @@ Vítejte ve Volební kalkulačce pro prezidentské volby 2023.
 Čeká vás 42 otázek. Na stejné otázky nám odpověděly kandidující osobnosti. Zodpovězení otázek zabere zhruba 10 minut. Na konci se dozvíte, jak se jednotliví kandidáti a kandidátky shodují s vašimi názory.
     `
     : route.params.election === 'prezidentske-2023' &&
+      route.params.district === 'pro-kazdeho-2-kolo'
+    ? `
+Vítejte ve Volební kalkulačce pro 2. kolo prezidentských voleb 2023.
+
+Vybrali jsme pro vás 20 otázek, ve kterých se postupující kandidáti – Petr Pavel a Andrej Babiš – liší. Zodpovězení otázek zabere zhruba 5 minut. Na konci se dozvíte, jak se kandidáti shodují s vašimi názory.
+    `
+    : route.params.election === 'prezidentske-2023' &&
       route.params.district === 'pro-nadsence'
     ? `
 Vítejte ve Volební kalkulačce pro prezidentské volby 2023.
