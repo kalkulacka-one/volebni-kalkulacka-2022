@@ -1,0 +1,1505 @@
+{
+  "id": "9327034e-dd2d-4be0-b50a-ea8cd590c82b",
+  "name": "2. kolo",
+  "description": "Kalkulačka vhodná pro všechny občany.",
+  "district_code": "pro-kazdeho-2-kolo",
+  "show_district_code": false,
+  "election": {
+    "id": "prezidentske-2023",
+    "key": "prezidentske-2023",
+    "name": "Prezidentské volby 2023",
+    "description": "Letos se volí v prezidentských volbách.",
+    "instructions": {
+      "header": "Prezidentske - header",
+      "step_1_1": "",
+      "step_1_2": "",
+      "step_1_link": "",
+      "step_2_1": "Prezidentske - 2_2"
+    },
+    "from": "2023-01-13T14:00:00",
+    "to": "2023-01-14T14:00:00"
+  },
+  "questions": [
+    {
+      "id": "9f655411-1ea6-459f-be10-94c9466c2924",
+      "name": "Plná zdpovědnost",
+      "title": "Prezident/ka by se měl/a zodpovídat za všechna svá rozhodnutí.",
+      "gist": "Prezident/ka není z výkonu své funkce odpovědný. Za rozhodnutí, která vyžadují spolupodpis premiéra, odpovídá vláda. Prezidenta nelze zadržet ani trestně stíhat, odpovídá pouze za výkon části pravomocí, pokud nesou rysy velezrady nebo hrubého porušení Ústavy.",
+      "detail": "",
+      "tags": [
+        "pravomoci prezidenta/ky"
+      ]
+    },
+    {
+      "id": "8fe2749a-37bf-42f0-b855-e4f81dbae09e",
+      "name": "Vlajka Ukrajiny na Hradě",
+      "title": "Souhlasím s tím, aby prezident/ka podporoval/a Ukrajinu vyvěšením vlajky na Hradě.",
+      "gist": "V březnu 2022 byly na znamení solidarity s Ukrajinou vztyčeny na stožáry na prvním nádvoří česká a ukrajinská vlajka.",
+      "detail": "",
+      "tags": [
+        "výkon úřadu"
+      ]
+    },
+    {
+      "id": "f58c1d9b-a3da-4416-85c9-5ca4a7474fed",
+      "name": "Zrušení Senátu",
+      "title": "Podpořil/a byste zrušení Senátu?",
+      "gist": "",
+      "detail": "",
+      "tags": [
+        "osobnost",
+        "politické postoje"
+      ]
+    },
+    {
+      "id": "802bff77-b1f7-40b9-9cf0-615276277d38",
+      "name": "Jmenování soudců",
+      "title": "Prezident/ka má mít povinnost jmenovat navržené soudce/soudkyně.",
+      "gist": "Prezident/ka dle Ústavy jmenuje soudce/soudkyně a také jmenuje předsedy některých vyšších soudů. Prezidenti Klaus a Zeman v minulosti odmítli některé soudce jmenovat.",
+      "detail": "",
+      "tags": [
+        "pravomoci prezidenta/ky"
+      ]
+    },
+    {
+      "id": "8e166cf1-1ff3-4919-97b4-14526fa1e743",
+      "name": "Zavedení eura",
+      "title": "ČR má zavést společnou evropskou měnu (euro).",
+      "gist": "",
+      "detail": "",
+      "tags": [
+        "osobnost",
+        "politické postoje"
+      ]
+    },
+    {
+      "id": "d69f0bc2-58cd-4737-b244-61db4503af3e",
+      "name": "Evropská integrace",
+      "title": "Měly by spolu členské státy EU více spolupracovat a pokračovat v prohlubování integrace?",
+      "gist": "",
+      "detail": "",
+      "tags": [
+        "osobnost",
+        "politické postoje"
+      ]
+    },
+    {
+      "id": "bb0191c2-cf87-4efe-8161-98f69ad59242",
+      "name": "Navrhování zákonů občany",
+      "title": "Občané by měli mít možnost předložit návrh zákona pomocí petice.",
+      "gist": "",
+      "detail": "",
+      "tags": [
+        "osobnost",
+        "politické postoje"
+      ]
+    },
+    {
+      "id": "0cc6ff51-e193-49a3-aceb-d6a7734c29f4",
+      "name": "Bydlení pro každého",
+      "title": "Stát / obce se mají postarat, aby měl každý kde bydlet.",
+      "gist": "",
+      "detail": "",
+      "tags": [
+        "osobnost",
+        "politické postoje"
+      ]
+    },
+    {
+      "id": "e7e3a66b-031a-4f04-b56a-f126116e5fc5",
+      "name": "Elektronické volby",
+      "title": "Měla by být zavedena možnost volit po internetu.",
+      "gist": "Úspěšné elektronické hlasování může zrychlit sčítání hlasovacích lístků, snížit náklady na placení zaměstnanců počítajících hlasy a zajistit lepší přístupnost voleb pro například zdravotně znevýhodněné voliče.",
+      "detail": "",
+      "tags": [
+        "osobnost",
+        "politické postoje"
+      ]
+    },
+    {
+      "id": "76e5d2fb-f467-47bd-82ec-484ce143fff6",
+      "name": "Bezplatná právní pomoc",
+      "title": "Stát by měl mít povinnost vytvořit systém bezplatné právní pomoci pro všechny.",
+      "gist": "",
+      "detail": "",
+      "tags": [
+        "osobnost",
+        "politické postoje"
+      ]
+    },
+    {
+      "id": "fa351c13-c98c-4e03-8558-1a30c6ff4c80",
+      "name": "Korespondenční hlasování",
+      "title": "Měl by stát občanům v zahraničí umožnit účast ve volbách formou korespondenčního hlasování?",
+      "gist": "",
+      "detail": "",
+      "tags": [
+        "osobnost",
+        "politické postoje"
+      ]
+    },
+    {
+      "id": "ed198de3-1490-4341-a0d4-2daf944705c9",
+      "name": "Klimatická změna – podpora",
+      "title": "Podporuji protesty studentů ve snaze přimět politiky, aby se vážně zabývali změnami klimatu.",
+      "gist": "",
+      "detail": "",
+      "tags": [
+        "osobnost",
+        "politické postoje"
+      ]
+    },
+    {
+      "id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
+      "name": "Výběr Rady ČNB",
+      "title": "O výběru členů Bankovní rady České národní banky má i nadále rozhodovat pouze prezident/ka.",
+      "gist": "Prezident/ka dle Ústavy jmenuje členy Bankovní rady ČNB (skupinu 7 lidí, která ČNB řídí). Způsob jejich výběru je dnes zcela v jeho/její pravomoci. Dosavadní čeští prezidenti členy Bankovní rady vždy vybírali neveřejně.",
+      "detail": "",
+      "tags": [
+        "pravomoci prezidenta/ky"
+      ]
+    },
+    {
+      "id": "cf87e266-0ec3-4d6c-b2c4-e775c24e14c7",
+      "name": "Právo pro všechny",
+      "title": "Souhlasím s tvrzením, že v Česku neplatí spravedlnost pro všechny stejně.",
+      "gist": "",
+      "detail": "",
+      "tags": [
+        "osobnost",
+        "politické postoje"
+      ]
+    },
+    {
+      "id": "88ec93b3-a58e-4635-81f6-f79f52172461",
+      "name": "Asistovaná sebevražda",
+      "title": "Eutanazie (asistovaná sebevražda) má být v ČR legální.",
+      "gist": "Podle zastánců je ukončení vlastního života základním právem člověka, podle odpůrců je nemorální a hrozí zneužití. Asistovaná sebevražda není v ČR legální, legální je např. v Německu, ve Švýcarsku nebo v Belgii.",
+      "detail": "",
+      "tags": [
+        "osobnost",
+        "politické postoje"
+      ]
+    },
+    {
+      "id": "d86ab5fe-ebef-471e-aa24-6661e596596a",
+      "name": "Prezident/ka na kole a v MHD",
+      "title": "Prezident/ka by měl/a k cestám do úřadu využívat MHD nebo jízdní kolo, kdykoli je to možné.",
+      "gist": "Rakouský prezident je známý svými cestami hromadnou dopravou a nizozemský premiér jezdí stále častěji do práce na kole. Uvedl to na zasedání Světového ekonomického fóra (2019) s tím, že když to počasí dovolí, využívá k cestě do kanceláře své jízdní kolo.",
+      "detail": "",
+      "tags": [
+        "osobnost",
+        "politické postoje"
+      ]
+    },
+    {
+      "id": "ce4e96b2-ca9b-42f2-ad12-7bedbbbd1776",
+      "name": "Podepisování smluv",
+      "title": "Prezident/ka má podepsat dojednané mezinárodní smlouvy bez ohledu na svůj osobní postoj.",
+      "gist": "Prezident/ka dle Ústavy podepisuje mezinárodní smlouvy. V praxi Československa i ČR takové smlouvy vždy dojednávala vláda. Např. prezident Klaus dlouho odmítal podepsat tzv. Lisabonskou smlouvu, ale nakonec ji podepsal.",
+      "detail": "",
+      "tags": [
+        "pravomoci prezidenta/ky"
+      ]
+    },
+    {
+      "id": "5c101330-c99f-4414-acfa-8c45157d321e",
+      "name": "Pověření vítěze voleb",
+      "title": "Prezident/ka má po volbách pověřit jednáním o sestavení vlády vždy předsedu strany, která volby vyhrála.",
+      "gist": "V minulosti prezident V. Klaus nepověřil sestavením vlády předsedu vítězné ČSSD J. Paroubka. Prezidenti Klaus (v r. 2004) a Zeman (v r. 2013) požadovali předem 101 podpisů poslanců před pověřením.",
+      "detail": "",
+      "tags": [
+        "pravomoci prezidenta/ky"
+      ]
+    },
+    {
+      "id": "b8fa048c-e81f-4c6a-ada7-be1c3329daa9",
+      "name": "Trestně stíhaný kandidát",
+      "title": "Je přijatelné, aby se hlavou státu stala osoba trestně stíhaná?",
+      "gist": "",
+      "detail": "",
+      "tags": [
+        "osobnost",
+        "morální kredit"
+      ]
+    },
+    {
+      "id": "8aa996bd-4c8a-4873-9375-a04087d8d7bc",
+      "name": "Veřejnoprávní média",
+      "title": "Česká veřejnoprávní média plní správně svoji funkci.",
+      "gist": "",
+      "detail": "",
+      "tags": [
+        "osobnost",
+        "politické postoje"
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
+      "name": "Petr Pavel",
+      "type": "person",
+      "description": "Petr Pavel",
+      "short_name": "Petr Pavel",
+      "is_active": false,
+      "given_name": "Petr",
+      "family_name": "Pavel",
+      "contacts": {
+        "web": []
+      },
+      "parties": [],
+      "motto": "Rozhoduji s klidem, chladnou hlavou a opírám se o zkušenosti"
+    },
+    {
+      "id": "2752996f-d64b-4b5d-a925-1ec063178838",
+      "name": "Andrej Babiš",
+      "type": "person",
+      "description": "Andrej Babiš",
+      "short_name": "Andrej Babiš",
+      "is_active": false,
+      "given_name": "Andrej",
+      "family_name": "Babiš",
+      "contacts": {
+        "web": []
+      },
+      "parties": [],
+      "motto": "-"
+    },
+    {
+      "id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
+      "name": "Danuše Nerudová",
+      "type": "person",
+      "description": "Danuše Nerudová",
+      "short_name": "Danuše Nerudová",
+      "is_active": false,
+      "given_name": "Danuše",
+      "family_name": "Nerudová",
+      "contacts": {
+        "web": []
+      },
+      "parties": [],
+      "motto": "Změna, která nastartuje Česko. Ekonomka, profesorka, máma dvou dětí"
+    },
+    {
+      "id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
+      "name": "Josef Středula –⁠ odstoupil",
+      "type": "person",
+      "description": "Josef Středula –⁠ odstoupil",
+      "short_name": "Josef Středula –⁠ odstoupil",
+      "is_active": false,
+      "given_name": "Josef",
+      "family_name": "Středula –⁠ odstoupil",
+      "contacts": {
+        "web": []
+      },
+      "parties": [],
+      "motto": "Ochránce, vyjednavač, otevřený, vytrvalý, cílevědomý, připravený, odborně zdatný, zkušený, pracovitý..   "
+    },
+    {
+      "id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
+      "name": "Marek Hilšer",
+      "type": "person",
+      "description": "Marek Hilšer",
+      "short_name": "Marek Hilšer",
+      "is_active": false,
+      "given_name": "Marek",
+      "family_name": "Hilšer",
+      "contacts": {
+        "web": []
+      },
+      "parties": [],
+      "motto": "Nikdy neztrácím přesvědčení, že je šance měnit věci k lepšímu."
+    },
+    {
+      "id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
+      "name": "Pavel Fischer",
+      "type": "person",
+      "description": "Pavel Fischer",
+      "short_name": "Pavel Fischer",
+      "is_active": false,
+      "given_name": "Pavel",
+      "family_name": "Fischer",
+      "contacts": {
+        "web": []
+      },
+      "parties": [],
+      "motto": "Se mnou se na Pražský hrad vrátí důstojnost, aktivita a ochota pomáhat. Jsem připraven být váš prezident. "
+    },
+    {
+      "id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
+      "name": "Jaroslav Bašta",
+      "type": "person",
+      "description": "Jaroslav Bašta",
+      "short_name": "Jaroslav Bašta",
+      "is_active": false,
+      "given_name": "Jaroslav",
+      "family_name": "Bašta",
+      "contacts": {
+        "web": []
+      },
+      "parties": [],
+      "motto": "Plním své sliby a nikdy neuhnu."
+    },
+    {
+      "id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
+      "name": "Tomáš Zima",
+      "type": "person",
+      "description": "Tomáš Zima",
+      "short_name": "Tomáš Zima",
+      "is_active": false,
+      "given_name": "Tomáš",
+      "family_name": "Zima",
+      "contacts": {
+        "web": []
+      },
+      "parties": [],
+      "motto": "Věřím, že zdravý rozum zvítězí."
+    },
+    {
+      "id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
+      "name": "Karel Diviš",
+      "type": "person",
+      "description": "Karel Diviš",
+      "short_name": "Karel Diviš",
+      "is_active": false,
+      "given_name": "Karel",
+      "family_name": "Diviš",
+      "contacts": {
+        "web": []
+      },
+      "parties": [],
+      "motto": "Obyčejný muž pro neobyčejnou zemi "
+    }
+  ],
+  "answers": [
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-784509-74",
+      "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
+      "question_id": "9f655411-1ea6-459f-be10-94c9466c2924",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-784509-72",
+      "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
+      "question_id": "8fe2749a-37bf-42f0-b855-e4f81dbae09e",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-784509-31",
+      "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
+      "question_id": "f58c1d9b-a3da-4416-85c9-5ca4a7474fed",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-784509-20",
+      "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
+      "question_id": "802bff77-b1f7-40b9-9cf0-615276277d38",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-784509-62",
+      "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
+      "question_id": "8e166cf1-1ff3-4919-97b4-14526fa1e743",
+      "answer": "yes",
+      "comment": "Rozhodně ne v současné době."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-784509-85",
+      "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
+      "question_id": "d69f0bc2-58cd-4737-b244-61db4503af3e",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-784509-60",
+      "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
+      "question_id": "bb0191c2-cf87-4efe-8161-98f69ad59242",
+      "answer": "yes",
+      "comment": "Musí to být však ošetřeno zákonem, včetně vyloučení oblastí, kde to nelze, např. obrana a bezpečnost."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-784509-30",
+      "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
+      "question_id": "0cc6ff51-e193-49a3-aceb-d6a7734c29f4",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-784509-61",
+      "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
+      "question_id": "e7e3a66b-031a-4f04-b56a-f126116e5fc5",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-784509-79",
+      "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
+      "question_id": "76e5d2fb-f467-47bd-82ec-484ce143fff6",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-784509-86",
+      "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
+      "question_id": "fa351c13-c98c-4e03-8558-1a30c6ff4c80",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-784509-96",
+      "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
+      "question_id": "ed198de3-1490-4341-a0d4-2daf944705c9",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-784509-66",
+      "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
+      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-784509-88",
+      "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
+      "question_id": "cf87e266-0ec3-4d6c-b2c4-e775c24e14c7",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-784509-46",
+      "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
+      "question_id": "88ec93b3-a58e-4635-81f6-f79f52172461",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-784509-98",
+      "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
+      "question_id": "d86ab5fe-ebef-471e-aa24-6661e596596a",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-784509-19",
+      "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
+      "question_id": "ce4e96b2-ca9b-42f2-ad12-7bedbbbd1776",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-784509-17",
+      "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
+      "question_id": "5c101330-c99f-4414-acfa-8c45157d321e",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-784509-24",
+      "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
+      "question_id": "b8fa048c-e81f-4c6a-ada7-be1c3329daa9",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-784509-81",
+      "candidate_id": "c4164c8a-d01f-4233-844f-14a96e1d7ca8",
+      "question_id": "8aa996bd-4c8a-4873-9375-a04087d8d7bc",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-935631-74",
+      "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
+      "question_id": "9f655411-1ea6-459f-be10-94c9466c2924",
+      "answer": "no",
+      "comment": "Podle Ústavy čl. 54 je ze své funkce neodpovědný."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-935631-72",
+      "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
+      "question_id": "8fe2749a-37bf-42f0-b855-e4f81dbae09e",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-935631-31",
+      "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
+      "question_id": "f58c1d9b-a3da-4416-85c9-5ca4a7474fed",
+      "answer": "no",
+      "comment": "Senát mnohokrát prokázal svoji funkci jako pojistka demokratického systému."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-935631-20",
+      "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
+      "question_id": "802bff77-b1f7-40b9-9cf0-615276277d38",
+      "answer": "no",
+      "comment": "Měl by postupovat podle znění Ústavy a zákonů - odpovědnost navrhovat soudce má ministerstvo spravedlnosti a prezident je následně jmenuje. Pouze v krajním případě, kdy kandidát nesplňuje elementární předpoklady pro výkon funkce, by měl mít prezident možnost vyjádřit pochybnosti."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-935631-62",
+      "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
+      "question_id": "8e166cf1-1ff3-4919-97b4-14526fa1e743",
+      "answer": "yes",
+      "comment": "Jako občan jsem pro, česká ekonomika je již nyní úzce provázaná s eurozónou a přijetí eura nám dá možnosti podílet se na rozhodování o společné měnové politice. Toto rozhodnutí by ale měla vláda udělat až v okamžiku, kdy to pro ČR bude ekonomicky i politicky výhodné."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-935631-85",
+      "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
+      "question_id": "d69f0bc2-58cd-4737-b244-61db4503af3e",
+      "answer": "yes",
+      "comment": "Tempem přijatelným pro všechny členské země"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-935631-60",
+      "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
+      "question_id": "bb0191c2-cf87-4efe-8161-98f69ad59242",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-935631-30",
+      "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
+      "question_id": "0cc6ff51-e193-49a3-aceb-d6a7734c29f4",
+      "answer": "no",
+      "comment": "Stát by měl poskytnout asistenci lidem, kde ji nejvíce potřebují, ale bydlení nelze garantovat jako nárok všem."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-935631-61",
+      "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
+      "question_id": "e7e3a66b-031a-4f04-b56a-f126116e5fc5",
+      "answer": "yes",
+      "comment": "Ve vazbě na podstatnou digitalizaci celé státní správy a vytvoření zaručených mechanismů, aby nedocházelo k volebním podvodům."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-935631-79",
+      "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
+      "question_id": "76e5d2fb-f467-47bd-82ec-484ce143fff6",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-935631-86",
+      "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
+      "question_id": "fa351c13-c98c-4e03-8558-1a30c6ff4c80",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-935631-96",
+      "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
+      "question_id": "ed198de3-1490-4341-a0d4-2daf944705c9",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-935631-66",
+      "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
+      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
+      "answer": "no",
+      "comment": "Určitá forma spolurozhodování například se Senátem by byla na místě, protože jde o důležité funkce, na kterých by měla existovat širší shoda."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-935631-88",
+      "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
+      "question_id": "cf87e266-0ec3-4d6c-b2c4-e775c24e14c7",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-935631-46",
+      "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
+      "question_id": "88ec93b3-a58e-4635-81f6-f79f52172461",
+      "answer": "yes",
+      "comment": "Stejně jako bych každému rád dopřál právo na důstojný život, tak myslím, že by každý měl mít právo na důstojný odchod. Alespoň já bych ho rád měl. Jsou případy, kdy člověk trpí, nemá vůli jít dál, ale my uměle prodlužujeme jeho utrpení. V některých zemích, například ve Švýcarsku, už toto právo existuje. Myslím, že bychom ho lidem neměli odpírat."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-935631-98",
+      "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
+      "question_id": "d86ab5fe-ebef-471e-aa24-6661e596596a",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-935631-19",
+      "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
+      "question_id": "ce4e96b2-ca9b-42f2-ad12-7bedbbbd1776",
+      "answer": "no",
+      "comment": "Prezident je součástí vyjednávacího procesu, takže jeho postoj by měl být zohledněn už před samotným podpisem. Pokud zohledněn není a prezident má závažné důvody s ratifikací nesouhlasit, měl by mít v krajní situaci možnost smlouvu nepodepsat v zájmu ochrany strategických zájmů ČR."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-935631-17",
+      "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
+      "question_id": "5c101330-c99f-4414-acfa-8c45157d321e",
+      "answer": "no",
+      "comment": "Důležitá je schopnost designovaného premiéra sestavit stabilní vládu s důvěrou poslanecké sněmovny, tedy opřenou o alespoň 101 hlasů poslanců."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-935631-24",
+      "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
+      "question_id": "b8fa048c-e81f-4c6a-ada7-be1c3329daa9",
+      "answer": "no",
+      "comment": "Zákon vychází z presumpce neviny, takže tato možnost existuje, ale prezident by měl být nezpochybnitelnou morální autoritou."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-935631-81",
+      "candidate_id": "b0a9f173-d83d-49d4-8e8f-4fbddcfcbdac",
+      "question_id": "8aa996bd-4c8a-4873-9375-a04087d8d7bc",
+      "answer": "yes",
+      "comment": "Ale stále je co zlepšovat :)"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-427663-74",
+      "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
+      "question_id": "9f655411-1ea6-459f-be10-94c9466c2924",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-427663-72",
+      "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
+      "question_id": "8fe2749a-37bf-42f0-b855-e4f81dbae09e",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-427663-31",
+      "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
+      "question_id": "f58c1d9b-a3da-4416-85c9-5ca4a7474fed",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-427663-20",
+      "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
+      "question_id": "802bff77-b1f7-40b9-9cf0-615276277d38",
+      "answer": "no",
+      "comment": "Prezident může odmítnou návrh výhradně na základě rozporu kandidáta se zákonem."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-427663-62",
+      "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
+      "question_id": "8e166cf1-1ff3-4919-97b4-14526fa1e743",
+      "answer": "yes",
+      "comment": "Jakmile splníme kritéria."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-427663-85",
+      "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
+      "question_id": "d69f0bc2-58cd-4737-b244-61db4503af3e",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-427663-60",
+      "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
+      "question_id": "bb0191c2-cf87-4efe-8161-98f69ad59242",
+      "answer": "no",
+      "comment": "Máme systém zastupitelské demokracie, mohou se obrátit na své poslance."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-427663-30",
+      "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
+      "question_id": "0cc6ff51-e193-49a3-aceb-d6a7734c29f4",
+      "answer": "no",
+      "comment": "Ale mají pomoci těm v nouzi."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-427663-61",
+      "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
+      "question_id": "e7e3a66b-031a-4f04-b56a-f126116e5fc5",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-427663-79",
+      "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
+      "question_id": "76e5d2fb-f467-47bd-82ec-484ce143fff6",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-427663-86",
+      "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
+      "question_id": "fa351c13-c98c-4e03-8558-1a30c6ff4c80",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-427663-96",
+      "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
+      "question_id": "ed198de3-1490-4341-a0d4-2daf944705c9",
+      "answer": "yes",
+      "comment": "Každý má právo vyslovit svůj názor i případným protestem."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-427663-66",
+      "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
+      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-427663-88",
+      "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
+      "question_id": "cf87e266-0ec3-4d6c-b2c4-e775c24e14c7",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-427663-46",
+      "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
+      "question_id": "88ec93b3-a58e-4635-81f6-f79f52172461",
+      "answer": "dont_know",
+      "comment": "Je nutná celospolečenská debata a musí být připravena silná a transparentní pravidla aby nedošlo k zneužití."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-427663-98",
+      "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
+      "question_id": "d86ab5fe-ebef-471e-aa24-6661e596596a",
+      "answer": "no",
+      "comment": "Já obvykle již cestou pracuji a to by na kole nebo v MHD bylo obtížné."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-427663-19",
+      "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
+      "question_id": "ce4e96b2-ca9b-42f2-ad12-7bedbbbd1776",
+      "answer": "yes",
+      "comment": "Proces ratifikace mezinárodních smluv je dán zákonem.  Jde o spolupráci parlamentu a prezidenta. "
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-427663-17",
+      "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
+      "question_id": "5c101330-c99f-4414-acfa-8c45157d321e",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-427663-24",
+      "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
+      "question_id": "b8fa048c-e81f-4c6a-ada7-be1c3329daa9",
+      "answer": "yes",
+      "comment": "O vině/nevině rozhodují soudy nikoliv státní zastupitelství."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-427663-81",
+      "candidate_id": "86be90a3-82c4-4344-8feb-7a955cb0b211",
+      "question_id": "8aa996bd-4c8a-4873-9375-a04087d8d7bc",
+      "answer": "no",
+      "comment": "Veřejnoprávní média jsou důležitou součástí svobodné společnosti. Jejich současný model ale neopovídá měnícímu se mediálnímu prostředí ani formou, ani obsahem.  "
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-800655-74",
+      "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
+      "question_id": "9f655411-1ea6-459f-be10-94c9466c2924",
+      "answer": "yes",
+      "comment": "To je snad logické"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-800655-72",
+      "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
+      "question_id": "8fe2749a-37bf-42f0-b855-e4f81dbae09e",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-800655-31",
+      "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
+      "question_id": "f58c1d9b-a3da-4416-85c9-5ca4a7474fed",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-800655-20",
+      "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
+      "question_id": "802bff77-b1f7-40b9-9cf0-615276277d38",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-800655-62",
+      "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
+      "question_id": "8e166cf1-1ff3-4919-97b4-14526fa1e743",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-800655-85",
+      "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
+      "question_id": "d69f0bc2-58cd-4737-b244-61db4503af3e",
+      "answer": "no",
+      "comment": "Více Evropy znamená méně demokracie"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-800655-60",
+      "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
+      "question_id": "bb0191c2-cf87-4efe-8161-98f69ad59242",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-800655-30",
+      "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
+      "question_id": "0cc6ff51-e193-49a3-aceb-d6a7734c29f4",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-800655-61",
+      "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
+      "question_id": "e7e3a66b-031a-4f04-b56a-f126116e5fc5",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-800655-79",
+      "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
+      "question_id": "76e5d2fb-f467-47bd-82ec-484ce143fff6",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-800655-86",
+      "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
+      "question_id": "fa351c13-c98c-4e03-8558-1a30c6ff4c80",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-800655-96",
+      "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
+      "question_id": "ed198de3-1490-4341-a0d4-2daf944705c9",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-800655-66",
+      "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
+      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-800655-88",
+      "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
+      "question_id": "cf87e266-0ec3-4d6c-b2c4-e775c24e14c7",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-800655-46",
+      "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
+      "question_id": "88ec93b3-a58e-4635-81f6-f79f52172461",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-800655-98",
+      "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
+      "question_id": "d86ab5fe-ebef-471e-aa24-6661e596596a",
+      "answer": "no",
+      "comment": "Peleton prezidenta a ochranky by zablokoval dopravu"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-800655-19",
+      "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
+      "question_id": "ce4e96b2-ca9b-42f2-ad12-7bedbbbd1776",
+      "answer": "no",
+      "comment": "viz komentář k předchozí otázce"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-800655-17",
+      "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
+      "question_id": "5c101330-c99f-4414-acfa-8c45157d321e",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-800655-24",
+      "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
+      "question_id": "b8fa048c-e81f-4c6a-ada7-be1c3329daa9",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-800655-81",
+      "candidate_id": "5306bafc-ba5f-4aca-a3a8-43a2baca012a",
+      "question_id": "8aa996bd-4c8a-4873-9375-a04087d8d7bc",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-497739-74",
+      "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
+      "question_id": "9f655411-1ea6-459f-be10-94c9466c2924",
+      "answer": "dont_know",
+      "comment": "Tato otázka je pro mne obtížně srozumitelná. Z výkonu své funkce prezident odpovědný (v trestně-právním smyslu) není, a to je v pořádku. Pokud máte na mysli zodpovídat se veřejnosti, svá rozhodnutí vysvětlit a obhájit, pak by byla odpověď ano. "
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-497739-72",
+      "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
+      "question_id": "8fe2749a-37bf-42f0-b855-e4f81dbae09e",
+      "answer": "no",
+      "comment": "Jde o symbol české státnosti, výhradně. Další vlajky tu mohou zavlát ad hoc např. při významné státní návštěvě, jinak ne. "
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-497739-31",
+      "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
+      "question_id": "f58c1d9b-a3da-4416-85c9-5ca4a7474fed",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-497739-20",
+      "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
+      "question_id": "802bff77-b1f7-40b9-9cf0-615276277d38",
+      "answer": "no",
+      "comment": "Je to obdobná situace jako u jmenování ministrů. Prezident disponuje informacemi např. od tajných služeb. "
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-497739-62",
+      "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
+      "question_id": "8e166cf1-1ff3-4919-97b4-14526fa1e743",
+      "answer": "no",
+      "comment": "Nyní ne. Jednak bychom přišli o vlastní měnovou politiku, jednak i v rámci měnové unie přibývá států, které neplní Maastrichtstká kritéria (větší schodky, velké celkové zadlužení)."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-497739-85",
+      "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
+      "question_id": "d69f0bc2-58cd-4737-b244-61db4503af3e",
+      "answer": "no",
+      "comment": "Otázku vnímám jako směr federalizace, zrušení veta apod. - a s tím nesouhlasím. "
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-497739-60",
+      "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
+      "question_id": "bb0191c2-cf87-4efe-8161-98f69ad59242",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-497739-30",
+      "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
+      "question_id": "0cc6ff51-e193-49a3-aceb-d6a7734c29f4",
+      "answer": "dont_know",
+      "comment": "Mají se snažit samostatně stavět bydlení, podporovat družstva, neblokovat zbytečně novou výstavbu apod. "
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-497739-61",
+      "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
+      "question_id": "e7e3a66b-031a-4f04-b56a-f126116e5fc5",
+      "answer": "no",
+      "comment": "Volby musí být přímo, rovné a tajné. Online volba nesplňuje téměř nic z toho. Plus by stát disponoval údajem o tom, jak člověk volil, což je nesmírně nebezpečné. Dalším rozměrem je vznik nedůvěry k systému (viz USA). "
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-497739-79",
+      "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
+      "question_id": "76e5d2fb-f467-47bd-82ec-484ce143fff6",
+      "answer": "dont_know"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-497739-86",
+      "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
+      "question_id": "fa351c13-c98c-4e03-8558-1a30c6ff4c80",
+      "answer": "dont_know",
+      "comment": "Mám obecně výhrady k hlasování na dálku - zejména proto, že neodpovídá požadavkům na přímé, rovné a tajné volby (v tomto případě není zajištěna jistota, že šlo o přímou a tajnou volbu). Nicméně dobrým nastavením by to šlo alespoň zčásti omezit. "
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-497739-96",
+      "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
+      "question_id": "ed198de3-1490-4341-a0d4-2daf944705c9",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-497739-66",
+      "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
+      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-497739-88",
+      "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
+      "question_id": "cf87e266-0ec3-4d6c-b2c4-e775c24e14c7",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-497739-46",
+      "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
+      "question_id": "88ec93b3-a58e-4635-81f6-f79f52172461",
+      "answer": "dont_know",
+      "comment": "Obecně ji považuji za přijatelnou, obrovským problémem je možné zneužití. Podepsal bych jen zákon, který by toto řešil opravdu velmi precizně a toto riziko elimiminoval. "
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-497739-98",
+      "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
+      "question_id": "d86ab5fe-ebef-471e-aa24-6661e596596a",
+      "answer": "no",
+      "comment": "Občas klidně, ale pokud se potřebujete pružně přemisťovat po Praze a ČR, pak to na kole obvykle moc nejde.  "
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-497739-19",
+      "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
+      "question_id": "ce4e96b2-ca9b-42f2-ad12-7bedbbbd1776",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-497739-17",
+      "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
+      "question_id": "5c101330-c99f-4414-acfa-8c45157d321e",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-497739-24",
+      "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
+      "question_id": "b8fa048c-e81f-4c6a-ada7-be1c3329daa9",
+      "answer": "no",
+      "comment": "Já osobně to za přijatelné nepovažuji, ale zákonem bych to neomezoval. Současnou úpravu Ústavy považuji za dostatečnou. "
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-497739-81",
+      "candidate_id": "c6c0b94c-502f-4057-a2c7-fe8fa551f559",
+      "question_id": "8aa996bd-4c8a-4873-9375-a04087d8d7bc",
+      "answer": "dont_know"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-728980-74",
+      "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
+      "question_id": "9f655411-1ea6-459f-be10-94c9466c2924",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-728980-72",
+      "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
+      "question_id": "8fe2749a-37bf-42f0-b855-e4f81dbae09e",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-728980-31",
+      "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
+      "question_id": "f58c1d9b-a3da-4416-85c9-5ca4a7474fed",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-728980-20",
+      "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
+      "question_id": "802bff77-b1f7-40b9-9cf0-615276277d38",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-728980-62",
+      "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
+      "question_id": "8e166cf1-1ff3-4919-97b4-14526fa1e743",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-728980-85",
+      "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
+      "question_id": "d69f0bc2-58cd-4737-b244-61db4503af3e",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-728980-60",
+      "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
+      "question_id": "bb0191c2-cf87-4efe-8161-98f69ad59242",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-728980-30",
+      "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
+      "question_id": "0cc6ff51-e193-49a3-aceb-d6a7734c29f4",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-728980-61",
+      "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
+      "question_id": "e7e3a66b-031a-4f04-b56a-f126116e5fc5",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-728980-79",
+      "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
+      "question_id": "76e5d2fb-f467-47bd-82ec-484ce143fff6",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-728980-86",
+      "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
+      "question_id": "fa351c13-c98c-4e03-8558-1a30c6ff4c80",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-728980-96",
+      "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
+      "question_id": "ed198de3-1490-4341-a0d4-2daf944705c9",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-728980-66",
+      "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
+      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-728980-88",
+      "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
+      "question_id": "cf87e266-0ec3-4d6c-b2c4-e775c24e14c7",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-728980-46",
+      "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
+      "question_id": "88ec93b3-a58e-4635-81f6-f79f52172461",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-728980-98",
+      "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
+      "question_id": "d86ab5fe-ebef-471e-aa24-6661e596596a",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-728980-19",
+      "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
+      "question_id": "ce4e96b2-ca9b-42f2-ad12-7bedbbbd1776",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-728980-17",
+      "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
+      "question_id": "5c101330-c99f-4414-acfa-8c45157d321e",
+      "answer": "no",
+      "comment": "Toho, kdo má největší šanci sestavit stabilní vládu."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-728980-24",
+      "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
+      "question_id": "b8fa048c-e81f-4c6a-ada7-be1c3329daa9",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-728980-81",
+      "candidate_id": "a43b99e9-d55b-45d7-a21c-3af9b48df026",
+      "question_id": "8aa996bd-4c8a-4873-9375-a04087d8d7bc",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-879071-74",
+      "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
+      "question_id": "9f655411-1ea6-459f-be10-94c9466c2924",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-879071-72",
+      "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
+      "question_id": "8fe2749a-37bf-42f0-b855-e4f81dbae09e",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-879071-31",
+      "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
+      "question_id": "f58c1d9b-a3da-4416-85c9-5ca4a7474fed",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-879071-20",
+      "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
+      "question_id": "802bff77-b1f7-40b9-9cf0-615276277d38",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-879071-62",
+      "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
+      "question_id": "8e166cf1-1ff3-4919-97b4-14526fa1e743",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-879071-85",
+      "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
+      "question_id": "d69f0bc2-58cd-4737-b244-61db4503af3e",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-879071-60",
+      "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
+      "question_id": "bb0191c2-cf87-4efe-8161-98f69ad59242",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-879071-30",
+      "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
+      "question_id": "0cc6ff51-e193-49a3-aceb-d6a7734c29f4",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-879071-61",
+      "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
+      "question_id": "e7e3a66b-031a-4f04-b56a-f126116e5fc5",
+      "answer": "no",
+      "comment": "Přestože jsem podporovatelem digitalizace státu, elektronické volby mají vážná úskalí, proto se kloním ke klasickému způsobu."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-879071-79",
+      "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
+      "question_id": "76e5d2fb-f467-47bd-82ec-484ce143fff6",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-879071-86",
+      "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
+      "question_id": "fa351c13-c98c-4e03-8558-1a30c6ff4c80",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-879071-96",
+      "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
+      "question_id": "ed198de3-1490-4341-a0d4-2daf944705c9",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-879071-66",
+      "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
+      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-879071-88",
+      "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
+      "question_id": "cf87e266-0ec3-4d6c-b2c4-e775c24e14c7",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-879071-46",
+      "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
+      "question_id": "88ec93b3-a58e-4635-81f6-f79f52172461",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-879071-98",
+      "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
+      "question_id": "d86ab5fe-ebef-471e-aa24-6661e596596a",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-879071-19",
+      "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
+      "question_id": "ce4e96b2-ca9b-42f2-ad12-7bedbbbd1776",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-879071-17",
+      "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
+      "question_id": "5c101330-c99f-4414-acfa-8c45157d321e",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-879071-24",
+      "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
+      "question_id": "b8fa048c-e81f-4c6a-ada7-be1c3329daa9",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-879071-81",
+      "candidate_id": "e7f22f9d-0459-4b41-a20d-8e922a636c05",
+      "question_id": "8aa996bd-4c8a-4873-9375-a04087d8d7bc",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-291038-74",
+      "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
+      "question_id": "9f655411-1ea6-459f-be10-94c9466c2924",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-291038-72",
+      "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
+      "question_id": "8fe2749a-37bf-42f0-b855-e4f81dbae09e",
+      "answer": "no",
+      "comment": "Po ruské invazi v únoru 2022 to mělo svůj význam, ale nepovažuji to za nezbytné. Naopak za nezbytné považuji, abychom Ukrajině v jejím zápase účinně pomáhali."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-291038-31",
+      "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
+      "question_id": "f58c1d9b-a3da-4416-85c9-5ca4a7474fed",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-291038-20",
+      "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
+      "question_id": "802bff77-b1f7-40b9-9cf0-615276277d38",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-291038-62",
+      "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
+      "question_id": "8e166cf1-1ff3-4919-97b4-14526fa1e743",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-291038-85",
+      "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
+      "question_id": "d69f0bc2-58cd-4737-b244-61db4503af3e",
+      "answer": "yes",
+      "comment": "Prohlubovat spolupráci v oblastech, kde je to třeba, je zcela na místě. "
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-291038-60",
+      "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
+      "question_id": "bb0191c2-cf87-4efe-8161-98f69ad59242",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-291038-30",
+      "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
+      "question_id": "0cc6ff51-e193-49a3-aceb-d6a7734c29f4",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-291038-61",
+      "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
+      "question_id": "e7e3a66b-031a-4f04-b56a-f126116e5fc5",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-291038-79",
+      "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
+      "question_id": "76e5d2fb-f467-47bd-82ec-484ce143fff6",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-291038-86",
+      "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
+      "question_id": "fa351c13-c98c-4e03-8558-1a30c6ff4c80",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-291038-96",
+      "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
+      "question_id": "ed198de3-1490-4341-a0d4-2daf944705c9",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-291038-66",
+      "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
+      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-291038-88",
+      "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
+      "question_id": "cf87e266-0ec3-4d6c-b2c4-e775c24e14c7",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-291038-46",
+      "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
+      "question_id": "88ec93b3-a58e-4635-81f6-f79f52172461",
+      "answer": "no",
+      "comment": "Obával bych se zneužití. "
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-291038-98",
+      "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
+      "question_id": "d86ab5fe-ebef-471e-aa24-6661e596596a",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-291038-19",
+      "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
+      "question_id": "ce4e96b2-ca9b-42f2-ad12-7bedbbbd1776",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-291038-17",
+      "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
+      "question_id": "5c101330-c99f-4414-acfa-8c45157d321e",
+      "answer": "no",
+      "comment": "Prezident může usilovat o to nalézt alternativní variantu, například pověřit šéfa seskupení politických stran koalice, z nichž žádná sice nebude vítězem, ale dohromady dají v parlamentu většinu. "
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-291038-24",
+      "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
+      "question_id": "b8fa048c-e81f-4c6a-ada7-be1c3329daa9",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-291038-81",
+      "candidate_id": "72278ace-732c-46fb-8e8d-4ebd485d48f5",
+      "question_id": "8aa996bd-4c8a-4873-9375-a04087d8d7bc",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-904458-74",
+      "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
+      "question_id": "9f655411-1ea6-459f-be10-94c9466c2924",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-904458-72",
+      "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
+      "question_id": "8fe2749a-37bf-42f0-b855-e4f81dbae09e",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-904458-31",
+      "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
+      "question_id": "f58c1d9b-a3da-4416-85c9-5ca4a7474fed",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-904458-20",
+      "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
+      "question_id": "802bff77-b1f7-40b9-9cf0-615276277d38",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-904458-62",
+      "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
+      "question_id": "8e166cf1-1ff3-4919-97b4-14526fa1e743",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-904458-85",
+      "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
+      "question_id": "d69f0bc2-58cd-4737-b244-61db4503af3e",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-904458-60",
+      "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
+      "question_id": "bb0191c2-cf87-4efe-8161-98f69ad59242",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-904458-30",
+      "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
+      "question_id": "0cc6ff51-e193-49a3-aceb-d6a7734c29f4",
+      "answer": "yes",
+      "comment": "Ano, mělo by například vzniknout mnohem více sociálních bytů."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-904458-61",
+      "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
+      "question_id": "e7e3a66b-031a-4f04-b56a-f126116e5fc5",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-904458-79",
+      "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
+      "question_id": "76e5d2fb-f467-47bd-82ec-484ce143fff6",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-904458-86",
+      "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
+      "question_id": "fa351c13-c98c-4e03-8558-1a30c6ff4c80",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-904458-96",
+      "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
+      "question_id": "ed198de3-1490-4341-a0d4-2daf944705c9",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-904458-66",
+      "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
+      "question_id": "b6961f8a-c796-42f9-a516-b8f7739aa913",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-904458-88",
+      "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
+      "question_id": "cf87e266-0ec3-4d6c-b2c4-e775c24e14c7",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-904458-46",
+      "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
+      "question_id": "88ec93b3-a58e-4635-81f6-f79f52172461",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-904458-98",
+      "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
+      "question_id": "d86ab5fe-ebef-471e-aa24-6661e596596a",
+      "answer": "no"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-904458-19",
+      "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
+      "question_id": "ce4e96b2-ca9b-42f2-ad12-7bedbbbd1776",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-904458-17",
+      "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
+      "question_id": "5c101330-c99f-4414-acfa-8c45157d321e",
+      "answer": "yes"
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-904458-24",
+      "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
+      "question_id": "b8fa048c-e81f-4c6a-ada7-be1c3329daa9",
+      "answer": "yes",
+      "comment": "Nemělo by to ale být trestní stíhání spojené s politickou činností."
+    },
+    {
+      "id": "prezidentske-2023-pro-kazdeho-2-kolo-a-904458-81",
+      "candidate_id": "2752996f-d64b-4b5d-a925-1ec063178838",
+      "question_id": "8aa996bd-4c8a-4873-9375-a04087d8d7bc",
+      "answer": "no"
+    }
+  ]
+}
