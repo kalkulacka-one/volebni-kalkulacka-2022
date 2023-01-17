@@ -52,7 +52,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
           Kdo z&nbsp;nich bude reprezentovat<br />vaše&nbsp;názory?
         </HeadlineText>
         <BodyText size="small" tag="h2">
-          Volební kalkulačka Prezident 2023<br />42 otázek, cca 10 minut
+          Volební kalkulačka pro 2. kolo<br />20 otázek, cca 5 minut
         </BodyText>
         <ButtonComponent
           kind="filled"
@@ -64,7 +64,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
               params: {
                 ...route.params,
                 election: 'prezidentske-2023',
-                district: 'pro-kazdeho',
+                district: 'pro-kazdeho-2-kolo',
               },
               query: { ...route.query },
             })
@@ -83,6 +83,28 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
         <BodyText size="small">
           Volební kalkulačku už vyplnilo přes 1 milion lidí.
         </BodyText>
+        <ButtonComponent
+          kind="outlined"
+          color="primary"
+          tag="a"
+          @click="
+            router.push({
+              name: appRoutes.guide.name,
+              params: {
+                ...route.params,
+                election: 'prezidentske-2023',
+                district: 'pro-kazdeho',
+              },
+              query: { ...route.query },
+            })
+          "
+        >
+          Spustit kalkulačku pro 1. kolo
+          <template #iconAfter>
+            <IconComponent :icon="mdiArrowRight" />
+          </template>
+        </ButtonComponent>
+        <BodyText size="small" tag="h2">42 otázek, cca 10 minut</BodyText>
       </StackComponent>
       <div class="avatars">
         <div class="avatar pavel-fischer">

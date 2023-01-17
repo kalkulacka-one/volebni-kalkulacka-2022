@@ -51,6 +51,18 @@ def extract_election_prezidentske(
         ),
         (
             District(
+                '9327034e-dd2d-4be0-b50a-ea8cd590c82b',
+                "2. kolo",
+                "Kalkulačka vhodná pro všechny občany.",
+                "pro-kazdeho-2-kolo",
+                False,
+                on_hp_from=metadata.on_hp_from,
+                on_hp_to=metadata.on_hp_to,
+            ),
+            "classic2",
+        ),
+        (
+            District(
                 '575a8e7b-b2a5-4257-9a61-c25db4242403',
                 "Pro nadšence",
                 "Kalkulačka vhodná pro všechny politické nadšence.",
