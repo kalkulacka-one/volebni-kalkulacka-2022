@@ -192,7 +192,7 @@ window.onscroll = calculateStickeHeaderPos;
       <QuestionCard
         class="question-card"
         :style="{
-          'grid-column': `1 / span ${2 * candidateOrder.length + 1}`,
+          'grid-column': `1 / span ${2 * candidateOrder.length + 2}`,
           'grid-row': 2 * questionIndex + 2,
         }"
         :question="question"
