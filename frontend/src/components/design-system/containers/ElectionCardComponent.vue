@@ -61,7 +61,7 @@ const getDurationDate = (from: string, to: string) => {
     month: 'long',
     day: 'numeric',
   });
-  // @ts-ignore
+
   return dateTimeFormat.formatRange(startDate, endDate).replace('–', ' – ');
 };
 
