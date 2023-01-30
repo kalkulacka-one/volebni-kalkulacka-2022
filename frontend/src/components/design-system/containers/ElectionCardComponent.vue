@@ -26,14 +26,17 @@ import {
   mdiReload,
   mdiShareVariantOutline,
 } from '@mdi/js';
+
+export interface Candidate {
+  id: string;
+  name: string;
+  image: string;
+  score: number;
+  description: string;
+}
+
 export interface Props {
-  candidates?: {
-    id: string;
-    name: string;
-    image: string;
-    score: number;
-    description: string;
-  }[];
+  candidates?: Candidate[];
   electionName?: string | null;
   electionDateFrom?: string | null;
   electionDateTo?: string | null;
