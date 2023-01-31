@@ -199,7 +199,11 @@ if (!userStore.user) router.push(appRoutes.login);
       <TitleText tag="h2" size="small">Opravdu chcete smazat profil?</TitleText>
     </template>
     <template #content>
-      <StackComponent spacing="large">
+      <StackComponent spacing="large" centered>
+        <span />
+
+        <img src="/images/lock_person.svg" width="32" height="32" alt="" />
+
         <BodyText size="medium">
           Smazáním profilu přijdete permanentne o uložené kalkulačky.
         </BodyText>
