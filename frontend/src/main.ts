@@ -33,6 +33,7 @@ import VueSocialSharing from 'vue-social-sharing';
 import RegisterPageVue from './routes/profile/RegisterPageVue.vue';
 import LoginPageVue from './routes/profile/LoginPageVue.vue';
 import ProfilePageVue from './routes/profile/ProfilePage.vue';
+import ProfileSettingsPageVue from './routes/profile/ProfileSettingsPage.vue';
 
 const RESULT_QUERY_NAME = 'result';
 
@@ -202,6 +203,14 @@ export const appRoutes = {
     component: ProfilePageVue,
     meta: {
       title: 'Můj profil - Volební kalkulačka',
+    },
+  },
+  profileSettings: {
+    name: 'profile-settings',
+    path: '/nastaveni-profilu',
+    component: ProfileSettingsPageVue,
+    meta: {
+      title: 'Nastavení profilu - Volební kalkulačka',
     },
   },
   fallback: {

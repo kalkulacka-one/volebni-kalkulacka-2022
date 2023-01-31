@@ -5,18 +5,24 @@ import StackComponent from '@/components/design-system/layout/StackComponent.vue
 import { mdiAlertOutline } from '@mdi/js';
 
 export interface Props {
-  disabled: boolean;
-  groupName: string;
-  icon: string;
-  label: string | null;
-  modelValue: string | null;
-  placeholder: string;
-  value: string;
-  error: string | null;
+  disabled?: boolean | undefined;
+  groupName?: string | undefined;
+  icon?: string | null;
+  label?: string | null;
+  modelValue?: string | undefined;
+  placeholder?: string | undefined;
+  value?: string | undefined;
+  error?: string | null;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  modelValue: null,
+  disabled: undefined,
+  groupName: undefined,
+  icon: null,
+  label: null,
+  modelValue: undefined,
+  placeholder: undefined,
+  value: undefined,
   error: null,
 });
 
@@ -136,6 +142,8 @@ defineEmits(['update:modelValue']);
     &:disabled {
       background-color: white;
       border-color: rgb(var(--color-neutral-border-disabled));
+      user-select: none;
+      cursor: not-allowed;
     }
   }
 }

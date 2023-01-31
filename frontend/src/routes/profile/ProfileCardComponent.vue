@@ -1,10 +1,8 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
-import { mdiLogout } from '@mdi/js';
+import { mdiCogOutline } from '@mdi/js';
 
 import { appRoutes } from '@/main';
-
-import { useUserStore } from '@/stores/userStore';
 
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
@@ -24,23 +22,12 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 const router = useRouter();
-const userStore = useUserStore();
-
-const handleLogout = async () => {
-  const response = await fetch('/api/auth/logout');
-  if (response.ok) {
-    userStore.fetchUser();
-    router.push(appRoutes.index);
-  } else {
-    throw Error('Logout failed');
-  }
-};
 </script>
 
 <template>
   <CardComponent
     corner="top-right"
-    padding="medium"
+    spacing="medium"
     border
     border-radius="medium"
   >
@@ -54,9 +41,12 @@ const handleLogout = async () => {
         </BodyText>
       </StackComponent>
 
-      <ButtonComponent kind="link" @click.prevent="handleLogout">
+      <ButtonComponent
+        kind="link"
+        @click="router.push(appRoutes.profileSettings)"
+      >
         <IconComponent
-          :icon="mdiLogout"
+          :icon="mdiCogOutline"
           size="medium"
           color="rgb(var(--color-neutral-fg))"
         />
