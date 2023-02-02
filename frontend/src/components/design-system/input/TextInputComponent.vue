@@ -11,7 +11,6 @@ export interface Props {
   label?: string | null;
   modelValue?: string | undefined;
   placeholder?: string | undefined;
-  value?: string | undefined;
   error?: string | null;
 }
 
@@ -22,7 +21,6 @@ const props = withDefaults(defineProps<Props>(), {
   label: null,
   modelValue: undefined,
   placeholder: undefined,
-  value: undefined,
   error: null,
 });
 
@@ -48,8 +46,8 @@ defineEmits(['update:modelValue']);
 
     <input
       type="text"
-      :value="value"
-      :name="props.groupName"
+      :value="modelValue"
+      :name="groupName"
       :placeholder="placeholder"
       :disabled="disabled"
       @input="

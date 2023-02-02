@@ -16,6 +16,7 @@ import BackgroundComponent from '@/components/design-system/style/BackgroundComp
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 import CardComponent from '@/components/design-system/containers/CardComponent.vue';
+import FormComponent from '@/components/design-system/input/FormComponent.vue';
 import FooterMultiWord from '@/components/FooterMultiWord.vue';
 import HeadlineText from '@/components/design-system/typography/HeadlineText.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
@@ -33,12 +34,15 @@ import TitleText from '@/components/design-system/typography/TitleText.vue';
 
 const router = useRouter();
 const userStore = useUserStore();
-
-const user = computed(() => userStore.user);
+const user = ref(userStore.user);
+const formSavedSuccess = ref();
+const saving = ref();
 
 const handlePreviousClick = () => router.go(-1);
 
 const isModalOpen = ref(false);
+const handleOpenModal = () => (isModalOpen.value = true);
+const handleCloseModal = () => (isModalOpen.value = false);
 
 const handleDeleteUserClick = async () => {
   const response = await fetch('/api/users/me', { method: 'DELETE' });
@@ -52,16 +56,32 @@ const handleDeleteUserClick = async () => {
   }
 };
 
-const handleOpenModal = () => {
-  isModalOpen.value = true;
+const onSubmit = async () => {
+  formSavedSuccess.value = '';
+  saving.value = true;
+
+  const response = await fetch('/api/users/me', {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(user.value),
+  });
+
+  if (response.ok) {
+    formSavedSuccess.value = 'Vaše změny byly úspěšne zapsány';
+    saving.value = false;
+    userStore.fetchUser();
+  } else {
+    saving.value = false;
+    throw Error('User update failed');
+  }
 };
 
-const handleCloseModal = () => {
-  isModalOpen.value = false;
-};
+const validateInput = (value: string | undefined) => {
+  const length = value?.length;
 
-const onSubmit = (e: Event) => {
-  router.push(appRoutes.profileSettings);
+  if (typeof length === 'number') return length < 1 ? 'Vyplňte pole' : null;
 };
 
 const handleLogout = async () => {
@@ -97,52 +117,51 @@ if (!userStore.user) router.push(appRoutes.login);
 
       <StaticContentLayout size="small" class="content">
         <StackComponent spacing="large" centered>
-          <form
-            id="register-form"
+          <FormComponent
             class="w-full"
-            ref="form"
-            @submit.prevent="(e) => onSubmit(e)"
+            @submit.prevent="onSubmit"
+            :success="formSavedSuccess"
           >
-            <CardComponent
-              corner="top-left"
-              spacing="medium"
-              border
-              border-radius="medium"
-              shadow
+            <TextInputComponent
+              label="Celé jméno"
+              type="text"
+              placeholder="Jan Novák"
+              class="w-full"
+              :modelValue="user?.displayName"
+              :icon="mdiAccountOutline"
+              @update:modelValue="
+                (newVal) => {
+                  if (user) user.displayName = newVal;
+                }
+              "
+              :error="validateInput(user?.displayName)"
+            />
+
+            <TextInputComponent
+              disabled
+              required
+              label="E-mail"
+              type="email"
+              placeholder="E-mail"
+              class="w-full"
+              :modelValue="user?.email"
+              :icon="mdiEmailOutline"
+              @update:modelValue="
+                (newVal) => {
+                  if (user) user.email = newVal;
+                }
+              "
+            />
+
+            <ButtonComponent
+              kind="filled"
+              color="primary"
+              class="w-full"
+              :loading="saving"
             >
-              <StackComponent spacing="medium" centered>
-                <TextInputComponent
-                  disabled
-                  label="Celé jméno"
-                  type="text"
-                  placeholder="Jan Novák"
-                  class="w-full"
-                  :value="user?.displayName"
-                  :icon="mdiAccountOutline"
-                />
-
-                <TextInputComponent
-                  disabled
-                  required
-                  label="E-mail"
-                  type="email"
-                  placeholder="E-mail"
-                  class="w-full"
-                  :value="user?.email"
-                  :icon="mdiEmailOutline"
-                />
-
-                <ButtonComponent
-                  disabled
-                  kind="filled"
-                  color="primary"
-                  class="w-full"
-                >
-                  Uložit změny
-                </ButtonComponent>
-              </StackComponent>
-            </CardComponent>
-          </form>
+              Uložit změny
+            </ButtonComponent>
+          </FormComponent>
 
           <img src="/images/lock_person.svg" width="32" height="32" alt="" />
 
@@ -169,8 +188,6 @@ if (!userStore.user) router.push(appRoutes.login);
             </ButtonComponent>
 
             <ButtonComponent
-              tag="a"
-              href="/api/auth/logout"
               kind="filled"
               color="white"
               class="w-full"
