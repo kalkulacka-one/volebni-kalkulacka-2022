@@ -45,6 +45,26 @@ const props = withDefaults(defineProps<Props>(), {
   updated: null,
 });
 
+const getUpdatedDate = (dateString: string) => {
+  const event = new Date(dateString);
+  return event.toLocaleString('cs-CZ', {
+    dateStyle: 'medium',
+    timeStyle: 'short',
+  });
+};
+
+const getDurationDate = (from: string, to: string) => {
+  const startDate = new Date(from);
+  const endDate = new Date(to);
+  const dateTimeFormat = new Intl.DateTimeFormat('cs-CZ', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+
+  return dateTimeFormat.formatRange(startDate, endDate).replace('–', ' – ');
+};
+
 const router = useRouter();
 const route = useRoute();
 
@@ -95,12 +115,12 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
 <template>
   <CardComponent padding="large" border shadow corner="bottom-right">
     <StackComponent spacing="medium">
-      <div>
+      <StackComponent spacing="extra-small">
         <TitleText tag="h4" size="small">{{ electionName }}</TitleText>
         <BodyText size="small" v-if="electionDateFrom && electionDateTo">
-          {{ electionDateFrom }} - {{ electionDateTo }}
+          {{ getDurationDate(electionDateFrom, electionDateTo) }}
         </BodyText>
-      </div>
+      </StackComponent>
 
       <hr v-if="!candidates" class="ruler" />
 
@@ -248,7 +268,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           size="extra-small"
           color="rgb(var(--color-neutral-fg-muted))"
         >
-          ULOŽENO {{ updated }}
+          ULOŽENO {{ getUpdatedDate(updated) }}
         </BodyText>
       </ResponsiveWrapper>
 
@@ -258,7 +278,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           color="rgb(var(--color-neutral-fg-muted))"
           class="full-width centered"
         >
-          ULOŽENO {{ updated }}
+          ULOŽENO {{ getUpdatedDate(updated) }}
         </BodyText>
       </ResponsiveWrapper>
     </StackComponent>

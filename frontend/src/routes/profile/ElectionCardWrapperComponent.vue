@@ -13,7 +13,7 @@ export interface Answer {
   calculatorId: string;
   answers: { answer: boolean; questionId: string };
   matches: { candidateId: string; score: number };
-  createdAt: Date;
+  createdAt: string;
   updatedAt: string;
 }
 
@@ -30,10 +30,12 @@ const calculator = calculators.find(
   (c) => props.answer.calculatorId === c.calculator_id
 );
 
-const { election } = await fetchCalculator(
+const calc = await fetchCalculator(
   calculator?.election_id as string,
   calculator?.district_code as string
 );
+
+const election = calc ? calc.election : null;
 
 const name = computed(() => `${election?.name} (${calculator?.name})`);
 </script>
@@ -41,10 +43,13 @@ const name = computed(() => `${election?.name} (${calculator?.name})`);
 <template>
   <ElectionCardComponent
     :election-name="name"
+    :election-date-from="election?.from"
+    :election-date-to="election?.to"
     :district="calculator?.district_code"
     :election="calculator?.election_id"
     :uuid="answer?.id"
     :candidates="true"
+    :updated="answer?.updatedAt"
   />
 </template>
 
