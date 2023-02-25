@@ -1,4 +1,5 @@
 import passport from 'passport';
+import { VercelRequest, VercelResponse } from '@vercel/node';
 import { sign } from 'jsonwebtoken';
 import express, { Express, Request, Response, NextFunction } from 'express';
 import { Strategy as FacebookStrategy } from 'passport-facebook';
@@ -287,7 +288,7 @@ if (
   const magicLogin = getMagicLogin();
   passport.use(magicLogin);
 
-  app.get('/api/auth/magiclogin', magicLogin.send);
+  app.post('/api/auth/magiclogin', magicLogin.send);
   app.get('/api/auth/magiclogin/callback', callback('magiclogin'));
 }
 
@@ -312,4 +313,9 @@ app.get('/*', (req, res) => {
   respond404(res, req.url);
 });
 
-export default app;
+export default function (req: VercelRequest, res: VercelResponse) {
+  // This reads request readable stream and parses it as JSON
+  // Needed for parsing request body in Vercel
+  const { body } = req;
+  return app(req, res);
+}
