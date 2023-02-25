@@ -121,9 +121,11 @@ const resultsGeneral = computed(() => {
 const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
 const getReducedCandidates = () => {
   const { candidates, candidatesCount } = props;
-  const reducedCandidates = candidates ? candidates.slice(0, candidatesCount ? candidatesCount : 3) : [];
+  const reducedCandidates = candidates
+    ? candidates.slice(0, candidatesCount ? candidatesCount : 3)
+    : [];
   return reducedCandidates;
-}
+};
 </script>
 
 <template>
