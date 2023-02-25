@@ -119,8 +119,11 @@ const resultsGeneral = computed(() => {
 });
 
 const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
-const { candidates, candidatesCount } = props;
-const reducedCandidates = candidates ? candidates.slice(0, candidatesCount ? candidatesCount : 3) : [];
+const getReducedCandidates = () => {
+  const { candidates, candidatesCount } = props;
+  const reducedCandidates = candidates ? candidates.slice(0, candidatesCount ? candidatesCount : 3) : [];
+  return reducedCandidates;
+}
 </script>
 
 <template>
@@ -136,7 +139,7 @@ const reducedCandidates = candidates ? candidates.slice(0, candidatesCount ? can
       <hr v-if="!candidates" class="ruler" />
 
       <template v-if="candidates">
-        <template v-for="(candidate, idx) in reducedCandidates" :key="idx">
+        <template v-for="(candidate, idx) in getReducedCandidates()" :key="idx">
           <StackComponent
             horizontal
             spacing="small"
