@@ -57,6 +57,7 @@ const candidateMatches = props?.answer.matches.map((x) => {
     :election="calculator?.election_id"
     :uuid="answer?.id"
     :candidates="candidateMatches ? candidateMatches.slice(0, 3) : undefined"
+    :candidates-count="3"
   />
 </template>
 

@@ -37,6 +37,7 @@ export interface Candidate {
 
 export interface Props {
   candidates?: Candidate[];
+  candidatesCount?: number | null;
   electionName?: string | null;
   electionDateFrom?: string | null;
   electionDateTo?: string | null;
@@ -118,6 +119,8 @@ const resultsGeneral = computed(() => {
 });
 
 const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
+const { candidates, candidatesCount } = props;
+const reducedCandidates = candidates ? candidates.slice(0, candidatesCount ? candidatesCount : 3) : [];
 </script>
 
 <template>
@@ -133,7 +136,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
       <hr v-if="!candidates" class="ruler" />
 
       <template v-if="candidates">
-        <template v-for="(candidate, idx) in candidates" :key="idx">
+        <template v-for="(candidate, idx) in reducedCandidates" :key="idx">
           <StackComponent
             horizontal
             spacing="small"
