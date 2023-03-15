@@ -11,6 +11,7 @@ export interface Props {
   color?: 'neutral' | 'primary' | 'secondary' | 'white' | 'facebook';
   selected?: boolean;
   readOnly?: boolean;
+  loading?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -20,6 +21,7 @@ const props = withDefaults(defineProps<Props>(), {
   color: 'neutral',
   selected: false,
   readOnly: false,
+  loading: false,
 });
 
 const classes = computed(() => ({
@@ -28,6 +30,7 @@ const classes = computed(() => ({
   [`button--${props.color}`]: props.color,
   'button--selected': props.selected,
   'button--read-only': props.readOnly,
+  'button--loading': props.loading,
 }));
 
 const computedTag = computed(() => (props.href ? 'a' : props.tag));
@@ -70,6 +73,10 @@ const computedSize = computed(() =>
 
   &:disabled {
     cursor: not-allowed;
+  }
+
+  &.button--loading {
+    cursor: wait;
   }
 
   &.button--read-only {
@@ -157,7 +164,8 @@ const computedSize = computed(() =>
       }
     }
 
-    &:disabled {
+    &:disabled,
+    &.button--loading {
       color: rgb(var(--color-neutral-fg-disabled));
       border-color: rgb(var(--color-neutral-fg-disabled));
     }
@@ -311,7 +319,8 @@ const computedSize = computed(() =>
       }
     }
 
-    &:disabled {
+    &:disabled,
+    &.button--loading {
       background-color: transparent;
       color: rgb(var(--color-neutral-fg-disabled));
       border-color: rgb(var(--color-neutral-border-disabled));
@@ -320,7 +329,8 @@ const computedSize = computed(() =>
 
   &--filled,
   &--answer {
-    &:disabled {
+    &:disabled,
+    &.button--loading {
       color: rgb(var(--color-primary-fg-inverse)) !important;
       background-color: rgb(var(--color-neutral-bg-disabled)) !important;
       border-color: transparent !important;

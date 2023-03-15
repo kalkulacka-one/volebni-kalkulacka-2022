@@ -26,6 +26,18 @@ export default async function (req: VercelRequest, res: VercelResponse) {
       .delete({ where: { id: auth.user.id } })
       .catch(prismaErrorHandler(res));
     return res.status(204).send(null);
+  } else if (req.method === 'PUT') {
+    const { displayName } = req.body;
+    if (!displayName) {
+      return respond401(res, 'Name is required.');
+    }
+    await prisma.user
+      .update({
+        where: { id: auth.user.id },
+        data: { displayName },
+      })
+      .catch(prismaErrorHandler(res));
+    return res.status(204).send(null);
   }
 
   respond405(res, req.method);
