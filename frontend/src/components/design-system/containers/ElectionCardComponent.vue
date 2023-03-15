@@ -26,9 +26,18 @@ import {
   mdiReload,
   mdiShareVariantOutline,
 } from '@mdi/js';
+
+export interface Candidate {
+  id: string;
+  name: string;
+  image: string;
+  score: number;
+  description: string;
+}
+
 export interface Props {
-  // TODO
-  candidates?: any;
+  candidates?: Candidate[];
+  candidatesCount?: number | null;
   electionName?: string | null;
   electionDateFrom?: string | null;
   electionDateTo?: string | null;
@@ -39,7 +48,7 @@ export interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  candidates: null,
+  candidates: undefined,
   electionDateFrom: null,
   electionDateTo: null,
   updated: null,
@@ -110,6 +119,13 @@ const resultsGeneral = computed(() => {
 });
 
 const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
+const getReducedCandidates = () => {
+  const { candidates, candidatesCount } = props;
+  const reducedCandidates = candidates
+    ? candidates.slice(0, candidatesCount ? candidatesCount : 3)
+    : [];
+  return reducedCandidates;
+};
 </script>
 
 <template>
@@ -123,6 +139,56 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
       </StackComponent>
 
       <hr v-if="!candidates" class="ruler" />
+
+      <template v-if="candidates">
+        <template v-for="(candidate, idx) in getReducedCandidates()" :key="idx">
+          <StackComponent
+            horizontal
+            spacing="small"
+            centered
+            class="full-width"
+          >
+            <AvatarComponent
+              :backgroundImage="candidate.image"
+              :backgroundColor="
+                idx == 0
+                  ? 'rgb(var(--color-primary-bg-strong))'
+                  : 'rgb(var(--color-primary-bg))'
+              "
+            >
+              <BodyText
+                size="small"
+                :color="
+                  idx === 0
+                    ? 'rgb(var(--palette-neutral-100))'
+                    : 'rgb(var(--color-primary-fg-strong))'
+                "
+                >{{ idx + 1 }}</BodyText
+              >
+            </AvatarComponent>
+
+            <StackComponent spacing="extra-small" class="full-width">
+              <TitleText size="small" tag="h5">{{ candidate.name }}</TitleText>
+
+              <SimpleProgress
+                :id="'candidate' + idx"
+                :value="candidate?.score"
+                color-primary="rgb(var(--palette-primary-50))"
+                color-secondary="rgb(var(--color-neutral-bg))"
+                :max="100"
+                height="2px"
+              />
+              <BodyText v-if="candidate" size="extra-small">{{
+                candidate.description
+              }}</BodyText>
+            </StackComponent>
+
+            <TitleText size="medium" tag="h2">
+              {{ candidate.score }}&nbsp;%
+            </TitleText>
+          </StackComponent>
+        </template>
+      </template>
 
       <ResponsiveWrapper extra-small small>
         <ButtonComponent

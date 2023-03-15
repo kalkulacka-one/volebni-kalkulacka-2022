@@ -30,15 +30,17 @@ FilledIn.args = {
   electionDateTo: '24. září 2022',
   candidates: [
     {
+      id: 'a',
       name: 'Miluše Politická',
-      party: 'Koalice pro práva občanů',
-      percentage: 95,
+      description: 'Koalice pro práva občanů',
+      score: 95,
       image: 'https://thispersondoesnotexist.com/image',
     },
     {
+      id: 'b',
       name: 'Petr Apolitický',
-      party: 'Koalice pro práva občanů',
-      percentage: 93,
+      description: 'Koalice pro práva občanů',
+      score: 93,
       image: 'https://thispersondoesnotexist.com/image',
     },
   ],

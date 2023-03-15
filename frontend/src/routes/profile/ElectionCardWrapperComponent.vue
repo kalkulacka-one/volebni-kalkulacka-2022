@@ -1,19 +1,16 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
-import { mdiCogOutline } from '@mdi/js';
+import { computed } from 'vue';
 
 import { fetchCalculator, fetchCalculators } from '@/common/dataFetch';
-import { appRoutes } from '@/main';
-
 import ElectionCardComponent from '@/components/design-system/containers/ElectionCardComponent.vue';
+import type { Candidate } from '@/components/design-system/containers/ElectionCardComponent.vue';
 
 export interface Answer {
   id: string;
   calculatorId: string;
-  answers: { answer: boolean; questionId: string };
-  matches: { candidateId: string; score: number };
-  createdAt: string;
+  answers: { answer: boolean; questionId: string }[];
+  matches: { candidateId: string; score: number }[];
+  createdAt: Date;
   updatedAt: string;
 }
 
@@ -30,14 +27,25 @@ const calculator = calculators.find(
   (c) => props.answer.calculatorId === c.calculator_id
 );
 
-const calc = await fetchCalculator(
+const { election, candidates } = await fetchCalculator(
   calculator?.election_id as string,
   calculator?.district_code as string
 );
 
-const election = calc ? calc.election : null;
+// const election = calc ? calc.election : null;
 
 const name = computed(() => `${election?.name} (${calculator?.name})`);
+
+const candidateMatches = props?.answer.matches.map((x) => {
+  const candidate = candidates?.find((c) => c.id === x.candidateId);
+  return {
+    id: candidate?.id,
+    name: candidate?.name,
+    image: candidate?.img_url,
+    score: x.score,
+    description: candidate?.description,
+  };
+}) as Candidate[];
 </script>
 
 <template>
@@ -48,8 +56,8 @@ const name = computed(() => `${election?.name} (${calculator?.name})`);
     :district="calculator?.district_code"
     :election="calculator?.election_id"
     :uuid="answer?.id"
-    :candidates="true"
-    :updated="answer?.updatedAt"
+    :candidates="candidateMatches ? candidateMatches.slice(0, 3) : undefined"
+    :candidates-count="3"
   />
 </template>
 
