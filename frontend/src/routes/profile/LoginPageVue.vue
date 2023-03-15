@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
-import { mdiCloseCircleOutline } from '@mdi/js';
-import { appRoutes } from '@/main';
+import { mdiCloseCircleOutline, mdiEmailOutline } from '@mdi/js';
 
+import { appRoutes } from '@/main';
 import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
@@ -11,6 +11,7 @@ import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
+import StaticContentLayout from '@/components/layouts/StaticContentLayout.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import SocialMediaConnectComponent from './SocialMediaConnectComponent.vue';
 import TitleText from '@/components/design-system/typography/TitleText.vue';
@@ -63,7 +64,11 @@ const handleClose = () => {
   }
 };
 
-const handleGoToRegisterClick = () => router.push(appRoutes.register);
+const handleGoToEmailFormClick = () => {
+  router.push({
+    name: appRoutes.loginForm.name,
+  });
+};
 </script>
 
 <template>
@@ -78,48 +83,60 @@ const handleGoToRegisterClick = () => router.push(appRoutes.register);
           </template>
         </NavigationBar>
       </template>
-      <StackComponent spacing="medium" centered>
-        <StackComponent spacing="small" centered>
-          <TitleText tag="p" size="medium">Přihlásit se</TitleText>
+      <StaticContentLayout size="small">
+        <StackComponent spacing="large" centered>
+          <StackComponent spacing="small" centered>
+            <TitleText tag="p" size="medium">Přihlásit se</TitleText>
+          </StackComponent>
+          <StackComponent spacing="medium" centered stretched>
+            <SocialMediaConnectComponent
+              :google-url="
+                href({
+                  provider: 'google',
+                  returnPath,
+                  answerId,
+                  updateToken,
+                })
+              "
+              :facebook-url="
+                href({
+                  provider: 'facebook',
+                  returnPath,
+                  answerId,
+                  updateToken,
+                })
+              "
+            />
+            <ButtonComponent
+              kind="outlined"
+              color="neutral"
+              class="w-full"
+              @click="handleGoToEmailFormClick"
+            >
+              <template #icon>
+                <IconComponent :icon="mdiEmailOutline" />
+              </template>
+              Pomocí emailu
+            </ButtonComponent>
+          </StackComponent>
+
+          <StackComponent centered spacing="large">
+            <BodyText size="small" centered>
+              Vaše osobní údaje budou zpracovávány za účelem tvorby
+              uživatelského profilu, a to v souladu s
+              <router-link to="/ochrana-dat"
+                >Podmínkami ochrany osobních údajů</router-link
+              >.
+            </BodyText>
+            <StackComponent horizontal centered spacing="extra-small">
+              <BodyText size="medium" strong
+                >Ještě nemáte profil?
+                <router-link to="/registrace"> Vytvořte si ho </router-link>
+              </BodyText>
+            </StackComponent>
+          </StackComponent>
         </StackComponent>
-        <StackComponent spacing="medium" centered>
-          <SocialMediaConnectComponent
-            :google-url="
-              href({
-                provider: 'google',
-                returnPath,
-                answerId,
-                updateToken,
-              })
-            "
-            :facebook-url="
-              href({
-                provider: 'facebook',
-                returnPath,
-                answerId,
-                updateToken,
-              })
-            "
-          />
-        </StackComponent>
-        <StackComponent centered spacing="extra-small">
-          <BodyText size="medium">Ještě nemáte profil?</BodyText>
-          <ButtonComponent
-            kind="link"
-            color="primary"
-            @click="handleGoToRegisterClick"
-          >
-            Vytvořit profil
-          </ButtonComponent>
-        </StackComponent>
-        <BodyText size="small">
-          Přihlášením udělujete souhlas se zpracováním osobních údajů v souladu
-          se
-          <router-link to="/ochrana-dat"
-            >zásadami ochrany osobních údajů</router-link
-          >.
-        </BodyText>
-      </StackComponent>
+      </StaticContentLayout>
     </StickyHeaderLayout>
   </BackgroundComponent>
 </template>

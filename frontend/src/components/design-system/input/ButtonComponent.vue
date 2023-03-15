@@ -62,7 +62,6 @@ const computedSize = computed(() =>
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
   line-height: 0;
   padding: 0;
   cursor: pointer;

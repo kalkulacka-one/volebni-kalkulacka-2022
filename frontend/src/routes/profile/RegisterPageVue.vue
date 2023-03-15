@@ -1,17 +1,19 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
+import { mdiCloseCircleOutline, mdiEmailOutline } from '@mdi/js';
+
 import { appRoutes } from '@/main';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
 import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
+import StaticContentLayout from '@/components/layouts/StaticContentLayout.vue';
 import TitleText from '@/components/design-system/typography/TitleText.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
-import { mdiCloseCircleOutline } from '@mdi/js';
 import SocialMediaConnectComponent from './SocialMediaConnectComponent.vue';
 
 const router = useRouter();
@@ -58,7 +60,11 @@ const handleClose = () => {
   });
 };
 
-const handleGoToLoginClick = () => router.push(appRoutes.login);
+const handleGoToEmailFormClick = () => {
+  router.push({
+    name: appRoutes.registerForm.name,
+  });
+};
 </script>
 
 <template>
@@ -73,51 +79,73 @@ const handleGoToLoginClick = () => router.push(appRoutes.login);
           </template>
         </NavigationBar>
       </template>
-      <StackComponent spacing="large" centered>
-        <StackComponent spacing="small" centered>
-          <TitleText tag="p" size="medium">Vytvořit profil</TitleText>
-          <BodyText strong size="small">
-            Sledujte názorový vývoj ve svém profilu
-          </BodyText>
+      <StaticContentLayout size="small">
+        <StackComponent spacing="large" centered>
+          <StackComponent spacing="small" centered>
+            <TitleText tag="p" size="medium">Vytvořit profil</TitleText>
+            <BodyText strong size="small">
+              Sledujte názorový vývoj ve svém profilu
+            </BodyText>
+          </StackComponent>
+          <StackComponent spacing="medium" centered stretched>
+            <SocialMediaConnectComponent
+              :google-url="
+                href({
+                  provider: 'google',
+                  returnPath,
+                  answerId,
+                  updateToken,
+                })
+              "
+              :facebook-url="
+                href({
+                  provider: 'facebook',
+                  returnPath,
+                  answerId,
+                  updateToken,
+                })
+              "
+            />
+
+            <ButtonComponent
+              kind="outlined"
+              color="neutral"
+              class="w-full"
+              @click="handleGoToEmailFormClick"
+            >
+              <template #icon>
+                <IconComponent :icon="mdiEmailOutline" />
+              </template>
+              Vytvořit profil pomocí emailu
+            </ButtonComponent>
+          </StackComponent>
+          <StackComponent centered spacing="large">
+            <BodyText size="small" centered>
+              Vaše osobní údaje budou zpracovávány za účelem tvorby
+              uživatelského profilu, a to v souladu s
+              <router-link to="/ochrana-dat"
+                >Podmínkami ochrany osobních údajů</router-link
+              >.
+            </BodyText>
+            <StackComponent horizontal centered spacing="extra-small">
+              <BodyText size="medium" strong
+                >Už máte profil?
+                <router-link to="/prihlaseni"> Přihlašte se </router-link>
+              </BodyText>
+            </StackComponent>
+          </StackComponent>
         </StackComponent>
-        <StackComponent spacing="medium" centered>
-          <SocialMediaConnectComponent
-            :google-url="
-              href({
-                provider: 'google',
-                returnPath,
-                answerId,
-                updateToken,
-              })
-            "
-            :facebook-url="
-              href({
-                provider: 'facebook',
-                returnPath,
-                answerId,
-                updateToken,
-              })
-            "
-          />
-        </StackComponent>
-        <StackComponent centered spacing="extra-small">
-          <BodyText size="medium">Už máte profil?</BodyText>
-          <ButtonComponent
-            kind="link"
-            color="primary"
-            @click="handleGoToLoginClick"
-          >
-            Přihlásit se
-          </ButtonComponent>
-        </StackComponent>
-        <BodyText size="small">
-          Registrací udělujete souhlas se zpracováním osobních údajů v souladu
-          se
-          <router-link to="/ochrana-dat"
-            >zásadami ochrany osobních údajů</router-link
-          >.
-        </BodyText>
-      </StackComponent>
+      </StaticContentLayout>
     </StickyHeaderLayout>
   </BackgroundComponent>
 </template>
+
+<style scoped lang="scss">
+.auth-layout {
+  display: grid;
+  grid-template-columns: 1fr 21rem 1fr;
+}
+.auth-layout__col {
+  grid-column-start: 2;
+}
+</style>

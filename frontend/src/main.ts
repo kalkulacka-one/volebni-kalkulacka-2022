@@ -31,6 +31,8 @@ import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.v
 import { getDistrictCode } from './common/utils';
 import VueSocialSharing from 'vue-social-sharing';
 import RegisterPageVue from './routes/profile/RegisterPageVue.vue';
+import RegisterFormPageVue from './routes/profile/RegisterFormPageVue.vue';
+import LoginFormPageVue from './routes/profile/LoginFormPageVue.vue';
 import LoginPageVue from './routes/profile/LoginPageVue.vue';
 import ProfilePageVue from './routes/profile/ProfilePage.vue';
 import ProfileSettingsPageVue from './routes/profile/ProfileSettingsPage.vue';
@@ -189,6 +191,15 @@ export const appRoutes = {
       title: 'Přihlášení - Volební kalkulačka',
     },
   },
+
+  loginForm: {
+    name: 'login-form',
+    path: '/prihlaseni-emailem',
+    component: LoginFormPageVue,
+    meta: {
+      title: 'Přihlášení - Volební kalkulačka',
+    },
+  },
   register: {
     name: 'register',
     path: '/registrace',
@@ -197,6 +208,15 @@ export const appRoutes = {
       title: 'Registrace - Volební kalkulačka',
     },
   },
+  registerForm: {
+    name: 'register-form',
+    path: '/registracni-formular',
+    component: RegisterFormPageVue,
+    meta: {
+      title: 'Registrační formulář - Volební kalkulačka',
+    },
+  },
+
   profile: {
     name: 'profile',
     path: '/muj-profil',
