@@ -20,7 +20,6 @@ import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
 import QuestionsMethodologyPageVue from './routes/questions-methodology/QuestionsMethodologyPageVue.vue';
 import { useElectionStore } from './stores/electionStore';
-import { useUserStore } from './stores/userStore';
 import { createPinia } from 'pinia';
 import ErrorPageVue, { ErrorPageEnum } from './routes/error/ErrorPage.vue';
 import { decodeResults, encodeResults } from './common/resultParser';
@@ -30,9 +29,8 @@ import AboutElectionsPageVue from './routes/about-elections/AboutElectionsPage.v
 import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
 import { getDistrictCode } from './common/utils';
 import VueSocialSharing from 'vue-social-sharing';
-import RegisterPageVue from './routes/profile/RegisterPageVue.vue';
+import AuthPageVue from './routes/profile/AuthPageVue.vue';
 import EmailFormPageVue from './routes/profile/EmailFormPageVue.vue';
-import LoginPageVue from './routes/profile/LoginPageVue.vue';
 import ProfilePageVue from './routes/profile/ProfilePage.vue';
 import ProfileSettingsPageVue from './routes/profile/ProfileSettingsPage.vue';
 
@@ -185,7 +183,8 @@ export const appRoutes = {
   login: {
     name: 'login',
     path: '/prihlaseni',
-    component: LoginPageVue,
+    component: AuthPageVue,
+    props: { type: 'login' },
     meta: {
       title: 'Přihlášení - Volební kalkulačka',
     },
@@ -203,7 +202,8 @@ export const appRoutes = {
   register: {
     name: 'register',
     path: '/registrace',
-    component: RegisterPageVue,
+    component: AuthPageVue,
+    props: { type: 'registration' },
     meta: {
       title: 'Registrace - Volební kalkulačka',
     },

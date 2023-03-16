@@ -16,6 +16,14 @@ import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import SocialMediaConnectComponent from './SocialMediaConnectComponent.vue';
 
+export interface Props {
+  type?: 'registration' | 'login';
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  type: 'login',
+});
+
 const router = useRouter();
 const route = useRoute();
 
@@ -54,15 +62,22 @@ const href = ({
 
 // TODO: see https://stackoverflow.com/questions/62358716/check-if-there-is-a-previous-page-in-vue-route
 const handleClose = () => {
+  // if (window.history.length > 1) {
+  //   router.go(-1);
+  // } else {
   router.push({
     name: appRoutes.index.name,
     query: { ...route.query },
   });
+  // }
 };
 
 const handleGoToEmailFormClick = () => {
   router.push({
-    name: appRoutes.registerForm.name,
+    name:
+      props.type === 'login'
+        ? appRoutes.loginForm.name
+        : appRoutes.registerForm.name,
   });
 };
 </script>
@@ -82,8 +97,13 @@ const handleGoToEmailFormClick = () => {
       <StaticContentLayout size="small">
         <StackComponent spacing="large" centered>
           <StackComponent spacing="small" centered>
-            <TitleText tag="p" size="medium">Vytvořit profil</TitleText>
-            <BodyText strong size="small">
+            <TitleText tag="p" size="medium">
+              <template v-if="type === 'registration'"
+                >Vytvořit profil</template
+              >
+              <template v-else>Přihlásit se</template>
+            </TitleText>
+            <BodyText strong size="small" v-if="type === 'registration'">
               Sledujte názorový vývoj ve svém profilu
             </BodyText>
           </StackComponent>
@@ -116,7 +136,11 @@ const handleGoToEmailFormClick = () => {
               <template #icon>
                 <IconComponent :icon="mdiEmailOutline" />
               </template>
-              Vytvořit profil pomocí emailu
+
+              <template v-if="type === 'registration'"
+                >Vytvořit profil pomocí emailu</template
+              >
+              <template v-else>Pomocí emailu</template>
             </ButtonComponent>
           </StackComponent>
           <StackComponent centered spacing="large">
@@ -128,9 +152,13 @@ const handleGoToEmailFormClick = () => {
               >.
             </BodyText>
             <StackComponent horizontal centered spacing="extra-small">
-              <BodyText size="medium" strong
+              <BodyText v-if="type === 'registration'" size="medium" strong
                 >Už máte profil?
                 <router-link to="/prihlaseni"> Přihlašte se </router-link>
+              </BodyText>
+              <BodyText v-else size="medium" strong
+                >Ještě nemáte profil?
+                <router-link to="/registrace"> Vytvořte si ho </router-link>
               </BodyText>
             </StackComponent>
           </StackComponent>
