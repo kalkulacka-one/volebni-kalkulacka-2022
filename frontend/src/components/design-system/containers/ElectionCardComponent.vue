@@ -129,7 +129,7 @@ const getReducedCandidates = () => {
 </script>
 
 <template>
-  <CardComponent padding="large" border shadow corner="bottom-right">
+  <CardComponent :padding="Object('large')" border shadow corner="bottom-right">
     <StackComponent spacing="medium">
       <StackComponent spacing="extra-small">
         <TitleText tag="h4" size="small">{{ electionName }}</TitleText>

@@ -116,7 +116,6 @@ const getStrategyCallback = (strategy: string) => {
         update: {
           authProvider: strategy,
           authProviderId: profile.id,
-          displayName: profile.displayName,
         },
         create: {
           email: email,

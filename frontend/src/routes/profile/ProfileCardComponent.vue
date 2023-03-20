@@ -43,7 +43,7 @@ const router = useRouter();
 
       <ButtonComponent
         kind="link"
-        @click="router.push(appRoutes.profileSettings)"
+        @click.prevent="router.push(appRoutes.profileSettings)"
       >
         <IconComponent
           :icon="mdiCogOutline"

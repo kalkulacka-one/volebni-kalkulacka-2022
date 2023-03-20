@@ -93,8 +93,6 @@ const handleLogout = async () => {
     throw Error('Logout failed');
   }
 };
-
-if (!userStore.user) router.push(appRoutes.login);
 </script>
 
 <template>
@@ -181,7 +179,7 @@ if (!userStore.user) router.push(appRoutes.login);
               class="w-full"
               @click.prevent="handleOpenModal"
             >
-              Odstránit profil
+              Odstranit profil
               <template #iconAfter>
                 <IconComponent :icon="mdiTrashCanOutline" />
               </template>

@@ -1,0 +1,151 @@
+<script setup lang="ts">
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+import { mdiArrowLeft, mdiArrowRight, mdiEmailOutline } from '@mdi/js';
+import { appRoutes } from '@/main';
+
+import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
+import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
+import BodyText from '@/components/design-system/typography/BodyText.vue';
+import CardComponent from '@/components/design-system/containers/CardComponent.vue';
+import IconButton from '@/components/design-system/input/IconButton.vue';
+import IconComponent from '@/components/design-system/icons/IconComponent.vue';
+import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
+import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
+import StackComponent from '@/components/design-system/layout/StackComponent.vue';
+import StaticContentLayout from '@/components/layouts/StaticContentLayout.vue';
+import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
+import TextInputComponent from '@/components/design-system/input/TextInputComponent.vue';
+import TitleText from '@/components/design-system/typography/TitleText.vue';
+
+export interface Props {
+  type?: 'registration' | 'login';
+}
+
+withDefaults(defineProps<Props>(), {
+  type: 'login',
+});
+
+const router = useRouter();
+const emailAddress = ref('');
+const posting = ref();
+
+const handlePreviousClick = () => router.go(-1);
+
+const handleGoToLoginClick = () => router.push(appRoutes.login.name);
+
+// const handleEmailSubmitClick = () => true;
+
+const handleSubmit = async () => {
+  posting.value = true;
+
+  const response = await fetch('/api/auth/magiclogin', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ destination: emailAddress.value }),
+  });
+
+  if (response.ok) {
+    console.log('OK!');
+    // formSavedSuccess.value = 'Vaše změny byly úspěšne zapsány';
+    posting.value = false;
+    // userStore.fetchUser();
+  } else {
+    posting.value = false;
+    throw Error('User update failed');
+  }
+};
+</script>
+
+<template>
+  <BackgroundComponent>
+    <StickyHeaderLayout>
+      <template #header>
+        <ResponsiveWrapper extra-small small>
+          <SecondaryNavigationBar centered-title transparent>
+            <template #before>
+              <IconButton @click="handlePreviousClick">
+                <IconComponent :icon="mdiArrowLeft" title="Zpátky" />
+              </IconButton>
+            </template>
+          </SecondaryNavigationBar>
+        </ResponsiveWrapper>
+        <ResponsiveWrapper medium large extra-large huge>
+          <SecondaryNavigationBar transparent>
+            <template #before>
+              <IconButton @click="handlePreviousClick">
+                <IconComponent :icon="mdiArrowLeft" title="Zpátky" />
+              </IconButton>
+            </template>
+          </SecondaryNavigationBar>
+        </ResponsiveWrapper>
+      </template>
+      <StaticContentLayout size="small">
+        <StackComponent spacing="medium" centered>
+          <TitleText tag="p" size="medium">
+            <template v-if="type === 'registration'">Vytvořit profil</template>
+            <template v-else>Přihlásit se</template>
+          </TitleText>
+
+          <BodyText strong size="medium">
+            Zadajte svoji emailovou adresu
+          </BodyText>
+
+          <BodyText tag="p" size="medium" centered>
+            <template v-if="type === 'registration'"
+              >Do e-mailové schránky Vám zašleme e-mail s&nbsp;ověřovacím
+              odkazem. Registraci úspěšně dokončíte po kliknutí na
+              něj.</template
+            >
+            <template v-else
+              >Do e-mailové schránky Vám zašleme e-mail s&nbsp;ověřovacím
+              odkazem.</template
+            >
+          </BodyText>
+
+          <form
+            id="register-form"
+            ref="form"
+            @submit.prevent="() => handleSubmit"
+          >
+            <CardComponent
+              corner="top-left"
+              :padding="Object('medium')"
+              border
+              border-radius="medium"
+              shadow
+              class="form-wrapper"
+            >
+              <StackComponent spacing="medium" centered stretched>
+                <TextInputComponent
+                  required
+                  label="E-mail"
+                  type="email"
+                  placeholder="E-mail"
+                  :value="emailAddress"
+                  v-model="emailAddress"
+                  :icon="mdiEmailOutline"
+                  :disabled="posting"
+                />
+
+                <ButtonComponent
+                  kind="filled"
+                  color="primary"
+                  @click.prevent="handleSubmit"
+                  :loading="posting"
+                >
+                  Zaslat potvrdzovací email
+                  <template #iconAfter>
+                    <IconComponent :icon="mdiArrowRight" />
+                  </template>
+                </ButtonComponent>
+              </StackComponent>
+            </CardComponent>
+          </form>
+        </StackComponent>
+      </StaticContentLayout>
+    </StickyHeaderLayout>
+  </BackgroundComponent>
+</template>
