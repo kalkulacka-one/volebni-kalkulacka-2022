@@ -515,21 +515,18 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
       .pavel-fischer {
         grid-row: 2;
         grid-column: 1;
-        filter: grayscale(100%);
         opacity: 60%;
       }
 
       .jaroslav-basta {
         grid-row: 3;
         grid-column: 2;
-        filter: grayscale(100%);
         opacity: 60%;
       }
 
       .josef-stredula {
         grid-row: 4;
         grid-column: 1;
-        filter: grayscale(100%);
         opacity: 60%;
       }
 
@@ -541,34 +538,29 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
       .tomas-zima {
         grid-row: 4;
         grid-column: 3;
-        filter: grayscale(100%);
         opacity: 60%;
       }
 
       .danuse-nerudova {
         grid-row: 4;
         grid-column: 10;
-        filter: grayscale(100%);
         opacity: 60%;
       }
 
       .andrej-babis {
         grid-row: 2;
         grid-column: 11;
-        filter: grayscale(100%);
       }
 
       .karel-divis {
         grid-row: 4;
         grid-column: 11;
-        filter: grayscale(100%);
         opacity: 60%;
       }
 
       .marek-hilser {
         grid-row: 3;
         grid-column: 12;
-        filter: grayscale(100%);
         opacity: 60%;
       }
     }
@@ -584,6 +576,19 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
     .other-calcs {
       grid-column: 4/10;
     }
+  }
+
+  .avatars {
+      .pavel-fischer,
+      .jaroslav-basta,
+      .josef-stredula,
+      .tomas-zima,
+      .danuse-nerudova,
+      .andrej-babis,
+      .karel-divis,
+      .marek-hilser {
+        filter: grayscale(100%);
+      }
   }
 }
 
