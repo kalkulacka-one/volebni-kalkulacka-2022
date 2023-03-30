@@ -47,9 +47,9 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
         </BodyText>
         <HeadlineText tag="p" size="small">
           <span style="color: rgb(var(--color-neutral-fg))">
-            Petr Pavel × Andrej Babiš<br />
+            Petr Pavel<br />
           </span>
-          Kdo z&nbsp;nich bude reprezentovat<br />vaše&nbsp;názory?
+          Bude reprezentovat<br />vaše&nbsp;názory?
         </HeadlineText>
         <BodyText size="small" tag="h2">
           Volební kalkulačka pro 2. kolo<br />20 otázek, cca 5 minut
@@ -77,7 +77,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
         </ButtonComponent>
         <BodyText size="small">
           <a href="https://prezident2023.programydovoleb.cz/"
-            >Kdo kandiduje (Programy do voleb)
+            >Kdo kandidoval (Programy do voleb)
           </a>
         </BodyText>
         <BodyText size="small">
@@ -555,6 +555,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
       .andrej-babis {
         grid-row: 2;
         grid-column: 11;
+        filter: grayscale(100%);
       }
 
       .karel-divis {
