@@ -47,9 +47,9 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
         </BodyText>
         <HeadlineText tag="p" size="small">
           <span style="color: rgb(var(--color-neutral-fg))">
-            Petr Pavel × Andrej Babiš<br />
+            Petr Pavel<br />
           </span>
-          Kdo z&nbsp;nich bude reprezentovat<br />vaše&nbsp;názory?
+          Bude reprezentovat<br />vaše&nbsp;názory?
         </HeadlineText>
         <BodyText size="small" tag="h2">
           Volební kalkulačka pro 2. kolo<br />20 otázek, cca 5 minut
@@ -77,7 +77,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
         </ButtonComponent>
         <BodyText size="small">
           <a href="https://prezident2023.programydovoleb.cz/"
-            >Kdo kandiduje (Programy do voleb)
+            >Kdo kandidoval (Programy do voleb)
           </a>
         </BodyText>
         <BodyText size="small">
@@ -515,21 +515,18 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
       .pavel-fischer {
         grid-row: 2;
         grid-column: 1;
-        filter: grayscale(100%);
         opacity: 60%;
       }
 
       .jaroslav-basta {
         grid-row: 3;
         grid-column: 2;
-        filter: grayscale(100%);
         opacity: 60%;
       }
 
       .josef-stredula {
         grid-row: 4;
         grid-column: 1;
-        filter: grayscale(100%);
         opacity: 60%;
       }
 
@@ -541,14 +538,12 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
       .tomas-zima {
         grid-row: 4;
         grid-column: 3;
-        filter: grayscale(100%);
         opacity: 60%;
       }
 
       .danuse-nerudova {
         grid-row: 4;
         grid-column: 10;
-        filter: grayscale(100%);
         opacity: 60%;
       }
 
@@ -560,14 +555,12 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
       .karel-divis {
         grid-row: 4;
         grid-column: 11;
-        filter: grayscale(100%);
         opacity: 60%;
       }
 
       .marek-hilser {
         grid-row: 3;
         grid-column: 12;
-        filter: grayscale(100%);
         opacity: 60%;
       }
     }
@@ -583,6 +576,19 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
     .other-calcs {
       grid-column: 4/10;
     }
+  }
+
+  .avatars {
+      .pavel-fischer,
+      .jaroslav-basta,
+      .josef-stredula,
+      .tomas-zima,
+      .danuse-nerudova,
+      .andrej-babis,
+      .karel-divis,
+      .marek-hilser {
+        filter: grayscale(100%);
+      }
   }
 }
 
