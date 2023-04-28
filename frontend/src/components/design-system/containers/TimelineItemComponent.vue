@@ -30,15 +30,15 @@ const props = withDefaults(defineProps<Props>(), {
   &:before {
     top: var(--base-medium);
     left: calc(var(--base-small) * -1);
-    width: var(--base-smaller);
-    height: var(--base-smaller);
+    width: var(--base-extra-small);
+    height: var(--base-extra-small);
     border-radius: 50%;
   }
 
   &:after {
     top: var(--spacing-huge);
     left: calc(0.65rem * -1);
-    height: calc(100% - var(--base-smaller));
+    height: calc(100% - var(--base-extra-small));
     width: 1px;
   }
 
