@@ -5,7 +5,6 @@ import { mdiCogOutline } from '@mdi/js';
 import { appRoutes } from '@/main';
 
 import BodyText from '@/components/design-system/typography/BodyText.vue';
-import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
 import CardComponent from '@/components/design-system/containers/CardComponent.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
@@ -26,10 +25,12 @@ const router = useRouter();
 
 <template>
   <CardComponent
+    class="card"
     corner="top-right"
     spacing="medium"
     border
     border-radius="medium"
+    @click.prevent="router.push(appRoutes.profileSettings)"
   >
     <StackComponent spacing="small" horizontal centered space-between>
       <StackComponent spacing="extra-small">
@@ -41,18 +42,22 @@ const router = useRouter();
         </BodyText>
       </StackComponent>
 
-      <ButtonComponent
-        kind="link"
-        @click.prevent="router.push(appRoutes.profileSettings)"
-      >
-        <IconComponent
-          :icon="mdiCogOutline"
-          size="medium"
-          color="rgb(var(--color-neutral-fg))"
-        />
-      </ButtonComponent>
+      <IconComponent
+        :icon="mdiCogOutline"
+        size="medium"
+        color="rgb(var(--color-neutral-fg))"
+      />
     </StackComponent>
   </CardComponent>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.card {
+  cursor: pointer;
+  z-index: 1;
+  &:hover {
+    box-shadow: 6px 8px 0px 0px
+      rgba(var(--color-neutral-shadow), var(--transparency-20));
+  }
+}
+</style>
