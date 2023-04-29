@@ -90,7 +90,7 @@ const handleSubmit = async () => {
           </TitleText>
 
           <BodyText strong size="medium">
-            Zadajte svoji emailovou adresu
+            Zadajte svoji e-mailovou adresu
           </BodyText>
 
           <BodyText tag="p" size="medium" centered>
@@ -136,7 +136,7 @@ const handleSubmit = async () => {
                   @click.prevent="handleSubmit"
                   :loading="posting"
                 >
-                  Zaslat potvrdzovací email
+                  Zaslat potvrdzovací e-mail
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>

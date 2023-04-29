@@ -138,9 +138,9 @@ const handleGoToEmailFormClick = () => {
               </template>
 
               <template v-if="type === 'registration'"
-                >Vytvořit profil pomocí emailu</template
+                >Vytvořit profil pomocí e-mailu</template
               >
-              <template v-else>Pomocí emailu</template>
+              <template v-else>Pomocí e-mailu</template>
             </ButtonComponent>
           </StackComponent>
           <StackComponent centered spacing="large">

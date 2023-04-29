@@ -169,7 +169,7 @@ const handleLogout = async () => {
             </BodyText>
 
             <BodyText size="small">
-              Přectěte si o tom na <a href=".">Zásady ochrany dat</a>
+              Přectěte si o tom na <a href="/ochrana-dat">Zásady ochrany dat</a>
             </BodyText>
           </StackComponent>
           <StackComponent centered spacing="extra-small" class="w-full">

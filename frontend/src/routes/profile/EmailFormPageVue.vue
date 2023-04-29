@@ -53,11 +53,11 @@ const texts = {
   1: {
     registration: {
       title: 'Registrace čeká na Vaše potvrzení',
-      info: 'Potvrďte registraci na Vašem emailu',
+      info: 'Potvrďte registraci na Vašem e-mailu',
     },
     login: {
       title: 'Přihlášení čeká na Vaše potvrzení',
-      info: 'Potvrďte přihlášení na Vašem emailu',
+      info: 'Potvrďte přihlášení na Vašem e-mailu',
     },
   },
 };
