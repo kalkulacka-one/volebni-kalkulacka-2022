@@ -109,6 +109,14 @@ To run also backend serverless functions locally, you can use [Vercel CLI](https
 
   _In case you don't have access to Česko.Digital project or won't link it, you need to manually adjust the project settings on Vercel to use `frontend` as root directory, Vite as framework preset and `npm run build:vercel` as a build command._
 
+#### Sending e-mails locally
+
+You can run mailhog service via docker image by:
+
+```console
+docker run -p 8025:8025 -p 1025:1025 mailhog/mailhog
+```
+
 #### C) Running Storybook for component development
 
 Use [Storybook](https://storybook.js.org) to work on the presentational components.

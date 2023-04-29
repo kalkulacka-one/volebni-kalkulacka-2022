@@ -25,6 +25,7 @@ import { useUserStore } from '@/stores/userStore';
 const router = useRouter();
 const route = useRoute();
 const userStore = useUserStore();
+await userStore.fetchUser();
 
 const user = computed(() => userStore.user);
 const info = ref<HTMLElement | null>(null);

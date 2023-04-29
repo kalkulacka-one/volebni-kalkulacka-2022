@@ -21,7 +21,7 @@ const props = withDefaults(defineProps<Props>(), {
       border-radius="medium"
       shadow
     >
-      <StackComponent spacing="medium" centered>
+      <StackComponent spacing="medium" centered stretched>
         <slot />
 
         <BodyText

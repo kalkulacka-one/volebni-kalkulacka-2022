@@ -93,8 +93,6 @@ const handleLogout = async () => {
     throw Error('Logout failed');
   }
 };
-
-if (!userStore.user) router.push(appRoutes.login);
 </script>
 
 <template>
@@ -171,7 +169,7 @@ if (!userStore.user) router.push(appRoutes.login);
             </BodyText>
 
             <BodyText size="small">
-              Přectěte si o tom na <a href=".">Zásady ochrany dat</a>
+              Přectěte si o tom na <a href="/ochrana-dat">Zásady ochrany dat</a>
             </BodyText>
           </StackComponent>
           <StackComponent centered spacing="extra-small" class="w-full">
@@ -181,7 +179,7 @@ if (!userStore.user) router.push(appRoutes.login);
               class="w-full"
               @click.prevent="handleOpenModal"
             >
-              Odstránit profil
+              Odstranit profil
               <template #iconAfter>
                 <IconComponent :icon="mdiTrashCanOutline" />
               </template>

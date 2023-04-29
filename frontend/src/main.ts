@@ -1,14 +1,20 @@
 import { createApp } from 'vue';
+import { createPinia } from 'pinia';
+import VueSocialSharing from 'vue-social-sharing';
+
 import {
   createRouter,
   createWebHistory,
+  type NavigationGuardNext,
   type RouteLocationNormalized,
 } from 'vue-router';
 import App from './App.vue';
-
-import './assets/main.css';
-
+import { getDistrictCode } from './common/utils';
+import { decodeResults, encodeResults } from './common/resultParser';
+import { useElectionStore } from './stores/electionStore';
+import { useUserStore } from '@/stores/userStore';
 import EmbedProviderWrapper from '@/components/utilities/embedding/EmbedProviderWrapper.vue';
+import './assets/main.css';
 
 //routes
 import GuidePageVue from './routes/guide/GuidePage.vue';
@@ -19,19 +25,13 @@ import RecapPageVue from './routes/recap/RecapPage.vue';
 import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
 import QuestionsMethodologyPageVue from './routes/questions-methodology/QuestionsMethodologyPageVue.vue';
-import { useElectionStore } from './stores/electionStore';
-import { useUserStore } from './stores/userStore';
-import { createPinia } from 'pinia';
 import ErrorPageVue, { ErrorPageEnum } from './routes/error/ErrorPage.vue';
-import { decodeResults, encodeResults } from './common/resultParser';
 import SharePageVue from './routes/share/SharePage.vue';
 import AboutUsPageVue from './routes/about-us/AboutUsPage.vue';
 import AboutElectionsPageVue from './routes/about-elections/AboutElectionsPage.vue';
 import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
-import { getDistrictCode } from './common/utils';
-import VueSocialSharing from 'vue-social-sharing';
-import RegisterPageVue from './routes/profile/RegisterPageVue.vue';
-import LoginPageVue from './routes/profile/LoginPageVue.vue';
+import AuthPageVue from './routes/profile/AuthPageVue.vue';
+import EmailFormPageVue from './routes/profile/EmailFormPageVue.vue';
 import ProfilePageVue from './routes/profile/ProfilePage.vue';
 import ProfileSettingsPageVue from './routes/profile/ProfileSettingsPage.vue';
 
@@ -56,6 +56,17 @@ export const questionGuard = (
     console.warn(`Wrong question route ${to.path}`);
     return false;
   }
+};
+
+export const authGuard = async (
+  to: RouteLocationNormalized,
+  _from: RouteLocationNormalized,
+  next: NavigationGuardNext
+) => {
+  const userStore = useUserStore();
+  await userStore.fetchUser();
+  if (userStore.user) next();
+  else next(appRoutes.login);
 };
 
 const resultsProcessor = (
@@ -184,19 +195,41 @@ export const appRoutes = {
   login: {
     name: 'login',
     path: '/prihlaseni',
-    component: LoginPageVue,
+    component: AuthPageVue,
+    props: { type: 'login' },
     meta: {
       title: 'Přihlášení - Volební kalkulačka',
     },
   },
+  loginForm: {
+    name: 'login-form',
+    path: '/prihlaseni-emailem',
+    component: EmailFormPageVue,
+    props: { type: 'login' },
+    meta: {
+      title: 'Přihlášení - Volební kalkulačka',
+    },
+  },
+
   register: {
     name: 'register',
     path: '/registrace',
-    component: RegisterPageVue,
+    component: AuthPageVue,
+    props: { type: 'registration' },
     meta: {
       title: 'Registrace - Volební kalkulačka',
     },
   },
+  registerForm: {
+    name: 'register-form',
+    path: '/registracni-formular',
+    component: EmailFormPageVue,
+    props: { type: 'registration' },
+    meta: {
+      title: 'Registrační formulář - Volební kalkulačka',
+    },
+  },
+
   profile: {
     name: 'profile',
     path: '/muj-profil',
@@ -204,6 +237,7 @@ export const appRoutes = {
     meta: {
       title: 'Můj profil - Volební kalkulačka',
     },
+    beforeEnter: authGuard,
   },
   profileSettings: {
     name: 'profile-settings',
@@ -212,6 +246,7 @@ export const appRoutes = {
     meta: {
       title: 'Nastavení profilu - Volební kalkulačka',
     },
+    beforeEnter: authGuard,
   },
   fallback: {
     path: '/:catchAll(.*)',

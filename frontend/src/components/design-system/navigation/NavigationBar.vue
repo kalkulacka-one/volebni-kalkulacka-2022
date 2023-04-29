@@ -115,7 +115,7 @@ const handleAvatarClick = () => router.push(appRoutes.profile);
           background-color="rgb(var(--palette-primary-90))"
           :name="user.displayName ? user.displayName : user.email"
           class="user-avatar"
-          @click="handleAvatarClick"
+          @click="() => handleAvatarClick()"
         />
         <StackComponent
           v-if="withAccount && !user"

@@ -1,13 +1,16 @@
 import passport from 'passport';
+import { VercelRequest, VercelResponse } from '@vercel/node';
 import { sign } from 'jsonwebtoken';
 import express, { Express, Request, Response, NextFunction } from 'express';
 import { Strategy as FacebookStrategy } from 'passport-facebook';
 import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
+import MagicLoginStrategy from 'passport-magic-login';
 import type { Profile } from 'passport';
 import { prisma } from '../../src/server/prisma';
 import { assignAnswerToUser } from '../../src/server/answers';
 import ms from 'ms';
 import { respond404 } from '../../src/server/errors';
+import { sendEmail } from '../../src/server/mailing';
 
 const app: Express = express();
 
@@ -63,12 +66,24 @@ const providers = {
 
 const getStrategyCallback = (strategy: string) => {
   return async (
-    accessToken: string,
-    refreshToken: string,
-    profile: Profile,
+    accessToken: string | null,
+    refreshToken: string | null,
+    profile: Profile | { destination: string },
     cb: (error: any, user?: any, info?: any) => void
   ) => {
-    const email = profile.emails && profile.emails[0].value;
+    let email: string | undefined;
+    if (strategy === 'magiclogin') {
+      email = (profile as { destination: string }).destination;
+      profile = {
+        displayName: email,
+        id: email,
+        authProvider: 'magiclogin',
+        provider: 'magiclogin',
+      } as Profile;
+    } else {
+      profile = profile as Profile;
+      email = profile.emails && profile.emails[0] && profile.emails[0].value;
+    }
     if (!email) {
       // This is for facebook user, which doesn't have email
       try {
@@ -101,7 +116,6 @@ const getStrategyCallback = (strategy: string) => {
         update: {
           authProvider: strategy,
           authProviderId: profile.id,
-          displayName: profile.displayName,
         },
         create: {
           email: email,
@@ -139,6 +153,41 @@ const redirectAfterCallback = (returnTo: string, res: Response) => {
     return res.redirect(returnTo);
   }
   return res.redirect('/');
+};
+
+const getMagicLogin = () => {
+  if (!process.env.MAGIC_LINK_SECRET) {
+    throw new Error('MAGIC_LINK_SECRET is not defined');
+  }
+  const emailBody = `<html>
+    <body style="font-family: sans-serif; align: center">
+      <p>Děkujeme za přihlášení!</p>
+      <p>Prosíme potvrďte emailovou adresu kliknutím na link níže:</p>
+      <p>
+        <a href="{{confirmationLink}}" style="display: inline-block; text-decoration:none; border: none; border-radius: 4px; color: white; background-color: #0070f4; padding: 12px 20px; font-size: 16px; cursor: pointer;">
+          Ověřit email
+        </a>
+      </p>
+    </body>
+  </html>`;
+  return new MagicLoginStrategy({
+    callbackUrl: `${OAUTH_CALLBACK_URL}/api/auth/magiclogin/callback`,
+    secret: process.env.MAGIC_LINK_SECRET,
+    sendMagicLink: async (destination, href) => {
+      await sendEmail(
+        destination,
+        'Volební kalkulačka - přihlášení',
+        emailBody.replace('{{confirmationLink}}', href),
+        `Prosíme potvrďte emailovou adresu otevřením adresy: ${href}`
+      );
+    },
+    verify: (payload, cb) => {
+      return getStrategyCallback('magiclogin')(null, null, payload, cb);
+    },
+    jwtOptions: {
+      expiresIn: process.env.MAGIC_LINK_EXPIRATION || '2 days',
+    },
+  });
 };
 
 const callback = (provider: string) => {
@@ -230,6 +279,18 @@ for (const provider in providers) {
   }
 }
 
+if (
+  process.env.MAGIC_LINK_SECRET &&
+  process.env.EMAIL_SERVER_HOST &&
+  process.env.EMAIL_SERVER_PORT
+) {
+  const magicLogin = getMagicLogin();
+  passport.use(magicLogin);
+
+  app.post('/api/auth/magiclogin', magicLogin.send);
+  app.get('/api/auth/magiclogin/callback', callback('magiclogin'));
+}
+
 app.get('/api/auth/logout', (req, res) => {
   let redirect = req.query.returnTo;
   if (typeof redirect !== 'string' || !redirect.startsWith('/')) {
@@ -251,4 +312,9 @@ app.get('/*', (req, res) => {
   respond404(res, req.url);
 });
 
-export default app;
+export default function (req: VercelRequest, res: VercelResponse) {
+  // This reads request readable stream and parses it as JSON
+  // Needed for parsing request body in Vercel
+  const { body } = req;
+  return app(req, res);
+}

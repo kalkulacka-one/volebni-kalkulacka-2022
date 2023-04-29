@@ -19,6 +19,7 @@ withDefaults(defineProps<Props>(), {
 
 <style lang="scss" scoped>
 * {
+  flex: 1;
   margin: 0;
   font-family: var(--typography-button-family);
   font-weight: 700;

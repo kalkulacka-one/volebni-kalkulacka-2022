@@ -45,11 +45,10 @@ defineEmits(['update:modelValue']);
     <IconComponent v-if="icon" :icon="icon" class="input-icon" />
 
     <input
-      type="text"
-      :value="modelValue"
       :name="groupName"
       :placeholder="placeholder"
       :disabled="disabled"
+      :value="modelValue"
       @input="
         $emit('update:modelValue', ($event.target as HTMLInputElement).value)
       "
