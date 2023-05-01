@@ -20,12 +20,6 @@ Generator uses Python and FastAPI framework.
 
 [README](generator/README.md)
 
-## Infrastructure
-
-Everything is deployed to AWS and managed using Terraform.
-
-[README](infrastructure/README.md)
-
 ## Data
 
 Each instance of _volebni-kalkulacka-2022_ uses static dataset on CDN. During development this `.json` data are stored in repository in `data` directory. Any change in content of this directory is deployed to main domain under `https://<domain>/data/` directory.
