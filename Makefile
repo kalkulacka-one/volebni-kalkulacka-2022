@@ -10,12 +10,6 @@ test-generator:
 	cd $(GENERATOR_DIR); \
 	make test
 
-pre-commit-run-all:
-	pre-commit run -a -v
-
-pre-commit-install:
-	pre-commit install
-
 install-all: install-all-generator
 
 install-all-generator:
