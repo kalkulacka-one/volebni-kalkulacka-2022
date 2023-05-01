@@ -6,6 +6,20 @@
 
 🚧 WIP 🚧
 
+### Prerequisites
+
+#### Node.js
+
+For running Volební kalkulačka you need Node.js in version specified in the [`.nvmrc`](../.nvmrc) file.
+
+It is a good idea to set up [Node Version Manager](https://github.com/nvm-sh/nvm). Then you can simply run
+
+```console
+nvm install && nvm use
+```
+
+in the project root and you are good to go.
+
 ### Step by step guide
 
 - [ ] Clone the repository
