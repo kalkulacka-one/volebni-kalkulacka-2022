@@ -1,13 +1,12 @@
-name: "Frontend: build, test, lint & deploy"
+name: "Frontend: build, test & lint"
 on:
   push:
-    branches: [main, aws]
+    branches: main
     paths:
       - frontend/**
   pull_request:
     paths:
       - frontend/**
-  workflow_dispatch:
 jobs:
   build:
     name: Build, test & lint
@@ -53,35 +52,3 @@ jobs:
         name: Run end-to-end tests
         run: |
           npm run test:e2e:ci
-      - if: github.ref == 'refs/heads/aws'
-        name: Upload build
-        uses: actions/upload-artifact@v3
-        with:
-          name: frontend-${{ github.sha }}
-          path: frontend/dist
-          retention-days: 1
-  deploy:
-    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/aws'
-    name: Deploy
-    runs-on: ubuntu-latest
-    needs: build
-    env:
-      BUCKET: ${{ secrets.FRONTEND_BUCKET_NAME }}
-      CLOUDFRONT_DEPLOYMENT_ID: ${{ secrets.CLOUDFRONT_DEPLOYMENT_ID }}
-    steps:
-      - name: Download build
-        uses: actions/download-artifact@v3
-        with:
-          name: frontend-${{ github.sha }}
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: eu-central-1
-      - name: Deploy to S3
-        run: |
-          aws s3 sync --sse --delete . s3://${{ env.BUCKET }}
-      - name: Invalidate CloudFront cache
-        run: |
-          aws cloudfront create-invalidation --distribution-id ${{ env.CLOUDFRONT_DEPLOYMENT_ID }} --paths "/*"
