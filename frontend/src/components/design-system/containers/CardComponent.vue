@@ -2,7 +2,7 @@
 import type {
   Radius,
   Gap,
-} from '@/components/design-system/configurations/sizing-and-spacing';
+} from '@/components/design-system/tokens/sizing-and-spacing';
 
 import { computed } from 'vue';
 

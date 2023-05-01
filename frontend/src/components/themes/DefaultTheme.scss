@@ -120,12 +120,6 @@
   @media (max-width: calc($breakpoint-extra-small - 1px)) {
     --responsive-gap-large: var(--gap-small);
   }
-  //     4. extra large
-  --gap-extra-large: calc(var(--base-small) * 4); // ~ 64 px
-  --responsive-gap-extra-large: var(--gap-extra-large);
-  @media (max-width: calc($breakpoint-extra-small - 1px)) {
-    --responsive-gap-extra-large: var(--gap-small);
-  }
   //   - optional gap
   //     1. small
   --responsive-optional-gap-small: 0;
@@ -141,11 +135,6 @@
   }
   @media (max-width: calc($breakpoint-extra-small - 1px)) {
     --responsive-optional-gap-large: 0;
-  }
-  //     4. extra large
-  --responsive-optional-gap-extra-large: var(--gap-extra-large);
-  @media (max-width: calc($breakpoint-extra-small - 1px)) {
-    --responsive-optional-gap-extra-large: 0;
   }
 
   // Color palette

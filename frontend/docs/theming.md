@@ -37,11 +37,11 @@ To use a sizing token within a component, simply use the CSS variable:
 </style>
 ```
 
-The semantic variables have also types defined in [`@/components/design-system/configurations/sizing-and-spacing.ts`](../src/components/design-system/configurations/sizing-and-spacing.ts), which should be used when a variable is used as a prop in a component:
+The semantic variables have also types defined in [`@/components/design-system/tokens/sizing-and-spacing.ts`](../src/components/design-system/tokens/sizing-and-spacing.ts), which should be used when a variable is used as a prop in a component:
 
 ```vue
 <script setup lang="ts">
-import type { Gap } from '@/components/design-system/configurations/sizing-and-spacing';
+import type { Gap } from '@/components/design-system/tokens/sizing-and-spacing';
 
 export interface Props {
   padding: Gap;
@@ -55,7 +55,7 @@ In case you want to restrict the allowed values, simply list them as an intersec
 
 ```vue
 <script setup lang="ts">
-import type { Gap } from '@/components/design-system/configurations/sizing-and-spacing';
+import type { Gap } from '@/components/design-system/tokens/sizing-and-spacing';
 
 export interface Props {
   padding: Gap & ('medium' | 'large');
