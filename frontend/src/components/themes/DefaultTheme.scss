@@ -120,21 +120,34 @@
   @media (max-width: calc($breakpoint-extra-small - 1px)) {
     --responsive-gap-large: var(--gap-small);
   }
-  //   - optional gap
+  //   - responsive gap
   //     1. small
-  --responsive-optional-gap-small: 0;
+  --responsive-gap-small: var(--gap-small);
   //     2. medium
-  --responsive-optional-gap-medium: var(--gap-medium);
+  --responsive-gap-medium: var(--gap-medium);
   @media (max-width: calc($breakpoint-extra-small - 1px)) {
-    --responsive-optional-gap-medium: 0;
+    --responsive-gap-medium: var(--gap-small);
   }
   //     3. large
-  --responsive-optional-gap-large: var(--gap-large);
+  --responsive-gap-large: var(--gap-large);
+  @media (max-width: calc($breakpoint-extra-small - 1px)) {
+    --responsive-gap-large: var(--gap-small);
+  }
+  //   - optional gap
+  //     1. small
+  --optional-gap-small: 0;
+  //     2. medium
+  --optional-gap-medium: var(--gap-medium);
+  @media (max-width: calc($breakpoint-extra-small - 1px)) {
+    --optional-gap-medium: 0;
+  }
+  //     3. large
+  --optional-gap-large: var(--gap-large);
   @media (max-width: calc($breakpoint-medium - 1px)) {
-    --responsive-optional-gap-large: var(--gap-medium);
+    --optional-gap-large: var(--gap-medium);
   }
   @media (max-width: calc($breakpoint-extra-small - 1px)) {
-    --responsive-optional-gap-large: 0;
+    --optional-gap-large: 0;
   }
 
   // Color palette
