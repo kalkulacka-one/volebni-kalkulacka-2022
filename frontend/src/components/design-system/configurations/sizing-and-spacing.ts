@@ -1,7 +1,18 @@
-// Semantic sizings
-export type Border = 'thin' | 'medium' | 'thick';
-export type Radius = 'small' | 'medium' | 'large';
+// - semantic sizings
+//   - border
+export const borders = ['thin', 'medium', 'thick'] as const;
+export type Border = typeof borders[number];
+//   - radius
+export const radiuses = ['small', 'medium', 'large'] as const;
+export type Radius = typeof radiuses[number];
 
-// Semantic spacings
-export type Gap = 'small' | 'medium' | 'large' | 'extra-large';
-export type OptionalGap = 'small' | 'medium' | 'large' | 'extra-large';
+// - semantic spacings
+//   - gap
+export const gaps = ['small', 'medium', 'large'] as const;
+export type Gap = typeof gaps[number];
+//   - responsive gap
+export const responsiveGaps = gaps;
+export type ResponsiveGap = Gap;
+//   - optional gap
+export const optionalGaps = gaps;
+export type OptionalGap = Gap;
