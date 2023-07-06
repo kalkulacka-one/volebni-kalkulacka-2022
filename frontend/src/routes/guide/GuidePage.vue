@@ -412,6 +412,7 @@ const handlePreviousClick = () => {
               </ButtonComponent>
               <ButtonComponent
                 class="skip-button"
+                testId="tlacitko"
                 kind="link"
                 @click="goToQuestions"
               >
