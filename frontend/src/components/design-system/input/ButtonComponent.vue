@@ -42,7 +42,12 @@ const computedSize = computed(() =>
 </script>
 
 <template>
-  <component :is="computedTag" :href="href" :class="['button', classes]" :testId="testId">
+  <component
+    :is="computedTag"
+    :href="href"
+    :class="['button', classes]"
+    :testId="testId"
+  >
     <span
       v-if="$slots.icon"
       :class="['icon', $slots.default ? 'icon--before' : 'icon--only']"
