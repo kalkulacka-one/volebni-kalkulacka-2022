@@ -36,7 +36,7 @@ const classes = computed(() => ({
 const computedTag = computed(() => (props.href ? 'a' : props.tag));
 
 const computedSize = computed(() =>
-  props.kind === 'link' ? props.size : 'medium'
+  props.kind === 'link' ? props.size : 'medium',
 );
 </script>
 

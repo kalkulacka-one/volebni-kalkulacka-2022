@@ -23,7 +23,7 @@ export function sendEmail(
   to: string,
   subject: string,
   html: string,
-  text?: string
+  text?: string,
 ) {
   const transporter = getTransporter();
   return transporter.sendMail({

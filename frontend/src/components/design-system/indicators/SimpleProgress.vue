@@ -10,7 +10,7 @@ export interface SimpleProgressProps {
 }
 const props = defineProps<SimpleProgressProps>();
 const width = computed(() =>
-  props.max !== 0 ? `${(props.value / props.max) * 100}%` : '0%'
+  props.max !== 0 ? `${(props.value / props.max) * 100}%` : '0%',
 );
 </script>
 

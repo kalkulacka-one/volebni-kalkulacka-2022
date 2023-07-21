@@ -14,7 +14,7 @@ export enum UserAnswerEnum {
 }
 
 export const convertAnswerToBool = (
-  answer: UserAnswerEnum
+  answer: UserAnswerEnum,
 ): boolean | undefined => {
   switch (answer) {
     case UserAnswerEnum.yes:
@@ -27,7 +27,7 @@ export const convertAnswerToBool = (
 };
 
 export const convertBoolToAnswer = (
-  answer: boolean | undefined
+  answer: boolean | undefined,
 ): UserAnswerEnum => {
   switch (answer) {
     case true:
@@ -143,7 +143,7 @@ export const useElectionStore = defineStore('election', {
         const res = await fetch('/api/answers');
         const answers = await res.json();
         const calculatorAnswers = answers.filter(
-          (answer: any) => answer.calculatorId === this.calculator?.id
+          (answer: any) => answer.calculatorId === this.calculator?.id,
         );
         if (calculatorAnswers.length > 0) {
           this.resultsId = calculatorAnswers[0].id;
@@ -159,7 +159,7 @@ export const useElectionStore = defineStore('election', {
       };
       const answersCount = this.answers.length;
       const answeredAnswersCount = this.answers.filter(
-        (answer) => answer.answer === UserAnswerEnum.skip
+        (answer) => answer.answer === UserAnswerEnum.skip,
       ).length;
       if (answersCount === answeredAnswersCount) {
         response.action = 'no-action';

@@ -22,7 +22,7 @@ const classes = computed(() => ({
 }));
 
 const background = computed(() =>
-  props.transparent ? 'transparent' : undefined
+  props.transparent ? 'transparent' : undefined,
 );
 </script>
 

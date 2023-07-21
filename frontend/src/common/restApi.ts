@@ -45,11 +45,11 @@ const buildResultData = () => {
     .filter(notEmpty);
   const ra = calculateRelativeAgreement(
     electionStore.calculator.answers,
-    electionStore.answers
+    electionStore.answers,
   );
   const matches: Matches = ra.map((x) => {
     const candidate = electionStore.calculator?.candidates.find(
-      (c) => c.id === x.cId
+      (c) => c.id === x.cId,
     );
     if (!candidate) {
       throw new Error(`Unknown candidate ${x.cId}`);
@@ -93,7 +93,7 @@ export const getResults = async (resultId: string) => {
     throw new Error(`API call response not valid!`);
   }
   const calculator = (await fetchCalculators()).filter(
-    (calculator) => calculator.calculator_id === resParsed.calculatorId
+    (calculator) => calculator.calculator_id === resParsed.calculatorId,
   )[0];
   const electionId = calculator.election_id;
   const districtId = calculator.district_code;

@@ -25,8 +25,8 @@ const selectedCandidateIds = ref(
       ?.filter((x) => {
         if (x.is_active) return x;
       })
-      .map((x) => x.id)
-  )
+      .map((x) => x.id),
+  ),
 );
 
 const onSelectAllClicked = (event: MouseEvent) => {
@@ -44,7 +44,7 @@ watch(
   (newValue, oldValue) => {
     emit('update:modelValue', newValue);
   },
-  { deep: true, immediate: true }
+  { deep: true, immediate: true },
 );
 </script>
 

@@ -31,7 +31,7 @@ declare namespace newrelic {
    */
   function addPageAction(
     name: string,
-    attributes?: Record<string, SimpleType>
+    attributes?: Record<string, SimpleType>,
   ): void;
 
   /**
@@ -63,7 +63,7 @@ declare namespace newrelic {
    */
   function noticeError(
     error: Error | string,
-    customAttributes?: Record<string, SimpleType>
+    customAttributes?: Record<string, SimpleType>,
   ): void;
 
   /**
@@ -175,7 +175,7 @@ declare namespace newrelic {
      */
     // tslint:disable-next-line:no-unnecessary-generics
     getContext<T extends ContextObject = ContextObject>(
-      callback: GetContextCallback<T>
+      callback: GetContextCallback<T>,
     ): this;
 
     /**
@@ -196,7 +196,7 @@ declare namespace newrelic {
      */
     // tslint:disable-next-line:no-unnecessary-generics
     onEnd<T extends ContextObject = ContextObject>(
-      callback: GetContextCallback<T>
+      callback: GetContextCallback<T>,
     ): this;
 
     /**

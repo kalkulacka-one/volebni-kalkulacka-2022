@@ -52,22 +52,22 @@ const isCandidateInCandidateSet = (candidate: Candidate) => {
 };
 
 const questionsToShow = computed(() =>
-  props.questions.filter((x) => isQuestionInTagSet(x))
+  props.questions.filter((x) => isQuestionInTagSet(x)),
 );
 const candidatesToShow = computed(() =>
-  props.candidates.filter((x) => isCandidateInCandidateSet(x))
+  props.candidates.filter((x) => isCandidateInCandidateSet(x)),
 );
 console.debug(candidatesToShow);
 const results = calculateRelativeAgreement(
   props.candidateAnswers,
-  props.answers
+  props.answers,
 );
 const candidateOrder = computed(() =>
   results
     .filter((x) =>
-      props.selectedCandidateIds ? props.selectedCandidateIds.has(x.cId) : true
+      props.selectedCandidateIds ? props.selectedCandidateIds.has(x.cId) : true,
     )
-    .map((response) => response.cId)
+    .map((response) => response.cId),
 );
 
 const mapAnswerToIcon = (answer: string | UserAnswerEnum) => {
@@ -86,7 +86,7 @@ const mapAnswerToIcon = (answer: string | UserAnswerEnum) => {
     default:
       // eslint-disable-next-line no-undef
       newrelic?.noticeError(
-        new Error(`Unexpected answer value: \`${answer}\``)
+        new Error(`Unexpected answer value: \`${answer}\``),
       );
       return vkiLogoNeutral;
   }
@@ -108,7 +108,7 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
     default:
       // eslint-disable-next-line no-undef
       newrelic?.noticeError(
-        new Error(`Unexpected answer value: \`${answer}\``)
+        new Error(`Unexpected answer value: \`${answer}\``),
       );
       return 'neutral';
   }
@@ -177,7 +177,7 @@ window.onscroll = calculateStickeHeaderPos;
             <strong>
               {{
                 candidatesToShow.filter(
-                  (candidate) => candidate.id === candidateId
+                  (candidate) => candidate.id === candidateId,
                 )[0].short_name
               }}</strong
             >
@@ -208,13 +208,13 @@ window.onscroll = calculateStickeHeaderPos;
       >
         <FilledCircle
           :background-color="`rgb(var(--color-${mapAnswerToColor(
-            answers.filter((answer) => answer.id === question.id)[0].answer
+            answers.filter((answer) => answer.id === question.id)[0].answer,
           )}-bg-strong))`"
         >
           <IconComponent
             :icon="
               mapAnswerToIcon(
-                answers.filter((answer) => answer.id === question.id)[0].answer
+                answers.filter((answer) => answer.id === question.id)[0].answer,
               )
             "
             color="rgb(var(--color-neutral-fg-inverse))"
@@ -232,16 +232,24 @@ window.onscroll = calculateStickeHeaderPos;
           }"
         >
           <FilledCircle
-            :background-color="`rgb(var(--color-${mapAnswerToColor(candidateAnswers.filter((answer) =>
-                answer.candidate_id === candidateId &&
-                answer.question_id === question.id
-            )[0].answer as string)}-bg-strong))`"
+            :background-color="`rgb(var(--color-${mapAnswerToColor(
+              candidateAnswers.filter(
+                (answer) =>
+                  answer.candidate_id === candidateId &&
+                  answer.question_id === question.id,
+              )[0].answer as string,
+            )}-bg-strong))`"
           >
             <IconComponent
-              :icon="mapAnswerToIcon(candidateAnswers.filter((answer) =>
-                  answer.candidate_id === candidateId &&
-                  answer.question_id === question.id
-              )[0].answer as string)"
+              :icon="
+                mapAnswerToIcon(
+                  candidateAnswers.filter(
+                    (answer) =>
+                      answer.candidate_id === candidateId &&
+                      answer.question_id === question.id,
+                  )[0].answer as string,
+                )
+              "
               color="rgb(var(--color-neutral-fg-inverse))"
             />
           </FilledCircle>
@@ -252,7 +260,7 @@ window.onscroll = calculateStickeHeaderPos;
             candidateAnswers.filter(
               (answer) =>
                 answer.candidate_id === candidateId &&
-                answer.question_id === question.id
+                answer.question_id === question.id,
             )[0].comment
           "
           class="comment"
@@ -267,7 +275,7 @@ window.onscroll = calculateStickeHeaderPos;
                 candidateAnswers.filter(
                   (answer) =>
                     answer.candidate_id === candidateId &&
-                    answer.question_id === question.id
+                    answer.question_id === question.id,
                 )[0].comment
               }}
             </BodyText>

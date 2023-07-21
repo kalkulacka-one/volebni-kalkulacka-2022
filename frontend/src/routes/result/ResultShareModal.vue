@@ -57,7 +57,7 @@ const handleCopyClick = () => {
       },
       (err) => {
         console.error(err);
-      }
+      },
     );
   }
 };

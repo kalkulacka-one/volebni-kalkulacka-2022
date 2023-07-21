@@ -42,10 +42,10 @@ const election = electionStore.election as Election;
 const electionName = election.name;
 const districtCode = getDistrictCode(route.params.district as string);
 const districtName = electionStore.districts.filter(
-  (district) => district.district_code === districtCode
+  (district) => district.district_code === districtCode,
 )[0].name;
 const showDistrictCode = electionStore.districts.filter(
-  (district) => district.district_code === districtCode
+  (district) => district.district_code === districtCode,
 )[0].show_district_code;
 const districtNameWithCode = showDistrictCode
   ? `${districtName} (${districtCode})`
@@ -56,19 +56,19 @@ const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
 const forwardRoute = computed(
   () =>
     router.options.history.state.forward &&
-    router.resolve(router.options.history.state.forward as string)
+    router.resolve(router.options.history.state.forward as string),
 );
 
 const backRoute = computed(
   () =>
     router.options.history.state.back &&
-    router.resolve(router.options.history.state.back as string)
+    router.resolve(router.options.history.state.back as string),
 );
 
 const questionCount = computed(() => electionStore.questionCount);
 //internally questions start at 0
 const currentQuestionNr = computed(
-  () => parseInt(route.params['nr'] as string) - 1
+  () => parseInt(route.params['nr'] as string) - 1,
 );
 
 const previousButtonTitle = computed(() => {
@@ -221,7 +221,11 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
             <QuestionCard
               :current-question="currentQuestionNr + 1"
               :question-count="electionStore.questionCount"
-              :question="(electionStore.calculator?.questions[currentQuestionNr] as Question)"
+              :question="
+                electionStore.calculator?.questions[
+                  currentQuestionNr
+                ] as Question
+              "
             />
           </StepWrapper>
         </ResponsiveWrapper>
@@ -248,7 +252,11 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
             <QuestionCard
               :current-question="currentQuestionNr + 1"
               :question-count="electionStore.questionCount"
-              :question="(electionStore.calculator?.questions[currentQuestionNr] as Question)"
+              :question="
+                electionStore.calculator?.questions[
+                  currentQuestionNr
+                ] as Question
+              "
             />
             <template #after>
               <ResponsiveWrapper medium large extra-large huge>

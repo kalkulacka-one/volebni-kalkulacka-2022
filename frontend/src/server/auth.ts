@@ -5,7 +5,7 @@ import type { User } from '@prisma/client';
 
 export async function authUser(
   req: VercelRequest,
-  res: VercelResponse
+  res: VercelResponse,
 ): Promise<{ user: User; exp: number } | null> {
   const tokenString = req.cookies.auth;
   const PUBLIC_URL = process.env.PUBLIC_URL
