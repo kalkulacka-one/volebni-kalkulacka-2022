@@ -61,10 +61,10 @@ const election = electionStore.election as Election;
 const electionName = election.name;
 const districtCode = getDistrictCode(route.params.district as string);
 const districtName = electionStore.districts.filter(
-  (district) => district.district_code === districtCode
+  (district) => district.district_code === districtCode,
 )[0].name;
 const showDistrictCode = electionStore.districts.filter(
-  (district) => district.district_code === districtCode
+  (district) => district.district_code === districtCode,
 )[0].show_district_code;
 const districtNameWithCode = showDistrictCode
   ? `${districtName} (${districtCode})`
@@ -149,7 +149,7 @@ const candidateAnswers: CandidateAnswer[] =
 
 const hasAllCandidatesInactive =
   electionStore.calculator?.candidates.filter(
-    (candidate) => !candidate.is_active
+    (candidate) => !candidate.is_active,
   ).length === electionStore.calculator?.candidates.length;
 
 const hasActiveCandidatesBtn = hasAllCandidatesInactive
@@ -164,9 +164,9 @@ const handleActiveCandidatesClicked = (isActive: boolean) => {
     filteredCandidateAnswers.value = filteredCandidateAnswers.value.filter(
       (x) => {
         return electionStore.calculator?.candidates.find(
-          (cnd) => x.candidate_id === cnd.id && cnd.is_active
+          (cnd) => x.candidate_id === cnd.id && cnd.is_active,
         );
-      }
+      },
     );
   } else if (electionStore.calculator?.answers) {
     filteredCandidateAnswers.value = candidateAnswers;
@@ -177,7 +177,7 @@ handleActiveCandidatesClicked(false);
 const resultsGeneral = computed(() => {
   const ra = calculateRelativeAgreement(
     filteredCandidateAnswers.value,
-    electionStore.answers
+    electionStore.answers,
   );
   return ra;
 });

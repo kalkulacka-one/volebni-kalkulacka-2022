@@ -32,7 +32,7 @@ watch(
   (newValue, oldValue) => {
     emit('update:modelValue', newValue);
   },
-  { deep: true, immediate: true }
+  { deep: true, immediate: true },
 );
 </script>
 

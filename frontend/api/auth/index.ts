@@ -35,7 +35,7 @@ const providers = {
           profileFields: ['id', 'displayName', 'email'],
           callbackURL: `${OAUTH_CALLBACK_URL}/api/auth/facebook/callback`,
         },
-        getStrategyCallback('facebook')
+        getStrategyCallback('facebook'),
       );
     },
     enabled: !!(
@@ -53,7 +53,7 @@ const providers = {
           callbackURL: `${OAUTH_CALLBACK_URL}/api/auth/google/callback`,
           scope: ['profile', 'email'],
         },
-        getStrategyCallback('google')
+        getStrategyCallback('google'),
       );
     },
     enabled: !!(
@@ -69,7 +69,7 @@ const getStrategyCallback = (strategy: string) => {
     accessToken: string | null,
     refreshToken: string | null,
     profile: Profile | { destination: string },
-    cb: (error: any, user?: any, info?: any) => void
+    cb: (error: any, user?: any, info?: any) => void,
   ) => {
     let email: string | undefined;
     if (strategy === 'magiclogin') {
@@ -178,7 +178,7 @@ const getMagicLogin = () => {
         destination,
         'Volební kalkulačka - přihlášení',
         emailBody.replace('{{confirmationLink}}', href),
-        `Prosíme potvrďte emailovou adresu otevřením adresy: ${href}`
+        `Prosíme potvrďte emailovou adresu otevřením adresy: ${href}`,
       );
     },
     verify: (payload, cb) => {
@@ -212,11 +212,11 @@ const callback = (provider: string) => {
             Buffer.from(process.env.JWT_SECRET as string, 'base64'),
             {
               expiresIn: process.env.JWT_EXPIRES_IN || '7d',
-            }
+            },
           );
           const cookiePayload = { token };
           const expiresInDate = new Date(
-            Date.now() + ms(process.env.JWT_EXPIRES_IN || '7d')
+            Date.now() + ms(process.env.JWT_EXPIRES_IN || '7d'),
           );
           res.cookie('auth', JSON.stringify(cookiePayload), {
             domain: process.env.DOMAIN_NAME,
@@ -234,7 +234,7 @@ const callback = (provider: string) => {
         const { state } = req.query;
         if (state) {
           const { returnTo, updateToken, answerId } = JSON.parse(
-            Buffer.from(state as string, 'base64').toString()
+            Buffer.from(state as string, 'base64').toString(),
           );
           if (updateToken && answerId) {
             await assignAnswerToUser({
@@ -258,7 +258,7 @@ const authenticate = (options: { provider: string; scope: string[] }) => {
     const state =
       returnTo || (updateToken && answerId)
         ? Buffer.from(
-            JSON.stringify({ returnTo, updateToken, answerId })
+            JSON.stringify({ returnTo, updateToken, answerId }),
           ).toString('base64')
         : undefined;
     const authenticator = passport.authenticate(provider, {

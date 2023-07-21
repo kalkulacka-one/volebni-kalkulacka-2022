@@ -57,7 +57,7 @@ If you need to work just with the frontend, the easiest way is to run just Vue f
   ```sh
   DATA_PROXY=https://volebnikalkulacka.cz
   API_PROXY=https://volebnikalkulacka.cz
-  
+
   …
   ```
 
@@ -89,7 +89,7 @@ To run also backend serverless functions locally, you can use [Vercel CLI](https
 
   ```sh
   …
-  
+
   DATABASE_NAME=defaultdb
   DATABASE_URL_BASE=postgresql://john-doe:HUVAkcJHcpffDZuSuQLmwN@john-doe-development-5467.7tc.cockroachlabs.cloud:26257
   DATABASE_URL=${DATABASE_URL_BASE}/${DATABASE_NAME}

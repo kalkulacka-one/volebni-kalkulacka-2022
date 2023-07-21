@@ -16,7 +16,7 @@ defineProps<ResultCandidateContactsProps>();
 
 const handleSocialBtnClick = (
   type: SocialMediaProps['type'],
-  url: string | undefined
+  url: string | undefined,
 ) => {
   console.debug(`opening ${url}`);
   window.open(url, '_blank');

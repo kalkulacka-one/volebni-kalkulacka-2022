@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
   <head>
     <meta charset="utf-8" />
@@ -97,7 +97,7 @@
                   return r(o || e);
                 },
                 o,
-                o.exports
+                o.exports,
               );
             }
             return e[n].exports;
@@ -140,7 +140,7 @@
                       'flags: ' +
                         a(s, function (t, e) {
                           return t;
-                        }).join(', ')
+                        }).join(', '),
                     ));
               },
               {},
@@ -304,7 +304,7 @@
                       function () {
                         i(0, U > 1);
                       },
-                      N(!0)
+                      N(!0),
                     );
                 }
               },
@@ -496,7 +496,7 @@
                           },
                           function (t) {
                             throw (o.emit(n + 'end', [t], s), t);
-                          }
+                          },
                         )
                       );
                     });
@@ -746,7 +746,7 @@
                   o.inPlace(
                     window,
                     ['r' + i, 'mozR' + i, 'webkitR' + i, 'msR' + i],
-                    'raf-'
+                    'raf-',
                   ),
                   r.on('raf-start', function (t) {
                     t[0] = o(t[0], 'fn-');
@@ -1012,7 +1012,7 @@
                           s(
                             'xhr',
                             [e, n, this.startTime, this.endTime, 'xhr'],
-                            this
+                            this,
                           ))
                         );
                   }
@@ -1073,7 +1073,7 @@
                           function (n) {
                             i(e, t);
                           },
-                          w(!1)
+                          w(!1),
                         ),
                         (h && (h > 34 || h < 10)) ||
                           t.addEventListener(
@@ -1081,7 +1081,7 @@
                             function (t) {
                               e.lastSize = t.loaded;
                             },
-                            w(!1)
+                            w(!1),
                           );
                     }),
                     u.on('open-xhr-start', function (t) {
@@ -1095,7 +1095,7 @@
                         this.sameOrigin &&
                         e.setRequestHeader(
                           'X-NewRelic-ID',
-                          NREUM.loader_config.xpid
+                          NREUM.loader_config.xpid,
                         );
                       var n = f(this.parsedOrigin);
                       if (n) {
@@ -1106,12 +1106,12 @@
                           n.traceContextParentHeader &&
                             (e.setRequestHeader(
                               'traceparent',
-                              n.traceContextParentHeader
+                              n.traceContextParentHeader,
                             ),
                             n.traceContextStateHeader &&
                               e.setRequestHeader(
                                 'tracestate',
-                                n.traceContextStateHeader
+                                n.traceContextStateHeader,
                               ),
                             (r = !0)),
                           r && (this.dt = n);
@@ -1189,7 +1189,7 @@
                         u.emit(
                           'xhr-cb-time',
                           [a.now() - this.xhrCbStart, this.onload, e],
-                          e
+                          e,
                         );
                     }),
                     u.on('fetch-before-start', function (t) {
@@ -1288,7 +1288,7 @@
                       s(
                         'xhr',
                         [this.params, r, this.startTime, this.endTime, 'fetch'],
-                        this
+                        this,
                       );
                     });
                 }
@@ -1363,7 +1363,7 @@
                         t + e,
                         [f.now()].concat(s(arguments)),
                         n ? null : this,
-                        r
+                        r,
                       ),
                       n ? void 0 : this
                     );
@@ -1409,7 +1409,7 @@
                           (c.emit(
                             (o ? '' : 'no-') + 'fn-start',
                             [f.now(), r, o],
-                            n
+                            n,
                           ),
                           o)
                         )
@@ -1428,11 +1428,11 @@
                 });
                 a(
                   'actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get'.split(
-                    ','
+                    ',',
                   ),
                   function (t, e) {
                     m[e] = o(h, e);
-                  }
+                  },
                 ),
                   (newrelic.noticeError = function (t, e) {
                     'string' == typeof t && (t = new Error(t)),
@@ -1759,7 +1759,7 @@
                         ? document[s]
                         : document[i]
                         ? 'hidden'
-                        : 'visible'
+                        : 'visible',
                     );
                   }
                   'addEventListener' in document &&
@@ -2156,7 +2156,7 @@
             ],
           },
           {},
-          ['loader', 2, 17, 5, 3, 4]
+          ['loader', 2, 17, 5, 3, 4],
         ));
     </script>
     <script

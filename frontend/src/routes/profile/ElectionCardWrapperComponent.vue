@@ -24,12 +24,12 @@ const props = withDefaults(defineProps<Props>(), {
 
 const calculators = await fetchCalculators();
 const calculator = calculators.find(
-  (c) => props.answer.calculatorId === c.calculator_id
+  (c) => props.answer.calculatorId === c.calculator_id,
 );
 
 const { election, candidates } = await fetchCalculator(
   calculator?.election_id as string,
-  calculator?.district_code as string
+  calculator?.district_code as string,
 );
 
 // const election = calc ? calc.election : null;

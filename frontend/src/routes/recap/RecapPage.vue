@@ -38,10 +38,10 @@ const election = electionStore.election as Election;
 const electionName = election.name;
 const districtCode = getDistrictCode(route.params.district as string);
 const districtName = electionStore.districts.filter(
-  (district) => district.district_code === districtCode
+  (district) => district.district_code === districtCode,
 )[0].name;
 const showDistrictCode = electionStore.districts.filter(
-  (district) => district.district_code === districtCode
+  (district) => district.district_code === districtCode,
 )[0].show_district_code;
 const districtNameWithCode = showDistrictCode
   ? `${districtName} (${districtCode})`
@@ -67,8 +67,8 @@ const handleShowResultsClick = () => {
 
 const availableTags: Set<string> = new Set(['All']);
 const selectedTag = ref('All');
-electionStore.calculator?.questions.forEach((q) =>
-  q.tags?.forEach((tag) => availableTags.add(tag))
+electionStore.calculator?.questions.forEach(
+  (q) => q.tags?.forEach((tag) => availableTags.add(tag)),
 );
 
 const handleStarClick = (index: number) => {
@@ -183,7 +183,7 @@ const isCardHidden = (index: number) => {
               v-for="i in [...Array(electionStore.questionCount).keys()]"
               :key="i"
               :hidden="isCardHidden(i)"
-              :question="(electionStore.calculator?.questions[i] as Question)"
+              :question="electionStore.calculator?.questions[i] as Question"
               :answer="electionStore.answers[i]"
               :current-question="i + 1"
               :question-count="electionStore.questionCount"

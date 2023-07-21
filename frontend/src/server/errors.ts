@@ -9,7 +9,7 @@ export const errorRespond = (
   status: number,
   type: string,
   title: string,
-  detail?: string
+  detail?: string,
 ) => {
   res.setHeader('Content-Type', 'application/problem+json');
   return res.status(status).json({
@@ -26,7 +26,7 @@ export const respond404 = (res: VResponse, subject: string, id = '') => {
     404,
     'https://volebnikalkulacka.cz/api/errors/result-not-found',
     `${subject} not found`,
-    `${subject} - ${id} not found.`
+    `${subject} - ${id} not found.`,
   );
 };
 
@@ -36,7 +36,7 @@ export const respond405 = (res: VResponse, method = 'none') => {
     405,
     'https://volebnikalkulacka.cz/api/errors/method-not-allowed',
     `Method not allowed`,
-    `The HTTP ${method} method is not supported at this route.`
+    `The HTTP ${method} method is not supported at this route.`,
   );
 };
 
@@ -46,7 +46,7 @@ export const respond400 = (res: VResponse, message: string) => {
     400,
     'https://volebnikalkulacka.cz/api/errors/bad-request',
     'Bad request',
-    message
+    message,
   );
 };
 
@@ -56,7 +56,7 @@ export const respond401 = (res: VResponse, message = '') => {
     401,
     'https://volebnikalkulacka.cz/api/errors/unauthorized',
     'Unauthorized',
-    message
+    message,
   );
 };
 
@@ -66,7 +66,7 @@ export const respond500 = (res: VResponse, message = '') => {
     500,
     'https://volebnikalkulacka.cz/api/errors/internal-server-error',
     'Internal server error',
-    message
+    message,
   );
 };
 
@@ -76,7 +76,7 @@ export const prismaErrorHandler = (res: VResponse) => {
       | Prisma.PrismaClientValidationError
       | Prisma.PrismaClientKnownRequestError
       | Prisma.PrismaClientUnknownRequestError
-      | Prisma.PrismaClientRustPanicError
+      | Prisma.PrismaClientRustPanicError,
   ) => {
     if (err instanceof Prisma.PrismaClientValidationError) {
       errorRespond(
@@ -84,7 +84,7 @@ export const prismaErrorHandler = (res: VResponse) => {
         400,
         'https://volebnikalkulacka.cz/api/errors/prisma-validation-error',
         'Prisma validation error',
-        err.message
+        err.message,
       );
     } else if (err instanceof Prisma.PrismaClientKnownRequestError) {
       errorRespond(
@@ -92,7 +92,7 @@ export const prismaErrorHandler = (res: VResponse) => {
         400,
         'https://volebnikalkulacka.cz/api/errors/prisma-known-request-error',
         `Prisma request error ${err.code}`,
-        `${err.message} ${JSON.stringify(err.meta)}`
+        `${err.message} ${JSON.stringify(err.meta)}`,
       );
     } else if (err instanceof Prisma.PrismaClientUnknownRequestError) {
       errorRespond(
@@ -100,7 +100,7 @@ export const prismaErrorHandler = (res: VResponse) => {
         400,
         'https://volebnikalkulacka.cz/api/errors/prisma-unknown-request-error',
         'Prisma unknown request error',
-        err.message
+        err.message,
       );
     } else if (err instanceof Prisma.PrismaClientInitializationError) {
       errorRespond(
@@ -108,21 +108,21 @@ export const prismaErrorHandler = (res: VResponse) => {
         500,
         'https://volebnikalkulacka.cz/api/errors/prisma-initialization-error',
         `Prisma initialization error ${err.errorCode}}`,
-        err.message
+        err.message,
       );
     } else if (err instanceof Prisma.PrismaClientRustPanicError) {
       errorRespond(
         res,
         500,
         'https://volebnikalkulacka.cz/api/errors/prisma-rust-panic-error',
-        'Prisma Rust panic error'
+        'Prisma Rust panic error',
       );
     } else {
       errorRespond(
         res,
         500,
         'https://volebnikalkulacka.cz/api/errors/prisma-unknown-error',
-        'Prisma unknown error'
+        'Prisma unknown error',
       );
     }
   };

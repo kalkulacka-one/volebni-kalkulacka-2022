@@ -39,10 +39,10 @@ const election = electionStore.election as Election;
 const electionName = election.name;
 const districtCode = getDistrictCode(route.params.district as string);
 const districtName = electionStore.districts.filter(
-  (district) => district.district_code === districtCode
+  (district) => district.district_code === districtCode,
 )[0].name;
 const showDistrictCode = electionStore.districts.filter(
-  (district) => district.district_code === districtCode
+  (district) => district.district_code === districtCode,
 )[0].show_district_code;
 const districtNameWithCode = showDistrictCode
   ? `${districtName} (${districtCode})`

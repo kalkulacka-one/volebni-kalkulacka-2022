@@ -49,7 +49,7 @@ export default async function (req: VercelRequest, res: VercelResponse) {
         403,
         'https://volebnikalkulacka.cz/api/errors/invalid-user',
         'Invalid user',
-        'User is not the owner of the answer'
+        'User is not the owner of the answer',
       );
     } else if (!auth && existingResult?.userId) {
       return errorRespond(
@@ -57,7 +57,7 @@ export default async function (req: VercelRequest, res: VercelResponse) {
         401,
         'https://volebnikalkulacka.cz/api/errors/invalid-user',
         'Invalid user',
-        'You need to log in to update this answer'
+        'You need to log in to update this answer',
       );
     } else if (!auth && existingResult?.updateToken !== updateToken) {
       return errorRespond(
@@ -65,7 +65,7 @@ export default async function (req: VercelRequest, res: VercelResponse) {
         401,
         'https://volebnikalkulacka.cz/api/errors/invalid-update-token',
         'Invalid update token',
-        'updateToken from body does not match the updateToken of the existing answer'
+        'updateToken from body does not match the updateToken of the existing answer',
       );
     }
 

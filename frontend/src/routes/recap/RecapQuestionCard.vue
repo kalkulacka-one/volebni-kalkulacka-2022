@@ -36,10 +36,10 @@ export interface Props {
 const props = defineProps<Props>();
 
 const starColor = computed(() =>
-  props.answer.flag ? 'rgba(var(--palette-yellow))' : undefined
+  props.answer.flag ? 'rgba(var(--palette-yellow))' : undefined,
 );
 const starIcon = computed(() =>
-  props.answer.flag ? vkiStarFilled : vkiStarOutlined
+  props.answer.flag ? vkiStarFilled : vkiStarOutlined,
 );
 
 const isExpanded = ref(false);

@@ -13,7 +13,7 @@ const myResolver = {
     try {
       const localFile = file.url.replace(
         'https://kalkulacka.ceskodigital.net/schemas/',
-        '../schemas/'
+        '../schemas/',
       );
       const dataString = await fs.promises
         .readFile(localFile)

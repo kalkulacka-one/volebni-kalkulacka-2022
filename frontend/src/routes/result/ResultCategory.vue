@@ -25,7 +25,7 @@ const visibleCandidates = computed(() =>
     ? props.result.length
     : props.maxVisibleCandidates > props.result.length
     ? props.result.length
-    : props.maxVisibleCandidates
+    : props.maxVisibleCandidates,
 );
 console.debug(visibleCandidates.value);
 </script>

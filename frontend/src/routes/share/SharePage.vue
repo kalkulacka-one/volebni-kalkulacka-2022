@@ -27,7 +27,7 @@ import { ErrorPageEnum } from '../error/ErrorPage.vue';
 const route = useRoute();
 const electionStore = useElectionStore();
 const resultsGeneral: Ref<ReturnType<typeof calculateRelativeAgreement>> = ref(
-  []
+  [],
 );
 const isInitialized = ref(false);
 getResults(route.params.uuid as string)
@@ -35,7 +35,7 @@ getResults(route.params.uuid as string)
     if (electionStore.calculator) {
       resultsGeneral.value = calculateRelativeAgreement(
         electionStore.calculator.answers,
-        electionStore.answers
+        electionStore.answers,
       );
       isInitialized.value = true;
     }
@@ -58,10 +58,10 @@ watch(isInitialized, (value) => {
     const electionName = electionStore.election?.name;
     const districtCode = electionStore.calculator?.district_code;
     const districtName = electionStore.districts.filter(
-      (district) => district.district_code === districtCode
+      (district) => district.district_code === districtCode,
     )[0].name;
     const showDistrictCode = electionStore.districts.filter(
-      (district) => district.district_code === districtCode
+      (district) => district.district_code === districtCode,
     )[0].show_district_code;
     const districtNameWithCode = showDistrictCode
       ? `${districtName} (${districtCode})`

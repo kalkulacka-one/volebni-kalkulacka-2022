@@ -28,7 +28,7 @@ export interface ResultCandidateCardProps {
 const props = defineProps<ResultCandidateCardProps>();
 const store = useElectionStore();
 const candidate = store.calculator?.candidates.find(
-  (x) => x.id === props.canidateId
+  (x) => x.id === props.canidateId,
 );
 let avatarConfig = avatarsConfiguration.general;
 let primaryColor = '--palette-primary-50';

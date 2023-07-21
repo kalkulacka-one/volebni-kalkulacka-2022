@@ -51,10 +51,10 @@ const election = electionStore.election as Election;
 const electionName = election.name;
 const districtCode = getDistrictCode(route.params.district as string);
 const districtName = electionStore.districts.filter(
-  (district) => district.district_code === districtCode
+  (district) => district.district_code === districtCode,
 )[0].name;
 const showDistrictCode = electionStore.districts.filter(
-  (district) => district.district_code === districtCode
+  (district) => district.district_code === districtCode,
 )[0].show_district_code;
 const districtNameWithCode = showDistrictCode
   ? `${districtName} (${districtCode})`
@@ -109,13 +109,13 @@ Vítejte ve Volební kalkulačce pro komunální volby 2022.
 const forwardRoute = computed(
   () =>
     router.options.history.state.forward &&
-    router.resolve(router.options.history.state.forward as string)
+    router.resolve(router.options.history.state.forward as string),
 );
 
 const backRoute = computed(
   () =>
     router.options.history.state.back &&
-    router.resolve(router.options.history.state.back as string)
+    router.resolve(router.options.history.state.back as string),
 );
 
 const stepsCount = 4;
@@ -126,8 +126,8 @@ const farthestCompletedStep = ref(
     forwardRoute.value && forwardRoute.value.name === appRoutes.question.name
       ? 4
       : 0,
-    backRoute.value && backRoute.value.name === appRoutes.question.name ? 4 : 0
-  )
+    backRoute.value && backRoute.value.name === appRoutes.question.name ? 4 : 0,
+  ),
 );
 
 const previousButtonTitle = computed(() => {
@@ -197,7 +197,7 @@ const goToDistrictSelection = () => {
 const handleNextClick = () => {
   farthestCompletedStep.value = Math.max(
     farthestCompletedStep.value,
-    currentStep.value
+    currentStep.value,
   );
 
   if (currentStep.value < stepsCount) {

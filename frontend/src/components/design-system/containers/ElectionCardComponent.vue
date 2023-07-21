@@ -113,7 +113,7 @@ const handleShareClick = () => {
 const resultsGeneral = computed(() => {
   const ra = calculateRelativeAgreement(
     filteredCandidateAnswers.value,
-    electionStore.answers
+    electionStore.answers,
   );
   return ra;
 });

@@ -3,10 +3,10 @@ import type { Calculators } from '@/types/calculators';
 
 export const fetchCalculator = async (
   electionId: string,
-  districtId: string
+  districtId: string,
 ) => {
   const calculator: Calculator = await fetch(
-    `/data/kalkulacka/${electionId}/${districtId}.json`
+    `/data/kalkulacka/${electionId}/${districtId}.json`,
   ).then((x) => {
     if (x.status === 200) {
       return x.json();
@@ -17,7 +17,7 @@ export const fetchCalculator = async (
 
 export const fetchCalculators = async () => {
   const data: Calculators = await fetch(
-    `/data/kalkulacka/calculators.json`
+    `/data/kalkulacka/calculators.json`,
   ).then((x) => {
     if (x.status === 200) {
       return x.json();
@@ -28,7 +28,7 @@ export const fetchCalculators = async () => {
 
 export const fetchElections = async () => {
   const data: Calculators = await fetch(
-    `/data/kalkulacka/calculators.json`
+    `/data/kalkulacka/calculators.json`,
   ).then((x) => {
     if (x.status === 200) {
       return x.json();
@@ -39,7 +39,7 @@ export const fetchElections = async () => {
 
 export const fetchElectionData = async (electionId: string) => {
   const data: Calculators = await fetch(
-    `/data/kalkulacka/calculators.json`
+    `/data/kalkulacka/calculators.json`,
   ).then((x) => {
     if (x.status === 200) {
       return x.json();
@@ -47,7 +47,7 @@ export const fetchElectionData = async (electionId: string) => {
   });
   const election = data.elections.find((x) => x.key === electionId);
   const districts = data.calculators.filter(
-    (x) => x.election_id === election?.id
+    (x) => x.election_id === election?.id,
   );
   return {
     election: election,
