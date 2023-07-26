@@ -17,6 +17,7 @@ import TextInputComponent from '@/components/design-system/input/TextInputCompon
 const email = ref('');
 const emailError = ref();
 const posting = ref();
+const success = ref();
 const message = ref();
 
 const handleSubmit = async () => {
@@ -40,9 +41,11 @@ const handleSubmit = async () => {
 
   if (response.ok) {
     posting.value = false;
+    success.value = true;
     message.value = 'Dáme vám vedieť!';
   } else {
     posting.value = false;
+    uccess.value = false;
     message.value = 'Niečo sa pokazilo :( Skúste to znova.';
   }
 };
@@ -75,7 +78,7 @@ const handleSubmit = async () => {
             >
           </StackComponent>
           <StackComponent spacing="small" centered>
-            <BodyText size="small">
+            <BodyText size="small" v-if="!success">
               {{ message }}
             </BodyText>
             <form>
@@ -106,7 +109,7 @@ const handleSubmit = async () => {
                 </ButtonComponent>
               </StackComponent>
             </form>
-            <BodyText tag="p" size="small"
+            <BodyText tag="p" size="small" v-if="!success"
               >Odoslaním súhlasíte so zasielaním noviniek o volebnej
               kalkulačke.</BodyText
             >
