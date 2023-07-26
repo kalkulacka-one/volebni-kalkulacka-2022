@@ -185,7 +185,7 @@ const computedSize = computed(() =>
   &--answer {
     border-style: solid;
     border-width: var(--spacing-nano);
-    border-radius: var(--radius-small);
+    border-radius: var(--radius-medium);
     border-top-right-radius: 0;
 
     &.button--medium {
