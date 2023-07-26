@@ -78,10 +78,10 @@ const handleSubmit = async () => {
             >
           </StackComponent>
           <StackComponent spacing="small" centered>
-            <BodyText size="small" v-if="!success">
+            <BodyText size="small" v-if="success">
               {{ message }}
             </BodyText>
-            <form>
+            <form v-if="!success">
               <StackComponent
                 horizontal
                 spacing="small"
