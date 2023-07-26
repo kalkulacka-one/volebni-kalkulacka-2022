@@ -75,6 +75,9 @@ const handleSubmit = async () => {
             >
           </StackComponent>
           <StackComponent spacing="small" centered>
+            <BodyText size="small">
+              {{ message }}
+            </BodyText>
             <form>
               <StackComponent
                 horizontal
@@ -83,9 +86,6 @@ const handleSubmit = async () => {
                 wrap
                 style="justify-content: center"
               >
-                <BodyText size="small">
-                  {{ message }}
-                </BodyText>
                 <TextInputComponent
                   required
                   type="email"
