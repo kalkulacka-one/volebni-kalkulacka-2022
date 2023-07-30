@@ -55,14 +55,42 @@ type QuestionRowData = {
   Uuid: string;
   Name: string;
   Question: string;
+  Descript: string;
+  Tags: string;
+  Note: string;
+  Order: string;
 };
 
+class Question {
+  uuid: string;
+  name: string;
+  question: string;
+  descript: string;
+  tags: string[];
+  note: string;
+  order: string;
+
+  public constructor(row: QuestionRowData) {
+    this.uuid = row.Uuid;
+    this.name = row.Name;
+    this.question = row.Question;
+    this.descript = row.Descript;
+    this.tags = [row.Tags];
+    this.note = row.Note;
+    this.order = row.Order;
+  }
+}
+
 class QuestionsPool {
-  questions: { [key: string]: QuestionRowData } = {};
+  questions: { [key: string]: Question } = {};
 }
 
 class QuestionsRepository {
   pool: { [key: string]: QuestionsPool } = {};
+
+  public hasPool(key: string): boolean {
+    return key in this.pool;
+  }
 }
 
 async function extractCalculators(doc: GoogleSpreadsheet) {
@@ -75,13 +103,27 @@ async function extractCalculators(doc: GoogleSpreadsheet) {
   const calculatorRows = await sheet.getRows<CalculatorRowData>();
   for (let i = 0; i < calculatorRows.length; i++) {
     const r = calculatorRows[i];
+
+    if (
+      r.get('Election name') === undefined ||
+      r.get('Questions pool') === undefined
+    ) {
+      console.log('Skipping ', i, " - it's empty");
+      continue;
+    }
+
+    const poolKey = extractKey(r.get('Questions pool'));
+
     console.log(
       i,
       ': ElectionName: ',
       r.get('Election name'),
       ', District Name: ',
-      r.get('District name')
+      r.get('District name'),
+      ', Pool Key: ',
+      poolKey
     );
+
     // console.log(calculatorRows[i]);
   }
 }
@@ -124,3 +166,17 @@ function main() {
 
 // Call the main function
 main();
+
+function extractKey(url: CUrl): string | undefined {
+  const regex = /.*\/d\/([a-zA-Z0-9_-]+)\/.*/;
+  const match = url.match(regex);
+
+  console.log('URL: ', url, '; Match: ', match);
+  console.log(match);
+
+  if (match && match[1]) {
+    return match[1];
+  } else {
+    return undefined;
+  }
+}
