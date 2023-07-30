@@ -20,14 +20,50 @@ function parseCommandLineArgs(): { name: string; age: number } {
   return { name, age };
 }
 
+type CBool = 'Yes' | 'No';
+type CKey = string;
+type CUrl = string;
+type CDateTime = string;
+type CSheetName = string;
+
 type CalculatorRowData = {
   'Election name': string;
-  'Election key': string;
+  'Election key': CKey;
 
   'District name': string;
-  'District key': string;
+  'District key': CKey;
   Name: string;
+  Description: string;
+  'Show description'?: CBool;
+  Round: string;
+  Variant: string;
+  'Election from': CDateTime;
+  'Election to': CDateTime;
+  'Questions pool': CUrl;
+  'Questions spreadsheet': CUrl;
+  'Questions sheet': CSheetName;
+  'Questions form': CUrl;
+  'Answer yes': string;
+  'Answer no': string;
+  'Answers spreadsheet - candidates': CUrl;
+  'Answers sheet - candidates': CSheetName;
+  'Answers spreadsheet - experts': CUrl;
+  'Answers sheet - experts': CSheetName;
 };
+
+type QuestionRowData = {
+  Uuid: string;
+  Name: string;
+  Question: string;
+};
+
+class QuestionsPool {
+  questions: { [key: string]: QuestionRowData } = {};
+}
+
+class QuestionsRepository {
+  pool: { [key: string]: QuestionsPool } = {};
+}
 
 async function extractCalculators(doc: GoogleSpreadsheet) {
   await doc.loadInfo(); // loads document properties and worksheets
