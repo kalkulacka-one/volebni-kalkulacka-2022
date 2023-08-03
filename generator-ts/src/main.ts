@@ -121,7 +121,7 @@ async function extractCalculators(doc: GoogleSpreadsheet) {
       ', District Name: ',
       r.get('District name'),
       ', Pool Key: ',
-      poolKey
+      poolKey,
     );
 
     // console.log(calculatorRows[i]);
@@ -156,7 +156,7 @@ function main() {
 
   const doc = new GoogleSpreadsheet(
     '1rEtloBTzS_fZyeIX9wYYW32Pg2NeJNYj6oQbyIyTTvw',
-    jwtFromEnv
+    jwtFromEnv,
   );
 
   (async function () {
