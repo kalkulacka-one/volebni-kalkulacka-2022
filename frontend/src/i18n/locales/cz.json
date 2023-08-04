@@ -1,14 +1,14 @@
 {
-  "index":{
-    "title":"Volební kalkulačka 2023",
-    "info1":"Připravujeme volební kalkulačku pro volby do Slovenské národní rady v roce 2023.",
-    "info2":"Zanechte nám svůj e-mail a my vám dáme vědět, až kalkulačku spustíme.",
-    "info3":{
-      "prefix":"Mezitím se můžete podívat na {0}",
+  "index": {
+    "title": "Volební kalkulačka 2023",
+    "info1": "Připravujeme volební kalkulačku pro volby do Slovenské národní rady v roce 2023.",
+    "info2": "Zanechte nám svůj e-mail a my vám dáme vědět, až kalkulačku spustíme.",
+    "info3": {
+      "prefix": "Mezitím se můžete podívat na {0}",
       "link": "českou verzi",
       "sufix": " volební kalkulačky."
     },
-    "sendButton":"Dejte mi vědět",
-    "sendDisclaimer":"Odesláním souhlasíte se zasíláním novinek o volební kalkulačce."
+    "sendButton": "Dejte mi vědět",
+    "sendDisclaimer": "Odesláním souhlasíte se zasíláním novinek o volební kalkulačce."
   }
 }
