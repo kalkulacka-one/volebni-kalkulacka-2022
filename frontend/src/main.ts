@@ -1,5 +1,6 @@
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
+import i18n from './i18n';
 import VueSocialSharing from 'vue-social-sharing';
 
 import {
@@ -39,7 +40,7 @@ const RESULT_QUERY_NAME = 'result';
 
 export const questionGuard = (
   to: RouteLocationNormalized,
-  _from: RouteLocationNormalized,
+  _from: RouteLocationNormalized
 ) => {
   const store = useElectionStore();
 
@@ -61,7 +62,7 @@ export const questionGuard = (
 export const authGuard = async (
   to: RouteLocationNormalized,
   _from: RouteLocationNormalized,
-  next: NavigationGuardNext,
+  next: NavigationGuardNext
 ) => {
   const userStore = useUserStore();
   await userStore.fetchUser();
@@ -71,7 +72,7 @@ export const authGuard = async (
 
 const resultsProcessor = (
   to: RouteLocationNormalized,
-  _from: RouteLocationNormalized,
+  _from: RouteLocationNormalized
 ) => {
   if (to.query[RESULT_QUERY_NAME] === undefined) {
     const store = useElectionStore();
@@ -269,6 +270,10 @@ app.use(VueSocialSharing, {
   /* optional options */
 });
 
+//vue-i18n
+app.use(i18n);
+
+//pinia
 const pinia = createPinia();
 app.use(pinia);
 
@@ -319,7 +324,7 @@ router.beforeEach((to, from, next) => {
 
   // Remove any stale meta tags from the document using the key attribute we set below.
   Array.from(document.querySelectorAll('[data-vue-router-controlled]')).map(
-    (el) => el.parentNode?.removeChild(el),
+    (el) => el.parentNode?.removeChild(el)
   );
 
   // Skip rendering meta tags if there are none.
@@ -349,8 +354,8 @@ router.beforeEach((to, from, next) => {
 router.beforeEach(async (to, from) => {
   console.debug(
     `From: ${String(from.name)} ${Object.values(to.params)}, To: ${String(
-      to.name,
-    )} ${Object.values(to.params)}`,
+      to.name
+    )} ${Object.values(to.params)}`
   );
   const store = useElectionStore();
 
@@ -360,7 +365,7 @@ router.beforeEach(async (to, from) => {
     to.params.election !== store.election?.id
   ) {
     console.debug(
-      `Election IDs ${to.params.election} !== ${store.election?.id}. Fetching ...`,
+      `Election IDs ${to.params.election} !== ${store.election?.id}. Fetching ...`
     );
     await store.loadElection(to.params.election as string);
     if (store?.election === undefined) {
@@ -380,7 +385,7 @@ router.beforeEach(async (to, from) => {
     const districtNr = getDistrictCode(to.params.district as string);
     if (districtNr !== store.calculator?.district_code) {
       console.debug(
-        `District codes ${districtNr} !== ${store.calculator?.district_code}. Fetching ...`,
+        `District codes ${districtNr} !== ${store.calculator?.district_code}. Fetching ...`
       );
       await store.loadCalculator(to.params.election as string, districtNr);
       if (store?.calculator === undefined) {
@@ -412,7 +417,7 @@ router.beforeEach(async (to, from) => {
       hasResultQuery = true;
     } else {
       console.warn(
-        `Result hex answer count mismatch ${answers.length} vs ${store.calculator?.questions.length}`,
+        `Result hex answer count mismatch ${answers.length} vs ${store.calculator?.questions.length}`
       );
     }
   }
@@ -427,7 +432,7 @@ router.beforeEach(async (to, from) => {
   ) {
     // route to district selection only if district not specified
     console.debug(
-      `Re-routing to district selection: ${Object.values(to.params)}`,
+      `Re-routing to district selection: ${Object.values(to.params)}`
     );
     return {
       name: appRoutes.districtSelection.name,

@@ -13,6 +13,11 @@ import HeadlineText from '@/components/design-system/typography/HeadlineText.vue
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import TextInputComponent from '@/components/design-system/input/TextInputComponent.vue';
+// debug
+import { useI18n } from 'vue-i18n';
+const { t, locale } = useI18n();
+locale.value = 'cz';
+// end of debug
 
 const email = ref('');
 const emailError = ref();
@@ -49,6 +54,7 @@ const handleSubmit = async () => {
     message.value = 'Niečo sa pokazilo :( Skúste to znova.';
   }
 };
+const czechVerURL = 'https://www.volebnikalkulacka.cz';
 </script>
 
 <template>
@@ -60,25 +66,22 @@ const handleSubmit = async () => {
       <section style="padding: 2rem">
         <StackComponent spacing="large" centered>
           <StackComponent spacing="small" centered>
-            <HeadlineText tag="h1" size="large" centered
-              >Volebná kalkulačka 2023</HeadlineText
-            >
-            <BodyText size="large" centered
-              >Prípravujeme pre vás volebnú kalkulačku pre voľby do Národnej
-              rady Slovenskej republiky 2023.</BodyText
-            >
-            <BodyText size="large" centered
-              >Zanechajte nám váš e-mail a dáme vám vedieť, keď kalkulačku
-              spustíme.</BodyText
-            >
-            <BodyText size="medium" centered
-              >Zatiaľ sa môžete pozrieť na
-              <a href="https://www.volebnikalkulacka.cz">českú verziu</a>
-              volebnej kalkulačky.</BodyText
-            >
+            <HeadlineText tag="h1" size="large" centered>{{
+              $t('index.title')
+            }}</HeadlineText>
+            <BodyText size="large" centered>{{ $t('index.info1') }}</BodyText>
+            <BodyText size="large" centered>{{ $t('index.info2') }}</BodyText>
+            <BodyText size="medium" centered>
+              <i18n-t keypath="index.info3.prefix">
+                <a :href="czechVerURL" target="_blank">{{
+                  $t('index.info3.link')
+                }}</a>
+              </i18n-t>
+              {{ $t('index.info3.sufix') }}
+            </BodyText>
           </StackComponent>
           <StackComponent spacing="small" centered>
-            <BodyText size="small" v-if="success">
+            <BodyText v-if="success" size="small">
               {{ message }}
             </BodyText>
             <form v-if="!success">
@@ -90,11 +93,11 @@ const handleSubmit = async () => {
                 style="justify-content: center"
               >
                 <TextInputComponent
+                  v-model="email"
                   required
                   type="email"
                   placeholder="E-mail"
                   :value="email"
-                  v-model="email"
                   :icon="mdiEmailOutline"
                   :disabled="posting"
                   :error="emailError"
@@ -102,17 +105,16 @@ const handleSubmit = async () => {
                 <ButtonComponent
                   kind="filled"
                   color="primary"
-                  @click.prevent="handleSubmit"
                   :loading="posting"
+                  @click.prevent="handleSubmit"
                 >
-                  Dajte mi vedieť
+                  {{ $t('index.sendButton') }}
                 </ButtonComponent>
               </StackComponent>
             </form>
-            <BodyText tag="p" size="small" v-if="!success"
-              >Odoslaním súhlasíte so zasielaním noviniek o volebnej
-              kalkulačke.</BodyText
-            >
+            <BodyText v-if="!success" tag="p" size="small">{{
+              $t('index.sendDisclaimer')
+            }}</BodyText>
           </StackComponent>
         </StackComponent>
       </section>
