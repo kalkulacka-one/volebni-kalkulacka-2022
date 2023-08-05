@@ -274,6 +274,10 @@ app.use(VueSocialSharing, {
 app.use(i18n);
 
 //pinia
+//vue-i18n
+app.use(i18n);
+
+//pinia
 const pinia = createPinia();
 app.use(pinia);
 
