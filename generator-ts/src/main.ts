@@ -2,6 +2,7 @@
 import * as process from 'process';
 import { GoogleSpreadsheet } from 'google-spreadsheet';
 import { JWT } from 'google-auth-library';
+import { type CUrl, type CalculatorRowData, Calculators } from './types/input';
 
 // Function to get the value of an environmental variable or a default value
 function getEnvOrDefault(envVariable: string, defaultValue: string): string {
@@ -20,82 +21,13 @@ function parseCommandLineArgs(): { name: string; age: number } {
   return { name, age };
 }
 
-type CBool = 'Yes' | 'No';
-type CKey = string;
-type CUrl = string;
-type CDateTime = string;
-type CSheetName = string;
-
-type CalculatorRowData = {
-  'Election name': string;
-  'Election key': CKey;
-
-  'District name': string;
-  'District key': CKey;
-  Name: string;
-  Description: string;
-  'Show description'?: CBool;
-  Round: string;
-  Variant: string;
-  'Election from': CDateTime;
-  'Election to': CDateTime;
-  'Questions pool': CUrl;
-  'Questions spreadsheet': CUrl;
-  'Questions sheet': CSheetName;
-  'Questions form': CUrl;
-  'Answer yes': string;
-  'Answer no': string;
-  'Answers spreadsheet - candidates': CUrl;
-  'Answers sheet - candidates': CSheetName;
-  'Answers spreadsheet - experts': CUrl;
-  'Answers sheet - experts': CSheetName;
-};
-
-type QuestionRowData = {
-  Uuid: string;
-  Name: string;
-  Question: string;
-  Descript: string;
-  Tags: string;
-  Note: string;
-  Order: string;
-};
-
-class Question {
-  uuid: string;
-  name: string;
-  question: string;
-  descript: string;
-  tags: string[];
-  note: string;
-  order: string;
-
-  public constructor(row: QuestionRowData) {
-    this.uuid = row.Uuid;
-    this.name = row.Name;
-    this.question = row.Question;
-    this.descript = row.Descript;
-    this.tags = [row.Tags];
-    this.note = row.Note;
-    this.order = row.Order;
-  }
-}
-
-class QuestionsPool {
-  questions: { [key: string]: Question } = {};
-}
-
-class QuestionsRepository {
-  pool: { [key: string]: QuestionsPool } = {};
-
-  public hasPool(key: string): boolean {
-    return key in this.pool;
-  }
-}
-
-async function extractCalculators(doc: GoogleSpreadsheet) {
+async function extractCalculators(
+  doc: GoogleSpreadsheet,
+): Promise<Calculators> {
   await doc.loadInfo(); // loads document properties and worksheets
   console.log(doc.title);
+
+  let calculators = new Calculators();
 
   const sheet = doc.sheetsByTitle['Questions'];
   await sheet.loadHeaderRow();
@@ -126,6 +58,8 @@ async function extractCalculators(doc: GoogleSpreadsheet) {
 
     // console.log(calculatorRows[i]);
   }
+
+  return calculators;
 }
 
 // Main function
