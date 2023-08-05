@@ -16,8 +16,8 @@ It expects that the environmental variables - `GOOGLE_PRIVATE_KEY` and `GOOGLE_S
 these values are described in the [library documentation](https://theoephraim.github.io/node-google-spreadsheet/#/guides/authentication?id=service-account).
 
 ```sh
-export GOOGLE_PRIVATE_KEY=$( jq .private_key service_account.json  | sed -r 's/\\n/\\\n/g;s/\\//g;s/"//g' )
-export GOOGLE_SERVICE_ACCOUNT_EMAIL=$( jq .client_email service_account.json  | sed -r 's/\\n/\\\n/g;s/\\//g;s/"//g' )
+export GOOGLE_PRIVATE_KEY=$(jq .private_key service_account.json | sed -r 's/\\n/\\\n/g;s/\\//g;s/"//g')
+export GOOGLE_SERVICE_ACCOUNT_EMAIL=$(jq .client_email service_account.json | sed -r 's/\\n/\\\n/g;s/\\//g;s/"//g')
 ```
 
 ### Run Script

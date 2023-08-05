@@ -1,3 +1,5 @@
+import { GoogleSpreadsheetRow } from 'google-spreadsheet';
+
 type CBool = 'Yes' | 'No';
 type CKey = string;
 export type CUrl = string;
@@ -37,7 +39,7 @@ export type CalculatorRowData = {
   'Candidates sheet': CSheetName;
 };
 
-type QuestionsPoolRowData = {
+export type QuestionsPoolRowData = {
   Uuid: string;
   Name: string;
   Question: string;
@@ -47,20 +49,44 @@ type QuestionsPoolRowData = {
   Order: string;
 };
 
-class QuestionsPool {
-  questions: { [key: string]: QuestionsPoolRowData };
+export class QuestionsPool {
+  questions: { [key: string]: GoogleSpreadsheetRow<QuestionsPoolRowData> };
 
   constructor() {
     this.questions = {};
   }
+
+  append(row: GoogleSpreadsheetRow<QuestionsPoolRowData>) {
+    this.questions[row.get('Uuid')] = row;
+  }
+
+  contains(row: GoogleSpreadsheetRow<QuestionsPoolRowData>): boolean {
+    return row.get('Uuid') in this.questions;
+  }
 }
 
 export class Calculators {
-  calculators: { [key: string]: CalculatorRowData };
+  calculators: { [key: string]: GoogleSpreadsheetRow<CalculatorRowData>[] };
   questionPools: { [key: string]: QuestionsPool };
 
   constructor() {
     this.calculators = {};
     this.questionPools = {};
+  }
+
+  appendCalculator(calculator: GoogleSpreadsheetRow<CalculatorRowData>) {
+    const key = calculator.get('Election key');
+    if (!(key in this.calculators)) {
+      this.calculators[key] = [];
+    }
+    this.calculators[key].push(calculator);
+  }
+
+  shouldExtractQuestionPool(doc: CUrl): boolean {
+    return !(doc in this.questionPools);
+  }
+
+  setQuestionsPool(url: CUrl, pool: QuestionsPool) {
+    this.questionPools[url] = pool;
   }
 }
