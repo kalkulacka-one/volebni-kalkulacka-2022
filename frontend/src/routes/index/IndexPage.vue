@@ -77,19 +77,6 @@ const czechVerURL = 'https://www.volebnikalkulacka.cz';
               </i18n-t>
               {{ $t('index.info3.sufix') }}
             </BodyText>
-            <HeadlineText tag="h1" size="large" centered>{{
-              $t('index.title')
-            }}</HeadlineText>
-            <BodyText size="large" centered>{{ $t('index.info1') }}</BodyText>
-            <BodyText size="large" centered>{{ $t('index.info2') }}</BodyText>
-            <BodyText size="medium" centered>
-              <i18n-t keypath="index.info3.prefix">
-                <a :href="czechVerURL" target="_blank">{{
-                  $t('index.info3.link')
-                }}</a>
-              </i18n-t>
-              {{ $t('index.info3.sufix') }}
-            </BodyText>
           </StackComponent>
           <StackComponent spacing="small" centered>
             <BodyText v-if="success" size="small">
@@ -120,13 +107,9 @@ const czechVerURL = 'https://www.volebnikalkulacka.cz';
                   @click.prevent="handleSubmit"
                 >
                   {{ $t('index.sendButton') }}
-                  {{ $t('index.sendButton') }}
                 </ButtonComponent>
               </StackComponent>
             </form>
-            <BodyText v-if="!success" tag="p" size="small">{{
-              $t('index.sendDisclaimer')
-            }}</BodyText>
             <BodyText v-if="!success" tag="p" size="small">{{
               $t('index.sendDisclaimer')
             }}</BodyText>
