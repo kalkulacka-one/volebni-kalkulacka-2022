@@ -14,9 +14,9 @@ import NavigationBar from '@/components/design-system/navigation/NavigationBar.v
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import TextInputComponent from '@/components/design-system/input/TextInputComponent.vue';
 // debug
-import { useI18n } from 'vue-i18n';
-const { t, locale } = useI18n();
-locale.value = 'cz';
+// import { useI18n } from 'vue-i18n';
+// const { t, locale } = useI18n();
+// locale.value = 'cz';
 // end of debug
 
 const email = ref('');
@@ -50,7 +50,7 @@ const handleSubmit = async () => {
     message.value = 'Dáme vám vedieť!';
   } else {
     posting.value = false;
-    uccess.value = false;
+    success.value = false;
     message.value = 'Niečo sa pokazilo :( Skúste to znova.';
   }
 };
