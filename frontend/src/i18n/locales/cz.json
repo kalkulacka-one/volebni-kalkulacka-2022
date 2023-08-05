@@ -9,6 +9,19 @@
       "sufix": " volební kalkulačky."
     },
     "sendButton": "Dejte mi vědět",
-    "sendDisclaimer": "Odesláním souhlasíte se zasíláním novinek o volební kalkulačce."
+    "sendDisclaimer": "Odesláním souhlasíte se zasíláním novinek o volební kalkulačce.",
+    "subscription": {
+      "validation": "Pole nesmí být prázdné",
+      "success": "Dáme vám vědět!",
+      "error": "Něco se pokazilo :( Zkuste to znova."
+    }
+  },
+  "districtSelection": {
+    "title": {
+      "senat": "Zvolte svůj senátní obvod",
+      "communal": "Zvolte své město"
+    },
+    "goBack": "Zpět na hlavní stránku",
+    "continue": "Potvrdit a pokračovat"
   }
 }

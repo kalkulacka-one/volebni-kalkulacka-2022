@@ -9,6 +9,11 @@
       "sufix": " volebnej kalkulačky."
     },
     "sendButton": "Dajte mi vedieť",
-    "sendDisclaimer": "Odoslaním súhlasíte so zasielaním noviniek o volebnej kalkulačke."
+    "sendDisclaimer": "Odoslaním súhlasíte so zasielaním noviniek o volebnej kalkulačke.",
+    "subscription": {
+      "validation": "Pole nesmie byť prázdne",
+      "success": "Dáme vám vedieť!",
+      "error": "Niečo sa pokazilo :( Skúste to znova."
+    }
   }
 }

@@ -13,11 +13,9 @@ import HeadlineText from '@/components/design-system/typography/HeadlineText.vue
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import TextInputComponent from '@/components/design-system/input/TextInputComponent.vue';
-// debug
-// import { useI18n } from 'vue-i18n';
-// const { t, locale } = useI18n();
-// locale.value = 'cz';
-// end of debug
+import { useI18nWrapper } from '@/i18n';
+
+const { t, locale } = useI18nWrapper();
 
 const email = ref('');
 const emailError = ref();
@@ -28,7 +26,7 @@ const message = ref();
 const handleSubmit = async () => {
   console.log('handleSubmit');
   if (email.value === '') {
-    emailError.value = 'Pole nesmie byť prázdne';
+    emailError.value = t('index.subscription.validation');
     return;
   } else {
     emailError.value = undefined;
@@ -47,11 +45,11 @@ const handleSubmit = async () => {
   if (response.ok) {
     posting.value = false;
     success.value = true;
-    message.value = 'Dáme vám vedieť!';
+    message.value = t('index.subscription.success');
   } else {
     posting.value = false;
     success.value = false;
-    message.value = 'Niečo sa pokazilo :( Skúste to znova.';
+    message.value = t('index.subscription.error');
   }
 };
 const czechVerURL = 'https://www.volebnikalkulacka.cz';

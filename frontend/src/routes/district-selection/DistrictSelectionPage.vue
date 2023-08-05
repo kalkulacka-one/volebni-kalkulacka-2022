@@ -25,6 +25,9 @@ import MarkdownIt from '@/components/utilities/MarkdownIt.vue';
 import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import { stringToNormalizedHyphenated } from '@/common/utils';
+import { useI18nWrapper } from '@/i18n';
+
+const { t, locale } = useI18nWrapper();
 
 const router = useRouter();
 const route = useRoute();
@@ -39,8 +42,8 @@ const breadcrumbs = electionName;
 // TODO: Replace with data from store
 const title =
   route.params.election === 'senatni-2022'
-    ? 'Zvolte svůj senátní obvod'
-    : 'Zvolte své město';
+    ? t('districtSelection.title.senat')
+    : t('districtSelection.title.communal');
 
 const text = electionDescription;
 
@@ -89,7 +92,7 @@ const onSubmit = () => {
                     })
                   "
                 >
-                  Zpět na hlavní stránku
+                  {{ $t('districtSelection.goBack') }}
                   <template #iconAfter>
                     <IconComponent :icon="mdiCloseCircleOutline" />
                   </template>
@@ -108,7 +111,7 @@ const onSubmit = () => {
                   <template #icon>
                     <IconComponent
                       :icon="mdiCloseCircleOutline"
-                      title="Zpět na hlavní stránku"
+                      @title="t('districtSelection.goBack')"
                     />
                   </template>
                 </ButtonComponent>
@@ -161,7 +164,7 @@ const onSubmit = () => {
                   color="primary"
                   :disabled="!selected"
                 >
-                  Potvrdit a pokračovat
+                  {{ $t('districtSelection.continue') }}
                 </ButtonComponent>
               </BottomBar>
             </ResponsiveWrapper>
@@ -173,7 +176,7 @@ const onSubmit = () => {
                   color="primary"
                   :disabled="!selected"
                 >
-                  Potvrdit a pokračovat
+                  {{ $t('districtSelection.continue') }}
                 </ButtonComponent>
               </BottomBar>
             </ResponsiveWrapper>
