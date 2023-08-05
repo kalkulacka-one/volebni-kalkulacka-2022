@@ -26,3 +26,8 @@ export const i18n = (createI18n as typeof createI18nType)<
 
 // this is here only to force the right typings
 export const useI18nWrapper = useI18n as typeof useI18nType;
+
+export const switchLanguage = async (newLocale: string) => {
+  i18n.global.locale.value = newLocale;
+  document.querySelector('html')?.setAttribute('lang', newLocale);
+};

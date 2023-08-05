@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
-import { i18n } from '@/i18n';
+import { i18n, switchLanguage } from '@/i18n';
 import VueSocialSharing from 'vue-social-sharing';
 
 import {
@@ -441,6 +441,15 @@ router.beforeEach(async (to, from) => {
   } else {
     return true;
   }
+});
+
+//debug
+router.beforeEach((to, _from, next) => {
+  const lang = to.query['lang'];
+  if (lang && typeof lang === 'string') {
+    switchLanguage(lang);
+  }
+  next();
 });
 
 app.use(router);
