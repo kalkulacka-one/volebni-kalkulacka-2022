@@ -1,5 +1,6 @@
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
+import i18n from './i18n';
 import VueSocialSharing from 'vue-social-sharing';
 
 import {
@@ -269,6 +270,10 @@ app.use(VueSocialSharing, {
   /* optional options */
 });
 
+//vue-i18n
+app.use(i18n);
+
+//pinia
 const pinia = createPinia();
 app.use(pinia);
 
