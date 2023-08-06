@@ -12,6 +12,8 @@ import {
   QuestionsRow,
   QuestionsPoolRow,
   CalculatorRow,
+  CandidatesPoolRow,
+  type CandidatesPoolRowData,
 } from './types/input';
 
 // Function to convert GoogleSpreadsheetRow<QuestionsPoolRowData> to QuestionsPoolRow
@@ -24,7 +26,7 @@ export function convertToQuestionsPoolRow(
     Name: row.get('Name'),
     Question: row.get('Question'),
     Descript: row.get('Descript'),
-    Tags: row.get('Tags').split(),
+    Tags: row.get('Tags')?.split(),
     Note: row.get('Note'),
     Order: parseInt(row.get('Order')),
   });
@@ -69,5 +71,18 @@ export function convertToCalculatorRow(
     answersSheetExperts: row.get('Answers sheet - experts'),
     candidatesPool: row.get('Candidates pool'),
     candidatesSheet: row.get('Candidates sheet'),
+  });
+}
+
+export function convertToCandidatesPoolRow(
+  row: GoogleSpreadsheetRow<CandidatesPoolRowData>,
+): CandidatesPoolRow {
+  return new CandidatesPoolRow({
+    Uuid: row.get('Uuid'),
+    Name: row.get('Name'),
+    Abbriviation: row.get('Abbriviation'),
+    FirstName: row.get('First name'),
+    LastName: row.get('Last name'),
+    Type: row.get('Type'),
   });
 }

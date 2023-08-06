@@ -3,6 +3,7 @@ type CKey = string;
 export type CUrl = string;
 type CDateTime = string;
 type CSheetName = string;
+type CCandidateType = 'Person' | 'Party' | 'Coalition';
 
 /**
  * This type represents rows from the input Google Sheet that
@@ -34,6 +35,7 @@ export type CalculatorRowData = {
   'Answers spreadsheet - experts': CUrl;
   'Answers sheet - experts': CSheetName;
   'Candidates pool': CUrl;
+  'Candidates spreadsheet': CUrl;
   'Candidates sheet': CSheetName;
 };
 
@@ -61,6 +63,7 @@ export class CalculatorRow {
   answersSpreadsheetExperts: CUrl;
   answersSheetExperts: CSheetName;
   candidatesPool: CUrl;
+  candidatesSpreadsheet: CUrl;
   candidatesSheet: CSheetName;
 
   constructor(data: Partial<CalculatorRow>) {
@@ -86,6 +89,7 @@ export class CalculatorRow {
     this.answersSpreadsheetExperts = data.answersSpreadsheetExperts || '';
     this.answersSheetExperts = data.answersSheetExperts || '';
     this.candidatesPool = data.candidatesPool || '';
+    this.candidatesSpreadsheet = data.candidatesSpreadsheet || '';
     this.candidatesSheet = data.candidatesSheet || '';
   }
 }
@@ -177,15 +181,18 @@ export class Calculator {
   calculator: CalculatorRow;
   questionsPool: QuestionsPool;
   questions: Questions;
+  candidatesPool: CandidatesPool;
 
   constructor(
     calculator: CalculatorRow,
     questionsPool: QuestionsPool,
     questions: Questions,
+    candidatesPool: CandidatesPool,
   ) {
     this.calculator = calculator;
     this.questionsPool = questionsPool;
     this.questions = questions;
+    this.candidatesPool = candidatesPool;
   }
 
   key(): string {
@@ -193,15 +200,61 @@ export class Calculator {
   }
 }
 
+export type CandidatesPoolRowData = {
+  Uuid: string;
+  Name: string;
+  Abbriviation: string;
+  'First name': string;
+  'Last name': string;
+  Type: CCandidateType;
+};
+
+export class CandidatesPoolRow {
+  Uuid: string;
+  Name: string;
+  Abbriviation: string;
+  FirstName: string;
+  LastName: string;
+  Type: CCandidateType;
+
+  constructor(data: Partial<CandidatesPoolRow>) {
+    this.Uuid = data.Uuid || '';
+    this.Name = data.Name || '';
+    this.Abbriviation = data.Abbriviation || '';
+    this.FirstName = data['First name'] || '';
+    this.LastName = data['Last name'] || '';
+    this.Type = data.Type || 'Person';
+  }
+}
+
+export class CandidatesPool {
+  candidates: { [key: string]: CandidatesPoolRow };
+
+  constructor() {
+    this.candidates = {};
+  }
+
+  append(row: CandidatesPoolRow) {
+    this.candidates[row.Uuid] = row;
+  }
+
+  contains(row: CandidatesPoolRow): boolean {
+    return row.Uuid in this.candidates;
+  }
+}
+
 export class Calculators {
   calculators: { [key: string]: Calculator[] };
-  questionPools: { [key: string]: QuestionsPool };
+  questionsPools: { [key: string]: QuestionsPool };
   questions: { [key: string]: Questions };
+
+  candidatesPools: { [key: string]: CandidatesPool };
 
   constructor() {
     this.calculators = {};
-    this.questionPools = {};
+    this.questionsPools = {};
     this.questions = {};
+    this.candidatesPools = {};
   }
 
   appendCalculator(calculator: Calculator) {
@@ -213,11 +266,11 @@ export class Calculators {
   }
 
   getQuestionPool(url: CUrl): QuestionsPool | undefined {
-    return this.questionPools[url];
+    return this.questionsPools[url];
   }
 
   setQuestionsPool(url: CUrl, pool: QuestionsPool) {
-    this.questionPools[url] = pool;
+    this.questionsPools[url] = pool;
   }
 
   getQuestions(url: CUrl): Questions | undefined {
@@ -226,5 +279,13 @@ export class Calculators {
 
   setQuestions(url: CUrl, questions: Questions) {
     this.questions[url] = questions;
+  }
+
+  getCandidatesPool(url: CUrl): CandidatesPool | undefined {
+    return this.candidatesPools[url];
+  }
+
+  setCandidatesPool(url: CUrl, pool: CandidatesPool) {
+    this.candidatesPools[url] = pool;
   }
 }

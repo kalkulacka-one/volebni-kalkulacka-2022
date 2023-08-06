@@ -1,6 +1,6 @@
 // import the necessary modules
 import * as process from 'process';
-import { GoogleSpreadsheet } from 'google-spreadsheet';
+import { GoogleSpreadsheet, GoogleSpreadsheetRow } from 'google-spreadsheet';
 import { JWT } from 'google-auth-library';
 import {
   type CUrl,
@@ -11,13 +11,20 @@ import {
   Calculator,
   Questions,
   type QuestionRowData,
+  type CandidatesPoolRowData,
+  CandidatesPool,
 } from './types/input';
 
 import {
   convertToQuestionsPoolRow,
   convertToQuestionsRow,
   convertToCalculatorRow,
+  convertToCandidatesPoolRow,
 } from './converters';
+
+function isEmpty(val: string | undefined): boolean {
+  return (val || '').trim().length === 0;
+}
 
 // Function to get the value of an environmental variable or a default value
 function getEnvOrDefault(envVariable: string, defaultValue: string): string {
@@ -40,13 +47,19 @@ async function fetchGoogleSpreadsheet(
   url: CUrl,
   jwt: JWT,
 ): Promise<GoogleSpreadsheet> {
-  const key = extractKey(url);
   console.log('Fetching GoogleSpreadsheet: ', url);
+  const key = extractKey(url);
   const doc = new GoogleSpreadsheet(key, jwt);
 
   await doc.loadInfo(); // loads document properties and worksheets
   console.log('Fetched GoogleSpreadsheet: ', url, '; Title: ', doc.title);
   return doc;
+}
+
+function skipQuestionRowData(
+  row: GoogleSpreadsheetRow<QuestionRowData>,
+): boolean {
+  return isEmpty(row.get('Uuid')) || isEmpty(row.get('Name'));
 }
 
 async function extractQuestions(url: CUrl, jwt: JWT): Promise<Questions> {
@@ -61,12 +74,22 @@ async function extractQuestions(url: CUrl, jwt: JWT): Promise<Questions> {
     const questionRows = await sheet.getRows<QuestionRowData>();
     for (let i = 0; i < questionRows.length; i++) {
       const r = questionRows[i];
+      if (skipQuestionRowData(r)) {
+        console.log('Skipping QuestionRowData: ', i);
+        continue;
+      }
       console.log('Question: ', title, '/', i, '; ', r.get('Uuid'));
       questions.append(title, convertToQuestionsRow(i, r));
     }
   }
 
   return questions;
+}
+
+function skipQuestionsPoolRowData(
+  row: GoogleSpreadsheetRow<QuestionsPoolRowData>,
+): boolean {
+  return isEmpty(row.get('Uuid')) || isEmpty(row.get('Name'));
 }
 
 async function extractQuestionPool(
@@ -82,11 +105,57 @@ async function extractQuestionPool(
   const poolRows = await sheet.getRows<QuestionsPoolRowData>();
   for (let i = 0; i < poolRows.length; i++) {
     const r = poolRows[i];
-    console.log('Pool: ', i, '; ', r.get('Uuid'));
+    if (skipQuestionsPoolRowData(r)) {
+      console.log('Skipping QuestionsPoolRowData: ', i);
+      continue;
+    }
+    console.log('QuestionPool: ', i, '; ', r.get('Uuid'));
     pool.append(convertToQuestionsPoolRow(i, r));
   }
 
   return pool;
+}
+
+function skipCandidatesPoolRowData(
+  row: GoogleSpreadsheetRow<CandidatesPoolRowData>,
+): boolean {
+  return isEmpty(row.get('Uuid')) || isEmpty(row.get('Name'));
+}
+
+async function extractCandidatesPool(
+  url: CUrl,
+  jwt: JWT,
+): Promise<CandidatesPool> {
+  const pool = new CandidatesPool();
+  const doc = await fetchGoogleSpreadsheet(url, jwt);
+
+  const sheet = doc.sheetsByTitle['Candidates'];
+  await sheet.loadHeaderRow();
+
+  const poolRows = await sheet.getRows<CandidatesPoolRowData>();
+  for (let i = 0; i < poolRows.length; i++) {
+    const r = poolRows[i];
+    if (skipCandidatesPoolRowData(r)) {
+      console.log('Skipping CandidatesPoolRowData: ', i);
+      continue;
+    }
+    console.log('CandidatesPool: ', i, '; ', r.get('Uuid'));
+    pool.append(convertToCandidatesPoolRow(r));
+  }
+
+  return pool;
+}
+
+function skipCalculatorRowData(
+  row: GoogleSpreadsheetRow<CalculatorRowData>,
+): boolean {
+  return (
+    isEmpty(row.get('Election name')) ||
+    isEmpty(row.get('Questions pool')) ||
+    isEmpty(row.get('Questions spreadsheet')) ||
+    isEmpty(row.get('Questions sheet')) ||
+    isEmpty(row.get('Candidates pool'))
+  );
 }
 
 async function extractCalculators(url: CUrl, jwt: JWT): Promise<Calculators> {
@@ -102,11 +171,8 @@ async function extractCalculators(url: CUrl, jwt: JWT): Promise<Calculators> {
   for (let i = 0; i < calculatorRows.length; i++) {
     const r = calculatorRows[i];
 
-    if (
-      r.get('Election name') === undefined ||
-      r.get('Questions pool') === undefined
-    ) {
-      // console.log('Skipping ', i, " - it's empty");
+    if (skipCalculatorRowData(r)) {
+      console.log('Skipping CalculatorRowData: ', i);
       continue;
     }
 
@@ -133,10 +199,18 @@ async function extractCalculators(url: CUrl, jwt: JWT): Promise<Calculators> {
       calculators.setQuestions(questionPoolUrl, questions);
     }
 
+    const candidatesPoolUrl = r.get('Candidates pool');
+    let candidatesPool = calculators.getCandidatesPool(candidatesPoolUrl);
+    if (candidatesPool === undefined) {
+      candidatesPool = await extractCandidatesPool(candidatesPoolUrl, jwt);
+      calculators.setCandidatesPool(candidatesPoolUrl, candidatesPool);
+    }
+
     const calculator = new Calculator(
       convertToCalculatorRow(r),
       questionsPool,
       questions,
+      candidatesPool,
     );
 
     calculators.appendCalculator(calculator);
