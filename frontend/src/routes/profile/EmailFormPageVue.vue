@@ -78,7 +78,6 @@ const handleClose = () => {
     name: appRoutes.index.name,
     query: { ...route.query },
   });
-  // }
 };
 
 const handleSubmit = async () => {
@@ -102,7 +101,10 @@ const handleSubmit = async () => {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ destination: emailAddress.value }),
+    body: JSON.stringify({
+      destination: emailAddress.value,
+      ...route.query,
+    }),
   });
 
   if (response.ok) {
@@ -182,12 +184,12 @@ const handleSubmit = async () => {
 
           <FormComponent @submit.prevent="handleSubmit" v-if="step === 0">
             <TextInputComponent
+              v-model="emailAddress"
               required
               label="E-mail"
               type="email"
               placeholder="E-mail"
               :value="emailAddress"
-              v-model="emailAddress"
               :icon="mdiEmailOutline"
               :disabled="posting"
               :error="emailAddressError"
@@ -196,8 +198,8 @@ const handleSubmit = async () => {
             <ButtonComponent
               kind="filled"
               color="primary"
-              @click.prevent="handleSubmit"
               :loading="posting"
+              @click.prevent="handleSubmit"
             >
               Zaslat potvrdzovací email
               <template #iconAfter>

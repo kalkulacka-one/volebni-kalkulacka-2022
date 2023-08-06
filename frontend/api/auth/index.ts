@@ -25,6 +25,13 @@ if (!PUBLIC_URL) {
   throw new Error('PUBLIC_URL is not defined');
 }
 
+const getQueryObject = async (url: string) => {
+  const params = new URLSearchParams(url);
+  const entries = params.entries();
+
+  return Object.fromEntries(entries);
+};
+
 const providers = {
   facebook: {
     strategy: () => {
@@ -173,12 +180,20 @@ const getMagicLogin = () => {
   return new MagicLoginStrategy({
     callbackUrl: `${OAUTH_CALLBACK_URL}/api/auth/magiclogin/callback`,
     secret: process.env.MAGIC_LINK_SECRET,
-    sendMagicLink: async (destination, href) => {
+    sendMagicLink: async (destination, href, verificationCode, req) => {
+      const params = new URLSearchParams({
+        returnPath: req.body.returnPath,
+        answerId: req.body.answerId,
+        updateToken: req.body.updateToken,
+      }).toString();
+
+      const urlString = href + '&' + params;
+
       await sendEmail(
         destination,
         'Volební kalkulačka - přihlášení',
-        emailBody.replace('{{confirmationLink}}', href),
-        `Prosíme potvrďte emailovou adresu otevřením adresy: ${href}`,
+        emailBody.replace('{{confirmationLink}}', urlString),
+        `Prosíme potvrďte emailovou adresu otevřením adresy: ${urlString}`,
       );
     },
     verify: (payload, cb) => {
@@ -193,6 +208,21 @@ const getMagicLogin = () => {
 const callback = (provider: string) => {
   return (req: Request, res: Response, next: NextFunction) => {
     passport.authenticate(provider, { session: false }, (err, user, info) => {
+      const assignAnswerToUserFromQuery = async (
+        returnTo,
+        updateToken,
+        answerId,
+      ) => {
+        if (updateToken && answerId) {
+          await assignAnswerToUser({
+            answerId,
+            updateToken,
+            userId: user.id,
+          });
+        }
+        return redirectAfterCallback(returnTo, res);
+      };
+
       if (err || !user) {
         return res.redirect('/' + '?error=' + err?.message);
       }
@@ -232,20 +262,19 @@ const callback = (provider: string) => {
         }
 
         const { state } = req.query;
+
         if (state) {
           const { returnTo, updateToken, answerId } = JSON.parse(
             Buffer.from(state as string, 'base64').toString(),
           );
-          if (updateToken && answerId) {
-            await assignAnswerToUser({
-              answerId,
-              updateToken,
-              userId: user.id,
-            });
-          }
-          return redirectAfterCallback(returnTo, res);
+
+          assignAnswerToUserFromQuery(returnTo, updateToken, answerId);
+        } else {
+          const query = await getQueryObject(req.url);
+          const { returnPath, updateToken, answerId } = query;
+
+          assignAnswerToUserFromQuery(returnPath, updateToken, answerId);
         }
-        redirectAfterCallback('/', res);
       });
     })(req, res, next);
   };
