@@ -8,7 +8,16 @@ import {
   Calculators,
   type QuestionsPoolRowData,
   QuestionsPool,
+  Calculator,
+  Questions,
+  type QuestionRowData,
 } from './types/input';
+
+import {
+  convertToQuestionsPoolRow,
+  convertToQuestionsRow,
+  convertToCalculatorRow,
+} from './converters';
 
 // Function to get the value of an environmental variable or a default value
 function getEnvOrDefault(envVariable: string, defaultValue: string): string {
@@ -40,6 +49,26 @@ async function fetchGoogleSpreadsheet(
   return doc;
 }
 
+async function extractQuestions(url: CUrl, jwt: JWT): Promise<Questions> {
+  const questions = new Questions();
+  const doc = await fetchGoogleSpreadsheet(url, jwt);
+
+  for (let sI = 0; sI < doc.sheetCount; sI++) {
+    const sheet = doc.sheetsByIndex[sI];
+    await sheet.loadHeaderRow();
+    const title = sheet.title;
+
+    const questionRows = await sheet.getRows<QuestionRowData>();
+    for (let i = 0; i < questionRows.length; i++) {
+      const r = questionRows[i];
+      console.log('Question: ', title, '/', i, '; ', r.get('Uuid'));
+      questions.append(title, convertToQuestionsRow(i, r));
+    }
+  }
+
+  return questions;
+}
+
 async function extractQuestionPool(
   url: CUrl,
   jwt: JWT,
@@ -54,7 +83,7 @@ async function extractQuestionPool(
   for (let i = 0; i < poolRows.length; i++) {
     const r = poolRows[i];
     console.log('Pool: ', i, '; ', r.get('Uuid'));
-    pool.append(r);
+    pool.append(convertToQuestionsPoolRow(i, r));
   }
 
   return pool;
@@ -88,17 +117,29 @@ async function extractCalculators(url: CUrl, jwt: JWT): Promise<Calculators> {
       r.get('Election name'),
       ', District Name: ',
       r.get('District name'),
-      ', Questions pool: ',
-      r.get('Questions pool'),
     );
 
-    calculators.appendCalculator(r);
     const questionPoolUrl = r.get('Questions pool');
-    if (calculators.shouldExtractQuestionPool(questionPoolUrl)) {
-      const questionsPool = await extractQuestionPool(questionPoolUrl, jwt);
-
+    let questionsPool = calculators.getQuestionPool(questionPoolUrl);
+    if (questionsPool === undefined) {
+      questionsPool = await extractQuestionPool(questionPoolUrl, jwt);
       calculators.setQuestionsPool(questionPoolUrl, questionsPool);
     }
+
+    const questionsUrl = r.get('Questions spreadsheet');
+    let questions = calculators.getQuestions(questionsUrl);
+    if (questions === undefined) {
+      questions = await extractQuestions(questionsUrl, jwt);
+      calculators.setQuestions(questionPoolUrl, questions);
+    }
+
+    const calculator = new Calculator(
+      convertToCalculatorRow(r),
+      questionsPool,
+      questions,
+    );
+
+    calculators.appendCalculator(calculator);
 
     // console.log(calculatorRows[i]);
   }
