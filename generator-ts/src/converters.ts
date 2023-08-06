@@ -14,6 +14,8 @@ import {
   CalculatorRow,
   CandidatesPoolRow,
   type CandidatesPoolRowData,
+  CandidatesRow,
+  type CandidatesRowData,
 } from './types/input';
 
 // Function to convert GoogleSpreadsheetRow<QuestionsPoolRowData> to QuestionsPoolRow
@@ -48,29 +50,30 @@ export function convertToCalculatorRow(
   row: GoogleSpreadsheetRow<CalculatorRowData>,
 ): CalculatorRow {
   return new CalculatorRow({
-    electionName: row.get('Election name'),
-    electionKey: row.get('Election key'),
-    districtName: row.get('District name'),
-    districtKey: row.get('District key'),
-    name: row.get('Name'),
-    description: row.get('Description'),
-    showDescription: row.get('Show description'),
-    round: row.get('Round'),
-    variant: row.get('Variant'),
-    electionFrom: row.get('Election from'),
-    electionTo: row.get('Election to'),
-    questionsPool: row.get('Questions pool'),
-    questionsSpreadsheet: row.get('Questions spreadsheet'),
-    questionsSheet: row.get('Questions sheet'),
-    questionsForm: row.get('Questions form'),
-    answerYes: row.get('Answer yes'),
-    answerNo: row.get('Answer no'),
-    answersSpreadsheetCandidates: row.get('Answers spreadsheet - candidates'),
-    answersSheetCandidates: row.get('Answers sheet - candidates'),
-    answersSpreadsheetExperts: row.get('Answers spreadsheet - experts'),
-    answersSheetExperts: row.get('Answers sheet - experts'),
-    candidatesPool: row.get('Candidates pool'),
-    candidatesSheet: row.get('Candidates sheet'),
+    ElectionName: row.get('Election name'),
+    ElectionKey: row.get('Election key'),
+    DistrictName: row.get('District name'),
+    DistrictKey: row.get('District key'),
+    Name: row.get('Name'),
+    Description: row.get('Description'),
+    ShowDescription: row.get('Show description'),
+    Round: row.get('Round'),
+    Variant: row.get('Variant'),
+    ElectionFrom: row.get('Election from'),
+    ElectionTo: row.get('Election to'),
+    QuestionsPool: row.get('Questions pool'),
+    QuestionsSpreadsheet: row.get('Questions spreadsheet'),
+    QuestionsSheet: row.get('Questions sheet'),
+    QuestionsForm: row.get('Questions form'),
+    AnswerYes: row.get('Answer yes'),
+    AnswerNo: row.get('Answer no'),
+    AnswersSpreadsheetCandidates: row.get('Answers spreadsheet - candidates'),
+    AnswersSheetCandidates: row.get('Answers sheet - candidates'),
+    AnswersSpreadsheetExperts: row.get('Answers spreadsheet - experts'),
+    AnswersSheetExperts: row.get('Answers sheet - experts'),
+    CandidatesPool: row.get('Candidates pool'),
+    CandidatesSpreadsheet: row.get('Candidates spreadsheet'),
+    CandidatesSheet: row.get('Candidates sheet'),
   });
 }
 
@@ -84,5 +87,16 @@ export function convertToCandidatesPoolRow(
     FirstName: row.get('First name'),
     LastName: row.get('Last name'),
     Type: row.get('Type'),
+  });
+}
+
+export function convertToCandidatesRow(
+  row: GoogleSpreadsheetRow<CandidatesRowData>,
+): CandidatesRow {
+  return new CandidatesRow({
+    Uuid: row.get('Uuid'),
+    Name: row.get('Name'),
+    MemberOf: row.get('Member of'),
+    Members: row.get('Members'),
   });
 }

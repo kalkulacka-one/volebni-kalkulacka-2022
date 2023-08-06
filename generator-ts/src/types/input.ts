@@ -40,57 +40,57 @@ export type CalculatorRowData = {
 };
 
 export class CalculatorRow {
-  electionName: string;
-  electionKey: CKey;
+  ElectionName: string;
+  ElectionKey: CKey;
 
-  districtName: string;
-  districtKey: CKey;
-  name: string;
-  description: string;
-  showDescription?: CBool;
-  round: string;
-  variant: string;
-  electionFrom: CDateTime;
-  electionTo: CDateTime;
-  questionsPool: CUrl;
-  questionsSpreadsheet: CUrl;
-  questionsSheet: CSheetName;
-  questionsForm: CUrl;
-  answerYes: string;
-  answerNo: string;
-  answersSpreadsheetCandidates: CUrl;
-  answersSheetCandidates: CSheetName;
-  answersSpreadsheetExperts: CUrl;
-  answersSheetExperts: CSheetName;
-  candidatesPool: CUrl;
-  candidatesSpreadsheet: CUrl;
-  candidatesSheet: CSheetName;
+  DistrictName: string;
+  DistrictKey: CKey;
+  Name: string;
+  Description: string;
+  ShowDescription?: CBool;
+  Round: string;
+  Variant: string;
+  ElectionFrom: CDateTime;
+  ElectionTo: CDateTime;
+  QuestionsPool: CUrl;
+  QuestionsSpreadsheet: CUrl;
+  QuestionsSheet: CSheetName;
+  QuestionsForm: CUrl;
+  AnswerYes: string;
+  AnswerNo: string;
+  AnswersSpreadsheetCandidates: CUrl;
+  AnswersSheetCandidates: CSheetName;
+  AnswersSpreadsheetExperts: CUrl;
+  AnswersSheetExperts: CSheetName;
+  CandidatesPool: CUrl;
+  CandidatesSpreadsheet: CUrl;
+  CandidatesSheet: CSheetName;
 
   constructor(data: Partial<CalculatorRow>) {
-    this.electionName = data.electionName || '';
-    this.electionKey = data.electionKey || '';
-    this.districtName = data.districtName || '';
-    this.districtKey = data.districtKey || '';
-    this.name = data.name || '';
-    this.description = data.description || '';
-    this.showDescription = data.showDescription || 'No';
-    this.round = data.round || '';
-    this.variant = data.variant || '';
-    this.electionFrom = data.electionFrom || '';
-    this.electionTo = data.electionTo || '';
-    this.questionsPool = data.questionsPool || '';
-    this.questionsSpreadsheet = data.questionsSpreadsheet || '';
-    this.questionsSheet = data.questionsSheet || '';
-    this.questionsForm = data.questionsForm || '';
-    this.answerYes = data.answerYes || '';
-    this.answerNo = data.answerNo || '';
-    this.answersSpreadsheetCandidates = data.answersSpreadsheetCandidates || '';
-    this.answersSheetCandidates = data.answersSheetCandidates || '';
-    this.answersSpreadsheetExperts = data.answersSpreadsheetExperts || '';
-    this.answersSheetExperts = data.answersSheetExperts || '';
-    this.candidatesPool = data.candidatesPool || '';
-    this.candidatesSpreadsheet = data.candidatesSpreadsheet || '';
-    this.candidatesSheet = data.candidatesSheet || '';
+    this.ElectionName = data.ElectionName || '';
+    this.ElectionKey = data.ElectionKey || '';
+    this.DistrictName = data.DistrictName || '';
+    this.DistrictKey = data.DistrictKey || '';
+    this.Name = data.Name || '';
+    this.Description = data.Description || '';
+    this.ShowDescription = data.ShowDescription || 'No';
+    this.Round = data.Round || '';
+    this.Variant = data.Variant || '';
+    this.ElectionFrom = data.ElectionFrom || '';
+    this.ElectionTo = data.ElectionTo || '';
+    this.QuestionsPool = data.QuestionsPool || '';
+    this.QuestionsSpreadsheet = data.QuestionsSpreadsheet || '';
+    this.QuestionsSheet = data.QuestionsSheet || '';
+    this.QuestionsForm = data.QuestionsForm || '';
+    this.AnswerYes = data.AnswerYes || '';
+    this.AnswerNo = data.AnswerNo || '';
+    this.AnswersSpreadsheetCandidates = data.AnswersSpreadsheetCandidates || '';
+    this.AnswersSheetCandidates = data.AnswersSheetCandidates || '';
+    this.AnswersSpreadsheetExperts = data.AnswersSpreadsheetExperts || '';
+    this.AnswersSheetExperts = data.AnswersSheetExperts || '';
+    this.CandidatesPool = data.CandidatesPool || '';
+    this.CandidatesSpreadsheet = data.CandidatesSpreadsheet || '';
+    this.CandidatesSheet = data.CandidatesSheet || '';
   }
 }
 
@@ -182,21 +182,24 @@ export class Calculator {
   questionsPool: QuestionsPool;
   questions: Questions;
   candidatesPool: CandidatesPool;
+  candidates: Candidates;
 
   constructor(
     calculator: CalculatorRow,
     questionsPool: QuestionsPool,
     questions: Questions,
     candidatesPool: CandidatesPool,
+    candidates: Candidates,
   ) {
     this.calculator = calculator;
     this.questionsPool = questionsPool;
     this.questions = questions;
     this.candidatesPool = candidatesPool;
+    this.candidates = candidates;
   }
 
   key(): string {
-    return this.calculator.electionKey;
+    return this.calculator.ElectionKey;
   }
 }
 
@@ -243,18 +246,56 @@ export class CandidatesPool {
   }
 }
 
+export type CandidatesRowData = {
+  Uuid: string;
+  Name: string;
+  'Member of': string;
+  Members: string;
+};
+
+export class CandidatesRow {
+  Uuid: string;
+  Name: string;
+  MemberOf: string;
+  Members: string;
+
+  constructor(data: Partial<CandidatesRow>) {
+    this.Uuid = data.Uuid || '';
+    this.Name = data.Name || '';
+    this.MemberOf = data['Member of'] || '';
+    this.Members = data.Members || '';
+  }
+}
+
+export class Candidates {
+  candidates: { [title: string]: CandidatesRow[] };
+
+  constructor() {
+    this.candidates = {};
+  }
+
+  append(title: string, row: CandidatesRow) {
+    if (!(title in this.candidates)) {
+      this.candidates[title] = [];
+    }
+    this.candidates[title].push(row);
+  }
+}
+
 export class Calculators {
   calculators: { [key: string]: Calculator[] };
   questionsPools: { [key: string]: QuestionsPool };
   questions: { [key: string]: Questions };
 
   candidatesPools: { [key: string]: CandidatesPool };
+  candidates: { [key: string]: Candidates };
 
   constructor() {
     this.calculators = {};
     this.questionsPools = {};
     this.questions = {};
     this.candidatesPools = {};
+    this.candidates = {};
   }
 
   appendCalculator(calculator: Calculator) {
@@ -287,5 +328,13 @@ export class Calculators {
 
   setCandidatesPool(url: CUrl, pool: CandidatesPool) {
     this.candidatesPools[url] = pool;
+  }
+
+  getCandidates(url: CUrl): Candidates | undefined {
+    return this.candidates[url];
+  }
+
+  setCandidates(url: CUrl, candidates: Candidates) {
+    this.candidates[url] = candidates;
   }
 }

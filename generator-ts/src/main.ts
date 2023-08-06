@@ -13,6 +13,9 @@ import {
   type QuestionRowData,
   type CandidatesPoolRowData,
   CandidatesPool,
+  type CandidatesRowData,
+  CandidatesRow,
+  Candidates,
 } from './types/input';
 
 import {
@@ -20,6 +23,7 @@ import {
   convertToQuestionsRow,
   convertToCalculatorRow,
   convertToCandidatesPoolRow,
+  convertToCandidatesRow,
 } from './converters';
 
 function isEmpty(val: string | undefined): boolean {
@@ -78,7 +82,16 @@ async function extractQuestions(url: CUrl, jwt: JWT): Promise<Questions> {
         console.log('Skipping QuestionRowData: ', i);
         continue;
       }
-      console.log('Question: ', title, '/', i, '; ', r.get('Uuid'));
+      console.log(
+        'Question: ',
+        title,
+        '/',
+        i,
+        '; ',
+        r.get('Name'),
+        '; ',
+        r.get('Uuid'),
+      );
       questions.append(title, convertToQuestionsRow(i, r));
     }
   }
@@ -109,7 +122,7 @@ async function extractQuestionPool(
       console.log('Skipping QuestionsPoolRowData: ', i);
       continue;
     }
-    console.log('QuestionPool: ', i, '; ', r.get('Uuid'));
+    console.log('QuestionPool: ', i, '; ', r.get('Name'), '; ', r.get('Uuid'));
     pool.append(convertToQuestionsPoolRow(i, r));
   }
 
@@ -139,11 +152,57 @@ async function extractCandidatesPool(
       console.log('Skipping CandidatesPoolRowData: ', i);
       continue;
     }
-    console.log('CandidatesPool: ', i, '; ', r.get('Uuid'));
+    console.log(
+      'CandidatesPool: ',
+      i,
+      '; ',
+      r.get('Name'),
+      '; ',
+      r.get('Uuid'),
+    );
     pool.append(convertToCandidatesPoolRow(r));
   }
 
   return pool;
+}
+
+function skipCandidatesRowData(
+  row: GoogleSpreadsheetRow<CandidatesRowData>,
+): boolean {
+  return isEmpty(row.get('Uuid')) || isEmpty(row.get('Name'));
+}
+
+async function extractCandidates(url: CUrl, jwt: JWT): Promise<Candidates> {
+  const candidates = new Candidates();
+  const doc = await fetchGoogleSpreadsheet(url, jwt);
+
+  for (let sI = 0; sI < doc.sheetCount; sI++) {
+    const sheet = doc.sheetsByIndex[sI];
+    await sheet.loadHeaderRow();
+    const title = sheet.title;
+
+    const candidatesRows = await sheet.getRows<CandidatesRowData>();
+    for (let i = 0; i < candidatesRows.length; i++) {
+      const r = candidatesRows[i];
+      if (skipCandidatesRowData(r)) {
+        console.log('Skipping CandidatesRowData: ', i);
+        continue;
+      }
+      console.log(
+        'Candidates: ',
+        title,
+        '/',
+        i,
+        '; ',
+        r.get('Name'),
+        '; ',
+        r.get('Uuid'),
+      );
+      candidates.append(title, convertToCandidatesRow(r));
+    }
+  }
+
+  return candidates;
 }
 
 function skipCalculatorRowData(
@@ -154,7 +213,9 @@ function skipCalculatorRowData(
     isEmpty(row.get('Questions pool')) ||
     isEmpty(row.get('Questions spreadsheet')) ||
     isEmpty(row.get('Questions sheet')) ||
-    isEmpty(row.get('Candidates pool'))
+    isEmpty(row.get('Candidates pool')) ||
+    isEmpty(row.get('Candidates spreadsheet')) ||
+    isEmpty(row.get('Candidates sheet'))
   );
 }
 
@@ -196,7 +257,7 @@ async function extractCalculators(url: CUrl, jwt: JWT): Promise<Calculators> {
     let questions = calculators.getQuestions(questionsUrl);
     if (questions === undefined) {
       questions = await extractQuestions(questionsUrl, jwt);
-      calculators.setQuestions(questionPoolUrl, questions);
+      calculators.setQuestions(questionsUrl, questions);
     }
 
     const candidatesPoolUrl = r.get('Candidates pool');
@@ -206,11 +267,19 @@ async function extractCalculators(url: CUrl, jwt: JWT): Promise<Calculators> {
       calculators.setCandidatesPool(candidatesPoolUrl, candidatesPool);
     }
 
+    const candidatesUrl = r.get('Candidates spreadsheet');
+    let candidates = calculators.getCandidates(candidatesUrl);
+    if (candidates === undefined) {
+      candidates = await extractCandidates(candidatesUrl, jwt);
+      calculators.setCandidates(candidatesUrl, candidates);
+    }
+
     const calculator = new Calculator(
       convertToCalculatorRow(r),
       questionsPool,
       questions,
       candidatesPool,
+      candidates,
     );
 
     calculators.appendCalculator(calculator);
