@@ -120,12 +120,12 @@ const handleSubmit = async () => {
             >
               <StackComponent spacing="medium" centered stretched>
                 <TextInputComponent
+                  v-model="emailAddress"
                   required
                   label="E-mail"
                   type="email"
                   placeholder="E-mail"
                   :value="emailAddress"
-                  v-model="emailAddress"
                   :icon="mdiEmailOutline"
                   :disabled="posting"
                 />
@@ -133,8 +133,8 @@ const handleSubmit = async () => {
                 <ButtonComponent
                   kind="filled"
                   color="primary"
-                  @click.prevent="handleSubmit"
                   :loading="posting"
+                  @click.prevent="handleSubmit"
                 >
                   Zaslat potvrdzovací e-mail
                   <template #iconAfter>

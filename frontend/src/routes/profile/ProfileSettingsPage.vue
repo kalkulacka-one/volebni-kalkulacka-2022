@@ -117,22 +117,22 @@ const handleLogout = async () => {
         <StackComponent spacing="large" centered>
           <FormComponent
             class="w-full"
-            @submit.prevent="onSubmit"
             :success="formSavedSuccess"
+            @submit.prevent="onSubmit"
           >
             <TextInputComponent
               label="Celé jméno"
               type="text"
               placeholder="Jan Novák"
               class="w-full"
-              :modelValue="user?.displayName"
+              :model-value="user?.displayName"
               :icon="mdiAccountOutline"
+              :error="validateInput(user?.displayName)"
               @update:modelValue="
                 (newVal) => {
                   if (user) user.displayName = newVal;
                 }
               "
-              :error="validateInput(user?.displayName)"
             />
 
             <TextInputComponent
@@ -142,7 +142,7 @@ const handleLogout = async () => {
               type="email"
               placeholder="E-mail"
               class="w-full"
-              :modelValue="user?.email"
+              :model-value="user?.email"
               :icon="mdiEmailOutline"
               @update:modelValue="
                 (newVal) => {
@@ -229,8 +229,8 @@ const handleLogout = async () => {
               kind="filled"
               size="medium"
               color="primary"
-              @click.prevent="handleDeleteUserClick"
               center
+              @click.prevent="handleDeleteUserClick"
             >
               Smazat profil a data
             </ButtonComponent>

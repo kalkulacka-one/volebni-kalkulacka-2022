@@ -103,7 +103,7 @@ const handleGoToEmailFormClick = () => {
               >
               <template v-else>Přihlásit se</template>
             </TitleText>
-            <BodyText strong size="small" v-if="type === 'registration'">
+            <BodyText v-if="type === 'registration'" strong size="small">
               Sledujte názorový vývoj ve svém profilu
             </BodyText>
           </StackComponent>

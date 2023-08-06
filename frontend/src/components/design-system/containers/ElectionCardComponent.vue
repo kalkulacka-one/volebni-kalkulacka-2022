@@ -133,7 +133,7 @@ const getReducedCandidates = () => {
     <StackComponent spacing="medium">
       <StackComponent spacing="extra-small">
         <TitleText tag="h4" size="small">{{ electionName }}</TitleText>
-        <BodyText size="small" v-if="electionDateFrom && electionDateTo">
+        <BodyText v-if="electionDateFrom && electionDateTo" size="small">
           {{ getDurationDate(electionDateFrom, electionDateTo) }}
         </BodyText>
       </StackComponent>
@@ -149,8 +149,8 @@ const getReducedCandidates = () => {
             class="full-width"
           >
             <AvatarComponent
-              :backgroundImage="candidate.image"
-              :backgroundColor="
+              :background-image="candidate.image"
+              :background-color="
                 idx == 0
                   ? 'rgb(var(--color-primary-bg-strong))'
                   : 'rgb(var(--color-primary-bg))'
@@ -246,7 +246,7 @@ const getReducedCandidates = () => {
             padding="medium"
             border
             corner="bottom-left"
-            borderRadius="medium"
+            border-radius="medium"
             class="full-width"
           >
             <StackComponent horizontal spacing="medium" centered>
@@ -311,7 +311,7 @@ const getReducedCandidates = () => {
           padding="medium"
           border
           corner="bottom-left"
-          borderRadius="medium"
+          border-radius="medium"
           class="full-width"
         >
           <StackComponent horizontal spacing="medium" centered>
