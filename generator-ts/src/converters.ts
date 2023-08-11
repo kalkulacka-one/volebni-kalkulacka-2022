@@ -96,6 +96,7 @@ export function convertToCandidatesRow(
   return new CandidatesRow({
     Uuid: row.get('Uuid'),
     Name: row.get('Name'),
+    SecretCode: row.get('Secret code'),
     MemberOf: row.get('Member of'),
     Members: row.get('Members'),
   });

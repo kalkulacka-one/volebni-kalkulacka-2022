@@ -249,6 +249,7 @@ export class CandidatesPool {
 export type CandidatesRowData = {
   Uuid: string;
   Name: string;
+  'Secret code': string;
   'Member of': string;
   Members: string;
 };
@@ -256,12 +257,14 @@ export type CandidatesRowData = {
 export class CandidatesRow {
   Uuid: string;
   Name: string;
+  SecretCode: string;
   MemberOf: string;
   Members: string;
 
   constructor(data: Partial<CandidatesRow>) {
     this.Uuid = data.Uuid || '';
     this.Name = data.Name || '';
+    this.SecretCode = data['Secret code'] || '';
     this.MemberOf = data['Member of'] || '';
     this.Members = data.Members || '';
   }
