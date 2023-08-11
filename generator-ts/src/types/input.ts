@@ -40,6 +40,7 @@ export type CalculatorRowData = {
 };
 
 export class CalculatorRow {
+  Pos: number;
   ElectionName: string;
   ElectionKey: CKey;
 
@@ -66,7 +67,8 @@ export class CalculatorRow {
   CandidatesSpreadsheet: CUrl;
   CandidatesSheet: CSheetName;
 
-  constructor(data: Partial<CalculatorRow>) {
+  constructor(pos: number, data: Partial<CalculatorRow>) {
+    this.Pos = pos;
     this.ElectionName = data.ElectionName || '';
     this.ElectionKey = data.ElectionKey || '';
     this.DistrictName = data.DistrictName || '';
@@ -183,6 +185,8 @@ export class Calculator {
   questions: Questions;
   candidatesPool: CandidatesPool;
   candidates: Candidates;
+  answersCandidates: Answers;
+  answersExperts: Answers;
 
   constructor(
     calculator: CalculatorRow,
@@ -190,12 +194,16 @@ export class Calculator {
     questions: Questions,
     candidatesPool: CandidatesPool,
     candidates: Candidates,
+    answersCandidates: Answers,
+    answersExperts: Answers,
   ) {
     this.calculator = calculator;
     this.questionsPool = questionsPool;
     this.questions = questions;
     this.candidatesPool = candidatesPool;
     this.candidates = candidates;
+    this.answersCandidates = answersCandidates;
+    this.answersExperts = answersExperts;
   }
 
   key(): string {
@@ -213,6 +221,7 @@ export type CandidatesPoolRowData = {
 };
 
 export class CandidatesPoolRow {
+  Pos: number;
   Uuid: string;
   Name: string;
   Abbriviation: string;
@@ -220,7 +229,8 @@ export class CandidatesPoolRow {
   LastName: string;
   Type: CCandidateType;
 
-  constructor(data: Partial<CandidatesPoolRow>) {
+  constructor(pos: number, data: Partial<CandidatesPoolRow>) {
+    this.Pos = pos;
     this.Uuid = data.Uuid || '';
     this.Name = data.Name || '';
     this.Abbriviation = data.Abbriviation || '';
@@ -255,13 +265,15 @@ export type CandidatesRowData = {
 };
 
 export class CandidatesRow {
+  Pos: number;
   Uuid: string;
   Name: string;
   SecretCode: string;
   MemberOf: string;
   Members: string;
 
-  constructor(data: Partial<CandidatesRow>) {
+  constructor(pos: number, data: Partial<CandidatesRow>) {
+    this.Pos = pos;
     this.Uuid = data.Uuid || '';
     this.Name = data.Name || '';
     this.SecretCode = data['Secret code'] || '';
@@ -285,6 +297,42 @@ export class Candidates {
   }
 }
 
+export type AnswersRowData = {
+  Timestamp: string;
+  SecretCode: string;
+  Email: string;
+};
+
+export class AnswersRow {
+  Pos: number;
+  Timestamp: string;
+  SecretCode: string;
+  Email: string;
+  Data: Record<string, any>;
+
+  constructor(pos: number, data: Partial<AnswersRow>) {
+    this.Pos = pos;
+    this.Timestamp = data.Timestamp || '';
+    this.Email = data.Email || '';
+    this.SecretCode = data['Secret code'] || '';
+  }
+}
+
+export class Answers {
+  answers: { [title: string]: AnswersRow[] };
+
+  constructor() {
+    this.answers = {};
+  }
+
+  append(title: string, row: AnswersRow) {
+    if (!(title in this.answers)) {
+      this.answers[title] = [];
+    }
+    this.answers[title].push(row);
+  }
+}
+
 export class Calculators {
   calculators: { [key: string]: Calculator[] };
   questionsPools: { [key: string]: QuestionsPool };
@@ -293,12 +341,15 @@ export class Calculators {
   candidatesPools: { [key: string]: CandidatesPool };
   candidates: { [key: string]: Candidates };
 
+  answers: { [key: string]: Answers };
+
   constructor() {
     this.calculators = {};
     this.questionsPools = {};
     this.questions = {};
     this.candidatesPools = {};
     this.candidates = {};
+    this.answers = {};
   }
 
   appendCalculator(calculator: Calculator) {
@@ -339,5 +390,13 @@ export class Calculators {
 
   setCandidates(url: CUrl, candidates: Candidates) {
     this.candidates[url] = candidates;
+  }
+
+  getAnswers(url: CUrl): Answers | undefined {
+    return this.answers[url];
+  }
+
+  setAnswers(url: CUrl, candidates: Answers) {
+    this.answers[url] = candidates;
   }
 }

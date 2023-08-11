@@ -4,6 +4,7 @@
   "scripts": {
     "lint:fix": "npm run lint -- --fix",
     "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore",
+    "pretier:fix": "prettier --write .",
     "generate": "ts-node --esm src/main.ts --name 'John' --age 23",
     "dev:compile": "node_modules/typescript/bin/tsc --watch src/main.ts",
     "dev:generate-loop": "bash -c \"while [ 1 == 1 ]; do date; npm run dev:generate; sleep 15; done\"",

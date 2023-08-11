@@ -16,6 +16,9 @@ import {
   type CandidatesRowData,
   CandidatesRow,
   Candidates,
+  type AnswersRowData,
+  Answers,
+  AnswersRow,
 } from './types/input';
 
 import {
@@ -24,6 +27,7 @@ import {
   convertToCalculatorRow,
   convertToCandidatesPoolRow,
   convertToCandidatesRow,
+  convertToAnswersRow,
 } from './converters';
 
 function isEmpty(val: string | undefined): boolean {
@@ -160,7 +164,7 @@ async function extractCandidatesPool(
       '; ',
       r.get('Uuid'),
     );
-    pool.append(convertToCandidatesPoolRow(r));
+    pool.append(convertToCandidatesPoolRow(i, r));
   }
 
   return pool;
@@ -198,11 +202,50 @@ async function extractCandidates(url: CUrl, jwt: JWT): Promise<Candidates> {
         '; ',
         r.get('Uuid'),
       );
-      candidates.append(title, convertToCandidatesRow(r));
+      candidates.append(title, convertToCandidatesRow(i, r));
     }
   }
 
   return candidates;
+}
+
+function skipAnswersRowData(
+  row: GoogleSpreadsheetRow<Record<string, any>>,
+): boolean {
+  return isEmpty(row.get('Secret code'));
+}
+
+async function extractAnswers(url: CUrl, jwt: JWT): Promise<Answers> {
+  const answers = new Answers();
+  const doc = await fetchGoogleSpreadsheet(url, jwt);
+
+  for (let sI = 0; sI < doc.sheetCount; sI++) {
+    const sheet = doc.sheetsByIndex[sI];
+    await sheet.loadHeaderRow();
+    const title = sheet.title;
+
+    const answersRows = await sheet.getRows();
+    for (let i = 0; i < answersRows.length; i++) {
+      const r = answersRows[i];
+      if (skipAnswersRowData(r)) {
+        console.log('Skipping CandidatesRowData: ', i);
+        continue;
+      }
+      console.log(
+        'Answers: ',
+        title,
+        '/',
+        i,
+        '; ',
+        r.get('Secret code'),
+        '; ',
+        r.get('E-mail'),
+      );
+      answers.append(title, convertToAnswersRow(i, r));
+    }
+  }
+
+  return answers;
 }
 
 function skipCalculatorRowData(
@@ -215,7 +258,9 @@ function skipCalculatorRowData(
     isEmpty(row.get('Questions sheet')) ||
     isEmpty(row.get('Candidates pool')) ||
     isEmpty(row.get('Candidates spreadsheet')) ||
-    isEmpty(row.get('Candidates sheet'))
+    isEmpty(row.get('Candidates sheet')) ||
+    isEmpty(row.get('Answers spreadsheet - candidates')) ||
+    isEmpty(row.get('Answers spreadsheet - experts'))
   );
 }
 
@@ -274,12 +319,30 @@ async function extractCalculators(url: CUrl, jwt: JWT): Promise<Calculators> {
       calculators.setCandidates(candidatesUrl, candidates);
     }
 
+    const answersCandidatesUrl = r.get('Answers spreadsheet - candidates');
+    const answersCandidatesSheet = r.get('Answers sheet - candidates');
+    let answersCandidates = calculators.getAnswers(answersCandidatesUrl);
+    if (answersCandidates === undefined) {
+      answersCandidates = await extractAnswers(answersCandidatesUrl, jwt);
+      calculators.setAnswers(answersCandidatesUrl, answersCandidates);
+    }
+
+    const answersExpertsUrl = r.get('Answers spreadsheet - experts');
+    const answersExpertsSheet = r.get('Answers sheet - experts');
+    let answersExperts = calculators.getAnswers(answersExpertsUrl);
+    if (answersExperts === undefined) {
+      answersExperts = await extractAnswers(answersExpertsUrl, jwt);
+      calculators.setAnswers(answersExpertsUrl, answersExperts);
+    }
+
     const calculator = new Calculator(
-      convertToCalculatorRow(r),
+      convertToCalculatorRow(i, r),
       questionsPool,
       questions,
       candidatesPool,
       candidates,
+      answersCandidates,
+      answersExperts,
     );
 
     calculators.appendCalculator(calculator);

@@ -16,6 +16,7 @@ import {
   type CandidatesPoolRowData,
   CandidatesRow,
   type CandidatesRowData,
+  AnswersRow,
 } from './types/input';
 
 // Function to convert GoogleSpreadsheetRow<QuestionsPoolRowData> to QuestionsPoolRow
@@ -47,9 +48,10 @@ export function convertToQuestionsRow(
 }
 
 export function convertToCalculatorRow(
+  pos: number,
   row: GoogleSpreadsheetRow<CalculatorRowData>,
 ): CalculatorRow {
-  return new CalculatorRow({
+  return new CalculatorRow(pos, {
     ElectionName: row.get('Election name'),
     ElectionKey: row.get('Election key'),
     DistrictName: row.get('District name'),
@@ -78,9 +80,10 @@ export function convertToCalculatorRow(
 }
 
 export function convertToCandidatesPoolRow(
+  pos: number,
   row: GoogleSpreadsheetRow<CandidatesPoolRowData>,
 ): CandidatesPoolRow {
-  return new CandidatesPoolRow({
+  return new CandidatesPoolRow(pos, {
     Uuid: row.get('Uuid'),
     Name: row.get('Name'),
     Abbriviation: row.get('Abbriviation'),
@@ -91,13 +94,26 @@ export function convertToCandidatesPoolRow(
 }
 
 export function convertToCandidatesRow(
+  pos: number,
   row: GoogleSpreadsheetRow<CandidatesRowData>,
 ): CandidatesRow {
-  return new CandidatesRow({
+  return new CandidatesRow(pos, {
     Uuid: row.get('Uuid'),
     Name: row.get('Name'),
     SecretCode: row.get('Secret code'),
     MemberOf: row.get('Member of'),
     Members: row.get('Members'),
+  });
+}
+
+export function convertToAnswersRow(
+  pos: number,
+  row: GoogleSpreadsheetRow<Record<string, any>>,
+): AnswersRow {
+  return new AnswersRow(pos, {
+    Timestamp: row.get('Timestamp'),
+    SecretCode: row.get('Secret code'),
+    Email: row.get('E-mail'),
+    Data: row.toObject(),
   });
 }
