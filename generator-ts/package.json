@@ -6,13 +6,15 @@
     "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore",
     "pretier:fix": "prettier --write .",
     "generate": "ts-node --esm src/main.ts --name 'John' --age 23",
-    "dev:compile": "node_modules/typescript/bin/tsc --watch src/main.ts",
+    "dev:compile": "tsc --experimentalDecorators --watch src/main.ts",
     "dev:generate-loop": "bash -c \"while [ 1 == 1 ]; do date; npm run dev:generate; sleep 15; done\"",
     "dev:generate": "node src/main.js --name 'John' --age 23"
   },
   "dependencies": {
+    "class-transformer": "^0.5.1",
     "google-auth-library": "^8.9.0",
-    "google-spreadsheet": "^4.0.2"
+    "google-spreadsheet": "^4.0.2",
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",

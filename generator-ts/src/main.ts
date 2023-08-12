@@ -2,6 +2,16 @@
 import * as process from 'process';
 import { GoogleSpreadsheet, GoogleSpreadsheetRow } from 'google-spreadsheet';
 import { JWT } from 'google-auth-library';
+import 'reflect-metadata';
+import * as path from 'path';
+import * as fs from 'fs';
+import {
+  instanceToPlain,
+  Type,
+  deserialize,
+  instanceToInstance,
+} from 'class-transformer';
+
 import {
   type CUrl,
   type CalculatorRowData,
@@ -39,16 +49,24 @@ function getEnvOrDefault(envVariable: string, defaultValue: string): string {
   return process.env[envVariable] || defaultValue;
 }
 
+const DEFAULT_CACHE_LIFETIME = 1e10;
+const DEFAULT_CACHE_DIR = path.join(__dirname, '.cache');
+
 // Function to parse command-line arguments
-function parseCommandLineArgs(): { name: string; age: number } {
-  const nameArgIndex = process.argv.indexOf('--name');
-  const ageArgIndex = process.argv.indexOf('--age');
+function parseCommandLineArgs(): { cacheLifetime: number; cacheDir: string } {
+  const cacheLifetimeArgIndex = process.argv.indexOf('--cache-lifetime');
+  const cacheDirArgIndex = process.argv.indexOf('--cache-dir');
 
-  const name = nameArgIndex !== -1 ? process.argv[nameArgIndex + 1] : '';
-  const age =
-    ageArgIndex !== -1 ? parseInt(process.argv[ageArgIndex + 1]) : NaN;
+  const cacheLifetime =
+    cacheLifetimeArgIndex !== -1
+      ? parseInt(process.argv[cacheLifetimeArgIndex + 1])
+      : DEFAULT_CACHE_LIFETIME;
+  const cacheDir =
+    cacheDirArgIndex !== -1
+      ? process.argv[cacheDirArgIndex + 1]
+      : DEFAULT_CACHE_DIR;
 
-  return { name, age };
+  return { cacheLifetime, cacheDir };
 }
 
 async function fetchGoogleSpreadsheet(
@@ -356,17 +374,10 @@ async function extractCalculators(url: CUrl, jwt: JWT): Promise<Calculators> {
 // Main function
 function main() {
   // Parse command-line arguments
-  // const { name: nameFromArgs, age: ageFromArgs } = parseCommandLineArgs();
+  const { cacheLifetime, cacheDir } = parseCommandLineArgs();
 
-  // // Get values from environmental variables or set default values
-  // const nameFromEnv = getEnvOrDefault('NAME', 'Default Name');
-  // const ageFromEnv = parseInt(getEnvOrDefault('AGE', '0'));
-
-  // // Display the values
-  // console.log('Name from args:', nameFromArgs);
-  // console.log('Age from args:', ageFromArgs);
-  // console.log('Name from environmental variable:', nameFromEnv);
-  // console.log('Age from environmental variable:', ageFromEnv);
+  console.log('Cache Lifetime:', cacheLifetime);
+  console.log('Cache Dir:', cacheDir);
 
   const SCOPES = [
     'https://www.googleapis.com/auth/spreadsheets.readonly',
@@ -379,11 +390,76 @@ function main() {
     scopes: SCOPES,
   });
 
+  const calculatorsUrl =
+    'https://docs.google.com/spreadsheets/d/1rEtloBTzS_fZyeIX9wYYW32Pg2NeJNYj6oQbyIyTTvw/view#gid=0';
+  const calculatorsKey = extractKey(calculatorsUrl);
+  console.log(
+    'Processing calculators from: ',
+    calculatorsKey,
+    ' (',
+    calculatorsUrl,
+    ')',
+  );
+
   (async function () {
-    const calculators = await extractCalculators(
-      'https://docs.google.com/spreadsheets/d/1rEtloBTzS_fZyeIX9wYYW32Pg2NeJNYj6oQbyIyTTvw/view#gid=0',
-      jwtFromEnv,
-    );
+    let fetchData = false;
+    const cacheFile = path.join(cacheDir, calculatorsKey + '.json');
+
+    console.log('Using cache file: ', cacheFile);
+    try {
+      const cacheStats = fs.statSync(cacheFile);
+      new Date().getTime();
+      if (cacheStats.mtimeMs + cacheLifetime * 1e6 < new Date().getTime()) {
+        console.log(
+          'Cache file is too old: ',
+          cacheStats.mtime,
+          ' refetching data',
+        );
+        fetchData = true;
+      }
+    } catch (error) {
+      console.log('Cannot read input file: ', error);
+      fetchData = true;
+      fs.mkdirSync(cacheDir, { recursive: true });
+    }
+
+    let calculators = new Calculators();
+    if (fetchData) {
+      calculators = await extractCalculators(calculatorsUrl, jwtFromEnv);
+
+      let calculatorsJson = JSON.stringify(
+        instanceToPlain(calculators),
+        null,
+        2,
+      );
+      fs.writeFile(cacheFile, calculatorsJson, (err) => {
+        if (err) {
+          console.error('Error writing to file:', err);
+        } else {
+          console.log('Calculators were cached in: ', cacheFile);
+        }
+      });
+    } else {
+      try {
+        const data = fs.readFileSync(cacheFile, 'utf8');
+        try {
+          const jsonData = JSON.parse(data);
+          console.log('JSON Data:', jsonData);
+          calculators = instanceToInstance<Calculators>(jsonData);
+        } catch (parseError) {
+          console.error('Error parsing JSON:', parseError);
+          throw parseError;
+        }
+      } catch (readError) {
+        console.error('Error while reading file: ', readError);
+        throw readError;
+      }
+      instanceToInstance;
+    }
+
+    console.log(calculators);
+
+    // console.log("Calculators stats: ", calculators.stats());
   })();
 }
 

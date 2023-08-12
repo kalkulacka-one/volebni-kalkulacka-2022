@@ -1,3 +1,5 @@
+import { Type } from 'class-transformer';
+
 type CBool = 'Yes' | 'No';
 type CKey = string;
 export type CUrl = string;
@@ -149,7 +151,8 @@ export class QuestionsRow {
 }
 
 export class QuestionsPool {
-  questions: { [key: string]: QuestionsPoolRow };
+  @Type(() => QuestionsPoolRow)
+  questions: Record<string, QuestionsPoolRow>;
 
   constructor() {
     this.questions = {};
@@ -165,7 +168,8 @@ export class QuestionsPool {
 }
 
 export class Questions {
-  questions: { [title: string]: QuestionsRow[] };
+  @Type(() => QuestionsRow)
+  questions: Record<string, QuestionsRow[]>;
 
   constructor() {
     this.questions = {};
@@ -180,12 +184,25 @@ export class Questions {
 }
 
 export class Calculator {
+  @Type(() => CalculatorRow)
   calculator: CalculatorRow;
+
+  @Type(() => QuestionsPool)
   questionsPool: QuestionsPool;
+
+  @Type(() => Questions)
   questions: Questions;
+
+  @Type(() => CandidatesPool)
   candidatesPool: CandidatesPool;
+
+  @Type(() => Candidates)
   candidates: Candidates;
+
+  @Type(() => Answers)
   answersCandidates: Answers;
+
+  @Type(() => Answers)
   answersExperts: Answers;
 
   constructor(
@@ -241,7 +258,8 @@ export class CandidatesPoolRow {
 }
 
 export class CandidatesPool {
-  candidates: { [key: string]: CandidatesPoolRow };
+  @Type(() => CandidatesPoolRow)
+  candidates: Record<string, CandidatesPoolRow>;
 
   constructor() {
     this.candidates = {};
@@ -283,7 +301,8 @@ export class CandidatesRow {
 }
 
 export class Candidates {
-  candidates: { [title: string]: CandidatesRow[] };
+  @Type(() => CandidatesRow)
+  candidates: Record<string, CandidatesRow[]>;
 
   constructor() {
     this.candidates = {};
@@ -319,7 +338,8 @@ export class AnswersRow {
 }
 
 export class Answers {
-  answers: { [title: string]: AnswersRow[] };
+  @Type(() => AnswersRow)
+  answers: Record<string, AnswersRow[]>;
 
   constructor() {
     this.answers = {};
@@ -334,14 +354,21 @@ export class Answers {
 }
 
 export class Calculators {
-  calculators: { [key: string]: Calculator[] };
-  questionsPools: { [key: string]: QuestionsPool };
-  questions: { [key: string]: Questions };
+  @Type(() => Calculator)
+  calculators: Record<string, Calculator[]>;
 
-  candidatesPools: { [key: string]: CandidatesPool };
-  candidates: { [key: string]: Candidates };
+  @Type(() => QuestionsPool)
+  questionsPools: Record<string, QuestionsPool>;
+  @Type(() => Questions)
+  questions: Record<string, Questions>;
 
-  answers: { [key: string]: Answers };
+  @Type(() => CandidatesPool)
+  candidatesPools: Record<string, CandidatesPool>;
+  @Type(() => Candidates)
+  candidates: Record<string, Candidates>;
+
+  @Type(() => Answers)
+  answers: Record<string, Answers>;
 
   constructor() {
     this.calculators = {};
@@ -358,6 +385,7 @@ export class Calculators {
       this.calculators[key] = [];
     }
     this.calculators[key].push(calculator);
+    console.log(this.stats());
   }
 
   getQuestionPool(url: CUrl): QuestionsPool | undefined {
@@ -398,5 +426,13 @@ export class Calculators {
 
   setAnswers(url: CUrl, candidates: Answers) {
     this.answers[url] = candidates;
+  }
+
+  stats(): Record<string, any> {
+    return {
+      calculatorsCount: this.calculators.length,
+      questionsPoolsCount: this.questionsPools.size,
+      // questionsCount: this.questions,
+    };
   }
 }
