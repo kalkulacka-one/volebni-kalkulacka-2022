@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.volebnikalkulacka.cz/data/schemas/calculator-group.schema.json",
+  "title": "Calculator group",
+  "description": "Group of two or more calculators",
+  "type": "object",
+  "$defs": {
+    "id": {
+      "title": "ID",
+      "description": "Unique identifier of a calculator group in the format of UUID",
+      "type": "string",
+      "format": "uuid",
+      "examples": ["cbc72c2e-ff2f-4ceb-bb41-a1a5dce7d4da"]
+    },
+    "key": {
+      "title": "Key",
+      "description": "Human-friendly unique key of a calculator group in the hyphen-separated lowercased format",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "examples": ["prezidentske-2023"]
+    }
+  },
+  "properties": {
+    "id": {
+      "$ref": "#/$defs/id"
+    },
+    "key": {
+      "$ref": "#/$defs/key"
+    }
+  },
+  "unevaluatedProperties": false,
+  "required": ["id", "key"]
+}
