@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.volebnikalkulacka.cz/data/schemas/candidate.schema.json",
+  "title": "Candidate",
+  "description": "Candidate for a calculator",
+  "type": "object",
+  "properties": {
+    "id": {
+      "title": "ID",
+      "description": "Unique identifier of a candidate in the format of UUID",
+      "type": "string",
+      "format": "uuid",
+      "examples": ["11fee676-1eac-4948-a2fb-38e2b774f4b3"]
+    }
+  },
+  "unevaluatedProperties": false,
+  "required": ["id"]
+}
