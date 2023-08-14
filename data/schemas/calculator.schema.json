@@ -33,6 +33,21 @@
       },
       "unevaluatedProperties": false,
       "required": ["id", "key"]
+    },
+    "election": {
+      "title": "Election",
+      "description": "Reference to an election the calculator belongs to",
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "./election.schema.json#/properties/id"
+        },
+        "key": {
+          "$ref": "./election.schema.json#/properties/key"
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": ["id", "key"]
     }
   },
   "properties": {
@@ -62,6 +77,19 @@
         }
       },
       "required": ["calculatorGroup"]
+    },
+    {
+      "title": "Calculator from an election",
+      "description": "Calculator that is part of an election",
+      "properties": {
+        "calculatorGroup": {
+          "$ref": "#/$defs/calculatorGroup"
+        },
+        "election": {
+          "$ref": "#/$defs/election"
+        }
+      },
+      "required": ["calculatorGroup", "election"]
     }
   ]
 }
