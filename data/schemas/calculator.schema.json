@@ -48,6 +48,36 @@
       },
       "unevaluatedProperties": false,
       "required": ["id", "key"]
+    },
+    "variant": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "$ref": "./variant.schema.json#/properties/key"
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": ["key"]
+    },
+    "district": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "$ref": "./district.schema.json#/properties/key"
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": ["key"]
+    },
+    "round": {
+      "type": "object",
+      "properties": {
+        "number": {
+          "$ref": "./round.schema.json#/properties/number"
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": ["number"]
     }
   },
   "properties": {
@@ -74,9 +104,12 @@
       "properties": {
         "calculatorGroup": {
           "$ref": "#/$defs/calculatorGroup"
+        },
+        "variant": {
+          "$ref": "#/$defs/variant"
         }
       },
-      "required": ["calculatorGroup"]
+      "required": ["calculatorGroup", "variant"]
     },
     {
       "title": "Calculator from an election",
@@ -87,9 +120,29 @@
         },
         "election": {
           "$ref": "#/$defs/election"
+        },
+        "variant": {
+          "$ref": "#/$defs/variant"
+        },
+        "district": {
+          "$ref": "#/$defs/district"
+        },
+        "round": {
+          "$ref": "#/$defs/round"
         }
       },
-      "required": ["calculatorGroup", "election"]
+      "required": ["calculatorGroup", "election"],
+      "anyOf": [
+        {
+          "required": ["variant"]
+        },
+        {
+          "required": ["district"]
+        },
+        {
+          "required": ["round"]
+        }
+      ]
     }
   ]
 }
