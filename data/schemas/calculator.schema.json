@@ -18,16 +18,50 @@
       "type": "string",
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
       "examples": ["doprava-v-praze"]
+    },
+    "calculatorGroup": {
+      "title": "Calculator group",
+      "description": "Reference to a calculator group the calculator belongs to",
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "./calculator-group.schema.json#/properties/id"
+        },
+        "key": {
+          "$ref": "./calculator-group.schema.json#/properties/key"
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": ["id", "key"]
     }
   },
   "properties": {
     "id": {
       "$ref": "#/$defs/id"
-    },
-    "key": {
-      "$ref": "#/$defs/key"
     }
   },
   "unevaluatedProperties": false,
-  "required": ["id", "key"]
+  "required": ["id"],
+  "oneOf": [
+    {
+      "title": "Standalone calculator",
+      "description": "Standalone calculator is a calculator that is not part of a calculator group",
+      "properties": {
+        "key": {
+          "$ref": "#/$defs/key"
+        }
+      },
+      "required": ["key"]
+    },
+    {
+      "title": "Calculator from a group",
+      "description": "Calculator that is part of a calculator group",
+      "properties": {
+        "calculatorGroup": {
+          "$ref": "#/$defs/calculatorGroup"
+        }
+      },
+      "required": ["calculatorGroup"]
+    }
+  ]
 }
