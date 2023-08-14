@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.volebnikalkulacka.cz/data/schemas/election.schema.json",
+  "title": "Election",
+  "description": "Election provides various details about an election such as districts and rounds",
+  "type": "object",
+  "$defs": {
+    "id": {
+      "title": "ID",
+      "description": "Unique identifier of an election in the format of UUID",
+      "type": "string",
+      "format": "uuid",
+      "examples": ["ad9b73fc-e578-4b3a-9623-533d76224cbc"]
+    },
+    "key": {
+      "title": "Key",
+      "description": "Human-friendly unique key of an election in the hyphen-separated lowercased format",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "examples": ["prezidentske-2023"]
+    }
+  },
+  "properties": {
+    "id": {
+      "$ref": "#/$defs/id"
+    },
+    "key": {
+      "$ref": "#/$defs/key"
+    }
+  },
+  "unevaluatedProperties": false,
+  "required": ["id", "key"]
+}
