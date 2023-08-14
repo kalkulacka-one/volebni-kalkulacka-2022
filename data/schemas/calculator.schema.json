@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.volebnikalkulacka.cz/data/schemas/calculator.schema.json",
+  "title": "Calculator",
+  "description": "Calculator is a set of questions, candidates and their answers",
+  "type": "object",
+  "$defs": {
+    "id": {
+      "title": "ID",
+      "description": "Unique identifier of a calculator in the format of UUID",
+      "type": "string",
+      "format": "uuid",
+      "examples": ["e2cf4fec-81e0-490c-a056-7f63177dc6a7"]
+    },
+    "key": {
+      "title": "Key",
+      "description": "Human-friendly unique key of a standalone calculator in the hyphen-separated lowercased format",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "examples": ["doprava-v-praze"]
+    }
+  },
+  "properties": {
+    "id": {
+      "$ref": "#/$defs/id"
+    },
+    "key": {
+      "$ref": "#/$defs/key"
+    }
+  },
+  "unevaluatedProperties": false,
+  "required": ["id", "key"]
+}

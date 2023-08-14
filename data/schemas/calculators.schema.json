@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.volebnikalkulacka.cz/data/schemas/calculators.schema.json",
+  "title": "Calculators",
+  "description": "List of calculators",
+  "type": "array",
+  "items": {
+    "$ref": "./calculator.schema.json"
+  }
+}
