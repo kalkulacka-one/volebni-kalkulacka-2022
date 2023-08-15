@@ -1,0 +1,26 @@
+{
+  "id": "60c47450-3282-4c59-9be7-3ee532bc4605",
+  "key": "green-deal",
+  "variants": [
+    {
+      "key": "pro-kazdeho"
+    },
+    {
+      "key": "pro-experty"
+    }
+  ],
+  "calculators": [
+    {
+      "id": "a76be715-16a8-4cc2-9d98-ad50075e2d74",
+      "variant": {
+        "key": "pro-experty"
+      }
+    },
+    {
+      "id": "5ecaed42-a224-4a8d-aa39-23dcf9132dfe",
+      "variant": {
+        "key": "pro-kazdeho"
+      }
+    }
+  ]
+}
