@@ -39,6 +39,9 @@ export type CalculatorRowData = {
   'Candidates pool': CUrl;
   'Candidates spreadsheet': CUrl;
   'Candidates sheet': CSheetName;
+  'Districts pool': CUrl;
+  'Districts spreadsheet': CUrl;
+  'Districts sheet': CSheetName;
 };
 
 export class CalculatorRow {
@@ -68,6 +71,9 @@ export class CalculatorRow {
   CandidatesPool: CUrl;
   CandidatesSpreadsheet: CUrl;
   CandidatesSheet: CSheetName;
+  DistrictsPool: CUrl;
+  DistrictsSpreadsheet: CUrl;
+  DistrictsSheet: CSheetName;
 
   constructor(pos: number, data: Partial<CalculatorRow>) {
     this.Pos = pos;
@@ -95,6 +101,9 @@ export class CalculatorRow {
     this.CandidatesPool = data.CandidatesPool || '';
     this.CandidatesSpreadsheet = data.CandidatesSpreadsheet || '';
     this.CandidatesSheet = data.CandidatesSheet || '';
+    this.DistrictsPool = data.DistrictsPool || '';
+    this.DistrictsSpreadsheet = data.DistrictsSpreadsheet || '';
+    this.DistrictsSheet = data.DistrictsSheet || '';
   }
 }
 
@@ -102,7 +111,7 @@ export type QuestionsPoolRowData = {
   Uuid: string;
   Name: string;
   Question: string;
-  Descript: string;
+  Description: string;
   Tags: string;
   Note: string;
   Order: string;
@@ -113,7 +122,7 @@ export class QuestionsPoolRow {
   Uuid: string;
   Name: string;
   Question: string;
-  Descript: string;
+  Description: string;
   Tags: string[];
   Note: string;
   Order: number;
@@ -123,7 +132,7 @@ export class QuestionsPoolRow {
     this.Uuid = data.Uuid || '';
     this.Name = data.Name || '';
     this.Question = data.Question || '';
-    this.Descript = data.Descript || '';
+    this.Description = data.Description || '';
     this.Tags = data.Tags || [];
     this.Note = data.Note || '';
     this.Order = data.Order || NaN;
@@ -205,6 +214,12 @@ export class Calculator {
   @Type(() => Answers)
   answersExperts: Answers;
 
+  @Type(() => DistrictsPool)
+  districtsPool: DistrictsPool;
+
+  @Type(() => Districts)
+  districts: Districts;
+
   constructor(
     calculator: CalculatorRow,
     questionsPool: QuestionsPool,
@@ -213,6 +228,8 @@ export class Calculator {
     candidates: Candidates,
     answersCandidates: Answers,
     answersExperts: Answers,
+    districtsPool: DistrictsPool,
+    districts: Districts,
   ) {
     this.calculator = calculator;
     this.questionsPool = questionsPool;
@@ -221,12 +238,16 @@ export class Calculator {
     this.candidates = candidates;
     this.answersCandidates = answersCandidates;
     this.answersExperts = answersExperts;
+    this.districtsPool = districtsPool;
+    this.districts = districts;
   }
 
   key(): string {
     return this.calculator.ElectionKey;
   }
 }
+
+// Candidates - BEGIN
 
 export type CandidatesPoolRowData = {
   Uuid: string;
@@ -251,8 +272,8 @@ export class CandidatesPoolRow {
     this.Uuid = data.Uuid || '';
     this.Name = data.Name || '';
     this.Abbriviation = data.Abbriviation || '';
-    this.FirstName = data['First name'] || '';
-    this.LastName = data['Last name'] || '';
+    this.FirstName = data.FirstName || '';
+    this.LastName = data.LastName || '';
     this.Type = data.Type || 'Person';
   }
 }
@@ -294,8 +315,8 @@ export class CandidatesRow {
     this.Pos = pos;
     this.Uuid = data.Uuid || '';
     this.Name = data.Name || '';
-    this.SecretCode = data['Secret code'] || '';
-    this.MemberOf = data['Member of'] || '';
+    this.SecretCode = data.SecretCode || '';
+    this.MemberOf = data.MemberOf || '';
     this.Members = data.Members || '';
   }
 }
@@ -316,6 +337,85 @@ export class Candidates {
   }
 }
 
+// Candidates - END
+
+// Districts - BEGIN
+
+export type DistrictsPoolRowData = {
+  Uuid: string;
+  Name: string;
+  Key: string;
+  Description: string;
+};
+
+export class DistrictsPoolRow {
+  Pos: number;
+  Uuid: string;
+  Name: string;
+  Key: string;
+  Description: string;
+
+  constructor(pos: number, data: Partial<DistrictsPoolRow>) {
+    this.Pos = pos;
+    this.Uuid = data.Uuid || '';
+    this.Name = data.Name || '';
+    this.Key = data.Key || '';
+    this.Description = data.Description || '';
+  }
+}
+
+export class DistrictsPool {
+  @Type(() => DistrictsPoolRow)
+  districts: Record<string, DistrictsPoolRow>;
+
+  constructor() {
+    this.districts = {};
+  }
+
+  append(row: DistrictsPoolRow) {
+    this.districts[row.Uuid] = row;
+  }
+
+  contains(row: DistrictsPoolRow): boolean {
+    return row.Uuid in this.districts;
+  }
+}
+
+export type DistrictsRowData = {
+  Uuid: string;
+  Key: string;
+};
+
+export class DistrictsRow {
+  Pos: number;
+  Uuid: string;
+  Key: string;
+
+  constructor(pos: number, data: Partial<DistrictsRow>) {
+    this.Pos = pos;
+    this.Uuid = data.Uuid || '';
+    this.Key = data.Key || '';
+  }
+}
+
+export class Districts {
+  @Type(() => DistrictsRow)
+  districts: Record<string, DistrictsRow[]>;
+
+  constructor() {
+    this.districts = {};
+  }
+
+  append(title: string, row: DistrictsRow) {
+    if (!(title in this.districts)) {
+      this.districts[title] = [];
+    }
+    this.districts[title].push(row);
+  }
+}
+
+// Districts - END
+
 export type AnswersRowData = {
   Timestamp: string;
   SecretCode: string;
@@ -333,7 +433,7 @@ export class AnswersRow {
     this.Pos = pos;
     this.Timestamp = data.Timestamp || '';
     this.Email = data.Email || '';
-    this.SecretCode = data['Secret code'] || '';
+    this.SecretCode = data.SecretCode || '';
   }
 }
 
@@ -367,6 +467,11 @@ export class Calculators {
   @Type(() => Candidates)
   candidates: Record<string, Candidates>;
 
+  @Type(() => DistrictsPool)
+  districtsPools: Record<string, DistrictsPool>;
+  @Type(() => Districts)
+  districts: Record<string, Districts>;
+
   @Type(() => Answers)
   answers: Record<string, Answers>;
 
@@ -376,6 +481,8 @@ export class Calculators {
     this.questions = {};
     this.candidatesPools = {};
     this.candidates = {};
+    this.districtsPools = {};
+    this.districts = {};
     this.answers = {};
   }
 
@@ -404,6 +511,8 @@ export class Calculators {
     this.questions[url] = questions;
   }
 
+  // Candidates - BEGIN
+
   getCandidatesPool(url: CUrl): CandidatesPool | undefined {
     return this.candidatesPools[url];
   }
@@ -420,19 +529,45 @@ export class Calculators {
     this.candidates[url] = candidates;
   }
 
+  // Candidates - END
+
+  // Districts - BEGIN
+
+  getDistrictsPool(url: CUrl): DistrictsPool | undefined {
+    return this.districtsPools[url];
+  }
+
+  setDistrictsPool(url: CUrl, pool: DistrictsPool) {
+    this.districtsPools[url] = pool;
+  }
+
+  getDistricts(url: CUrl): Districts | undefined {
+    return this.districts[url];
+  }
+
+  setDistricts(url: CUrl, districts: Districts) {
+    this.districts[url] = districts;
+  }
+
+  // Districts - END
+
   getAnswers(url: CUrl): Answers | undefined {
     return this.answers[url];
   }
 
-  setAnswers(url: CUrl, candidates: Answers) {
-    this.answers[url] = candidates;
+  setAnswers(url: CUrl, answers: Answers) {
+    this.answers[url] = answers;
   }
 
   stats(): Record<string, any> {
     return {
-      calculatorsCount: this.calculators.length,
-      questionsPoolsCount: this.questionsPools.size,
-      // questionsCount: this.questions,
+      calculatorsCount: Object.keys(this.calculators).length,
+      questionsPoolsCount: Object.keys(this.questionsPools).length,
+      questionsCount: Object.keys(this.questions).length,
+      candidatesPoolsCount: Object.keys(this.candidatesPools).length,
+      candidatesCount: Object.keys(this.candidates).length,
+      districtsPoolsCount: Object.keys(this.districtsPools).length,
+      districtsCount: Object.keys(this.districts).length,
     };
   }
 }

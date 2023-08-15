@@ -16,6 +16,10 @@ import {
   type CandidatesPoolRowData,
   CandidatesRow,
   type CandidatesRowData,
+  DistrictsPoolRow,
+  type DistrictsPoolRowData,
+  DistrictsRow,
+  type DistrictsRowData,
   AnswersRow,
 } from './types/input';
 
@@ -28,7 +32,7 @@ export function convertToQuestionsPoolRow(
     Uuid: row.get('Uuid'),
     Name: row.get('Name'),
     Question: row.get('Question'),
-    Descript: row.get('Descript'),
+    Description: row.get('Description'),
     Tags: row.get('Tags')?.split(),
     Note: row.get('Note'),
     Order: parseInt(row.get('Order')),
@@ -76,6 +80,9 @@ export function convertToCalculatorRow(
     CandidatesPool: row.get('Candidates pool'),
     CandidatesSpreadsheet: row.get('Candidates spreadsheet'),
     CandidatesSheet: row.get('Candidates sheet'),
+    DistrictsPool: row.get('Districts pool'),
+    DistrictsSpreadsheet: row.get('Districts spreadsheet'),
+    DistrictsSheet: row.get('Districts sheet'),
   });
 }
 
@@ -103,6 +110,28 @@ export function convertToCandidatesRow(
     SecretCode: row.get('Secret code'),
     MemberOf: row.get('Member of'),
     Members: row.get('Members'),
+  });
+}
+
+export function convertToDistrictsPoolRow(
+  pos: number,
+  row: GoogleSpreadsheetRow<DistrictsPoolRowData>,
+): DistrictsPoolRow {
+  return new DistrictsPoolRow(pos, {
+    Uuid: row.get('Uuid'),
+    Name: row.get('Name'),
+    Key: row.get('Key'),
+    Description: row.get('Description'),
+  });
+}
+
+export function convertToDistrictsRow(
+  pos: number,
+  row: GoogleSpreadsheetRow<DistrictsRowData>,
+): DistrictsRow {
+  return new DistrictsRow(pos, {
+    Uuid: row.get('Uuid'),
+    Key: row.get('Key'),
   });
 }
 

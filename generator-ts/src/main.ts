@@ -10,6 +10,7 @@ import {
   Type,
   deserialize,
   instanceToInstance,
+  plainToClass,
 } from 'class-transformer';
 
 import {
@@ -26,6 +27,11 @@ import {
   type CandidatesRowData,
   CandidatesRow,
   Candidates,
+  type DistrictsPoolRowData,
+  DistrictsPool,
+  type DistrictsRowData,
+  DistrictsRow,
+  Districts,
   type AnswersRowData,
   Answers,
   AnswersRow,
@@ -37,6 +43,8 @@ import {
   convertToCalculatorRow,
   convertToCandidatesPoolRow,
   convertToCandidatesRow,
+  convertToDistrictsPoolRow,
+  convertToDistrictsRow,
   convertToAnswersRow,
 } from './converters';
 
@@ -227,6 +235,75 @@ async function extractCandidates(url: CUrl, jwt: JWT): Promise<Candidates> {
   return candidates;
 }
 
+function skipDistrictsPoolRowData(
+  row: GoogleSpreadsheetRow<DistrictsPoolRowData>,
+): boolean {
+  return isEmpty(row.get('Uuid')) || isEmpty(row.get('Name'));
+}
+
+async function extractDistrictsPool(
+  url: CUrl,
+  jwt: JWT,
+): Promise<DistrictsPool> {
+  const pool = new DistrictsPool();
+  const doc = await fetchGoogleSpreadsheet(url, jwt);
+
+  const sheet = doc.sheetsByTitle['Districts'];
+  await sheet.loadHeaderRow();
+
+  const poolRows = await sheet.getRows<DistrictsPoolRowData>();
+  for (let i = 0; i < poolRows.length; i++) {
+    const r = poolRows[i];
+    if (skipDistrictsPoolRowData(r)) {
+      console.log('Skipping DistrictsPoolRowData: ', i);
+      continue;
+    }
+    console.log('DistrictsPool: ', i, '; ', r.get('Key'), '; ', r.get('Uuid'));
+    pool.append(convertToDistrictsPoolRow(i, r));
+  }
+
+  return pool;
+}
+
+function skipDistrictsRowData(
+  row: GoogleSpreadsheetRow<DistrictsRowData>,
+): boolean {
+  return isEmpty(row.get('Uuid')) || isEmpty(row.get('Key'));
+}
+
+async function extractDistricts(url: CUrl, jwt: JWT): Promise<Districts> {
+  const districts = new Districts();
+  const doc = await fetchGoogleSpreadsheet(url, jwt);
+
+  for (let sI = 0; sI < doc.sheetCount; sI++) {
+    const sheet = doc.sheetsByIndex[sI];
+    await sheet.loadHeaderRow();
+    const title = sheet.title;
+
+    const districtsRows = await sheet.getRows<DistrictsRowData>();
+    for (let i = 0; i < districtsRows.length; i++) {
+      const r = districtsRows[i];
+      if (skipDistrictsRowData(r)) {
+        console.log('Skipping DistrictsRowData: ', i);
+        continue;
+      }
+      console.log(
+        'Districts: ',
+        title,
+        '/',
+        i,
+        '; ',
+        r.get('Key'),
+        '; ',
+        r.get('Uuid'),
+      );
+      districts.append(title, convertToDistrictsRow(i, r));
+    }
+  }
+
+  return districts;
+}
+
 function skipAnswersRowData(
   row: GoogleSpreadsheetRow<Record<string, any>>,
 ): boolean {
@@ -278,7 +355,10 @@ function skipCalculatorRowData(
     isEmpty(row.get('Candidates spreadsheet')) ||
     isEmpty(row.get('Candidates sheet')) ||
     isEmpty(row.get('Answers spreadsheet - candidates')) ||
-    isEmpty(row.get('Answers spreadsheet - experts'))
+    isEmpty(row.get('Answers spreadsheet - experts')) ||
+    isEmpty(row.get('Districts pool')) ||
+    isEmpty(row.get('Districts spreadsheet')) ||
+    isEmpty(row.get('Districts sheet'))
   );
 }
 
@@ -337,6 +417,20 @@ async function extractCalculators(url: CUrl, jwt: JWT): Promise<Calculators> {
       calculators.setCandidates(candidatesUrl, candidates);
     }
 
+    const districtsPoolUrl = r.get('Districts pool');
+    let districtsPool = calculators.getDistrictsPool(districtsPoolUrl);
+    if (districtsPool === undefined) {
+      districtsPool = await extractDistrictsPool(districtsPoolUrl, jwt);
+      calculators.setDistrictsPool(districtsPoolUrl, districtsPool);
+    }
+
+    const districtsUrl = r.get('Districts spreadsheet');
+    let districts = calculators.getDistricts(districtsUrl);
+    if (districts === undefined) {
+      districts = await extractDistricts(districtsUrl, jwt);
+      calculators.setDistricts(districtsUrl, districts);
+    }
+
     const answersCandidatesUrl = r.get('Answers spreadsheet - candidates');
     const answersCandidatesSheet = r.get('Answers sheet - candidates');
     let answersCandidates = calculators.getAnswers(answersCandidatesUrl);
@@ -361,6 +455,8 @@ async function extractCalculators(url: CUrl, jwt: JWT): Promise<Calculators> {
       candidates,
       answersCandidates,
       answersExperts,
+      districtsPool,
+      districts,
     );
 
     calculators.appendCalculator(calculator);
@@ -445,7 +541,7 @@ function main() {
         try {
           const jsonData = JSON.parse(data);
           console.log('JSON Data:', jsonData);
-          calculators = instanceToInstance<Calculators>(jsonData);
+          calculators = plainToClass(Calculators, jsonData);
         } catch (parseError) {
           console.error('Error parsing JSON:', parseError);
           throw parseError;
@@ -457,9 +553,7 @@ function main() {
       instanceToInstance;
     }
 
-    console.log(calculators);
-
-    // console.log("Calculators stats: ", calculators.stats());
+    console.log('Calculators stats: ', calculators.stats());
   })();
 }
 
