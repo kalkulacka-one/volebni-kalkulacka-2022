@@ -11,6 +11,52 @@
       "type": "integer",
       "minimum": 0,
       "examples": [0, 1]
+    },
+    "votingHours": {
+      "title": "Voting hours",
+      "description": "One or multiple voting hours for the round",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "title": "Voting period",
+        "type": "object",
+        "unevaluatedProperties": false,
+        "properties": {
+          "start": {
+            "title": "Start time",
+            "description": "Start date (or time) of a voting period in the ISO 8601 format",
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "date",
+                "examples": ["2023-01-13"]
+              },
+              {
+                "type": "string",
+                "format": "date-time",
+                "examples": ["2023-01-13T14:00:00+01:00"]
+              }
+            ]
+          },
+          "end": {
+            "title": "End time",
+            "description": "End date (or time) of a voting period in the ISO 8601 format",
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "date",
+                "examples": ["2023-01-13"]
+              },
+              {
+                "type": "string",
+                "format": "date-time",
+                "examples": ["2023-01-13T14:00:00+01:00"]
+              }
+            ]
+          }
+        },
+        "required": ["start", "end"]
+      }
     }
   },
   "unevaluatedProperties": false,
