@@ -18,6 +18,34 @@
       "type": "string",
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
       "examples": ["prezidentske-2023"]
+    },
+    "election": {
+      "title": "Election",
+      "description": "Reference to an election the calculator belongs to",
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "./election.schema.json#/properties/id"
+        },
+        "key": {
+          "$ref": "./election.schema.json#/properties/key"
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": ["id", "key"]
+    },
+    "variants": {
+      "title": "Ordered list of calculator variants",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "$ref": "./variant.schema.json#/properties/key"
+          }
+        }
+      }
     }
   },
   "properties": {
@@ -26,6 +54,12 @@
     },
     "key": {
       "$ref": "#/$defs/key"
+    },
+    "election": {
+      "$ref": "#/$defs/election"
+    },
+    "variants": {
+      "$ref": "#/$defs/variants"
     }
   },
   "unevaluatedProperties": false,
