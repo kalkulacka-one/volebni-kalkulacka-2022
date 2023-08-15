@@ -3,10 +3,10 @@
     "lint": "npx prettier .",
     "lint:fix": "npm run lint -- --write",
     "validate": "ajv validate -c ajv-formats --spec=draft2020",
-    "validate:example": "npm run validate:example:questions && npm run validate:example:candidates && npm run validate:example:answers && npm run validate:example:calculators && npm run validate:example:calculator-groups && npm run validate:example:elections",
+    "validate:example": "npm run validate:example:questions && npm run validate:example:candidates && npm run validate:example:candidates-answers && npm run validate:example:calculators && npm run validate:example:calculator-groups && npm run validate:example:elections",
     "validate:example:questions": "npm run validate -- -r \"./!(questions).schema.json\" -s questions.schema.json -d \"../example/volebnikalkulacka.cz/**/questions.json\"",
     "validate:example:candidates": "npm run validate -- -r \"./!(candidates).schema.json\" -s candidates.schema.json -d \"../example/volebnikalkulacka.cz/**/candidates.json\"",
-    "validate:example:answers": "npm run validate -- -r \"./!(answers).schema.json\" -s answers.schema.json -d \"../example/volebnikalkulacka.cz/**/answers.json\"",
+    "validate:example:candidates-answers": "npm run validate -- -r \"./!(candidates-answers).schema.json\" -s candidates-answers.schema.json -d \"../example/volebnikalkulacka.cz/**/candidates-answers.json\"",
     "validate:example:calculators": "npm run validate -- -r \"./!(calculator).schema.json\" -s calculator.schema.json -d \"../example/volebnikalkulacka.cz/**/calculator.json\"",
     "validate:example:calculator-groups": "npm run validate -- -r \"./!(calculator-group).schema.json\" -s calculator-group.schema.json -d \"../example/volebnikalkulacka.cz/**/calculator-group.json\"",
     "validate:example:elections": "npm run validate -- -r \"./!(election).schema.json\" -s election.schema.json -d \"../example/volebnikalkulacka.cz/**/election.json\""
