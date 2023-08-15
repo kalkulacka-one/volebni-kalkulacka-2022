@@ -18,6 +18,21 @@
       "type": "string",
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
       "examples": ["prezidentske-2023"]
+    },
+    "calculatorGroup": {
+      "title": "Calculator group",
+      "description": "Reference to a calculator group with election calculators",
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "./calculator-group.schema.json#/properties/id"
+        },
+        "key": {
+          "$ref": "./calculator-group.schema.json#/properties/key"
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": ["id", "key"]
     }
   },
   "properties": {
@@ -26,8 +41,26 @@
     },
     "key": {
       "$ref": "#/$defs/key"
+    },
+    "calculatorGroup": {
+      "$ref": "#/$defs/calculatorGroup"
+    },
+    "districts": {
+      "title": "Ordered list of election districts",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "./district.schema.json"
+      }
+    },
+    "rounds": {
+      "title": "Ordered list of election rounds",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "./round.schema.json"
+      }
     }
   },
-  "unevaluatedProperties": false,
-  "required": ["id", "key"]
+  "required": ["id", "key", "calculatorGroup"]
 }
