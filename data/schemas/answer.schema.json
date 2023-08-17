@@ -14,8 +14,15 @@
     },
     "answer": {
       "title": "Answer",
-      "description": "Yes or no answer to a question",
-      "type": "boolean"
+      "description": "Yes (`true`), no (`false`) or neutral (`null`) answer to a question",
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "isImportant": {
       "title": "Answer",
