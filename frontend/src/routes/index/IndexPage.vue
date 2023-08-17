@@ -45,7 +45,7 @@ const handleSubmit = async () => {
     message.value = 'Dáme vám vedieť!';
   } else {
     posting.value = false;
-    uccess.value = false;
+    success.value = false;
     message.value = 'Niečo sa pokazilo :( Skúste to znova.';
   }
 };
