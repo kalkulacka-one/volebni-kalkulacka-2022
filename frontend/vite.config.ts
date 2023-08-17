@@ -25,11 +25,10 @@ export default defineConfig(({ command, mode }) => {
       vue({ include: [/\.vue$/, /\.md$/] }),
       md(),
       VueI18nPlugin({
-        runtimeOnly: false,
         include: resolve(
           dirname(fileURLToPath(import.meta.url)),
           './src/i18n/locales/**',
-        ), // provide a path to the folder where you'll store translation data (see below)
+        ),
       }),
     ],
     esbuild: esbuildConf,
