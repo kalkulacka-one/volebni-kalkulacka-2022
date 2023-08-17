@@ -25,9 +25,9 @@ import MarkdownIt from '@/components/utilities/MarkdownIt.vue';
 import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import { stringToNormalizedHyphenated } from '@/common/utils';
-import { useI18nWrapper } from '@/i18n';
+import { useI18n } from 'vue-i18n'
 
-const { t, locale } = useI18nWrapper();
+const { t, locale } = useI18n();
 
 const router = useRouter();
 const route = useRoute();

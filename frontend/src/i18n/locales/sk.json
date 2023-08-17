@@ -14,14 +14,14 @@
       "validation": "Pole nesmie byť prázdne",
       "success": "Dáme vám vedieť!",
       "error": "Niečo sa pokazilo :( Skúste to znova."
-    },
-    "districtSelection": {
-      "title": {
-        "senat": "Zvolte svůj senátní obvod",
-        "communal": "Zvolte své město"
-      },
-      "goBack": "Zpět na hlavní stránku",
-      "continue": "Potvrdit a pokračovat"
     }
+  },
+  "districtSelection": {
+    "title": {
+      "senat": "Zvolte svůj senátní obvod",
+      "communal": "Zvolte své město"
+    },
+    "goBack": "Zpět na hlavní stránku",
+    "continue": "Potvrdit a pokračovat"
   }
 }

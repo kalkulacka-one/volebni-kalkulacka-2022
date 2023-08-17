@@ -13,9 +13,9 @@ import HeadlineText from '@/components/design-system/typography/HeadlineText.vue
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import TextInputComponent from '@/components/design-system/input/TextInputComponent.vue';
-import { useI18nWrapper } from '@/i18n';
+import { useI18n } from 'vue-i18n'
 
-const { t, locale } = useI18nWrapper();
+const { t, locale } = useI18n();
 
 const email = ref('');
 const emailError = ref();
