@@ -446,7 +446,7 @@ router.beforeEach(async (to, from) => {
 //debug
 router.beforeEach((to, _from, next) => {
   const lang = to.query['lang'];
-  if (lang && typeof lang === 'string') {
+  if (lang && (lang === 'cs' || lang === 'sk')) {
     switchLanguage(lang);
   }
   next();

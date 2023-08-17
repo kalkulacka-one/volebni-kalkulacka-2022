@@ -1,4 +1,4 @@
-import { createI18n, useI18n } from 'vue-i18n';
+import { createI18n, type Locale, type Composer } from 'vue-i18n';
 import cs from './locales/cs.json';
 import sk from './locales/sk.json';
 
@@ -14,7 +14,7 @@ export const i18n = createI18n<[MessageSchema], 'cs' | 'sk'>({
   },
 });
 
-export const switchLanguage = async (newLocale: string) => {
-  i18n.global.locale.value = newLocale;
+export const switchLanguage = async (newLocale: Locale) => {
+  (i18n.global as unknown as Composer).locale.value = newLocale;
   document.querySelector('html')?.setAttribute('lang', newLocale);
 };
