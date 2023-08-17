@@ -13,6 +13,9 @@ import HeadlineText from '@/components/design-system/typography/HeadlineText.vue
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import TextInputComponent from '@/components/design-system/input/TextInputComponent.vue';
+import { useI18n } from 'vue-i18n'
+
+const { t, locale } = useI18n();
 
 const email = ref('');
 const emailError = ref();
@@ -23,7 +26,7 @@ const message = ref();
 const handleSubmit = async () => {
   console.log('handleSubmit');
   if (email.value === '') {
-    emailError.value = 'Pole nesmie byť prázdne';
+    emailError.value = t('routes.index.IndexPage.empty-email-error');
     return;
   } else {
     emailError.value = undefined;
@@ -42,11 +45,11 @@ const handleSubmit = async () => {
   if (response.ok) {
     posting.value = false;
     success.value = true;
-    message.value = 'Dáme vám vedieť!';
+    message.value = t('routes.index.IndexPage.confirmation-message');
   } else {
     posting.value = false;
     success.value = false;
-    message.value = 'Niečo sa pokazilo :( Skúste to znova.';
+    message.value = t('routes.index.IndexPage.unknown-error');
   }
 };
 </script>
@@ -60,25 +63,21 @@ const handleSubmit = async () => {
       <section style="padding: 2rem">
         <StackComponent spacing="large" centered>
           <StackComponent spacing="small" centered>
-            <HeadlineText tag="h1" size="large" centered
-              >Volebná kalkulačka 2023</HeadlineText
-            >
-            <BodyText size="large" centered
-              >Prípravujeme pre vás volebnú kalkulačku pre voľby do Národnej
-              rady Slovenskej republiky 2023.</BodyText
-            >
-            <BodyText size="large" centered
-              >Zanechajte nám váš e-mail a dáme vám vedieť, keď kalkulačku
-              spustíme.</BodyText
-            >
-            <BodyText size="medium" centered
-              >Zatiaľ sa môžete pozrieť na
-              <a href="https://www.volebnikalkulacka.cz">českú verziu</a>
-              volebnej kalkulačky.</BodyText
-            >
+            <HeadlineText tag="h1" size="large" centered>{{
+              $t('routes.index.IndexPage.title')
+            }}</HeadlineText>
+            <BodyText size="large" centered>{{ $t('routes.index.IndexPage.primary-text') }}</BodyText>
+            <BodyText size="large" centered>{{ $t('routes.index.IndexPage.secondary-text') }}</BodyText>
+            <BodyText size="medium" centered>
+              {{ $t('routes.index.IndexPage.czech-version.prefix') }}
+                <a href="https://www.volebnikalkulacka.cz" target="_blank">
+                  {{ $t('routes.index.IndexPage.czech-version.link') }}
+                </a>
+              {{ $t('routes.index.IndexPage.czech-version.suffix') }}
+            </BodyText>
           </StackComponent>
           <StackComponent spacing="small" centered>
-            <BodyText size="small" v-if="success">
+            <BodyText v-if="success" size="small">
               {{ message }}
             </BodyText>
             <form v-if="!success">
@@ -90,11 +89,11 @@ const handleSubmit = async () => {
                 style="justify-content: center"
               >
                 <TextInputComponent
+                  v-model="email"
                   required
                   type="email"
-                  placeholder="E-mail"
+                  :placeholder="t('routes.index.IndexPage.input-label')"
                   :value="email"
-                  v-model="email"
                   :icon="mdiEmailOutline"
                   :disabled="posting"
                   :error="emailError"
@@ -102,17 +101,16 @@ const handleSubmit = async () => {
                 <ButtonComponent
                   kind="filled"
                   color="primary"
-                  @click.prevent="handleSubmit"
                   :loading="posting"
+                  @click.prevent="handleSubmit"
                 >
-                  Dajte mi vedieť
+                  {{ $t('routes.index.IndexPage.subscribe-button-label') }}
                 </ButtonComponent>
               </StackComponent>
             </form>
-            <BodyText tag="p" size="small" v-if="!success"
-              >Odoslaním súhlasíte so zasielaním noviniek o volebnej
-              kalkulačke.</BodyText
-            >
+            <BodyText v-if="!success" tag="p" size="small">{{
+              $t('routes.index.IndexPage.disclaimer')
+            }}</BodyText>
           </StackComponent>
         </StackComponent>
       </section>
