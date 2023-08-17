@@ -25,9 +25,6 @@ import MarkdownIt from '@/components/utilities/MarkdownIt.vue';
 import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import { stringToNormalizedHyphenated } from '@/common/utils';
-import { useI18n } from 'vue-i18n'
-
-const { t, locale } = useI18n();
 
 const router = useRouter();
 const route = useRoute();
@@ -42,8 +39,8 @@ const breadcrumbs = electionName;
 // TODO: Replace with data from store
 const title =
   route.params.election === 'senatni-2022'
-    ? t('districtSelection.title.senat')
-    : t('districtSelection.title.communal');
+    ? 'Zvolte svůj senátní obvod'
+    : 'Zvolte své město';
 
 const text = electionDescription;
 
@@ -92,7 +89,7 @@ const onSubmit = () => {
                     })
                   "
                 >
-                  {{ $t('districtSelection.goBack') }}
+                  Zpět na hlavní stránku
                   <template #iconAfter>
                     <IconComponent :icon="mdiCloseCircleOutline" />
                   </template>
@@ -111,7 +108,7 @@ const onSubmit = () => {
                   <template #icon>
                     <IconComponent
                       :icon="mdiCloseCircleOutline"
-                      @title="t('districtSelection.goBack')"
+                      title="Zpět na hlavní stránku"
                     />
                   </template>
                 </ButtonComponent>
@@ -164,7 +161,7 @@ const onSubmit = () => {
                   color="primary"
                   :disabled="!selected"
                 >
-                  {{ $t('districtSelection.continue') }}
+                  Potvrdit a pokračovat
                 </ButtonComponent>
               </BottomBar>
             </ResponsiveWrapper>
@@ -176,7 +173,7 @@ const onSubmit = () => {
                   color="primary"
                   :disabled="!selected"
                 >
-                  {{ $t('districtSelection.continue') }}
+                  Potvrdit a pokračovat
                 </ButtonComponent>
               </BottomBar>
             </ResponsiveWrapper>
