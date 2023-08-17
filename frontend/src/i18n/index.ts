@@ -5,21 +5,21 @@ import type {
   createI18n as createI18nType,
   useI18n as useI18nType,
 } from 'vue-i18n/dist/vue-i18n.d.ts';
-import cz from './locales/cz.json';
+import cs from './locales/cs.json';
 import sk from './locales/sk.json';
 
-type MessageSchema = typeof cz;
+type MessageSchema = typeof cs;
 
 export const i18n = (createI18n as typeof createI18nType)<
   [MessageSchema],
-  'cz' | 'sk'
+  'cs' | 'sk'
 >({
   locale: import.meta.env.VITE_DEFAULT_LOCALE,
   fallbackLocale: import.meta.env.VITE_FALLBACK_LOCALE,
   legacy: false,
   globalInjection: true,
   messages: {
-    cz,
+    cs,
     sk,
   },
 });
