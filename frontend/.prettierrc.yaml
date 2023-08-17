@@ -1,6 +1,5 @@
 singleQuote: true
 endOfLine: lf
-trailingComma: all
 overrides:
   - files: ['.env', '.env.*']
     options:
