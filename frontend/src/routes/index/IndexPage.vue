@@ -13,7 +13,7 @@ import HeadlineText from '@/components/design-system/typography/HeadlineText.vue
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import TextInputComponent from '@/components/design-system/input/TextInputComponent.vue';
-import { useI18n } from 'vue-i18n'
+import { useI18n } from 'vue-i18n';
 
 const { t, locale } = useI18n();
 
@@ -66,13 +66,17 @@ const handleSubmit = async () => {
             <HeadlineText tag="h1" size="large" centered>{{
               $t('routes.index.IndexPage.title')
             }}</HeadlineText>
-            <BodyText size="large" centered>{{ $t('routes.index.IndexPage.primary-text') }}</BodyText>
-            <BodyText size="large" centered>{{ $t('routes.index.IndexPage.secondary-text') }}</BodyText>
+            <BodyText size="large" centered>{{
+              $t('routes.index.IndexPage.primary-text')
+            }}</BodyText>
+            <BodyText size="large" centered>{{
+              $t('routes.index.IndexPage.secondary-text')
+            }}</BodyText>
             <BodyText size="medium" centered>
               {{ $t('routes.index.IndexPage.czech-version.prefix') }}
-                <a href="https://www.volebnikalkulacka.cz" target="_blank">
-                  {{ $t('routes.index.IndexPage.czech-version.link') }}
-                </a>
+              <a href="https://www.volebnikalkulacka.cz" target="_blank">
+                {{ $t('routes.index.IndexPage.czech-version.link') }}
+              </a>
               {{ $t('routes.index.IndexPage.czech-version.suffix') }}
             </BodyText>
           </StackComponent>

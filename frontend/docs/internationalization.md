@@ -48,7 +48,7 @@ To use a translation in a page or component, simply import the plugin and config
 
 ```vue
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
+import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
 </script>
 ```
@@ -57,9 +57,7 @@ And then use the translate function instead of strings in the code or a template
 
 ```vue
 <template>
-  <ButtonComponent
-    …
-  >
+  <ButtonComponent …>
     {{ $t('routes.profile.AuthPageVue.sign-in') }}
   </ButtonComponent>
 </template>
