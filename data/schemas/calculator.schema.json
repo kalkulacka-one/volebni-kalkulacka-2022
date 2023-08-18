@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.volebnikalkulacka.cz/data/schemas/calculator.schema.json",
+  "title": "Calculator",
+  "description": "Calculator is a set of questions, candidates and their answers",
+  "type": "object",
+  "$defs": {
+    "id": {
+      "title": "ID",
+      "description": "Unique identifier of a calculator in the format of UUID",
+      "type": "string",
+      "format": "uuid",
+      "examples": ["e2cf4fec-81e0-490c-a056-7f63177dc6a7"]
+    },
+    "key": {
+      "title": "Key",
+      "description": "Human-friendly unique key of a standalone calculator in the hyphen-separated lowercased format",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "examples": ["doprava-v-praze"]
+    },
+    "calculatorGroup": {
+      "title": "Calculator group",
+      "description": "Reference to a calculator group the calculator belongs to",
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "./calculator-group.schema.json#/properties/id"
+        },
+        "key": {
+          "$ref": "./calculator-group.schema.json#/properties/key"
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": ["id", "key"]
+    },
+    "election": {
+      "title": "Election",
+      "description": "Reference to an election the calculator belongs to",
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "./election.schema.json#/properties/id"
+        },
+        "key": {
+          "$ref": "./election.schema.json#/properties/key"
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": ["id", "key"]
+    },
+    "variant": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "$ref": "./variant.schema.json#/properties/key"
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": ["key"]
+    },
+    "district": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "$ref": "./district.schema.json#/properties/key"
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": ["key"]
+    },
+    "round": {
+      "type": "object",
+      "properties": {
+        "number": {
+          "$ref": "./round.schema.json#/properties/number"
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": ["number"]
+    }
+  },
+  "properties": {
+    "id": {
+      "$ref": "#/$defs/id"
+    }
+  },
+  "unevaluatedProperties": false,
+  "required": ["id"],
+  "oneOf": [
+    {
+      "title": "Standalone calculator",
+      "description": "Standalone calculator is a calculator that is not part of a calculator group",
+      "properties": {
+        "key": {
+          "$ref": "#/$defs/key"
+        }
+      },
+      "required": ["key"]
+    },
+    {
+      "title": "Calculator from a group",
+      "description": "Calculator that is part of a calculator group",
+      "properties": {
+        "calculatorGroup": {
+          "$ref": "#/$defs/calculatorGroup"
+        },
+        "variant": {
+          "$ref": "#/$defs/variant"
+        }
+      },
+      "required": ["calculatorGroup", "variant"]
+    },
+    {
+      "title": "Calculator from an election",
+      "description": "Calculator that is part of an election",
+      "properties": {
+        "calculatorGroup": {
+          "$ref": "#/$defs/calculatorGroup"
+        },
+        "election": {
+          "$ref": "#/$defs/election"
+        },
+        "variant": {
+          "$ref": "#/$defs/variant"
+        },
+        "district": {
+          "$ref": "#/$defs/district"
+        },
+        "round": {
+          "$ref": "#/$defs/round"
+        }
+      },
+      "required": ["calculatorGroup", "election"],
+      "anyOf": [
+        {
+          "required": ["variant"]
+        },
+        {
+          "required": ["district"]
+        },
+        {
+          "required": ["round"]
+        }
+      ]
+    }
+  ]
+}

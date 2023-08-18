@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.volebnikalkulacka.cz/data/schemas/elections.schema.json",
+  "title": "Elections",
+  "description": "List of elections",
+  "type": "array",
+  "items": {
+    "$ref": "./election.schema.json"
+  }
+}

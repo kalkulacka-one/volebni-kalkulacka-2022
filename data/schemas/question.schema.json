@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.volebnikalkulacka.cz/data/schemas/question.schema.json",
+  "title": "Question",
+  "description": "Question for a calculator",
+  "type": "object",
+  "properties": {
+    "id": {
+      "title": "ID",
+      "description": "Unique identifier of a question in the format of UUID",
+      "type": "string",
+      "format": "uuid",
+      "examples": ["51115be7-246a-4f07-baf7-247ee81fde36"]
+    }
+  },
+  "unevaluatedProperties": false,
+  "required": ["id"]
+}

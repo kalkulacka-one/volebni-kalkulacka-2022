@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.volebnikalkulacka.cz/data/schemas/answer.schema.json",
+  "title": "Answer",
+  "description": "Answer to a question of a calculator",
+  "type": "object",
+  "properties": {
+    "questionId": {
+      "title": "Question ID",
+      "description": "Unique identifier of an answered question in the format of UUID",
+      "type": "string",
+      "format": "uuid",
+      "examples": ["51115be7-246a-4f07-baf7-247ee81fde36"]
+    },
+    "answer": {
+      "title": "Answer",
+      "description": "Yes (`true`), no (`false`) or neutral (`null`) answer to a question",
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "isImportant": {
+      "title": "Answer",
+      "description": "Whether a question was marked as important",
+      "type": "boolean"
+    }
+  },
+  "unevaluatedProperties": false,
+  "required": ["questionId"]
+}

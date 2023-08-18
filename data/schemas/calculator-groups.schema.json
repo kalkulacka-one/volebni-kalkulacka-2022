@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.volebnikalkulacka.cz/data/schemas/calculator-groups.schema.json",
+  "title": "Answers",
+  "description": "List of calculator groups",
+  "type": "array",
+  "items": {
+    "$ref": "./calculator-group.schema.json"
+  }
+}
