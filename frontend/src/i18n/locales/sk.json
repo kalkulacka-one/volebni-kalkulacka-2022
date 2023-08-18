@@ -1,1 +1,22 @@
-{}
+{
+  "routes": {
+    "index": {
+      "IndexPage": {
+        "title": "Volebná kalkulačka 2023",
+        "primary-text": "Prípravujeme pre vás volebnú kalkulačku pre voľby do Národnej rady Slovenskej republiky 2023.",
+        "secondary-text": "Zanechajte nám váš e-mail a dáme vám vedieť, keď kalkulačku spustíme.",
+        "czech-version": {
+          "prefix": "Zatiaľ sa môžete pozrieť na {0}",
+          "link": "českú verziu",
+          "suffix": " volebnej kalkulačky."
+        },
+        "input-label": "E-mail",
+        "subscribe-button-label": "Dajte mi vedieť",
+        "disclaimer": "Odoslaním súhlasíte so zasielaním noviniek o volebnej kalkulačke.",
+        "empty-email-error": "Pole nesmie byť prázdne",
+        "success": "Dáme vám vedieť!",
+        "error": "Niečo sa pokazilo :( Skúste to znova."
+      }
+    }
+  }
+}
