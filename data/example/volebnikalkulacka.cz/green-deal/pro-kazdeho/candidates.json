@@ -1,11 +1,16 @@
 [
   {
-    "id": "11fee676-1eac-4948-a2fb-38e2b774f4b3"
+    "id": "11fee676-1eac-4948-a2fb-38e2b774f4b3",
+    "reference": {
+      "id": "5ee570e9-fdc6-4af1-8af5-a5e5589c44a6",
+      "type": "person"
+    }
   },
   {
-    "id": "fa770128-1072-4bac-94b0-a4080080278e"
-  },
-  {
-    "id": "b4591782-6c82-46d3-a099-24086bed187d"
+    "id": "fa770128-1072-4bac-94b0-a4080080278e",
+    "reference": {
+      "id": "5fb7d561-6e93-45c2-9c75-6a1f2b11deb4",
+      "type": "organization"
+    }
   }
 ]
