@@ -19,6 +19,27 @@
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
       "examples": ["doprava-v-praze"]
     },
+    "createdAt": {
+      "title": "Created at",
+      "description": "Time of the creation of a calculator in the ISO 8601 format",
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2021-01-01T00:00:00+01:00"]
+    },
+    "updatedAt": {
+      "title": "Updated at",
+      "description": "Time of the last update of a calculator in the ISO 8601 format",
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2021-01-01T00:00:00+01:00"]
+    },
+    "publishedAt": {
+      "title": "Published at",
+      "description": "Time when a calculator should be published in the ISO 8601 format",
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2021-01-01T00:00:00+01:00"]
+    },
     "calculatorGroup": {
       "title": "Calculator group",
       "description": "Reference to a calculator group the calculator belongs to",
@@ -83,10 +104,19 @@
   "properties": {
     "id": {
       "$ref": "#/$defs/id"
+    },
+    "createdAt": {
+      "$ref": "#/$defs/createdAt"
+    },
+    "updatedAt": {
+      "$ref": "#/$defs/updatedAt"
+    },
+    "publishedAt": {
+      "$ref": "#/$defs/publishedAt"
     }
   },
   "unevaluatedProperties": false,
-  "required": ["id"],
+  "required": ["id", "createdAt"],
   "oneOf": [
     {
       "title": "Standalone calculator",
