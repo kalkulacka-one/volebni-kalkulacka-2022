@@ -11,8 +11,30 @@
       "type": "string",
       "format": "uuid",
       "examples": ["11fee676-1eac-4948-a2fb-38e2b774f4b3"]
+    },
+    "reference": {
+      "title": "Person or organization reference",
+      "description": "Reference to a person or an organization which is a candidate",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "ID",
+          "description": "Unique identifier of a reference in the format of UUID",
+          "type": "string",
+          "format": "uuid",
+          "examples": ["5fb7d561-6e93-45c2-9c75-6a1f2b11deb4"]
+        },
+        "type": {
+          "title": "Type",
+          "description": "Type of a reference: either a person or an organization ",
+          "type": "string",
+          "enum": ["person", "organization"]
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": ["id", "type"]
     }
   },
   "unevaluatedProperties": false,
-  "required": ["id"]
+  "required": ["id", "reference"]
 }
