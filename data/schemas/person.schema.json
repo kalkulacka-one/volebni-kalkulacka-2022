@@ -17,6 +17,37 @@
       "description": "Person's preferred full name",
       "type": "string"
     },
+    "familyName": {
+      "description": "Family name (last name)",
+      "type": "string"
+    },
+    "givenName": {
+      "description": "Given name (first name)",
+      "type": "string"
+    },
+    "additionalName": {
+      "description": "Additional name (middle name)",
+      "type": "string"
+    },
+    "honorificPrefix": {
+      "description": "Honorifics preceding a person's name",
+      "type": "string"
+    },
+    "honorificSuffix": {
+      "description": "Honorifics following a person's name",
+      "type": "string"
+    },
+    "sortName": {
+      "description": "A name to use in a lexicographically ordered list",
+      "type": "string"
+    },
+    "alternateNames": {
+      "description": "Alternate names to use for example in search",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "memberOf": {
       "title": "Member of",
       "description": "List of organizations a person is a member of",
@@ -37,5 +68,13 @@
     }
   },
   "unevaluatedProperties": false,
-  "required": ["id", "name"]
+  "required": ["id"],
+  "anyOf": [
+    {
+      "required": ["name"]
+    },
+    {
+      "required": ["familyName", "givenName"]
+    }
+  ]
 }
