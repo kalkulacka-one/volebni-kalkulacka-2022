@@ -4,6 +4,40 @@
   "title": "Organization",
   "description": "Organization is a group of people, for example a political party, a movement, etc.",
   "type": "object",
+  "$defs": {
+    "person": {
+      "title": "Person",
+      "description": "Reference to a person",
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "./person.schema.json#/properties/id"
+        },
+        "type": {
+          "type": "string",
+          "const": "person"
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": ["id", "type"]
+    },
+    "organization": {
+      "title": "Organization",
+      "description": "Reference to an organization",
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "./organization.schema.json#/properties/id"
+        },
+        "type": {
+          "type": "string",
+          "const": "organization"
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": ["id", "type"]
+    }
+  },
   "properties": {
     "id": {
       "title": "ID",
@@ -16,6 +50,22 @@
       "title": "Name",
       "description": "Organization's preferred full name",
       "type": "string"
+    },
+    "members": {
+      "title": "Members",
+      "description": "List of members of an organization",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/$defs/person"
+          },
+          {
+            "$ref": "#/$defs/organization"
+          }
+        ]
+      }
     }
   },
   "unevaluatedProperties": false,
