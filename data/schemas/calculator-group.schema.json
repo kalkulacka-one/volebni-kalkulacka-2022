@@ -19,6 +19,27 @@
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
       "examples": ["prezidentske-2023"]
     },
+    "createdAt": {
+      "title": "Created at",
+      "description": "Time of the creation of a calculator group in the ISO 8601 format",
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2021-01-01T00:00:00+01:00"]
+    },
+    "updatedAt": {
+      "title": "Updated at",
+      "description": "Time of the last update of a calculator group in the ISO 8601 format",
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2021-01-01T00:00:00+01:00"]
+    },
+    "publishedAt": {
+      "title": "Published at",
+      "description": "Time when a calculator group should be published in the ISO 8601 format",
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2021-01-01T00:00:00+01:00"]
+    },
     "election": {
       "title": "Election",
       "description": "Reference to an election the calculator belongs to",
@@ -60,10 +81,19 @@
     },
     "variants": {
       "$ref": "#/$defs/variants"
+    },
+    "createdAt": {
+      "$ref": "#/$defs/createdAt"
+    },
+    "updatedAt": {
+      "$ref": "#/$defs/updatedAt"
+    },
+    "publishedAt": {
+      "$ref": "#/$defs/publishedAt"
     }
   },
   "unevaluatedProperties": false,
-  "required": ["id", "key"],
+  "required": ["id", "key", "createdAt"],
   "oneOf": [
     {
       "properties": {
