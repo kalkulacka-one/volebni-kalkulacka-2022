@@ -19,6 +19,27 @@
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
       "examples": ["prezidentske-2023"]
     },
+    "createdAt": {
+      "title": "Created at",
+      "description": "Time of the creation of an election in the ISO 8601 format",
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2021-01-01T00:00:00+01:00"]
+    },
+    "updatedAt": {
+      "title": "Updated at",
+      "description": "Time of the last update of an election group in the ISO 8601 format",
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2021-01-01T00:00:00+01:00"]
+    },
+    "publishedAt": {
+      "title": "Published at",
+      "description": "Time when an election group should be published in the ISO 8601 format",
+      "type": "string",
+      "format": "date-time",
+      "examples": ["2021-01-01T00:00:00+01:00"]
+    },
     "calculatorGroup": {
       "title": "Calculator group",
       "description": "Reference to a calculator group with election calculators",
@@ -42,6 +63,15 @@
     "key": {
       "$ref": "#/$defs/key"
     },
+    "createdAt": {
+      "$ref": "#/$defs/createdAt"
+    },
+    "updatedAt": {
+      "$ref": "#/$defs/updatedAt"
+    },
+    "publishedAt": {
+      "$ref": "#/$defs/publishedAt"
+    },
     "calculatorGroup": {
       "$ref": "#/$defs/calculatorGroup"
     },
@@ -62,5 +92,5 @@
       }
     }
   },
-  "required": ["id", "key", "calculatorGroup"]
+  "required": ["id", "key", "createdAt", "calculatorGroup"]
 }
