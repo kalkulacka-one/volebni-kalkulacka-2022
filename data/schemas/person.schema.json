@@ -16,6 +16,24 @@
       "title": "Name",
       "description": "Person's preferred full name",
       "type": "string"
+    },
+    "memberOf": {
+      "title": "Member of",
+      "description": "List of organizations a person is a member of",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "title": "Organization",
+        "description": "Reference to an organization",
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "./organization.schema.json#/properties/id"
+          }
+        },
+        "unevaluatedProperties": false,
+        "required": ["id"]
+      }
     }
   },
   "unevaluatedProperties": false,
