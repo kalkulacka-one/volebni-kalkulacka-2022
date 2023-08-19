@@ -2,7 +2,8 @@
   "scripts": {
     "lint": "npx prettier .",
     "lint:fix": "npm run lint -- --write",
-    "generate-types": "mkdir -p ./types && find ./schemas -type f -name \"*.schema.json\" -exec sh -c 'base=$(basename \"{}\" .schema.json | tr \"-\" \"\\n\" | awk \"{print (NR==1 ? \\$0 : toupper(substr(\\$0,1,1)) tolower(substr(\\$0,2)))}\" | tr -d \"\\n\"); npx quicktype -s schema \"{}\" -o \"./types/${base}.ts\" --lang typescript --just-types' \\;",
+    "generate-types:quicktype": "mkdir -p ./types && find ./schemas -type f -name \"*.schema.json\" -exec sh -c 'base=$(basename \"{}\" .schema.json | tr \"-\" \"\\n\" | awk \"{print (NR==1 ? \\$0 : toupper(substr(\\$0,1,1)) tolower(substr(\\$0,2)))}\" | tr -d \"\\n\"); npx quicktype -s schema \"{}\" -o \"./types/${base}.ts\" --lang typescript --just-types' \\;",
+    "generate-types:json2ts": "mkdir -p ./types && cd ./schemas && find . -type f -name \"*.schema.json\" -exec sh -c 'base=$(basename \"{}\" .schema.json | tr \"-\" \"\\n\" | awk \"{print (NR==1 ? \\$0 : toupper(substr(\\$0,1,1)) tolower(substr(\\$0,2)))}\" | tr -d \"\\n\"); json2ts -i \"{}\" -o \"../types/${base}.ts\"' \\;",
     "validate": "ajv validate -c ajv-formats --spec=draft2020",
     "validate:all": "npm run validate:calculator-groups && npm run validate:calculators && npm run validate:candidates-answers && npm run validate:candidates && npm run validate:elections && npm run validate:organizations && npm run validate:persons && npm run validate:questions",
     "validate:calculator-groups": "npm run validate -- -r \"./!(calculator-group).schema.json\" -s calculator-group.schema.json -d \"../instance/**/calculator-group.json\"",
@@ -27,6 +28,7 @@
     "ajv-cli": "^5.0.0",
     "ajv-formats": "^2.1.1",
     "prettier": "^3.0.1",
-    "quicktype": "^23.0.71"
+    "quicktype": "^23.0.71",
+    "json-schema-to-typescript": "^13.0.2"
   }
 }
