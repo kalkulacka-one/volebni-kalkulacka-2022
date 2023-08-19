@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.volebnikalkulacka.cz/data/schemas/person.schema.json",
+  "title": "Person",
+  "description": "A human being",
+  "type": "object",
+  "properties": {
+    "id": {
+      "title": "ID",
+      "description": "Unique identifier of a person in the format of UUID",
+      "type": "string",
+      "format": "uuid",
+      "examples": ["5ee570e9-fdc6-4af1-8af5-a5e5589c44a6"]
+    },
+    "name": {
+      "title": "Name",
+      "description": "Person's preferred full name",
+      "type": "string"
+    }
+  },
+  "unevaluatedProperties": false,
+  "required": ["id", "name"]
+}
