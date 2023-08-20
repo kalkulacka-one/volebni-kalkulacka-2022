@@ -28,7 +28,8 @@ export function convertToQuestionsPoolRow(
   pos: number,
   row: GoogleSpreadsheetRow<QuestionsPoolRowData>,
 ): QuestionsPoolRow {
-  return new QuestionsPoolRow(pos, {
+  return new QuestionsPoolRow({
+    Pos: pos,
     Uuid: row.get('Uuid'),
     Name: row.get('Name'),
     Question: row.get('Question'),
@@ -44,7 +45,8 @@ export function convertToQuestionsRow(
   pos: number,
   row: GoogleSpreadsheetRow<QuestionsPoolRowData>,
 ): QuestionsRow {
-  return new QuestionsRow(pos, {
+  return new QuestionsRow({
+    Pos: pos,
     Uuid: row.get('Uuid'),
     Name: row.get('Name'),
     Order: parseInt(row.get('Order')),
@@ -55,7 +57,8 @@ export function convertToCalculatorRow(
   pos: number,
   row: GoogleSpreadsheetRow<CalculatorRowData>,
 ): CalculatorRow {
-  return new CalculatorRow(pos, {
+  return new CalculatorRow({
+    Pos: pos,
     ElectionName: row.get('Election name'),
     ElectionKey: row.get('Election key'),
     DistrictName: row.get('District name'),
@@ -70,9 +73,13 @@ export function convertToCalculatorRow(
     QuestionsPool: row.get('Questions pool'),
     QuestionsSpreadsheet: row.get('Questions spreadsheet'),
     QuestionsSheet: row.get('Questions sheet'),
-    QuestionsForm: row.get('Questions form'),
-    AnswerYes: row.get('Answer yes'),
-    AnswerNo: row.get('Answer no'),
+    QuestionsFormCandidates: row.get('Questions form - candidates'),
+    QuestionsFormExperts: row.get('Questions form - experts'),
+    L10nYes: row.get('L10n: yes'),
+    L10nNo: row.get('L10n: no'),
+    L10nIsImportant: row.get('L10n: is important'),
+    L10nSecretCode: row.get('L10n: secret code'),
+    L10nComment: row.get('L10n: comment'),
     AnswersSpreadsheetCandidates: row.get('Answers spreadsheet - candidates'),
     AnswersSheetCandidates: row.get('Answers sheet - candidates'),
     AnswersSpreadsheetExperts: row.get('Answers spreadsheet - experts'),
@@ -90,7 +97,8 @@ export function convertToCandidatesPoolRow(
   pos: number,
   row: GoogleSpreadsheetRow<CandidatesPoolRowData>,
 ): CandidatesPoolRow {
-  return new CandidatesPoolRow(pos, {
+  return new CandidatesPoolRow({
+    Pos: pos,
     Uuid: row.get('Uuid'),
     Name: row.get('Name'),
     Abbriviation: row.get('Abbriviation'),
@@ -104,12 +112,13 @@ export function convertToCandidatesRow(
   pos: number,
   row: GoogleSpreadsheetRow<CandidatesRowData>,
 ): CandidatesRow {
-  return new CandidatesRow(pos, {
+  return new CandidatesRow({
+    Pos: pos,
     Uuid: row.get('Uuid'),
     Name: row.get('Name'),
     SecretCode: row.get('Secret code'),
     MemberOf: row.get('Member of'),
-    Members: row.get('Members'),
+    Members: row.get('Members')?.split(),
   });
 }
 
@@ -117,7 +126,8 @@ export function convertToDistrictsPoolRow(
   pos: number,
   row: GoogleSpreadsheetRow<DistrictsPoolRowData>,
 ): DistrictsPoolRow {
-  return new DistrictsPoolRow(pos, {
+  return new DistrictsPoolRow({
+    Pos: pos,
     Uuid: row.get('Uuid'),
     Name: row.get('Name'),
     Key: row.get('Key'),
@@ -129,7 +139,8 @@ export function convertToDistrictsRow(
   pos: number,
   row: GoogleSpreadsheetRow<DistrictsRowData>,
 ): DistrictsRow {
-  return new DistrictsRow(pos, {
+  return new DistrictsRow({
+    Pos: pos,
     Uuid: row.get('Uuid'),
     Key: row.get('Key'),
   });
@@ -139,7 +150,8 @@ export function convertToAnswersRow(
   pos: number,
   row: GoogleSpreadsheetRow<Record<string, any>>,
 ): AnswersRow {
-  return new AnswersRow(pos, {
+  return new AnswersRow({
+    Pos: pos,
     Timestamp: row.get('Timestamp'),
     SecretCode: row.get('Secret code'),
     Email: row.get('E-mail'),

@@ -29,9 +29,13 @@ export type CalculatorRowData = {
   'Questions pool': CUrl;
   'Questions spreadsheet': CUrl;
   'Questions sheet': CSheetName;
-  'Questions form': CUrl;
-  'Answer yes': string;
-  'Answer no': string;
+  'Questions form - candidates': CUrl;
+  'Questions form - experts': CUrl;
+  'L10n: yes': string;
+  'L10n: no': string;
+  'L10n: is important': string;
+  'L10n: secret code': string;
+  'L10n: comment': string;
   'Answers spreadsheet - candidates': CUrl;
   'Answers sheet - candidates': CSheetName;
   'Answers spreadsheet - experts': CUrl;
@@ -61,9 +65,13 @@ export class CalculatorRow {
   QuestionsPool: CUrl;
   QuestionsSpreadsheet: CUrl;
   QuestionsSheet: CSheetName;
-  QuestionsForm: CUrl;
-  AnswerYes: string;
-  AnswerNo: string;
+  QuestionsFormCandidates: CUrl;
+  QuestionsFormExperts: CUrl;
+  L10nYes: string;
+  L10nNo: string;
+  L10nIsImportant: string;
+  L10nSecretCode: string;
+  L10nComment: string;
   AnswersSpreadsheetCandidates: CUrl;
   AnswersSheetCandidates: CSheetName;
   AnswersSpreadsheetExperts: CUrl;
@@ -75,35 +83,41 @@ export class CalculatorRow {
   DistrictsSpreadsheet: CUrl;
   DistrictsSheet: CSheetName;
 
-  constructor(pos: number, data: Partial<CalculatorRow>) {
-    this.Pos = pos;
-    this.ElectionName = data.ElectionName || '';
-    this.ElectionKey = data.ElectionKey || '';
-    this.DistrictName = data.DistrictName || '';
-    this.DistrictKey = data.DistrictKey || '';
-    this.Name = data.Name || '';
-    this.Description = data.Description || '';
-    this.ShowDescription = data.ShowDescription || 'No';
-    this.Round = data.Round || '';
-    this.Variant = data.Variant || '';
-    this.ElectionFrom = data.ElectionFrom || '';
-    this.ElectionTo = data.ElectionTo || '';
-    this.QuestionsPool = data.QuestionsPool || '';
-    this.QuestionsSpreadsheet = data.QuestionsSpreadsheet || '';
-    this.QuestionsSheet = data.QuestionsSheet || '';
-    this.QuestionsForm = data.QuestionsForm || '';
-    this.AnswerYes = data.AnswerYes || '';
-    this.AnswerNo = data.AnswerNo || '';
-    this.AnswersSpreadsheetCandidates = data.AnswersSpreadsheetCandidates || '';
-    this.AnswersSheetCandidates = data.AnswersSheetCandidates || '';
-    this.AnswersSpreadsheetExperts = data.AnswersSpreadsheetExperts || '';
-    this.AnswersSheetExperts = data.AnswersSheetExperts || '';
-    this.CandidatesPool = data.CandidatesPool || '';
-    this.CandidatesSpreadsheet = data.CandidatesSpreadsheet || '';
-    this.CandidatesSheet = data.CandidatesSheet || '';
-    this.DistrictsPool = data.DistrictsPool || '';
-    this.DistrictsSpreadsheet = data.DistrictsSpreadsheet || '';
-    this.DistrictsSheet = data.DistrictsSheet || '';
+  constructor(data: Required<CalculatorRow>) {
+    this.Pos = data.Pos;
+    this.ElectionName = data.ElectionName;
+    this.ElectionKey = data.ElectionKey;
+    this.DistrictName = data.DistrictName;
+    this.DistrictKey = data.DistrictKey;
+    this.Name = data.Name;
+    this.Description = data.Description;
+    this.ShowDescription = data.ShowDescription;
+    this.Round = data.Round;
+    this.Variant = data.Variant;
+    this.ElectionFrom = data.ElectionFrom;
+    this.ElectionTo = data.ElectionTo;
+    this.QuestionsPool = data.QuestionsPool;
+    this.QuestionsSpreadsheet = data.QuestionsSpreadsheet;
+    this.QuestionsSheet = data.QuestionsSheet;
+    this.QuestionsFormCandidates = data.QuestionsFormCandidates;
+    this.QuestionsFormExperts = data.QuestionsFormExperts;
+
+    this.L10nYes = data.L10nYes;
+    this.L10nNo = data.L10nNo;
+    this.L10nIsImportant = data.L10nIsImportant;
+    this.L10nSecretCode = data.L10nSecretCode;
+    this.L10nComment = data.L10nComment;
+
+    this.AnswersSpreadsheetCandidates = data.AnswersSpreadsheetCandidates;
+    this.AnswersSheetCandidates = data.AnswersSheetCandidates;
+    this.AnswersSpreadsheetExperts = data.AnswersSpreadsheetExperts;
+    this.AnswersSheetExperts = data.AnswersSheetExperts;
+    this.CandidatesPool = data.CandidatesPool;
+    this.CandidatesSpreadsheet = data.CandidatesSpreadsheet;
+    this.CandidatesSheet = data.CandidatesSheet;
+    this.DistrictsPool = data.DistrictsPool;
+    this.DistrictsSpreadsheet = data.DistrictsSpreadsheet;
+    this.DistrictsSheet = data.DistrictsSheet;
   }
 }
 
@@ -127,14 +141,14 @@ export class QuestionsPoolRow {
   Note: string;
   Order: number;
 
-  constructor(pos: number, data: Partial<QuestionsPoolRow>) {
-    this.Pos = pos;
-    this.Uuid = data.Uuid || '';
-    this.Name = data.Name || '';
-    this.Question = data.Question || '';
-    this.Description = data.Description || '';
-    this.Tags = data.Tags || [];
-    this.Note = data.Note || '';
+  constructor(data: Required<QuestionsPoolRow>) {
+    this.Pos = data.Pos;
+    this.Uuid = data.Uuid;
+    this.Name = data.Name;
+    this.Question = data.Question;
+    this.Description = data.Description;
+    this.Tags = data.Tags;
+    this.Note = data.Note;
     this.Order = data.Order || NaN;
   }
 }
@@ -151,10 +165,10 @@ export class QuestionsRow {
   Name: string;
   Order: number;
 
-  constructor(pos: number, data: Partial<QuestionsRow>) {
-    this.Pos = pos;
-    this.Uuid = data.Uuid || '';
-    this.Name = data.Name || '';
+  constructor(data: Required<QuestionsRow>) {
+    this.Pos = data.Pos;
+    this.Uuid = data.Uuid;
+    this.Name = data.Name;
     this.Order = data.Order || NaN;
   }
 }
@@ -267,13 +281,13 @@ export class CandidatesPoolRow {
   LastName: string;
   Type: CCandidateType;
 
-  constructor(pos: number, data: Partial<CandidatesPoolRow>) {
-    this.Pos = pos;
-    this.Uuid = data.Uuid || '';
-    this.Name = data.Name || '';
-    this.Abbriviation = data.Abbriviation || '';
-    this.FirstName = data.FirstName || '';
-    this.LastName = data.LastName || '';
+  constructor(data: Required<CandidatesPoolRow>) {
+    this.Pos = data.Pos;
+    this.Uuid = data.Uuid;
+    this.Name = data.Name;
+    this.Abbriviation = data.Abbriviation;
+    this.FirstName = data.FirstName;
+    this.LastName = data.LastName;
     this.Type = data.Type || 'Person';
   }
 }
@@ -311,13 +325,13 @@ export class CandidatesRow {
   MemberOf: string;
   Members: string;
 
-  constructor(pos: number, data: Partial<CandidatesRow>) {
-    this.Pos = pos;
-    this.Uuid = data.Uuid || '';
-    this.Name = data.Name || '';
-    this.SecretCode = data.SecretCode || '';
-    this.MemberOf = data.MemberOf || '';
-    this.Members = data.Members || '';
+  constructor(data: Required<CandidatesRow>) {
+    this.Pos = data.Pos;
+    this.Uuid = data.Uuid;
+    this.Name = data.Name;
+    this.SecretCode = data.SecretCode;
+    this.MemberOf = data.MemberOf;
+    this.Members = data.Members;
   }
 }
 
@@ -355,12 +369,12 @@ export class DistrictsPoolRow {
   Key: string;
   Description: string;
 
-  constructor(pos: number, data: Partial<DistrictsPoolRow>) {
-    this.Pos = pos;
-    this.Uuid = data.Uuid || '';
-    this.Name = data.Name || '';
-    this.Key = data.Key || '';
-    this.Description = data.Description || '';
+  constructor(data: Required<DistrictsPoolRow>) {
+    this.Pos = data.Pos;
+    this.Uuid = data.Uuid;
+    this.Name = data.Name;
+    this.Key = data.Key;
+    this.Description = data.Description;
   }
 }
 
@@ -391,10 +405,10 @@ export class DistrictsRow {
   Uuid: string;
   Key: string;
 
-  constructor(pos: number, data: Partial<DistrictsRow>) {
-    this.Pos = pos;
-    this.Uuid = data.Uuid || '';
-    this.Key = data.Key || '';
+  constructor(data: Required<DistrictsRow>) {
+    this.Pos = data.Pos;
+    this.Uuid = data.Uuid;
+    this.Key = data.Key;
   }
 }
 
@@ -429,11 +443,11 @@ export class AnswersRow {
   Email: string;
   Data: Record<string, any>;
 
-  constructor(pos: number, data: Partial<AnswersRow>) {
-    this.Pos = pos;
-    this.Timestamp = data.Timestamp || '';
-    this.Email = data.Email || '';
-    this.SecretCode = data.SecretCode || '';
+  constructor(data: Required<AnswersRow>) {
+    this.Pos = data.Pos;
+    this.Timestamp = data.Timestamp;
+    this.Email = data.Email;
+    this.SecretCode = data.SecretCode;
   }
 }
 

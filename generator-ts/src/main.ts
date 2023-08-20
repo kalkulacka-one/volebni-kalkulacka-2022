@@ -1,6 +1,7 @@
 // import the necessary modules
 import * as process from 'process';
 import { GoogleSpreadsheet, GoogleSpreadsheetRow } from 'google-spreadsheet';
+import { forms_v1, google } from 'googleapis';
 import { JWT } from 'google-auth-library';
 import 'reflect-metadata';
 import * as path from 'path';
@@ -478,6 +479,7 @@ function main() {
   const SCOPES = [
     'https://www.googleapis.com/auth/spreadsheets.readonly',
     'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/forms',
   ];
 
   const jwtFromEnv = new JWT({
@@ -554,6 +556,30 @@ function main() {
     }
 
     console.log('Calculators stats: ', calculators.stats());
+
+    const auth = new google.auth.GoogleAuth({
+      scopes: [
+        'https://www.googleapis.com/auth/forms',
+        'https://www.googleapis.com/auth/drive',
+      ],
+    });
+
+    const googleForms = google.forms({
+      version: 'v1',
+      auth,
+    });
+
+    const form = await googleForms.forms.create({
+      requestBody: {
+        info: {
+          title: 'Title',
+          documentTitle: 'Document Title',
+        },
+      },
+    });
+
+    console.log(form.data.formId);
+    console.log(form.data.linkedSheetId);
   })();
 }
 

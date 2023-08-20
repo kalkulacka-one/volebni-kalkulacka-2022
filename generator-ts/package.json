@@ -11,9 +11,11 @@
     "dev:generate": "node src/main.js --name 'John' --age 23"
   },
   "dependencies": {
+    "@googleapis/forms": "^2.0.2",
     "class-transformer": "^0.5.1",
     "google-auth-library": "^8.9.0",
     "google-spreadsheet": "^4.0.2",
+    "googleapis": "^126.0.0",
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
