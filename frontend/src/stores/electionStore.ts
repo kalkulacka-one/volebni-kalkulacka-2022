@@ -1,3 +1,5 @@
+import { fetchData } from '@/common/dataFetch';
+
 import {
   deprecatedFetchCalculator,
   deprecatedFetchElectionData,
@@ -95,6 +97,7 @@ export const useElectionStore = defineStore('election', {
       let electionData = undefined;
       try {
         electionData = await deprecatedFetchElectionData(electionId);
+        await fetchData();
       } catch (error) {
         console.error(error);
       }

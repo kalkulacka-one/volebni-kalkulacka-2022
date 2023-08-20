@@ -1,6 +1,8 @@
 import type { DeprecatedCalculator } from '@/types/calculator';
 import type { DeprecatedCalculators } from '@/types/calculators';
 
+import type { Calculator } from '@data/types/calculator';
+
 export const deprecatedFetchCalculator = async (
   electionId: string,
   districtId: string,
@@ -53,4 +55,14 @@ export const deprecatedFetchElectionData = async (electionId: string) => {
     election: election,
     districts: districts,
   };
+};
+
+
+export const fetchData = async () => {
+  const data: Calculator = await fetch('/data/instance/volebnakalkulacka.sk/nrsr-2023/inventura-2020-2023/calculator.json').then((response) => {
+    if (response.status === 200) {
+      return response.json();
+    }
+  });
+  console.log(data);
 };
