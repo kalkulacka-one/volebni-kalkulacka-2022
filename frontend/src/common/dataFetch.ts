@@ -1,7 +1,7 @@
 import type { Calculator } from '@/types/calculator';
 import type { Calculators } from '@/types/calculators';
 
-export const fetchCalculator = async (
+export const deprecatedFetchCalculator = async (
   electionId: string,
   districtId: string,
 ) => {
@@ -15,7 +15,7 @@ export const fetchCalculator = async (
   return calculator;
 };
 
-export const fetchCalculators = async () => {
+export const deprecatedFetchCalculators = async () => {
   const data: Calculators = await fetch(
     `/data/kalkulacka/calculators.json`,
   ).then((x) => {
@@ -26,7 +26,7 @@ export const fetchCalculators = async () => {
   return data.calculators;
 };
 
-export const fetchElections = async () => {
+export const deprecatedFetchElections = async () => {
   const data: Calculators = await fetch(
     `/data/kalkulacka/calculators.json`,
   ).then((x) => {
@@ -37,7 +37,7 @@ export const fetchElections = async () => {
   return data.elections;
 };
 
-export const fetchElectionData = async (electionId: string) => {
+export const deprecatedFetchElectionData = async (electionId: string) => {
   const data: Calculators = await fetch(
     `/data/kalkulacka/calculators.json`,
   ).then((x) => {

@@ -11,7 +11,7 @@ import type { ResultOutRest } from '@/types/rest/ResultOut';
 import { calculateRelativeAgreement } from './resultParser';
 import type { Answers } from '@prisma/client';
 import type { Answer } from '@/types/rest/Answer';
-import { fetchCalculators } from '@/common/dataFetch';
+import { deprecatedFetchCalculators } from '@/common/dataFetch';
 
 //const BASE_URL = 'https://kalkulacka.ceskodigital.cz';
 //const BASE_URL = 'http://localhost:8080';
@@ -92,7 +92,7 @@ export const getResults = async (resultId: string) => {
   if (!resParsed.id || !resParsed.answers) {
     throw new Error(`API call response not valid!`);
   }
-  const calculator = (await fetchCalculators()).filter(
+  const calculator = (await deprecatedFetchCalculators()).filter(
     (calculator) => calculator.calculator_id === resParsed.calculatorId,
   )[0];
   const electionId = calculator.election_id;

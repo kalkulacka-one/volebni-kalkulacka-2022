@@ -1,4 +1,7 @@
-import { fetchCalculator, fetchElectionData } from '@/common/dataFetch';
+import {
+  deprecatedFetchCalculator,
+  deprecatedFetchElectionData,
+} from '@/common/dataFetch';
 import { patchResults, postResults } from '@/common/restApi';
 import { encodeResults } from '@/common/resultParser';
 import type { Calculator } from '@/types/calculator';
@@ -91,7 +94,7 @@ export const useElectionStore = defineStore('election', {
       this.election = undefined;
       let electionData = undefined;
       try {
-        electionData = await fetchElectionData(electionId);
+        electionData = await deprecatedFetchElectionData(electionId);
       } catch (error) {
         console.error(error);
       }
@@ -110,7 +113,7 @@ export const useElectionStore = defineStore('election', {
       this.uniqueQuestionTags.clear();
       let calculator = undefined;
       try {
-        calculator = await fetchCalculator(electionId, districtId);
+        calculator = await deprecatedFetchCalculator(electionId, districtId);
       } catch (error) {
         console.error(error);
       }
