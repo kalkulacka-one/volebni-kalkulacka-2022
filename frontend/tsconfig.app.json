@@ -4,7 +4,8 @@
     "env.d.ts",
     "src/**/*",
     "src/**/*.vue",
-    "src/i18n/locales/*.json"
+    "src/i18n/locales/*.json",
+    "../data/**/*"
   ],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
@@ -12,7 +13,9 @@
     "lib": ["ES2021", "DOM", "DOM.Iterable"],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": ["./src/*"],
+      "@data/*": ["../data/*"]
+    },
+    "rootDir": "../."
   }
 }
