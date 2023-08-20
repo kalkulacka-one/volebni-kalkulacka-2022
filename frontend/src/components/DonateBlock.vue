@@ -2,6 +2,9 @@
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import TitleText from '@/components/design-system/typography/TitleText.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 </script>
 
 <script lang="ts">
@@ -24,8 +27,7 @@ export default {
     <StackComponent spacing="small">
       <TitleText size="large" tag="h2">{{ t('components.DonateBlock.title') }}</TitleText>
       <BodyText size="medium"
-        >Líbí se vám projekt Volební kalkulačka? Budeme rádi, pokud nás
-        podpoříte a umožníte nám pokračovat v jejich tvorbě.</BodyText
+        >{{ t('components.DonateBlock.body') }}</BodyText
       >
     </StackComponent>
     <div class="donation" data-darujme-widget-token="w2acrk0w61fgr3so">
