@@ -39,56 +39,104 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
       <StackComponent spacing="large" class="section">
         <HeadlineText tag="h1" size="large">O kalkulačke</HeadlineText>
         <BodyText size="large">
-          Čo je to volebná kalkulačka? Ako sa dá použiť a ako funguje? Kto za ňou stojí? Ako sa vytvárajú a vyhodnocujú otázky? Všetko o nej sa dozviete nižšie.
+          Čo je to volebná kalkulačka? Ako sa dá použiť a ako funguje? Kto za
+          ňou stojí? Ako sa vytvárajú a vyhodnocujú otázky? Všetko o nej sa
+          dozviete nižšie.
         </BodyText>
 
         <TitleText size="large" tag="h2">Čo je to volebná kalkulačka</TitleText>
         <BodyText size="large">
-          Volebná kalkulačka® (voting advice application) je jednoduchý, zvyčajne internetový test, ktorý porovnáva vaše politické postoje s postojmi politických strán alebo osôb (zákonodarcov, kandidátov vo voľbách atď.). Viac informácií o histórii volebných kalkulačiek a úspešných príkladoch z celého sveta si môžete prečítať na Wikipédii.
+          Volebná kalkulačka® (voting advice application) je jednoduchý,
+          zvyčajne internetový test, ktorý porovnáva vaše politické postoje s
+          postojmi politických strán alebo osôb (zákonodarcov, kandidátov vo
+          voľbách atď.). Viac informácií o histórii volebných kalkulačiek a
+          úspešných príkladoch z celého sveta si môžete prečítať na Wikipédii.
         </BodyText>
 
         <TitleText size="large" tag="h2">
           KKto a ako vytvára volebnú kalkulačku
         </TitleText>
         <BodyText size="large">
-          Českú a slovenskú volebnú kalkulačku vyvíja a prevádzkuje spoločnosť <a href="https://kohovolit.eu/">KohoVolit.eu</a> od roku 2006. Celkovo sme vytvorili viac ako 100 volebných kalkulačiek pre všetky typy volieb (európske, prezidentské, parlamentné, regionálne a komunálne). Pravidelne pomáhame vytvárať kalkulačky aj v Maďarsku a ďalších krajinách. Doteraz najúspešnejšiu kalkulačku využili viac ako 2 milióny voličov pred prezidentskými voľbami v Českej republike v roku 2023.
+          Českú a slovenskú volebnú kalkulačku vyvíja a prevádzkuje spoločnosť
+          <a href="https://kohovolit.eu/">KohoVolit.eu</a> od roku 2006. Celkovo
+          sme vytvorili viac ako 100 volebných kalkulačiek pre všetky typy
+          volieb (európske, prezidentské, parlamentné, regionálne a komunálne).
+          Pravidelne pomáhame vytvárať kalkulačky aj v Maďarsku a ďalších
+          krajinách. Doteraz najúspešnejšiu kalkulačku využili viac ako 2
+          milióny voličov pred prezidentskými voľbami v Českej republike v roku
+          2023.
         </BodyText>
         <BodyText size="large">
-          <a href="https://kohovolit.eu/">KohoVolit.eu</a> vytvára dva typy kalkulačiek:
+          <a href="https://kohovolit.eu/">KohoVolit.eu</a> vytvára dva typy
+          kalkulačiek:
         </BodyText>
         <BodyText size="large">
-          Volebná kalkulačka (názorový test) porovnáva vaše odpovede s odpoveďami, ktoré poskytli politické strany alebo samotní kandidáti. Ak niektorá strana alebo kandidát chýba, je to vždy preto, že sme odpovede nedostali.
+          Volebná kalkulačka (názorový test) porovnáva vaše odpovede s
+          odpoveďami, ktoré poskytli politické strany alebo samotní kandidáti.
+          Ak niektorá strana alebo kandidát chýba, je to vždy preto, že sme
+          odpovede nedostali.
         </BodyText>
         <BodyText size="large">
-          Inventúra hlasovaní porovnáva vaše odpovede so skutočnými hlasovaniami v zákonodarnom zbore v uplynulom volebnom období.
+          Inventúra hlasovaní porovnáva vaše odpovede so skutočnými hlasovaniami
+          v zákonodarnom zbore v uplynulom volebnom období.
         </BodyText>
 
         <TitleText size="large" tag="h2">Ako vytvárame otázky</TitleText>
         <BodyText size="large">
-          Najmä vo volebnej kalkulačke je výber a formulácia otázok kľúčovým bodom. V záujme transparentnosti uvádzame náš dokument, ktorým sa riadi tvorba otázok:
+          Najmä vo volebnej kalkulačke je výber a formulácia otázok kľúčovým
+          bodom. V záujme transparentnosti uvádzame náš dokument, ktorým sa
+          riadi tvorba otázok:
           <router-link to="/metodika-tvorby-otazek">
             Metodika výberu tém a formulácie otázok.
           </router-link></BodyText
         ><BodyText size="large">
-          V prevažnej väčšine prípadov zasielame stranám alebo kandidátom viac otázok, ako sa použije vo výslednej kalkulačke. Zvyčajne sa vyraďujú otázky, pri ktorých existuje zhoda medzi kandidátmi (t. j. takéto otázky nerozdeľujú kandidátov). Potom sa vyradia otázky, ktoré sa nepodarili (kandidáti správne upozornili na problém s otázkou alebo sme naň prišli sami po jej odoslaní), a otázky, ktoré sú podobné iným.
+          V prevažnej väčšine prípadov zasielame stranám alebo kandidátom viac
+          otázok, ako sa použije vo výslednej kalkulačke. Zvyčajne sa vyraďujú
+          otázky, pri ktorých existuje zhoda medzi kandidátmi (t. j. takéto
+          otázky nerozdeľujú kandidátov). Potom sa vyradia otázky, ktoré sa
+          nepodarili (kandidáti správne upozornili na problém s otázkou alebo
+          sme naň prišli sami po jej odoslaní), a otázky, ktoré sú podobné iným.
         </BodyText>
 
         <TitleText size="large" tag="h2">Ako hodnotíme zhodu</TitleText>
         <BodyText size="large">
-          Otázka, na ktorú neodpoviete "áno" alebo "nie", sa do výpočtu nezapočítava. Ak na otázku odpoviete "Áno", strany alebo kandidáti, ktorí tiež odpovedali "Áno", získajú jeden bod. Strany alebo kandidáti, ktorí odpovedia "Nie", strácajú jeden bod. Ak odpoviete "Nie", strany alebo kandidáti, ktorí tiež odpovedali "Nie", získajú jeden bod. Tí, ktorí odpovedia "Áno", strácajú jeden bod. Strany alebo kandidáti, ktorí neodpovedali "Áno" alebo "Nie", nezískavajú ani nestrácajú žiadne body.
+          Otázka, na ktorú neodpoviete "áno" alebo "nie", sa do výpočtu
+          nezapočítava. Ak na otázku odpoviete "Áno", strany alebo kandidáti,
+          ktorí tiež odpovedali "Áno", získajú jeden bod. Strany alebo
+          kandidáti, ktorí odpovedia "Nie", strácajú jeden bod. Ak odpoviete
+          "Nie", strany alebo kandidáti, ktorí tiež odpovedali "Nie", získajú
+          jeden bod. Tí, ktorí odpovedia "Áno", strácajú jeden bod. Strany alebo
+          kandidáti, ktorí neodpovedali "Áno" alebo "Nie", nezískavajú ani
+          nestrácajú žiadne body.
         </BodyText>
         <BodyText size="large">
-          Potom sa pre každú stranu alebo kandidáta spočítajú body za všetky otázky, na ktoré ste odpovedali "áno" alebo "nie", a výsledok sa vydelí počtom takýchto otázok. Takto sa získa zhoda medzi -100 % a 100 %. Kvôli pohodlnosti sa zhoda prepočíta na rozsah od 0 % do 100 % vydelením dvoma a pripočítaním 50 % (pre kalkulačky od polovice roka 2013).
+          Potom sa pre každú stranu alebo kandidáta spočítajú body za všetky
+          otázky, na ktoré ste odpovedali "áno" alebo "nie", a výsledok sa
+          vydelí počtom takýchto otázok. Takto sa získa zhoda medzi -100 % a 100
+          %. Kvôli pohodlnosti sa zhoda prepočíta na rozsah od 0 % do 100 %
+          vydelením dvoma a pripočítaním 50 % (pre kalkulačky od polovice roka
+          2013).
         </BodyText>
 
         <TitleText size="large" tag="h2">
           Dôležitosť otázok a hlasovania
         </TitleText>
         <BodyText size="large">
-          Pri každej otázke alebo hlasovaní máte možnosť nastaviť, aká dôležitá je pre vás zhoda, t. j. váhu, s akou má byť zahrnutá do celkového súčtu zhody. Každej z dvoch úrovní dôležitosti (normálna, vysoká) sa priradí váha a celkový konsenzus je potom váženým priemerom konsenzu v každej otázke alebo hlasovaní. V skutočnosti sa teda namiesto pripočítania alebo odpočítania jedného bodu ku konsenzu pripočíta alebo odpočíta váha príslušnej otázky alebo hlasovania a na konci sa vydelí nie počtom otázok alebo hlasov, ale súčtom absolútnych hodnôt ich váh. Spôsob stanovenia váh je taký, že vysoká dôležitosť má dvojnásobnú váhu v porovnaní s bežnou dôležitosťou.
+          Pri každej otázke alebo hlasovaní máte možnosť nastaviť, aká dôležitá
+          je pre vás zhoda, t. j. váhu, s akou má byť zahrnutá do celkového
+          súčtu zhody. Každej z dvoch úrovní dôležitosti (normálna, vysoká) sa
+          priradí váha a celkový konsenzus je potom váženým priemerom konsenzu v
+          každej otázke alebo hlasovaní. V skutočnosti sa teda namiesto
+          pripočítania alebo odpočítania jedného bodu ku konsenzu pripočíta
+          alebo odpočíta váha príslušnej otázky alebo hlasovania a na konci sa
+          vydelí nie počtom otázok alebo hlasov, ale súčtom absolútnych hodnôt
+          ich váh. Spôsob stanovenia váh je taký, že vysoká dôležitosť má
+          dvojnásobnú váhu v porovnaní s bežnou dôležitosťou.
         </BodyText>
         <BodyText size="large">
-          Môže sa stať, že dosiahnete rovnakú zhodu s dvoma alebo viacerými stranami alebo osobami. V takom prípade sa poradie strán alebo osôb v zobrazení výslednej zhody určí náhodne.
+          Môže sa stať, že dosiahnete rovnakú zhodu s dvoma alebo viacerými
+          stranami alebo osobami. V takom prípade sa poradie strán alebo osôb v
+          zobrazení výslednej zhody určí náhodne.
         </BodyText>
         <TitleText size="large" tag="h2">
           Současnou Volební kalkulačku připravili
