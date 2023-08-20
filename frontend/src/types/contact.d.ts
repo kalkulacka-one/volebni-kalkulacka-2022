@@ -8,7 +8,7 @@
 /**
  * A representation of contact
  */
-export interface Contact {
+export interface DeprecatedContact {
   /**
    * Websites
    */

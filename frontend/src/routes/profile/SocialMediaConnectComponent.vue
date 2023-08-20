@@ -2,7 +2,7 @@
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
 import SocialMediaIcon from '@/components/design-system/icons/SocialMediaIcon.vue';
-import type { Question } from '@/types/question';
+import type { DeprecatedQuestion } from '@/types/question';
 
 export interface Props {
   googleUrl: string;

@@ -7,8 +7,8 @@ import { mdiCloseCircleOutline, mdiArrowRight, mdiArrowLeft } from '@mdi/js';
 import { appRoutes, questionGuard } from '@/main';
 import { useElectionStore, UserAnswerEnum } from '@/stores/electionStore';
 
-import type { Election } from '@/types/election';
-import type { Question } from '@/types/question';
+import type { DeprecatedElection } from '@/types/election';
+import type { DeprecatedQuestion } from '@/types/question';
 
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
@@ -38,7 +38,7 @@ if (electionStore.calculator === undefined) {
   throw new Error('Calculator is undefined. This should never happen');
 }
 
-const election = electionStore.election as Election;
+const election = electionStore.election as DeprecatedElection;
 const electionName = election.name;
 const districtCode = getDistrictCode(route.params.district as string);
 const districtName = electionStore.districts.filter(
@@ -224,7 +224,7 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
               :question="
                 electionStore.calculator?.questions[
                   currentQuestionNr
-                ] as Question
+                ] as DeprecatedQuestion
               "
             />
           </StepWrapper>
@@ -255,7 +255,7 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
               :question="
                 electionStore.calculator?.questions[
                   currentQuestionNr
-                ] as Question
+                ] as DeprecatedQuestion
               "
             />
             <template #after>

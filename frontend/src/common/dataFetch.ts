@@ -1,11 +1,11 @@
-import type { Calculator } from '@/types/calculator';
-import type { Calculators } from '@/types/calculators';
+import type { DeprecatedCalculator } from '@/types/calculator';
+import type { DeprecatedCalculators } from '@/types/calculators';
 
-export const fetchCalculator = async (
+export const deprecatedFetchCalculator = async (
   electionId: string,
   districtId: string,
 ) => {
-  const calculator: Calculator = await fetch(
+  const calculator: DeprecatedCalculator = await fetch(
     `/data/kalkulacka/${electionId}/${districtId}.json`,
   ).then((x) => {
     if (x.status === 200) {
@@ -15,8 +15,8 @@ export const fetchCalculator = async (
   return calculator;
 };
 
-export const fetchCalculators = async () => {
-  const data: Calculators = await fetch(
+export const deprecatedFetchCalculators = async () => {
+  const data: DeprecatedCalculators = await fetch(
     `/data/kalkulacka/calculators.json`,
   ).then((x) => {
     if (x.status === 200) {
@@ -26,8 +26,8 @@ export const fetchCalculators = async () => {
   return data.calculators;
 };
 
-export const fetchElections = async () => {
-  const data: Calculators = await fetch(
+export const deprecatedFetchElections = async () => {
+  const data: DeprecatedCalculators = await fetch(
     `/data/kalkulacka/calculators.json`,
   ).then((x) => {
     if (x.status === 200) {
@@ -37,8 +37,8 @@ export const fetchElections = async () => {
   return data.elections;
 };
 
-export const fetchElectionData = async (electionId: string) => {
-  const data: Calculators = await fetch(
+export const deprecatedFetchElectionData = async (electionId: string) => {
+  const data: DeprecatedCalculators = await fetch(
     `/data/kalkulacka/calculators.json`,
   ).then((x) => {
     if (x.status === 200) {

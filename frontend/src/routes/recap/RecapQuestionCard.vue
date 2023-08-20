@@ -3,7 +3,7 @@ import { computed, ref } from 'vue';
 import { mdiChevronUp, mdiChevronDown } from '@mdi/js';
 
 import { UserAnswerEnum, type UserAnswer } from '@/stores/electionStore';
-import type { Question } from '@/types/question';
+import type { DeprecatedQuestion } from '@/types/question';
 
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
@@ -24,7 +24,7 @@ import {
 import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 
 export interface Props {
-  question: Question;
+  question: DeprecatedQuestion;
   currentQuestion: number;
   questionCount: number;
   answer: UserAnswer;
