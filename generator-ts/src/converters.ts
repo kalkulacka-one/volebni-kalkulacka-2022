@@ -6,7 +6,6 @@ import {
   Calculators,
   type QuestionsPoolRowData,
   QuestionsPool,
-  Calculator,
   Questions,
   type QuestionRowData,
   QuestionsRow,

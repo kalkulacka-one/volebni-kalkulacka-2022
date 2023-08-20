@@ -1,3 +1,4 @@
+import { isEmptyValue } from '../utils';
 import { Type } from 'class-transformer';
 
 type CBool = 'Yes' | 'No';
@@ -83,7 +84,12 @@ export class CalculatorRow {
   DistrictsSpreadsheet: CUrl;
   DistrictsSheet: CSheetName;
 
-  constructor(data: Required<CalculatorRow>) {
+  constructor(data: Partial<CalculatorRow>) {
+    // Why is this always undefined? And only in this function?
+    console.log('Constructing CalculatorRow: ' + data);
+    if (data === undefined) {
+      return;
+    }
     this.Pos = data.Pos;
     this.ElectionName = data.ElectionName;
     this.ElectionKey = data.ElectionKey;
@@ -118,6 +124,17 @@ export class CalculatorRow {
     this.DistrictsPool = data.DistrictsPool;
     this.DistrictsSpreadsheet = data.DistrictsSpreadsheet;
     this.DistrictsSheet = data.DistrictsSheet;
+  }
+
+  key(): string {
+    return `${this.ElectionKey}--${this.DistrictKey}--${this.Round}--${this.Variant}`;
+  }
+
+  hasForms(): boolean {
+    return (
+      !isEmptyValue(this.QuestionsFormExperts) &&
+      !isEmptyValue(this.QuestionsFormCandidates)
+    );
   }
 }
 
@@ -206,9 +223,10 @@ export class Questions {
   }
 }
 
+/*
 export class Calculator {
   @Type(() => CalculatorRow)
-  calculator: CalculatorRow;
+  row: CalculatorRow;
 
   @Type(() => QuestionsPool)
   questionsPool: QuestionsPool;
@@ -235,7 +253,7 @@ export class Calculator {
   districts: Districts;
 
   constructor(
-    calculator: CalculatorRow,
+    row: CalculatorRow,
     questionsPool: QuestionsPool,
     questions: Questions,
     candidatesPool: CandidatesPool,
@@ -245,7 +263,7 @@ export class Calculator {
     districtsPool: DistrictsPool,
     districts: Districts,
   ) {
-    this.calculator = calculator;
+    this.row = row;
     this.questionsPool = questionsPool;
     this.questions = questions;
     this.candidatesPool = candidatesPool;
@@ -257,9 +275,10 @@ export class Calculator {
   }
 
   key(): string {
-    return this.calculator.ElectionKey;
+    return this.row.ElectionKey;
   }
 }
+*/
 
 // Candidates - BEGIN
 
@@ -432,7 +451,7 @@ export class Districts {
 
 export type AnswersRowData = {
   Timestamp: string;
-  SecretCode: string;
+  'Secret code': string;
   Email: string;
 };
 
@@ -468,8 +487,8 @@ export class Answers {
 }
 
 export class Calculators {
-  @Type(() => Calculator)
-  calculators: Record<string, Calculator[]>;
+  @Type(() => CalculatorRow)
+  calculators: CalculatorRow[];
 
   @Type(() => QuestionsPool)
   questionsPools: Record<string, QuestionsPool>;
@@ -490,7 +509,7 @@ export class Calculators {
   answers: Record<string, Answers>;
 
   constructor() {
-    this.calculators = {};
+    this.calculators = [];
     this.questionsPools = {};
     this.questions = {};
     this.candidatesPools = {};
@@ -500,13 +519,8 @@ export class Calculators {
     this.answers = {};
   }
 
-  appendCalculator(calculator: Calculator) {
-    const key = calculator.key();
-    if (!(key in this.calculators)) {
-      this.calculators[key] = [];
-    }
-    this.calculators[key].push(calculator);
-    console.log(this.stats());
+  appendCalculator(calculator: CalculatorRow) {
+    this.calculators.push(calculator);
   }
 
   getQuestionPool(url: CUrl): QuestionsPool | undefined {
@@ -575,7 +589,7 @@ export class Calculators {
 
   stats(): Record<string, any> {
     return {
-      calculatorsCount: Object.keys(this.calculators).length,
+      calculatorsCount: this.calculators.length,
       questionsPoolsCount: Object.keys(this.questionsPools).length,
       questionsCount: Object.keys(this.questions).length,
       candidatesPoolsCount: Object.keys(this.candidatesPools).length,

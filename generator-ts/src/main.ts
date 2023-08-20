@@ -20,7 +20,7 @@ import {
   Calculators,
   type QuestionsPoolRowData,
   QuestionsPool,
-  Calculator,
+  // Calculator,
   Questions,
   type QuestionRowData,
   type CandidatesPoolRowData,
@@ -36,6 +36,9 @@ import {
   type AnswersRowData,
   Answers,
   AnswersRow,
+  CalculatorRow,
+  QuestionsRow,
+  QuestionsPoolRow,
 } from './types/input';
 
 import {
@@ -49,9 +52,7 @@ import {
   convertToAnswersRow,
 } from './converters';
 
-function isEmpty(val: string | undefined): boolean {
-  return (val || '').trim().length === 0;
-}
+import { isEmptyColumn } from './utils';
 
 // Function to get the value of an environmental variable or a default value
 function getEnvOrDefault(envVariable: string, defaultValue: string): string {
@@ -94,7 +95,10 @@ async function fetchGoogleSpreadsheet(
 function skipQuestionRowData(
   row: GoogleSpreadsheetRow<QuestionRowData>,
 ): boolean {
-  return isEmpty(row.get('Uuid')) || isEmpty(row.get('Name'));
+  return (
+    isEmptyColumn<QuestionRowData>(row, 'Uuid') ||
+    isEmptyColumn<QuestionRowData>(row, 'Name')
+  );
 }
 
 async function extractQuestions(url: CUrl, jwt: JWT): Promise<Questions> {
@@ -133,7 +137,10 @@ async function extractQuestions(url: CUrl, jwt: JWT): Promise<Questions> {
 function skipQuestionsPoolRowData(
   row: GoogleSpreadsheetRow<QuestionsPoolRowData>,
 ): boolean {
-  return isEmpty(row.get('Uuid')) || isEmpty(row.get('Name'));
+  return (
+    isEmptyColumn<QuestionsPoolRowData>(row, 'Uuid') ||
+    isEmptyColumn<QuestionsPoolRowData>(row, 'Name')
+  );
 }
 
 async function extractQuestionPool(
@@ -163,7 +170,10 @@ async function extractQuestionPool(
 function skipCandidatesPoolRowData(
   row: GoogleSpreadsheetRow<CandidatesPoolRowData>,
 ): boolean {
-  return isEmpty(row.get('Uuid')) || isEmpty(row.get('Name'));
+  return (
+    isEmptyColumn<CandidatesPoolRowData>(row, 'Uuid') ||
+    isEmptyColumn<CandidatesPoolRowData>(row, 'Name')
+  );
 }
 
 async function extractCandidatesPool(
@@ -200,7 +210,10 @@ async function extractCandidatesPool(
 function skipCandidatesRowData(
   row: GoogleSpreadsheetRow<CandidatesRowData>,
 ): boolean {
-  return isEmpty(row.get('Uuid')) || isEmpty(row.get('Name'));
+  return (
+    isEmptyColumn<CandidatesRowData>(row, 'Uuid') ||
+    isEmptyColumn<CandidatesRowData>(row, 'Name')
+  );
 }
 
 async function extractCandidates(url: CUrl, jwt: JWT): Promise<Candidates> {
@@ -239,7 +252,10 @@ async function extractCandidates(url: CUrl, jwt: JWT): Promise<Candidates> {
 function skipDistrictsPoolRowData(
   row: GoogleSpreadsheetRow<DistrictsPoolRowData>,
 ): boolean {
-  return isEmpty(row.get('Uuid')) || isEmpty(row.get('Name'));
+  return (
+    isEmptyColumn<DistrictsPoolRowData>(row, 'Uuid') ||
+    isEmptyColumn<DistrictsPoolRowData>(row, 'Name')
+  );
 }
 
 async function extractDistrictsPool(
@@ -269,7 +285,10 @@ async function extractDistrictsPool(
 function skipDistrictsRowData(
   row: GoogleSpreadsheetRow<DistrictsRowData>,
 ): boolean {
-  return isEmpty(row.get('Uuid')) || isEmpty(row.get('Key'));
+  return (
+    isEmptyColumn<DistrictsRowData>(row, 'Uuid') ||
+    isEmptyColumn<DistrictsRowData>(row, 'Key')
+  );
 }
 
 async function extractDistricts(url: CUrl, jwt: JWT): Promise<Districts> {
@@ -306,9 +325,9 @@ async function extractDistricts(url: CUrl, jwt: JWT): Promise<Districts> {
 }
 
 function skipAnswersRowData(
-  row: GoogleSpreadsheetRow<Record<string, any>>,
+  row: GoogleSpreadsheetRow<Partial<AnswersRowData>>,
 ): boolean {
-  return isEmpty(row.get('Secret code'));
+  return isEmptyColumn<AnswersRowData>(row, 'Secret code');
 }
 
 async function extractAnswers(url: CUrl, jwt: JWT): Promise<Answers> {
@@ -320,7 +339,7 @@ async function extractAnswers(url: CUrl, jwt: JWT): Promise<Answers> {
     await sheet.loadHeaderRow();
     const title = sheet.title;
 
-    const answersRows = await sheet.getRows();
+    const answersRows = await sheet.getRows<Partial<AnswersRowData>>();
     for (let i = 0; i < answersRows.length; i++) {
       const r = answersRows[i];
       if (skipAnswersRowData(r)) {
@@ -335,7 +354,7 @@ async function extractAnswers(url: CUrl, jwt: JWT): Promise<Answers> {
         '; ',
         r.get('Secret code'),
         '; ',
-        r.get('E-mail'),
+        r.get('Email'),
       );
       answers.append(title, convertToAnswersRow(i, r));
     }
@@ -348,18 +367,16 @@ function skipCalculatorRowData(
   row: GoogleSpreadsheetRow<CalculatorRowData>,
 ): boolean {
   return (
-    isEmpty(row.get('Election name')) ||
-    isEmpty(row.get('Questions pool')) ||
-    isEmpty(row.get('Questions spreadsheet')) ||
-    isEmpty(row.get('Questions sheet')) ||
-    isEmpty(row.get('Candidates pool')) ||
-    isEmpty(row.get('Candidates spreadsheet')) ||
-    isEmpty(row.get('Candidates sheet')) ||
-    isEmpty(row.get('Answers spreadsheet - candidates')) ||
-    isEmpty(row.get('Answers spreadsheet - experts')) ||
-    isEmpty(row.get('Districts pool')) ||
-    isEmpty(row.get('Districts spreadsheet')) ||
-    isEmpty(row.get('Districts sheet'))
+    isEmptyColumn<CalculatorRowData>(row, 'Election name') ||
+    isEmptyColumn<CalculatorRowData>(row, 'Questions pool') ||
+    isEmptyColumn<CalculatorRowData>(row, 'Questions spreadsheet') ||
+    isEmptyColumn<CalculatorRowData>(row, 'Questions sheet') ||
+    isEmptyColumn<CalculatorRowData>(row, 'Candidates pool') ||
+    isEmptyColumn<CalculatorRowData>(row, 'Candidates spreadsheet') ||
+    isEmptyColumn<CalculatorRowData>(row, 'Candidates sheet') ||
+    isEmptyColumn<CalculatorRowData>(row, 'Districts pool') ||
+    isEmptyColumn<CalculatorRowData>(row, 'Districts spreadsheet') ||
+    isEmptyColumn<CalculatorRowData>(row, 'Districts sheet')
   );
 }
 
@@ -435,7 +452,10 @@ async function extractCalculators(url: CUrl, jwt: JWT): Promise<Calculators> {
     const answersCandidatesUrl = r.get('Answers spreadsheet - candidates');
     const answersCandidatesSheet = r.get('Answers sheet - candidates');
     let answersCandidates = calculators.getAnswers(answersCandidatesUrl);
-    if (answersCandidates === undefined) {
+    if (
+      answersCandidates === undefined &&
+      !isEmptyColumn(r, 'Answers spreadsheet - candidates')
+    ) {
       answersCandidates = await extractAnswers(answersCandidatesUrl, jwt);
       calculators.setAnswers(answersCandidatesUrl, answersCandidates);
     }
@@ -443,24 +463,15 @@ async function extractCalculators(url: CUrl, jwt: JWT): Promise<Calculators> {
     const answersExpertsUrl = r.get('Answers spreadsheet - experts');
     const answersExpertsSheet = r.get('Answers sheet - experts');
     let answersExperts = calculators.getAnswers(answersExpertsUrl);
-    if (answersExperts === undefined) {
+    if (
+      answersExperts === undefined &&
+      !isEmptyColumn(r, 'Answers spreadsheet - experts')
+    ) {
       answersExperts = await extractAnswers(answersExpertsUrl, jwt);
       calculators.setAnswers(answersExpertsUrl, answersExperts);
     }
 
-    const calculator = new Calculator(
-      convertToCalculatorRow(i, r),
-      questionsPool,
-      questions,
-      candidatesPool,
-      candidates,
-      answersCandidates,
-      answersExperts,
-      districtsPool,
-      districts,
-    );
-
-    calculators.appendCalculator(calculator);
+    calculators.appendCalculator(convertToCalculatorRow(i, r));
 
     // console.log(calculatorRows[i]);
   }
@@ -530,19 +541,18 @@ function main() {
         null,
         2,
       );
-      fs.writeFile(cacheFile, calculatorsJson, (err) => {
-        if (err) {
-          console.error('Error writing to file:', err);
-        } else {
-          console.log('Calculators were cached in: ', cacheFile);
-        }
-      });
+      try {
+        fs.writeFileSync(cacheFile, calculatorsJson, 'utf-8');
+        console.log('Calculators were cached in: ', cacheFile);
+      } catch (writeError) {
+        console.error('Error writing to file:', writeError);
+        throw writeError;
+      }
     } else {
       try {
         const data = fs.readFileSync(cacheFile, 'utf8');
         try {
           const jsonData = JSON.parse(data);
-          console.log('JSON Data:', jsonData);
           calculators = plainToClass(Calculators, jsonData);
         } catch (parseError) {
           console.error('Error parsing JSON:', parseError);
@@ -557,18 +567,24 @@ function main() {
 
     console.log('Calculators stats: ', calculators.stats());
 
-    const auth = new google.auth.GoogleAuth({
-      scopes: [
-        'https://www.googleapis.com/auth/forms',
-        'https://www.googleapis.com/auth/drive',
-      ],
-    });
+    // const googleForms = initGoogleForms();
 
-    const googleForms = google.forms({
-      version: 'v1',
-      auth,
-    });
+    for (const calculator of calculators.calculators) {
+      console.log(calculator.Pos + ': ' + calculator.key());
+      if (!calculator.hasForms()) {
+        const questions = constructQuestions(
+          calculator,
+          calculators.getQuestionPool(calculator.QuestionsPool),
+          calculators.getQuestions(calculator.QuestionsSpreadsheet).questions[
+            calculator.QuestionsSheet
+          ],
+        );
 
+        console.log(questions);
+      }
+    }
+
+    /*
     const form = await googleForms.forms.create({
       requestBody: {
         info: {
@@ -580,11 +596,27 @@ function main() {
 
     console.log(form.data.formId);
     console.log(form.data.linkedSheetId);
+    */
   })();
 }
 
 // Call the main function
 main();
+
+function initGoogleForms() {
+  const auth = new google.auth.GoogleAuth({
+    scopes: [
+      'https://www.googleapis.com/auth/forms',
+      'https://www.googleapis.com/auth/drive',
+    ],
+  });
+
+  const googleForms = google.forms({
+    version: 'v1',
+    auth,
+  });
+  return googleForms;
+}
 
 function extractKey(url: CUrl): string | undefined {
   const regex = /.*\/d\/([a-zA-Z0-9_-]+)\/?.*/;
@@ -598,4 +630,55 @@ function extractKey(url: CUrl): string | undefined {
   } else {
     return undefined;
   }
+}
+function constructQuestions(
+  calculator: CalculatorRow,
+  pool: QuestionsPool,
+  questions: QuestionsRow[],
+): QuestionsRow[] {
+  if (questions === undefined) {
+    console.error(calculator);
+    throw new Error(`No questions for calculator on row: ${calculator.Pos}`);
+  }
+
+  const res = new Array<QuestionsPoolRow>(questions.length);
+
+  const used = new Set<string>();
+
+  // 1. set the questions to their Order
+  for (const q of questions) {
+    if (q.Order !== undefined && q.Order >= 1 && q.Order <= questions.length) {
+      const index = q.Order - 1;
+      if (res[index] === undefined) {
+        res[index] = pool.questions[q.Uuid];
+        used.add(q.Uuid);
+      }
+    }
+  }
+
+  // 2. Fill the remaining positions based on their position
+  if (used.size != questions.length) {
+    let usePos = 0;
+    for (let i = 0; i < questions.length; i++) {
+      const q = questions[i];
+      console.log(`${q.Uuid}: ${q.Uuid in used}; ${used.has(q.Uuid)}`);
+      if (!used.has(q.Uuid)) {
+        while (res[usePos] !== undefined && usePos < questions.length) {
+          usePos++;
+          console.log(usePos);
+        }
+        res[usePos] = pool.questions[q.Uuid];
+        used.add(q.Uuid);
+      }
+    }
+  }
+
+  if (used.size != res.length || res.length != questions.length) {
+    console.log(res);
+    throw new Error(
+      `Function not implemented properly - used: ${used.size}; res: ${res.length}; questions: ${questions.length}.`,
+    );
+  }
+
+  return res;
 }
