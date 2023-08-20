@@ -1,0 +1,23 @@
+{
+  "id": "05c64bc5-aa2e-4457-ab30-336f7cf9131b",
+  "key": "nrsr-2023",
+  "createdAt": "2021-01-01T00:00:00+01:00",
+  "election": {
+    "id": "57a09a41-631b-4b40-ac22-b75b8ce14d84",
+    "key": "nrsr-2023"
+  },
+  "calculators": [
+    {
+      "id": "fdd4cb21-3ef2-40df-bcfa-e559fd650490",
+      "round": {
+        "number": 0
+      }
+    },
+    {
+      "id": "84599cb4-3ae5-4756-b724-80e282e95dca",
+      "round": {
+        "number": 1
+      }
+    }
+  ]
+}
