@@ -1,5 +1,5 @@
 import { UserAnswerEnum, type UserAnswer } from '@/stores/electionStore';
-import type { CandidateAnswer } from '@/types/calculator';
+import type { DeprecatedCandidateAnswer } from '@/types/calculator';
 import seedrandom from 'seedrandom';
 const HEX_VERSIONS = [0];
 const RAND_SEED = Math.random().toString();
@@ -69,7 +69,7 @@ export type RelativeAgreement = { cId: string; result: Result }[];
 
 export const calculateAnswerResult = (
   ua: UserAnswer,
-  ca: CandidateAnswer,
+  ca: DeprecatedCandidateAnswer,
   weight: number,
 ) => {
   let w = ua.flag ? weight : 1;
@@ -109,7 +109,7 @@ export const calculateAnswerResult = (
 };
 
 export const calculateRelativeAgreement = (
-  candidateAnswers: CandidateAnswer[],
+  candidateAnswers: DeprecatedCandidateAnswer[],
   userAnswers: UserAnswer[],
   weight = 2,
 ) => {

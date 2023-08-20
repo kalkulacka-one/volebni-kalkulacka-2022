@@ -8,7 +8,7 @@
 /**
  * A representation single calculator
  */
-export interface Calculator {
+export interface DeprecatedCalculator {
   /**
    * UUID
    */
@@ -31,25 +31,25 @@ export interface Calculator {
    * Show on HP end - ISO 8601
    */
   on_hp_to?: string;
-  election: Election;
+  election: DeprecatedElection;
   /**
    * List of questions
    */
-  questions: Question[];
+  questions: DeprecatedQuestion[];
   /**
    * List of candidates
    */
-  candidates: Candidate[];
+  candidates: DeprecatedCandidate[];
   /**
    * List of answers
    */
-  answers: CandidateAnswer[];
+  answers: DeprecatedCandidateAnswer[];
   [k: string]: unknown;
 }
 /**
  * A representation of election
  */
-export interface Election {
+export interface DeprecatedElection {
   /**
    * UUID
    */
@@ -89,7 +89,7 @@ export interface Election {
 /**
  * A representation of single question
  */
-export interface Question {
+export interface DeprecatedQuestion {
   /**
    * UUID
    */
@@ -119,7 +119,7 @@ export interface Question {
 /**
  * A representation of candidate
  */
-export interface Candidate {
+export interface DeprecatedCandidate {
   /**
    * UUID
    */
@@ -160,17 +160,17 @@ export interface Candidate {
    * Is candidate active? This is useful for second round.
    */
   is_active?: boolean;
-  contact?: Contact;
+  contact?: DeprecatedContact;
   /**
    * If the type is party, then this array should have single element. If the type is coalition, then there should be multiple parties. If the type is party, then there should be at most one party.
    */
-  parties?: Party[];
+  parties?: DeprecatedParty[];
   [k: string]: unknown;
 }
 /**
  * A representation of contact
  */
-export interface Contact {
+export interface DeprecatedContact {
   /**
    * Websites
    */
@@ -220,7 +220,7 @@ export interface Contact {
 /**
  * A representation of party
  */
-export interface Party {
+export interface DeprecatedParty {
   /**
    * UUID
    */
@@ -251,7 +251,7 @@ export interface Party {
 /**
  * A representation of answers for given candidate to questions
  */
-export interface CandidateAnswer {
+export interface DeprecatedCandidateAnswer {
   /**
    * UUID
    */

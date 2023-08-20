@@ -18,8 +18,8 @@ import {
   encodeResults,
 } from '@/common/resultParser';
 
-import type { Election } from '@/types/election';
-import type { CandidateAnswer } from '@/types/candidate-answer';
+import type { DeprecatedElection } from '@/types/election';
+import type { DeprecatedCandidateAnswer } from '@/types/candidate-answer';
 
 import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
 import BottomBar from '@/components/design-system/navigation/BottomBar.vue';
@@ -57,7 +57,7 @@ const userStore = useUserStore();
 
 const user = computed(() => userStore.user);
 
-const election = electionStore.election as Election;
+const election = electionStore.election as DeprecatedElection;
 const electionName = election.name;
 const districtCode = getDistrictCode(route.params.district as string);
 const districtName = electionStore.districts.filter(
@@ -144,7 +144,7 @@ const signUpPath = computed(() => {
 
 console.debug(encodeResults(electionStore.answers));
 
-const candidateAnswers: CandidateAnswer[] =
+const candidateAnswers: DeprecatedCandidateAnswer[] =
   electionStore.calculator?.answers || [];
 
 const hasAllCandidatesInactive =
@@ -157,7 +157,8 @@ const hasActiveCandidatesBtn = hasAllCandidatesInactive
   : electionStore.calculator?.candidates.some((x) => !x.is_active);
 
 const showNotActiveCandidates = ref(false);
-const filteredCandidateAnswers: Ref<CandidateAnswer[]> = ref(candidateAnswers);
+const filteredCandidateAnswers: Ref<DeprecatedCandidateAnswer[]> =
+  ref(candidateAnswers);
 const handleActiveCandidatesClicked = (isActive: boolean) => {
   showNotActiveCandidates.value = isActive;
   if (!hasAllCandidatesInactive && !showNotActiveCandidates.value) {

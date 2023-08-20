@@ -8,7 +8,7 @@
 /**
  * A representation of single question
  */
-export interface Question {
+export interface DeprecatedQuestion {
   /**
    * UUID
    */

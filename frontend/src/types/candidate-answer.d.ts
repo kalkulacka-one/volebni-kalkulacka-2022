@@ -8,7 +8,7 @@
 /**
  * A representation of answers for given candidate to questions
  */
-export interface CandidateAnswer {
+export interface DeprecatedCandidateAnswer {
   /**
    * UUID
    */

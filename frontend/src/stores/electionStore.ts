@@ -4,9 +4,9 @@ import {
 } from '@/common/dataFetch';
 import { patchResults, postResults } from '@/common/restApi';
 import { encodeResults } from '@/common/resultParser';
-import type { Calculator } from '@/types/calculator';
-import type { Calculators } from '@/types/calculators';
-import type { Election } from '@/types/election';
+import type { DeprecatedCalculator } from '@/types/calculator';
+import type { DeprecatedCalculators } from '@/types/calculators';
+import type { DeprecatedElection } from '@/types/election';
 import type { User } from '@/stores/userStore';
 import { defineStore } from 'pinia';
 
@@ -51,9 +51,9 @@ export interface UserAnswer {
 export const useElectionStore = defineStore('election', {
   state: () => {
     return {
-      election: undefined as Election | undefined,
-      districts: [] as Calculators['calculators'],
-      calculator: undefined as Calculator | undefined,
+      election: undefined as DeprecatedElection | undefined,
+      districts: [] as DeprecatedCalculators['calculators'],
+      calculator: undefined as DeprecatedCalculator | undefined,
       answers: [] as UserAnswer[],
       resultsId: null as null | string,
       resultsUpdateToken: null as null | string,

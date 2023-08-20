@@ -8,7 +8,7 @@
 /**
  * A representation of party
  */
-export interface Party {
+export interface DeprecatedParty {
   /**
    * UUID
    */
@@ -33,13 +33,13 @@ export interface Party {
    * Image
    */
   img_url?: string;
-  contact?: Contact;
+  contact?: DeprecatedContact;
   [k: string]: unknown;
 }
 /**
  * A representation of contact
  */
-export interface Contact {
+export interface DeprecatedContact {
   /**
    * Websites
    */

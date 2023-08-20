@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Question } from '@/types/question';
+import type { DeprecatedQuestion } from '@/types/question';
 
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 import CardComponent from '@/components/design-system/containers/CardComponent.vue';
@@ -8,7 +8,7 @@ import StackComponent from '@/components/design-system/layout/StackComponent.vue
 import TagComponent from '@/components/design-system/containers/TagComponent.vue';
 
 export interface Props {
-  question: Question;
+  question: DeprecatedQuestion;
   currentQuestion: number;
   questionCount: number;
 }

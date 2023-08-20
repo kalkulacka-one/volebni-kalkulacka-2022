@@ -8,7 +8,7 @@
 /**
  * A representation of candidate
  */
-export interface Candidate {
+export interface DeprecatedCandidate {
   /**
    * UUID
    */
@@ -49,17 +49,17 @@ export interface Candidate {
    * Is candidate active? This is useful for second round.
    */
   is_active?: boolean;
-  contact?: Contact;
+  contact?: DeprecatedContact;
   /**
    * If the type is party, then this array should have single element. If the type is coalition, then there should be multiple parties. If the type is party, then there should be at most one party.
    */
-  parties?: Party[];
+  parties?: DeprecatedParty[];
   [k: string]: unknown;
 }
 /**
  * A representation of contact
  */
-export interface Contact {
+export interface DeprecatedContact {
   /**
    * Websites
    */
@@ -109,7 +109,7 @@ export interface Contact {
 /**
  * A representation of party
  */
-export interface Party {
+export interface DeprecatedParty {
   /**
    * UUID
    */

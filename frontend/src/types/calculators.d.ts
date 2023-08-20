@@ -8,8 +8,8 @@
 /**
  * A representation all elections
  */
-export interface Calculators {
-  elections: Election[];
+export interface DeprecatedCalculators {
+  elections: DeprecatedElection[];
   calculators: {
     /**
      * UUID of election
@@ -34,7 +34,7 @@ export interface Calculators {
 /**
  * A representation of election
  */
-export interface Election {
+export interface DeprecatedElection {
   /**
    * UUID
    */
