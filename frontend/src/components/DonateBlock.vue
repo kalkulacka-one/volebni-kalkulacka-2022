@@ -22,7 +22,7 @@ export default {
 <template>
   <div class="section-donation">
     <StackComponent spacing="small">
-      <TitleText size="large" tag="h2">Podpořte tvorbu kalkulaček</TitleText>
+      <TitleText size="large" tag="h2">{{ t('components.DonateBlock.title') }}</TitleText>
       <BodyText size="medium"
         >Líbí se vám projekt Volební kalkulačka? Budeme rádi, pokud nás
         podpoříte a umožníte nám pokračovat v jejich tvorbě.</BodyText
