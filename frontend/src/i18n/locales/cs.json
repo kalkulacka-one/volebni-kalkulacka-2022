@@ -1,4 +1,6 @@
 {
+  "main_title": "Volebni",
+  "title-more-about-voting": "Více o volbách",
   "routes": {
     "index": {
       "IndexPage": {
@@ -23,6 +25,23 @@
     "DonateBlock": {
       "title": "Podpořte tvorbu kalkulaček",
       "body": "Líbí se vám projekt Volební kalkulačka? Budeme rádi, pokud nás podpoříte a umožníte nám pokračovat v jejich tvorbě."
+    },
+    "FooterMultiWord": {
+      "body-who-to-vote": "Volební kalkulačka je nestranným pomocníkem v rozhodování Koho Volit.",
+      "title-more-about-voting": "Více o volbách",
+      "body-presidential-voting": "Prezidentské volby",
+      "body-comunal-voting": "Komunální volby",
+      "body-senate-voting": "Senátní volby",
+      "body-about-voting-calculator": "O volební kalkulačce",
+      "body-methodoogy": "Metodika tvorby otázek",
+      "body-data-protection": "Ochrana dat",
+      "body-support-calculator":Podpořit kalkulačku",
+      "body-created-by-ngos":Vytvořeno spoluprací neziskových organizací
+    },
+    "design-systems": {
+      "containers": {
+        
+      }
     }
   }
 }
