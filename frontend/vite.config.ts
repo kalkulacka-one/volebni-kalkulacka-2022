@@ -7,7 +7,7 @@ import md from 'vite-plugin-md';
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite';
 
 const esbuildProd: ESBuildOptions = {
-  drop: ['console', 'debugger'],
+  //drop: ['console', 'debugger'],
 };
 
 const esbuildVercel: ESBuildOptions = {
