@@ -6,7 +6,7 @@ import { mdiCloseCircleOutline } from '@mdi/js';
 import { appRoutes } from '@/main';
 import { useElectionStore } from '@/stores/electionStore';
 
-import type { Election } from '@/types/election';
+import type { DeprecatedElection } from '@/types/election';
 
 import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
@@ -30,7 +30,7 @@ const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
 
-const election = electionStore.election as Election;
+const election = electionStore.election as DeprecatedElection;
 const electionName = election.name;
 const electionDescription = election.description;
 

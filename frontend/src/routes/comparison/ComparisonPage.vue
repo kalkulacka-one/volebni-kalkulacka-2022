@@ -6,10 +6,10 @@ import { appRoutes } from '@/main';
 import { useElectionStore } from '@/stores/electionStore';
 import { getDistrictCode } from '@/common/utils';
 
-import type { Candidate } from '@/types/candidate';
-import type { CandidateAnswer } from '@/types/candidate-answer';
-import type { Election } from '@/types/election';
-import type { Question } from '@/types/question';
+import type { DeprecatedCandidate } from '@/types/candidate';
+import type { DeprecatedCandidateAnswer } from '@/types/candidate-answer';
+import type { DeprecatedElection } from '@/types/election';
+import type { DeprecatedQuestion } from '@/types/question';
 
 import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
 import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper.vue';
@@ -35,7 +35,7 @@ const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
 
-const election = electionStore.election as Election;
+const election = electionStore.election as DeprecatedElection;
 const electionName = election.name;
 const districtCode = getDistrictCode(route.params.district as string);
 const districtName = electionStore.districts.filter(
@@ -62,10 +62,12 @@ const handlePreviousClick = () => {
 
 const filterMenuIsVisible = ref(false);
 
-const questions = electionStore.calculator?.questions as Question[];
+const questions = electionStore.calculator?.questions as DeprecatedQuestion[];
 const answers = electionStore.answers;
-const candidates = electionStore?.calculator?.candidates as Candidate[];
-const candidateAnswers = electionStore.calculator?.answers as CandidateAnswer[];
+const candidates = electionStore?.calculator
+  ?.candidates as DeprecatedCandidate[];
+const candidateAnswers = electionStore.calculator
+  ?.answers as DeprecatedCandidateAnswer[];
 </script>
 
 <template>

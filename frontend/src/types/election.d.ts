@@ -8,7 +8,7 @@
 /**
  * A representation of election
  */
-export interface Election {
+export interface DeprecatedElection {
   /**
    * UUID
    */

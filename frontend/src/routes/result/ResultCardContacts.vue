@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Contact } from '@/types/contact';
+import type { DeprecatedContact } from '@/types/contact';
 import SocialMediaIcon, {
   type SocialMediaProps,
 } from '../../components/design-system/icons/SocialMediaIcon.vue';
@@ -10,7 +10,7 @@ import { mdiEmail } from '@mdi/js';
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
 import IconButton from '../../components/design-system/input/IconButton.vue';
 export interface ResultCandidateContactsProps {
-  contact: Contact;
+  contact: DeprecatedContact;
 }
 defineProps<ResultCandidateContactsProps>();
 

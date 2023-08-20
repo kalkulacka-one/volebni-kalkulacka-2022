@@ -7,7 +7,7 @@ import {
   calculateRelativeAgreement,
   encodeResults,
 } from '@/common/resultParser';
-import type { CandidateAnswer } from '@/types/candidate-answer';
+import type { DeprecatedCandidateAnswer } from '@/types/candidate-answer';
 
 import AvatarComponent from '@/components/design-system/other/AvatarComponent.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
@@ -102,10 +102,11 @@ const handleVoteClick = () => {
 
 const electionStore = useElectionStore();
 
-const candidateAnswers: CandidateAnswer[] =
+const candidateAnswers: DeprecatedCandidateAnswer[] =
   electionStore.calculator?.answers || [];
 
-const filteredCandidateAnswers: Ref<CandidateAnswer[]> = ref(candidateAnswers);
+const filteredCandidateAnswers: Ref<DeprecatedCandidateAnswer[]> =
+  ref(candidateAnswers);
 
 const handleShareClick = () => {
   shareModal.value?.open();

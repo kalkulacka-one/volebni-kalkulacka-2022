@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 
-import type { Question } from '@/types/question';
-import type { Candidate } from '@/types/candidate';
-import type { CandidateAnswer } from '@/types/candidate-answer';
+import type { DeprecatedQuestion } from '@/types/question';
+import type { DeprecatedCandidate } from '@/types/candidate';
+import type { DeprecatedCandidateAnswer } from '@/types/candidate-answer';
 import { UserAnswerEnum, type UserAnswer } from '@/stores/electionStore';
 
 import { calculateRelativeAgreement } from '@/common/resultParser';
@@ -23,16 +23,16 @@ import QuestionCard from '@/components/QuestionCard.vue';
 import CardComponent from '../../components/design-system/containers/CardComponent.vue';
 
 export interface Props {
-  questions: Question[];
+  questions: DeprecatedQuestion[];
   answers: UserAnswer[];
-  candidates: Candidate[];
-  candidateAnswers: CandidateAnswer[];
+  candidates: DeprecatedCandidate[];
+  candidateAnswers: DeprecatedCandidateAnswer[];
   selectedTags?: Set<string>;
   selectedCandidateIds?: Set<string>;
 }
 
 const props = defineProps<Props>();
-const isQuestionInTagSet = (question: Question) => {
+const isQuestionInTagSet = (question: DeprecatedQuestion) => {
   if (!props.selectedTags) {
     return true;
   }
@@ -43,7 +43,7 @@ const isQuestionInTagSet = (question: Question) => {
   );
 };
 
-const isCandidateInCandidateSet = (candidate: Candidate) => {
+const isCandidateInCandidateSet = (candidate: DeprecatedCandidate) => {
   if (!props.selectedCandidateIds) {
     return true;
   } else {

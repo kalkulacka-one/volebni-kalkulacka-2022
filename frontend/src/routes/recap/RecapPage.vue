@@ -6,8 +6,8 @@ import { mdiCloseCircleOutline, mdiArrowLeft, mdiArrowRight } from '@mdi/js';
 import { appRoutes } from '@/main';
 import { useElectionStore, UserAnswerEnum } from '@/stores/electionStore';
 
-import type { Election } from '@/types/election';
-import type { Question } from '@/types/question';
+import type { DeprecatedElection } from '@/types/election';
+import type { DeprecatedQuestion } from '@/types/question';
 
 import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
@@ -34,7 +34,7 @@ const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
 
-const election = electionStore.election as Election;
+const election = electionStore.election as DeprecatedElection;
 const electionName = election.name;
 const districtCode = getDistrictCode(route.params.district as string);
 const districtName = electionStore.districts.filter(
@@ -183,7 +183,9 @@ const isCardHidden = (index: number) => {
               v-for="i in [...Array(electionStore.questionCount).keys()]"
               :key="i"
               :hidden="isCardHidden(i)"
-              :question="electionStore.calculator?.questions[i] as Question"
+              :question="
+                electionStore.calculator?.questions[i] as DeprecatedQuestion
+              "
               :answer="electionStore.answers[i]"
               :current-question="i + 1"
               :question-count="electionStore.questionCount"
