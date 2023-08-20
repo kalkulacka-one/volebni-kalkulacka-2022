@@ -37,108 +37,106 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
     </StickyHeaderLayout>
     <StaticContentLayout>
       <StackComponent spacing="large" class="section">
-        <HeadlineText tag="h1" size="large">O kalkulačce</HeadlineText>
+        <HeadlineText tag="h1" size="large">O kalkulačke</HeadlineText>
         <BodyText size="large">
-          Co je vlastně volební kalkulačka? Jak ji lze použít a jak funguje? Kdo
-          za ní stojí? Jak se tvoří a vyhodnocují otázky? O tom všem se dozvíte
-          níže.
+          Čo je to volebná kalkulačka? Ako sa dá použiť a ako funguje? Kto za
+          ňou stojí? Ako sa vytvárajú a vyhodnocujú otázky? Všetko o nej sa
+          dozviete nižšie.
         </BodyText>
 
-        <TitleText size="large" tag="h2"> Co je volební kalkulačka </TitleText>
+        <TitleText size="large" tag="h2">Čo je to volebná kalkulačka</TitleText>
         <BodyText size="large">
-          Volební kalkulačka® (anglicky voting advice application) je
-          jednoduchý, zpravidla internetový test porovnávající Vaše politické
-          postoje s postoji politických stran či osob (zákonodárců, kandidátů ve
-          volbách atd.). Více o historii volebních kalkulaček a o úspěšných
-          příkladech ze světa se můžete dočíst na Wikipedii.
+          Volebná kalkulačka® (voting advice application) je jednoduchý,
+          zvyčajne internetový test, ktorý porovnáva vaše politické postoje s
+          postojmi politických strán alebo osôb (zákonodarcov, kandidátov vo
+          voľbách atď.). Viac informácií o histórii volebných kalkulačiek a
+          úspešných príkladoch z celého sveta si môžete prečítať na Wikipédii.
         </BodyText>
 
         <TitleText size="large" tag="h2">
-          Kdo a jak volební kalkulačku tvoří
+          KKto a ako vytvára volebnú kalkulačku
         </TitleText>
         <BodyText size="large">
-          Českou a slovenskou Volební kalkulačku vyvíjí a provozuje spolek
-          <a href="https://kohovolit.eu/">KohoVolit.eu</a>
-          již od roku 2006. Celkem jsme vytvořili již přes 100 volebních
-          kalkulaček pro všechny druhy voleb (evropské, prezidentské,
-          parlamentní, regionální i komunální). Pravidelně také pomáháme tvořit
-          kalkulačky v Maďarsku a v dalších zemích. Zatím nejúspěšnější
-          kalkulačku před prvním kolem prezidentských voleb v ČR v roce 2018
-          použil více než 1,25 milionu voličů.
+          Českú a slovenskú volebnú kalkulačku vyvíja a prevádzkuje spoločnosť
+          <a href="https://kohovolit.eu/">KohoVolit.eu</a> od roku 2006. Celkovo
+          sme vytvorili viac ako 100 volebných kalkulačiek pre všetky typy
+          volieb (európske, prezidentské, parlamentné, regionálne a komunálne).
+          Pravidelne pomáhame vytvárať kalkulačky aj v Maďarsku a ďalších
+          krajinách. Doteraz najúspešnejšiu kalkulačku využili viac ako 2
+          milióny voličov pred prezidentskými voľbami v Českej republike v roku
+          2023.
         </BodyText>
         <BodyText size="large">
-          <a href="https://kohovolit.eu/">KohoVolit.eu</a> vytváří dva druhy
-          kalkulaček:
+          <a href="https://kohovolit.eu/">KohoVolit.eu</a> vytvára dva typy
+          kalkulačiek:
         </BodyText>
         <BodyText size="large">
-          Volební kalkulačka (názorový test) porovnává Vaše odpovědi s
-          odpověďmi, které nám poskytly samotné politické strany či kandidáti ve
-          volbách. Pokud některá strana či kandidát v názorovém testu chybí, je
-          to vždy proto, že jsme neobdrželi odpovědi.
+          Volebná kalkulačka (názorový test) porovnáva vaše odpovede s
+          odpoveďami, ktoré poskytli politické strany alebo samotní kandidáti.
+          Ak niektorá strana alebo kandidát chýba, je to vždy preto, že sme
+          odpovede nedostali.
         </BodyText>
         <BodyText size="large">
-          Inventura hlasování porovnává Vaše odpovědi s reálnými hlasováními v
-          zákonodárném sboru za uplynulé funkční období.
+          Inventúra hlasovaní porovnáva vaše odpovede so skutočnými hlasovaniami
+          v zákonodarnom zbore v uplynulom volebnom období.
         </BodyText>
 
-        <TitleText size="large" tag="h2"> Jak tvoříme otázky </TitleText>
+        <TitleText size="large" tag="h2">Ako vytvárame otázky</TitleText>
         <BodyText size="large">
-          Obzvláště v názorovém testu ("volební kalkulačce") je výběr a
-          formulace otázek klíčovým místem tvorby kalkulačky. Z důvodu
-          tranpsarentnosti zde uvádíme náš dokument, kterým se při tvorbě otázek
-          řídíme:
+          Najmä vo volebnej kalkulačke je výber a formulácia otázok kľúčovým
+          bodom. V záujme transparentnosti uvádzame náš dokument, ktorým sa
+          riadi tvorba otázok:
           <router-link to="/metodika-tvorby-otazek">
-            Metodika výběru témat a tvorby otázek
+            Metodika výberu tém a formulácie otázok.
           </router-link></BodyText
         ><BodyText size="large">
-          V naprosté většině případů názorového testu ("volební kalkulačky")
-          stranám nebo kandidátům posíláme více otázek, než kolik se použije ve
-          výsledné kalkulačce. Obvykle se vyřadí otázky, kde je u kandidátů
-          shoda (tj. takové otázky nerozdělují kandidáty). Potom otázky, které
-          se nepovedly (kandidáti správně upozorní na nějaký problém s otázkou,
-          příp. na něj přijdeme sami až po odeslání), a otázky, které jsou
-          podobné jako jiné.
+          V prevažnej väčšine prípadov zasielame stranám alebo kandidátom viac
+          otázok, ako sa použije vo výslednej kalkulačke. Zvyčajne sa vyraďujú
+          otázky, pri ktorých existuje zhoda medzi kandidátmi (t. j. takéto
+          otázky nerozdeľujú kandidátov). Potom sa vyradia otázky, ktoré sa
+          nepodarili (kandidáti správne upozornili na problém s otázkou alebo
+          sme naň prišli sami po jej odoslaní), a otázky, ktoré sú podobné iným.
         </BodyText>
 
-        <TitleText size="large" tag="h2"> Jak vyhodnocujeme shodu </TitleText>
+        <TitleText size="large" tag="h2">Ako hodnotíme zhodu</TitleText>
         <BodyText size="large">
-          Otázka, u níž neodpovíte „Ano“ či „Ne“, se do výpočtu nezahrnuje.
-          Pokud na otázku odpovíte „Ano“, strany či kandidáti, kteří rovněž
-          odpověděli „Ano“, získávají jeden bod. Strany či kandidáti, kteří
-          odpověděli „Ne“, jeden bod ztrácejí. Pokud odpovíte „Ne“, získávají
-          jeden bod strany či kandidáti, kteří rovněž odpověděli „Ne“. Ti, kteří
-          odpověděli „Ano“, naopak jeden bod ztrácejí. Strany či kandidáti,
-          kteří na otázku neodpověděli „Ano“ ani „Ne“, nezískávají ani neztrácí
-          žádné body.
+          Otázka, na ktorú neodpoviete "áno" alebo "nie", sa do výpočtu
+          nezapočítava. Ak na otázku odpoviete "Áno", strany alebo kandidáti,
+          ktorí tiež odpovedali "Áno", získajú jeden bod. Strany alebo
+          kandidáti, ktorí odpovedia "Nie", strácajú jeden bod. Ak odpoviete
+          "Nie", strany alebo kandidáti, ktorí tiež odpovedali "Nie", získajú
+          jeden bod. Tí, ktorí odpovedia "Áno", strácajú jeden bod. Strany alebo
+          kandidáti, ktorí neodpovedali "Áno" alebo "Nie", nezískavajú ani
+          nestrácajú žiadne body.
         </BodyText>
         <BodyText size="large">
-          Následně se každé straně či kandidátovi sečtou body za všechny otázky,
-          u nichž jste odpověděli „Ano“ či „Ne“, a výsledek se vydělí počtem
-          takových otázek. Tím je získána shoda v rozmezí -100 % až 100 %. Pro
-          větší názornost se shoda převádí na rozmezí 0 % až 100 % tak, že se
-          vydělí dvěma a přičte se k ní 50 % (u kalkulaček od poloviny roku
+          Potom sa pre každú stranu alebo kandidáta spočítajú body za všetky
+          otázky, na ktoré ste odpovedali "áno" alebo "nie", a výsledok sa
+          vydelí počtom takýchto otázok. Takto sa získa zhoda medzi -100 % a 100
+          %. Kvôli pohodlnosti sa zhoda prepočíta na rozsah od 0 % do 100 %
+          vydelením dvoma a pripočítaním 50 % (pre kalkulačky od polovice roka
           2013).
         </BodyText>
 
         <TitleText size="large" tag="h2">
-          Důležitost otázek a hlasování
+          Dôležitosť otázok a hlasovania
         </TitleText>
         <BodyText size="large">
-          U každé otázky či hlasování máte možnost nastavit, jakou pro Vás má
-          shoda důležitost, tedy váhu s jakou se má zahrnout do celkového součtu
-          shody. Každé ze dvou úrovní důležitosti (normální, vysoká) odpovídá
-          jistá váha a celková shoda je pak váženým průměrem shody v
-          jednotlivých otázkách či hlasováních. Ve skutečnosti se tedy místo
-          jednoho bodu ke shodě přičte, resp. odečte váha příslušné otázky či
-          hlasování a na konci se dělí nikoli počtem otázek či hlasování, ale
-          součtem absolutních hodnot jejich vah. Nastavení vah je takové, že
-          vysoká důležitost má oproti normální důležitosti dvojnásobnou váhu.
-          Zobrazení výsledné shody
+          Pri každej otázke alebo hlasovaní máte možnosť nastaviť, aká dôležitá
+          je pre vás zhoda, t. j. váhu, s akou má byť zahrnutá do celkového
+          súčtu zhody. Každej z dvoch úrovní dôležitosti (normálna, vysoká) sa
+          priradí váha a celkový konsenzus je potom váženým priemerom konsenzu v
+          každej otázke alebo hlasovaní. V skutočnosti sa teda namiesto
+          pripočítania alebo odpočítania jedného bodu ku konsenzu pripočíta
+          alebo odpočíta váha príslušnej otázky alebo hlasovania a na konci sa
+          vydelí nie počtom otázok alebo hlasov, ale súčtom absolútnych hodnôt
+          ich váh. Spôsob stanovenia váh je taký, že vysoká dôležitosť má
+          dvojnásobnú váhu v porovnaní s bežnou dôležitosťou.
         </BodyText>
         <BodyText size="large">
-          Může se stát, že Vám vyjde stejná shoda se dvěma nebo více stranami či
-          osobami. V tom případě je pořadí stran či osob při zobrazení výsledné
-          shody určeno náhodně.
+          Môže sa stať, že dosiahnete rovnakú zhodu s dvoma alebo viacerými
+          stranami alebo osobami. V takom prípade sa poradie strán alebo osôb v
+          zobrazení výslednej zhody určí náhodne.
         </BodyText>
         <TitleText size="large" tag="h2">
           Současnou Volební kalkulačku připravili
