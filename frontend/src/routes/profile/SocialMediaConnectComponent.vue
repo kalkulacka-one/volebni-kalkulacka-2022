@@ -4,6 +4,9 @@ import ButtonComponent from '@/components/design-system/input/ButtonComponent.vu
 import SocialMediaIcon from '@/components/design-system/icons/SocialMediaIcon.vue';
 import type { DeprecatedQuestion } from '@/types/question';
 
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
+
 export interface Props {
   googleUrl: string;
   facebookUrl: string;
@@ -17,12 +20,12 @@ defineProps<Props>();
     <template #icon>
       <SocialMediaIcon type="google" />
     </template>
-    Pokračovat přes Google
+    {{ $t('routes.profile.SocialMediaConnectCompponent.google') }}
   </ButtonComponent>
   <ButtonComponent kind="filled" color="facebook" tag="a" :href="facebookUrl">
     <template #icon>
       <SocialMediaIcon type="facebook" color="white" />
     </template>
-    Pokračovat přes Facebook
+    {{ $t('routes.profile.SocialMediaConnectCompponent.facebook') }}
   </ButtonComponent>
 </template>

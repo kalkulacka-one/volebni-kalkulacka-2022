@@ -80,6 +80,9 @@ const handleGoToEmailFormClick = () => {
         : appRoutes.registerForm.name,
   });
 };
+
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
 </script>
 
 <template>
@@ -89,7 +92,10 @@ const handleGoToEmailFormClick = () => {
         <NavigationBar transparent :with-logo="false">
           <template #right>
             <IconButton kind="link" @click="handleClose">
-              <IconComponent :icon="mdiCloseCircleOutline" title="Zavřít" />
+              <IconComponent
+                :icon="mdiCloseCircleOutline"
+                title=" $t('routes.profile.AuthPageVue.title-close')"
+              />
             </IconButton>
           </template>
         </NavigationBar>
@@ -99,12 +105,12 @@ const handleGoToEmailFormClick = () => {
           <StackComponent spacing="small" centered>
             <TitleText tag="p" size="medium">
               <template v-if="type === 'registration'"
-                >Vytvořit profil</template
-              >
+                >{{ $t('routes.profile.AuthPageVue.registration') }}
+              </template>
               <template v-else>Přihlásit se</template>
             </TitleText>
             <BodyText strong size="small" v-if="type === 'registration'">
-              Sledujte názorový vývoj ve svém profilu
+              {{ $t('routes.profile.AuthPageVue.opinion') }}
             </BodyText>
           </StackComponent>
           <StackComponent spacing="medium" centered stretched>
@@ -137,28 +143,34 @@ const handleGoToEmailFormClick = () => {
                 <IconComponent :icon="mdiEmailOutline" />
               </template>
 
-              <template v-if="type === 'registration'"
-                >Vytvořit profil pomocí e-mailu</template
-              >
-              <template v-else>Pomocí e-mailu</template>
+              <template v-if="type === 'registration'">{{
+                $t('routes.profile.AuthPageVue.create-profile-email')
+              }}</template>
+              <template v-else>{{
+                $t('routes.profile.AuthPageVue.use-email')
+              }}</template>
             </ButtonComponent>
           </StackComponent>
           <StackComponent centered spacing="large">
             <BodyText size="small" centered>
-              Vaše osobní údaje budou zpracovávány za účelem tvorby
-              uživatelského profilu, a to v souladu s
-              <router-link to="/ochrana-dat"
-                >Podmínkami ochrany osobních údajů</router-link
+              {{ $t('routes.profile.AuthPageVue.notification') }}
+              <router-link to="/ochrana-dat">{{
+                $t('routes.profile.AuthPageVue.link-title')
+              }}</router-link
               >.
             </BodyText>
             <StackComponent horizontal centered spacing="extra-small">
               <BodyText v-if="type === 'registration'" size="medium" strong
-                >Už máte profil?
-                <router-link to="/prihlaseni"> Přihlašte se </router-link>
+                >{{ $t('routes.profile.AuthPageVue.question-one') }}
+                <router-link to="/prihlaseni">
+                  {{ $t('routes.profile.AuthPageVue.logged-in') }}
+                </router-link>
               </BodyText>
               <BodyText v-else size="medium" strong
-                >Ještě nemáte profil?
-                <router-link to="/registrace"> Vytvořte si ho </router-link>
+                >{{ $t('routes.profile.AuthPageVue.question-two') }}
+                <router-link to="/registrace">
+                  {{ $t('routes.profile.AuthPageVue.create-it') }}
+                </router-link>
               </BodyText>
             </StackComponent>
           </StackComponent>

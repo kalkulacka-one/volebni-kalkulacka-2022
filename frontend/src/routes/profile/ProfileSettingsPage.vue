@@ -38,6 +38,9 @@ const user = ref(userStore.user);
 const formSavedSuccess = ref();
 const saving = ref();
 
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
+
 const handlePreviousClick = () => router.go(-1);
 
 const isModalOpen = ref(false);
@@ -109,7 +112,9 @@ const handleLogout = async () => {
               <IconComponent :icon="mdiArrowLeft" title="Zpátky" />
             </IconButton>
           </template>
-          <TitleText tag="p" size="medium">Nastavení profilu</TitleText>
+          <TitleText tag="p" size="medium">{{
+            $t('routes.profile.ProfileSettingsPage.title-settings')
+          }}</TitleText>
         </SecondaryNavigationBar>
       </template>
 
@@ -157,7 +162,7 @@ const handleLogout = async () => {
               class="w-full"
               :loading="saving"
             >
-              Uložit změny
+              {{ $t('routes.profile.ProfileSettingsPage.button-save') }}
             </ButtonComponent>
           </FormComponent>
 
@@ -165,11 +170,18 @@ const handleLogout = async () => {
 
           <StackComponent centered spacing="extra-small">
             <BodyText size="small">
-              <strong>Jak nakládáme s daty?</strong>
+              <strong>{{
+                $t('routes.profile.ProfileSettingsPage.title-data')
+              }}</strong>
             </BodyText>
 
             <BodyText size="small">
-              Přectěte si o tom na <a href="/ochrana-dat">Zásady ochrany dat</a>
+              {{ $t('routes.profile.ProfileSettingsPage.message-part-one') }}
+              <a href="/ochrana-dat">
+                {{
+                  $t('routes.profile.ProfileSettingsPage.message-part-two')
+                }}</a
+              >
             </BodyText>
           </StackComponent>
           <StackComponent centered spacing="extra-small" class="w-full">
@@ -179,7 +191,7 @@ const handleLogout = async () => {
               class="w-full"
               @click.prevent="handleOpenModal"
             >
-              Odstranit profil
+              {{ $t('routes.profile.ProfileSettingsPage.button-delete') }}
               <template #iconAfter>
                 <IconComponent :icon="mdiTrashCanOutline" />
               </template>
@@ -191,7 +203,7 @@ const handleLogout = async () => {
               class="w-full"
               @click.prevent="handleLogout"
             >
-              Odhlásit se
+              {{ $t('routes.profile.ProfileSettingsPage.log-out') }}
               <template #iconAfter>
                 <IconComponent :icon="mdiLogout" />
               </template>
@@ -211,7 +223,9 @@ const handleLogout = async () => {
     :is-modal-open="isModalOpen"
   >
     <template #title>
-      <TitleText tag="h2" size="small">Opravdu chcete smazat profil?</TitleText>
+      <TitleText tag="h2" size="small">{{
+        $t('routes.profile.ProfileSettingsPage.confirm-delete-profile')
+      }}</TitleText>
     </template>
     <template #content>
       <StackComponent spacing="large" centered>
@@ -220,7 +234,9 @@ const handleLogout = async () => {
         <img src="/images/lock_person.svg" width="32" height="32" alt="" />
 
         <BodyText size="medium">
-          Smazáním profilu přijdete permanentne o uložené kalkulačky.
+          {{
+            $t('routes.profile.ProfileSettingsPage.notification-delete-profile')
+          }}
         </BodyText>
 
         <ResponsiveWrapper extra-small small>
@@ -232,7 +248,9 @@ const handleLogout = async () => {
               @click.prevent="handleDeleteUserClick"
               center
             >
-              Smazat profil a data
+              {{
+                $t('routes.profile.ProfileSettingsPage.button-delete-profile')
+              }}
             </ButtonComponent>
             <ButtonComponent
               kind="outlined"
@@ -240,7 +258,7 @@ const handleLogout = async () => {
               color="neutral"
               @click.prevent="handleCloseModal"
             >
-              Ponechat profil a data
+              {{ $t('routes.profile.ProfileSettingsPage.button-save-profile') }}
             </ButtonComponent>
           </StackComponent>
         </ResponsiveWrapper>
@@ -253,7 +271,9 @@ const handleLogout = async () => {
               color="primary"
               @click.prevent="handleDeleteUserClick"
             >
-              Smazat profil a data
+              {{
+                $t('routes.profile.ProfileSettingsPage.button-delete-profile')
+              }}
             </ButtonComponent>
             <ButtonComponent
               kind="outlined"
@@ -261,7 +281,7 @@ const handleLogout = async () => {
               color="neutral"
               @click.prevent="handleCloseModal"
             >
-              Ponechat profil a data
+              {{ $t('routes.profile.ProfileSettingsPage.button-save-profile') }}
             </ButtonComponent>
           </StackComponent>
         </ResponsiveWrapper>

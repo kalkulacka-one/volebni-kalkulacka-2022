@@ -73,7 +73,6 @@
         "fifteenth-sub-text": "Hlas musí být odevzdat v úředně označené obálce, kterou dostanete přímo ve volební místnosti.",
         "fifteenth-sub-second-text": "První kolo senátních voleb se koná souběžně s volbami do krajských nebo obecních zastupitelstev, případně i s místními referendy. Jednotlivé volby se liší barvou obálky. Pokud je hlas ve špatné obálce, je neplatný.",
         "fifteenth-sub-third-text": "V případě, že je odevzdaná prázdná obálka, je tento hlas neplatný."
-
       }
     },
     "about-us": {
@@ -98,8 +97,8 @@
         "fourth-text": "Následne sa každej strane či kandidátovi spočítajú body za všetky otázky, pri ktorých ste odpovedali „Áno“ alebo „Nie“, a výsledok sa vydelí počtom takýchto otázok. Tým je získaná zhoda v rozmedzí -100% až 100%. Pre väčšiu názornosť sa zhoda prevádza na rozmedzie 0 % až 100 % tak, že sa vydelí dvoma a pripočíta sa k nej 50 % (pri kalkulačkách od polovice roku 2013).",
         "fifth-title": "Dôležitosť otázok a hlasovania",
         "fifth-description": "Pri každej otázke či hlasovaní máte možnosť nastaviť, akú pre Vás má zhoda dôležitosť, teda váhu s akou sa má zahrnúť do celkového súčtu zhody. Každej z dvoch úrovní dôležitosti (normálna, vysoká) zodpovedá istá váha a celková zhoda je potom váženým priemerom zhody v jednotlivých otázkach či hlasovaniach. V skutočnosti sa teda namiesto jedného bodu k zhode pripočíta, resp. odpočíta váha príslušnej otázky či hlasovania a na konci sa delí nie počtom otázok či hlasovania, ale súčtom absolútnych hodnôt ich váh. Nastavenie váh je také, že vysoká dôležitosť má oproti normálnej dôležitosti dvojnásobnú váhu. Zobrazenie výslednej zhody",
-        "fifth-text": "Môže sa stať, že Vám vyjde rovnaká zhoda s dvoma alebo viacerými stranami či osobami. V tom prípade je poradie strán či osôb pri zobrazení výslednej zhody určené náhodne.", 
-        "team-members-title": "Súčasnú Volebnú kalkulačku pripravili",        
+        "fifth-text": "Môže sa stať, že Vám vyjde rovnaká zhoda s dvoma alebo viacerými stranami či osobami. V tom prípade je poradie strán či osôb pri zobrazení výslednej zhody určené náhodne.",
+        "team-members-title": "Súčasnú Volebnú kalkulačku pripravili",
         "michal-skop": "Michal Škop",
         "scrum-master": "Lucie Zátorská",
         "mentor": "Martin Wenisch",
@@ -124,6 +123,68 @@
     "data-protection": {
       "DataProtectionPage": {
         "title": "Ochrana dat"
+      }
+    },
+    "profile": {
+      "AuthPageVue": {
+        "title-close": "Zavřít",
+        "registration": "Vytvořit profil",
+        "opinion ": "Sledujte názorový vývoj ve svém profilu",
+        "create-profile-email": "Vytvořit profil pomocí e-mailu",
+        "use-email": "Pomocí e-mailu",
+        "notification": "Vaše osobní údaje budou zpracovávány za účelem tvorby uživatelského profilu, a to v souladu s",
+        "link-title": "Podmínkami ochrany osobních údajů",
+        "question-one": "Už máte profil?",
+        "log-in": "Přihlašte se",
+        "question-two": "Ještě nemáte profil?",
+        "create-it": "Vytvořte si ho"
+      },
+      "EmailAuthPageVue": {
+        "title-close": "Zavřít",
+        "create-profile": "Vytvořit profil",
+        "log-in": "Přihlásit se",
+        "message": "Zadajte svoji e-mailovou adresu",
+        "message-verification-first": "Do e-mailové schránky Vám zašleme e-mail s&nbsp;ověřovacím odkazem. Registraci úspěšně dokončíte po kliknutí na něj.",
+        "message-verification-second": "Do e-mailové schránky Vám zašleme e-mail s&nbsp;ověřovacím odkazem.",
+        "confirmation": "Zaslat potvrdzovací e-mail"
+      },
+      "EmailFormPageVue": {
+        "registration-title": "Vytvořit profil",
+        "registration-info": "Do e-mailové schránky Vám zašleme e-mail s ověřovacím odkazem. Registraci úspěšně dokončíte po kliknutí na něj.",
+        "login-title": "Přihlásit se",
+        "login-info": "Do e-mailové schránky Vám zašleme e-mail s ověřovacím odkazem.",
+        "confirm-title": "Registrace čeká na Vaše potvrzení",
+        "confirm-info": "Potvrďte registraci na Vašem e-mailu",
+        "notification-title": "Přihlášení čeká na Vaše potvrzení",
+        "notification-info": "Potvrďte přihlášení na Vašem e-mailu",
+        "error-email": "E-mailová adresa není správném tvaru",
+        "error-empty-field": "Pole nesmí být prázdné",
+        "title-back": "Zpátky",
+        "title-close": "Zavřít",
+        "notification": "Zadajte svoji emailovou adresu",
+        "about-spam": "Pokud jste e-mail s ověřovacím odkazem neobdrželi, zkontrolujte prosím složku spamu nebo nevyžádanou poštu.",
+        "send-confirm": "Zaslat potvrdzovací email"
+      },
+      "ProfilePage": {
+        "main-title": "Moje kalkulačky",
+        "message": "Žádné další vyplněné kalkulačky v roce 2023"
+      },
+      "ProfileSettingsPage": {
+        "title-settings": "Nastavení profilu",
+        "button-save": "Uložit změny",
+        "title-data": "Jak nakládáme s daty?",
+        "message-part-one": "Přectěte si o tom na",
+        "message-part-two": "Zásady ochrany dat",
+        "button-delete": "Odstranit profil",
+        "log-out": "Odhlásit se",
+        "confirm-delete-profile": "Opravdu chcete smazat profil?",
+        "notification-delete-profile": "Smazáním profilu přijdete permanentne o uložené kalkulačky.",
+        "button-delete-profile": "Smazat profil a data",
+        "button-save-profile": "Ponechat profil a data"
+      },
+      "SocialMediaConnectCompponent": {
+        "google": "Pokračovat přes Google",
+        "facebook": "Pokračovat přes Facebook"
       }
     }
   },
