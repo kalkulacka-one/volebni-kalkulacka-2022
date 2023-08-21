@@ -52,6 +52,27 @@
         "unknown-error": "Neznámá chyba"
       }
     },
+    "guide": {
+      "GuidePage": {
+        "next-step": "Ďalší krok",
+        "previous-step": "Predchádzajúci krok",
+        "first-question": "Prvá otázka",
+        "back-to-main-page": "Späť na hlavnú stránku",
+        "text-answer-button": "Odpovedať môžete pomocou tlačidiel:",
+        "agree": "súhlasím",
+        "disagree": "nesúhlasím",
+        "text-method": "Keď sa &nbsp;politikom alebo stranou v odpovedi zhodnete, získa vo výpočte zhody 1&nbsp;bod. V opačnom prípade 1&nbsp;bod stratí.",
+        "text-0": "Ak politik alebo strana na otázku neodpovedali/nehlasovali, započíta sa ziskom 0&nbsp;bodov.",
+        "text-important": "Pokiaľ vám na danej téme zvlášť záleží, označte ju hviezdičkou:",
+        "important": "pre mňa dôležité",
+        "double-weight": "Odpoveď potom bude mať vo výpočte zhody dvojnásobnú váhu.",
+        "skip-question": "Keď si nie ste si istí, téma Vás nezaujíma alebo z iného dôvodu nechcete odpovedať, môžete otázku preskočiť šípkou napravo.",
+        "skip": "preskočiť",
+        "not-included": "Táto otázka sa do výpočtu vašej zhody nezapočíta.",
+        "skip-guide": "Preskočiť návod",
+        "guide": "Návod"
+      }
+    },
     "index": {
       "IndexPage": {
         "czech-version": {
