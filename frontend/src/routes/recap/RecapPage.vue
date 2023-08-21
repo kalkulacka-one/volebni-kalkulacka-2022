@@ -179,8 +179,7 @@ const isCardHidden = (index: number) => {
       <BottomBarWrapper>
         <StackComponent class="main" spacing="small">
           <BodyText size="small">
-            Zde si můžete projít a&nbsp;případně upravit svoje odpovědi
-            a&nbsp;jejich váhu.
+            {{ $t('routes.recap.RecapPage.hint-text') }}
           </BodyText>
           <StackComponent class="list" spacing="small">
             <RecapQuestionCard
