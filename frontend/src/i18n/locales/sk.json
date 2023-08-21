@@ -130,6 +130,68 @@
         "go-to-main-page": "Prejsť na hlavnú stránku"
       }
     },
+    "profile": {
+      "AuthPageVue": {
+        "title-close": "Zavrieť",
+        "registration": "Vytvoriť profil",
+        "opinion ": "Sledujte názorový vývoj vo svojom profile",
+        "create-profile-email": "Vytvoriť profil pomocou e-mailu",
+        "use-email": "Pomocou e-mailu",
+        "notification": "Vaše osobné údaje budú spracovávané za účelom tvorby užívateľského profilu, a to v súlade s",
+        "link-title": "Podmienkami ochrany osobných údajov",
+        "question-one": "Už máte profil?",
+        "log-in": "Prihláste sa",
+        "question-two": "Ešte nemáte profil?",
+        "create-it": "Vytvorte si ho"
+      },
+      "EmailAuthPageVue": {
+        "title-close": "Zavrieť",
+        "create-profile": "Vytvoriť profil",
+        "log-in": "Prihlásiť sa",
+        "message": "Zadajte svoju e-mailovú adresu",
+        "message-verification-first": "Do e-mailovej schránky Vám zašleme e-mail s&nbsp;overovacím odkazom. Registráciu úspešne dokončíte po kliknutí naň.",
+        "message-verification-second": "Do e-mailovej schránky Vám zašleme e-mail s&nbsp;overovacím odkazom.",
+        "confirmation": "Zaslať potvrdzovací e-mail"
+      },
+      "EmailFormPageVue": {
+        "registration-title": "Vytvoriť profil",
+        "registration-info": "Do e-mailovej schránky Vám zašleme e-mail s overovacím odkazom. Registráciu úspešne dokončíte po kliknutí naň.",
+        "login-title": "Prihlásiť sa",
+        "login-info": "Do e-mailovej schránky Vám zašleme e-mail s overovacím odkazom.",
+        "confirm-title": "Registrácia čaká na Vaše potvrdenie",
+        "confirm-info": "Potvrďte registráciu na Vašom e-maile",
+        "notification-title": "Prihlásenie čaká na Vaše potvrdenie",
+        "notification-info": "Potvrďte prihlásenie na Vašom e-maile",
+        "error-email": "E-mailová adresa nie je správnom tvare",
+        "error-empty-field": "Pole nesmie byť prázdne",
+        "title-back": "Naspäť",
+        "title-close": "Zavrieť",
+        "notification": "Zadajte svoju emailovú adresu",
+        "about-spam": "Ak ste e-mail s overovacím odkazom nedostali, skontrolujte prosím zložku spamu alebo nevyžiadanú poštu.",
+        "send-confirm": "Zaslať potvrdzovací email"
+      },
+      "ProfilePage": {
+        "main-title": "Moje kalkulačky",
+        "message": "Žiadne ďalšie vyplnené kalkulačky v roku 2023"
+      },
+      "ProfileSettingsPage": {
+        "title-settings": "Nastavenie profilu",
+        "button-save": "Uložiť zmeny",
+        "title-data": "Ako nakladáme s dátami?",
+        "message-part-one": "Prečítajte si o tom na",
+        "message-part-two": "Zásady ochrany dát",
+        "button-delete": "Odstrániť profil",
+        "log-out": "Odhlásiť sa",
+        "confirm-delete-profile": "Naozaj chcete zmazať profil?",
+        "notification-delete-profile": "Zmazaním profilu prídete permanentne o uložené kalkulačky.",
+        "button-delete-profile": "Zmazať profil a dáta",
+        "button-save-profile": "Ponechať profil a dáta"
+      },
+      "SocialMediaConnectCompponent": {
+        "google": "Pokračovať cez Google",
+        "facebook": "Pokračovať cez Facebook"
+      }
+    },
     "question": {
       "QuestionBottomBar": {
         "important-for-me": "Pre mňa dôležité",
