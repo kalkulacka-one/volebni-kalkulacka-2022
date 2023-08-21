@@ -100,7 +100,6 @@ zníženie dávky v nezamestnanosti a zrušenie možnosti príplatku k dávke vo
 zavedenie príspevku na začatie podnikania,
 sprísnenie podmienok nároku na nemocenské a materské pre samostatne zárobkovo činné osoby?
 
-
 <IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Súhlasím so zavedením turniketov v metre.
 
 </StackComponent>
