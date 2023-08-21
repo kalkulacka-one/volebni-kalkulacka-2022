@@ -1,110 +1,110 @@
 {
-  "routes": {
-    "index": {
-      "IndexPage": {
-        "title": "Volební kalkulačka 2023",
-        "primary-text": "Připravujeme volební kalkulačku pro volby do Slovenské národní rady v roce 2023.",
-        "secondary-text": "Zanechte nám svůj e-mail a my vám dáme vědět, až kalkulačku spustíme.",
-        "czech-version": {
-          "prefix": "Mezitím se můžete podívat na {0}",
-          "link": "českou verzi",
-          "suffix": " volební kalkulačky."
-        },
-        "input-label": "E-mail",
-        "subscribe-button-label": "Dejte mi vědět",
-        "disclaimer": "Odesláním souhlasíte se zasíláním novinek o volební kalkulačce.",
-        "empty-email-error": "Pole nesmí být prázdné",
-        "success": "Dáme vám vědět!",
-        "error": "Něco se pokazilo :( Zkuste to znova."
-      }
+  "components": {
+    "DonateBlock": {
+      "body": "Líbí se vám projekt Volební kalkulačka? Budeme rádi, pokud nás podpoříte a umožníte nám pokračovat v jejich tvorbě.",
+      "title": "Podpořte tvorbu kalkulaček"
     },
+    "FooterMultiWord": {
+      "body-about-voting-calculator": "O volební kalkulačce",
+      "body-comunal-voting": "Komunální volby",
+      "body-created-by-ngos": "Vytvořeno spoluprací neziskových organizací.",
+      "body-data-protection": "Ochrana dat",
+      "body-methodoogy": "Metodika tvorby otázek",
+      "body-presidential-voting": "Prezidentské volby",
+      "body-senate-voting": "Senátní volby",
+      "body-support-calculator": "Podpořit kalkulačku",
+      "body-who-to-vote": "Volební kalkulačka je nestranným pomocníkem v rozhodování Koho Volit.",
+      "title-more-about-voting": "Více o volbách"
+    },
+    "QuestionCandidateFilter": {
+      "title-candidate-filter": "Filtrovat podle kandidujících"
+    }
+  },
+  "routes": {
     "data-protection": {
       "DataProtectionPage": {
         "title": "Ochrana dat"
       }
     },
+    "index": {
+      "IndexPage": {
+        "czech-version": {
+          "link": "českou verzi",
+          "prefix": "Mezitím se můžete podívat na {0}",
+          "suffix": " volební kalkulačky."
+        },
+        "disclaimer": "Odesláním souhlasíte se zasíláním novinek o volební kalkulačce.",
+        "empty-email-error": "Pole nesmí být prázdné",
+        "error": "Něco se pokazilo :( Zkuste to znova.",
+        "input-label": "E-mail",
+        "primary-text": "Připravujeme volební kalkulačku pro volby do Slovenské národní rady v roce 2023.",
+        "secondary-text": "Zanechte nám svůj e-mail a my vám dáme vědět, až kalkulačku spustíme.",
+        "subscribe-button-label": "Dejte mi vědět",
+        "success": "Dáme vám vědět!",
+        "title": "Volební kalkulačka 2023"
+      }
+    },
     "profile": {
       "AuthPageVue": {
-        "title-close": "Zavřít",
-        "registration": "Vytvořit profil",
-        "opinion ": "Sledujte názorový vývoj ve svém profilu",
+        "create-it": "Vytvořte si ho",
         "create-profile-email": "Vytvořit profil pomocí e-mailu",
-        "use-email": "Pomocí e-mailu",
-        "notification": "Vaše osobní údaje budou zpracovávány za účelem tvorby uživatelského profilu, a to v souladu s",
         "link-title": "Podmínkami ochrany osobních údajů",
-        "question-one": "Už máte profil?",
         "log-in": "Přihlašte se",
+        "notification": "Vaše osobní údaje budou zpracovávány za účelem tvorby uživatelského profilu, a to v souladu s",
+        "opinion ": "Sledujte názorový vývoj ve svém profilu",
+        "question-one": "Už máte profil?",
         "question-two": "Ještě nemáte profil?",
-        "create-it": "Vytvořte si ho"
+        "registration": "Vytvořit profil",
+        "title-close": "Zavřít",
+        "use-email": "Pomocí e-mailu"
       },
       "EmailAuthPageVue": {
-        "title-close": "Zavřít",
+        "confirmation": "Zaslat potvrdzovací e-mail",
         "create-profile": "Vytvořit profil",
         "log-in": "Přihlásit se",
         "message": "Zadajte svoji e-mailovou adresu",
         "message-verification-first": "Do e-mailové schránky Vám zašleme e-mail s&nbsp;ověřovacím odkazem. Registraci úspěšně dokončíte po kliknutí na něj.",
         "message-verification-second": "Do e-mailové schránky Vám zašleme e-mail s&nbsp;ověřovacím odkazem.",
-        "confirmation": "Zaslat potvrdzovací e-mail"
+        "title-close": "Zavřít"
       },
       "EmailFormPageVue": {
-        "registration-title": "Vytvořit profil",
-        "registration-info": "Do e-mailové schránky Vám zašleme e-mail s ověřovacím odkazem. Registraci úspěšně dokončíte po kliknutí na něj.",
-        "login-title": "Přihlásit se",
-        "login-info": "Do e-mailové schránky Vám zašleme e-mail s ověřovacím odkazem.",
-        "confirm-title": "Registrace čeká na Vaše potvrzení",
+        "about-spam": "Pokud jste e-mail s ověřovacím odkazem neobdrželi, zkontrolujte prosím složku spamu nebo nevyžádanou poštu.",
         "confirm-info": "Potvrďte registraci na Vašem e-mailu",
-        "notification-title": "Přihlášení čeká na Vaše potvrzení",
-        "notification-info": "Potvrďte přihlášení na Vašem e-mailu",
+        "confirm-title": "Registrace čeká na Vaše potvrzení",
         "error-email": "E-mailová adresa není správném tvaru",
         "error-empty-field": "Pole nesmí být prázdné",
-        "title-back": "Zpátky",
-        "title-close": "Zavřít",
+        "login-info": "Do e-mailové schránky Vám zašleme e-mail s ověřovacím odkazem.",
+        "login-title": "Přihlásit se",
         "notification": "Zadajte svoji emailovou adresu",
-        "about-spam": "Pokud jste e-mail s ověřovacím odkazem neobdrželi, zkontrolujte prosím složku spamu nebo nevyžádanou poštu.",
-        "send-confirm": "Zaslat potvrdzovací email"
+        "notification-info": "Potvrďte přihlášení na Vašem e-mailu",
+        "notification-title": "Přihlášení čeká na Vaše potvrzení",
+        "registration-info": "Do e-mailové schránky Vám zašleme e-mail s ověřovacím odkazem. Registraci úspěšně dokončíte po kliknutí na něj.",
+        "registration-title": "Vytvořit profil",
+        "send-confirm": "Zaslat potvrdzovací email",
+        "title-back": "Zpátky",
+        "title-close": "Zavřít"
       },
       "ProfilePage": {
         "main-title": "Moje kalkulačky",
         "message": "Žádné další vyplněné kalkulačky v roce 2023"
       },
       "ProfileSettingsPage": {
-        "title-settings": "Nastavení profilu",
+        "button-delete": "Odstranit profil",
+        "button-delete-profile": "Smazat profil a data",
         "button-save": "Uložit změny",
-        "title-data": "Jak nakládáme s daty?",
+        "button-save-profile": "Ponechat profil a data",
+        "confirm-delete-profile": "Opravdu chcete smazat profil?",
+        "log-out": "Odhlásit se",
         "message-part-one": "Přectěte si o tom na",
         "message-part-two": "Zásady ochrany dat",
-        "button-delete": "Odstranit profil",
-        "log-out": "Odhlásit se",
-        "confirm-delete-profile": "Opravdu chcete smazat profil?",
         "notification-delete-profile": "Smazáním profilu přijdete permanentne o uložené kalkulačky.",
-        "button-delete-profile": "Smazat profil a data",
-        "button-save-profile": "Ponechat profil a data"
+        "title-data": "Jak nakládáme s daty?",
+        "title-settings": "Nastavení profilu"
       },
       "SocialMediaConnectCompponent": {
-        "google": "Pokračovat přes Google",
-        "facebook": "Pokračovat přes Facebook"
+        "facebook": "Pokračovat přes Facebook",
+        "google": "Pokračovat přes Google"
       }
-    }
-  },
-  "components": {
-    "DonateBlock": {
-      "title": "Podpořte tvorbu kalkulaček",
-      "body": "Líbí se vám projekt Volební kalkulačka? Budeme rádi, pokud nás podpoříte a umožníte nám pokračovat v jejich tvorbě."
-    },
-    "FooterMultiWord": {
-      "body-who-to-vote": "Volební kalkulačka je nestranným pomocníkem v rozhodování Koho Volit.",
-      "title-more-about-voting": "Více o volbách",
-      "body-presidential-voting": "Prezidentské volby",
-      "body-comunal-voting": "Komunální volby",
-      "body-senate-voting": "Senátní volby",
-      "body-about-voting-calculator": "O volební kalkulačce",
-      "body-methodoogy": "Metodika tvorby otázek",
-      "body-data-protection": "Ochrana dat",
-      "body-support-calculator": "Podpořit kalkulačku",
-      "body-created-by-ngos": "Vytvořeno spoluprací neziskových organizací."
-    },
-    "QuestionCandidateFilter": {
-      "title-candidate-filter": "Filtrovat podle kandidujících"
     }
   }
 }
