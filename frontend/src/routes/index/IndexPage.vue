@@ -106,98 +106,6 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
         </ButtonComponent>
         <BodyText size="small" tag="h2">42 otázek, cca 10 minut</BodyText>
       </StackComponent>
-      <div class="avatars">
-        <div class="avatar pavel-fischer">
-          <img
-            alt="Fotografie – Pavel Fischer"
-            src="@/assets/prezidenti-2023/cand-pavel-fischer-1x.jpg"
-            srcset="
-              @/assets/prezidenti-2023/cand-pavel-fischer-1x.webp,
-              @/assets/prezidenti-2023/cand-pavel-fischer-2x.webp 2x
-            "
-          />
-        </div>
-        <div class="avatar shift jaroslav-basta">
-          <img
-            alt="Fotografie – Jaroslav Bašta"
-            src="@/assets/prezidenti-2023/cand-jaroslav-basta-1x.jpg"
-            srcset="
-              @/assets/prezidenti-2023/cand-jaroslav-basta-1x.webp,
-              @/assets/prezidenti-2023/cand-jaroslav-basta-2x.webp 2x
-            "
-          />
-        </div>
-        <div class="avatar shift josef-stredula">
-          <img
-            alt="Fotografie – Josef Středula"
-            src="@/assets/prezidenti-2023/cand-josef-stredula-1x.jpg"
-            srcset="
-              @/assets/prezidenti-2023/cand-josef-stredula-1x.webp,
-              @/assets/prezidenti-2023/cand-josef-stredula-2x.webp 2x
-            "
-          />
-        </div>
-        <div class="avatar petr-pavel">
-          <img
-            alt="Fotografie – Petr Pavel"
-            src="@/assets/prezidenti-2023/cand-petr-pavel-1x.jpg"
-            srcset="
-              @/assets/prezidenti-2023/cand-petr-pavel-1x.webp,
-              @/assets/prezidenti-2023/cand-petr-pavel-2x.webp 2x
-            "
-          />
-        </div>
-        <div class="avatar shift tomas-zima">
-          <img
-            alt="Fotografie – Tomáš Zima"
-            src="@/assets/prezidenti-2023/cand-tomas-zima-1x.jpg"
-            srcset="
-              @/assets/prezidenti-2023/cand-tomas-zima-1x.webp,
-              @/assets/prezidenti-2023/cand-tomas-zima-2x.webp 2x
-            "
-          />
-        </div>
-        <div class="avatar danuse-nerudova">
-          <img
-            alt="Fotografie – Danuše Nerudová"
-            src="@/assets/prezidenti-2023/cand-danuse-nerudova-1x.jpg"
-            srcset="
-              @/assets/prezidenti-2023/cand-danuse-nerudova-1x.webp,
-              @/assets/prezidenti-2023/cand-danuse-nerudova-2x.webp 2x
-            "
-          />
-        </div>
-        <div class="avatar andrej-babis">
-          <img
-            alt="Fotografie – Andrej Babiš"
-            src="@/assets/prezidenti-2023/cand-andrej-babis-1x.jpg"
-            srcset="
-              @/assets/prezidenti-2023/cand-andrej-babis-1x.webp,
-              @/assets/prezidenti-2023/cand-andrej-babis-2x.webp 2x
-            "
-          />
-        </div>
-        <div class="avatar shift karel-divis">
-          <img
-            alt="Fotografie – Karel Diviš"
-            src="@/assets/prezidenti-2023/cand-karel-divis-1x.jpg"
-            srcset="
-              @/assets/prezidenti-2023/cand-karel-divis-1x.webp,
-              @/assets/prezidenti-2023/cand-karel-divis-2x.webp 2x
-            "
-          />
-        </div>
-        <div class="avatar shift marek-hilser">
-          <img
-            alt="Fotografie – Marek Hilšer"
-            src="@/assets/prezidenti-2023/cand-marek-hilser-1x.jpg"
-            srcset="
-              @/assets/prezidenti-2023/cand-marek-hilser-1x.webp,
-              @/assets/prezidenti-2023/cand-marek-hilser-2x.webp 2x
-            "
-          />
-        </div>
-      </div>
       <div class="other-calcs">
         <CardComponent
           corner="bottom-left"
@@ -417,42 +325,6 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
   overflow: hidden;
   padding-top: 7%;
 
-  .avatars {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-
-    .avatar {
-      width: 80%;
-      left: 10%;
-
-      &.shift {
-        top: -25%;
-      }
-    }
-  }
-
-  .avatar {
-    position: relative;
-    width: 100%;
-
-    &:after {
-      content: '';
-      display: block;
-      padding-bottom: 100%;
-      padding-left: 100%;
-    }
-
-    > img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      left: 0;
-      box-shadow: 0px 8px 32px rgba(var(--color-neutral-fg), 0.1);
-    }
-  }
-
   .calc-main {
     text-align: center;
     padding: 24px;
@@ -499,71 +371,6 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
       grid-template-columns: 1fr 1fr;
       padding: 0;
     }
-
-    .avatars {
-      display: contents;
-
-      .avatar {
-        width: 100%;
-        left: 0;
-
-        &.shift {
-          top: -50%;
-        }
-      }
-
-      .pavel-fischer {
-        grid-row: 2;
-        grid-column: 1;
-        opacity: 60%;
-      }
-
-      .jaroslav-basta {
-        grid-row: 3;
-        grid-column: 2;
-        opacity: 60%;
-      }
-
-      .josef-stredula {
-        grid-row: 4;
-        grid-column: 1;
-        opacity: 60%;
-      }
-
-      .petr-pavel {
-        grid-row: 4;
-        grid-column: 2;
-      }
-
-      .tomas-zima {
-        grid-row: 4;
-        grid-column: 3;
-        opacity: 60%;
-      }
-
-      .danuse-nerudova {
-        grid-row: 4;
-        grid-column: 10;
-        opacity: 60%;
-      }
-
-      .andrej-babis {
-        grid-row: 2;
-        grid-column: 11;
-      }
-
-      .karel-divis {
-        grid-row: 4;
-        grid-column: 11;
-        opacity: 60%;
-      }
-
-      .marek-hilser {
-        grid-row: 3;
-        grid-column: 12;
-        opacity: 60%;
-      }
-    }
   }
 
   @media (min-width: 992px) {
@@ -576,19 +383,6 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
     .other-calcs {
       grid-column: 4/10;
     }
-  }
-
-  .avatars {
-      .pavel-fischer,
-      .jaroslav-basta,
-      .josef-stredula,
-      .tomas-zima,
-      .danuse-nerudova,
-      .andrej-babis,
-      .karel-divis,
-      .marek-hilser {
-        filter: grayscale(100%);
-      }
   }
 }
 
