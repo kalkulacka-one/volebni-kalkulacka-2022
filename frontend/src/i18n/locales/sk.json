@@ -105,6 +105,65 @@
         "facebook": "Pokračovať cez Facebook",
         "google": "Pokračovať cez Google"
       }
+    },
+    "comparison": {
+      "ComparisonGrid": {
+        "my": "Moje",
+        "answers": "odpovede"
+      },
+      "ComparisonPage": {
+        "back-to-main-page": "Späť na hlavnú stránku",
+        "my-match": "Moja zhoda",
+        "set-comparison": "Nastaviť porovnanie",
+        "comparison": "Porovnanie"
+      }
+    },
+    "data-protection": {
+      "DataProtectionPage": {
+        "data-protection": "Ochrana dát"
+      }
+    },
+    "error": {
+      "ErrorPage": {
+        "unknown-error": "Neznámá chyba",
+        "this-page-does-not-exist": "Táto stránka neexistuje",
+        "go-to-main-page": "Prejsť na hlavnú stránku"
+      }
+    },
+    "question": {
+      "QuestionBottomBar": {
+        "important-for-me": "Pre mňa dôležité",
+        "yes": "Áno",
+        "no": "Nie"
+      },
+      "QuestionPage": {
+        "instructions-short": "Návod",
+        "instructions-long": "Návod",
+        "previous-question-long": "Predchádzajúca otázka",
+        "previous-question-short": "Predchádzajúca",
+        "skip-question-long": "Preskočiť otázku",
+        "skip-question-short": "Preskočiť",
+        "next-question-long": "Ďalšia otázka",
+        "next-question-short": "Ďalšia",
+        "recapitulation-long": "Rekapitulácia",
+        "recapitulation-short": "Rekapitulácia"
+      }
+    },
+    "recap":{
+      "RecapPage": {
+        "back-to-main-page": "Späť",
+        "questions": "Otázky",
+        "recapitulation": "Rekapitulácia",
+        "display-results": "Zobraziť výsledky",
+        "hint-text": "Tu si môžete prejsť a prípadne upraviť svoje odpovede a ich váhu."
+      },
+      "RecapQuestionCard": {
+        "important-for-me": "Pre mňa dôležité",
+        "yes": "Áno",
+        "no": "Nie",
+        "without-answer": "Bez odpovede",
+        "display_details": "Zobraziť detaily"
+      }
     }
   }
 }

@@ -31,6 +31,10 @@ import { ref } from 'vue';
 import QuestionCandidateFilter from '@/components/QuestionCandidateFilter.vue';
 import QuestionTagFilter from '@/components/QuestionTagFilter.vue';
 
+import { useI18n } from 'vue-i18n';
+
+const { t, locale } = useI18n();
+
 const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
@@ -88,7 +92,7 @@ const candidateAnswers = electionStore.calculator
                     })
                   "
                 >
-                  Zpět na hlavní stránku
+                {{ $t('routes.comparison.ComparisonPage.back-to-main-page') }}
                   <template #iconAfter>
                     <IconComponent :icon="mdiCloseCircleOutline" />
                   </template>
@@ -107,7 +111,7 @@ const candidateAnswers = electionStore.calculator
                   <template #icon>
                     <IconComponent
                       :icon="mdiCloseCircleOutline"
-                      title="Zpět na hlavní stránku"
+                      title="$t('routes.comparison.ComparisonPage.back-to-main-page')"
                     />
                   </template>
                 </ButtonComponent>
@@ -121,7 +125,7 @@ const candidateAnswers = electionStore.calculator
           <SecondaryNavigationBar centered-title>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Moje shoda" />
+                <IconComponent :icon="mdiArrowLeft" title="$t('routes.comparison.ComparisonPage.my-match')" />
               </IconButton>
             </template>
             <TitleText tag="h2" size="medium">Porovnání</TitleText>
@@ -131,7 +135,7 @@ const candidateAnswers = electionStore.calculator
                 @click="filterMenuIsVisible = !filterMenuIsVisible"
               >
                 <template #icon>
-                  <IconComponent :icon="mdiTune" title="Nastavit porovnání" />
+                  <IconComponent :icon="mdiTune" title="$t('routes.comparison.ComparisonPage.set-comparison')" />
                 </template>
               </ButtonComponent>
             </template>
@@ -151,16 +155,16 @@ const candidateAnswers = electionStore.calculator
           <SecondaryNavigationBar>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Moje shoda" />
+                <IconComponent :icon="mdiArrowLeft" title="$t('routes.comparison.ComparisonPage.my-match')" />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="large">Porovnání</TitleText>
+            <TitleText tag="h2" size="large">{{ $t('routes.comparison.ComparisonPage.comparison') }}</TitleText>
             <template #after>
               <ButtonComponent
                 kind="link"
                 @click="filterMenuIsVisible = !filterMenuIsVisible"
               >
-                Nastavit porovnání
+                {{ $t('routes.comparison.ComparisonPage.set-comparison') }}
                 <template #iconAfter>
                   <IconComponent :icon="mdiTune" />
                 </template>
