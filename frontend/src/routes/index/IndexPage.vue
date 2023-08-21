@@ -41,18 +41,20 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
       <BlobComponent color="red" class="blob2" />
       <StackComponent spacing="medium" centered class="calc-main">
         <BodyText size="medium" tag="h1" color="fg-strong">
-          <b>2. kolo prezidentských voleb</b><br />
-          27.–28. ledna 2023
+          <b>Voľby do Národnej rady Slovenskej republiky</b><br />
+          30. septembra 2023
           <br />
         </BodyText>
         <HeadlineText tag="p" size="small">
-          <span style="color: rgb(var(--color-neutral-fg))">
-            Petr Pavel<br />
-          </span>
-          Bude reprezentovat<br />vaše&nbsp;názory?
+          Parlamentné voľby
+          <span style="color: rgb(var(--color-neutral-fg))"> 2023 </span>
         </HeadlineText>
-        <BodyText size="small" tag="h2">
-          Volební kalkulačka pro 2. kolo<br />20 otázek, cca 5 minut
+        <BodyText size="medium" tag="h2" color="fg-strong">
+          <strong>Inventúra hlasovaní</strong>
+        </BodyText>
+        <BodyText size="small">
+          Volebná kalkulačka na základe skutočných hlasovaní z Národnej rady
+          2020–2023
         </BodyText>
         <ButtonComponent
           kind="filled"
@@ -70,41 +72,12 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
             })
           "
         >
-          Spustit kalkulačku
+          Spústiť inventúru hlasovaní
+
           <template #iconAfter>
             <IconComponent :icon="mdiArrowRight" />
           </template>
         </ButtonComponent>
-        <BodyText size="small">
-          <a href="https://prezident2023.programydovoleb.cz/"
-            >Kdo kandidoval (Programy do voleb)
-          </a>
-        </BodyText>
-        <BodyText size="small">
-          Volební kalkulačku už vyplnilo přes 1 milion lidí.
-        </BodyText>
-        <ButtonComponent
-          kind="outlined"
-          color="primary"
-          tag="a"
-          @click="
-            router.push({
-              name: appRoutes.guide.name,
-              params: {
-                ...route.params,
-                election: 'prezidentske-2023',
-                district: 'pro-kazdeho',
-              },
-              query: { ...route.query },
-            })
-          "
-        >
-          Spustit kalkulačku pro 1. kolo
-          <template #iconAfter>
-            <IconComponent :icon="mdiArrowRight" />
-          </template>
-        </ButtonComponent>
-        <BodyText size="small" tag="h2">42 otázek, cca 10 minut</BodyText>
       </StackComponent>
       <div class="other-calcs">
         <CardComponent
@@ -117,16 +90,18 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
         >
           <StackComponent spacing="small" centered space-between>
             <BodyText size="medium" tag="h2" color="fg-strong">
-              <strong>Kalkulačka pro nadšence</strong><br />
-              Prezident 2023
+              <strong>Volebná kalkulačka 2023</strong>
             </BodyText>
             <BodyText size="small">
-              Všech 98 otázek, které jsme položili prezidentským kandidátům.
+              Klasická volebná kalkulačka pre voľby 2023.<br /><i
+                >Spustíme počiatkom septembra.</i
+              >
             </BodyText>
             <ButtonComponent
+              readOnly
+              disabled
               kind="outlined"
               color="primary"
-              tag="a"
               @click="
                 router.push({
                   name: appRoutes.guide.name,
@@ -139,7 +114,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
                 })
               "
             >
-              Spustit kalkulačku
+              Již brzy
               <template #iconAfter>
                 <IconComponent :icon="mdiArrowRight" />
               </template>
@@ -156,20 +131,18 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
         >
           <StackComponent spacing="small" centered space-between>
             <BodyText size="medium" tag="h2" color="fg-strong">
-              <strong>Kalkulačka pro mladé</strong><br />
-              Prezident 2023
+              <strong>Kalkulačka pre mladé</strong>
             </BodyText>
             <BodyText size="small">
-              Otázky, které rezonují mladou generací.<br />
-              Ve spolupráci s projektem
-              <a href="https://www.nazorypolitiku.cz" target="_blank">
-                NázoryPolitiků.cz </a
-              >.
+              Otázky, ktoré rezonujú mladou generáciou. <br /><i
+                >Spustíme počiatkom septembra.</i
+              >
             </BodyText>
             <ButtonComponent
+              readOnly
+              disabled
               kind="outlined"
               color="primary"
-              tag="a"
               @click="
                 router.push({
                   name: appRoutes.guide.name,
@@ -182,7 +155,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
                 })
               "
             >
-              Spustit kalkulačku
+              Již brzy
               <template #iconAfter>
                 <IconComponent :icon="mdiArrowRight" />
               </template>
@@ -191,125 +164,49 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
         </CardComponent>
       </div>
     </div>
-    <StackComponent class="section" spacing="large" centered>
-      <ButtonComponent kind="link" @click="scrollDown">
-        <div class="button-content">
-          Starší kalkulačky<IconComponent :icon="mdiArrowDown"></IconComponent>
-        </div>
-      </ButtonComponent>
-    </StackComponent>
 
     <StaticContentLayout>
       <StackComponent class="section" spacing="small" centered>
-        <TitleText size="large" tag="h2">Jak kalkulačka vzniká?</TitleText>
+        <TitleText size="large" tag="h2">Ako vzniká kalkulačka?</TitleText>
         <BodyText size="medium"
-          >Volební kalkulačka je projekt neziskové organizace KohoVolit.eu a je
-          nestranným pomocníkem při Vašem rozhodování koho volit.</BodyText
+          >Volebná kalkulačka je projektom neziskovej organizácie KohoVolit.eu a
+          je nestranným pomocníkom pri vašom rozhodovaní, koho voliť.</BodyText
         >
         <div class="info-bubbles-grid section">
           <InfoBubble image="info-1.png">
             <BodyText size="small"
-              >Připravíme zhruba 40 otázek na aktuální politická
-              témata.</BodyText
-            >
+              >Prípravíme približne 40 otázok na aktuálne politické témy.
+            </BodyText>
           </InfoBubble>
           <InfoBubble image="info-2.png">
             <BodyText size="small"
-              >Otázky položíme všem kandidátům / stranám.</BodyText
-            >
+              >Otázky položíme všetkým kandidátom / stranám.
+            </BodyText>
           </InfoBubble>
           <InfoBubble image="info-3.png">
             <BodyText size="small"
-              >Dostaneme od většiny z nich odpovědi.</BodyText
-            >
+              >Z väčšiny z nich dostaneme odpovede.
+            </BodyText>
           </InfoBubble>
           <InfoBubble image="info-4.png">
             <BodyText size="small"
-              >Volební kalkulačka vám s nimi spočítá názorovou shodu.</BodyText
+              >Volebná kalkulačka vám s nimi vypočíta zhodu názorov.</BodyText
             >
           </InfoBubble>
         </div>
       </StackComponent>
       <StackComponent class="section" spacing="large" centered>
         <BodyText size="medium"
-          >Volební kalkulačka je pouze informační služba a není jejím cílem
-          dávat konkrétní volební doporučení.</BodyText
-        >
+          >Volebná kalkulačka je len informačnou službou a jej cieľom nie je
+          poskytovať konkrétne volebné odporúčania.
+        </BodyText>
         <ButtonComponent kind="link" @click="router.push('/o-nas')">
           <div class="button-content">
-            Zjistit více<IconComponent :icon="mdiArrowRight"></IconComponent>
+            Zistiť viac<IconComponent :icon="mdiArrowRight"></IconComponent>
           </div>
         </ButtonComponent>
       </StackComponent>
       <DonateBlock />
-      <StackComponent spacing="large">
-        <div ref="info"></div>
-        <TitleText size="large" tag="h2">
-          Volební kalkulačky k už proběhlým volbám
-        </TitleText>
-        <MasonryGrid style="align-self: stretch">
-          <CardComponent corner="top-right" padding="medium" border shadow>
-            <div class="card-content">
-              <div class="card-content-text">
-                <TitleText tag="h3" size="medium"
-                  >Komunální volby 2022</TitleText
-                >
-                <BodyText size="medium"
-                  >K dispozici jsou kalkulačky pro vybraná města.</BodyText
-                >
-                <div class="divider" />
-                <BodyText size="small"
-                  >Komunální kalkulačku vyplnilo přes 100 tisíc lidí.</BodyText
-                >
-              </div>
-              <ButtonComponent
-                kind="outlined"
-                color="primary"
-                @click="
-                  router.push({
-                    name: appRoutes.districtSelection.name,
-                    params: { ...route.params, election: 'komunalni-2022' },
-                    query: { ...route.query },
-                  })
-                "
-                >Spustit kalkulačku</ButtonComponent
-              >
-            </div>
-          </CardComponent>
-          <CardComponent corner="top-left" padding="medium" border shadow>
-            <div class="card-content">
-              <div class="card-content-text">
-                <TitleText tag="h3" size="medium">Senátní volby 2022</TitleText>
-                <BodyText size="medium"
-                  >Pro jednotlivé volební obvody.</BodyText
-                >
-                <BodyText size="medium"
-                  ><a
-                    href="https://2022.programydovoleb.cz/senatni-volby#kde-se-letos-voli"
-                    >Více o senátních obvodech</a
-                  ></BodyText
-                >
-              </div>
-              <div class="divider" />
-              <BodyText size="small"
-                >Senátní kalkulačku vyplnilo přes 25 tisíc lidí.</BodyText
-              >
-              <ButtonComponent
-                color="primary"
-                kind="outlined"
-                @click="
-                  router.push({
-                    name: appRoutes.districtSelection.name,
-                    params: { ...route.params, election: 'senatni-2022' },
-                    query: { ...route.query },
-                  })
-                "
-                >Spustit kalkulačku</ButtonComponent
-              >
-            </div>
-          </CardComponent>
-        </MasonryGrid>
-      </StackComponent>
     </StaticContentLayout>
     <FooterMultiWord class="section" />
   </StickyHeaderLayout>
