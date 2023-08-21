@@ -18,6 +18,9 @@ import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import TextInputComponent from '@/components/design-system/input/TextInputComponent.vue';
 import TitleText from '@/components/design-system/typography/TitleText.vue';
 
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
+
 export interface Props {
   type?: 'registration' | 'login';
 }
@@ -67,7 +70,10 @@ const handleSubmit = async () => {
           <SecondaryNavigationBar centered-title transparent>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Zpátky" />
+                <IconComponent
+                  :icon="mdiArrowLeft"
+                  title=" $t('routes.profile.EmailAuthPageVue.title-close')"
+                />
               </IconButton>
             </template>
           </SecondaryNavigationBar>
@@ -76,7 +82,10 @@ const handleSubmit = async () => {
           <SecondaryNavigationBar transparent>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Zpátky" />
+                <IconComponent
+                  :icon="mdiArrowLeft"
+                  title=" $t('routes.profile.EmailAuthPageVue.title-close')"
+                />
               </IconButton>
             </template>
           </SecondaryNavigationBar>
@@ -85,24 +94,25 @@ const handleSubmit = async () => {
       <StaticContentLayout size="small">
         <StackComponent spacing="medium" centered>
           <TitleText tag="p" size="medium">
-            <template v-if="type === 'registration'">Vytvořit profil</template>
-            <template v-else>Přihlásit se</template>
+            <template v-if="type === 'registration'">{{
+              $t('routes.profile.EmailAuthPageVue.create-profile')
+            }}</template>
+            <template v-else>{{
+              $t('routes.profile.EmailAuthPageVue.log-in')
+            }}</template>
           </TitleText>
 
           <BodyText strong size="medium">
-            Zadajte svoji e-mailovou adresu
+            {{ $t('routes.profile.EmailAuthPageVue.message') }}
           </BodyText>
 
           <BodyText tag="p" size="medium" centered>
-            <template v-if="type === 'registration'"
-              >Do e-mailové schránky Vám zašleme e-mail s&nbsp;ověřovacím
-              odkazem. Registraci úspěšně dokončíte po kliknutí na
-              něj.</template
-            >
-            <template v-else
-              >Do e-mailové schránky Vám zašleme e-mail s&nbsp;ověřovacím
-              odkazem.</template
-            >
+            <template v-if="type === 'registration'">{{
+              $t('routes.profile.EmailAuthPageVue.message-verification-first')
+            }}</template>
+            <template v-else>{{
+              $t('routes.profile.EmailAuthPageVue.message-verification-second')
+            }}</template>
           </BodyText>
 
           <form
@@ -136,7 +146,7 @@ const handleSubmit = async () => {
                   @click.prevent="handleSubmit"
                   :loading="posting"
                 >
-                  Zaslat potvrdzovací e-mail
+                  {{ $t('routes.profile.EmailAuthPageVue.confirmation') }}
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
