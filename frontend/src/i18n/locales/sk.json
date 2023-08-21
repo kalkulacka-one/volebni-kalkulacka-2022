@@ -163,7 +163,7 @@
         "yes": "Áno",
         "no": "Nie",
         "without-answer": "Bez odpovede",
-        "display_details": "Zobraziť detaily"
+        "display-details": "Zobraziť detaily"
       }
     },
     "result": {
@@ -196,6 +196,18 @@
         "compare-answers": "Porovnať odpovede",
         "something-went-wrong": "Niečo sa pokazilo",
         "something-went-wrong-text": "Bohužiaľ momentálne nemožno zdieľať, skúste to prosím neskôr."
+      },
+      "ResultShareModal": {
+        "hashtag1": "voľby",
+        "hashtag2": "voľby2023",
+        "hashtag3": "volebnákalkulačka",
+        "text-my-match": "Podľa Volebnej kalkulačky mi najväčšia zhoda vyšla takto:",
+        "text-do-it-too": "Pozrite sa na moje výsledky a vyplňte si ju tiež!",
+        "share-now": "Zdieľaj rovno...",
+        "share-title": "Volebná kalkulačka",
+        "share-facebook": "Zdieľať na Facebooku",
+        "share-twitter": "Zdieľať na X / Twitteri",
+        "text-copy": "...alebo si kliknutím skopíruj odkaz"
       }
     }
   },

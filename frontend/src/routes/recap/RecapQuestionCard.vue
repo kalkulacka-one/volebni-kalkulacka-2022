@@ -66,7 +66,7 @@ const toggleClick = () => {
             :icon="starIcon"
             :color="starColor"
             size="large"
-            title="$t('routes.question.QuestionBottomBar.important-for-me')"
+            title="$t('routes.recap.RecapQuestionCard.important-for-me')"
           />
         </IconButton>
       </ResponsiveWrapper>
@@ -76,7 +76,7 @@ const toggleClick = () => {
             :icon="starIcon"
             :color="starColor"
             size="medium"
-            title="$t('routes.question.QuestionBottomBar.important-for-me')"
+            title="$t('routes.recap.RecapQuestionCard.important-for-me')"
           />
         </IconButton>
       </ResponsiveWrapper>
