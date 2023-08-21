@@ -8,7 +8,7 @@ import {
 } from '@/components/design-system/icons';
 import { useI18n } from 'vue-i18n';
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 </script>
 
 <StackComponent spacing="extra-small">
@@ -49,7 +49,7 @@ Pri navrhovaní otázok si musíme vedieť predstaviť, že ľudia si vyberú od
 
 </StackComponent>
 
-## 3. OOtázky by mali byť dôležité
+## 3. Otázky by mali byť dôležité
 
 Zohľadňujeme napríklad to, na čo dané zastupiteľstvo/parlament vynakladá najviac verejných prostriedkov.
 

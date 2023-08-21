@@ -45,7 +45,7 @@ const { t } = useI18n();
     <StaticContentLayout>
       <StackComponent spacing="large" class="section">
         <HeadlineText tag="h1" size="large"
-          >{{ $t('questions-methodology.QuestionsMethodologyPageVue.title') }}</HeadlineText
+          >{{ $t('routes.questions-methodology.QuestionsMethodologyPageVue.title') }}</HeadlineText
         >
 
         <BodyText size="medium">
