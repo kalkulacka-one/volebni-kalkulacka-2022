@@ -282,23 +282,28 @@
   },
   "components": {
     "DonateBlock": {
-      "title": "Podpořte tvorbu kalkulaček",
-      "body": "Líbí se vám projekt Volební kalkulačka? Budeme rádi, pokud nás podpoříte a umožníte nám pokračovat v jejich tvorbě."
+      "title": "Podporte tvorbu kalkulačiek",
+      "body": "Páči sa vám projekt Volebná kalkulačka? Budeme radi, ak nás podporíte a umožníte nám pokračovať v ich tvorbe.",
+      "darujme-token": "ump6u9fi5cl6vcqc"
     },
     "FooterMultiWord": {
-      "body-who-to-vote": "Volební kalkulačka je nestranným pomocníkem v rozhodování Koho Volit.",
-      "title-more-about-elections": "Více o volbách",
-      "body-presidential-voting": "Prezidentské volby",
-      "body-comunal-voting": "Komunální volby",
+      "body-who-to-vote": "Volebná kalkulačka je nestranným pomocníkom v rozhodovaní koho voliť.",
+      "title-more-about-elections": "Viac o voľbách",
+      "body-presidential-voting": "Prezidentské voľby",
+      "body-comunal-voting": "Komunálné voľby",
       "body-senate-voting": "Senátní volby",
-      "body-about-voting-calculator": "O volební kalkulačce",
-      "body-methodoogy": "Metodika tvorby otázek",
-      "body-data-protection": "Ochrana dat",
-      "body-support-calculator": "Podpořit kalkulačku",
-      "body-created-by-ngos": "Vytvořeno spoluprací neziskových organizací."
+      "body-about-voting-calculator": "O volebnej kalkulačke",
+      "body-methodoogy": "Metodika tvorby otázok",
+      "body-data-protection": "Ochrana dát",
+      "body-support-calculator": "Podporiť kalkulačku",
+      "body-created-by-ngos": "Vytvorené spoluprácou neziskových organizácií.",
+      "links": "Odkazy"
     },
     "QuestionCandidateFilter": {
-      "title-candidate-filter": "Filtrovat podle kandidujících"
+      "title-candidate-filter": "Filtrovať podľa kandidujúcich"
+    },
+    "QuestionTagFilter": {
+      "select-all": "Vybrať všetko"
     }
   }
 }

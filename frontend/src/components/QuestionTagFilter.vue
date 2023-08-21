@@ -52,6 +52,7 @@ watch(
         :checked="true"
         @click="onSelectAllClicked"
       >
+        {{ $t('components.QuestionTagFilter.select-all') }}
         Vybrat vše
       </pill-group-item-component>
       <pill-group-item-component

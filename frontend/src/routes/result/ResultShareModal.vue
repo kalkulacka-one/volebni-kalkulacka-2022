@@ -171,6 +171,4 @@ const handleCopyClick = () => {
     padding: var(--spacing-extra-small);
   }
 }
-.share-wrapper {
-}
 </style>

@@ -21,7 +21,7 @@ const router = useRouter();
         <div class="data-1">
           <LogoComponent size="small" text />
           <BodyText size="small">{{
-            t('components.FooterMultiWord.body-who-to-vote')
+            $t('components.FooterMultiWord.body-who-to-vote')
           }}</BodyText>
           <a href="https://www.facebook.com/KohoVolit.eu"
             ><img src="/images/fb.svg"
@@ -30,7 +30,7 @@ const router = useRouter();
         <div class="data-2">
           <StackComponent spacing="medium">
             <TitleText size="small" tag="h5">{{
-              t('components.FooterMultiWord.title-more-about-voting')
+              $t('components.FooterMultiWord.title-more-about-elections')
             }}</TitleText>
             <StackComponent spacing="extra-small">
               <router-link
@@ -39,7 +39,7 @@ const router = useRouter();
                   hash: '#prezidentske',
                 }"
                 ><BodyText size="small">{{
-                  t('components.FooterMultiWord.body-presidential-voting')
+                  $t('components.FooterMultiWord.body-presidential-voting')
                 }}</BodyText></router-link
               >
               <router-link
@@ -48,7 +48,7 @@ const router = useRouter();
                   hash: '#komunalni',
                 }"
                 ><BodyText size="small">{{
-                  t('components.FooterMultiWord.body-comunal-voting')
+                  $t('components.FooterMultiWord.body-comunal-voting')
                 }}</BodyText></router-link
               >
               <router-link
@@ -57,7 +57,7 @@ const router = useRouter();
                   hash: '#senatni',
                 }"
                 ><BodyText size="small">{{
-                  t('components.FooterMultiWord.body-senate-voting')
+                  $t('components.FooterMultiWord.body-senate-voting')
                 }}</BodyText></router-link
               >
             </StackComponent>
@@ -65,16 +65,16 @@ const router = useRouter();
         </div>
         <div class="data-3">
           <StackComponent spacing="medium">
-            <TitleText size="small" tag="h5">O projektu</TitleText>
+            <TitleText size="small" tag="h5">{{ $t('components.FooterMultiWord.body-about-voting-calculator') }}</TitleText>
             <StackComponent spacing="extra-small">
               <router-link to="/o-nas"
                 ><BodyText size="small">{{
-                  t('components.FooterMultiWord.body-about-voting-calculator')
+                  $t('components.FooterMultiWord.body-about-voting-calculator')
                 }}</BodyText></router-link
               >
               <router-link to="/metodika-tvorby-otazek"
                 ><BodyText size="small">{{
-                  t('components.FooterMultiWord.body-methodoogy')
+                  $t('components.FooterMultiWord.body-methodoogy')
                 }}</BodyText></router-link
               >
             </StackComponent>
@@ -82,16 +82,16 @@ const router = useRouter();
         </div>
         <div class="data-4">
           <StackComponent spacing="medium">
-            <TitleText size="small" tag="h5">Odkazy</TitleText>
+            <TitleText size="small" tag="h5">{{ $t('components.FooterMultiWord.links') }}</TitleText>
             <StackComponent spacing="extra-small">
               <router-link to="/ochrana-dat"
                 ><BodyText size="small">{{
-                  t('components.FooterMultiWord.body-data-protection')
+                  $t('components.FooterMultiWord.body-data-protection')
                 }}</BodyText></router-link
               >
               <a href="https://www.darujme.cz/darovat/1200653"
                 ><BodyText size="small">{{
-                  t('components.FooterMultiWord.body-support-calculator')
+                  $t('components.FooterMultiWord.body-support-calculator')
                 }}</BodyText></a
               >
             </StackComponent>
@@ -117,7 +117,7 @@ const router = useRouter();
       </div>
       <div class="logo">
         <BodyText size="small">{{
-          t('components.FooterMultiWord.body-created-by-ngos')
+          $t('components.FooterMultiWord.body-created-by-ngos')
         }}</BodyText>
         <a href="https://kohovolit.eu"
           ><img src="/images/logo-kohovolit.svg"
