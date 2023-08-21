@@ -52,7 +52,7 @@ import {
   convertToAnswersRow,
 } from './converters';
 
-import { isEmptyColumn } from './utils';
+import { isEmptyColumn, isEmptyValue } from './utils';
 
 // Function to get the value of an environmental variable or a default value
 function getEnvOrDefault(envVariable: string, defaultValue: string): string {
@@ -567,7 +567,7 @@ function main() {
 
     console.log('Calculators stats: ', calculators.stats());
 
-    // const googleForms = initGoogleForms();
+    const googleForms = initGoogleForms();
 
     for (const calculator of calculators.calculators) {
       console.log(calculator.Pos + ': ' + calculator.key());
@@ -580,23 +580,23 @@ function main() {
           ],
         );
 
+        if (isEmptyValue(calculator.QuestionsFormCandidates)) {
+          const form = await createForm(
+            googleForms,
+            calculator,
+            questions,
+            'candidate',
+          );
+
+          console.log(
+            `Form: https://docs.google.com/forms/d/${form.formId}; Sheet: ${form.linkedSheetId}`,
+          );
+          throw new Error('Just testing');
+        }
+
         console.log(questions);
       }
     }
-
-    /*
-    const form = await googleForms.forms.create({
-      requestBody: {
-        info: {
-          title: 'Title',
-          documentTitle: 'Document Title',
-        },
-      },
-    });
-
-    console.log(form.data.formId);
-    console.log(form.data.linkedSheetId);
-    */
   })();
 }
 
@@ -635,7 +635,7 @@ function constructQuestions(
   calculator: CalculatorRow,
   pool: QuestionsPool,
   questions: QuestionsRow[],
-): QuestionsRow[] {
+): QuestionsPoolRow[] {
   if (questions === undefined) {
     console.error(calculator);
     throw new Error(`No questions for calculator on row: ${calculator.Pos}`);
@@ -678,6 +678,156 @@ function constructQuestions(
     throw new Error(
       `Function not implemented properly - used: ${used.size}; res: ${res.length}; questions: ${questions.length}.`,
     );
+  }
+
+  return res;
+}
+
+// https://developers.google.com/forms/api/reference/rest
+async function createForm(
+  googleForms: forms_v1.Forms,
+  calculator: CalculatorRow,
+  questions: QuestionsPoolRow[],
+  type: 'candidate' | 'expert',
+): Promise<forms_v1.Schema$Form> {
+  const title = `${calculator.ElectionName} - ${calculator.DistrictName} - ${calculator.Round} - ${calculator.Variant} - ${type}`;
+  // https://developers.google.com/forms/api/reference/rest/v1/forms/create
+  // https://developers.google.com/forms/api/reference/rest/v1/forms#resource:-form
+  const formC = await googleForms.forms.create({
+    requestBody: {
+      info: {
+        title: title,
+        // description: `${title} - ${calculator.Description}`,
+      },
+    },
+  });
+
+  console.log(`${title} - ${formC.data.formId}`);
+
+  if (formC.status != 200) {
+    throw new Error(
+      `Calculator: ${calculator.Pos} - ${formC.status}: ${formC.statusText}`,
+    );
+  }
+
+  // https://developers.google.com/forms/api/reference/rest/v1/forms/batchUpdate#http-request
+  const formU = await googleForms.forms.batchUpdate({
+    formId: formC.data.formId,
+    requestBody: {
+      includeFormInResponse: true,
+      requests: createFormQuestions(calculator, questions).map(
+        (item: forms_v1.Schema$Item, index: number) => {
+          return {
+            createItem: {
+              item: item,
+              location: {
+                index: index,
+              },
+            },
+          };
+        },
+      ),
+    },
+  });
+
+  if (formU.status != 200) {
+    throw new Error(
+      `Calculator: ${calculator.Pos} - ${formU.status}: ${formU.statusText}`,
+    );
+  }
+
+  //items: createFormQuestions(calculator, questions),
+
+  return formU.data.form;
+}
+
+function createFormQuestions(
+  calculator: CalculatorRow,
+  questions: QuestionsPoolRow[],
+): forms_v1.Schema$Item[] {
+  const res = Array<forms_v1.Schema$Item>();
+
+  res.push({
+    title: 'E-mail',
+    questionItem: {
+      question: {
+        required: true,
+        textQuestion: {
+          paragraph: false,
+        },
+      },
+    },
+  });
+
+  res.push({
+    title: `${calculator.L10nSecretCode}`,
+    questionItem: {
+      question: {
+        required: true,
+        textQuestion: {
+          paragraph: false,
+        },
+      },
+    },
+  });
+
+  for (let i = 0; i < questions.length; i++) {
+    const row = questions[i];
+    // https://developers.google.com/forms/api/reference/rest/v1/forms#item
+    res.push({
+      title: `${i}. ${row.Question}`,
+      description: row.Description,
+      questionItem: {
+        question: {
+          required: false,
+          choiceQuestion: {
+            type: 'RADIO',
+            options: [
+              {
+                value: calculator.L10nYes,
+              },
+              {
+                value: calculator.L10nNo,
+              },
+            ],
+          },
+        },
+      },
+    });
+
+    res.push({
+      title: `${i}. ${calculator.L10nComment}`,
+      // description: row.Description,
+      questionItem: {
+        question: {
+          required: false,
+          textQuestion: {
+            paragraph: true,
+          },
+        },
+      },
+    });
+
+    res.push({
+      title: `${i}. ${calculator.L10nIsImportant}`,
+      // description: row.Description,
+      questionItem: {
+        question: {
+          required: false,
+          choiceQuestion: {
+            type: 'RADIO',
+            options: [
+              {
+                value: calculator.L10nYes,
+              },
+              {
+                value: calculator.L10nNo,
+              },
+            ],
+          },
+        },
+      },
+    });
   }
 
   return res;
