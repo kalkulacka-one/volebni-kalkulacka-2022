@@ -114,7 +114,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
                 })
               "
             >
-              Již brzy
+              Už čoskoro
               <template #iconAfter>
                 <IconComponent :icon="mdiArrowRight" />
               </template>
@@ -155,7 +155,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
                 })
               "
             >
-              Již brzy
+              Už čoskoro
               <template #iconAfter>
                 <IconComponent :icon="mdiArrowRight" />
               </template>
