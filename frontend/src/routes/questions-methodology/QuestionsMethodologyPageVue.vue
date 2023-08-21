@@ -14,6 +14,10 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
 import MarkdownIt from '@/components/utilities/MarkdownIt.vue';
 
 import QuestionMethodologyText from './QuestionsMethodologyText.md';
+
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 </script>
 
 <template>
@@ -41,7 +45,7 @@ import QuestionMethodologyText from './QuestionsMethodologyText.md';
     <StaticContentLayout>
       <StackComponent spacing="large" class="section">
         <HeadlineText tag="h1" size="large"
-          >Metodika výběru a tvorby otázek</HeadlineText
+          >{{ $t('questions-methodology.QuestionsMethodologyPageVue.title') }}</HeadlineText
         >
 
         <BodyText size="medium">
