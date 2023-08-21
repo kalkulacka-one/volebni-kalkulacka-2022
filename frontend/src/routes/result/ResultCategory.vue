@@ -9,12 +9,17 @@ import ButtonComponent from '../../components/design-system/input/ButtonComponen
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
 import StackComponent from '../../components/design-system/layout/StackComponent.vue';
 
+import { useI18n } from 'vue-i18n';
+
 export interface ResultCategoryProps {
   result: ReturnType<typeof calculateRelativeAgreement>;
   category: TTopics;
   title?: string;
   maxVisibleCandidates: number;
 }
+
+const { t, locale } = useI18n();
+
 const props = defineProps<ResultCategoryProps>();
 const isExpanded = ref(false);
 const handleExpandClick = () => {
@@ -50,7 +55,11 @@ console.debug(visibleCandidates.value);
       class="expand-btn"
       @click="handleExpandClick"
     >
-      {{ isExpanded ? 'Skrýt kandidáty' : 'Zobrazit všechny kandidáty' }}
+      {{
+        isExpanded
+          ? "$t('routes.result.ResultCategory.hide-candidates')"
+          : "$t('routes.result.ResultCategory.show-all-candidates')"
+      }}
       <template #iconAfter>
         <IconComponent
           :class="[
