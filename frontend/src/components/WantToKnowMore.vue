@@ -12,7 +12,9 @@ const { t } = useI18n();
     tag="p"
     size="extra-small"
   >
-    <span class="content-title">{{ $t('components.WantToKnowMore.more-about-topic') }}</span>
+    <span class="content-title">{{
+      $t('components.WantToKnowMore.more-about-topic')
+    }}</span>
   </HeadlineText>
   <BodyText tag="p" size="medium">
     <slot />

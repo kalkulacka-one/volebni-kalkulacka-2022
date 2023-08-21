@@ -65,7 +65,9 @@ const router = useRouter();
         </div>
         <div class="data-3">
           <StackComponent spacing="medium">
-            <TitleText size="small" tag="h5">{{ $t('components.FooterMultiWord.body-about-voting-calculator') }}</TitleText>
+            <TitleText size="small" tag="h5">{{
+              $t('components.FooterMultiWord.body-about-voting-calculator')
+            }}</TitleText>
             <StackComponent spacing="extra-small">
               <router-link to="/o-nas"
                 ><BodyText size="small">{{
@@ -82,7 +84,9 @@ const router = useRouter();
         </div>
         <div class="data-4">
           <StackComponent spacing="medium">
-            <TitleText size="small" tag="h5">{{ $t('components.FooterMultiWord.links') }}</TitleText>
+            <TitleText size="small" tag="h5">{{
+              $t('components.FooterMultiWord.links')
+            }}</TitleText>
             <StackComponent spacing="extra-small">
               <router-link to="/ochrana-dat"
                 ><BodyText size="small">{{

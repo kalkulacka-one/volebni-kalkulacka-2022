@@ -18,10 +18,14 @@ export default {
           a.async = 1; a.src = "https://www.darujme.cz/assets/scripts/widget.js";
           b.parentNode.insertBefore(a, b);
         }(window, document, "script", "Darujme");
-        Darujme(1, "${this.$t('components.DonateBlock.token')}", 'render', "https://www.darujme.cz/widget?token=${this.$t('components.DonateBlock.token')}", "100%");
+        Darujme(1, "${this.$t(
+          'components.DonateBlock.token',
+        )}", 'render', "https://www.darujme.cz/widget?token=${this.$t(
+          'components.DonateBlock.token',
+        )}", "100%");
     `);
-  }
-}
+  },
+};
 </script>
 
 <template>
@@ -32,7 +36,10 @@ export default {
       }}</TitleText>
       <BodyText size="medium">{{ t('components.DonateBlock.body') }}</BodyText>
     </StackComponent>
-    <div class="donation" data-darujme-widget-token="$t('components.DonateBlock.token')">
+    <div
+      class="donation"
+      data-darujme-widget-token="$t('components.DonateBlock.token')"
+    >
       &nbsp;
     </div>
   </div>
