@@ -2,6 +2,32 @@
   "components": {
     "DonateBlock": {
       "body": "Páči sa vám projekt Volebná kalkulačka? Budeme radi, ak nás podporíte a umožníte nám pokračovať v ich tvorbe.",
+      "darujme-token": "ump6u9fi5cl6vcqc",
+      "title": "Podporte tvorbu kalkulačiek"
+    },
+    "FooterMultiWord": {
+      "body-about-voting-calculator": "O volebnej kalkulačke",
+      "body-comunal-voting": "Komunálné voľby",
+      "body-created-by-ngos": "Vytvorené spoluprácou neziskových organizácií.",
+      "body-data-protection": "Ochrana dát",
+      "body-methodoogy": "Metodika tvorby otázok",
+      "body-presidential-voting": "Prezidentské voľby",
+      "body-senate-voting": "Senátní volby",
+      "body-support-calculator": "Podporiť kalkulačku",
+      "body-who-to-vote": "Volebná kalkulačka je nestranným pomocníkom v rozhodovaní koho voliť.",
+      "links": "Odkazy",
+      "title-more-about-elections": "Viac o voľbách"
+    },
+    "QuestionCandidateFilter": {
+      "title-candidate-filter": "Filtrovať podľa kandidujúcich"
+    },
+    "QuestionTagFilter": {
+      "select-all": "Vybrať všetko"
+    }
+  },
+  "components": {
+    "DonateBlock": {
+      "body": "Páči sa vám projekt Volebná kalkulačka? Budeme radi, ak nás podporíte a umožníte nám pokračovať v ich tvorbe.",
       "title": "Podporte tvorbu kalkulačiek"
     },
     "FooterMultiWord": {
@@ -21,9 +47,33 @@
     }
   },
   "routes": {
+    "comparison": {
+      "ComparisonGrid": {
+        "answers": "odpovede",
+        "my": "Moje"
+      },
+      "ComparisonPage": {
+        "back-to-main-page": "Späť na hlavnú stránku",
+        "comparison": "Porovnanie",
+        "my-match": "Moja zhoda",
+        "set-comparison": "Nastaviť porovnanie"
+      }
+    },
+    "data-protection": {
+      "DataProtectionPage": {
+        "data-protection": "Ochrana dát"
+      }
+    },
     "data-protection": {
       "DataProtectionPage": {
         "title": "Ochrana dát"
+      }
+    },
+    "error": {
+      "ErrorPage": {
+        "go-to-main-page": "Prejsť na hlavnú stránku",
+        "this-page-does-not-exist": "Táto stránka neexistuje",
+        "unknown-error": "Neznámá chyba"
       }
     },
     "index": {
@@ -106,126 +156,102 @@
         "google": "Pokračovať cez Google"
       }
     },
-    "comparison": {
-      "ComparisonGrid": {
-        "my": "Moje",
-        "answers": "odpovede"
-      },
-      "ComparisonPage": {
-        "back-to-main-page": "Späť na hlavnú stránku",
-        "my-match": "Moja zhoda",
-        "set-comparison": "Nastaviť porovnanie",
-        "comparison": "Porovnanie"
-      }
-    },
-    "data-protection": {
-      "DataProtectionPage": {
-        "data-protection": "Ochrana dát"
-      }
-    },
-    "error": {
-      "ErrorPage": {
-        "unknown-error": "Neznámá chyba",
-        "this-page-does-not-exist": "Táto stránka neexistuje",
-        "go-to-main-page": "Prejsť na hlavnú stránku"
-      }
-    },
     "profile": {
       "AuthPageVue": {
-        "title-close": "Zavrieť",
-        "registration": "Vytvoriť profil",
-        "opinion ": "Sledujte názorový vývoj vo svojom profile",
+        "create-it": "Vytvorte si ho",
         "create-profile-email": "Vytvoriť profil pomocou e-mailu",
-        "use-email": "Pomocou e-mailu",
-        "notification": "Vaše osobné údaje budú spracovávané za účelom tvorby užívateľského profilu, a to v súlade s",
         "link-title": "Podmienkami ochrany osobných údajov",
-        "question-one": "Už máte profil?",
         "log-in": "Prihláste sa",
+        "notification": "Vaše osobné údaje budú spracovávané za účelom tvorby užívateľského profilu, a to v súlade s",
+        "opinion ": "Sledujte názorový vývoj vo svojom profile",
+        "question-one": "Už máte profil?",
         "question-two": "Ešte nemáte profil?",
-        "create-it": "Vytvorte si ho"
+        "registration": "Vytvoriť profil",
+        "title-close": "Zavrieť",
+        "use-email": "Pomocou e-mailu"
       },
       "EmailAuthPageVue": {
-        "title-close": "Zavrieť",
+        "confirmation": "Zaslať potvrdzovací e-mail",
         "create-profile": "Vytvoriť profil",
         "log-in": "Prihlásiť sa",
         "message": "Zadajte svoju e-mailovú adresu",
         "message-verification-first": "Do e-mailovej schránky Vám zašleme e-mail s&nbsp;overovacím odkazom. Registráciu úspešne dokončíte po kliknutí naň.",
         "message-verification-second": "Do e-mailovej schránky Vám zašleme e-mail s&nbsp;overovacím odkazom.",
-        "confirmation": "Zaslať potvrdzovací e-mail"
+        "title-close": "Zavrieť"
       },
       "EmailFormPageVue": {
-        "registration-title": "Vytvoriť profil",
-        "registration-info": "Do e-mailovej schránky Vám zašleme e-mail s overovacím odkazom. Registráciu úspešne dokončíte po kliknutí naň.",
-        "login-title": "Prihlásiť sa",
-        "login-info": "Do e-mailovej schránky Vám zašleme e-mail s overovacím odkazom.",
-        "confirm-title": "Registrácia čaká na Vaše potvrdenie",
+        "about-spam": "Ak ste e-mail s overovacím odkazom nedostali, skontrolujte prosím zložku spamu alebo nevyžiadanú poštu.",
         "confirm-info": "Potvrďte registráciu na Vašom e-maile",
-        "notification-title": "Prihlásenie čaká na Vaše potvrdenie",
-        "notification-info": "Potvrďte prihlásenie na Vašom e-maile",
+        "confirm-title": "Registrácia čaká na Vaše potvrdenie",
         "error-email": "E-mailová adresa nie je správnom tvare",
         "error-empty-field": "Pole nesmie byť prázdne",
-        "title-back": "Naspäť",
-        "title-close": "Zavrieť",
+        "login-info": "Do e-mailovej schránky Vám zašleme e-mail s overovacím odkazom.",
+        "login-title": "Prihlásiť sa",
         "notification": "Zadajte svoju emailovú adresu",
-        "about-spam": "Ak ste e-mail s overovacím odkazom nedostali, skontrolujte prosím zložku spamu alebo nevyžiadanú poštu.",
-        "send-confirm": "Zaslať potvrdzovací email"
+        "notification-info": "Potvrďte prihlásenie na Vašom e-maile",
+        "notification-title": "Prihlásenie čaká na Vaše potvrdenie",
+        "registration-info": "Do e-mailovej schránky Vám zašleme e-mail s overovacím odkazom. Registráciu úspešne dokončíte po kliknutí naň.",
+        "registration-title": "Vytvoriť profil",
+        "send-confirm": "Zaslať potvrdzovací email",
+        "title-back": "Naspäť",
+        "title-close": "Zavrieť"
       },
       "ProfilePage": {
         "main-title": "Moje kalkulačky",
         "message": "Žiadne ďalšie vyplnené kalkulačky v roku 2023"
       },
       "ProfileSettingsPage": {
-        "title-settings": "Nastavenie profilu",
+        "button-delete": "Odstrániť profil",
+        "button-delete-profile": "Zmazať profil a dáta",
         "button-save": "Uložiť zmeny",
-        "title-data": "Ako nakladáme s dátami?",
+        "button-save-profile": "Ponechať profil a dáta",
+        "confirm-delete-profile": "Naozaj chcete zmazať profil?",
+        "log-out": "Odhlásiť sa",
         "message-part-one": "Prečítajte si o tom na",
         "message-part-two": "Zásady ochrany dát",
-        "button-delete": "Odstrániť profil",
-        "log-out": "Odhlásiť sa",
-        "confirm-delete-profile": "Naozaj chcete zmazať profil?",
         "notification-delete-profile": "Zmazaním profilu prídete permanentne o uložené kalkulačky.",
-        "button-delete-profile": "Zmazať profil a dáta",
-        "button-save-profile": "Ponechať profil a dáta"
+        "title-data": "Ako nakladáme s dátami?",
+        "title-settings": "Nastavenie profilu"
       },
       "SocialMediaConnectCompponent": {
-        "google": "Pokračovať cez Google",
-        "facebook": "Pokračovať cez Facebook"
+        "facebook": "Pokračovať cez Facebook",
+        "google": "Pokračovať cez Google"
       }
     },
     "question": {
       "QuestionBottomBar": {
         "important-for-me": "Pre mňa dôležité",
-        "yes": "Áno",
-        "no": "Nie"
+        "no": "Nie",
+        "yes": "Áno"
       },
       "QuestionPage": {
-        "instructions-short": "Návod",
+        "back-to-main-page": "Späť na hlavnú stránku",
         "instructions-long": "Návod",
-        "previous-question-long": "Predchádzajúca otázka",
-        "previous-question-short": "Predchádzajúca",
-        "skip-question-long": "Preskočiť otázku",
-        "skip-question-short": "Preskočiť",
+        "instructions-short": "Návod",
         "next-question-long": "Ďalšia otázka",
         "next-question-short": "Ďalšia",
+        "previous-question-long": "Predchádzajúca otázka",
+        "previous-question-short": "Predchádzajúca",
         "recapitulation-long": "Rekapitulácia",
         "recapitulation-short": "Rekapitulácia",
-        "back-to-main-page": "Späť na hlavnú stránku"
+        "skip-question-long": "Preskočiť otázku",
+        "skip-question-short": "Preskočiť"
       }
     },
     "recap": {
       "RecapPage": {
         "back-to-main-page": "Späť",
-        "questions": "Otázky",
-        "recapitulation": "Rekapitulácia",
         "display-results": "Zobraziť výsledky",
-        "hint-text": "Tu si môžete prejsť a prípadne upraviť svoje odpovede a ich váhu."
+        "hint-text": "Tu si môžete prejsť a prípadne upraviť svoje odpovede a ich váhu.",
+        "questions": "Otázky",
+        "recapitulation": "Rekapitulácia"
       },
       "RecapQuestionCard": {
+        "display-details": "Zobraziť detaily",
         "important-for-me": "Pre mňa dôležité",
-        "yes": "Áno",
         "no": "Nie",
         "without-answer": "Bez odpovede",
-        "display-details": "Zobraziť detaily"
+        "yes": "Áno"
       }
     },
     "result": {
@@ -242,34 +268,34 @@
       },
       "ResultPage": {
         "back-to-main-page": "Späť na hlavnú stránku",
-        "recapitulation": "Rekapitulácia",
-        "share": "Zdieľať",
-        "my-match": "Moja zhoda",
-        "display-not-advancing-candidates": "Zobraziť nepostupujúce kandidáty",
-        "text-in-time": "Sledujte, ako sa Vaše názory a výsledky (ne)menia v čase.",
-        "text-save-calc": "Uložte si kalkulačku a vyplňte ju aj viackrát, a to pre každej voľby.",
-        "text-at-least-one-answer": "Pre zobrazenie výsledku je nutné odpovedať aspoň na 1 otázku",
-        "you-may": "Môžete sa",
         "back-to-start": "vrátiť na začátok",
-        "text-and-answer": "a odpovedať na minimálne 1 otázku, alebo si",
-        "text-display-answers": "zobraziť porovnanie odpovedí kandidátov",
-        "fill-calc": "Vyplniť kalkulačku",
         "candidates-answers": "Odpovede kandidátov",
         "compare-answers": "Porovnať odpovede",
+        "display-not-advancing-candidates": "Zobraziť nepostupujúce kandidáty",
+        "fill-calc": "Vyplniť kalkulačku",
+        "my-match": "Moja zhoda",
+        "recapitulation": "Rekapitulácia",
+        "share": "Zdieľať",
         "something-went-wrong": "Niečo sa pokazilo",
-        "something-went-wrong-text": "Bohužiaľ momentálne nemožno zdieľať, skúste to prosím neskôr."
+        "something-went-wrong-text": "Bohužiaľ momentálne nemožno zdieľať, skúste to prosím neskôr.",
+        "text-and-answer": "a odpovedať na minimálne 1 otázku, alebo si",
+        "text-at-least-one-answer": "Pre zobrazenie výsledku je nutné odpovedať aspoň na 1 otázku",
+        "text-display-answers": "zobraziť porovnanie odpovedí kandidátov",
+        "text-in-time": "Sledujte, ako sa Vaše názory a výsledky (ne)menia v čase.",
+        "text-save-calc": "Uložte si kalkulačku a vyplňte ju aj viackrát, a to pre každej voľby.",
+        "you-may": "Môžete sa"
       },
       "ResultShareModal": {
         "hashtag1": "voľby",
         "hashtag2": "voľby2023",
         "hashtag3": "volebnákalkulačka",
-        "text-my-match": "Podľa Volebnej kalkulačky mi najväčšia zhoda vyšla takto:",
-        "text-do-it-too": "Pozrite sa na moje výsledky a vyplňte si ju tiež!",
+        "share-facebook": "Zdieľať na Facebooku",
         "share-now": "Zdieľaj rovno...",
         "share-title": "Volebná kalkulačka",
-        "share-facebook": "Zdieľať na Facebooku",
         "share-twitter": "Zdieľať na X / Twitteri",
-        "text-copy": "...alebo si kliknutím skopíruj odkaz"
+        "text-copy": "...alebo si kliknutím skopíruj odkaz",
+        "text-do-it-too": "Pozrite sa na moje výsledky a vyplňte si ju tiež!",
+        "text-my-match": "Podľa Volebnej kalkulačky mi najväčšia zhoda vyšla takto:"
       }
     },
     "share": {
@@ -278,32 +304,6 @@
         "my-match": "Takto to vyšlo mne",
         "text-fill-again": "Pokiaľ si chcete kalkulačku vyplniť tiež, kliknite na \"Vyplniť znovu\" v pravom hornom rohu."
       }
-    }
-  },
-  "components": {
-    "DonateBlock": {
-      "title": "Podporte tvorbu kalkulačiek",
-      "body": "Páči sa vám projekt Volebná kalkulačka? Budeme radi, ak nás podporíte a umožníte nám pokračovať v ich tvorbe.",
-      "darujme-token": "ump6u9fi5cl6vcqc"
-    },
-    "FooterMultiWord": {
-      "body-who-to-vote": "Volebná kalkulačka je nestranným pomocníkom v rozhodovaní koho voliť.",
-      "title-more-about-elections": "Viac o voľbách",
-      "body-presidential-voting": "Prezidentské voľby",
-      "body-comunal-voting": "Komunálné voľby",
-      "body-senate-voting": "Senátní volby",
-      "body-about-voting-calculator": "O volebnej kalkulačke",
-      "body-methodoogy": "Metodika tvorby otázok",
-      "body-data-protection": "Ochrana dát",
-      "body-support-calculator": "Podporiť kalkulačku",
-      "body-created-by-ngos": "Vytvorené spoluprácou neziskových organizácií.",
-      "links": "Odkazy"
-    },
-    "QuestionCandidateFilter": {
-      "title-candidate-filter": "Filtrovať podľa kandidujúcich"
-    },
-    "QuestionTagFilter": {
-      "select-all": "Vybrať všetko"
     }
   }
 }
