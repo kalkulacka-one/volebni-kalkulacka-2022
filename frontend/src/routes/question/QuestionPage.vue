@@ -77,9 +77,15 @@ const currentQuestionNr = computed(
 
 const previousButtonTitle = computed(() => {
   if (currentQuestionNr.value === 0) {
-    return { long: t('routes.question.QuestionPage.instructions-long'), short: t('routes.question.QuestionPage.instructions-short'), };
+    return {
+      long: t('routes.question.QuestionPage.instructions-long'),
+      short: t('routes.question.QuestionPage.instructions-short'),
+    };
   } else {
-    return { long: t('routes.question.QuestionPage.previous-question-long'), short: t('routes.question.QuestionPage.previous-question-short') };
+    return {
+      long: t('routes.question.QuestionPage.previous-question-long'),
+      short: t('routes.question.QuestionPage.previous-question-short'),
+    };
   }
 });
 
@@ -89,12 +95,21 @@ const nextButtonTitle = computed(() => {
       electionStore.answers[currentQuestionNr.value].answer ===
       UserAnswerEnum.skip
     ) {
-      return { long: t('routes.question.QuestionPage.skip-question-long'), short: t('routes.question.QuestionPage.skip-question-short') };
+      return {
+        long: t('routes.question.QuestionPage.skip-question-long'),
+        short: t('routes.question.QuestionPage.skip-question-short'),
+      };
     } else {
-      return { long: t('routes.question.QuestionPage.next-question-long'), short: t('routes.question.QuestionPage.next-question-short') };
+      return {
+        long: t('routes.question.QuestionPage.next-question-long'),
+        short: t('routes.question.QuestionPage.next-question-short'),
+      };
     }
   } else {
-    return { long: t('routes.question.QuestionPage.recapitulation-long'), short: t('routes.question.QuestionPage.recapitulation-short') };
+    return {
+      long: t('routes.question.QuestionPage.recapitulation-long'),
+      short: t('routes.question.QuestionPage.recapitulation-short'),
+    };
   }
 });
 
@@ -187,7 +202,7 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
                 <template #icon>
                   <IconComponent
                     :icon="mdiCloseCircleOutline"
-                    title="Zpět na hlavní stránku"
+                    title="$t('routes.question.QuestionPage.back-to-main-page')"
                   />
                 </template>
               </ButtonComponent>

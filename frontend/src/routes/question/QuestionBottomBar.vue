@@ -57,7 +57,9 @@ const starIcon = computed(() =>
               title="Pro mě důležité"
             />
           </IconButton>
-          <BodyText class="star-text" size="medium">{{ $t('routes.question.QuestionBottomBar.important-for-me') }}</BodyText>
+          <BodyText class="star-text" size="medium">{{
+            $t('routes.question.QuestionBottomBar.important-for-me')
+          }}</BodyText>
         </StackComponent>
       </ResponsiveWrapper>
       <ResponsiveWrapper extra-small small medium>

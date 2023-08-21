@@ -18,6 +18,8 @@ import IconComponent from '../../components/design-system/icons/IconComponent.vu
 
 import AvatarComponent from '@/components/design-system/other/AvatarComponent.vue';
 
+import { useI18n } from 'vue-i18n';
+
 export interface ResultCandidateCardProps {
   order: number;
   canidateId: string;
@@ -25,6 +27,9 @@ export interface ResultCandidateCardProps {
   strong: boolean;
   category: TTopics;
 }
+
+const { t, locale } = useI18n();
+
 const props = defineProps<ResultCandidateCardProps>();
 const store = useElectionStore();
 const candidate = store.calculator?.candidates.find(
@@ -180,7 +185,7 @@ const toggleClick = () => {
         <IconComponent
           :icon="isExpanded ? mdiChevronUp : mdiChevronDown"
           size="medium"
-          title="Zobrazit detaily"
+          title="$t('routes.result.ResultCandidateCard.diplay-details')"
         />
       </IconButton>
     </div>
@@ -191,7 +196,9 @@ const toggleClick = () => {
     >
       <div v-if="candidate?.motto">
         <BodyText class="motto-title" size="small"
-          ><strong>Co o sobě kandidát/ka říká</strong></BodyText
+          ><strong>{{
+            $t('routes.result.ResultCandidateCard.what-candidate-say')
+          }}</strong></BodyText
         >
         <BodyText size="small">{{ candidate?.motto }}</BodyText>
       </div>

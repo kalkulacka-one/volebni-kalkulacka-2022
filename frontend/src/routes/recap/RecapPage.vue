@@ -143,20 +143,30 @@ const isCardHidden = (index: number) => {
           <SecondaryNavigationBar centered-title>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="$t('routes.recap.RecapPage.questions')" />
+                <IconComponent
+                  :icon="mdiArrowLeft"
+                  title="$t('routes.recap.RecapPage.questions')"
+                />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="medium">{{ $t('routes.recap.RecapPage.recapitulation') }}</TitleText>
+            <TitleText tag="h2" size="medium">{{
+              $t('routes.recap.RecapPage.recapitulation')
+            }}</TitleText>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
         <ResponsiveWrapper medium large extra-large huge>
           <SecondaryNavigationBar>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="$t('routes.recap.RecapPage.questions')" />
+                <IconComponent
+                  :icon="mdiArrowLeft"
+                  title="$t('routes.recap.RecapPage.questions')"
+                />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="large">{{ $t('routes.recap.RecapPage.recapitulation') }}</TitleText>
+            <TitleText tag="h2" size="large">{{
+              $t('routes.recap.RecapPage.recapitulation')
+            }}</TitleText>
             <template #after>
               <ButtonComponent
                 class="desktop"

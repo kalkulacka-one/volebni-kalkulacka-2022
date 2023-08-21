@@ -47,6 +47,10 @@ import CheckboxComponent from '../../components/design-system/input/CheckboxComp
 import { inject } from 'vue';
 import { EmbedKey } from '@/components/utilities/embedding/EmbedKey';
 
+import { useI18n } from 'vue-i18n';
+
+const { t, locale } = useI18n();
+
 const currentEmbed = inject(EmbedKey);
 
 const router = useRouter();
@@ -202,7 +206,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                     })
                   "
                 >
-                  Zpět na hlavní stránku
+                  {{ $t('routes.result.ResultPage.back-to-main-page') }}
                   <template #iconAfter>
                     <IconComponent :icon="mdiCloseCircleOutline" />
                   </template>
@@ -221,7 +225,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   <template #icon>
                     <IconComponent
                       :icon="mdiCloseCircleOutline"
-                      title="Zpět na hlavní stránku"
+                      title="$t('routes.result.ResultPage.back-to-main-page')"
                     />
                   </template>
                 </ButtonComponent>
@@ -235,10 +239,15 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           <SecondaryNavigationBar centered-title>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Rekapitulace" />
+                <IconComponent
+                  :icon="mdiArrowLeft"
+                  title="$t('routes.result.ResultPage.recapitulation')"
+                />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="medium">Moje shoda</TitleText>
+            <TitleText tag="h2" size="medium">{{
+              $t('routes.result.ResultPage.my-match')
+            }}</TitleText>
             <template v-if="election.key === 'prezidentske-2023'" #after>
               <ButtonComponent
                 kind="link"
@@ -257,10 +266,15 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           <SecondaryNavigationBar>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Rekapitulace" />
+                <IconComponent
+                  :icon="mdiArrowLeft"
+                  title="$t('routes.result.ResultPage.recapitulation')"
+                />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="large">Moje shoda</TitleText>
+            <TitleText tag="h2" size="large">{{
+              $t('routes.result.ResultPage.my-match')
+            }}</TitleText>
             <template #after>
               <div class="navbar-btn-wrapper">
                 <ButtonComponent
@@ -272,7 +286,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   <template #icon>
                     <IconComponent :icon="mdiShareVariantOutline" />
                   </template>
-                  Sdílet
+                  {{ $t('routes.result.ResultPage.share') }}
                 </ButtonComponent>
                 <ButtonComponent
                   class="desktop"
@@ -280,7 +294,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   color="primary"
                   @click="handleShowComparsionClick"
                 >
-                  Porovnat odpovědi
+                  {{ $t('routes.result.ResultPage.compare-answers') }}
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
@@ -301,7 +315,9 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
             group-name="test"
             @update:check="handleActiveCandidatesClicked"
           >
-            Zobrazit nepostupující kandidáty
+            {{
+              $t('routes.result.ResultPage.display-not-advancing-candidates')
+            }}
           </CheckboxComponent>
           <ResultCategory
             :result="resultsGeneral"
@@ -316,11 +332,10 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
             <StackComponent centered spacing="medium">
               <StackComponent spacing="medium">
                 <TitleText tag="p" size="medium">
-                  Sledujte, jak se Vaše názory a výsledky (ne)mění v čase.
+                  {{ $t('routes.result.ResultPage.text-in-time') }}
                 </TitleText>
                 <BodyText tag="p" size="medium">
-                  Uložte si kalkulačku a vyplňte ji klidně vícekrát, a to pro
-                  každé volby.
+                  {{ $t('routes.result.ResultPage.text-save-calc') }}
                 </BodyText>
               </StackComponent>
               <ButtonComponent
@@ -342,10 +357,10 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           <CardComponent corner="bottom-left">
             <StackComponent spacing="medium">
               <TitleText tag="p" size="medium">
-                Pro zobrazení výsledku je nutné odpovědět alespoň na 1 otázku
+                {{ $t('routes.result.ResultPage.text-at-least-one-answer') }}
               </TitleText>
               <BodyText tag="p" size="medium">
-                Můžete se
+                {{ $t('routes.result.ResultPage.you-may') }}
                 <a
                   :href="
                     router.resolve({
@@ -355,9 +370,9 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                     }).path
                   "
                   @click.prevent="handleStartClick"
-                  >vrátit na začátek</a
+                  >{{ $t('routes.result.ResultPage.back-to-start') }}</a
                 >
-                a odpovědět na minimálně 1 otázku, nebo si
+                {{ $t('routes.result.ResultPage.text-and-answer') }}
                 <a
                   :href="
                     router.resolve({
@@ -368,7 +383,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   "
                   @click.prevent="handleShowComparsionClick"
                 >
-                  zobrazit porovnání odpovědí kandidátů </a
+                  {{ $t('routes.result.ResultPage.text-display-answers') }} </a
                 >.
               </BodyText>
               <StackComponent horizontal spacing="medium">
@@ -377,7 +392,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   color="primary"
                   @click="handleStartClick"
                 >
-                  Vyplnit kalkulačku
+                  {{ $t('routes.result.ResultPage.fill-calc') }}
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
@@ -387,7 +402,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   color="primary"
                   @click="handleShowComparsionClick"
                 >
-                  Odpovědi kandidátů
+                  {{ $t('routes.result.ResultPage.candidates-answers') }}
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
@@ -407,7 +422,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   color="primary"
                   @click="handleShowComparsionClick"
                 >
-                  Porovnat odpovědi
+                  {{ $t('routes.result.ResultPage.compare-answers') }}
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
@@ -424,8 +439,12 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
     ref="shareModal"
     :relative-agreement="resultsGeneral"
   />
-  <ErrorModal v-else ref="shareModal" title="Něco se pokazilo">
-    Bohužel momentálně nelze sdílet, zkuste to prosím později.
+  <ErrorModal
+    v-else
+    ref="shareModal"
+    title="$t('routes.result.ResultPage.something-went-wrong')"
+  >
+    {{ $t('routes.result.ResultPage.something-went-wrong-text') }}
   </ErrorModal>
 </template>
 

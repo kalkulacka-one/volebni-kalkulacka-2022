@@ -146,10 +146,11 @@
         "next-question-long": "Ďalšia otázka",
         "next-question-short": "Ďalšia",
         "recapitulation-long": "Rekapitulácia",
-        "recapitulation-short": "Rekapitulácia"
+        "recapitulation-short": "Rekapitulácia",
+        "back-to-main-page": "Späť na hlavnú stránku"
       }
     },
-    "recap":{
+    "recap": {
       "RecapPage": {
         "back-to-main-page": "Späť",
         "questions": "Otázky",
@@ -164,6 +165,38 @@
         "without-answer": "Bez odpovede",
         "display_details": "Zobraziť detaily"
       }
+    },
+    "result": {
+      "ResultCandidateCard": {
+        "display-details": "Zobraziť detaily",
+        "what-candidate-say": "Čo o sobe kandidát/ka hovorí"
+      },
+      "ResultCardContacts": {
+        "contacts": "Kontakty"
+      },
+      "ResultCategory": {
+        "hide-candidates": "Skryť kandidátov",
+        "show-all-candidates": "Zobraziť všetkých kandidátov"
+      },
+      "ResultPage": {
+        "back-to-main-page": "Späť na hlavnú stránku",
+        "recapitulation": "Rekapitulácia",
+        "share": "Zdieľať",
+        "my-match": "Moja zhoda",
+        "display-not-advancing-candidates": "Zobraziť nepostupujúce kandidáty",
+        "text-in-time": "Sledujte, ako sa Vaše názory a výsledky (ne)menia v čase.",
+        "text-save-calc": "Uložte si kalkulačku a vyplňte ju aj viackrát, a to pre každej voľby.",
+        "text-at-least-one-answer": "Pre zobrazenie výsledku je nutné odpovedať aspoň na 1 otázku",
+        "you-may": "Môžete sa",
+        "back-to-start": "vrátiť na začátok",
+        "text-and-answer": "a odpovedať na minimálne 1 otázku, alebo si",
+        "text-display-answers": "zobraziť porovnanie odpovedí kandidátov",
+        "fill-calc": "Vyplniť kalkulačku",
+        "candidates-answers": "Odpovede kandidátov",
+        "compare-answers": "Porovnať odpovede",
+        "something-went-wrong": "Niečo sa pokazilo",
+        "something-went-wrong-text": "Bohužiaľ momentálne nemožno zdieľať, skúste to prosím neskôr."
+      }
     }
   },
   "components": {
@@ -173,18 +206,18 @@
     },
     "FooterMultiWord": {
       "body-who-to-vote": "Volební kalkulačka je nestranným pomocníkem v rozhodování Koho Volit.",
-      "title-more-about-voting": "Více o volbách",
+      "title-more-about-elections": "Více o volbách",
       "body-presidential-voting": "Prezidentské volby",
       "body-comunal-voting": "Komunální volby",
       "body-senate-voting": "Senátní volby",
       "body-about-voting-calculator": "O volební kalkulačce",
       "body-methodoogy": "Metodika tvorby otázek",
       "body-data-protection": "Ochrana dat",
-      "body-support-calculator":"Podpořit kalkulačku",
-      "body-created-by-ngos":"Vytvořeno spoluprací neziskových organizací."
+      "body-support-calculator": "Podpořit kalkulačku",
+      "body-created-by-ngos": "Vytvořeno spoluprací neziskových organizací."
     },
     "QuestionCandidateFilter": {
-      "title-candidate-filter":"Filtrovat podle kandidujících"
+      "title-candidate-filter": "Filtrovat podle kandidujících"
     }
   }
 }

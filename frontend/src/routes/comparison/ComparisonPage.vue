@@ -92,7 +92,7 @@ const candidateAnswers = electionStore.calculator
                     })
                   "
                 >
-                {{ $t('routes.comparison.ComparisonPage.back-to-main-page') }}
+                  {{ $t('routes.comparison.ComparisonPage.back-to-main-page') }}
                   <template #iconAfter>
                     <IconComponent :icon="mdiCloseCircleOutline" />
                   </template>
@@ -125,7 +125,10 @@ const candidateAnswers = electionStore.calculator
           <SecondaryNavigationBar centered-title>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="$t('routes.comparison.ComparisonPage.my-match')" />
+                <IconComponent
+                  :icon="mdiArrowLeft"
+                  title="$t('routes.comparison.ComparisonPage.my-match')"
+                />
               </IconButton>
             </template>
             <TitleText tag="h2" size="medium">Porovnání</TitleText>
@@ -135,7 +138,10 @@ const candidateAnswers = electionStore.calculator
                 @click="filterMenuIsVisible = !filterMenuIsVisible"
               >
                 <template #icon>
-                  <IconComponent :icon="mdiTune" title="$t('routes.comparison.ComparisonPage.set-comparison')" />
+                  <IconComponent
+                    :icon="mdiTune"
+                    title="$t('routes.comparison.ComparisonPage.set-comparison')"
+                  />
                 </template>
               </ButtonComponent>
             </template>
@@ -155,10 +161,15 @@ const candidateAnswers = electionStore.calculator
           <SecondaryNavigationBar>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="$t('routes.comparison.ComparisonPage.my-match')" />
+                <IconComponent
+                  :icon="mdiArrowLeft"
+                  title="$t('routes.comparison.ComparisonPage.my-match')"
+                />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="large">{{ $t('routes.comparison.ComparisonPage.comparison') }}</TitleText>
+            <TitleText tag="h2" size="large">{{
+              $t('routes.comparison.ComparisonPage.comparison')
+            }}</TitleText>
             <template #after>
               <ButtonComponent
                 kind="link"
