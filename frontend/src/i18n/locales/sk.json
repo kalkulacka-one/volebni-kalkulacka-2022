@@ -1,43 +1,110 @@
 {
-  "routes": {
-    "index": {
-      "IndexPage": {
-        "title": "Volebná kalkulačka 2023",
-        "primary-text": "Prípravujeme pre vás volebnú kalkulačku pre voľby do Národnej rady Slovenskej republiky 2023.",
-        "secondary-text": "Zanechajte nám váš e-mail a dáme vám vedieť, keď kalkulačku spustíme.",
-        "czech-version": {
-          "prefix": "Zatiaľ sa môžete pozrieť na {0}",
-          "link": "českú verziu",
-          "suffix": " volebnej kalkulačky."
-        },
-        "input-label": "E-mail",
-        "subscribe-button-label": "Dajte mi vedieť",
-        "disclaimer": "Odoslaním súhlasíte so zasielaním noviniek o volebnej kalkulačke.",
-        "empty-email-error": "Pole nesmie byť prázdne",
-        "success": "Dáme vám vedieť!",
-        "error": "Niečo sa pokazilo :( Skúste to znova."
-      }
-    }
-  },
   "components": {
     "DonateBlock": {
-      "title": "Podporte tvorbu kalkulačiek",
-      "body": "Páči sa vám projekt Volebná kalkulačka? Budeme radi, ak nás podporíte a umožníte nám pokračovať v ich tvorbe."
+      "body": "Páči sa vám projekt Volebná kalkulačka? Budeme radi, ak nás podporíte a umožníte nám pokračovať v ich tvorbe.",
+      "title": "Podporte tvorbu kalkulačiek"
     },
     "FooterMultiWord": {
-      "body-who-to-vote": "Volebná kalkulačka je nestranným pomocníkom pri rozhodovaní Koho Voliť.",
-      "title-more-about-voting": "Viac o voľbách",
-      "body-presidential-voting": "Prezidentské voľby",
-      "body-comunal-voting": "Komunálne voľby",
-      "body-senate-voting": "Senátne voľby",
       "body-about-voting-calculator": "O volebnej kalkulačke",
-      "body-methodoogy": "Metodika tvorby otázok",
+      "body-comunal-voting": "Komunálne voľby",
+      "body-created-by-ngos": "Vytvorené spoluprácou neziskových organizácií.",
       "body-data-protection": "Ochrana údajov",
+      "body-methodoogy": "Metodika tvorby otázok",
+      "body-presidential-voting": "Prezidentské voľby",
+      "body-senate-voting": "Senátne voľby",
       "body-support-calculator": "Podporiť kalkulačku",
-      "body-created-by-ngos": "Vytvorené spoluprácou neziskových organizácií."
+      "body-who-to-vote": "Volebná kalkulačka je nestranným pomocníkom pri rozhodovaní Koho Voliť.",
+      "title-more-about-voting": "Viac o voľbách"
     },
     "QuestionCandidateFilter": {
       "title-candidate-filter": "Filtrovať podľa kandidujúcich"
+    }
+  },
+  "routes": {
+    "data-protection": {
+      "DataProtectionPage": {
+        "title": "Ochrana dát"
+      }
+    },
+    "index": {
+      "IndexPage": {
+        "czech-version": {
+          "link": "českú verziu",
+          "prefix": "Zatiaľ sa môžete pozrieť na {0}",
+          "suffix": " volebnej kalkulačky."
+        },
+        "disclaimer": "Odoslaním súhlasíte so zasielaním noviniek o volebnej kalkulačke.",
+        "empty-email-error": "Pole nesmie byť prázdne",
+        "error": "Niečo sa pokazilo :( Skúste to znova.",
+        "input-label": "E-mail",
+        "primary-text": "Prípravujeme pre vás volebnú kalkulačku pre voľby do Národnej rady Slovenskej republiky 2023.",
+        "secondary-text": "Zanechajte nám váš e-mail a dáme vám vedieť, keď kalkulačku spustíme.",
+        "subscribe-button-label": "Dajte mi vedieť",
+        "success": "Dáme vám vedieť!",
+        "title": "Volebná kalkulačka 2023"
+      }
+    },
+    "profile": {
+      "AuthPageVue": {
+        "create-it": "Vytvorte si ho",
+        "create-profile-email": "Vytvoriť profil pomocou e-mailu",
+        "link-title": "Podmienkami ochrany osobných údajov",
+        "log-in": "Prihláste sa",
+        "notification": "Vaše osobné údaje budú spracovávané za účelom tvorby užívateľského profilu, a to v súlade s",
+        "opinion ": "Sledujte názorový vývoj vo svojom profile",
+        "question-one": "Už máte profil?",
+        "question-two": "Ešte nemáte profil?",
+        "registration": "Vytvoriť profil",
+        "title-close": "Zavrieť",
+        "use-email": "Pomocou e-mailu"
+      },
+      "EmailAuthPageVue": {
+        "confirmation": "Zaslať potvrdzovací e-mail",
+        "create-profile": "Vytvoriť profil",
+        "log-in": "Prihlásiť sa",
+        "message": "Zadajte svoju e-mailovú adresu",
+        "message-verification-first": "Do e-mailovej schránky Vám zašleme e-mail s&nbsp;overovacím odkazom. Registráciu úspešne dokončíte po kliknutí naň.",
+        "message-verification-second": "Do e-mailovej schránky Vám zašleme e-mail s&nbsp;overovacím odkazom.",
+        "title-close": "Zavrieť"
+      },
+      "EmailFormPageVue": {
+        "about-spam": "Ak ste e-mail s overovacím odkazom nedostali, skontrolujte prosím zložku spamu alebo nevyžiadanú poštu.",
+        "confirm-info": "Potvrďte registráciu na Vašom e-maile",
+        "confirm-title": "Registrácia čaká na Vaše potvrdenie",
+        "error-email": "E-mailová adresa nie je správnom tvare",
+        "error-empty-field": "Pole nesmie byť prázdne",
+        "login-info": "Do e-mailovej schránky Vám zašleme e-mail s overovacím odkazom.",
+        "login-title": "Prihlásiť sa",
+        "notification": "Zadajte svoju emailovú adresu",
+        "notification-info": "Potvrďte prihlásenie na Vašom e-maile",
+        "notification-title": "Prihlásenie čaká na Vaše potvrdenie",
+        "registration-info": "Do e-mailovej schránky Vám zašleme e-mail s overovacím odkazom. Registráciu úspešne dokončíte po kliknutí naň.",
+        "registration-title": "Vytvoriť profil",
+        "send-confirm": "Zaslať potvrdzovací email",
+        "title-back": "Naspäť",
+        "title-close": "Zavrieť"
+      },
+      "ProfilePage": {
+        "main-title": "Moje kalkulačky",
+        "message": "Žiadne ďalšie vyplnené kalkulačky v roku 2023"
+      },
+      "ProfileSettingsPage": {
+        "button-delete": "Odstrániť profil",
+        "button-delete-profile": "Zmazať profil a dáta",
+        "button-save": "Uložiť zmeny",
+        "button-save-profile": "Ponechať profil a dáta",
+        "confirm-delete-profile": "Naozaj chcete zmazať profil?",
+        "log-out": "Odhlásiť sa",
+        "message-part-one": "Prečítajte si o tom na",
+        "message-part-two": "Zásady ochrany dát",
+        "notification-delete-profile": "Zmazaním profilu prídete permanentne o uložené kalkulačky.",
+        "title-data": "Ako nakladáme s dátami?",
+        "title-settings": "Nastavenie profilu"
+      },
+      "SocialMediaConnectCompponent": {
+        "facebook": "Pokračovať cez Facebook",
+        "google": "Pokračovať cez Google"
+      }
     }
   }
 }

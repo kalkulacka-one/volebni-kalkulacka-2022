@@ -10,8 +10,9 @@ import StackComponent from '@/components/design-system/layout/StackComponent.vue
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 import ContainerComponent from '@/components/design-system/containers/ContainerComponent.vue';
 import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
-
 import PrivacyPolicy from './PrivacyPolicy.md';
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
 </script>
 
 <template>
@@ -38,7 +39,9 @@ import PrivacyPolicy from './PrivacyPolicy.md';
     </StickyHeaderLayout>
     <StaticContentLayout>
       <StackComponent spacing="large" class="section">
-        <HeadlineText tag="h1" size="large">Ochrana dat</HeadlineText>
+        <HeadlineText tag="h1" size="large">
+          {{ $t('routes.data-protection.DataProtectionPage.title') }}
+        </HeadlineText>
         <BodyText size="medium">
           <PrivacyPolicy />
         </BodyText>

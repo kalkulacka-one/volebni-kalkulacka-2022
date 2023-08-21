@@ -39,25 +39,28 @@ const emailAddressError = ref();
 const posting = ref();
 const step = ref(0);
 
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
+
 const texts = {
   0: {
     registration: {
-      title: 'Vytvořit profil',
-      info: 'Do e-mailové schránky Vám zašleme e-mail s ověřovacím odkazem. Registraci úspěšně dokončíte po kliknutí na něj.',
+      title: "$t('routes.profile.EmailFormPageVue.registration-title')",
+      info: " $t('routes.profile.EmailFormPageVue.registration-info')",
     },
     login: {
-      title: 'Přihlásit se',
-      info: 'Do e-mailové schránky Vám zašleme e-mail s ověřovacím odkazem.',
+      title: "$t('routes.profile.EmailFormPageVue.login-title')",
+      info: "$t('routes.profile.EmailFormPageVue.login-info')",
     },
   },
   1: {
     registration: {
-      title: 'Registrace čeká na Vaše potvrzení',
-      info: 'Potvrďte registraci na Vašem e-mailu',
+      title: "$t('routes.profile.EmailFormPageVue.confirm-title')",
+      info: "$t('routes.profile.EmailFormPageVue.confirm-info')",
     },
     login: {
-      title: 'Přihlášení čeká na Vaše potvrzení',
-      info: 'Potvrďte přihlášení na Vašem e-mailu',
+      title: "$t('routes.profile.EmailFormPageVue.notification-title')",
+      info: "$t('routes.profile.EmailFormPageVue.notification-info')",
     },
   },
 };
@@ -70,7 +73,7 @@ const validateEmail = (value: string | undefined) => {
   if (value)
     return expression.test(value)
       ? null
-      : 'E-mailová adresa není správném tvaru';
+      : "$t('routes.profile.EmailFormPageVue.error-email')";
 };
 
 const handleClose = () => {
@@ -85,7 +88,8 @@ const handleSubmit = async () => {
   const validate = validateEmail(emailAddress.value);
 
   if (emailAddress.value === '') {
-    emailAddressError.value = 'Pole nesmí být prázdné';
+    emailAddressError.value =
+      "$t('routes.profile.EmailFormPageVue.error-empty-field')";
     return;
   }
   if (validate) {
@@ -124,7 +128,10 @@ const handleSubmit = async () => {
             <SecondaryNavigationBar centered-title transparent>
               <template #before>
                 <IconButton @click="handlePreviousClick">
-                  <IconComponent :icon="mdiArrowLeft" title="Zpátky" />
+                  <IconComponent
+                    :icon="mdiArrowLeft"
+                    title="$t('routes.profile.EmailFormPageVue.title-back')"
+                  />
                 </IconButton>
               </template>
             </SecondaryNavigationBar>
@@ -133,7 +140,10 @@ const handleSubmit = async () => {
             <SecondaryNavigationBar transparent>
               <template #before>
                 <IconButton @click="handlePreviousClick">
-                  <IconComponent :icon="mdiArrowLeft" title="Zpátky" />
+                  <IconComponent
+                    :icon="mdiArrowLeft"
+                    title="$t('routes.profile.EmailFormPageVue.title-back')"
+                  />
                 </IconButton>
               </template>
             </SecondaryNavigationBar>
@@ -143,7 +153,10 @@ const handleSubmit = async () => {
         <NavigationBar transparent :with-logo="false" v-if="step === 1">
           <template #right>
             <IconButton kind="link" @click="handleClose">
-              <IconComponent :icon="mdiCloseCircleOutline" title="Zavřít" />
+              <IconComponent
+                :icon="mdiCloseCircleOutline"
+                title="$t('routes.profile.EmailFormPageVue.title-close')"
+              />
             </IconButton>
           </template>
         </NavigationBar>
@@ -163,7 +176,7 @@ const handleSubmit = async () => {
           </template>
 
           <BodyText strong size="medium" v-if="step === 0">
-            Zadajte svoji emailovou adresu
+            {{ $t('routes.profile.EmailFormPageVue.notification') }}
           </BodyText>
 
           <BodyText size="medium" centered v-if="step === 1">
@@ -176,8 +189,7 @@ const handleSubmit = async () => {
           </BodyText>
 
           <BodyText tag="p" size="medium" centered v-if="step === 1">
-            Pokud jste e-mail s ověřovacím odkazem neobdrželi, zkontrolujte
-            prosím složku spamu nebo nevyžádanou poštu.
+            {{ $t('routes.profile.EmailFormPageVue.about-spam') }}
           </BodyText>
 
           <FormComponent @submit.prevent="handleSubmit" v-if="step === 0">
@@ -199,7 +211,7 @@ const handleSubmit = async () => {
               @click.prevent="handleSubmit"
               :loading="posting"
             >
-              Zaslat potvrdzovací email
+              {{ $t('routes.profile.EmailFormPageVue.send-confirm') }}
               <template #iconAfter>
                 <IconComponent :icon="mdiArrowRight" />
               </template>

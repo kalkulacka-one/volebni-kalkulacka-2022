@@ -19,6 +19,9 @@ import TimelineComponent from '@/components/design-system/containers/TimelineCom
 import TimelineItemComponent from '@/components/design-system/containers/TimelineItemComponent.vue';
 import { useUserStore } from '@/stores/userStore';
 
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
+
 const userStore = useUserStore();
 
 const user = computed(() => userStore.user);
@@ -41,7 +44,7 @@ if (!userStore.user) router.push(appRoutes.login);
       <ResponsiveWrapper extra-small small>
         <StackComponent stretched spacing="medium">
           <HeadlineText tag="h1" size="extra-small">
-            Moje kalkulačky
+            {{ $t('routes.profile.ProfilePage.main-title') }}
           </HeadlineText>
           <ProfileCardComponent
             :name="user?.displayName"
@@ -51,7 +54,9 @@ if (!userStore.user) router.push(appRoutes.login);
       </ResponsiveWrapper>
       <ResponsiveWrapper medium large extra-large huge>
         <StackComponent spacing="large" horizontal space-between>
-          <HeadlineText tag="h1" size="small">Moje kalkulačky</HeadlineText>
+          <HeadlineText tag="h1" size="small">
+            {{ $t('routes.profile.ProfilePage.main-title') }}</HeadlineText
+          >
           <ProfileCardComponent
             :name="user?.displayName"
             :email="user?.email"
@@ -69,7 +74,7 @@ if (!userStore.user) router.push(appRoutes.login);
 
         <TimelineItemComponent last>
           <BodyText size="small">
-            Žádné další vyplněné kalkulačky v roce 2023
+            {{ $t('routes.profile.ProfilePage.message') }}
           </BodyText>
         </TimelineItemComponent>
       </TimelineComponent>
