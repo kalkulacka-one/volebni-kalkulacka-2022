@@ -27,42 +27,6 @@ const router = useRouter();
             ><img src="/images/fb.svg"
           /></a>
         </div>
-        <div class="data-2">
-          <StackComponent spacing="medium">
-            <TitleText size="small" tag="h5">{{
-              $t('components.FooterMultiWord.title-more-about-elections')
-            }}</TitleText>
-            <StackComponent spacing="extra-small">
-              <router-link
-                :to="{
-                  name: 'o-volbach',
-                  hash: '#prezidentske',
-                }"
-                ><BodyText size="small">{{
-                  $t('components.FooterMultiWord.body-presidential-voting')
-                }}</BodyText></router-link
-              >
-              <router-link
-                :to="{
-                  name: 'o-volbach',
-                  hash: '#komunalni',
-                }"
-                ><BodyText size="small">{{
-                  $t('components.FooterMultiWord.body-comunal-voting')
-                }}</BodyText></router-link
-              >
-              <router-link
-                :to="{
-                  name: 'o-volbach',
-                  hash: '#senatni',
-                }"
-                ><BodyText size="small">{{
-                  $t('components.FooterMultiWord.body-senate-voting')
-                }}</BodyText></router-link
-              >
-            </StackComponent>
-          </StackComponent>
-        </div>
         <div class="data-3">
           <StackComponent spacing="medium">
             <TitleText size="small" tag="h5">{{
