@@ -307,7 +307,9 @@ const handlePreviousClick = () => {
             </BodyText>
           </StackComponent>
           <StackComponent v-if="currentStep === 2" spacing="small">
-            <BodyText size="medium">{{ $t('routes.guide.GuidePage.text-answer-button') }}</BodyText>
+            <BodyText size="medium">{{
+              $t('routes.guide.GuidePage.text-answer-button')
+            }}</BodyText>
             <CardComponent
               corner="bottom-right"
               border
@@ -319,14 +321,18 @@ const handlePreviousClick = () => {
                     :icon="vkiLogoInFavour"
                     color="rgb(var(--color-primary-fg))"
                   />
-                  <BodyText size="medium">= {{ $t('routes.guide.GuidePage.agree') }}</BodyText>
+                  <BodyText size="medium"
+                    >= {{ $t('routes.guide.GuidePage.agree') }}</BodyText
+                  >
                 </StackComponent>
                 <StackComponent horizontal spacing="small">
                   <IconComponent
                     :icon="vkiLogoAgainst"
                     color="rgb(var(--color-secondary-fg))"
                   />
-                  <BodyText size="medium">= {{ $t('routes.guide.GuidePage.disagree') }}</BodyText>
+                  <BodyText size="medium"
+                    >= {{ $t('routes.guide.GuidePage.disagree') }}</BodyText
+                  >
                 </StackComponent>
               </StackComponent>
             </CardComponent>
@@ -356,7 +362,9 @@ const handlePreviousClick = () => {
                   :icon="vkiStarFilled"
                   color="rgb(var(--palette-yellow))"
                 />
-                <BodyText size="medium">= {{ $t('routes.guide.GuidePage.important') }}</BodyText>
+                <BodyText size="medium"
+                  >= {{ $t('routes.guide.GuidePage.important') }}</BodyText
+                >
               </StackComponent>
             </CardComponent>
             <BodyText size="medium">
@@ -374,7 +382,9 @@ const handlePreviousClick = () => {
             >
               <StackComponent horizontal spacing="small">
                 <IconComponent :icon="mdiArrowRight" />
-                <BodyText size="medium">= {{ $t('routes.guide.GuidePage.skip') }}</BodyText>
+                <BodyText size="medium"
+                  >= {{ $t('routes.guide.GuidePage.skip') }}</BodyText
+                >
               </StackComponent>
             </CardComponent>
             <BodyText size="medium">
@@ -396,7 +406,8 @@ const handlePreviousClick = () => {
           <ResponsiveWrapper medium large extra-large huge>
             <BottomBar class="bottom-bar" transparent>
               <LabelText class="text">
-                {{ $t('routes.guide.GuidePage.guide') }} {{ currentStep }}&hairsp;/&hairsp;{{ stepsCount }}
+                {{ $t('routes.guide.GuidePage.guide') }}
+                {{ currentStep }}&hairsp;/&hairsp;{{ stepsCount }}
               </LabelText>
               <StepProgress class="progress-indicator" :current="currentStep" />
               <ButtonComponent
@@ -415,7 +426,7 @@ const handlePreviousClick = () => {
                 kind="link"
                 @click="goToQuestions"
               >
-              {{ $t('routes.guide.GuidePage.skip-guide') }}
+                {{ $t('routes.guide.GuidePage.skip-guide') }}
                 <template #iconAfter>
                   <IconComponent :icon="mdiFastForward" />
                 </template>
@@ -425,7 +436,8 @@ const handlePreviousClick = () => {
           <ResponsiveWrapper extra-small small>
             <BottomBar class="bottom-bar">
               <LabelText class="text">
-                {{ $t('routes.guide.GuidePage.guide') }} {{ currentStep }}&hairsp;/&hairsp;{{ stepsCount }}
+                {{ $t('routes.guide.GuidePage.guide') }}
+                {{ currentStep }}&hairsp;/&hairsp;{{ stepsCount }}
               </LabelText>
               <StepProgress class="progress-indicator" :current="currentStep" />
               <ButtonComponent
@@ -444,7 +456,7 @@ const handlePreviousClick = () => {
                 kind="link"
                 @click="goToQuestions"
               >
-              {{ $t('routes.guide.GuidePage.skip-guide') }}
+                {{ $t('routes.guide.GuidePage.skip-guide') }}
                 <template #iconAfter>
                   <IconComponent :icon="mdiFastForward" />
                 </template>
