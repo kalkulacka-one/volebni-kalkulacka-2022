@@ -22,6 +22,8 @@ import {
 import QuestionCard from '@/components/QuestionCard.vue';
 import CardComponent from '../../components/design-system/containers/CardComponent.vue';
 
+import { useI18n } from 'vue-i18n';
+
 export interface Props {
   questions: DeprecatedQuestion[];
   answers: UserAnswer[];
@@ -30,6 +32,8 @@ export interface Props {
   selectedTags?: Set<string>;
   selectedCandidateIds?: Set<string>;
 }
+
+const { t, locale } = useI18n();
 
 const props = defineProps<Props>();
 const isQuestionInTagSet = (question: DeprecatedQuestion) => {
@@ -154,8 +158,8 @@ window.onscroll = calculateStickeHeaderPos;
       >
         <BodyText size="small" :style="{ 'text-align': 'center' }">
           <strong>
-            Moje <br />
-            odpovědi
+            {{ $t('routes.comparison.ComparisonGrid.my') }} <br />
+            {{ $t('routes.comparison.ComparisonGrid.answers') }}
           </strong>
         </BodyText>
       </FilledCircle>

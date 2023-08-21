@@ -9,10 +9,15 @@ import { mdiOpenInNew } from '@mdi/js';
 import { mdiEmail } from '@mdi/js';
 import IconComponent from '../../components/design-system/icons/IconComponent.vue';
 import IconButton from '../../components/design-system/input/IconButton.vue';
+
+import { useI18n } from 'vue-i18n';
+
 export interface ResultCandidateContactsProps {
   contact: DeprecatedContact;
 }
 defineProps<ResultCandidateContactsProps>();
+
+const { t, locale } = useI18n();
 
 const handleSocialBtnClick = (
   type: SocialMediaProps['type'],
@@ -24,7 +29,11 @@ const handleSocialBtnClick = (
 </script>
 <template>
   <div class="wrapper">
-    <BodyText size="small"><strong>Kontakty</strong></BodyText>
+    <BodyText size="small"
+      ><strong>{{
+        $t('routes.result.ResultCardContacts.contacts')
+      }}</strong></BodyText
+    >
     <div class="social-wrapper">
       <IconButton
         v-if="contact.instagram"

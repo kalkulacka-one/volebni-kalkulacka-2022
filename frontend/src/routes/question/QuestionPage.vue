@@ -28,6 +28,10 @@ import BackgroundComponent from '../../components/design-system/style/Background
 import StatusBarComponent from '@/components/design-system/other/StatusBarComponent.vue';
 import { getDistrictCode } from '@/common/utils';
 
+import { useI18n } from 'vue-i18n';
+
+const { t, locale } = useI18n();
+
 const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
@@ -73,9 +77,15 @@ const currentQuestionNr = computed(
 
 const previousButtonTitle = computed(() => {
   if (currentQuestionNr.value === 0) {
-    return { long: 'Návod', short: 'Návod' };
+    return {
+      long: t('routes.question.QuestionPage.instructions-long'),
+      short: t('routes.question.QuestionPage.instructions-short'),
+    };
   } else {
-    return { long: 'Předchozí otázka', short: 'Předchozí' };
+    return {
+      long: t('routes.question.QuestionPage.previous-question-long'),
+      short: t('routes.question.QuestionPage.previous-question-short'),
+    };
   }
 });
 
@@ -85,12 +95,21 @@ const nextButtonTitle = computed(() => {
       electionStore.answers[currentQuestionNr.value].answer ===
       UserAnswerEnum.skip
     ) {
-      return { long: 'Přeskočit otázku', short: 'Přeskočit' };
+      return {
+        long: t('routes.question.QuestionPage.skip-question-long'),
+        short: t('routes.question.QuestionPage.skip-question-short'),
+      };
     } else {
-      return { long: 'Další otázka', short: 'Další' };
+      return {
+        long: t('routes.question.QuestionPage.next-question-long'),
+        short: t('routes.question.QuestionPage.next-question-short'),
+      };
     }
   } else {
-    return { long: 'Rekapitulace', short: 'Rekapitulace' };
+    return {
+      long: t('routes.question.QuestionPage.recapitulation-long'),
+      short: t('routes.question.QuestionPage.recapitulation-short'),
+    };
   }
 });
 
@@ -183,7 +202,7 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
                 <template #icon>
                   <IconComponent
                     :icon="mdiCloseCircleOutline"
-                    title="Zpět na hlavní stránku"
+                    title="$t('routes.question.QuestionPage.back-to-main-page')"
                   />
                 </template>
               </ButtonComponent>
