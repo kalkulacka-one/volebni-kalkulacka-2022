@@ -18,5 +18,26 @@
         "error": "Niečo sa pokazilo :( Skúste to znova."
       }
     }
+  },
+  "components": {
+    "DonateBlock": {
+      "title": "Podporte tvorbu kalkulačiek",
+      "body": "Páči sa vám projekt Volebná kalkulačka? Budeme radi, ak nás podporíte a umožníte nám pokračovať v ich tvorbe."
+    },
+    "FooterMultiWord": {
+      "body-who-to-vote": "Volebná kalkulačka je nestranným pomocníkom pri rozhodovaní Koho Voliť.",
+      "title-more-about-voting": "Viac o voľbách",
+      "body-presidential-voting": "Prezidentské voľby",
+      "body-comunal-voting": "Komunálne voľby",
+      "body-senate-voting": "Senátne voľby",
+      "body-about-voting-calculator": "O volebnej kalkulačke",
+      "body-methodoogy": "Metodika tvorby otázok",
+      "body-data-protection": "Ochrana údajov",
+      "body-support-calculator": "Podporiť kalkulačku",
+      "body-created-by-ngos": "Vytvorené spoluprácou neziskových organizácií."
+    },
+    "QuestionCandidateFilter": {
+      "title-candidate-filter": "Filtrovať podľa kandidujúcich"
+    }
   }
 }

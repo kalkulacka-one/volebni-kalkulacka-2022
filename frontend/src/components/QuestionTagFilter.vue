@@ -42,7 +42,7 @@ watch(
 <template>
   <form>
     <TitleText class="tag-filter-title" tag="h3" size="small">
-     {{ t('components.QuestionFilter.title-filter-by-theme') }}
+      {{ t('components.QuestionFilter.title-filter-by-theme') }}
     </TitleText>
     <pill-group-component>
       <pill-group-item-component

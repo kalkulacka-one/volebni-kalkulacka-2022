@@ -1,6 +1,4 @@
 {
-  "main_title": "Volebni",
-  "title-more-about-voting": "Více o volbách",
   "routes": {
     "index": {
       "IndexPage": {
@@ -35,17 +33,11 @@
       "body-about-voting-calculator": "O volební kalkulačce",
       "body-methodoogy": "Metodika tvorby otázek",
       "body-data-protection": "Ochrana dat",
-      "body-support-calculator":Podpořit kalkulačku",
-      "body-created-by-ngos":Vytvořeno spoluprací neziskových organizací."
+      "body-support-calculator": "Podpořit kalkulačku",
+      "body-created-by-ngos": "Vytvořeno spoluprací neziskových organizací."
     },
     "QuestionCandidateFilter": {
-      "title-candidate-filter":"Filtrovat podle kandidujících"
-    },
-    
- {
-        
-        
-      }
+      "title-candidate-filter": "Filtrovat podle kandidujících"
     }
   }
 }

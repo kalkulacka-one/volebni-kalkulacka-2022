@@ -1,13 +1,14 @@
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
+import { useI18n } from 'vue-i18n';
+import { mdiEmail, mdiPhone } from '@mdi/js';
+
 import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import TitleText from '@/components/design-system/typography/TitleText.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
-import { mdiEmail, mdiPhone } from '@mdi/js';
 import { appRoutes } from '@/main';
-import { useRouter } from 'vue-router';
-import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
 const router = useRouter();
@@ -19,39 +20,45 @@ const router = useRouter();
       <div class="grid-wrapper">
         <div class="data-1">
           <LogoComponent size="small" text />
-          <BodyText size="small"
-            >{{ t('components.FooterMultiWord.body-who-to-vote') }}</BodyText
-          >
+          <BodyText size="small">{{
+            t('components.FooterMultiWord.body-who-to-vote')
+          }}</BodyText>
           <a href="https://www.facebook.com/KohoVolit.eu"
             ><img src="/images/fb.svg"
           /></a>
         </div>
         <div class="data-2">
           <StackComponent spacing="medium">
-            <TitleText size="small" tag="h5">{{ t('components.FooterMultiWord.title-more-about-voting') }}</TitleText>
+            <TitleText size="small" tag="h5">{{
+              t('components.FooterMultiWord.title-more-about-voting')
+            }}</TitleText>
             <StackComponent spacing="extra-small">
               <router-link
                 :to="{
                   name: 'o-volbach',
                   hash: '#prezidentske',
                 }"
-                ><BodyText size="small"
-                  >{{ t('components.FooterMultiWord.body-presidential-voting') }}</BodyText
-                ></router-link
+                ><BodyText size="small">{{
+                  t('components.FooterMultiWord.body-presidential-voting')
+                }}</BodyText></router-link
               >
               <router-link
                 :to="{
                   name: 'o-volbach',
                   hash: '#komunalni',
                 }"
-                ><BodyText size="small">{{ t('components.FooterMultiWord.body-comunal-voting') }}</BodyText></router-link
+                ><BodyText size="small">{{
+                  t('components.FooterMultiWord.body-comunal-voting')
+                }}</BodyText></router-link
               >
               <router-link
                 :to="{
                   name: 'o-volbach',
                   hash: '#senatni',
                 }"
-                ><BodyText size="small">{{ t('components.FooterMultiWord.body-senate-voting') }}</BodyText></router-link
+                ><BodyText size="small">{{
+                  t('components.FooterMultiWord.body-senate-voting')
+                }}</BodyText></router-link
               >
             </StackComponent>
           </StackComponent>
@@ -61,14 +68,14 @@ const router = useRouter();
             <TitleText size="small" tag="h5">O projektu</TitleText>
             <StackComponent spacing="extra-small">
               <router-link to="/o-nas"
-                ><BodyText size="small"
-                  >{{ t('components.FooterMultiWord.body-about-voting-calculator') }}</BodyText
-                ></router-link
+                ><BodyText size="small">{{
+                  t('components.FooterMultiWord.body-about-voting-calculator')
+                }}</BodyText></router-link
               >
               <router-link to="/metodika-tvorby-otazek"
-                ><BodyText size="small"
-                  >{{ t('components.FooterMultiWord.body-methodoogy') }}</BodyText
-                ></router-link
+                ><BodyText size="small">{{
+                  t('components.FooterMultiWord.body-methodoogy')
+                }}</BodyText></router-link
               >
             </StackComponent>
           </StackComponent>
@@ -78,10 +85,14 @@ const router = useRouter();
             <TitleText size="small" tag="h5">Odkazy</TitleText>
             <StackComponent spacing="extra-small">
               <router-link to="/ochrana-dat"
-                ><BodyText size="small">{{ t('components.FooterMultiWord.body-data-protection') }}</BodyText></router-link
+                ><BodyText size="small">{{
+                  t('components.FooterMultiWord.body-data-protection')
+                }}</BodyText></router-link
               >
               <a href="https://www.darujme.cz/darovat/1200653"
-                ><BodyText size="small">{{t('components.FooterMultiWord.body-support-calculator') }}</BodyText></a
+                ><BodyText size="small">{{
+                  t('components.FooterMultiWord.body-support-calculator')
+                }}</BodyText></a
               >
             </StackComponent>
           </StackComponent>
@@ -105,9 +116,9 @@ const router = useRouter();
         </div>
       </div>
       <div class="logo">
-        <BodyText size="small"
-          >{{t('components.FooterMultiWord.body-created-by-ngos') }}</BodyText
-        >
+        <BodyText size="small">{{
+          t('components.FooterMultiWord.body-created-by-ngos')
+        }}</BodyText>
         <a href="https://kohovolit.eu"
           ><img src="/images/logo-kohovolit.svg"
         /></a>
