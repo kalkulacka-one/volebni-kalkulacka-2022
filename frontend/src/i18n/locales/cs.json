@@ -54,23 +54,23 @@
     },
     "guide": {
       "GuidePage": {
-        "next-step": "Další krok",
-        "previous-step": "Předchozí krok",
-        "first-question": "První otázka",
-        "back-to-main-page": "Zpět na hlavní stránku",
-        "text-answer-button": "Odpovídat můžete pomocí tlačítek:",
         "agree": "souhlasím",
+        "back-to-main-page": "Zpět na hlavní stránku",
         "disagree": "nesouhlasím",
-        "text-method": "Když se s&nbsp;politikem nebo stranou v&nbsp;odpovědi shodnete, získá ve výpočtu shody 1&nbsp;bod. V&nbsp;opačném případě 1&nbsp;bod ztratí.",
-        "text-0": "Pokud kandidát nebo strana na otázku neodpověděli, započítá se ziskem 0&nbsp;bodů.",
-        "text-important": "Pokud vám na daném tématu zvlášť záleží, označte ho hvězdičkou:",
-        "important": "pro mě důležité",
         "double-weight": "Odpověď pak bude mít ve výpočtu shody dvojnásobnou váhu.",
-        "skip-question": "Když si nejste si jisti, téma Vás nezajímá nebo z&nbsp;jiného důvodu nechcete odpovídat, můžete otázku přeskočit šipkou napravo.",
-        "skip": "přeskočit",
+        "first-question": "První otázka",
+        "guide": "Návod",
+        "important": "pro mě důležité",
+        "next-step": "Další krok",
         "not-included": "Tato otázka se do výpočtu vaší shody nezapočítá.",
+        "previous-step": "Předchozí krok",
+        "skip": "přeskočit",
         "skip-guide": "Přeskočit návod",
-        "guide": "Návod"
+        "skip-question": "Když si nejste si jisti, téma Vás nezajímá nebo z&nbsp;jiného důvodu nechcete odpovídat, můžete otázku přeskočit šipkou napravo.",
+        "text-0": "Pokud kandidát nebo strana na otázku neodpověděli, započítá se ziskem 0&nbsp;bodů.",
+        "text-answer-button": "Odpovídat můžete pomocí tlačítek:",
+        "text-important": "Pokud vám na daném tématu zvlášť záleží, označte ho hvězdičkou:",
+        "text-method": "Když se s&nbsp;politikem nebo stranou v&nbsp;odpovědi shodnete, získá ve výpočtu shody 1&nbsp;bod. V&nbsp;opačném případě 1&nbsp;bod ztratí."
       }
     },
     "index": {
