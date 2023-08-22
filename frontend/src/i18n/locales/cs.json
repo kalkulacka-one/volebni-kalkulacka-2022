@@ -99,11 +99,6 @@
         "title": "Volební kalkulačka 2023"
       }
     },
-    "questions-methodology": {
-      "QuestionsMethodologyPageVue": {
-        "title": "Metodika výběru a tvorby otázek"
-      }
-    },
     "profile": {
       "AuthPageVue": {
         "create-it": "Vytvořte si ho",
@@ -184,6 +179,11 @@
         "recapitulation-short": "Rekapitulace",
         "skip-question-long": "Přeskočit otázku",
         "skip-question-short": "Přeskočit"
+      }
+    },
+    "questions-methodology": {
+      "QuestionsMethodologyPageVue": {
+        "title": "Metodika výběru a tvorby otázek"
       }
     },
     "recap": {
