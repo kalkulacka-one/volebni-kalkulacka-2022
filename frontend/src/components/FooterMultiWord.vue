@@ -220,7 +220,7 @@ a:after {
   height: 20px;
 }
 
-.memo-logo{
+.memo-logo {
   height: 20px;
   filter: invert(100%);
 }
