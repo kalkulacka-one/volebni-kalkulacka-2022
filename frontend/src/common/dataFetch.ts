@@ -18,6 +18,7 @@ export const deprecatedFetchCalculator = async (
 ) => {
   let deprecatedCalculator = {} as DeprecatedCalculator;
 
+  deprecatedCalculator.id = '4d2d81e3-2602-4259-b230-4237e5110005';
   deprecatedCalculator.district_code = 'inventura-2020-2023';
   deprecatedCalculator.show_district_code = false;
   deprecatedCalculator.name = 'Inventúra hlasovaní 2020–2023';
