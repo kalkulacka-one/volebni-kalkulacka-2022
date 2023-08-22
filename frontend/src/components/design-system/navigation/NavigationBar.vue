@@ -129,14 +129,18 @@ const handleAvatarClick = () => router.push(appRoutes.profile);
           spacing="medium"
         >
           <ResponsiveWrapper medium large extra-large huge>
-            <ButtonComponent kind="link" @click="handleRegisterClick"
-              >{{ $t('components.design-system.navigation.NavigationBar.create-account') }}</ButtonComponent
-            >
+            <ButtonComponent kind="link" @click="handleRegisterClick">{{
+              $t(
+                'components.design-system.navigation.NavigationBar.create-account',
+              )
+            }}</ButtonComponent>
             <ButtonComponent
               kind="outlined"
               size="small"
               @click="handleLoginClick"
-              >{{ $t('components.design-system.navigation.NavigationBar.login') }}</ButtonComponent
+              >{{
+                $t('components.design-system.navigation.NavigationBar.login')
+              }}</ButtonComponent
             >
           </ResponsiveWrapper>
           <ResponsiveWrapper extra-small small>
@@ -145,8 +149,7 @@ const handleAvatarClick = () => router.push(appRoutes.profile);
               color="primary"
               size="small"
               @click="handleLoginClick"
-              ></ButtonComponent
-            >
+            ></ButtonComponent>
           </ResponsiveWrapper>
         </StackComponent>
       </slot>
