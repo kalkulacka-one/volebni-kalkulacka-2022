@@ -96,7 +96,7 @@ const router = useRouter();
         /></a>
         <BodyText size="small"></BodyText>
         <a href="https://memo98.sk/"
-          ><img class="cd-logo" src="/images/logo-memo.png"
+          ><img class="memo-logo" src="/images/logo-memo.png"
         /></a>
       </div>
     </div>
@@ -218,5 +218,10 @@ a:after {
 
 .cd-logo {
   height: 20px;
+}
+
+.memo-logo{
+  height: 20px;
+  filter: invert(100%);
 }
 </style>
