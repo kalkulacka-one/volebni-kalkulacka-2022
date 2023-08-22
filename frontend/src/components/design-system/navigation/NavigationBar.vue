@@ -16,6 +16,8 @@ import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 
 import type { User } from '@/stores/userStore';
 
+import { useI18n } from 'vue-i18n';
+
 export interface Props {
   padding?: 'small' | 'medium' | 'large';
   paddingResponsive?: boolean;
@@ -25,6 +27,8 @@ export interface Props {
   withAccount?: boolean;
   withLogo?: boolean;
 }
+
+const { t, locale } = useI18n();
 
 const props = withDefaults(defineProps<Props>(), {
   padding: 'large',

@@ -1,5 +1,13 @@
 {
   "components": {
+    "design-system": {
+      "navigation": {
+        "NavigationBar": {
+          "create-account": "Vytvoriť profil",
+          "login": "Přihlásit se"
+        }
+      }
+    },
     "DonateBlock": {
       "body": "Páči sa vám projekt Volebná kalkulačka? Budeme radi, ak nás podporíte a umožníte nám pokračovať v ich tvorbe.",
       "title": "Podporte tvorbu kalkulačiek"
