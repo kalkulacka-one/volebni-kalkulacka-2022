@@ -225,7 +225,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   <template #icon>
                     <IconComponent
                       :icon="mdiCloseCircleOutline"
-                      title="$t('routes.result.ResultPage.back-to-main-page')"
+                      :title="$t('routes.result.ResultPage.back-to-main-page')"
                     />
                   </template>
                 </ButtonComponent>
@@ -241,7 +241,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
               <IconButton @click="handlePreviousClick">
                 <IconComponent
                   :icon="mdiArrowLeft"
-                  title="$t('routes.result.ResultPage.recapitulation')"
+                  :title="$t('routes.result.ResultPage.recapitulation')"
                 />
               </IconButton>
             </template>
@@ -268,7 +268,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
               <IconButton @click="handlePreviousClick">
                 <IconComponent
                   :icon="mdiArrowLeft"
-                  title="$t('routes.result.ResultPage.recapitulation')"
+                  :title="$t('routes.result.ResultPage.recapitulation')"
                 />
               </IconButton>
             </template>
@@ -442,7 +442,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
   <ErrorModal
     v-else
     ref="shareModal"
-    title="$t('routes.result.ResultPage.something-went-wrong')"
+    :title="$t('routes.result.ResultPage.something-went-wrong')"
   >
     {{ $t('routes.result.ResultPage.something-went-wrong-text') }}
   </ErrorModal>

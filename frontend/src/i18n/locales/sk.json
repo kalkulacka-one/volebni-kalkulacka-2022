@@ -1,5 +1,13 @@
 {
   "components": {
+    "design-system": {
+      "navigation": {
+        "NavigationBar": {
+          "create-account": "Vytvoriť profil",
+          "login": "Prihlásiť sa"
+        }
+      }
+    },
     "DonateBlock": {
       "body": "Páči sa vám projekt Volebná kalkulačka? Budeme radi, ak nás podporíte a umožníte nám pokračovať v ich tvorbe.",
       "title": "Podporte tvorbu kalkulačiek"
@@ -67,10 +75,10 @@
         "skip": "preskočiť",
         "skip-guide": "Preskočiť návod",
         "skip-question": "Keď si nie ste si istí, téma Vás nezaujíma alebo z iného dôvodu nechcete odpovedať, môžete otázku preskočiť šípkou napravo.",
-        "text-0": "Ak politik alebo strana na otázku neodpovedali/nehlasovali, započíta sa ziskom 0&nbsp;bodov.",
+        "text-0": "Ak politik alebo strana na otázku neodpovedali/nehlasovali, započíta sa ziskom 0 bodov.",
         "text-answer-button": "Odpovedať môžete pomocou tlačidiel:",
         "text-important": "Pokiaľ vám na danej téme zvlášť záleží, označte ju hviezdičkou:",
-        "text-method": "Keď sa &nbsp;politikom alebo stranou v odpovedi zhodnete, získa vo výpočte zhody 1&nbsp;bod. V opačnom prípade 1&nbsp;bod stratí."
+        "text-method": "Keď sa  politikom alebo stranou v odpovedi zhodnete, získa vo výpočte zhody 1 bod. V opačnom prípade 1 bod stratí."
       }
     },
     "index": {
@@ -110,8 +118,8 @@
         "create-profile": "Vytvoriť profil",
         "log-in": "Prihlásiť sa",
         "message": "Zadajte svoju e-mailovú adresu",
-        "message-verification-first": "Do e-mailovej schránky Vám zašleme e-mail s&nbsp;overovacím odkazom. Registráciu úspešne dokončíte po kliknutí naň.",
-        "message-verification-second": "Do e-mailovej schránky Vám zašleme e-mail s&nbsp;overovacím odkazom.",
+        "message-verification-first": "Do e-mailovej schránky Vám zašleme e-mail s overovacím odkazom. Registráciu úspešne dokončíte po kliknutí naň.",
+        "message-verification-second": "Do e-mailovej schránky Vám zašleme e-mail s overovacím odkazom.",
         "title-close": "Zavrieť"
       },
       "EmailFormPageVue": {

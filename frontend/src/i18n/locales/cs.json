@@ -1,5 +1,13 @@
 {
   "components": {
+    "design-system": {
+      "navigation": {
+        "NavigationBar": {
+          "create-account": "Vytvořit účet",
+          "login": "Přihlásit se"
+        }
+      }
+    },
     "DonateBlock": {
       "body": "Líbí se vám projekt Volební kalkulačka? Budeme rádi, pokud nás podpoříte a umožníte nám pokračovat v jejich tvorbě.",
       "title": "Podpořte tvorbu kalkulaček"
@@ -66,11 +74,11 @@
         "previous-step": "Předchozí krok",
         "skip": "přeskočit",
         "skip-guide": "Přeskočit návod",
-        "skip-question": "Když si nejste si jisti, téma Vás nezajímá nebo z&nbsp;jiného důvodu nechcete odpovídat, můžete otázku přeskočit šipkou napravo.",
-        "text-0": "Pokud kandidát nebo strana na otázku neodpověděli, započítá se ziskem 0&nbsp;bodů.",
+        "skip-question": "Když si nejste si jisti, téma Vás nezajímá nebo z jiného důvodu nechcete odpovídat, můžete otázku přeskočit šipkou napravo.",
+        "text-0": "Pokud kandidát nebo strana na otázku neodpověděli, započítá se ziskem 0 bodů.",
         "text-answer-button": "Odpovídat můžete pomocí tlačítek:",
         "text-important": "Pokud vám na daném tématu zvlášť záleží, označte ho hvězdičkou:",
-        "text-method": "Když se s&nbsp;politikem nebo stranou v&nbsp;odpovědi shodnete, získá ve výpočtu shody 1&nbsp;bod. V&nbsp;opačném případě 1&nbsp;bod ztratí."
+        "text-method": "Když se s politikem nebo stranou v odpovědi shodnete, získá ve výpočtu shody 1 bod. V opačném případě 1 bod ztratí."
       }
     },
     "index": {
@@ -110,8 +118,8 @@
         "create-profile": "Vytvořit profil",
         "log-in": "Přihlásit se",
         "message": "Zadajte svoji e-mailovou adresu",
-        "message-verification-first": "Do e-mailové schránky Vám zašleme e-mail s&nbsp;ověřovacím odkazem. Registraci úspěšně dokončíte po kliknutí na něj.",
-        "message-verification-second": "Do e-mailové schránky Vám zašleme e-mail s&nbsp;ověřovacím odkazem.",
+        "message-verification-first": "Do e-mailové schránky Vám zašleme e-mail s ověřovacím odkazem. Registraci úspěšně dokončíte po kliknutí na něj.",
+        "message-verification-second": "Do e-mailové schránky Vám zašleme e-mail s ověřovacím odkazem.",
         "title-close": "Zavřít"
       },
       "EmailFormPageVue": {
@@ -177,7 +185,7 @@
       "RecapPage": {
         "back-to-main-page": "Zpět na hlavní stránku",
         "display-results": "Zobrazit výsledky",
-        "hint-text": "Zde si můžete projít a&nbsp;případně upravit svoje odpovědi a&nbsp;jejich váhu.",
+        "hint-text": "Zde si můžete projít a případně upravit svoje odpovědi a jejich váhu.",
         "questions": "Otázky",
         "recapitulation": "Rekapitulace"
       },

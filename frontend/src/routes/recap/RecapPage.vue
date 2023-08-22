@@ -113,7 +113,7 @@ const isCardHidden = (index: number) => {
                   <template #icon>
                     <IconComponent
                       :icon="mdiCloseCircleOutline"
-                      title="$t('routes.recap.RecapPage.back-to-main-page')"
+                      :title="$t('routes.recap.RecapPage.back-to-main-page')"
                     />
                   </template>
                 </ButtonComponent>
@@ -145,7 +145,7 @@ const isCardHidden = (index: number) => {
               <IconButton @click="handlePreviousClick">
                 <IconComponent
                   :icon="mdiArrowLeft"
-                  title="$t('routes.recap.RecapPage.questions')"
+                  :title="$t('routes.recap.RecapPage.questions')"
                 />
               </IconButton>
             </template>
@@ -160,7 +160,7 @@ const isCardHidden = (index: number) => {
               <IconButton @click="handlePreviousClick">
                 <IconComponent
                   :icon="mdiArrowLeft"
-                  title="$t('routes.recap.RecapPage.questions')"
+                  :title="$t('routes.recap.RecapPage.questions')"
                 />
               </IconButton>
             </template>

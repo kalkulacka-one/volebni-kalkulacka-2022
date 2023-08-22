@@ -79,12 +79,12 @@ const handleCopyClick = () => {
     <template #content>
       <div class="share-wrapper">
         <TitleText color="rgb(var(--color-neutral-fg))" tag="h4" size="small"
-          >S{{ $t('routes.result.ResultShareModal.share-now') }}.</TitleText
+          >{{ $t('routes.result.ResultShareModal.share-now') }}.</TitleText
         >
         <div class="share-wrapper">
           <div class="share-buttons-wrapper">
             <ShareNetwork
-              title="$t('routes.result.ResultShareModal.share-title')"
+              :title="$t('routes.result.ResultShareModal.share-title')"
               network="facebook"
               :description="shareDescription"
               :hashtags="hashTags"

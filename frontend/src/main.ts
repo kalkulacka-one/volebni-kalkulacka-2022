@@ -88,7 +88,7 @@ export const appRoutes = {
     path: '/',
     component: IndexPageVue,
     meta: {
-      title: 'Volební kalkulačka',
+      title: 'Volebná kalkulačka',
     },
   },
   aboutUs: {
@@ -96,7 +96,7 @@ export const appRoutes = {
     path: '/o-nas',
     component: AboutUsPageVue,
     meta: {
-      title: 'O nás',
+      title: 'O kalkulačke',
     },
   },
   aboutElections: {
@@ -113,7 +113,7 @@ export const appRoutes = {
     alias: ['/soukromi', '/podminky'],
     component: DataProtectionPageVue,
     meta: {
-      title: 'Ochrana dat',
+      title: 'Ochrana dát',
     },
   },
   questionsMethodology: {
@@ -121,7 +121,7 @@ export const appRoutes = {
     path: '/metodika-tvorby-otazek',
     component: QuestionsMethodologyPageVue,
     meta: {
-      title: 'Metodika tvorby otázek',
+      title: 'Metodika tvorby otázok',
     },
   },
   error: {
@@ -130,7 +130,7 @@ export const appRoutes = {
     props: true,
     component: ErrorPageVue,
     meta: {
-      title: 'Error - Volební kalkulačka',
+      title: 'Error - Volebná kalkulačka',
     },
   },
   districtSelection: {
@@ -139,7 +139,7 @@ export const appRoutes = {
     alias: '/volby/:election',
     component: DistrictSelectionPageVue,
     meta: {
-      title: 'Volební kalkulačka',
+      title: 'Volebná kalkulačka',
     },
   },
   guide: {
@@ -148,7 +148,7 @@ export const appRoutes = {
     alias: '/volby/:election/:district',
     component: GuidePageVue,
     meta: {
-      title: 'Návod - Volební kalkulačka',
+      title: 'Návod - Volebná kalkulačka',
     },
   },
   question: {
@@ -156,7 +156,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/otazka/:nr?',
     component: QuestionPageVue,
     meta: {
-      title: 'Otázka $$ - Volební kalkulačka',
+      title: 'Otázka $$ - Volebná kalkulačka',
       hasNumber: true,
     },
     beforeEnter: questionGuard,
@@ -166,7 +166,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/rekapitulace',
     component: RecapPageVue,
     meta: {
-      title: 'Rekapitulace - Volební kalkulačka',
+      title: 'Rekapitulace - Volebná kalkulačka',
     },
   },
   result: {
@@ -174,7 +174,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/vysledek',
     component: ResultPageVue,
     meta: {
-      title: 'Výsledky - Volební kalkulačka',
+      title: 'Výsledky - Volebná kalkulačka',
     },
   },
   comparison: {
@@ -182,7 +182,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/srovnani',
     component: ComparisonPageVue,
     meta: {
-      title: 'Porovnaní - Volební kalkulačka',
+      title: 'Porovnaní - Volebná kalkulačka',
     },
   },
   share: {
@@ -190,7 +190,7 @@ export const appRoutes = {
     path: '/share/:uuid',
     component: SharePageVue,
     meta: {
-      title: 'Moje výsledky - Volební kalkulačka',
+      title: 'Moje výsledky - Volebná kalkulačka',
     },
   },
   login: {
@@ -199,7 +199,7 @@ export const appRoutes = {
     component: AuthPageVue,
     props: { type: 'login' },
     meta: {
-      title: 'Přihlášení - Volební kalkulačka',
+      title: 'Přihlášení - Volebná kalkulačka',
     },
   },
   loginForm: {
@@ -208,7 +208,7 @@ export const appRoutes = {
     component: EmailFormPageVue,
     props: { type: 'login' },
     meta: {
-      title: 'Přihlášení - Volební kalkulačka',
+      title: 'Přihlášení - Volebná kalkulačka',
     },
   },
 
@@ -218,7 +218,7 @@ export const appRoutes = {
     component: AuthPageVue,
     props: { type: 'registration' },
     meta: {
-      title: 'Registrace - Volební kalkulačka',
+      title: 'Registrace - Volebná kalkulačka',
     },
   },
   registerForm: {
@@ -227,7 +227,7 @@ export const appRoutes = {
     component: EmailFormPageVue,
     props: { type: 'registration' },
     meta: {
-      title: 'Registrační formulář - Volební kalkulačka',
+      title: 'Registrační formulář - Volebná kalkulačka',
     },
   },
 
@@ -236,7 +236,7 @@ export const appRoutes = {
     path: '/muj-profil',
     component: ProfilePageVue,
     meta: {
-      title: 'Můj profil - Volební kalkulačka',
+      title: 'Můj profil - Volebná kalkulačka',
     },
     beforeEnter: authGuard,
   },
@@ -245,7 +245,7 @@ export const appRoutes = {
     path: '/nastaveni-profilu',
     component: ProfileSettingsPageVue,
     meta: {
-      title: 'Nastavení profilu - Volební kalkulačka',
+      title: 'Nastavení profilu - Volebná kalkulačka',
     },
     beforeEnter: authGuard,
   },

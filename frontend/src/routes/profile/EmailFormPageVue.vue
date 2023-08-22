@@ -130,7 +130,7 @@ const handleSubmit = async () => {
                 <IconButton @click="handlePreviousClick">
                   <IconComponent
                     :icon="mdiArrowLeft"
-                    title="$t('routes.profile.EmailFormPageVue.title-back')"
+                    :title="$t('routes.profile.EmailFormPageVue.title-back')"
                   />
                 </IconButton>
               </template>
@@ -142,7 +142,7 @@ const handleSubmit = async () => {
                 <IconButton @click="handlePreviousClick">
                   <IconComponent
                     :icon="mdiArrowLeft"
-                    title="$t('routes.profile.EmailFormPageVue.title-back')"
+                    :title="$t('routes.profile.EmailFormPageVue.title-back')"
                   />
                 </IconButton>
               </template>
@@ -155,7 +155,7 @@ const handleSubmit = async () => {
             <IconButton kind="link" @click="handleClose">
               <IconComponent
                 :icon="mdiCloseCircleOutline"
-                title="$t('routes.profile.EmailFormPageVue.title-close')"
+                :title="$t('routes.profile.EmailFormPageVue.title-close')"
               />
             </IconButton>
           </template>

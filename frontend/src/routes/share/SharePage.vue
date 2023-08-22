@@ -104,7 +104,7 @@ const breadcrumbs = ref('');
                   <template #icon>
                     <IconComponent
                       :icon="mdiRepeat"
-                      title="$t('routes.share.SharePage.fill-again')"
+                      :title="$t('routes.share.SharePage.fill-again')"
                     />
                   </template>
                 </ButtonComponent>

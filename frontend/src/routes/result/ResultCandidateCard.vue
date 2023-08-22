@@ -185,7 +185,7 @@ const toggleClick = () => {
         <IconComponent
           :icon="isExpanded ? mdiChevronUp : mdiChevronDown"
           size="medium"
-          title="$t('routes.result.ResultCandidateCard.diplay-details')"
+          :title="$t('routes.result.ResultCandidateCard.diplay-details')"
         />
       </IconButton>
     </div>

@@ -16,6 +16,8 @@ import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 
 import type { User } from '@/stores/userStore';
 
+import { useI18n } from 'vue-i18n';
+
 export interface Props {
   padding?: 'small' | 'medium' | 'large';
   paddingResponsive?: boolean;
@@ -25,6 +27,8 @@ export interface Props {
   withAccount?: boolean;
   withLogo?: boolean;
 }
+
+const { t, locale } = useI18n();
 
 const props = withDefaults(defineProps<Props>(), {
   padding: 'large',
@@ -125,14 +129,18 @@ const handleAvatarClick = () => router.push(appRoutes.profile);
           spacing="medium"
         >
           <ResponsiveWrapper medium large extra-large huge>
-            <ButtonComponent kind="link" @click="handleRegisterClick"
-              >Vytvořit účet</ButtonComponent
-            >
+            <ButtonComponent kind="link" @click="handleRegisterClick">{{
+              $t(
+                'components.design-system.navigation.NavigationBar.create-account',
+              )
+            }}</ButtonComponent>
             <ButtonComponent
               kind="outlined"
               size="small"
               @click="handleLoginClick"
-              >Přihlásit se</ButtonComponent
+              >{{
+                $t('components.design-system.navigation.NavigationBar.login')
+              }}</ButtonComponent
             >
           </ResponsiveWrapper>
           <ResponsiveWrapper extra-small small>
@@ -141,8 +149,7 @@ const handleAvatarClick = () => router.push(appRoutes.profile);
               color="primary"
               size="small"
               @click="handleLoginClick"
-              >Přihlásit se</ButtonComponent
-            >
+            ></ButtonComponent>
           </ResponsiveWrapper>
         </StackComponent>
       </slot>
