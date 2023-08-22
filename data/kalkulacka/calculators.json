@@ -44,9 +44,22 @@
       },
       "from": "2023-01-13T14:00:00",
       "to": "2023-01-14T14:00:00"
+    },
+    {
+      "id": "57a09a41-631b-4b40-ac22-b75b8ce14d84",
+      "key": "nrsr-2023",
+      "name": "Parlamentné voľby 2023",
+      "description": "Voľby do Národnej rady Slovenskej republiky 30. septembra 2023."
     }
   ],
   "calculators": [
+    {
+      "election_id":"57a09a41-631b-4b40-ac22-b75b8ce14d84",
+      "district_code": "inventura-2020-2023",
+      "show_district_code": false,
+      "name": "Inventúra hlasovaní 2020–2023",
+      "description": "Volebná kalkulačka na základe skutočných hlasovaní z Národnej rady 2020–2023"
+    },    
     {
       "election_id": "senatni-2022",
       "district_code": "1",
