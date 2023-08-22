@@ -257,7 +257,7 @@ const handlePreviousClick = () => {
                   <template #icon>
                     <IconComponent
                       :icon="mdiCloseCircleOutline"
-                      title="$t('routes.guide.GuidePage.back-to-main-page')"
+                      :title="$t('routes.guide.GuidePage.back-to-main-page')"
                     />
                   </template>
                 </ButtonComponent>

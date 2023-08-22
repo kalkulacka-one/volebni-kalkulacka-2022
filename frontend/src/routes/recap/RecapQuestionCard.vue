@@ -66,7 +66,7 @@ const toggleClick = () => {
             :icon="starIcon"
             :color="starColor"
             size="large"
-            title="$t('routes.recap.RecapQuestionCard.important-for-me')"
+            ::title="$t('routes.recap.RecapQuestionCard.important-for-me')"
           />
         </IconButton>
       </ResponsiveWrapper>
@@ -76,7 +76,7 @@ const toggleClick = () => {
             :icon="starIcon"
             :color="starColor"
             size="medium"
-            title="$t('routes.recap.RecapQuestionCard.important-for-me')"
+            :title="$t('routes.recap.RecapQuestionCard.important-for-me')"
           />
         </IconButton>
       </ResponsiveWrapper>
@@ -243,7 +243,7 @@ const toggleClick = () => {
         <IconComponent
           :icon="isExpanded ? mdiChevronUp : mdiChevronDown"
           size="medium"
-          title="$t('routes.recap.RecapQuestionCard.display-details')"
+          :title="$t('routes.recap.RecapQuestionCard.display-details')"
         />
       </IconButton>
     </div>

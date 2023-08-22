@@ -68,7 +68,7 @@ const starIcon = computed(() =>
             :icon="starIcon"
             :color="starColor"
             size="large"
-            title="$t('routes.question.QuestionBottomBar.important-for-me')"
+            :title="$t('routes.question.QuestionBottomBar.important-for-me')"
             @click="starClick"
           />
         </IconButton>
