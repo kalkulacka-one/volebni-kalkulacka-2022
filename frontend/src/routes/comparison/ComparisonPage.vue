@@ -111,7 +111,9 @@ const candidateAnswers = electionStore.calculator
                   <template #icon>
                     <IconComponent
                       :icon="mdiCloseCircleOutline"
-                      :title="$t('routes.comparison.ComparisonPage.back-to-main-page')"
+                      :title="
+                        $t('routes.comparison.ComparisonPage.back-to-main-page')
+                      "
                     />
                   </template>
                 </ButtonComponent>
@@ -140,7 +142,9 @@ const candidateAnswers = electionStore.calculator
                 <template #icon>
                   <IconComponent
                     :icon="mdiTune"
-                    :title="$t('routes.comparison.ComparisonPage.set-comparison')"
+                    :title="
+                      $t('routes.comparison.ComparisonPage.set-comparison')
+                    "
                   />
                 </template>
               </ButtonComponent>

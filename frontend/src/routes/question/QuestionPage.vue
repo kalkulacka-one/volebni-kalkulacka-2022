@@ -202,7 +202,9 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
                 <template #icon>
                   <IconComponent
                     :icon="mdiCloseCircleOutline"
-                    :title="$t('routes.question.QuestionPage.back-to-main-page')"
+                    :title="
+                      $t('routes.question.QuestionPage.back-to-main-page')
+                    "
                   />
                 </template>
               </ButtonComponent>
