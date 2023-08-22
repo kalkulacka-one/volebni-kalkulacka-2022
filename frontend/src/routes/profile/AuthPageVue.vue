@@ -107,7 +107,9 @@ const { t } = useI18n();
               <template v-if="type === 'registration'"
                 >{{ $t('routes.profile.AuthPageVue.registration') }}
               </template>
-              <template v-else>Přihlásit se</template>
+              <template v-else>{{
+                $t('routes.profile.AuthPageVue.log-in')
+              }}</template>
             </TitleText>
             <BodyText strong size="small" v-if="type === 'registration'">
               {{ $t('routes.profile.AuthPageVue.opinion') }}
