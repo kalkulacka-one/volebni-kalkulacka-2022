@@ -90,9 +90,13 @@ const router = useRouter();
         <a href="https://kohovolit.eu"
           ><img src="/images/logo-kohovolit.svg"
         /></a>
-        <BodyText size="small">a</BodyText>
+        <BodyText size="small"></BodyText>
         <a href="https://cesko.digital"
           ><img class="cd-logo" src="/images/logo-cd.svg"
+        /></a>
+        <BodyText size="small"></BodyText>
+        <a href="https://memo98.sk/"
+          ><img class="cd-logo" src="/images/logo-memo.png"
         /></a>
       </div>
     </div>
