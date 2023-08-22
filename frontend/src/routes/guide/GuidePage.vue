@@ -84,9 +84,9 @@ Vítejte ve Volební kalkulačce pro prezidentské volby 2023.
     : route.params.election === 'prezidentske-2023' &&
       route.params.district === 'pro-kazdeho-2-kolo'
     ? `
-    Vitajte v Invetúre hlasovaní Národnej rady 2020-2023.
+Vitajte v Invetúre hlasovaní Národnej rady 2020-2023.
 
-    Vybrali sme pre vás 30 skutočných hlasovaní, ktoré sa uskutočnili v Národnej rade SR v poslednom volebnom období. Budete o nich hlasovať ako poslanci.Zodpovedanie otázok zaberie zhruba 5 minút. Na konci sa dozviete, ktorí poslanci sa zhodovali s vašimi názormi.
+Vybrali sme pre vás 30 skutočných hlasovaní, ktoré sa uskutočnili v Národnej rade SR v poslednom volebnom období. Budete o nich hlasovať ako poslanci.Zodpovedanie otázok zaberie zhruba 5 minút. Na konci sa dozviete, ktorí poslanci sa zhodovali s vašimi názormi.
     `
     : route.params.election === 'prezidentske-2023' &&
       route.params.district === 'pro-nadsence'
