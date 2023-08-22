@@ -73,7 +73,7 @@ const validateEmail = (value: string | undefined) => {
   if (value)
     return expression.test(value)
       ? null
-      : "$t('routes.profile.EmailFormPageVue.error-email')";
+      : t('routes.profile.EmailFormPageVue.error-email');
 };
 
 const handleClose = () => {
@@ -88,8 +88,9 @@ const handleSubmit = async () => {
   const validate = validateEmail(emailAddress.value);
 
   if (emailAddress.value === '') {
-    emailAddressError.value =
-      "$t('routes.profile.EmailFormPageVue.error-empty-field')";
+    emailAddressError.value = t(
+      'routes.profile.EmailFormPageVue.error-empty-field',
+    );
     return;
   }
   if (validate) {

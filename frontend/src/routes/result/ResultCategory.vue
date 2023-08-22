@@ -57,8 +57,8 @@ console.debug(visibleCandidates.value);
     >
       {{
         isExpanded
-          ? "$t('routes.result.ResultCategory.hide-candidates')"
-          : "$t('routes.result.ResultCategory.show-all-candidates')"
+          ? $t('routes.result.ResultCategory.hide-candidates')
+          : $t('routes.result.ResultCategory.show-all-candidates')
       }}
       <template #iconAfter>
         <IconComponent
