@@ -61,11 +61,18 @@ function getEnvOrDefault(envVariable: string, defaultValue: string): string {
 
 const DEFAULT_CACHE_LIFETIME = 1e10;
 const DEFAULT_CACHE_DIR = path.join(__dirname, '.cache');
+const DEFAULT_CALCULATORS_URL =
+  'https://docs.google.com/spreadsheets/d/1rEtloBTzS_fZyeIX9wYYW32Pg2NeJNYj6oQbyIyTTvw/view#gid=0';
 
 // Function to parse command-line arguments
-function parseCommandLineArgs(): { cacheLifetime: number; cacheDir: string } {
+function parseCommandLineArgs(): {
+  cacheLifetime: number;
+  cacheDir: string;
+  calculatorsUrl: CUrl;
+} {
   const cacheLifetimeArgIndex = process.argv.indexOf('--cache-lifetime');
   const cacheDirArgIndex = process.argv.indexOf('--cache-dir');
+  const calculatorsUrlArgIndex = process.argv.indexOf('--calculators-url');
 
   const cacheLifetime =
     cacheLifetimeArgIndex !== -1
@@ -75,8 +82,12 @@ function parseCommandLineArgs(): { cacheLifetime: number; cacheDir: string } {
     cacheDirArgIndex !== -1
       ? process.argv[cacheDirArgIndex + 1]
       : DEFAULT_CACHE_DIR;
+  const calculatorsUrl =
+    calculatorsUrlArgIndex !== -1
+      ? process.argv[calculatorsUrlArgIndex + 1]
+      : DEFAULT_CALCULATORS_URL;
 
-  return { cacheLifetime, cacheDir };
+  return { cacheLifetime, cacheDir, calculatorsUrl };
 }
 
 async function fetchGoogleSpreadsheet(
@@ -371,12 +382,18 @@ function skipCalculatorRowData(
     isEmptyColumn<CalculatorRowData>(row, 'Questions pool') ||
     isEmptyColumn<CalculatorRowData>(row, 'Questions spreadsheet') ||
     isEmptyColumn<CalculatorRowData>(row, 'Questions sheet') ||
+    isEmptyColumn<CalculatorRowData>(row, 'Questions sheet - candidates') ||
     isEmptyColumn<CalculatorRowData>(row, 'Candidates pool') ||
     isEmptyColumn<CalculatorRowData>(row, 'Candidates spreadsheet') ||
     isEmptyColumn<CalculatorRowData>(row, 'Candidates sheet') ||
     isEmptyColumn<CalculatorRowData>(row, 'Districts pool') ||
     isEmptyColumn<CalculatorRowData>(row, 'Districts spreadsheet') ||
-    isEmptyColumn<CalculatorRowData>(row, 'Districts sheet')
+    isEmptyColumn<CalculatorRowData>(row, 'Districts sheet') ||
+    isEmptyColumn<CalculatorRowData>(row, 'L10n: yes') ||
+    isEmptyColumn<CalculatorRowData>(row, 'L10n: no') ||
+    isEmptyColumn<CalculatorRowData>(row, 'L10n: is important') ||
+    isEmptyColumn<CalculatorRowData>(row, 'L10n: secret code') ||
+    isEmptyColumn<CalculatorRowData>(row, 'L10n: comment')
   );
 }
 
@@ -482,10 +499,11 @@ async function extractCalculators(url: CUrl, jwt: JWT): Promise<Calculators> {
 // Main function
 function main() {
   // Parse command-line arguments
-  const { cacheLifetime, cacheDir } = parseCommandLineArgs();
+  const { cacheLifetime, cacheDir, calculatorsUrl } = parseCommandLineArgs();
 
   console.log('Cache Lifetime:', cacheLifetime);
   console.log('Cache Dir:', cacheDir);
+  console.log('Calculators URL:', calculatorsUrl);
 
   const SCOPES = [
     'https://www.googleapis.com/auth/spreadsheets.readonly',
@@ -499,8 +517,6 @@ function main() {
     scopes: SCOPES,
   });
 
-  const calculatorsUrl =
-    'https://docs.google.com/spreadsheets/d/1rEtloBTzS_fZyeIX9wYYW32Pg2NeJNYj6oQbyIyTTvw/view#gid=0';
   const calculatorsKey = extractKey(calculatorsUrl);
   console.log(
     'Processing calculators from: ',
@@ -576,7 +592,7 @@ function main() {
           calculator,
           calculators.getQuestionPool(calculator.QuestionsPool),
           calculators.getQuestions(calculator.QuestionsSpreadsheet).questions[
-            calculator.QuestionsSheet
+            calculator.QuestionsSheetCandidates
           ],
         );
 
@@ -773,9 +789,10 @@ function createFormQuestions(
 
   for (let i = 0; i < questions.length; i++) {
     const row = questions[i];
+    const prefix = `${i + 1}/${questions.length})`;
     // https://developers.google.com/forms/api/reference/rest/v1/forms#item
     res.push({
-      title: `${i}. ${row.Question}`,
+      title: `${prefix} ${row.Question}`,
       description: row.Description,
       questionItem: {
         question: {
@@ -796,7 +813,7 @@ function createFormQuestions(
     });
 
     res.push({
-      title: `${i}. ${calculator.L10nComment}`,
+      title: `${prefix} ${calculator.L10nComment}`,
       // description: row.Description,
       questionItem: {
         question: {
@@ -809,7 +826,7 @@ function createFormQuestions(
     });
 
     res.push({
-      title: `${i}. ${calculator.L10nIsImportant}`,
+      title: `${prefix}. ${calculator.L10nIsImportant}`,
       // description: row.Description,
       questionItem: {
         question: {

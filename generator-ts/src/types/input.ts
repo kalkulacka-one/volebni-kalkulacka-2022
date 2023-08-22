@@ -30,6 +30,7 @@ export type CalculatorRowData = {
   'Questions pool': CUrl;
   'Questions spreadsheet': CUrl;
   'Questions sheet': CSheetName;
+  'Questions sheet - candidates': CSheetName;
   'Questions form - candidates': CUrl;
   'Questions form - experts': CUrl;
   'L10n: yes': string;
@@ -66,6 +67,7 @@ export class CalculatorRow {
   QuestionsPool: CUrl;
   QuestionsSpreadsheet: CUrl;
   QuestionsSheet: CSheetName;
+  QuestionsSheetCandidates: CSheetName;
   QuestionsFormCandidates: CUrl;
   QuestionsFormExperts: CUrl;
   L10nYes: string;
@@ -105,6 +107,7 @@ export class CalculatorRow {
     this.QuestionsPool = data.QuestionsPool;
     this.QuestionsSpreadsheet = data.QuestionsSpreadsheet;
     this.QuestionsSheet = data.QuestionsSheet;
+    this.QuestionsSheetCandidates = data.QuestionsSheetCandidates;
     this.QuestionsFormCandidates = data.QuestionsFormCandidates;
     this.QuestionsFormExperts = data.QuestionsFormExperts;
 

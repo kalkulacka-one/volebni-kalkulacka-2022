@@ -72,6 +72,7 @@ export function convertToCalculatorRow(
     QuestionsPool: row.get('Questions pool'),
     QuestionsSpreadsheet: row.get('Questions spreadsheet'),
     QuestionsSheet: row.get('Questions sheet'),
+    QuestionsSheetCandidates: row.get('Questions sheet - candidates'),
     QuestionsFormCandidates: row.get('Questions form - candidates'),
     QuestionsFormExperts: row.get('Questions form - experts'),
     L10nYes: row.get('L10n: yes'),

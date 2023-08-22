@@ -5,10 +5,10 @@
     "lint:fix": "npm run lint -- --fix",
     "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore",
     "pretier:fix": "prettier --write .",
-    "generate": "ts-node --esm src/main.ts --name 'John' --age 23",
+    "generate": "ts-node --esm src/main.ts",
     "dev:compile": "tsc --experimentalDecorators --watch src/main.ts",
     "dev:generate-loop": "bash -c \"while [ 1 == 1 ]; do date; npm run dev:generate; sleep 15; done\"",
-    "dev:generate": "node src/main.js --name 'John' --age 23"
+    "dev:generate": "node src/main.js"
   },
   "dependencies": {
     "@googleapis/forms": "^2.0.2",
