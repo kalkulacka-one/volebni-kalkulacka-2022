@@ -171,7 +171,7 @@ export const appRoutes = {
   },
   result: {
     name: 'result',
-    path: '/volby/:election/:district/vysledek',
+    path: '/volby/:election/:district/vysledok',
     component: ResultPageVue,
     meta: {
       title: 'Výsledky - Volebná kalkulačka',

@@ -85,8 +85,9 @@ const mapAnswerToIcon = (answer: string | UserAnswerEnum) => {
       return vkiLogoAgainst;
     case UserAnswerEnum.skip:
     case 'dont_know':
-    case undefined:
       return vkiLogoNeutral;
+    case undefined:
+      return '';
     default:
       // eslint-disable-next-line no-undef
       newrelic?.noticeError(
@@ -107,8 +108,9 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
       return 'secondary';
     case UserAnswerEnum.skip:
     case 'dont_know':
-    case undefined:
       return 'neutral';
+    case undefined:
+      return 'undefined-color';
     default:
       // eslint-disable-next-line no-undef
       newrelic?.noticeError(
@@ -212,13 +214,14 @@ window.onscroll = calculateStickeHeaderPos;
       >
         <FilledCircle
           :background-color="`rgb(var(--color-${mapAnswerToColor(
-            answers.filter((answer) => answer.id === question.id)[0].answer,
+            answers.filter((answer) => answer.id === question.id)[0]?.answer,
           )}-bg-strong))`"
         >
           <IconComponent
             :icon="
               mapAnswerToIcon(
-                answers.filter((answer) => answer.id === question.id)[0].answer,
+                answers.filter((answer) => answer.id === question.id)[0]
+                  ?.answer,
               )
             "
             color="rgb(var(--color-neutral-fg-inverse))"
@@ -241,7 +244,7 @@ window.onscroll = calculateStickeHeaderPos;
                 (answer) =>
                   answer.candidate_id === candidateId &&
                   answer.question_id === question.id,
-              )[0].answer as string,
+              )[0]?.answer as string,
             )}-bg-strong))`"
           >
             <IconComponent
@@ -251,7 +254,7 @@ window.onscroll = calculateStickeHeaderPos;
                     (answer) =>
                       answer.candidate_id === candidateId &&
                       answer.question_id === question.id,
-                  )[0].answer as string,
+                  )[0]?.answer as string,
                 )
               "
               color="rgb(var(--color-neutral-fg-inverse))"
@@ -265,7 +268,7 @@ window.onscroll = calculateStickeHeaderPos;
               (answer) =>
                 answer.candidate_id === candidateId &&
                 answer.question_id === question.id,
-            )[0].comment
+            )[0]?.comment
           "
           class="comment"
           :style="{
@@ -280,7 +283,7 @@ window.onscroll = calculateStickeHeaderPos;
                   (answer) =>
                     answer.candidate_id === candidateId &&
                     answer.question_id === question.id,
-                )[0].comment
+                )[0]?.comment
               }}
             </BodyText>
           </CardComponent>
