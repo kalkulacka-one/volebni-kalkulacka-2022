@@ -324,7 +324,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
             category="general"
             :max-visible-candidates="5"
           />
-          <CardComponent
+          <!-- <CardComponent
             v-if="!user && election.key === 'prezidentske-2023'"
             corner="bottom-left"
             style="max-width: 32rem; justify-self: center"
@@ -350,7 +350,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                 Vytvořit profil
               </ButtonComponent>
             </StackComponent>
-          </CardComponent>
+          </CardComponent> -->
           <DonateBlock />
         </StackComponent>
         <StackComponent v-else class="main" spacing="medium">
