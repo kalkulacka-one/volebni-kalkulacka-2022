@@ -138,9 +138,36 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
           stranami alebo osobami. V takom prípade sa poradie strán alebo osôb v
           zobrazení výslednej zhody určí náhodne.
         </BodyText>
+
+        <TitleText tag="h2" size="large">História kalkulačky</TitleText>
+        <BodyText size="large">
+          Združenie KohoVolit.eu vytvára volebné kalkulačky od roku 2006 takmer
+          pre každé voľby na všetkých úrovniach politickej súťaže (európske,
+          prezidentské, parlamentné, regionálne a komunálne) v Českej republike,
+          na Slovensku a v posledný rokoch aj v Maďarsku.
+        </BodyText>
+        <BodyText size="large">
+          Celkovo pripravila približne 100 aplikácií. KohoVolit.eu je lídrom v
+          oblasti volebných kalkulačiek v oboch krajinách a postupne zaviedol do
+          českého a slovenského jazyka pojem "volebná kalkulačka" ako všeobecné
+          označenie pre tento druh aplikácií.
+        </BodyText>
+        <BodyText size="large">
+          Pojem volebná kalkulačka sa už vžil do politického myslenia občanov,
+          médií i samotných politických subjektov.
+        </BodyText>
+
         <TitleText size="large" tag="h2">
-          Současnou Volební kalkulačku připravili
+          Významná aktualizácia s Česko.Digital (2022)
         </TitleText>
+        <BodyText size="large">
+          Vďaka niekoľkomesačnej spolupráci s komunitou odborných dobrovoľníkov
+          <a href="https://cesko.digital">Česko.Digital</a> a angažovanosti
+          niekoľkých desiatok nadšencov prešla kalkulačka v roku 2022 zásadnými
+          technickými a dizajnovými zmenami. Všetkým zúčastneným patrí obrovská
+          vďaka.
+        </BodyText>
+
         <BodyText size="large">
           <ul>
             <li>
@@ -174,6 +201,12 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
               - obsah a komunikace
             </li>
             <li>
+              <a href="https://www.linkedin.com/in/krystofk/" target="_blank"
+                >Kryštof Korb</a
+              >
+              - Tech Lead
+            </li>
+            <li>
               <a href="https://www.linkedin.com/in/mwenisch/" target="_blank"
                 >Gabriela Chladilová</a
               >
@@ -194,12 +227,6 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
                 >Natália Bebjaková</a
               >
               - UX/UI
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/krystofk/" target="_blank"
-                >Kryštof Korb</a
-              >
-              - Tech Team
             </li>
             <li>
               <a
@@ -274,12 +301,13 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
           </ul>
         </BodyText>
 
+        <TitleText size="large" tag="h2">
+          Spolprácia s Memo 98 a Infovolby.sk
+        </TitleText>
         <BodyText size="large">
-          <img
-            src="https://michalskop-github-io.azureedge.net/documents/volebni-kalkulacka/images/partners/2022/ACF_slogan_1.png"
-            alt="Active Citizens Fund"
-            style="width: 100%"
-          />
+          Obsah volebnej kalkulačky pre parlamentné voľby 2023 sme vytvárali so
+          združením <a href="https://memo98.sk">Memo 98</a> a projektom
+          <a href="https://infovolby.sk">Infovolby.sk</a>.
         </BodyText>
       </StackComponent>
       <DonateBlock />
