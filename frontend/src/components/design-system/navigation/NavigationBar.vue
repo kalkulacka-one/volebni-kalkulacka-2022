@@ -130,13 +130,13 @@ const handleAvatarClick = () => router.push(appRoutes.profile);
         >
           <ResponsiveWrapper medium large extra-large huge>
             <ButtonComponent kind="link" @click="handleRegisterClick"
-              >Vytvořit účet</ButtonComponent
+              >{{ $t('components.design-system.navigation.NavigationBar.create-account') }}</ButtonComponent
             >
             <ButtonComponent
               kind="outlined"
               size="small"
               @click="handleLoginClick"
-              >Přihlásit se</ButtonComponent
+              >{{ $t('components.design-system.navigation.NavigationBar.login') }}</ButtonComponent
             >
           </ResponsiveWrapper>
           <ResponsiveWrapper extra-small small>
@@ -145,7 +145,7 @@ const handleAvatarClick = () => router.push(appRoutes.profile);
               color="primary"
               size="small"
               @click="handleLoginClick"
-              >Přihlásit se</ButtonComponent
+              ></ButtonComponent
             >
           </ResponsiveWrapper>
         </StackComponent>
