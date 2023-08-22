@@ -16,7 +16,7 @@ export const deprecatedFetchCalculator = async (
   electionId: string,
   districtId: string,
 ) => {
-  let deprecatedCalculator = {} as DeprecatedCalculator;
+  const deprecatedCalculator = {} as DeprecatedCalculator;
 
   deprecatedCalculator.id = '4d2d81e3-2602-4259-b230-4237e5110005';
   deprecatedCalculator.district_code = 'inventura-2020-2023';
