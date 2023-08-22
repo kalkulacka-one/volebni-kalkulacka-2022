@@ -288,7 +288,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   </template>
                   {{ $t('routes.result.ResultPage.share') }}
                 </ButtonComponent>
-                <ButtonComponent
+                <!-- <ButtonComponent
                   class="desktop"
                   kind="filled"
                   color="primary"
@@ -298,7 +298,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
-                </ButtonComponent>
+                </ButtonComponent> -->
               </div>
             </template>
           </SecondaryNavigationBar>
@@ -324,7 +324,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
             category="general"
             :max-visible-candidates="5"
           />
-          <CardComponent
+          <!-- <CardComponent
             v-if="!user && election.key === 'prezidentske-2023'"
             corner="bottom-left"
             style="max-width: 32rem; justify-self: center"
@@ -350,7 +350,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                 Vytvořit profil
               </ButtonComponent>
             </StackComponent>
-          </CardComponent>
+          </CardComponent> -->
           <DonateBlock />
         </StackComponent>
         <StackComponent v-else class="main" spacing="medium">
@@ -373,7 +373,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   >{{ $t('routes.result.ResultPage.back-to-start') }}</a
                 >
                 {{ $t('routes.result.ResultPage.text-and-answer') }}
-                <a
+                <!-- <a
                   :href="
                     router.resolve({
                       name: appRoutes.comparison.name,
@@ -384,7 +384,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   @click.prevent="handleShowComparsionClick"
                 >
                   {{ $t('routes.result.ResultPage.text-display-answers') }} </a
-                >.
+                >. -->
               </BodyText>
               <StackComponent horizontal spacing="medium">
                 <ButtonComponent
@@ -397,7 +397,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
                 </ButtonComponent>
-                <ButtonComponent
+                <!-- <ButtonComponent
                   kind="outlined"
                   color="primary"
                   @click="handleShowComparsionClick"
@@ -406,14 +406,14 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
-                </ButtonComponent>
+                </ButtonComponent> -->
               </StackComponent>
             </StackComponent>
           </CardComponent>
           <DonateBlock />
         </StackComponent>
 
-        <template #bottom-bar>
+        <!-- <template #bottom-bar>
           <ResponsiveWrapper extra-small small>
             <BottomBar>
               <div class="bottom-bar-grid">
@@ -430,7 +430,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
               </div>
             </BottomBar>
           </ResponsiveWrapper>
-        </template>
+        </template> -->
       </BottomBarWrapper>
     </StickyHeaderLayout>
   </BackgroundComponent>
