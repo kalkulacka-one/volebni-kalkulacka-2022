@@ -65,8 +65,8 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
               name: appRoutes.guide.name,
               params: {
                 ...route.params,
-                election: 'prezidentske-2023',
-                district: 'pro-kazdeho-2-kolo',
+                election: 'nrsr-2023',
+                district: 'inventura-2020-2023',
               },
               query: { ...route.query },
             })
