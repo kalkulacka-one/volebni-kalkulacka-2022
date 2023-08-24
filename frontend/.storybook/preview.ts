@@ -26,6 +26,7 @@ export const globalTypes = {
         { value: 'blesk', title: 'Blesk' },
         { value: 'idnes', title: 'iDNES.cz' },
         { value: 'infovolby', title: 'Infovoľby.sk' },
+        { value: 'aktuality', title: 'Aktuality.sk' },
       ],
     },
   },

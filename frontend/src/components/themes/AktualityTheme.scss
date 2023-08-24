@@ -1,0 +1,25 @@
+@import '@/components/themes/DefaultTheme.scss';
+
+*:deep() {
+  // Override any of the default theme variables here
+
+  // Color palette
+  // -------------
+  // Primary colors
+  --palette-primary-10: 17, 18, 20;
+  --palette-primary-30: 35, 36, 39;
+  --palette-primary-50: 72, 76, 80;
+  --palette-primary-70: 156, 164, 173;
+  --palette-primary-90: 240, 242, 245;
+
+  // Secondary colors
+  --palette-secondary-10: 140, 26, 27;
+  --palette-secondary-20: 149, 27, 29;
+  --palette-secondary-30: 157, 28, 30;
+  --palette-secondary-40: 166, 29, 31;
+  --palette-secondary-50: 207, 47, 50; /* #cf2f32 */
+  --palette-secondary-60: 216, 57, 59;
+  --palette-secondary-70: 224, 68, 67;
+  --palette-secondary-80: 233, 78, 76;
+  --palette-secondary-90: 241, 89, 84;
+}
