@@ -1,25 +1,31 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+import { useI18n } from 'vue-i18n';
 
 import { appRoutes } from '@/main';
 
-import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
-import CardComponent from '@/components/design-system/containers/CardComponent.vue';
-import StackComponent from '../../components/design-system/layout/StackComponent.vue';
+import { mdiArrowDown, mdiArrowRight, mdiEmailOutline } from '@mdi/js';
+
+import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
+import BlobComponent from '@/components/design-system/style/BlobComponent.vue';
 import BodyText from '../../components/design-system/typography/BodyText.vue';
 import ButtonComponent from '../../components/design-system/input/ButtonComponent.vue';
-import TitleText from '@/components/design-system/typography/TitleText.vue';
+import CardComponent from '@/components/design-system/containers/CardComponent.vue';
+import DonateBlock from '@/components/DonateBlock.vue';
+import FooterMultiWord from '@/components/FooterMultiWord.vue';
+import FormComponent from '@/components/design-system/input/FormComponent.vue';
 import HeadlineText from '@/components/design-system/typography/HeadlineText.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
-import { mdiArrowDown, mdiArrowRight } from '@mdi/js';
 import InfoBubble from '@/components/InfoBubble.vue';
-import FooterMultiWord from '@/components/FooterMultiWord.vue';
-import DonateBlock from '@/components/DonateBlock.vue';
-import StaticContentLayout from '@/components/layouts/StaticContentLayout.vue';
 import MasonryGrid from '@/components/design-system/layout/MasonryGrid.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
-import BlobComponent from '@/components/design-system/style/BlobComponent.vue';
+import StackComponent from '../../components/design-system/layout/StackComponent.vue';
+import StaticContentLayout from '@/components/layouts/StaticContentLayout.vue';
+import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
+import TextInputComponent from '@/components/design-system/input/TextInputComponent.vue';
+import TitleText from '@/components/design-system/typography/TitleText.vue';
+
 import { useUserStore } from '@/stores/userStore';
 
 const router = useRouter();
@@ -29,6 +35,44 @@ const userStore = useUserStore();
 const user = computed(() => userStore.user);
 const info = ref<HTMLElement | null>(null);
 const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
+
+const { t, locale } = useI18n();
+
+const email = ref('');
+const emailError = ref();
+const posting = ref();
+const success = ref();
+const message = ref();
+
+const handleSubmit = async () => {
+  console.log('handleSubmit');
+  if (email.value === '') {
+    emailError.value = t('routes.index.IndexPage.empty-email-error');
+    return;
+  } else {
+    emailError.value = undefined;
+  }
+
+  posting.value = true;
+
+  const response = await fetch('/api/subscriptions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ email: email.value }),
+  });
+
+  if (response.ok) {
+    posting.value = false;
+    success.value = true;
+    message.value = t('routes.index.IndexPage.success');
+  } else {
+    posting.value = false;
+    success.value = false;
+    message.value = t('routes.index.IndexPage.error');
+  }
+};
 </script>
 
 <template>
@@ -53,8 +97,8 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
           <strong>Inventúra hlasovaní</strong>
         </BodyText>
         <BodyText size="small">
-          Volebná kalkulačka na základe skutočných hlasovaní z Národnej rady
-          2020–2023
+          Volebná kalkulačka na základe skutočných hlasovaní poslancov a
+          poslankýň Národnej rady SR v 8. volebnom období 2020–2023
         </BodyText>
         <ButtonComponent
           kind="filled"
@@ -72,7 +116,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
             })
           "
         >
-          Spústiť inventúru hlasovaní
+          Spustiť inventúru hlasovaní
 
           <template #iconAfter>
             <IconComponent :icon="mdiArrowRight" />
@@ -164,7 +208,49 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
         </CardComponent>
       </div>
     </div>
-
+    <section class="subscribe">
+      <StackComponent spacing="large" centered>
+        <BodyText size="medium" centered>{{
+          $t('routes.index.IndexPage.secondary-text')
+        }}</BodyText>
+        <StackComponent spacing="small" centered>
+          <BodyText v-if="success" size="small">
+            {{ message }}
+          </BodyText>
+          <form v-if="!success">
+            <StackComponent
+              horizontal
+              spacing="small"
+              stretched
+              wrap
+              style="justify-content: center"
+            >
+              <TextInputComponent
+                v-model="email"
+                required
+                type="email"
+                :placeholder="t('routes.index.IndexPage.input-label')"
+                :value="email"
+                :icon="mdiEmailOutline"
+                :disabled="posting"
+                :error="emailError"
+              />
+              <ButtonComponent
+                kind="filled"
+                color="primary"
+                :loading="posting"
+                @click.prevent="handleSubmit"
+              >
+                {{ $t('routes.index.IndexPage.subscribe-button-label') }}
+              </ButtonComponent>
+            </StackComponent>
+          </form>
+          <BodyText v-if="!success" tag="p" size="small">{{
+            $t('routes.index.IndexPage.disclaimer')
+          }}</BodyText>
+        </StackComponent>
+      </StackComponent>
+    </section>
     <StaticContentLayout>
       <StackComponent class="section" spacing="small" centered>
         <TitleText size="large" tag="h2">Ako vzniká kalkulačka?</TitleText>
@@ -377,5 +463,13 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
       justify-content: end;
     }
   }
+}
+
+.subscribe {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  display: grid;
+  align-content: center;
+  justify-content: center;
 }
 </style>
