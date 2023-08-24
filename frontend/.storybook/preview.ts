@@ -25,6 +25,7 @@ export const globalTypes = {
         { value: 'e15', title: 'E15' },
         { value: 'blesk', title: 'Blesk' },
         { value: 'idnes', title: 'iDNES.cz' },
+        { value: 'infovolby', title: 'Infovoľby.sk' },
       ],
     },
   },
