@@ -28,6 +28,7 @@ export const globalTypes = {
         { value: 'infovolby', title: 'Infovoľby.sk' },
         { value: 'aktuality', title: 'Aktuality.sk' },
         { value: 'sme', title: 'SME' },
+        { value: 'hnonline', title: 'HN online' },
       ],
     },
   },
