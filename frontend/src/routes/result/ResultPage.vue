@@ -319,6 +319,14 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
               $t('routes.result.ResultPage.display-not-advancing-candidates')
             }}
           </CheckboxComponent>
+          <BodyText size="medium">
+            Kompletní přehled všech kandidátů a jejich odpovědí najdete
+            <a
+              target="_blank"
+              href="https://docs.google.com/spreadsheets/d/1UzaiDq-NRdgoPSiSv3uxDqk0wpGC7wlJUdGsTAQnLus"
+              >v tabulce</a
+            >.
+          </BodyText>
           <ResultCategory
             :result="resultsGeneral"
             category="general"
