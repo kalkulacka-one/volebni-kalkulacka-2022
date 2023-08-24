@@ -23,7 +23,7 @@ export const deprecatedFetchCalculator = async (
   deprecatedCalculator.show_district_code = false;
   deprecatedCalculator.name = 'Inventúra hlasovaní 2020–2023';
   deprecatedCalculator.description =
-    'Volebná kalkulačka na základe skutočných hlasovaní z Národnej rady 2020–2023';
+    'olebná kalkulačka na základe skutočných hlasovaní poslancov Národnej rady Slovenskej republiky v 8. volebnom období 2020-2023';
   deprecatedCalculator.election = {
     id: '57a09a41-631b-4b40-ac22-b75b8ce14d84',
     key: 'nrsr-2023',

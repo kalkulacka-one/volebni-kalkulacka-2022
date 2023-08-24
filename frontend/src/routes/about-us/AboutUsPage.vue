@@ -54,21 +54,21 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
         </BodyText>
 
         <TitleText size="large" tag="h2">
-          KKto a ako vytvára volebnú kalkulačku
+          Kto a ako vytvára volebnú kalkulačku
         </TitleText>
         <BodyText size="large">
           Českú a slovenskú volebnú kalkulačku vyvíja a prevádzkuje spoločnosť
-          <a href="https://kohovolit.eu/">KohoVolit.eu</a> od roku 2006. Celkovo
-          sme vytvorili viac ako 100 volebných kalkulačiek pre všetky typy
-          volieb (európske, prezidentské, parlamentné, regionálne a komunálne).
-          Pravidelne pomáhame vytvárať kalkulačky aj v Maďarsku a ďalších
-          krajinách. Doteraz najúspešnejšiu kalkulačku využili viac ako 2
-          milióny voličov pred prezidentskými voľbami v Českej republike v roku
-          2023.
+          <a href="https://kohovolit.eu/" target="_blank">KohoVolit.eu</a> od
+          roku 2006. Celkovo sme vytvorili viac ako 100 volebných kalkulačiek
+          pre všetky typy volieb (európske, prezidentské, parlamentné,
+          regionálne a komunálne). Pravidelne pomáhame vytvárať kalkulačky aj v
+          Maďarsku a ďalších krajinách. Doteraz najúspešnejšiu kalkulačku
+          využili viac ako 2 milióny voličov pred prezidentskými voľbami v
+          Českej republike v roku 2023.
         </BodyText>
         <BodyText size="large">
-          <a href="https://kohovolit.eu/">KohoVolit.eu</a> vytvára dva typy
-          kalkulačiek:
+          <a href="https://kohovolit.eu/" target="_blank">KohoVolit.eu</a>
+          vytvára dva typy kalkulačiek:
         </BodyText>
         <BodyText size="large">
           Volebná kalkulačka (názorový test) porovnáva vaše odpovede s
@@ -162,10 +162,10 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
         </TitleText>
         <BodyText size="large">
           Vďaka niekoľkomesačnej spolupráci s komunitou odborných dobrovoľníkov
-          <a href="https://cesko.digital">Česko.Digital</a> a angažovanosti
-          niekoľkých desiatok nadšencov prešla kalkulačka v roku 2022 zásadnými
-          technickými a dizajnovými zmenami. Všetkým zúčastneným patrí obrovská
-          vďaka.
+          <a href="https://cesko.digital" target="_blank">Česko.Digital</a> a
+          angažovanosti niekoľkých desiatok nadšencov prešla kalkulačka v roku
+          2022 zásadnými technickými a dizajnovými zmenami. Všetkým zúčastneným
+          patrí obrovská vďaka.
         </BodyText>
 
         <BodyText size="large">
@@ -306,8 +306,9 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
         </TitleText>
         <BodyText size="large">
           Obsah volebnej kalkulačky pre parlamentné voľby 2023 sme vytvárali so
-          združením <a href="https://memo98.sk">Memo 98</a> a projektom
-          <a href="https://infovolby.sk">Infovolby.sk</a>.
+          združením <a href="https://memo98.sk" target="_blank">Memo 98</a> a
+          projektom
+          <a href="https://infovolby.sk" target="_blank">Infovolby.sk</a>.
         </BodyText>
       </StackComponent>
       <DonateBlock />
