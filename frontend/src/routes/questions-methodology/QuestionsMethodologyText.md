@@ -83,7 +83,7 @@ Ide o to, aby bolo možné skontrolovať odpoveď po 4 rokoch (na konci volebné
 
 </StackComponent>
 
-## 5. Otázka musí být krátká a srozumitelná
+## 5. Otázka musí byť krátka a zrozumiteľná
 
 Chceme, aby si respondent otázky skutočne prečítal a porozumel im. Preto ich formulujeme v rozsahu maximálne 20 slov, pričom akýkoľvek popis obmedzujeme na 50 slov.
 

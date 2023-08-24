@@ -84,9 +84,9 @@ Vítejte ve Volební kalkulačce pro prezidentské volby 2023.
     : route.params.election === 'nrsr-2023' &&
       route.params.district === 'inventura-2020-2023'
     ? `
-Vitajte v Invetúre hlasovaní Národnej rady 2020-2023.
+Vitajte v Inventúre hlasovaní Národnej rady SR 2020-2023!
 
-Vybrali sme pre vás 30 skutočných hlasovaní, ktoré sa uskutočnili v Národnej rade SR v poslednom volebnom období. Budete o nich hlasovať ako poslanci.Zodpovedanie otázok zaberie zhruba 5 minút. Na konci sa dozviete, ktorí poslanci sa zhodovali s vašimi názormi.
+Vybrali sme pre Vás 30 skutočných hlasovaní, ktoré sa uskutočnili v Národnej rade SR v končiacom volebnom období. Predstavte si, že o nich hlasujete ako jeden z poslancov alebo poslankýň. Zodpovedanie otázok zaberie zhruba 5 minút. Na konci sa dozviete, ktorí poslanci sa zhodovali s vašimi názormi.
     `
     : route.params.election === 'prezidentske-2023' &&
       route.params.district === 'pro-nadsence'
@@ -300,7 +300,9 @@ const handlePreviousClick = () => {
           <StackComponent v-if="currentStep === 1" spacing="small">
             <HeadingComponent kind="title" size="medium">
               {{ electionName }}
-              <template #secondary>{{ districtNameWithCode }}</template>
+              <template #secondary
+                ><small>{{ districtNameWithCode }}</small></template
+              >
             </HeadingComponent>
             <BodyText size="medium">
               <MarkdownIt :markdown="text" />

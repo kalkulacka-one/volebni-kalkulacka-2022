@@ -53,8 +53,8 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
           <strong>Inventúra hlasovaní</strong>
         </BodyText>
         <BodyText size="small">
-          Volebná kalkulačka na základe skutočných hlasovaní z Národnej rady
-          2020–2023
+          Volebná kalkulačka na základe skutočných hlasovaní poslancov a
+          poslankýň Národnej rady SR v 8. volebnom období 2020–2023
         </BodyText>
         <ButtonComponent
           kind="filled"
@@ -72,7 +72,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
             })
           "
         >
-          Spústiť inventúru hlasovaní
+          Spustiť inventúru hlasovaní
 
           <template #iconAfter>
             <IconComponent :icon="mdiArrowRight" />
