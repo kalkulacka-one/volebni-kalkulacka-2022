@@ -27,6 +27,7 @@ export const globalTypes = {
         { value: 'idnes', title: 'iDNES.cz' },
         { value: 'infovolby', title: 'Infovoľby.sk' },
         { value: 'aktuality', title: 'Aktuality.sk' },
+        { value: 'sme', title: 'SME' },
       ],
     },
   },
