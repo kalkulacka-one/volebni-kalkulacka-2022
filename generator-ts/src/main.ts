@@ -39,6 +39,9 @@ import {
   CalculatorRow,
   QuestionsRow,
   QuestionsPoolRow,
+  L10ns,
+  L10nsRowData,
+  L10nsRow,
 } from './types/input';
 
 import {
@@ -50,6 +53,7 @@ import {
   convertToDistrictsPoolRow,
   convertToDistrictsRow,
   convertToAnswersRow,
+  convertToL10nsRow,
 } from './converters';
 
 import { isEmptyColumn, isEmptyValue } from './utils';
@@ -335,6 +339,49 @@ async function extractDistricts(url: CUrl, jwt: JWT): Promise<Districts> {
   return districts;
 }
 
+function skipL10nsRowData(row: GoogleSpreadsheetRow<L10nsRowData>): boolean {
+  return (
+    isEmptyColumn<L10nsRowData>(row, 'Form - email') ||
+    isEmptyColumn<L10nsRowData>(row, 'Form - party name') ||
+    isEmptyColumn<L10nsRowData>(row, 'Form - person name') ||
+    isEmptyColumn<L10nsRowData>(row, 'Form - secret code') ||
+    isEmptyColumn<L10nsRowData>(row, 'Form - secret code - description') ||
+    isEmptyColumn<L10nsRowData>(row, 'Form - is important') ||
+    isEmptyColumn<L10nsRowData>(row, 'Form - comment') ||
+    isEmptyColumn<L10nsRowData>(row, 'Form - yes') ||
+    isEmptyColumn<L10nsRowData>(row, 'Form - no') ||
+    isEmptyColumn<L10nsRowData>(row, 'Form - skip') ||
+    isEmptyColumn<L10nsRowData>(row, 'Form - motto') ||
+    isEmptyColumn<L10nsRowData>(row, 'Form - motto - description') ||
+    isEmptyColumn<L10nsRowData>(row, 'Form - to authors') ||
+    isEmptyColumn<L10nsRowData>(row, 'Form - description')
+  );
+}
+
+async function extractL10ns(url: CUrl, jwt: JWT): Promise<L10ns> {
+  const l10ns = new L10ns();
+  const doc = await fetchGoogleSpreadsheet(url, jwt);
+
+  for (let sI = 0; sI < doc.sheetCount; sI++) {
+    const sheet = doc.sheetsByIndex[sI];
+    await sheet.loadHeaderRow();
+    const title = sheet.title;
+
+    const l10nsRows = await sheet.getRows<L10nsRowData>();
+    for (let i = 0; i < l10nsRows.length; i++) {
+      const r = l10nsRows[i];
+      if (skipL10nsRowData(r)) {
+        console.log('Skipping L10nsRowData: ', i);
+        continue;
+      }
+      console.log('L10ns: ', title);
+      l10ns.set(title, convertToL10nsRow(i, r));
+    }
+  }
+
+  return l10ns;
+}
+
 function skipAnswersRowData(
   row: GoogleSpreadsheetRow<Partial<AnswersRowData>>,
 ): boolean {
@@ -389,11 +436,8 @@ function skipCalculatorRowData(
     isEmptyColumn<CalculatorRowData>(row, 'Districts pool') ||
     isEmptyColumn<CalculatorRowData>(row, 'Districts spreadsheet') ||
     isEmptyColumn<CalculatorRowData>(row, 'Districts sheet') ||
-    isEmptyColumn<CalculatorRowData>(row, 'L10n: yes') ||
-    isEmptyColumn<CalculatorRowData>(row, 'L10n: no') ||
-    isEmptyColumn<CalculatorRowData>(row, 'L10n: is important') ||
-    isEmptyColumn<CalculatorRowData>(row, 'L10n: secret code') ||
-    isEmptyColumn<CalculatorRowData>(row, 'L10n: comment')
+    isEmptyColumn<CalculatorRowData>(row, 'L10ns spreadsheet') ||
+    isEmptyColumn<CalculatorRowData>(row, 'L10ns sheet')
   );
 }
 
@@ -464,6 +508,13 @@ async function extractCalculators(url: CUrl, jwt: JWT): Promise<Calculators> {
     if (districts === undefined) {
       districts = await extractDistricts(districtsUrl, jwt);
       calculators.setDistricts(districtsUrl, districts);
+    }
+
+    const l10nsUrl = r.get('L10ns spreadsheet');
+    let l10ns = calculators.getL10ns(l10nsUrl);
+    if (l10ns === undefined) {
+      l10ns = await extractL10ns(l10nsUrl, jwt);
+      calculators.setL10ns(l10nsUrl, l10ns);
     }
 
     const answersCandidatesUrl = r.get('Answers spreadsheet - candidates');
@@ -600,6 +651,9 @@ function main() {
           const form = await createForm(
             googleForms,
             calculator,
+            calculators.getL10ns(calculator.L10nsSpreadsheet).l10ns[
+              calculator.L10nsSheet
+            ],
             questions,
             'candidate',
           );
@@ -703,10 +757,11 @@ function constructQuestions(
 async function createForm(
   googleForms: forms_v1.Forms,
   calculator: CalculatorRow,
+  l10ns: L10nsRow,
   questions: QuestionsPoolRow[],
   type: 'candidate' | 'expert',
 ): Promise<forms_v1.Schema$Form> {
-  const title = `${calculator.ElectionName} - ${calculator.DistrictName} - ${calculator.Round} - ${calculator.Variant} - ${type}`;
+  const title = `${calculator.ElectionName} - ${calculator.DistrictName} - ${type}`;
   // https://developers.google.com/forms/api/reference/rest/v1/forms/create
   // https://developers.google.com/forms/api/reference/rest/v1/forms#resource:-form
   const formC = await googleForms.forms.create({
@@ -726,23 +781,37 @@ async function createForm(
     );
   }
 
+  const createItems = createFormQuestions(l10ns, questions).map(
+    (item: forms_v1.Schema$Item, index: number) => {
+      return {
+        createItem: {
+          item: item,
+          location: {
+            index: index,
+          },
+        },
+      };
+    },
+  );
+
+  console.info(`${title} has ${createItems.length} questions`);
+
   // https://developers.google.com/forms/api/reference/rest/v1/forms/batchUpdate#http-request
   const formU = await googleForms.forms.batchUpdate({
     formId: formC.data.formId,
     requestBody: {
       includeFormInResponse: true,
-      requests: createFormQuestions(calculator, questions).map(
-        (item: forms_v1.Schema$Item, index: number) => {
-          return {
-            createItem: {
-              item: item,
-              location: {
-                index: index,
-              },
+      requests: [
+        {
+          updateFormInfo: {
+            info: {
+              description: l10ns.FormDescription,
             },
-          };
+            updateMask: 'description',
+          },
         },
-      ),
+        ...createItems,
+      ],
     },
   });
 
@@ -758,13 +827,13 @@ async function createForm(
 }
 
 function createFormQuestions(
-  calculator: CalculatorRow,
+  l10ns: L10nsRow,
   questions: QuestionsPoolRow[],
 ): forms_v1.Schema$Item[] {
   const res = Array<forms_v1.Schema$Item>();
 
   res.push({
-    title: 'E-mail',
+    title: l10ns.FormPersonName,
     questionItem: {
       question: {
         required: true,
@@ -776,7 +845,32 @@ function createFormQuestions(
   });
 
   res.push({
-    title: `${calculator.L10nSecretCode}`,
+    title: l10ns.FormPartyName,
+    questionItem: {
+      question: {
+        required: true,
+        textQuestion: {
+          paragraph: false,
+        },
+      },
+    },
+  });
+
+  res.push({
+    title: l10ns.FormEmail,
+    questionItem: {
+      question: {
+        required: true,
+        textQuestion: {
+          paragraph: false,
+        },
+      },
+    },
+  });
+
+  res.push({
+    title: l10ns.FormSecretCode,
+    description: l10ns.FormSecretCodeDescription,
     questionItem: {
       question: {
         required: true,
@@ -796,15 +890,18 @@ function createFormQuestions(
       description: row.Description,
       questionItem: {
         question: {
-          required: false,
+          required: true,
           choiceQuestion: {
             type: 'RADIO',
             options: [
               {
-                value: calculator.L10nYes,
+                value: l10ns.FormYes,
               },
               {
-                value: calculator.L10nNo,
+                value: l10ns.FormNo,
+              },
+              {
+                value: l10ns.FormSkip,
               },
             ],
           },
@@ -813,8 +910,7 @@ function createFormQuestions(
     });
 
     res.push({
-      title: `${prefix} ${calculator.L10nComment}`,
-      // description: row.Description,
+      title: `${prefix} ${l10ns.FormComment}`,
       questionItem: {
         question: {
           required: false,
@@ -826,19 +922,15 @@ function createFormQuestions(
     });
 
     res.push({
-      title: `${prefix}. ${calculator.L10nIsImportant}`,
-      // description: row.Description,
+      title: `${prefix}. ${l10ns.FormIsImportant}`,
       questionItem: {
         question: {
           required: false,
           choiceQuestion: {
-            type: 'RADIO',
+            type: 'CHECKBOX',
             options: [
               {
-                value: calculator.L10nYes,
-              },
-              {
-                value: calculator.L10nNo,
+                value: l10ns.FormYes,
               },
             ],
           },
@@ -846,6 +938,31 @@ function createFormQuestions(
       },
     });
   }
+
+  res.push({
+    title: l10ns.FormMotto,
+    description: l10ns.FormMottoDescription,
+    questionItem: {
+      question: {
+        required: true,
+        textQuestion: {
+          paragraph: false,
+        },
+      },
+    },
+  });
+
+  res.push({
+    title: l10ns.FormToAuthors,
+    questionItem: {
+      question: {
+        required: false,
+        textQuestion: {
+          paragraph: false,
+        },
+      },
+    },
+  });
 
   return res;
 }

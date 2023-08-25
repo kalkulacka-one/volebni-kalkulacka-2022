@@ -20,6 +20,8 @@ import {
   DistrictsRow,
   type DistrictsRowData,
   AnswersRow,
+  type L10nsRowData,
+  L10nsRow,
 } from './types/input';
 
 // Function to convert GoogleSpreadsheetRow<QuestionsPoolRowData> to QuestionsPoolRow
@@ -75,11 +77,8 @@ export function convertToCalculatorRow(
     QuestionsSheetCandidates: row.get('Questions sheet - candidates'),
     QuestionsFormCandidates: row.get('Questions form - candidates'),
     QuestionsFormExperts: row.get('Questions form - experts'),
-    L10nYes: row.get('L10n: yes'),
-    L10nNo: row.get('L10n: no'),
-    L10nIsImportant: row.get('L10n: is important'),
-    L10nSecretCode: row.get('L10n: secret code'),
-    L10nComment: row.get('L10n: comment'),
+    L10nsSpreadsheet: row.get('L10ns spreadsheet'),
+    L10nsSheet: row.get('L10ns sheet'),
     AnswersSpreadsheetCandidates: row.get('Answers spreadsheet - candidates'),
     AnswersSheetCandidates: row.get('Answers sheet - candidates'),
     AnswersSpreadsheetExperts: row.get('Answers spreadsheet - experts'),
@@ -143,6 +142,30 @@ export function convertToDistrictsRow(
     Pos: pos,
     Uuid: row.get('Uuid'),
     Key: row.get('Key'),
+  });
+}
+
+// Function to convert GoogleSpreadsheetRow<QuestionsRowData> to QuestionsRow
+export function convertToL10nsRow(
+  pos: number,
+  row: GoogleSpreadsheetRow<L10nsRowData>,
+): L10nsRow {
+  return new L10nsRow({
+    Pos: pos,
+    FormEmail: row.get('Form - email'),
+    FormPersonName: row.get('Form - person name'),
+    FormPartyName: row.get('Form - party name'),
+    FormSecretCode: row.get('Form - secret code'),
+    FormSecretCodeDescription: row.get('Form - secret code - description'),
+    FormIsImportant: row.get('Form - is important'),
+    FormComment: row.get('Form - comment'),
+    FormYes: row.get('Form - yes'),
+    FormNo: row.get('Form - no'),
+    FormSkip: row.get('Form - skip'),
+    FormMotto: row.get('Form - motto'),
+    FormMottoDescription: row.get('Form - motto - description'),
+    FormToAuthors: row.get('Form - to authors'),
+    FormDescription: row.get('Form - description'),
   });
 }
 

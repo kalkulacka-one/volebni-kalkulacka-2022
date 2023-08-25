@@ -33,11 +33,8 @@ export type CalculatorRowData = {
   'Questions sheet - candidates': CSheetName;
   'Questions form - candidates': CUrl;
   'Questions form - experts': CUrl;
-  'L10n: yes': string;
-  'L10n: no': string;
-  'L10n: is important': string;
-  'L10n: secret code': string;
-  'L10n: comment': string;
+  'L10ns spreadsheet': CUrl;
+  'L10ns sheet': CSheetName;
   'Answers spreadsheet - candidates': CUrl;
   'Answers sheet - candidates': CSheetName;
   'Answers spreadsheet - experts': CUrl;
@@ -70,11 +67,8 @@ export class CalculatorRow {
   QuestionsSheetCandidates: CSheetName;
   QuestionsFormCandidates: CUrl;
   QuestionsFormExperts: CUrl;
-  L10nYes: string;
-  L10nNo: string;
-  L10nIsImportant: string;
-  L10nSecretCode: string;
-  L10nComment: string;
+  L10nsSpreadsheet: CUrl;
+  L10nsSheet: CSheetName;
   AnswersSpreadsheetCandidates: CUrl;
   AnswersSheetCandidates: CSheetName;
   AnswersSpreadsheetExperts: CUrl;
@@ -110,13 +104,8 @@ export class CalculatorRow {
     this.QuestionsSheetCandidates = data.QuestionsSheetCandidates;
     this.QuestionsFormCandidates = data.QuestionsFormCandidates;
     this.QuestionsFormExperts = data.QuestionsFormExperts;
-
-    this.L10nYes = data.L10nYes;
-    this.L10nNo = data.L10nNo;
-    this.L10nIsImportant = data.L10nIsImportant;
-    this.L10nSecretCode = data.L10nSecretCode;
-    this.L10nComment = data.L10nComment;
-
+    this.L10nsSpreadsheet = data.L10nsSpreadsheet;
+    this.L10nsSheet = data.L10nsSheet;
     this.AnswersSpreadsheetCandidates = data.AnswersSpreadsheetCandidates;
     this.AnswersSheetCandidates = data.AnswersSheetCandidates;
     this.AnswersSpreadsheetExperts = data.AnswersSpreadsheetExperts;
@@ -225,63 +214,6 @@ export class Questions {
     this.questions[title].push(row);
   }
 }
-
-/*
-export class Calculator {
-  @Type(() => CalculatorRow)
-  row: CalculatorRow;
-
-  @Type(() => QuestionsPool)
-  questionsPool: QuestionsPool;
-
-  @Type(() => Questions)
-  questions: Questions;
-
-  @Type(() => CandidatesPool)
-  candidatesPool: CandidatesPool;
-
-  @Type(() => Candidates)
-  candidates: Candidates;
-
-  @Type(() => Answers)
-  answersCandidates: Answers;
-
-  @Type(() => Answers)
-  answersExperts: Answers;
-
-  @Type(() => DistrictsPool)
-  districtsPool: DistrictsPool;
-
-  @Type(() => Districts)
-  districts: Districts;
-
-  constructor(
-    row: CalculatorRow,
-    questionsPool: QuestionsPool,
-    questions: Questions,
-    candidatesPool: CandidatesPool,
-    candidates: Candidates,
-    answersCandidates: Answers,
-    answersExperts: Answers,
-    districtsPool: DistrictsPool,
-    districts: Districts,
-  ) {
-    this.row = row;
-    this.questionsPool = questionsPool;
-    this.questions = questions;
-    this.candidatesPool = candidatesPool;
-    this.candidates = candidates;
-    this.answersCandidates = answersCandidates;
-    this.answersExperts = answersExperts;
-    this.districtsPool = districtsPool;
-    this.districts = districts;
-  }
-
-  key(): string {
-    return this.row.ElectionKey;
-  }
-}
-*/
 
 // Candidates - BEGIN
 
@@ -489,6 +421,77 @@ export class Answers {
   }
 }
 
+// L10ns - BEGIN
+
+export type L10nsRowData = {
+  'Form - email': string;
+  'Form - person name': string;
+  'Form - party name': string;
+  'Form - secret code': string;
+  'Form - secret code - description': string;
+  'Form - is important': string;
+  'Form - comment': string;
+  'Form - yes': string;
+  'Form - no': string;
+  'Form - skip': string;
+  'Form - motto': string;
+  'Form - motto - description': string;
+  'Form - to authors': string;
+  'Form - description': string;
+};
+
+export class L10nsRow {
+  Pos: number;
+  FormEmail: string;
+  FormPersonName: string;
+  FormPartyName: string;
+  FormSecretCode: string;
+  FormSecretCodeDescription: string;
+  FormIsImportant: string;
+  FormComment: string;
+  FormYes: string;
+  FormNo: string;
+  FormSkip: string;
+  FormMotto: string;
+  FormMottoDescription: string;
+  FormToAuthors: string;
+
+  FormDescription: string;
+
+  constructor(data: Required<L10nsRow>) {
+    this.Pos = data.Pos;
+    this.FormEmail = data.FormEmail;
+    this.FormPersonName = data.FormPersonName;
+    this.FormPartyName = data.FormPartyName;
+    this.FormSecretCode = data.FormSecretCode;
+    this.FormSecretCodeDescription = data.FormSecretCodeDescription;
+    this.FormIsImportant = data.FormIsImportant;
+    this.FormComment = data.FormComment;
+    this.FormYes = data.FormYes;
+    this.FormNo = data.FormNo;
+    this.FormSkip = data.FormSkip;
+    this.FormMotto = data.FormMotto;
+    this.FormMottoDescription = data.FormMottoDescription;
+    this.FormToAuthors = data.FormToAuthors;
+    this.FormDescription = data.FormDescription;
+  }
+}
+
+export class L10ns {
+  @Type(() => L10nsRow)
+  l10ns: Record<string, L10nsRow>;
+
+  constructor() {
+    this.l10ns = {};
+  }
+
+  set(title: string, row: L10nsRow) {
+    this.l10ns[title] = row;
+  }
+}
+
+// L10ns - END
+
 export class Calculators {
   @Type(() => CalculatorRow)
   calculators: CalculatorRow[];
@@ -508,6 +511,9 @@ export class Calculators {
   @Type(() => Districts)
   districts: Record<string, Districts>;
 
+  @Type(() => L10ns)
+  l10ns: Record<string, L10ns>;
+
   @Type(() => Answers)
   answers: Record<string, Answers>;
 
@@ -519,6 +525,7 @@ export class Calculators {
     this.candidates = {};
     this.districtsPools = {};
     this.districts = {};
+    this.l10ns = {};
     this.answers = {};
   }
 
@@ -581,6 +588,18 @@ export class Calculators {
   }
 
   // Districts - END
+
+  // L10ns - BEGIN
+
+  getL10ns(url: CUrl): L10ns | undefined {
+    return this.l10ns[url];
+  }
+
+  setL10ns(url: CUrl, districts: L10ns) {
+    this.l10ns[url] = districts;
+  }
+
+  // L10ns - END
 
   getAnswers(url: CUrl): Answers | undefined {
     return this.answers[url];
