@@ -6,14 +6,26 @@
 
 ## Project Setup
 
+### Instal dependencies
+
 ```sh
 npm install
 ```
 
+### Create Service Account
+
+Since we are using Google Spreasheets and Google Forms you have to have [Service Account](https://console.cloud.google.com/apis/credentials/serviceaccountkey.) Store the provided file as `service_account.json` in this folder. Do not commit this file!
+
 ### Setup Environmental Variables
 
-It expects that the environmental variables - `GOOGLE_PRIVATE_KEY`, `GOOGLE_SERVICE_ACCOUNT_EMAIL`, and `GOOGLE_APPLICATION_CREDENTIALS` are populated. Instructions for how to obtain
-these values are described in the [library documentation](https://theoephraim.github.io/node-google-spreadsheet/#/guides/authentication?id=service-account).
+We are using two different libraries:
+
+- https://theoephraim.github.io/node-google-spreadsheet/#/guides/authentication?id=service-account
+- https://www.npmjs.com/package/googleapis#service-account-credentials
+
+you have to fill in more environmental variables. It expects that the environmental variables - `GOOGLE_PRIVATE_KEY`, `GOOGLE_SERVICE_ACCOUNT_EMAIL`, and `GOOGLE_APPLICATION_CREDENTIALS` are populated.
+
+You can use following commands:
 
 ```sh
 export GOOGLE_PRIVATE_KEY=$(jq .private_key service_account.json | sed -r 's/\\n/\\\n/g;s/\\//g;s/"//g');
@@ -27,6 +39,14 @@ export GOOGLE_APPLICATION_CREDENTIALS=$(realpath service_account.json);
 npm run generate
 ```
 
+#### Options
+
+- `--cache-dir` (default: `.cache`) - folder where should be downloaded JSON representation of used Google Spreadsheets stored. This is useful for development.
+- `--cache-lifetime` (default: `86400`, 1 day) - for how long should should we use the downloaded version.
+- `--calculators-url` (default: `https://docs.google.com/spreadsheets/d/1rEtloBTzS_fZyeIX9wYYW32Pg2NeJNYj6oQbyIyTTvw/view#gid=0`) - URL of the calculators
+
+Used values are produced at the beginning of the script execution.
+
 ## Workflow
 
 1. Create form similar to the - https://docs.google.com/spreadsheets/d/1rEtloBTzS_fZyeIX9wYYW32Pg2NeJNYj6oQbyIyTTvw/edit?usp=sharing
@@ -36,6 +56,16 @@ npm run generate
 5. Update corresponding cells with those values.
 6. Send forms to the candidates
 7. Run the same script as in 3) to update the resul files.
+
+### Commands
+
+- do not use cached version, download google sheet again - `npm run generate -- --cache-lifetime 0 --calculators-url "https://docs.google.com/spreadsheets/d/1rEtloBTzS_fZyeIX9wYYW32Pg2NeJNYj6oQbyIyTTvw"`
+- quickly experiment with the JSON generator
+  - keep recompiling the code - `npm run dev:compile`
+  - run the code generation - `npm run dev:generate`
+- quickly experiment with Google Spreadsheet content
+  - keep recompiling the code - `npm run dev:compile`
+  - run the code generation - `npm run dev:generate -- --cache-lifetime 0`
 
 ## Spreadsheet Description
 
@@ -92,3 +122,12 @@ Check and fix:
 ```sh
 npx prettier --write .
 ```
+
+## Used API/Libraries
+
+- Google Auth Library - https://www.npmjs.com/package/google-auth-library
+- Google APIs - https://www.npmjs.com/package/googleapis
+  - We use Service Account - https://console.cloud.google.com/apis/credentials/serviceaccountkey
+- Google Forms API - https://developers.google.com/forms/api/guides
+  - `create` - https://developers.google.com/forms/api/reference/rest/v1/forms/create
+  - `batchUpdate` - https://developers.google.com/forms/api/reference/rest/v1/forms/batchUpdate
