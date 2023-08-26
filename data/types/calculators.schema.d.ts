@@ -37,7 +37,10 @@ export type ShortTitle = string;
  * Description of a calculator
  */
 export type Description = string;
-export type Calculator2 = StandaloneCalculator | CalculatorFromAGroup | CalculatorFromAnElection;
+export type Calculator2 =
+  | StandaloneCalculator
+  | CalculatorFromAGroup
+  | CalculatorFromAnElection;
 /**
  * Human-friendly unique key of a standalone calculator in the hyphen-separated lowercased format
  */
@@ -57,9 +60,20 @@ export type Key2 = string;
 /**
  * Calculator that is part of an election
  */
-export type CalculatorFromAnElection = {
-  [k: string]: unknown;
-};
+export type CalculatorFromAnElection =
+  | {
+      [k: string]: unknown;
+    }
+  | {
+      [k: string]: unknown;
+    }
+  | {
+      [k: string]: unknown;
+    };
+/**
+ * List of calculators
+ */
+export type Calculators = Calculator[];
 
 export interface Calculator1 {
   id: ID;

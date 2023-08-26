@@ -22,7 +22,7 @@ import {
   AnswersRow,
   type L10nsRowData,
   L10nsRow,
-} from './types/input';
+} from './types';
 
 // Function to convert GoogleSpreadsheetRow<QuestionsPoolRowData> to QuestionsPoolRow
 export function convertToQuestionsPoolRow(

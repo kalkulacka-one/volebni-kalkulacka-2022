@@ -42,7 +42,7 @@ import {
   L10ns,
   L10nsRowData,
   L10nsRow,
-} from './types/input';
+} from './input/types';
 
 import {
   convertToQuestionsPoolRow,
@@ -54,7 +54,7 @@ import {
   convertToDistrictsRow,
   convertToAnswersRow,
   convertToL10nsRow,
-} from './converters';
+} from './input/converters';
 
 import { isEmptyColumn, isEmptyValue } from './utils';
 
