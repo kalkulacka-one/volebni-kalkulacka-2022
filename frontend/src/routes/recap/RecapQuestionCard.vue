@@ -3,7 +3,7 @@ import { computed, ref } from 'vue';
 import { mdiChevronUp, mdiChevronDown } from '@mdi/js';
 
 import { UserAnswerEnum, type UserAnswer } from '@/stores/electionStore';
-import type { Question } from '@/types/question';
+import type { DeprecatedQuestion } from '@/types/question';
 
 import BodyText from '@/components/design-system/typography/BodyText.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
@@ -24,7 +24,7 @@ import {
 import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 
 export interface Props {
-  question: Question;
+  question: DeprecatedQuestion;
   currentQuestion: number;
   questionCount: number;
   answer: UserAnswer;
@@ -36,10 +36,10 @@ export interface Props {
 const props = defineProps<Props>();
 
 const starColor = computed(() =>
-  props.answer.flag ? 'rgba(var(--palette-yellow))' : undefined
+  props.answer.flag ? 'rgba(var(--palette-yellow))' : undefined,
 );
 const starIcon = computed(() =>
-  props.answer.flag ? vkiStarFilled : vkiStarOutlined
+  props.answer.flag ? vkiStarFilled : vkiStarOutlined,
 );
 
 const isExpanded = ref(false);
@@ -66,7 +66,7 @@ const toggleClick = () => {
             :icon="starIcon"
             :color="starColor"
             size="large"
-            title="Pro mě důležité"
+            ::title="$t('routes.recap.RecapQuestionCard.important-for-me')"
           />
         </IconButton>
       </ResponsiveWrapper>
@@ -76,7 +76,7 @@ const toggleClick = () => {
             :icon="starIcon"
             :color="starColor"
             size="medium"
-            title="Pro mě důležité"
+            :title="$t('routes.recap.RecapQuestionCard.important-for-me')"
           />
         </IconButton>
       </ResponsiveWrapper>
@@ -130,10 +130,16 @@ const toggleClick = () => {
           <template #icon>
             <IconComponent
               :icon="vkiLogoInFavour"
-              :title="isExpanded ? 'Ano' : undefined"
+              :title="
+                isExpanded
+                  ? $t('routes.recap.RecapQuestionCard.yes')
+                  : undefined
+              "
             />
           </template>
-          <template v-if="isExpanded" #default>Ano</template>
+          <template v-if="isExpanded" #default>{{
+            $t('routes.recap.RecapQuestionCard.yes')
+          }}</template>
         </ButtonComponent>
         <ButtonComponent
           v-show="answer.answer === UserAnswerEnum.no || isExpanded"
@@ -147,10 +153,14 @@ const toggleClick = () => {
           <template #icon>
             <IconComponent
               :icon="vkiLogoAgainst"
-              :title="isExpanded ? 'Ne' : undefined"
+              :title="
+                isExpanded ? $t('routes.recap.RecapQuestionCard.no') : undefined
+              "
             />
           </template>
-          <template v-if="isExpanded" #default>Ne</template>
+          <template v-if="isExpanded" #default>{{
+            $t('routes.recap.RecapQuestionCard.no')
+          }}</template>
         </ButtonComponent>
         <ButtonComponent
           v-show="answer.answer === UserAnswerEnum.skip && !isExpanded"
@@ -161,7 +171,11 @@ const toggleClick = () => {
           <template #icon>
             <IconComponent
               :icon="vkiLogoNeutral"
-              :title="isExpanded ? 'Bez odpovědi' : undefined"
+              :title="
+                isExpanded
+                  ? $t('routes.recap.RecapQuestionCard.without-answer')
+                  : undefined
+              "
             />
           </template>
         </ButtonComponent>
@@ -179,7 +193,11 @@ const toggleClick = () => {
           <template #icon>
             <IconComponent
               :icon="vkiLogoInFavour"
-              :title="isExpanded ? 'Ano' : undefined"
+              :title="
+                isExpanded
+                  ? $t('routes.recap.RecapQuestionCard.yes')
+                  : undefined
+              "
             />
           </template>
         </ButtonComponent>
@@ -195,7 +213,9 @@ const toggleClick = () => {
           <template #icon>
             <IconComponent
               :icon="vkiLogoAgainst"
-              :title="isExpanded ? 'Ne' : undefined"
+              :title="
+                isExpanded ? $t('routes.recap.RecapQuestionCard.no') : undefined
+              "
             />
           </template>
         </ButtonComponent>
@@ -208,7 +228,11 @@ const toggleClick = () => {
           <template #icon>
             <IconComponent
               :icon="vkiLogoNeutral"
-              :title="isExpanded ? 'Bez odpovědi' : undefined"
+              :title="
+                isExpanded
+                  ? $t('routes.recap.RecapQuestionCard.without-answer')
+                  : undefined
+              "
             />
           </template>
         </ButtonComponent>
@@ -219,7 +243,7 @@ const toggleClick = () => {
         <IconComponent
           :icon="isExpanded ? mdiChevronUp : mdiChevronDown"
           size="medium"
-          title="Zobrazit detaily"
+          :title="$t('routes.recap.RecapQuestionCard.display-details')"
         />
       </IconButton>
     </div>

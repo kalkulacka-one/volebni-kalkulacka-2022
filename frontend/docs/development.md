@@ -6,6 +6,20 @@
 
 🚧 WIP 🚧
 
+### Prerequisites
+
+#### Node.js
+
+For running Volební kalkulačka you need Node.js in version specified in the [`.nvmrc`](../.nvmrc) file.
+
+It is a good idea to set up [Node Version Manager](https://github.com/nvm-sh/nvm). Then you can simply run
+
+```console
+nvm install && nvm use
+```
+
+in the project root and you are good to go.
+
 ### Step by step guide
 
 - [ ] Clone the repository
@@ -43,7 +57,7 @@ If you need to work just with the frontend, the easiest way is to run just Vue f
   ```sh
   DATA_PROXY=https://volebnikalkulacka.cz
   API_PROXY=https://volebnikalkulacka.cz
-  
+
   …
   ```
 
@@ -75,10 +89,10 @@ To run also backend serverless functions locally, you can use [Vercel CLI](https
 
   ```sh
   …
-  
+
   DATABASE_NAME=defaultdb
   DATABASE_URL_BASE=postgresql://john-doe:HUVAkcJHcpffDZuSuQLmwN@john-doe-development-5467.7tc.cockroachlabs.cloud:26257
-  DATABASE_URL=postgresql://${DATABASE_URL_BASE}/${DATABASE_NAME}
+  DATABASE_URL=${DATABASE_URL_BASE}/${DATABASE_NAME}
   ```
 
 - [ ] To reset your database, run all migrations and generate client, run
@@ -108,6 +122,14 @@ To run also backend serverless functions locally, you can use [Vercel CLI](https
   ```
 
   _In case you don't have access to Česko.Digital project or won't link it, you need to manually adjust the project settings on Vercel to use `frontend` as root directory, Vite as framework preset and `npm run build:vercel` as a build command._
+
+#### Sending e-mails locally
+
+You can run mailhog service via docker image by:
+
+```console
+docker run -p 8025:8025 -p 1025:1025 mailhog/mailhog
+```
 
 #### C) Running Storybook for component development
 

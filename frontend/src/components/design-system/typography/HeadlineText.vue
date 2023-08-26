@@ -2,16 +2,26 @@
 export interface Props {
   tag: 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   size: 'extra-small' | 'small' | 'medium' | 'large';
+  centered?: boolean;
   color?: string;
 }
 
 withDefaults(defineProps<Props>(), {
+  centered: false,
   color: 'rgb(var(--color-neutral-fg-strong))',
 });
 </script>
 
 <template>
-  <component :is="tag" :class="[size]">
+  <component
+    :is="tag"
+    :class="[
+      size,
+      {
+        centered: centered,
+      },
+    ]"
+  >
     <slot />
   </component>
 </template>
@@ -46,5 +56,9 @@ withDefaults(defineProps<Props>(), {
   font-size: var(--typography-headline-large-size);
   line-height: var(--typography-headline-large-line-height);
   letter-spacing: var(--typography-headline-large-letter-spacing);
+}
+
+.centered {
+  text-align: center;
 }
 </style>

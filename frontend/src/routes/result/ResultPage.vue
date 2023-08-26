@@ -18,8 +18,8 @@ import {
   encodeResults,
 } from '@/common/resultParser';
 
-import type { Election } from '@/types/election';
-import type { CandidateAnswer } from '@/types/candidate-answer';
+import type { DeprecatedElection } from '@/types/election';
+import type { DeprecatedCandidateAnswer } from '@/types/candidate-answer';
 
 import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
 import BottomBar from '@/components/design-system/navigation/BottomBar.vue';
@@ -47,6 +47,10 @@ import CheckboxComponent from '../../components/design-system/input/CheckboxComp
 import { inject } from 'vue';
 import { EmbedKey } from '@/components/utilities/embedding/EmbedKey';
 
+import { useI18n } from 'vue-i18n';
+
+const { t, locale } = useI18n();
+
 const currentEmbed = inject(EmbedKey);
 
 const router = useRouter();
@@ -57,14 +61,14 @@ const userStore = useUserStore();
 
 const user = computed(() => userStore.user);
 
-const election = electionStore.election as Election;
+const election = electionStore.election as DeprecatedElection;
 const electionName = election.name;
 const districtCode = getDistrictCode(route.params.district as string);
 const districtName = electionStore.districts.filter(
-  (district) => district.district_code === districtCode
+  (district) => district.district_code === districtCode,
 )[0].name;
 const showDistrictCode = electionStore.districts.filter(
-  (district) => district.district_code === districtCode
+  (district) => district.district_code === districtCode,
 )[0].show_district_code;
 const districtNameWithCode = showDistrictCode
   ? `${districtName} (${districtCode})`
@@ -100,7 +104,7 @@ const handleShareClick = () => {
   shareModal.value?.open();
 };
 onBeforeMount(async () => {
-  if (election.key === 'prezidentske-2023') {
+  if (election.key === 'nrsr-2023') {
     if (userStore.user || userStore.user === null) {
       const res = await electionStore.saveResults({
         embedName: currentEmbed,
@@ -144,12 +148,12 @@ const signUpPath = computed(() => {
 
 console.debug(encodeResults(electionStore.answers));
 
-const candidateAnswers: CandidateAnswer[] =
+const candidateAnswers: DeprecatedCandidateAnswer[] =
   electionStore.calculator?.answers || [];
 
 const hasAllCandidatesInactive =
   electionStore.calculator?.candidates.filter(
-    (candidate) => !candidate.is_active
+    (candidate) => !candidate.is_active,
   ).length === electionStore.calculator?.candidates.length;
 
 const hasActiveCandidatesBtn = hasAllCandidatesInactive
@@ -157,16 +161,17 @@ const hasActiveCandidatesBtn = hasAllCandidatesInactive
   : electionStore.calculator?.candidates.some((x) => !x.is_active);
 
 const showNotActiveCandidates = ref(false);
-const filteredCandidateAnswers: Ref<CandidateAnswer[]> = ref(candidateAnswers);
+const filteredCandidateAnswers: Ref<DeprecatedCandidateAnswer[]> =
+  ref(candidateAnswers);
 const handleActiveCandidatesClicked = (isActive: boolean) => {
   showNotActiveCandidates.value = isActive;
   if (!hasAllCandidatesInactive && !showNotActiveCandidates.value) {
     filteredCandidateAnswers.value = filteredCandidateAnswers.value.filter(
       (x) => {
         return electionStore.calculator?.candidates.find(
-          (cnd) => x.candidate_id === cnd.id && cnd.is_active
+          (cnd) => x.candidate_id === cnd.id && cnd.is_active,
         );
-      }
+      },
     );
   } else if (electionStore.calculator?.answers) {
     filteredCandidateAnswers.value = candidateAnswers;
@@ -177,7 +182,7 @@ handleActiveCandidatesClicked(false);
 const resultsGeneral = computed(() => {
   const ra = calculateRelativeAgreement(
     filteredCandidateAnswers.value,
-    electionStore.answers
+    electionStore.answers,
   );
   return ra;
 });
@@ -201,7 +206,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                     })
                   "
                 >
-                  Zpět na hlavní stránku
+                  {{ $t('routes.result.ResultPage.back-to-main-page') }}
                   <template #iconAfter>
                     <IconComponent :icon="mdiCloseCircleOutline" />
                   </template>
@@ -220,7 +225,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   <template #icon>
                     <IconComponent
                       :icon="mdiCloseCircleOutline"
-                      title="Zpět na hlavní stránku"
+                      :title="$t('routes.result.ResultPage.back-to-main-page')"
                     />
                   </template>
                 </ButtonComponent>
@@ -234,11 +239,16 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           <SecondaryNavigationBar centered-title>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Rekapitulace" />
+                <IconComponent
+                  :icon="mdiArrowLeft"
+                  :title="$t('routes.result.ResultPage.recapitulation')"
+                />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="medium">Moje shoda</TitleText>
-            <template v-if="election.key === 'prezidentske-2023'" #after>
+            <TitleText tag="h2" size="medium">{{
+              $t('routes.result.ResultPage.my-match')
+            }}</TitleText>
+            <template v-if="election.key === 'nrsr-2023'" #after>
               <ButtonComponent
                 kind="link"
                 color="primary"
@@ -256,14 +266,19 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           <SecondaryNavigationBar>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Rekapitulace" />
+                <IconComponent
+                  :icon="mdiArrowLeft"
+                  :title="$t('routes.result.ResultPage.recapitulation')"
+                />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="large">Moje shoda</TitleText>
+            <TitleText tag="h2" size="large">{{
+              $t('routes.result.ResultPage.my-match')
+            }}</TitleText>
             <template #after>
               <div class="navbar-btn-wrapper">
                 <ButtonComponent
-                  v-if="election.key === 'prezidentske-2023'"
+                  v-if="election.key === 'nrsr-2023'"
                   kind="link"
                   color="primary"
                   @click="handleShareClick"
@@ -271,19 +286,19 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   <template #icon>
                     <IconComponent :icon="mdiShareVariantOutline" />
                   </template>
-                  Sdílet
+                  {{ $t('routes.result.ResultPage.share') }}
                 </ButtonComponent>
-                <ButtonComponent
+                <!-- <ButtonComponent
                   class="desktop"
                   kind="filled"
                   color="primary"
                   @click="handleShowComparsionClick"
                 >
-                  Porovnat odpovědi
+                  {{ $t('routes.result.ResultPage.compare-answers') }}
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
-                </ButtonComponent>
+                </ButtonComponent> -->
               </div>
             </template>
           </SecondaryNavigationBar>
@@ -300,14 +315,24 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
             group-name="test"
             @update:check="handleActiveCandidatesClicked"
           >
-            Zobrazit nepostupující kandidáty
+            {{
+              $t('routes.result.ResultPage.display-not-advancing-candidates')
+            }}
           </CheckboxComponent>
+          <BodyText size="medium">
+            Kompletní přehled všech kandidátů a jejich odpovědí najdete
+            <a
+              target="_blank"
+              href="https://docs.google.com/spreadsheets/d/1UzaiDq-NRdgoPSiSv3uxDqk0wpGC7wlJUdGsTAQnLus"
+              >v tabulce</a
+            >.
+          </BodyText>
           <ResultCategory
             :result="resultsGeneral"
             category="general"
             :max-visible-candidates="5"
           />
-          <CardComponent
+          <!-- <CardComponent
             v-if="!user && election.key === 'prezidentske-2023'"
             corner="bottom-left"
             style="max-width: 32rem; justify-self: center"
@@ -315,11 +340,10 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
             <StackComponent centered spacing="medium">
               <StackComponent spacing="medium">
                 <TitleText tag="p" size="medium">
-                  Sledujte, jak se Vaše názory a výsledky (ne)mění v čase.
+                  {{ $t('routes.result.ResultPage.text-in-time') }}
                 </TitleText>
                 <BodyText tag="p" size="medium">
-                  Uložte si kalkulačku a vyplňte ji klidně vícekrát, a to pro
-                  každé volby.
+                  {{ $t('routes.result.ResultPage.text-save-calc') }}
                 </BodyText>
               </StackComponent>
               <ButtonComponent
@@ -334,17 +358,17 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                 Vytvořit profil
               </ButtonComponent>
             </StackComponent>
-          </CardComponent>
+          </CardComponent> -->
           <DonateBlock />
         </StackComponent>
         <StackComponent v-else class="main" spacing="medium">
           <CardComponent corner="bottom-left">
             <StackComponent spacing="medium">
               <TitleText tag="p" size="medium">
-                Pro zobrazení výsledku je nutné odpovědět alespoň na 1 otázku
+                {{ $t('routes.result.ResultPage.text-at-least-one-answer') }}
               </TitleText>
               <BodyText tag="p" size="medium">
-                Můžete se
+                {{ $t('routes.result.ResultPage.you-may') }}
                 <a
                   :href="
                     router.resolve({
@@ -354,10 +378,10 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                     }).path
                   "
                   @click.prevent="handleStartClick"
-                  >vrátit na začátek</a
+                  >{{ $t('routes.result.ResultPage.back-to-start') }}</a
                 >
-                a odpovědět na minimálně 1 otázku, nebo si
-                <a
+                {{ $t('routes.result.ResultPage.text-and-answer') }}
+                <!-- <a
                   :href="
                     router.resolve({
                       name: appRoutes.comparison.name,
@@ -367,8 +391,8 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   "
                   @click.prevent="handleShowComparsionClick"
                 >
-                  zobrazit porovnání odpovědí kandidátů </a
-                >.
+                  {{ $t('routes.result.ResultPage.text-display-answers') }} </a
+                >. -->
               </BodyText>
               <StackComponent horizontal spacing="medium">
                 <ButtonComponent
@@ -376,28 +400,28 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   color="primary"
                   @click="handleStartClick"
                 >
-                  Vyplnit kalkulačku
+                  {{ $t('routes.result.ResultPage.fill-calc') }}
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
                 </ButtonComponent>
-                <ButtonComponent
+                <!-- <ButtonComponent
                   kind="outlined"
                   color="primary"
                   @click="handleShowComparsionClick"
                 >
-                  Odpovědi kandidátů
+                  {{ $t('routes.result.ResultPage.candidates-answers') }}
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
-                </ButtonComponent>
+                </ButtonComponent> -->
               </StackComponent>
             </StackComponent>
           </CardComponent>
           <DonateBlock />
         </StackComponent>
 
-        <template #bottom-bar>
+        <!-- <template #bottom-bar>
           <ResponsiveWrapper extra-small small>
             <BottomBar>
               <div class="bottom-bar-grid">
@@ -406,7 +430,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   color="primary"
                   @click="handleShowComparsionClick"
                 >
-                  Porovnat odpovědi
+                  {{ $t('routes.result.ResultPage.compare-answers') }}
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
@@ -414,7 +438,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
               </div>
             </BottomBar>
           </ResponsiveWrapper>
-        </template>
+        </template> -->
       </BottomBarWrapper>
     </StickyHeaderLayout>
   </BackgroundComponent>
@@ -423,8 +447,12 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
     ref="shareModal"
     :relative-agreement="resultsGeneral"
   />
-  <ErrorModal v-else ref="shareModal" title="Něco se pokazilo">
-    Bohužel momentálně nelze sdílet, zkuste to prosím později.
+  <ErrorModal
+    v-else
+    ref="shareModal"
+    :title="$t('routes.result.ResultPage.something-went-wrong')"
+  >
+    {{ $t('routes.result.ResultPage.something-went-wrong-text') }}
   </ErrorModal>
 </template>
 

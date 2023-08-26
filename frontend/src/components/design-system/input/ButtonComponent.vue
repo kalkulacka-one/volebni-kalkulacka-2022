@@ -36,7 +36,7 @@ const classes = computed(() => ({
 const computedTag = computed(() => (props.href ? 'a' : props.tag));
 
 const computedSize = computed(() =>
-  props.kind === 'link' ? props.size : 'medium'
+  props.kind === 'link' ? props.size : 'medium',
 );
 </script>
 
@@ -62,7 +62,6 @@ const computedSize = computed(() =>
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
   line-height: 0;
   padding: 0;
   cursor: pointer;
@@ -186,7 +185,7 @@ const computedSize = computed(() =>
   &--answer {
     border-style: solid;
     border-width: var(--spacing-nano);
-    border-radius: var(--radius-small);
+    border-radius: var(--radius-medium);
     border-top-right-radius: 0;
 
     &.button--medium {

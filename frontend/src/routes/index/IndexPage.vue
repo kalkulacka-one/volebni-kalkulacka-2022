@@ -1,25 +1,31 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+import { useI18n } from 'vue-i18n';
 
 import { appRoutes } from '@/main';
 
-import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
-import CardComponent from '@/components/design-system/containers/CardComponent.vue';
-import StackComponent from '../../components/design-system/layout/StackComponent.vue';
+import { mdiArrowDown, mdiArrowRight, mdiEmailOutline } from '@mdi/js';
+
+import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
+import BlobComponent from '@/components/design-system/style/BlobComponent.vue';
 import BodyText from '../../components/design-system/typography/BodyText.vue';
 import ButtonComponent from '../../components/design-system/input/ButtonComponent.vue';
-import TitleText from '@/components/design-system/typography/TitleText.vue';
+import CardComponent from '@/components/design-system/containers/CardComponent.vue';
+import DonateBlock from '@/components/DonateBlock.vue';
+import FooterMultiWord from '@/components/FooterMultiWord.vue';
+import FormComponent from '@/components/design-system/input/FormComponent.vue';
 import HeadlineText from '@/components/design-system/typography/HeadlineText.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
-import { mdiArrowDown, mdiArrowRight } from '@mdi/js';
 import InfoBubble from '@/components/InfoBubble.vue';
-import FooterMultiWord from '@/components/FooterMultiWord.vue';
-import DonateBlock from '@/components/DonateBlock.vue';
-import StaticContentLayout from '@/components/layouts/StaticContentLayout.vue';
 import MasonryGrid from '@/components/design-system/layout/MasonryGrid.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
-import BlobComponent from '@/components/design-system/style/BlobComponent.vue';
+import StackComponent from '../../components/design-system/layout/StackComponent.vue';
+import StaticContentLayout from '@/components/layouts/StaticContentLayout.vue';
+import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
+import TextInputComponent from '@/components/design-system/input/TextInputComponent.vue';
+import TitleText from '@/components/design-system/typography/TitleText.vue';
+
 import { useUserStore } from '@/stores/userStore';
 
 const router = useRouter();
@@ -29,6 +35,44 @@ const userStore = useUserStore();
 const user = computed(() => userStore.user);
 const info = ref<HTMLElement | null>(null);
 const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
+
+const { t, locale } = useI18n();
+
+const email = ref('');
+const emailError = ref();
+const posting = ref();
+const success = ref();
+const message = ref();
+
+const handleSubmit = async () => {
+  console.log('handleSubmit');
+  if (email.value === '') {
+    emailError.value = t('routes.index.IndexPage.empty-email-error');
+    return;
+  } else {
+    emailError.value = undefined;
+  }
+
+  posting.value = true;
+
+  const response = await fetch('/api/subscriptions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ email: email.value }),
+  });
+
+  if (response.ok) {
+    posting.value = false;
+    success.value = true;
+    message.value = t('routes.index.IndexPage.success');
+  } else {
+    posting.value = false;
+    success.value = false;
+    message.value = t('routes.index.IndexPage.error');
+  }
+};
 </script>
 
 <template>
@@ -41,18 +85,20 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
       <BlobComponent color="red" class="blob2" />
       <StackComponent spacing="medium" centered class="calc-main">
         <BodyText size="medium" tag="h1" color="fg-strong">
-          <b>2. kolo prezidentských voleb</b><br />
-          27.–28. ledna 2023
+          <b>Voľby do Národnej rady Slovenskej republiky</b><br />
+          30. septembra 2023
           <br />
         </BodyText>
         <HeadlineText tag="p" size="small">
-          <span style="color: rgb(var(--color-neutral-fg))">
-            Petr Pavel<br />
-          </span>
-          Bude reprezentovat<br />vaše&nbsp;názory?
+          Parlamentné voľby
+          <span style="color: rgb(var(--color-neutral-fg))"> 2023 </span>
         </HeadlineText>
-        <BodyText size="small" tag="h2">
-          Volební kalkulačka pro 2. kolo<br />20 otázek, cca 5 minut
+        <BodyText size="medium" tag="h2" color="fg-strong">
+          <strong>Inventúra hlasovaní</strong>
+        </BodyText>
+        <BodyText size="small">
+          Volebná kalkulačka na základe skutočných hlasovaní poslancov a
+          poslankýň Národnej rady SR v 8. volebnom období 2020–2023
         </BodyText>
         <ButtonComponent
           kind="filled"
@@ -63,141 +109,20 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
               name: appRoutes.guide.name,
               params: {
                 ...route.params,
-                election: 'prezidentske-2023',
-                district: 'pro-kazdeho-2-kolo',
+                election: 'nrsr-2023',
+                district: 'inventura-2020-2023',
               },
               query: { ...route.query },
             })
           "
         >
-          Spustit kalkulačku
+          Spustiť inventúru hlasovaní
+
           <template #iconAfter>
             <IconComponent :icon="mdiArrowRight" />
           </template>
         </ButtonComponent>
-        <BodyText size="small">
-          <a href="https://prezident2023.programydovoleb.cz/"
-            >Kdo kandidoval (Programy do voleb)
-          </a>
-        </BodyText>
-        <BodyText size="small">
-          Volební kalkulačku už vyplnilo přes 1 milion lidí.
-        </BodyText>
-        <ButtonComponent
-          kind="outlined"
-          color="primary"
-          tag="a"
-          @click="
-            router.push({
-              name: appRoutes.guide.name,
-              params: {
-                ...route.params,
-                election: 'prezidentske-2023',
-                district: 'pro-kazdeho',
-              },
-              query: { ...route.query },
-            })
-          "
-        >
-          Spustit kalkulačku pro 1. kolo
-          <template #iconAfter>
-            <IconComponent :icon="mdiArrowRight" />
-          </template>
-        </ButtonComponent>
-        <BodyText size="small" tag="h2">42 otázek, cca 10 minut</BodyText>
       </StackComponent>
-      <div class="avatars">
-        <div class="avatar pavel-fischer">
-          <img
-            alt="Fotografie – Pavel Fischer"
-            src="@/assets/prezidenti-2023/cand-pavel-fischer-1x.jpg"
-            srcset="
-              @/assets/prezidenti-2023/cand-pavel-fischer-1x.webp,
-              @/assets/prezidenti-2023/cand-pavel-fischer-2x.webp 2x
-            "
-          />
-        </div>
-        <div class="avatar shift jaroslav-basta">
-          <img
-            alt="Fotografie – Jaroslav Bašta"
-            src="@/assets/prezidenti-2023/cand-jaroslav-basta-1x.jpg"
-            srcset="
-              @/assets/prezidenti-2023/cand-jaroslav-basta-1x.webp,
-              @/assets/prezidenti-2023/cand-jaroslav-basta-2x.webp 2x
-            "
-          />
-        </div>
-        <div class="avatar shift josef-stredula">
-          <img
-            alt="Fotografie – Josef Středula"
-            src="@/assets/prezidenti-2023/cand-josef-stredula-1x.jpg"
-            srcset="
-              @/assets/prezidenti-2023/cand-josef-stredula-1x.webp,
-              @/assets/prezidenti-2023/cand-josef-stredula-2x.webp 2x
-            "
-          />
-        </div>
-        <div class="avatar petr-pavel">
-          <img
-            alt="Fotografie – Petr Pavel"
-            src="@/assets/prezidenti-2023/cand-petr-pavel-1x.jpg"
-            srcset="
-              @/assets/prezidenti-2023/cand-petr-pavel-1x.webp,
-              @/assets/prezidenti-2023/cand-petr-pavel-2x.webp 2x
-            "
-          />
-        </div>
-        <div class="avatar shift tomas-zima">
-          <img
-            alt="Fotografie – Tomáš Zima"
-            src="@/assets/prezidenti-2023/cand-tomas-zima-1x.jpg"
-            srcset="
-              @/assets/prezidenti-2023/cand-tomas-zima-1x.webp,
-              @/assets/prezidenti-2023/cand-tomas-zima-2x.webp 2x
-            "
-          />
-        </div>
-        <div class="avatar danuse-nerudova">
-          <img
-            alt="Fotografie – Danuše Nerudová"
-            src="@/assets/prezidenti-2023/cand-danuse-nerudova-1x.jpg"
-            srcset="
-              @/assets/prezidenti-2023/cand-danuse-nerudova-1x.webp,
-              @/assets/prezidenti-2023/cand-danuse-nerudova-2x.webp 2x
-            "
-          />
-        </div>
-        <div class="avatar andrej-babis">
-          <img
-            alt="Fotografie – Andrej Babiš"
-            src="@/assets/prezidenti-2023/cand-andrej-babis-1x.jpg"
-            srcset="
-              @/assets/prezidenti-2023/cand-andrej-babis-1x.webp,
-              @/assets/prezidenti-2023/cand-andrej-babis-2x.webp 2x
-            "
-          />
-        </div>
-        <div class="avatar shift karel-divis">
-          <img
-            alt="Fotografie – Karel Diviš"
-            src="@/assets/prezidenti-2023/cand-karel-divis-1x.jpg"
-            srcset="
-              @/assets/prezidenti-2023/cand-karel-divis-1x.webp,
-              @/assets/prezidenti-2023/cand-karel-divis-2x.webp 2x
-            "
-          />
-        </div>
-        <div class="avatar shift marek-hilser">
-          <img
-            alt="Fotografie – Marek Hilšer"
-            src="@/assets/prezidenti-2023/cand-marek-hilser-1x.jpg"
-            srcset="
-              @/assets/prezidenti-2023/cand-marek-hilser-1x.webp,
-              @/assets/prezidenti-2023/cand-marek-hilser-2x.webp 2x
-            "
-          />
-        </div>
-      </div>
       <div class="other-calcs">
         <CardComponent
           corner="bottom-left"
@@ -209,16 +134,18 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
         >
           <StackComponent spacing="small" centered space-between>
             <BodyText size="medium" tag="h2" color="fg-strong">
-              <strong>Kalkulačka pro nadšence</strong><br />
-              Prezident 2023
+              <strong>Volebná kalkulačka 2023</strong>
             </BodyText>
             <BodyText size="small">
-              Všech 98 otázek, které jsme položili prezidentským kandidátům.
+              Klasická volebná kalkulačka pre voľby 2023.<br /><i
+                >Spustíme počiatkom septembra.</i
+              >
             </BodyText>
             <ButtonComponent
+              readOnly
+              disabled
               kind="outlined"
               color="primary"
-              tag="a"
               @click="
                 router.push({
                   name: appRoutes.guide.name,
@@ -231,7 +158,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
                 })
               "
             >
-              Spustit kalkulačku
+              Už čoskoro
               <template #iconAfter>
                 <IconComponent :icon="mdiArrowRight" />
               </template>
@@ -248,20 +175,18 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
         >
           <StackComponent spacing="small" centered space-between>
             <BodyText size="medium" tag="h2" color="fg-strong">
-              <strong>Kalkulačka pro mladé</strong><br />
-              Prezident 2023
+              <strong>Kalkulačka pre mladé</strong>
             </BodyText>
             <BodyText size="small">
-              Otázky, které rezonují mladou generací.<br />
-              Ve spolupráci s projektem
-              <a href="https://www.nazorypolitiku.cz" target="_blank">
-                NázoryPolitiků.cz </a
-              >.
+              Otázky, ktoré rezonujú mladou generáciou. <br /><i
+                >Spustíme počiatkom septembra.</i
+              >
             </BodyText>
             <ButtonComponent
+              readOnly
+              disabled
               kind="outlined"
               color="primary"
-              tag="a"
               @click="
                 router.push({
                   name: appRoutes.guide.name,
@@ -274,7 +199,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
                 })
               "
             >
-              Spustit kalkulačku
+              Už čoskoro
               <template #iconAfter>
                 <IconComponent :icon="mdiArrowRight" />
               </template>
@@ -283,125 +208,91 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
         </CardComponent>
       </div>
     </div>
-    <StackComponent class="section" spacing="large" centered>
-      <ButtonComponent kind="link" @click="scrollDown">
-        <div class="button-content">
-          Starší kalkulačky<IconComponent :icon="mdiArrowDown"></IconComponent>
-        </div>
-      </ButtonComponent>
-    </StackComponent>
-
+    <section class="subscribe">
+      <StackComponent spacing="large" centered>
+        <BodyText size="medium" centered>{{
+          $t('routes.index.IndexPage.secondary-text')
+        }}</BodyText>
+        <StackComponent spacing="small" centered>
+          <BodyText v-if="success" size="small">
+            {{ message }}
+          </BodyText>
+          <form v-if="!success">
+            <StackComponent
+              horizontal
+              spacing="small"
+              stretched
+              wrap
+              style="justify-content: center"
+            >
+              <TextInputComponent
+                v-model="email"
+                required
+                type="email"
+                :placeholder="t('routes.index.IndexPage.input-label')"
+                :value="email"
+                :icon="mdiEmailOutline"
+                :disabled="posting"
+                :error="emailError"
+              />
+              <ButtonComponent
+                kind="filled"
+                color="primary"
+                :loading="posting"
+                @click.prevent="handleSubmit"
+              >
+                {{ $t('routes.index.IndexPage.subscribe-button-label') }}
+              </ButtonComponent>
+            </StackComponent>
+          </form>
+          <BodyText v-if="!success" tag="p" size="small">{{
+            $t('routes.index.IndexPage.disclaimer')
+          }}</BodyText>
+        </StackComponent>
+      </StackComponent>
+    </section>
     <StaticContentLayout>
       <StackComponent class="section" spacing="small" centered>
-        <TitleText size="large" tag="h2">Jak kalkulačka vzniká?</TitleText>
+        <TitleText size="large" tag="h2">Ako vzniká kalkulačka?</TitleText>
         <BodyText size="medium"
-          >Volební kalkulačka je projekt neziskové organizace KohoVolit.eu a je
-          nestranným pomocníkem při Vašem rozhodování koho volit.</BodyText
+          >Volebná kalkulačka je projektom neziskovej organizácie KohoVolit.eu a
+          je nestranným pomocníkom pri vašom rozhodovaní, koho voliť.</BodyText
         >
         <div class="info-bubbles-grid section">
           <InfoBubble image="info-1.png">
             <BodyText size="small"
-              >Připravíme zhruba 40 otázek na aktuální politická
-              témata.</BodyText
-            >
+              >Prípravíme približne 40 otázok na aktuálne politické témy.
+            </BodyText>
           </InfoBubble>
           <InfoBubble image="info-2.png">
             <BodyText size="small"
-              >Otázky položíme všem kandidátům / stranám.</BodyText
-            >
+              >Otázky položíme všetkým kandidátom / stranám.
+            </BodyText>
           </InfoBubble>
           <InfoBubble image="info-3.png">
             <BodyText size="small"
-              >Dostaneme od většiny z nich odpovědi.</BodyText
-            >
+              >Z väčšiny z nich dostaneme odpovede.
+            </BodyText>
           </InfoBubble>
           <InfoBubble image="info-4.png">
             <BodyText size="small"
-              >Volební kalkulačka vám s nimi spočítá názorovou shodu.</BodyText
+              >Volebná kalkulačka vám s nimi vypočíta zhodu názorov.</BodyText
             >
           </InfoBubble>
         </div>
       </StackComponent>
       <StackComponent class="section" spacing="large" centered>
         <BodyText size="medium"
-          >Volební kalkulačka je pouze informační služba a není jejím cílem
-          dávat konkrétní volební doporučení.</BodyText
-        >
+          >Volebná kalkulačka je len informačnou službou a jej cieľom nie je
+          poskytovať konkrétne volebné odporúčania.
+        </BodyText>
         <ButtonComponent kind="link" @click="router.push('/o-nas')">
           <div class="button-content">
-            Zjistit více<IconComponent :icon="mdiArrowRight"></IconComponent>
+            Zistiť viac<IconComponent :icon="mdiArrowRight"></IconComponent>
           </div>
         </ButtonComponent>
       </StackComponent>
       <DonateBlock />
-      <StackComponent spacing="large">
-        <div ref="info"></div>
-        <TitleText size="large" tag="h2">
-          Volební kalkulačky k už proběhlým volbám
-        </TitleText>
-        <MasonryGrid style="align-self: stretch">
-          <CardComponent corner="top-right" padding="medium" border shadow>
-            <div class="card-content">
-              <div class="card-content-text">
-                <TitleText tag="h3" size="medium"
-                  >Komunální volby 2022</TitleText
-                >
-                <BodyText size="medium"
-                  >K dispozici jsou kalkulačky pro vybraná města.</BodyText
-                >
-                <div class="divider" />
-                <BodyText size="small"
-                  >Komunální kalkulačku vyplnilo přes 100 tisíc lidí.</BodyText
-                >
-              </div>
-              <ButtonComponent
-                kind="outlined"
-                color="primary"
-                @click="
-                  router.push({
-                    name: appRoutes.districtSelection.name,
-                    params: { ...route.params, election: 'komunalni-2022' },
-                    query: { ...route.query },
-                  })
-                "
-                >Spustit kalkulačku</ButtonComponent
-              >
-            </div>
-          </CardComponent>
-          <CardComponent corner="top-left" padding="medium" border shadow>
-            <div class="card-content">
-              <div class="card-content-text">
-                <TitleText tag="h3" size="medium">Senátní volby 2022</TitleText>
-                <BodyText size="medium"
-                  >Pro jednotlivé volební obvody.</BodyText
-                >
-                <BodyText size="medium"
-                  ><a
-                    href="https://2022.programydovoleb.cz/senatni-volby#kde-se-letos-voli"
-                    >Více o senátních obvodech</a
-                  ></BodyText
-                >
-              </div>
-              <div class="divider" />
-              <BodyText size="small"
-                >Senátní kalkulačku vyplnilo přes 25 tisíc lidí.</BodyText
-              >
-              <ButtonComponent
-                color="primary"
-                kind="outlined"
-                @click="
-                  router.push({
-                    name: appRoutes.districtSelection.name,
-                    params: { ...route.params, election: 'senatni-2022' },
-                    query: { ...route.query },
-                  })
-                "
-                >Spustit kalkulačku</ButtonComponent
-              >
-            </div>
-          </CardComponent>
-        </MasonryGrid>
-      </StackComponent>
     </StaticContentLayout>
     <FooterMultiWord class="section" />
   </StickyHeaderLayout>
@@ -416,42 +307,6 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
   column-gap: 24px;
   overflow: hidden;
   padding-top: 7%;
-
-  .avatars {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-
-    .avatar {
-      width: 80%;
-      left: 10%;
-
-      &.shift {
-        top: -25%;
-      }
-    }
-  }
-
-  .avatar {
-    position: relative;
-    width: 100%;
-
-    &:after {
-      content: '';
-      display: block;
-      padding-bottom: 100%;
-      padding-left: 100%;
-    }
-
-    > img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      left: 0;
-      box-shadow: 0px 8px 32px rgba(var(--color-neutral-fg), 0.1);
-    }
-  }
 
   .calc-main {
     text-align: center;
@@ -499,71 +354,6 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
       grid-template-columns: 1fr 1fr;
       padding: 0;
     }
-
-    .avatars {
-      display: contents;
-
-      .avatar {
-        width: 100%;
-        left: 0;
-
-        &.shift {
-          top: -50%;
-        }
-      }
-
-      .pavel-fischer {
-        grid-row: 2;
-        grid-column: 1;
-        opacity: 60%;
-      }
-
-      .jaroslav-basta {
-        grid-row: 3;
-        grid-column: 2;
-        opacity: 60%;
-      }
-
-      .josef-stredula {
-        grid-row: 4;
-        grid-column: 1;
-        opacity: 60%;
-      }
-
-      .petr-pavel {
-        grid-row: 4;
-        grid-column: 2;
-      }
-
-      .tomas-zima {
-        grid-row: 4;
-        grid-column: 3;
-        opacity: 60%;
-      }
-
-      .danuse-nerudova {
-        grid-row: 4;
-        grid-column: 10;
-        opacity: 60%;
-      }
-
-      .andrej-babis {
-        grid-row: 2;
-        grid-column: 11;
-      }
-
-      .karel-divis {
-        grid-row: 4;
-        grid-column: 11;
-        opacity: 60%;
-      }
-
-      .marek-hilser {
-        grid-row: 3;
-        grid-column: 12;
-        opacity: 60%;
-      }
-    }
   }
 
   @media (min-width: 992px) {
@@ -576,19 +366,6 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
     .other-calcs {
       grid-column: 4/10;
     }
-  }
-
-  .avatars {
-      .pavel-fischer,
-      .jaroslav-basta,
-      .josef-stredula,
-      .tomas-zima,
-      .danuse-nerudova,
-      .andrej-babis,
-      .karel-divis,
-      .marek-hilser {
-        filter: grayscale(100%);
-      }
   }
 }
 
@@ -686,5 +463,13 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
       justify-content: end;
     }
   }
+}
+
+.subscribe {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  display: grid;
+  align-content: center;
+  justify-content: center;
 }
 </style>

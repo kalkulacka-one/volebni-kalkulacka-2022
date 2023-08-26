@@ -6,8 +6,8 @@ import { mdiCloseCircleOutline, mdiArrowLeft, mdiArrowRight } from '@mdi/js';
 import { appRoutes } from '@/main';
 import { useElectionStore, UserAnswerEnum } from '@/stores/electionStore';
 
-import type { Election } from '@/types/election';
-import type { Question } from '@/types/question';
+import type { DeprecatedElection } from '@/types/election';
+import type { DeprecatedQuestion } from '@/types/question';
 
 import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
@@ -30,18 +30,22 @@ import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import RecapQuestionCard from './RecapQuestionCard.vue';
 import { getDistrictCode } from '@/common/utils';
 
+import { useI18n } from 'vue-i18n';
+
+const { t, locale } = useI18n();
+
 const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
 
-const election = electionStore.election as Election;
+const election = electionStore.election as DeprecatedElection;
 const electionName = election.name;
 const districtCode = getDistrictCode(route.params.district as string);
 const districtName = electionStore.districts.filter(
-  (district) => district.district_code === districtCode
+  (district) => district.district_code === districtCode,
 )[0].name;
 const showDistrictCode = electionStore.districts.filter(
-  (district) => district.district_code === districtCode
+  (district) => district.district_code === districtCode,
 )[0].show_district_code;
 const districtNameWithCode = showDistrictCode
   ? `${districtName} (${districtCode})`
@@ -67,8 +71,8 @@ const handleShowResultsClick = () => {
 
 const availableTags: Set<string> = new Set(['All']);
 const selectedTag = ref('All');
-electionStore.calculator?.questions.forEach((q) =>
-  q.tags?.forEach((tag) => availableTags.add(tag))
+electionStore.calculator?.questions.forEach(
+  (q) => q.tags?.forEach((tag) => availableTags.add(tag)),
 );
 
 const handleStarClick = (index: number) => {
@@ -109,7 +113,7 @@ const isCardHidden = (index: number) => {
                   <template #icon>
                     <IconComponent
                       :icon="mdiCloseCircleOutline"
-                      title="Zpět na hlavní stránku"
+                      :title="$t('routes.recap.RecapPage.back-to-main-page')"
                     />
                   </template>
                 </ButtonComponent>
@@ -124,7 +128,7 @@ const isCardHidden = (index: number) => {
                     })
                   "
                 >
-                  Zpět na hlavní stránku
+                  {{ $t('routes.recap.RecapPage.back-to-main-page') }}
                   <template #iconAfter>
                     <IconComponent :icon="mdiCloseCircleOutline" />
                   </template>
@@ -139,20 +143,30 @@ const isCardHidden = (index: number) => {
           <SecondaryNavigationBar centered-title>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Otázky" />
+                <IconComponent
+                  :icon="mdiArrowLeft"
+                  :title="$t('routes.recap.RecapPage.questions')"
+                />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="medium">Rekapitulace</TitleText>
+            <TitleText tag="h2" size="medium">{{
+              $t('routes.recap.RecapPage.recapitulation')
+            }}</TitleText>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
         <ResponsiveWrapper medium large extra-large huge>
           <SecondaryNavigationBar>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Otázky" />
+                <IconComponent
+                  :icon="mdiArrowLeft"
+                  :title="$t('routes.recap.RecapPage.questions')"
+                />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="large">Rekapitulace</TitleText>
+            <TitleText tag="h2" size="large">{{
+              $t('routes.recap.RecapPage.recapitulation')
+            }}</TitleText>
             <template #after>
               <ButtonComponent
                 class="desktop"
@@ -163,7 +177,7 @@ const isCardHidden = (index: number) => {
                 <template #icon>
                   <IconComponent :icon="vkiLogoPercent" />
                 </template>
-                Zobrazit výsledky
+                {{ $t('routes.recap.RecapPage.display-results') }}
                 <template #iconAfter>
                   <IconComponent :icon="mdiArrowRight" />
                 </template>
@@ -175,15 +189,16 @@ const isCardHidden = (index: number) => {
       <BottomBarWrapper>
         <StackComponent class="main" spacing="small">
           <BodyText size="small">
-            Zde si můžete projít a&nbsp;případně upravit svoje odpovědi
-            a&nbsp;jejich váhu.
+            {{ $t('routes.recap.RecapPage.hint-text') }}
           </BodyText>
           <StackComponent class="list" spacing="small">
             <RecapQuestionCard
               v-for="i in [...Array(electionStore.questionCount).keys()]"
               :key="i"
               :hidden="isCardHidden(i)"
-              :question="(electionStore.calculator?.questions[i] as Question)"
+              :question="
+                electionStore.calculator?.questions[i] as DeprecatedQuestion
+              "
               :answer="electionStore.answers[i]"
               :current-question="i + 1"
               :question-count="electionStore.questionCount"

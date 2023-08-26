@@ -1,8 +1,10 @@
 import { fileURLToPath, URL } from 'node:url';
+import { resolve, dirname } from 'node:path';
 
 import { defineConfig, loadEnv, type ESBuildOptions } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import md from 'vite-plugin-md';
+import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite';
 
 const esbuildProd: ESBuildOptions = {
   drop: ['console', 'debugger'],
@@ -19,7 +21,16 @@ export default defineConfig(({ command, mode }) => {
   const esbuildConf = isVercel ? esbuildVercel : esbuildProd;
   console.log(`Deploying on Vercel: ${isVercel}`);
   return {
-    plugins: [vue({ include: [/\.vue$/, /\.md$/] }), md()],
+    plugins: [
+      vue({ include: [/\.vue$/, /\.md$/] }),
+      md(),
+      VueI18nPlugin({
+        include: resolve(
+          dirname(fileURLToPath(import.meta.url)),
+          './src/i18n/locales/**',
+        ),
+      }),
+    ],
     esbuild: esbuildConf,
     build: {
       sourcemap: mode !== 'production' || isVercel,

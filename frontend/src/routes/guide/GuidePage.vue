@@ -11,7 +11,7 @@ import {
 import { appRoutes } from '@/main';
 import { useElectionStore } from '@/stores/electionStore';
 
-import type { Election } from '@/types/election';
+import type { DeprecatedElection } from '@/types/election';
 
 import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
@@ -43,18 +43,22 @@ import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import { getDistrictCode } from '@/common/utils';
 
+import { useI18n } from 'vue-i18n';
+
+const { t, locale } = useI18n();
+
 const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
 
-const election = electionStore.election as Election;
+const election = electionStore.election as DeprecatedElection;
 const electionName = election.name;
 const districtCode = getDistrictCode(route.params.district as string);
 const districtName = electionStore.districts.filter(
-  (district) => district.district_code === districtCode
+  (district) => district.district_code === districtCode,
 )[0].name;
 const showDistrictCode = electionStore.districts.filter(
-  (district) => district.district_code === districtCode
+  (district) => district.district_code === districtCode,
 )[0].show_district_code;
 const districtNameWithCode = showDistrictCode
   ? `${districtName} (${districtCode})`
@@ -77,12 +81,12 @@ Vítejte ve Volební kalkulačce pro prezidentské volby 2023.
 
 Čeká vás 42 otázek. Na stejné otázky nám odpověděly kandidující osobnosti. Zodpovězení otázek zabere zhruba 10 minut. Na konci se dozvíte, jak se jednotliví kandidáti a kandidátky shodují s vašimi názory.
     `
-    : route.params.election === 'prezidentske-2023' &&
-      route.params.district === 'pro-kazdeho-2-kolo'
+    : route.params.election === 'nrsr-2023' &&
+      route.params.district === 'inventura-2020-2023'
     ? `
-Vítejte ve Volební kalkulačce pro 2. kolo prezidentských voleb 2023.
+Vitajte v Inventúre hlasovaní Národnej rady SR 2020-2023!
 
-Vybrali jsme pro vás 20 otázek, ve kterých se postupující kandidáti – Petr Pavel a Andrej Babiš – liší. Zodpovězení otázek zabere zhruba 5 minut. Na konci se dozvíte, jak se kandidáti shodují s vašimi názory.
+Vybrali sme pre Vás 30 skutočných hlasovaní, ktoré sa uskutočnili v Národnej rade SR v končiacom volebnom období. Predstavte si, že o nich hlasujete ako jeden z poslancov alebo poslankýň. Zodpovedanie otázok zaberie zhruba 5 minút. Na konci sa dozviete, ktorí poslanci sa zhodovali s vašimi názormi.
     `
     : route.params.election === 'prezidentske-2023' &&
       route.params.district === 'pro-nadsence'
@@ -109,13 +113,13 @@ Vítejte ve Volební kalkulačce pro komunální volby 2022.
 const forwardRoute = computed(
   () =>
     router.options.history.state.forward &&
-    router.resolve(router.options.history.state.forward as string)
+    router.resolve(router.options.history.state.forward as string),
 );
 
 const backRoute = computed(
   () =>
     router.options.history.state.back &&
-    router.resolve(router.options.history.state.back as string)
+    router.resolve(router.options.history.state.back as string),
 );
 
 const stepsCount = 4;
@@ -126,23 +130,23 @@ const farthestCompletedStep = ref(
     forwardRoute.value && forwardRoute.value.name === appRoutes.question.name
       ? 4
       : 0,
-    backRoute.value && backRoute.value.name === appRoutes.question.name ? 4 : 0
-  )
+    backRoute.value && backRoute.value.name === appRoutes.question.name ? 4 : 0,
+  ),
 );
 
 const previousButtonTitle = computed(() => {
   if (currentStep.value === 1) {
-    return 'Změnit obvod';
+    return t('routes.guide.GuidePage.next-step');
   } else {
-    return 'Předchozí krok';
+    return t('routes.guide.GuidePage.previous-step');
   }
 });
 
 const nextButtonTitle = computed(() => {
   if (currentStep.value < stepsCount) {
-    return 'Další krok';
+    return t('routes.guide.GuidePage.next-step');
   } else {
-    return 'První otázka';
+    return t('routes.guide.GuidePage.first-question');
   }
 });
 const nextButtonKind = computed(() => {
@@ -197,7 +201,7 @@ const goToDistrictSelection = () => {
 const handleNextClick = () => {
   farthestCompletedStep.value = Math.max(
     farthestCompletedStep.value,
-    currentStep.value
+    currentStep.value,
   );
 
   if (currentStep.value < stepsCount) {
@@ -234,7 +238,7 @@ const handlePreviousClick = () => {
                     })
                   "
                 >
-                  Zpět na hlavní stránku
+                  {{ $t('routes.guide.GuidePage.back-to-main-page') }}
                   <template #iconAfter>
                     <IconComponent :icon="mdiCloseCircleOutline" />
                   </template>
@@ -253,7 +257,7 @@ const handlePreviousClick = () => {
                   <template #icon>
                     <IconComponent
                       :icon="mdiCloseCircleOutline"
-                      title="Zpět na hlavní stránku"
+                      :title="$t('routes.guide.GuidePage.back-to-main-page')"
                     />
                   </template>
                 </ButtonComponent>
@@ -296,14 +300,18 @@ const handlePreviousClick = () => {
           <StackComponent v-if="currentStep === 1" spacing="small">
             <HeadingComponent kind="title" size="medium">
               {{ electionName }}
-              <template #secondary>{{ districtNameWithCode }}</template>
+              <template #secondary
+                ><small>{{ districtNameWithCode }}</small></template
+              >
             </HeadingComponent>
             <BodyText size="medium">
               <MarkdownIt :markdown="text" />
             </BodyText>
           </StackComponent>
           <StackComponent v-if="currentStep === 2" spacing="small">
-            <BodyText size="medium">Odpovídat můžete pomocí tlačítek:</BodyText>
+            <BodyText size="medium">{{
+              $t('routes.guide.GuidePage.text-answer-button')
+            }}</BodyText>
             <CardComponent
               corner="bottom-right"
               border
@@ -315,32 +323,33 @@ const handlePreviousClick = () => {
                     :icon="vkiLogoInFavour"
                     color="rgb(var(--color-primary-fg))"
                   />
-                  <BodyText size="medium">= souhlasím</BodyText>
+                  <BodyText size="medium"
+                    >= {{ $t('routes.guide.GuidePage.agree') }}</BodyText
+                  >
                 </StackComponent>
                 <StackComponent horizontal spacing="small">
                   <IconComponent
                     :icon="vkiLogoAgainst"
                     color="rgb(var(--color-secondary-fg))"
                   />
-                  <BodyText size="medium">= nesouhlasím</BodyText>
+                  <BodyText size="medium"
+                    >= {{ $t('routes.guide.GuidePage.disagree') }}</BodyText
+                  >
                 </StackComponent>
               </StackComponent>
             </CardComponent>
             <StackComponent spacing="extra-small">
               <BodyText size="medium">
-                Když se s&nbsp;kandidátem nebo stranou v&nbsp;odpovědi shodnete,
-                získá ve výpočtu shody 1&nbsp;bod. V&nbsp;opačném případě
-                1&nbsp;bod ztratí.
+                {{ $t('routes.guide.GuidePage.text-method') }}
               </BodyText>
               <BodyText size="medium">
-                Pokud kandidát nebo strana na otázku neodpověděli, započítá se
-                ziskem 0&nbsp;bodů.
+                {{ $t('routes.guide.GuidePage.text-0') }}
               </BodyText>
             </StackComponent>
           </StackComponent>
           <StackComponent v-if="currentStep === 3" spacing="small">
             <BodyText size="medium">
-              Pokud vám na daném tématu zvlášť záleží, označte ho hvězdičkou:
+              {{ $t('routes.guide.GuidePage.text-important') }}
             </BodyText>
             <!-- TODO: remove inline styles -->
             <CardComponent
@@ -355,17 +364,18 @@ const handlePreviousClick = () => {
                   :icon="vkiStarFilled"
                   color="rgb(var(--palette-yellow))"
                 />
-                <BodyText size="medium">= pro mě důležité</BodyText>
+                <BodyText size="medium"
+                  >= {{ $t('routes.guide.GuidePage.important') }}</BodyText
+                >
               </StackComponent>
             </CardComponent>
             <BodyText size="medium">
-              Odpověď pak bude mít ve výpočtu shody dvojnásobnou váhu.
+              {{ $t('routes.guide.GuidePage.double-weight') }}
             </BodyText>
           </StackComponent>
           <StackComponent v-if="currentStep === 4" spacing="small">
             <BodyText size="medium">
-              Když nemáte názor, nejste si jisti nebo z&nbsp;jiného důvodu
-              nechcete odpovídat, můžete otázku přeskočit šipkou napravo.
+              {{ $t('routes.guide.GuidePage.skip-question') }}
             </BodyText>
             <CardComponent
               corner="bottom-right"
@@ -374,11 +384,13 @@ const handlePreviousClick = () => {
             >
               <StackComponent horizontal spacing="small">
                 <IconComponent :icon="mdiArrowRight" />
-                <BodyText size="medium">= přeskočit</BodyText>
+                <BodyText size="medium"
+                  >= {{ $t('routes.guide.GuidePage.skip') }}</BodyText
+                >
               </StackComponent>
             </CardComponent>
             <BodyText size="medium">
-              Tato otázka se do výpočtu vaší shody nezapočítá.
+              {{ $t('routes.guide.GuidePage.not-included') }}
             </BodyText>
           </StackComponent>
           <template #after>
@@ -396,7 +408,8 @@ const handlePreviousClick = () => {
           <ResponsiveWrapper medium large extra-large huge>
             <BottomBar class="bottom-bar" transparent>
               <LabelText class="text">
-                Návod {{ currentStep }}&hairsp;/&hairsp;{{ stepsCount }}
+                {{ $t('routes.guide.GuidePage.guide') }}
+                {{ currentStep }}&hairsp;/&hairsp;{{ stepsCount }}
               </LabelText>
               <StepProgress class="progress-indicator" :current="currentStep" />
               <ButtonComponent
@@ -415,7 +428,7 @@ const handlePreviousClick = () => {
                 kind="link"
                 @click="goToQuestions"
               >
-                Přeskočit návod
+                {{ $t('routes.guide.GuidePage.skip-guide') }}
                 <template #iconAfter>
                   <IconComponent :icon="mdiFastForward" />
                 </template>
@@ -425,7 +438,8 @@ const handlePreviousClick = () => {
           <ResponsiveWrapper extra-small small>
             <BottomBar class="bottom-bar">
               <LabelText class="text">
-                Návod {{ currentStep }}&hairsp;/&hairsp;{{ stepsCount }}
+                {{ $t('routes.guide.GuidePage.guide') }}
+                {{ currentStep }}&hairsp;/&hairsp;{{ stepsCount }}
               </LabelText>
               <StepProgress class="progress-indicator" :current="currentStep" />
               <ButtonComponent
@@ -444,7 +458,7 @@ const handlePreviousClick = () => {
                 kind="link"
                 @click="goToQuestions"
               >
-                Přeskočit návod
+                {{ $t('routes.guide.GuidePage.skip-guide') }}
                 <template #iconAfter>
                   <IconComponent :icon="mdiFastForward" />
                 </template>

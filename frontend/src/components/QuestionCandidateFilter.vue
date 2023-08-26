@@ -1,10 +1,14 @@
 <script setup lang="ts">
-import { useElectionStore } from '@/stores/electionStore';
 import { ref, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+import { useElectionStore } from '@/stores/electionStore';
 
 import PillGroupComponent from '@/components/design-system/input/PillGroupComponent.vue';
 import PillGroupItemComponent from '@/components/design-system/input/PillGroupItemComponent.vue';
 import TitleText from './design-system/typography/TitleText.vue';
+
+const { t } = useI18n();
 
 export interface Props {
   modelValue?: Set<string>;
@@ -25,8 +29,8 @@ const selectedCandidateIds = ref(
       ?.filter((x) => {
         if (x.is_active) return x;
       })
-      .map((x) => x.id)
-  )
+      .map((x) => x.id),
+  ),
 );
 
 const onSelectAllClicked = (event: MouseEvent) => {
@@ -44,14 +48,14 @@ watch(
   (newValue, oldValue) => {
     emit('update:modelValue', newValue);
   },
-  { deep: true, immediate: true }
+  { deep: true, immediate: true },
 );
 </script>
 
 <template>
   <form>
     <TitleText class="tag-filter-title" tag="h3" size="small">
-      Filtrovat podle kandidujících
+      {{ t('components.QuestionCandidateFilter.title-candidate-filter') }}
     </TitleText>
     <pill-group-component>
       <pill-group-item-component

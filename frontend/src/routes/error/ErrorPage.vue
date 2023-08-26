@@ -26,9 +26,13 @@ import { mdiArrowRight } from '@mdi/js';
 
 import NotFoundImg from '@/assets/error/not-found.svg';
 
+import { useI18n } from 'vue-i18n';
+
 export interface Props {
   case: ErrorPageEnum;
 }
+
+const { t, locale } = useI18n();
 
 const props = defineProps<Props>();
 const route = useRoute();
@@ -41,12 +45,12 @@ const handleHomeClicked = () => {
   });
 };
 const pageInfo = computed(() => {
-  let header = 'Unknown Error';
+  let header = t('routes.error.ErrorPage.unknown-error');
   let imgSrc = '';
   let imgAlt = '';
   switch (props.case) {
     case ErrorPageEnum.NotFound:
-      header = 'Tato stránka neexistuje';
+      header = t('routes.error.ErrorPage.this-page-does-not-exist');
       imgSrc = NotFoundImg;
       imgAlt = 'Not Found';
       break;
@@ -115,7 +119,7 @@ const pageInfo = computed(() => {
           size="medium"
           @click="handleHomeClicked"
         >
-          Přejít na hlavní stránku
+          {{ $t('routes.error.ErrorPage.go-to-main-page') }}
           <template #iconAfter>
             <IconComponent size="medium" :icon="mdiArrowRight" />
           </template>

@@ -7,8 +7,8 @@ import { mdiCloseCircleOutline, mdiArrowRight, mdiArrowLeft } from '@mdi/js';
 import { appRoutes, questionGuard } from '@/main';
 import { useElectionStore, UserAnswerEnum } from '@/stores/electionStore';
 
-import type { Election } from '@/types/election';
-import type { Question } from '@/types/question';
+import type { DeprecatedElection } from '@/types/election';
+import type { DeprecatedQuestion } from '@/types/question';
 
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
@@ -28,6 +28,10 @@ import BackgroundComponent from '../../components/design-system/style/Background
 import StatusBarComponent from '@/components/design-system/other/StatusBarComponent.vue';
 import { getDistrictCode } from '@/common/utils';
 
+import { useI18n } from 'vue-i18n';
+
+const { t, locale } = useI18n();
+
 const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
@@ -38,14 +42,14 @@ if (electionStore.calculator === undefined) {
   throw new Error('Calculator is undefined. This should never happen');
 }
 
-const election = electionStore.election as Election;
+const election = electionStore.election as DeprecatedElection;
 const electionName = election.name;
 const districtCode = getDistrictCode(route.params.district as string);
 const districtName = electionStore.districts.filter(
-  (district) => district.district_code === districtCode
+  (district) => district.district_code === districtCode,
 )[0].name;
 const showDistrictCode = electionStore.districts.filter(
-  (district) => district.district_code === districtCode
+  (district) => district.district_code === districtCode,
 )[0].show_district_code;
 const districtNameWithCode = showDistrictCode
   ? `${districtName} (${districtCode})`
@@ -56,26 +60,32 @@ const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
 const forwardRoute = computed(
   () =>
     router.options.history.state.forward &&
-    router.resolve(router.options.history.state.forward as string)
+    router.resolve(router.options.history.state.forward as string),
 );
 
 const backRoute = computed(
   () =>
     router.options.history.state.back &&
-    router.resolve(router.options.history.state.back as string)
+    router.resolve(router.options.history.state.back as string),
 );
 
 const questionCount = computed(() => electionStore.questionCount);
 //internally questions start at 0
 const currentQuestionNr = computed(
-  () => parseInt(route.params['nr'] as string) - 1
+  () => parseInt(route.params['nr'] as string) - 1,
 );
 
 const previousButtonTitle = computed(() => {
   if (currentQuestionNr.value === 0) {
-    return { long: 'Návod', short: 'Návod' };
+    return {
+      long: t('routes.question.QuestionPage.instructions-long'),
+      short: t('routes.question.QuestionPage.instructions-short'),
+    };
   } else {
-    return { long: 'Předchozí otázka', short: 'Předchozí' };
+    return {
+      long: t('routes.question.QuestionPage.previous-question-long'),
+      short: t('routes.question.QuestionPage.previous-question-short'),
+    };
   }
 });
 
@@ -85,12 +95,21 @@ const nextButtonTitle = computed(() => {
       electionStore.answers[currentQuestionNr.value].answer ===
       UserAnswerEnum.skip
     ) {
-      return { long: 'Přeskočit otázku', short: 'Přeskočit' };
+      return {
+        long: t('routes.question.QuestionPage.skip-question-long'),
+        short: t('routes.question.QuestionPage.skip-question-short'),
+      };
     } else {
-      return { long: 'Další otázka', short: 'Další' };
+      return {
+        long: t('routes.question.QuestionPage.next-question-long'),
+        short: t('routes.question.QuestionPage.next-question-short'),
+      };
     }
   } else {
-    return { long: 'Rekapitulace', short: 'Rekapitulace' };
+    return {
+      long: t('routes.question.QuestionPage.recapitulation-long'),
+      short: t('routes.question.QuestionPage.recapitulation-short'),
+    };
   }
 });
 
@@ -164,7 +183,7 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
                   })
                 "
               >
-                Zpět na hlavní stránku
+                {{ $t('routes.question.QuestionPage.back-to-main-page') }}
                 <template #iconAfter>
                   <IconComponent :icon="mdiCloseCircleOutline" />
                 </template>
@@ -183,7 +202,9 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
                 <template #icon>
                   <IconComponent
                     :icon="mdiCloseCircleOutline"
-                    title="Zpět na hlavní stránku"
+                    :title="
+                      $t('routes.question.QuestionPage.back-to-main-page')
+                    "
                   />
                 </template>
               </ButtonComponent>
@@ -221,7 +242,11 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
             <QuestionCard
               :current-question="currentQuestionNr + 1"
               :question-count="electionStore.questionCount"
-              :question="(electionStore.calculator?.questions[currentQuestionNr] as Question)"
+              :question="
+                electionStore.calculator?.questions[
+                  currentQuestionNr
+                ] as DeprecatedQuestion
+              "
             />
           </StepWrapper>
         </ResponsiveWrapper>
@@ -248,7 +273,11 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
             <QuestionCard
               :current-question="currentQuestionNr + 1"
               :question-count="electionStore.questionCount"
-              :question="(electionStore.calculator?.questions[currentQuestionNr] as Question)"
+              :question="
+                electionStore.calculator?.questions[
+                  currentQuestionNr
+                ] as DeprecatedQuestion
+              "
             />
             <template #after>
               <ResponsiveWrapper medium large extra-large huge>

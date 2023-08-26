@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 
-import type { Question } from '@/types/question';
-import type { Candidate } from '@/types/candidate';
-import type { CandidateAnswer } from '@/types/candidate-answer';
+import type { DeprecatedQuestion } from '@/types/question';
+import type { DeprecatedCandidate } from '@/types/candidate';
+import type { DeprecatedCandidateAnswer } from '@/types/candidate-answer';
 import { UserAnswerEnum, type UserAnswer } from '@/stores/electionStore';
 
 import { calculateRelativeAgreement } from '@/common/resultParser';
@@ -22,17 +22,21 @@ import {
 import QuestionCard from '@/components/QuestionCard.vue';
 import CardComponent from '../../components/design-system/containers/CardComponent.vue';
 
+import { useI18n } from 'vue-i18n';
+
 export interface Props {
-  questions: Question[];
+  questions: DeprecatedQuestion[];
   answers: UserAnswer[];
-  candidates: Candidate[];
-  candidateAnswers: CandidateAnswer[];
+  candidates: DeprecatedCandidate[];
+  candidateAnswers: DeprecatedCandidateAnswer[];
   selectedTags?: Set<string>;
   selectedCandidateIds?: Set<string>;
 }
 
+const { t, locale } = useI18n();
+
 const props = defineProps<Props>();
-const isQuestionInTagSet = (question: Question) => {
+const isQuestionInTagSet = (question: DeprecatedQuestion) => {
   if (!props.selectedTags) {
     return true;
   }
@@ -43,7 +47,7 @@ const isQuestionInTagSet = (question: Question) => {
   );
 };
 
-const isCandidateInCandidateSet = (candidate: Candidate) => {
+const isCandidateInCandidateSet = (candidate: DeprecatedCandidate) => {
   if (!props.selectedCandidateIds) {
     return true;
   } else {
@@ -52,22 +56,22 @@ const isCandidateInCandidateSet = (candidate: Candidate) => {
 };
 
 const questionsToShow = computed(() =>
-  props.questions.filter((x) => isQuestionInTagSet(x))
+  props.questions.filter((x) => isQuestionInTagSet(x)),
 );
 const candidatesToShow = computed(() =>
-  props.candidates.filter((x) => isCandidateInCandidateSet(x))
+  props.candidates.filter((x) => isCandidateInCandidateSet(x)),
 );
 console.debug(candidatesToShow);
 const results = calculateRelativeAgreement(
   props.candidateAnswers,
-  props.answers
+  props.answers,
 );
 const candidateOrder = computed(() =>
   results
     .filter((x) =>
-      props.selectedCandidateIds ? props.selectedCandidateIds.has(x.cId) : true
+      props.selectedCandidateIds ? props.selectedCandidateIds.has(x.cId) : true,
     )
-    .map((response) => response.cId)
+    .map((response) => response.cId),
 );
 
 const mapAnswerToIcon = (answer: string | UserAnswerEnum) => {
@@ -81,12 +85,13 @@ const mapAnswerToIcon = (answer: string | UserAnswerEnum) => {
       return vkiLogoAgainst;
     case UserAnswerEnum.skip:
     case 'dont_know':
-    case undefined:
       return vkiLogoNeutral;
+    case undefined:
+      return '';
     default:
       // eslint-disable-next-line no-undef
       newrelic?.noticeError(
-        new Error(`Unexpected answer value: \`${answer}\``)
+        new Error(`Unexpected answer value: \`${answer}\``),
       );
       return vkiLogoNeutral;
   }
@@ -103,12 +108,13 @@ const mapAnswerToColor = (answer: string | UserAnswerEnum) => {
       return 'secondary';
     case UserAnswerEnum.skip:
     case 'dont_know':
-    case undefined:
       return 'neutral';
+    case undefined:
+      return 'undefined-color';
     default:
       // eslint-disable-next-line no-undef
       newrelic?.noticeError(
-        new Error(`Unexpected answer value: \`${answer}\``)
+        new Error(`Unexpected answer value: \`${answer}\``),
       );
       return 'neutral';
   }
@@ -154,8 +160,8 @@ window.onscroll = calculateStickeHeaderPos;
       >
         <BodyText size="small" :style="{ 'text-align': 'center' }">
           <strong>
-            Moje <br />
-            odpovědi
+            {{ $t('routes.comparison.ComparisonGrid.my') }} <br />
+            {{ $t('routes.comparison.ComparisonGrid.answers') }}
           </strong>
         </BodyText>
       </FilledCircle>
@@ -177,7 +183,7 @@ window.onscroll = calculateStickeHeaderPos;
             <strong>
               {{
                 candidatesToShow.filter(
-                  (candidate) => candidate.id === candidateId
+                  (candidate) => candidate.id === candidateId,
                 )[0].short_name
               }}</strong
             >
@@ -208,13 +214,14 @@ window.onscroll = calculateStickeHeaderPos;
       >
         <FilledCircle
           :background-color="`rgb(var(--color-${mapAnswerToColor(
-            answers.filter((answer) => answer.id === question.id)[0].answer
+            answers.filter((answer) => answer.id === question.id)[0]?.answer,
           )}-bg-strong))`"
         >
           <IconComponent
             :icon="
               mapAnswerToIcon(
-                answers.filter((answer) => answer.id === question.id)[0].answer
+                answers.filter((answer) => answer.id === question.id)[0]
+                  ?.answer,
               )
             "
             color="rgb(var(--color-neutral-fg-inverse))"
@@ -232,16 +239,24 @@ window.onscroll = calculateStickeHeaderPos;
           }"
         >
           <FilledCircle
-            :background-color="`rgb(var(--color-${mapAnswerToColor(candidateAnswers.filter((answer) =>
-                answer.candidate_id === candidateId &&
-                answer.question_id === question.id
-            )[0].answer as string)}-bg-strong))`"
+            :background-color="`rgb(var(--color-${mapAnswerToColor(
+              candidateAnswers.filter(
+                (answer) =>
+                  answer.candidate_id === candidateId &&
+                  answer.question_id === question.id,
+              )[0]?.answer as string,
+            )}-bg-strong))`"
           >
             <IconComponent
-              :icon="mapAnswerToIcon(candidateAnswers.filter((answer) =>
-                  answer.candidate_id === candidateId &&
-                  answer.question_id === question.id
-              )[0].answer as string)"
+              :icon="
+                mapAnswerToIcon(
+                  candidateAnswers.filter(
+                    (answer) =>
+                      answer.candidate_id === candidateId &&
+                      answer.question_id === question.id,
+                  )[0]?.answer as string,
+                )
+              "
               color="rgb(var(--color-neutral-fg-inverse))"
             />
           </FilledCircle>
@@ -252,8 +267,8 @@ window.onscroll = calculateStickeHeaderPos;
             candidateAnswers.filter(
               (answer) =>
                 answer.candidate_id === candidateId &&
-                answer.question_id === question.id
-            )[0].comment
+                answer.question_id === question.id,
+            )[0]?.comment
           "
           class="comment"
           :style="{
@@ -267,8 +282,8 @@ window.onscroll = calculateStickeHeaderPos;
                 candidateAnswers.filter(
                   (answer) =>
                     answer.candidate_id === candidateId &&
-                    answer.question_id === question.id
-                )[0].comment
+                    answer.question_id === question.id,
+                )[0]?.comment
               }}
             </BodyText>
           </CardComponent>

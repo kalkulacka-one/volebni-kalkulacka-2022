@@ -1,7 +1,11 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import TitleText from '@/components/design-system/typography/TitleText.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
+
+const { t } = useI18n();
 </script>
 
 <script lang="ts">
@@ -14,7 +18,7 @@ export default {
           a.async = 1; a.src = "https://www.darujme.cz/assets/scripts/widget.js";
           b.parentNode.insertBefore(a, b);
         }(window, document, "script", "Darujme");
-    Darujme(1, "w2acrk0w61fgr3so", 'render', "https://www.darujme.cz/widget?token=w2acrk0w61fgr3so", "100%");`);
+    Darujme(1, "ump6u9fi5cl6vcqc", 'render', "https://www.darujme.cz/widget?token=ump6u9fi5cl6vcqc", "100%");`);
   },
 };
 </script>
@@ -22,13 +26,12 @@ export default {
 <template>
   <div class="section-donation">
     <StackComponent spacing="small">
-      <TitleText size="large" tag="h2">Podpořte tvorbu kalkulaček</TitleText>
-      <BodyText size="medium"
-        >Líbí se vám projekt Volební kalkulačka? Budeme rádi, pokud nás
-        podpoříte a umožníte nám pokračovat v jejich tvorbě.</BodyText
-      >
+      <TitleText size="large" tag="h2">{{
+        t('components.DonateBlock.title')
+      }}</TitleText>
+      <BodyText size="medium">{{ t('components.DonateBlock.body') }}</BodyText>
     </StackComponent>
-    <div class="donation" data-darujme-widget-token="w2acrk0w61fgr3so">
+    <div class="donation" data-darujme-widget-token="ump6u9fi5cl6vcqc">
       &nbsp;
     </div>
   </div>

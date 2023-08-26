@@ -1,13 +1,21 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.web.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "src/i18n/locales/*.json",
+    "../data/**/*"
+  ],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
-    "lib": ["ES2021", "DOM"],
     "composite": true,
+    "lib": ["ES2021", "DOM", "DOM.Iterable"],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": ["./src/*"],
+      "@data/*": ["../data/*"]
+    },
+    "rootDir": "../."
   }
 }

@@ -3,15 +3,25 @@ export interface Props {
   tag: 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   size: 'extra-small' | 'small' | 'medium' | 'large';
   color?: string;
+  centered?: boolean;
 }
 
 withDefaults(defineProps<Props>(), {
   color: 'rgb(var(--color-neutral-fg-strong))',
+  centered: false,
 });
 </script>
 
 <template>
-  <component :is="tag" :class="[size]">
+  <component
+    :is="tag"
+    :class="[
+      size,
+      {
+        centered: centered,
+      },
+    ]"
+  >
     <slot />
   </component>
 </template>
@@ -34,5 +44,9 @@ withDefaults(defineProps<Props>(), {
   font-size: var(--typography-title-large-size);
   line-height: var(--typography-title-large-line-height);
   letter-spacing: var(--typography-title-large-letter-spacing);
+}
+
+.centered {
+  text-align: center;
 }
 </style>

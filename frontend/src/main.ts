@@ -1,14 +1,21 @@
 import { createApp } from 'vue';
+import { createPinia } from 'pinia';
+import { i18n, switchLanguage } from '@/i18n';
+import VueSocialSharing from 'vue-social-sharing';
+
 import {
   createRouter,
   createWebHistory,
+  type NavigationGuardNext,
   type RouteLocationNormalized,
 } from 'vue-router';
 import App from './App.vue';
-
-import './assets/main.css';
-
+import { getDistrictCode } from './common/utils';
+import { decodeResults, encodeResults } from './common/resultParser';
+import { useElectionStore } from './stores/electionStore';
+import { useUserStore } from '@/stores/userStore';
 import EmbedProviderWrapper from '@/components/utilities/embedding/EmbedProviderWrapper.vue';
+import './assets/main.css';
 
 //routes
 import GuidePageVue from './routes/guide/GuidePage.vue';
@@ -19,19 +26,13 @@ import RecapPageVue from './routes/recap/RecapPage.vue';
 import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
 import QuestionsMethodologyPageVue from './routes/questions-methodology/QuestionsMethodologyPageVue.vue';
-import { useElectionStore } from './stores/electionStore';
-import { useUserStore } from './stores/userStore';
-import { createPinia } from 'pinia';
 import ErrorPageVue, { ErrorPageEnum } from './routes/error/ErrorPage.vue';
-import { decodeResults, encodeResults } from './common/resultParser';
 import SharePageVue from './routes/share/SharePage.vue';
 import AboutUsPageVue from './routes/about-us/AboutUsPage.vue';
 import AboutElectionsPageVue from './routes/about-elections/AboutElectionsPage.vue';
 import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
-import { getDistrictCode } from './common/utils';
-import VueSocialSharing from 'vue-social-sharing';
-import RegisterPageVue from './routes/profile/RegisterPageVue.vue';
-import LoginPageVue from './routes/profile/LoginPageVue.vue';
+import AuthPageVue from './routes/profile/AuthPageVue.vue';
+import EmailFormPageVue from './routes/profile/EmailFormPageVue.vue';
 import ProfilePageVue from './routes/profile/ProfilePage.vue';
 import ProfileSettingsPageVue from './routes/profile/ProfileSettingsPage.vue';
 
@@ -39,7 +40,7 @@ const RESULT_QUERY_NAME = 'result';
 
 export const questionGuard = (
   to: RouteLocationNormalized,
-  _from: RouteLocationNormalized
+  _from: RouteLocationNormalized,
 ) => {
   const store = useElectionStore();
 
@@ -58,9 +59,20 @@ export const questionGuard = (
   }
 };
 
+export const authGuard = async (
+  to: RouteLocationNormalized,
+  _from: RouteLocationNormalized,
+  next: NavigationGuardNext,
+) => {
+  const userStore = useUserStore();
+  await userStore.fetchUser();
+  if (userStore.user) next();
+  else next(appRoutes.login);
+};
+
 const resultsProcessor = (
   to: RouteLocationNormalized,
-  _from: RouteLocationNormalized
+  _from: RouteLocationNormalized,
 ) => {
   if (to.query[RESULT_QUERY_NAME] === undefined) {
     const store = useElectionStore();
@@ -76,7 +88,7 @@ export const appRoutes = {
     path: '/',
     component: IndexPageVue,
     meta: {
-      title: 'Volební kalkulačka',
+      title: 'Volebná kalkulačka',
     },
   },
   aboutUs: {
@@ -84,7 +96,7 @@ export const appRoutes = {
     path: '/o-nas',
     component: AboutUsPageVue,
     meta: {
-      title: 'O nás',
+      title: 'O kalkulačke',
     },
   },
   aboutElections: {
@@ -101,7 +113,7 @@ export const appRoutes = {
     alias: ['/soukromi', '/podminky'],
     component: DataProtectionPageVue,
     meta: {
-      title: 'Ochrana dat',
+      title: 'Ochrana dát',
     },
   },
   questionsMethodology: {
@@ -109,7 +121,7 @@ export const appRoutes = {
     path: '/metodika-tvorby-otazek',
     component: QuestionsMethodologyPageVue,
     meta: {
-      title: 'Metodika tvorby otázek',
+      title: 'Metodika tvorby otázok',
     },
   },
   error: {
@@ -118,7 +130,7 @@ export const appRoutes = {
     props: true,
     component: ErrorPageVue,
     meta: {
-      title: 'Error - Volební kalkulačka',
+      title: 'Error - Volebná kalkulačka',
     },
   },
   districtSelection: {
@@ -127,7 +139,7 @@ export const appRoutes = {
     alias: '/volby/:election',
     component: DistrictSelectionPageVue,
     meta: {
-      title: 'Volební kalkulačka',
+      title: 'Volebná kalkulačka',
     },
   },
   guide: {
@@ -136,7 +148,7 @@ export const appRoutes = {
     alias: '/volby/:election/:district',
     component: GuidePageVue,
     meta: {
-      title: 'Návod - Volební kalkulačka',
+      title: 'Návod - Volebná kalkulačka',
     },
   },
   question: {
@@ -144,7 +156,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/otazka/:nr?',
     component: QuestionPageVue,
     meta: {
-      title: 'Otázka $$ - Volební kalkulačka',
+      title: 'Otázka $$ - Volebná kalkulačka',
       hasNumber: true,
     },
     beforeEnter: questionGuard,
@@ -154,15 +166,15 @@ export const appRoutes = {
     path: '/volby/:election/:district/rekapitulace',
     component: RecapPageVue,
     meta: {
-      title: 'Rekapitulace - Volební kalkulačka',
+      title: 'Rekapitulace - Volebná kalkulačka',
     },
   },
   result: {
     name: 'result',
-    path: '/volby/:election/:district/vysledek',
+    path: '/volby/:election/:district/vysledok',
     component: ResultPageVue,
     meta: {
-      title: 'Výsledky - Volební kalkulačka',
+      title: 'Výsledky - Volebná kalkulačka',
     },
   },
   comparison: {
@@ -170,7 +182,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/srovnani',
     component: ComparisonPageVue,
     meta: {
-      title: 'Porovnaní - Volební kalkulačka',
+      title: 'Porovnaní - Volebná kalkulačka',
     },
   },
   share: {
@@ -178,40 +190,64 @@ export const appRoutes = {
     path: '/share/:uuid',
     component: SharePageVue,
     meta: {
-      title: 'Moje výsledky - Volební kalkulačka',
+      title: 'Moje výsledky - Volebná kalkulačka',
     },
   },
   login: {
     name: 'login',
     path: '/prihlaseni',
-    component: LoginPageVue,
+    component: AuthPageVue,
+    props: { type: 'login' },
     meta: {
-      title: 'Přihlášení - Volební kalkulačka',
+      title: 'Přihlášení - Volebná kalkulačka',
     },
   },
+  loginForm: {
+    name: 'login-form',
+    path: '/prihlaseni-emailem',
+    component: EmailFormPageVue,
+    props: { type: 'login' },
+    meta: {
+      title: 'Přihlášení - Volebná kalkulačka',
+    },
+  },
+
   register: {
     name: 'register',
     path: '/registrace',
-    component: RegisterPageVue,
+    component: AuthPageVue,
+    props: { type: 'registration' },
     meta: {
-      title: 'Registrace - Volební kalkulačka',
+      title: 'Registrace - Volebná kalkulačka',
     },
   },
+  registerForm: {
+    name: 'register-form',
+    path: '/registracni-formular',
+    component: EmailFormPageVue,
+    props: { type: 'registration' },
+    meta: {
+      title: 'Registrační formulář - Volebná kalkulačka',
+    },
+  },
+
   profile: {
     name: 'profile',
     path: '/muj-profil',
     component: ProfilePageVue,
     meta: {
-      title: 'Můj profil - Volební kalkulačka',
+      title: 'Můj profil - Volebná kalkulačka',
     },
+    beforeEnter: authGuard,
   },
   profileSettings: {
     name: 'profile-settings',
     path: '/nastaveni-profilu',
     component: ProfileSettingsPageVue,
     meta: {
-      title: 'Nastavení profilu - Volební kalkulačka',
+      title: 'Nastavení profilu - Volebná kalkulačka',
     },
+    beforeEnter: authGuard,
   },
   fallback: {
     path: '/:catchAll(.*)',
@@ -234,6 +270,10 @@ app.use(VueSocialSharing, {
   /* optional options */
 });
 
+//vue-i18n
+app.use(i18n);
+
+//pinia
 const pinia = createPinia();
 app.use(pinia);
 
@@ -284,7 +324,7 @@ router.beforeEach((to, from, next) => {
 
   // Remove any stale meta tags from the document using the key attribute we set below.
   Array.from(document.querySelectorAll('[data-vue-router-controlled]')).map(
-    (el) => el.parentNode?.removeChild(el)
+    (el) => el.parentNode?.removeChild(el),
   );
 
   // Skip rendering meta tags if there are none.
@@ -314,8 +354,8 @@ router.beforeEach((to, from, next) => {
 router.beforeEach(async (to, from) => {
   console.debug(
     `From: ${String(from.name)} ${Object.values(to.params)}, To: ${String(
-      to.name
-    )} ${Object.values(to.params)}`
+      to.name,
+    )} ${Object.values(to.params)}`,
   );
   const store = useElectionStore();
 
@@ -325,7 +365,7 @@ router.beforeEach(async (to, from) => {
     to.params.election !== store.election?.id
   ) {
     console.debug(
-      `Election IDs ${to.params.election} !== ${store.election?.id}. Fetching ...`
+      `Election IDs ${to.params.election} !== ${store.election?.id}. Fetching ...`,
     );
     await store.loadElection(to.params.election as string);
     if (store?.election === undefined) {
@@ -345,7 +385,7 @@ router.beforeEach(async (to, from) => {
     const districtNr = getDistrictCode(to.params.district as string);
     if (districtNr !== store.calculator?.district_code) {
       console.debug(
-        `District codes ${districtNr} !== ${store.calculator?.district_code}. Fetching ...`
+        `District codes ${districtNr} !== ${store.calculator?.district_code}. Fetching ...`,
       );
       await store.loadCalculator(to.params.election as string, districtNr);
       if (store?.calculator === undefined) {
@@ -377,7 +417,7 @@ router.beforeEach(async (to, from) => {
       hasResultQuery = true;
     } else {
       console.warn(
-        `Result hex answer count mismatch ${answers.length} vs ${store.calculator?.questions.length}`
+        `Result hex answer count mismatch ${answers.length} vs ${store.calculator?.questions.length}`,
       );
     }
   }
@@ -392,7 +432,7 @@ router.beforeEach(async (to, from) => {
   ) {
     // route to district selection only if district not specified
     console.debug(
-      `Re-routing to district selection: ${Object.values(to.params)}`
+      `Re-routing to district selection: ${Object.values(to.params)}`,
     );
     return {
       name: appRoutes.districtSelection.name,
@@ -401,6 +441,15 @@ router.beforeEach(async (to, from) => {
   } else {
     return true;
   }
+});
+
+//debug
+router.beforeEach((to, _from, next) => {
+  const lang = to.query['lang'];
+  if (lang && (lang === 'cs' || lang === 'sk')) {
+    switchLanguage(lang);
+  }
+  next();
 });
 
 app.use(router);

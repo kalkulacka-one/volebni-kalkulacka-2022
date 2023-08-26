@@ -1,5 +1,5 @@
 import { UserAnswerEnum, type UserAnswer } from '@/stores/electionStore';
-import type { CandidateAnswer } from '@/types/calculator';
+import type { DeprecatedCandidateAnswer } from '@/types/calculator';
 import seedrandom from 'seedrandom';
 const HEX_VERSIONS = [0];
 const RAND_SEED = Math.random().toString();
@@ -46,7 +46,7 @@ export const decodeResults = (hexString: string) => {
   }
   if (answerCount !== answers.length) {
     console.warn(
-      `answer count missmatch, expected: ${answerCount}, actual: ${answers.length}`
+      `answer count missmatch, expected: ${answerCount}, actual: ${answers.length}`,
     );
     answers.length = 0;
   }
@@ -69,8 +69,8 @@ export type RelativeAgreement = { cId: string; result: Result }[];
 
 export const calculateAnswerResult = (
   ua: UserAnswer,
-  ca: CandidateAnswer,
-  weight: number
+  ca: DeprecatedCandidateAnswer,
+  weight: number,
 ) => {
   let w = ua.flag ? weight : 1;
   let res = 0;
@@ -109,9 +109,9 @@ export const calculateAnswerResult = (
 };
 
 export const calculateRelativeAgreement = (
-  candidateAnswers: CandidateAnswer[],
+  candidateAnswers: DeprecatedCandidateAnswer[],
   userAnswers: UserAnswer[],
-  weight = 2
+  weight = 2,
 ) => {
   const relativeAgreement = new Map<string, Result>();
   const rnd = seedrandom(RAND_SEED);
@@ -131,7 +131,7 @@ export const calculateRelativeAgreement = (
     const ua = userAnswers.find((x) => x.id === ca.question_id);
     if (ua === undefined) {
       console.warn(
-        `Candidate answer ${ca.candidate_id} is not in the user question pool!`
+        `Candidate answer ${ca.candidate_id} is not in the user question pool!`,
       );
       return;
     }

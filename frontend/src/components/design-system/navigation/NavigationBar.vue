@@ -16,6 +16,8 @@ import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 
 import type { User } from '@/stores/userStore';
 
+import { useI18n } from 'vue-i18n';
+
 export interface Props {
   padding?: 'small' | 'medium' | 'large';
   paddingResponsive?: boolean;
@@ -25,6 +27,8 @@ export interface Props {
   withAccount?: boolean;
   withLogo?: boolean;
 }
+
+const { t, locale } = useI18n();
 
 const props = withDefaults(defineProps<Props>(), {
   padding: 'large',
@@ -42,7 +46,7 @@ const classes = computed(() => ({
 }));
 
 const background = computed(() =>
-  props.transparent ? 'transparent' : undefined
+  props.transparent ? 'transparent' : undefined,
 );
 
 const router = useRouter();
@@ -115,7 +119,7 @@ const handleAvatarClick = () => router.push(appRoutes.profile);
           background-color="rgb(var(--palette-primary-90))"
           :name="user.displayName ? user.displayName : user.email"
           class="user-avatar"
-          @click="handleAvatarClick"
+          @click="() => handleAvatarClick()"
         />
         <StackComponent
           v-if="withAccount && !user"
@@ -124,15 +128,19 @@ const handleAvatarClick = () => router.push(appRoutes.profile);
           centered
           spacing="medium"
         >
-          <ResponsiveWrapper medium large extra-large huge>
-            <ButtonComponent kind="link" @click="handleRegisterClick"
-              >Vytvořit účet</ButtonComponent
-            >
+          <!-- <ResponsiveWrapper medium large extra-large huge>
+            <ButtonComponent kind="link" @click="handleRegisterClick">{{
+              $t(
+                'components.design-system.navigation.NavigationBar.create-account',
+              )
+            }}</ButtonComponent>
             <ButtonComponent
               kind="outlined"
               size="small"
               @click="handleLoginClick"
-              >Přihlásit se</ButtonComponent
+              >{{
+                $t('components.design-system.navigation.NavigationBar.login')
+              }}</ButtonComponent
             >
           </ResponsiveWrapper>
           <ResponsiveWrapper extra-small small>
@@ -141,9 +149,8 @@ const handleAvatarClick = () => router.push(appRoutes.profile);
               color="primary"
               size="small"
               @click="handleLoginClick"
-              >Přihlásit se</ButtonComponent
-            >
-          </ResponsiveWrapper>
+            ></ButtonComponent>
+          </ResponsiveWrapper> -->
         </StackComponent>
       </slot>
     </StackComponent>

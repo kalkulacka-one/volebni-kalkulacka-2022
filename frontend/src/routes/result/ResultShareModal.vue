@@ -11,9 +11,14 @@ import TitleText from '../../components/design-system/typography/TitleText.vue';
 import type { RelativeAgreement } from '@/common/resultParser';
 import { useElectionStore } from '@/stores/electionStore';
 
+import { useI18n } from 'vue-i18n';
+
 export interface ResultShareModalProps {
   relativeAgreement: RelativeAgreement;
 }
+
+const { t, locale } = useI18n();
+
 const electionStore = useElectionStore();
 const props = defineProps<ResultShareModalProps>();
 const bestMatch = electionStore.calculator?.candidates.find((x) => {
@@ -24,13 +29,15 @@ const bestMatch = electionStore.calculator?.candidates.find((x) => {
   }
 });
 const hashTags = [
-  'volby',
-  'volby2023',
-  'prezidentskevolby',
-  'volebnikalkulacka',
-  'mojevysledky',
+  t('routes.result.ResultShareModal.hashtag1'),
+  t('routes.result.ResultShareModal.hashtag2'),
+  t('routes.result.ResultShareModal.hashtag3'),
 ].join(',');
-const shareDescription = `Podle Volební kalkulačky mi největší shoda vyšla takhle: ${bestMatch?.short_name}. Podívejte se na moje výsledky a vyplňte si ji také!`;
+const shareDescription = `${t(
+  'routes.result.ResultShareModal.text-my-match',
+)} ${bestMatch?.short_name}. ${t(
+  'routes.result.ResultShareModal.text-do-it-too',
+)}`;
 const shareLink = ref(null as null | string);
 onMounted(() => {
   shareLink.value = generateSocialLink('link');
@@ -57,7 +64,7 @@ const handleCopyClick = () => {
       },
       (err) => {
         console.error(err);
-      }
+      },
     );
   }
 };
@@ -72,19 +79,19 @@ const handleCopyClick = () => {
     <template #content>
       <div class="share-wrapper">
         <TitleText color="rgb(var(--color-neutral-fg))" tag="h4" size="small"
-          >Sdílej rovnou...</TitleText
+          >{{ $t('routes.result.ResultShareModal.share-now') }}.</TitleText
         >
         <div class="share-wrapper">
           <div class="share-buttons-wrapper">
             <ShareNetwork
-              title="Volební kalkulačka"
+              :title="$t('routes.result.ResultShareModal.share-title')"
               network="facebook"
               :description="shareDescription"
               :hashtags="hashTags"
               :url="shareLink"
             >
               <ButtonComponent kind="link" size="medium">
-                Sdílet na Facebooku
+                {{ $t('routes.result.ResultShareModal.share-facebook') }}
                 <template #icon>
                   <SocialMediaIcon
                     type="facebook"
@@ -100,7 +107,7 @@ const handleCopyClick = () => {
               :url="shareLink"
             >
               <ButtonComponent kind="link" size="medium">
-                Sdílet na Twitteru
+                {{ $t('routes.result.ResultShareModal.share-twitter') }}
                 <template #icon>
                   <SocialMediaIcon
                     type="twitter"
@@ -110,8 +117,11 @@ const handleCopyClick = () => {
               </ButtonComponent>
             </ShareNetwork>
           </div>
-          <TitleText color="rgb(var(--color-neutral-fg))" tag="h4" size="small"
-            >...nebo si kliknutím zkopíruj odkaz</TitleText
+          <TitleText
+            color="rgb(var(--color-neutral-fg))"
+            tag="h4"
+            size="small"
+            >{{ $t('routes.result.ResultShareModal.text-copy') }}</TitleText
           >
           <div class="copy-wrapper" @click="handleCopyClick">
             <IconButton>
@@ -160,7 +170,5 @@ const handleCopyClick = () => {
     background-color: rgb(var(--color-neutral-bg));
     padding: var(--spacing-extra-small);
   }
-}
-.share-wrapper {
 }
 </style>

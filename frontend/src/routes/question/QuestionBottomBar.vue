@@ -19,6 +19,10 @@ import {
   vkiStarFilled,
 } from '@/components/design-system/icons';
 
+import { useI18n } from 'vue-i18n';
+
+const { t, locale } = useI18n();
+
 const props = defineProps<{
   answer: UserAnswer;
   starClick: () => void;
@@ -28,10 +32,10 @@ const props = defineProps<{
 }>();
 
 const starColor = computed(() =>
-  props.answer.flag ? 'rgba(var(--palette-yellow))' : undefined
+  props.answer.flag ? 'rgba(var(--palette-yellow))' : undefined,
 );
 const starIcon = computed(() =>
-  props.answer.flag ? vkiStarFilled : vkiStarOutlined
+  props.answer.flag ? vkiStarFilled : vkiStarOutlined,
 );
 </script>
 
@@ -53,7 +57,9 @@ const starIcon = computed(() =>
               title="Pro mě důležité"
             />
           </IconButton>
-          <BodyText class="star-text" size="medium">Pro mě důležité</BodyText>
+          <BodyText class="star-text" size="medium">{{
+            $t('routes.question.QuestionBottomBar.important-for-me')
+          }}</BodyText>
         </StackComponent>
       </ResponsiveWrapper>
       <ResponsiveWrapper extra-small small medium>
@@ -62,7 +68,7 @@ const starIcon = computed(() =>
             :icon="starIcon"
             :color="starColor"
             size="large"
-            title="Pro mě důležité"
+            :title="$t('routes.question.QuestionBottomBar.important-for-me')"
             @click="starClick"
           />
         </IconButton>
@@ -78,7 +84,7 @@ const starIcon = computed(() =>
           <template #icon>
             <IconComponent :icon="vkiLogoInFavour" />
           </template>
-          Ano
+          {{ $t('routes.question.QuestionBottomBar.yes') }}
         </ButtonComponent>
         <ButtonComponent
           class="against"
@@ -90,7 +96,7 @@ const starIcon = computed(() =>
           <template #icon>
             <IconComponent :icon="vkiLogoAgainst" />
           </template>
-          Ne
+          {{ $t('routes.question.QuestionBottomBar.no') }}
         </ButtonComponent>
       </ResponsiveWrapper>
       <ResponsiveWrapper extra-small>

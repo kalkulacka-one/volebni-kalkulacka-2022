@@ -7,7 +7,7 @@ import {
   calculateRelativeAgreement,
   encodeResults,
 } from '@/common/resultParser';
-import type { CandidateAnswer } from '@/types/candidate-answer';
+import type { DeprecatedCandidateAnswer } from '@/types/candidate-answer';
 
 import AvatarComponent from '@/components/design-system/other/AvatarComponent.vue';
 import BodyText from '@/components/design-system/typography/BodyText.vue';
@@ -102,10 +102,11 @@ const handleVoteClick = () => {
 
 const electionStore = useElectionStore();
 
-const candidateAnswers: CandidateAnswer[] =
+const candidateAnswers: DeprecatedCandidateAnswer[] =
   electionStore.calculator?.answers || [];
 
-const filteredCandidateAnswers: Ref<CandidateAnswer[]> = ref(candidateAnswers);
+const filteredCandidateAnswers: Ref<DeprecatedCandidateAnswer[]> =
+  ref(candidateAnswers);
 
 const handleShareClick = () => {
   shareModal.value?.open();
@@ -113,7 +114,7 @@ const handleShareClick = () => {
 const resultsGeneral = computed(() => {
   const ra = calculateRelativeAgreement(
     filteredCandidateAnswers.value,
-    electionStore.answers
+    electionStore.answers,
   );
   return ra;
 });
@@ -129,7 +130,7 @@ const getReducedCandidates = () => {
 </script>
 
 <template>
-  <CardComponent padding="large" border shadow corner="bottom-right">
+  <CardComponent :padding="Object('large')" border shadow corner="bottom-right">
     <StackComponent spacing="medium">
       <StackComponent spacing="extra-small">
         <TitleText tag="h4" size="small">{{ electionName }}</TitleText>

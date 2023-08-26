@@ -24,10 +24,14 @@ import { mdiRepeat } from '@mdi/js';
 import BodyText from '../../components/design-system/typography/BodyText.vue';
 import { ErrorPageEnum } from '../error/ErrorPage.vue';
 
+import { useI18n } from 'vue-i18n';
+
+const { t, locale } = useI18n();
+
 const route = useRoute();
 const electionStore = useElectionStore();
 const resultsGeneral: Ref<ReturnType<typeof calculateRelativeAgreement>> = ref(
-  []
+  [],
 );
 const isInitialized = ref(false);
 getResults(route.params.uuid as string)
@@ -35,7 +39,7 @@ getResults(route.params.uuid as string)
     if (electionStore.calculator) {
       resultsGeneral.value = calculateRelativeAgreement(
         electionStore.calculator.answers,
-        electionStore.answers
+        electionStore.answers,
       );
       isInitialized.value = true;
     }
@@ -58,10 +62,10 @@ watch(isInitialized, (value) => {
     const electionName = electionStore.election?.name;
     const districtCode = electionStore.calculator?.district_code;
     const districtName = electionStore.districts.filter(
-      (district) => district.district_code === districtCode
+      (district) => district.district_code === districtCode,
     )[0].name;
     const showDistrictCode = electionStore.districts.filter(
-      (district) => district.district_code === districtCode
+      (district) => district.district_code === districtCode,
     )[0].show_district_code;
     const districtNameWithCode = showDistrictCode
       ? `${districtName} (${districtCode})`
@@ -89,7 +93,7 @@ const breadcrumbs = ref('');
             <EmbedWrapper>
               <ResponsiveWrapper medium large extra-large huge>
                 <ButtonComponent kind="link" @click="handleFillAgainClick">
-                  Vyplnit znovu
+                  {{ $t('routes.share.SharePage.fill-again') }}
                   <template #iconAfter>
                     <IconComponent :icon="mdiRepeat" />
                   </template>
@@ -98,7 +102,10 @@ const breadcrumbs = ref('');
               <ResponsiveWrapper extra-small small>
                 <ButtonComponent kind="link" @click="handleFillAgainClick">
                   <template #icon>
-                    <IconComponent :icon="mdiRepeat" title="Vyplnit znovu" />
+                    <IconComponent
+                      :icon="mdiRepeat"
+                      :title="$t('routes.share.SharePage.fill-again')"
+                    />
                   </template>
                 </ButtonComponent>
               </ResponsiveWrapper>
@@ -110,14 +117,18 @@ const breadcrumbs = ref('');
         <ResponsiveWrapper extra-small small>
           <SecondaryNavigationBar centered-title>
             <template #before> </template>
-            <TitleText tag="h2" size="medium">Takhle to vyšlo mně</TitleText>
+            <TitleText tag="h2" size="medium">{{
+              $t('routes.share.SharePage.my-match')
+            }}</TitleText>
             <template #after> </template>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
         <ResponsiveWrapper medium large extra-large huge>
           <SecondaryNavigationBar>
             <template #before> </template>
-            <TitleText tag="h2" size="large">Takhle to vyšlo mně</TitleText>
+            <TitleText tag="h2" size="large">{{
+              $t('routes.share.SharePage.my-match')
+            }}</TitleText>
             <template #after> </template>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
@@ -126,8 +137,7 @@ const breadcrumbs = ref('');
         <StackComponent class="main" spacing="medium">
           <BodyText class="results-header-note" tag="p" size="medium">
             <strong>
-              Pokud si chcete kalkulačku vyplnit také, klikněte na "Vyplnit
-              znovu" v pravém horním rohu.
+              {{ $t('routes.share.SharePage.text-fill-again') }}
             </strong>
           </BodyText>
           <ResultCategory
