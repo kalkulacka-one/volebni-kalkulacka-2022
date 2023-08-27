@@ -1,6 +1,8 @@
 import { forms_v1, google } from 'googleapis';
 import { CalculatorRow, QuestionsPoolRow, L10nsRow } from './input/types';
 
+export type CFormType = 'candidate' | 'expert';
+
 export function initGoogleForms() {
   const auth = new google.auth.GoogleAuth({
     scopes: [
@@ -22,7 +24,7 @@ export async function createForm(
   calculator: CalculatorRow,
   l10ns: L10nsRow,
   questions: QuestionsPoolRow[],
-  type: 'candidate' | 'expert',
+  type: CFormType,
 ): Promise<forms_v1.Schema$Form> {
   const title = `${calculator.ElectionName} - ${calculator.DistrictName} - ${type}`;
   // https://developers.google.com/forms/api/reference/rest/v1/forms/create
@@ -92,7 +94,7 @@ export async function createForm(
 function createFormQuestions(
   l10ns: L10nsRow,
   questions: QuestionsPoolRow[],
-  type: 'candidate' | 'expert',
+  type: CFormType,
 ): forms_v1.Schema$Item[] {
   const res = Array<forms_v1.Schema$Item>();
 
