@@ -395,7 +395,7 @@ export class AnswersRow {
   Timestamp: string;
   SecretCode: string;
   Email: string;
-  Data: Record<string, any>;
+  Data: Record<string, string>;
 
   constructor(data: Required<AnswersRow>) {
     this.Pos = data.Pos;
@@ -609,7 +609,7 @@ export class Calculators {
     this.answers[url] = answers;
   }
 
-  stats(): Record<string, any> {
+  stats(): Record<string, number> {
     return {
       calculatorsCount: this.calculators.length,
       questionsPoolsCount: Object.keys(this.questionsPools).length,

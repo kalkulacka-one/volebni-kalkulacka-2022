@@ -1,16 +1,14 @@
 // import the necessary modules
 import * as process from 'process';
 import { GoogleSpreadsheet, GoogleSpreadsheetRow } from 'google-spreadsheet';
-import { forms_v1, google } from 'googleapis';
 import { JWT } from 'google-auth-library';
 import 'reflect-metadata';
 import * as path from 'path';
 import * as fs from 'fs';
 import {
   instanceToPlain,
-  Type,
-  deserialize,
   instanceToInstance,
+  ClassConstructor,
   plainToClass,
 } from 'class-transformer';
 
@@ -26,22 +24,18 @@ import {
   type CandidatesPoolRowData,
   CandidatesPool,
   type CandidatesRowData,
-  CandidatesRow,
   Candidates,
   type DistrictsPoolRowData,
   DistrictsPool,
   type DistrictsRowData,
-  DistrictsRow,
   Districts,
   type AnswersRowData,
   Answers,
-  AnswersRow,
   CalculatorRow,
   QuestionsRow,
   QuestionsPoolRow,
   L10ns,
   L10nsRowData,
-  L10nsRow,
 } from './input/types';
 
 import {
@@ -58,10 +52,7 @@ import {
 
 import { isEmptyColumn, isEmptyValue } from './utils';
 
-// Function to get the value of an environmental variable or a default value
-function getEnvOrDefault(envVariable: string, defaultValue: string): string {
-  return process.env[envVariable] || defaultValue;
-}
+import { initGoogleForms, createForm } from './form';
 
 const DEFAULT_CACHE_LIFETIME = 1e10;
 const DEFAULT_CACHE_DIR = path.join(__dirname, '.cache');
@@ -445,7 +436,7 @@ async function extractCalculators(url: CUrl, jwt: JWT): Promise<Calculators> {
   console.log('Extracting calculators from: ', url);
   const doc = await fetchGoogleSpreadsheet(url, jwt);
 
-  let calculators = new Calculators();
+  const calculators = new Calculators();
 
   const sheet = doc.sheetsByTitle['Questions'];
   await sheet.loadHeaderRow();
@@ -518,7 +509,6 @@ async function extractCalculators(url: CUrl, jwt: JWT): Promise<Calculators> {
     }
 
     const answersCandidatesUrl = r.get('Answers spreadsheet - candidates');
-    const answersCandidatesSheet = r.get('Answers sheet - candidates');
     let answersCandidates = calculators.getAnswers(answersCandidatesUrl);
     if (
       answersCandidates === undefined &&
@@ -529,7 +519,6 @@ async function extractCalculators(url: CUrl, jwt: JWT): Promise<Calculators> {
     }
 
     const answersExpertsUrl = r.get('Answers spreadsheet - experts');
-    const answersExpertsSheet = r.get('Answers sheet - experts');
     let answersExperts = calculators.getAnswers(answersExpertsUrl);
     if (
       answersExperts === undefined &&
@@ -578,115 +567,26 @@ function main() {
   );
 
   (async function () {
-    let fetchData = false;
     const cacheFile = path.join(cacheDir, calculatorsKey + '.json');
-
     console.log('Using cache file: ', cacheFile);
-    try {
-      const cacheStats = fs.statSync(cacheFile);
-      new Date().getTime();
-      if (cacheStats.mtimeMs + cacheLifetime * 1e6 < new Date().getTime()) {
-        console.log(
-          'Cache file is too old: ',
-          cacheStats.mtime,
-          ' refetching data',
-        );
-        fetchData = true;
-      }
-    } catch (error) {
-      console.log('Cannot read input file: ', error);
-      fetchData = true;
-      fs.mkdirSync(cacheDir, { recursive: true });
-    }
 
+    // extract calculators
     let calculators = new Calculators();
-    if (fetchData) {
+    if (shouldFetchData(cacheFile, cacheLifetime)) {
       calculators = await extractCalculators(calculatorsUrl, jwtFromEnv);
-
-      let calculatorsJson = JSON.stringify(
-        instanceToPlain(calculators),
-        null,
-        2,
-      );
-      try {
-        fs.writeFileSync(cacheFile, calculatorsJson, 'utf-8');
-        console.log('Calculators were cached in: ', cacheFile);
-      } catch (writeError) {
-        console.error('Error writing to file:', writeError);
-        throw writeError;
-      }
+      storeData(cacheFile, calculators);
     } else {
-      try {
-        const data = fs.readFileSync(cacheFile, 'utf8');
-        try {
-          const jsonData = JSON.parse(data);
-          calculators = plainToClass(Calculators, jsonData);
-        } catch (parseError) {
-          console.error('Error parsing JSON:', parseError);
-          throw parseError;
-        }
-      } catch (readError) {
-        console.error('Error while reading file: ', readError);
-        throw readError;
-      }
-      instanceToInstance;
+      calculators = loadData(Calculators, cacheFile);
     }
-
     console.log('Calculators stats: ', calculators.stats());
 
-    const googleForms = initGoogleForms();
-
-    for (const calculator of calculators.calculators) {
-      console.log(calculator.Pos + ': ' + calculator.key());
-      if (!calculator.hasForms()) {
-        const questions = constructQuestions(
-          calculator,
-          calculators.getQuestionPool(calculator.QuestionsPool),
-          calculators.getQuestions(calculator.QuestionsSpreadsheet).questions[
-            calculator.QuestionsSheetCandidates
-          ],
-        );
-
-        if (isEmptyValue(calculator.QuestionsFormCandidates)) {
-          const form = await createForm(
-            googleForms,
-            calculator,
-            calculators.getL10ns(calculator.L10nsSpreadsheet).l10ns[
-              calculator.L10nsSheet
-            ],
-            questions,
-            'candidate',
-          );
-
-          console.log(
-            `Form: https://docs.google.com/forms/d/${form.formId}; Sheet: ${form.linkedSheetId}`,
-          );
-          throw new Error('Just testing');
-        }
-
-        console.log(questions);
-      }
-    }
+    // create Google Forms
+    await createForms(calculators);
   })();
 }
 
 // Call the main function
 main();
-
-function initGoogleForms() {
-  const auth = new google.auth.GoogleAuth({
-    scopes: [
-      'https://www.googleapis.com/auth/forms',
-      'https://www.googleapis.com/auth/drive',
-    ],
-  });
-
-  const googleForms = google.forms({
-    version: 'v1',
-    auth,
-  });
-  return googleForms;
-}
 
 function extractKey(url: CUrl): string | undefined {
   const regex = /.*\/d\/([a-zA-Z0-9_-]+)\/?.*/;
@@ -753,216 +653,100 @@ function constructQuestions(
   return res;
 }
 
-// https://developers.google.com/forms/api/reference/rest
-async function createForm(
-  googleForms: forms_v1.Forms,
-  calculator: CalculatorRow,
-  l10ns: L10nsRow,
-  questions: QuestionsPoolRow[],
-  type: 'candidate' | 'expert',
-): Promise<forms_v1.Schema$Form> {
-  const title = `${calculator.ElectionName} - ${calculator.DistrictName} - ${type}`;
-  // https://developers.google.com/forms/api/reference/rest/v1/forms/create
-  // https://developers.google.com/forms/api/reference/rest/v1/forms#resource:-form
-  const formC = await googleForms.forms.create({
-    requestBody: {
-      info: {
-        title: title,
-        // description: `${title} - ${calculator.Description}`,
-      },
-    },
-  });
-
-  console.log(`${title} - ${formC.data.formId}`);
-
-  if (formC.status != 200) {
-    throw new Error(
-      `Calculator: ${calculator.Pos} - ${formC.status}: ${formC.statusText}`,
-    );
+function shouldFetchData(cacheFile: string, cacheLifetime: number): boolean {
+  try {
+    const cacheStats = fs.statSync(cacheFile);
+    new Date().getTime();
+    if (cacheStats.mtimeMs + cacheLifetime * 1e6 < new Date().getTime()) {
+      console.log(
+        'Cache file is too old: ',
+        cacheStats.mtime,
+        ' refetching data',
+      );
+      return true;
+    }
+  } catch (error) {
+    console.log('Cannot read input file: ', error);
+    fs.mkdirSync(path.dirname(cacheFile), { recursive: true });
+    return true;
   }
-
-  const createItems = createFormQuestions(l10ns, questions).map(
-    (item: forms_v1.Schema$Item, index: number) => {
-      return {
-        createItem: {
-          item: item,
-          location: {
-            index: index,
-          },
-        },
-      };
-    },
-  );
-
-  console.info(`${title} has ${createItems.length} questions`);
-
-  // https://developers.google.com/forms/api/reference/rest/v1/forms/batchUpdate#http-request
-  const formU = await googleForms.forms.batchUpdate({
-    formId: formC.data.formId,
-    requestBody: {
-      includeFormInResponse: true,
-      requests: [
-        {
-          updateFormInfo: {
-            info: {
-              description: l10ns.FormDescription,
-            },
-            updateMask: 'description',
-          },
-        },
-        ...createItems,
-      ],
-    },
-  });
-
-  if (formU.status != 200) {
-    throw new Error(
-      `Calculator: ${calculator.Pos} - ${formU.status}: ${formU.statusText}`,
-    );
-  }
-
-  //items: createFormQuestions(calculator, questions),
-
-  return formU.data.form;
+  return false;
 }
 
-function createFormQuestions(
-  l10ns: L10nsRow,
-  questions: QuestionsPoolRow[],
-): forms_v1.Schema$Item[] {
-  const res = Array<forms_v1.Schema$Item>();
-
-  res.push({
-    title: l10ns.FormPersonName,
-    questionItem: {
-      question: {
-        required: true,
-        textQuestion: {
-          paragraph: false,
-        },
-      },
-    },
-  });
-
-  res.push({
-    title: l10ns.FormPartyName,
-    questionItem: {
-      question: {
-        required: true,
-        textQuestion: {
-          paragraph: false,
-        },
-      },
-    },
-  });
-
-  res.push({
-    title: l10ns.FormEmail,
-    questionItem: {
-      question: {
-        required: true,
-        textQuestion: {
-          paragraph: false,
-        },
-      },
-    },
-  });
-
-  res.push({
-    title: l10ns.FormSecretCode,
-    description: l10ns.FormSecretCodeDescription,
-    questionItem: {
-      question: {
-        required: true,
-        textQuestion: {
-          paragraph: false,
-        },
-      },
-    },
-  });
-
-  for (let i = 0; i < questions.length; i++) {
-    const row = questions[i];
-    const prefix = `${i + 1}/${questions.length})`;
-    // https://developers.google.com/forms/api/reference/rest/v1/forms#item
-    res.push({
-      title: `${prefix} ${row.Question}`,
-      description: row.Description,
-      questionItem: {
-        question: {
-          required: true,
-          choiceQuestion: {
-            type: 'RADIO',
-            options: [
-              {
-                value: l10ns.FormYes,
-              },
-              {
-                value: l10ns.FormNo,
-              },
-              {
-                value: l10ns.FormSkip,
-              },
-            ],
-          },
-        },
-      },
-    });
-
-    res.push({
-      title: `${prefix} ${l10ns.FormComment}`,
-      questionItem: {
-        question: {
-          required: false,
-          textQuestion: {
-            paragraph: true,
-          },
-        },
-      },
-    });
-
-    res.push({
-      title: `${prefix}. ${l10ns.FormIsImportant}`,
-      questionItem: {
-        question: {
-          required: false,
-          choiceQuestion: {
-            type: 'CHECKBOX',
-            options: [
-              {
-                value: l10ns.FormYes,
-              },
-            ],
-          },
-        },
-      },
-    });
+function storeData<T>(file: string, data: T) {
+  const calculatorsJson = JSON.stringify(instanceToPlain<T>(data), null, 2);
+  try {
+    fs.writeFileSync(file, calculatorsJson, 'utf-8');
+    console.log('Data were cached in: ', file);
+  } catch (writeError) {
+    console.error('Error writing to file:', writeError);
+    throw writeError;
   }
+}
 
-  res.push({
-    title: l10ns.FormMotto,
-    description: l10ns.FormMottoDescription,
-    questionItem: {
-      question: {
-        required: true,
-        textQuestion: {
-          paragraph: false,
-        },
-      },
-    },
-  });
+function loadData<T>(cls: ClassConstructor<T>, file: string): T {
+  try {
+    const data = fs.readFileSync(file, 'utf8');
+    try {
+      const jsonData = JSON.parse(data);
+      return plainToClass(cls, jsonData);
+    } catch (parseError) {
+      console.error('Error parsing JSON:', parseError);
+      throw parseError;
+    }
+  } catch (readError) {
+    console.error('Error while reading file: ', readError);
+    throw readError;
+  }
+}
 
-  res.push({
-    title: l10ns.FormToAuthors,
-    questionItem: {
-      question: {
-        required: false,
-        textQuestion: {
-          paragraph: false,
-        },
-      },
-    },
-  });
+async function createForms(calculators: Calculators) {
+  const googleForms = initGoogleForms();
 
-  return res;
+  for (const calculator of calculators.calculators) {
+    console.log(calculator.Pos + ': ' + calculator.key());
+    if (!calculator.hasForms()) {
+      const questions = constructQuestions(
+        calculator,
+        calculators.getQuestionPool(calculator.QuestionsPool),
+        calculators.getQuestions(calculator.QuestionsSpreadsheet).questions[
+          calculator.QuestionsSheetCandidates
+        ],
+      );
+
+      // Create form for candidates
+      if (isEmptyValue(calculator.QuestionsFormCandidates)) {
+        const form = await createForm(
+          googleForms,
+          calculator,
+          calculators.getL10ns(calculator.L10nsSpreadsheet).l10ns[
+            calculator.L10nsSheet
+          ],
+          questions,
+          'candidate',
+        );
+
+        console.log(
+          `${calculator.Pos} - candidate - Form: https://docs.google.com/forms/d/${form.formId}; Sheet: ${form.linkedSheetId}`,
+        );
+      }
+
+      // Create form for experts
+      if (isEmptyValue(calculator.QuestionsFormCandidates)) {
+        const form = await createForm(
+          googleForms,
+          calculator,
+          calculators.getL10ns(calculator.L10nsSpreadsheet).l10ns[
+            calculator.L10nsSheet
+          ],
+          questions,
+          'expert',
+        );
+
+        console.log(
+          `${calculator.Pos} - expert - Form: https://docs.google.com/forms/d/${form.formId}; Sheet: ${form.linkedSheetId}`,
+        );
+      }
+    }
+  }
 }

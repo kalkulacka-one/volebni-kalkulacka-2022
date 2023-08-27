@@ -1,13 +1,7 @@
 import { GoogleSpreadsheetRow } from 'google-spreadsheet';
-import { JWT } from 'google-auth-library';
 import {
-  type CUrl,
   type CalculatorRowData,
-  Calculators,
   type QuestionsPoolRowData,
-  QuestionsPool,
-  Questions,
-  type QuestionRowData,
   QuestionsRow,
   QuestionsPoolRow,
   CalculatorRow,
@@ -171,7 +165,7 @@ export function convertToL10nsRow(
 
 export function convertToAnswersRow(
   pos: number,
-  row: GoogleSpreadsheetRow<Record<string, any>>,
+  row: GoogleSpreadsheetRow<Record<string, string>>,
 ): AnswersRow {
   return new AnswersRow({
     Pos: pos,
