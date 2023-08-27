@@ -44,7 +44,7 @@ export async function createForm(
     );
   }
 
-  const createItems = createFormQuestions(l10ns, questions).map(
+  const createItems = createFormQuestions(l10ns, questions, type).map(
     (item: forms_v1.Schema$Item, index: number) => {
       return {
         createItem: {
@@ -92,6 +92,7 @@ export async function createForm(
 function createFormQuestions(
   l10ns: L10nsRow,
   questions: QuestionsPoolRow[],
+  type: 'candidate' | 'expert',
 ): forms_v1.Schema$Item[] {
   const res = Array<forms_v1.Schema$Item>();
 
@@ -176,7 +177,7 @@ function createFormQuestions(
       title: `${prefix} ${l10ns.FormComment}`,
       questionItem: {
         question: {
-          required: false,
+          required: type === 'expert',
           textQuestion: {
             paragraph: true,
           },
@@ -207,7 +208,7 @@ function createFormQuestions(
     description: l10ns.FormMottoDescription,
     questionItem: {
       question: {
-        required: true,
+        required: type === 'candidate',
         textQuestion: {
           paragraph: false,
         },
@@ -221,7 +222,7 @@ function createFormQuestions(
       question: {
         required: false,
         textQuestion: {
-          paragraph: false,
+          paragraph: true,
         },
       },
     },
