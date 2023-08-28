@@ -18,7 +18,28 @@ export function initGoogleForms() {
   return googleForms;
 }
 
-// https://developers.google.com/forms/api/reference/rest
+// https://developers.google.com/forms/api/reference/rest/v1/forms/get
+export async function getForm(
+  googleForms: forms_v1.Forms,
+  calculator: CalculatorRow,
+  key: string,
+): Promise<forms_v1.Schema$Form> {
+  // https://developers.google.com/forms/api/reference/rest/v1/forms/get
+  // https://developers.google.com/forms/api/reference/rest/v1/forms#resource:-form
+  const formG = await googleForms.forms.get({
+    formId: key,
+  });
+
+  if (formG.status != 200) {
+    throw new Error(
+      `Calculator: ${calculator.Pos} - ${key} - ${formG.status}: ${formG.statusText}`,
+    );
+  }
+
+  return formG.data;
+}
+
+// https://developers.google.com/forms/api/reference/rest/v1/forms/create
 export async function createForm(
   googleForms: forms_v1.Forms,
   calculator: CalculatorRow,

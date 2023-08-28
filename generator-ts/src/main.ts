@@ -52,7 +52,7 @@ import {
 
 import { isEmptyColumn, isEmptyValue } from './utils';
 
-import { initGoogleForms, createForm } from './form';
+import { initGoogleForms, createForm, getForm } from './form';
 
 const DEFAULT_CACHE_LIFETIME = 1e10;
 const DEFAULT_CACHE_DIR = path.join(__dirname, '.cache');
@@ -704,7 +704,13 @@ async function createForms(calculators: Calculators) {
   const googleForms = initGoogleForms();
 
   for (const calculator of calculators.calculators) {
-    console.log(calculator.Pos + ': ' + calculator.key());
+    console.log(
+      `Generating form for ${
+        calculator.Pos
+      }: ${calculator.key()} - candidate: ${
+        calculator.QuestionsFormCandidates
+      }, expert: ${calculator.QuestionsFormExperts}`,
+    );
     if (!calculator.hasForms()) {
       const questions = constructQuestions(
         calculator,
@@ -725,10 +731,6 @@ async function createForms(calculators: Calculators) {
           questions,
           'candidate',
         );
-
-        console.log(
-          `${calculator.Pos} - candidate - Form: https://docs.google.com/forms/d/${form.formId}; Sheet: ${form.linkedSheetId}`,
-        );
       }
 
       // Create form for experts
@@ -748,5 +750,22 @@ async function createForms(calculators: Calculators) {
         );
       }
     }
+
+    const formC = await getForm(
+      googleForms,
+      calculator,
+      extractKey(calculator.QuestionsFormCandidates),
+    );
+    console.log(
+      `Get: ${calculator.Pos} - candidate - Form: https://docs.google.com/forms/d/${formC.formId}; Sheet: ${formC.linkedSheetId}`,
+    );
+    const formE = await getForm(
+      googleForms,
+      calculator,
+      extractKey(calculator.QuestionsFormExperts),
+    );
+    console.log(
+      `Get: ${calculator.Pos} - expert - Form: https://docs.google.com/forms/d/${formE.formId}; Sheet: ${formE.linkedSheetId}`,
+    );
   }
 }
