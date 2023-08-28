@@ -170,6 +170,10 @@ function createFormQuestions(
 
   for (let i = 0; i < questions.length; i++) {
     const row = questions[i];
+    if (row === undefined) {
+      console.log(`Skipping question on position: ${i}`);
+      continue;
+    }
     const prefix = `${i + 1}/${questions.length})`;
     // https://developers.google.com/forms/api/reference/rest/v1/forms#item
     res.push({

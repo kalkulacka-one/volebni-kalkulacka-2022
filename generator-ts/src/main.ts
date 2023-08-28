@@ -91,6 +91,10 @@ async function fetchGoogleSpreadsheet(
 ): Promise<GoogleSpreadsheet> {
   console.log('Fetching GoogleSpreadsheet: ', url);
   const key = extractKey(url);
+  if (key === undefined) {
+    throw new Error(`Cannot extract spreadsheet key from URL: '${url}'`);
+  }
+
   const doc = new GoogleSpreadsheet(key, jwt);
 
   await doc.loadInfo(); // loads document properties and worksheets
@@ -438,7 +442,7 @@ async function extractCalculators(url: CUrl, jwt: JWT): Promise<Calculators> {
 
   const calculators = new Calculators();
 
-  const sheet = doc.sheetsByTitle['Questions'];
+  const sheet = doc.sheetsByTitle['Calculators'];
   await sheet.loadHeaderRow();
 
   const calculatorRows = await sheet.getRows<CalculatorRowData>();
@@ -730,6 +734,9 @@ async function createForms(calculators: Calculators) {
           ],
           questions,
           'candidate',
+        );
+        console.log(
+          `${calculator.Pos} - candidate - Form: https://docs.google.com/forms/d/${form.formId}; Sheet: ${form.linkedSheetId}`,
         );
       }
 
