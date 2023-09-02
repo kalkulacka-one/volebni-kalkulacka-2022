@@ -109,8 +109,9 @@ const handleSubmit = async () => {
               name: appRoutes.guide.name,
               params: {
                 ...route.params,
-                election: 'nrsr-2023',
-                district: 'inventura-2020-2023',
+                type: `${'volby'}`,
+                first: 'nrsr-2023',
+                second: 'inventura-2020-2023',
               },
               query: { ...route.query },
             })
@@ -151,8 +152,9 @@ const handleSubmit = async () => {
                   name: appRoutes.guide.name,
                   params: {
                     ...route.params,
-                    election: 'prezidentske-2023',
-                    district: 'pro-nadsence',
+                    type: `${'volby'}`,
+                    first: 'prezidentske-2023',
+                    second: 'pro-nadsence',
                   },
                   query: { ...route.query },
                 })
@@ -192,8 +194,9 @@ const handleSubmit = async () => {
                   name: appRoutes.guide.name,
                   params: {
                     ...route.params,
-                    election: 'prezidentske-2023',
-                    district: 'pro-mlade',
+                    type: `${'volby'}`,
+                    first: 'prezidentske-2023',
+                    second: 'pro-mlade',
                   },
                   query: { ...route.query },
                 })

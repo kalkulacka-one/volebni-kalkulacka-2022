@@ -38,7 +38,7 @@ const breadcrumbs = electionName;
 
 // TODO: Replace with data from store
 const title =
-  route.params.election === 'senatni-2022'
+  route.params.first === 'senatni-2022'
     ? 'Zvolte svůj senátní obvod'
     : 'Zvolte své město';
 
@@ -57,14 +57,14 @@ const options = electionStore.districts.map((district) => {
   };
 });
 
-const selected = ref((route.params.district as string) || null);
+const selected = ref((route.params.second as string) || null);
 
 const onSubmit = () => {
   console.debug(selected);
   if (selected.value) {
     router.push({
       name: appRoutes.guide.name,
-      params: { ...route.params, district: selected.value, nr: 1 },
+      params: { ...route.params, second: selected.value, nr: 1 },
       query: { ...route.query },
     });
   }
