@@ -12,10 +12,7 @@ import type {
 import type { DeprecatedQuestion } from '@/types/question';
 import type { DeprecatedCalculators } from '@/types/calculators';
 
-export const deprecatedFetchCalculator = async (
-  electionId: string,
-  districtId: string,
-) => {
+export const deprecatedFetchCalculator = async (key: string) => {
   const deprecatedCalculator = {} as DeprecatedCalculator;
 
   deprecatedCalculator.id = '4d2d81e3-2602-4259-b230-4237e5110005';
@@ -33,9 +30,7 @@ export const deprecatedFetchCalculator = async (
   };
 
   // Load questions and map them to deprecated structure
-  const questions = await fetchCalculatorQuestions(
-    'nrsr-2023/inventura-2020-2023',
-  );
+  const questions = await fetchCalculatorQuestions(key);
   const transformedQuestions = questions.map(
     (question) =>
       ({
@@ -50,13 +45,9 @@ export const deprecatedFetchCalculator = async (
   deprecatedCalculator.questions = transformedQuestions;
 
   // Load candidates and map them to deprecated structure
-  const candidates = await fetchCalculatorCandidates(
-    'nrsr-2023/inventura-2020-2023',
-  );
-  const persons = await fetchCalculatorPersons('nrsr-2023/inventura-2020-2023');
-  const organizations = await fetchCalculatorOrganizations(
-    'nrsr-2023/inventura-2020-2023',
-  );
+  const candidates = await fetchCalculatorCandidates(key);
+  const persons = await fetchCalculatorPersons(key);
+  const organizations = await fetchCalculatorOrganizations(key);
   const transformedCandidates = candidates.map((candidate) => {
     const transformedCandidate = {
       id: candidate.id,
@@ -123,9 +114,7 @@ export const deprecatedFetchCalculator = async (
   deprecatedCalculator.candidates = transformedCandidates;
 
   // Load candidates' answers and map them to deprecated structure
-  const candidatesAnswers = await fetchCalculatorCandidatesAnswers(
-    'nrsr-2023/inventura-2020-2023',
-  );
+  const candidatesAnswers = await fetchCalculatorCandidatesAnswers(key);
   const transformedCandidatesAnswers = [] as DeprecatedCandidateAnswer[];
   for (const candidateId in candidatesAnswers) {
     const answers = candidatesAnswers[candidateId];

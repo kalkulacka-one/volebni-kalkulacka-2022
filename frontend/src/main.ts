@@ -8,6 +8,7 @@ import {
   createWebHistory,
   type NavigationGuardNext,
   type RouteLocationNormalized,
+  type RouteParams,
 } from 'vue-router';
 import App from './App.vue';
 import { getDistrictCode } from './common/utils';
@@ -351,6 +352,15 @@ router.beforeEach((to, from, next) => {
 
 //handles changing of election and district and fetching data
 router.beforeEach(async (to, from) => {
+  const calculatorKeyFromParams = (params: RouteParams) => {
+    const { first, second, third, fourth } = params;
+    const keyParts = [first, second, third, fourth].filter(
+      (x) => x !== '' && x !== undefined,
+    );
+    const key = keyParts.join('/');
+    return key;
+  };
+
   console.debug(
     `From: ${String(from.name)} ${Object.values(to.params)}, To: ${String(
       to.name,
@@ -383,7 +393,7 @@ router.beforeEach(async (to, from) => {
       console.debug(
         `District codes ${districtNr} !== ${store.calculator?.district_code}. Fetching ...`,
       );
-      await store.loadCalculator(to.params.first as string, districtNr);
+      await store.loadCalculator(calculatorKeyFromParams(to.params));
       if (store?.calculator === undefined) {
         return {
           name: appRoutes.error.name,
