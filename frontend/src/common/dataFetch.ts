@@ -1,5 +1,6 @@
-import type { CandidatesAnswers } from '@data/types/candidatesAnswers';
+import type { Calculator } from '@data/types/calculator';
 import type { Candidates } from '@data/types/candidates';
+import type { CandidatesAnswers } from '@data/types/candidatesAnswers';
 import type { Organizations } from '@data/types/organizations';
 import type { Persons } from '@data/types/persons';
 import type { Questions } from '@data/types/questions';
@@ -188,6 +189,7 @@ export const deprecatedFetchElectionData = async (electionId: string) => {
 };
 
 type CalculatorFile =
+  | 'calculator'
   | 'questions'
   | 'candidates-answers'
   | 'candidates'
@@ -195,6 +197,7 @@ type CalculatorFile =
   | 'organizations';
 
 type CalculatorFileToTypeMap = {
+  calculator: Calculator;
   questions: Questions;
   'candidates-answers': CandidatesAnswers;
   candidates: Candidates;
@@ -223,6 +226,13 @@ const fetchCalculatorFile = async <T extends CalculatorFile>({
     }
   });
   return data;
+};
+
+const fetchCalculator = async (key: string) => {
+  return await fetchCalculatorFile({
+    key,
+    file: 'calculator',
+  });
 };
 
 const fetchCalculatorQuestions = async (key: string) => {
