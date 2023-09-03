@@ -6,6 +6,7 @@ import ButtonText from '@/components/design-system/typography/ButtonText.vue';
 export interface Props {
   tag?: 'button' | 'a';
   href?: string;
+  testId?: 'tlacitko';
   kind: 'link' | 'outlined' | 'filled' | 'answer';
   size?: 'medium' | 'small';
   color?: 'neutral' | 'primary' | 'secondary' | 'white' | 'facebook';
@@ -41,7 +42,12 @@ const computedSize = computed(() =>
 </script>
 
 <template>
-  <component :is="computedTag" :href="href" :class="['button', classes]">
+  <component
+    :is="computedTag"
+    :href="href"
+    :class="['button', classes]"
+    :testId="testId"
+  >
     <span
       v-if="$slots.icon"
       :class="['icon', $slots.default ? 'icon--before' : 'icon--only']"
