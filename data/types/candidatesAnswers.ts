@@ -26,6 +26,28 @@ export type Answer1 = boolean | null;
  * Whether a question was marked as important
  */
 export type Answer2 = boolean;
+/**
+ * Who answered a question
+ */
+export type Responded = "user" | "candidate" | "expert";
+/**
+ * Respondent's comment to an answer
+ */
+export type Comment = string;
+/**
+ * Ordered list of sources for an answer
+ *
+ * @minItems 1
+ */
+export type Sources = [Source, ...Source[]];
+/**
+ * URL of a source
+ */
+export type URL = string;
+/**
+ * Title of a source
+ */
+export type Title = string;
 
 /**
  * List of candidates' answers
@@ -40,5 +62,16 @@ export interface Answer {
   questionId: QuestionID;
   answer?: Answer1;
   isImportant?: Answer2;
+  respondent?: Responded;
+  comment?: Comment;
+  sources?: Sources;
+  [k: string]: unknown;
+}
+/**
+ * Source of an answer
+ */
+export interface Source {
+  url: URL;
+  title?: Title;
   [k: string]: unknown;
 }
