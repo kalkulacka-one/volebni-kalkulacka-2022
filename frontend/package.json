@@ -21,8 +21,11 @@
     "preview": "vite preview --port 4173",
     "storybook:build": "storybook build",
     "storybook": "storybook dev -p 6006",
-    "test:e2e:ci": "start-server-and-test preview http://localhost:4173/ \"cypress run --e2e\"",
-    "test:e2e": "start-server-and-test preview http://localhost:4173/ \"cypress open --e2e\"",
+    "test:db:reset": "dotenv -c test -- bash -c \"npx prisma migrate reset --force && npx prisma generate\"",
+    "test:e2e:open": "dotenv -c test -- bash -c 'start-server-and-test test:server \"$PUBLIC_URL\" \"cypress open --e2e\"'",
+    "test:e2e:run": "dotenv -c test -- bash -c 'start-server-and-test test:server \"$PUBLIC_URL\" \"npm run test-only\"'",
+    "test-only": "dotenv -c test -- cypress run --e2e",
+    "test:server": "dotenv -c test -- bash -c \"npm run test:db:reset && npm run dev:copy-data && cd .. && vercel dev --local-config ./vercel.development.json\"",
     "test:unit": "vitest --environment jsdom",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
   },
