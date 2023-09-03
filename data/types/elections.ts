@@ -80,6 +80,12 @@ export type StartTime = string | string;
  */
 export type EndTime = string | string;
 /**
+ * One or multiple voting hours for the election
+ *
+ * @minItems 1
+ */
+export type VotingHours1 = [TimePeriod, ...TimePeriod[]];
+/**
  * List of elections
  */
 export type Elections = Election[];
@@ -99,6 +105,7 @@ export interface Election {
   calculatorGroup: CalculatorGroup;
   districts?: OrderedListOfElectionDistricts;
   rounds?: OrderedListOfElectionRounds;
+  votingHours?: VotingHours1;
   [k: string]: unknown;
 }
 /**
