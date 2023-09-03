@@ -1,0 +1,16 @@
+name: volebni-kalkulacka
+services:
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - 1025:1025
+      - 8025:8025
+    volumes:
+      - mailhog:/maildir
+    healthcheck:
+      test: wget --quiet --output-document=/dev/null http://localhost:8025
+      interval: 5s
+      timeout: 5s
+      retries: 15
+volumes:
+  mailhog:
