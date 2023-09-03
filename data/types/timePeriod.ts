@@ -6,32 +6,14 @@
  */
 
 /**
- * Round ordinal number from 0
- */
-export type Number = number;
-/**
- * One or multiple voting hours for the round
- *
- * @minItems 1
- */
-export type VotingHours = [TimePeriod, ...TimePeriod[]];
-/**
  * Start date (or time) of a voting period in the ISO 8601 format
  */
-export type StartTime = string | string;
+export type StartTime = string;
 /**
  * End date (or time) of a voting period in the ISO 8601 format
  */
-export type EndTime = string | string;
+export type EndTime = string;
 
-/**
- * Round of an election
- */
-export interface Round {
-  number: Number;
-  votingHours?: VotingHours;
-  [k: string]: unknown;
-}
 /**
  * Time period from–to
  */
