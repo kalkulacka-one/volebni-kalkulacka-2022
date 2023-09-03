@@ -70,7 +70,7 @@ export type Number = number;
  *
  * @minItems 1
  */
-export type VotingHours = [VotingPeriod, ...VotingPeriod[]];
+export type VotingHours = [TimePeriod, ...TimePeriod[]];
 /**
  * Start date (or time) of a voting period in the ISO 8601 format
  */
@@ -125,7 +125,10 @@ export interface Round {
   votingHours?: VotingHours;
   [k: string]: unknown;
 }
-export interface VotingPeriod {
+/**
+ * Time period from–to
+ */
+export interface TimePeriod {
   start: StartTime;
   end: EndTime;
   [k: string]: unknown;
