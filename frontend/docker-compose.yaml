@@ -1,5 +1,24 @@
 name: volebni-kalkulacka
 services:
+  cockroach:
+    image: cockroachdb/cockroach
+    environment:
+      COCKROACH_USER: volebnikalkulacka
+      COCKROACH_PASSWORD: volebnikalkulacka
+      COCKROACH_DATABASE: volebnikalkulacka
+    ports:
+      - 26257:26257
+      - 8080:8080
+    volumes:
+      - cockroach:/cockroach/cockroach-data
+    networks:
+      - roachnet
+    command: start-single-node --certs-dir /cockroach/cockroach-data/certs --http-addr=0.0.0.0:8080
+    healthcheck:
+      test: curl --insecure --silent --fail https://localhost:8080
+      interval: 5s
+      timeout: 5s
+      retries: 15
   mailhog:
     image: mailhog/mailhog
     ports:
@@ -13,4 +32,8 @@ services:
       timeout: 5s
       retries: 15
 volumes:
+  cockroach:
   mailhog:
+networks:
+  roachnet:
+    driver: bridge
