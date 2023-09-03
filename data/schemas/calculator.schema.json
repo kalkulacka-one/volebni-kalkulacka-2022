@@ -154,7 +154,10 @@
           "$ref": "#/$defs/key"
         }
       },
-      "required": ["key", "title", "shortTitle"]
+      "required": ["key", "title", "shortTitle"],
+      "not": {
+        "required": ["calculatorGroup", "election"]
+      }
     },
     {
       "title": "Calculator from a group",
@@ -167,7 +170,10 @@
           "$ref": "#/$defs/variant"
         }
       },
-      "required": ["calculatorGroup", "variant"]
+      "required": ["calculatorGroup", "variant"],
+      "not": {
+        "required": ["election"]
+      }
     },
     {
       "title": "Calculator from an election",

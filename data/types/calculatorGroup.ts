@@ -36,7 +36,7 @@ export type OrderedListOfCalculatorVariants = [
   ...{
     key?: Key2;
     [k: string]: unknown;
-  }[]
+  }[],
 ];
 /**
  * Human-friendly unique key of a variant in the hyphen-separated lowercased format
@@ -86,7 +86,10 @@ export type ID2 = string;
 /**
  * @minItems 1
  */
-export type OrderedListOfCalculatorsFromAnElection = [Calculator1, ...Calculator1[]];
+export type OrderedListOfCalculatorsFromAnElection = [
+  Calculator1,
+  ...Calculator1[],
+];
 export type Calculator1 =
   | {
       [k: string]: unknown;

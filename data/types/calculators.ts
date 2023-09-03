@@ -37,7 +37,10 @@ export type ShortTitle = string;
  * Description of a calculator
  */
 export type Description = string;
-export type Calculator2 = StandaloneCalculator | CalculatorFromAGroup | CalculatorFromAnElection;
+export type Calculator2 =
+  | StandaloneCalculator
+  | CalculatorFromAGroup
+  | CalculatorFromAnElection;
 /**
  * Human-friendly unique key of a standalone calculator in the hyphen-separated lowercased format
  */

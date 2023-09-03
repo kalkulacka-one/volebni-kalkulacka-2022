@@ -70,7 +70,7 @@ export type Number = number;
  *
  * @minItems 1
  */
-export type VotingHours = [VotingPeriod, ...VotingPeriod[]];
+export type VotingHours = [TimePeriod, ...TimePeriod[]];
 /**
  * Start date (or time) of a voting period in the ISO 8601 format
  */
@@ -79,6 +79,12 @@ export type StartTime = string | string;
  * End date (or time) of a voting period in the ISO 8601 format
  */
 export type EndTime = string | string;
+/**
+ * One or multiple voting hours for the election
+ *
+ * @minItems 1
+ */
+export type VotingHours1 = [TimePeriod, ...TimePeriod[]];
 
 /**
  * Election provides various details about an election such as districts and rounds
@@ -95,6 +101,7 @@ export interface Election {
   calculatorGroup: CalculatorGroup;
   districts?: OrderedListOfElectionDistricts;
   rounds?: OrderedListOfElectionRounds;
+  votingHours?: VotingHours1;
   [k: string]: unknown;
 }
 /**
@@ -121,7 +128,10 @@ export interface Round {
   votingHours?: VotingHours;
   [k: string]: unknown;
 }
-export interface VotingPeriod {
+/**
+ * Time period from–to
+ */
+export interface TimePeriod {
   start: StartTime;
   end: EndTime;
   [k: string]: unknown;

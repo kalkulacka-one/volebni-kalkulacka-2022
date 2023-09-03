@@ -118,8 +118,18 @@
       "items": {
         "$ref": "./round.schema.json"
       }
+    },
+    "votingHours": {
+      "title": "Voting hours",
+      "description": "One or multiple voting hours for the election",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "./time-period.schema.json"
+      }
     }
   },
+  "unevaluatedProperties": false,
   "required": [
     "id",
     "key",
@@ -127,5 +137,17 @@
     "title",
     "shortTitle",
     "calculatorGroup"
-  ]
+  ],
+  "dependentSchemas": {
+    "rounds": {
+      "not": {
+        "required": ["votingHours"]
+      }
+    },
+    "votingHours": {
+      "not": {
+        "required": ["rounds"]
+      }
+    }
+  }
 }

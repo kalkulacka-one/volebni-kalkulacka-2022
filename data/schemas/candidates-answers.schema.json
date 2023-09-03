@@ -9,5 +9,5 @@
       "$ref": "./answers.schema.json"
     }
   },
-  "additionalProperties": false
+  "unevaluatedProperties": false
 }
