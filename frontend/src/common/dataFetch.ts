@@ -139,10 +139,6 @@ export const deprecatedFetchCalculator = async (key: string) => {
       });
     }
   }
-  const ttransformedCandidatesAnswers = transformedCandidatesAnswers.filter(
-    (response) =>
-      response.candidate_id === '2de03a75-cf63-4fbf-a144-a6e6d71ae2c4',
-  );
 
   deprecatedCalculator.answers = transformedCandidatesAnswers;
   return deprecatedCalculator;
