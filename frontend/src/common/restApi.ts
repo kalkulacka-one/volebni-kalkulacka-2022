@@ -99,7 +99,7 @@ export const getResults = async (resultId: string) => {
   const districtId = calculator.district_code;
   //load election
   await electionStore.loadElection(electionId);
-  await electionStore.loadCalculator(electionId, districtId);
+  await electionStore.loadCalculator(calculator.key);
   electionStore.answers = (
     resParsed.answers as ReturnType<typeof buildResultData>['answers']
   ).map((x) => {

@@ -44,7 +44,7 @@ if (electionStore.calculator === undefined) {
 
 const election = electionStore.election as DeprecatedElection;
 const electionName = election.name;
-const districtCode = getDistrictCode(route.params.district as string);
+const districtCode = getDistrictCode(route.params.second as string);
 const districtName = electionStore.districts.filter(
   (district) => district.district_code === districtCode,
 )[0].name;
@@ -124,6 +124,7 @@ const goToQuestion = (number: number) => {
 const goToRecap = () => {
   router.push({
     name: appRoutes.recap.name,
+    params: { ...route.params },
     query: { ...route.query },
   });
 };

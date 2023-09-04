@@ -53,7 +53,7 @@ const electionStore = useElectionStore();
 
 const election = electionStore.election as DeprecatedElection;
 const electionName = election.name;
-const districtCode = getDistrictCode(route.params.district as string);
+const districtCode = getDistrictCode(route.params.second as string);
 const districtName = electionStore.districts.filter(
   (district) => district.district_code === districtCode,
 )[0].name;
@@ -68,35 +68,35 @@ const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
 
 // TODO: Replace with data from store
 const text =
-  route.params.election === 'senatni-2022'
+  route.params.first === 'senatni-2022'
     ? `
 Vítejte ve Volební kalkulačce pro volby do Senátu ČR.
 
 Čeká vás zhruba 40 otázek. Na stejné otázky nám odpověděli kandidáti. Zodpovězení otázek zabere cca 10 minut. Na konci se dozvíte, jak se kandidáti shodují s vašimi názory.
       `
-    : route.params.election === 'prezidentske-2023' &&
-      route.params.district === 'pro-kazdeho'
+    : route.params.first === 'prezidentske-2023' &&
+      route.params.second === 'pro-kazdeho'
     ? `
 Vítejte ve Volební kalkulačce pro prezidentské volby 2023.
 
 Čeká vás 42 otázek. Na stejné otázky nám odpověděly kandidující osobnosti. Zodpovězení otázek zabere zhruba 10 minut. Na konci se dozvíte, jak se jednotliví kandidáti a kandidátky shodují s vašimi názory.
     `
-    : route.params.election === 'nrsr-2023' &&
-      route.params.district === 'inventura-2020-2023'
+    : route.params.first === 'nrsr-2023' &&
+      route.params.second === 'inventura-2020-2023'
     ? `
 Vitajte v Inventúre hlasovaní Národnej rady SR 2020-2023!
 
 Vybrali sme pre Vás 30 skutočných hlasovaní, ktoré sa uskutočnili v Národnej rade SR v končiacom volebnom období. Predstavte si, že o nich hlasujete ako jeden z poslancov alebo poslankýň. Zodpovedanie otázok zaberie zhruba 5 minút. Na konci sa dozviete, ktorí poslanci sa zhodovali s vašimi názormi.
     `
-    : route.params.election === 'prezidentske-2023' &&
-      route.params.district === 'pro-nadsence'
+    : route.params.first === 'prezidentske-2023' &&
+      route.params.second === 'pro-nadsence'
     ? `
 Vítejte ve Volební kalkulačce pro prezidentské volby 2023.
 
 Čeká vás 98 otázek. Na stejné otázky nám odpověděly kandidující osobnosti. Zodpovězení otázek zabere zhruba 10 minut. Na konci se dozvíte, jak se jednotliví kandidáti a kandidátky shodují s vašimi názory.
     `
-    : route.params.election === 'prezidentske-2023' &&
-      route.params.district === 'pro-mlade'
+    : route.params.first === 'prezidentske-2023' &&
+      route.params.second === 'pro-mlade'
     ? `
 Volební kalkulačka pro mladé byla vytvořena ve **spolupráci s projektem [NázoryPolitiků.cz](https://www.nazorypolitiku.cz)**.
 

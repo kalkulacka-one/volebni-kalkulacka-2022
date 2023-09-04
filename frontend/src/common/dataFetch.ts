@@ -1,5 +1,6 @@
-import type { CandidatesAnswers } from '@data/types/candidatesAnswers';
+import type { Calculator } from '@data/types/calculator';
 import type { Candidates } from '@data/types/candidates';
+import type { CandidatesAnswers } from '@data/types/candidatesAnswers';
 import type { Organizations } from '@data/types/organizations';
 import type { Persons } from '@data/types/persons';
 import type { Questions } from '@data/types/questions';
@@ -12,14 +13,14 @@ import type {
 import type { DeprecatedQuestion } from '@/types/question';
 import type { DeprecatedCalculators } from '@/types/calculators';
 
-export const deprecatedFetchCalculator = async (
-  electionId: string,
-  districtId: string,
-) => {
+export const deprecatedFetchCalculator = async (key: string) => {
   const deprecatedCalculator = {} as DeprecatedCalculator;
 
-  deprecatedCalculator.id = '4d2d81e3-2602-4259-b230-4237e5110005';
-  deprecatedCalculator.district_code = 'inventura-2020-2023';
+  // Load calculator data and map them to deprecated structure
+  const calculator = await fetchCalculator(key);
+  deprecatedCalculator.id = calculator.id;
+  deprecatedCalculator.key = key;
+  deprecatedCalculator.district_code = calculator.variant.key;
   deprecatedCalculator.show_district_code = false;
   deprecatedCalculator.name = 'Inventúra hlasovaní 2020–2023';
   deprecatedCalculator.description =
@@ -33,7 +34,7 @@ export const deprecatedFetchCalculator = async (
   };
 
   // Load questions and map them to deprecated structure
-  const questions = await fetchCalculatorQuestions();
+  const questions = await fetchCalculatorQuestions(key);
   const transformedQuestions = questions.map(
     (question) =>
       ({
@@ -48,16 +49,19 @@ export const deprecatedFetchCalculator = async (
   deprecatedCalculator.questions = transformedQuestions;
 
   // Load candidates and map them to deprecated structure
-  const candidates = await fetchCalculatorCandidates();
-  const persons = await fetchCalculatorPersons();
-  const organizations = await fetchCalculatorOrganizations();
+  const candidates = await fetchCalculatorCandidates(key);
+  const organizations = await fetchCalculatorOrganizations(key);
+  const hasPersonType = candidates.some(
+    (item) => item.reference && item.reference.type === 'person',
+  );
+  const persons = hasPersonType ? await fetchCalculatorPersons(key) : undefined;
   const transformedCandidates = candidates.map((candidate) => {
     const transformedCandidate = {
       id: candidate.id,
       is_active: true,
     } as DeprecatedCandidate;
 
-    if (candidate.reference.type == 'person') {
+    if (persons && candidate.reference.type == 'person') {
       const person =
         persons.find((person) => person.id === candidate.reference.id) ||
         (() => {
@@ -117,7 +121,7 @@ export const deprecatedFetchCalculator = async (
   deprecatedCalculator.candidates = transformedCandidates;
 
   // Load candidates' answers and map them to deprecated structure
-  const candidatesAnswers = await fetchCalculatorCandidatesAnswers();
+  const candidatesAnswers = await fetchCalculatorCandidatesAnswers(key);
   const transformedCandidatesAnswers = [] as DeprecatedCandidateAnswer[];
   for (const candidateId in candidatesAnswers) {
     const answers = candidatesAnswers[candidateId];
@@ -141,10 +145,6 @@ export const deprecatedFetchCalculator = async (
       });
     }
   }
-  const ttransformedCandidatesAnswers = transformedCandidatesAnswers.filter(
-    (response) =>
-      response.candidate_id === '2de03a75-cf63-4fbf-a144-a6e6d71ae2c4',
-  );
 
   deprecatedCalculator.answers = transformedCandidatesAnswers;
   return deprecatedCalculator;
@@ -190,10 +190,39 @@ export const deprecatedFetchElectionData = async (electionId: string) => {
   };
 };
 
-export const fetchCalculatorQuestions = async () => {
-  const data: Questions = await fetch(
-    '/data/instance/volebnakalkulacka.sk/nrsr-2023/inventura-2020-2023/questions.json',
-  ).then((response) => {
+type CalculatorFile =
+  | 'calculator'
+  | 'questions'
+  | 'candidates-answers'
+  | 'candidates'
+  | 'persons'
+  | 'organizations';
+
+type CalculatorFileToTypeMap = {
+  calculator: Calculator;
+  questions: Questions;
+  'candidates-answers': CandidatesAnswers;
+  candidates: Candidates;
+  persons: Persons;
+  organizations: Organizations;
+};
+
+type CalculatorFileToType<T extends CalculatorFile> =
+  T extends keyof CalculatorFileToTypeMap ? CalculatorFileToTypeMap[T] : never;
+
+const fetchCalculatorFile = async <T extends CalculatorFile>({
+  key,
+  file,
+  instance = 'volebnakalkulacka.sk',
+  baseUrl = '/data/instance',
+}: {
+  key: string;
+  file: T;
+  instance?: string;
+  baseUrl?: string;
+}) => {
+  const url = `${baseUrl}/${instance}/${key}/${file}.json`;
+  const data: CalculatorFileToType<T> = await fetch(url).then((response) => {
     if (response.status === 200) {
       return response.json();
     }
@@ -201,46 +230,44 @@ export const fetchCalculatorQuestions = async () => {
   return data;
 };
 
-export const fetchCalculatorCandidatesAnswers = async () => {
-  const data: CandidatesAnswers = await fetch(
-    '/data/instance/volebnakalkulacka.sk/nrsr-2023/inventura-2020-2023/candidates-answers.json',
-  ).then((response) => {
-    if (response.status === 200) {
-      return response.json();
-    }
+const fetchCalculator = async (key: string) => {
+  return await fetchCalculatorFile({
+    key,
+    file: 'calculator',
   });
-  return data;
 };
 
-export const fetchCalculatorCandidates = async () => {
-  const data: Candidates = await fetch(
-    '/data/instance/volebnakalkulacka.sk/nrsr-2023/inventura-2020-2023/candidates.json',
-  ).then((response) => {
-    if (response.status === 200) {
-      return response.json();
-    }
+const fetchCalculatorQuestions = async (key: string) => {
+  return await fetchCalculatorFile({
+    key,
+    file: 'questions',
   });
-  return data;
 };
 
-export const fetchCalculatorPersons = async () => {
-  const data: Persons = await fetch(
-    '/data/instance/volebnakalkulacka.sk/nrsr-2023/inventura-2020-2023/persons.json',
-  ).then((response) => {
-    if (response.status === 200) {
-      return response.json();
-    }
+const fetchCalculatorCandidatesAnswers = async (key: string) => {
+  return await fetchCalculatorFile({
+    key,
+    file: 'candidates-answers',
   });
-  return data;
 };
 
-export const fetchCalculatorOrganizations = async () => {
-  const data: Organizations = await fetch(
-    '/data/instance/volebnakalkulacka.sk/nrsr-2023/inventura-2020-2023/organizations.json',
-  ).then((response) => {
-    if (response.status === 200) {
-      return response.json();
-    }
+const fetchCalculatorCandidates = async (key: string) => {
+  return await fetchCalculatorFile({
+    key,
+    file: 'candidates',
   });
-  return data;
+};
+
+const fetchCalculatorPersons = async (key: string) => {
+  return await fetchCalculatorFile({
+    key,
+    file: 'persons',
+  });
+};
+
+const fetchCalculatorOrganizations = async (key: string) => {
+  return await fetchCalculatorFile({
+    key,
+    file: 'organizations',
+  });
 };

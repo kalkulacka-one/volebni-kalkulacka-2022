@@ -31,8 +31,7 @@ const calculator = calculators.find(
 );
 
 const { election, candidates } = await deprecatedFetchCalculator(
-  calculator?.election_id as string,
-  calculator?.district_code as string,
+  calculator?.key as string,
 );
 
 // const election = calc ? calc.election : null;

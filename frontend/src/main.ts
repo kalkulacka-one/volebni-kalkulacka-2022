@@ -8,6 +8,7 @@ import {
   createWebHistory,
   type NavigationGuardNext,
   type RouteLocationNormalized,
+  type RouteParams,
 } from 'vue-router';
 import App from './App.vue';
 import { getDistrictCode } from './common/utils';
@@ -144,8 +145,7 @@ export const appRoutes = {
   },
   guide: {
     name: 'guide',
-    path: '/volby/:election/:district/navod/:step?',
-    alias: '/volby/:election/:district',
+    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'navod'}/:step(\\d+)?`,
     component: GuidePageVue,
     meta: {
       title: 'Návod - Volebná kalkulačka',
@@ -153,7 +153,7 @@ export const appRoutes = {
   },
   question: {
     name: 'question',
-    path: '/volby/:election/:district/otazka/:nr?',
+    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'otazka'}/:nr(\\d+)?`,
     component: QuestionPageVue,
     meta: {
       title: 'Otázka $$ - Volebná kalkulačka',
@@ -163,7 +163,7 @@ export const appRoutes = {
   },
   recap: {
     name: 'recap',
-    path: '/volby/:election/:district/rekapitulace',
+    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'rekapitulace'}/:nr(\\d+)?`,
     component: RecapPageVue,
     meta: {
       title: 'Rekapitulace - Volebná kalkulačka',
@@ -171,7 +171,7 @@ export const appRoutes = {
   },
   result: {
     name: 'result',
-    path: '/volby/:election/:district/vysledok',
+    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'vysledok'}`,
     component: ResultPageVue,
     meta: {
       title: 'Výsledky - Volebná kalkulačka',
@@ -179,7 +179,7 @@ export const appRoutes = {
   },
   comparison: {
     name: 'comparison',
-    path: '/volby/:election/:district/srovnani',
+    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'porovnaní'}`,
     component: ComparisonPageVue,
     meta: {
       title: 'Porovnaní - Volebná kalkulačka',
@@ -352,6 +352,15 @@ router.beforeEach((to, from, next) => {
 
 //handles changing of election and district and fetching data
 router.beforeEach(async (to, from) => {
+  const calculatorKeyFromParams = (params: RouteParams) => {
+    const { first, second, third, fourth } = params;
+    const keyParts = [first, second, third, fourth].filter(
+      (x) => x !== '' && x !== undefined,
+    );
+    const key = keyParts.join('/');
+    return key;
+  };
+
   console.debug(
     `From: ${String(from.name)} ${Object.values(to.params)}, To: ${String(
       to.name,
@@ -360,14 +369,11 @@ router.beforeEach(async (to, from) => {
   const store = useElectionStore();
 
   //load election if election in store is different
-  if (
-    to.params.election !== undefined &&
-    to.params.election !== store.election?.id
-  ) {
+  if (to.params.first !== undefined && to.params.first !== store.election?.id) {
     console.debug(
-      `Election IDs ${to.params.election} !== ${store.election?.id}. Fetching ...`,
+      `Election IDs ${to.params.first} !== ${store.election?.id}. Fetching ...`,
     );
-    await store.loadElection(to.params.election as string);
+    await store.loadElection(to.params.first as string);
     if (store?.election === undefined) {
       return {
         name: appRoutes.error.name,
@@ -375,19 +381,19 @@ router.beforeEach(async (to, from) => {
           case: ErrorPageEnum.NotFound,
         },
         state: {
-          extraInfo: `Election fetch failed. Election: ${to.params.election}`,
+          extraInfo: `Election fetch failed. Election: ${to.params.first}`,
         },
       };
     }
   }
   //load calculator data if district in store different
-  if (to.params.district !== undefined) {
-    const districtNr = getDistrictCode(to.params.district as string);
+  if (to.params.second !== undefined) {
+    const districtNr = getDistrictCode(to.params.second as string);
     if (districtNr !== store.calculator?.district_code) {
       console.debug(
         `District codes ${districtNr} !== ${store.calculator?.district_code}. Fetching ...`,
       );
-      await store.loadCalculator(to.params.election as string, districtNr);
+      await store.loadCalculator(calculatorKeyFromParams(to.params));
       if (store?.calculator === undefined) {
         return {
           name: appRoutes.error.name,
@@ -395,7 +401,7 @@ router.beforeEach(async (to, from) => {
             case: ErrorPageEnum.NotFound,
           },
           state: {
-            extraInfo: `Calculator fetch failed. Election: ${to.params.election}, districtNr: ${districtNr}`,
+            extraInfo: `Calculator fetch failed. Election: ${to.params.first}, districtNr: ${districtNr}`,
           },
         };
       }
@@ -425,9 +431,9 @@ router.beforeEach(async (to, from) => {
   if (hasResultQuery) {
     return true;
   } else if (
-    from.params.election !== to.params.election &&
-    to.params.district === undefined &&
-    to.params.election !== undefined &&
+    from.params.first !== to.params.first &&
+    to.params.second === undefined &&
+    to.params.first !== undefined &&
     to.name !== appRoutes.districtSelection.name
   ) {
     // route to district selection only if district not specified

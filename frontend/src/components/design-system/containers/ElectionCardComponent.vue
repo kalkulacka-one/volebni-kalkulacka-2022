@@ -93,8 +93,9 @@ const handleVoteClick = () => {
     name: appRoutes.guide.name,
     params: {
       ...route.params,
-      election: props.election,
-      district: props.district,
+      type: `${'volby'}`,
+      first: props.election,
+      second: props.district,
     },
     query: { ...route.query },
   });

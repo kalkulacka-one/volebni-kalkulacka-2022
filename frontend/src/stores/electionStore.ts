@@ -108,12 +108,12 @@ export const useElectionStore = defineStore('election', {
         newrelic?.noticeError(new Error('Election data are undefined!'));
       }
     },
-    async loadCalculator(electionId: string, districtId: string) {
+    async loadCalculator(key: string) {
       this.calculator = undefined;
       this.uniqueQuestionTags.clear();
       let calculator = undefined;
       try {
-        calculator = await deprecatedFetchCalculator(electionId, districtId);
+        calculator = await deprecatedFetchCalculator(key);
       } catch (error) {
         console.error(error);
       }
