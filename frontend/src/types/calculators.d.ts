@@ -27,6 +27,7 @@ export interface DeprecatedCalculators {
      * Show on HP end - ISO 8601
      */
     on_hp_to?: string;
+    key: string;
     [k: string]: unknown;
   }[];
   [k: string]: unknown;
