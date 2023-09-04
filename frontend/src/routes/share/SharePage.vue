@@ -59,18 +59,19 @@ getResults(route.params.uuid as string)
 const router = useRouter();
 watch(isInitialized, (value) => {
   if (value) {
-    const electionName = electionStore.election?.name;
-    const districtCode = electionStore.calculator?.district_code;
-    const districtName = electionStore.districts.filter(
-      (district) => district.district_code === districtCode,
-    )[0].name;
-    const showDistrictCode = electionStore.districts.filter(
-      (district) => district.district_code === districtCode,
-    )[0].show_district_code;
-    const districtNameWithCode = showDistrictCode
-      ? `${districtName} (${districtCode})`
-      : districtName;
-    breadcrumbs.value = `${electionName} — ${districtNameWithCode}`;
+    // const electionName = electionStore.election?.name;
+    // const districtCode = electionStore.calculator?.district_code;
+    // const districtName = electionStore.districts.filter(
+    //   (district) => district.district_code === districtCode,
+    // )[0].name;
+    // const showDistrictCode = electionStore.districts.filter(
+    //   (district) => district.district_code === districtCode,
+    // )[0].show_district_code;
+    // const districtNameWithCode = showDistrictCode
+    //   ? `${districtName} (${districtCode})`
+    //   : districtName;
+    // breadcrumbs.value = `${electionName} — ${districtNameWithCode}`;
+    breadcrumbs.value = `${electionStore.calculator?.name}`;
   }
 });
 const handleFillAgainClick = () => {
