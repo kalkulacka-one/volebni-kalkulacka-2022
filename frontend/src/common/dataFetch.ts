@@ -16,8 +16,11 @@ import type { DeprecatedCalculators } from '@/types/calculators';
 export const deprecatedFetchCalculator = async (key: string) => {
   const deprecatedCalculator = {} as DeprecatedCalculator;
 
-  deprecatedCalculator.id = '4d2d81e3-2602-4259-b230-4237e5110005';
-  deprecatedCalculator.district_code = 'inventura-2020-2023';
+  // Load calculator data and map them to deprecated structure
+  const calculator = await fetchCalculator(key);
+  deprecatedCalculator.id = calculator.id;
+  deprecatedCalculator.key = key;
+  deprecatedCalculator.district_code = calculator.variant.key;
   deprecatedCalculator.show_district_code = false;
   deprecatedCalculator.name = 'Inventúra hlasovaní 2020–2023';
   deprecatedCalculator.description =
