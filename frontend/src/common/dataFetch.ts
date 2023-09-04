@@ -50,15 +50,18 @@ export const deprecatedFetchCalculator = async (key: string) => {
 
   // Load candidates and map them to deprecated structure
   const candidates = await fetchCalculatorCandidates(key);
-  const persons = await fetchCalculatorPersons(key);
   const organizations = await fetchCalculatorOrganizations(key);
+  const hasPersonType = candidates.some(
+    (item) => item.reference && item.reference.type === 'person',
+  );
+  const persons = hasPersonType ? await fetchCalculatorPersons(key) : undefined;
   const transformedCandidates = candidates.map((candidate) => {
     const transformedCandidate = {
       id: candidate.id,
       is_active: true,
     } as DeprecatedCandidate;
 
-    if (candidate.reference.type == 'person') {
+    if (persons && candidate.reference.type == 'person') {
       const person =
         persons.find((person) => person.id === candidate.reference.id) ||
         (() => {
