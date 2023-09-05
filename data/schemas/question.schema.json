@@ -31,6 +31,9 @@
       "examples": [
         "Senát by se měl zrušit, protože je zbytečný a jeho činnost je nákladná."
       ]
+    },
+    "tags": {
+      "$ref": "./tags.schema.json"
     }
   },
   "unevaluatedProperties": false,

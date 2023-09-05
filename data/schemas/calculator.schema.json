@@ -59,6 +59,9 @@
       "type": "string",
       "examples": ["Volební kalkulačka pro 2. kolo prezidentských voleb 2023"]
     },
+    "tags": {
+      "$ref": "./tags.schema.json"
+    },
     "calculatorGroup": {
       "title": "Calculator group",
       "description": "Reference to a calculator group the calculator belongs to",
