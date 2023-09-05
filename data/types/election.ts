@@ -38,6 +38,16 @@ export type ShortTitle = string;
  */
 export type Description = string;
 /**
+ * Ordered list of tags
+ *
+ * @minItems 1
+ */
+export type Tags = [Tag, ...Tag[]];
+/**
+ * Tag with max. 25 characters
+ */
+export type Tag = string;
+/**
  * Unique identifier of a calculator group in the format of UUID
  */
 export type ID1 = string;
@@ -98,6 +108,7 @@ export interface Election {
   title: Title;
   shortTitle: ShortTitle;
   description?: Description;
+  tags?: Tags;
   calculatorGroup: CalculatorGroup;
   districts?: OrderedListOfElectionDistricts;
   rounds?: OrderedListOfElectionRounds;

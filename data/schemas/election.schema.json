@@ -103,6 +103,9 @@
     "description": {
       "$ref": "#/$defs/description"
     },
+    "tags": {
+      "$ref": "#/$defs/tags"
+    },
     "calculatorGroup": {
       "$ref": "#/$defs/calculatorGroup"
     },
