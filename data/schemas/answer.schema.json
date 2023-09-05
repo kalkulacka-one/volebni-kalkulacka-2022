@@ -28,6 +28,43 @@
       "title": "Answer",
       "description": "Whether a question was marked as important",
       "type": "boolean"
+    },
+    "respondent": {
+      "title": "Responded",
+      "description": "Who answered a question",
+      "type": "string",
+      "enum": ["user", "candidate", "expert"]
+    },
+    "comment": {
+      "title": "Comment",
+      "description": "Respondent's comment to an answer",
+      "type": "string"
+    },
+    "sources": {
+      "title": "Sources",
+      "description": "Ordered list of sources for an answer",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "title": "Source",
+        "description": "Source of an answer",
+        "type": "object",
+        "properties": {
+          "url": {
+            "title": "URL",
+            "description": "URL of a source",
+            "type": "string",
+            "format": "uri"
+          },
+          "title": {
+            "title": "Title",
+            "description": "Title of a source",
+            "type": "string"
+          }
+        },
+        "unevaluatedProperties": false,
+        "required": ["url"]
+      }
     }
   },
   "unevaluatedProperties": false,
