@@ -33,6 +33,12 @@
       },
       "unevaluatedProperties": false,
       "required": ["id", "type"]
+    },
+    "displayName": {
+      "title": "Display name",
+      "description": "Display name of a candidate",
+      "type": "string",
+      "examples": ["Jan Novák"]
     }
   },
   "unevaluatedProperties": false,
