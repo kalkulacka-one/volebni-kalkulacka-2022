@@ -40,7 +40,7 @@ export const deprecatedFetchCalculator = async (key: string) => {
     (question) =>
       ({
         id: question.id,
-        name: question.title, // Fill this with appropriate value
+        name: question.title,
         title: question.statement,
         gist: question.detail,
         detail: '',
