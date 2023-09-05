@@ -44,7 +44,7 @@ export const deprecatedFetchCalculator = async (key: string) => {
         title: question.statement,
         gist: question.detail,
         detail: '',
-        tags: [],
+        tags: question.tags,
       }) as DeprecatedQuestion,
   );
   deprecatedCalculator.questions = transformedQuestions;
