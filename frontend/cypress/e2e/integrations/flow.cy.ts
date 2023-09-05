@@ -38,7 +38,7 @@ describe('Happy day flow with - Yes answer', () => {
     electionsPage.clickBtnYes(30); // insert here number of questions
   });
   it('should show summary', () => {
-    sumPage.assertUrlRecapExist('rekapitulace');
+    sumPage.assertUrlRecapExist('rekapitulacia');
     sumPage.assertBtnRecapExist();
     sumPage.assertAllAnswersAreYes(30);
     sumPage.clickShowResults();
@@ -67,7 +67,7 @@ describe('Happy day flow with - No answer', () => {
     electionsPage.clickBtnNo(30); // insert here number of questions
   });
   it('should show summary', () => {
-    sumPage.assertUrlRecapExist('rekapitulace');
+    sumPage.assertUrlRecapExist('rekapitulacia');
     sumPage.assertBtnRecapExist();
     sumPage.assertAllAnswersAreNo(30);
     sumPage.clickShowResults();
