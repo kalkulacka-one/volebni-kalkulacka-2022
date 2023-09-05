@@ -143,7 +143,7 @@ export interface DeprecatedCandidate {
   /**
    * Candidate type
    */
-  type: "party" | "coalition" | "person";
+  type: "party" | "coalition" | "person" | "candidate-list";
   /**
    * Longer description.
    */

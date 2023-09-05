@@ -114,7 +114,7 @@ export const deprecatedFetchCalculator = async (key: string) => {
         })();
 
       transformedCandidate.name = organization.name;
-      transformedCandidate.type = 'party';
+      transformedCandidate.type = organization.type || 'party';
       transformedCandidate.short_name = transformedCandidate.name;
     }
     return transformedCandidate;
