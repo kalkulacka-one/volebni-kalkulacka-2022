@@ -288,7 +288,13 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   </template>
                   {{ $t('routes.result.ResultPage.share') }}
                 </ButtonComponent>
-                <!-- <ButtonComponent
+                <ButtonComponent
+                  v-if="
+                    !(
+                      route.params.first === 'nrsr-2023' &&
+                      route.params.second === 'inventura-2020-2023'
+                    )
+                  "
                   class="desktop"
                   kind="filled"
                   color="primary"
@@ -298,7 +304,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
-                </ButtonComponent> -->
+                </ButtonComponent>
               </div>
             </template>
           </SecondaryNavigationBar>
@@ -387,7 +393,13 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   >{{ $t('routes.result.ResultPage.back-to-start') }}</a
                 >
                 {{ $t('routes.result.ResultPage.text-and-answer') }}
-                <!-- <a
+                <a
+                  v-if="
+                    !(
+                      route.params.first === 'nrsr-2023' &&
+                      route.params.second === 'inventura-2020-2023'
+                    )
+                  "
                   :href="
                     router.resolve({
                       name: appRoutes.comparison.name,
@@ -398,7 +410,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   @click.prevent="handleShowComparsionClick"
                 >
                   {{ $t('routes.result.ResultPage.text-display-answers') }} </a
-                >. -->
+                >.
               </BodyText>
               <StackComponent horizontal spacing="medium">
                 <ButtonComponent
@@ -411,7 +423,13 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
                 </ButtonComponent>
-                <!-- <ButtonComponent
+                <ButtonComponent
+                  v-if="
+                    !(
+                      route.params.first === 'nrsr-2023' &&
+                      route.params.second === 'inventura-2020-2023'
+                    )
+                  "
                   kind="outlined"
                   color="primary"
                   @click="handleShowComparsionClick"
@@ -420,15 +438,23 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
-                </ButtonComponent> -->
+                </ButtonComponent>
               </StackComponent>
             </StackComponent>
           </CardComponent>
           <DonateBlock />
         </StackComponent>
-
-        <!-- <template #bottom-bar>
-          <ResponsiveWrapper extra-small small>
+        <template #bottom-bar>
+          <ResponsiveWrapper
+            v-if="
+              !(
+                route.params.first === 'nrsr-2023' &&
+                route.params.second === 'inventura-2020-2023'
+              )
+            "
+            extra-small
+            small
+          >
             <BottomBar>
               <div class="bottom-bar-grid">
                 <ButtonComponent
@@ -444,7 +470,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
               </div>
             </BottomBar>
           </ResponsiveWrapper>
-        </template> -->
+        </template>
       </BottomBarWrapper>
     </StickyHeaderLayout>
   </BackgroundComponent>
