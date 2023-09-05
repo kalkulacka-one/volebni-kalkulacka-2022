@@ -319,7 +319,13 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
               $t('routes.result.ResultPage.display-not-advancing-candidates')
             }}
           </CheckboxComponent>
-          <BodyText size="medium">
+          <BodyText
+            v-if="
+              route.params.first === 'nrsr-2023' &&
+              route.params.second === 'inventura-2020-2023'
+            "
+            size="medium"
+          >
             {{ $t('routes.result.ResultPage.text-table') }}
             <a
               target="_blank"
