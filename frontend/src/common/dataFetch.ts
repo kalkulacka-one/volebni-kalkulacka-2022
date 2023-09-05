@@ -144,6 +144,7 @@ export const deprecatedFetchCalculator = async (key: string) => {
         candidate_id: candidateId,
         question_id: answer.questionId,
         answer: transformedAnswer,
+        comment: answer.comment,
       });
     }
   }
