@@ -25,6 +25,7 @@ export const deprecatedFetchCalculator = async (key: string) => {
   deprecatedCalculator.name = 'Inventúra hlasovaní 2020–2023';
   deprecatedCalculator.description =
     'Volebná kalkulačka na základe skutočných hlasovaní poslancov Národnej rady Slovenskej republiky v 8. volebnom období 2020-2023';
+  deprecatedCalculator.intro = calculator.intro;
   deprecatedCalculator.election = {
     id: '57a09a41-631b-4b40-ac22-b75b8ce14d84',
     key: 'nrsr-2023',
