@@ -45,6 +45,12 @@
       "description": "Motto of a candidate",
       "type": "string",
       "examples": ["Za lepší budoucnost"]
+    },
+    "number": {
+      "title": "Number",
+      "description": "Official candidate list (usually drawn) number assigned by a public authority",
+      "type": "integer",
+      "examples": [1]
     }
   },
   "unevaluatedProperties": false,
