@@ -39,6 +39,12 @@
       "description": "Display name of a candidate",
       "type": "string",
       "examples": ["Jan Novák"]
+    },
+    "motto": {
+      "title": "Motto",
+      "description": "Motto of a candidate",
+      "type": "string",
+      "examples": ["Za lepší budoucnost"]
     }
   },
   "unevaluatedProperties": false,
