@@ -163,7 +163,7 @@ export const appRoutes = {
   },
   recap: {
     name: 'recap',
-    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'rekapitulace'}/:nr(\\d+)?`,
+    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'rekapitulacia'}/:nr(\\d+)?`,
     component: RecapPageVue,
     meta: {
       title: 'Rekapitulace - Volebná kalkulačka',
