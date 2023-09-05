@@ -148,6 +148,12 @@
     },
     "description": {
       "$ref": "#/$defs/description"
+    },
+    "intro": {
+      "$ref": "#/$defs/intro"
+    },
+    "tags": {
+      "$ref": "#/$defs/tags"
     }
   },
   "unevaluatedProperties": false,
