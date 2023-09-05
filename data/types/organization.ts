@@ -33,6 +33,10 @@ export type ShortName1 = string;
  */
 export type Abbreviation = string;
 /**
+ * Whether the organization is a political party/movement, coalition or a candidate list
+ */
+export type OrganizationType = "party" | "coalition" | "candidate-list";
+/**
  * List of members of an organization
  *
  * @minItems 1
@@ -61,6 +65,7 @@ export interface Organization2 {
    * Alternate names to use for example in search
    */
   alternateNames?: string[];
+  type?: OrganizationType;
   members?: Members;
   [k: string]: unknown;
 }

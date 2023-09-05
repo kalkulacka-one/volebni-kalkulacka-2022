@@ -21,6 +21,16 @@ export type Statement = string;
  * A detailed description or an explanation of a question
  */
 export type Detail = string;
+/**
+ * Ordered list of tags
+ *
+ * @minItems 1
+ */
+export type Tags = [Tag, ...Tag[]];
+/**
+ * Tag with max. 25 characters
+ */
+export type Tag = string;
 
 /**
  * Question for a calculator
@@ -30,5 +40,6 @@ export interface Question {
   title: Title;
   statement: Statement;
   detail?: Detail;
+  tags?: Tags;
   [k: string]: unknown;
 }

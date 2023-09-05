@@ -17,6 +17,18 @@ export type ID1 = string;
  * Type of a reference: either a person or an organization
  */
 export type Type = "person" | "organization";
+/**
+ * Display name of a candidate
+ */
+export type DisplayName = string;
+/**
+ * Motto of a candidate
+ */
+export type Motto = string;
+/**
+ * Official candidate list (usually drawn) number assigned by a public authority
+ */
+export type Number = number;
 
 /**
  * Candidate for a calculator
@@ -24,6 +36,9 @@ export type Type = "person" | "organization";
 export interface Candidate {
   id: ID;
   reference: PersonOrOrganizationReference;
+  displayName?: DisplayName;
+  motto?: Motto;
+  number?: Number;
   [k: string]: unknown;
 }
 /**
