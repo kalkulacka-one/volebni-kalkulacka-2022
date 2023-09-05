@@ -37,6 +37,16 @@ export type ShortTitle = string;
  * Description of a calculator
  */
 export type Description = string;
+/**
+ * Ordered list of tags
+ *
+ * @minItems 1
+ */
+export type Tags = [Tag, ...Tag[]];
+/**
+ * Tag with max. 25 characters
+ */
+export type Tag = string;
 export type Calculator2 =
   | StandaloneCalculator
   | CalculatorFromAGroup
@@ -83,6 +93,11 @@ export interface Calculator1 {
   title?: Title;
   shortTitle?: ShortTitle;
   description?: Description;
+  /**
+   * Intro text displayed before starting the calculator
+   */
+  intro?: string;
+  tags?: Tags;
   [k: string]: unknown;
 }
 /**
