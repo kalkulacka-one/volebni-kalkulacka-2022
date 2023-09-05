@@ -25,6 +25,7 @@ export const deprecatedFetchCalculator = async (key: string) => {
   deprecatedCalculator.name = 'Inventúra hlasovaní 2020–2023';
   deprecatedCalculator.description =
     'Volebná kalkulačka na základe skutočných hlasovaní poslancov Národnej rady Slovenskej republiky v 8. volebnom období 2020-2023';
+  deprecatedCalculator.intro = calculator.intro;
   deprecatedCalculator.election = {
     id: '57a09a41-631b-4b40-ac22-b75b8ce14d84',
     key: 'nrsr-2023',
@@ -39,11 +40,11 @@ export const deprecatedFetchCalculator = async (key: string) => {
     (question) =>
       ({
         id: question.id,
-        name: question.title, // Fill this with appropriate value
+        name: question.title,
         title: question.statement,
         gist: question.detail,
         detail: '',
-        tags: [],
+        tags: question.tags,
       }) as DeprecatedQuestion,
   );
   deprecatedCalculator.questions = transformedQuestions;
@@ -113,8 +114,9 @@ export const deprecatedFetchCalculator = async (key: string) => {
         })();
 
       transformedCandidate.name = organization.name;
-      transformedCandidate.type = 'party';
+      transformedCandidate.type = organization.type || 'party';
       transformedCandidate.short_name = transformedCandidate.name;
+      transformedCandidate.motto = candidate.motto;
     }
     return transformedCandidate;
   });
@@ -142,6 +144,7 @@ export const deprecatedFetchCalculator = async (key: string) => {
         candidate_id: candidateId,
         question_id: answer.questionId,
         answer: transformedAnswer,
+        comment: answer.comment,
       });
     }
   }
