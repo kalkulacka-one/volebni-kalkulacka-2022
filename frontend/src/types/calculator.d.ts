@@ -272,5 +272,6 @@ export interface DeprecatedCandidateAnswer {
    * Candidate's comment related to their answer.
    */
   comment?: string;
+  expert?: boolean;
   [k: string]: unknown;
 }

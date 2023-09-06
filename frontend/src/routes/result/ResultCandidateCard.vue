@@ -26,6 +26,7 @@ export interface ResultCandidateCardProps {
   result: number;
   strong: boolean;
   category: TTopics;
+  expert: boolean;
 }
 
 const { t, locale } = useI18n();
@@ -140,13 +141,16 @@ const toggleClick = () => {
     </div>
     <div class="secondary-text">
       <div class="party-wrapper">
-        <BodyText size="medium">{{
+        <BodyText v-if="!expert" size="medium">{{
           candidate?.type == 'person' &&
           candidate?.parties &&
           candidate?.parties.length > 0
             ? candidate?.parties?.[0].name
             : candidate?.name
         }}</BodyText>
+        <BodyText size="medium" v-if="expert">
+          postoje z verejných zdrojov
+        </BodyText>
         <!--
         <div
           v-for="(party, i) in candidate?.parties"

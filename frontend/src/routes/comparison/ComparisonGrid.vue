@@ -134,6 +134,11 @@ const calculateStickeHeaderPos = () => {
 window.onload = calculateStickeHeaderPos;
 window.onresize = calculateStickeHeaderPos;
 window.onscroll = calculateStickeHeaderPos;
+
+export interface Source {
+  title?: string;
+  url: string;
+}
 </script>
 
 <template>
@@ -268,7 +273,12 @@ window.onscroll = calculateStickeHeaderPos;
               (answer) =>
                 answer.candidate_id === candidateId &&
                 answer.question_id === question.id,
-            )[0]?.comment
+            )[0]?.comment ||
+            candidateAnswers.filter(
+              (answer) =>
+                answer.candidate_id === candidateId &&
+                answer.question_id === question.id,
+            )[0]?.expert
           "
           class="comment"
           :style="{
@@ -278,6 +288,17 @@ window.onscroll = calculateStickeHeaderPos;
         >
           <CardComponent corner="top-left" :padding="Object('medium')">
             <BodyText size="small">
+              <template
+                v-if="
+                  candidateAnswers.filter(
+                    (answer) =>
+                      answer.candidate_id === candidateId &&
+                      answer.question_id === question.id,
+                  )[0]?.expert
+                "
+              >
+                <strong>Odôvodnenie postoja</strong><br />
+              </template>
               {{
                 candidateAnswers.filter(
                   (answer) =>
@@ -285,6 +306,30 @@ window.onscroll = calculateStickeHeaderPos;
                     answer.question_id === question.id,
                 )[0]?.comment
               }}
+              <template
+                v-if="
+                  candidateAnswers.filter(
+                    (answer) =>
+                      answer.candidate_id === candidateId &&
+                      answer.question_id === question.id,
+                  )[0]?.sources
+                "
+              >
+                <ul
+                  v-for="source in candidateAnswers.filter(
+                    (answer) =>
+                      answer.candidate_id === candidateId &&
+                      answer.question_id === question.id,
+                  )[0]?.sources as Source[]"
+                  v-bind:key="source.url"
+                >
+                  <li>
+                    <a :href="source.url">{{
+                      source.title || source.url.substring(8, 18) + '…'
+                    }}</a>
+                  </li>
+                </ul>
+              </template>
             </BodyText>
           </CardComponent>
         </div>
