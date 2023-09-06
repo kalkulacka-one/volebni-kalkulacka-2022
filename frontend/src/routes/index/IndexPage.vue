@@ -94,35 +94,56 @@ const handleSubmit = async () => {
           <span style="color: rgb(var(--color-neutral-fg))"> 2023 </span>
         </HeadlineText>
         <BodyText size="medium" tag="h2" color="fg-strong">
-          <strong>Inventúra hlasovaní</strong>
+          <strong>Volebná kalkulačka</strong>
         </BodyText>
-        <BodyText size="small">
-          Volebná kalkulačka na základe skutočných hlasovaní poslancov a
-          poslankýň Národnej rady SR v 8. volebnom období 2020–2023
+        <BodyText size="medium">
+          Spustíme už o pár dní! Zatiaľ si môžete vyplniť kalkulačku pre mladých
+          alebo inventáru hlasovania.
         </BodyText>
-        <ButtonComponent
-          kind="filled"
-          color="primary"
-          tag="a"
-          @click="
-            router.push({
-              name: appRoutes.guide.name,
-              params: {
-                ...route.params,
-                type: `${'volby'}`,
-                first: 'nrsr-2023',
-                second: 'inventura-2020-2023',
-              },
-              query: { ...route.query },
-            })
-          "
-        >
-          Spustiť inventúru hlasovaní
 
-          <template #iconAfter>
-            <IconComponent :icon="mdiArrowRight" />
-          </template>
-        </ButtonComponent>
+        <section class="subscribe">
+          <StackComponent spacing="large" centered>
+            <BodyText size="small" centered>{{
+              $t('routes.index.IndexPage.secondary-text')
+            }}</BodyText>
+            <StackComponent spacing="small" centered>
+              <BodyText v-if="success" size="small">
+                {{ message }}
+              </BodyText>
+              <form v-if="!success">
+                <StackComponent
+                  horizontal
+                  spacing="small"
+                  stretched
+                  wrap
+                  style="justify-content: center"
+                >
+                  <TextInputComponent
+                    v-model="email"
+                    required
+                    type="email"
+                    :placeholder="t('routes.index.IndexPage.input-label')"
+                    :value="email"
+                    :icon="mdiEmailOutline"
+                    :disabled="posting"
+                    :error="emailError"
+                  />
+                  <ButtonComponent
+                    kind="filled"
+                    color="primary"
+                    :loading="posting"
+                    @click.prevent="handleSubmit"
+                  >
+                    {{ $t('routes.index.IndexPage.subscribe-button-label') }}
+                  </ButtonComponent>
+                </StackComponent>
+              </form>
+              <BodyText v-if="!success" tag="p" size="small">{{
+                $t('routes.index.IndexPage.disclaimer')
+              }}</BodyText>
+            </StackComponent>
+          </StackComponent>
+        </section>
       </StackComponent>
       <div class="other-calcs">
         <CardComponent
@@ -131,20 +152,17 @@ const handleSubmit = async () => {
           border
           border-radius="large"
           shadow
-          class="other-calc-card calc-ultimate"
+          class="other-calc-card calc-youth"
         >
           <StackComponent spacing="small" centered space-between>
             <BodyText size="medium" tag="h2" color="fg-strong">
-              <strong>Volebná kalkulačka 2023</strong>
+              <strong>Kalkulačka pre mladých</strong>
             </BodyText>
             <BodyText size="small">
-              Klasická volebná kalkulačka pre voľby 2023.<br /><i
-                >Spustíme počiatkom septembra.</i
-              >
+              Otázky, ktoré rezonujú mladou generáciou.
             </BodyText>
             <ButtonComponent
               readOnly
-              disabled
               kind="outlined"
               color="primary"
               @click="
@@ -153,14 +171,14 @@ const handleSubmit = async () => {
                   params: {
                     ...route.params,
                     type: `${'volby'}`,
-                    first: 'prezidentske-2023',
-                    second: 'pro-nadsence',
+                    first: 'nrsr-2023',
+                    second: 'pre-mladych',
                   },
                   query: { ...route.query },
                 })
               "
             >
-              Už čoskoro
+              Spustiť kalkulačku
               <template #iconAfter>
                 <IconComponent :icon="mdiArrowRight" />
               </template>
@@ -177,32 +195,31 @@ const handleSubmit = async () => {
         >
           <StackComponent spacing="small" centered space-between>
             <BodyText size="medium" tag="h2" color="fg-strong">
-              <strong>Kalkulačka pre mladé</strong>
+              <strong>Inventúra hlasovaní</strong>
             </BodyText>
             <BodyText size="small">
-              Otázky, ktoré rezonujú mladou generáciou. <br /><i
-                >Spustíme počiatkom septembra.</i
-              >
+              Volebná kalkulačka na základe skutočných hlasovaní poslancov a
+              poslankýň Národnej rady SR v 8. volebnom období 2020–2023
             </BodyText>
             <ButtonComponent
-              readOnly
-              disabled
               kind="outlined"
               color="primary"
+              tag="a"
               @click="
                 router.push({
                   name: appRoutes.guide.name,
                   params: {
                     ...route.params,
                     type: `${'volby'}`,
-                    first: 'prezidentske-2023',
-                    second: 'pro-mlade',
+                    first: 'nrsr-2023',
+                    second: 'inventura-2020-2023',
                   },
                   query: { ...route.query },
                 })
               "
             >
-              Už čoskoro
+              Spustiť inventúru hlasovaní
+
               <template #iconAfter>
                 <IconComponent :icon="mdiArrowRight" />
               </template>
@@ -211,49 +228,6 @@ const handleSubmit = async () => {
         </CardComponent>
       </div>
     </div>
-    <section class="subscribe">
-      <StackComponent spacing="large" centered>
-        <BodyText size="medium" centered>{{
-          $t('routes.index.IndexPage.secondary-text')
-        }}</BodyText>
-        <StackComponent spacing="small" centered>
-          <BodyText v-if="success" size="small">
-            {{ message }}
-          </BodyText>
-          <form v-if="!success">
-            <StackComponent
-              horizontal
-              spacing="small"
-              stretched
-              wrap
-              style="justify-content: center"
-            >
-              <TextInputComponent
-                v-model="email"
-                required
-                type="email"
-                :placeholder="t('routes.index.IndexPage.input-label')"
-                :value="email"
-                :icon="mdiEmailOutline"
-                :disabled="posting"
-                :error="emailError"
-              />
-              <ButtonComponent
-                kind="filled"
-                color="primary"
-                :loading="posting"
-                @click.prevent="handleSubmit"
-              >
-                {{ $t('routes.index.IndexPage.subscribe-button-label') }}
-              </ButtonComponent>
-            </StackComponent>
-          </form>
-          <BodyText v-if="!success" tag="p" size="small">{{
-            $t('routes.index.IndexPage.disclaimer')
-          }}</BodyText>
-        </StackComponent>
-      </StackComponent>
-    </section>
     <StaticContentLayout>
       <StackComponent class="section" spacing="small" centered>
         <TitleText size="large" tag="h2">Ako vzniká kalkulačka?</TitleText>
@@ -469,8 +443,8 @@ const handleSubmit = async () => {
 }
 
 .subscribe {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   display: grid;
   align-content: center;
   justify-content: center;
