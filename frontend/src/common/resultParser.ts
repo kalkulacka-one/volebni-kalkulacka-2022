@@ -63,6 +63,7 @@ export interface Result {
   result: number;
   result_percent: number;
   random: number;
+  expert: boolean;
 }
 
 export type RelativeAgreement = { cId: string; result: Result }[];
@@ -123,6 +124,7 @@ export const calculateRelativeAgreement = (
         result: 0.5,
         result_percent: 50,
         random: rnd(),
+        expert: ca.expert || false,
       });
     }
     const res = relativeAgreement.get(ca.candidate_id) as Result;

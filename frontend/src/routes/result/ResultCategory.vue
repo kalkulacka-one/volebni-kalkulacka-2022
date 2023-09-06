@@ -46,6 +46,7 @@ console.debug(visibleCandidates.value);
       :result="result[i - 1].result.result_percent"
       :strong="i === 1"
       :category="category"
+      :expert="result[i - 1].result.expert"
     />
   </StackComponent>
   <template v-if="props.result.length > maxVisibleCandidates">
