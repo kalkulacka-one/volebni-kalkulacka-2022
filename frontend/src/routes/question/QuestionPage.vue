@@ -278,6 +278,7 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
               <!-- @click="starClick" -->
               <IconButton>
                 <IconComponent
+                  @click="handleStarClick"
                   :icon="electionStore.answers[currentQuestionNr].flag ? vkiStarFilled : vkiStarOutlined"
                   :color="electionStore.answers[currentQuestionNr].flag ? 'rgba(var(--palette-yellow))' : 'rgba(var(--palette-neutral-100))'"
                   size="large"

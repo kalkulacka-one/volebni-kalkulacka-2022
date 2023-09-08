@@ -30,7 +30,10 @@
 
   --palette-button-bg: 239, 72, 128; /* #EF4880 */
 
-  
+  .edit-btn-text{
+    font-family: var(--typography-body-family);
+    font-size: var(--typography-body-medium-size);
+  }
 
   .status-bar{
 
@@ -79,9 +82,13 @@
     background: transparent;
   }
 
+  .recap-question-card{
+    border-radius: 0px !important;
+  }
+
   .bottom-bar-container{
     display: grid;
-    grid-template-columns: 1.3fr clamp(32rem, 50vw, 48rem) .2fr;
+    // grid-template-columns: 1.3fr clamp(32rem, 50vw, 48rem) .2fr;
     grid-template-areas: 'before main after';
     gap: var(--spacing-smaller);
     height: 100%;
@@ -101,7 +108,7 @@
 
   .step-wrapper{
     display: grid;
-    grid-template-columns: 1.3fr clamp(32rem, 50vw, 48rem) .2fr;
+    // grid-template-columns: 1.3fr clamp(32rem, 50vw, 48rem) .2fr;
     grid-template-areas: 'before main after';
     gap: var(--spacing-smaller);
     height: 100%;
@@ -109,11 +116,11 @@
   }
 
   .my-match-bottom-bar{
-    display: grid;
-    align-items: center;
-    grid-template-columns: auto 1fr auto;
-    grid-template-areas: "before title after";
-    gap: var(--responsive-spacing-large);
+    // display: grid;
+    // align-items: center;
+    // grid-template-columns: auto 1fr auto;
+    // grid-template-areas: "before title after";
+    // gap: var(--responsive-spacing-large);
     // -webkit-backdrop-filter: blur(6px);
     // backdrop-filter: blur(6px);
   }
@@ -123,11 +130,11 @@
   }
 
   .recap-header{
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1.3fr clamp(32rem, 50vw, 48rem) .2fr;
-    grid-template-areas: 'before title after';
-    gap: var(--spacing-smaller);
+    // display: grid;
+    // align-items: center;
+    // grid-template-columns: 1.3fr clamp(32rem, 50vw, 48rem) .2fr;
+    // grid-template-areas: 'before title after';
+    // gap: var(--spacing-smaller);
   }
 
   .stack-recap{
@@ -157,7 +164,7 @@
 
       display: grid;
       align-items: center;
-      grid-template-columns: 1.3fr clamp(32rem, 50vw, 48rem) .2fr;
+      // grid-template-columns: 1.3fr clamp(32rem, 50vw, 48rem) .2fr;
       grid-template-areas: 'before title after';
       gap: var(--responsive-spacing-large);
     }

@@ -44,9 +44,9 @@ const starIcon = computed(() =>
 
 const isExpanded = ref(false);
 const toggleClick = () => {
-  //   isExpanded.value = !isExpanded.value;
+    isExpanded.value = !isExpanded.value;
 };
-isExpanded.value = true;
+// isExpanded.value = true;
 </script>
 
 <template>
@@ -87,7 +87,7 @@ isExpanded.value = true;
         horizontal
         spacing="extra-small"
         spacing-responsive
-        style="flex-wrap: wrap"
+        style="flex-wrap: wrap; justify-content: space-between;"
       >
         <BodyText size="large" style="margin-bottom: 12px">
           <strong> {{ currentQuestion }}/{{ questionCount }} </strong>
@@ -98,6 +98,16 @@ isExpanded.value = true;
         <!-- <TagComponent v-for="tag in question.tags" :key="tag">
           {{ tag }}
         </TagComponent> -->
+        <div class="edit-btn" style="display: flex;justify-content: center;align-items: center;border: 2px solid #ef4880;padding: 1px 14px;">
+          <span class="edit-btn-text">Edit</span>
+          <IconButton @click="toggleClick">
+              <IconComponent
+                :icon="!isExpanded ? mdiChevronUp : mdiChevronDown"
+                size="medium"
+                :title="$t('routes.recap.RecapQuestionCard.display-details')"
+              />
+            </IconButton>
+        </div>
       </StackComponent>
     </div>
     <StackComponent class="text">
@@ -112,8 +122,9 @@ isExpanded.value = true;
       </BodyText>
       <StackComponent class="stack-recap">
         <div class="recap-button-wrapper">
+            <!-- v-show="answer.answer === UserAnswerEnum.yes || isExpanded" -->
           <ButtonComponent
-            v-show="answer.answer === UserAnswerEnum.yes || isExpanded"
+            v-show="isExpanded"
             class="in-favour"
             kind="answer"
             color="primary"
@@ -135,8 +146,9 @@ isExpanded.value = true;
               $t('routes.recap.RecapQuestionCard.yes')
             }}</template>
           </ButtonComponent>
+            <!-- v-show="answer.answer === UserAnswerEnum.no || isExpanded" -->
           <ButtonComponent
-            v-show="answer.answer === UserAnswerEnum.no || isExpanded"
+            v-show="isExpanded"
             class="against"
             kind="answer"
             color="secondary"
@@ -158,7 +170,9 @@ isExpanded.value = true;
               $t('routes.recap.RecapQuestionCard.no')
             }}</template>
           </ButtonComponent>
-          <IconButton style="justify-self: end" @click="starClick">
+          <IconButton style="justify-self: end" @click="starClick"
+            v-show="isExpanded"
+          >
             <IconComponent
               :icon="starIcon"
               :color="starColor"
