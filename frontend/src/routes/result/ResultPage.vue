@@ -192,7 +192,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
   <BackgroundComponent :is-image="false">
     <StickyHeaderLayout>
       <template #header>
-        <NavigationBar>
+        <NavigationBar v-if="currentEmbed !== 'infovolby'">
           <template #title>{{ breadcrumbs }}</template>
           <template #right>
             <EmbedWrapper>
@@ -262,7 +262,55 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
             </template>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
-        <ResponsiveWrapper medium large extra-large huge>
+        <ResponsiveWrapper v-if="currentEmbed === 'infovolby'" medium large extra-large huge>
+          <SecondaryNavigationBar>
+            <template #before>
+              <IconButton @click="handlePreviousClick">
+                <IconComponent
+                  color="white"
+                  :icon="mdiArrowLeft"
+                  :title="$t('routes.result.ResultPage.recapitulation')"
+                />
+              </IconButton>
+            </template>
+            <TitleText tag="h2" size="large" color="white">{{
+              $t('routes.result.ResultPage.my-match')
+            }}</TitleText>
+            <template #after>
+              <!-- <div class="navbar-btn-wrapper">
+                <ButtonComponent
+                  v-if="election.key === 'nrsr-2023'"
+                  kind="link"
+                  color="primary"
+                  @click="handleShareClick"
+                >
+                  <template #icon>
+                    <IconComponent :icon="mdiShareVariantOutline" />
+                  </template>
+                  {{ $t('routes.result.ResultPage.share') }}
+                </ButtonComponent>
+                <ButtonComponent
+                  v-if="
+                    !(
+                      route.params.first === 'nrsr-2023' &&
+                      route.params.second === 'inventura-2020-2023'
+                    )
+                  "
+                  class="desktop"
+                  kind="filled"
+                  color="primary"
+                  @click="handleShowComparsionClick"
+                >
+                  {{ $t('routes.result.ResultPage.compare-answers') }}
+                  <template #iconAfter>
+                    <IconComponent :icon="mdiArrowRight" />
+                  </template>
+                </ButtonComponent>
+              </div> -->
+            </template>
+          </SecondaryNavigationBar>
+        </ResponsiveWrapper>
+        <ResponsiveWrapper v-else medium large extra-large huge>
           <SecondaryNavigationBar>
             <template #before>
               <IconButton @click="handlePreviousClick">
@@ -445,7 +493,65 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           <DonateBlock />
         </StackComponent>
         <template #bottom-bar>
+          <ResponsiveWrapper v-if="currentEmbed === 'infovolby' || !(
+                route.params.first === 'nrsr-2023' &&
+                route.params.second === 'inventura-2020-2023'
+              )" medium large extra-large>
+            <BottomBar>
+              <div class="my-match-bottom-bar">
+                <div class="before"></div>
+                <div class="main">
+                  <div class="wrapper">
+                    <ButtonComponent
+                      kind="outlined"
+                      color="white"
+                  @click="handleShowComparsionClick"
+                >
+                  {{ $t('routes.result.ResultPage.compare-answers') }}
+                  <template #iconAfter>
+                    <IconComponent :icon="mdiArrowRight" />
+                  </template>
+                </ButtonComponent>
+                  </div>
+                </div>
+                <div class="after"></div>
+              </div>
+              <!-- <div class="bottom-bar-grid">
+                <ButtonComponent
+                  kind="filled"
+                  color="primary"
+                  @click="handleShowResultsClick"
+                >
+                  Zobrazit výsledky
+                  <template #iconAfter>
+                    <IconComponent :icon="mdiArrowRight" />
+                  </template>
+                </ButtonComponent>
+              </div> -->
+            </BottomBar>
+          </ResponsiveWrapper>
+
           <ResponsiveWrapper
+            v-else
+            extra-small
+            small
+          >
+            <BottomBar>
+              <div class="bottom-bar-grid">
+                <ButtonComponent
+                  kind="filled"
+                  color="primary"
+                  @click="handleShowComparsionClick"
+                >
+                  {{ $t('routes.result.ResultPage.compare-answers') }}
+                  <template #iconAfter>
+                    <IconComponent :icon="mdiArrowRight" />
+                  </template>
+                </ButtonComponent>
+              </div>
+            </BottomBar>
+          </ResponsiveWrapper>
+          <!-- <ResponsiveWrapper
             v-if="
               !(
                 route.params.first === 'nrsr-2023' &&
@@ -469,7 +575,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                 </ButtonComponent>
               </div>
             </BottomBar>
-          </ResponsiveWrapper>
+          </ResponsiveWrapper> -->
         </template>
       </BottomBarWrapper>
     </StickyHeaderLayout>
