@@ -97,8 +97,8 @@ const handleSubmit = async () => {
           <strong>Volebná kalkulačka</strong>
         </BodyText>
         <BodyText size="medium">
-          Spustíme už o pár dní! Zatiaľ si môžete vyplniť kalkulačku pre mladých
-          alebo inventáru hlasovania.
+          Spustíme ju o pár dní! Zatiaľ si môžete vyplniť kalkulačku pre mladých
+          alebo inventúru hlasovania.
         </BodyText>
 
         <section class="subscribe">
