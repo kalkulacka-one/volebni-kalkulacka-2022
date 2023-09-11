@@ -93,57 +93,28 @@ const handleSubmit = async () => {
           Parlamentné voľby
           <span style="color: rgb(var(--color-neutral-fg))"> 2023 </span>
         </HeadlineText>
-        <BodyText size="medium" tag="h2" color="fg-strong">
-          <strong>Volebná kalkulačka</strong>
-        </BodyText>
-        <BodyText size="medium">
-          Spustíme ju o pár dní! Zatiaľ si môžete vyplniť kalkulačku pre mladých
-          alebo inventúru hlasovania.
-        </BodyText>
-
-        <section class="subscribe">
-          <StackComponent spacing="large" centered>
-            <BodyText size="small" centered>{{
-              $t('routes.index.IndexPage.secondary-text')
-            }}</BodyText>
-            <StackComponent spacing="small" centered>
-              <BodyText v-if="success" size="small">
-                {{ message }}
-              </BodyText>
-              <form v-if="!success">
-                <StackComponent
-                  horizontal
-                  spacing="small"
-                  stretched
-                  wrap
-                  style="justify-content: center"
-                >
-                  <TextInputComponent
-                    v-model="email"
-                    required
-                    type="email"
-                    :placeholder="t('routes.index.IndexPage.input-label')"
-                    :value="email"
-                    :icon="mdiEmailOutline"
-                    :disabled="posting"
-                    :error="emailError"
-                  />
-                  <ButtonComponent
-                    kind="filled"
-                    color="primary"
-                    :loading="posting"
-                    @click.prevent="handleSubmit"
-                  >
-                    {{ $t('routes.index.IndexPage.subscribe-button-label') }}
-                  </ButtonComponent>
-                </StackComponent>
-              </form>
-              <BodyText v-if="!success" tag="p" size="small">{{
-                $t('routes.index.IndexPage.disclaimer')
-              }}</BodyText>
-            </StackComponent>
-          </StackComponent>
-        </section>
+        <BodyText size="small"> 20 otázek, cca 10 minut </BodyText>
+        <ButtonComponent
+          kind="filled"
+          color="primary"
+          @click="
+            router.push({
+              name: appRoutes.guide.name,
+              params: {
+                ...route.params,
+                type: `${'volby'}`,
+                first: 'nrsr-2023',
+                second: 'kalkulacka',
+              },
+              query: { ...route.query },
+            })
+          "
+        >
+          Spustiť kalkulačku
+          <template #iconAfter>
+            <IconComponent :icon="mdiArrowRight" />
+          </template>
+        </ButtonComponent>
       </StackComponent>
       <div class="other-calcs">
         <CardComponent
@@ -159,7 +130,8 @@ const handleSubmit = async () => {
               <strong>Kalkulačka pre mladých</strong>
             </BodyText>
             <BodyText size="small">
-              Otázky, ktoré rezonujú mladou generáciou.
+              Otázky, ktoré rezonujú mladou generáciou<br />
+              25 otázek, 15 minut
             </BodyText>
             <ButtonComponent
               kind="outlined"
