@@ -162,7 +162,6 @@ const handleSubmit = async () => {
               Otázky, ktoré rezonujú mladou generáciou.
             </BodyText>
             <ButtonComponent
-              readOnly
               kind="outlined"
               color="primary"
               @click="
