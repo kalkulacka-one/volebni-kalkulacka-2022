@@ -45,6 +45,24 @@ A person can be a member of one or multiple organizations, for example political
 
 An organization can have either persons or organizations as members, therefore for example forming a coalition.
 
+### Images
+
+Persons, organizations and candidates can have images. You should always start by adding images to the lowest level (person or organization with no members) and then add further images, that may be preferred in some views (for example if a coalition has its own logo, you should add it and it will be used instead of composed image from multiple logos of the individual parties).
+
+To assign an image to an entity, simply upload the appropriate image with `{UUID of person/organization/candidate}.webp` filename in WebP format to the `./images/persons` / `./images/organizations` / `./images/candidates` folder in the calculator data folder and add
+
+```json
+…
+"images" [
+  {
+    "type": "avatar"
+  }
+],
+…
+```
+
+to the person/organization/candidate object. Currently accepted types are `avatar` (should be square), `logo` and `portrait`.
+
 ---
 
 ```mermaid
