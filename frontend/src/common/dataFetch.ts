@@ -117,6 +117,9 @@ export const deprecatedFetchCalculator = async (key: string) => {
       transformedCandidate.type = organization.type || 'party';
       transformedCandidate.short_name = organization.shortName;
       transformedCandidate.motto = candidate.motto;
+      if (candidate.images) {
+        transformedCandidate.img_url = `/data/instance/volebnakalkulacka.sk/${key}/images/candidates/${candidate.id}.webp`;
+      }
     }
     return transformedCandidate;
   });
