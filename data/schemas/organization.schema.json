@@ -79,6 +79,9 @@
         "type": "string"
       }
     },
+    "images": {
+      "$ref": "./images.schema.json"
+    },
     "type": {
       "title": "Organization type",
       "description": "Whether the organization is a political party/movement, coalition or a candidate list",
