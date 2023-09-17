@@ -93,7 +93,7 @@ const handleSubmit = async () => {
           Parlamentné voľby
           <span style="color: rgb(var(--color-neutral-fg))"> 2023 </span>
         </HeadlineText>
-        <BodyText size="small"> 20 otázek, cca 10 minut </BodyText>
+        <BodyText size="small"> 42 otázek, cca 10 minut </BodyText>
         <ButtonComponent
           kind="filled"
           color="primary"
@@ -131,7 +131,7 @@ const handleSubmit = async () => {
             </BodyText>
             <BodyText size="small">
               Otázky, ktoré rezonujú mladou generáciou<br />
-              25 otázek, 15 minut
+              25 otázek, cca 5 minut
             </BodyText>
             <ButtonComponent
               kind="outlined"
