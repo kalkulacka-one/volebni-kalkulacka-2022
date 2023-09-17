@@ -40,6 +40,9 @@
       "type": "string",
       "examples": ["Jan Novák"]
     },
+    "images": {
+      "$ref": "./images.schema.json"
+    },
     "motto": {
       "title": "Motto",
       "description": "Motto of a candidate",

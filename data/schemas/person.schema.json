@@ -48,6 +48,9 @@
         "type": "string"
       }
     },
+    "images": {
+      "$ref": "./images.schema.json"
+    },
     "memberOf": {
       "title": "Member of",
       "description": "List of organizations a person is a member of",
