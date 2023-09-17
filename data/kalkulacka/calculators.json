@@ -25,6 +25,15 @@
       "name": "Pre mladých",
       "description": "Volebná kalkulačka pre mladých",
       "key": "nrsr-2023/pre-mladych"
+    },
+    {
+      "calculator_id": "036db4cf-69b1-4416-a978-ec96f4e8c052",
+      "election_id": "57a09a41-631b-4b40-ac22-b75b8ce14d84",
+      "district_code": "kalkulacka",
+      "show_district_code": false,
+      "name": "Kalkulačka",
+      "description": "Kalkulačka pre všetkých",
+      "key": "nrsr-2023/kalkulacka"
     }
   ]
 }
