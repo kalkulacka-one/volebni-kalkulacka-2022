@@ -7,6 +7,7 @@ import CardComponent from '@/components/design-system/containers/CardComponent.v
 import HeadingComponent from '@/components/design-system/typography/HeadingComponent.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import TagComponent from '@/components/design-system/containers/TagComponent.vue';
+import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 
 export interface Props {
   question: DeprecatedQuestion;
@@ -37,10 +38,12 @@ defineProps<Props>();
         <BodyText size="small">
           {{ currentQuestion }}/{{ questionCount }}
         </BodyText>
-        <BodyText size="small">{{ question.name }}</BodyText>
-        <TagComponent v-for="tag in question.tags" :key="tag">
-          {{ tag }}
-        </TagComponent>
+        <ResponsiveWrapper small medium large extra-large huge>
+          <BodyText size="small">{{ question.name }}</BodyText>
+          <TagComponent v-for="tag in question.tags" :key="tag">
+            {{ tag }}
+          </TagComponent>
+        </ResponsiveWrapper>
       </StackComponent>
       <HeadingComponent class="heading--desktop" kind="headline" size="small">
         {{ question.title }}
