@@ -377,6 +377,11 @@ const handleSubscribe = async () => {
               >{{ $t('routes.result.ResultPage.in-table') }}</a
             >.
           </BodyText>
+          <ResultCategory
+            :result="resultsGeneral"
+            category="general"
+            :max-visible-candidates="5"
+          />
           <section class="subscribe">
             <StackComponent spacing="small" centered>
               <BodyText size="small" centered>
@@ -419,11 +424,6 @@ const handleSubscribe = async () => {
               }}</BodyText>
             </StackComponent>
           </section>
-          <ResultCategory
-            :result="resultsGeneral"
-            category="general"
-            :max-visible-candidates="5"
-          />
           <!-- <CardComponent
             v-if="!user && election.key === 'prezidentske-2023'"
             corner="bottom-left"
