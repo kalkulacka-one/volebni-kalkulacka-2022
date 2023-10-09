@@ -44,7 +44,7 @@ const posting = ref();
 const success = ref();
 const message = ref();
 
-const handleSubmit = async () => {
+const handleSubscribe = async () => {
   console.log('handleSubmit');
   if (email.value === '') {
     emailError.value = t('routes.index.IndexPage.empty-email-error');
@@ -199,6 +199,51 @@ const handleSubmit = async () => {
         </CardComponent>
       </div>
     </div>
+    <section class="subscribe">
+      <StackComponent spacing="small" centered>
+        <TitleText size="large" tag="h2">
+          Chcete vedieť o nových kalkulačkách?
+        </TitleText>
+        <BodyText size="small" centered>
+          Zanechajte nám váš e-mail a dáme vám vedieť vždy, keď spustíme novú
+          kalkulačku.
+        </BodyText>
+        <BodyText v-if="success" size="small">
+          {{ message }}
+        </BodyText>
+        <form v-if="!success">
+          <StackComponent
+            horizontal
+            spacing="small"
+            stretched
+            wrap
+            style="justify-content: center"
+          >
+            <TextInputComponent
+              v-model="email"
+              required
+              type="email"
+              :placeholder="t('routes.index.IndexPage.input-label')"
+              :value="email"
+              :icon="mdiEmailOutline"
+              :disabled="posting"
+              :error="emailError"
+            />
+            <ButtonComponent
+              kind="outlined"
+              color="primary"
+              :loading="posting"
+              @click.prevent="handleSubscribe"
+            >
+              Odeslat
+            </ButtonComponent>
+          </StackComponent>
+        </form>
+        <BodyText v-if="!success" tag="p" size="small">{{
+          $t('routes.index.IndexPage.disclaimer')
+        }}</BodyText>
+      </StackComponent>
+    </section>
     <StaticContentLayout>
       <StackComponent class="section" spacing="small" centered>
         <TitleText size="large" tag="h2">Ako vzniká kalkulačka?</TitleText>
@@ -414,8 +459,7 @@ const handleSubmit = async () => {
 }
 
 .subscribe {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 40px;
   display: grid;
   align-content: center;
   justify-content: center;
