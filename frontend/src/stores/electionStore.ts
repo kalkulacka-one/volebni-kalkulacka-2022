@@ -101,8 +101,8 @@ export const useElectionStore = defineStore('election', {
         console.debug('Election fetch complete!');
       } else {
         console.warn('Election data are undefined!');
-        // eslint-disable-next-line no-undef
-        newrelic?.noticeError(new Error('Election data are undefined!'));
+        // TODO Track error
+        // new Error('Election data are undefined!');
       }
     },
     async loadCalculator(electionId: string, districtId: string) {
