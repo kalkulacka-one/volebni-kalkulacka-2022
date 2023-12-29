@@ -66,11 +66,11 @@ const pageInfo = computed(() => {
     redirected from: ${redirectUrl}
     extra info: ${router.options.history.state.extraInfo}
   `);
-  // eslint-disable-next-line no-undef
-  newrelic?.noticeError(`ErrorPage ${props.case}`, {
-    redirectedFrom: route.redirectedFrom?.fullPath || '',
-    extraInfo: redirectUrl || '',
-  });
+  // TODO Track error
+  // `ErrorPage ${props.case}`, {
+  //   redirectedFrom: route.redirectedFrom?.fullPath || '',
+  //   extraInfo: redirectUrl || '',
+  // };
   return {
     header: header,
     imgSrc: imgSrc,
