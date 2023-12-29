@@ -579,16 +579,16 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
   }
 
   .avatars {
-      .pavel-fischer,
-      .jaroslav-basta,
-      .josef-stredula,
-      .tomas-zima,
-      .danuse-nerudova,
-      .andrej-babis,
-      .karel-divis,
-      .marek-hilser {
-        filter: grayscale(100%);
-      }
+    .pavel-fischer,
+    .jaroslav-basta,
+    .josef-stredula,
+    .tomas-zima,
+    .danuse-nerudova,
+    .andrej-babis,
+    .karel-divis,
+    .marek-hilser {
+      filter: grayscale(100%);
+    }
   }
 }
 
