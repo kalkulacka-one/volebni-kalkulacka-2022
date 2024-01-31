@@ -26,8 +26,8 @@ const classes = ['status-bar-primary', 'status-bar-secondary'];
           question.answer === UserAnswerEnum.yes
             ? classes[0]
             : question.answer === UserAnswerEnum.no
-            ? classes[1]
-            : '',
+              ? classes[1]
+              : '',
           index === currentQuestion ? 'active' : '',
         ]"
       ></div>

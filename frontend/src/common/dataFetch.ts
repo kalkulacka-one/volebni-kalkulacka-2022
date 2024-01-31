@@ -135,12 +135,12 @@ export const deprecatedFetchCalculator = async (key: string) => {
         answer.answer === true
           ? 'yes'
           : answer.answer === false
-          ? 'no'
-          : answer.answer === null
-          ? 'dont_know'
-          : (() => {
-              throw new Error(`Unexpected answer value: ${answer.answer}`);
-            })();
+            ? 'no'
+            : answer.answer === null
+              ? 'dont_know'
+              : (() => {
+                  throw new Error(`Unexpected answer value: ${answer.answer}`);
+                })();
 
       transformedCandidatesAnswers.push({
         id: answer.questionId,

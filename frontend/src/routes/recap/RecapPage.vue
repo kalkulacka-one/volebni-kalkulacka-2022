@@ -71,8 +71,8 @@ const handleShowResultsClick = () => {
 
 const availableTags: Set<string> = new Set(['All']);
 const selectedTag = ref('All');
-electionStore.calculator?.questions.forEach(
-  (q) => q.tags?.forEach((tag) => availableTags.add(tag)),
+electionStore.calculator?.questions.forEach((q) =>
+  q.tags?.forEach((tag) => availableTags.add(tag)),
 );
 
 const handleStarClick = (index: number) => {

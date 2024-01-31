@@ -11,8 +11,8 @@ export async function authUser(
   const PUBLIC_URL = process.env.PUBLIC_URL
     ? process.env.PUBLIC_URL
     : process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : null;
+      ? `https://${process.env.VERCEL_URL}`
+      : null;
   if (!tokenString) {
     return null;
   }

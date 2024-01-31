@@ -17,8 +17,8 @@ const app: Express = express();
 const PUBLIC_URL = process.env.PUBLIC_URL
   ? process.env.PUBLIC_URL
   : process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : null;
+    ? `https://${process.env.VERCEL_URL}`
+    : null;
 const OAUTH_CALLBACK_URL = process.env.OAUTH_CALLBACK_URL || PUBLIC_URL;
 
 if (!PUBLIC_URL) {
