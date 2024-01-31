@@ -1,6 +1,7 @@
 singleQuote: true
-endOfLine: lf
 overrides:
   - files: ['.env', '.env.*']
     options:
       parser: 'sh'
+plugins:
+  - prettier-plugin-sh
