@@ -13,7 +13,7 @@ import ContainerComponent from '@/components/design-system/containers/ContainerC
 import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
 import MarkdownIt from '@/components/utilities/MarkdownIt.vue';
 
-import QuestionMethodologyText from './QuestionsMethodologyText.md';
+// import QuestionMethodologyText from './QuestionsMethodologyText.md';
 </script>
 
 <template>
@@ -45,7 +45,7 @@ import QuestionMethodologyText from './QuestionsMethodologyText.md';
         >
 
         <BodyText size="medium">
-          <QuestionMethodologyText />
+          <!-- <QuestionMethodologyText /> -->
         </BodyText>
       </StackComponent>
       <DonateBlock />

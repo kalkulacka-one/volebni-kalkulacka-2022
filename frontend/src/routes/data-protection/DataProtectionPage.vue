@@ -11,7 +11,7 @@ import BodyText from '@/components/design-system/typography/BodyText.vue';
 import ContainerComponent from '@/components/design-system/containers/ContainerComponent.vue';
 import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
 
-import PrivacyPolicy from './PrivacyPolicy.md';
+// import PrivacyPolicy from './PrivacyPolicy.md';
 </script>
 
 <template>
@@ -40,7 +40,7 @@ import PrivacyPolicy from './PrivacyPolicy.md';
       <StackComponent spacing="large" class="section">
         <HeadlineText tag="h1" size="large">Ochrana dat</HeadlineText>
         <BodyText size="medium">
-          <PrivacyPolicy />
+          <!-- <PrivacyPolicy /> -->
         </BodyText>
       </StackComponent>
       <DonateBlock />

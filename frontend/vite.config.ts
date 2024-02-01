@@ -3,6 +3,8 @@ import { fileURLToPath, URL } from 'node:url';
 import { defineConfig, loadEnv, type ESBuildOptions } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import md from 'vite-plugin-md';
+import mdx from '@mdx-js/rollup';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 
 const esbuildProd: ESBuildOptions = {
   drop: ['console', 'debugger'],
@@ -19,7 +21,15 @@ export default defineConfig(({ command, mode }) => {
   const esbuildConf = isVercel ? esbuildVercel : esbuildProd;
   console.log(`Deploying on Vercel: ${isVercel}`);
   return {
-    plugins: [vue({ include: [/\.vue$/, /\.md$/] }), md()],
+    plugins: [
+      vue({ include: [/\.vue$/, /\.md$/] }),
+      md(),
+      mdx({
+        jsx: true,
+        providerImportSource: '@mdx-js/vue' /* otherOptions… */,
+      }),
+      vueJsx({ include: /\.mdx/ }),
+    ],
     esbuild: esbuildConf,
     build: {
       sourcemap: mode !== 'production' || isVercel,
