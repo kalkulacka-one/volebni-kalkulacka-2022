@@ -24,7 +24,7 @@ const router = useRouter();
             $t('components.FooterMultiWord.body-who-to-vote')
           }}</BodyText>
           <a href="https://www.facebook.com/KohoVolit.eu"
-            ><img src="/images/fb.svg"
+            ><img :src="'/images/fb.svg'"
           /></a>
         </div>
         <div class="data-3">
@@ -88,15 +88,15 @@ const router = useRouter();
           $t('components.FooterMultiWord.body-created-by-ngos')
         }}</BodyText>
         <a href="https://kohovolit.eu"
-          ><img src="/images/logo-kohovolit.svg"
+          ><img :src="'/images/logo-kohovolit.svg'"
         /></a>
         <BodyText size="small"></BodyText>
         <a href="https://cesko.digital"
-          ><img class="cd-logo" src="/images/logo-cd.svg"
+          ><img class="cd-logo" :src="'/images/logo-cd.svg'"
         /></a>
         <BodyText size="small"></BodyText>
         <a href="https://memo98.sk/"
-          ><img class="memo-logo" src="/images/logo-memo.png"
+          ><img class="memo-logo" :src="'/images/logo-memo.png'"
         /></a>
       </div>
     </div>
