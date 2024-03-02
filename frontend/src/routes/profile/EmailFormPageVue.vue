@@ -169,7 +169,7 @@ const handleSubmit = async () => {
           </TitleText>
 
           <template v-if="step === 1">
-            <img src="/images/email.svg" />
+            <img :src="'/images/email.svg'" />
 
             <TitleText tag="span" size="medium" centered>
               {{ texts[step][type].title }}

@@ -85,165 +85,62 @@ const handleSubscribe = async () => {
       <BlobComponent color="red" class="blob2" />
       <StackComponent spacing="medium" centered class="calc-main">
         <BodyText size="medium" tag="h1" color="fg-strong">
-          <b>Voľby do Národnej rady Slovenskej republiky</b><br />
-          30. septembra 2023
+          <b>Voľby prezidenta Slovenskej republiky</b><br />
+          23. marca 2024
           <br />
         </BodyText>
         <HeadlineText tag="p" size="small">
-          Parlamentné voľby
-          <span style="color: rgb(var(--color-neutral-fg))"> 2023 </span>
+          Prezidentské voľby
+          <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
         </HeadlineText>
-        <BodyText size="small"> 42 otázok, cca 10 minút </BodyText>
-        <ButtonComponent
-          kind="filled"
-          color="primary"
-          @click="
-            router.push({
-              name: appRoutes.guide.name,
-              params: {
-                ...route.params,
-                type: `${'volby'}`,
-                first: 'nrsr-2023',
-                second: 'kalkulacka',
-              },
-              query: { ...route.query },
-            })
-          "
+        <BodyText size="large"
+          >Volebnú kalkulačku spustíme začiatkom marca</BodyText
         >
-          Spustiť kalkulačku
-          <template #iconAfter>
-            <IconComponent :icon="mdiArrowRight" />
-          </template>
-        </ButtonComponent>
+        <section class="subscribe">
+          <StackComponent spacing="small" centered>
+            <BodyText size="medium" centered>
+              Volebná kalkulačka pre prezidentské voľby bude spustená o niekoľko
+              dní. <br />
+              Zanechajte nám svoj e-mail a my vám dáme vedieť ako prvým.
+            </BodyText>
+            <BodyText v-if="success" size="small">
+              {{ message }}
+            </BodyText>
+            <form v-if="!success">
+              <StackComponent
+                horizontal
+                spacing="small"
+                stretched
+                wrap
+                style="justify-content: center"
+              >
+                <TextInputComponent
+                  v-model="email"
+                  required
+                  type="email"
+                  :placeholder="t('routes.index.IndexPage.input-label')"
+                  :value="email"
+                  :icon="mdiEmailOutline"
+                  :disabled="posting"
+                  :error="emailError"
+                />
+                <ButtonComponent
+                  kind="outlined"
+                  color="primary"
+                  :loading="posting"
+                  @click.prevent="handleSubscribe"
+                >
+                  Odeslat
+                </ButtonComponent>
+              </StackComponent>
+            </form>
+            <BodyText v-if="!success" tag="p" size="small">{{
+              $t('routes.index.IndexPage.disclaimer')
+            }}</BodyText>
+          </StackComponent>
+        </section>
       </StackComponent>
-      <div class="other-calcs">
-        <CardComponent
-          corner="bottom-left"
-          padding="large"
-          border
-          border-radius="large"
-          shadow
-          class="other-calc-card calc-youth"
-        >
-          <StackComponent spacing="small" centered space-between>
-            <BodyText size="medium" tag="h2" color="fg-strong">
-              <strong>Kalkulačka pre mladých</strong>
-            </BodyText>
-            <BodyText size="small">
-              Otázky, ktoré rezonujú mladou generáciou<br />
-              25 otázek, cca 5 minut
-            </BodyText>
-            <ButtonComponent
-              kind="outlined"
-              color="primary"
-              @click="
-                router.push({
-                  name: appRoutes.guide.name,
-                  params: {
-                    ...route.params,
-                    type: `${'volby'}`,
-                    first: 'nrsr-2023',
-                    second: 'pre-mladych',
-                  },
-                  query: { ...route.query },
-                })
-              "
-            >
-              Spustiť kalkulačku
-              <template #iconAfter>
-                <IconComponent :icon="mdiArrowRight" />
-              </template>
-            </ButtonComponent>
-          </StackComponent>
-        </CardComponent>
-        <CardComponent
-          corner="top-left"
-          padding="large"
-          border
-          border-radius="large"
-          shadow
-          class="other-calc-card calc-youth"
-        >
-          <StackComponent spacing="small" centered space-between>
-            <BodyText size="medium" tag="h2" color="fg-strong">
-              <strong>Inventúra hlasovaní</strong>
-            </BodyText>
-            <BodyText size="small">
-              Volebná kalkulačka na základe skutočných hlasovaní poslancov a
-              poslankýň Národnej rady SR v 8. volebnom období 2020–2023
-            </BodyText>
-            <ButtonComponent
-              kind="outlined"
-              color="primary"
-              tag="a"
-              @click="
-                router.push({
-                  name: appRoutes.guide.name,
-                  params: {
-                    ...route.params,
-                    type: `${'volby'}`,
-                    first: 'nrsr-2023',
-                    second: 'inventura-2020-2023',
-                  },
-                  query: { ...route.query },
-                })
-              "
-            >
-              Spustiť inventúru hlasovaní
-
-              <template #iconAfter>
-                <IconComponent :icon="mdiArrowRight" />
-              </template>
-            </ButtonComponent>
-          </StackComponent>
-        </CardComponent>
-      </div>
     </div>
-    <section class="subscribe">
-      <StackComponent spacing="small" centered>
-        <TitleText size="large" tag="h2">
-          Chcete vedieť o nových kalkulačkách?
-        </TitleText>
-        <BodyText size="small" centered>
-          Zanechajte nám váš e-mail a dáme vám vedieť vždy, keď spustíme novú
-          kalkulačku.
-        </BodyText>
-        <BodyText v-if="success" size="small">
-          {{ message }}
-        </BodyText>
-        <form v-if="!success">
-          <StackComponent
-            horizontal
-            spacing="small"
-            stretched
-            wrap
-            style="justify-content: center"
-          >
-            <TextInputComponent
-              v-model="email"
-              required
-              type="email"
-              :placeholder="t('routes.index.IndexPage.input-label')"
-              :value="email"
-              :icon="mdiEmailOutline"
-              :disabled="posting"
-              :error="emailError"
-            />
-            <ButtonComponent
-              kind="outlined"
-              color="primary"
-              :loading="posting"
-              @click.prevent="handleSubscribe"
-            >
-              Odeslat
-            </ButtonComponent>
-          </StackComponent>
-        </form>
-        <BodyText v-if="!success" tag="p" size="small">{{
-          $t('routes.index.IndexPage.disclaimer')
-        }}</BodyText>
-      </StackComponent>
-    </section>
     <StaticContentLayout>
       <StackComponent class="section" spacing="small" centered>
         <TitleText size="large" tag="h2">Ako vzniká kalkulačka?</TitleText>
@@ -286,6 +183,118 @@ const handleSubscribe = async () => {
         </ButtonComponent>
       </StackComponent>
       <DonateBlock />
+      <StackComponent spacing="large">
+        <div ref="info"></div>
+        <TitleText size="large" tag="h2">
+          Volebné kalkulačky pre už uskutočnené voľby
+        </TitleText>
+        <MasonryGrid style="align-self: stretch">
+          <CardComponent corner="top-right" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium"
+                  >Parlamentné voľby 2023</TitleText
+                >
+                <BodyText size="medium"
+                  >Voľby do Národnej rady Slovenskej republiky, 42 otázok, cca
+                  10 minút</BodyText
+                >
+              </div>
+              <ButtonComponent
+                kind="filled"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      type: `${'volby'}`,
+                      first: 'nrsr-2023',
+                      second: 'kalkulacka',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+                Spustiť kalkulačku
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
+          <CardComponent corner="top-left" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium"
+                  >Parlamentné voľby 2023 pre mladých</TitleText
+                >
+                <BodyText size="medium"
+                  >Otázky, ktoré rezonujú mladou generáciou, 25 otázek, cca 5
+                  minut</BodyText
+                >
+              </div>
+              <ButtonComponent
+                kind="outlined"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      type: `${'volby'}`,
+                      first: 'nrsr-2023',
+                      second: 'pre-mladych',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+                Spustiť kalkulačku
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
+          <CardComponent corner="top-left" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium"
+                  >Inventúra hlasovaní</TitleText
+                >
+                <BodyText size="medium"
+                  >Volebná kalkulačka na základe skutočných hlasovaní poslancov
+                  a poslankýň Národnej rady SR v 8. volebnom období
+                  2020–2023</BodyText
+                >
+              </div>
+              <ButtonComponent
+                kind="outlined"
+                color="primary"
+                tag="a"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      type: `${'volby'}`,
+                      first: 'nrsr-2023',
+                      second: 'inventura-2020-2023',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+                Spustiť inventúru hlasovaní
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
+        </MasonryGrid>
+      </StackComponent>
     </StaticContentLayout>
     <FooterMultiWord class="section" />
   </StickyHeaderLayout>

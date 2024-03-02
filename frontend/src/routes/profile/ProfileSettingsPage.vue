@@ -166,7 +166,7 @@ const handleLogout = async () => {
             </ButtonComponent>
           </FormComponent>
 
-          <img src="/images/lock_person.svg" width="32" height="32" alt="" />
+          <img :src="'/images/lock_person.svg'" width="32" height="32" alt="" />
 
           <StackComponent centered spacing="extra-small">
             <BodyText size="small">
@@ -231,7 +231,7 @@ const handleLogout = async () => {
       <StackComponent spacing="large" centered>
         <span />
 
-        <img src="/images/lock_person.svg" width="32" height="32" alt="" />
+        <img :src="'/images/lock_person.svg'" width="32" height="32" alt="" />
 
         <BodyText size="medium">
           {{
