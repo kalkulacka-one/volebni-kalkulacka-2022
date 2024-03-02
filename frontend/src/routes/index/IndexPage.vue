@@ -86,7 +86,7 @@ const handleSubscribe = async () => {
       <StackComponent spacing="medium" centered class="calc-main">
         <BodyText size="medium" tag="h1" color="fg-strong">
           <b>Voľby prezidenta Slovenskej republiky</b><br />
-          23. marca 2024
+          23. marca a 6. apríla 2024
           <br />
         </BodyText>
         <HeadlineText tag="p" size="small">
@@ -130,7 +130,7 @@ const handleSubscribe = async () => {
             </BodyText>
             <BodyText size="small">
               Otázky, ktoré rezonujú mladou generáciou<br />
-              25 otázek, cca 5 minut
+              25 otázok, cca 5 minút
             </BodyText>
             <ButtonComponent
               kind="outlined"
