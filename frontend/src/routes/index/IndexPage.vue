@@ -344,6 +344,145 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
             <div class="card-content">
               <div class="card-content-text">
                 <TitleText tag="h3" size="medium"
+                  >Prezidentské volby 2023</TitleText
+                >
+                <BodyText size="medium"
+                  >Volby prezidenta České republiky 2023, 42 otázek, cca 10
+                  minut</BodyText
+                >
+              </div>
+              <ButtonComponent
+                kind="filled"
+                color="primary"
+                tag="a"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      election: 'prezidentske-2023',
+                      district: 'pro-kazdeho',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+                Spustit kalkulačku pro 1. kolo
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
+          <CardComponent corner="top-right" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium"
+                  >Prezidentské volby 2023: 2. kolo</TitleText
+                >
+                <BodyText size="medium"
+                  >Volební kalkulačka pro 2. kolo, 20 otázek, cca 5
+                  minut</BodyText
+                >
+              </div>
+              <ButtonComponent
+                kind="outlined"
+                color="primary"
+                tag="a"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      election: 'prezidentske-2023',
+                      district: 'pro-kazdeho-2-kolo',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+                Spustit kalkulačku
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
+          <CardComponent corner="top-right" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium"
+                  >Prezidentské volby 2023: pro nadšence</TitleText
+                >
+                <BodyText size="medium"
+                  >Všech 98 otázek, které jsme položili prezidentským
+                  kandidátům.
+                </BodyText>
+              </div>
+              <ButtonComponent
+                kind="outlined"
+                color="primary"
+                tag="a"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      election: 'prezidentske-2023',
+                      district: 'pro-nadsence',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+                Spustit kalkulačku
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
+          <CardComponent corner="top-right" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium"
+                  >Prezidentské volby 2023: pro mladé</TitleText
+                >
+                <BodyText size="medium"
+                  >Otázky, které rezonují mladou generací.<br />
+                  Ve spolupráci s projektem
+                  <a href="https://www.nazorypolitiku.cz" target="_blank">
+                    NázoryPolitiků.cz </a
+                  >.</BodyText
+                >
+              </div>
+              <ButtonComponent
+                kind="outlined"
+                color="primary"
+                tag="a"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      election: 'prezidentske-2023',
+                      district: 'pro-mlade',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+                Spustit kalkulačku
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
+          <CardComponent corner="top-right" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium"
                   >Komunální volby 2022</TitleText
                 >
                 <BodyText size="medium"
@@ -355,7 +494,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
                 >
               </div>
               <ButtonComponent
-                kind="outlined"
+                kind="filled"
                 color="primary"
                 @click="
                   router.push({
@@ -388,7 +527,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
               >
               <ButtonComponent
                 color="primary"
-                kind="outlined"
+                kind="filled"
                 @click="
                   router.push({
                     name: appRoutes.districtSelection.name,
