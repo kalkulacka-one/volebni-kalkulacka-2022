@@ -163,7 +163,7 @@ if (!userStore.user) router.push(appRoutes.login);
             </ButtonComponent>
           </FormComponent>
 
-          <img src="/images/lock_person.svg" width="32" height="32" alt="" />
+          <img :src="'/images/lock_person.svg'" width="32" height="32" alt="" />
 
           <StackComponent centered spacing="extra-small">
             <BodyText size="small">
@@ -219,7 +219,7 @@ if (!userStore.user) router.push(appRoutes.login);
       <StackComponent spacing="large" centered>
         <span />
 
-        <img src="/images/lock_person.svg" width="32" height="32" alt="" />
+        <img :src="'/images/lock_person.svg'" width="32" height="32" alt="" />
 
         <BodyText size="medium">
           Smazáním profilu přijdete permanentne o uložené kalkulačky.
