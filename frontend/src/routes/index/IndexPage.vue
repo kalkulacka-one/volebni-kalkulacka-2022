@@ -93,54 +93,115 @@ const handleSubscribe = async () => {
           Prezidentské voľby
           <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
         </HeadlineText>
-        <BodyText size="large"
-          >Volebnú kalkulačku spustíme začiatkom marca</BodyText
+        <BodyText size="small"> 42 otázok, cca 10 minút </BodyText>
+        <ButtonComponent
+          kind="filled"
+          color="primary"
+          @click="
+            router.push({
+              name: appRoutes.guide.name,
+              params: {
+                ...route.params,
+                type: `${'volby'}`,
+                first: 'prezidentske-2024',
+                second: 'kalkulacka',
+              },
+              query: { ...route.query },
+            })
+          "
         >
-        <section class="subscribe">
-          <StackComponent spacing="small" centered>
-            <BodyText size="medium" centered>
-              Volebná kalkulačka pre prezidentské voľby bude spustená o niekoľko
-              dní. <br />
-              Zanechajte nám svoj e-mail a my vám dáme vedieť ako prvým.
+          Spustiť kalkulačku
+          <template #iconAfter>
+            <IconComponent :icon="mdiArrowRight" />
+          </template>
+        </ButtonComponent>
+        <br />
+        <CardComponent
+          corner="bottom-left"
+          padding="large"
+          border
+          border-radius="large"
+          shadow
+          class="other-calc-card calc-youth"
+        >
+          <StackComponent spacing="small" centered space-between>
+            <BodyText size="medium" tag="h2" color="fg-strong">
+              <strong>Kalkulačka pre mladých</strong>
             </BodyText>
-            <BodyText v-if="success" size="small">
-              {{ message }}
+            <BodyText size="small">
+              Otázky, ktoré rezonujú mladou generáciou<br />
+              25 otázek, cca 5 minut
             </BodyText>
-            <form v-if="!success">
-              <StackComponent
-                horizontal
-                spacing="small"
-                stretched
-                wrap
-                style="justify-content: center"
-              >
-                <TextInputComponent
-                  v-model="email"
-                  required
-                  type="email"
-                  :placeholder="t('routes.index.IndexPage.input-label')"
-                  :value="email"
-                  :icon="mdiEmailOutline"
-                  :disabled="posting"
-                  :error="emailError"
-                />
-                <ButtonComponent
-                  kind="outlined"
-                  color="primary"
-                  :loading="posting"
-                  @click.prevent="handleSubscribe"
-                >
-                  Odeslat
-                </ButtonComponent>
-              </StackComponent>
-            </form>
-            <BodyText v-if="!success" tag="p" size="small">{{
-              $t('routes.index.IndexPage.disclaimer')
-            }}</BodyText>
+            <ButtonComponent
+              kind="outlined"
+              color="primary"
+              @click="
+                router.push({
+                  name: appRoutes.guide.name,
+                  params: {
+                    ...route.params,
+                    type: `${'volby'}`,
+                    first: 'prezidentske-2024',
+                    second: 'pre-mladych',
+                  },
+                  query: { ...route.query },
+                })
+              "
+            >
+              Spustiť kalkulačku
+              <template #iconAfter>
+                <IconComponent :icon="mdiArrowRight" />
+              </template>
+            </ButtonComponent>
           </StackComponent>
-        </section>
+        </CardComponent>
       </StackComponent>
     </div>
+    <section class="subscribe">
+      <StackComponent spacing="small" centered>
+        <TitleText size="large" tag="h2">
+          Chcete vedieť o nových kalkulačkách?
+        </TitleText>
+        <BodyText size="small" centered>
+          Zanechajte nám váš e-mail a dáme vám vedieť vždy, keď spustíme novú
+          kalkulačku.
+        </BodyText>
+        <BodyText v-if="success" size="small">
+          {{ message }}
+        </BodyText>
+        <form v-if="!success">
+          <StackComponent
+            horizontal
+            spacing="small"
+            stretched
+            wrap
+            style="justify-content: center"
+          >
+            <TextInputComponent
+              v-model="email"
+              required
+              type="email"
+              :placeholder="t('routes.index.IndexPage.input-label')"
+              :value="email"
+              :icon="mdiEmailOutline"
+              :disabled="posting"
+              :error="emailError"
+            />
+            <ButtonComponent
+              kind="outlined"
+              color="primary"
+              :loading="posting"
+              @click.prevent="handleSubscribe"
+            >
+              Odeslat
+            </ButtonComponent>
+          </StackComponent>
+        </form>
+        <BodyText v-if="!success" tag="p" size="small">{{
+          $t('routes.index.IndexPage.disclaimer')
+        }}</BodyText>
+      </StackComponent>
+    </section>
     <StaticContentLayout>
       <StackComponent class="section" spacing="small" centered>
         <TitleText size="large" tag="h2">Ako vzniká kalkulačka?</TitleText>
