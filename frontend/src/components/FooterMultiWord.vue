@@ -22,7 +22,7 @@ const router = useRouter();
             Volit.</BodyText
           >
           <a href="https://www.facebook.com/KohoVolit.eu"
-            ><img src="/images/fb.svg"
+            ><img :src="'/images/fb.svg'"
           /></a>
         </div>
         <div class="data-2">
@@ -108,11 +108,11 @@ const router = useRouter();
           >Vytvořeno spoluprací neziskových organizací</BodyText
         >
         <a href="https://kohovolit.eu"
-          ><img src="/images/logo-kohovolit.svg"
+          ><img :src="'/images/logo-kohovolit.svg'"
         /></a>
         <BodyText size="small">a</BodyText>
         <a href="https://cesko.digital"
-          ><img class="cd-logo" src="/images/logo-cd.svg"
+          ><img class="cd-logo" :src="'/images/logo-cd.svg'"
         /></a>
       </div>
     </div>
