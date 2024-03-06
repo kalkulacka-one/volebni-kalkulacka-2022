@@ -5,5 +5,19 @@
   "election": {
     "id": "6c3343d9-f313-4715-907c-8844ceea15bb",
     "key": "prezidentske-2024"
-  }
+  },
+  "calculators": [
+    {
+      "id": "2131b1ce-9f8c-43e9-86de-812d07e93902",
+      "variant": {
+        "key": "kalkulacka"
+      }
+    },
+    {
+      "id": "ebb4dcc4-b23a-4dc8-8976-ec9c21592fe5",
+      "variant": {
+        "key": "pre-mladych"
+      }
+    }
+  ]
 }
