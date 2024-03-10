@@ -369,9 +369,12 @@ router.beforeEach(async (to, from) => {
   const store = useElectionStore();
 
   //load election if election in store is different
-  if (to.params.first !== undefined && to.params.first !== store.election?.id) {
+  if (
+    to.params.first !== undefined &&
+    to.params.first !== store.election?.key
+  ) {
     console.debug(
-      `Election IDs ${to.params.first} !== ${store.election?.id}. Fetching ...`,
+      `Election IDs ${to.params.first} !== ${store.election?.key}. Fetching ...`,
     );
     await store.loadElection(to.params.first as string);
     if (store?.election === undefined) {
@@ -387,24 +390,27 @@ router.beforeEach(async (to, from) => {
     }
   }
   //load calculator data if district in store different
-  if (to.params.second !== undefined) {
-    const districtNr = getDistrictCode(to.params.second as string);
-    if (districtNr !== store.calculator?.district_code) {
-      console.debug(
-        `District codes ${districtNr} !== ${store.calculator?.district_code}. Fetching ...`,
-      );
-      await store.loadCalculator(calculatorKeyFromParams(to.params));
-      if (store?.calculator === undefined) {
-        return {
-          name: appRoutes.error.name,
-          params: {
-            case: ErrorPageEnum.NotFound,
-          },
-          state: {
-            extraInfo: `Calculator fetch failed. Election: ${to.params.first}, districtNr: ${districtNr}`,
-          },
-        };
-      }
+  if (
+    (to.params.first !== undefined &&
+      to.params.first !== store.election?.key) ||
+    (to.params.second !== undefined &&
+      getDistrictCode(to.params.second as string) !==
+        store.calculator?.district_code)
+  ) {
+    console.debug(
+      `District codes ${getDistrictCode(to.params.second as string)} !== ${store.calculator?.district_code}. Fetching ...`,
+    );
+    await store.loadCalculator(calculatorKeyFromParams(to.params));
+    if (store?.calculator === undefined) {
+      return {
+        name: appRoutes.error.name,
+        params: {
+          case: ErrorPageEnum.NotFound,
+        },
+        state: {
+          extraInfo: `Calculator fetch failed. Election: ${to.params.first}, districtNr: ${getDistrictCode(to.params.second as string)}`,
+        },
+      };
     }
   }
 
