@@ -387,12 +387,9 @@ router.beforeEach(async (to, from) => {
     }
   }
   //load calculator data if district in store different
-  if (to.params.first !== undefined && to.params.second !== undefined) {
+  if (to.params.second !== undefined) {
     const districtNr = getDistrictCode(to.params.second as string);
-    if (
-      to.params.first !== store.election?.id ||
-      districtNr !== store.calculator?.district_code
-    ) {
+    if (districtNr !== store.calculator?.district_code) {
       console.debug(
         `District codes ${districtNr} !== ${store.calculator?.district_code}. Fetching ...`,
       );
