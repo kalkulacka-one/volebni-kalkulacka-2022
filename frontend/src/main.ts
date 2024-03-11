@@ -377,6 +377,7 @@ router.beforeEach(async (to, from) => {
       `Election IDs ${to.params.first} !== ${store.election?.key}. Fetching ...`,
     );
     await store.loadElection(to.params.first as string);
+    await store.loadCalculator(calculatorKeyFromParams(to.params));
     if (store?.election === undefined) {
       return {
         name: appRoutes.error.name,
@@ -391,11 +392,9 @@ router.beforeEach(async (to, from) => {
   }
   //load calculator data if district in store different
   if (
-    (to.params.first !== undefined &&
-      to.params.first !== store.election?.key) ||
-    (to.params.second !== undefined &&
-      getDistrictCode(to.params.second as string) !==
-        store.calculator?.district_code)
+    to.params.second !== undefined &&
+    getDistrictCode(to.params.second as string) !==
+      store.calculator?.district_code
   ) {
     console.debug(
       `District codes ${getDistrictCode(to.params.second as string)} !== ${store.calculator?.district_code}. Fetching ...`,
