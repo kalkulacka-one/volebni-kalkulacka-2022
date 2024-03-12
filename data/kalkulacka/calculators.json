@@ -5,6 +5,12 @@
       "key": "nrsr-2023",
       "name": "Parlamentné voľby 2023",
       "description": "Voľby do Národnej rady Slovenskej republiky 30. septembra 2023."
+    },
+    {
+      "id": "6c3343d9-f313-4715-907c-8844ceea15bb",
+      "key": "prezidentske-2024",
+      "name": "Prezidentské voľby 2024",
+      "description": "Voľby prezidenta Slovenskej republiky 2024"
     }
   ],
   "calculators": [
@@ -34,6 +40,24 @@
       "name": "Kalkulačka",
       "description": "Kalkulačka pre všetkých",
       "key": "nrsr-2023/kalkulacka"
+    },
+    {
+      "calculator_id": "ebb4dcc4-b23a-4dc8-8976-ec9c21592fe5",
+      "election_id": "6c3343d9-f313-4715-907c-8844ceea15bb",
+      "district_code": "pre-mladych",
+      "show_district_code": false,
+      "name": "Pre mladých",
+      "description": "Volebná kalkulačka pre mladých",
+      "key": "prezidentske-2024/pre-mladych"
+    },
+    {
+      "calculator_id": "2131b1ce-9f8c-43e9-86de-812d07e93902",
+      "election_id": "6c3343d9-f313-4715-907c-8844ceea15bb",
+      "district_code": "kalkulacka",
+      "show_district_code": false,
+      "name": "Kalkulačka",
+      "description": "Kalkulačka pre všetkých",
+      "key": "prezidentske-2024/kalkulacka"
     }
   ]
 }

@@ -1,0 +1,23 @@
+{
+  "id": "5e36119b-99f9-4ef0-867b-ec655a15bec8",
+  "key": "prezidentske-2024",
+  "createdAt": "2021-01-01T00:00:00+01:00",
+  "election": {
+    "id": "6c3343d9-f313-4715-907c-8844ceea15bb",
+    "key": "prezidentske-2024"
+  },
+  "calculators": [
+    {
+      "id": "2131b1ce-9f8c-43e9-86de-812d07e93902",
+      "variant": {
+        "key": "kalkulacka"
+      }
+    },
+    {
+      "id": "ebb4dcc4-b23a-4dc8-8976-ec9c21592fe5",
+      "variant": {
+        "key": "pre-mladych"
+      }
+    }
+  ]
+}

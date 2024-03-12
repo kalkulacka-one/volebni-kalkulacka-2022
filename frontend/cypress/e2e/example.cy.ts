@@ -3,6 +3,6 @@
 describe('My First Test', () => {
   it('visits the app root url', () => {
     cy.visit('/');
-    cy.contains('h1', 'Voľby do Národnej rady Slovenskej republiky');
+    cy.contains('h1', 'Voľby prezidenta Slovenskej republiky');
   });
 });

@@ -79,29 +79,26 @@ export const deprecatedFetchCalculator = async (key: string) => {
       transformedCandidate.short_name = transformedCandidate.name;
 
       const organizationId = person.memberOf?.[0]?.id;
-      if (!organizationId) {
-        throw new Error(
-          `Person with ID \`${candidate.reference.id}\` has no organization.`,
-        );
-      }
-      const organization =
-        organizations.find(
-          (organization) => organization.id === organizationId,
-        ) ||
-        (() => {
-          throw new Error(
-            `Organization with ID \`${organizationId}\` not found.`,
-          );
-        })();
+      if (organizationId) {
+        const organization =
+          organizations.find(
+            (organization) => organization.id === organizationId,
+          ) ||
+          (() => {
+            throw new Error(
+              `Organization with ID \`${organizationId}\` not found.`,
+            );
+          })();
 
-      transformedCandidate.parties = [
-        {
-          id: organization.id,
-          name: organization.name,
-          short_name: organization.shortName,
-          description: '',
-        },
-      ];
+        transformedCandidate.parties = [
+          {
+            id: organization.id,
+            name: organization.name,
+            short_name: organization.shortName,
+            description: '',
+          },
+        ];
+      }
     } else if (candidate.reference.type == 'organization') {
       const organization =
         organizations.find(

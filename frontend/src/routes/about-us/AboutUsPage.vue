@@ -305,9 +305,9 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
           Spolprácia s Memo 98 a Infovolby.sk
         </TitleText>
         <BodyText size="large">
-          Obsah volebnej kalkulačky pre parlamentné voľby 2023 sme vytvárali so
-          združením <a href="https://memo98.sk" target="_blank">Memo 98</a> a
-          projektom
+          Obsah volebnej kalkulačky pre parlamentné voľby 2023 a prezidentské
+          voľby 2024 sme vytvárali so združením
+          <a href="https://memo98.sk" target="_blank">Memo 98</a> a projektom
           <a href="https://infovolby.sk" target="_blank">Infovolby.sk</a>.
         </BodyText>
       </StackComponent>
