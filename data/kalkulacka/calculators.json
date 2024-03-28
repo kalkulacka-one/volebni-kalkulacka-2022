@@ -58,6 +58,24 @@
       "name": "Kalkulačka",
       "description": "Kalkulačka pre všetkých",
       "key": "prezidentske-2024/kalkulacka"
+    },
+    {
+      "calculator_id": "49d11d02-ebcf-4935-b433-c6b7df6b6313",
+      "election_id": "6c3343d9-f313-4715-907c-8844ceea15bb",
+      "district_code": "pre-mladych-2-kolo",
+      "show_district_code": false,
+      "name": "Pre mladých 2. kolo",
+      "description": "Volebná kalkulačka pre mladých 2. kolo",
+      "key": "prezidentske-2024/pre-mladych-2-kolo"
+    },
+    {
+      "calculator_id": "239fb35c-95f6-4cb7-8c41-90ce35bf6124",
+      "election_id": "6c3343d9-f313-4715-907c-8844ceea15bb",
+      "district_code": "kalkulacka-2-kolo",
+      "show_district_code": false,
+      "name": "Kalkulačka 2. kolo",
+      "description": "Kalkulačka pre všetkých 2. kolo",
+      "key": "prezidentske-2024/kalkulacka-2-kolo"
     }
   ]
 }
