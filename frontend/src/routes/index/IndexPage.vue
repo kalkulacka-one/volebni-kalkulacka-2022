@@ -83,141 +83,29 @@ const handleSubscribe = async () => {
     <div class="prezident-hero">
       <BlobComponent color="blue" class="blob1" />
       <BlobComponent color="red" class="blob2" />
-
-      <StackComponent spacing="small" centered class="calc-main">
-        <StackComponent spacing="large" centered space-between>
-          <BodyText size="medium" tag="h1" color="fg-strong">
-            <b>Voľby prezidenta Slovenskej republiky</b><br />
-            2. kolo<br />
-            6. apríla 2024
-            <br />
-          </BodyText>
-          <div>
-            <HeadlineText tag="p" size="small">
-              Prezidentské voľby
-              <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
-            </HeadlineText>
-            <HeadlineText tag="p" size="extra-small">
-              <span style="color: rgb(var(--color-neutral-fg))">
-                Korčok × Pellegrini
-              </span>
-            </HeadlineText>
-          </div>
-          <BodyText size="small"> 30 otázok, 5–10 minút </BodyText>
-          <ButtonComponent
-            kind="filled"
-            color="primary"
-            @click="
-              router.push({
-                name: appRoutes.guide.name,
-                params: {
-                  ...route.params,
-                  type: `${'volby'}`,
-                  first: 'prezidentske-2024',
-                  second: 'kalkulacka-2-kolo',
-                },
-                query: { ...route.query },
-              })
-            "
-          >
-            Spustiť kalkulačku
-            <template #iconAfter>
-              <IconComponent :icon="mdiArrowRight" />
-            </template>
-          </ButtonComponent>
-          <StackComponent spacing="extra-small" centered space-between>
-            <ButtonComponent
-              kind="link"
-              color="primary"
-              tag="a"
-              @click="
-                router.push({
-                  name: appRoutes.guide.name,
-                  params: {
-                    ...route.params,
-                    type: `${'volby'}`,
-                    first: 'prezidentske-2024',
-                    second: 'kalkulacka',
-                  },
-                  query: { ...route.query },
-                })
-              "
-            >
-              Spustiť kalkulačku pre 1. kolo
-              <template #iconAfter>
-                <IconComponent :icon="mdiArrowRight" />
-              </template>
-            </ButtonComponent>
-            <BodyText size="small" tag="h2">42 otázok, cca 10 minút</BodyText>
-          </StackComponent>
-        </StackComponent>
-        <br />
-        <CardComponent
-          corner="bottom-left"
-          padding="large"
-          border
-          border-radius="large"
-          shadow
-          class="other-calc-card calc-youth"
+      <StackComponent spacing="medium" centered class="calc-main">
+        <BodyText size="medium" tag="h1" color="fg-strong">
+          <strong>Voľby do Európskeho parlamentu na Slovensku 2024</strong
+          ><br />
+          8. júna 2024
+          <br />
+        </BodyText>
+        <HeadlineText tag="p" size="small">
+          Európske voľby
+          <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
+        </HeadlineText>
+        <BodyText size="large"
+          >Pripravujeme pre vás volebnú kalkulačku pre Európske voľby.</BodyText
         >
-          <StackComponent spacing="large" centered>
-            <StackComponent spacing="small" centered space-between>
-              <BodyText size="medium" tag="h2" color="fg-strong">
-                <strong>Kalkulačka pre mladých</strong>
-              </BodyText>
-              <BodyText size="small">
-                Otázky, ktoré rezonujú mladou generáciou<br />
-                25 otázok, cca 5 minút
-              </BodyText>
-              <ButtonComponent
-                kind="outlined"
-                color="primary"
-                @click="
-                  router.push({
-                    name: appRoutes.guide.name,
-                    params: {
-                      ...route.params,
-                      type: `${'volby'}`,
-                      first: 'prezidentske-2024',
-                      second: 'pre-mladych-2-kolo',
-                    },
-                    query: { ...route.query },
-                  })
-                "
-              >
-                Spustiť kalkulačku
-                <template #iconAfter>
-                  <IconComponent :icon="mdiArrowRight" />
-                </template>
-              </ButtonComponent>
-            </StackComponent>
-            <StackComponent spacing="extra-small" centered space-between>
-              <ButtonComponent
-                kind="link"
-                color="primary"
-                tag="a"
-                @click="
-                  router.push({
-                    name: appRoutes.guide.name,
-                    params: {
-                      ...route.params,
-                      type: `${'volby'}`,
-                      first: 'prezidentske-2024',
-                      second: 'kalkulacka',
-                    },
-                    query: { ...route.query },
-                  })
-                "
-              >
-                Spustiť kalkulačku pre 1. kolo
-                <template #iconAfter>
-                  <IconComponent :icon="mdiArrowRight" />
-                </template>
-              </ButtonComponent>
-              <BodyText size="small" tag="h2">25 otázok, cca 5 minút</BodyText>
-            </StackComponent>
-          </StackComponent>
-        </CardComponent>
+        <StackComponent class="section" spacing="large" centered>
+          <ButtonComponent kind="link" @click="scrollDown">
+            <div class="button-content">
+              Staršie kalkulačky<IconComponent
+                :icon="mdiArrowDown"
+              ></IconComponent>
+            </div>
+          </ButtonComponent>
+        </StackComponent>
       </StackComponent>
     </div>
     <section class="subscribe">
@@ -313,6 +201,141 @@ const handleSubscribe = async () => {
           Volebné kalkulačky pre už uskutočnené voľby
         </TitleText>
         <MasonryGrid style="align-self: stretch">
+          <CardComponent corner="top-right" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium">
+                  Prezidentské voľby 2024
+                </TitleText>
+                <BodyText size="medium"
+                  >Voľby prezidenta Slovenskej republiky, 42 otázok, cca 10
+                  minút</BodyText
+                >
+              </div>
+              <ButtonComponent
+                kind="filled"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      type: `${'volby'}`,
+                      first: 'prezidentske-2024',
+                      second: 'kalkulacka',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+                Spustiť kalkulačku
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
+          <CardComponent corner="top-left" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium"
+                  >Prezidentské voľby 2024: 2. kolo</TitleText
+                >
+                <BodyText size="medium"
+                  >Korčok × Pellegrini, 30 otázok, 5–10 minút</BodyText
+                >
+              </div>
+              <ButtonComponent
+                kind="outlined"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      type: `${'volby'}`,
+                      first: 'prezidentske-2024',
+                      second: 'kalkulacka-2-kolo',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+                Spustiť kalkulačku pre 2. kolo
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
+          <CardComponent corner="top-left" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium"
+                  >Prezidentské voľby 2024 pre mladých</TitleText
+                >
+                <BodyText size="medium"
+                  >Otázky, ktoré rezonujú mladou generáciou, 25 otázek, cca 5
+                  minut</BodyText
+                >
+              </div>
+              <ButtonComponent
+                kind="outlined"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      type: `${'volby'}`,
+                      first: 'prezidentske-2024',
+                      second: 'pre-mladych',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+                Spustiť kalkulačku
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
+          <CardComponent corner="top-left" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium"
+                  >Prezidentské voľby 2024 pre mladých: 2. kolo</TitleText
+                >
+                <BodyText size="medium"
+                  >Otázky, ktoré rezonujú mladou generáciou, 25 otázek, cca 5
+                  minut</BodyText
+                >
+              </div>
+              <ButtonComponent
+                kind="outlined"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      type: `${'volby'}`,
+                      first: 'prezidentske-2024',
+                      second: 'pre-mladych-2-kolo',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+                Spustiť kalkulačku pre 2. kolo
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
           <CardComponent corner="top-right" padding="medium" border shadow>
             <div class="card-content">
               <div class="card-content-text">
