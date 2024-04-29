@@ -33,12 +33,12 @@ const router = useRouter();
               $t('components.FooterMultiWord.body-about-voting-calculator')
             }}</TitleText>
             <StackComponent spacing="extra-small">
-              <router-link to="/o-nas"
+              <router-link to="/uber-den-wahlrechner"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-about-voting-calculator')
                 }}</BodyText></router-link
               >
-              <router-link to="/metodika-tvorby-otazek"
+              <router-link to="/methodologie-der-fragenentwicklung"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-methodoogy')
                 }}</BodyText></router-link
@@ -52,12 +52,12 @@ const router = useRouter();
               $t('components.FooterMultiWord.links')
             }}</TitleText>
             <StackComponent spacing="extra-small">
-              <router-link to="/ochrana-dat"
+              <router-link to="/datenschutz"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-data-protection')
                 }}</BodyText></router-link
               >
-              <a href="https://www.darujme.cz/darovat/1202684"
+              <a href="https://www.darujme.cz/darovat/1209495"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-support-calculator')
                 }}</BodyText></a
@@ -71,12 +71,12 @@ const router = useRouter();
             <StackComponent spacing="extra-small">
               <StackComponent spacing="small" centered horizontal
                 ><IconComponent :icon="mdiEmail" /><BodyText size="small"
-                  >info@kohovolit.eu</BodyText
+                  >info@wahlrechner.at</BodyText
                 ></StackComponent
               >
               <StackComponent spacing="small" centered horizontal
                 ><IconComponent :icon="mdiPhone" /><BodyText size="small"
-                  >+420 735 518 529</BodyText
+                  >+43 676 3341627</BodyText
                 ></StackComponent
               >
             </StackComponent>
@@ -87,16 +87,26 @@ const router = useRouter();
         <BodyText size="small">{{
           $t('components.FooterMultiWord.body-created-by-ngos')
         }}</BodyText>
+        <a href="https://demokratiestiftung.at"
+          ><img class="od-logo" :src="'/images/logo-od.png'"
+        /></a>
         <a href="https://kohovolit.eu"
           ><img :src="'/images/logo-kohovolit.svg'"
         /></a>
-        <BodyText size="small"></BodyText>
         <a href="https://cesko.digital"
           ><img class="cd-logo" :src="'/images/logo-cd.svg'"
         /></a>
-        <BodyText size="small"></BodyText>
-        <a href="https://memo98.sk/"
-          ><img class="memo-logo" :src="'/images/logo-memo.png'"
+        <a href="https://www.andrassyuni.eu"
+          ><img class="andrassy-logo" :src="'/images/logo-andrassy.png'"
+        /></a>
+        <a href="https://www.donau-uni.ac.at/de/universitaet/fakultaeten/wirtschaft-globalisierung/forschung/research-lab-democracy-and-society-in-transition/demokratie-politische-kommunikation-und-politische-bildung/netpol.html"
+          ><img class="netpol-logo" :src="'/images/logo-netpol.png'"
+        /></a>
+        <a href="https://wahlbeobachtung.org"
+          ><img class="wahlbeobachtung-logo" :src="'/images/logo-wb.jpg'"
+        /></a>
+        <a href="https://poledu.at"
+          ><img class="poledu-logo" :src="'/images/logo-poledu.svg'"
         /></a>
       </div>
     </div>
@@ -223,5 +233,25 @@ a:after {
 .memo-logo {
   height: 20px;
   filter: invert(100%);
+}
+
+.od-logo {
+  height: 80px;
+}
+
+.andrassy-logo {
+  height: 40px;
+}
+
+.netpol-logo {
+  height: 20px;
+}
+
+.wahlbeobachtung-logo {
+  height: 40px;
+}
+
+.poledu-logo {
+  height: 80px;
 }
 </style>

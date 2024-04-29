@@ -177,7 +177,7 @@ const handleLogout = async () => {
 
             <BodyText size="small">
               {{ $t('routes.profile.ProfileSettingsPage.message-part-one') }}
-              <a href="/ochrana-dat">
+              <a href="/datenschutz">
                 {{
                   $t('routes.profile.ProfileSettingsPage.message-part-two')
                 }}</a

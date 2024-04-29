@@ -13,159 +13,136 @@ const { t, locale } = useI18n();
 
 <StackComponent spacing="extra-small">
 
-<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Nevyhovujúci príklad
+<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Nicht konformes Beispiel
 
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Vyhovujúci príklad
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Konformes Beispiel
 
 </StackComponent>
 
-## 1. Otázka sa musí týkať toho, čo majú zvolení politici možnosť ovplyvniť.
+## 1. Die Frage muss lauten, was die gewählten Politiker beeinflussen können.
 
 <StackComponent spacing="extra-small">
 
-<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Česká republika by mala vystúpiť z EÚ (otázka v regionálnych voľbách).
+<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Österreich sollte die EU verlassen (Frage bei den Regionalwahlen).
 
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Česká republika by mala vystúpiť z EÚ (otázka v celoštátnych voľbách).
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Österreich sollte aus der EU austreten (Frage bei den Nationalratswahlen).
 
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Chcel/a by som, aby sa Praha v nasledujúcich voľbách vrátila k systému jedného volebného obvodu (otázka v pražských voľbách).
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Ich möchte, dass Wien bei den nächsten Wahlen zu einem Einwahlsystem zurückkehrt (Frage bei den Gemeinderatswahlen).
 
 </StackComponent>
 
-## 2. Na otázku treba odpovedať áno alebo nie a nemala by viesť k odpovedi.
+## 2. Die Frage sollte mit Ja oder Nein beantwortet werden und nicht zu einer Antwort führen.
 
-Pri navrhovaní otázok si musíme vedieť predstaviť, že ľudia si vyberú odpovede áno aj nie. Otázka by tiež nemala byť sugestívna (návodná).
-
-<br />
+Bei der Gestaltung von Fragen müssen wir uns vorstellen können, dass die Menschen sowohl Ja- als auch Nein-Antworten wählen werden. Die Frage sollte auch nicht suggestiv (leitend) sein.
 
 <StackComponent spacing="extra-small">
 
-<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Mala by sa zlepšiť dopravná situácia v Považskom Chlmci a vo Vraní?
+<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Sollte die Verkehrssituation in Považský Chlmec und Vraní verbessert werden?
 
-<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Bol/a by som rád/a, keby Opencard nebola pre cestujúcich nákladovo výhodnejšia ako "papierová električenka", aby si cestujúci mohli vybrať. (otázka navádza k odpovedi “áno”).
+<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Ich möchte, dass die Opencard für die Fahrgäste nicht kostengünstiger ist als eine "Papierstraßenbahn", damit die Fahrgäste wählen können. (die Frage führt zu einer "Ja"-Antwort).
 
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Malo by sa pri Rajčianke vybudovať odpočívadlo? (len za predpokladu, že je všeobecne známe, čo to je, veľa sa o tom v meste diskutovalo, vedia, koľko by to stálo atď.).
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Sollte in Rajcianka ein Rastplatz gebaut werden? (nur unter der Voraussetzung, dass allgemein bekannt ist, worum es sich handelt, dass in der Stadt viel darüber diskutiert wird, dass man weiß, wie viel es kosten würde, usw.).
 
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Malo by sa na cyklodopravu vyčleniť aspoň 1 % z rozpočtu mesta na dopravu?
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Sollte mindestens 1 % des Verkehrsbudgets der Stadt für den Radverkehr bereitgestellt werden?
 
 </StackComponent>
 
-## 3. Otázky by mali byť dôležité
+## 3. Die Fragen sollten wichtig sein
 
-Zohľadňujeme napríklad to, na čo dané zastupiteľstvo/parlament vynakladá najviac verejných prostriedkov.
+Wir berücksichtigen z. B., wofür der Rat/das Parlament die meisten öffentlichen Gelder ausgibt.
 
-Témy vyberáme tak, aby boli relevantné pre všetky skupiny voličov (vek, príjem, záujmy).
-
-<br />
+Wir wählen Themen, die für alle Wählergruppen relevant sind (Alter, Einkommen, Interessen).
 
 <StackComponent spacing="extra-small">
 
-<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Malo by sa mesto ospravedlniť pani M. Lorenzovej a pánovi Cejthamrovi za výroky, ktoré zazneli počas tejto konfrontácie?
+<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Sollte sich die Stadt bei Frau M. Lorenz und Herrn Cejthamra für die Äußerungen während dieser Konfrontation entschuldigen?
 
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Hlasovali by ste za zrušenie záruky a automatický vstup do druhého piliera?
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Würden Sie für die Abschaffung der Garantie und den automatischen Eintritt in die zweite Säule stimmen?
 
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Hlasovali by ste za dôveru vláde a zachovanie eura?
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Würden Sie für das Vertrauen in die Regierung und die Beibehaltung des Euro stimmen?
 
 </StackComponent>
 
-## 4. Otázka by mala byť čo najkonkrétnejšia
+## 4. Die Frage sollte so spezifisch wie möglich sein.
 
-Ide o to, aby bolo možné skontrolovať odpoveď po 4 rokoch (na konci volebného obdobia).
-
-<br />
+Die Antwort soll nach 4 Jahren (am Ende der Wahlperiode) überprüft werden können.
 
 <StackComponent spacing="extra-small">
 
-<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Mala by sa zahusťovať zástavba v centre mesta?
+<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Sollte die Entwicklung im Stadtzentrum verdichtet werden?
 
-<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Podľa môjho názoru by mala byť vybudovaná rýchlostná cesta z ruzyňského letiska do centra Prahy. (Správna odpoveď by bola: Budem presadzovať/chcem, aby sa v nasledujúcich 4 rokoch začala stavať rýchlodráha z letiska do centra Prahy)
+<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Meiner Meinung nach sollte eine Schnellstraße vom Flughafen Ruzyně ins Zentrum von Prag gebaut werden. (Die richtige Antwort wäre: Ich werde mich dafür einsetzen, dass in den nächsten 4 Jahren eine Schnellstraße vom Flughafen ins Zentrum von Prag gebaut wird)
 
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Mala by sa cena listkov na verejnú dopravu znížiť o 10 % pre seniorov a študentov?
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Sollte der Preis für Fahrkarten im öffentlichen Nahverkehr für Senioren und Studenten um 10 % gesenkt werden?
 
 </StackComponent>
 
-## 5. Otázka musí byť krátka a zrozumiteľná
+## 5. Die Frage muss kurz und klar sein
 
-Chceme, aby si respondent otázky skutočne prečítal a porozumel im. Preto ich formulujeme v rozsahu maximálne 20 slov, pričom akýkoľvek popis obmedzujeme na 50 slov.
-
-<br />
+Wir möchten, dass der Befragte die Fragen tatsächlich liest und versteht. Deshalb formulieren wir sie in maximal 20 Wörtern und beschränken jede Beschreibung auf 50 Wörter.
 
 <StackComponent spacing="extra-small">
 
-<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Hlasovali by ste za:  
-zrušenie sociálneho príspevku pre rodičov samoživiteľov,
-zníženie príspevku pri narodení dieťaťa len u rodičov s nízkymi príjmami,
-jednotnú celkovú výšku rodičovského príspevku (220 000Kč) a väčšiu flexibilitu pri výbere výšky a dĺžky poberania rodičovského príspevku,
-zníženie príspevku na starostlivosť,
-zníženie dávky v nezamestnanosti a zrušenie možnosti príplatku k dávke vo výške minimálneho zárobku,
-zavedenie príspevku na začatie podnikania,
-sprísnenie podmienok nároku na nemocenské a materské pre samostatne zárobkovo činné osoby?
+<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Würden Sie stimmen für:
 
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Súhlasím so zavedením turniketov v metre.
+die Abschaffung des Sozialgeldes für Alleinerziehende, die Kürzung des Geburtsgeldes nur für Eltern mit geringem Einkommen, einen einheitlichen Gesamtbetrag des Elterngeldes (220 000 CZK) und eine größere Flexibilität bei der Wahl der Höhe und der Dauer des Elterngeldes, die Kürzung des Betreuungsgeldes, die Kürzung des Arbeitslosengeldes und die Abschaffung der Möglichkeit eines Zuschusses zum Arbeitslosengeld in Höhe des Mindesteinkommens, die Einführung eines Existenzgründerzuschusses, die Verschärfung der Bedingungen für den Anspruch auf Krankengeld und Mutterschaftsgeld für Selbständige?
+
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Ich bin mit der Einführung von Drehkreuzen in der U-Bahn einverstanden.
 
 </StackComponent>
 
-## 6. Otázky s popismi musia mať zmysel aj bez nich
+## 6. Fragen mit Beschreibungen müssen auch ohne sie Sinn machen
 
-Veľký počet ľudí číta len samotnú otázku, nie popis. Môže sa stať, že popis sa na mobilnom zariadení nezobrazí.
+Viele Menschen lesen nur die Frage selbst und nicht die Beschreibung. Es kann vorkommen, dass die Beschreibung auf einem mobilen Gerät nicht angezeigt wird.
 
 <br />
 
 <StackComponent spacing="extra-small">
 
-<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Hlasovali by ste za zrušenie záruky a automatický vstup do druhého piliera?
+<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Würden Sie dafür stimmen, die Garantie zu entfernen und automatisch in die zweite Säule einzusteigen?
 
-<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Má podľa vás zmysel pripájať sa k podobným projektom?
+<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Glauben Sie, dass es sinnvoll ist, sich ähnlichen Projekten anzuschließen?
 
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Súhlasím so spoplatnením vjazdu áut do centra mesta, napríklad formou mýta.
-
-</StackComponent>
-
-## 7. Uprednostňujeme otázky v pozitívnej forme, vyhýbame sa mätúcej forme dvojitému záporu
-
-Nasledujúci príklad ukazuje, že dvojitý zápor je zavádzajúci a nepresný.
-
-<br />
-
-<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Na Vysočine by nemalo byť úložisko jadrového odpadu za každú cenu.
-
-<br />
-
-V skutočnosti tu nie je jasné, s čím opýtaný nesúhlasí:
-
-a) nie, nemalo by sa stavať,
-
-b) nesúhlasím, malo by sa vybudovať.
-
-Správne formulovaná otázka by mala znieť: "Mal by kraj urobiť všetko pre to, aby zabránil vybudovaniu úložiska jadrového odpadu?").
-
-<br />
-
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Stredné školy by sa mali naďalej zlučovať do väčších celkov.
-
-<br />
-
-Nie "Stredné školy by sa už nemali spájať do väčších celkov".
-
-## 8. Otázka musí byť napísaná zrozumiteľným jazykom
-
-Otázky sú formulované tak, aby im porozumeli rôzne sociálne skupiny.
-
-<br />
-
-<StackComponent spacing="extra-small">
-
-<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Nový územný plán musí regulovať výškovú výstavbu, ktorá môže poškodiť panorámu Prahy.
-
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Výstavba mrakodrapov v historickom centre by mala byť zakázaná.
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Ich bin für die Erhebung von Gebühren für die Einfahrt ins Stadtzentrum, zum Beispiel in Form einer Maut.
 
 </StackComponent>
 
-## 9. Vyberáme aj témy, ktoré sú zaujímavé, aj keď nie úplne dôležité.
+## 7. Wir bevorzugen Fragen in der positiven Form und vermeiden die verwirrende doppelte Negativform
+
+Das folgende Beispiel zeigt, dass die doppelte Verneinung irreführend und ungenau ist.
+
+<br />
+
+<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Es sollte kein Atommülllager in den Highlands geben, egal um welchen Preis
+
+Tatsächlich ist hier nicht klar, womit der Befragte nicht einverstanden ist:
+
+a) nein, es sollte nicht gebaut werden,
+
+b) nicht einverstanden, es sollte gebaut werden.
+
+Eine richtig formulierte Frage müsste lauten: "Sollte der Landkreis alles tun, um den Bau eines Atommülllagers zu verhindern?").
+
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Gymnasien sollten weiterhin zu größeren Einheiten zusammengelegt werden.
+
+Nicht "Gymnasien sollten nicht mehr zu größeren Einheiten zusammengelegt werden".
+
+## 8. Die Frage muss in einfacher Sprache formuliert sein
+
+<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Die Fragen werden so formuliert, dass sie von verschiedenen gesellschaftlichen Gruppen verstanden werden können.
+
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Der neue Flächennutzungsplan muss den Bau von Hochhäusern regeln, die die Prager Skyline verschandeln können.
+
+<br />
+
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Der neue Flächennutzungsplan muss den Bau von Hochhäusern regeln, die die Prager Skyline verschandeln können.
+
+## 9. Wir wählen auch Themen aus, die interessant sind, obwohl sie nicht ganz so wichtig sind.
 
 <StackComponent spacing="extra-small">
 
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Hlasovali by ste za návrh na farebnú signalizáciu pre poslancov, ako majú hlasovať?
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Würden Sie für den Vorschlag stimmen, den Abgeordneten farblich zu signalisieren, wie sie abstimmen sollen?
 
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Hlasovali by ste za zákon "Václav Havel prispel k slobode a demokracii."?
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Würden Sie für das Gesetz "Václav Havel hat zu Freiheit und Demokratie beigetragen" stimmen?
 
 </StackComponent>

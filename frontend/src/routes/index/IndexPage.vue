@@ -85,37 +85,27 @@ const handleSubscribe = async () => {
       <BlobComponent color="red" class="blob2" />
       <StackComponent spacing="medium" centered class="calc-main">
         <BodyText size="medium" tag="h1" color="fg-strong">
-          <strong>Voľby do Európskeho parlamentu na Slovensku 2024</strong
+          <strong>Die Europawahl in Österreich</strong
           ><br />
-          8. júna 2024
+          9. Juni 2024
           <br />
         </BodyText>
         <HeadlineText tag="p" size="small">
-          Európske voľby
+          Europawahl
           <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
         </HeadlineText>
         <BodyText size="large"
-          >Pripravujeme pre vás volebnú kalkulačku pre Európske voľby.</BodyText
+          >Der Start ist für 8. Mai 2024 geplant.</BodyText
         >
-        <StackComponent class="section" spacing="large" centered>
-          <ButtonComponent kind="link" @click="scrollDown">
-            <div class="button-content">
-              Staršie kalkulačky<IconComponent
-                :icon="mdiArrowDown"
-              ></IconComponent>
-            </div>
-          </ButtonComponent>
-        </StackComponent>
       </StackComponent>
     </div>
     <section class="subscribe">
       <StackComponent spacing="small" centered>
         <TitleText size="large" tag="h2">
-          Chcete vedieť o nových kalkulačkách?
+          Möchten Sie über neue Rechner informiert werden?
         </TitleText>
         <BodyText size="small" centered>
-          Zanechajte nám váš e-mail a dáme vám vedieť vždy, keď spustíme novú
-          kalkulačku.
+          Hinterlassen Sie uns Ihre E-Mail-Adresse und wir informieren Sie immer, wenn wir einen neuen Rechner starten.
         </BodyText>
         <BodyText v-if="success" size="small">
           {{ message }}
@@ -144,7 +134,7 @@ const handleSubscribe = async () => {
               :loading="posting"
               @click.prevent="handleSubscribe"
             >
-              Odeslat
+              Senden
             </ButtonComponent>
           </StackComponent>
         </form>
@@ -155,293 +145,55 @@ const handleSubscribe = async () => {
     </section>
     <StaticContentLayout>
       <StackComponent class="section" spacing="small" centered>
-        <TitleText size="large" tag="h2">Ako vzniká kalkulačka?</TitleText>
+        <TitleText size="large" tag="h2"
+          >Wie wird der Wahlrechner entwickelt?</TitleText
+        >
         <BodyText size="medium"
-          >Volebná kalkulačka je projektom neziskovej organizácie KohoVolit.eu a
-          je nestranným pomocníkom pri vašom rozhodovaní, koho voliť.</BodyText
+          >Wahlrechner.at ist eine zivilgesellschaftliche Initiative der
+          Organisationen KohoVolit.eu, wahlbeobachtung.org, PolEdu - Politics &
+          Education, Bizeps, Vokskabin.hu/Andrássy Universität Budapest und dem
+          Gründungsverein Österreichische Demokratiestiftung. Es handelt sich um
+          ein überparteiliches Instrument, das Ihnen dabei helfen soll, sich vor
+          der Europawahl umfassend über die Positionen der kandidierenden
+          Parteien zu informieren.</BodyText
         >
         <div class="info-bubbles-grid section">
           <InfoBubble image="info-1.png">
             <BodyText size="small"
-              >Prípravíme približne 40 otázok na aktuálne politické témy.
+              >Wir werden etwa 40 Fragen zu aktuellen politischen Themen
+              stellen.
             </BodyText>
           </InfoBubble>
           <InfoBubble image="info-2.png">
             <BodyText size="small"
-              >Otázky položíme všetkým kandidátom / stranám.
+              >Wir werden Fragen an alle Kandidierenden / Parteien richten.
             </BodyText>
           </InfoBubble>
           <InfoBubble image="info-3.png">
             <BodyText size="small"
-              >Z väčšiny z nich dostaneme odpovede.
+              >Wir werden von den meisten Kandidierenden/Parteien Antworten
+              erhalten.
             </BodyText>
           </InfoBubble>
           <InfoBubble image="info-4.png">
             <BodyText size="small"
-              >Volebná kalkulačka vám s nimi vypočíta zhodu názorov.</BodyText
+              >Der Wahlrechner wird die Übereinstimmung mit Ihren Positionen
+              berechnen.</BodyText
             >
           </InfoBubble>
         </div>
       </StackComponent>
       <StackComponent class="section" spacing="large" centered>
         <BodyText size="medium"
-          >Volebná kalkulačka je len informačnou službou a jej cieľom nie je
-          poskytovať konkrétne volebné odporúčania.
+          >Der Wahlrechner ist ein reiner Informationsdienst und dient nicht dazu, konkrete Wahlempfehlungen abzugeben.
         </BodyText>
-        <ButtonComponent kind="link" @click="router.push('/o-nas')">
+        <ButtonComponent kind="link" @click="router.push('/uber-den-wahlrechner')">
           <div class="button-content">
-            Zistiť viac<IconComponent :icon="mdiArrowRight"></IconComponent>
+            Mehr herausfinden<IconComponent :icon="mdiArrowRight"></IconComponent>
           </div>
         </ButtonComponent>
       </StackComponent>
       <DonateBlock />
-      <StackComponent spacing="large">
-        <div ref="info"></div>
-        <TitleText size="large" tag="h2">
-          Volebné kalkulačky pre už uskutočnené voľby
-        </TitleText>
-        <MasonryGrid style="align-self: stretch">
-          <CardComponent corner="top-right" padding="medium" border shadow>
-            <div class="card-content">
-              <div class="card-content-text">
-                <TitleText tag="h3" size="medium">
-                  Prezidentské voľby 2024
-                </TitleText>
-                <BodyText size="medium"
-                  >Voľby prezidenta Slovenskej republiky, 42 otázok, cca 10
-                  minút</BodyText
-                >
-              </div>
-              <ButtonComponent
-                kind="filled"
-                color="primary"
-                @click="
-                  router.push({
-                    name: appRoutes.guide.name,
-                    params: {
-                      ...route.params,
-                      type: `${'volby'}`,
-                      first: 'prezidentske-2024',
-                      second: 'kalkulacka',
-                    },
-                    query: { ...route.query },
-                  })
-                "
-              >
-                Spustiť kalkulačku
-                <template #iconAfter>
-                  <IconComponent :icon="mdiArrowRight" />
-                </template>
-              </ButtonComponent>
-            </div>
-          </CardComponent>
-          <CardComponent corner="top-left" padding="medium" border shadow>
-            <div class="card-content">
-              <div class="card-content-text">
-                <TitleText tag="h3" size="medium"
-                  >Prezidentské voľby 2024: 2. kolo</TitleText
-                >
-                <BodyText size="medium"
-                  >Korčok × Pellegrini, 30 otázok, 5–10 minút</BodyText
-                >
-              </div>
-              <ButtonComponent
-                kind="outlined"
-                color="primary"
-                @click="
-                  router.push({
-                    name: appRoutes.guide.name,
-                    params: {
-                      ...route.params,
-                      type: `${'volby'}`,
-                      first: 'prezidentske-2024',
-                      second: 'kalkulacka-2-kolo',
-                    },
-                    query: { ...route.query },
-                  })
-                "
-              >
-                Spustiť kalkulačku pre 2. kolo
-                <template #iconAfter>
-                  <IconComponent :icon="mdiArrowRight" />
-                </template>
-              </ButtonComponent>
-            </div>
-          </CardComponent>
-          <CardComponent corner="top-left" padding="medium" border shadow>
-            <div class="card-content">
-              <div class="card-content-text">
-                <TitleText tag="h3" size="medium"
-                  >Prezidentské voľby 2024 pre mladých</TitleText
-                >
-                <BodyText size="medium"
-                  >Otázky, ktoré rezonujú mladou generáciou, 25 otázek, cca 5
-                  minut</BodyText
-                >
-              </div>
-              <ButtonComponent
-                kind="outlined"
-                color="primary"
-                @click="
-                  router.push({
-                    name: appRoutes.guide.name,
-                    params: {
-                      ...route.params,
-                      type: `${'volby'}`,
-                      first: 'prezidentske-2024',
-                      second: 'pre-mladych',
-                    },
-                    query: { ...route.query },
-                  })
-                "
-              >
-                Spustiť kalkulačku
-                <template #iconAfter>
-                  <IconComponent :icon="mdiArrowRight" />
-                </template>
-              </ButtonComponent>
-            </div>
-          </CardComponent>
-          <CardComponent corner="top-left" padding="medium" border shadow>
-            <div class="card-content">
-              <div class="card-content-text">
-                <TitleText tag="h3" size="medium"
-                  >Prezidentské voľby 2024 pre mladých: 2. kolo</TitleText
-                >
-                <BodyText size="medium"
-                  >Otázky, ktoré rezonujú mladou generáciou, 25 otázek, cca 5
-                  minut</BodyText
-                >
-              </div>
-              <ButtonComponent
-                kind="outlined"
-                color="primary"
-                @click="
-                  router.push({
-                    name: appRoutes.guide.name,
-                    params: {
-                      ...route.params,
-                      type: `${'volby'}`,
-                      first: 'prezidentske-2024',
-                      second: 'pre-mladych-2-kolo',
-                    },
-                    query: { ...route.query },
-                  })
-                "
-              >
-                Spustiť kalkulačku pre 2. kolo
-                <template #iconAfter>
-                  <IconComponent :icon="mdiArrowRight" />
-                </template>
-              </ButtonComponent>
-            </div>
-          </CardComponent>
-          <CardComponent corner="top-right" padding="medium" border shadow>
-            <div class="card-content">
-              <div class="card-content-text">
-                <TitleText tag="h3" size="medium"
-                  >Parlamentné voľby 2023</TitleText
-                >
-                <BodyText size="medium"
-                  >Voľby do Národnej rady Slovenskej republiky, 42 otázok, cca
-                  10 minút</BodyText
-                >
-              </div>
-              <ButtonComponent
-                kind="filled"
-                color="primary"
-                @click="
-                  router.push({
-                    name: appRoutes.guide.name,
-                    params: {
-                      ...route.params,
-                      type: `${'volby'}`,
-                      first: 'nrsr-2023',
-                      second: 'kalkulacka',
-                    },
-                    query: { ...route.query },
-                  })
-                "
-              >
-                Spustiť kalkulačku
-                <template #iconAfter>
-                  <IconComponent :icon="mdiArrowRight" />
-                </template>
-              </ButtonComponent>
-            </div>
-          </CardComponent>
-          <CardComponent corner="top-left" padding="medium" border shadow>
-            <div class="card-content">
-              <div class="card-content-text">
-                <TitleText tag="h3" size="medium"
-                  >Parlamentné voľby 2023 pre mladých</TitleText
-                >
-                <BodyText size="medium"
-                  >Otázky, ktoré rezonujú mladou generáciou, 25 otázek, cca 5
-                  minut</BodyText
-                >
-              </div>
-              <ButtonComponent
-                kind="outlined"
-                color="primary"
-                @click="
-                  router.push({
-                    name: appRoutes.guide.name,
-                    params: {
-                      ...route.params,
-                      type: `${'volby'}`,
-                      first: 'nrsr-2023',
-                      second: 'pre-mladych',
-                    },
-                    query: { ...route.query },
-                  })
-                "
-              >
-                Spustiť kalkulačku
-                <template #iconAfter>
-                  <IconComponent :icon="mdiArrowRight" />
-                </template>
-              </ButtonComponent>
-            </div>
-          </CardComponent>
-          <CardComponent corner="top-left" padding="medium" border shadow>
-            <div class="card-content">
-              <div class="card-content-text">
-                <TitleText tag="h3" size="medium"
-                  >Inventúra hlasovaní</TitleText
-                >
-                <BodyText size="medium"
-                  >Volebná kalkulačka na základe skutočných hlasovaní poslancov
-                  a poslankýň Národnej rady SR v 8. volebnom období
-                  2020–2023</BodyText
-                >
-              </div>
-              <ButtonComponent
-                kind="outlined"
-                color="primary"
-                tag="a"
-                @click="
-                  router.push({
-                    name: appRoutes.guide.name,
-                    params: {
-                      ...route.params,
-                      type: `${'volby'}`,
-                      first: 'nrsr-2023',
-                      second: 'inventura-2020-2023',
-                    },
-                    query: { ...route.query },
-                  })
-                "
-              >
-                Spustiť inventúru hlasovaní
-                <template #iconAfter>
-                  <IconComponent :icon="mdiArrowRight" />
-                </template>
-              </ButtonComponent>
-            </div>
-          </CardComponent>
-        </MasonryGrid>
-      </StackComponent>
     </StaticContentLayout>
     <FooterMultiWord class="section" />
   </StickyHeaderLayout>

@@ -37,278 +37,178 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
     </StickyHeaderLayout>
     <StaticContentLayout>
       <StackComponent spacing="large" class="section">
-        <HeadlineText tag="h1" size="large">O kalkulačke</HeadlineText>
+        <HeadlineText tag="h1" size="large">Über den Wahlrechner</HeadlineText>
         <BodyText size="large">
-          Čo je to volebná kalkulačka? Ako sa dá použiť a ako funguje? Kto za
-          ňou stojí? Ako sa vytvárajú a vyhodnocujú otázky? Všetko o nej sa
-          dozviete nižšie.
+          Die Orientierungshilfe für Wähler:innen in Österreich
         </BodyText>
-
-        <TitleText size="large" tag="h2">Čo je to volebná kalkulačka</TitleText>
+        <TitleText size="large" tag="h2">Mission</TitleText>
         <BodyText size="large">
-          Volebná kalkulačka® (voting advice application) je jednoduchý,
-          zvyčajne internetový test, ktorý porovnáva vaše politické postoje s
-          postojmi politických strán alebo osôb (zákonodarcov, kandidátov vo
-          voľbách atď.). Viac informácií o histórii volebných kalkulačiek a
-          úspešných príkladoch z celého sveta si môžete prečítať na Wikipédii.
+          Österreichs Demokratie braucht eine überparteiliche, ausgewogene,
+          barrierefreie und wissenschaftlich fundierte Unterstützung für
+          Wähler:innen. Insbesondere Erstwähler:innen benötigen
+          Orientierungshilfen.
         </BodyText>
-
-        <TitleText size="large" tag="h2">
-          Kto a ako vytvára volebnú kalkulačku
+        <BodyText size="large">
+          Für dieses Ziel haben sich folgende Organisationen aus
+          Zivilgesellschaft und Wissenschaft zusammengefunden, um eine neue
+          Orientierungshilfe für die Wähler:innen in Österreich (Voting Advice
+          Application, VAA) zu entwickeln:
+        </BodyText>
+        <BodyText size="large">
+          <ul>
+            <li>Gründungsverein Österreichische Demokratiestiftung</li>
+            <li>KohoVolit.eu</li>
+            <li>wahbeobachtung.org</li>
+            <li>PolEdu - Politics & Education</li>
+            <li>Bizeps</li>
+            <li>Vokskabin.hu/Andrássy Universität Budapest</li>
+          </ul>
+        </BodyText>
+        <TitleText size="large" tag="h2"
+          >Wie funktioniert wahlrechner.at?
         </TitleText>
         <BodyText size="large">
-          Českú a slovenskú volebnú kalkulačku vyvíja a prevádzkuje spoločnosť
-          <a href="https://kohovolit.eu/" target="_blank">KohoVolit.eu</a> od
-          roku 2006. Celkovo sme vytvorili viac ako 100 volebných kalkulačiek
-          pre všetky typy volieb (európske, prezidentské, parlamentné,
-          regionálne a komunálne). Pravidelne pomáhame vytvárať kalkulačky aj v
-          Maďarsku a ďalších krajinách. Doteraz najúspešnejšiu kalkulačku
-          využili viac ako 2 milióny voličov pred prezidentskými voľbami v
-          Českej republike v roku 2023.
-        </BodyText>
-        <BodyText size="large">
-          <a href="https://kohovolit.eu/" target="_blank">KohoVolit.eu</a>
-          vytvára dva typy kalkulačiek:
-        </BodyText>
-        <BodyText size="large">
-          Volebná kalkulačka (názorový test) porovnáva vaše odpovede s
-          odpoveďami, ktoré poskytli politické strany alebo samotní kandidáti.
-          Ak niektorá strana alebo kandidát chýba, je to vždy preto, že sme
-          odpovede nedostali.
-        </BodyText>
-        <BodyText size="large">
-          Inventúra hlasovaní porovnáva vaše odpovede so skutočnými hlasovaniami
-          v zákonodarnom zbore v uplynulom volebnom období.
-        </BodyText>
-
-        <TitleText size="large" tag="h2">Ako vytvárame otázky</TitleText>
-        <BodyText size="large">
-          Najmä vo volebnej kalkulačke je výber a formulácia otázok kľúčovým
-          bodom. V záujme transparentnosti uvádzame náš dokument, ktorým sa
-          riadi tvorba otázok:
-          <router-link to="/metodika-tvorby-otazek">
-            Metodika výberu tém a formulácie otázok.
-          </router-link></BodyText
+          Wahlrechner ist ein interaktives Online-Tool mit dem Ziel, die
+          Nutzer:innen über die wichtigsten (gesellschafts-)politischen Fragen
+          der aktuellen Wahlperiode zu informieren und ihnen eine
+          Orientierungshilfe über die Positionen der Parteien anzubieten. </BodyText
         ><BodyText size="large">
-          V prevažnej väčšine prípadov zasielame stranám alebo kandidátom viac
-          otázok, ako sa použije vo výslednej kalkulačke. Zvyčajne sa vyraďujú
-          otázky, pri ktorých existuje zhoda medzi kandidátmi (t. j. takéto
-          otázky nerozdeľujú kandidátov). Potom sa vyradia otázky, ktoré sa
-          nepodarili (kandidáti správne upozornili na problém s otázkou alebo
-          sme naň prišli sami po jej odoslaní), a otázky, ktoré sú podobné iným.
+          Der Wahlrechner stellt den Nutzer:innen rund 40 Fragen, die mit Dafür
+          oder Dagegen beantwortet werden können. Zusätzlich kann Weiß
+          nicht/Weiter ausgewählt werden. Die Angaben der Nutzer:innen werden
+          mit den Angaben der Parteien verglichen und die Nutzer:innen bekommen
+          ein Ergebnis, wie ihre Angaben mit jenen der Parteien übereinstimmen. </BodyText
+        ><BodyText size="large">
+          Der österreichische Wahlrechner kooperiert auf europäischer Ebene mit
+          VoteMatch.eu, so können die Nutzer:innen ihre Antworten mit denen von
+          Parteien aus anderen EU- Ländern vergleichen. </BodyText
+        ><BodyText size="large">
+          15 Fragen aus dem europäischen Katalog übernehmen alle
+          Wahlorientierungshilfen, die an VoteMatch.eu teilnehmen. 25 weitere
+          Fragen werden nach nationalen Themenlagen erarbeitet. So ergibt sich
+          ein Fragenkatalog von 40 Fragen.
         </BodyText>
-
-        <TitleText size="large" tag="h2">Ako hodnotíme zhodu</TitleText>
-        <BodyText size="large">
-          Otázka, na ktorú neodpoviete "áno" alebo "nie", sa do výpočtu
-          nezapočítava. Ak na otázku odpoviete "Áno", strany alebo kandidáti,
-          ktorí tiež odpovedali "Áno", získajú jeden bod. Strany alebo
-          kandidáti, ktorí odpovedia "Nie", strácajú jeden bod. Ak odpoviete
-          "Nie", strany alebo kandidáti, ktorí tiež odpovedali "Nie", získajú
-          jeden bod. Tí, ktorí odpovedia "Áno", strácajú jeden bod. Strany alebo
-          kandidáti, ktorí neodpovedali "Áno" alebo "Nie", nezískavajú ani
-          nestrácajú žiadne body.
-        </BodyText>
-        <BodyText size="large">
-          Potom sa pre každú stranu alebo kandidáta spočítajú body za všetky
-          otázky, na ktoré ste odpovedali "áno" alebo "nie", a výsledok sa
-          vydelí počtom takýchto otázok. Takto sa získa zhoda medzi -100 % a 100
-          %. Kvôli pohodlnosti sa zhoda prepočíta na rozsah od 0 % do 100 %
-          vydelením dvoma a pripočítaním 50 % (pre kalkulačky od polovice roka
-          2013).
-        </BodyText>
-
-        <TitleText size="large" tag="h2">
-          Dôležitosť otázok a hlasovania
+        <TitleText size="large" tag="h2"
+          >Wer soll angesprochen werden?
         </TitleText>
         <BodyText size="large">
-          Pri každej otázke alebo hlasovaní máte možnosť nastaviť, aká dôležitá
-          je pre vás zhoda, t. j. váhu, s akou má byť zahrnutá do celkového
-          súčtu zhody. Každej z dvoch úrovní dôležitosti (normálna, vysoká) sa
-          priradí váha a celkový konsenzus je potom váženým priemerom konsenzu v
-          každej otázke alebo hlasovaní. V skutočnosti sa teda namiesto
-          pripočítania alebo odpočítania jedného bodu ku konsenzu pripočíta
-          alebo odpočíta váha príslušnej otázky alebo hlasovania a na konci sa
-          vydelí nie počtom otázok alebo hlasov, ale súčtom absolútnych hodnôt
-          ich váh. Spôsob stanovenia váh je taký, že vysoká dôležitosť má
-          dvojnásobnú váhu v porovnaní s bežnou dôležitosťou.
+          Zielgruppe ist eine möglichst breite Öffentlichkeit, die sich vor der
+          Europawahl informieren will. Wie die Zahlen aus anderen Ländern
+          zeigen, werden Online-Wahlhilfen von Jahr zu Jahr beliebter. Die
+          Online-Wahlhilfe des Projektpartners KohoVolit.eu aus Tschechien
+          erreichte bei den Präsidentschaftswahlen 2023 40 Prozent der
+          Wähler:innen. In Deutschland wurde der Wahl-O-Mat im Vorfeld der
+          letzten Bundestagswahl 2021 21,3 Millionen Mal aufgerufen.
         </BodyText>
-        <BodyText size="large">
-          Môže sa stať, že dosiahnete rovnakú zhodu s dvoma alebo viacerými
-          stranami alebo osobami. V takom prípade sa poradie strán alebo osôb v
-          zobrazení výslednej zhody určí náhodne.
-        </BodyText>
-
-        <TitleText tag="h2" size="large">História kalkulačky</TitleText>
-        <BodyText size="large">
-          Združenie KohoVolit.eu vytvára volebné kalkulačky od roku 2006 takmer
-          pre každé voľby na všetkých úrovniach politickej súťaže (európske,
-          prezidentské, parlamentné, regionálne a komunálne) v Českej republike,
-          na Slovensku a v posledný rokoch aj v Maďarsku.
-        </BodyText>
-        <BodyText size="large">
-          Celkovo pripravila približne 100 aplikácií. KohoVolit.eu je lídrom v
-          oblasti volebných kalkulačiek v oboch krajinách a postupne zaviedol do
-          českého a slovenského jazyka pojem "volebná kalkulačka" ako všeobecné
-          označenie pre tento druh aplikácií.
-        </BodyText>
-        <BodyText size="large">
-          Pojem volebná kalkulačka sa už vžil do politického myslenia občanov,
-          médií i samotných politických subjektov.
-        </BodyText>
-
         <TitleText size="large" tag="h2">
-          Významná aktualizácia s Česko.Digital (2022)
+          Wie gewährleistet wahlrechner.at seine politische Unabhängigkeit und
+          Ausgewogenheit?
         </TitleText>
         <BodyText size="large">
-          Vďaka niekoľkomesačnej spolupráci s komunitou odborných dobrovoľníkov
-          <a href="https://cesko.digital" target="_blank">Česko.Digital</a> a
-          angažovanosti niekoľkých desiatok nadšencov prešla kalkulačka v roku
-          2022 zásadnými technickými a dizajnovými zmenami. Všetkým zúčastneným
-          patrí obrovská vďaka.
+          Das Programm speichert keine persönlichen Daten, so dass die
+          Anonymität der Benutzer:innen gewährleistet ist. Anhand der Ja/Nein-
+          oder Weiß nicht/Weiter-Antworten können die Nutzer:innen die
+          prozentuale Übereinstimmung oder Abweichung zwischen ihren eigenen
+          Positionen und denen der Parteien vergleichen, die nach dem Ausfüllen
+          des Fragebogens in einem Diagramm mit Prozentzahlen und einer
+          Rangliste zusammengefasst werden. Das Programm berechnet den Grad der
+          Übereinstimmung oder Nichtübereinstimmung anhand einer mathematischen
+          Gleichung.
         </BodyText>
-
+        <BodyText size="large">
+          Je nach Antwort werden unterschiedliche Werte generiert. Der Wert ist
+          1 , wenn die Antworten der Parteien und der Nutzer:innen identisch
+          sind, minus 1, wenn die Antworten unterschiedlich sind. Die Weiß
+          nicht/Weiter-Antworten und das Überspringen von Fragen, d. h. wenn die
+          Nutzer:innen bei einer oder mehreren Fragen keine der
+          Antwortmöglichkeiten nutzen, werden diese Fragen nicht in Berechnungen
+          verwendet. Am Ende weist das Programm die Nutzer:innen darauf hin,
+          dass das Ergebnis auf der Grundlage der mit Ja oder Nein beantworteten
+          Fragen berechnet wurde.
+        </BodyText>
+        <BodyText size="large">
+          Für die Entwickler:innen von Wahlrechner bestand die erste und
+          wichtigste Aufgabe darin, die Grundsätze und Ziele des Programms
+          festzulegen, nämlich Wissenschaftlichkeit, Objektivität und
+          parteipolitische Neutralität.
+        </BodyText>
+        <TitleText tag="h2" size="large"
+          >Wer sind die Projektpartner?</TitleText
+        >
         <BodyText size="large">
           <ul>
             <li>
-              <a
-                href="https://www.seznamzpravy.cz/autor/michal-skop-1250/"
-                target="_blank"
-                >Michal Škop</a
+              <strong
+                >Gründungsverein Österreichische Demokratiestiftung</strong
               >
-              - KohoVolit.eu
+              <p>
+                Die Österreichische Demokratiestiftung (Gründungsverein) ist
+                unabhängig, überparteilich und fördert demokratische
+                Auseinandersetzungen. Ziel der Österreichischen
+                Demokratiestiftung ist es, dauerhaft Projekte und Ideen zu
+                unterstützen oder umzusetzen, die demokratiepolitische
+                Grundlagen vermitteln, verstärken und die demokratische
+                Infrastruktur stärken. Für Wahlrechner.at ist die
+                Österreichische Demokratiestiftung für Projektmanagement
+                verantwortlich.
+              </p>
             </li>
             <li>
-              <a
-                href="https://www.linkedin.com/in/lucie-zatorska-81714350/"
-                target="_blank"
-                >Lucie Zátorská</a
-              >
-              - Scrum Master
+              <strong>KohoVolit.eu</strong>
+              <p>
+                KohoVolit.eu ist der Betreiber der weitverbreitetsten Wahlhilfe
+                (Wahlrechner) in Mitteleuropa. Seit 2006 erstellt das Projekt
+                Wahlrechner in Tschechien und Slowakei und war bereits an der
+                Entwicklung solcher Anwendungen in insgesamt 7 Ländern
+                beteiligt. Mittlerweile werden regelmäßig mehrere “Wahlrechner”
+                pro Jahr in drei Ländern erstellt. KohoVolit.eu stellt dem
+                Projekt Wahlrechner.at die Software und sein langjähriges
+                Know-how zur Umsetzung von anderen Wahlrechnern zur Verfügung.
+              </p>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/mwenisch/" target="_blank"
-                >Martin Wenisch</a
-              >
-              - mentor Česko.Digital
+              <strong>Vokskabin.hu/Andrássy Universität Budapest</strong>
+              <p>
+                Die ungarische online Wahlhilfe, Vokskabin ist die gemeinsame
+                Initiative der deutschsprachigen Andrássy Gyula Universität
+                Budapest (AUB) und des Netzwerks Politische Kommunikation
+                (netPOL). Für Wahlrechner.at werden Vokskabin und die AUB
+                Unterstützung in den Bereichen redaktionelle Arbeit, Fundraising
+                und Kommunikation leisten.
+              </p>
             </li>
             <li>
-              <a
-                href="https://www.seznamzpravy.cz/autor/katerina-mahdalova-815"
-                target="_blank"
-                >Kateřina Mahdalová</a
-              >
-              - obsah a komunikace
+              <strong>wahbeobachtung.org </strong>
+              <p>
+                Wahlbeobachtung.org ist eine unparteiische Arbeitsgemeinschaft
+                internationaler Wahlbeobachter:innen, mit dem Ziel der
+                Verbesserung österreichischer Wahlprozesse und einem besseren
+                Verständnis für Wahlen speziell bei Jungwähler:innen.
+              </p>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/krystofk/" target="_blank"
-                >Kryštof Korb</a
-              >
-              - Tech Lead
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/mwenisch/" target="_blank"
-                >Gabriela Chladilová</a
-              >
-              - Support Česko.Digital
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/klara-scholleova/"
-                target="_blank"
-                >Klára Schoelleová</a
-              >
-              - UX/UI
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/natalia-bebjakova/"
-                target="_blank"
-                >Natália Bebjaková</a
-              >
-              - UX/UI
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/ondrej-kyjanek-b24832a3/"
-                target="_blank"
-                >Ondřej Kyjánek</a
-              >
-              - Tech Team
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/pavel-vojacek-14420713/"
-                target="_blank"
-                >Pavel Vojáček</a
-              >
-              - Tech Team
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/martin-ladeck%C3%BD-9366ba5/"
-                target="_blank"
-                >Martin Ladecký</a
-              >
-              - Tech Team
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/martinmajlis/"
-                target="_blank"
-                >Martin Majliš</a
-              >
-              - Tech Team
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/tiborkulcar/" target="_blank"
-                >Tibur Kulčár</a
-              >
-              - Tech Team
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/lukasprikryl/"
-                target="_blank"
-                >Lukáš Přikryl</a
-              >
-              - Marketing Lead
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/pavla-radkova/"
-                target="_blank"
-                >Pavla Řádková</a
-              >
-              - UX Research
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/klara-vostinakova/"
-                target="_blank"
-                >Klára Vostiňáková</a
-              >
-              - komunikace
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/doroteja-stamenova-03a50924/"
-                target="_blank"
-                >Doroteja Stamenova</a
-              >
-              - UX/UI
+              <strong>PolEdu - Politics & Education </strong>
+              <p>
+                PolEdu ist ein parteiunabhängiger Verein für politische Bildung
+                mit Sitz in Wien. Für Wahlrechner.at wird PolEdu den Kontakt zu
+                jungen Menschen herstellen und die politischen Inhalte in eine
+                jugendgerechte Sprache bringen.
+              </p>
             </li>
           </ul>
         </BodyText>
-
         <TitleText size="large" tag="h2">
-          Spolprácia s Memo 98 a Infovolby.sk
+          Wie finanziert sich wahlrechner.at?
         </TitleText>
         <BodyText size="large">
-          Obsah volebnej kalkulačky pre parlamentné voľby 2023 a prezidentské
-          voľby 2024 sme vytvárali so združením
-          <a href="https://memo98.sk" target="_blank">Memo 98</a> a projektom
-          <a href="https://infovolby.sk" target="_blank">Infovolby.sk</a>.
+          Wahlrechner.at soll ein Projekt aus der Zivilgesellschaft für die
+          Zivilgesellschaft sein. Wir bewerben uns bei der Stiftung
+          Österreich-Ungarn um eine Förderung für grenzüberschreitende
+          Zusammenarbeit in der Höhe von 15.000 EUR. Weiters werden Spenden zur
+          Unterstützung des Projektes gesammelt. Mittel, die im Zuge des
+          Pilotprojektes nicht verbraucht werden, werden für die Verbesserung
+          der technischen Infrastruktur genutzt, um Wahlrechner als zweite
+          maßgebliche VAA in Österreich zu positionieren.
         </BodyText>
       </StackComponent>
       <DonateBlock />

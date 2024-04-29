@@ -1,86 +1,89 @@
-V tomto dokumentu naleznete informace o tom, jaké informace o Vás zpracováváme my, spolek KohoVolit.eu, IČO: 22841890, se sídlem Vinice 347, Plasy, zapsaný ve spolkovém rejstříku vedeném u Krajského soudu v Plzni, spisová značka: L 5397, jako správce osobních údajů. Dozvíte se také, za jakými účely zpracováváme Vaše osobní údaje a z jakých zdrojů tyto údaje získáváme. V poslední části uvádíme, jaká máte práva při zpracování Vašich osobních údajů a jak je můžete uplatnit.
+In diesem Dokument finden Sie Informationen darüber, welche Informationen über Sie von uns, dem Verein KohoVolit.eu, ID-Nr.: 22841890, mit Sitz in Vinice 347, Plasy, Tschechische Republik, eingetragen im Bundesregister beim Landgericht in Pilsen, Aktenzeichen: L 5397, als Inhaber der personenbezogenen Daten verarbeitet werden. Sie werden auch erfahren, zu welchen Zwecken wir Ihre personenbezogenen Daten verarbeiten und aus welchen Quellen wir diese Daten erhalten. Im letzten Abschnitt informieren wir Sie darüber, welche Rechte Sie bei der Verarbeitung Ihrer personenbezogenen Daten haben und wie Sie diese ausüben können.
 
-## Jaké osobní údaje zpracováváme a za jakými účely?
+## Welche personenbezogenen Daten verarbeiten wir und zu welchen Zwecken?
 
-**Základní verze Volební kalkulačky nepoužívá cookies ani nesbírá žádná data** o Vás. Pokud tak kalkulačku využijete anonymně, nejsou sbírány žádné osobní údaje.
+**Die Basisversion des Wahlrechners verwendet keine Cookies und sammelt keine Daten über Sie.** Wenn Sie den Rechner anonym nutzen, werden also keine personenbezogenen Daten erhoben.
 
-Pokud si ve Volební kalkulačce vytvoříte **uživatelský profil**, budou uloženy následující osobní údaje:
+Wenn Sie im Wahlrechner ein **Benutzerprofil anlegen**, werden folgende personenbezogene Daten gespeichert:
 
-- e-mailová adresa,
-- jméno a příjmení (dobrovolný údaj),
-- adresa trvalého bydliště (dobrovolný údaj),
-- údaje o Vašich odpovědích a odvozených preferencích.
+- E-Mail Adresse,
+- Vor- und Nachname (optional),
+- Ihr ständiger Wohnsitz (optional),
+- Daten zu Ihren Antworten und daraus abgeleitete Präferenzen.
 
-Tyto osobní údaje budeme zpracovávat pro splnění smlouvy, konkrétně pro vedení uživatelského profilu s Vámi, a to do okamžiku zrušení Vašeho uživatelského profilu. Údaje o Vašich odpovědích a odvozených preferencích budeme současně zpracovávat na základě Vašeho souhlasu jako výjimky pro zpracování zvláštní kategorie údajů.
+Wir verarbeiten diese personenbezogenen Daten zur Erfüllung des Vertrages, insbesondere zur Pflege des Nutzerprofils mit Ihnen, bis zur Löschung Ihres Nutzerprofils. Gleichzeitig verarbeiten wir die Daten über Ihre Antworten und abgeleiteten Präferenzen auf der Grundlage Ihrer Einwilligung als Ausnahmen für die Verarbeitung besonderer Datenkategorien.
 
-V případě přihlášení přes profil na **Facebooku, Googlu a Twitteru** se uloží následující osobní údaje:
+Im Falle der Anmeldung über **Facebook-, Google- und Twitter-Profile** werden folgende personenbezogene Daten gespeichert:
 
-- jméno,
-- profilová fotografie,
-- adresa trvalého bydliště (dobrovolný údaj).
+- Name,
+- Profilfoto,
+- Wohnanschrift (optionale Daten).
 
-Tyto osobní údaje budeme zpracovávat pro splnění smlouvy, konkrétně pro umožnění přihlášení přes profil u třetích stran, a to do okamžiku zrušení Vašeho uživatelského profilu.
+Wir verarbeiten diese personenbezogenen Daten zur Vertragserfüllung, insbesondere um Ihnen zu ermöglichen, sich über Ihr Profil bei Dritten anzumelden, bis Ihr Benutzerprofil gelöscht wird.
 
-V případě **sdílení Vašich odpovědí** budeme dále sdělovat údaje o Vašich odpovědích a odvozených preferencích. Tyto údaje budeme zpracovávat na základě Vašeho souhlasu, a to za účelem sdílení Vašich odpovědí, po dobu 1 měsíce od provedení sdílení.
+Im Falle der **Weitergabe Ihrer Antworten** werden wir darüber hinaus Daten über Ihre Antworten und die daraus abgeleiteten Präferenzen übermitteln. Wir verarbeiten diese Daten auf der Grundlage Ihrer Einwilligung zum Zweck der Weitergabe Ihrer Antworten für einen Zeitraum von einem Monat nach der Weitergabe.
 
-V případě udělení souhlasu pro **příležitostné zasílání propagačních sdělení** uložíme Vaši e-mailovou adresu a budeme ji zpracovávat pro tyto účely. Dozvíte se tak například o spuštění Volební kalkulačky pro nadcházející volby. Souhlas je možno kdykoliv zrušit a na uvedených kontaktech nebo přímo v zaslaném e-mailu. Osobní údaje zpracováváme do odvolání Vašeho souhlasu.
+Wenn Sie uns Ihre Zustimmung geben, **gelegentlich Werbemitteilungen zu erhalten**, werden wir Ihre E-Mail-Adresse speichern und für diese Zwecke verarbeiten. So werden Sie beispielsweise über die Einführung des Wahlrechners für die bevorstehenden Wahlen informiert. Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie sich an die oben genannten Kontaktpersonen oder direkt in der zugesandten E-Mail wenden. Wir verarbeiten personenbezogene Daten, bis Sie Ihre Einwilligung widerrufen.
 
-## Z jakých zdrojů osobní údaje získáváme?
+## Aus welchen Quellen erhalten wir personenbezogene Daten?
 
-Osobní údaje, které zpracováváme, pocházejí především od Vás samotných, a to z Vašeho používání webu Volební kalkulačky a vyplňování údajů.
+Die personenbezogenen Daten, die wir verarbeiten, stammen in erster Linie von Ihnen selbst, aus Ihrer Nutzung der Website des Wahlrechners und aus dem Ausfüllen der Daten.
 
-Další osobní údaje získáváme v rámci naší činnosti, přičemž se jedná zejména o odvozené údaje z Vámi poskytnutých údajů, zejména údaje o Vaší předpokládané volební preferenci a shodě s preferencemi vybraného kandidáta.
+Andere personenbezogene Daten erhalten wir im Rahmen unserer Geschäftstätigkeit, die hauptsächlich aus den von Ihnen bereitgestellten Daten abgeleitet werden, insbesondere Daten über Ihre voraussichtliche Wahlpräferenz und die Übereinstimmung mit den Präferenzen des von Ihnen gewählten Kandidaten.
 
-Další osobní údaje můžeme získávat od třetích osob, například při přihlašování do Volební kalkulačky přes služby třetích osob.
+Wir können weitere personenbezogene Daten von Dritten erhalten, z. B. wenn Sie sich über Dienste von Dritten in den Wahlrechner einloggen.
 
-## Jaká máte práva při zpracování osobních údajů?
+## Welche Rechte haben Sie bei der Verarbeitung personenbezogener Daten?
 
-Stejně jako my máme svá práva a povinnosti při zpracování Vašich osobních údajů, máte také Vy při zpracování vašich osobních údajů určitá práva uvedená v následujících odstavcích. Všechna tato práva, stejně jako dotazy či stížnosti, můžete uplatnit na e-mailové adrese info@kohovolit.eu. Váš požadavek vyřídíme vždy co nejdříve, nejpozději však do jednoho měsíce. Tuto lhůtu můžeme ve výjimečných případech prodloužit zejména z důvodu složitosti Vašeho požadavku o další dva měsíce, o čemž bychom Vás informovali.
+Ebenso wie wir bei der Verarbeitung Ihrer personenbezogenen Daten Rechte und Pflichten haben, haben auch Sie bei der Verarbeitung Ihrer personenbezogenen Daten bestimmte Rechte, die in den folgenden Abschnitten erläutert werden. Sie können alle diese Rechte ausüben und sich bei Fragen oder Beschwerden an uns wenden: info@kohovolit.eu. Wir werden Ihre Anfrage immer so schnell wie möglich, spätestens jedoch innerhalb eines Monats, bearbeiten. In Ausnahmefällen können wir diese Frist um weitere zwei Monate verlängern, insbesondere aufgrund der Komplexität Ihres Anliegens, und wir werden Sie darüber informieren.
 
-V souvislosti se zpracováním Vašich osobních údajů Vám konkrétně náleží následující práva:
+Im Zusammenhang mit der Verarbeitung Ihrer personenbezogenen Daten stehen Ihnen insbesondere die folgenden Rechte zu:
 
-1. Právo odvolat souhlas
+1. Das Recht auf Widerruf der Einwilligung
 
-   Máte právo kdykoli odvolat souhlas se zpracováním osobních údajů. Toto můžete učinit odesláním e-mailu na naši adresu. Odvolání souhlasu však nemá vliv na oprávněnost zpracování před udělením takového souhlasu.
+   Sie haben das Recht, Ihre Einwilligung in die Verarbeitung Ihrer personenbezogenen Daten jederzeit zu widerrufen. Sie können dies tun, indem Sie eine E-Mail an unsere Adresse senden. Der Widerruf der Einwilligung berührt jedoch nicht die Rechtmäßigkeit der vor der Einwilligung erfolgten Verarbeitung.
 
-2. Právo na přístup
+2. Recht auf Auskunft
 
-   Máte právo získat od nás potvrzení, zda zpracováváme Vaše osobní údaje či nikoli.
+   Sie haben das Recht, von uns eine Bestätigung darüber zu erhalten, ob wir Ihre personenbezogenen Daten verarbeiten oder nicht.
 
-   Pokud Vaše osobní údaje zpracováváme, máte současně právo požadovat přístup k informacím o účelu a rozsahu zpracování, příjemcích údajů, době zpracování, právu na opravu, výmaz, omezení zpracování a podání námitky proti zpracování, právu podat stížnost u dozorového úřadu a o zdrojích osobních údajů (tyto informace již jsou uvedeny v tomto dokumentu).
+   Wenn wir Ihre personenbezogenen Daten verarbeiten, haben Sie außerdem das Recht, Auskunft über den Zweck und den Umfang der Verarbeitung, die Empfänger der Daten, die Dauer der Verarbeitung, das Recht auf Berichtigung, Löschung, Einschränkung der Verarbeitung und auf Widerspruch gegen die Verarbeitung, das Recht auf Beschwerde bei einer Aufsichtsbehörde und die Quellen der personenbezogenen Daten zu verlangen (diese Informationen sind bereits in diesem Dokument enthalten).
 
-   Stejně tak nás můžete požádat o kopii zpracovávaných osobních údajů. První kopii poskytujeme bezplatně, další již mohou být zpoplatněny. Rozsah poskytnutých údajů může být omezen tak, aby nedošlo k zásahu do práv a svobod jiných osob.
+   Sie können von uns auch eine Kopie der von uns verarbeiteten personenbezogenen Daten verlangen. Die erste Kopie stellen wir Ihnen kostenlos zur Verfügung, weitere können bereits gebührenpflichtig sein. Der Umfang der bereitgestellten Daten kann eingeschränkt werden, um die Rechte und Freiheiten anderer nicht zu beeinträchtigen.
 
-3. Právo na opravu
+3. Recht auf Berichtigung
 
-   Máte právo požadovat od nás opravu nepřesných osobních údajů, které se Vás týkají. Podle účelu zpracování můžete mít také právo na doplnění neúplných osobních údajů, a to i poskytnutím dodatečného prohlášení.
+   Sie haben das Recht, von uns die Berichtigung Sie betreffender unrichtiger personenbezogener Daten zu verlangen. Je nach Zweck der Verarbeitung können Sie auch das Recht haben, unvollständige personenbezogene Daten vervollständigen zu lassen, auch durch Abgabe einer zusätzlichen Erklärung.
 
-4. Právo na výmaz
+4. Recht auf Löschung
 
-   Máte právo požadovat výmaz Vašich osobních údajů, a to v případech, kdy:  
-   Vaše osobní údaje již nepotřebujeme pro účely, pro které byly získány či zpracovávány;  
-   odvoláte souhlas, na základě kterého byly osobní údaje zpracovány, a neexistuje žádný další důvod pro jejich zpracování;
-   vznesete námitku proti zpracování a neexistují další převažující důvody pro zpracování, popř. vznesete námitku proti zpracování za účelem přímého marketingu;
-   osobní údaje jsou zpracovávány v rozporu s právními předpisy.
+   Sie haben das Recht, die Löschung Ihrer personenbezogenen Daten zu verlangen, wenn:
 
-   Toto právo však nemůžete uplatnit v případě, kdy je zpracování potřebné pro splnění našich právních povinností či nám svěřených úkolů ve veřejném zájmu nebo pro určení, výkon či obhajobu právních nároků.
+   Wir benötigen Ihre personenbezogenen Daten nicht mehr für die Zwecke, für die sie erhoben oder verarbeitet wurden;
+   Sie widerrufen die Einwilligung, auf deren Grundlage die personenbezogenen Daten verarbeitet wurden, und es gibt keinen weiteren Grund für die Verarbeitung; Sie legen Widerspruch gegen die Verarbeitung ein, und es gibt keine weiteren zwingenden Gründe für die Verarbeitung, oder Sie legen Widerspruch gegen die Verarbeitung zu Zwecken der Direktwerbung ein; personenbezogene Daten werden unter Verstoß gegen das Gesetz verarbeitet.
 
-5. Právo na omezení zpracování
+   Sie können dieses Recht jedoch nicht ausüben, wenn die Verarbeitung zur Erfüllung unserer rechtlichen Verpflichtungen oder zur Wahrnehmung von Aufgaben, die uns im öffentlichen Interesse übertragen wurden, oder zur Begründung, Ausübung oder Verteidigung von Rechtsansprüchen erforderlich ist.
 
-   Máte právo požadovat omezení zpracování Vašich osobních údajů, a to v případech, kdy:  
-   popíráte přesnost Vašich osobních údajů; v takovém případě můžete požadovat omezení zpracování do doby ověření přesnosti osobních údajů;  
-   zpracování je v rozporu s právními předpisy a místo výmazu budete požadovat omezení zpracování osobních údajů;  
-   Vaše osobní údaje již nepotřebujeme pro účely, pro které byly získány či zpracovávány, avšak Vy je požadujete pro určení, výkon nebo obhajobu právních nároků;  
-   vznesli jste námitku proti zpracování osobních údajů; v takovém případě můžete požadovat omezení zpracování do doby ověření, zda naše oprávněné zájmy převažují.
+5. Recht auf Einschränkung der Verarbeitung
 
-6. Právo na přenositelnost
+   Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen, wenn:
 
-   Máte právo získat kopii Vašich osobních údajů, které zpracováváme automatizovaně na základě Vašeho souhlasu nebo pro splnění smlouvy. Tyto údaje předáme v běžně používaném a strojově čitelném formátu Vám či Vámi určenému správci, pokud to je technicky proveditelné. Rozsah poskytnutých údajů může být omezen tak, aby nedošlo k zásahu do práv a svobod jiných osob.
+   Sie bestreiten die Richtigkeit Ihrer personenbezogenen Daten; in diesem Fall können Sie die Einschränkung der Verarbeitung verlangen, bis die Richtigkeit der personenbezogenen Daten überprüft ist;
 
-7. Právo vznést námitku proti zpracování
+   die Verarbeitung gegen das Gesetz verstößt und Sie anstelle der Löschung die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten verlangen;
 
-   Máte právo vznést námitku proti zpracování Vašich osobních údajů, které zpracováváme na základě našeho oprávněného zájmu. Vaše údaje přestaneme zpracovávat, pokud neexistují další převažující důvody pro zpracování či pokud není zpracování potřebné pro určení, výkon nebo obhajobu právních nároků, popř. pokud vznesete námitku proti zpracování za účelem přímého marketingu.
+   wir Ihre personenbezogenen Daten für die Zwecke, für die sie erhoben oder verarbeitet wurden, nicht mehr benötigen, Sie sie aber zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen benötigen;
 
-8. Právo podat stížnost
+   Sie haben gegen die Verarbeitung Ihrer personenbezogenen Daten Widerspruch eingelegt; in diesem Fall können Sie eine Einschränkung der Verarbeitung beantragen, bis geprüft wurde, ob unsere berechtigten Interessen überwiegen.
 
-   Vedle možnosti uplatnění práv uvedené výše také můžete podat stížnost u příslušného dozorového úřadu, kterým je Úřadu pro ochranu osobních údajů sídlící na adrese Pplk. Sochora 27, 170 00 Praha 7.
+6. Recht auf Übertragbarkeit
+
+   Sie haben das Recht, eine Kopie Ihrer personenbezogenen Daten zu erhalten, die wir auf der Grundlage Ihrer Einwilligung oder zur Erfüllung eines Vertrags automatisiert verarbeiten. Wir werden diese Daten in einem gängigen und maschinenlesbaren Format an Sie oder an einen von Ihnen benannten Verantwortlichen übermitteln, sofern dies technisch machbar ist. Der Umfang der übermittelten Daten kann eingeschränkt werden, um die Rechte und Freiheiten anderer Personen nicht zu beeinträchtigen.
+
+7. Recht auf Widerspruch gegen die Verarbeitung
+
+   Sie haben das Recht, gegen die Verarbeitung Ihrer personenbezogenen Daten, die wir auf der Grundlage unserer berechtigten Interessen verarbeiten, Widerspruch einzulegen. Wir werden die Verarbeitung Ihrer Daten einstellen, wenn es keine anderen zwingenden Gründe für die Verarbeitung gibt oder wenn die Verarbeitung nicht für die Begründung, Ausübung oder Verteidigung von Rechtsansprüchen erforderlich ist oder wenn Sie der Verarbeitung zu Zwecken der Direktwerbung widersprechen.
+
+8. Recht auf Einreichung einer Beschwerde
+
+   Neben der Ausübung der oben genannten Rechte können Sie auch eine Beschwerde bei der zuständigen Aufsichtsbehörde einreichen, und zwar beim Amt für den Schutz personenbezogener Daten mit Sitz in Pplk. Sochora 27, 170 00 Prag 7

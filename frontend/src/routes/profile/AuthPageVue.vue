@@ -156,7 +156,7 @@ const { t } = useI18n();
           <StackComponent centered spacing="large">
             <BodyText size="small" centered>
               {{ $t('routes.profile.AuthPageVue.notification') }}
-              <router-link to="/ochrana-dat">{{
+              <router-link to="/datenschutz">{{
                 $t('routes.profile.AuthPageVue.link-title')
               }}</router-link
               >.

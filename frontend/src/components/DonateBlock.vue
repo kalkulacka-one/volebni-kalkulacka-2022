@@ -18,7 +18,7 @@ export default {
           a.async = 1; a.src = "https://www.darujme.cz/assets/scripts/widget.js";
           b.parentNode.insertBefore(a, b);
         }(window, document, "script", "Darujme");
-    Darujme(1, "ump6u9fi5cl6vcqc", 'render', "https://www.darujme.cz/widget?token=ump6u9fi5cl6vcqc", "100%");`);
+    Darujme(1, "p889ojumaax0exw9", 'render', "https://www.darujme.cz/widget?token=p889ojumaax0exw9", "100%");`);
   },
 };
 </script>
@@ -31,7 +31,7 @@ export default {
       }}</TitleText>
       <BodyText size="medium">{{ t('components.DonateBlock.body') }}</BodyText>
     </StackComponent>
-    <div class="donation" data-darujme-widget-token="ump6u9fi5cl6vcqc">
+    <div class="donation" data-darujme-widget-token="p889ojumaax0exw9">
       &nbsp;
     </div>
   </div>
