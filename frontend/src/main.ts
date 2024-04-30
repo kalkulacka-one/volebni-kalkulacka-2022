@@ -89,15 +89,15 @@ export const appRoutes = {
     path: '/',
     component: IndexPageVue,
     meta: {
-      title: 'Volebná kalkulačka',
+      title: 'Voksmonitor',
     },
   },
   aboutUs: {
-    name: 'o-nas',
-    path: '/o-nas',
+    name: 'a-voksmonitorrol',
+    path: '/a-voksmonitorrol',
     component: AboutUsPageVue,
     meta: {
-      title: 'O kalkulačke',
+      title: 'A Voksmonitorról',
     },
   },
   aboutElections: {
@@ -109,20 +109,19 @@ export const appRoutes = {
     },
   },
   dataProtection: {
-    name: 'ochrana-dat',
-    path: '/ochrana-dat',
-    alias: ['/soukromi', '/podminky'],
+    name: 'adatvedelem',
+    path: '/adatvedelem',
     component: DataProtectionPageVue,
     meta: {
-      title: 'Ochrana dát',
+      title: 'Adat védelem',
     },
   },
   questionsMethodology: {
-    name: 'metodika-tvorby-otazek',
-    path: '/metodika-tvorby-otazek',
+    name: 'a-voksmonitor-modszertana',
+    path: '/a-voksmonitor-modszertana',
     component: QuestionsMethodologyPageVue,
     meta: {
-      title: 'Metodika tvorby otázok',
+      title: 'A Voksmonitor módszertana',
     },
   },
   error: {
@@ -131,7 +130,7 @@ export const appRoutes = {
     props: true,
     component: ErrorPageVue,
     meta: {
-      title: 'Error - Volebná kalkulačka',
+      title: 'Error - Voksmonitor',
     },
   },
   districtSelection: {
@@ -140,7 +139,7 @@ export const appRoutes = {
     alias: '/volby/:election',
     component: DistrictSelectionPageVue,
     meta: {
-      title: 'Volebná kalkulačka',
+      title: 'Voksmonitor',
     },
   },
   guide: {
@@ -148,7 +147,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'navod'}/:step(\\d+)?`,
     component: GuidePageVue,
     meta: {
-      title: 'Návod - Volebná kalkulačka',
+      title: 'Návod - Voksmonitor',
     },
   },
   question: {
@@ -156,7 +155,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'otazka'}/:nr(\\d+)?`,
     component: QuestionPageVue,
     meta: {
-      title: 'Otázka $$ - Volebná kalkulačka',
+      title: 'Otázka $$ - Voksmonitor',
       hasNumber: true,
     },
     beforeEnter: questionGuard,
@@ -166,7 +165,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'rekapitulacia'}/:nr(\\d+)?`,
     component: RecapPageVue,
     meta: {
-      title: 'Rekapitulace - Volebná kalkulačka',
+      title: 'Rekapitulace - Voksmonitor',
     },
   },
   result: {
@@ -174,7 +173,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'vysledok'}`,
     component: ResultPageVue,
     meta: {
-      title: 'Výsledky - Volebná kalkulačka',
+      title: 'Výsledky - Voksmonitor',
     },
   },
   comparison: {
@@ -182,7 +181,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'porovnaní'}`,
     component: ComparisonPageVue,
     meta: {
-      title: 'Porovnaní - Volebná kalkulačka',
+      title: 'Porovnaní - Voksmonitor',
     },
   },
   share: {
@@ -190,7 +189,7 @@ export const appRoutes = {
     path: '/share/:uuid',
     component: SharePageVue,
     meta: {
-      title: 'Moje výsledky - Volebná kalkulačka',
+      title: 'Moje výsledky - Voksmonitor',
     },
   },
   login: {
@@ -199,7 +198,7 @@ export const appRoutes = {
     component: AuthPageVue,
     props: { type: 'login' },
     meta: {
-      title: 'Přihlášení - Volebná kalkulačka',
+      title: 'Přihlášení - Voksmonitor',
     },
   },
   loginForm: {
@@ -208,7 +207,7 @@ export const appRoutes = {
     component: EmailFormPageVue,
     props: { type: 'login' },
     meta: {
-      title: 'Přihlášení - Volebná kalkulačka',
+      title: 'Přihlášení - Voksmonitor',
     },
   },
 
@@ -218,7 +217,7 @@ export const appRoutes = {
     component: AuthPageVue,
     props: { type: 'registration' },
     meta: {
-      title: 'Registrace - Volebná kalkulačka',
+      title: 'Registrace - Voksmonitor',
     },
   },
   registerForm: {
@@ -227,7 +226,7 @@ export const appRoutes = {
     component: EmailFormPageVue,
     props: { type: 'registration' },
     meta: {
-      title: 'Registrační formulář - Volebná kalkulačka',
+      title: 'Registrační formulář - Voksmonitor',
     },
   },
 
@@ -236,7 +235,7 @@ export const appRoutes = {
     path: '/muj-profil',
     component: ProfilePageVue,
     meta: {
-      title: 'Můj profil - Volebná kalkulačka',
+      title: 'Můj profil - Voksmonitor',
     },
     beforeEnter: authGuard,
   },
@@ -245,7 +244,7 @@ export const appRoutes = {
     path: '/nastaveni-profilu',
     component: ProfileSettingsPageVue,
     meta: {
-      title: 'Nastavení profilu - Volebná kalkulačka',
+      title: 'Nastavení profilu - Voksmonitor',
     },
     beforeEnter: authGuard,
   },

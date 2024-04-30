@@ -37,77 +37,92 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
     </StickyHeaderLayout>
     <StaticContentLayout>
       <StackComponent spacing="large" class="section">
-        <HeadlineText tag="h1" size="large">O kalkulačke</HeadlineText>
+        <HeadlineText tag="h1" size="large">A Voksmonitorról</HeadlineText>
         <BodyText size="large">
-          Čo je to volebná kalkulačka? Ako sa dá použiť a ako funguje? Kto za
-          ňou stojí? Ako sa vytvárajú a vyhodnocujú otázky? Všetko o nej sa
-          dozviete nižšie.
+          Mi az a Voksmonitor? Hogyan használható és hogyan működik? Ki áll
+          mögötte? Hogyan jönnek létre és hogyan értékelik a kérdéseket? Az
+          alábbiakban mindent megtudhat ezekről a témákról.
         </BodyText>
 
-        <TitleText size="large" tag="h2">Čo je to volebná kalkulačka</TitleText>
+        <TitleText size="large" tag="h2">Mi az a Voksmonitor?</TitleText>
         <BodyText size="large">
-          Volebná kalkulačka® (voting advice application) je jednoduchý,
-          zvyčajne internetový test, ktorý porovnáva vaše politické postoje s
-          postojmi politických strán alebo osôb (zákonodarcov, kandidátov vo
-          voľbách atď.). Viac informácií o histórii volebných kalkulačiek a
-          úspešných príkladoch z celého sveta si môžete prečítať na Wikipédii.
+          A Voksmonitor (választási kalkulátor) egy olyan online alkalmazás,
+          amely összehasonlítja az Ön politikai véleményét az adott választáson
+          induló politikai pártok vagy konkrét jelöltek álláspontjával. A
+          Voksmonitorhoz hasonló magyar (pl. Vokskabin) és külföldi
+          (pl.Stemwijzer, Wahl-O-Mat,Wahlrechner) választási kalkulátorok
+          történetéről és a világ minden tájáról származó sikeres példákról
+          bővebben a Wikipédián olvashat. A Voksmonitor célja, hogy a választók
+          ne csak a pártok kommunikációján keresztül találkozzanak a politikai
+          elképzelésekkel, hanem megismerjék azok konkrét programját és
+          szakmai-politikai ügyekben foglalt álláspontját és így megtudják, hogy
+          melyik párt álláspontja áll a legközelebb és legtávolabb az ő
+          elképzeléseiktől.
         </BodyText>
 
         <TitleText size="large" tag="h2">
-          Kto a ako vytvára volebnú kalkulačku
+          Ki és hogyan készíti el a választási kalkulátort?
         </TitleText>
         <BodyText size="large">
-          Českú a slovenskú volebnú kalkulačku vyvíja a prevádzkuje spoločnosť
-          <a href="https://kohovolit.eu/" target="_blank">KohoVolit.eu</a> od
-          roku 2006. Celkovo sme vytvorili viac ako 100 volebných kalkulačiek
-          pre všetky typy volieb (európske, prezidentské, parlamentné,
-          regionálne a komunálne). Pravidelne pomáhame vytvárať kalkulačky aj v
-          Maďarsku a ďalších krajinách. Doteraz najúspešnejšiu kalkulačku
-          využili viac ako 2 milióny voličov pred prezidentskými voľbami v
-          Českej republike v roku 2023.
-        </BodyText>
-        <BodyText size="large">
-          <a href="https://kohovolit.eu/" target="_blank">KohoVolit.eu</a>
-          vytvára dva typy kalkulačiek:
-        </BodyText>
-        <BodyText size="large">
-          Volebná kalkulačka (názorový test) porovnáva vaše odpovede s
-          odpoveďami, ktoré poskytli politické strany alebo samotní kandidáti.
-          Ak niektorá strana alebo kandidát chýba, je to vždy preto, že sme
-          odpovede nedostali.
-        </BodyText>
-        <BodyText size="large">
-          Inventúra hlasovaní porovnáva vaše odpovede so skutočnými hlasovaniami
-          v zákonodarnom zbore v uplynulom volebnom období.
+          A választási kalkulátort a K-Monitor munkatársai készítik el és a
+          KohoVolit.eu-val közösen fejlesztik és üzemeltetik. A Voksmonitor 2014
+          óta működik és az országgyűlési, európai parlamenti illetve
+          önkormányzati (ill. főpolgármesteri) választásokra készíti el magyar
+          és angol nyelvű választási kalkulátorát. A Voksmonitorban megjelenő
+          kérdéseket először a választásokon listát vagy jelöltet állító
+          pártoknak küldjük el, akiknek lehetőségük nyílik megválaszolni ezeket
+          illetve megjegyezéseket fűzni a kérdésekhez, amennyiben szükségesnek
+          érzik. Ha egy párt nem válaszol, a K-Monitor a pártok politikai
+          programját és kommunikációját, illetve adott esetben a már meghozott
+          intézkedéseket veszi alapul a válaszok kialakításánál. Ez felvetheti
+          annak a lehetőségét, hogy a választ nem adó párt hivatalos
+          álláspontjától eltérhetnek a válaszok. Fontos azonban megjegyezni,
+          hogy a K-Monitor minden, az alkalmazásban szereplő politikai párt és
+          jelöltnek megadja a lehetőséget ezek korrigálására, így a pártok
+          jelezhetik, ha valamit javítani szeretnének, az eredmények között
+          pedig világosan megjeleníti, hogy saját, vagy szakértői értékelés
+          alapján kódolt válaszról van-e szó.
         </BodyText>
 
-        <TitleText size="large" tag="h2">Ako vytvárame otázky</TitleText>
+        <TitleText size="large" tag="h2"
+          >Hogyan választjuk ki a kérdéseket, a kalkulátorban megjelenő
+          témákat?</TitleText
+        >
         <BodyText size="large">
-          Najmä vo volebnej kalkulačke je výber a formulácia otázok kľúčovým
-          bodom. V záujme transparentnosti uvádzame náš dokument, ktorým sa
-          riadi tvorba otázok:
-          <router-link to="/metodika-tvorby-otazek">
-            Metodika výberu tém a formulácie otázok.
-          </router-link></BodyText
-        ><BodyText size="large">
-          V prevažnej väčšine prípadov zasielame stranám alebo kandidátom viac
-          otázok, ako sa použije vo výslednej kalkulačke. Zvyčajne sa vyraďujú
-          otázky, pri ktorých existuje zhoda medzi kandidátmi (t. j. takéto
-          otázky nerozdeľujú kandidátov). Potom sa vyradia otázky, ktoré sa
-          nepodarili (kandidáti správne upozornili na problém s otázkou alebo
-          sme naň prišli sami po jej odoslaní), a otázky, ktoré sú podobné iným.
+          Különösen egy választási kalkulátorban kulcsfontosságú a kérdések
+          kiválasztása és megfogalmazása. Elsőként kiválasztjuk az adott
+          választás szempontjából legrelevánsabb és legfontosabb témaköröket és
+          ezekhez kapcsolódó állításokat fogalmazunk meg. Az esetek túlnyomó
+          többségében több kérdést küldünk a pártoknak vagy jelölteknek, mint
+          amennyit a végleges kalkulátorban felhasználunk. Jellemzően azokat a
+          kérdéseket, amelyekben a jelöltek között egyetértés van, nem
+          használjuk fel (azaz az ilyen kérdések nem osztják meg a jelölteket).
+          Azokat a kérdéseket, amikre a pártok eltérő választ adnak, tehát nem
+          alakul ki teljes konszenzus, felhasználjuk a választási kalkulátorhoz.
+          A kérdések és a hozzájuk tartozó kiegészítő információk, amik a kérdés
+          pontosabb megértését szolgálják, a választást megelőző pár hétben
+          magyar és angol nyelven állnak a kitöltők rendelkezésére.
         </BodyText>
 
-        <TitleText size="large" tag="h2">Ako hodnotíme zhodu</TitleText>
+        <TitleText size="large" tag="h2"
+          >Hogyan értékeljük a válaszokat?</TitleText
+        >
         <BodyText size="large">
-          Otázka, na ktorú neodpoviete "áno" alebo "nie", sa do výpočtu
-          nezapočítava. Ak na otázku odpoviete "Áno", strany alebo kandidáti,
-          ktorí tiež odpovedali "Áno", získajú jeden bod. Strany alebo
-          kandidáti, ktorí odpovedia "Nie", strácajú jeden bod. Ak odpoviete
-          "Nie", strany alebo kandidáti, ktorí tiež odpovedali "Nie", získajú
-          jeden bod. Tí, ktorí odpovedia "Áno", strácajú jeden bod. Strany alebo
-          kandidáti, ktorí neodpovedali "Áno" alebo "Nie", nezískavajú ani
-          nestrácajú žiadne body.
+          Az olyan kérdéseket, amelyekre a felhasználók nem "igen"-nel vagy
+          "nem"-mel válaszolnak, a program nem számítja bele az eredménybe. Ha a
+          kitöltő egy kérdésre "igen”-nel válaszol, akkor azok a pártok vagy
+          jelöltek, akik szintén "igen”-nel válaszoltak, egy pontot kapnak. Azok
+          a pártok vagy jelöltek, akik "nem"-mel válaszolnak, egy pontot
+          veszítenek. Ha viszont "nem" választ ad, a szintén "nem" választ adó
+          pártok vagy jelöltek egy-egy pontot kapnak. Azok, akik az aktuális
+          kérdésre “igen" választ adtak, egy pontot veszítenek. Azok a pártok
+          vagy jelöltek, akik az adott kérdésre nem adtak "igen" vagy "nem"
+          választ, nem kapnak és nem is veszítenek pontot. Ezután minden egyes
+          párt vagy jelölt esetében az "igen" vagy "nem" válasszal megválaszolt
+          kérdésekre kapott pontokat össze kell adni, és az eredményt el kell
+          osztani az ilyen kérdések számával. A végeredményt a 0% és 100%
+          közötti tartományra átszámítva kapjuk meg a megjelenített eredményt,
+          ami a kitöltő és az adott párt álláspontjának hasonlóságát mutatja.
         </BodyText>
         <BodyText size="large">
           Potom sa pre každú stranu alebo kandidáta spočítajú body za všetky
@@ -118,197 +133,21 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
           2013).
         </BodyText>
 
-        <TitleText size="large" tag="h2">
-          Dôležitosť otázok a hlasovania
-        </TitleText>
+        <TitleText size="large" tag="h2"> A kérdések súlyozása </TitleText>
         <BodyText size="large">
-          Pri každej otázke alebo hlasovaní máte možnosť nastaviť, aká dôležitá
-          je pre vás zhoda, t. j. váhu, s akou má byť zahrnutá do celkového
-          súčtu zhody. Každej z dvoch úrovní dôležitosti (normálna, vysoká) sa
-          priradí váha a celkový konsenzus je potom váženým priemerom konsenzu v
-          každej otázke alebo hlasovaní. V skutočnosti sa teda namiesto
-          pripočítania alebo odpočítania jedného bodu ku konsenzu pripočíta
-          alebo odpočíta váha príslušnej otázky alebo hlasovania a na konci sa
-          vydelí nie počtom otázok alebo hlasov, ale súčtom absolútnych hodnôt
-          ich váh. Spôsob stanovenia váh je taký, že vysoká dôležitosť má
-          dvojnásobnú váhu v porovnaní s bežnou dôležitosťou.
-        </BodyText>
-        <BodyText size="large">
-          Môže sa stať, že dosiahnete rovnakú zhodu s dvoma alebo viacerými
-          stranami alebo osobami. V takom prípade sa poradie strán alebo osôb v
-          zobrazení výslednej zhody určí náhodne.
-        </BodyText>
-
-        <TitleText tag="h2" size="large">História kalkulačky</TitleText>
-        <BodyText size="large">
-          Združenie KohoVolit.eu vytvára volebné kalkulačky od roku 2006 takmer
-          pre každé voľby na všetkých úrovniach politickej súťaže (európske,
-          prezidentské, parlamentné, regionálne a komunálne) v Českej republike,
-          na Slovensku a v posledný rokoch aj v Maďarsku.
-        </BodyText>
-        <BodyText size="large">
-          Celkovo pripravila približne 100 aplikácií. KohoVolit.eu je lídrom v
-          oblasti volebných kalkulačiek v oboch krajinách a postupne zaviedol do
-          českého a slovenského jazyka pojem "volebná kalkulačka" ako všeobecné
-          označenie pre tento druh aplikácií.
-        </BodyText>
-        <BodyText size="large">
-          Pojem volebná kalkulačka sa už vžil do politického myslenia občanov,
-          médií i samotných politických subjektov.
-        </BodyText>
-
-        <TitleText size="large" tag="h2">
-          Významná aktualizácia s Česko.Digital (2022)
-        </TitleText>
-        <BodyText size="large">
-          Vďaka niekoľkomesačnej spolupráci s komunitou odborných dobrovoľníkov
-          <a href="https://cesko.digital" target="_blank">Česko.Digital</a> a
-          angažovanosti niekoľkých desiatok nadšencov prešla kalkulačka v roku
-          2022 zásadnými technickými a dizajnovými zmenami. Všetkým zúčastneným
-          patrí obrovská vďaka.
-        </BodyText>
-
-        <BodyText size="large">
-          <ul>
-            <li>
-              <a
-                href="https://www.seznamzpravy.cz/autor/michal-skop-1250/"
-                target="_blank"
-                >Michal Škop</a
-              >
-              - KohoVolit.eu
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/lucie-zatorska-81714350/"
-                target="_blank"
-                >Lucie Zátorská</a
-              >
-              - Scrum Master
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/mwenisch/" target="_blank"
-                >Martin Wenisch</a
-              >
-              - mentor Česko.Digital
-            </li>
-            <li>
-              <a
-                href="https://www.seznamzpravy.cz/autor/katerina-mahdalova-815"
-                target="_blank"
-                >Kateřina Mahdalová</a
-              >
-              - obsah a komunikace
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/krystofk/" target="_blank"
-                >Kryštof Korb</a
-              >
-              - Tech Lead
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/mwenisch/" target="_blank"
-                >Gabriela Chladilová</a
-              >
-              - Support Česko.Digital
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/klara-scholleova/"
-                target="_blank"
-                >Klára Schoelleová</a
-              >
-              - UX/UI
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/natalia-bebjakova/"
-                target="_blank"
-                >Natália Bebjaková</a
-              >
-              - UX/UI
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/ondrej-kyjanek-b24832a3/"
-                target="_blank"
-                >Ondřej Kyjánek</a
-              >
-              - Tech Team
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/pavel-vojacek-14420713/"
-                target="_blank"
-                >Pavel Vojáček</a
-              >
-              - Tech Team
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/martin-ladeck%C3%BD-9366ba5/"
-                target="_blank"
-                >Martin Ladecký</a
-              >
-              - Tech Team
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/martinmajlis/"
-                target="_blank"
-                >Martin Majliš</a
-              >
-              - Tech Team
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/tiborkulcar/" target="_blank"
-                >Tibur Kulčár</a
-              >
-              - Tech Team
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/lukasprikryl/"
-                target="_blank"
-                >Lukáš Přikryl</a
-              >
-              - Marketing Lead
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/pavla-radkova/"
-                target="_blank"
-                >Pavla Řádková</a
-              >
-              - UX Research
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/klara-vostinakova/"
-                target="_blank"
-                >Klára Vostiňáková</a
-              >
-              - komunikace
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/doroteja-stamenova-03a50924/"
-                target="_blank"
-                >Doroteja Stamenova</a
-              >
-              - UX/UI
-            </li>
-          </ul>
-        </BodyText>
-
-        <TitleText size="large" tag="h2">
-          Spolprácia s Memo 98 a Infovolby.sk
-        </TitleText>
-        <BodyText size="large">
-          Obsah volebnej kalkulačky pre parlamentné voľby 2023 a prezidentské
-          voľby 2024 sme vytvárali so združením
-          <a href="https://memo98.sk" target="_blank">Memo 98</a> a projektom
-          <a href="https://infovolby.sk" target="_blank">Infovolby.sk</a>.
+          Az alkalmazás használói minden kérdésnél külön beállíthatják, hogy
+          mennyire fontos nekik az adott téma, azaz a kérdésre adott válaszuk
+          milyen súllyal szerepeljen az összesítésben. A két prioritási szint
+          (normál, magas) mindegyike súlyt kap, és az általános konszenzus
+          ezután az egyes kérdések vagy szavazások konszenzusának súlyozott
+          átlaga. Ahelyett, hogy a konszenzushoz hozzáadnánk vagy levonnánk egy
+          pontot, a kérdés vagy szavazás súlyát adjuk hozzá vagy vonjuk le, és a
+          végén nem a kérdések vagy szavazatok számával, hanem a súlyok abszolút
+          értékeinek összegével osztjuk. A súlyok meghatározásának módszere
+          olyan, hogy a nagy fontosságú súly kétszerese a közönséges fontosságú
+          súlynak. Egyes esetekben előfordulhat, hogy két vagy több párttal vagy
+          jelölttel is egyenlő mértékű egyezést mutat az eredmény. Ilyen esetben
+          a felek vagy személyek sorrendje véletlenszerűen kerül meghatározásra.
         </BodyText>
       </StackComponent>
       <DonateBlock />

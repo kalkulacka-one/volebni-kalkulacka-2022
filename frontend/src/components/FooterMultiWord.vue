@@ -33,12 +33,12 @@ const router = useRouter();
               $t('components.FooterMultiWord.body-about-voting-calculator')
             }}</TitleText>
             <StackComponent spacing="extra-small">
-              <router-link to="/o-nas"
+              <router-link to="/a-voksmonitorrol"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-about-voting-calculator')
                 }}</BodyText></router-link
               >
-              <router-link to="/metodika-tvorby-otazek"
+              <router-link to="/a-voksmonitor-modszertana"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-methodoogy')
                 }}</BodyText></router-link
@@ -52,7 +52,7 @@ const router = useRouter();
               $t('components.FooterMultiWord.links')
             }}</TitleText>
             <StackComponent spacing="extra-small">
-              <router-link to="/ochrana-dat"
+              <router-link to="/adatvedelem"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-data-protection')
                 }}</BodyText></router-link
@@ -67,16 +67,16 @@ const router = useRouter();
         </div>
         <div class="data-5">
           <StackComponent spacing="medium">
-            <TitleText size="small" tag="h5">Kontakt</TitleText>
+            <TitleText size="small" tag="h5">Kapcsolat</TitleText>
             <StackComponent spacing="extra-small">
               <StackComponent spacing="small" centered horizontal
                 ><IconComponent :icon="mdiEmail" /><BodyText size="small"
-                  >info@kohovolit.eu</BodyText
+                  >info@k-monitor.hu</BodyText
                 ></StackComponent
               >
               <StackComponent spacing="small" centered horizontal
                 ><IconComponent :icon="mdiPhone" /><BodyText size="small"
-                  >+420 735 518 529</BodyText
+                  >+36 1 789 5005</BodyText
                 ></StackComponent
               >
             </StackComponent>
@@ -95,8 +95,8 @@ const router = useRouter();
           ><img class="cd-logo" :src="'/images/logo-cd.svg'"
         /></a>
         <BodyText size="small"></BodyText>
-        <a href="https://memo98.sk/"
-          ><img class="memo-logo" :src="'/images/logo-memo.png'"
+        <a href="https://k-monitor.hu/"
+          ><img class="k-monitor-logo" :src="'/images/logo-k-monitor.png'"
         /></a>
       </div>
     </div>
@@ -220,8 +220,7 @@ a:after {
   height: 20px;
 }
 
-.memo-logo {
-  height: 20px;
-  filter: invert(100%);
+.k-monitor-logo {
+  height: 30px;
 }
 </style>
