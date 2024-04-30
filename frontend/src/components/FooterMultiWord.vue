@@ -57,7 +57,7 @@ const router = useRouter();
                   $t('components.FooterMultiWord.body-data-protection')
                 }}</BodyText></router-link
               >
-              <a href="https://www.darujme.cz/darovat/1202684"
+              <a href="https://www.darujme.cz/darovat/1200653"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-support-calculator')
                 }}</BodyText></a
@@ -93,10 +93,6 @@ const router = useRouter();
         <BodyText size="small"></BodyText>
         <a href="https://cesko.digital"
           ><img class="cd-logo" :src="'/images/logo-cd.svg'"
-        /></a>
-        <BodyText size="small"></BodyText>
-        <a href="https://memo98.sk/"
-          ><img class="memo-logo" :src="'/images/logo-memo.png'"
         /></a>
       </div>
     </div>
