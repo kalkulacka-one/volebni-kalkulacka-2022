@@ -6,6 +6,23 @@
       "destination": "/"
     }
   ],
+  "redirects": [
+    {
+      "source": "/volby/prezidentske-2023/:path*",
+      "destination": "https://archiv.volebnikalkulacka.cz/volby/prezidentske-2023/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/volby/senatni-2022/:path*",
+      "destination": "https://archiv.volebnikalkulacka.cz/volby/senatni-2022/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/volby/komunalni-2022/:path*",
+      "destination": "https://archiv.volebnikalkulacka.cz/volby/komunalni-2022/:path*",
+      "permanent": false
+    }
+  ],
   "trailingSlash": false,
   "ignoreCommand": "bash ignored-build-step.sh"
 }
