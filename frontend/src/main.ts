@@ -76,7 +76,7 @@ export const appRoutes = {
     path: '/',
     component: IndexPageVue,
     meta: {
-      title: 'Volební kalkulačka',
+      title: 'Archiv volebních kalkulaček',
     },
   },
   aboutUs: {
@@ -118,7 +118,7 @@ export const appRoutes = {
     props: true,
     component: ErrorPageVue,
     meta: {
-      title: 'Error - Volební kalkulačka',
+      title: 'Error - Archiv volebních kalkulaček',
     },
   },
   districtSelection: {
@@ -127,7 +127,7 @@ export const appRoutes = {
     alias: '/volby/:election',
     component: DistrictSelectionPageVue,
     meta: {
-      title: 'Volební kalkulačka',
+      title: 'Archiv volebních kalkulaček',
     },
   },
   guide: {
@@ -136,7 +136,7 @@ export const appRoutes = {
     alias: '/volby/:election/:district',
     component: GuidePageVue,
     meta: {
-      title: 'Návod - Volební kalkulačka',
+      title: 'Návod - Archiv volebních kalkulaček',
     },
   },
   question: {
@@ -144,7 +144,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/otazka/:nr?',
     component: QuestionPageVue,
     meta: {
-      title: 'Otázka $$ - Volební kalkulačka',
+      title: 'Otázka $$ - Archiv volebních kalkulaček',
       hasNumber: true,
     },
     beforeEnter: questionGuard,
@@ -154,7 +154,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/rekapitulace',
     component: RecapPageVue,
     meta: {
-      title: 'Rekapitulace - Volební kalkulačka',
+      title: 'Rekapitulace - Archiv volebních kalkulaček',
     },
   },
   result: {
@@ -162,7 +162,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/vysledek',
     component: ResultPageVue,
     meta: {
-      title: 'Výsledky - Volební kalkulačka',
+      title: 'Výsledky - Archiv volebních kalkulaček',
     },
   },
   comparison: {
@@ -170,7 +170,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/srovnani',
     component: ComparisonPageVue,
     meta: {
-      title: 'Porovnaní - Volební kalkulačka',
+      title: 'Porovnaní - Archiv volebních kalkulaček',
     },
   },
   share: {
@@ -178,7 +178,7 @@ export const appRoutes = {
     path: '/share/:uuid',
     component: SharePageVue,
     meta: {
-      title: 'Moje výsledky - Volební kalkulačka',
+      title: 'Moje výsledky - Archiv volebních kalkulaček',
     },
   },
   login: {
@@ -186,7 +186,7 @@ export const appRoutes = {
     path: '/prihlaseni',
     component: LoginPageVue,
     meta: {
-      title: 'Přihlášení - Volební kalkulačka',
+      title: 'Přihlášení - Archiv volebních kalkulaček',
     },
   },
   register: {
@@ -194,7 +194,7 @@ export const appRoutes = {
     path: '/registrace',
     component: RegisterPageVue,
     meta: {
-      title: 'Registrace - Volební kalkulačka',
+      title: 'Registrace - Archiv volebních kalkulaček',
     },
   },
   profile: {
@@ -202,7 +202,7 @@ export const appRoutes = {
     path: '/muj-profil',
     component: ProfilePageVue,
     meta: {
-      title: 'Můj profil - Volební kalkulačka',
+      title: 'Můj profil - Archiv volebních kalkulaček',
     },
   },
   profileSettings: {
@@ -210,7 +210,7 @@ export const appRoutes = {
     path: '/nastaveni-profilu',
     component: ProfileSettingsPageVue,
     meta: {
-      title: 'Nastavení profilu - Volební kalkulačka',
+      title: 'Nastavení profilu - Archiv volebních kalkulaček',
     },
   },
   fallback: {

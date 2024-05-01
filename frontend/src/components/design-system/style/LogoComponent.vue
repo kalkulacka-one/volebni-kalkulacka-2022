@@ -73,7 +73,7 @@ const handleClick = () => {
       v-if="props.text"
       :class="['logo--text', `logo--text-${props.size}`, logoMonochromatic]"
     >
-      Volební kalkulačka
+      Archiv volebních kalkulaček
     </div>
   </div>
 </template>
