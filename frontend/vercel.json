@@ -6,5 +6,6 @@
       "destination": "/"
     }
   ],
-  "trailingSlash": false
+  "trailingSlash": false,
+  "ignoreCommand": "bash ignored-build-step.sh"
 }
