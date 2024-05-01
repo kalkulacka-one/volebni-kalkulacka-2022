@@ -40,23 +40,14 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
       <BlobComponent color="blue" class="blob1" />
       <BlobComponent color="red" class="blob2" />
       <StackComponent spacing="medium" centered class="calc-main">
-        <BodyText size="medium" tag="h1" color="fg-strong">
-          <strong>Volby do Evropského parlamentu v Česku 2024</strong><br />
-          7. a 8. června 2024
-          <br />
-        </BodyText>
         <HeadlineText tag="p" size="small">
-          Evropské volby
-          <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
+          Archiv volebních kalkulaček
         </HeadlineText>
-        <BodyText size="large"
-          >Připravujeme pro vás volební kalkulačku pro Evropské volby</BodyText
-        >
         <StackComponent class="section" spacing="large" centered>
-          <ButtonComponent kind="link" @click="scrollDown">
+          <ButtonComponent kind="link" href="https://www.volebnikalkulacka.cz">
             <div class="button-content">
-              Starší kalkulačky<IconComponent
-                :icon="mdiArrowDown"
+              Kalkulačka pro Evropské volby<IconComponent
+                :icon="mdiArrowRight"
               ></IconComponent>
             </div>
           </ButtonComponent>
@@ -64,48 +55,6 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
       </StackComponent>
     </div>
     <StaticContentLayout>
-      <StackComponent class="section" spacing="small" centered>
-        <TitleText size="large" tag="h2">Jak kalkulačka vzniká?</TitleText>
-        <BodyText size="medium"
-          >Volební kalkulačka je projekt neziskové organizace KohoVolit.eu a je
-          nestranným pomocníkem při Vašem rozhodování koho volit.</BodyText
-        >
-        <div class="info-bubbles-grid section">
-          <InfoBubble image="info-1.png">
-            <BodyText size="small"
-              >Připravíme zhruba 40 otázek na aktuální politická
-              témata.</BodyText
-            >
-          </InfoBubble>
-          <InfoBubble image="info-2.png">
-            <BodyText size="small"
-              >Otázky položíme všem kandidátům / stranám.</BodyText
-            >
-          </InfoBubble>
-          <InfoBubble image="info-3.png">
-            <BodyText size="small"
-              >Dostaneme od většiny z nich odpovědi.</BodyText
-            >
-          </InfoBubble>
-          <InfoBubble image="info-4.png">
-            <BodyText size="small"
-              >Volební kalkulačka vám s nimi spočítá názorovou shodu.</BodyText
-            >
-          </InfoBubble>
-        </div>
-      </StackComponent>
-      <StackComponent class="section" spacing="large" centered>
-        <BodyText size="medium"
-          >Volební kalkulačka je pouze informační služba a není jejím cílem
-          dávat konkrétní volební doporučení.</BodyText
-        >
-        <ButtonComponent kind="link" @click="router.push('/o-nas')">
-          <div class="button-content">
-            Zjistit více<IconComponent :icon="mdiArrowRight"></IconComponent>
-          </div>
-        </ButtonComponent>
-      </StackComponent>
-      <DonateBlock />
       <StackComponent spacing="large">
         <div ref="info"></div>
         <TitleText size="large" tag="h2">
@@ -313,6 +262,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
           </CardComponent>
         </MasonryGrid>
       </StackComponent>
+      <DonateBlock />
     </StaticContentLayout>
     <FooterMultiWord class="section" />
   </StickyHeaderLayout>
