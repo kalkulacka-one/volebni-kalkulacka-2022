@@ -86,7 +86,7 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
           Najmä vo volebnej kalkulačke je výber a formulácia otázok kľúčovým
           bodom. V záujme transparentnosti uvádzame náš dokument, ktorým sa
           riadi tvorba otázok:
-          <router-link to="/metodika-tvorby-otazek">
+          <router-link to="/metodika-tvorby-otazok">
             Metodika výberu tém a formulácie otázok.
           </router-link></BodyText
         ><BodyText size="large">

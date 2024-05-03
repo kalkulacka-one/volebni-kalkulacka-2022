@@ -38,7 +38,7 @@ const router = useRouter();
                   $t('components.FooterMultiWord.body-about-voting-calculator')
                 }}</BodyText></router-link
               >
-              <router-link to="/metodika-tvorby-otazek"
+              <router-link to="/metodika-tvorby-otazok"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-methodoogy')
                 }}</BodyText></router-link

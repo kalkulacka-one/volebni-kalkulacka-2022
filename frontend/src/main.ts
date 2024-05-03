@@ -118,8 +118,8 @@ export const appRoutes = {
     },
   },
   questionsMethodology: {
-    name: 'metodika-tvorby-otazek',
-    path: '/metodika-tvorby-otazek',
+    name: 'metodika-tvorby-otazok',
+    path: '/metodika-tvorby-otazok',
     component: QuestionsMethodologyPageVue,
     meta: {
       title: 'Metodika tvorby otázok',
