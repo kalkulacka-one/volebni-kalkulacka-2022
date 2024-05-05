@@ -83,66 +83,43 @@ const handleSubscribe = async () => {
     <div class="prezident-hero">
       <BlobComponent color="blue" class="blob1" />
       <BlobComponent color="red" class="blob2" />
-      <StackComponent spacing="medium" centered class="calc-main">
-        <BodyText size="medium" tag="h1" color="fg-strong">
-          <strong>Die Europawahl in Österreich</strong
-          ><br />
-          9. Juni 2024
-          <br />
-        </BodyText>
-        <HeadlineText tag="p" size="small">
-          Europawahl
-          <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
-        </HeadlineText>
-        <BodyText size="large"
-          >Der Start ist für 8. Mai 2024 geplant.</BodyText
-        >
+      <StackComponent spacing="small" centered class="calc-main">
+        <StackComponent spacing="large" centered space-between>
+          <BodyText size="medium" tag="h1" color="fg-strong">
+            <strong>Die Europawahl in Österreich</strong
+            ><br />
+            9. Juni 2024
+            <br />
+          </BodyText>
+          <HeadlineText tag="p" size="small">
+            Europawahl
+            <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
+          </HeadlineText>
+          <BodyText size="small"> 42 fragen, ca. 10 minuten</BodyText>
+          <ButtonComponent
+            kind="filled"
+            color="primary"
+            @click="
+              router.push({
+                name: appRoutes.guide.name,
+                params: {
+                  ...route.params,
+                  type: `${'wahlen'}`,
+                  first: 'europawahl-2024',
+                  second: 'wahlrechner',
+                },
+                query: { ...route.query },
+              })
+            "
+          >
+            Starten Sie den Wahlrechner
+            <template #iconAfter>
+              <IconComponent :icon="mdiArrowRight" />
+            </template>
+          </ButtonComponent>
+        </StackComponent>
       </StackComponent>
     </div>
-    <section class="subscribe">
-      <StackComponent spacing="small" centered>
-        <TitleText size="large" tag="h2">
-          Möchten Sie über neue Rechner informiert werden?
-        </TitleText>
-        <BodyText size="small" centered>
-          Hinterlassen Sie uns Ihre E-Mail-Adresse und wir informieren Sie immer, wenn wir einen neuen Rechner starten.
-        </BodyText>
-        <BodyText v-if="success" size="small">
-          {{ message }}
-        </BodyText>
-        <form v-if="!success">
-          <StackComponent
-            horizontal
-            spacing="small"
-            stretched
-            wrap
-            style="justify-content: center"
-          >
-            <TextInputComponent
-              v-model="email"
-              required
-              type="email"
-              :placeholder="t('routes.index.IndexPage.input-label')"
-              :value="email"
-              :icon="mdiEmailOutline"
-              :disabled="posting"
-              :error="emailError"
-            />
-            <ButtonComponent
-              kind="outlined"
-              color="primary"
-              :loading="posting"
-              @click.prevent="handleSubscribe"
-            >
-              Senden
-            </ButtonComponent>
-          </StackComponent>
-        </form>
-        <BodyText v-if="!success" tag="p" size="small">{{
-          $t('routes.index.IndexPage.disclaimer')
-        }}</BodyText>
-      </StackComponent>
-    </section>
     <StaticContentLayout>
       <StackComponent class="section" spacing="small" centered>
         <TitleText size="large" tag="h2"
@@ -193,6 +170,50 @@ const handleSubscribe = async () => {
           </div>
         </ButtonComponent>
       </StackComponent>
+      <section class="subscribe">
+        <StackComponent spacing="small" centered>
+          <TitleText size="large" tag="h2">
+            Möchten Sie über neue Rechner informiert werden?
+          </TitleText>
+          <BodyText size="small" centered>
+            Hinterlassen Sie uns Ihre E-Mail-Adresse und wir informieren Sie immer, wenn wir einen neuen Rechner starten.
+          </BodyText>
+          <BodyText v-if="success" size="small">
+            {{ message }}
+          </BodyText>
+          <form v-if="!success">
+            <StackComponent
+              horizontal
+              spacing="small"
+              stretched
+              wrap
+              style="justify-content: center"
+            >
+              <TextInputComponent
+                v-model="email"
+                required
+                type="email"
+                :placeholder="t('routes.index.IndexPage.input-label')"
+                :value="email"
+                :icon="mdiEmailOutline"
+                :disabled="posting"
+                :error="emailError"
+              />
+              <ButtonComponent
+                kind="outlined"
+                color="primary"
+                :loading="posting"
+                @click.prevent="handleSubscribe"
+              >
+                Senden
+              </ButtonComponent>
+            </StackComponent>
+          </form>
+          <BodyText v-if="!success" tag="p" size="small">{{
+            $t('routes.index.IndexPage.disclaimer')
+          }}</BodyText>
+        </StackComponent>
+      </section>
       <DonateBlock />
     </StaticContentLayout>
     <FooterMultiWord class="section" />
