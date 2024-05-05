@@ -1,81 +1,21 @@
 {
   "elections": [
     {
-      "id": "57a09a41-631b-4b40-ac22-b75b8ce14d84",
-      "key": "nrsr-2023",
-      "name": "Parlamentné voľby 2023",
-      "description": "Voľby do Národnej rady Slovenskej republiky 30. septembra 2023."
-    },
-    {
-      "id": "6c3343d9-f313-4715-907c-8844ceea15bb",
-      "key": "prezidentske-2024",
-      "name": "Prezidentské voľby 2024",
-      "description": "Voľby prezidenta Slovenskej republiky 2024"
+      "id": "3c13c7f4-8df7-4fa0-80c4-53895942fbc0",
+      "key": "europawahl-2024",
+      "name": "Europawahl 2024",
+      "description": "Die Europawahl in Österreich 2024"
     }
   ],
   "calculators": [
     {
-      "calculator_id": "4d2d81e3-2602-4259-b230-4237e5110005",
-      "election_id": "57a09a41-631b-4b40-ac22-b75b8ce14d84",
-      "district_code": "inventura-2020-2023",
+      "calculator_id": "1e9c3280-8e26-4b2e-8284-b4d7512147b7",
+      "election_id": "3c13c7f4-8df7-4fa0-80c4-53895942fbc0",
+      "district_code": "wahlrechner",
       "show_district_code": false,
-      "name": "Inventúra hlasovaní 2020–2023",
-      "description": "Volebná kalkulačka na základe skutočných hlasovaní z Národnej rady 2020–2023",
-      "key": "nrsr-2023/inventura-2020-2023"
-    },
-    {
-      "calculator_id": "b99f1063-5d5b-4b80-a954-7927f11b4ba8",
-      "election_id": "57a09a41-631b-4b40-ac22-b75b8ce14d84",
-      "district_code": "pre-mladych",
-      "show_district_code": false,
-      "name": "Pre mladých",
-      "description": "Volebná kalkulačka pre mladých",
-      "key": "nrsr-2023/pre-mladych"
-    },
-    {
-      "calculator_id": "036db4cf-69b1-4416-a978-ec96f4e8c052",
-      "election_id": "57a09a41-631b-4b40-ac22-b75b8ce14d84",
-      "district_code": "kalkulacka",
-      "show_district_code": false,
-      "name": "Kalkulačka",
-      "description": "Kalkulačka pre všetkých",
-      "key": "nrsr-2023/kalkulacka"
-    },
-    {
-      "calculator_id": "ebb4dcc4-b23a-4dc8-8976-ec9c21592fe5",
-      "election_id": "6c3343d9-f313-4715-907c-8844ceea15bb",
-      "district_code": "pre-mladych",
-      "show_district_code": false,
-      "name": "Pre mladých",
-      "description": "Volebná kalkulačka pre mladých",
-      "key": "prezidentske-2024/pre-mladych"
-    },
-    {
-      "calculator_id": "2131b1ce-9f8c-43e9-86de-812d07e93902",
-      "election_id": "6c3343d9-f313-4715-907c-8844ceea15bb",
-      "district_code": "kalkulacka",
-      "show_district_code": false,
-      "name": "Kalkulačka",
-      "description": "Kalkulačka pre všetkých",
-      "key": "prezidentske-2024/kalkulacka"
-    },
-    {
-      "calculator_id": "49d11d02-ebcf-4935-b433-c6b7df6b6313",
-      "election_id": "6c3343d9-f313-4715-907c-8844ceea15bb",
-      "district_code": "pre-mladych-2-kolo",
-      "show_district_code": false,
-      "name": "Pre mladých 2. kolo",
-      "description": "Volebná kalkulačka pre mladých 2. kolo",
-      "key": "prezidentske-2024/pre-mladych-2-kolo"
-    },
-    {
-      "calculator_id": "239fb35c-95f6-4cb7-8c41-90ce35bf6124",
-      "election_id": "6c3343d9-f313-4715-907c-8844ceea15bb",
-      "district_code": "kalkulacka-2-kolo",
-      "show_district_code": false,
-      "name": "Kalkulačka 2. kolo",
-      "description": "Kalkulačka pre všetkých 2. kolo",
-      "key": "prezidentske-2024/kalkulacka-2-kolo"
+      "name": "Wahlrechner",
+      "description": "Die Europawahl in Österreich 2024",
+      "key": "europawahl-2024/wahlrechner"
     }
   ]
 }
