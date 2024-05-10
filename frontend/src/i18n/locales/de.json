@@ -75,11 +75,11 @@
         "previous-step": "Vorheriger Schritt",
         "skip": "überspringen",
         "skip-guide": "Anleitung überspringen",
-        "skip-question": "Wenn du dir nicht sicher bist, dich das Thema nicht interessiert oder du aus einem anderen Grund nicht antworten möchtest, kannst du die Frage mit dem Pfeil auf der rechten Seite überspringen",
-        "text-0": "Wenn ein Politiker/eine Politikerin oder eine Partei die Frage nicht beantwortet hat (nicht abgestimmt hat), wird dies mit 0 Punkten bewertet.",
-        "text-answer-button": "Du kannst mit den Schaltflächen antworten.:",
-        "text-important": "Wenn dir eines der Themen besonders wichtig ist, markiere es mit einem Stern.",
-        "text-method": "Wenn du mit einem Politiker/einer Politikerin oder einer Partei bei einer Antwort übereinstimmst, bekommen sie im Übereinstimmungswert 1 Punkt. Andernfalls verlieren sie 1 Punkt."
+        "skip-question": "Ist man bei einem Thema nicht sicher, oder will aus einem anderen Grund nicht antworten, kann die Frage mit dem Pfeil auf der rechten Seite übersprungen werden. Diese Frage wird dann nicht in die Berechnung des Ergebnisses einbezogen.",
+        "text-0": "Wenn eine Partei die Frage nicht beantwortet hat (z.B. Stimmenthaltung bei Abstimmung), wird dies mit 0 Punkten bewertet.",
+        "text-answer-button": "Antwortmöglichkeiten:",
+        "text-important": "Wird eines der Themen als besonders wichtig empfunden, kann es mit einem Stern markiert werden. Diese Antwort hat dann doppeltes Gewicht bei der Berechnung des Ergebnisses.",
+        "text-method": "Wenn eine Antwort mit einer Partei übereinstimmt, wird im Übereinstimmungswert 1 Punkt angerechnet. Wenn die Antwort nicht, übereinstimmt wird 1 Punkt abgezogen."
       }
     },
     "index": {
