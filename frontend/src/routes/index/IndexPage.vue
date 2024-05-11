@@ -95,7 +95,7 @@ const handleSubscribe = async () => {
             Europawahl
             <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
           </HeadlineText>
-          <BodyText size="small"> 42 fragen, ca. 10 minuten</BodyText>
+          <BodyText size="small"> 42 Fragen, ca. 10 Minuten</BodyText>
           <ButtonComponent
             kind="filled"
             color="primary"
@@ -118,6 +118,47 @@ const handleSubscribe = async () => {
             </template>
           </ButtonComponent>
         </StackComponent>
+        <BodyText size="large">—</BodyText>
+        <CardComponent
+          corner="bottom-left"
+          padding="large"
+          border
+          border-radius="large"
+          shadow
+          class="other-calc-card calc-youth"
+        >
+          <StackComponent spacing="large" centered>
+            <StackComponent spacing="small" centered space-between>
+              <BodyText size="medium" tag="h2" color="fg-strong">
+                <strong>Wahlrechner express</strong>
+              </BodyText>
+              <BodyText size="small">
+                20 Fragen, ca. 5 Minuten
+              </BodyText>
+              <ButtonComponent
+                kind="outlined"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      type: `${'wahlen'}`,
+                      first: 'europawahl-2024',
+                      second: 'express',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+              Starten Sie den Wahlrechner
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </StackComponent>
+          </StackComponent>
+        </CardComponent>
       </StackComponent>
     </div>
     <StaticContentLayout>

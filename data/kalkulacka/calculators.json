@@ -16,6 +16,15 @@
       "name": "Wahlrechner",
       "description": "Die Europawahl in Österreich 2024",
       "key": "europawahl-2024/wahlrechner"
+    },
+    {
+      "calculator_id": "a5b42fab-aa32-4554-b182-98d7ea731126",
+      "election_id": "3c13c7f4-8df7-4fa0-80c4-53895942fbc0",
+      "district_code": "express",
+      "show_district_code": false,
+      "name": "Wahlrechner express",
+      "description": "Die Europawahl in Österreich 2024",
+      "key": "europawahl-2024/express"
     }
   ]
 }
