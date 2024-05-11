@@ -112,7 +112,7 @@ const handleSubscribe = async () => {
               })
             "
           >
-            Starten Sie den Wahlrechner
+            Start des Wahlrechners
             <template #iconAfter>
               <IconComponent :icon="mdiArrowRight" />
             </template>
@@ -130,10 +130,10 @@ const handleSubscribe = async () => {
           <StackComponent spacing="large" centered>
             <StackComponent spacing="small" centered space-between>
               <BodyText size="medium" tag="h2" color="fg-strong">
-                <strong>Wahlrechner express</strong>
+                <strong>Wahlrechner Express</strong>
               </BodyText>
               <BodyText size="small">
-                20 Fragen, ca. 5 Minuten
+                25 Fragen, ca. 5 Minuten
               </BodyText>
               <ButtonComponent
                 kind="outlined"
@@ -151,7 +151,7 @@ const handleSubscribe = async () => {
                   })
                 "
               >
-              Starten Sie den Wahlrechner
+                Start des Wahlrechners
                 <template #iconAfter>
                   <IconComponent :icon="mdiArrowRight" />
                 </template>

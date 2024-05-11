@@ -385,7 +385,7 @@ const handleSubscribe = async () => {
           <section class="subscribe">
             <StackComponent spacing="small" centered>
               <BodyText size="small" centered>
-                Hinterlassen Sie uns Ihre E-Mail-Adresse, und wir werden Sie jedes Mal benachrichtigen, wenn wir einen neuen Taschenrechner starten.
+                Hinterlassen Sie uns Ihre E-Mail-Adresse, und wir werden Sie jedes Mal benachrichtigen, wenn wir einen neuen Wahlrechner starten.
               </BodyText>
               <BodyText v-if="success" size="small">
                 {{ message }}
@@ -414,7 +414,7 @@ const handleSubscribe = async () => {
                     :loading="posting"
                     @click.prevent="handleSubscribe"
                   >
-                    Bitte informieren Sie mich über neue Taschenrechner.
+                  Bitte um Information zu neuen Wahlrechnern.
                   </ButtonComponent>
                 </StackComponent>
               </form>

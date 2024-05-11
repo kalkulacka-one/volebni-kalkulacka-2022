@@ -10,7 +10,7 @@
     },
     "DonateBlock": {
       "body": "Gefällt Ihnen das Projekt Wahlrechner? Wir würden uns freuen, wenn Sie uns unterstützen, damit wir das Service auch bei den kommenden Wahlen anbieten können.",
-      "title": "Unterstützen Sie die Erstellung des Wahlrechners"
+      "title": "Unterstützung für den Wahlrechner"
     },    
     "FooterMultiWord": {
       "body-about-voting-calculator": "Über den Wahlrechner",
@@ -26,7 +26,8 @@
       "title-more-about-elections": "Mehr zu den Wahlen"
     },
     "QuestionCandidateFilter": {
-      "title-candidate-filter": "Filtern nach Parteien"
+      "title-candidate-filter": "Filtern nach Parteien",
+      "select-all": "Alle auswählen"
     },
     "QuestionTagFilter": {
       "title-filter-by-theme": "Filtern nach Themen",
@@ -176,8 +177,8 @@
         "next-question-short": "Nächste",
         "previous-question-long": "Vorherige Frage",
         "previous-question-short": "Vorherige",
-        "recapitulation-long": "Rekapitulation",
-        "recapitulation-short": "Rekapitulation",
+        "recapitulation-long": "Übersicht",
+        "recapitulation-short": "Übersicht",
         "skip-question-long": "Frage überspringen",
         "skip-question-short": "Überspringen"
       }
@@ -191,9 +192,9 @@
       "RecapPage": {
         "back-to-main-page": "Zurück zur Hauptseite",
         "display-results": "Ergebnisse anzeigen",
-        "hint-text": "Hier kannst du deine Antworten und ihre Gewichtung überprüfen und gegebenenfalls anpassen.",
+        "hint-text": "Hier kann man die gewählten Antworten und deren Gewichtung überprüfen und gegebenenfalls anpassen.",
         "questions": "Fragen",
-        "recapitulation": "Rekapitulation"
+        "recapitulation": "Übersicht"
       },
       "RecapQuestionCard": {
         "display-details": "Details anzeigen",
@@ -229,7 +230,7 @@
         "something-went-wrong": "Etwas ist schief gelaufen",
         "something-went-wrong-text": "Leider kann im Moment nicht geteilt werden. Bitte versuchen Sie es später erneut.",
         "text-and-answer": "und mindestens eine Frage beantworten oder",
-        "text-at-least-one-answer": "Um das Ergebnis anzuzeigen, müssen Sie mindestens eine Frage beantworten",
+        "text-at-least-one-answer": "Um das Ergebnis anzuzeigen muß man mindestens eine Frage beantworten",
         "text-display-answers": "den Vergleich der Antworten der Kandidaten ansehen",
         "text-in-time": "Sledujte, ako sa Vaše názory a výsledky (ne)menia v čase.",
         "text-save-calc": "Uložte si kalkulačku a vyplňte ju aj viackrát, a to pre každej voľby.",
