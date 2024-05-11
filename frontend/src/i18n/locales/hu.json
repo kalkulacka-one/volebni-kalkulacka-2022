@@ -23,31 +23,31 @@
       "body-support-calculator": "A Voksmonitor támogatása",
       "body-who-to-vote": "A Voksmonitor összeveti a véleményedet a pártok programjaival.",
       "links": "Linkek",
-      "title-more-about-elections": "Viac o voľbách"
+      "title-more-about-elections": "Többet a választásokról"
     },
     "QuestionCandidateFilter": {
-      "title-candidate-filter": "Filtrovať podľa kandidujúcich",
-      "select-all": "Vybrať všetko"
+      "title-candidate-filter": "Szűrés pártok szerint",
+      "select-all": "Összes kiválasztása"
     },
     "QuestionTagFilter": {
-      "title-filter-by-theme": "Filtrovať podľa tém",
-      "select-all": "Vybrať všetko"
+      "title-filter-by-theme": "Szűrés témák szerint",
+      "select-all": "Összes kiválasztása"
     },
     "WantToKnowMore": {
-      "more-about-topic": "Viac o téme"
+      "more-about-topic": "Bővebben"
     }
   },
   "routes": {
     "comparison": {
       "ComparisonGrid": {
-        "answers": "odpovede",
-        "my": "Moje"
+        "answers": "válaszaim",
+        "my": "Az én"
       },
       "ComparisonPage": {
-        "back-to-main-page": "Späť na hlavnú stránku",
-        "comparison": "Porovnanie",
-        "my-match": "Moja zhoda",
-        "set-comparison": "Nastaviť porovnanie"
+        "back-to-main-page": "Vissza a főoldalra",
+        "comparison": "Összehasonlítás",
+        "my-match": "Egyezéseim",
+        "set-comparison": "Összehasonlítás "
       }
     },
     "data-protection": {
@@ -57,30 +57,30 @@
     },
     "error": {
       "ErrorPage": {
-        "go-to-main-page": "Prejsť na hlavnú stránku",
-        "this-page-does-not-exist": "Táto stránka neexistuje",
-        "unknown-error": "Neznámá chyba"
+        "go-to-main-page": "Főoldara",
+        "this-page-does-not-exist": "Ez az oldal nem található",
+        "unknown-error": "Ismeretlen hiba"
       }
     },
     "guide": {
       "GuidePage": {
-        "agree": "súhlasím",
-        "back-to-main-page": "Späť na hlavnú stránku",
-        "disagree": "nesúhlasím",
-        "double-weight": "Odpoveď potom bude mať vo výpočte zhody dvojnásobnú váhu.",
-        "first-question": "Prvá otázka",
-        "guide": "Návod",
-        "important": "pre mňa dôležité",
-        "next-step": "Ďalší krok",
-        "not-included": "Táto otázka sa do výpočtu vašej zhody nezapočíta.",
-        "previous-step": "Predchádzajúci krok",
-        "skip": "preskočiť",
-        "skip-guide": "Preskočiť návod",
-        "skip-question": "Keď si nie ste istý/á, téma vás nezaujíma alebo z iného dôvodu nechcete odpovedať, môžete otázku preskočiť šípkou napravo.",
-        "text-0": "Ak politik/politička alebo strana na otázku neodpovedali (nehlasovali), započíta sa zisk 0 bodov.",
-        "text-answer-button": "Odpovedať môžete pomocou tlačidiel:",
-        "text-important": "Pokiaľ je pre vás niektorá z tém obzvlášť dôležitá, označte ju hviezdičkou.",
-        "text-method": "Keď sa s politikom/političkou alebo stranou v odpovedi zhodnete, získajú vo výpočte zhody 1 bod. V opačnom prípade 1 bod stratia."
+        "agree": "Egyetért",
+        "back-to-main-page": "Vissza a főoldalra",
+        "disagree": "Nem ért egyet",
+        "double-weight": "Kétszeres súlyozás",
+        "first-question": "Első kérdés",
+        "guide": "Útmutató",
+        "important": "Fontos számomra",
+        "next-step": "Következő lépés",
+        "not-included": "Ezt a kérdést nem vesszük figyelembe az eredmények kiszámításánál",
+        "previous-step": "Előzős lépés",
+        "skip": "kihagyás",
+        "skip-guide": "Útmutató kihagyása",
+        "skip-question": "Amennyiben nincs álláspontja a témáról, vagy nem szeretne válazolni, a jobb oldalon található nyíllal továbbléphet. A kérdést nem vesszük figyelembe az eredmények kiszámításánál.",
+        "text-0": "Amennyiben egy párt nem válaszolt, vagy nincs egyértelmű álláspontja (tartózkodik), úgy a választ 0 ponttal értékeljük.",
+        "text-answer-button": "Válaszlehetőségek",
+        "text-important": "Csillaggal jelölhetőek a kitöltő számára fontos témák. Ezeket a program dupla súllyal számítja.",
+        "text-method": "Amennyiben egy válasz megegyezik egy párt válaszával, az egy pontot ér. Amennyiben ellentétes a válasz, egy pontot levonunk."
       }
     },
     "index": {
@@ -88,16 +88,16 @@
         "czech-version": {
           "link": "českú verziu",
           "prefix": "Zatiaľ sa môžete pozrieť na {0}",
-          "suffix": " volebnej kalkulačky."
+          "suffix": "volebnej kalkulačky."
         },
         "disclaimer": "A beküldéssel beleegyezik, hogy értesítést kapjon a Voksmonitorról.",
-        "empty-email-error": "Pole nesmie byť prázdne",
+        "empty-email-error": "Szükséges mező",
         "error": "Hiba történt :( Kérjük, próbálja újra.",
         "input-label": "E-mail",
         "primary-text": "Prípravujeme pre vás volebnú kalkulačku pre voľby do Národnej rady Slovenskej republiky 2023.",
-        "secondary-text": "Zanechajte nám váš e-mail a dáme vám vedieť, keď kalkulačku spustíme.",
-        "subscribe-button-label": "Tudasd velem",
-        "success": "Tudatjuk majd!",
+        "secondary-text": "Adja meg az e-mailcímét, és értesítést küldünk, ha elérhető a Voksmonitor",
+        "subscribe-button-label": "Feliratkozás",
+        "success": "Értesíteni fogjuk!",
         "title": "Voksmonitor"
       }
     },
@@ -108,7 +108,7 @@
         "link-title": "Podmienkami ochrany osobných údajov",
         "log-in": "Prihláste sa",
         "notification": "Vaše osobné údaje budú spracovávané za účelom tvorby užívateľského profilu, a to v súlade s",
-        "opinion ": "Sledujte názorový vývoj vo svojom profile",
+        "opinion": "Sledujte názorový vývoj vo svojom profile",
         "question-one": "Už máte profil?",
         "question-two": "Ešte nemáte profil?",
         "registration": "Vytvoriť profil",
@@ -120,8 +120,8 @@
         "create-profile": "Vytvoriť profil",
         "log-in": "Prihlásiť sa",
         "message": "Zadajte svoju e-mailovú adresu",
-        "message-verification-first": "Do e-mailovej schránky Vám zašleme e-mail s overovacím odkazom. Registráciu úspešne dokončíte po kliknutí naň.",
-        "message-verification-second": "Do e-mailovej schránky Vám zašleme e-mail s overovacím odkazom.",
+        "message-verification-first": "Do e-mailovej schránky Vám zašleme e-mail s overovacím odkazom. Registráciu úspešne dokončíte po kliknutí naň.",
+        "message-verification-second": "Do e-mailovej schránky Vám zašleme e-mail s overovacím odkazom.",
         "title-close": "Zavrieť"
       },
       "EmailFormPageVue": {
@@ -165,22 +165,22 @@
     },
     "question": {
       "QuestionBottomBar": {
-        "important-for-me": "Pre mňa dôležité",
-        "no": "Nie",
-        "yes": "Áno"
+        "important-for-me": "Fontos számomra",
+        "no": "Nem ért egyet",
+        "yes": "Egyetért"
       },
       "QuestionPage": {
-        "back-to-main-page": "Späť na hlavnú stránku",
-        "instructions-long": "Návod",
-        "instructions-short": "Návod",
-        "next-question-long": "Ďalšia otázka",
-        "next-question-short": "Ďalšia",
-        "previous-question-long": "Predchádzajúca otázka",
-        "previous-question-short": "Predchádzajúca",
-        "recapitulation-long": "Rekapitulácia",
-        "recapitulation-short": "Rekapitulácia",
-        "skip-question-long": "Preskočiť otázku",
-        "skip-question-short": "Preskočiť"
+        "back-to-main-page": "Vissza a főoldalra",
+        "instructions-long": "Útmutató",
+        "instructions-short": "Útmutató",
+        "next-question-long": "Következő kérdés",
+        "next-question-short": "Következő",
+        "previous-question-long": "Előző kérdés",
+        "previous-question-short": "Előző",
+        "recapitulation-long": "Összegzés",
+        "recapitulation-short": "Összegzés",
+        "skip-question-long": "Kérdés kihagyása",
+        "skip-question-short": "kihagyás"
       }
     },
     "questions-methodology": {
@@ -190,71 +190,71 @@
     },
     "recap": {
       "RecapPage": {
-        "back-to-main-page": "Späť",
-        "display-results": "Zobraziť výsledky",
-        "hint-text": "Tu si môžete prejsť a prípadne upraviť svoje odpovede a ich váhu.",
-        "questions": "Otázky",
-        "recapitulation": "Rekapitulácia"
+        "back-to-main-page": "Vissza",
+        "display-results": "Eredmények mutatása",
+        "hint-text": "Válaszok és súlyozás áttekintése, javítása",
+        "questions": "Kérdések",
+        "recapitulation": "Összegzés"
       },
       "RecapQuestionCard": {
-        "display-details": "Zobraziť detaily",
-        "important-for-me": "Pre mňa dôležité",
-        "no": "Nie",
-        "without-answer": "Bez odpovede",
-        "yes": "Áno"
+        "display-details": "Részletek mutatása",
+        "important-for-me": "Fontos számomra",
+        "no": "Nem ért egyet",
+        "without-answer": "Nincs válasz",
+        "yes": "Egyetért"
       }
     },
     "result": {
       "ResultCandidateCard": {
-        "display-details": "Zobraziť detaily",
-        "what-candidate-say": "Čo o sobe kandidát/ka hovorí"
+        "display-details": "Részletek mutatása",
+        "what-candidate-say": "Mit mondanak a jelöltek magukról"
       },
       "ResultCardContacts": {
-        "contacts": "Kontakty"
+        "contacts": "Kapcsolat"
       },
       "ResultCategory": {
-        "hide-candidates": "Skryť kandidátov",
-        "show-all-candidates": "Zobraziť úplný zoznam osobností alebo politických subjektov"
+        "hide-candidates": "Jelöltek elrejtése",
+        "show-all-candidates": "Minden jelölt mutatása"
       },
       "ResultPage": {
-        "back-to-main-page": "Späť na hlavnú stránku",
-        "back-to-start": "vrátiť na začátok",
-        "candidates-answers": "Odpovede kandidátov",
-        "compare-answers": "Porovnať odpovede",
-        "display-not-advancing-candidates": "Zobraziť nepostupujúce kandidáty",
-        "in-table": "v tabulke",
-        "fill-calc": "Vyplniť kalkulačku",
-        "my-match": "Moja zhoda",
-        "recapitulation": "Rekapitulácia",
-        "share": "Zdieľať",
-        "something-went-wrong": "Niečo sa pokazilo",
-        "something-went-wrong-text": "Bohužiaľ momentálne nemožno zdieľať, skúste to prosím neskôr.",
-        "text-and-answer": "a odpovedať na minimálne 1 otázku, alebo si",
-        "text-at-least-one-answer": "Pre zobrazenie výsledku je nutné odpovedať aspoň na 1 otázku",
-        "text-display-answers": "zobraziť porovnanie odpovedí kandidátov",
+        "back-to-main-page": "Vissza a főoldalra",
+        "back-to-start": "Vissza az elejére",
+        "candidates-answers": "A jelöltek válaszai",
+        "compare-answers": "Válaszok összehasonlítása",
+        "display-not-advancing-candidates": "Nem továbbjutó jelöltek mutatása",
+        "in-table": "a táblázatban",
+        "fill-calc": "Töltsd ki a Voksmonitort",
+        "my-match": "Egyezéseim",
+        "recapitulation": "Összegzés",
+        "share": "Megosztás",
+        "something-went-wrong": "Hiba történt :( ",
+        "something-went-wrong-text": "Jelenleg nem működik a megosztás",
+        "text-and-answer": "és legalább egy kérdés megválaszolása vagy",
+        "text-at-least-one-answer": "Az eredmények megtekintéséhez legalább egy kérdés megválaszolandó",
+        "text-display-answers": "a jelöltek válaszainak összehasonlítása.",
         "text-in-time": "Sledujte, ako sa Vaše názory a výsledky (ne)menia v čase.",
-        "text-save-calc": "Uložte si kalkulačku a vyplňte ju aj viackrát, a to pre každej voľby.",
-        "text-table": "Kompletný prehľad všetkých kandidátov a ich odpovedí (hlasovaní) nájdete",
-        "you-may": "Môžete sa"
+        "text-save-calc": "kövesd, hogy miként változnak az eredményeid idővel.",
+        "text-table": "megtekintheted az összes jelölt válaszát.",
+        "you-may": ""
       },
       "ResultShareModal": {
-        "hashtag1": "voľby",
-        "hashtag2": "voľby2023",
-        "hashtag3": "volebnákalkulačka",
-        "share-facebook": "Zdieľať na Facebooku",
-        "share-now": "Zdieľaj rovno...",
-        "share-title": "Volebná kalkulačka",
-        "share-twitter": "Zdieľať na X / Twitteri",
-        "text-copy": "...alebo si kliknutím skopíruj odkaz",
-        "text-do-it-too": "Pozrite sa na moje výsledky a vyplňte si ju tiež!",
-        "text-my-match": "Podľa Volebnej kalkulačky mi najväčšia zhoda vyšla takto:"
+        "hashtag1": "Választások",
+        "hashtag2": "Választások2024",
+        "hashtag3": "Voksmonitor",
+        "share-facebook": "Megosztás Facebookon",
+        "share-now": "Megosztás most",
+        "share-title": "Voksmonitor2024",
+        "share-twitter": "Megosztás a Twitteren",
+        "text-copy": "... vagy kattints ide a link másolásához",
+        "text-do-it-too": "Ezek az eredményeim, töltsd ki te is!",
+        "text-my-match": "A Voksmonitor szerint az alábbiak állnak hozzám a legközelebb:"
       }
     },
     "share": {
       "SharePage": {
-        "fill-again": "Vyplniť znova",
-        "my-match": "Takto to vyšlo mne",
-        "text-fill-again": "Pokiaľ si chcete kalkulačku vyplniť tiež, kliknite na \"Vyplniť znovu\" v pravom hornom rohu."
+        "fill-again": "Kitöltés újból",
+        "my-match": "Ez jött ki nekem:",
+        "text-fill-again": "A Voksmonitor újbóli kitöltéséhez kattintson a jobb felső sarokban található gombra"
       }
     }
   }
