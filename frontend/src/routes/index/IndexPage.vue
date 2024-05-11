@@ -83,106 +83,200 @@ const handleSubscribe = async () => {
     <div class="prezident-hero">
       <BlobComponent color="blue" class="blob1" />
       <BlobComponent color="red" class="blob2" />
-      <StackComponent spacing="medium" centered class="calc-main">
-        <BodyText size="medium" tag="h1" color="fg-strong">
-          <strong>Európai parlamenti választás Magyarországon</strong
-          ><br />
-          2024. június 9-én
-          <br />
-        </BodyText>
-        <HeadlineText tag="p" size="small">
-          Európai parlamenti választás
-          <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
-        </HeadlineText>
-        <BodyText size="large"
-          >Elkészítettünk a Voksmonitort az európai választásokra.</BodyText
+      <StackComponent spacing="small" centered class="calc-main">
+        <StackComponent spacing="large" centered space-between>
+          <BodyText size="medium" tag="h1" color="fg-strong">
+            <strong>Európai parlamenti & önkormányzati választás Magyarországon</strong
+            ><br />
+            9. Juni 2024
+            <br />
+          </BodyText>
+          <HeadlineText tag="p" size="small">
+            Európai parlamenti & Budapest választás
+            <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
+          </HeadlineText>
+          <StackComponent horizontal spacing="large">
+          <div>
+            <BodyText size="small"> 42 Fragen, ca. 10 Minuten</BodyText>
+            <ButtonComponent
+              kind="filled"
+              color="primary"
+              @click="
+                router.push({
+                  name: appRoutes.guide.name,
+                  params: {
+                    ...route.params,
+                    type: `${'valasztasok'}`,
+                    first: 'budapest-2024',
+                    second: 'voksmonitor',
+                  },
+                  query: { ...route.query },
+                })
+              "
+            >
+              Starten Sie den Európai parlamenti voksmonitor
+              <template #iconAfter>
+                <IconComponent :icon="mdiArrowRight" />
+              </template>
+            </ButtonComponent>
+          </div>
+          <div>
+            <BodyText size="small"> 42 Fragen, ca. 10 Minuten</BodyText>
+            <ButtonComponent
+              kind="filled"
+              color="primary"
+              @click="
+                router.push({
+                  name: appRoutes.guide.name,
+                  params: {
+                    ...route.params,
+                    type: `${'valasztasok'}`,
+                    first: 'budapest-2024',
+                    second: 'voksmonitor',
+                  },
+                  query: { ...route.query },
+                })
+              "
+            >
+              Starten Sie den önkormányzati választás voksmonitor
+              <template #iconAfter>
+                <IconComponent :icon="mdiArrowRight" />
+              </template>
+            </ButtonComponent>
+          </div>
+          </StackComponent>
+        </StackComponent>
+        <BodyText size="large">—</BodyText>
+        <CardComponent
+          corner="bottom-left"
+          padding="large"
+          border
+          border-radius="large"
+          shadow
+          class="other-calc-card calc-youth"
         >
+          <StackComponent spacing="large" centered>
+            <StackComponent spacing="small" centered space-between>
+              <BodyText size="medium" tag="h2" color="fg-strong">
+                <strong>Wahlrechner express</strong>
+              </BodyText>
+              <BodyText size="small">
+                20 Fragen, ca. 5 Minuten
+              </BodyText>
+              <ButtonComponent
+                kind="outlined"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      type: `${'wahlen'}`,
+                      first: 'europawahl-2024',
+                      second: 'express',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+              Starten Sie den Wahlrechner
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </StackComponent>
+          </StackComponent>
+        </CardComponent>
       </StackComponent>
     </div>
-    <section class="subscribe">
-      <StackComponent spacing="small" centered>
-        <TitleText size="large" tag="h2">
-          Szeretne értesülni a Voksmonitor indulásáról?
-        </TitleText>
-        <BodyText size="small" centered>
-          Adja meg nekünk az e-mail címét és értesítjük, ha új Voksmonitor-t indítunk.
-        </BodyText>
-        <BodyText v-if="success" size="small">
-          {{ message }}
-        </BodyText>
-        <form v-if="!success">
-          <StackComponent
-            horizontal
-            spacing="small"
-            stretched
-            wrap
-            style="justify-content: center"
-          >
-            <TextInputComponent
-              v-model="email"
-              required
-              type="email"
-              :placeholder="t('routes.index.IndexPage.input-label')"
-              :value="email"
-              :icon="mdiEmailOutline"
-              :disabled="posting"
-              :error="emailError"
-            />
-            <ButtonComponent
-              kind="outlined"
-              color="primary"
-              :loading="posting"
-              @click.prevent="handleSubscribe"
-            >
-              Beküldés
-            </ButtonComponent>
-          </StackComponent>
-        </form>
-        <BodyText v-if="!success" tag="p" size="small">{{
-          $t('routes.index.IndexPage.disclaimer')
-        }}</BodyText>
-      </StackComponent>
-    </section>
     <StaticContentLayout>
       <StackComponent class="section" spacing="small" centered>
-        <TitleText size="large" tag="h2">Hogyan készül a Voksmonitor?</TitleText>
+        <TitleText size="large" tag="h2"
+          >Wer steht hinter dem Wahlrechner?</TitleText
+        >
         <BodyText size="medium"
-          >A Voksmonitor a K-Monitor és a KohoVolit.eu nonprofit szervezetek közös projektje, ami a pártok programjára alapozva segít mérlegelni, hogy kire szavazzon.</BodyText
+          >Wahlrechner.at ist eine zivilgesellschaftliche Initiative der Organisationen KohoVolit.eu, wahlbeobachtung.org, PolEdu - Politics & Education, Bizeps, Vokskabin.hu/Andrássy Universität Budapest und dem Gründungsverein Österreichische Demokratiestiftung. Es handelt sich um ein überparteiliches Instrument, das Wählerinnen und Wählern dabei helfen soll, sich vor der Europawahl 2024 umfassend über die Positionen der kandidierenden Parteien zu informieren.</BodyText
         >
         <div class="info-bubbles-grid section">
           <InfoBubble image="info-1.png">
             <BodyText size="small"
-              > A kérdőív körülbelül 40 kérdésben méri fel a kitöltő álláspontját aktuális európai politikai témákról.
+              >Wir werden etwa 40 Fragen zu aktuellen politischen Themen
+              stellen.
             </BodyText>
           </InfoBubble>
           <InfoBubble image="info-2.png">
             <BodyText size="small"
-              >A kérdéseket minden listát állító, érdemi támogatottsággal rendelkező pártnak feltettük.
+              >Wir werden Fragen an alle Kandidierenden / Parteien richten.
             </BodyText>
           </InfoBubble>
           <InfoBubble image="info-3.png">
             <BodyText size="small"
-              >A válaszaikat összevetjük az Ön válaszaival.
+              >Wir werden von den meisten Kandidierenden/Parteien Antworten
+              erhalten.
             </BodyText>
           </InfoBubble>
           <InfoBubble image="info-4.png">
             <BodyText size="small"
-              >A Voksmonitor pedig kiszámolja, hogy Ön mennyire ért velük egyet.
-</BodyText
+              >Der Wahlrechner wird die Übereinstimmung mit Ihren Positionen
+              berechnen.</BodyText
             >
           </InfoBubble>
         </div>
       </StackComponent>
       <StackComponent class="section" spacing="large" centered>
         <BodyText size="medium"
-          >A Voksmonitor célja a tájékoztatás és a választói mérlegelés segítése. A végső döntést a szavazófülkében Ön hozza meg.
+          >Der Wahlrechner ist ein reiner Informationsdienst und dient nicht dazu, konkrete Wahlempfehlungen abzugeben.
         </BodyText>
-        <ButtonComponent kind="link" @click="router.push('/a-voksmonitorrol')">
+        <ButtonComponent kind="link" @click="router.push('/uber-den-wahlrechner')">
           <div class="button-content">
-            Tudjon meg többet!<IconComponent :icon="mdiArrowRight"></IconComponent>
+            Mehr herausfinden<IconComponent :icon="mdiArrowRight"></IconComponent>
           </div>
         </ButtonComponent>
       </StackComponent>
+      <section class="subscribe">
+        <StackComponent spacing="small" centered>
+          <TitleText size="large" tag="h2">
+            Möchten Sie über neue Rechner informiert werden?
+          </TitleText>
+          <BodyText size="small" centered>
+            Hinterlassen Sie uns Ihre E-Mail-Adresse und wir informieren Sie immer, wenn wir einen neuen Rechner starten.
+          </BodyText>
+          <BodyText v-if="success" size="small">
+            {{ message }}
+          </BodyText>
+          <form v-if="!success">
+            <StackComponent
+              horizontal
+              spacing="small"
+              stretched
+              wrap
+              style="justify-content: center"
+            >
+              <TextInputComponent
+                v-model="email"
+                required
+                type="email"
+                :placeholder="t('routes.index.IndexPage.input-label')"
+                :value="email"
+                :icon="mdiEmailOutline"
+                :disabled="posting"
+                :error="emailError"
+              />
+              <ButtonComponent
+                kind="outlined"
+                color="primary"
+                :loading="posting"
+                @click.prevent="handleSubscribe"
+              >
+                Senden
+              </ButtonComponent>
+            </StackComponent>
+          </form>
+          <BodyText v-if="!success" tag="p" size="small">{{
+            $t('routes.index.IndexPage.disclaimer')
+          }}</BodyText>
+        </StackComponent>
+      </section>
       <DonateBlock />
     </StaticContentLayout>
     <FooterMultiWord class="section" />
