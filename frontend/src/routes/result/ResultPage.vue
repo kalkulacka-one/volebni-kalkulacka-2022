@@ -385,8 +385,7 @@ const handleSubscribe = async () => {
           <section class="subscribe">
             <StackComponent spacing="small" centered>
               <BodyText size="small" centered>
-                Zanechajte nám váš e-mail a dáme vám vedieť vždy, keď spustíme
-                novú kalkulačku.
+                Hagyja meg e-mail címét, és minden alkalommal értesítjük, amikor új számológépet indítunk.
               </BodyText>
               <BodyText v-if="success" size="small">
                 {{ message }}
@@ -415,7 +414,7 @@ const handleSubscribe = async () => {
                     :loading="posting"
                     @click.prevent="handleSubscribe"
                   >
-                    Informujte ma o nových kalkulačkách
+                    Kérem, tájékoztasson az új számológépekről.
                   </ButtonComponent>
                 </StackComponent>
               </form>
