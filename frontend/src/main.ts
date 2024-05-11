@@ -166,7 +166,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'rekapitulacia'}/:nr(\\d+)?`,
     component: RecapPageVue,
     meta: {
-      title: 'Rekapitulace - Volebná kalkulačka',
+      title: 'Rekapitulácia - Volebná kalkulačka',
     },
   },
   result: {
@@ -174,15 +174,15 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'vysledok'}`,
     component: ResultPageVue,
     meta: {
-      title: 'Výsledky - Volebná kalkulačka',
+      title: 'Výsledok - Volebná kalkulačka',
     },
   },
   comparison: {
     name: 'comparison',
-    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'porovnaní'}`,
+    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'porovnanie'}`,
     component: ComparisonPageVue,
     meta: {
-      title: 'Porovnaní - Volebná kalkulačka',
+      title: 'Porovnanie - Volebná kalkulačka',
     },
   },
   share: {
