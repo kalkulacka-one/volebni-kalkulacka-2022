@@ -389,5 +389,6 @@ export interface Source {
   max-width: calc(6 * var(--spacing-large));
   margin-top: calc(var(--spacing-extra-large) / 2);
   margin-left: calc(-1 * var(--responsive-spacing-large));
+  overflow-wrap: break-word;
 }
 </style>
