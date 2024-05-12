@@ -65,7 +65,7 @@ watch(
         :checked="true"
         @click="onSelectAllClicked"
       >
-        Vybrat vše
+       {{ t('components.QuestionCandidateFilter.select-all') }}
       </pill-group-item-component>
       <pill-group-item-component
         v-for="(candidateId, idx) in uniqueCandidateIds"

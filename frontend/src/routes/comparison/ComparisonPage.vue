@@ -133,7 +133,7 @@ const candidateAnswers = electionStore.calculator
                 />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="medium">Porovnání</TitleText>
+            <TitleText tag="h2" size="medium">{{ $t('routes.comparison.ComparisonPage.comparison') }}</TitleText>
             <template #after>
               <ButtonComponent
                 kind="link"
