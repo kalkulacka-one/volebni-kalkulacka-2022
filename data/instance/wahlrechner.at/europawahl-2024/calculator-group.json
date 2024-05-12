@@ -1,0 +1,23 @@
+{
+  "id": "ff118828-e48c-40c6-a6d8-4880546e9861",
+  "key": "europawahl-2024",
+  "createdAt": "2021-01-01T00:00:00+01:00",
+  "election": {
+    "id": "3c13c7f4-8df7-4fa0-80c4-53895942fbc0",
+    "key": "europawahl-2024"
+  },
+  "calculators": [
+    {
+      "id": "1e9c3280-8e26-4b2e-8284-b4d7512147b7",
+      "variant": {
+        "key": "wahlrechner"
+      }
+    },
+    {
+      "id": "a5b42fab-aa32-4554-b182-98d7ea731126",
+      "variant": {
+        "key": "express"
+      }
+    }
+  ]
+}

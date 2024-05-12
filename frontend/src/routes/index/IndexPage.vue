@@ -83,79 +83,91 @@ const handleSubscribe = async () => {
     <div class="prezident-hero">
       <BlobComponent color="blue" class="blob1" />
       <BlobComponent color="red" class="blob2" />
-      <StackComponent spacing="medium" centered class="calc-main">
-        <BodyText size="medium" tag="h1" color="fg-strong">
-          <strong>Die Europawahl in Österreich</strong
-          ><br />
-          9. Juni 2024
-          <br />
-        </BodyText>
-        <HeadlineText tag="p" size="small">
-          Europawahl
-          <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
-        </HeadlineText>
-        <BodyText size="large"
-          >Der Start ist für 8. Mai 2024 geplant.</BodyText
+      <StackComponent spacing="small" centered class="calc-main">
+        <StackComponent spacing="large" centered space-between>
+          <BodyText size="medium" tag="h1" color="fg-strong">
+            <strong>Die Europawahl in Österreich</strong
+            ><br />
+            9. Juni 2024
+            <br />
+          </BodyText>
+          <HeadlineText tag="p" size="small">
+            Europawahl
+            <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
+          </HeadlineText>
+          <BodyText size="small"> 42 Fragen, ca. 10 Minuten</BodyText>
+          <ButtonComponent
+            kind="filled"
+            color="primary"
+            @click="
+              router.push({
+                name: appRoutes.guide.name,
+                params: {
+                  ...route.params,
+                  type: `${'wahlen'}`,
+                  first: 'europawahl-2024',
+                  second: 'wahlrechner',
+                },
+                query: { ...route.query },
+              })
+            "
+          >
+            Start des Wahlrechners
+            <template #iconAfter>
+              <IconComponent :icon="mdiArrowRight" />
+            </template>
+          </ButtonComponent>
+        </StackComponent>
+        <BodyText size="large">—</BodyText>
+        <CardComponent
+          corner="bottom-left"
+          padding="large"
+          border
+          border-radius="large"
+          shadow
+          class="other-calc-card calc-youth"
         >
+          <StackComponent spacing="large" centered>
+            <StackComponent spacing="small" centered space-between>
+              <BodyText size="medium" tag="h2" color="fg-strong">
+                <strong>Wahlrechner Express</strong>
+              </BodyText>
+              <BodyText size="small">
+                25 Fragen, ca. 5 Minuten
+              </BodyText>
+              <ButtonComponent
+                kind="outlined"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      type: `${'wahlen'}`,
+                      first: 'europawahl-2024',
+                      second: 'express',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+                Start des Wahlrechners
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </StackComponent>
+          </StackComponent>
+        </CardComponent>
       </StackComponent>
     </div>
-    <section class="subscribe">
-      <StackComponent spacing="small" centered>
-        <TitleText size="large" tag="h2">
-          Möchten Sie über neue Rechner informiert werden?
-        </TitleText>
-        <BodyText size="small" centered>
-          Hinterlassen Sie uns Ihre E-Mail-Adresse und wir informieren Sie immer, wenn wir einen neuen Rechner starten.
-        </BodyText>
-        <BodyText v-if="success" size="small">
-          {{ message }}
-        </BodyText>
-        <form v-if="!success">
-          <StackComponent
-            horizontal
-            spacing="small"
-            stretched
-            wrap
-            style="justify-content: center"
-          >
-            <TextInputComponent
-              v-model="email"
-              required
-              type="email"
-              :placeholder="t('routes.index.IndexPage.input-label')"
-              :value="email"
-              :icon="mdiEmailOutline"
-              :disabled="posting"
-              :error="emailError"
-            />
-            <ButtonComponent
-              kind="outlined"
-              color="primary"
-              :loading="posting"
-              @click.prevent="handleSubscribe"
-            >
-              Senden
-            </ButtonComponent>
-          </StackComponent>
-        </form>
-        <BodyText v-if="!success" tag="p" size="small">{{
-          $t('routes.index.IndexPage.disclaimer')
-        }}</BodyText>
-      </StackComponent>
-    </section>
     <StaticContentLayout>
       <StackComponent class="section" spacing="small" centered>
         <TitleText size="large" tag="h2"
-          >Wie wird der Wahlrechner entwickelt?</TitleText
+          >Wer steht hinter dem Wahlrechner?</TitleText
         >
         <BodyText size="medium"
-          >Wahlrechner.at ist eine zivilgesellschaftliche Initiative der
-          Organisationen KohoVolit.eu, wahlbeobachtung.org, PolEdu - Politics &
-          Education, Bizeps, Vokskabin.hu/Andrássy Universität Budapest und dem
-          Gründungsverein Österreichische Demokratiestiftung. Es handelt sich um
-          ein überparteiliches Instrument, das Ihnen dabei helfen soll, sich vor
-          der Europawahl umfassend über die Positionen der kandidierenden
-          Parteien zu informieren.</BodyText
+          >Wahlrechner.at ist eine zivilgesellschaftliche Initiative der Organisationen KohoVolit.eu, wahlbeobachtung.org, PolEdu - Politics & Education, Bizeps, Vokskabin.hu/Andrássy Universität Budapest und dem Gründungsverein Österreichische Demokratiestiftung. Es handelt sich um ein überparteiliches Instrument, das Wählerinnen und Wählern dabei helfen soll, sich vor der Europawahl 2024 umfassend über die Positionen der kandidierenden Parteien zu informieren.</BodyText
         >
         <div class="info-bubbles-grid section">
           <InfoBubble image="info-1.png">
@@ -193,6 +205,50 @@ const handleSubscribe = async () => {
           </div>
         </ButtonComponent>
       </StackComponent>
+      <section class="subscribe">
+        <StackComponent spacing="small" centered>
+          <TitleText size="large" tag="h2">
+            Möchten Sie über neue Rechner informiert werden?
+          </TitleText>
+          <BodyText size="small" centered>
+            Hinterlassen Sie uns Ihre E-Mail-Adresse und wir informieren Sie immer, wenn wir einen neuen Rechner starten.
+          </BodyText>
+          <BodyText v-if="success" size="small">
+            {{ message }}
+          </BodyText>
+          <form v-if="!success">
+            <StackComponent
+              horizontal
+              spacing="small"
+              stretched
+              wrap
+              style="justify-content: center"
+            >
+              <TextInputComponent
+                v-model="email"
+                required
+                type="email"
+                :placeholder="t('routes.index.IndexPage.input-label')"
+                :value="email"
+                :icon="mdiEmailOutline"
+                :disabled="posting"
+                :error="emailError"
+              />
+              <ButtonComponent
+                kind="outlined"
+                color="primary"
+                :loading="posting"
+                @click.prevent="handleSubscribe"
+              >
+                Senden
+              </ButtonComponent>
+            </StackComponent>
+          </form>
+          <BodyText v-if="!success" tag="p" size="small">{{
+            $t('routes.index.IndexPage.disclaimer')
+          }}</BodyText>
+        </StackComponent>
+      </section>
       <DonateBlock />
     </StaticContentLayout>
     <FooterMultiWord class="section" />

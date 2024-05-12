@@ -9,8 +9,8 @@
       }
     },
     "DonateBlock": {
-      "body": "Gefällt Ihnen das Projekt Wahlrechner? Wir würden uns freuen, wenn Sie uns unterstützen und es uns ermöglichen, mit ihrer Erstellung fortzufahren.",
-      "title": "Unterstützen Sie die Erstellung von Rechnern"
+      "body": "Gefällt Ihnen das Projekt Wahlrechner? Wir würden uns freuen, wenn Sie uns unterstützen, damit wir das Service auch bei den kommenden Wahlen anbieten können.",
+      "title": "Unterstützung für den Wahlrechner"
     },    
     "FooterMultiWord": {
       "body-about-voting-calculator": "Über den Wahlrechner",
@@ -23,30 +23,31 @@
       "body-support-calculator": "Unterstützung",
       "body-who-to-vote": "Der Wahlrechner ist ein unparteiischer Wahlhelfer.",
       "links": "Links",
-      "title-more-about-elections": "Viac o voľbách"
+      "title-more-about-elections": "Mehr zu den Wahlen"
     },
     "QuestionCandidateFilter": {
-      "title-candidate-filter": "Filtrovať podľa kandidujúcich"
+      "title-candidate-filter": "Filtern nach Parteien",
+      "select-all": "Alle auswählen"
     },
     "QuestionTagFilter": {
-      "title-filter-by-theme": "Filtrovať podľa tém",
-      "select-all": "Vybrať všetko"
+      "title-filter-by-theme": "Filtern nach Themen",
+      "select-all": "Alle auswählen"
     },
     "WantToKnowMore": {
-      "more-about-topic": "Viac o téme"
+      "more-about-topic": "Mehr zum Thema"
     }
   },
   "routes": {
     "comparison": {
       "ComparisonGrid": {
-        "answers": "odpovede",
-        "my": "Moje"
+        "answers": "Antworten",
+        "my": "Meine"
       },
       "ComparisonPage": {
-        "back-to-main-page": "Späť na hlavnú stránku",
-        "comparison": "Porovnanie",
-        "my-match": "Moja zhoda",
-        "set-comparison": "Nastaviť porovnanie"
+        "back-to-main-page": "Zurück zur Hauptseite",
+        "comparison": "Vergleich",
+        "my-match": "Meine Übereinstimmung",
+        "set-comparison": "Vergleich einstellen"
       }
     },
     "data-protection": {
@@ -56,30 +57,30 @@
     },
     "error": {
       "ErrorPage": {
-        "go-to-main-page": "Prejsť na hlavnú stránku",
-        "this-page-does-not-exist": "Táto stránka neexistuje",
-        "unknown-error": "Neznámá chyba"
+        "go-to-main-page": "Gehe zur Hauptseite",
+        "this-page-does-not-exist": "Diese Seite existiert nicht.",
+        "unknown-error": "Unbekannter Fehler"
       }
     },
     "guide": {
       "GuidePage": {
-        "agree": "súhlasím",
-        "back-to-main-page": "Späť na hlavnú stránku",
-        "disagree": "nesúhlasím",
-        "double-weight": "Odpoveď potom bude mať vo výpočte zhody dvojnásobnú váhu.",
-        "first-question": "Prvá otázka",
-        "guide": "Návod",
-        "important": "pre mňa dôležité",
-        "next-step": "Ďalší krok",
-        "not-included": "Táto otázka sa do výpočtu vašej zhody nezapočíta.",
-        "previous-step": "Predchádzajúci krok",
-        "skip": "preskočiť",
-        "skip-guide": "Preskočiť návod",
-        "skip-question": "Keď si nie ste istý/á, téma vás nezaujíma alebo z iného dôvodu nechcete odpovedať, môžete otázku preskočiť šípkou napravo.",
-        "text-0": "Ak politik/politička alebo strana na otázku neodpovedali (nehlasovali), započíta sa zisk 0 bodov.",
-        "text-answer-button": "Odpovedať môžete pomocou tlačidiel:",
-        "text-important": "Pokiaľ je pre vás niektorá z tém obzvlášť dôležitá, označte ju hviezdičkou.",
-        "text-method": "Keď sa s politikom/političkou alebo stranou v odpovedi zhodnete, získajú vo výpočte zhody 1 bod. V opačnom prípade 1 bod stratia."
+        "agree": "Dafür",
+        "back-to-main-page": "Zurück zur Hauptseite",
+        "disagree": "Dagegen",
+        "double-weight": "Die Antwort hat dann doppeltes Gewicht bei der Berechnung der Einhaltung.",
+        "first-question": "Die erste Frage",
+        "guide": "Anleitung",
+        "important": "wichtig für mich",
+        "next-step": "Nächste Schritt",
+        "not-included": "Diese Frage wird nicht in Ihre Berechnung der Einhaltung der Vorschriften einbezogen.",
+        "previous-step": "Vorheriger Schritt",
+        "skip": "überspringen",
+        "skip-guide": "Anleitung überspringen",
+        "skip-question": "Ist man bei einem Thema nicht sicher, oder will aus einem anderen Grund nicht antworten, kann die Frage mit dem Pfeil auf der rechten Seite übersprungen werden. Diese Frage wird dann nicht in die Berechnung des Ergebnisses einbezogen.",
+        "text-0": "Wenn eine Partei die Frage nicht beantwortet hat (z.B. Stimmenthaltung bei Abstimmung), wird dies mit 0 Punkten bewertet.",
+        "text-answer-button": "Antwortmöglichkeiten:",
+        "text-important": "Wird eines der Themen als besonders wichtig empfunden, kann es mit einem Stern markiert werden. Diese Antwort hat dann doppeltes Gewicht bei der Berechnung des Ergebnisses.",
+        "text-method": "Wenn eine Antwort mit einer Partei übereinstimmt, wird im Übereinstimmungswert 1 Punkt angerechnet. Wenn die Antwort nicht, übereinstimmt wird 1 Punkt abgezogen."
       }
     },
     "index": {
@@ -97,7 +98,7 @@
         "secondary-text": "Hinterlassen Sie uns Ihre E-Mail-Adresse und wir informieren Sie, sobald der Rechner verfügbar ist.",
         "subscribe-button-label": "Benachrichtigen Sie mich",
         "success": "Wir werden Sie informieren!",
-        "title": "Wahlrechner 2023"
+        "title": "Wahlrechner 2024"
       }
     },
     "profile": {
@@ -164,22 +165,22 @@
     },
     "question": {
       "QuestionBottomBar": {
-        "important-for-me": "Pre mňa dôležité",
-        "no": "Nie",
-        "yes": "Áno"
+        "important-for-me": "Wichtig für mich",
+        "no": "Dagegen",
+        "yes": "Dafür"
       },
       "QuestionPage": {
-        "back-to-main-page": "Späť na hlavnú stránku",
-        "instructions-long": "Návod",
-        "instructions-short": "Návod",
-        "next-question-long": "Ďalšia otázka",
-        "next-question-short": "Ďalšia",
-        "previous-question-long": "Predchádzajúca otázka",
-        "previous-question-short": "Predchádzajúca",
-        "recapitulation-long": "Rekapitulácia",
-        "recapitulation-short": "Rekapitulácia",
-        "skip-question-long": "Preskočiť otázku",
-        "skip-question-short": "Preskočiť"
+        "back-to-main-page": "Zurück zur Hauptseite",
+        "instructions-long": "Anleitung",
+        "instructions-short": "Anleitung",
+        "next-question-long": "Nächste Frage",
+        "next-question-short": "Nächste",
+        "previous-question-long": "Vorherige Frage",
+        "previous-question-short": "Vorherige",
+        "recapitulation-long": "Übersicht",
+        "recapitulation-short": "Übersicht",
+        "skip-question-long": "Frage überspringen",
+        "skip-question-short": "Überspringen"
       }
     },
     "questions-methodology": {
@@ -189,71 +190,71 @@
     },
     "recap": {
       "RecapPage": {
-        "back-to-main-page": "Späť",
-        "display-results": "Zobraziť výsledky",
-        "hint-text": "Tu si môžete prejsť a prípadne upraviť svoje odpovede a ich váhu.",
-        "questions": "Otázky",
-        "recapitulation": "Rekapitulácia"
+        "back-to-main-page": "Zurück zur Hauptseite",
+        "display-results": "Ergebnisse anzeigen",
+        "hint-text": "Hier kann man die gewählten Antworten und deren Gewichtung überprüfen und gegebenenfalls anpassen.",
+        "questions": "Fragen",
+        "recapitulation": "Übersicht"
       },
       "RecapQuestionCard": {
-        "display-details": "Zobraziť detaily",
-        "important-for-me": "Pre mňa dôležité",
-        "no": "Nie",
-        "without-answer": "Bez odpovede",
-        "yes": "Áno"
+        "display-details": "Details anzeigen",
+        "important-for-me": "Wichtig für mich",
+        "no": "Dagegen",
+        "without-answer": "Ohne Antwort",
+        "yes": "Dafür"
       }
     },
     "result": {
       "ResultCandidateCard": {
-        "display-details": "Zobraziť detaily",
-        "what-candidate-say": "Čo o sobe kandidát/ka hovorí"
+        "display-details": "Details anzeigen",
+        "what-candidate-say": "Was sagen die Kandidaten über sich selbst?"
       },
       "ResultCardContacts": {
-        "contacts": "Kontakty"
+        "contacts": "Kontakte"
       },
       "ResultCategory": {
-        "hide-candidates": "Skryť kandidátov",
-        "show-all-candidates": "Zobraziť úplný zoznam osobností alebo politických subjektov"
+        "hide-candidates": "Kandidaten ausblenden",
+        "show-all-candidates": "Alle Kandidaten anzeigen"
       },
       "ResultPage": {
-        "back-to-main-page": "Späť na hlavnú stránku",
-        "back-to-start": "vrátiť na začátok",
-        "candidates-answers": "Odpovede kandidátov",
-        "compare-answers": "Porovnať odpovede",
-        "display-not-advancing-candidates": "Zobraziť nepostupujúce kandidáty",
-        "in-table": "v tabulke",
-        "fill-calc": "Vyplniť kalkulačku",
-        "my-match": "Moja zhoda",
-        "recapitulation": "Rekapitulácia",
-        "share": "Zdieľať",
-        "something-went-wrong": "Niečo sa pokazilo",
-        "something-went-wrong-text": "Bohužiaľ momentálne nemožno zdieľať, skúste to prosím neskôr.",
-        "text-and-answer": "a odpovedať na minimálne 1 otázku, alebo si",
-        "text-at-least-one-answer": "Pre zobrazenie výsledku je nutné odpovedať aspoň na 1 otázku",
-        "text-display-answers": "zobraziť porovnanie odpovedí kandidátov",
+        "back-to-main-page": "Zurück zur Hauptseite",
+        "back-to-start": "Zurück zum Anfang",
+        "candidates-answers": "Antworten der Kandidaten",
+        "compare-answers": "Vergleiche die Antworten",
+        "display-not-advancing-candidates": "Nicht weitergeleitete Kandidaten anzeigen",
+        "in-table": "in der Tabelle",
+        "fill-calc": "Fülle den Wahlrechner aus",
+        "my-match": "Meine Übereinstimmung",
+        "recapitulation": "Rekapitulation",
+        "share": "Teilen",
+        "something-went-wrong": "Etwas ist schief gelaufen",
+        "something-went-wrong-text": "Leider kann im Moment nicht geteilt werden. Bitte versuchen Sie es später erneut.",
+        "text-and-answer": "und mindestens eine Frage beantworten oder",
+        "text-at-least-one-answer": "Um das Ergebnis anzuzeigen muß man mindestens eine Frage beantworten",
+        "text-display-answers": "den Vergleich der Antworten der Kandidaten ansehen",
         "text-in-time": "Sledujte, ako sa Vaše názory a výsledky (ne)menia v čase.",
         "text-save-calc": "Uložte si kalkulačku a vyplňte ju aj viackrát, a to pre každej voľby.",
-        "text-table": "Kompletný prehľad všetkých kandidátov a ich odpovedí (hlasovaní) nájdete",
-        "you-may": "Môžete sa"
+        "text-table": "Einen vollständigen Überblick über alle Kandidaten und deine Antworten (Abstimmungen) findest du",
+        "you-may": "Du kannst"
       },
       "ResultShareModal": {
-        "hashtag1": "voľby",
-        "hashtag2": "voľby2023",
-        "hashtag3": "volebnákalkulačka",
-        "share-facebook": "Zdieľať na Facebooku",
-        "share-now": "Zdieľaj rovno...",
-        "share-title": "Volebná kalkulačka",
-        "share-twitter": "Zdieľať na X / Twitteri",
-        "text-copy": "...alebo si kliknutím skopíruj odkaz",
-        "text-do-it-too": "Pozrite sa na moje výsledky a vyplňte si ju tiež!",
-        "text-my-match": "Podľa Volebnej kalkulačky mi najväčšia zhoda vyšla takto:"
+        "hashtag1": "Wahlen",
+        "hashtag2": "Wahlen2024",
+        "hashtag3": "Wahlrechner",
+        "share-facebook": "Auf Facebook teilen",
+        "share-now": "Teilen jetzt...",
+        "share-title": "Wahlrechner 2024",
+        "share-twitter": "Auf X / Twitter teilen",
+        "text-copy": "...oder klicke hier, um den Link zu kopieren.",
+        "text-do-it-too": "Schau dir meine Ergebnisse an und füll sie auch aus!",
+        "text-my-match": "Laut dem Wahlrechner habe ich die größte Übereinstimmung mit den folgenden Ergebnissen:"
       }
     },
     "share": {
       "SharePage": {
-        "fill-again": "Vyplniť znova",
-        "my-match": "Takto to vyšlo mne",
-        "text-fill-again": "Pokiaľ si chcete kalkulačku vyplniť tiež, kliknite na \"Vyplniť znovu\" v pravom hornom rohu."
+        "fill-again": "Erneut ausfüllen.",
+        "my-match": "So ist es bei mir herausgekommen.",
+        "text-fill-again": "Wenn Sie den Wahlrechner auch ausfüllen möchten, klicken Sie auf „Erneut ausfüllen“ in der oberen rechten Ecke."
       }
     }
   }

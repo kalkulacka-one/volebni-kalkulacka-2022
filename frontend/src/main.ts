@@ -135,8 +135,8 @@ export const appRoutes = {
   },
   districtSelection: {
     name: 'district-selection',
-    path: '/volby/:election/vyber',
-    alias: '/volby/:election',
+    path: '/wahlen/:election/vyber',
+    alias: '/wahlen/:election',
     component: DistrictSelectionPageVue,
     meta: {
       title: 'Wahlrechner',
@@ -144,7 +144,7 @@ export const appRoutes = {
   },
   guide: {
     name: 'guide',
-    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'navod'}/:step(\\d+)?`,
+    path: `/:type(${'kalkulacka'}|${'wahlen'})/:first/:second?/:third?/:fourth?/${'anleitung'}/:step(\\d+)?`,
     component: GuidePageVue,
     meta: {
       title: 'Anleitung - Wahlrechner',
@@ -152,7 +152,7 @@ export const appRoutes = {
   },
   question: {
     name: 'question',
-    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'otazka'}/:nr(\\d+)?`,
+    path: `/:type(${'kalkulacka'}|${'wahlen'})/:first/:second?/:third?/:fourth?/${'frage'}/:nr(\\d+)?`,
     component: QuestionPageVue,
     meta: {
       title: 'Frage $$ - Wahlrechner',
@@ -162,7 +162,7 @@ export const appRoutes = {
   },
   recap: {
     name: 'recap',
-    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'rekapitulacia'}/:nr(\\d+)?`,
+    path: `/:type(${'kalkulacka'}|${'wahlen'})/:first/:second?/:third?/:fourth?/${'zusammenfassung'}/:nr(\\d+)?`,
     component: RecapPageVue,
     meta: {
       title: 'Zusammenfassung - Wahlrechner',
@@ -170,7 +170,7 @@ export const appRoutes = {
   },
   result: {
     name: 'result',
-    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'vysledok'}`,
+    path: `/:type(${'kalkulacka'}|${'wahlen'})/:first/:second?/:third?/:fourth?/${'ergebnisse'}`,
     component: ResultPageVue,
     meta: {
       title: 'Ergebnisse - Wahlrechner',
@@ -178,7 +178,7 @@ export const appRoutes = {
   },
   comparison: {
     name: 'comparison',
-    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'porovnaní'}`,
+    path: `/:type(${'kalkulacka'}|${'wahlen'})/:first/:second?/:third?/:fourth?/${'vergleich'}`,
     component: ComparisonPageVue,
     meta: {
       title: 'Vergleich - Wahlrechner',
