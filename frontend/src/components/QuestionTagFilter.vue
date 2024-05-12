@@ -52,8 +52,7 @@ watch(
         :checked="true"
         @click="onSelectAllClicked"
       >
-        {{ $t('components.QuestionTagFilter.select-all') }}
-        Vybrat vše
+        {{ t('components.QuestionTagFilter.select-all') }}
       </pill-group-item-component>
       <pill-group-item-component
         v-for="(tag, idx) in uniqueTags"

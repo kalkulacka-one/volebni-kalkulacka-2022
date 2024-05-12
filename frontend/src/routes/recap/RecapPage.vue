@@ -218,7 +218,7 @@ const isCardHidden = (index: number) => {
                   color="primary"
                   @click="handleShowResultsClick"
                 >
-                  Zobrazit výsledky
+                  {{ $t('routes.recap.RecapPage.display-results') }}
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
