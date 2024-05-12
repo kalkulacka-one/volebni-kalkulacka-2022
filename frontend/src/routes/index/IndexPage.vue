@@ -92,7 +92,7 @@ const handleSubscribe = async () => {
             <br />
           </BodyText>
           <HeadlineText tag="p" size="small">
-            Európai parlamenti & Fővárosi polgármester választás 2024
+            Európai parlamenti & Fővárosi polgármester választás
             <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
           </HeadlineText>
           <StackComponent horizontal spacing="large">
