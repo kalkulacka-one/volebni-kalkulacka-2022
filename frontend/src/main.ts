@@ -144,44 +144,44 @@ export const appRoutes = {
   },
   guide: {
     name: 'guide',
-    path: `/:type(${'kalkulacka'}|${'valasztasok'})/:first/:second?/:third?/:fourth?/${'navod'}/:step(\\d+)?`,
+    path: `/:type(${'kalkulacka'}|${'valasztasok'})/:first/:second?/:third?/:fourth?/${'utmutato'}/:step(\\d+)?`,
     component: GuidePageVue,
     meta: {
-      title: 'Návod - Voksmonitor',
+      title: 'Útmutató - Voksmonitor',
     },
   },
   question: {
     name: 'question',
-    path: `/:type(${'kalkulacka'}|${'valasztasok'})/:first/:second?/:third?/:fourth?/${'otazka'}/:nr(\\d+)?`,
+    path: `/:type(${'kalkulacka'}|${'valasztasok'})/:first/:second?/:third?/:fourth?/${'kerdes'}/:nr(\\d+)?`,
     component: QuestionPageVue,
     meta: {
-      title: 'Otázka $$ - Voksmonitor',
+      title: 'Kérdés $$ - Voksmonitor',
       hasNumber: true,
     },
     beforeEnter: questionGuard,
   },
   recap: {
     name: 'recap',
-    path: `/:type(${'kalkulacka'}|${'valasztasok'})/:first/:second?/:third?/:fourth?/${'rekapitulacia'}/:nr(\\d+)?`,
+    path: `/:type(${'kalkulacka'}|${'valasztasok'})/:first/:second?/:third?/:fourth?/${'osszegzes'}/:nr(\\d+)?`,
     component: RecapPageVue,
     meta: {
-      title: 'Rekapitulace - Voksmonitor',
+      title: 'Összegzés - Voksmonitor',
     },
   },
   result: {
     name: 'result',
-    path: `/:type(${'kalkulacka'}|${'valasztasok'})/:first/:second?/:third?/:fourth?/${'vysledok'}`,
+    path: `/:type(${'kalkulacka'}|${'valasztasok'})/:first/:second?/:third?/:fourth?/${'egyezeseim'}`,
     component: ResultPageVue,
     meta: {
-      title: 'Výsledky - Voksmonitor',
+      title: 'Egyezéseim - Voksmonitor',
     },
   },
   comparison: {
     name: 'comparison',
-    path: `/:type(${'kalkulacka'}|${'valasztasok'})/:first/:second?/:third?/:fourth?/${'porovnaní'}`,
+    path: `/:type(${'kalkulacka'}|${'valasztasok'})/:first/:second?/:third?/:fourth?/${'osszehasonlitas'}`,
     component: ComparisonPageVue,
     meta: {
-      title: 'Porovnaní - Voksmonitor',
+      title: 'Összehasonlítás - Voksmonitor',
     },
   },
   share: {
@@ -189,7 +189,7 @@ export const appRoutes = {
     path: '/share/:uuid',
     component: SharePageVue,
     meta: {
-      title: 'Moje výsledky - Voksmonitor',
+      title: 'Egyezéseim - Voksmonitor',
     },
   },
   login: {
