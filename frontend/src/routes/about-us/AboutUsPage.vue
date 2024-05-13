@@ -202,12 +202,11 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
         </TitleText>
         <BodyText size="large">
           Wahlrechner.at soll ein Projekt aus der Zivilgesellschaft für die
-          Zivilgesellschaft sein. Wir bewerben uns bei der Stiftung
-          Österreich-Ungarn um eine Förderung für grenzüberschreitende
-          Zusammenarbeit in der Höhe von 15.000 EUR. Weiters werden Spenden zur
+          Zivilgesellschaft sein. Kooperierenden NGOs unterstützen das Projekt
+          durch freiwillige Mitarbeit während der Pilotphase. Spenden werden zur
           Unterstützung des Projektes gesammelt. Mittel, die im Zuge des
           Pilotprojektes nicht verbraucht werden, werden für die Verbesserung
-          der technischen Infrastruktur genutzt, um Wahlrechner als zweite
+          der technischen Infrastruktur genutzt, um Wahlrechner als
           maßgebliche VAA in Österreich zu positionieren.
         </BodyText>
       </StackComponent>
