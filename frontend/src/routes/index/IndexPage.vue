@@ -172,25 +172,22 @@ const handleSubscribe = async () => {
         <div class="info-bubbles-grid section">
           <InfoBubble image="info-1.png">
             <BodyText size="small"
-              >Wir werden etwa 40 Fragen zu aktuellen politischen Themen
-              stellen.
+              >Wir stellen etwa 50 Fragen zu aktuellen politischen Themen..
             </BodyText>
           </InfoBubble>
           <InfoBubble image="info-2.png">
             <BodyText size="small"
-              >Wir werden Fragen an alle Kandidierenden / Parteien richten.
+              >Wir befragen die wahlwerbenden Parteien.
             </BodyText>
           </InfoBubble>
           <InfoBubble image="info-3.png">
             <BodyText size="small"
-              >Wir werden von den meisten Kandidierenden/Parteien Antworten
-              erhalten.
+              >Und die Parteien antworten.
             </BodyText>
           </InfoBubble>
           <InfoBubble image="info-4.png">
             <BodyText size="small"
-              >Der Wahlrechner wird die Übereinstimmung mit Ihren Positionen
-              berechnen.</BodyText
+              >Der Wahlrechner berechnet die Übereinstimmung mit Ihren Antworten.</BodyText
             >
           </InfoBubble>
         </div>
