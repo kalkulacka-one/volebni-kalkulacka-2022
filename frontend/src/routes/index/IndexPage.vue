@@ -110,7 +110,7 @@ const handleSubscribe = async () => {
                     <strong>Európai parlamenti voksmonitor</strong>
                   </BodyText>
                   <BodyText size="small">
-                    43 kérdés, nagyjából 10 perc
+                    40 kérdés, nagyjából 10 perc
                   </BodyText>
                   <ButtonComponent
                     kind="filled"
@@ -147,10 +147,10 @@ const handleSubscribe = async () => {
               <StackComponent spacing="large" centered>
                 <StackComponent spacing="small" centered space-between>
                   <BodyText size="medium" tag="h2" color="fg-strong">
-                    <strong>Fővárosi polgármester voksmonitor</strong>
+                    <strong>Főpolgármesteri voksmonitor</strong>
                   </BodyText>
                   <BodyText size="small">
-                    20 kérdés, nagyjából 5 perc
+                    38 kérdés, nagyjából 8-10 percc
                   </BodyText>
                   <ButtonComponent
                     kind="filled"
@@ -189,7 +189,7 @@ const handleSubscribe = async () => {
                       })
                     "
                   >
-                  English questions version
+                  English version
                     <template #iconAfter>
                       <IconComponent :icon="mdiArrowRight" />
                     </template>

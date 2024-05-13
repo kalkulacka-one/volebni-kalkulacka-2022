@@ -9,13 +9,13 @@
       }
     },
     "DonateBlock": {
-      "body": "Tetszik a Voksmonitor? Kérjük, támogassa az elkészültét!",
-      "title": "Támogassa a Voksmonitor elkészítését!"
+      "body": "Tetszik a Voksmonitor? Kérjük, támogasd az elkészítését!",
+      "title": "Támogasd a Voksmonitor elkészítését!"
     },
     "FooterMultiWord": {
       "body-about-voting-calculator": "A Voksmonitorról",
       "body-comunal-voting": "Komunálné voľby",
-      "body-created-by-ngos": "Nonprofit szervezetek Száveteno együttműködése.",
+      "body-created-by-ngos": "Civil szervezetek együttműködésében készült.",
       "body-data-protection": "Adatvédelem",
       "body-methodoogy": "A Voksmonitor módszertana",
       "body-presidential-voting": "Prezidentské voľby",
@@ -23,7 +23,7 @@
       "body-support-calculator": "A Voksmonitor támogatása",
       "body-who-to-vote": "A Voksmonitor összeveti a véleményedet a pártok programjaival.",
       "links": "Linkek",
-      "title-more-about-elections": "Többet a választásokról"
+      "title-more-about-elections": "További információ a választásokról"
     },
     "QuestionCandidateFilter": {
       "title-candidate-filter": "Szűrés pártok szerint",
@@ -57,7 +57,7 @@
     },
     "error": {
       "ErrorPage": {
-        "go-to-main-page": "Főoldara",
+        "go-to-main-page": "Főoldal",
         "this-page-does-not-exist": "Ez az oldal nem található",
         "unknown-error": "Ismeretlen hiba"
       }
@@ -73,11 +73,11 @@
         "important": "Fontos számomra",
         "next-step": "Következő lépés",
         "not-included": "Ezt a kérdést nem vesszük figyelembe az eredmények kiszámításánál",
-        "previous-step": "Előzős lépés",
+        "previous-step": "Előző lépés",
         "skip": "kihagyás",
         "skip-guide": "Útmutató kihagyása",
-        "skip-question": "Amennyiben nincs álláspontja a témáról, vagy nem szeretne válazolni, a jobb oldalon található nyíllal továbbléphet. A kérdést nem vesszük figyelembe az eredmények kiszámításánál.",
-        "text-0": "Amennyiben egy párt nem válaszolt, vagy nincs egyértelmű álláspontja (tartózkodik), úgy a választ 0 ponttal értékeljük.",
+        "skip-question": "Amennyiben nincs álláspontod a témáról, vagy nem szeretnél válaszolni, a jobb oldalon található nyíllal továbbléphetsz. A kérdést nem vesszük figyelembe az eredmények kiszámításánál.",
+        "text-0": "Amennyiben egy párt nem válaszolt, vagy nincs egyértelmű álláspontja (tartózkodik), úgy a választ nem értékeljük.",
         "text-answer-button": "Válaszlehetőségek",
         "text-important": "Csillaggal jelölhetőek a kitöltő számára fontos témák. Ezeket a program dupla súllyal számítja.",
         "text-method": "Amennyiben egy válasz megegyezik egy párt válaszával, az egy pontot ér. Amennyiben ellentétes a válasz, egy pontot levonunk."
@@ -90,14 +90,16 @@
           "prefix": "Zatiaľ sa môžete pozrieť na {0}",
           "suffix": "volebnej kalkulačky."
         },
-        "disclaimer": "A beküldéssel beleegyezik, hogy értesítést kapjon a Voksmonitorról.",
+        "disclaimer": "A beküldéssel beleegyezel, hogy értesítést kapj a Voksmonitorról.",
         "empty-email-error": "Szükséges mező",
-        "error": "Hiba történt :( Kérjük, próbálja újra.",
+        "error": "Hiba történt :( Kérjük, próbáld újra.",
+        "inform-me": "Értesítsen az új Voksmonitorokról",
         "input-label": "E-mail",
+        "input-text": "Hagyja meg e-mail-címét, és értesíteni fogjuk, amikor új Voksmonitort piacra dobunk.",
         "primary-text": "Prípravujeme pre vás volebnú kalkulačku pre voľby do Národnej rady Slovenskej republiky 2023.",
-        "secondary-text": "Adja meg az e-mailcímét, és értesítést küldünk, ha elérhető a Voksmonitor",
+        "secondary-text": "Add meg az e-mail címed, és értesítést küldünk, ha elérhető a Voksmonitor.",
         "subscribe-button-label": "Feliratkozás",
-        "success": "Értesíteni fogjuk!",
+        "success": "Értesíteni fogunk!",
         "title": "Voksmonitor"
       }
     },
@@ -166,8 +168,8 @@
     "question": {
       "QuestionBottomBar": {
         "important-for-me": "Fontos számomra",
-        "no": "Nem ért egyet",
-        "yes": "Egyetért"
+        "no": "Nem értek egyet",
+        "yes": "Egyetértek"
       },
       "QuestionPage": {
         "back-to-main-page": "Vissza a főoldalra",
@@ -199,15 +201,15 @@
       "RecapQuestionCard": {
         "display-details": "Részletek mutatása",
         "important-for-me": "Fontos számomra",
-        "no": "Nem ért egyet",
+        "no": "Nem értek egyet",
         "without-answer": "Nincs válasz",
-        "yes": "Egyetért"
+        "yes": "Egyetértek"
       }
     },
     "result": {
       "ResultCandidateCard": {
         "display-details": "Részletek mutatása",
-        "what-candidate-say": "Mit mondanak a jelöltek magukról"
+        "what-candidate-say": "Mit mondanak a jelöltek magukról?"
       },
       "ResultCardContacts": {
         "contacts": "Kapcsolat"
