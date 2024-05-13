@@ -385,8 +385,6 @@ const handleSubscribe = async () => {
           <section class="subscribe">
             <StackComponent spacing="small" centered>
               <BodyText size="small" centered>
-                Zanechajte nám váš e-mail a dáme vám vedieť vždy, keď spustíme
-                novú kalkulačku.
                 {{ $t('routes.index.IndexPage.input-text') }}
               </BodyText>
               <BodyText v-if="success" size="small">
