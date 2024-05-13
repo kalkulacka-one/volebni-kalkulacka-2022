@@ -378,7 +378,7 @@ const handleSubscribe = async () => {
           <ResultCategory
             :result="resultsGeneral"
             category="general"
-            :max-visible-candidates="5"
+            :max-visible-candidates="7"
           />
           <section class="subscribe">
             <StackComponent spacing="small" centered>

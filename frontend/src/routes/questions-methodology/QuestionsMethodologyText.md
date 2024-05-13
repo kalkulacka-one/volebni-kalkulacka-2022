@@ -13,45 +13,43 @@ const { t, locale } = useI18n();
 
 <StackComponent spacing="extra-small">
 
-<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Nicht konformes Beispiel
+<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Schlechtes Beispiel
 
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Konformes Beispiel
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Gutes Beispiel
 
 </StackComponent>
 
-## 1. Die Frage muss lauten, was die gewählten Politiker beeinflussen können.
+## 1. Die Frage muss auf ein Thema bezogen sein, auf das die gewählten Politiker:innen Einfluss haben.
 
 <StackComponent spacing="extra-small">
 
-<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Österreich sollte die EU verlassen (Frage bei den Regionalwahlen).
+<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Österreich sollte die EU verlassen (Frage bei einer Landtagswahl).
 
 <IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Österreich sollte aus der EU austreten (Frage bei den Nationalratswahlen).
 
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Ich möchte, dass Wien bei den nächsten Wahlen zu einem Einwahlsystem zurückkehrt (Frage bei den Gemeinderatswahlen).
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Ich möchte, dass Wien flächendeckend Tempo 30 einführt. (Frage bei den Gemeinderatswahlen).
 
 </StackComponent>
 
-## 2. Die Frage sollte mit Ja oder Nein beantwortet werden und nicht zu einer Antwort führen.
+## 2. Die Frage sollte mit Ja oder Nein beantwortet werden können und nicht suggestiv gestellt sein.
 
 Bei der Gestaltung von Fragen müssen wir uns vorstellen können, dass die Menschen sowohl Ja- als auch Nein-Antworten wählen werden. Die Frage sollte auch nicht suggestiv (leitend) sein.
 
 <StackComponent spacing="extra-small">
 
-<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Sollte die Verkehrssituation in Považský Chlmec und Vraní verbessert werden?
+<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Sollte die Verkehrssituation in St. Pölten verbessert werden? (Impliziert, dass die Verkehrssituation in St. Pölten Verbesserung braucht)
 
-<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Ich möchte, dass die Opencard für die Fahrgäste nicht kostengünstiger ist als eine "Papierstraßenbahn", damit die Fahrgäste wählen können. (die Frage führt zu einer "Ja"-Antwort).
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Ich möchte, dass Wien flächendeckend Tempo 30 einführt.
 
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Sollte in Rajcianka ein Rastplatz gebaut werden? (nur unter der Voraussetzung, dass allgemein bekannt ist, worum es sich handelt, dass in der Stadt viel darüber diskutiert wird, dass man weiß, wie viel es kosten würde, usw.).
-
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Sollte mindestens 1 % des Verkehrsbudgets der Stadt für den Radverkehr bereitgestellt werden?
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Sollte mindestens 1% des Verkehrsbudgets der Stadt für den Radverkehr bereitgestellt werden?
 
 </StackComponent>
 
 ## 3. Die Fragen sollten wichtig sein
 
-Wir berücksichtigen z. B., wofür der Rat/das Parlament die meisten öffentlichen Gelder ausgibt.
+Wir berücksichtigen beispielsweise Themen, für die der Rat/das Parlament die meisten öffentlichen Gelder bereitstellt. 
 
-Wir wählen Themen, die für alle Wählergruppen relevant sind (Alter, Einkommen, Interessen).
+Wir wählen Themen aus, die für alle Wählergruppen relevant sind (Alter, Einkommen, Interessen).
 
 <StackComponent spacing="extra-small">
 
@@ -65,21 +63,21 @@ Wir wählen Themen, die für alle Wählergruppen relevant sind (Alter, Einkommen
 
 ## 4. Die Frage sollte so spezifisch wie möglich sein.
 
-Die Antwort soll nach 4 Jahren (am Ende der Wahlperiode) überprüft werden können.
+Die Antwort soll nach Ende einer Legislaturperiode bzw. vor der nächsten Wahl überprüft werden können.
 
 <StackComponent spacing="extra-small">
 
-<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Sollte die Entwicklung im Stadtzentrum verdichtet werden?
+<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Die Landesregierung soll den öffentlichen Verkehr weiterentwickeln.
 
-<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Meiner Meinung nach sollte eine Schnellstraße vom Flughafen Ruzyně ins Zentrum von Prag gebaut werden. (Die richtige Antwort wäre: Ich werde mich dafür einsetzen, dass in den nächsten 4 Jahren eine Schnellstraße vom Flughafen ins Zentrum von Prag gebaut wird)
+<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Die Landesregierung soll mehr Gelder in den öffentlichen Verkehr investieren als in der vergangenen Legislaturperiode.
 
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Sollte der Preis für Fahrkarten im öffentlichen Nahverkehr für Senioren und Studenten um 10 % gesenkt werden?
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Sollte der Preis für Fahrkarten im öffentlichen Nahverkehr für Senior:innen und Studierende um 10% gesenkt werden?
 
 </StackComponent>
 
 ## 5. Die Frage muss kurz und klar sein
 
-Wir möchten, dass der Befragte die Fragen tatsächlich liest und versteht. Deshalb formulieren wir sie in maximal 20 Wörtern und beschränken jede Beschreibung auf 50 Wörter.
+Wir möchten, dass die Fragen auch ohne viel Vorwissen verstanden werden. Deshalb formulieren wir sie in maximal 20 Wörtern und beschränken die jeweiligen Zusatzinfos auf 50 Wörter.
 
 <StackComponent spacing="extra-small">
 
@@ -91,29 +89,26 @@ die Abschaffung des Sozialgeldes für Alleinerziehende, die Kürzung des Geburts
 
 </StackComponent>
 
-## 6. Fragen mit Beschreibungen müssen auch ohne sie Sinn machen
+## 6. Fragen sollen auch ohne Zusatzinformation Sinn ergeben
 
-Viele Menschen lesen nur die Frage selbst und nicht die Beschreibung. Es kann vorkommen, dass die Beschreibung auf einem mobilen Gerät nicht angezeigt wird.
+Viele Menschen lesen nur die Frage selbst und nicht die dazugehörige Beschreibung. Es kann vorkommen, dass die Beschreibung auf einem mobilen Gerät nicht angezeigt wird.
 
 <br />
 
 <StackComponent spacing="extra-small">
 
-<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Würden Sie dafür stimmen, die Garantie zu entfernen und automatisch in die zweite Säule einzusteigen?
+<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Glauben Sie, dass es sinnvoll ist, sich ähnlichen Verkehrsprojekten wie in Tirol anzuschließen?
 
-<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Glauben Sie, dass es sinnvoll ist, sich ähnlichen Projekten anzuschließen?
-
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Ich bin für die Erhebung von Gebühren für die Einfahrt ins Stadtzentrum, zum Beispiel in Form einer Maut.
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Ich bin für die Erhebung einer Maut für die Einfahrt von Privat-PKW in den 1. Wiener Gemeindebezirk.
 
 </StackComponent>
 
 ## 7. Wir bevorzugen Fragen in der positiven Form und vermeiden die verwirrende doppelte Negativform
 
 Das folgende Beispiel zeigt, dass die doppelte Verneinung irreführend und ungenau ist.
-
 <br />
 
-<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Es sollte kein Atommülllager in den Highlands geben, egal um welchen Preis
+<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Würden Sie nicht zustimmen, dass es nicht unvernünftig wäre, Windräder zur Stromerzeugung in Oberösterreich nicht zu bauen?
 
 Tatsächlich ist hier nicht klar, womit der Befragte nicht einverstanden ist:
 
@@ -121,23 +116,27 @@ a) nein, es sollte nicht gebaut werden,
 
 b) nicht einverstanden, es sollte gebaut werden.
 
-Eine richtig formulierte Frage müsste lauten: "Sollte der Landkreis alles tun, um den Bau eines Atommülllagers zu verhindern?").
+Eine richtig formulierte Frage müsste lauten: Soll die Landesregierung den Bau von Windrädern zur Stromerzeugung in Oberösterreich verhindern?
 
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Gymnasien sollten weiterhin zu größeren Einheiten zusammengelegt werden.
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Kleine Gemeinden sollten zu größeren Einheiten zusammengelegt werden.
 
-Nicht "Gymnasien sollten nicht mehr zu größeren Einheiten zusammengelegt werden".
+Kleine Gemeinden sollten nicht zu größeren Einheiten zusammengelegt werden.
 
 ## 8. Die Frage muss in einfacher Sprache formuliert sein
 
-<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Die Fragen werden so formuliert, dass sie von verschiedenen gesellschaftlichen Gruppen verstanden werden können.
+Die Fragen werden so formuliert, dass sie von möchlichst allen Wähler:innen unterschiedlichen Alters, Bildungsgrads oder Herkunft, verstanden werden können.
 
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Der neue Flächennutzungsplan muss den Bau von Hochhäusern regeln, die die Prager Skyline verschandeln können.
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Die Wiener Ringstraße soll dauerhaft für den privaten Auto-Verkehr gesperrt werden.
 
 <br />
 
+<IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Die permanente Exklusion des privaten Autoverkehrs auf der Wiener Ringstraße soll etabliert werden.
+
 <IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Der neue Flächennutzungsplan muss den Bau von Hochhäusern regeln, die die Prager Skyline verschandeln können.
 
-## 9. Wir wählen auch Themen aus, die interessant sind, obwohl sie nicht ganz so wichtig sind.
+## 9. Wir wählen manchmal auch Themen aus, die interessant, aber vielleicht nicht ganz so wichtig sind.
+
+Das soll zur Auflockerung der manchmal vielleicht etwas trockenen Themen dienen.
 
 <StackComponent spacing="extra-small">
 
