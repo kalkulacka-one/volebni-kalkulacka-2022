@@ -129,8 +129,9 @@ const handleSubscribe = async () => {
                           query: { ...route.query },
                         })
                       "
+                      disabled
                     >
-                    A Voksmonitor elindítása
+                    Hamarosan
                       <template #iconAfter>
                         <IconComponent :icon="mdiArrowRight" />
                       </template>
@@ -234,8 +235,9 @@ const handleSubscribe = async () => {
                           query: { ...route.query },
                         })
                       "
+                      disabled
                     >
-                    A Voksmonitor elindítása
+                    Hamarosan
                       <template #iconAfter>
                         <IconComponent :icon="mdiArrowRight" />
                       </template>
