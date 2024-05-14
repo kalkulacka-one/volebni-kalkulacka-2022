@@ -60,7 +60,7 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
             <li>KohoVolit.eu</li>
             <li>wahbeobachtung.org</li>
             <li>PolEdu - Politics & Education</li>
-            <li>Bizeps</li>
+            <li>BIZEPS - Zentrum für selbstbestimmtes Leben</li>
             <li>Vokskabin.hu/Andrássy Universität Budapest</li>
           </ul>
         </BodyText>
