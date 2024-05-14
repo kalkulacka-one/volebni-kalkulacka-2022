@@ -60,7 +60,7 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
             <li>KohoVolit.eu</li>
             <li>wahbeobachtung.org</li>
             <li>PolEdu - Politics & Education</li>
-            <li>Bizeps</li>
+            <li>BIZEPS - Zentrum für selbstbestimmtes Leben</li>
             <li>Vokskabin.hu/Andrássy Universität Budapest</li>
           </ul>
         </BodyText>
@@ -202,13 +202,23 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
         </TitleText>
         <BodyText size="large">
           Wahlrechner.at soll ein Projekt aus der Zivilgesellschaft für die
-          Zivilgesellschaft sein. Kooperierenden NGOs unterstützen das Projekt
-          durch freiwillige Mitarbeit während der Pilotphase. Spenden werden zur
-          Zusammenarbeit in der Höhe von 15.000 EUR. Weiters werden Spenden zur
-          Unterstützung des Projektes gesammelt. Mittel, die im Zuge des
-          Pilotprojektes nicht verbraucht werden, werden für die Verbesserung
-          der technischen Infrastruktur genutzt, um Wahlrechner als
-          maßgebliche VAA in Österreich zu positionieren.
+          Zivilgesellschaft sein.Das Pilotprojekt wurde durch ehrenamtliche Tätigkeit umgesetzt,
+          für die Zukunft ist das Projekt auf Unterstützung durch Spenden angewiesen. 
+          Weiters werden Spenden zur Unterstützung des Projektes gesammelt.
+        </BodyText>
+        <TitleText size="large" tag="h2">
+          Wie wird die Übereinstimmung berechnet?
+        </TitleText>
+        <BodyText size="large">
+          Ein Beispiel:<br />
+          Wenn Sie 42 Fragen mit ✅ Dafür beantworten und eine Partei hat 37x ✅ Dafür gestimmt, 2x sich nicht festgelegt und 3x ❌ Dagegen gestimmt hat, ergibt sich folgende Rechnung:<br />
+          37x Übereinstimmung (Sie stimmten ✅ Dafür, die Partei ✅ Dafür) = 37 Punkte <br />
+          2x Keine Festlegung (Sie stimmten ✅ Dafür, die Partei Neutral)= 0 Punkte<br />
+          3x Widerspruch (Sie stimmten ✅ Dafür, die Partei ❌ Dagegen) = -3 Punkte<br />
+          Ergebnis der Partei: 34 Punkte<br />
+          Anzahl der beantworteten Fragen: 42<br />
+          Der Rechner überträgt dieses Ergebnis so in eine Prozentangabe (0 % - 100 %):<br />
+          ((34 / 42) + 1) / 2 *100 % = <strong>90 %</strong><br />
         </BodyText>
       </StackComponent>
       <DonateBlock />

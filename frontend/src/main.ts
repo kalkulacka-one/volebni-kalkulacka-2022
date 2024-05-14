@@ -32,6 +32,7 @@ import SharePageVue from './routes/share/SharePage.vue';
 import AboutUsPageVue from './routes/about-us/AboutUsPage.vue';
 import AboutElectionsPageVue from './routes/about-elections/AboutElectionsPage.vue';
 import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
+import ImprintPageVue from './routes/imprint/ImprintPage.vue';
 import AuthPageVue from './routes/profile/AuthPageVue.vue';
 import EmailFormPageVue from './routes/profile/EmailFormPageVue.vue';
 import ProfilePageVue from './routes/profile/ProfilePage.vue';
@@ -114,6 +115,14 @@ export const appRoutes = {
     component: DataProtectionPageVue,
     meta: {
       title: 'Datenschutz',
+    },
+  },
+  imprint: {
+    name: 'impressum',
+    path: '/impressum',
+    component: ImprintPageVue,
+    meta: {
+      title: 'Impressum',
     },
   },
   questionsMethodology: {

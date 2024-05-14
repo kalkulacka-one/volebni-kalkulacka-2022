@@ -39,7 +39,7 @@ Bei der Gestaltung von Fragen müssen wir uns vorstellen können, dass die Mensc
 
 <IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Sollte die Verkehrssituation in St. Pölten verbessert werden? (Impliziert, dass die Verkehrssituation in St. Pölten Verbesserung braucht)
 
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Ich möchte, dass Wien flächendeckend Tempo 30 einführt.
+<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Ich möchte, dass Wien flächendeckend Tempo 30 einführt.
 
 <IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Sollte mindestens 1% des Verkehrsbudgets der Stadt für den Radverkehr bereitgestellt werden?
 
@@ -131,8 +131,6 @@ Die Fragen werden so formuliert, dass sie von möchlichst allen Wähler:innen un
 <br />
 
 <IconBadge :icon="vkiLogoAgainst" :background-color="'white'" :color="'rgb(var(--color-secondary-fg))'" /> Die permanente Exklusion des privaten Autoverkehrs auf der Wiener Ringstraße soll etabliert werden.
-
-<IconBadge :icon="vkiLogoInFavour" :background-color="'white'" :color="'rgb(var(--color-primary-fg))'" /> Der neue Flächennutzungsplan muss den Bau von Hochhäusern regeln, die die Prager Skyline verschandeln können.
 
 ## 9. Wir wählen manchmal auch Themen aus, die interessant, aber vielleicht nicht ganz so wichtig sind.
 

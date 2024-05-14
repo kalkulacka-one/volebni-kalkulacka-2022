@@ -22,6 +22,7 @@
       "body-senate-voting": "Senátní volby",
       "body-support-calculator": "Unterstützung",
       "body-who-to-vote": "Der Wahlrechner ist ein unparteiischer Wahlhelfer.",
+      "imprint": "Impressum",
       "links": "Links",
       "title-more-about-elections": "Mehr zu den Wahlen"
     },
@@ -67,8 +68,8 @@
         "agree": "Dafür",
         "back-to-main-page": "Zurück zur Hauptseite",
         "disagree": "Dagegen",
-        "double-weight": "Die Antwort hat dann doppeltes Gewicht bei der Berechnung der Einhaltung.",
-        "first-question": "Die erste Frage",
+        "double-weight": " Diese Antwort hat dann doppeltes Gewicht bei der Berechnung des Ergebnisses.",
+        "first-question": "Zur erste Frage",
         "guide": "Anleitung",
         "important": "wichtig für mich",
         "next-step": "Nächster Schritt",
@@ -76,10 +77,10 @@
         "previous-step": "Vorheriger Schritt",
         "skip": "überspringen",
         "skip-guide": "Anleitung überspringen",
-        "skip-question": "Ist man bei einem Thema nicht sicher, oder will aus einem anderen Grund nicht antworten, kann die Frage mit dem Pfeil auf der rechten Seite übersprungen werden. Diese Frage wird dann nicht in die Berechnung des Ergebnisses einbezogen.",
+        "skip-question": "Ist man bei einem Thema nicht sicher, oder will aus einem anderen Grund nicht antworten, kann die Frage mit einem Klick (rechts bzw. rechts oben) auf “überspringen” übersprungen werden.",
         "text-0": "Wenn eine Partei die Frage nicht beantwortet hat (z.B. Stimmenthaltung bei Abstimmung), wird dies mit 0 Punkten bewertet.",
         "text-answer-button": "Antwortmöglichkeiten:",
-        "text-important": "Wird eines der Themen als besonders wichtig empfunden, kann es mit einem Stern markiert werden. Diese Antwort hat dann doppeltes Gewicht bei der Berechnung des Ergebnisses.",
+        "text-important": "Wird eines der Themen als besonders wichtig empfunden, kann es mit einem Stern markiert werden.",
         "text-method": "Wenn eine Antwort mit einer Partei übereinstimmt, wird im Übereinstimmungswert 1 Punkt angerechnet. Wenn die Antwort nicht, übereinstimmt wird 1 Punkt abgezogen."
       }
     },
