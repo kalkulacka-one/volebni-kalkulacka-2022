@@ -52,6 +52,11 @@ const router = useRouter();
               $t('components.FooterMultiWord.links')
             }}</TitleText>
             <StackComponent spacing="extra-small">
+              <router-link to="/impressum"
+                ><BodyText size="small">{{
+                  $t('components.FooterMultiWord.imprint')
+                }}</BodyText></router-link
+              >
               <router-link to="/datenschutz"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-data-protection')
