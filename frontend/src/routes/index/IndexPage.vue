@@ -312,45 +312,6 @@ const handleSubscribe = async () => {
       </StackComponent>
     </div>
     <StaticContentLayout>
-      <StackComponent class="section" spacing="small" centered>
-        <TitleText size="large" tag="h2">Hogyan készül a Voksmonitor?</TitleText>
-        <BodyText size="medium"
-          >A Voksmonitor a K-Monitor és a KohoVolit.eu nonprofit szervezetek közös projektje, ami a pártok programjára alapozva segít mérlegelni, hogy kire szavazzon.</BodyText
-        >
-        <div class="info-bubbles-grid section">
-          <InfoBubble image="info-1.png">
-            <BodyText size="small"
-              > A kérdőív körülbelül 40 kérdésben méri fel a kitöltő álláspontját aktuális európai politikai témákról.
-            </BodyText>
-          </InfoBubble>
-          <InfoBubble image="info-2.png">
-            <BodyText size="small"
-              >A kérdéseket minden listát állító, érdemi támogatottsággal rendelkező pártnak feltettük.
-            </BodyText>
-          </InfoBubble>
-          <InfoBubble image="info-3.png">
-            <BodyText size="small"
-              >A válaszaikat összevetjük az Ön válaszaival.
-            </BodyText>
-          </InfoBubble>
-          <InfoBubble image="info-4.png">
-            <BodyText size="small"
-              >A Voksmonitor pedig kiszámolja, hogy Ön mennyire ért velük egyet.
-</BodyText
-            >
-          </InfoBubble>
-        </div>
-      </StackComponent>
-      <StackComponent class="section" spacing="large" centered>
-        <BodyText size="medium"
-          >A Voksmonitor célja a tájékoztatás és a választói mérlegelés segítése. A végső döntést a szavazófülkében Ön hozza meg.
-        </BodyText>
-        <ButtonComponent kind="link" @click="router.push('/a-voksmonitorrol')">
-          <div class="button-content">
-            Tudjon meg többet!<IconComponent :icon="mdiArrowRight"></IconComponent>
-          </div>
-        </ButtonComponent>
-      </StackComponent>
       <section class="subscribe">
         <StackComponent spacing="small" centered>
           <TitleText size="large" tag="h2">
@@ -395,6 +356,45 @@ const handleSubscribe = async () => {
           }}</BodyText>
         </StackComponent>
       </section>
+      <StackComponent class="section" spacing="small" centered>
+        <TitleText size="large" tag="h2">Hogyan készül a Voksmonitor?</TitleText>
+        <BodyText size="medium"
+          >A Voksmonitor a K-Monitor és a KohoVolit.eu nonprofit szervezetek közös projektje, ami a pártok programjára alapozva segít mérlegelni, hogy kire szavazzon.</BodyText
+        >
+        <div class="info-bubbles-grid section">
+          <InfoBubble image="info-1.png">
+            <BodyText size="small"
+              > A kérdőív körülbelül 40 kérdésben méri fel a kitöltő álláspontját aktuális európai politikai témákról.
+            </BodyText>
+          </InfoBubble>
+          <InfoBubble image="info-2.png">
+            <BodyText size="small"
+              >A kérdéseket minden listát állító, érdemi támogatottsággal rendelkező pártnak feltettük.
+            </BodyText>
+          </InfoBubble>
+          <InfoBubble image="info-3.png">
+            <BodyText size="small"
+              >A válaszaikat összevetjük az Ön válaszaival.
+            </BodyText>
+          </InfoBubble>
+          <InfoBubble image="info-4.png">
+            <BodyText size="small"
+              >A Voksmonitor pedig kiszámolja, hogy Ön mennyire ért velük egyet.
+</BodyText
+            >
+          </InfoBubble>
+        </div>
+      </StackComponent>
+      <StackComponent class="section" spacing="large" centered>
+        <BodyText size="medium"
+          >A Voksmonitor célja a tájékoztatás és a választói mérlegelés segítése. A végső döntést a szavazófülkében Ön hozza meg.
+        </BodyText>
+        <ButtonComponent kind="link" @click="router.push('/a-voksmonitorrol')">
+          <div class="button-content">
+            Tudjon meg többet!<IconComponent :icon="mdiArrowRight"></IconComponent>
+          </div>
+        </ButtonComponent>
+      </StackComponent>
       <DonateBlock />
     </StaticContentLayout>
     <FooterMultiWord class="section" />
