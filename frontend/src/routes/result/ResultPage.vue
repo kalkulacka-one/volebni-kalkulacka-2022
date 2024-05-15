@@ -106,22 +106,20 @@ const handleShareClick = () => {
   shareModal.value?.open();
 };
 onBeforeMount(async () => {
-  if (election.key === 'nrsr-2023' || election.key === 'prezidentske-2024') {
-    if (userStore.user || userStore.user === null) {
+  if (userStore.user || userStore.user === null) {
+    const res = await electionStore.saveResults({
+      embedName: currentEmbed,
+      user: userStore.user as User | null | undefined,
+    });
+    console.debug(res);
+  } else {
+    userStore.$subscribe(async (mutation, state) => {
       const res = await electionStore.saveResults({
         embedName: currentEmbed,
-        user: userStore.user as User | null | undefined,
+        user: state.user as User | null | undefined,
       });
       console.debug(res);
-    } else {
-      userStore.$subscribe(async (mutation, state) => {
-        const res = await electionStore.saveResults({
-          embedName: currentEmbed,
-          user: state.user as User | null | undefined,
-        });
-        console.debug(res);
-      });
-    }
+    });
   }
 });
 
@@ -385,8 +383,7 @@ const handleSubscribe = async () => {
           <section class="subscribe">
             <StackComponent spacing="small" centered>
               <BodyText size="small" centered>
-                Zanechajte nám váš e-mail a dáme vám vedieť vždy, keď spustíme
-                novú kalkulačku.
+                {{ $t('routes.index.IndexPage.input-text') }}
               </BodyText>
               <BodyText v-if="success" size="small">
                 {{ message }}
@@ -415,7 +412,7 @@ const handleSubscribe = async () => {
                     :loading="posting"
                     @click.prevent="handleSubscribe"
                   >
-                    Informujte ma o nových kalkulačkách
+                    {{ $t('routes.index.IndexPage.inform-me') }}
                   </ButtonComponent>
                 </StackComponent>
               </form>

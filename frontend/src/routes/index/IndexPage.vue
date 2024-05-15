@@ -27,6 +27,7 @@ import TextInputComponent from '@/components/design-system/input/TextInputCompon
 import TitleText from '@/components/design-system/typography/TitleText.vue';
 
 import { useUserStore } from '@/stores/userStore';
+import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -83,67 +84,278 @@ const handleSubscribe = async () => {
     <div class="prezident-hero">
       <BlobComponent color="blue" class="blob1" />
       <BlobComponent color="red" class="blob2" />
-      <StackComponent spacing="medium" centered class="calc-main">
-        <BodyText size="medium" tag="h1" color="fg-strong">
-          <strong>Európai parlamenti választás Magyarországon</strong
-          ><br />
-          2024. június 9-én
-          <br />
-        </BodyText>
-        <HeadlineText tag="p" size="small">
-          Európai parlamenti választás
-          <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
-        </HeadlineText>
-        <BodyText size="large"
-          >Elkészítettünk a Voksmonitort az európai választásokra.</BodyText
-        >
+      <StackComponent spacing="small" centered class="calc-main">
+        <StackComponent spacing="large" centered space-between>
+          <BodyText size="medium" tag="h1" color="fg-strong">
+            <strong>Európai parlamenti & önkormányzati választás Magyarországon</strong
+            ><br />
+            2024 június 9.
+            <br />
+          </BodyText>
+          <HeadlineText tag="p" size="small">
+            Európai parlamenti & Fővárosi polgármester választás
+            <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
+          </HeadlineText>
+          <ResponsiveWrapper extra-small small>
+            <StackComponent spacing="large">
+              <CardComponent
+                corner="bottom-left"
+                padding="large"
+                border
+                border-radius="large"
+                shadow
+                class="other-calc-card calc-youth"
+              >
+                <StackComponent spacing="large" centered>
+                  <StackComponent spacing="small" centered space-between>
+                    <BodyText size="medium" tag="h2" color="fg-strong">
+                      <strong>Európai parlamenti voksmonitor</strong>
+                    </BodyText>
+                    <BodyText size="small">
+                      40 kérdés, nagyjából 10 perc
+                    </BodyText>
+                    <ButtonComponent
+                      kind="filled"
+                      color="primary"
+                      @click="
+                        router.push({
+                          name: appRoutes.guide.name,
+                          params: {
+                            ...route.params,
+                            type: `${'valasztasok'}`,
+                            first: 'europai-2024',
+                            second: 'voksmonitor',
+                          },
+                          query: { ...route.query },
+                        })
+                      "
+                      disabled
+                    >
+                    Hamarosan
+                      <template #iconAfter>
+                        <IconComponent :icon="mdiArrowRight" />
+                      </template>
+                    </ButtonComponent>
+                  </StackComponent>
+                </StackComponent>
+              </CardComponent>
+              <CardComponent
+                corner="bottom-left"
+                padding="large"
+                border
+                border-radius="large"
+                shadow
+                class="other-calc-card calc-youth"
+              >
+                <StackComponent spacing="large" centered>
+                  <StackComponent spacing="small" centered space-between>
+                    <BodyText size="medium" tag="h2" color="fg-strong">
+                      <strong>Főpolgármesteri voksmonitor</strong>
+                    </BodyText>
+                    <BodyText size="small">
+                      38 kérdés, nagyjából 8-10 percc
+                    </BodyText>
+                    <ButtonComponent
+                      kind="filled"
+                      color="primary"
+                      @click="
+                        router.push({
+                          name: appRoutes.guide.name,
+                          params: {
+                            ...route.params,
+                            type: `${'valasztasok'}`,
+                            first: 'budapest-2024',
+                            second: 'voksmonitor',
+                          },
+                          query: { ...route.query },
+                        })
+                      "
+                    >
+                    A Voksmonitor elindítása
+                      <template #iconAfter>
+                        <IconComponent :icon="mdiArrowRight" />
+                      </template>
+                    </ButtonComponent>
+                    <ButtonComponent
+                      kind="outlined"
+                      color="primary"
+                      @click="
+                        router.push({
+                          name: appRoutes.guide.name,
+                          params: {
+                            ...route.params,
+                            type: `${'valasztasok'}`,
+                            first: 'budapest-2024',
+                            second: 'english',
+                          },
+                          query: { ...route.query },
+                        })
+                      "
+                    >
+                    English version
+                      <template #iconAfter>
+                        <IconComponent :icon="mdiArrowRight" />
+                      </template>
+                    </ButtonComponent>
+                  </StackComponent>
+                </StackComponent>
+              </CardComponent>
+            </StackComponent>
+          </ResponsiveWrapper>
+          <ResponsiveWrapper medium large extra-large huge>
+            <StackComponent horizontal spacing="large">
+              <CardComponent
+                corner="bottom-left"
+                padding="large"
+                border
+                border-radius="large"
+                shadow
+                class="other-calc-card calc-youth"
+              >
+                <StackComponent spacing="large" centered>
+                  <StackComponent spacing="small" centered space-between>
+                    <BodyText size="medium" tag="h2" color="fg-strong">
+                      <strong>Európai parlamenti voksmonitor</strong>
+                    </BodyText>
+                    <BodyText size="small">
+                      40 kérdés, nagyjából 10 perc
+                    </BodyText>
+                    <ButtonComponent
+                      kind="filled"
+                      color="primary"
+                      @click="
+                        router.push({
+                          name: appRoutes.guide.name,
+                          params: {
+                            ...route.params,
+                            type: `${'valasztasok'}`,
+                            first: 'europai-2024',
+                            second: 'voksmonitor',
+                          },
+                          query: { ...route.query },
+                        })
+                      "
+                      disabled
+                    >
+                    Hamarosan
+                      <template #iconAfter>
+                        <IconComponent :icon="mdiArrowRight" />
+                      </template>
+                    </ButtonComponent>
+                  </StackComponent>
+                </StackComponent>
+              </CardComponent>
+              <CardComponent
+                corner="bottom-left"
+                padding="large"
+                border
+                border-radius="large"
+                shadow
+                class="other-calc-card calc-youth"
+              >
+                <StackComponent spacing="large" centered>
+                  <StackComponent spacing="small" centered space-between>
+                    <BodyText size="medium" tag="h2" color="fg-strong">
+                      <strong>Főpolgármesteri voksmonitor</strong>
+                    </BodyText>
+                    <BodyText size="small">
+                      38 kérdés, nagyjából 8-10 percc
+                    </BodyText>
+                    <ButtonComponent
+                      kind="filled"
+                      color="primary"
+                      @click="
+                        router.push({
+                          name: appRoutes.guide.name,
+                          params: {
+                            ...route.params,
+                            type: `${'valasztasok'}`,
+                            first: 'budapest-2024',
+                            second: 'voksmonitor',
+                          },
+                          query: { ...route.query },
+                        })
+                      "
+                    >
+                    A Voksmonitor elindítása
+                      <template #iconAfter>
+                        <IconComponent :icon="mdiArrowRight" />
+                      </template>
+                    </ButtonComponent>
+                    <ButtonComponent
+                      kind="outlined"
+                      color="primary"
+                      @click="
+                        router.push({
+                          name: appRoutes.guide.name,
+                          params: {
+                            ...route.params,
+                            type: `${'valasztasok'}`,
+                            first: 'budapest-2024',
+                            second: 'english',
+                          },
+                          query: { ...route.query },
+                        })
+                      "
+                    >
+                    English version
+                      <template #iconAfter>
+                        <IconComponent :icon="mdiArrowRight" />
+                      </template>
+                    </ButtonComponent>
+                  </StackComponent>
+                </StackComponent>
+              </CardComponent>
+            </StackComponent>
+          </ResponsiveWrapper>
+        </StackComponent>
       </StackComponent>
     </div>
-    <section class="subscribe">
-      <StackComponent spacing="small" centered>
-        <TitleText size="large" tag="h2">
-          Szeretne értesülni a Voksmonitor indulásáról?
-        </TitleText>
-        <BodyText size="small" centered>
-          Adja meg nekünk az e-mail címét és értesítjük, ha új Voksmonitor-t indítunk.
-        </BodyText>
-        <BodyText v-if="success" size="small">
-          {{ message }}
-        </BodyText>
-        <form v-if="!success">
-          <StackComponent
-            horizontal
-            spacing="small"
-            stretched
-            wrap
-            style="justify-content: center"
-          >
-            <TextInputComponent
-              v-model="email"
-              required
-              type="email"
-              :placeholder="t('routes.index.IndexPage.input-label')"
-              :value="email"
-              :icon="mdiEmailOutline"
-              :disabled="posting"
-              :error="emailError"
-            />
-            <ButtonComponent
-              kind="outlined"
-              color="primary"
-              :loading="posting"
-              @click.prevent="handleSubscribe"
-            >
-              Beküldés
-            </ButtonComponent>
-          </StackComponent>
-        </form>
-        <BodyText v-if="!success" tag="p" size="small">{{
-          $t('routes.index.IndexPage.disclaimer')
-        }}</BodyText>
-      </StackComponent>
-    </section>
     <StaticContentLayout>
+      <section class="subscribe">
+        <StackComponent spacing="small" centered>
+          <TitleText size="large" tag="h2">
+            Érdekel a következő Voksmonitor
+          </TitleText>
+          <BodyText size="small" centered>
+            Iratkozz fel és értesítünk, ha új Voksmonitort indítunk
+          </BodyText>
+          <BodyText v-if="success" size="small">
+            {{ message }}
+          </BodyText>
+          <form v-if="!success">
+            <StackComponent
+              horizontal
+              spacing="small"
+              stretched
+              wrap
+              style="justify-content: center"
+            >
+              <TextInputComponent
+                v-model="email"
+                required
+                type="email"
+                :placeholder="t('routes.index.IndexPage.input-label')"
+                :value="email"
+                :icon="mdiEmailOutline"
+                :disabled="posting"
+                :error="emailError"
+              />
+              <ButtonComponent
+                kind="outlined"
+                color="primary"
+                :loading="posting"
+                @click.prevent="handleSubscribe"
+              >
+                Elküld
+              </ButtonComponent>
+            </StackComponent>
+          </form>
+          <BodyText v-if="!success" tag="p" size="small">{{
+            $t('routes.index.IndexPage.disclaimer')
+          }}</BodyText>
+        </StackComponent>
+      </section>
       <StackComponent class="section" spacing="small" centered>
         <TitleText size="large" tag="h2">Hogyan készül a Voksmonitor?</TitleText>
         <BodyText size="medium"
@@ -235,7 +447,7 @@ const handleSubscribe = async () => {
 
     .calc-main {
       grid-row: 1/6;
-      grid-column: 4/10;
+      grid-column: 2/12;
       margin-bottom: 16px;
     }
 

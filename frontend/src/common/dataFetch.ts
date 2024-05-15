@@ -22,16 +22,16 @@ export const deprecatedFetchCalculator = async (key: string) => {
   deprecatedCalculator.key = key;
   deprecatedCalculator.district_code = calculator.variant.key;
   deprecatedCalculator.show_district_code = false;
-  deprecatedCalculator.name = 'Inventúra hlasovaní 2020–2023';
+  deprecatedCalculator.name = 'Budapest 2024';
   deprecatedCalculator.description =
-    'Volebná kalkulačka na základe skutočných hlasovaní poslancov Národnej rady Slovenskej republiky v 8. volebnom období 2020-2023';
+    'Budapest 2024';
   deprecatedCalculator.intro = calculator.intro;
   deprecatedCalculator.election = {
-    id: '57a09a41-631b-4b40-ac22-b75b8ce14d84',
-    key: 'nrsr-2023',
-    name: 'Parlamentné voľby 2023',
+    id: '4a086edd-27b4-43a5-9e24-9ca37f9cd7af',
+    key: 'budapest-2024',
+    name: 'Budapest 2024',
     description:
-      'Voľby do Národnej rady Slovenskej republiky 30. septembra 2023.',
+      'Budapest 2024',
   };
 
   // Load questions and map them to deprecated structure
@@ -115,7 +115,7 @@ export const deprecatedFetchCalculator = async (key: string) => {
       transformedCandidate.short_name = organization.shortName;
       transformedCandidate.motto = candidate.motto;
       if (candidate.images) {
-        transformedCandidate.img_url = `/data/instance/volebnakalkulacka.sk/${key}/images/candidates/${candidate.id}.webp`;
+        transformedCandidate.img_url = `/data/instance/voksmonitor.hu/${key}/images/candidates/${candidate.id}.webp`;
       }
     }
     return transformedCandidate;
@@ -218,7 +218,7 @@ type CalculatorFileToType<T extends CalculatorFile> =
 const fetchCalculatorFile = async <T extends CalculatorFile>({
   key,
   file,
-  instance = 'volebnakalkulacka.sk',
+  instance = 'voksmonitor.hu',
   baseUrl = '/data/instance',
 }: {
   key: string;
