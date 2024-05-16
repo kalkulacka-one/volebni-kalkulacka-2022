@@ -22,16 +22,16 @@ export const deprecatedFetchCalculator = async (key: string) => {
   deprecatedCalculator.key = key;
   deprecatedCalculator.district_code = calculator.variant.key;
   deprecatedCalculator.show_district_code = false;
-  deprecatedCalculator.name = 'Budapest 2024';
+  deprecatedCalculator.name = 'Önkormányzati választások 2024';
   deprecatedCalculator.description =
-    'Budapest 2024';
+    'Önkormányzati választások 2024';
   deprecatedCalculator.intro = calculator.intro;
   deprecatedCalculator.election = {
     id: '4a086edd-27b4-43a5-9e24-9ca37f9cd7af',
-    key: 'budapest-2024',
-    name: 'Budapest 2024',
+    key: 'onkormanyzati-2024',
+    name: 'Önkormányzati választások 2024',
     description:
-      'Budapest 2024',
+      'Önkormányzati választások 2024',
   };
 
   // Load questions and map them to deprecated structure

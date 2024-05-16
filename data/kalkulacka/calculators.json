@@ -2,29 +2,29 @@
   "elections": [
     {
       "id": "4a086edd-27b4-43a5-9e24-9ca37f9cd7af",
-      "key": "budapest-2024",
-      "name": "Budapest 2024",
-      "description": "Budapest 2024"
+      "key": "onkormanyzati-2024",
+      "name": "Önkormányzati 2024",
+      "description": "Önkormányzati választások 2024"
     }
   ],
   "calculators": [
     {
       "calculator_id": "5a1e9273-bceb-442d-a0ca-15afc6ed7e25",
       "election_id": "4a086edd-27b4-43a5-9e24-9ca37f9cd7af",
-      "district_code": "voksmonitor",
+      "district_code": "budapest",
       "show_district_code": false,
-      "name": "Voksmonitor",
+      "name": "Budapest",
       "description": "Budapest 2024",
-      "key": "budapest-2024/voksmonitor"
+      "key": "onkormanyzati-2024/budapest"
     },
     {
       "calculator_id": "08c1eff9-077b-4e02-a872-a09da7814e91",
       "election_id": "4a086edd-27b4-43a5-9e24-9ca37f9cd7af",
-      "district_code": "english",
+      "district_code": "budapest-english",
       "show_district_code": false,
-      "name": "English",
+      "name": "Budapest (English)",
       "description": "Budapest 2024 in English",
-      "key": "budapest-2024/english"
+      "key": "onkormanyzati-2024/budapest-english"
     }
   ]
 }
