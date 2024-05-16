@@ -153,7 +153,7 @@ const handleSubscribe = async () => {
                       <strong>Főpolgármesteri voksmonitor</strong>
                     </BodyText>
                     <BodyText size="small">
-                      38 kérdés, nagyjából 8-10 percc
+                      38 kérdés, nagyjából 8-10 perc
                     </BodyText>
                     <ButtonComponent
                       kind="filled"
@@ -259,7 +259,7 @@ const handleSubscribe = async () => {
                       <strong>Főpolgármesteri voksmonitor</strong>
                     </BodyText>
                     <BodyText size="small">
-                      38 kérdés, nagyjából 8-10 percc
+                      38 kérdés, nagyjából 8-10 perc
                     </BodyText>
                     <ButtonComponent
                       kind="filled"
