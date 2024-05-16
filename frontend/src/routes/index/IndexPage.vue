@@ -167,7 +167,7 @@ const handleSubscribe = async () => {
           >Wer steht hinter dem Wahlrechner?</TitleText
         >
         <BodyText size="medium"
-          >Wahlrechner.at ist eine zivilgesellschaftliche Initiative der Organisationen KohoVolit.eu, wahlbeobachtung.org, PolEdu - Politics & Education, Bizeps, Vokskabin.hu/Andrássy Universität Budapest und dem Gründungsverein Österreichische Demokratiestiftung. Es handelt sich um ein überparteiliches Instrument, das Wählerinnen und Wählern dabei helfen soll, sich vor der Europawahl 2024 umfassend über die Positionen der kandidierenden Parteien zu informieren.</BodyText
+          >Wahlrechner.at ist eine zivilgesellschaftliche Initiative der Organisationen KohoVolit.eu, wahlbeobachtung.org, PolEdu - Politics & Education, BIZEPS - Zentrum für selbstbestimmtes Leben, Vokskabin.hu/Andrássy Universität Budapest und dem Gründungsverein Österreichische Demokratiestiftung. Es handelt sich um ein überparteiliches Instrument, das Wählerinnen und Wählern dabei helfen soll, sich vor der Europawahl 2024 umfassend über die Positionen der kandidierenden Parteien zu informieren.</BodyText
         >
         <div class="info-bubbles-grid section">
           <InfoBubble image="info-1.png">
