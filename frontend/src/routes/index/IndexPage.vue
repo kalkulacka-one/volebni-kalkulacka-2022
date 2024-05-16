@@ -164,8 +164,8 @@ const handleSubscribe = async () => {
                           params: {
                             ...route.params,
                             type: `${'valasztasok'}`,
-                            first: 'budapest-2024',
-                            second: 'voksmonitor',
+                            first: 'onkormanyzati-2024',
+                            second: 'budapest',
                           },
                           query: { ...route.query },
                         })
@@ -185,8 +185,8 @@ const handleSubscribe = async () => {
                           params: {
                             ...route.params,
                             type: `${'valasztasok'}`,
-                            first: 'budapest-2024',
-                            second: 'english',
+                            first: 'onkormanyzati-2024',
+                            second: 'budapest-english',
                           },
                           query: { ...route.query },
                         })
@@ -270,8 +270,8 @@ const handleSubscribe = async () => {
                           params: {
                             ...route.params,
                             type: `${'valasztasok'}`,
-                            first: 'budapest-2024',
-                            second: 'voksmonitor',
+                            first: 'onkormanyzati-2024',
+                            second: 'budapest',
                           },
                           query: { ...route.query },
                         })
@@ -291,8 +291,8 @@ const handleSubscribe = async () => {
                           params: {
                             ...route.params,
                             type: `${'valasztasok'}`,
-                            first: 'budapest-2024',
-                            second: 'english',
+                            first: 'onkormanyzati-2024',
+                            second: 'budapest-english',
                           },
                           query: { ...route.query },
                         })
