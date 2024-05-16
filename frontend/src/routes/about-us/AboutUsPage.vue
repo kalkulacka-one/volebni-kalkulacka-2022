@@ -124,14 +124,6 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
           közötti tartományra átszámítva kapjuk meg a megjelenített eredményt,
           ami a kitöltő és az adott párt álláspontjának hasonlóságát mutatja.
         </BodyText>
-        <BodyText size="large">
-          Potom sa pre každú stranu alebo kandidáta spočítajú body za všetky
-          otázky, na ktoré ste odpovedali "áno" alebo "nie", a výsledok sa
-          vydelí počtom takýchto otázok. Takto sa získa zhoda medzi -100 % a 100
-          %. Kvôli pohodlnosti sa zhoda prepočíta na rozsah od 0 % do 100 %
-          vydelením dvoma a pripočítaním 50 % (pre kalkulačky od polovice roka
-          2013).
-        </BodyText>
 
         <TitleText size="large" tag="h2"> A kérdések súlyozása </TitleText>
         <BodyText size="large">
