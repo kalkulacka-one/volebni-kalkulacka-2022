@@ -285,7 +285,7 @@ const voteMatchCountry = 'AT';
 
 const mappedAnswers = computed(
   () => electionStore.answers.map(answer => {
-    const answerMapping = { 1: -1, 3: 0, 2: 1 };
+    const answerMapping = { 1: 1, 3: 0, 2: -1 };
     const swappedQuestionMapping = Object.fromEntries(
       Object.entries(questionMapping).map(([key, value]) => [value, key])
     );
