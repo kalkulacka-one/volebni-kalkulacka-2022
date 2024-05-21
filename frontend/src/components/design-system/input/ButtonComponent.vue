@@ -69,6 +69,7 @@ const computedSize = computed(() =>
   text-decoration: none;
   touch-action: manipulation;
   color: inherit;
+  width: max-content;
 
   &:disabled {
     cursor: not-allowed;
