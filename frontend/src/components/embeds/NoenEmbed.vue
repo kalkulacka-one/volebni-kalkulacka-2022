@@ -3,7 +3,7 @@ import ThemeProvider from '@/components/utilities/theming/ThemeProvider.vue';
 </script>
 
 <template>
-  <ThemeProvider theme="puls-24">
+  <ThemeProvider theme="noen">
     <router-view />
   </ThemeProvider>
 </template>

@@ -6,18 +6,18 @@
   // Color palette
   // -------------
   // Primary colors
-  --palette-primary-10: 18, 30, 90; /* Darker */
-  --palette-primary-30: 22, 36, 109; /* Darker */
-  --palette-primary-50: 26, 43, 128; /* Original color */
-  --palette-primary-70: 30, 49, 147; /* Lighter */
-  --palette-primary-90: 34, 55, 166; /* Lightest */
+  --palette-primary-10: 51, 153, 204; /* Darker */
+  --palette-primary-30: 57, 172, 229; /* Darker */
+  --palette-primary-50: 64, 191, 255; /* Original color */
+  --palette-primary-70: 70, 210, 280; /* Lighter */
+  --palette-primary-90: 76, 229, 306; /* Lightest */
 
   // Secondary colors
-  --palette-secondary-10: 172, 3, 55; /* Darker */
-  --palette-secondary-30: 201, 3, 64; /* Darker */
-  --palette-secondary-50: 230, 4, 73; /* Original color */
-  --palette-secondary-70: 259, 5, 82; /* Lighter */
-  --palette-secondary-90: 288, 6, 91; /* Lightest */
+  --palette-secondary-10: 159, 0, 0; /* Darker */
+  --palette-secondary-30: 179, 0, 0; /* Darker */
+  --palette-secondary-50: 199, 0, 0; /* Original color */
+  --palette-secondary-70: 219, 0, 0; /* Lighter */
+  --palette-secondary-90: 239, 0, 0; /* Lightest */
 
   // --color-neutral-bg: var(--palette-secondary-70);
 }
