@@ -1,0 +1,23 @@
+@import '@/components/themes/DefaultTheme.scss';
+
+*:deep() {
+  // Override any of the default theme variables here
+
+  // Color palette
+  // -------------
+  // Primary colors
+  --palette-primary-10: 51, 153, 204; /* Darker */
+  --palette-primary-30: 57, 172, 229; /* Darker */
+  --palette-primary-50: 64, 191, 255; /* Original color */
+  --palette-primary-70: 70, 210, 280; /* Lighter */
+  --palette-primary-90: 76, 229, 306; /* Lightest */
+
+  // Secondary colors
+  --palette-secondary-10: 159, 0, 0; /* Darker */
+  --palette-secondary-30: 179, 0, 0; /* Darker */
+  --palette-secondary-50: 199, 0, 0; /* Original color */
+  --palette-secondary-70: 219, 0, 0; /* Lighter */
+  --palette-secondary-90: 239, 0, 0; /* Lightest */
+
+  // --color-neutral-bg: var(--palette-secondary-70);
+}
