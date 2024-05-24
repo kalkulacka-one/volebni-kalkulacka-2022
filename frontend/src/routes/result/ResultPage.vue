@@ -476,10 +476,10 @@ onBeforeUnmount(removeExternalScript);
               <img style="max-height: 1rem;" :src="'/images/votematcheurope-logo.svg'" />
               <StackComponent spacing="medium">
                 <TitleText tag="p" size="medium" color="white">
-                  What party in the EU is your best match?
+                  Mit welcher Partei in der EU stimmen Sie am meisten überein?
                 </TitleText>
                 <BodyText tag="p" size="medium" color="white">
-                  Compare your results with political parties in other European countries.
+                  Vergleichen Sie Ihre Ergebnisse mit politischen Parteien in anderen europäischen Ländern.
                 </BodyText>
               </StackComponent>
               <ButtonComponent
@@ -488,7 +488,7 @@ onBeforeUnmount(removeExternalScript);
                 target="_blank"
                 class="VotematchEU-button"
               >
-                Show my results in VoteMatch Europe
+              Meine Ergebnisse in VoteMatch Europe anzeigen
               </ButtonComponent>
             </StackComponent>
           </CardComponent>
