@@ -1,0 +1,23 @@
+{
+  "id": "e0e0966d-ec30-4008-afb3-cd0ec4f1272f",
+  "key": "europske-2024",
+  "createdAt": "2021-01-01T00:00:00+01:00",
+  "election": {
+    "id": "14e46503-3fbe-4c98-a6ec-7f7609334e22",
+    "key": "europske-2024"
+  },
+  "calculators": [
+    {
+      "id": "0bfc4f88-0295-4b13-9098-7392acac8f8d",
+      "variant": {
+        "key": "kalkulacka"
+      }
+    },
+    {
+      "id": "6ad2d24c-9d7a-4164-8ec5-ebaf9b7a290a",
+      "variant": {
+        "key": "expres"
+      }
+    }
+  ]
+}
