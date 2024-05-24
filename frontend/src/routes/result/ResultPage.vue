@@ -106,7 +106,7 @@ const handleShareClick = () => {
   shareModal.value?.open();
 };
 onBeforeMount(async () => {
-  if (election.key === 'nrsr-2023' || election.key === 'prezidentske-2024') {
+  if (election.key === 'nrsr-2023' || election.key === 'prezidentske-2024' || election.key === 'evropske-2024') {
     if (userStore.user || userStore.user === null) {
       const res = await electionStore.saveResults({
         embedName: currentEmbed,
