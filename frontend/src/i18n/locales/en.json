@@ -1,0 +1,263 @@
+{
+  "components": {
+    "design-system": {
+      "navigation": {
+        "NavigationBar": {
+          "create-account": "Create Account",
+          "login": "Log In"
+        }
+      }
+    },
+    "DonateBlock": {
+      "body": "Do you like the Voting Monitor? Please support its creation!",
+      "title": "Support the Creation of the Voting Monitor!"
+    },
+    "FooterMultiWord": {
+      "body-about-voting-calculator": "About the Voting Monitor",
+      "body-comunal-voting": "Municipal Elections",
+      "body-created-by-ngos": "Created in collaboration with NGOs.",
+      "body-data-protection": "Data Protection",
+      "body-methodoogy": "Voting Monitor Methodology",
+      "body-presidential-voting": "Presidential Elections",
+      "body-senate-voting": "Senate Elections",
+      "body-support-calculator": "Support the Voting Monitor",
+      "body-who-to-vote": "The Voting Monitor compares your opinions with party programs.",
+      "links": "Links",
+      "title-more-about-elections": "More Information About Elections"
+    },
+    "QuestionCandidateFilter": {
+      "title-candidate-filter": "Filter by Parties",
+      "select-all": "Select All"
+    },
+    "QuestionTagFilter": {
+      "title-filter-by-theme": "Filter by Themes",
+      "select-all": "Select All"
+    },
+    "WantToKnowMore": {
+      "more-about-topic": "More About This Topic"
+    }
+  },
+  "routes": {
+    "comparison": {
+      "ComparisonGrid": {
+        "answers": "My Answers",
+        "my": "My"
+      },
+      "ComparisonPage": {
+        "back-to-main-page": "Back to Main Page",
+        "comparison": "Comparison",
+        "my-match": "My Matches",
+        "set-comparison": "Set Comparison"
+      }
+    },
+    "data-protection": {
+      "DataProtectionPage": {
+        "title": "Data Protection"
+      }
+    },
+    "error": {
+      "ErrorPage": {
+        "go-to-main-page": "Main Page",
+        "this-page-does-not-exist": "This Page Does Not Exist",
+        "unknown-error": "Unknown Error"
+      }
+    },
+    "guide": {
+      "GuidePage": {
+        "agree": "Agree",
+        "back-to-main-page": "Back to Main Page",
+        "disagree": "Disagree",
+        "double-weight": "Double Weight",
+        "first-question": "First Question",
+        "guide": "Guide",
+        "important": "Important to Me",
+        "next-step": "Next Step",
+        "not-included": "This question will not be considered in the results calculation",
+        "previous-step": "Previous Step",
+        "skip": "Skip",
+        "skip-guide": "Skip Guide",
+        "skip-question": "If you have no opinion on the topic or do not want to answer, you can move on using the arrow on the right. This question will not be considered in the results calculation.",
+        "text-0": "If a party did not answer or has no clear stance (abstains), the answer will not be evaluated.",
+        "text-answer-button": "Answer Options",
+        "text-important": "Topics important to the respondent can be marked with a star. These are calculated with double weight.",
+        "text-method": "If an answer matches a party's answer, it earns one point. If the answers are opposite, one point is deducted."
+      }
+    },
+    "index": {
+      "IndexPage": {
+        "czech-version": {
+          "link": "Czech version",
+          "prefix": "In the meantime, you can check out the {0}",
+          "suffix": "voting calculator."
+        },
+        "disclaimer": "By submitting, you agree to receive notifications about the Voting Monitor.",
+        "empty-email-error": "Required field",
+        "error": "An error occurred :( Please try again.",
+        "inform-me": "Notify me about new Voting Monitors",
+        "input-label": "Email",
+        "input-text": "Sign up and we'll notify you when a new Voting Monitor is launched.",
+        "primary-text": "We are preparing a voting calculator for the 2023 Slovak National Council elections.",
+        "secondary-text": "Enter your email address and we will notify you when the Voting Monitor is available.",
+        "subscribe-button-label": "Subscribe",
+        "success": "We will notify you!",
+        "title": "Voting Monitor"
+      }
+    },
+    "profile": {
+      "AuthPageVue": {
+        "create-it": "Create It",
+        "create-profile-email": "Create Profile with Email",
+        "link-title": "Privacy Policy",
+        "log-in": "Log In",
+        "notification": "Your personal data will be processed for the purpose of creating a user profile, in accordance with the",
+        "opinion": "Track your opinion development in your profile",
+        "question-one": "Already have a profile?",
+        "question-two": "Don't have a profile yet?",
+        "registration": "Create Profile",
+        "title-close": "Close",
+        "use-email": "With Email"
+      },
+      "EmailAuthPageVue": {
+        "confirmation": "Send Confirmation Email",
+        "create-profile": "Create Profile",
+        "log-in": "Log In",
+        "message": "Enter your email address",
+        "message-verification-first": "We will send you an email with a verification link. Complete the registration by clicking on it.",
+        "message-verification-second": "We will send you an email with a verification link.",
+        "title-close": "Close"
+      },
+      "EmailFormPageVue": {
+        "about-spam": "If you did not receive the email with the verification link, please check your spam or junk folder.",
+        "confirm-info": "Confirm your registration in your email",
+        "confirm-title": "Registration Waiting for Your Confirmation",
+        "error-email": "The email address is not in the correct format",
+        "error-empty-field": "Field must not be empty",
+        "login-info": "We will send you an email with a verification link.",
+        "login-title": "Log In",
+        "notification": "Enter your email address",
+        "notification-info": "Confirm your login in your email",
+        "notification-title": "Login Waiting for Your Confirmation",
+        "registration-info": "We will send you an email with a verification link. Complete the registration by clicking on it.",
+        "registration-title": "Create Profile",
+        "send-confirm": "Send Confirmation Email",
+        "title-back": "Back",
+        "title-close": "Close"
+      },
+      "ProfilePage": {
+        "main-title": "My Calculators",
+        "message": "No other completed calculators in 2023"
+      },
+      "ProfileSettingsPage": {
+        "button-delete": "Delete Profile",
+        "button-delete-profile": "Delete Profile and Data",
+        "button-save": "Save Changes",
+        "button-save-profile": "Keep Profile and Data",
+        "confirm-delete-profile": "Are you sure you want to delete the profile?",
+        "log-out": "Log Out",
+        "message-part-one": "Read about it in the",
+        "message-part-two": "Data Protection Policy",
+        "notification-delete-profile": "Deleting the profile will permanently remove the saved calculators.",
+        "title-data": "How Do We Handle Data?",
+        "title-settings": "Profile Settings"
+      },
+      "SocialMediaConnectCompponent": {
+        "facebook": "Continue with Facebook",
+        "google": "Continue with Google"
+      }
+    },
+    "question": {
+      "QuestionBottomBar": {
+        "important-for-me": "Important to Me",
+        "no": "Disagree",
+        "yes": "Agree"
+      },
+      "QuestionPage": {
+        "back-to-main-page": "Back to Main Page",
+        "instructions-long": "Guide",
+        "instructions-short": "Guide",
+        "next-question-long": "Next Question",
+        "next-question-short": "Next",
+        "previous-question-long": "Previous Question",
+        "previous-question-short": "Previous",
+        "recapitulation-long": "Recapitulation",
+        "recapitulation-short": "Recap",
+        "skip-question-long": "Skip Question",
+        "skip-question-short": "Skip"
+      }
+    },
+    "questions-methodology": {
+      "QuestionsMethodologyPageVue": {
+        "title": "Voting Monitor Methodology"
+      }
+    },
+    "recap": {
+      "RecapPage": {
+        "back-to-main-page": "Back",
+        "display-results": "Show Results",
+        "hint-text": "Review and adjust your answers and weights",
+        "questions": "Questions",
+        "recapitulation": "Recapitulation"
+      },
+      "RecapQuestionCard": {
+        "display-details": "Show Details",
+        "important-for-me": "Important to Me",
+        "no": "Disagree",
+        "without-answer": "No Answer",
+        "yes": "Agree"
+      }
+    },
+    "result": {
+      "ResultCandidateCard": {
+        "display-details": "Show Details",
+        "what-candidate-say": "What Candidates Say About Themselves"
+      },
+      "ResultCardContacts": {
+        "contacts": "Contact"
+      },
+      "ResultCategory": {
+        "hide-candidates": "Hide Candidates",
+        "show-all-candidates": "Show All Candidates"
+      },
+      "ResultPage": {
+        "back-to-main-page": "Back to Main Page",
+        "back-to-start": "Back to Start",
+        "candidates-answers": "Candidates' Answers",
+        "compare-answers": "Compare Answers",
+        "display-not-advancing-candidates": "Show Non-Advancing Candidates",
+        "in-table": "in the table",
+        "fill-calc": "Fill in the Voting Monitor",
+        "my-match": "My Matches",
+        "recapitulation": "Recap",
+        "share": "Share",
+        "something-went-wrong": "An Error Occurred :(",
+        "something-went-wrong-text": "Sharing is currently not working",
+        "text-and-answer": "and answer at least one question or",
+        "text-at-least-one-answer": "You must answer at least one question to see the results",
+        "text-display-answers": "compare the candidates' answers.",
+        "text-in-time": "Track how your opinions and results change over time.",
+        "text-save-calc": "save your results and compare them over time.",
+        "text-table": "view all candidates' answers.",
+        "you-may": ""
+      },
+      "ResultShareModal": {
+        "hashtag1": "Elections",
+        "hashtag2": "Elections2024",
+        "hashtag3": "VotingMonitor",
+        "share-facebook": "Share on Facebook",
+        "share-now": "Share Now",
+        "share-title": "VotingMonitor2024",
+        "share-twitter": "Share on Twitter",
+        "text-copy": "... or click here to copy the link",
+        "text-do-it-too": "These are my results, fill it out too!",
+        "text-my-match": "According to the Voting Monitor, the following are closest to me:"
+      }
+    },
+    "share": {
+      "SharePage": {
+        "fill-again": "Fill Again",
+        "my-match": "This is what I got:",
+        "text-fill-again": "To fill out the Voting Monitor again, click the button in the top right corner"
+      }
+    }
+  }
+}
