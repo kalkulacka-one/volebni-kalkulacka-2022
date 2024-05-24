@@ -33,6 +33,12 @@ Andere personenbezogene Daten erhalten wir im Rahmen unserer Geschäftstätigkei
 
 Wir können weitere personenbezogene Daten von Dritten erhalten, z. B. wenn Sie sich über Dienste von Dritten in den Wahlrechner einloggen.
 
+## Links zu Datenschutzrichtlinien Dritter
+
+Wahlrechner kann Websites von Drittanbietern enthalten, die Dienstleistungen im Zusammenhang mit unserer Plattform anbieten. Bitte beachten Sie, dass diese Websites eigene Datenschutzrichtlinien und Datenverarbeitungspraktiken haben. Wir empfehlen Ihnen, diese Richtlinien zu überprüfen, bevor Sie persönliche Informationen bereitstellen. Weitere Informationen finden Sie in den Datenschutzrichtlinien der folgenden Seiten:
+
+- Darujme: [Datenschutzerklärung](https://www.darujme.cz/projekt/1209495/zpracovani-osobnich-udaju?locale=en)
+
 ## Welche Rechte haben Sie bei der Verarbeitung personenbezogener Daten?
 
 Ebenso wie wir bei der Verarbeitung Ihrer personenbezogenen Daten Rechte und Pflichten haben, haben auch Sie bei der Verarbeitung Ihrer personenbezogenen Daten bestimmte Rechte, die in den folgenden Abschnitten erläutert werden. Sie können alle diese Rechte ausüben und sich bei Fragen oder Beschwerden an uns wenden: info@kohovolit.eu. Wir werden Ihre Anfrage immer so schnell wie möglich, spätestens jedoch innerhalb eines Monats, bearbeiten. In Ausnahmefällen können wir diese Frist um weitere zwei Monate verlängern, insbesondere aufgrund der Komplexität Ihres Anliegens, und wir werden Sie darüber informieren.
