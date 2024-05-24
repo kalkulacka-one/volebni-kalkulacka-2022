@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onBeforeMount, ref, type ComputedRef, type Ref } from 'vue';
+import { computed, onBeforeMount, onMounted, onUnmounted, ref, type ComputedRef, type Ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 
 import {
@@ -50,6 +50,7 @@ import { inject } from 'vue';
 import { EmbedKey } from '@/components/utilities/embedding/EmbedKey';
 
 import { useI18n } from 'vue-i18n';
+import { switchLanguage } from '@/i18n';
 
 const { t, locale } = useI18n();
 
@@ -223,6 +224,16 @@ const handleSubscribe = async () => {
     message.value = t('routes.index.IndexPage.error');
   }
 };
+
+onMounted(() => {
+  if (districtCode.includes('english')) {
+    switchLanguage('en');
+  }
+});
+
+onUnmounted(() => {
+  switchLanguage(import.meta.env.VITE_DEFAULT_LOCALE);
+});
 </script>
 <template>
   <BackgroundComponent :is-image="false">

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { mdiCloseCircleOutline, mdiArrowLeft, mdiArrowRight } from '@mdi/js';
 
@@ -31,6 +31,7 @@ import RecapQuestionCard from './RecapQuestionCard.vue';
 import { getDistrictCode } from '@/common/utils';
 
 import { useI18n } from 'vue-i18n';
+import { switchLanguage } from '@/i18n';
 
 const { t, locale } = useI18n();
 
@@ -91,6 +92,16 @@ const isCardHidden = (index: number) => {
     electionStore.calculator?.questions[index].tags?.includes(selectedTag.value)
   );
 };
+
+onMounted(() => {
+  if (districtCode.includes('english')) {
+    switchLanguage('en');
+  }
+});
+
+onUnmounted(() => {
+  switchLanguage(import.meta.env.VITE_DEFAULT_LOCALE);
+});
 </script>
 <template>
   <BackgroundComponent :is-image="false">

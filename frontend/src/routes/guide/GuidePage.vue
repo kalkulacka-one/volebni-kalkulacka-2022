@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed, ref, onMounted, onUnmounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import {
   mdiCloseCircleOutline,
@@ -44,6 +44,7 @@ import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import { getDistrictCode } from '@/common/utils';
 
 import { useI18n } from 'vue-i18n';
+import { switchLanguage } from '@/i18n';
 
 const { t, locale } = useI18n();
 
@@ -220,6 +221,16 @@ const handlePreviousClick = () => {
     goToStep(currentStep.value - 1);
   }
 };
+
+onMounted(() => {
+  if (districtCode.includes('english')) {
+    switchLanguage('en');
+  }
+});
+
+onUnmounted(() => {
+  switchLanguage(import.meta.env.VITE_DEFAULT_LOCALE);
+});
 </script>
 
 <template>

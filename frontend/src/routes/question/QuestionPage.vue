@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, onMounted, onUnmounted } from 'vue';
 import { useRoute, useRouter, onBeforeRouteUpdate } from 'vue-router';
 import type { RouteParams } from 'vue-router';
 import { mdiCloseCircleOutline, mdiArrowRight, mdiArrowLeft } from '@mdi/js';
@@ -29,6 +29,7 @@ import StatusBarComponent from '@/components/design-system/other/StatusBarCompon
 import { getDistrictCode } from '@/common/utils';
 
 import { useI18n } from 'vue-i18n';
+import { switchLanguage } from '@/i18n';
 
 const { t, locale } = useI18n();
 
@@ -165,6 +166,16 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
     handleNextClick();
   }
 };
+
+onMounted(() => {
+  if (districtCode.includes('english')) {
+    switchLanguage('en');
+  }
+});
+
+onUnmounted(() => {
+  switchLanguage(import.meta.env.VITE_DEFAULT_LOCALE);
+});
 </script>
 
 <template>
