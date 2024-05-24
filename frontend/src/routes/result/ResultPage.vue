@@ -397,7 +397,7 @@ onBeforeUnmount(removeExternalScript);
             <TitleText tag="h2" size="medium">{{
               $t('routes.result.ResultPage.my-match')
             }}</TitleText>
-            <template v-if="election.key === 'nrsr-2023'" #after>
+            <template #after>
               <ButtonComponent
                 kind="link"
                 color="primary"
@@ -427,7 +427,6 @@ onBeforeUnmount(removeExternalScript);
             <template #after>
               <div class="navbar-btn-wrapper">
                 <ButtonComponent
-                  v-if="election.key === 'nrsr-2023'"
                   kind="link"
                   color="primary"
                   @click="handleShareClick"
@@ -438,12 +437,6 @@ onBeforeUnmount(removeExternalScript);
                   {{ $t('routes.result.ResultPage.share') }}
                 </ButtonComponent>
                 <ButtonComponent
-                  v-if="
-                    !(
-                      route.params.first === 'nrsr-2023' &&
-                      route.params.second === 'inventura-2020-2023'
-                    )
-                  "
                   class="desktop"
                   kind="filled"
                   color="primary"
@@ -474,20 +467,6 @@ onBeforeUnmount(removeExternalScript);
               $t('routes.result.ResultPage.display-not-advancing-candidates')
             }}
           </CheckboxComponent>
-          <BodyText
-            v-if="
-              route.params.first === 'nrsr-2023' &&
-              route.params.second === 'inventura-2020-2023'
-            "
-            size="medium"
-          >
-            {{ $t('routes.result.ResultPage.text-table') }}
-            <a
-              target="_blank"
-              href="https://docs.google.com/spreadsheets/d/1UzaiDq-NRdgoPSiSv3uxDqk0wpGC7wlJUdGsTAQnLus"
-              >{{ $t('routes.result.ResultPage.in-table') }}</a
-            >.
-          </BodyText>
           <CardComponent
             v-if="showVoteMatch"
             background-color="#153288"
@@ -609,12 +588,6 @@ onBeforeUnmount(removeExternalScript);
                 >
                 {{ $t('routes.result.ResultPage.text-and-answer') }}
                 <a
-                  v-if="
-                    !(
-                      route.params.first === 'nrsr-2023' &&
-                      route.params.second === 'inventura-2020-2023'
-                    )
-                  "
                   :href="
                     router.resolve({
                       name: appRoutes.comparison.name,
@@ -639,12 +612,6 @@ onBeforeUnmount(removeExternalScript);
                   </template>
                 </ButtonComponent>
                 <ButtonComponent
-                  v-if="
-                    !(
-                      route.params.first === 'nrsr-2023' &&
-                      route.params.second === 'inventura-2020-2023'
-                    )
-                  "
                   kind="outlined"
                   color="primary"
                   @click="handleShowComparsionClick"
@@ -661,12 +628,6 @@ onBeforeUnmount(removeExternalScript);
         </StackComponent>
         <template #bottom-bar>
           <ResponsiveWrapper
-            v-if="
-              !(
-                route.params.first === 'nrsr-2023' &&
-                route.params.second === 'inventura-2020-2023'
-              )
-            "
             extra-small
             small
           >
