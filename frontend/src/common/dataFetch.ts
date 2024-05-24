@@ -77,6 +77,9 @@ export const deprecatedFetchCalculator = async (key: string) => {
       transformedCandidate.family_name = person.familyName;
       transformedCandidate.type = 'person';
       transformedCandidate.short_name = transformedCandidate.name;
+      if (candidate.images) {
+        transformedCandidate.img_url = `/data/instance/voksmonitor.hu/${key}/images/candidates/${candidate.id}.webp`;
+      }
 
       const organizationId = person.memberOf?.[0]?.id;
       if (organizationId) {
