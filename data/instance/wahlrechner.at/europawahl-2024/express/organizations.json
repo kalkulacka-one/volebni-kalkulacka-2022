@@ -4,62 +4,60 @@
     "name": "Österreichische Volkspartei",
     "shortName": "ÖVP",
     "sortName": "ÖVP",
-    "euParty": "Europäische Volkspartei",
-    "euAbbreviation": "evp",
-    "type": "candidate-list"
+    "type": "candidate-list",
+    "party": "Europäische Volkspartei",
+    "group": "Fraktion der Europäischen Volkspartei"
   },
   {
     "id": "21e722ff-1943-46a3-8ce8-37702dea7d21",
     "name": "Sozialdemokratische Partei Österreichs",
     "shortName": "SPÖ",
     "sortName": "SPÖ",
-    "euParty": "Sozialdemokratische Partei Europas",
-    "euAbbreviation": "SPE",
-    "type": "candidate-list"
+    "type": "candidate-list",
+    "party": "Sozialdemokratische Partei Europas",
+    "group": "Progressive Allianz der Sozialdemokraten"
   },
   {
     "id": "0dfe30b6-ea75-4947-9f4e-9ce02e254329",
     "name": "Freiheitliche Partei Österreichs",
     "shortName": "FPÖ",
     "sortName": "FPÖ",
-    "euParty": "Identität und Demokratie Partei",
-    "euAbbreviation": "IDP",
-    "type": "candidate-list"
+    "type": "candidate-list",
+    "party": "Identität und Demokratie Partei",
+    "group": "Identität und Demokratie"
   },
   {
     "id": "767c85bc-e9d8-41b5-ab3e-4187bbfe5e32",
     "name": "Die Grünen – Grüne Alternative",
     "shortName": "GRÜNE",
     "sortName": "GRÜNE",
-    "euParty": "Europäische Grüne Partei",
-    "euAbbreviation": "EGP",
-    "type": "candidate-list"
+    "type": "candidate-list",
+    "party": "Europäische Grüne Partei",
+    "group": "Die Grünen/Europäische Freie Allianz"
   },
   {
     "id": "d2b8ecd7-61bd-4b5e-902c-898109678582",
     "name": "NEOS – Das Neue Österreich und Liberales Forum",
     "shortName": "NEOS",
     "sortName": "NEOS",
-    "euParty": "Europäische Allianz der Liberalen und Demokraten für Europa",
-    "euAbbreviation": "ALDE",
-    "type": "candidate-list"
+    "type": "candidate-list",
+    "party": "Europäische Allianz der Liberalen und Demokraten für Europa",
+    "group": "Renew Europe"
   },
   {
     "id": "04d64b65-f34c-4b0d-9935-dd43d202091e",
     "name": "Kommunistische Partei Österreichs",
     "shortName": "KPÖ",
     "sortName": "KPÖ",
-    "euParty": "Europäische Linke",
-    "euAbbreviation": "EL",
-    "type": "candidate-list"
+    "type": "candidate-list",
+    "party": "Europäische Linke",
+    "group": "Die Linke im Europäischen Parlament"
   },
   {
     "id": "2c4a8ad9-27ac-43a9-a81d-3078ebaf6037",
     "name": "Demokratisch, Neutral, Authentisch",
     "shortName": "DNA",
     "sortName": "DNA",
-    "euParty": "-",
-    "euAbbreviation": "-",
     "type": "candidate-list"
   }
 ]
