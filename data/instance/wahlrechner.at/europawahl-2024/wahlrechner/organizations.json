@@ -4,6 +4,8 @@
     "name": "Österreichische Volkspartei",
     "shortName": "ÖVP",
     "sortName": "ÖVP",
+    "euParty": "Europäische Volkspartei",
+    "euAbbreviation": "evp",
     "type": "candidate-list"
   },
   {
@@ -11,6 +13,8 @@
     "name": "Sozialdemokratische Partei Österreichs",
     "shortName": "SPÖ",
     "sortName": "SPÖ",
+    "euParty": "Sozialdemokratische Partei Europas",
+    "euAbbreviation": "SPE",
     "type": "candidate-list"
   },
   {
@@ -18,6 +22,8 @@
     "name": "Freiheitliche Partei Österreichs",
     "shortName": "FPÖ",
     "sortName": "FPÖ",
+    "euParty": "Identität und Demokratie Partei",
+    "euAbbreviation": "IDP",
     "type": "candidate-list"
   },
   {
@@ -25,6 +31,8 @@
     "name": "Die Grünen – Grüne Alternative",
     "shortName": "GRÜNE",
     "sortName": "GRÜNE",
+    "euParty": "Europäische Grüne Partei",
+    "euAbbreviation": "EGP",
     "type": "candidate-list"
   },
   {
@@ -32,6 +40,8 @@
     "name": "NEOS – Das Neue Österreich und Liberales Forum",
     "shortName": "NEOS",
     "sortName": "NEOS",
+    "euParty": "Europäische Allianz der Liberalen und Demokraten für Europa",
+    "euAbbreviation": "ALDE",
     "type": "candidate-list"
   },
   {
@@ -39,6 +49,8 @@
     "name": "Kommunistische Partei Österreichs",
     "shortName": "KPÖ",
     "sortName": "KPÖ",
+    "euParty": "Europäische Linke",
+    "euAbbreviation": "EL",
     "type": "candidate-list"
   },
   {
@@ -46,6 +58,8 @@
     "name": "Demokratisch, Neutral, Authentisch",
     "shortName": "DNA",
     "sortName": "DNA",
+    "euParty": "-",
+    "euAbbreviation": "-",
     "type": "candidate-list"
   }
 ]
