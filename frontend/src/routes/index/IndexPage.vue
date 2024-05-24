@@ -97,7 +97,7 @@ const handleSubscribe = async () => {
             <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
           </HeadlineText>
           <ResponsiveWrapper extra-small small>
-            <StackComponent spacing="large">
+            <StackComponent spacing="large" stretched>
               <CardComponent
                 corner="bottom-left"
                 padding="large"
