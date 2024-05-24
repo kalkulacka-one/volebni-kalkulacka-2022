@@ -1,0 +1,23 @@
+{
+  "id": "22b8ee64-b3df-4d37-8fd8-62256721016b",
+  "key": "evropske-2024",
+  "createdAt": "2021-01-01T00:00:00+01:00",
+  "election": {
+    "id": "582b96d3-89ad-4f5c-8906-c9c03bb3a8bf",
+    "key": "evropske-2024"
+  },
+  "calculators": [
+    {
+      "id": "ac39139b-476b-41cc-a9c0-8a7c867ac7d0",
+      "variant": {
+        "key": "kalkulacka"
+      }
+    },
+    {
+      "id": "c3d22e0d-4745-484c-af34-3e1018709378",
+      "variant": {
+        "key": "expres"
+      }
+    }
+  ]
+}
