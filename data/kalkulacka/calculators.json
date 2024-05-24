@@ -11,6 +11,12 @@
       "key": "prezidentske-2024",
       "name": "Prezidentské voľby 2024",
       "description": "Voľby prezidenta Slovenskej republiky 2024"
+    },
+    {
+      "id": "14e46503-3fbe-4c98-a6ec-7f7609334e22",
+      "key": "europske-2024",
+      "name": "Europské voľby 2024",
+      "description": "Voľby do Európskeho parlamentu na Slovensku 2024"
     }
   ],
   "calculators": [
@@ -76,6 +82,24 @@
       "name": "Kalkulačka 2. kolo",
       "description": "Kalkulačka pre všetkých 2. kolo",
       "key": "prezidentske-2024/kalkulacka-2-kolo"
+    },
+    {
+      "calculator_id": "0bfc4f88-0295-4b13-9098-7392acac8f8d",
+      "election_id": "14e46503-3fbe-4c98-a6ec-7f7609334e22",
+      "district_code": "kalkulacka",
+      "show_district_code": false,
+      "name": "Kalkulačka",
+      "description": "Volebná kalkulačka",
+      "key": "europske-2024/kalkulacka"
+    },
+    {
+      "calculator_id": "6ad2d24c-9d7a-4164-8ec5-ebaf9b7a290a",
+      "election_id": "14e46503-3fbe-4c98-a6ec-7f7609334e22",
+      "district_code": "expres",
+      "show_district_code": false,
+      "name": "Kalkulačka expres",
+      "description": "Volebná kalkulačka expres",
+      "key": "europske-2024/kalkulacka"
     }
   ]
 }
