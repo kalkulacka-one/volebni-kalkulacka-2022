@@ -4,7 +4,8 @@
     "name": "Slovenský PATRIOT",
     "shortName": "Patriot",
     "sortName": "Patriot",
-    "type": "candidate-list"
+    "type": "candidate-list",
+    "group": "Nezaradení"
   },
   {
     "id": "53091359-af38-40da-92a5-dee97ededdb4",
@@ -18,14 +19,18 @@
     "name": "Demokrati",
     "shortName": "Demokrati",
     "sortName": "Demokrati",
-    "type": "candidate-list"
+    "type": "candidate-list",
+    "party": "Európska ľudová strana",
+    "group": "Európska ľudová strana"
   },
   {
     "id": "c6240e25-edd3-4eb6-bc4e-e563daae9e7f",
     "name": "Magyar Szövetség - Maďarská aliancia",
     "shortName": "Szövetség - Aliancia",
     "sortName": "Szövetség - Aliancia",
-    "type": "candidate-list"
+    "type": "candidate-list",
+    "party": "Európska ľudová strana",
+    "group": "Európska ľudová strana"
   },
   {
     "id": "14020e28-18ce-4a79-9d00-1e1ca649dbe3",
@@ -46,7 +51,8 @@
     "name": "Pirátska strana - Slovensko",
     "shortName": "Piráti",
     "sortName": "Piráti",
-    "type": "candidate-list"
+    "type": "candidate-list",
+    "party": "Európska pirátska strana"
   },
   {
     "id": "93e77251-df34-4ca9-9ce1-3b297f70f2ab",
@@ -67,14 +73,16 @@
     "name": "Slovenská národná strana",
     "shortName": "SNS",
     "sortName": "SNS",
-    "type": "candidate-list"
+    "type": "candidate-list",
+    "party": "Strana identity a demokracie"
   },
   {
     "id": "7b20048a-5e9a-4696-bb8b-4562e26b73c2",
     "name": "REPUBLIKA",
     "shortName": "Republika",
     "sortName": "Republika",
-    "type": "candidate-list"
+    "type": "candidate-list",
+    "group": "Nezaradení"
   },
   {
     "id": "cd91cac2-5273-4161-bbf0-d8e1a34b9b6d",
@@ -109,7 +117,9 @@
     "name": "Komunistická strana Slovenska",
     "shortName": "KSS",
     "sortName": "KSS",
-    "type": "candidate-list"
+    "type": "candidate-list",
+    "party": "Strana európské levice",
+    "group": "Levica v Európském parlamentu"
   },
   {
     "id": "ac986658-f067-48aa-b83a-74625550d1f4",
@@ -123,42 +133,52 @@
     "name": "SMER - sociálna demokracia",
     "shortName": "Smer - SD",
     "sortName": "Smer - SD",
-    "type": "candidate-list"
+    "type": "candidate-list",
+    "group": "Nezaradení"
   },
   {
     "id": "e2b92cfe-2b42-4837-9fd6-a461297436f6",
     "name": "Kresťanskodemokratické hnutie",
     "shortName": "KDH",
     "sortName": "KDH",
-    "type": "candidate-list"
+    "type": "candidate-list",
+    "party": "Európska ľudová strana",
+    "group": "Európska ľudová strana"
   },
   {
     "id": "88168a91-e723-41a9-9c0f-187bd5bb07f3",
     "name": "Sloboda a Solidarita",
     "shortName": "SaS",
     "sortName": "SaS",
-    "type": "candidate-list"
+    "type": "candidate-list",
+    "party": "Strana európskych konzervatívcov a reformistov",
+    "group": "Európski konzervatívci a reformisti"
   },
   {
     "id": "c1349bf5-e688-4b31-b9f8-cfaccee6cea0",
     "name": "Progresívne Slovensko",
     "shortName": "PS",
     "sortName": "PS",
-    "type": "candidate-list"
+    "type": "candidate-list",
+    "party": "Aliancia liberálov a demokratov pre Európu",
+    "group": "Obnova Európy"
   },
   {
     "id": "e2ba7fa4-a24d-48ea-a5ae-ecaffa324eaf",
     "name": "SLOVENSKO, ZA ĽUDÍ",
     "shortName": "Slovensko, Za ľudí",
     "sortName": "Slovensko, Za ľudí",
-    "type": "candidate-list"
+    "type": "candidate-list",
+    "party": "Európska ľudová strana",
+    "group": "Európska ľudová strana"
   },
   {
     "id": "52210606-19ff-4519-ad3d-4fb43aff8784",
     "name": "HLAS - sociálna demokracia",
     "shortName": "Hlas - SD",
     "sortName": "Hlas - SD",
-    "type": "candidate-list"
+    "type": "candidate-list",
+    "group": "Nezaradení"
   },
   {
     "id": "32b40794-73b5-4157-ad38-5c5ae1a7ed98",
