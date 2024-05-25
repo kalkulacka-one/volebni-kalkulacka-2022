@@ -4,21 +4,25 @@
     "name": "DK-MSZP-PÁRBESZÉD",
     "shortName": "DK-MSZP-P",
     "sortName": "DK-MSZP-P",
-    "type": "candidate-list"
+    "type": "candidate-list",
+    "party": "Európai Szocialisták Pártja",
+    "group": "Szocialisták és Demokraták Progresszív Szövetsége"
   },
   {
     "id": "98f48248-1821-4e8c-8da9-96ee532af410",
     "name": "Fidesz-KDNP",
     "shortName": "Fidesz-KDNP",
     "sortName": "Fidesz-KDNP",
-    "type": "candidate-list"
+    "type": "candidate-list",
+    "group": "Független képviselők"
   },
   {
     "id": "56e20377-7132-44be-8cd0-91b1c3982a09",
     "name": "Jobbik-Konzervatívok",
     "shortName": "Jobbik ",
     "sortName": "Jobbik ",
-    "type": "candidate-list"
+    "type": "candidate-list",
+    "group": "Független képviselők"
   },
   {
     "id": "855bace4-f913-4d99-be70-fb391b17dd85",
@@ -32,7 +36,9 @@
     "name": "Magyar Kétfarkú Kutyapárt",
     "shortName": "MKKP",
     "sortName": "MKKP",
-    "type": "candidate-list"
+    "type": "candidate-list",
+    "party": "Európai Kalózpárt",
+    "group": "Zöldek/Európai Szabad Szövetség"
   },
   {
     "id": "153aec09-6689-4db9-b63a-c6b28c7ce5c0",
@@ -60,7 +66,9 @@
     "name": "Momentum Mozgalom",
     "shortName": "Momentum",
     "sortName": "Momentum",
-    "type": "candidate-list"
+    "type": "candidate-list",
+    "party": "Liberálisok és Demokraták Szövetsége Európáért Párt",
+    "group": "Újítsuk meg Európát"
   },
   {
     "id": "a9b9a340-2312-4c4e-967d-b23ccac5d9f5",
