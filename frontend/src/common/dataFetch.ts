@@ -114,6 +114,9 @@ export const deprecatedFetchCalculator = async (key: string) => {
       transformedCandidate.type = organization.type || 'party';
       transformedCandidate.short_name = organization.shortName;
       transformedCandidate.motto = candidate.motto;
+      transformedCandidate.party = organization.party;
+      transformedCandidate.group = organization.group;
+
       if (candidate.images) {
         transformedCandidate.img_url = `/data/instance/wahlrechner.at/${key}/images/candidates/${candidate.id}.webp`;
       }
