@@ -135,6 +135,27 @@ const handleSubscribe = async () => {
                         <IconComponent :icon="mdiArrowRight" />
                       </template>
                     </ButtonComponent>
+                    <ButtonComponent
+                      kind="outlined"
+                      color="primary"
+                      @click="
+                        router.push({
+                          name: appRoutes.guide.name,
+                          params: {
+                            ...route.params,
+                            type: `${'valasztasok'}`,
+                            first: 'europai-2024',
+                            second: 'english',
+                          },
+                          query: { ...route.query },
+                        })
+                      "
+                    >
+                    English version
+                      <template #iconAfter>
+                        <IconComponent :icon="mdiArrowRight" />
+                      </template>
+                    </ButtonComponent>
                   </StackComponent>
                 </StackComponent>
               </CardComponent>
@@ -236,6 +257,27 @@ const handleSubscribe = async () => {
                       "
                     >
                     A Voksmonitor elindítása
+                      <template #iconAfter>
+                        <IconComponent :icon="mdiArrowRight" />
+                      </template>
+                    </ButtonComponent>
+                    <ButtonComponent
+                      kind="outlined"
+                      color="primary"
+                      @click="
+                        router.push({
+                          name: appRoutes.guide.name,
+                          params: {
+                            ...route.params,
+                            type: `${'valasztasok'}`,
+                            first: 'europai-2024',
+                            second: 'english',
+                          },
+                          query: { ...route.query },
+                        })
+                      "
+                    >
+                    English version
                       <template #iconAfter>
                         <IconComponent :icon="mdiArrowRight" />
                       </template>
