@@ -149,7 +149,7 @@ const toggleClick = () => {
             : candidate?.name
         }}</BodyText>
         <BodyText size="medium" v-if="expert">
-          postoje z verejných zdrojov
+          Közforrásokból származó adatok
         </BodyText>
         <!--
         <div
