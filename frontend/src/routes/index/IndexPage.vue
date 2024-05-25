@@ -170,7 +170,7 @@ const handleSubscribe = async () => {
                 <StackComponent spacing="large" centered>
                   <StackComponent spacing="small" centered space-between>
                     <BodyText size="medium" tag="h2" color="fg-strong">
-                      <strong>Főpolgármesteri voksmonitor</strong>
+                      <strong>Budapest főpolgármesteri voksmonitor</strong>
                     </BodyText>
                     <BodyText size="small">
                       38 kérdés, nagyjából 8-10 perc
@@ -296,7 +296,7 @@ const handleSubscribe = async () => {
                 <StackComponent spacing="large" centered>
                   <StackComponent spacing="small" centered space-between>
                     <BodyText size="medium" tag="h2" color="fg-strong">
-                      <strong>Főpolgármesteri voksmonitor</strong>
+                      <strong>Budapest főpolgármesteri voksmonitor</strong>
                     </BodyText>
                     <BodyText size="small">
                       38 kérdés, nagyjából 8-10 perc
