@@ -42,7 +42,7 @@ defineProps<Props>();
           {{ tag }}
         </TagComponent>
       </StackComponent>
-      <HeadingComponent class="heading--desktop" kind="headline" size="small">
+      <HeadingComponent class="heading--desktop" kind="title" size="medium">
         {{ question.title }}
       </HeadingComponent>
       <HeadingComponent class="heading--mobile" kind="title" size="medium">
