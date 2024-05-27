@@ -13,46 +13,46 @@
       "title": "Support the Creation of the Voting Monitor!"
     },
     "FooterMultiWord": {
-      "body-about-voting-calculator": "About the Voting Monitor",
-      "body-comunal-voting": "Municipal Elections",
-      "body-created-by-ngos": "Created in collaboration with NGOs.",
-      "body-data-protection": "Data Protection",
-      "body-methodoogy": "Voting Monitor Methodology",
+      "body-about-voting-calculator": "About Voksmonitor",
+      "body-comunal-voting": "Municipal elections",
+      "body-created-by-ngos": "Created in collaboration of NGOs",
+      "body-data-protection": "Data protection",
+      "body-methodoogy": "Methodology",
       "body-presidential-voting": "Presidential Elections",
       "body-senate-voting": "Senate Elections",
-      "body-support-calculator": "Support the Voting Monitor",
-      "body-who-to-vote": "The Voting Monitor compares your opinions with party programs.",
+      "body-support-calculator": "Support Voksmonitor",
+      "body-who-to-vote": "Voksmonitor compares your opinions with party programs.",
       "links": "Links",
-      "title-more-about-elections": "More Information About Elections"
+      "title-more-about-elections": "More information about elections"
     },
     "QuestionCandidateFilter": {
-      "title-candidate-filter": "Filter by Parties",
-      "select-all": "Select All"
+      "title-candidate-filter": "Filter by parties",
+      "select-all": "Select all"
     },
     "QuestionTagFilter": {
-      "title-filter-by-theme": "Filter by Themes",
-      "select-all": "Select All"
+      "title-filter-by-theme": "Filter by topics",
+      "select-all": "Select all"
     },
     "WantToKnowMore": {
-      "more-about-topic": "More About This Topic"
+      "more-about-topic": "More about this topic"
     }
   },
   "routes": {
     "comparison": {
       "ComparisonGrid": {
-        "answers": "My Answers",
+        "answers": "My answers",
         "my": "My"
       },
       "ComparisonPage": {
-        "back-to-main-page": "Back to Main Page",
+        "back-to-main-page": "Back to home",
         "comparison": "Comparison",
-        "my-match": "My Matches",
-        "set-comparison": "Set Comparison"
+        "my-match": "My matches",
+        "set-comparison": "Set comparison"
       }
     },
     "data-protection": {
       "DataProtectionPage": {
-        "title": "Data Protection"
+        "title": "Data protection"
       }
     },
     "error": {
@@ -70,12 +70,12 @@
         "double-weight": "Double Weight",
         "first-question": "First Question",
         "guide": "Guide",
-        "important": "Important to Me",
-        "next-step": "Next Step",
+        "important": "Important to me",
+        "next-step": "Next step",
         "not-included": "This question will not be considered in the results calculation",
-        "previous-step": "Previous Step",
+        "previous-step": "Previous step",
         "skip": "Skip",
-        "skip-guide": "Skip Guide",
+        "skip-guide": "Skip guide",
         "skip-question": "If you have no opinion on the topic or do not want to answer, you can move on using the arrow on the right. This question will not be considered in the results calculation.",
         "text-0": "If a party did not answer or has no clear stance (abstains), the answer will not be evaluated.",
         "text-answer-button": "Answer Options",
@@ -167,66 +167,66 @@
     },
     "question": {
       "QuestionBottomBar": {
-        "important-for-me": "Important to Me",
+        "important-for-me": "Important to me",
         "no": "Disagree",
         "yes": "Agree"
       },
       "QuestionPage": {
-        "back-to-main-page": "Back to Main Page",
+        "back-to-main-page": "Back to home",
         "instructions-long": "Guide",
         "instructions-short": "Guide",
-        "next-question-long": "Next Question",
+        "next-question-long": "Next question",
         "next-question-short": "Next",
-        "previous-question-long": "Previous Question",
+        "previous-question-long": "Previous question",
         "previous-question-short": "Previous",
         "recapitulation-long": "Recapitulation",
         "recapitulation-short": "Recap",
-        "skip-question-long": "Skip Question",
+        "skip-question-long": "Skip question",
         "skip-question-short": "Skip"
       }
     },
     "questions-methodology": {
       "QuestionsMethodologyPageVue": {
-        "title": "Voting Monitor Methodology"
+        "title": "Voksmonitor methodology"
       }
     },
     "recap": {
       "RecapPage": {
         "back-to-main-page": "Back",
-        "display-results": "Show Results",
+        "display-results": "Show results",
         "hint-text": "Review and adjust your answers and weights",
         "questions": "Questions",
         "recapitulation": "Recapitulation"
       },
       "RecapQuestionCard": {
-        "display-details": "Show Details",
-        "important-for-me": "Important to Me",
+        "display-details": "Show details",
+        "important-for-me": "Important to me",
         "no": "Disagree",
-        "without-answer": "No Answer",
+        "without-answer": "No answer",
         "yes": "Agree"
       }
     },
     "result": {
       "ResultCandidateCard": {
-        "display-details": "Show Details",
+        "display-details": "Show details",
         "what-candidate-say": "What Candidates Say About Themselves"
       },
       "ResultCardContacts": {
         "contacts": "Contact"
       },
       "ResultCategory": {
-        "hide-candidates": "Hide Candidates",
-        "show-all-candidates": "Show All Candidates"
+        "hide-candidates": "Hide candidates",
+        "show-all-candidates": "Show all candidates"
       },
       "ResultPage": {
-        "back-to-main-page": "Back to Main Page",
-        "back-to-start": "Back to Start",
-        "candidates-answers": "Candidates' Answers",
-        "compare-answers": "Compare Answers",
+        "back-to-main-page": "Back to home",
+        "back-to-start": "Back to start",
+        "candidates-answers": "Candidates' answers",
+        "compare-answers": "Compare answers",
         "display-not-advancing-candidates": "Show Non-Advancing Candidates",
         "in-table": "in the table",
         "fill-calc": "Fill in the Voting Monitor",
-        "my-match": "My Matches",
+        "my-match": "My matches",
         "recapitulation": "Recap",
         "share": "Share",
         "something-went-wrong": "An Error Occurred :(",
