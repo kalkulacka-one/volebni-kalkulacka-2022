@@ -27,11 +27,12 @@ import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import ComparisonGrid from './ComparisonGrid.vue';
 import ContainerComponent from '../../components/design-system/containers/ContainerComponent.vue';
 
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import QuestionCandidateFilter from '@/components/QuestionCandidateFilter.vue';
 import QuestionTagFilter from '@/components/QuestionTagFilter.vue';
 
 import { useI18n } from 'vue-i18n';
+import { switchLanguage } from '@/i18n';
 
 const { t, locale } = useI18n();
 
@@ -72,6 +73,16 @@ const candidates = electionStore?.calculator
   ?.candidates as DeprecatedCandidate[];
 const candidateAnswers = electionStore.calculator
   ?.answers as DeprecatedCandidateAnswer[];
+
+onMounted(() => {
+  if (districtCode.includes('english')) {
+    switchLanguage('en');
+  }
+});
+
+onUnmounted(() => {
+  switchLanguage(import.meta.env.VITE_DEFAULT_LOCALE);
+});
 </script>
 
 <template>
