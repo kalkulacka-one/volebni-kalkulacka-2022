@@ -1,0 +1,23 @@
+{
+  "id": "c4f3095d-0f8e-4692-a5c2-de5dda6b2176",
+  "key": "europai-2024",
+  "createdAt": "2021-01-01T00:00:00+01:00",
+  "election": {
+    "id": "0e5321db-556b-4e5d-9a86-9f38edbbf67d",
+    "key": "europai-2024"
+  },
+  "calculators": [
+    {
+      "id": "0a465ec4-8790-4b00-a860-249ea52ea17b",
+      "variant": {
+        "key": "voksmonitor"
+      }
+    },
+    {
+      "id": "927070bd-77b6-4506-8a49-68c2d1bd491a",
+      "variant": {
+        "key": "english"
+      }
+    }
+  ]
+}
