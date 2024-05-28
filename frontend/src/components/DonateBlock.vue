@@ -51,5 +51,6 @@ export default {
 
 .donation {
   background-color: white;
+  min-width: 16rem;
 }
 </style>
