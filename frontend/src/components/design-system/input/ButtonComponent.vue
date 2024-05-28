@@ -69,6 +69,7 @@ const computedSize = computed(() =>
   text-decoration: none;
   touch-action: manipulation;
   color: inherit;
+  text-wrap: nowrap;
 
   &:disabled {
     cursor: not-allowed;
