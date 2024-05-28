@@ -106,7 +106,7 @@ const handleShareClick = () => {
   shareModal.value?.open();
 };
 onBeforeMount(async () => {
-  if (election.key === 'nrsr-2023' || election.key === 'prezidentske-2024' || election.key === 'evropske-2024') {
+  if (election.key === 'nrsr-2023' || election.key === 'prezidentske-2024' || election.key === 'europske-2024') {
     if (userStore.user || userStore.user === null) {
       const res = await electionStore.saveResults({
         embedName: currentEmbed,
@@ -286,7 +286,7 @@ const handleSubscribe = async () => {
             <TitleText tag="h2" size="medium">{{
               $t('routes.result.ResultPage.my-match')
             }}</TitleText>
-            <template v-if="election.key === 'nrsr-2023' || election.key === 'prezidentske-2024' || election.key === 'evropske-2024'" #after>
+            <template v-if="election.key === 'nrsr-2023' || election.key === 'prezidentske-2024' || election.key === 'europske-2024'" #after>
               <ButtonComponent
                 kind="link"
                 color="primary"
@@ -316,7 +316,7 @@ const handleSubscribe = async () => {
             <template #after>
               <div class="navbar-btn-wrapper">
                 <ButtonComponent
-                  v-if="election.key === 'nrsr-2023' || election.key === 'prezidentske-2024' || election.key === 'evropske-2024'"
+                  v-if="election.key === 'nrsr-2023' || election.key === 'prezidentske-2024' || election.key === 'europske-2024'"
                   kind="link"
                   color="primary"
                   @click="handleShareClick"
