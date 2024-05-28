@@ -32,6 +32,7 @@ import SharePageVue from './routes/share/SharePage.vue';
 import AboutUsPageVue from './routes/about-us/AboutUsPage.vue';
 import AboutElectionsPageVue from './routes/about-elections/AboutElectionsPage.vue';
 import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
+import ArchivePage from './routes/archive/ArchivePage.vue';
 import AuthPageVue from './routes/profile/AuthPageVue.vue';
 import EmailFormPageVue from './routes/profile/EmailFormPageVue.vue';
 import ProfilePageVue from './routes/profile/ProfilePage.vue';
@@ -115,6 +116,14 @@ export const appRoutes = {
     component: DataProtectionPageVue,
     meta: {
       title: 'Ochrana dat',
+    },
+  },
+  archive: {
+    name: 'archiv',
+    path: '/archiv',
+    component: ArchivePage,
+    meta: {
+      title: 'Archiv',
     },
   },
   questionsMethodology: {
