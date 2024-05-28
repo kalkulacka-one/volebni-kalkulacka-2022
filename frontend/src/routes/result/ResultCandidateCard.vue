@@ -184,7 +184,7 @@ const toggleClick = () => {
     >
       {{ result }}&nbsp;%
     </TitleText>
-    <div v-if="candidate?.motto" class="toggle">
+    <div v-if="candidate?.motto || candidate?.party || candidate?.group" class="toggle">
       <IconButton @click="toggleClick">
         <IconComponent
           :icon="isExpanded ? mdiChevronUp : mdiChevronDown"
@@ -194,7 +194,7 @@ const toggleClick = () => {
       </IconButton>
     </div>
     <div
-      v-if="candidate?.motto || candidate?.contact"
+      v-if="candidate?.motto || candidate?.contact || candidate?.party || candidate?.group"
       v-show="isExpanded"
       class="expansion"
     >
@@ -209,6 +209,23 @@ const toggleClick = () => {
       <div v-if="candidate?.contact">
         <DividerComponent class="divider"></DividerComponent>
         <ResultCardContacts :contact="candidate?.contact"></ResultCardContacts>
+      </div>
+      <div v-if="candidate?.party">
+        <BodyText class="motto-title" size="small"
+          ><strong>{{
+            $t('routes.result.ResultCandidateCard.eu-party')
+          }}</strong></BodyText
+        >
+        <BodyText size="small">{{ candidate?.party }}</BodyText>
+      </div>
+      <DividerComponent v-if="candidate?.party && candidate?.group" class="divider" />
+      <div v-if="candidate?.group">
+        <BodyText class="motto-title" size="small"
+          ><strong>{{
+            $t('routes.result.ResultCandidateCard.eu-group')
+          }}</strong></BodyText
+        >
+        <BodyText size="small">{{ candidate?.group }}</BodyText>
       </div>
     </div>
   </CardComponent>
