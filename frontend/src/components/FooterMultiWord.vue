@@ -62,6 +62,9 @@ const router = useRouter();
                   $t('components.FooterMultiWord.body-support-calculator')
                 }}</BodyText></a
               >
+              <router-link to="/archiv">
+                <BodyText size="small">Můj profil</BodyText>
+              </router-link>
             </StackComponent>
           </StackComponent>
         </div>
