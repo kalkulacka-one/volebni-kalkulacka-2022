@@ -29,9 +29,11 @@ const bestMatch = electionStore.calculator?.candidates.find((x) => {
   }
 });
 const hashTags = [
-  t('routes.result.ResultShareModal.hashtag1'),
-  t('routes.result.ResultShareModal.hashtag2'),
-  t('routes.result.ResultShareModal.hashtag3'),
+  "wahlrechner",
+  "europawahlen",
+  "europawahlen2024",
+  "wahlen",
+  "wahlen2024"
 ].join(',');
 const shareDescription = `${t(
   'routes.result.ResultShareModal.text-my-match',
