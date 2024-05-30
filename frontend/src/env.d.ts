@@ -14,3 +14,8 @@ declare module '*.md' {
   const Component: ComponentOptions;
   export default Component;
 }
+
+declare function plausible(
+  eventName: string,
+  options?: { props?: Record<string, any> }
+): void;
