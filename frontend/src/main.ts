@@ -172,7 +172,7 @@ export const appRoutes = {
   },
   recap: {
     name: 'recap',
-    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'rekapitulacia'}/:nr(\\d+)?`,
+    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'rekapitulace'}/:nr(\\d+)?`,
     component: RecapPageVue,
     meta: {
       title: 'Rekapitulace - Volební kalkulačka',
@@ -180,7 +180,7 @@ export const appRoutes = {
   },
   result: {
     name: 'result',
-    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'vysledok'}`,
+    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'vysledek'}`,
     component: ResultPageVue,
     meta: {
       title: 'Výsledky - Volební kalkulačka',
@@ -188,10 +188,10 @@ export const appRoutes = {
   },
   comparison: {
     name: 'comparison',
-    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'porovnaní'}`,
+    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'porovnani'}`,
     component: ComparisonPageVue,
     meta: {
-      title: 'Porovnaní - Volební kalkulačka',
+      title: 'Porovnání - Volební kalkulačka',
     },
   },
   share: {
