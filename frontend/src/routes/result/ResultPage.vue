@@ -362,8 +362,7 @@ const handleSubscribe = async () => {
           <section class="subscribe">
             <StackComponent spacing="small" centered>
               <BodyText size="small" centered>
-                Zanechajte nám váš e-mail a dáme vám vedieť vždy, keď spustíme
-                novú kalkulačku.
+                Nechejte nám váš e-mail a my vám dáme vědět vždy, když spustíme novou kalkulačku.
               </BodyText>
               <BodyText v-if="success" size="small">
                 {{ message }}
@@ -392,13 +391,13 @@ const handleSubscribe = async () => {
                     :loading="posting"
                     @click.prevent="handleSubscribe"
                   >
-                    Informujte ma o nových kalkulačkách
+                    Odeslat
                   </ButtonComponent>
                 </StackComponent>
               </form>
-              <BodyText v-if="!success" tag="p" size="small">{{
-                $t('routes.index.IndexPage.disclaimer')
-              }}</BodyText>
+              <BodyText v-if="!success" tag="p" size="small">
+                Odesláním souhlasíte se zasíláním novinek o volební kalkulačce a <a href="/ochrana-dat" target="_blank">zásadami ochrany osobních údajů</a>.
+              </BodyText>
             </StackComponent>
           </section>
           <!-- <CardComponent
