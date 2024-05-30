@@ -340,25 +340,116 @@ const handleSubscribe = async () => {
         </ResponsiveWrapper>
       </template>
       <BottomBarWrapper>
-        <StackComponent
-          v-if="electionStore.answerCount > 0"
-          class="main"
-          spacing="medium"
-        >
-          <CheckboxComponent
-            v-if="hasActiveCandidatesBtn"
-            group-name="test"
-            @update:check="handleActiveCandidatesClicked"
+        <StackComponent centered spacing="medium" class="main">
+          <StackComponent
+            v-if="electionStore.answerCount > 0"
+            stretched
+            spacing="small"
           >
-            {{
-              $t('routes.result.ResultPage.display-not-advancing-candidates')
-            }}
-          </CheckboxComponent>
-          <ResultCategory
-            :result="resultsGeneral"
-            category="general"
-            :max-visible-candidates="5"
-          />
+            <CheckboxComponent
+              v-if="hasActiveCandidatesBtn"
+              group-name="test"
+              @update:check="handleActiveCandidatesClicked"
+            >
+              {{
+                $t('routes.result.ResultPage.display-not-advancing-candidates')
+              }}
+            </CheckboxComponent>
+            <ResultCategory
+              :result="resultsGeneral"
+              category="general"
+              :max-visible-candidates="5"
+            />
+
+
+
+
+            <!-- <CardComponent
+              v-if="!user && election.key === 'prezidentske-2023'"
+              corner="bottom-left"
+              style="max-width: 32rem; justify-self: center"
+            >
+              <StackComponent centered spacing="medium">
+                <StackComponent spacing="medium">
+                  <TitleText tag="p" size="medium">
+                    {{ $t('routes.result.ResultPage.text-in-time') }}
+                  </TitleText>
+                  <BodyText tag="p" size="medium">
+                    {{ $t('routes.result.ResultPage.text-save-calc') }}
+                  </BodyText>
+                </StackComponent>
+                <ButtonComponent
+                  kind="outlined"
+                  color="primary"
+                  :href="signUpPath"
+                  target="_blank"
+                >
+                  <template #icon>
+                    <IconComponent :icon="mdiAccountCircleOutline" />
+                  </template>
+                  Vytvořit profil
+                </ButtonComponent>
+              </StackComponent>
+            </CardComponent> -->
+          </StackComponent>
+          <StackComponent v-else class="main" spacing="medium">
+            <CardComponent corner="bottom-left">
+              <StackComponent spacing="medium">
+                <TitleText tag="p" size="medium">
+                  {{ $t('routes.result.ResultPage.text-at-least-one-answer') }}
+                </TitleText>
+                <BodyText tag="p" size="medium">
+                  {{ $t('routes.result.ResultPage.you-may') }}
+                  <a
+                    :href="
+                      router.resolve({
+                        name: appRoutes.question.name,
+                        params: { ...route.params, nr: 1 },
+                        query: { ...route.query },
+                      }).path
+                    "
+                    @click.prevent="handleStartClick"
+                    >{{ $t('routes.result.ResultPage.back-to-start') }}</a
+                  >
+                  {{ $t('routes.result.ResultPage.text-and-answer') }}
+                  <a
+                    :href="
+                      router.resolve({
+                        name: appRoutes.comparison.name,
+                        params: { ...route.params },
+                        query: { ...route.query },
+                      }).path
+                    "
+                    @click.prevent="handleShowComparsionClick"
+                  >
+                    {{ $t('routes.result.ResultPage.text-display-answers') }} </a
+                  >.
+                </BodyText>
+                <StackComponent horizontal spacing="medium" wrap>
+                  <ButtonComponent
+                    kind="outlined"
+                    color="primary"
+                    @click="handleStartClick"
+                  >
+                    {{ $t('routes.result.ResultPage.fill-calc') }}
+                    <template #iconAfter>
+                      <IconComponent :icon="mdiArrowRight" />
+                    </template>
+                  </ButtonComponent>
+                  <ButtonComponent
+                    kind="outlined"
+                    color="primary"
+                    @click="handleShowComparsionClick"
+                  >
+                    {{ $t('routes.result.ResultPage.candidates-answers') }}
+                    <template #iconAfter>
+                      <IconComponent :icon="mdiArrowRight" />
+                    </template>
+                  </ButtonComponent>
+                </StackComponent>
+              </StackComponent>
+            </CardComponent>
+          </StackComponent>
           <section class="subscribe">
             <StackComponent spacing="small" centered>
               <BodyText size="small" centered>
@@ -400,93 +491,9 @@ const handleSubscribe = async () => {
               </BodyText>
             </StackComponent>
           </section>
-          <!-- <CardComponent
-            v-if="!user && election.key === 'prezidentske-2023'"
-            corner="bottom-left"
-            style="max-width: 32rem; justify-self: center"
-          >
-            <StackComponent centered spacing="medium">
-              <StackComponent spacing="medium">
-                <TitleText tag="p" size="medium">
-                  {{ $t('routes.result.ResultPage.text-in-time') }}
-                </TitleText>
-                <BodyText tag="p" size="medium">
-                  {{ $t('routes.result.ResultPage.text-save-calc') }}
-                </BodyText>
-              </StackComponent>
-              <ButtonComponent
-                kind="outlined"
-                color="primary"
-                :href="signUpPath"
-                target="_blank"
-              >
-                <template #icon>
-                  <IconComponent :icon="mdiAccountCircleOutline" />
-                </template>
-                Vytvořit profil
-              </ButtonComponent>
-            </StackComponent>
-          </CardComponent> -->
-          <DonateBlock />
-        </StackComponent>
-        <StackComponent v-else class="main" spacing="medium">
           <CardComponent corner="bottom-left">
-            <StackComponent spacing="medium">
-              <TitleText tag="p" size="medium">
-                {{ $t('routes.result.ResultPage.text-at-least-one-answer') }}
-              </TitleText>
-              <BodyText tag="p" size="medium">
-                {{ $t('routes.result.ResultPage.you-may') }}
-                <a
-                  :href="
-                    router.resolve({
-                      name: appRoutes.question.name,
-                      params: { ...route.params, nr: 1 },
-                      query: { ...route.query },
-                    }).path
-                  "
-                  @click.prevent="handleStartClick"
-                  >{{ $t('routes.result.ResultPage.back-to-start') }}</a
-                >
-                {{ $t('routes.result.ResultPage.text-and-answer') }}
-                <a
-                  :href="
-                    router.resolve({
-                      name: appRoutes.comparison.name,
-                      params: { ...route.params },
-                      query: { ...route.query },
-                    }).path
-                  "
-                  @click.prevent="handleShowComparsionClick"
-                >
-                  {{ $t('routes.result.ResultPage.text-display-answers') }} </a
-                >.
-              </BodyText>
-              <StackComponent horizontal spacing="medium">
-                <ButtonComponent
-                  kind="outlined"
-                  color="primary"
-                  @click="handleStartClick"
-                >
-                  {{ $t('routes.result.ResultPage.fill-calc') }}
-                  <template #iconAfter>
-                    <IconComponent :icon="mdiArrowRight" />
-                  </template>
-                </ButtonComponent>
-                <ButtonComponent
-                  kind="outlined"
-                  color="primary"
-                  @click="handleShowComparsionClick"
-                >
-                  {{ $t('routes.result.ResultPage.candidates-answers') }}
-                  <template #iconAfter>
-                    <IconComponent :icon="mdiArrowRight" />
-                  </template>
-                </ButtonComponent>
-              </StackComponent>
-            </StackComponent>
+            <DonateBlock />
           </CardComponent>
-          <DonateBlock />
         </StackComponent>
         <template #bottom-bar>
           <ResponsiveWrapper
