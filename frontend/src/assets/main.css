@@ -10,7 +10,7 @@ body {
   display: grid;
 }
 
-a[href^='http']:after {
+a[href^='http']:not(.button):after {
   font-weight: bold;
   content: ' ↗';
 }

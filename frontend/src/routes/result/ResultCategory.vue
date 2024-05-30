@@ -37,7 +37,7 @@ console.debug(visibleCandidates.value);
 
 <template>
   <TitleText v-if="title" tag="h4" size="medium">{{ title }}</TitleText>
-  <StackComponent style="display: grid" spacing="medium">
+  <StackComponent style="display: grid" spacing="small">
     <ResultCandidateCard
       v-for="i in visibleCandidates"
       :key="result[i - 1].cId"
