@@ -236,7 +236,7 @@ const handleSubscribe = async () => {
                         <strong>Debrecen főpolgármesteri voksmonitor</strong>
                       </BodyText>
                       <BodyText size="small">
-                        38 kérdés, nagyjából 8-10 perc
+                        23 kérdés, nagyjából 5 perc
                       </BodyText>
                       <ButtonComponent
                         kind="filled"
@@ -404,7 +404,7 @@ const handleSubscribe = async () => {
                         <strong>Debrecen főpolgármesteri voksmonitor</strong>
                       </BodyText>
                       <BodyText size="small">
-                        38 kérdés, nagyjából 8-10 perc
+                        23 kérdés, nagyjából 5 perc
                       </BodyText>
                       <ButtonComponent
                         kind="filled"
