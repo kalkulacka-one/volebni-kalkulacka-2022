@@ -75,12 +75,16 @@ watch(isInitialized, (value) => {
   }
 });
 const handleFillAgainClick = () => {
-  const newRoute = {
-    name: appRoutes.districtSelection.name,
-    query: { ...route.query },
-    params: { election: electionStore.election?.id },
-  };
-  router.push(newRoute);
+  router.push({
+      name: appRoutes.guide.name,
+      params: {
+        ...route.params,
+        type: `${'wahlen'}`,
+        first: electionStore?.calculator?.key.split("/")[0],
+        second: electionStore?.calculator?.key.split("/")[1],
+      },
+      query: { ...route.query },
+    })
 };
 const breadcrumbs = ref('');
 </script>
@@ -89,7 +93,7 @@ const breadcrumbs = ref('');
     <StickyHeaderLayout>
       <template #header>
         <NavigationBar>
-          <template #title>{{ breadcrumbs }}</template>
+          <template #title></template>
           <template #right>
             <EmbedWrapper>
               <ResponsiveWrapper medium large extra-large huge>
