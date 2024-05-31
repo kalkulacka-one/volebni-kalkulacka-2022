@@ -342,7 +342,7 @@ onMounted(() => {
     document.addEventListener('VotematchEU-ready', function() {
       (window as any).VotematchEU.update({
         lang: voteMatchLanguage,
-        action:'https://acc-app.votematch.eu',
+        // action:'https://acc-app.votematch.eu',
       });
       (window as any).VotematchEU.results({
         country: voteMatchCountry,
