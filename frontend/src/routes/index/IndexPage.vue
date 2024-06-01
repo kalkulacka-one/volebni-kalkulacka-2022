@@ -401,7 +401,7 @@ const handleSubscribe = async () => {
                   <StackComponent spacing="large" centered>
                     <StackComponent spacing="small" centered space-between>
                       <BodyText size="medium" tag="h2" color="fg-strong">
-                        <strong>Debrecen főpolgármesteri voksmonitor</strong>
+                        <strong>Debrecen polgármesteri voksmonitor</strong>
                       </BodyText>
                       <BodyText size="small">
                         23 kérdés, nagyjából 5 perc
