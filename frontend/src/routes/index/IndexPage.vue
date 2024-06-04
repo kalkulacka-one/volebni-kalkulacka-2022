@@ -174,7 +174,7 @@ const handleSubscribe = async () => {
                   <strong>Inventúra hlasovaní</strong>
                 </BodyText>
                 <BodyText size="small">
-                  25 otázok, cca 5 minút
+                  42 otázok, cca 10 minút
                 </BodyText>
                 <ButtonComponent
                   kind="outlined"
