@@ -323,10 +323,16 @@ const mappedAnswers = computed(
     .reduce((result, item) => ({ ...result, ...item }), {})
 );
 
-const showVoteMatch = computed(() => !!(Object.keys(mappedAnswers.value).length >= 15));
+const voteMatchCalculators = ['kalkulacka', 'expres'];
+const showVoteMatch = computed(
+  () =>
+    !!(Object.keys(mappedAnswers.value).length >= 15) &&
+    route.params.first === 'evropske-2024' &&
+    voteMatchCalculators.includes(route.params.second as string),
+);
 
 onMounted(() => {
-  if (showVoteMatch) {
+  if (showVoteMatch.value) {
     loadExternalScript();
 
     const swappedCandidateMapping = Object.fromEntries(
