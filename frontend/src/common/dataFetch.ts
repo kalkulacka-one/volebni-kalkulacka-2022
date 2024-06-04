@@ -90,6 +90,8 @@ export const deprecatedFetchCalculator = async (key: string) => {
             );
           })();
 
+        transformedCandidate.group = organization.group;
+
         transformedCandidate.parties = [
           {
             id: organization.id,
@@ -98,6 +100,10 @@ export const deprecatedFetchCalculator = async (key: string) => {
             description: '',
           },
         ];
+      }
+      
+      if (candidate.images) {
+        transformedCandidate.img_url = `/data/instance/volebnakalkulacka.sk/${key}/images/candidates/${candidate.id}.webp`;
       }
     } else if (candidate.reference.type == 'organization') {
       const organization =
