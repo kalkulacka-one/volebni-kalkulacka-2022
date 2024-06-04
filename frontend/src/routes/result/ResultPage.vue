@@ -319,10 +319,16 @@ const mappedAnswers = computed(
     .reduce((result, item) => ({ ...result, ...item }), {})
 );
 
-const showVoteMatch = computed(() => !!(Object.keys(mappedAnswers.value).length >= 15));
+const voteMatchCalculators = ['kalkulacka', 'expres'];
+const showVoteMatch = computed(
+  () =>
+    !!(Object.keys(mappedAnswers.value).length >= 15) &&
+    route.params.first === 'europske-2024' &&
+    voteMatchCalculators.includes(route.params.second as string),
+);
 
 onMounted(() => {
-  if (showVoteMatch) {
+  if (showVoteMatch.value) {
     loadExternalScript();
 
     const swappedCandidateMapping = Object.fromEntries(
@@ -485,7 +491,7 @@ onBeforeUnmount(removeExternalScript);
           spacing="medium"
         >
           <CardComponent
-            v-if="showVoteMatch && route.params.first === 'europske-2024'"
+            v-if="showVoteMatch"
             background-color="#153288"
             corner="bottom-left"
           >
