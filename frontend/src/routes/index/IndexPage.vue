@@ -119,7 +119,7 @@ const handleSubscribe = async () => {
           </ButtonComponent>
         </StackComponent>
         <BodyText size="large">—</BodyText>
-        <StackComponent horizontal spacing="large">
+        <StackComponent horizontal spacing="large" wrap style="justify-content: center;">
           <CardComponent
             corner="bottom-left"
             padding="large"
@@ -597,7 +597,7 @@ const handleSubscribe = async () => {
 
     .calc-main {
       grid-row: 1/6;
-      grid-column: 4/10;
+      grid-column: 2/12;
       margin-bottom: 16px;
     }
 
