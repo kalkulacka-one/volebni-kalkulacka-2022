@@ -100,6 +100,15 @@
       "name": "Kalkulačka expres",
       "description": "Volebná kalkulačka expres",
       "key": "europske-2024/kalkulacka"
+    },
+    {
+      "calculator_id": "f1c9d4f5-8368-4d34-a16d-0e38336c782a",
+      "election_id": "14e46503-3fbe-4c98-a6ec-7f7609334e22",
+      "district_code": "inventura",
+      "show_district_code": false,
+      "name": "Inventúra hlasovaní",
+      "description": "Inventúra hlasovaní 2019–2024",
+      "key": "europske-2024/inventura"
     }
   ]
 }
