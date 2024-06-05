@@ -62,32 +62,56 @@ const logInteraction = (interaction: string) => {
         >
         finančně: ať už pošlete jakoukoliv částku, moc nám to pomůže.</BodyText
       >
-      <StackComponent horizontal spacing="small">
-        <ButtonComponent
-          tag="a"
-          target="_blank"
-          href="https://www.kalkulacka.one/cs/zapojte-se"
-          kind="outlined"
-          color="primary"
-          @click="logInteraction('join-us-button')"
-        >
-          Chci se zapojit
-          <template #iconAfter>
-            <IconComponent :icon="mdiArrowRight" />
-          </template>
-        </ButtonComponent>
+      <ButtonComponent
+        tag="a"
+        target="_blank"
+        href="https://www.kalkulacka.one/cs/zapojte-se"
+        kind="filled"
+        color="primary"
+        @click="logInteraction('join-us-button')"
+      >
+        Chci se zapojit
+      </ButtonComponent>
+      <StackComponent horizontal spacing="small" wrap>
         <ButtonComponent
           tag="a"
           target="_blank"
           href="https://www.darujme.cz/darovat/1200653"
-          kind="outlined"
+          kind="filled"
           color="primary"
-          @click="logInteraction('donate-button')"
+          @click="logInteraction('donate-button-100')"
         >
           Chci přispět
-          <template #iconAfter>
-            <IconComponent :icon="mdiArrowRight" />
-          </template>
+        </ButtonComponent>
+        <ButtonComponent
+          tag="a"
+          target="_blank"
+          href="https://www.darujme.cz/darovat/1200653?frequency=once&amount=100"
+          kind="outlined"
+          color="primary"
+          @click="logInteraction('donate-button-100')"
+        >
+          100 Kč
+        </ButtonComponent>
+        <ButtonComponent
+          tag="a"
+          target="_blank"
+          href="https://www.darujme.cz/darovat/1200653?frequency=once&amount=200"
+          kind="outlined"
+          color="primary"
+          @click="logInteraction('donate-button-200')"
+        >
+          200 Kč
+        </ButtonComponent>
+        <ButtonComponent
+          tag="a"
+          target="_blank"
+          href="https://www.darujme.cz/darovat/1200653?frequency=once&amount=500"
+          kind="outlined"
+          color="primary"
+          @click="logInteraction('donate-button-200')"
+        >
+          500 Kč
         </ButtonComponent>
       </StackComponent>
       <BodyText size="medium"
@@ -121,32 +145,56 @@ const logInteraction = (interaction: string) => {
           >podpořte finančně</a
         >. Každý příspěvek se počítá!</BodyText
       >
-      <StackComponent horizontal spacing="small">
-        <ButtonComponent
-          tag="a"
-          target="_blank"
-          href="https://www.kalkulacka.one/cs/zapojte-se"
-          kind="outlined"
-          color="primary"
-          @click="logInteraction('join-us-button')"
-        >
-          Chci se zapojit
-          <template #iconAfter>
-            <IconComponent :icon="mdiArrowRight" />
-          </template>
-        </ButtonComponent>
+      <ButtonComponent
+        tag="a"
+        target="_blank"
+        href="https://www.kalkulacka.one/cs/zapojte-se"
+        kind="filled"
+        color="primary"
+        @click="logInteraction('join-us-button')"
+      >
+        Chci se zapojit
+      </ButtonComponent>
+      <StackComponent horizontal spacing="small" wrap>
         <ButtonComponent
           tag="a"
           target="_blank"
           href="https://www.darujme.cz/darovat/1200653"
-          kind="outlined"
+          kind="filled"
           color="primary"
-          @click="logInteraction('donate-button')"
+          @click="logInteraction('donate-button-100')"
         >
           Chci přispět
-          <template #iconAfter>
-            <IconComponent :icon="mdiArrowRight" />
-          </template>
+        </ButtonComponent>
+        <ButtonComponent
+          tag="a"
+          target="_blank"
+          href="https://www.darujme.cz/darovat/1200653?frequency=once&amount=100"
+          kind="outlined"
+          color="primary"
+          @click="logInteraction('donate-button-100')"
+        >
+          100 Kč
+        </ButtonComponent>
+        <ButtonComponent
+          tag="a"
+          target="_blank"
+          href="https://www.darujme.cz/darovat/1200653?frequency=once&amount=200"
+          kind="outlined"
+          color="primary"
+          @click="logInteraction('donate-button-200')"
+        >
+          200 Kč
+        </ButtonComponent>
+        <ButtonComponent
+          tag="a"
+          target="_blank"
+          href="https://www.darujme.cz/darovat/1200653?frequency=once&amount=500"
+          kind="outlined"
+          color="primary"
+          @click="logInteraction('donate-button-200')"
+        >
+          500 Kč
         </ButtonComponent>
       </StackComponent>
       <BodyText size="medium"
@@ -182,32 +230,56 @@ const logInteraction = (interaction: string) => {
           >přispějte finančně</a
         >.</BodyText
       >
-      <StackComponent horizontal spacing="small">
-        <ButtonComponent
-          tag="a"
-          target="_blank"
-          href="https://www.kalkulacka.one/cs/zapojte-se"
-          kind="outlined"
-          color="primary"
-          @click="logInteraction('join-us-button')"
-        >
-          Chci se zapojit
-          <template #iconAfter>
-            <IconComponent :icon="mdiArrowRight" />
-          </template>
-        </ButtonComponent>
+      <ButtonComponent
+        tag="a"
+        target="_blank"
+        href="https://www.kalkulacka.one/cs/zapojte-se"
+        kind="filled"
+        color="primary"
+        @click="logInteraction('join-us-button')"
+      >
+        Chci se zapojit
+      </ButtonComponent>
+      <StackComponent horizontal spacing="small" wrap>
         <ButtonComponent
           tag="a"
           target="_blank"
           href="https://www.darujme.cz/darovat/1200653"
-          kind="outlined"
+          kind="filled"
           color="primary"
-          @click="logInteraction('donate-button')"
+          @click="logInteraction('donate-button-100')"
         >
           Chci přispět
-          <template #iconAfter>
-            <IconComponent :icon="mdiArrowRight" />
-          </template>
+        </ButtonComponent>
+        <ButtonComponent
+          tag="a"
+          target="_blank"
+          href="https://www.darujme.cz/darovat/1200653?frequency=once&amount=100"
+          kind="outlined"
+          color="primary"
+          @click="logInteraction('donate-button-100')"
+        >
+          100 Kč
+        </ButtonComponent>
+        <ButtonComponent
+          tag="a"
+          target="_blank"
+          href="https://www.darujme.cz/darovat/1200653?frequency=once&amount=200"
+          kind="outlined"
+          color="primary"
+          @click="logInteraction('donate-button-200')"
+        >
+          200 Kč
+        </ButtonComponent>
+        <ButtonComponent
+          tag="a"
+          target="_blank"
+          href="https://www.darujme.cz/darovat/1200653?frequency=once&amount=500"
+          kind="outlined"
+          color="primary"
+          @click="logInteraction('donate-button-200')"
+        >
+          500 Kč
         </ButtonComponent>
       </StackComponent>
       <BodyText size="medium"
@@ -240,9 +312,6 @@ const logInteraction = (interaction: string) => {
           @click="logInteraction('donate-button-100')"
         >
           100 Kč
-          <template #iconAfter>
-            <IconComponent :icon="mdiArrowRight" />
-          </template>
         </ButtonComponent>
         <ButtonComponent
           tag="a"
@@ -253,9 +322,6 @@ const logInteraction = (interaction: string) => {
           @click="logInteraction('donate-button-200')"
         >
           200 Kč
-          <template #iconAfter>
-            <IconComponent :icon="mdiArrowRight" />
-          </template>
         </ButtonComponent>
         <ButtonComponent
           tag="a"
@@ -266,9 +332,6 @@ const logInteraction = (interaction: string) => {
           @click="logInteraction('donate-button-200')"
         >
           500 Kč
-          <template #iconAfter>
-            <IconComponent :icon="mdiArrowRight" />
-          </template>
         </ButtonComponent>
         <ButtonComponent
           tag="a"
@@ -279,9 +342,6 @@ const logInteraction = (interaction: string) => {
           @click="logInteraction('donate-button')"
         >
           Jiná částka
-          <template #iconAfter>
-            <IconComponent :icon="mdiArrowRight" />
-          </template>
         </ButtonComponent>
       </StackComponent>
       <BodyText size="medium"
@@ -303,9 +363,6 @@ const logInteraction = (interaction: string) => {
         @click="logInteraction('join-us-button')"
       >
         Chci se zapojit
-        <template #iconAfter>
-          <IconComponent :icon="mdiArrowRight" />
-        </template>
       </ButtonComponent>
       <BodyText size="medium"
         >Vaše podpora je klíčová pro to, abychom mohli pokračovat v naší práci
@@ -329,6 +386,48 @@ const logInteraction = (interaction: string) => {
           >Podpořte nás jakoukoliv částkou</a
         >, která vám vyhovuje. Každý příspěvek se počítá!</BodyText
       >
+      <StackComponent horizontal spacing="small" wrap>
+        <ButtonComponent
+          tag="a"
+          target="_blank"
+          href="https://www.darujme.cz/darovat/1200653"
+          kind="filled"
+          color="primary"
+          @click="logInteraction('donate-button-100')"
+        >
+          Chci přispět
+        </ButtonComponent>
+        <ButtonComponent
+          tag="a"
+          target="_blank"
+          href="https://www.darujme.cz/darovat/1200653?frequency=once&amount=100"
+          kind="outlined"
+          color="primary"
+          @click="logInteraction('donate-button-100')"
+        >
+          100 Kč
+        </ButtonComponent>
+        <ButtonComponent
+          tag="a"
+          target="_blank"
+          href="https://www.darujme.cz/darovat/1200653?frequency=once&amount=200"
+          kind="outlined"
+          color="primary"
+          @click="logInteraction('donate-button-200')"
+        >
+          200 Kč
+        </ButtonComponent>
+        <ButtonComponent
+          tag="a"
+          target="_blank"
+          href="https://www.darujme.cz/darovat/1200653?frequency=once&amount=500"
+          kind="outlined"
+          color="primary"
+          @click="logInteraction('donate-button-200')"
+        >
+          500 Kč
+        </ButtonComponent>
+      </StackComponent>
       <BodyText size="medium">
         Nebo se
         <a
@@ -341,34 +440,16 @@ const logInteraction = (interaction: string) => {
         prezidentských volbách 2024 si kalkulačku vyplnilo přes 1 milion
         lidí.</BodyText
       >
-      <StackComponent horizontal spacing="small">
-        <ButtonComponent
-          tag="a"
-          target="_blank"
-          href="https://www.kalkulacka.one/cs/zapojte-se"
-          kind="outlined"
-          color="primary"
-          @click="logInteraction('join-us-button')"
-        >
-          Chci se zapojit
-          <template #iconAfter>
-            <IconComponent :icon="mdiArrowRight" />
-          </template>
-        </ButtonComponent>
-        <ButtonComponent
-          tag="a"
-          target="_blank"
-          href="https://www.darujme.cz/darovat/1200653"
-          kind="outlined"
-          color="primary"
-          @click="logInteraction('donate-button')"
-        >
-          Chci přispět
-          <template #iconAfter>
-            <IconComponent :icon="mdiArrowRight" />
-          </template>
-        </ButtonComponent>
-      </StackComponent>
+      <ButtonComponent
+        tag="a"
+        target="_blank"
+        href="https://www.kalkulacka.one/cs/zapojte-se"
+        kind="filled"
+        color="primary"
+        @click="logInteraction('join-us-button')"
+      >
+        Chci se zapojit
+      </ButtonComponent>
       <BodyText size="medium"
         >Vaše podpora je klíčová pro to, abychom mohli pokračovat v naší práci
         pro nadcházející volby a vylepšovat kalkulačku. Děkujeme!</BodyText
