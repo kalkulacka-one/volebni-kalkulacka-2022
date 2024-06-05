@@ -16,8 +16,11 @@ const variants = {
   3: 'authority',
   4: 'anchoring',
   5: 'social-proof',
+  6: 'club',
+  7: 'club',
+  8: 'club',
 };
-const random = Math.floor(Math.random() * 5) + 1;
+const random = Math.floor(Math.random() * 8) + 1;
 const randomVariant = variants[random as keyof typeof variants];
 
 const route = useRoute();
@@ -131,12 +134,20 @@ const logInteraction = (interaction: string) => {
       >
       <BodyText size="medium">
         Pokud se vám kalkulačka líbí a chcete, aby byla k dispozici i nadále,
-        <a
+        přidejte se k našemu <a
           href="https://www.kalkulacka.one/cs/zapojte-se"
           target="_blank"
           @click="logInteraction('join-us')"
-          >přidejte se k našemu týmu dobrovolníků</a
-        >
+          >týmu dobrovolníků</a
+        >, do <a href="https://herohero.co/volebnikalkulacka" target="_blank"
+          @click="logInteraction('join-herohero')"
+          >klubu podporovatelů na Herohero</a> nebo na 
+          <a
+          href="https://www.patreon.com/volebnikalkulacka"
+          target="_blank"
+          @click="logInteraction('join-patreon')"
+          >Patreonu</a
+        > 
         nebo nás
         <a
           href="https://www.darujme.cz/darovat/1200653"
@@ -378,14 +389,46 @@ const logInteraction = (interaction: string) => {
       <BodyText size="medium"
         >Máme radost, že jste využili Volební kalkulačku. Připojte se k více než
         1000 dárcům, kteří nás finančně podpořili, a pomozte nám pokračovat v
-        této důležité práci.
+        této důležité práci.</BodyText>
+      <BodyText size="medium">Přidejte se do <a href="https://herohero.co/volebnikalkulacka" target="_blank"
+          @click="logInteraction('join-herohero')"
+          >klubu podporovatelů na Herohero</a> nebo na 
+          <a
+          href="https://www.patreon.com/volebnikalkulacka"
+          target="_blank"
+          @click="logInteraction('join-patreon')"
+          >Patreonu</a
+        > 
+        nebo nás
         <a
           href="https://www.darujme.cz/darovat/1200653"
           target="_blank"
           @click="logInteraction('donate')"
-          >Podpořte nás jakoukoliv částkou</a
+          >jednorázově podpořte jakoukoliv částkou</a
         >, která vám vyhovuje. Každý příspěvek se počítá!</BodyText
       >
+      <StackComponent horizontal spacing="small" wrap>
+        <ButtonComponent
+          tag="a"
+          target="_blank"
+          href="https://herohero.co/volebnikalkulacka"
+          kind="filled"
+          color="primary"
+          @click="logInteraction('join-herohero-button')"
+        >
+          Přidat se na Herohero
+        </ButtonComponent>
+        <ButtonComponent
+          tag="a"
+          target="_blank"
+          href="https://www.patreon.com/volebnikalkulacka"
+          kind="filled"
+          color="primary"
+          @click="logInteraction('join-patreon-button')"
+        >
+          Přidat se na Patreonu
+        </ButtonComponent>
+      </StackComponent>
       <StackComponent horizontal spacing="small" wrap>
         <ButtonComponent
           tag="a"
@@ -395,7 +438,7 @@ const logInteraction = (interaction: string) => {
           color="primary"
           @click="logInteraction('donate-button-100')"
         >
-          Chci přispět
+          Přispět jednorázově
         </ButtonComponent>
         <ButtonComponent
           tag="a"
@@ -450,6 +493,85 @@ const logInteraction = (interaction: string) => {
       >
         Chci se zapojit
       </ButtonComponent>
+      <BodyText size="medium"
+        >Vaše podpora je klíčová pro to, abychom mohli pokračovat v naší práci
+        pro nadcházející volby a vylepšovat kalkulačku. Děkujeme!</BodyText
+      >
+    </StackComponent>
+  </section>
+  <section v-else-if="randomVariant === 'club'">
+    <StackComponent spacing="small">
+      <TitleText size="large" tag="h2"
+        >Přidejte se do klubu podporovatelů Volební kalkulačky</TitleText
+      >
+      <BodyText size="medium"
+        >Podpořte Volební kalkulačku a staňte se členy klubu podporovatelů na 
+        <a
+          href="https://www.patreon.com/volebnikalkulacka"
+          target="_blank"
+          @click="logInteraction('join-patreon')"
+          >Patreonu</a
+        > nebo <a href="https://herohero.co/volebnikalkulacka" target="_blank"
+          @click="logInteraction('join-herohero')"
+          >Herohero</a>. Kromě dobrého pocitu z podpory demokracie získáte třeba exkluzivní přístup ke kalkulačkám den přes oficiálním spuštěním!
+        </BodyText
+      >
+      <StackComponent horizontal spacing="small" wrap>
+        <ButtonComponent
+          tag="a"
+          target="_blank"
+          href="https://www.patreon.com/volebnikalkulacka"
+          kind="filled"
+          color="primary"
+          @click="logInteraction('join-patreon-button')"
+        >
+          Přidat se na Patreonu
+        </ButtonComponent>
+        <ButtonComponent
+          tag="a"
+          target="_blank"
+          href="https://herohero.co/volebnikalkulacka"
+          kind="filled"
+          color="primary"
+          @click="logInteraction('join-herohero-button')"
+        >
+          Přidat se na Herohero
+        </ButtonComponent>
+      </StackComponent>
+      <BodyText size="medium">
+        Nebo se
+        <a
+          href="https://www.kalkulacka.one/cs/zapojte-se"
+          target="_blank"
+          @click="logInteraction('join-us')"
+          >přidejte k našemu týmu dobrovolníků</a
+        >
+        a pomozte milionům lidí, kteří Volební kalkulačku využívají: třeba jen v
+        prezidentských volbách 2024 si kalkulačku vyplnilo přes 1 milion
+        lidí. Finančně přispět můžete i jednorázově.</BodyText
+      >
+      <StackComponent horizontal spacing="small" wrap>
+        <ButtonComponent
+          tag="a"
+          target="_blank"
+          href="https://www.kalkulacka.one/cs/zapojte-se"
+          kind="outlined"
+          color="primary"
+          @click="logInteraction('join-us-button')"
+        >
+          Chci se zapojit
+        </ButtonComponent>
+        <ButtonComponent
+          tag="a"
+          target="_blank"
+          href="https://www.darujme.cz/darovat/1200653"
+          kind="outlined"
+          color="primary"
+          @click="logInteraction('donate-button-100')"
+        >
+          Chci přispět jednorázově
+        </ButtonComponent>
+      </StackComponent>
       <BodyText size="medium"
         >Vaše podpora je klíčová pro to, abychom mohli pokračovat v naší práci
         pro nadcházející volby a vylepšovat kalkulačku. Děkujeme!</BodyText
