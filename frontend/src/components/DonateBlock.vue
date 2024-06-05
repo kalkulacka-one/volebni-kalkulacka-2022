@@ -480,7 +480,7 @@ const logInteraction = (interaction: string) => {
           >přidejte k našemu týmu dobrovolníků</a
         >
         a pomozte milionům lidí, kteří Volební kalkulačku využívají: třeba jen v
-        prezidentských volbách 2024 si kalkulačku vyplnilo přes 1 milion
+        prezidentských volbách 2023 si kalkulačku vyplnilo přes 1 milion
         lidí.</BodyText
       >
       <ButtonComponent
@@ -547,7 +547,7 @@ const logInteraction = (interaction: string) => {
           >přidejte k našemu týmu dobrovolníků</a
         >
         a pomozte milionům lidí, kteří Volební kalkulačku využívají: třeba jen v
-        prezidentských volbách 2024 si kalkulačku vyplnilo přes 1 milion
+        prezidentských volbách 2023 si kalkulačku vyplnilo přes 1 milion
         lidí. Finančně přispět můžete i jednorázově.</BodyText
       >
       <StackComponent horizontal spacing="small" wrap>
