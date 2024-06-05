@@ -277,7 +277,7 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
         </BodyText>
 
         <BodyText size="large">
-          Na přípravě současné volební kalkulačky jsme spolupracovali s <a href="https://europeum.cz/">Europeum</a> a <a href="https://dikyzemuzem.cz/">Díky, že můžem</a>, kteří měli další podporu:
+          Na přípravě současné volební kalkulačky jsme spolupracovali s <a href="https://europeum.cz/">Europeum</a> a <a href="https://dikyzemuzem.cz/">Díky, že můžem</a>, používali informace z <a href="https://www.europarl.europa.eu/portal/cs">Evropského parlamentu</a> a <a href="https://twitter.com/ep_prehledne">Europarlament přehledně</a>. Ti měli další podporu:
         </BodyText>
         <BodyText size="large">
           <img
