@@ -154,6 +154,12 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
               - KohoVolit.eu
             </li>
             <li>
+              <a href="https://www.linkedin.com/in/krystofk/" target="_blank"
+                >Kryštof Korb</a
+              >
+              - Tech Lead
+            </li>
+            <li>
               <a
                 href="https://www.linkedin.com/in/lucie-zatorska-81714350/"
                 target="_blank"
@@ -196,12 +202,6 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
                 >Natália Bebjaková</a
               >
               - UX/UI
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/krystofk/" target="_blank"
-                >Kryštof Korb</a
-              >
-              - Tech Team
             </li>
             <li>
               <a
@@ -277,6 +277,21 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
         </BodyText>
 
         <BodyText size="large">
+          Na přípravě současné volební kalkulačky jsme spolupracovali s <a href="https://europeum.cz/">Europeum</a> a <a href="https://dikyzemuzem.cz/">Díky, že můžem</a>, kteří měli další podporu:
+        </BodyText>
+        <BodyText size="large">
+          <img
+            src="https://michalskop-github-io.azureedge.net/documents/volebni-kalkulacka/images/partners/2024/europeum.png"
+            alt="Europeum"
+            style="width: 480px"
+          />
+          <br />
+          <img
+            src="https://michalskop-github-io.azureedge.net/documents/volebni-kalkulacka/images/partners/2024/CS_spolufinancovano_EU.png"
+            alt="EU"
+            style="width: 480px"
+          />
+          <br />
           <img
             src="https://michalskop-github-io.azureedge.net/documents/volebni-kalkulacka/images/partners/2022/ACF_slogan_1.png"
             alt="Active Citizens Fund"
