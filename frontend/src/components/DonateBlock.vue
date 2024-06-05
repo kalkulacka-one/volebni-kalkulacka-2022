@@ -112,7 +112,7 @@ const logInteraction = (interaction: string) => {
           href="https://www.darujme.cz/darovat/1200653?frequency=once&amount=500"
           kind="outlined"
           color="primary"
-          @click="logInteraction('donate-button-200')"
+          @click="logInteraction('donate-button-500')"
         >
           500 Kč
         </ButtonComponent>
@@ -203,7 +203,7 @@ const logInteraction = (interaction: string) => {
           href="https://www.darujme.cz/darovat/1200653?frequency=once&amount=500"
           kind="outlined"
           color="primary"
-          @click="logInteraction('donate-button-200')"
+          @click="logInteraction('donate-button-500')"
         >
           500 Kč
         </ButtonComponent>
@@ -288,7 +288,7 @@ const logInteraction = (interaction: string) => {
           href="https://www.darujme.cz/darovat/1200653?frequency=once&amount=500"
           kind="outlined"
           color="primary"
-          @click="logInteraction('donate-button-200')"
+          @click="logInteraction('donate-button-500')"
         >
           500 Kč
         </ButtonComponent>
@@ -340,7 +340,7 @@ const logInteraction = (interaction: string) => {
           href="https://www.darujme.cz/darovat/1200653?frequency=once&amount=500"
           kind="outlined"
           color="primary"
-          @click="logInteraction('donate-button-200')"
+          @click="logInteraction('donate-button-500')"
         >
           500 Kč
         </ButtonComponent>
@@ -466,7 +466,7 @@ const logInteraction = (interaction: string) => {
           href="https://www.darujme.cz/darovat/1200653?frequency=once&amount=500"
           kind="outlined"
           color="primary"
-          @click="logInteraction('donate-button-200')"
+          @click="logInteraction('donate-button-500')"
         >
           500 Kč
         </ButtonComponent>
