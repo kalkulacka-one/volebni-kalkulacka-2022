@@ -612,7 +612,9 @@ onBeforeUnmount(removeExternalScript);
               </ButtonComponent>
             </StackComponent>
           </CardComponent> -->
-          <DonateBlock />
+          <CardComponent corner="bottom-left">
+            <DonateBlock />
+          </CardComponent>
         </StackComponent>
         <StackComponent v-else class="main" spacing="medium">
           <CardComponent corner="bottom-left">
@@ -683,7 +685,9 @@ onBeforeUnmount(removeExternalScript);
               </StackComponent>
             </StackComponent>
           </CardComponent>
-          <DonateBlock />
+          <CardComponent corner="bottom-left">
+            <DonateBlock />
+          </CardComponent>
         </StackComponent>
         <template #bottom-bar>
           <ResponsiveWrapper
