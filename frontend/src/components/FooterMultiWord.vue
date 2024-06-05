@@ -57,7 +57,7 @@ const router = useRouter();
                   $t('components.FooterMultiWord.body-data-protection')
                 }}</BodyText></router-link
               >
-              <a href="https://www.darujme.cz/darovat/1200653"
+              <a href="https://www.kalkulacka.one/cs/podporte-kalkulacku"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-support-calculator')
                 }}</BodyText></a
