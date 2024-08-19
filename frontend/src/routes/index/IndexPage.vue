@@ -83,124 +83,20 @@ const handleSubscribe = async () => {
     <div class="prezident-hero">
       <BlobComponent color="blue" class="blob1" />
       <BlobComponent color="red" class="blob2" />
-      <StackComponent spacing="small" centered class="calc-main">
-        <StackComponent spacing="large" centered space-between>
-          <BodyText size="medium" tag="h1" color="fg-strong">
-            <strong>Volby do Evropského parlamentu v Česku</strong
-            ><br />
-            7. a 8. června 2024
-            <br />
-          </BodyText>
-          <HeadlineText tag="p" size="small">
-            Evropské volby
-            <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
-          </HeadlineText>
-          <BodyText size="small"> 42 otázek, cca 10 minut</BodyText>
-          <ButtonComponent
-            kind="filled"
-            color="primary"
-            @click="
-              router.push({
-                name: appRoutes.guide.name,
-                params: {
-                  ...route.params,
-                  type: `${'volby'}`,
-                  first: 'evropske-2024',
-                  second: 'kalkulacka',
-                },
-                query: { ...route.query },
-              })
-            "
-          >
-            Spustit kalkulačku
-            <template #iconAfter>
-              <IconComponent :icon="mdiArrowRight" />
-            </template>
-          </ButtonComponent>
-        </StackComponent>
-        <BodyText size="large">—</BodyText>
-        <StackComponent horizontal spacing="large" wrap style="justify-content: center;">
-          <CardComponent
-            corner="bottom-left"
-            padding="large"
-            border
-            border-radius="large"
-            shadow
-            class="other-calc-card calc-youth"
-          >
-            <StackComponent spacing="large" centered>
-              <StackComponent spacing="small" centered space-between>
-                <BodyText size="medium" tag="h2" color="fg-strong">
-                  <strong>Kalkulačka expres</strong>
-                </BodyText>
-                <BodyText size="small">
-                  25 otázek, cca 5 minut
-                </BodyText>
-                <ButtonComponent
-                  kind="outlined"
-                  color="primary"
-                  @click="
-                    router.push({
-                      name: appRoutes.guide.name,
-                      params: {
-                        ...route.params,
-                        type: `${'volby'}`,
-                        first: 'evropske-2024',
-                        second: 'expres',
-                      },
-                      query: { ...route.query },
-                    })
-                  "
-                >
-                Spustit kalkulačku
-                  <template #iconAfter>
-                    <IconComponent :icon="mdiArrowRight" />
-                  </template>
-                </ButtonComponent>
-              </StackComponent>
-            </StackComponent>
-          </CardComponent>
-          <CardComponent
-            corner="bottom-left"
-            padding="large"
-            border
-            border-radius="large"
-            shadow
-            class="other-calc-card calc-youth"
-          >
-            <StackComponent spacing="large" centered>
-              <StackComponent spacing="small" centered space-between>
-                <BodyText size="medium" tag="h2" color="fg-strong">
-                  <strong>Inventura hlasování <span style="text-wrap: nowrap;">2019–2024</span></strong>
-                </BodyText>
-                <BodyText size="small">
-                  42 otázek, cca 10 minut
-                </BodyText>
-                <ButtonComponent
-                  kind="outlined"
-                  color="primary"
-                  @click="
-                    router.push({
-                      name: appRoutes.guide.name,
-                      params: {
-                        ...route.params,
-                        type: `${'volby'}`,
-                        first: 'evropske-2024',
-                        second: 'inventura',
-                      },
-                      query: { ...route.query },
-                    })
-                  "
-                >
-                Spustit inventuru
-                  <template #iconAfter>
-                    <IconComponent :icon="mdiArrowRight" />
-                  </template>
-                </ButtonComponent>
-              </StackComponent>
-            </StackComponent>
-          </CardComponent>
-        </StackComponent>
+      <StackComponent spacing="medium" centered class="calc-main">
+        <BodyText size="medium" tag="h1" color="fg-strong">
+          <strong>Volby do Senátu a zastupitelstev krajů 2024</strong
+          ><br />
+          20. a 21. září 2024
+          <br />
+        </BodyText>
+        <HeadlineText tag="p" size="small">
+          Krajské a senátní volby
+          <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
+        </HeadlineText>
+        <BodyText size="large"
+          >Připravujeme pro vás volební kalkulačku pro krajské a senátní volby</BodyText
+        >
         <StackComponent class="section" spacing="large" centered>
           <ButtonComponent kind="link" @click="scrollDown">
             <div class="button-content">
@@ -305,6 +201,111 @@ const handleSubscribe = async () => {
           Volební kalkulačky k už proběhlým volbám
         </TitleText>
         <MasonryGrid style="align-self: stretch">
+
+
+
+
+          <CardComponent corner="top-right" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium"
+                  >Evropské volby 2024</TitleText
+                >
+                <BodyText size="medium"
+                  >Volby do Evropského parlamentu v Česku, 42 otázek, cca 10
+                  minut</BodyText
+                >
+              </div>
+              <ButtonComponent
+                kind="filled"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      type: `${'volby'}`,
+                      first: 'evropske-2024',
+                      second: 'kalkulacka',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+                Spustit kalkulačku
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
+          <CardComponent corner="top-right" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium"
+                  >Evropské volby 2024: expres</TitleText
+                >
+                <BodyText size="medium"
+                  >Volby do Evropského parlamentu v Česku, 25 otázek, cca 5
+                  minut</BodyText
+                >
+              </div>
+              <ButtonComponent
+                kind="outlined"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      type: `${'volby'}`,
+                      first: 'evropske-2024',
+                      second: 'expres',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+                Spustit kalkulačku
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
+          <CardComponent corner="top-right" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium"
+                  >Evropské volby 2024: inventura hlasování</TitleText
+                >
+                <BodyText size="medium"
+                  >Inventura hlasování 2019–2024, 42 otázek, cca 10 minut</BodyText
+                >
+              </div>
+              <ButtonComponent
+                kind="outlined"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      type: `${'volby'}`,
+                      first: 'evropske-2024',
+                      second: 'inventura',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+                Spustit kalkulačku
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
           <CardComponent corner="top-right" padding="medium" border shadow>
             <div class="card-content">
               <div class="card-content-text">
