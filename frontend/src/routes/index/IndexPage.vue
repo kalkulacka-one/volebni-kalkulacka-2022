@@ -83,125 +83,32 @@ const handleSubscribe = async () => {
     <div class="prezident-hero">
       <BlobComponent color="blue" class="blob1" />
       <BlobComponent color="red" class="blob2" />
-      <StackComponent spacing="small" centered class="calc-main">
-        <StackComponent spacing="large" centered space-between>
-          <BodyText size="medium" tag="h1" color="fg-strong">
-            <strong>Die Europawahl in Österreich</strong
-            ><br />
-            9. Juni 2024
-            <br />
-          </BodyText>
-          <HeadlineText tag="p" size="small">
-            Europawahl
-            <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
-          </HeadlineText>
-          <BodyText size="small"> 42 Fragen, ca. 10 Minuten</BodyText>
-          <ButtonComponent
-            kind="filled"
-            color="primary"
-            @click="
-              router.push({
-                name: appRoutes.guide.name,
-                params: {
-                  ...route.params,
-                  type: `${'wahlen'}`,
-                  first: 'europawahl-2024',
-                  second: 'wahlrechner',
-                },
-                query: { ...route.query },
-              })
-            "
-          >
-            Start des Wahlrechners
-            <template #iconAfter>
-              <IconComponent :icon="mdiArrowRight" />
-            </template>
+      <StackComponent spacing="medium" centered class="calc-main">
+        <BodyText size="medium" tag="h1" color="fg-strong">
+          <strong>Nationalratswahl in Österreich 2024</strong
+          ><br />
+          29. September 2024
+          <br />
+        </BodyText>
+        <HeadlineText tag="p" size="small">
+          Nationalratswahl
+          <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
+        </HeadlineText>
+        <BodyText size="large"
+          >Wir bereiten für Sie den Wahlrechner für die Nationalratswahl in Österreich 2024 vor.</BodyText
+        >
+        <StackComponent class="section" spacing="large" centered>
+          <ButtonComponent kind="link" @click="scrollDown">
+            <div class="button-content">
+              Ältere Wahlrechner<IconComponent
+                :icon="mdiArrowDown"
+              ></IconComponent>
+            </div>
           </ButtonComponent>
         </StackComponent>
-        <BodyText size="large">—</BodyText>
-        <CardComponent
-          corner="bottom-left"
-          padding="large"
-          border
-          border-radius="large"
-          shadow
-          class="other-calc-card calc-youth"
-        >
-          <StackComponent spacing="large" centered>
-            <StackComponent spacing="small" centered space-between>
-              <BodyText size="medium" tag="h2" color="fg-strong">
-                <strong>Wahlrechner Express</strong>
-              </BodyText>
-              <BodyText size="small">
-                25 Fragen, ca. 5 Minuten
-              </BodyText>
-              <ButtonComponent
-                kind="outlined"
-                color="primary"
-                @click="
-                  router.push({
-                    name: appRoutes.guide.name,
-                    params: {
-                      ...route.params,
-                      type: `${'wahlen'}`,
-                      first: 'europawahl-2024',
-                      second: 'express',
-                    },
-                    query: { ...route.query },
-                  })
-                "
-              >
-                Start des Wahlrechners
-                <template #iconAfter>
-                  <IconComponent :icon="mdiArrowRight" />
-                </template>
-              </ButtonComponent>
-            </StackComponent>
-          </StackComponent>
-        </CardComponent>
       </StackComponent>
     </div>
     <StaticContentLayout>
-      <StackComponent class="section" spacing="small" centered>
-        <TitleText size="large" tag="h2"
-          >Wer steht hinter dem Wahlrechner?</TitleText
-        >
-        <BodyText size="medium"
-          >Wahlrechner.at ist eine zivilgesellschaftliche Initiative der Organisationen KohoVolit.eu, wahlbeobachtung.org, PolEdu - Politics & Education, BIZEPS - Zentrum für selbstbestimmtes Leben, Vokskabin.hu/Andrássy Universität Budapest und dem Gründungsverein Österreichische Demokratiestiftung. Es handelt sich um ein überparteiliches Instrument, das Wählerinnen und Wählern dabei helfen soll, sich vor der Europawahl 2024 umfassend über die Positionen der kandidierenden Parteien zu informieren.</BodyText
-        >
-        <div class="info-bubbles-grid section">
-          <InfoBubble image="info-1.png">
-            <BodyText size="small"
-              >Wir stellen etwa 50 Fragen zu aktuellen politischen Themen..
-            </BodyText>
-          </InfoBubble>
-          <InfoBubble image="info-2.png">
-            <BodyText size="small"
-              >Wir befragen die wahlwerbenden Parteien.
-            </BodyText>
-          </InfoBubble>
-          <InfoBubble image="info-3.png">
-            <BodyText size="small"
-              >Und die Parteien antworten.
-            </BodyText>
-          </InfoBubble>
-          <InfoBubble image="info-4.png">
-            <BodyText size="small"
-              >Der Wahlrechner berechnet die Übereinstimmung mit Ihren Antworten.</BodyText
-            >
-          </InfoBubble>
-        </div>
-      </StackComponent>
-      <StackComponent class="section" spacing="large" centered>
-        <BodyText size="medium"
-          >Der Wahlrechner ist ein reiner Informationsdienst und dient nicht dazu, konkrete Wahlempfehlungen abzugeben.
-        </BodyText>
-        <ButtonComponent kind="link" @click="router.push('/uber-den-wahlrechner')">
-          <div class="button-content">
-            Mehr herausfinden<IconComponent :icon="mdiArrowRight"></IconComponent>
-          </div>
-        </ButtonComponent>
-      </StackComponent>
       <section class="subscribe">
         <StackComponent spacing="small" centered>
           <TitleText size="large" tag="h2">
@@ -246,7 +153,121 @@ const handleSubscribe = async () => {
           }}</BodyText>
         </StackComponent>
       </section>
+      <StackComponent class="section" spacing="small" centered>
+        <TitleText size="large" tag="h2"
+          >Wer steht hinter dem Wahlrechner?</TitleText
+        >
+        <BodyText size="medium"
+          >Wahlrechner.at ist eine zivilgesellschaftliche Initiative der Organisationen KohoVolit.eu, wahlbeobachtung.org, PolEdu - Politics & Education, BIZEPS - Zentrum für selbstbestimmtes Leben, Vokskabin.hu/Andrássy Universität Budapest und dem Gründungsverein Österreichische Demokratiestiftung. Es handelt sich um ein überparteiliches Instrument, das Wählerinnen und Wählern dabei helfen soll, sich vor der Europawahl 2024 umfassend über die Positionen der kandidierenden Parteien zu informieren.</BodyText
+        >
+        <div class="info-bubbles-grid section">
+          <InfoBubble image="info-1.png">
+            <BodyText size="small"
+              >Wir stellen etwa 50 Fragen zu aktuellen politischen Themen..
+            </BodyText>
+          </InfoBubble>
+          <InfoBubble image="info-2.png">
+            <BodyText size="small"
+              >Wir befragen die wahlwerbenden Parteien.
+            </BodyText>
+          </InfoBubble>
+          <InfoBubble image="info-3.png">
+            <BodyText size="small"
+              >Und die Parteien antworten.
+            </BodyText>
+          </InfoBubble>
+          <InfoBubble image="info-4.png">
+            <BodyText size="small"
+              >Der Wahlrechner berechnet die Übereinstimmung mit Ihren Antworten.</BodyText
+            >
+          </InfoBubble>
+        </div>
+      </StackComponent>
+      <StackComponent class="section" spacing="large" centered>
+        <BodyText size="medium"
+          >Der Wahlrechner ist ein reiner Informationsdienst und dient nicht dazu, konkrete Wahlempfehlungen abzugeben.
+        </BodyText>
+        <ButtonComponent kind="link" @click="router.push('/uber-den-wahlrechner')">
+          <div class="button-content">
+            Mehr herausfinden<IconComponent :icon="mdiArrowRight"></IconComponent>
+          </div>
+        </ButtonComponent>
+      </StackComponent>
       <DonateBlock />
+      <StackComponent spacing="large">
+        <div ref="info"></div>
+        <TitleText size="large" tag="h2">
+          Wahlrechner für bereits abgehaltene Wahlen
+        </TitleText>
+        <MasonryGrid style="align-self: stretch">
+          <CardComponent corner="top-right" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium"
+                  >Europawahl 2024</TitleText
+                >
+                <BodyText size="medium"
+                  >Die Europawahl in Österreich, 42 Fragen, ca. 10 Minuten</BodyText
+                >
+              </div>
+              <ButtonComponent
+                kind="filled"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      type: `${'wahlen'}`,
+                      first: 'europawahl-2024',
+                      second: 'wahlrechner',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+              Start des Wahlrechners
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
+          <CardComponent corner="top-right" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium"
+                  >Europawahl 2024: Express</TitleText
+                >
+                <BodyText size="medium"
+                  >Die Europawahl in Österreich, 25 Fragen, ca. 5 Minuten</BodyText
+                >
+              </div>
+              <ButtonComponent
+                kind="outlined"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      type: `${'wahlen'}`,
+                      first: 'europawahl-2024',
+                      second: 'express',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+              Start des Wahlrechners
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
+        </MasonryGrid>
+      </StackComponent>
     </StaticContentLayout>
     <FooterMultiWord class="section" />
   </StickyHeaderLayout>
