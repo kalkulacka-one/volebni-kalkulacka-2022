@@ -1,3 +1,10 @@
+> [!IMPORTANT]
+> **Volební kalkulačku teď najdete na → [`kalkulacka-one/kalkulacka`](https://github.com/kalkulacka-one/kalkulacka)**
+>
+> —
+> 
+> **Volební kalkulačka is now at → [`kalkulacka-one/kalkulacka`](https://github.com/kalkulacka-one/kalkulacka)**
+
 # volebni-kalkulacka-2022
 
 Volební kalkulačka, nová verze s Česko.Digital v roce 2022
