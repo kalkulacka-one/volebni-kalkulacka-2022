@@ -432,7 +432,7 @@ onBeforeUnmount(removeExternalScript);
             }}</TitleText>
             <template #after>
               <div class="navbar-btn-wrapper">
-                <!-- <ButtonComponent
+                <ButtonComponent
                   kind="link"
                   color="primary"
                   @click="handleShareClick"
@@ -441,7 +441,7 @@ onBeforeUnmount(removeExternalScript);
                     <IconComponent :icon="mdiShareVariantOutline" />
                   </template>
                   {{ $t('routes.result.ResultPage.share') }}
-                </ButtonComponent> -->
+                </ButtonComponent>
                 <ButtonComponent
                   class="desktop"
                   kind="filled"
