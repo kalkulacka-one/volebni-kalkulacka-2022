@@ -56,12 +56,10 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
         </BodyText>
         <BodyText size="large">
           <ul>
-            <li>Gründungsverein Österreichische Demokratiestiftung</li>
             <li>KohoVolit.eu</li>
-            <li>wahbeobachtung.org</li>
+            <li>wahlbeobachtung.org</li>
             <li>PolEdu - Politics & Education</li>
             <li>BIZEPS - Zentrum für selbstbestimmtes Leben</li>
-            <li>Vokskabin.hu/Andrássy Universität Budapest</li>
           </ul>
         </BodyText>
         <TitleText size="large" tag="h2"
@@ -136,23 +134,7 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
           >Wer sind die Projektpartner?</TitleText
         >
         <BodyText size="large">
-          <ul>
-            <li>
-              <strong
-                >Gründungsverein Österreichische Demokratiestiftung</strong
-              >
-              <p>
-                Die Österreichische Demokratiestiftung (Gründungsverein) ist
-                unabhängig, überparteilich und fördert demokratische
-                Auseinandersetzungen. Ziel der Österreichischen
-                Demokratiestiftung ist es, dauerhaft Projekte und Ideen zu
-                unterstützen oder umzusetzen, die demokratiepolitische
-                Grundlagen vermitteln, verstärken und die demokratische
-                Infrastruktur stärken. Für Wahlrechner.at ist die
-                Österreichische Demokratiestiftung für Projektmanagement
-                verantwortlich.
-              </p>
-            </li>
+          <ul>      
             <li>
               <strong>KohoVolit.eu</strong>
               <p>
@@ -164,17 +146,6 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
                 pro Jahr in drei Ländern erstellt. KohoVolit.eu stellt dem
                 Projekt Wahlrechner.at die Software und sein langjähriges
                 Know-how zur Umsetzung von anderen Wahlrechnern zur Verfügung.
-              </p>
-            </li>
-            <li>
-              <strong>Vokskabin.hu/Andrássy Universität Budapest</strong>
-              <p>
-                Die ungarische online Wahlhilfe, Vokskabin ist die gemeinsame
-                Initiative der deutschsprachigen Andrássy Gyula Universität
-                Budapest (AUB) und des Netzwerks Politische Kommunikation
-                (netPOL). Für Wahlrechner.at werden Vokskabin und die AUB
-                Unterstützung in den Bereichen redaktionelle Arbeit, Fundraising
-                und Kommunikation leisten.
               </p>
             </li>
             <li>
@@ -219,6 +190,15 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
           Anzahl der beantworteten Fragen: 42<br />
           Der Rechner überträgt dieses Ergebnis so in eine Prozentangabe (0 % - 100 %):<br />
           ((34 / 42) + 1) / 2 *100 % = <strong>90 %</strong><br />
+        </BodyText>
+        <TitleText size="large" tag="h2">Europawahl 2024</TitleText>
+        <BodyText size="large">
+          Der Wahlrechner für die Europawahl 2024 wurde im Rahmen des VoteMatch.eu-Netzwerks erstellt.<br/>
+          Dabei haben auch folgende Organisationen mitgewirkt:<br/>
+          <ul>
+            <li>Gründungsverein Österreichische Demokratiestiftung</li>
+            <li>Vokskabin.hu/Andrássy Universität Budapest</li>
+          </ul>
         </BodyText>
       </StackComponent>
       <DonateBlock />
