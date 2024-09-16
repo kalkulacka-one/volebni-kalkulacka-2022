@@ -75,12 +75,7 @@ const toggleClick = () => {
             ? 'rgb(var(--palette-primary-50))'
             : 'rgb(var(--palette-primary-90))'
         "
-        :background-image="
-          candidate?.img_url ||
-          (candidate?.parties?.length === 1
-            ? candidate?.parties[0].img_url
-            : undefined)
-        "
+        
       >
         <BodyText
           :size="order === 1 ? 'large' : 'medium'"
@@ -149,7 +144,7 @@ const toggleClick = () => {
             : candidate?.name
         }}</BodyText>
         <BodyText size="medium" v-if="expert">
-          postoje z verejných zdrojov
+          <i>expertní odpovědi</i>
         </BodyText>
         <!--
         <div
