@@ -26,6 +26,8 @@ import ResultPageVue from './routes/result/ResultPage.vue';
 import RecapPageVue from './routes/recap/RecapPage.vue';
 import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
+import DistrictSelectionHackSenatePageVue from './routes/district-selection/DistrictSelectionHackSenatePage.vue';
+import DistrictSelectionHackRegionPageVue from './routes/district-selection/DistrictSelectionHackRegionPage.vue';
 import QuestionsMethodologyPageVue from './routes/questions-methodology/QuestionsMethodologyPageVue.vue';
 import ErrorPageVue, { ErrorPageEnum } from './routes/error/ErrorPage.vue';
 import SharePageVue from './routes/share/SharePage.vue';
@@ -150,6 +152,24 @@ export const appRoutes = {
     component: DistrictSelectionPageVue,
     meta: {
       title: 'Volební kalkulačka',
+    },
+  },
+  districtSelectionHackSenate: {
+    name: 'district-selection-hack-senate',
+    path: '/volby/senatni-2024/vyber',
+    alias: '/volby/senatni-2024',
+    component: DistrictSelectionHackSenatePageVue,
+    meta: {
+      title: 'Senátní volby 2024',
+    },
+  },
+  districtSelectionHackRegion: {
+    name: 'district-selection-hack-region',
+    path: '/volby/krajske-2024/vyber',
+    alias: '/volby/krajske-2024',
+    component: DistrictSelectionHackRegionPageVue,
+    meta: {
+      title: 'Krajské volby 2024',
     },
   },
   guide: {
