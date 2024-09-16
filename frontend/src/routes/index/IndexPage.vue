@@ -150,7 +150,7 @@ const handleSubscribe = async () => {
                     })
                   "
                 >
-                Start des Wahlrechners Express
+                Start des Wahlrechner Express
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
