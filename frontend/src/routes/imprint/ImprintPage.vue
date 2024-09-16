@@ -39,10 +39,10 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
       <StackComponent spacing="large" class="section">
         <HeadlineText tag="h1" size="large">Impressum</HeadlineText>
         <BodyText size="large">
-          Wahlrechner.at ist eine zivilgesellschaftliche Initiative der Organisationen KohoVolit.eu, wahlbeobachtung.org, PolEdu - Politics &amp; Education, BIZEPS - Zentrum für selbstbestimmtes Leben, Vokskabin.hu/Andrássy Universität Budapest und dem Gründungsverein Österreichische Demokratiestiftung.
+          Wahlrechner.at ist eine zivilgesellschaftliche Initiative der Organisationen KohoVolit.eu, wahlbeobachtung.org, PolEdu - Politics &amp; Education und BIZEPS - Zentrum für selbstbestimmtes Leben.
         </BodyText>
         <BodyText size="large">
-          Es handelt sich um ein überparteiliches Instrument, das Wählerinnen und Wählern dabei helfen soll, sich vor der Europawahl 2024 umfassend über die Positionen der kandidierenden Parteien zu informieren.
+          Es ist ein überparteiliches Instrument, das Wähler:innen hilft, sich vor der Wahl umfassend über die Positionen der kandidierenden Parteien zu informieren.
         </BodyText>
         <TitleText size="large" tag="h2">Inhaberin der Website</TitleText>
         <BodyText size="large">
@@ -55,14 +55,12 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
         <TitleText size="large" tag="h2">Für den Inhalt verantwortlich</TitleText>
         <BodyText size="large">
           <ul>
-            <li>Melani Barlai</li>
             <li>Paul Grohma</li>
             <li>Manuel Köllner</li>
             <li>Kateřina Mahdalová</li>
             <li>Christian Pöltl-Dienst</li>
             <li>Armin Rabitsch</li>
             <li>Michal Škop</li>
-            <li>Luise Wernisch-Liebich</li>
           </ul>
         </BodyText>
 

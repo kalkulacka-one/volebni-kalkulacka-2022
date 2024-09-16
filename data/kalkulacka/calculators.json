@@ -5,6 +5,12 @@
       "key": "europawahl-2024",
       "name": "Europawahl 2024",
       "description": "Die Europawahl in Österreich 2024"
+    },
+    {
+      "id": "cf234e2c-4eb0-43ec-a6ba-dec7a36e188e",
+      "key": "nationalratswahl-2024",
+      "name": "Nationalratswahl 2024",
+      "description": "Nationalratswahl 2024"
     }
   ],
   "calculators": [
@@ -25,6 +31,33 @@
       "name": "Wahlrechner express",
       "description": "Die Europawahl in Österreich 2024",
       "key": "europawahl-2024/express"
+    },
+    {
+      "calculator_id": "9d03079a-478f-4902-9976-6ffe2f659096",
+      "election_id": "cf234e2c-4eb0-43ec-a6ba-dec7a36e188e",
+      "district_code": "wahlrechner",
+      "show_district_code": false,
+      "name": "Wahlrechner",
+      "description": "Nationalratswahl 2024",
+      "key": "nationalratswahl-2024/wahlrechner"
+    },
+    {
+      "calculator_id": "c3830bbe-e431-4af1-98bf-7b9c2f803bb4",
+      "election_id": "cf234e2c-4eb0-43ec-a6ba-dec7a36e188e",
+      "district_code": "express",
+      "show_district_code": false,
+      "name": "Wahlrechner Express",
+      "description": "Nationalratswahl 2024",
+      "key": "nationalratswahl-2024/express"
+    },
+    {
+      "calculator_id": "e797487f-22bf-4e27-a788-27a06ee6aa44",
+      "election_id": "cf234e2c-4eb0-43ec-a6ba-dec7a36e188e",
+      "district_code": "abstimmungsrechner",
+      "show_district_code": false,
+      "name": "Abstimmungsrechner",
+      "description": "Nationalratswahl 2024",
+      "key": "nationalratswahl-2024/abstimmunsgrechner"
     }
   ]
 }

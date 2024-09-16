@@ -76,7 +76,7 @@ const router = useRouter();
             <StackComponent spacing="extra-small">
               <StackComponent spacing="small" centered horizontal
                 ><IconComponent :icon="mdiEmail" /><BodyText size="small"
-                  >info@wahlrechner.at</BodyText
+                  >servus@wahlrechner.at</BodyText
                 ></StackComponent
               >
               <StackComponent spacing="small" centered horizontal
@@ -92,20 +92,11 @@ const router = useRouter();
         <BodyText size="small">{{
           $t('components.FooterMultiWord.body-created-by-ngos')
         }}</BodyText>
-        <a href="https://demokratiestiftung.at"
-          ><img class="od-logo" :src="'/images/logo-od.png'"
-        /></a>
         <a href="https://kohovolit.eu"
           ><img :src="'/images/logo-kohovolit.svg'"
         /></a>
         <a href="https://cesko.digital"
           ><img class="cd-logo" :src="'/images/logo-cd.svg'"
-        /></a>
-        <a href="https://www.andrassyuni.eu"
-          ><img class="andrassy-logo" :src="'/images/logo-andrassy.png'"
-        /></a>
-        <a href="https://www.donau-uni.ac.at/de/universitaet/fakultaeten/wirtschaft-globalisierung/forschung/research-lab-democracy-and-society-in-transition/demokratie-politische-kommunikation-und-politische-bildung/netpol.html"
-          ><img class="netpol-logo" :src="'/images/logo-netpol.png'"
         /></a>
         <a href="https://wahlbeobachtung.org"
           ><img class="wahlbeobachtung-logo" :src="'/images/logo-wb.jpg'"

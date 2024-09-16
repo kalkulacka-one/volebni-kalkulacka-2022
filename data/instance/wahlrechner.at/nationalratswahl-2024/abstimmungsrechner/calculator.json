@@ -1,0 +1,16 @@
+{
+  "id": "e797487f-22bf-4e27-a788-27a06ee6aa44",
+  "createdAt": "2021-01-01T00:00:00+01:00",
+  "calculatorGroup": {
+    "id": "77baeac2-f947-4a79-a1fc-15027bd4ced8",
+    "key": "nationalratswahl-2024"
+  },
+  "election": {
+    "id": "cf234e2c-4eb0-43ec-a6ba-dec7a36e188e",
+    "key": "nationalratswahl-2024"
+  },
+  "variant": {
+    "key": "abstimmungsrechner"
+  },
+  "intro": "Willkommen beim Abstimmungsrechner für die Nationalratswahl 2024!\n\nDieser experimentelle Abstimmungsrechner ist eine Sonderversion des Wahlrechners, basierend auf realen Abstimmungen im Nationalrat. Er enthält 33 Fragen zu wichtigen Themen und vergleicht Ihre Antworten mit den tatsächlichen Abstimmungen der derzeit im Parlament vertretenen Parteien.\n\nDie Beantwortung dauert etwa 5-10 Minuten. Das Resultat zeigt, mit welchen Parteien Ihre Ansichten am ehesten übereinstimmen. Bitte beachten Sie, dass dieser Abstimmungsrechner auf realen Abstimmungen basiert und daher nur jene Parteien enthält, die aktuell im Parlament vertreten sind."
+}
