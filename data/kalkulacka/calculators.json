@@ -42,6 +42,15 @@
       "key": "nationalratswahl-2024/wahlrechner"
     },
     {
+      "calculator_id": "c3830bbe-e431-4af1-98bf-7b9c2f803bb4",
+      "election_id": "cf234e2c-4eb0-43ec-a6ba-dec7a36e188e",
+      "district_code": "express",
+      "show_district_code": false,
+      "name": "Wahlrechner Express",
+      "description": "Nationalratswahl 2024",
+      "key": "nationalratswahl-2024/express"
+    },
+    {
       "calculator_id": "e797487f-22bf-4e27-a788-27a06ee6aa44",
       "election_id": "cf234e2c-4eb0-43ec-a6ba-dec7a36e188e",
       "district_code": "abstimmungsrechner",
