@@ -141,13 +141,7 @@ const logInteraction = (interaction: string) => {
           >týmu dobrovolníků</a
         >, do <a href="https://herohero.co/volebnikalkulacka" target="_blank"
           @click="logInteraction('join-herohero')"
-          >klubu podporovatelů na Herohero</a> nebo na 
-          <a
-          href="https://www.patreon.com/volebnikalkulacka"
-          target="_blank"
-          @click="logInteraction('join-patreon')"
-          >Patreonu</a
-        > 
+          >klubu podporovatelů na Herohero</a>
         nebo nás
         <a
           href="https://www.darujme.cz/darovat/1200653"
@@ -392,14 +386,7 @@ const logInteraction = (interaction: string) => {
         této důležité práci.</BodyText>
       <BodyText size="medium">Přidejte se do <a href="https://herohero.co/volebnikalkulacka" target="_blank"
           @click="logInteraction('join-herohero')"
-          >klubu podporovatelů na Herohero</a> nebo na 
-          <a
-          href="https://www.patreon.com/volebnikalkulacka"
-          target="_blank"
-          @click="logInteraction('join-patreon')"
-          >Patreonu</a
-        > 
-        nebo nás
+          >klubu podporovatelů na Herohero</a> nebo nás
         <a
           href="https://www.darujme.cz/darovat/1200653"
           target="_blank"
@@ -417,16 +404,6 @@ const logInteraction = (interaction: string) => {
           @click="logInteraction('join-herohero-button')"
         >
           Přidat se na Herohero
-        </ButtonComponent>
-        <ButtonComponent
-          tag="a"
-          target="_blank"
-          href="https://www.patreon.com/volebnikalkulacka"
-          kind="filled"
-          color="primary"
-          @click="logInteraction('join-patreon-button')"
-        >
-          Přidat se na Patreonu
         </ButtonComponent>
       </StackComponent>
       <StackComponent horizontal spacing="small" wrap>
@@ -505,28 +482,12 @@ const logInteraction = (interaction: string) => {
         >Přidejte se do klubu podporovatelů Volební kalkulačky</TitleText
       >
       <BodyText size="medium"
-        >Podpořte Volební kalkulačku a staňte se členy klubu podporovatelů na 
-        <a
-          href="https://www.patreon.com/volebnikalkulacka"
-          target="_blank"
-          @click="logInteraction('join-patreon')"
-          >Patreonu</a
-        > nebo <a href="https://herohero.co/volebnikalkulacka" target="_blank"
+        >Podpořte Volební kalkulačku a staňte se členy klubu podporovatelů na <a href="https://herohero.co/volebnikalkulacka" target="_blank"
           @click="logInteraction('join-herohero')"
           >Herohero</a>. Kromě dobrého pocitu z podpory demokracie získáte třeba exkluzivní přístup ke kalkulačkám den přes oficiálním spuštěním!
         </BodyText
       >
       <StackComponent horizontal spacing="small" wrap>
-        <ButtonComponent
-          tag="a"
-          target="_blank"
-          href="https://www.patreon.com/volebnikalkulacka"
-          kind="filled"
-          color="primary"
-          @click="logInteraction('join-patreon-button')"
-        >
-          Přidat se na Patreonu
-        </ButtonComponent>
         <ButtonComponent
           tag="a"
           target="_blank"
