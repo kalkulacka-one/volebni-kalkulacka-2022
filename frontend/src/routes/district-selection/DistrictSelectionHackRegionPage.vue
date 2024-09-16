@@ -34,55 +34,55 @@ const title = "Zvolte svůj kraj";
 const breadcrumbs = "Krajské volby 2024";
 const options = [
   {
-    value: "1-stredocesky",
+    value: "cz1-stredocesky",
     label: "Středočeský kraj",
   },
   {
-    value: "2-jihocesky",
+    value: "cz2-jihocesky",
     label: "Jihočeský kraj",
   },
   {
-    value: "3-plzensky",
+    value: "cz3-plzensky",
     label: "Plzeňský kraj",
   },
   {
-    value: "4-karlovarsky",
+    value: "cz4-karlovarsky",
     label: "Karlovarský kraj",
   },
   {
-    value: "5-ustecky",
+    value: "cz5-ustecky",
     label: "Ústecký kraj",
   },
   {
-    value: "6-liberecky",
+    value: "cz6-liberecky",
     label: "Liberecký kraj",
   },
   {
-    value: "7-kralovehradecky",
+    value: "cz7-kralovehradecky",
     label: "Královéhradecký kraj",
   },
   {
-    value: "8-pardubicky",
+    value: "cz8-pardubicky",
     label: "Pardubický kraj",
   },
   {
-    value: "9-vysocina",
+    value: "cz9-vysocina",
     label: "Vysočina",
   },
   {
-    value: "10-jihomoravsky",
+    value: "cz10-jihomoravsky",
     label: "Jihomoravský kraj",
   },
   {
-    value: "11-olomoucky",
+    value: "cz11-olomoucky",
     label: "Olomoucký kraj",
   },
   {
-    value: "12-zlinsky",
+    value: "cz12-zlinsky",
     label: "Zlínský kraj",
   },
   {
-    value: "13-moravskoslezsky",
+    value: "cz13-moravskoslezsky",
     label: "Moravskoslezský kraj",
   },
 ];
