@@ -107,21 +107,27 @@ const handleShareClick = () => {
   shareModal.value?.open();
 };
 onBeforeMount(async () => {
-  if (userStore.user || userStore.user === null) {
-    const res = await electionStore.saveResults({
-      embedName: currentEmbed,
-      user: userStore.user as User | null | undefined,
-    });
-    console.debug(res);
-  } else {
-    userStore.$subscribe(async (mutation, state) => {
-      const res = await electionStore.saveResults({
-        embedName: currentEmbed,
-        user: state.user as User | null | undefined,
-      });
-      console.debug(res);
-    });
-  }
+  // if (userStore.user || userStore.user === null) {
+  //   const res = await electionStore.saveResults({
+  //     embedName: currentEmbed,
+  //     user: userStore.user as User | null | undefined,
+  //   });
+  //   console.debug(res);
+  // } else {
+  //   userStore.$subscribe(async (mutation, state) => {
+  //     const res = await electionStore.saveResults({
+  //       embedName: currentEmbed,
+  //       user: state.user as User | null | undefined,
+  //     });
+  //     console.debug(res);
+  //   });
+  // }
+
+  const res = await electionStore.saveResults({
+    embedName: currentEmbed,
+    user: userStore.user as User | null | undefined,
+  });
+  console.debug(res);
 });
 
 const signUpParams = computed(() => {
