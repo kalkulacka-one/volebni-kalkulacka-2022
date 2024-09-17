@@ -76,7 +76,7 @@ const router = useRouter();
             <StackComponent spacing="extra-small">
               <StackComponent spacing="small" centered horizontal
                 ><IconComponent :icon="mdiEmail" /><BodyText size="small"
-                  >servus@wahlrechner.at</BodyText
+                  >hallo@wahlrechner.at</BodyText
                 ></StackComponent
               >
               <StackComponent spacing="small" centered horizontal
