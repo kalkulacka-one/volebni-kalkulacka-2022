@@ -11,6 +11,12 @@
       "key": "krajske-2024",
       "name": "Krajské volby 2024",
       "description": "Volby do krajských zastupitelstev 2024"
+    },
+    {
+      "id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "key": "senatni-2024",
+      "name": "Senátní volby 2024",
+      "description": "Volby do Senátu 2024"
     }
   ],
   "calculators": [
@@ -157,6 +163,249 @@
       "name": "Moravskoslezský kraj",
       "description": "Volební kalkulačka pro krajské volby 2024 pro Moravskoslezský kraj",
       "key": "krajske-2024/13-moravskoslezsky"
+    },
+    {
+      "calculator_id": "68825da8-cf1a-4f88-905e-bdf0199ead9d",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "2-sokolov",
+      "show_district_code": false,
+      "name": "Sokolov (2)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Sokolov (2)",
+      "key": "senatni-2024/2-sokolov"
+    },
+    {
+      "calculator_id": "850731e4-6f23-4f67-b49f-0a85a5ed4fbf",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "5-chomutov",
+      "show_district_code": false,
+      "name": "Chomutov (5)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Chomutov (5)",
+      "key": "senatni-2024/5-chomutov"
+    },
+    {
+      "calculator_id": "c5ae3fc3-054d-4a3d-92db-a2e97fdeea8b",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "8-rokycany",
+      "show_district_code": false,
+      "name": "Rokycany (8)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Rokycany (8)",
+      "key": "senatni-2024/8-rokycany"
+    },
+    {
+      "calculator_id": "79b52e66-aef8-4580-84a1-2e543cc4054f",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "11-domazlice",
+      "show_district_code": false,
+      "name": "Domažlice (11)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Domažlice (11)",
+      "key": "senatni-2024/11-domazlice"
+    },
+    {
+      "calculator_id": "9f9c83a6-a77d-471c-96be-a72477b0df41",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "14-ceske-budejovice",
+      "show_district_code": false,
+      "name": "České Budějovice (14)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod České Budějovice (14)",
+      "key": "senatni-2024/14-ceske-budejovice"
+    },
+    {
+      "calculator_id": "30c6c885-244f-409e-bec0-7abd4163ebf1",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "17-praha-12",
+      "show_district_code": false,
+      "name": "Praha 12 (17)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Praha 12 (17)",
+      "key": "senatni-2024/17-praha-12"
+    },
+    {
+      "calculator_id": "7fbed94a-6e8f-4ff1-b32e-9c1b69f222f4",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "20-praha-4",
+      "show_district_code": false,
+      "name": "Praha 4 (20)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Praha 4 (20)",
+      "key": "senatni-2024/20-praha-4"
+    },
+    {
+      "calculator_id": "335acf24-d8be-40a3-82ad-55cffe40247c",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "23-praha-8",
+      "show_district_code": false,
+      "name": "Praha 8 (23)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Praha 8 (23)",
+      "key": "senatni-2024/23-praha-8"
+    },
+    {
+      "calculator_id": "acdbfc91-4652-4ec9-b403-84cd223362fe",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "26-praha-2",
+      "show_district_code": false,
+      "name": "Praha 2 (26)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Praha 2 (26)",
+      "key": "senatni-2024/26-praha-2"
+    },
+    {
+      "calculator_id": "68a3bb4b-cf34-466f-a145-85957ff3e7c1",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "29-litomerice",
+      "show_district_code": false,
+      "name": "Litoměřice (29)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Litoměřice (29)",
+      "key": "senatni-2024/29-litomerice"
+    },
+    {
+      "calculator_id": "d6558726-d459-4022-b8a5-12a00b1c6a86",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "32-teplice",
+      "show_district_code": false,
+      "name": "Teplice (32)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Teplice (32)",
+      "key": "senatni-2024/32-teplice"
+    },
+    {
+      "calculator_id": "80c98841-7e0b-4a61-bc15-dd0254be47ea",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "35-jablonec-nad-nisou",
+      "show_district_code": false,
+      "name": "Jablonec nad Nisou (35)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Jablonec nad Nisou (35)",
+      "key": "senatni-2024/35-jablonec-nad-nisou"
+    },
+    {
+      "calculator_id": "ee4449b4-b4bb-4fc5-afc1-501c12528063",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "38-mlada-boleslav",
+      "show_district_code": false,
+      "name": "Mladá Boleslav (38)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Mladá Boleslav (38)",
+      "key": "senatni-2024/38-mlada-boleslav"
+    },
+    {
+      "calculator_id": "898f1d1f-5331-46f4-a4a8-6b43ff2aec9f",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "41-benesov",
+      "show_district_code": false,
+      "name": "Benešov (41)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Benešov (41)",
+      "key": "senatni-2024/41-benesov"
+    },
+    {
+      "calculator_id": "ca1dd226-72f0-4822-b672-e52e8a1028f0",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "44-chrudim",
+      "show_district_code": false,
+      "name": "Chrudim (44)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Chrudim (44)",
+      "key": "senatni-2024/44-chrudim"
+    },
+    {
+      "calculator_id": "e3a44a8a-1989-4e42-b4d1-ab0223dae4c9",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "47-nachod",
+      "show_district_code": false,
+      "name": "Náchod (47)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Náchod (47)",
+      "key": "senatni-2024/47-nachod"
+    },
+    {
+      "calculator_id": "dfa844a6-13e3-4c45-9b2e-228ff3b94744",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "50-svitavy",
+      "show_district_code": false,
+      "name": "Svitavy (50)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Svitavy (50)",
+      "key": "senatni-2024/50-svitavy"
+    },
+    {
+      "calculator_id": "ee086a7f-a681-41e8-8c3f-16ea50d7aab1",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "53-trebic",
+      "show_district_code": false,
+      "name": "Třebíč (53)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Třebíč (53)",
+      "key": "senatni-2024/53-trebic"
+    },
+    {
+      "calculator_id": "f450635e-5dc6-4a67-8235-13c59c29180c",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "56-breclav",
+      "show_district_code": false,
+      "name": "Břeclav (56)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Břeclav (56)",
+      "key": "senatni-2024/56-breclav"
+    },
+    {
+      "calculator_id": "9e815c9e-1616-4eea-aa06-b88985b2fa31",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "59-brno-mesto",
+      "show_district_code": false,
+      "name": "Brno-město (59)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Brno-město (59)",
+      "key": "senatni-2024/59-brno-mesto"
+    },
+    {
+      "calculator_id": "72004c64-0d24-4ffa-ae4e-0f165b8421e5",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "62-prostejov",
+      "show_district_code": false,
+      "name": "Prostějov (62)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Prostějov (62)",
+      "key": "senatni-2024/62-prostejov"
+    },
+    {
+      "calculator_id": "dfc58697-dcd8-4c3d-9f39-637bb1fba317",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "65-sumperk",
+      "show_district_code": false,
+      "name": "Šumperk (65)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Šumperk (65)",
+      "key": "senatni-2024/65-sumperk"
+    },
+    {
+      "calculator_id": "02c3966f-4ae2-4f94-99f6-4241dc9d1b46",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "68-opava",
+      "show_district_code": false,
+      "name": "Opava (68)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Opava (68)",
+      "key": "senatni-2024/68-opava"
+    },
+    {
+      "calculator_id": "04d9b3a3-fe3a-461a-98d6-b313cd8b3e3b",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "71-ostrava-mesto",
+      "show_district_code": false,
+      "name": "Ostrava-město (71)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Ostrava-město (71)",
+      "key": "senatni-2024/71-ostrava-mesto"
+    },
+    {
+      "calculator_id": "e985a1f6-a5b7-458c-b486-5ef28ee09c5c",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "74-karvina",
+      "show_district_code": false,
+      "name": "Karviná (74)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Karviná (74)",
+      "key": "senatni-2024/74-karvina"
+    },
+    {
+      "calculator_id": "07c89cb5-ea1e-4a87-b3c8-051a7437d465",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "77-vsetin",
+      "show_district_code": false,
+      "name": "Vsetín (77)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Vsetín (77)",
+      "key": "senatni-2024/77-vsetin"
+    },
+    {
+      "calculator_id": "c9c0c0c7-0a90-4cf1-9a4d-d8a460d5544d",
+      "election_id": "8b28e4b7-96b6-4007-b289-2b0998f85beb",
+      "district_code": "80-zlin",
+      "show_district_code": false,
+      "name": "Zlín (80)",
+      "description": "Volební kalkulačka pro senátní volby 2024 pro obvod Zlín (80)",
+      "key": "senatni-2024/80-zlin"
     }
   ]
 }
