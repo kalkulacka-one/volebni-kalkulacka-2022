@@ -107,20 +107,27 @@ const handleShareClick = () => {
 };
 onBeforeMount(async () => {
   if (election.key === 'nrsr-2023' || election.key === 'prezidentske-2024' || election.key === 'europske-2024') {
-    if (userStore.user || userStore.user === null) {
-      const res = await electionStore.saveResults({
-        embedName: currentEmbed,
-        user: userStore.user as User | null | undefined,
-      });
-      console.debug(res);
-    } else {
-      userStore.$subscribe(async (mutation, state) => {
-        const res = await electionStore.saveResults({
-          embedName: currentEmbed,
-          user: state.user as User | null | undefined,
-        });
-        console.debug(res);
-      });
+    // if (userStore.user || userStore.user === null) {
+    //   const res = await electionStore.saveResults({
+    //     embedName: currentEmbed,
+    //     user: userStore.user as User | null | undefined,
+    //   });
+    //   console.debug(res);
+    // } else {
+    //   userStore.$subscribe(async (mutation, state) => {
+    //     const res = await electionStore.saveResults({
+    //       embedName: currentEmbed,
+    //       user: state.user as User | null | undefined,
+    //     });
+    //     console.debug(res);
+    //   });
+    // }
+
+    const res = await electionStore.saveResults({
+      embedName: currentEmbed,
+      user: userStore.user as User | null | undefined,
+    });
+    console.debug(res);
     }
   }
 });
