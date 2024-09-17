@@ -1,0 +1,21 @@
+@import '@/components/themes/DefaultTheme.scss';
+
+*:deep() {
+  // Override any of the default theme variables here
+
+  // Color palette
+  // -------------
+  /* Primary colors (based on black) */
+  --palette-primary-10: 0, 0, 0;
+  --palette-primary-30: 26, 26, 26;
+  --palette-primary-50: 66, 66, 66;
+  --palette-primary-70: 150, 150, 150;
+  --palette-primary-90: 200, 200, 200;
+
+  /* Secondary colors (based on Austrian flag red) */
+  --palette-secondary-10: 117, 20, 28;
+  --palette-secondary-30: 165, 29, 40;
+  --palette-secondary-50: 237, 41, 57; /* #ED2939 - Austrian flag red */
+  --palette-secondary-70: 241, 93, 105;
+  --palette-secondary-90: 245, 145, 153;
+}
