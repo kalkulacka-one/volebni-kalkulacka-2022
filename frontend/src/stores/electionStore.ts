@@ -142,16 +142,16 @@ export const useElectionStore = defineStore('election', {
       embedName: string | undefined;
       user: User | null | undefined;
     }) {
-      if (user) {
-        const res = await fetch('/api/answers');
-        const answers = await res.json();
-        const calculatorAnswers = answers.filter(
-          (answer: any) => answer.calculatorId === this.calculator?.id,
-        );
-        if (calculatorAnswers.length > 0) {
-          this.resultsId = calculatorAnswers[0].id;
-        }
-      }
+      // if (user) {
+      //   const res = await fetch('/api/answers');
+      //   const answers = await res.json();
+      //   const calculatorAnswers = answers.filter(
+      //     (answer: any) => answer.calculatorId === this.calculator?.id,
+      //   );
+      //   if (calculatorAnswers.length > 0) {
+      //     this.resultsId = calculatorAnswers[0].id;
+      //   }
+      // }
 
       //if results already saved do not save them again
       const newEncodedResults = encodeResults(this.answers);
