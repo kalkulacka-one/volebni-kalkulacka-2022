@@ -84,19 +84,59 @@ const handleSubscribe = async () => {
       <BlobComponent color="blue" class="blob1" />
       <BlobComponent color="red" class="blob2" />
       <StackComponent spacing="medium" centered class="calc-main">
-        <BodyText size="medium" tag="h1" color="fg-strong">
-          <strong>Volby do Senátu a zastupitelstev krajů 2024</strong
-          ><br />
-          20. a 21. září 2024
-          <br />
-        </BodyText>
-        <HeadlineText tag="p" size="small">
-          Krajské a senátní volby
-          <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
-        </HeadlineText>
-        <BodyText size="large"
-          >Připravujeme pro vás volební kalkulačku pro krajské a senátní volby</BodyText
-        >
+          <StackComponent spacing="large" centered space-between>
+            <BodyText size="medium" tag="h1" color="fg-strong">
+            <strong>Volby do Senátu a zastupitelstev krajů 2024</strong
+            ><br />
+            20. a 21. září 2024
+            <br />
+          </BodyText>
+          <HeadlineText tag="p" size="small">
+            Krajské a senátní volby
+            <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
+          </HeadlineText>
+          <StackComponent horizontal spacing="large" wrap style="justify-content: center;">
+            <StackComponent vertical spacing="small" centered>
+              <ButtonComponent
+                kind="filled"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.districtSelectionHackRegion.name,
+                    params: { ...route.params },
+                    query: { ...route.query },
+                  })
+                "
+              >
+                Vybrat kraj
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+              <BodyText size="small"> 25 otázek, 5–10 minut</BodyText>
+            </StackComponent>
+            <StackComponent vertical spacing="small" centered>
+              <ButtonComponent
+                kind="filled"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.districtSelectionHackSenate.name,
+                    params: { ...route.params },
+                    query: { ...route.query },
+                  })
+                "
+                disabled
+              >
+                Vybrat senátní obvod
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+              <BodyText size="small"> Senátní kalkulačku spustíme již brzy! </BodyText>
+            </StackComponent>
+          </StackComponent>
+        </StackComponent>
         <StackComponent class="section" spacing="large" centered>
           <ButtonComponent kind="link" @click="scrollDown">
             <div class="button-content">
