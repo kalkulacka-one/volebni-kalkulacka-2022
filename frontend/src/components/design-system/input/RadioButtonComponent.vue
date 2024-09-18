@@ -5,13 +5,20 @@ export interface Props {
   groupName: string;
   value: string;
   modelValue: string | null;
+  disabled: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   modelValue: null,
+  disabled: false,
 });
 
 defineEmits(['update:modelValue']);
+
+import { useSlots } from 'vue';
+
+const slots = useSlots();
+const content = slots.default ? slots.default()[0]?.children : '';
 </script>
 
 <template>
@@ -24,15 +31,22 @@ defineEmits(['update:modelValue']);
       @input="
         $emit('update:modelValue', ($event.target as HTMLInputElement).value)
       "
+      :disabled="props.disabled"
     />
     <span class="radio-checkbox"></span>
     <BodyText size="medium">
-      <slot />
+      <span v-html="content"></span>
     </BodyText>
   </label>
 </template>
 
 <style scoped lang="scss">
+label:has(input:disabled) {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 .label {
   display: flex;
   align-items: center;

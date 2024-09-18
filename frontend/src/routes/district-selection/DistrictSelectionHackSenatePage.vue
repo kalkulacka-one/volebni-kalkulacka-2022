@@ -35,7 +35,7 @@ const breadcrumbs = "Senátní volby 2024";
 const options = [
   {
     value:  "74-karvina",
-    label:  "Karviná (74)"
+    label:  "Karviná (74) <span style=\"font-size: 0.75em\">– odpověděl pouze 1 kandidát</span>"
   },
   {
     value:  "2-sokolov",
@@ -47,7 +47,7 @@ const options = [
   },
   {
     value:  "8-rokycany",
-    label:  "Rokycany (8)"
+    label:  "Rokycany (8) <span style=\"font-size: 0.75em\">– odpověděli pouze 2 kandidáti</span>"
   },
   {
     value:  "11-domazlice",
@@ -55,7 +55,7 @@ const options = [
   },
   {
     value:  "14-ceske-budejovice",
-    label:  "České Budějovice (14)"
+    label:  "České Budějovice (14) <span style=\"font-size: 0.75em\">– odpověděli pouze 2 kandidáti</span>"
   },
   {
     value:  "17-praha-12",
@@ -95,7 +95,7 @@ const options = [
   },
   {
     value:  "44-chrudim",
-    label:  "Chrudim (44)"
+    label:  "Chrudim (44) <span style=\"font-size: 0.75em\">– odpověděli pouze 2 kandidáti</span>"
   },
   {
     value:  "47-nachod",
@@ -123,7 +123,7 @@ const options = [
   },
   {
     value:  "65-sumperk",
-    label:  "Šumperk (65)"
+    label:  "Šumperk (65) <span style=\"font-size: 0.75em\">– odpověděl pouze 1 kandidát</span>"
   },
   {
     value:  "68-opava",
@@ -135,7 +135,8 @@ const options = [
   },
   {
     value:  "77-vsetin",
-    label:  "Vsetín (77)"
+    label:  "Vsetín (77) <span style=\"font-size: 0.75em\">– neodpověděl žádný kandidát</span>",
+    disabled: true
   },
   {
     value:  "80-zlin",
@@ -234,6 +235,7 @@ const onSubmit = () => {
                   v-model="selected"
                   group-name="district-selection"
                   :value="option.value"
+                  :disabled="option.disabled"
                 >
                   {{ option.label }}
                 </RadioButtonComponent>
