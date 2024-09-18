@@ -95,7 +95,7 @@ const options = [
   },
   {
     value:  "44-chrudim",
-    label:  "Chrudim (44) <span style=\"font-size: 0.75em\">– odpověděli pouze 2 kandidáti</span>"
+    label:  "Chrudim (44)"
   },
   {
     value:  "47-nachod",
