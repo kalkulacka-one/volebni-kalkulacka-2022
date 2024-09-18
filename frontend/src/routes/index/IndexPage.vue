@@ -126,14 +126,13 @@ const handleSubscribe = async () => {
                     query: { ...route.query },
                   })
                 "
-                disabled
               >
                 Vybrat senátní obvod
                 <template #iconAfter>
                   <IconComponent :icon="mdiArrowRight" />
                 </template>
               </ButtonComponent>
-              <BodyText size="small"> Senátní kalkulačku spustíme již brzy! </BodyText>
+              <BodyText size="small"> 35 otázek, cca 10 minut </BodyText>
             </StackComponent>
           </StackComponent>
         </StackComponent>
