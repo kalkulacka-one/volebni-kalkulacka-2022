@@ -30,11 +30,11 @@ const bestMatch = electionStore.calculator?.candidates.find((x) => {
 });
 const hashTags = [
   "volebnikalkulacka",
-  "evropskevolby",
-  "evropskevolby2024",
-  "eurovolby",
-  "eurovolby2024",
   "volby",
+  "krajskevolby2024",
+  "krajskevolby",
+  "senatnivolby2024",
+  "senatnivolby",
   "volby2024"
 ].join(',');
 const shareDescription = `${t(
