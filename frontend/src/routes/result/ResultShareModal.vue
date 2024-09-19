@@ -30,8 +30,10 @@ const bestMatch = electionStore.calculator?.candidates.find((x) => {
 });
 const hashTags = [
   "wahlrechner",
-  "europawahlen",
-  "europawahlen2024",
+  "nationalratswahlen",
+  "nationalratswahlen2024",
+  "NRW",
+  "NRW2024",
   "wahlen",
   "wahlen2024"
 ].join(',');
