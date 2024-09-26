@@ -60,6 +60,7 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
             <li>wahlbeobachtung.org</li>
             <li>PolEdu - Politics & Education</li>
             <li>BIZEPS - Zentrum für selbstbestimmtes Leben</li>
+            <li>Meine Abgeordneten - So tickt Österreichs Politik</li>
           </ul>
         </BodyText>
         <TitleText size="large" tag="h2"
