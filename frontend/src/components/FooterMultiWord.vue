@@ -104,6 +104,9 @@ const router = useRouter();
         <a href="https://poledu.at"
           ><img class="poledu-logo" :src="'/images/logo-poledu.svg'"
         /></a>
+        <a href="https://www.meineabgeordneten.at/"
+          ><img class="meineabgeordneten-logo" :src="'/images/logo-meineabgeordneten.png'"
+        /></a>
       </div>
     </div>
   </div>

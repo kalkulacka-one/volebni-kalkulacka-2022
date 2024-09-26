@@ -39,7 +39,7 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
       <StackComponent spacing="large" class="section">
         <HeadlineText tag="h1" size="large">Impressum</HeadlineText>
         <BodyText size="large">
-          Wahlrechner.at ist eine zivilgesellschaftliche Initiative der Organisationen KohoVolit.eu, wahlbeobachtung.org, PolEdu - Politics &amp; Education und BIZEPS - Zentrum für selbstbestimmtes Leben.
+          Wahlrechner.at ist eine zivilgesellschaftliche Initiative der Organisationen KohoVolit.eu, wahlbeobachtung.org, PolEdu - Politics, Education und BIZEPS - Zentrum für selbstbestimmtes Leben &amp; Meine Abgeordneten.
         </BodyText>
         <BodyText size="large">
           Es ist ein überparteiliches Instrument, das Wähler:innen hilft, sich vor der Wahl umfassend über die Positionen der kandidierenden Parteien zu informieren.
