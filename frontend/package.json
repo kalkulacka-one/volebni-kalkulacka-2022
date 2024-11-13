@@ -12,6 +12,7 @@
     "dev:db:migrate": "dotenv -c development -- bash -c \"npx prisma migrate dev && npx prisma generate\"",
     "dev:db:reset": "dotenv -c development -- bash -c \"npx prisma migrate reset && npx prisma generate\"",
     "dev:db:studio": "dotenv -c development -- npx prisma studio",
+    "dev:db:pull": "dotenv -c development -- bash -c \"npx prisma db pull\"",
     "dev:vercel": "dotenv -c development -- bash -c \"npm run dev:copy-data && cd .. && vercel dev --local-config ./vercel.development.json\"",
     "dev": "dotenv -c development -- bash -c \"npm run dev:copy-data && vite\"",
     "lint:fix": "npm run lint -- --fix",
@@ -28,7 +29,7 @@
   },
   "dependencies": {
     "@mdi/js": "^7.0.96",
-    "@prisma/client": "^4.6.1",
+    "@prisma/client": "^5.22.0",
     "pinia": "^2.0.20",
     "seedrandom": "^3.0.5",
     "vue": "^3.2.37",
