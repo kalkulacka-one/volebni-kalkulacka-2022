@@ -4,6 +4,7 @@ import {
   convertAnswerToBool,
   UserAnswerEnum,
 } from '@/stores/electionStore';
+import { useSubscriberStore } from '@/stores/subscriberStore';
 import type { CalculatorRest } from '@/types/rest/Calculator';
 import type { ElectionRest } from '@/types/rest/Election';
 import type { Matches, ResultInRest } from '@/types/rest/ResultIn';
@@ -19,6 +20,7 @@ const BASE_URL = '';
 
 const buildResultData = () => {
   const electionStore = useElectionStore();
+  const subscriberStore = useSubscriberStore();
   if (!electionStore.calculator) {
     throw new Error('Calculator undefined');
   } else if (!electionStore.election) {
@@ -59,9 +61,11 @@ const buildResultData = () => {
       score: x.result.result_percent,
     };
   });
+  const subEmail = subscriberStore.subscriber?.email;
   const values = {
     answers: answers,
     matches: matches,
+    subEmail: subEmail,
     calculatorId: electionStore.calculator.id,
   };
   return values;

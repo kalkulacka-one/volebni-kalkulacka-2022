@@ -46,6 +46,7 @@ import DonateBlock from '../../components/DonateBlock.vue';
 import CheckboxComponent from '../../components/design-system/input/CheckboxComponent.vue';
 import { inject } from 'vue';
 import { EmbedKey } from '@/components/utilities/embedding/EmbedKey';
+import { useSubscriberStore } from '@/stores/subscriberStore';
 
 const currentEmbed = inject(EmbedKey);
 
@@ -54,8 +55,10 @@ const route = useRoute();
 const electionStore = useElectionStore();
 
 const userStore = useUserStore();
+const subscriberStore = useSubscriberStore();
 
 const user = computed(() => userStore.user);
+const subscriber = computed(() => subscriberStore.subscriber)
 
 const election = electionStore.election as Election;
 const electionName = election.name;

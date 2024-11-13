@@ -18,6 +18,7 @@ import ResultPageVue from './routes/result/ResultPage.vue';
 import RecapPageVue from './routes/recap/RecapPage.vue';
 import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
+import EmailCollectionPageVue from './routes/email-collection/EmailCollectionPage.vue';
 import QuestionsMethodologyPageVue from './routes/questions-methodology/QuestionsMethodologyPageVue.vue';
 import { useElectionStore } from './stores/electionStore';
 import { useUserStore } from './stores/userStore';
@@ -126,6 +127,14 @@ export const appRoutes = {
     path: '/volby/:election/vyber',
     alias: '/volby/:election',
     component: DistrictSelectionPageVue,
+    meta: {
+      title: 'Archiv volebních kalkulaček',
+    },
+  },
+  emailCollection: {
+    name: 'email-collection',
+    path: '/volby/:election/:district/email',
+    component: EmailCollectionPageVue,
     meta: {
       title: 'Archiv volebních kalkulaček',
     },

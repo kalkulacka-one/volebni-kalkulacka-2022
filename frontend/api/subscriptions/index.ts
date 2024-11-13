@@ -16,7 +16,7 @@ export default async function (req: VercelRequest, res: VercelResponse) {
     });
 
     if (existingUser) {
-      return respond401(res);
+      return res.status(201).json(existingUser)
     }
 
     const user = await prisma.user.create({
