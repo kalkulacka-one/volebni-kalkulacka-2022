@@ -70,15 +70,15 @@ Vítejte ve Volební kalkulačce pro volby do Senátu ČR.
 
 Čeká vás zhruba 40 otázek. Na stejné otázky nám odpověděli kandidáti. Zodpovězení otázek zabere cca 10 minut. Na konci se dozvíte, jak se kandidáti shodují s vašimi názory.
       `
-    : route.params.election === 'prezidentske-2023' &&
-      route.params.district === 'pro-kazdeho'
+    : route.params.election === 'presidential-2023' &&
+      route.params.district === 'national'
     ? `
 Vítejte ve Volební kalkulačce pro prezidentské volby 2023.
 
 Čeká vás 42 otázek. Na stejné otázky nám odpověděly kandidující osobnosti. Zodpovězení otázek zabere zhruba 10 minut. Na konci se dozvíte, jak se jednotliví kandidáti a kandidátky shodují s vašimi názory.
     `
-    : route.params.election === 'prezidentske-2023' &&
-      route.params.district === 'pro-kazdeho-2-kolo'
+    : route.params.election === 'presidential-2023' &&
+      route.params.district === 'national-2-kolo'
     ? `
 Vítejte ve Volební kalkulačce pro 2. kolo prezidentských voleb 2023.
 

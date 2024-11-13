@@ -100,7 +100,7 @@ const handleShareClick = () => {
   shareModal.value?.open();
 };
 onBeforeMount(async () => {
-  if (election.key === 'prezidentske-2023') {
+  if (election.key === 'presidential-2023') {
     if (userStore.user || userStore.user === null) {
       const res = await electionStore.saveResults({
         embedName: currentEmbed,

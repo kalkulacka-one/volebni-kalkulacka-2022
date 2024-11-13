@@ -39,33 +39,16 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
     <div class="prezident-hero">
       <BlobComponent color="blue" class="blob1" />
       <BlobComponent color="red" class="blob2" />
-      <StackComponent spacing="medium" centered class="calc-main">
+      <StackComponent spacing="small" centered class="calc-main">
         <HeadlineText tag="p" size="small">
-          Archiv volebních kalkulaček
+          Fontos választás
         </HeadlineText>
         <StackComponent class="section" spacing="large" centered>
-          <ButtonComponent kind="link" href="https://www.volebnikalkulacka.cz">
-            <div class="button-content">
-              Kalkulačka pro Evropské volby<IconComponent
-                :icon="mdiArrowRight"
-              ></IconComponent>
-            </div>
-          </ButtonComponent>
-        </StackComponent>
-      </StackComponent>
-    </div>
-    <StaticContentLayout>
-      <StackComponent spacing="large">
-        <div ref="info"></div>
-        <TitleText size="large" tag="h2">
-          Volební kalkulačky k už proběhlým volbám
-        </TitleText>
-        <MasonryGrid style="align-self: stretch">
           <CardComponent corner="top-right" padding="medium" border shadow>
             <div class="card-content">
               <div class="card-content-text">
                 <TitleText tag="h3" size="medium"
-                  >Prezidentské volby 2023</TitleText
+                  >Elnökválasztás 2024</TitleText
                 >
                 <BodyText size="medium"
                   >Volby prezidenta České republiky 2023, 42 otázek, cca 10
@@ -78,192 +61,36 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
                 tag="a"
                 @click="
                   router.push({
-                    name: appRoutes.guide.name,
+                    name: appRoutes.emailCollection.name,
                     params: {
                       ...route.params,
-                      election: 'prezidentske-2023',
-                      district: 'pro-kazdeho',
+                      election: 'presidential-2023',
+                      district: 'national',
                     },
                     query: { ...route.query },
                   })
                 "
               >
-                Spustit kalkulačku pro 1. kolo
+                Első forduló
                 <template #iconAfter>
                   <IconComponent :icon="mdiArrowRight" />
                 </template>
               </ButtonComponent>
             </div>
           </CardComponent>
-          <CardComponent corner="top-right" padding="medium" border shadow>
-            <div class="card-content">
-              <div class="card-content-text">
-                <TitleText tag="h3" size="medium"
-                  >Prezidentské volby 2023: 2. kolo</TitleText
-                >
-                <BodyText size="medium"
-                  >Volební kalkulačka pro 2. kolo, 20 otázek, cca 5
-                  minut</BodyText
-                >
-              </div>
-              <ButtonComponent
-                kind="outlined"
-                color="primary"
-                tag="a"
-                @click="
-                  router.push({
-                    name: appRoutes.guide.name,
-                    params: {
-                      ...route.params,
-                      election: 'prezidentske-2023',
-                      district: 'pro-kazdeho-2-kolo',
-                    },
-                    query: { ...route.query },
-                  })
-                "
-              >
-                Spustit kalkulačku
-                <template #iconAfter>
-                  <IconComponent :icon="mdiArrowRight" />
-                </template>
-              </ButtonComponent>
-            </div>
-          </CardComponent>
-          <CardComponent corner="top-right" padding="medium" border shadow>
-            <div class="card-content">
-              <div class="card-content-text">
-                <TitleText tag="h3" size="medium"
-                  >Prezidentské volby 2023: pro nadšence</TitleText
-                >
-                <BodyText size="medium"
-                  >Všech 98 otázek, které jsme položili prezidentským
-                  kandidátům.
-                </BodyText>
-              </div>
-              <ButtonComponent
-                kind="outlined"
-                color="primary"
-                tag="a"
-                @click="
-                  router.push({
-                    name: appRoutes.guide.name,
-                    params: {
-                      ...route.params,
-                      election: 'prezidentske-2023',
-                      district: 'pro-nadsence',
-                    },
-                    query: { ...route.query },
-                  })
-                "
-              >
-                Spustit kalkulačku
-                <template #iconAfter>
-                  <IconComponent :icon="mdiArrowRight" />
-                </template>
-              </ButtonComponent>
-            </div>
-          </CardComponent>
-          <CardComponent corner="top-right" padding="medium" border shadow>
-            <div class="card-content">
-              <div class="card-content-text">
-                <TitleText tag="h3" size="medium"
-                  >Prezidentské volby 2023: pro mladé</TitleText
-                >
-                <BodyText size="medium"
-                  >Otázky, které rezonují mladou generací.<br />
-                  Ve spolupráci s projektem
-                  <a href="https://www.nazorypolitiku.cz" target="_blank">
-                    NázoryPolitiků.cz </a
-                  >.</BodyText
-                >
-              </div>
-              <ButtonComponent
-                kind="outlined"
-                color="primary"
-                tag="a"
-                @click="
-                  router.push({
-                    name: appRoutes.guide.name,
-                    params: {
-                      ...route.params,
-                      election: 'prezidentske-2023',
-                      district: 'pro-mlade',
-                    },
-                    query: { ...route.query },
-                  })
-                "
-              >
-                Spustit kalkulačku
-                <template #iconAfter>
-                  <IconComponent :icon="mdiArrowRight" />
-                </template>
-              </ButtonComponent>
-            </div>
-          </CardComponent>
-          <CardComponent corner="top-right" padding="medium" border shadow>
-            <div class="card-content">
-              <div class="card-content-text">
-                <TitleText tag="h3" size="medium"
-                  >Komunální volby 2022</TitleText
-                >
-                <BodyText size="medium"
-                  >K dispozici jsou kalkulačky pro vybraná města.</BodyText
-                >
-                <div class="divider" />
-                <BodyText size="small"
-                  >Komunální kalkulačku vyplnilo přes 100 tisíc lidí.</BodyText
-                >
-              </div>
-              <ButtonComponent
-                kind="filled"
-                color="primary"
-                @click="
-                  router.push({
-                    name: appRoutes.districtSelection.name,
-                    params: { ...route.params, election: 'komunalni-2022' },
-                    query: { ...route.query },
-                  })
-                "
-                >Spustit kalkulačku</ButtonComponent
-              >
-            </div>
-          </CardComponent>
-          <CardComponent corner="top-left" padding="medium" border shadow>
-            <div class="card-content">
-              <div class="card-content-text">
-                <TitleText tag="h3" size="medium">Senátní volby 2022</TitleText>
-                <BodyText size="medium"
-                  >Pro jednotlivé volební obvody.</BodyText
-                >
-                <BodyText size="medium"
-                  ><a
-                    href="https://2022.programydovoleb.cz/senatni-volby#kde-se-letos-voli"
-                    >Více o senátních obvodech</a
-                  ></BodyText
-                >
-              </div>
-              <div class="divider" />
-              <BodyText size="small"
-                >Senátní kalkulačku vyplnilo přes 25 tisíc lidí.</BodyText
-              >
-              <ButtonComponent
-                color="primary"
-                kind="filled"
-                @click="
-                  router.push({
-                    name: appRoutes.districtSelection.name,
-                    params: { ...route.params, election: 'senatni-2022' },
-                    query: { ...route.query },
-                  })
-                "
-                >Spustit kalkulačku</ButtonComponent
-              >
-            </div>
-          </CardComponent>
-        </MasonryGrid>
+        </StackComponent>
+      </StackComponent>
+    </div>
+    <!-- <StaticContentLayout>
+      <StackComponent spacing="large" centered>
+        <div ref="info"></div>
+        <TitleText size="large" tag="h2">
+          Volební kalkulačky k už proběhlým volbám
+        </TitleText>
+        
       </StackComponent>
       <DonateBlock />
-    </StaticContentLayout>
+    </StaticContentLayout> -->
     <FooterMultiWord class="section" />
   </StickyHeaderLayout>
 </template>
