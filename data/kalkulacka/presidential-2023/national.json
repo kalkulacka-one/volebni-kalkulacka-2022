@@ -1,13 +1,14 @@
 {
   "id": "2e0e6853-4305-4dec-abdc-a47d458b1b95",
-  "name": "1. kolo",
+  "name": "1. fordulo",
   "description": "Kalkulačka vhodná pro všechny občany.",
-  "district_code": "1-kolo",
+  "district_code": "national",
   "show_district_code": false,
   "election": {
     "id": "prezidentske-2023",
     "key": "prezidentske-2023",
-    "name": "Prezidentské volby 2023",    "description": "Letos se volí v prezidentských volbách.",
+    "name": "Prezidentské volby 2023",
+    "description": "Letos se volí v prezidentských volbách.",
     "instructions": {
       "header": "Prezidentske - header",
       "step_1_1": "",
@@ -15,8 +16,8 @@
       "step_1_link": "",
       "step_2_1": "Prezidentske - 2_2"
     },
-    "from": "2023-01-13T14:00:00",
-    "to": "2023-01-14T14:00:00"
+    "from": "2024-11-03T14:00:00",
+    "to": "2025-01-24T14:00:00"
   },
   "questions": [
     {
