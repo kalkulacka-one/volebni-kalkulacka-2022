@@ -41,12 +41,6 @@ const electionDescription = election.description;
 
 const breadcrumbs = electionName;
 
-// TODO: Replace with data from store
-const title =
-  route.params.election === 'senatni-2022'
-    ? 'Add meg az email-címed.'
-    : 'Add meg az email-címed.';
-
 const selected = ref((route.params.district as string) || null);
 
 const email = ref('');
@@ -75,7 +69,6 @@ const onSubmit = async () => {
   });
 
   if (response.ok) {
-    console.debug()
     posting.value = false;
     success.value = true;
     message.value = 'Sikeres feliratkozás!';
@@ -97,9 +90,11 @@ const onSubmit = async () => {
       query: { ...route.query },
     });
   } else {
+    const error = await response.json();
+
     posting.value = false;
     success.value = false;
-    message.value = 'Sikeretelen feliratkozás!';
+    emailError.value = error.detail;
   }
 };
 </script>
@@ -170,9 +165,6 @@ const onSubmit = async () => {
           <BodyText size="small" centered>
             Hinterlassen Sie uns Ihre E-Mail-Adresse und wir informieren Sie immer, wenn wir einen neuen Rechner starten.
           </BodyText>
-          <BodyText v-if="success" size="small">
-            {{ message }}
-          </BodyText>
           <form v-if="!success">
             <StackComponent
               horizontal
@@ -202,7 +194,7 @@ const onSubmit = async () => {
             </StackComponent>
           </form>
           <BodyText v-if="!success" tag="p" size="small">{{
-            'Vigyázz, valami nem jó!'
+            'Ha megadod az email-címed, azzal elfogadod az erre vonatkozó adatvédelmi szabályzatot.'
           }}</BodyText>
         </StackComponent>
       </section>

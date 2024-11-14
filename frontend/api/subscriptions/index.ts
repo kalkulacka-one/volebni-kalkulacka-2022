@@ -11,6 +11,10 @@ export default async function (req: VercelRequest, res: VercelResponse) {
       return respond401(res, 'Email is required.');
     }
 
+    if (!isValidEmail(email)) {
+      return respond401(res, 'Email is invalid.');
+    }
+
     const existingUser = await prisma.user.findUnique({
       where: { email },
     });
@@ -30,4 +34,8 @@ export default async function (req: VercelRequest, res: VercelResponse) {
   } else {
     return respond405(res, req.method);
   }
+}
+
+function isValidEmail(email: string) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
