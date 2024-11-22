@@ -47,10 +47,10 @@ const showDistrictCode = electionStore.districts.filter(
 const districtNameWithCode = showDistrictCode
   ? `${districtName} (${districtCode})`
   : districtName;
-
-const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
-const selectedTags = ref(new Set<string>(electionStore.uniqueQuestionTags));
-const selectedCandidateIds = ref(new Set<string>());
+  
+  const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
+  const selectedTags = ref(new Set<string>(electionStore.uniqueQuestionTags));
+  const selectedCandidateIds = ref(new Set<string>());
 
 const handlePreviousClick = () => {
   router.push({
@@ -66,6 +66,11 @@ const questions = electionStore.calculator?.questions as Question[];
 const answers = electionStore.answers;
 const candidates = electionStore?.calculator?.candidates as Candidate[];
 const candidateAnswers = electionStore.calculator?.answers as CandidateAnswer[];
+
+for (const candidate of candidates) {
+  candidate.is_active = true;
+}
+
 </script>
 
 <template>

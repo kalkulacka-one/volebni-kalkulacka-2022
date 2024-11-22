@@ -14,6 +14,7 @@ import EmbedProviderWrapper from '@/components/utilities/embedding/EmbedProvider
 import GuidePageVue from './routes/guide/GuidePage.vue';
 import IndexPageVue from './routes/index/IndexPage.vue';
 import QuestionPageVue from './routes/question/QuestionPage.vue';
+import PreferredCandidatePageVue from './routes/preferred-candidate/PreferredCandidatePage.vue';
 import ResultPageVue from './routes/result/ResultPage.vue';
 import RecapPageVue from './routes/recap/RecapPage.vue';
 import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
@@ -157,6 +158,14 @@ export const appRoutes = {
       hasNumber: true,
     },
     beforeEnter: questionGuard,
+  },
+  preferredCandidate: {
+    name: 'preferred-candidate',
+    path: '/volby/:election/:district/otazka/kandidat',
+    component: PreferredCandidatePageVue,
+    meta: {
+      title: 'Preferovaný kandidát - Archiv volebních kalkulaček',
+    },
   },
   recap: {
     name: 'recap',

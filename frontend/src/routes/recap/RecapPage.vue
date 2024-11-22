@@ -65,6 +65,14 @@ const handleShowResultsClick = () => {
   });
 };
 
+const goToEmailCollectionPage = () => {
+  router.push({
+    name: appRoutes.emailCollection.name,
+    params: { ...route.params },
+    query: { ...route.query },
+  });
+};
+
 const availableTags: Set<string> = new Set(['All']);
 const selectedTag = ref('All');
 electionStore.calculator?.questions.forEach((q) =>
@@ -158,7 +166,7 @@ const isCardHidden = (index: number) => {
                 class="desktop"
                 kind="filled"
                 color="primary"
-                @click="handleShowResultsClick"
+                @click="goToEmailCollectionPage"
               >
                 <template #icon>
                   <IconComponent :icon="vkiLogoPercent" />
@@ -201,7 +209,7 @@ const isCardHidden = (index: number) => {
                 <ButtonComponent
                   kind="filled"
                   color="primary"
-                  @click="handleShowResultsClick"
+                  @click="goToEmailCollectionPage"
                 >
                   Zobrazit výsledky
                   <template #iconAfter>

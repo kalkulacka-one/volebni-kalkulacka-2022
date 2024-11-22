@@ -34,6 +34,8 @@ export default async function (req: VercelRequest, res: VercelResponse) {
     const body = getBody(req, res);
     const answers = body.answers;
     const matches = body.matches;
+    const choiceId = body.choiceId as string;
+    const subEmail = body.subEmail as string;
     const updateToken = req.body.updateToken;
     const existingResult = await prisma.answers
       .findUniqueOrThrow({
@@ -75,6 +77,8 @@ export default async function (req: VercelRequest, res: VercelResponse) {
         data: {
           answers: answers,
           matches: matches,
+          choiceId: choiceId,
+          subEmail: subEmail,
           userId: auth?.user?.id,
         },
       })

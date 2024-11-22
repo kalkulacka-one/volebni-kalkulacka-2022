@@ -52,7 +52,7 @@ const message = ref();
 const onSubmit = async () => {
   console.log('handleSubmit');
   if (email.value === '') {
-    emailError.value = 'Add meg az email-címed!';
+    emailError.value = 'Missing email';
     return;
   } else {
     emailError.value = undefined;
@@ -80,13 +80,18 @@ const onSubmit = async () => {
       email: subscriber.email,
     })
 
-    router.push({
-      name: appRoutes.guide.name,
+    /* router.push({
+      name: appRoutes.result.name,
       params: {
         ...route.params,
         election: 'presidential-2023',
         district: 'national',
       },
+      query: { ...route.query },
+    }); */
+
+    router.push({
+      name: appRoutes.preferredCandidate.name,
       query: { ...route.query },
     });
   } else {
@@ -96,6 +101,26 @@ const onSubmit = async () => {
     success.value = false;
     emailError.value = error.detail;
   }
+};
+
+const onRefuse = async () => {
+  subscriberStore.setSubscriber({
+      id: undefined,
+      email: undefined,
+    })
+  /* router.push({
+    name: appRoutes.result.name,
+    params: {
+      ...route.params,
+      election: 'presidential-2023',
+      district: 'national',
+    },
+    query: { ...route.query },
+  }); */
+  router.push({
+    name: appRoutes.preferredCandidate.name,
+    query: { ...route.query },
+  });
 };
 </script>
 
@@ -117,7 +142,7 @@ const onSubmit = async () => {
                     })
                   "
                 >
-                  Nem adom
+                  Vissza a főoldalra
                   <template #iconAfter>
                     <IconComponent :icon="mdiCloseCircleOutline" />
                   </template>
@@ -160,10 +185,10 @@ const onSubmit = async () => {
       <section class="subscribe">
         <StackComponent spacing="small" centered>
           <TitleText size="large" tag="h2">
-            Add meg az email-címed.
+            Adresa de contact
           </TitleText>
-          <BodyText size="small" centered>
-            Hinterlassen Sie uns Ihre E-Mail-Adresse und wir informieren Sie immer, wenn wir einen neuen Rechner starten.
+          <BodyText size="small" centered class="bodyText">
+            Dorim să vă transmitem analiza noastră a rezultatelor complete ale acestui sondaj după alegeri, adică câți oameni au fost de acord cu fiecare declarație politică de mai sus dintre toți respondenții și dintre susținătorii diferitelor partide și cum au fost recomandate recomandările pe care le codificăm. pozițiile părților diferă de preferințele lor declarate de partid. Vă rugăm să scrieți mai jos pe o adresă de e-mail unde putem trimite acest raport?
           </BodyText>
           <form v-if="!success">
             <StackComponent
@@ -196,6 +221,16 @@ const onSubmit = async () => {
           <BodyText v-if="!success" tag="p" size="small">{{
             'Ha megadod az email-címed, azzal elfogadod az erre vonatkozó adatvédelmi szabályzatot.'
           }}</BodyText>
+          <ButtonComponent
+              kind="outlined"
+              color="neutral"
+              size="small"
+              :loading="posting"
+              @click.prevent="onRefuse"
+              class="refuse"
+            >
+              Nem szeretném megadni az email-címem
+            </ButtonComponent>
         </StackComponent>
       </section>
       <!-- <form id="district-form" ref="form" @submit.prevent="onSubmit">
@@ -269,8 +304,16 @@ const onSubmit = async () => {
   }
 }
 
+.bodyText {
+  max-width: 800px;
+}
+
 form {
   display: contents;
+}
+
+.refuse {
+  margin-top: var(--spacing-medium);
 }
 
 .bottom-bar {

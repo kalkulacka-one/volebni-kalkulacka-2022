@@ -42,10 +42,10 @@ import ResultShareModal from './ResultShareModal.vue';
 import { getDistrictCode } from '@/common/utils';
 import BodyText from '../../components/design-system/typography/BodyText.vue';
 import ErrorModal from '../../components/ErrorModal.vue';
-import DonateBlock from '../../components/DonateBlock.vue';
 import CheckboxComponent from '../../components/design-system/input/CheckboxComponent.vue';
 import { inject } from 'vue';
 import { EmbedKey } from '@/components/utilities/embedding/EmbedKey';
+import { useSubscriberStore } from '@/stores/subscriberStore';
 
 const currentEmbed = inject(EmbedKey);
 
@@ -54,8 +54,10 @@ const route = useRoute();
 const electionStore = useElectionStore();
 
 const userStore = useUserStore();
+const subscriberStore = useSubscriberStore();
 
 const user = computed(() => userStore.user);
+const subscriber = computed(() => subscriberStore.subscriber)
 
 const election = electionStore.election as Election;
 const electionName = election.name;
@@ -73,9 +75,10 @@ const districtNameWithCode = showDistrictCode
 const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
 
 const handlePreviousClick = () => {
+  // go to the last question
   router.push({
-    name: appRoutes.recap.name,
-    params: { ...route.params },
+    name: appRoutes.question.name,
+    params: { ...route.params, nr: electionStore.questionCount },
     query: { ...route.query },
   });
 };
@@ -95,49 +98,6 @@ const handleShowComparsionClick = () => {
     query: { ...route.query },
   });
 };
-
-onBeforeMount(async () => {
-  if (election.key === 'presidential-2023') {
-    if (userStore.user || userStore.user === null) {
-      const res = await electionStore.saveResults({
-        embedName: currentEmbed,
-        user: userStore.user as User | null | undefined,
-      });
-      console.debug(res);
-    } else {
-      userStore.$subscribe(async (mutation, state) => {
-        const res = await electionStore.saveResults({
-          embedName: currentEmbed,
-          user: state.user as User | null | undefined,
-        });
-        console.debug(res);
-      });
-    }
-  }
-});
-
-const signUpParams = computed(() => {
-  const returnPath = router.resolve({
-    name: appRoutes.share.name,
-    params: { uuid: electionStore.resultsId },
-  }).path;
-
-  return {
-    name: appRoutes.register.name,
-    params: {
-      ...route.params,
-    },
-    query: {
-      returnPath,
-      answerId: electionStore.resultsId,
-      updateToken: electionStore.resultsUpdateToken,
-    },
-  };
-});
-
-const signUpPath = computed(() => {
-  return router.resolve(signUpParams.value).fullPath;
-});
 
 console.debug(encodeResults(electionStore.answers));
 
@@ -234,7 +194,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                 <IconComponent :icon="mdiArrowLeft" title="Rekapitulace" />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="medium">Moje shoda</TitleText>
+            <TitleText tag="h2" size="medium">Ha ma lenne a választás, kire szavazna?</TitleText>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
         <ResponsiveWrapper medium large extra-large huge>
@@ -244,19 +204,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                 <IconComponent :icon="mdiArrowLeft" title="Rekapitulace" />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="large">Moje shoda</TitleText>
-            <template #after>
-              <div class="navbar-btn-wrapper">
-                <ButtonComponent
-                  v-if="election.key === 'presidential-2023'"
-                  kind="outlined"
-                  color="primary"
-                  @click="handleShowComparsionClick"
-                >
-                  Válaszok összehasonlítása
-                </ButtonComponent>
-              </div>
-            </template>
+            <TitleText tag="h2" size="large">Ha ma lenne a választás, kire szavazna?</TitleText>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
       </template>
@@ -274,9 +222,8 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
             Zobrazit nepostupující kandidáty
           </CheckboxComponent>
           <ResultCategory
-            :result="resultsGeneral"
             category="general"
-            :max-visible-candidates="5"
+            :max-visible-candidates="50"
           />
         </StackComponent>
         <StackComponent v-else class="main" spacing="medium">
@@ -336,34 +283,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
               </StackComponent>
             </StackComponent>
           </CardComponent>
-          <DonateBlock />
         </StackComponent>
-
-        <template #bottom-bar>
-          <ResponsiveWrapper extra-small small>
-            <BottomBar>
-              <div class="bottom-bar-grid">
-                <ButtonComponent
-                  kind="outlined"
-                  color="primary"
-                  @click="handleShowComparsionClick"
-                >
-                  Válaszok összehasonlítása
-                </ButtonComponent>
-                <!-- <ButtonComponent
-                  kind="filled"
-                  color="primary"
-                  @click="goToPreferredCandidate"
-                >
-                  Tovább
-                  <template #iconAfter>
-                    <IconComponent :icon="mdiArrowRight" />
-                  </template>
-                </ButtonComponent> -->
-              </div>
-            </BottomBar>
-          </ResponsiveWrapper>
-        </template>
       </BottomBarWrapper>
     </StickyHeaderLayout>
   </BackgroundComponent>
@@ -406,6 +326,5 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
 .bottom-bar-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--spacing-small);
 }
 </style>

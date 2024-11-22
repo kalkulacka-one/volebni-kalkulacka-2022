@@ -34,7 +34,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
 <template>
   <StickyHeaderLayout>
     <template #header>
-      <NavigationBar transparent with-account :user="user" />
+      <NavigationBar transparent />
     </template>
     <div class="prezident-hero">
       <BlobComponent color="blue" class="blob1" />
@@ -61,7 +61,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
                 tag="a"
                 @click="
                   router.push({
-                    name: appRoutes.emailCollection.name,
+                    name: appRoutes.guide.name,
                     params: {
                       ...route.params,
                       election: 'presidential-2023',
