@@ -229,7 +229,7 @@ const onRefuse = async () => {
               @click.prevent="onRefuse"
               class="refuse"
             >
-              Nu vreau să ofer adresa mea de email az email-címem
+              Nu vreau să ofer adresa mea de email
             </ButtonComponent>
         </StackComponent>
       </section>
