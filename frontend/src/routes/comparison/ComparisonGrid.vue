@@ -33,7 +33,7 @@ export interface Props {
 
 const props = defineProps<Props>();
 const isQuestionInTagSet = (question: Question) => {
-  if (!props.selectedTags) {
+  if (!props.selectedTags?.size) {
     return true;
   }
   return (

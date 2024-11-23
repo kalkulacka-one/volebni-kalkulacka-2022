@@ -64,47 +64,13 @@ const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
 
 // TODO: Replace with data from store
 const text =
-  route.params.election === 'senatni-2022'
-    ? `
-Vítejte ve Volební kalkulačce pro volby do Senátu ČR.
-
-Čeká vás zhruba 40 otázek. Na stejné otázky nám odpověděli kandidáti. Zodpovězení otázek zabere cca 10 minut. Na konci se dozvíte, jak se kandidáti shodují s vašimi názory.
-      `
-    : route.params.election === 'presidential-2023' &&
-      route.params.district === 'national'
+  route.params.election === 'parliamentary-2024' &&
+      route.params.district === 'global'
     ? `
 Vítejte ve Volební kalkulačce pro prezidentské volby 2023.
 
 Čeká vás 42 otázek. Na stejné otázky nám odpověděly kandidující osobnosti. Zodpovězení otázek zabere zhruba 10 minut. Na konci se dozvíte, jak se jednotliví kandidáti a kandidátky shodují s vašimi názory.
-    `
-    : route.params.election === 'presidential-2023' &&
-      route.params.district === 'national-2-kolo'
-    ? `
-Vítejte ve Volební kalkulačce pro 2. kolo prezidentských voleb 2023.
-
-Vybrali jsme pro vás 20 otázek, ve kterých se postupující kandidáti – Petr Pavel a Andrej Babiš – liší. Zodpovězení otázek zabere zhruba 5 minut. Na konci se dozvíte, jak se kandidáti shodují s vašimi názory.
-    `
-    : route.params.election === 'prezidentske-2023' &&
-      route.params.district === 'pro-nadsence'
-    ? `
-Vítejte ve Volební kalkulačce pro prezidentské volby 2023.
-
-Čeká vás 98 otázek. Na stejné otázky nám odpověděly kandidující osobnosti. Zodpovězení otázek zabere zhruba 10 minut. Na konci se dozvíte, jak se jednotliví kandidáti a kandidátky shodují s vašimi názory.
-    `
-    : route.params.election === 'prezidentske-2023' &&
-      route.params.district === 'pro-mlade'
-    ? `
-Volební kalkulačka pro mladé byla vytvořena ve **spolupráci s projektem [NázoryPolitiků.cz](https://www.nazorypolitiku.cz)**.
-
-Projekt vznikl v roce 2020 jako iniciativa středoškolských studentů. Tým se z původní dvojice rozrostl na **15 studentů, kteří se snaží pomáhat voličům** orientovat se v názorech kandidátů. Za **3 roky** pomohl projekt s rozhodováním více než **100 000 voličů**.
-
-Na základě průzkumů a po konzultacích se sociology bylo vybráno **16 otázek, které mládež a prvovoliči považují za stěžejní témata** voleb. Naší vizí je přinést věcnost a přehlednost do politiky, zvýšit volební účast a podpořit tak demokracii.
-    `
-    : `
-Vítejte ve Volební kalkulačce pro komunální volby 2022.
-
-Čeká vás zhruba 40 otázek. Na stejné otázky nám odpověděly kandidující strany. Zodpovězení otázek zabere cca 10 minut. Na konci se dozvíte, jak se kandidující strany shodují s vašimi názory.
-    `;
+    ` : ``;
 
 const forwardRoute = computed(
   () =>

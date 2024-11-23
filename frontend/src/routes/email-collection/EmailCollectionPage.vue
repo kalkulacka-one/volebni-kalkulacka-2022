@@ -80,16 +80,6 @@ const onSubmit = async () => {
       email: subscriber.email,
     })
 
-    /* router.push({
-      name: appRoutes.result.name,
-      params: {
-        ...route.params,
-        election: 'presidential-2023',
-        district: 'national',
-      },
-      query: { ...route.query },
-    }); */
-
     router.push({
       name: appRoutes.preferredCandidate.name,
       query: { ...route.query },
@@ -108,15 +98,6 @@ const onRefuse = async () => {
       id: undefined,
       email: undefined,
     })
-  /* router.push({
-    name: appRoutes.result.name,
-    params: {
-      ...route.params,
-      election: 'presidential-2023',
-      district: 'national',
-    },
-    query: { ...route.query },
-  }); */
   router.push({
     name: appRoutes.preferredCandidate.name,
     query: { ...route.query },
