@@ -80,7 +80,7 @@ const initials = computed(() => {
     <FilledCircle
       class="circle"
       :size="sizePairs[props.size].avatar"
-      :background-color="props.backgroundColor"
+      background-color="#fff"
     >
       <template v-if="backgroundImage">
         <img class="image" :src="backgroundImage" />
@@ -124,7 +124,7 @@ const initials = computed(() => {
   }
 
   .image {
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
     height: 100%;
   }

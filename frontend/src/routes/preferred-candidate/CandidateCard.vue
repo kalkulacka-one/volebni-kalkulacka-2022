@@ -80,7 +80,10 @@ const handleVote = (candidateId: string | null) => {
       </AvatarComponent>
     </div>
     <div class="text">
-      <BodyText class="desktop mobile" tag="p" size="medium">
+      <BodyText class="desktop" tag="p" size="medium">
+        <strong>{{ candidate?.name }}</strong>
+      </BodyText>
+      <BodyText class="mobile" tag="p" size="medium">
         <strong>{{ candidate?.short_name }}</strong>
       </BodyText>
     </div>
