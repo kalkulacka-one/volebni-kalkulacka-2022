@@ -63,7 +63,7 @@ const handleVote = (option: string | null) => {
         color="neutral"
         @click="handleVote('no-vote')"
       >
-        Nem tudom
+        Nu știu
         <template>
           <IconComponent :icon="mdiArrowRight" />
         </template>
@@ -73,7 +73,7 @@ const handleVote = (option: string | null) => {
         color="neutral"
         @click="handleVote('no-answer')"
       >
-        Nem mennék el szavazni
+        Nu aș merge la vot
         <template>
           <IconComponent :icon="mdiArrowRight" />
         </template>

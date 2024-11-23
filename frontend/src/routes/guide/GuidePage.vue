@@ -140,7 +140,7 @@ const previousButtonTitle = computed(() => {
 
 const nextButtonTitle = computed(() => {
   if (currentStep.value < stepsCount) {
-    return 'Další krok';
+    return 'Pasul următor';
   } else {
     return 'První otázka';
   }
@@ -234,7 +234,7 @@ const handlePreviousClick = () => {
                     })
                   "
                 >
-                  Zpět na hlavní stránku
+                  Înapoi la pagina principală
                   <template #iconAfter>
                     <IconComponent :icon="mdiCloseCircleOutline" />
                   </template>
@@ -253,7 +253,7 @@ const handlePreviousClick = () => {
                   <template #icon>
                     <IconComponent
                       :icon="mdiCloseCircleOutline"
-                      title="Zpět na hlavní stránku"
+                      title="Înapoi la pagina principală"
                     />
                   </template>
                 </ButtonComponent>
@@ -355,7 +355,7 @@ const handlePreviousClick = () => {
                   :icon="vkiStarFilled"
                   color="rgb(var(--palette-yellow))"
                 />
-                <BodyText size="medium">= pro mě důležité</BodyText>
+                <BodyText size="medium">= Important pentru mine</BodyText>
               </StackComponent>
             </CardComponent>
             <BodyText size="medium">
@@ -415,7 +415,7 @@ const handlePreviousClick = () => {
                 kind="link"
                 @click="goToQuestions"
               >
-                Přeskočit návod
+                Sari peste instrucțiuni
                 <template #iconAfter>
                   <IconComponent :icon="mdiFastForward" />
                 </template>
@@ -444,7 +444,7 @@ const handlePreviousClick = () => {
                 kind="link"
                 @click="goToQuestions"
               >
-                Přeskočit návod
+                Sari peste instrucțiuni
                 <template #iconAfter>
                   <IconComponent :icon="mdiFastForward" />
                 </template>

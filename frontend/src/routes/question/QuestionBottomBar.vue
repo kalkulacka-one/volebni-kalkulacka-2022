@@ -50,10 +50,10 @@ const starIcon = computed(() =>
               :icon="starIcon"
               :color="starColor"
               size="large"
-              title="Pro mě důležité"
+              title="Important pentru mine"
             />
           </IconButton>
-          <BodyText class="star-text" size="medium">Pro mě důležité</BodyText>
+          <BodyText class="star-text" size="medium">Important pentru mine</BodyText>
         </StackComponent>
       </ResponsiveWrapper>
       <ResponsiveWrapper extra-small small medium>
@@ -62,7 +62,7 @@ const starIcon = computed(() =>
             :icon="starIcon"
             :color="starColor"
             size="large"
-            title="Pro mě důležité"
+            title="Important pentru mine"
             @click="starClick"
           />
         </IconButton>
@@ -78,7 +78,7 @@ const starIcon = computed(() =>
           <template #icon>
             <IconComponent :icon="vkiLogoInFavour" />
           </template>
-          Ano
+          Da
         </ButtonComponent>
         <ButtonComponent
           class="against"
@@ -90,7 +90,7 @@ const starIcon = computed(() =>
           <template #icon>
             <IconComponent :icon="vkiLogoAgainst" />
           </template>
-          Ne
+          Nu
         </ButtonComponent>
       </ResponsiveWrapper>
       <ResponsiveWrapper extra-small>

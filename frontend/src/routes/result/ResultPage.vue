@@ -198,7 +198,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                     })
                   "
                 >
-                  Zpět na hlavní stránku
+                  Înapoi la pagina principală
                   <template #iconAfter>
                     <IconComponent :icon="mdiCloseCircleOutline" />
                   </template>
@@ -217,7 +217,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   <template #icon>
                     <IconComponent
                       :icon="mdiCloseCircleOutline"
-                      title="Zpět na hlavní stránku"
+                      title="Înapoi la pagina principală"
                     />
                   </template>
                 </ButtonComponent>
@@ -231,20 +231,20 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           <SecondaryNavigationBar centered-title>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Rekapitulace" />
+                <IconComponent :icon="mdiArrowLeft" title="Recapitulare" />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="medium">Moje shoda</TitleText>
+            <TitleText tag="h2" size="medium">Potrivirea mea</TitleText>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
         <ResponsiveWrapper medium large extra-large huge>
           <SecondaryNavigationBar>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Rekapitulace" />
+                <IconComponent :icon="mdiArrowLeft" title="Recapitulare" />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="large">Moje shoda</TitleText>
+            <TitleText tag="h2" size="large">Potrivirea mea</TitleText>
             <template #after>
               <div class="navbar-btn-wrapper">
                 <ButtonComponent
@@ -253,7 +253,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   color="primary"
                   @click="handleShowComparsionClick"
                 >
-                  Válaszok összehasonlítása
+                  Compară răspunsurile
                 </ButtonComponent>
               </div>
             </template>
@@ -348,7 +348,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   color="primary"
                   @click="handleShowComparsionClick"
                 >
-                  Válaszok összehasonlítása
+                  Compară răspunsurile
                 </ButtonComponent>
                 <!-- <ButtonComponent
                   kind="filled"

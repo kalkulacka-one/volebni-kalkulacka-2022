@@ -51,7 +51,7 @@ watch(
 <template>
   <form>
     <TitleText class="tag-filter-title" tag="h3" size="small">
-      Filtrovat podle kandidujících
+      Filtrează după candidați
     </TitleText>
     <pill-group-component>
       <pill-group-item-component

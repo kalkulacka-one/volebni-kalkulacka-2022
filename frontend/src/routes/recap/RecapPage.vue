@@ -117,7 +117,7 @@ const isCardHidden = (index: number) => {
                   <template #icon>
                     <IconComponent
                       :icon="mdiCloseCircleOutline"
-                      title="Zpět na hlavní stránku"
+                      title="Înapoi la pagina principală"
                     />
                   </template>
                 </ButtonComponent>
@@ -132,7 +132,7 @@ const isCardHidden = (index: number) => {
                     })
                   "
                 >
-                  Zpět na hlavní stránku
+                  Înapoi la pagina principală
                   <template #iconAfter>
                     <IconComponent :icon="mdiCloseCircleOutline" />
                   </template>
@@ -150,7 +150,7 @@ const isCardHidden = (index: number) => {
                 <IconComponent :icon="mdiArrowLeft" title="Otázky" />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="medium">Rekapitulace</TitleText>
+            <TitleText tag="h2" size="medium">Recapitulare</TitleText>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
         <ResponsiveWrapper medium large extra-large huge>
@@ -160,7 +160,7 @@ const isCardHidden = (index: number) => {
                 <IconComponent :icon="mdiArrowLeft" title="Otázky" />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="large">Rekapitulace</TitleText>
+            <TitleText tag="h2" size="large">Recapitulare</TitleText>
             <template #after>
               <ButtonComponent
                 class="desktop"
@@ -171,7 +171,7 @@ const isCardHidden = (index: number) => {
                 <template #icon>
                   <IconComponent :icon="vkiLogoPercent" />
                 </template>
-                Zobrazit výsledky
+                Arată rezultatele
                 <template #iconAfter>
                   <IconComponent :icon="mdiArrowRight" />
                 </template>
@@ -183,8 +183,7 @@ const isCardHidden = (index: number) => {
       <BottomBarWrapper>
         <StackComponent class="main" spacing="small">
           <BodyText size="small">
-            Zde si můžete projít a&nbsp;případně upravit svoje odpovědi
-            a&nbsp;jejich váhu.
+            Aici puteți verifica și ajusta răspunsurile și greutatea lor, dacă este necesar.
           </BodyText>
           <StackComponent class="list" spacing="small">
             <RecapQuestionCard
@@ -211,7 +210,7 @@ const isCardHidden = (index: number) => {
                   color="primary"
                   @click="goToEmailCollectionPage"
                 >
-                  Zobrazit výsledky
+                  Arată rezultatele
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>

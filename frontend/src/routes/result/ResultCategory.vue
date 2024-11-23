@@ -50,7 +50,7 @@ console.debug(visibleCandidates.value);
       class="expand-btn"
       @click="handleExpandClick"
     >
-      {{ isExpanded ? 'Skrýt kandidáty' : 'Zobrazit všechny kandidáty' }}
+      {{ isExpanded ? 'Ascunde candidații' : 'Arată toți candidații' }}
       <template #iconAfter>
         <IconComponent
           :class="[

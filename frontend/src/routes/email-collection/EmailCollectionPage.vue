@@ -142,7 +142,7 @@ const onRefuse = async () => {
                     })
                   "
                 >
-                  Vissza a főoldalra
+                  Înapoi la pagina principalăoldalra
                   <template #iconAfter>
                     <IconComponent :icon="mdiCloseCircleOutline" />
                   </template>
@@ -214,7 +214,7 @@ const onRefuse = async () => {
                 :loading="posting"
                 @click.prevent="onSubmit"
               >
-                Senden
+                Trimit
               </ButtonComponent>
             </StackComponent>
           </form>
@@ -229,7 +229,7 @@ const onRefuse = async () => {
               @click.prevent="onRefuse"
               class="refuse"
             >
-              Nem szeretném megadni az email-címem
+              Nu vreau să ofer adresa mea de email az email-címem
             </ButtonComponent>
         </StackComponent>
       </section>

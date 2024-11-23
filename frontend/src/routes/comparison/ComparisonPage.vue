@@ -91,7 +91,7 @@ for (const candidate of candidates) {
                     })
                   "
                 >
-                  Zpět na hlavní stránku
+                  Înapoi la pagina principală
                   <template #iconAfter>
                     <IconComponent :icon="mdiCloseCircleOutline" />
                   </template>
@@ -110,7 +110,7 @@ for (const candidate of candidates) {
                   <template #icon>
                     <IconComponent
                       :icon="mdiCloseCircleOutline"
-                      title="Zpět na hlavní stránku"
+                      title="Înapoi la pagina principală"
                     />
                   </template>
                 </ButtonComponent>
@@ -124,17 +124,17 @@ for (const candidate of candidates) {
           <SecondaryNavigationBar centered-title>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Moje shoda" />
+                <IconComponent :icon="mdiArrowLeft" title="Potrivirea mea" />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="medium">Porovnání</TitleText>
+            <TitleText tag="h2" size="medium">Comparație</TitleText>
             <template #after>
               <ButtonComponent
                 kind="link"
                 @click="filterMenuIsVisible = !filterMenuIsVisible"
               >
                 <template #icon>
-                  <IconComponent :icon="mdiTune" title="Nastavit porovnání" />
+                  <IconComponent :icon="mdiTune" title="Setează comparația" />
                 </template>
               </ButtonComponent>
             </template>
@@ -154,16 +154,16 @@ for (const candidate of candidates) {
           <SecondaryNavigationBar>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Moje shoda" />
+                <IconComponent :icon="mdiArrowLeft" title="Potrivirea mea" />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="large">Porovnání</TitleText>
+            <TitleText tag="h2" size="large">Comparație</TitleText>
             <template #after>
               <ButtonComponent
                 kind="link"
                 @click="filterMenuIsVisible = !filterMenuIsVisible"
               >
-                Nastavit porovnání
+                Setează comparația
                 <template #iconAfter>
                   <IconComponent :icon="mdiTune" />
                 </template>

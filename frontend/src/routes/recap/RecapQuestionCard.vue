@@ -66,7 +66,7 @@ const toggleClick = () => {
             :icon="starIcon"
             :color="starColor"
             size="large"
-            title="Pro mě důležité"
+            title="Important pentru mine"
           />
         </IconButton>
       </ResponsiveWrapper>
@@ -76,7 +76,7 @@ const toggleClick = () => {
             :icon="starIcon"
             :color="starColor"
             size="medium"
-            title="Pro mě důležité"
+            title="Important pentru mine"
           />
         </IconButton>
       </ResponsiveWrapper>
@@ -130,10 +130,10 @@ const toggleClick = () => {
           <template #icon>
             <IconComponent
               :icon="vkiLogoInFavour"
-              :title="isExpanded ? 'Ano' : undefined"
+              :title="isExpanded ? 'Da' : undefined"
             />
           </template>
-          <template v-if="isExpanded" #default>Ano</template>
+          <template v-if="isExpanded" #default>Da</template>
         </ButtonComponent>
         <ButtonComponent
           v-show="answer.answer === UserAnswerEnum.no || isExpanded"
@@ -147,10 +147,10 @@ const toggleClick = () => {
           <template #icon>
             <IconComponent
               :icon="vkiLogoAgainst"
-              :title="isExpanded ? 'Ne' : undefined"
+              :title="isExpanded ? 'Nu' : undefined"
             />
           </template>
-          <template v-if="isExpanded" #default>Ne</template>
+          <template v-if="isExpanded" #default>Nu</template>
         </ButtonComponent>
         <ButtonComponent
           v-show="answer.answer === UserAnswerEnum.skip && !isExpanded"
@@ -161,7 +161,7 @@ const toggleClick = () => {
           <template #icon>
             <IconComponent
               :icon="vkiLogoNeutral"
-              :title="isExpanded ? 'Bez odpovědi' : undefined"
+              :title="isExpanded ? 'Fără răspuns' : undefined"
             />
           </template>
         </ButtonComponent>
@@ -179,7 +179,7 @@ const toggleClick = () => {
           <template #icon>
             <IconComponent
               :icon="vkiLogoInFavour"
-              :title="isExpanded ? 'Ano' : undefined"
+              :title="isExpanded ? 'Da' : undefined"
             />
           </template>
         </ButtonComponent>
@@ -195,7 +195,7 @@ const toggleClick = () => {
           <template #icon>
             <IconComponent
               :icon="vkiLogoAgainst"
-              :title="isExpanded ? 'Ne' : undefined"
+              :title="isExpanded ? 'Nu' : undefined"
             />
           </template>
         </ButtonComponent>
@@ -208,7 +208,7 @@ const toggleClick = () => {
           <template #icon>
             <IconComponent
               :icon="vkiLogoNeutral"
-              :title="isExpanded ? 'Bez odpovědi' : undefined"
+              :title="isExpanded ? 'Fără răspuns' : undefined"
             />
           </template>
         </ButtonComponent>

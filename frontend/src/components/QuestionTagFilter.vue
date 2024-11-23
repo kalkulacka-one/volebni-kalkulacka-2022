@@ -39,7 +39,7 @@ watch(
 <template>
   <form>
     <TitleText class="tag-filter-title" tag="h3" size="small">
-      Filtrovat podle témat
+      Filtrează după teme
     </TitleText>
     <pill-group-component>
       <pill-group-item-component

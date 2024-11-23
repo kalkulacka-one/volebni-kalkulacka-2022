@@ -158,7 +158,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                     })
                   "
                 >
-                  Zpět na hlavní stránku
+                  Înapoi la pagina principală
                   <template #iconAfter>
                     <IconComponent :icon="mdiCloseCircleOutline" />
                   </template>
@@ -177,7 +177,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   <template #icon>
                     <IconComponent
                       :icon="mdiCloseCircleOutline"
-                      title="Zpět na hlavní stránku"
+                      title="Înapoi la pagina principală"
                     />
                   </template>
                 </ButtonComponent>
@@ -191,20 +191,20 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           <SecondaryNavigationBar centered-title>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Rekapitulace" />
+                <IconComponent :icon="mdiArrowLeft" title="Recapitulare" />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="medium">Ha ma lenne a választás, kire szavazna?</TitleText>
+            <TitleText tag="h2" size="medium">Dacă alegerile ar fi astăzi, pe cine ați vota?</TitleText>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
         <ResponsiveWrapper medium large extra-large huge>
           <SecondaryNavigationBar>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Rekapitulace" />
+                <IconComponent :icon="mdiArrowLeft" title="Recapitulare" />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="large">Ha ma lenne a választás, kire szavazna?</TitleText>
+            <TitleText tag="h2" size="large">Dacă alegerile ar fi astăzi, pe cine ați vota?</TitleText>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
       </template>
