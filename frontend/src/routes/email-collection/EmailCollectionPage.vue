@@ -85,6 +85,10 @@ const onSubmit = async () => {
       query: { ...route.query },
     });
   } else {
+    if (response.status === 500) [
+      emailError.value = 'Internal server error',
+      onRefuse()
+    ]
     const error = await response.json();
 
     posting.value = false;
