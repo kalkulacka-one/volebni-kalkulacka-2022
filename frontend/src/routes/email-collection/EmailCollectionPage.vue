@@ -172,7 +172,7 @@ const onRefuse = async () => {
                 <IconComponent :icon="mdiArrowLeft" title="Recapitulare" />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="medium">Adresa de contact</TitleText>
+            <TitleText tag="h2" size="medium">Lasă-ne adresa ta de email</TitleText>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
         <ResponsiveWrapper medium large extra-large huge>
@@ -182,7 +182,7 @@ const onRefuse = async () => {
                 <IconComponent :icon="mdiArrowLeft" title="Recapitulare" />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="large">Adresa de contact</TitleText>
+            <TitleText tag="h2" size="large">Lasă-ne adresa ta de email</TitleText>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
       </template>
@@ -191,13 +191,10 @@ const onRefuse = async () => {
           <template #before />
           <StackComponent spacing="small">
             <BodyText size="medium">
-              Am vrea să te invităm să faci parte dintr-un grup de cetățeni pe care îi vom contacta din nou cu întrebări despre problemele, nevoile și opiniile lor. 
+              Te invităm să faci parte dintr-un grup de cetățeni pe care îi vom contacta din nou cu întrebări despre problemele, nevoile și opiniile lor. Eventualele tale răspunsuri vor fi folosite doar în formă anonimizată, pentru a scrie cercetări academice.
             </BodyText>
             <BodyText size="medium">
-              Am folosi răspunsurile tale doar în formă anonimizată, pentru a scrie cercetări academice. Putem să te contactăm în viitor pentru acest lucru?
-            </BodyText>
-            <BodyText size="medium">
-              Îți vom trimite la aceeași adresă și un rezumat al ceea ce a reieșit din analiza statistică a răspunsurilor la TestVot.
+              Îți vom trimite pe același email și un rezumat a ceea ce a reieșit din analiza statistică a răspunsurilor tale la TestVot.
             </BodyText>
           </StackComponent>
           <template #after />
@@ -243,7 +240,7 @@ const onRefuse = async () => {
                   :loading="posting"
                   @click.prevent="onRefuse"
                 >
-                  Nu vreau să ofer adresa mea de email
+                  Nu ofer adresa de email
                 </ButtonComponent>
             </StackComponent>
           </ResponsiveWrapper>
@@ -286,7 +283,7 @@ const onRefuse = async () => {
                   :loading="posting"
                   @click.prevent="onRefuse"
                 >
-                  Nu vreau să ofer adresa mea de email
+                  Nu ofer adresa de email
                 </ButtonComponent>
             </BottomBar>
           </ResponsiveWrapper>

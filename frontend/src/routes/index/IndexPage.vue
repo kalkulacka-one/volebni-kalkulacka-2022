@@ -48,12 +48,12 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
           <CardComponent corner="top-right" padding="medium" border shadow>
             <div class="card-content">
               <div class="card-content-text">
-                <TitleText tag="h3" size="medium"
-                  >TestVot 2024 alegeri parlamentare</TitleText
-                >
-                <BodyText size="medium"
-                  >MISSING</BodyText
-                >
+                <TitleText tag="h3" size="medium">
+                  TestVot 2024 alegeri parlamentare
+                </TitleText>
+                <!-- <BodyText size="medium">
+                  MISSING
+                </BodyText> -->
               </div>
               <ButtonComponent
                 kind="filled"

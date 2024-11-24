@@ -194,7 +194,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                 <IconComponent :icon="mdiArrowLeft" title="Recapitulare" />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="medium">Dacă alegerile ar fi astăzi, pe cine ați vota?</TitleText>
+            <TitleText tag="h2" size="medium">Dacă alegerile ar fi astăzi, pe cine ai vota?</TitleText>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
         <ResponsiveWrapper medium large extra-large huge>
@@ -204,7 +204,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                 <IconComponent :icon="mdiArrowLeft" title="Recapitulare" />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="large">Dacă alegerile ar fi astăzi, pe cine ați vota?</TitleText>
+            <TitleText tag="h2" size="large">Dacă alegerile ar fi astăzi, pe cine ai vota?</TitleText>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
       </template>

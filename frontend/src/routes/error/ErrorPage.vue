@@ -46,7 +46,7 @@ const pageInfo = computed(() => {
   let imgAlt = '';
   switch (props.case) {
     case ErrorPageEnum.NotFound:
-      header = 'Tato stránka neexistuje';
+      header = 'Această pagină nu există';
       imgSrc = NotFoundImg;
       imgAlt = 'Not Found';
       break;
@@ -115,7 +115,7 @@ const pageInfo = computed(() => {
           size="medium"
           @click="handleHomeClicked"
         >
-          Přejít na hlavní stránku
+          Mergi la pagina principală
           <template #iconAfter>
             <IconComponent size="medium" :icon="mdiArrowRight" />
           </template>

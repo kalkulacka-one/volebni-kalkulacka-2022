@@ -98,7 +98,7 @@ const nextButtonTitle = computed(() => {
   if (currentStep.value < stepsCount) {
     return 'Pasul următor';
   } else {
-    return 'Prima întrebare';
+    return 'Prima afirmație';
   }
 });
 const nextButtonKind = computed(() => {
@@ -251,11 +251,12 @@ const handlePreviousClick = () => {
           </template>
           <StackComponent v-if="currentStep === 1" spacing="small">
             <HeadingComponent kind="title" size="medium">
-              {{ electionName }}
-              <template #secondary>{{ districtNameWithCode }}</template>
+              <!-- {{ electionName }}
+              <template #secondary>{{ districtNameWithCode }}</template> -->
+              Ce face TestVot
             </HeadingComponent>
             <BodyText size="medium">
-              Indiferent dacă și cu cine vei vota, din TestVot poți afla ceva despre viziunea și pozițiile partidelor pe probleme care îi preocupa pe români.
+              Indiferent dacă știi cu cine vei vota, din TestVot poți afla mai multe despre viziunea și pozițiile partidelor pe probleme care îi preocupa pe români.
             </BodyText>
             <BodyText size="medium">
               <MarkdownIt :markdown="`Aplicația TestVot, realizată de [OpenPolitics.ro](https://www.openpolitics.ro/) și [Median Research Centre](https://www.medianresearch.ro/) (MRC), este singura de acest gen din România care a fost disponibilă la toate alegerile naționale începând cu 2008.`"/>
@@ -265,7 +266,7 @@ const handlePreviousClick = () => {
             <HeadingComponent kind="title" size="medium">
               Cum funcționează TestVot
             </HeadingComponent>
-            <BodyText size="medium">Versiunea pentru alegerile parlamentare din 2024 are TBD de întrebări cu 2 variante de răspuns (da / nu).</BodyText>
+            <BodyText size="medium">Versiunea pentru alegerile parlamentare din 2024 are TBD de afirmații cu 2 variante de răspuns (sunt de acord / nu sunt de acord).</BodyText>
             <CardComponent
               corner="bottom-right"
               border
@@ -326,7 +327,7 @@ const handlePreviousClick = () => {
           </StackComponent>
           <StackComponent v-if="currentStep === 4" spacing="small">
             <BodyText size="medium">
-              Dacă nu ai o opinie, nu sunteți sigur(ă) sau nu vrei să răspunzi din alt motiv, poți sări peste o întrebare.
+              Dacă nu ai o opinie, nu ești sigur(ă) sau nu vrei să răspunzi din alt motiv, poți sări peste o întrebare.
             </BodyText>
             <CardComponent
               corner="bottom-right"
@@ -339,7 +340,7 @@ const handlePreviousClick = () => {
               </StackComponent>
             </CardComponent>
             <BodyText size="medium">
-              Aceasta  nu va fi luată în calcul în scorul compatibilității.
+              Aceasta  nu va fi luată în calcul la scorul compatibilității.
             </BodyText>
           </StackComponent>
           <template #after>
