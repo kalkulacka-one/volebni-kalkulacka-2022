@@ -128,7 +128,7 @@ for (const candidate of candidates) {
               </IconButton>
             </template>
             <TitleText tag="h2" size="medium">Comparație</TitleText>
-            <template #after>
+            <!-- <template #after>
               <ButtonComponent
                 kind="link"
                 @click="filterMenuIsVisible = !filterMenuIsVisible"
@@ -137,7 +137,7 @@ for (const candidate of candidates) {
                   <IconComponent :icon="mdiTune" title="Setează comparația" />
                 </template>
               </ButtonComponent>
-            </template>
+            </template> -->
           </SecondaryNavigationBar>
           <QuestionTagFilter
             v-show="filterMenuIsVisible"
@@ -158,7 +158,7 @@ for (const candidate of candidates) {
               </IconButton>
             </template>
             <TitleText tag="h2" size="large">Comparație</TitleText>
-            <template #after>
+            <!-- <template #after>
               <ButtonComponent
                 kind="link"
                 @click="filterMenuIsVisible = !filterMenuIsVisible"
@@ -168,7 +168,7 @@ for (const candidate of candidates) {
                   <IconComponent :icon="mdiTune" />
                 </template>
               </ButtonComponent>
-            </template>
+            </template> -->
           </SecondaryNavigationBar>
           <QuestionTagFilter
             v-show="filterMenuIsVisible"
