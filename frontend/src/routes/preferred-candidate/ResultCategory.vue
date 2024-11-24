@@ -11,6 +11,7 @@ import DividerComponent from '@/components/design-system/containers/DividerCompo
 import { useSubscriberStore } from '@/stores/subscriberStore';
 import { appRoutes } from '@/main';
 import { useRoute, useRouter } from 'vue-router';
+import { mdiArrowRight } from '@mdi/js';
 
 export interface ResultCategoryProps {
   category: TTopics;
@@ -37,7 +38,7 @@ const handleVote = (option: string | null) => {
     subscriberStore.saveVote('did-not-answer');
   } 
   router.push({
-    name: appRoutes.result.name,
+    name: appRoutes.emailCollection.name,
     params: { ...route.params },
     query: { ...route.query },
   });
