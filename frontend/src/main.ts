@@ -78,7 +78,7 @@ export const appRoutes = {
     path: '/',
     component: IndexPageVue,
     meta: {
-      title: 'Archiv volebních kalkulaček',
+      title: 'TestVot 2024',
     },
   },
   aboutUs: {
@@ -120,7 +120,7 @@ export const appRoutes = {
     props: true,
     component: ErrorPageVue,
     meta: {
-      title: 'Error - Archiv volebních kalkulaček',
+      title: 'Error - TestVot 2024',
     },
   },
   districtSelection: {
@@ -129,7 +129,7 @@ export const appRoutes = {
     alias: '/volby/:election',
     component: DistrictSelectionPageVue,
     meta: {
-      title: 'Archiv volebních kalkulaček',
+      title: 'TestVot 2024242424',
     },
   },
   emailCollection: {
@@ -137,7 +137,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/email',
     component: EmailCollectionPageVue,
     meta: {
-      title: 'Archiv volebních kalkulaček',
+      title: 'TestVot 2024',
     },
   },
   guide: {
@@ -146,7 +146,7 @@ export const appRoutes = {
     alias: '/volby/:election/:district',
     component: GuidePageVue,
     meta: {
-      title: 'Návod - Archiv volebních kalkulaček',
+      title: 'Instrucţiuni - TestVot 2024',
     },
   },
   question: {
@@ -154,7 +154,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/otazka/:nr?',
     component: QuestionPageVue,
     meta: {
-      title: 'Otázka $$ - Archiv volebních kalkulaček',
+      title: 'Otázka $$ - TestVot 2024',
       hasNumber: true,
     },
     beforeEnter: questionGuard,
@@ -164,7 +164,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/otazka/kandidat',
     component: PreferredCandidatePageVue,
     meta: {
-      title: 'Preferovaný kandidát - Archiv volebních kalkulaček',
+      title: 'Preferovaný kandidát - TestVot 2024',
     },
   },
   recap: {
@@ -172,7 +172,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/rekapitulace',
     component: RecapPageVue,
     meta: {
-      title: 'Rekapitulace - Archiv volebních kalkulaček',
+      title: 'Rekapitulace - TestVot 2024',
     },
   },
   result: {
@@ -180,7 +180,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/vysledek',
     component: ResultPageVue,
     meta: {
-      title: 'Výsledky - Archiv volebních kalkulaček',
+      title: 'Výsledky - TestVot 2024',
     },
   },
   comparison: {
@@ -188,7 +188,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/srovnani',
     component: ComparisonPageVue,
     meta: {
-      title: 'Porovnaní - Archiv volebních kalkulaček',
+      title: 'Porovnaní - TestVot 2024',
     },
   },
   share: {
@@ -196,7 +196,7 @@ export const appRoutes = {
     path: '/share/:uuid',
     component: SharePageVue,
     meta: {
-      title: 'Moje výsledky - Archiv volebních kalkulaček',
+      title: 'Moje výsledky - TestVot 2024',
     },
   },
   login: {
@@ -204,7 +204,7 @@ export const appRoutes = {
     path: '/prihlaseni',
     component: LoginPageVue,
     meta: {
-      title: 'Přihlášení - Archiv volebních kalkulaček',
+      title: 'Přihlášení - TestVot 2024',
     },
   },
   register: {
@@ -212,7 +212,7 @@ export const appRoutes = {
     path: '/registrace',
     component: RegisterPageVue,
     meta: {
-      title: 'Registrace - Archiv volebních kalkulaček',
+      title: 'Registrace - TestVot 2024',
     },
   },
   profile: {
@@ -220,7 +220,7 @@ export const appRoutes = {
     path: '/muj-profil',
     component: ProfilePageVue,
     meta: {
-      title: 'Můj profil - Archiv volebních kalkulaček',
+      title: 'Můj profil - TestVot 2024',
     },
   },
   profileSettings: {
@@ -228,7 +228,7 @@ export const appRoutes = {
     path: '/nastaveni-profilu',
     component: ProfileSettingsPageVue,
     meta: {
-      title: 'Nastavení profilu - Archiv volebních kalkulaček',
+      title: 'Nastavení profilu - TestVot 2024',
     },
   },
   fallback: {

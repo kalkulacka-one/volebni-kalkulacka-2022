@@ -38,21 +38,21 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
     </template>
     <div class="prezident-hero">
       <BlobComponent color="blue" class="blob1" />
-      <BlobComponent color="red" class="blob2" />
+      <BlobComponent color="yellow" class="blob2" />
+      <BlobComponent color="red" class="blob3" />
       <StackComponent spacing="small" centered class="calc-main">
         <HeadlineText tag="p" size="small">
-          Fontos választás
+          Testează-ți votul!
         </HeadlineText>
         <StackComponent class="section" spacing="large" centered>
           <CardComponent corner="top-right" padding="medium" border shadow>
             <div class="card-content">
               <div class="card-content-text">
                 <TitleText tag="h3" size="medium"
-                  >Elnökválasztás 2024</TitleText
+                  >TestVot 2024 alegeri parlamentare</TitleText
                 >
                 <BodyText size="medium"
-                  >Volby prezidenta České republiky 2023, 42 otázek, cca 10
-                  minut</BodyText
+                  >MISSING</BodyText
                 >
               </div>
               <ButtonComponent
@@ -71,7 +71,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
                   })
                 "
               >
-                Első forduló
+                Continuă
                 <template #iconAfter>
                   <IconComponent :icon="mdiArrowRight" />
                 </template>
@@ -130,6 +130,11 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
   }
 
   .blob2 {
+    position: absolute;
+    right: 35%;
+  }
+
+  .blob3 {
     position: absolute;
     right: 10%;
     top: 10%;
