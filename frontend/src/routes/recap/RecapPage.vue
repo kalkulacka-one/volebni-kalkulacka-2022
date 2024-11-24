@@ -117,7 +117,7 @@ const isCardHidden = (index: number) => {
                   <template #icon>
                     <IconComponent
                       :icon="mdiCloseCircleOutline"
-                      title="Înapoi la pagina principală"
+                      title="Pagina Principală"
                     />
                   </template>
                 </ButtonComponent>
@@ -132,7 +132,7 @@ const isCardHidden = (index: number) => {
                     })
                   "
                 >
-                  Înapoi la pagina principală
+                  Pagina Principală
                   <template #iconAfter>
                     <IconComponent :icon="mdiCloseCircleOutline" />
                   </template>
@@ -147,7 +147,7 @@ const isCardHidden = (index: number) => {
           <SecondaryNavigationBar centered-title>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Otázky" />
+                <IconComponent :icon="mdiArrowLeft" title="Întrebări" />
               </IconButton>
             </template>
             <TitleText tag="h2" size="medium">Recapitulare</TitleText>
@@ -157,7 +157,7 @@ const isCardHidden = (index: number) => {
           <SecondaryNavigationBar>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Otázky" />
+                <IconComponent :icon="mdiArrowLeft" title="Întrebări" />
               </IconButton>
             </template>
             <TitleText tag="h2" size="large">Recapitulare</TitleText>

@@ -52,7 +52,7 @@ const message = ref();
 const onSubmit = async () => {
   console.log('handleSubmit');
   if (email.value === '') {
-    emailError.value = 'Missing email';
+    emailError.value = 'Email Necesar';
     return;
   } else {
     emailError.value = undefined;

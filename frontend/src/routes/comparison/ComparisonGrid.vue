@@ -150,8 +150,8 @@ window.onscroll = calculateStickeHeaderPos;
       >
         <BodyText size="small" :style="{ 'text-align': 'center' }">
           <strong>
-            Răspunsurile<br />
-            mele
+            Răspuns<br />
+            meu
           </strong>
         </BodyText>
       </FilledCircle>

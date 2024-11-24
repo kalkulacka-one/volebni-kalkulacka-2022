@@ -61,7 +61,7 @@ watch(
         :checked="true"
         @click="onSelectAllClicked"
       >
-        Vybrat vše
+        Selectați toate
       </pill-group-item-component>
       <pill-group-item-component
         v-for="(candidateId, idx) in uniqueCandidateIds"

@@ -198,7 +198,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                     })
                   "
                 >
-                  Înapoi la pagina principală
+                  Pagina Principală
                   <template #iconAfter>
                     <IconComponent :icon="mdiCloseCircleOutline" />
                   </template>
@@ -217,7 +217,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   <template #icon>
                     <IconComponent
                       :icon="mdiCloseCircleOutline"
-                      title="Înapoi la pagina principală"
+                      title="Pagina Principală"
                     />
                   </template>
                 </ButtonComponent>

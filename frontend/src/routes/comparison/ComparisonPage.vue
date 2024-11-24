@@ -91,7 +91,7 @@ for (const candidate of candidates) {
                     })
                   "
                 >
-                  Înapoi la pagina principală
+                  Pagina Principală
                   <template #iconAfter>
                     <IconComponent :icon="mdiCloseCircleOutline" />
                   </template>
@@ -110,7 +110,7 @@ for (const candidate of candidates) {
                   <template #icon>
                     <IconComponent
                       :icon="mdiCloseCircleOutline"
-                      title="Înapoi la pagina principală"
+                      title="Pagina Principală"
                     />
                   </template>
                 </ButtonComponent>

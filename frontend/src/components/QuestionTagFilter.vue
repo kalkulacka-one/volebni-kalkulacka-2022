@@ -49,7 +49,7 @@ watch(
         :checked="true"
         @click="onSelectAllClicked"
       >
-        Vybrat vše
+      Selectați toate
       </pill-group-item-component>
       <pill-group-item-component
         v-for="(tag, idx) in uniqueTags"
