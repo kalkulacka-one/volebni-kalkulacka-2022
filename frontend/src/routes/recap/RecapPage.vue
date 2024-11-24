@@ -57,17 +57,9 @@ const handlePreviousClick = () => {
   });
 };
 
-const handleShowResultsClick = () => {
+const goToPreferredCandidatePage = () => {
   router.push({
-    name: appRoutes.result.name,
-    params: { ...route.params },
-    query: { ...route.query },
-  });
-};
-
-const goToEmailCollectionPage = () => {
-  router.push({
-    name: appRoutes.emailCollection.name,
+    name: appRoutes.preferredCandidate.name,
     params: { ...route.params },
     query: { ...route.query },
   });
@@ -166,7 +158,7 @@ const isCardHidden = (index: number) => {
                 class="desktop"
                 kind="filled"
                 color="primary"
-                @click="goToEmailCollectionPage"
+                @click="goToPreferredCandidatePage"
               >
                 <template #icon>
                   <IconComponent :icon="vkiLogoPercent" />
@@ -208,7 +200,7 @@ const isCardHidden = (index: number) => {
                 <ButtonComponent
                   kind="filled"
                   color="primary"
-                  @click="goToEmailCollectionPage"
+                  @click="goToPreferredCandidatePage"
                 >
                   Arată rezultatele
                   <template #iconAfter>

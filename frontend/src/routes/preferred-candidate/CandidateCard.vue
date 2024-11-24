@@ -32,7 +32,7 @@ const handleVote = (candidateId: string | null) => {
   if (!candidateId) return;
   subscriberStore.saveVote(candidateId);
   router.push({
-    name: appRoutes.result.name,
+    name: appRoutes.emailCollection.name,
     params: { ...route.params },
     query: { ...route.query },
   });

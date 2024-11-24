@@ -77,8 +77,8 @@ const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
 const handlePreviousClick = () => {
   // go to the last question
   router.push({
-    name: appRoutes.question.name,
-    params: { ...route.params, nr: electionStore.questionCount },
+    name: appRoutes.recap.name,
+    params: { ...route.params },
     query: { ...route.query },
   });
 };

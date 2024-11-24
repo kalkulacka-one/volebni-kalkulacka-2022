@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { mdiCloseCircleOutline } from '@mdi/js';
+import { mdiArrowLeft, mdiArrowRight, mdiCloseCircleOutline } from '@mdi/js';
 
 import { appRoutes } from '@/main';
 import { useElectionStore } from '@/stores/electionStore';
@@ -29,6 +29,7 @@ import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import { stringToNormalizedHyphenated } from '@/common/utils';
 import TextInputComponent from '@/components/design-system/input/TextInputComponent.vue';
+import StepWrapper from '@/components/design-system/layout/StepWrapper.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -43,11 +44,19 @@ const breadcrumbs = electionName;
 
 const selected = ref((route.params.district as string) || null);
 
-const email = ref('');
+const email = ref(subscriberStore.subscriber?.email || '');
 const emailError = ref();
 const posting = ref();
 const success = ref();
 const message = ref();
+
+const handlePreviousClick = () => {
+  router.push({
+    name: appRoutes.preferredCandidate.name,
+    params: { ...route.params },
+    query: { ...route.query },
+  });
+};
 
 const onSubmit = async () => {
   console.log('handleSubmit');
@@ -81,7 +90,7 @@ const onSubmit = async () => {
     })
 
     router.push({
-      name: appRoutes.preferredCandidate.name,
+      name: appRoutes.result.name,
       query: { ...route.query },
     });
   } else {
@@ -99,11 +108,11 @@ const onSubmit = async () => {
 
 const onRefuse = async () => {
   subscriberStore.setSubscriber({
-      id: undefined,
-      email: undefined,
-    })
+    id: undefined,
+    email: undefined,
+  })
   router.push({
-    name: appRoutes.preferredCandidate.name,
+    name: appRoutes.result.name,
     query: { ...route.query },
   });
 };
@@ -113,10 +122,28 @@ const onRefuse = async () => {
   <BackgroundComponent :is-image="false">
     <StickyHeaderLayout>
       <template #header>
-        <NavigationBar transparent>
+        <NavigationBar>
           <template #title>{{ breadcrumbs }}</template>
           <template #right>
             <EmbedWrapper>
+              <ResponsiveWrapper extra-small small>
+                <ButtonComponent
+                  kind="link"
+                  @click="
+                      router.push({
+                        name: appRoutes.index.name,
+                        query: { ...route.query },
+                      })
+                    "
+                  >
+                  <template #icon>
+                    <IconComponent
+                    :icon="mdiCloseCircleOutline"
+                    title="Pagina Principală"
+                    />
+                  </template>
+              </ButtonComponent>
+              </ResponsiveWrapper>
               <ResponsiveWrapper medium large extra-large huge>
                 <ButtonComponent
                   kind="link"
@@ -127,27 +154,9 @@ const onRefuse = async () => {
                     })
                   "
                 >
-                  Înapoi la pagina principalăoldalra
+                  Pagina Principală
                   <template #iconAfter>
                     <IconComponent :icon="mdiCloseCircleOutline" />
-                  </template>
-                </ButtonComponent>
-              </ResponsiveWrapper>
-              <ResponsiveWrapper extra-small small>
-                <ButtonComponent
-                  kind="link"
-                  @click="
-                    router.push({
-                      name: appRoutes.index.name,
-                      query: { ...route.query },
-                    })
-                  "
-                >
-                  <template #icon>
-                    <IconComponent
-                      :icon="mdiCloseCircleOutline"
-                      title="Nem adom"
-                    />
                   </template>
                 </ButtonComponent>
               </ResponsiveWrapper>
@@ -157,117 +166,132 @@ const onRefuse = async () => {
       </template>
       <template #sticky-header>
         <ResponsiveWrapper extra-small small>
-          <SecondaryNavigationBar transparent centered-title>
-            <TitleText tag="h2" size="medium">{{ title }}</TitleText>
+          <SecondaryNavigationBar centered-title>
+            <template #before>
+              <IconButton @click="handlePreviousClick">
+                <IconComponent :icon="mdiArrowLeft" title="Recapitulare" />
+              </IconButton>
+            </template>
+            <TitleText tag="h2" size="medium">Adresa de contact</TitleText>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
         <ResponsiveWrapper medium large extra-large huge>
-          <SecondaryNavigationBar transparent>
-            <TitleText tag="h2" size="large">{{ title }}</TitleText>
+          <SecondaryNavigationBar centered-title>
+            <template #before>
+              <IconButton @click="handlePreviousClick">
+                <IconComponent :icon="mdiArrowLeft" title="Recapitulare" />
+              </IconButton>
+            </template>
+            <TitleText tag="h2" size="large">Adresa de contact</TitleText>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
       </template>
-      <section class="subscribe">
-        <StackComponent spacing="small" centered>
-          <TitleText size="large" tag="h2">
-            Adresa de contact
-          </TitleText>
-          <BodyText size="small" centered class="bodyText">
-            Dorim să vă transmitem analiza noastră a rezultatelor complete ale acestui sondaj după alegeri, adică câți oameni au fost de acord cu fiecare declarație politică de mai sus dintre toți respondenții și dintre susținătorii diferitelor partide și cum au fost recomandate recomandările pe care le codificăm. pozițiile părților diferă de preferințele lor declarate de partid. Vă rugăm să scrieți mai jos pe o adresă de e-mail unde putem trimite acest raport?
-          </BodyText>
-          <form v-if="!success">
-            <StackComponent
-              horizontal
-              spacing="small"
-              stretched
-              wrap
-              style="justify-content: center"
-            >
-              <TextInputComponent
-                v-model="email"
-                required
-                type="email"
-                placeholder="kovacsferenc@gmail.com"
-                :value="email"
-                :icon="mdiEmailOutline"
-                :disabled="posting"
-                :error="emailError"
-              />
-              <ButtonComponent
-                kind="outlined"
-                color="primary"
-                :loading="posting"
-                @click.prevent="onSubmit"
-              >
-                Trimit
-              </ButtonComponent>
-            </StackComponent>
-          </form>
-          <BodyText v-if="!success" tag="p" size="small">{{
-            'Ha megadod az email-címed, azzal elfogadod az erre vonatkozó adatvédelmi szabályzatot.'
-          }}</BodyText>
-          <ButtonComponent
-              kind="outlined"
-              color="neutral"
-              size="small"
-              :loading="posting"
-              @click.prevent="onRefuse"
-              class="refuse"
-            >
-              Nu vreau să ofer adresa mea de email
-            </ButtonComponent>
-        </StackComponent>
-      </section>
-      <!-- <form id="district-form" ref="form" @submit.prevent="onSubmit">
-        <BottomBarWrapper>
-          <div class="main">
-            <StackComponent spacing="medium">
-              <BodyText size="medium">
-                <StackComponent spacing="extra-small">
-                  <MarkdownIt :markdown="text" />
-                </StackComponent>
+      <BottomBarWrapper>
+        <StepWrapper centered>
+          <template #before />
+          <StackComponent spacing="small">
+            <BodyText size="medium">
+              Am vrea să te invităm să faci parte dintr-un grup de cetățeni pe care îi vom contacta din nou cu întrebări despre problemele, nevoile și opiniile lor. 
+            </BodyText>
+            <BodyText size="medium">
+              Am folosi răspunsurile tale doar în formă anonimizată, pentru a scrie cercetări academice. Putem să te contactăm în viitor pentru acest lucru?
+            </BodyText>
+            <BodyText size="medium">
+              Îți vom trimite la aceeași adresă și un rezumat al ceea ce a reieșit din analiza statistică a răspunsurilor la TestVot.
+            </BodyText>
+          </StackComponent>
+          <template #after />
+        </StepWrapper>
+        <template #bottom-bar>
+          <ResponsiveWrapper medium large extra-large huge>
+            <StackComponent class="bottom-bar" spacing="small">
+              <BodyText size="small">
+                Prin furnizarea adresei dvs. de e-mail, sunteți de acord cu <a href="" target="_blank">politica de confidențialitate</a> aplicabilă.
               </BodyText>
-              <div class="list" style="align-self: stretch">
-                <RadioButtonComponent
-                  v-for="option in options"
-                  :key="option.value"
-                  v-model="selected"
-                  group-name="district-selection"
-                  :value="option.value"
+              <form v-if="!success">
+                <StackComponent
+                  horizontal
+                  stretched
+                  spacing="small"
                 >
-                  {{ option.label }}
-                </RadioButtonComponent>
-              </div>
+                  <TextInputComponent
+                    v-model="email"
+                    required
+                    type="email"
+                    placeholder="nume.exemplu@example.ro"
+                    :value="email"
+                    :icon="mdiEmailOutline"
+                    :disabled="posting"
+                    :error="emailError"
+                  />
+                  <ButtonComponent
+                    kind="filled"
+                    color="primary"
+                    :loading="posting"
+                    @click.prevent="onSubmit"
+                  >
+                    Trimit
+                    <template #iconAfter>
+                      <IconComponent :icon="mdiArrowRight" />
+                    </template>
+                  </ButtonComponent>
+                </StackComponent>
+              </form>
+              <ButtonComponent
+                  kind="outlined"
+                  color="neutral"
+                  :loading="posting"
+                  @click.prevent="onRefuse"
+                >
+                  Nu vreau să ofer adresa mea de email
+                </ButtonComponent>
             </StackComponent>
-          </div>
-          <template #bottom-bar>
-            <ResponsiveWrapper medium large extra-large huge>
-              <BottomBar class="bottom-bar" transparent>
-                <ButtonComponent
-                  kind="filled"
-                  type="submit"
-                  color="primary"
-                  :disabled="!selected"
+          </ResponsiveWrapper>
+          <ResponsiveWrapper extra-small small>
+            <BottomBar class="bottom-bar" spacing="small">
+              <BodyText size="small">
+                Prin furnizarea adresei dvs. de e-mail, sunteți de acord cu <a href="" target="_blank">politica de confidențialitate</a> aplicabilă.
+              </BodyText>
+              <form v-if="!success">
+                <StackComponent
+                  horizontal
+                  stretched
+                  spacing="small"
                 >
-                  Potvrdit a pokračovat
-                </ButtonComponent>
-              </BottomBar>
-            </ResponsiveWrapper>
-            <ResponsiveWrapper extra-small small>
-              <BottomBar class="bottom-bar">
-                <ButtonComponent
-                  kind="filled"
-                  type="submit"
-                  color="primary"
-                  :disabled="!selected"
+                  <TextInputComponent
+                    v-model="email"
+                    required
+                    type="email"
+                    placeholder="nume.exemplu@example.ro"
+                    :value="email"
+                    :icon="mdiEmailOutline"
+                    :disabled="posting"
+                    :error="emailError"
+                  />
+                  <ButtonComponent
+                    kind="filled"
+                    color="primary"
+                    :loading="posting"
+                    @click.prevent="onSubmit"
+                  >
+                    <template #icon>
+                      <IconComponent :icon="mdiArrowRight" />
+                    </template>
+                  </ButtonComponent>
+                </StackComponent>
+              </form>
+              <ButtonComponent
+                  kind="outlined"
+                  color="neutral"
+                  :loading="posting"
+                  @click.prevent="onRefuse"
                 >
-                  Potvrdit a pokračovat
+                  Nu vreau să ofer adresa mea de email
                 </ButtonComponent>
-              </BottomBar>
-            </ResponsiveWrapper>
-          </template>
-        </BottomBarWrapper>
-      </form> -->
+            </BottomBar>
+          </ResponsiveWrapper>
+        </template>
+      </BottomBarWrapper>
     </StickyHeaderLayout>
   </BackgroundComponent>
 </template>
@@ -283,31 +307,25 @@ const onRefuse = async () => {
 }
 
 /* TODO: update breakpoint */
-@media (max-width: 700px) {
-  .main {
-    grid-template-columns: 1fr;
+/* @media (max-width: 700px) {
+  .bottom-bar {
+    grid-template-columns: max-content;
   }
-}
-
-.bodyText {
-  max-width: 800px;
-}
-
-form {
-  display: contents;
-}
-
-.refuse {
-  margin-top: var(--spacing-medium);
-}
+} */
 
 .bottom-bar {
   display: grid;
-  grid-template-columns: max-content;
+  grid-template-columns: min-content;
+  gap: var(--spacing-small);
   justify-content: center;
+  margin-bottom: 1rem;
 
   @media (max-width: 700px) {
     grid-template-columns: 1fr;
   }
+}
+
+form .input-wrapper {
+  flex-grow: 1;
 }
 </style>

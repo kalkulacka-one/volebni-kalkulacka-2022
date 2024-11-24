@@ -74,7 +74,7 @@ const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
 
 const handlePreviousClick = () => {
   router.push({
-    name: appRoutes.recap.name,
+    name: appRoutes.emailCollection.name,
     params: { ...route.params },
     query: { ...route.query },
   });
@@ -231,7 +231,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           <SecondaryNavigationBar centered-title>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Recapitulare" />
+                <IconComponent :icon="mdiArrowLeft" title="Adresa de contact" />
               </IconButton>
             </template>
             <TitleText tag="h2" size="medium">Potrivirea mea</TitleText>
@@ -241,7 +241,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           <SecondaryNavigationBar>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Recapitulare" />
+                <IconComponent :icon="mdiArrowLeft" title="Adresa de contact" />
               </IconButton>
             </template>
             <TitleText tag="h2" size="large">Potrivirea mea</TitleText>
