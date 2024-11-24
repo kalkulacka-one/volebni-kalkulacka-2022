@@ -188,7 +188,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
       </template>
       <template #sticky-header>
         <ResponsiveWrapper extra-small small>
-          <SecondaryNavigationBar centered-title>
+          <SecondaryNavigationBar>
             <template #before>
               <IconButton @click="handlePreviousClick">
                 <IconComponent :icon="mdiArrowLeft" title="Recapitulare" />
@@ -198,7 +198,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
         <ResponsiveWrapper medium large extra-large huge>
-          <SecondaryNavigationBar>
+          <SecondaryNavigationBar centered-title>
             <template #before>
               <IconButton @click="handlePreviousClick">
                 <IconComponent :icon="mdiArrowLeft" title="Recapitulare" />
