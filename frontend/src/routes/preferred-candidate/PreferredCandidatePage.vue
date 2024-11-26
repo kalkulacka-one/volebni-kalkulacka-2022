@@ -29,7 +29,6 @@ import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import ResultCategory from './ResultCategory.vue';
 import { getDistrictCode } from '@/common/utils';
 import BodyText from '../../components/design-system/typography/BodyText.vue';
-import CheckboxComponent from '../../components/design-system/input/CheckboxComponent.vue';
 
 const router = useRouter();
 const route = useRoute();
