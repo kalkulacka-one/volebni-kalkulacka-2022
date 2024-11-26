@@ -125,16 +125,16 @@ export const appRoutes = {
   },
   districtSelection: {
     name: 'district-selection',
-    path: '/volby/:election/vyber',
-    alias: '/volby/:election',
+    path: '/optiuni/:election/selectie',
+    alias: '/optiuni/:election',
     component: DistrictSelectionPageVue,
     meta: {
-      title: 'TestVot 2024242424',
+      title: 'TestVot 2024',
     },
   },
   emailCollection: {
     name: 'email-collection',
-    path: '/volby/:election/:district/email',
+    path: '/optiuni/:election/:district/email',
     component: EmailCollectionPageVue,
     meta: {
       title: 'TestVot 2024',
@@ -142,8 +142,8 @@ export const appRoutes = {
   },
   guide: {
     name: 'guide',
-    path: '/volby/:election/:district/navod/:step?',
-    alias: '/volby/:election/:district',
+    path: '/optiuni/:election/:district/intructiuni/:step?',
+    alias: '/optiuni/:election/:district',
     component: GuidePageVue,
     meta: {
       title: 'Instrucţiuni - TestVot 2024',
@@ -151,84 +151,44 @@ export const appRoutes = {
   },
   question: {
     name: 'question',
-    path: '/volby/:election/:district/otazka/:nr?',
+    path: '/optiuni/:election/:district/intrebare/:nr?',
     component: QuestionPageVue,
     meta: {
-      title: 'Otázka $$ - TestVot 2024',
+      title: 'Întrebare $$ - TestVot 2024',
       hasNumber: true,
     },
     beforeEnter: questionGuard,
   },
   preferredCandidate: {
     name: 'preferred-candidate',
-    path: '/volby/:election/:district/otazka/kandidat',
+    path: '/optiuni/:election/:district/intrebare/candidat',
     component: PreferredCandidatePageVue,
     meta: {
-      title: 'Preferovaný kandidát - TestVot 2024',
+      title: 'Întrebare $$ - TestVot 2024',
     },
   },
   recap: {
     name: 'recap',
-    path: '/volby/:election/:district/rekapitulace',
+    path: '/optiuni/:election/:district/recapitulare',
     component: RecapPageVue,
     meta: {
-      title: 'Rekapitulace - TestVot 2024',
+      title: 'Recapitulare - TestVot 2024',
     },
   },
   result: {
     name: 'result',
-    path: '/volby/:election/:district/vysledek',
+    path: '/optiuni/:election/:district/rezultat',
     component: ResultPageVue,
     meta: {
-      title: 'Výsledky - TestVot 2024',
+      title: 'Rezultat - TestVot 2024',
     },
   },
   comparison: {
     name: 'comparison',
-    path: '/volby/:election/:district/srovnani',
+    path: '/optiuni/:election/:district/comparatie',
     component: ComparisonPageVue,
     meta: {
-      title: 'Porovnaní - TestVot 2024',
-    },
-  },
-  share: {
-    name: 'share',
-    path: '/share/:uuid',
-    component: SharePageVue,
-    meta: {
-      title: 'Moje výsledky - TestVot 2024',
-    },
-  },
-  login: {
-    name: 'login',
-    path: '/prihlaseni',
-    component: LoginPageVue,
-    meta: {
-      title: 'Přihlášení - TestVot 2024',
-    },
-  },
-  register: {
-    name: 'register',
-    path: '/registrace',
-    component: RegisterPageVue,
-    meta: {
-      title: 'Registrace - TestVot 2024',
-    },
-  },
-  profile: {
-    name: 'profile',
-    path: '/muj-profil',
-    component: ProfilePageVue,
-    meta: {
-      title: 'Můj profil - TestVot 2024',
-    },
-  },
-  profileSettings: {
-    name: 'profile-settings',
-    path: '/nastaveni-profilu',
-    component: ProfileSettingsPageVue,
-    meta: {
-      title: 'Nastavení profilu - TestVot 2024',
+      title: 'Comparație - TestVot 2024',
     },
   },
   fallback: {
