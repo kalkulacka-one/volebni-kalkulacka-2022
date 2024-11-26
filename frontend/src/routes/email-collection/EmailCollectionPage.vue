@@ -191,10 +191,13 @@ const onRefuse = async () => {
           <template #before />
           <StackComponent spacing="small">
             <BodyText size="medium">
+              Ne-am bucura să ne spui ce crezi despre TestVot sau despre alegeri. Poți să ne scrii la <a target="_blank" href="mailto:portal@medianresearch.ro">portal@medianresearch.ro</a>.
+            </BodyText>
+            <BodyText size="medium">
               Te invităm să faci parte dintr-un grup de cetățeni pe care îi vom contacta din nou cu întrebări despre problemele, nevoile și opiniile lor. Eventualele tale răspunsuri vor fi folosite doar în formă anonimizată. 
             </BodyText>
             <BodyText size="medium">
-              Îți vom trimite pe același email și un rezumat a ceea ce a reieșit din analiza statistică a răspunsurilor tale la TestVot.
+              Iți vom trimite pe același email și un rezumat a ceea ce a reieșit din analiza statistică a răspunsurilor la TestVot.
             </BodyText>
           </StackComponent>
           <template #after />
