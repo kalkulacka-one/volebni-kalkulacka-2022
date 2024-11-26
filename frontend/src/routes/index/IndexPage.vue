@@ -7,20 +7,17 @@ import { appRoutes } from '@/main';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import CardComponent from '@/components/design-system/containers/CardComponent.vue';
 import StackComponent from '../../components/design-system/layout/StackComponent.vue';
-import BodyText from '../../components/design-system/typography/BodyText.vue';
 import ButtonComponent from '../../components/design-system/input/ButtonComponent.vue';
 import TitleText from '@/components/design-system/typography/TitleText.vue';
 import HeadlineText from '@/components/design-system/typography/HeadlineText.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
-import { mdiArrowDown, mdiArrowRight } from '@mdi/js';
-import InfoBubble from '@/components/InfoBubble.vue';
+import { mdiArrowRight } from '@mdi/js';
 import FooterMultiWord from '@/components/FooterMultiWord.vue';
-import DonateBlock from '@/components/DonateBlock.vue';
-import StaticContentLayout from '@/components/layouts/StaticContentLayout.vue';
-import MasonryGrid from '@/components/design-system/layout/MasonryGrid.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
 import BlobComponent from '@/components/design-system/style/BlobComponent.vue';
 import { useUserStore } from '@/stores/userStore';
+import BodyText from '@/components/design-system/typography/BodyText.vue';
+import CheckboxComponent from '@/components/design-system/input/CheckboxComponent.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -29,6 +26,8 @@ const userStore = useUserStore();
 const user = computed(() => userStore.user);
 const info = ref<HTMLElement | null>(null);
 const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
+
+const hasCheckedPrivacy = ref(false);
 </script>
 
 <template>
@@ -51,15 +50,22 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
                 <TitleText tag="h3" size="medium">
                   TestVot 2024 alegeri parlamentare
                 </TitleText>
-                <!-- <BodyText size="medium">
-                  MISSING
-                </BodyText> -->
+                <BodyText size="medium">
+                  Pentru a folosi aplicația trebuie să fii de acord cu <router-link to="/protectia-datelor">politica de confidențialitate</router-link> a datelor.
+                </BodyText>
+                <CheckboxComponent groupName="privacy" label="Sunt de acord cu politica de confidențialitate" @update:check="checked => hasCheckedPrivacy = checked">
+                  Sunt de acord
+                </CheckboxComponent>
               </div>
               <ButtonComponent
-                kind="filled"
-                color="primary"
+                :kind="hasCheckedPrivacy ? 'filled' : 'outlined'"
+                :color="hasCheckedPrivacy ? 'primary' : 'primary'"
+                :readOnly="!hasCheckedPrivacy"
                 tag="a"
-                @click="
+
+                @click="() => {
+                  if (!hasCheckedPrivacy) return;
+
                   router.push({
                     name: appRoutes.guide.name,
                     params: {
@@ -69,7 +75,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
                     },
                     query: { ...route.query },
                   })
-                "
+                }"
               >
                 Continuă
                 <template #iconAfter>
@@ -81,16 +87,6 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
         </StackComponent>
       </StackComponent>
     </div>
-    <!-- <StaticContentLayout>
-      <StackComponent spacing="large" centered>
-        <div ref="info"></div>
-        <TitleText size="large" tag="h2">
-          Volební kalkulačky k už proběhlým volbám
-        </TitleText>
-        
-      </StackComponent>
-      <DonateBlock />
-    </StaticContentLayout> -->
     <FooterMultiWord class="section" />
   </StickyHeaderLayout>
 </template>
@@ -213,6 +209,11 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
   display: flex;
   flex-direction: column;
   gap: 8px;
+  max-width: 400px;
+}
+
+.card-content-text h3 {
+  padding-bottom: 8px;
 }
 
 .divider {
