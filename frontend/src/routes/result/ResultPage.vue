@@ -42,7 +42,6 @@ import ResultShareModal from './ResultShareModal.vue';
 import { getDistrictCode } from '@/common/utils';
 import BodyText from '../../components/design-system/typography/BodyText.vue';
 import ErrorModal from '../../components/ErrorModal.vue';
-import DonateBlock from '../../components/DonateBlock.vue';
 import CheckboxComponent from '../../components/design-system/input/CheckboxComponent.vue';
 import { inject } from 'vue';
 import { EmbedKey } from '@/components/utilities/embedding/EmbedKey';
@@ -336,7 +335,6 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
               </StackComponent>
             </StackComponent>
           </CardComponent>
-          <DonateBlock />
         </StackComponent>
 
         <template #bottom-bar>
