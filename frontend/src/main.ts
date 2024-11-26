@@ -81,39 +81,6 @@ export const appRoutes = {
       title: 'TestVot 2024',
     },
   },
-  aboutUs: {
-    name: 'o-nas',
-    path: '/o-nas',
-    component: AboutUsPageVue,
-    meta: {
-      title: 'O nás',
-    },
-  },
-  aboutElections: {
-    name: 'o-volbach',
-    path: '/o-volbach',
-    component: AboutElectionsPageVue,
-    meta: {
-      title: 'O volbách',
-    },
-  },
-  dataProtection: {
-    name: 'ochrana-dat',
-    path: '/ochrana-dat',
-    alias: ['/soukromi', '/podminky'],
-    component: DataProtectionPageVue,
-    meta: {
-      title: 'Ochrana dat',
-    },
-  },
-  questionsMethodology: {
-    name: 'metodika-tvorby-otazek',
-    path: '/metodika-tvorby-otazek',
-    component: QuestionsMethodologyPageVue,
-    meta: {
-      title: 'Metodika tvorby otázek',
-    },
-  },
   error: {
     name: 'error',
     path: '/error/:case',
