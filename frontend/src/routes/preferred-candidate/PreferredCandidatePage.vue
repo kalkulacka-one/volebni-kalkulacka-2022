@@ -1,28 +1,17 @@
 <script setup lang="ts">
-import { computed, onBeforeMount, ref, type ComputedRef, type Ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 
 import {
-  mdiShareVariantOutline,
   mdiCloseCircleOutline,
   mdiArrowLeft,
   mdiArrowRight,
-  mdiAccountCircleOutline,
 } from '@mdi/js';
 
 import { appRoutes } from '@/main';
 import { useElectionStore } from '@/stores/electionStore';
-import { useUserStore, type User } from '@/stores/userStore';
-import {
-  calculateRelativeAgreement,
-  encodeResults,
-} from '@/common/resultParser';
-
 import type { Election } from '@/types/election';
-import type { CandidateAnswer } from '@/types/candidate-answer';
 
 import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
-import BottomBar from '@/components/design-system/navigation/BottomBar.vue';
 import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper.vue';
 import CardComponent from '@/components/design-system/containers/CardComponent.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
@@ -38,26 +27,13 @@ import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
 import ResultCategory from './ResultCategory.vue';
-import ResultShareModal from './ResultShareModal.vue';
 import { getDistrictCode } from '@/common/utils';
 import BodyText from '../../components/design-system/typography/BodyText.vue';
-import ErrorModal from '../../components/ErrorModal.vue';
 import CheckboxComponent from '../../components/design-system/input/CheckboxComponent.vue';
-import { inject } from 'vue';
-import { EmbedKey } from '@/components/utilities/embedding/EmbedKey';
-import { useSubscriberStore } from '@/stores/subscriberStore';
-
-const currentEmbed = inject(EmbedKey);
 
 const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
-
-const userStore = useUserStore();
-const subscriberStore = useSubscriberStore();
-
-const user = computed(() => userStore.user);
-const subscriber = computed(() => subscriberStore.subscriber)
 
 const election = electionStore.election as Election;
 const electionName = election.name;
@@ -98,47 +74,6 @@ const handleShowComparsionClick = () => {
     query: { ...route.query },
   });
 };
-
-console.debug(encodeResults(electionStore.answers));
-
-const candidateAnswers: CandidateAnswer[] =
-  electionStore.calculator?.answers || [];
-
-const hasAllCandidatesInactive =
-  electionStore.calculator?.candidates.filter(
-    (candidate) => !candidate.is_active
-  ).length === electionStore.calculator?.candidates.length;
-
-const hasActiveCandidatesBtn = hasAllCandidatesInactive
-  ? false
-  : electionStore.calculator?.candidates.some((x) => !x.is_active);
-
-const showNotActiveCandidates = ref(false);
-const filteredCandidateAnswers: Ref<CandidateAnswer[]> = ref(candidateAnswers);
-const handleActiveCandidatesClicked = (isActive: boolean) => {
-  showNotActiveCandidates.value = isActive;
-  if (!hasAllCandidatesInactive && !showNotActiveCandidates.value) {
-    filteredCandidateAnswers.value = filteredCandidateAnswers.value.filter(
-      (x) => {
-        return electionStore.calculator?.candidates.find(
-          (cnd) => x.candidate_id === cnd.id && cnd.is_active
-        );
-      }
-    );
-  } else if (electionStore.calculator?.answers) {
-    filteredCandidateAnswers.value = candidateAnswers;
-  }
-};
-handleActiveCandidatesClicked(false);
-
-const resultsGeneral = computed(() => {
-  const ra = calculateRelativeAgreement(
-    filteredCandidateAnswers.value,
-    electionStore.answers
-  );
-  return ra;
-});
-const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
 </script>
 <template>
   <BackgroundComponent :is-image="false">
@@ -214,13 +149,6 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           class="main"
           spacing="medium"
         >
-          <CheckboxComponent
-            v-if="hasActiveCandidatesBtn"
-            group-name="test"
-            @update:check="handleActiveCandidatesClicked"
-          >
-            Zobrazit nepostupující kandidáty
-          </CheckboxComponent>
           <ResultCategory
             category="general"
             :max-visible-candidates="50"
@@ -287,14 +215,6 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
       </BottomBarWrapper>
     </StickyHeaderLayout>
   </BackgroundComponent>
-  <ResultShareModal
-    v-if="electionStore.resultsId"
-    ref="shareModal"
-    :relative-agreement="resultsGeneral"
-  />
-  <ErrorModal v-else ref="shareModal" title="Něco se pokazilo">
-    Bohužel momentálně nelze sdílet, zkuste to prosím později.
-  </ErrorModal>
 </template>
 
 <style lang="scss" scoped>
