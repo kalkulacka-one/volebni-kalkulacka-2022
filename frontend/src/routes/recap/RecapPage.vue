@@ -175,7 +175,7 @@ const isCardHidden = (index: number) => {
       <BottomBarWrapper>
         <StackComponent class="main" spacing="small">
           <BodyText size="small">
-            Aici puteți verifica și ajusta răspunsurile și greutatea lor, dacă este necesar.
+            Aici poți verifica și ajusta răspunsurile și greutatea lor, dacă este necesar.
           </BodyText>
           <StackComponent class="list" spacing="small">
             <RecapQuestionCard
@@ -202,7 +202,7 @@ const isCardHidden = (index: number) => {
                   color="primary"
                   @click="goToPreferredCandidatePage"
                 >
-                  Arată rezultatele
+                  Spre rezultatele
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
