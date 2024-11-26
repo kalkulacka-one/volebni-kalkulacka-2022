@@ -191,7 +191,7 @@ const onRefuse = async () => {
           <template #before />
           <StackComponent spacing="small">
             <BodyText size="medium">
-              Te invităm să faci parte dintr-un grup de cetățeni pe care îi vom contacta din nou cu întrebări despre problemele, nevoile și opiniile lor. Eventualele tale răspunsuri vor fi folosite doar în formă anonimizată, pentru a scrie cercetări academice.
+              Te invităm să faci parte dintr-un grup de cetățeni pe care îi vom contacta din nou cu întrebări despre problemele, nevoile și opiniile lor. Eventualele tale răspunsuri vor fi folosite doar în formă anonimizată. 
             </BodyText>
             <BodyText size="medium">
               Îți vom trimite pe același email și un rezumat a ceea ce a reieșit din analiza statistică a răspunsurilor tale la TestVot.
