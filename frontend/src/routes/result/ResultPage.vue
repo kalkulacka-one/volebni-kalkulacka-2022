@@ -282,34 +282,10 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           <CardComponent corner="bottom-left">
             <StackComponent spacing="medium">
               <TitleText tag="p" size="medium">
-                Pro zobrazení výsledku je nutné odpovědět alespoň na 1 otázku
+                Pentru a vedea rezultatul, trebuie să răspundeți la cel puțin o întrebare.
               </TitleText>
               <BodyText tag="p" size="medium">
-                Můžete se
-                <a
-                  :href="
-                    router.resolve({
-                      name: appRoutes.question.name,
-                      params: { ...route.params, nr: 1 },
-                      query: { ...route.query },
-                    }).path
-                  "
-                  @click.prevent="handleStartClick"
-                  >vrátit na začátek</a
-                >
-                a odpovědět na minimálně 1 otázku, nebo si
-                <a
-                  :href="
-                    router.resolve({
-                      name: appRoutes.comparison.name,
-                      params: { ...route.params },
-                      query: { ...route.query },
-                    }).path
-                  "
-                  @click.prevent="handleShowComparsionClick"
-                >
-                  zobrazit porovnání odpovědí kandidátů </a
-                >.
+                Puteți reveni la început și răspunde la cel puțin o întrebare sau puteți vizualiza comparația răspunsurilor candidaților.
               </BodyText>
               <StackComponent horizontal spacing="medium">
                 <ButtonComponent
@@ -317,7 +293,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   color="primary"
                   @click="handleStartClick"
                 >
-                  Vyplnit kalkulačku
+                  Completați calculatorul
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
@@ -327,7 +303,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   color="primary"
                   @click="handleShowComparsionClick"
                 >
-                  Odpovědi kandidátů
+                  Răspunsurile candidaților
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
