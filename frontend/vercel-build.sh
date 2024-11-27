@@ -11,5 +11,7 @@ else
   echo "Building for preview environment, using a clean database for \`$VERCEL_GIT_COMMIT_REF\` branch"
   GIT_COMMIT_REF_SHA=$(echo -n $VERCEL_GIT_COMMIT_REF | openssl dgst -sha256 | sed 's/^.* //')
   export DATABASE_URL="$DATABASE_URL_BASE/$GIT_COMMIT_REF_SHA"
-  prisma generate && prisma migrate reset --force && npm run build-only:preview && cp -r ../data ./dist/
+  prisma generate
+  prisma db execute --file=<(echo "DROP SCHEMA public CASCADE; CREATE SCHEMA public;") --preview-feature
+  prisma migrate deploy && npm run build-only:preview && cp -r ../data ./dist/
 fi
