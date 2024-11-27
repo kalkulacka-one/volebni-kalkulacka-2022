@@ -2,7 +2,7 @@
 
 echo "VERCEL_PROJECT_PRODUCTION_URL: $VERCEL_PROJECT_PRODUCTION_URL"
 
-if [[ "$VERCEL_PROJECT_PRODUCTION_URL" == "www.volebnikalkulacka.cz" ]] ; then
+if [[ "$VERCEL_PROJECT_PRODUCTION_URL" == "www.testvot.eu" ]] ; then
   # Proceed with the build
     echo "✅ - Build can proceed"
   exit 1;
