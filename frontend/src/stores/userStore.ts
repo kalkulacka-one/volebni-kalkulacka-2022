@@ -6,6 +6,7 @@ export interface User {
   createdAt?: string;
   displayName?: string;
   email?: string;
+  vote?: string;
   id?: string;
   updatedAt?: string;
   img_url?: string;
@@ -25,5 +26,14 @@ export const useUserStore = defineStore('user', {
       const response = await res.json();
       this.user = response.user ? response.user : null;
     },
+    setUser(user: User) {
+      this.user = {
+        ...user,
+        vote: this.user?.vote,
+      };
+    },
+    saveVote(candidateId: string) {
+      this.user!.vote = candidateId;
+    }
   },
 });

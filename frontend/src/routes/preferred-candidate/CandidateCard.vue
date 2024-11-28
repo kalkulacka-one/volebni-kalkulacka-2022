@@ -6,13 +6,15 @@ import IconComponent from '../../components/design-system/icons/IconComponent.vu
 
 import AvatarComponent from '@/components/design-system/other/AvatarComponent.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
+import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 
 import {
-  vkiLogoInFavour,
+  vkiLogoAgainst,
 } from '@/components/design-system/icons';
-import { useSubscriberStore } from '@/stores/subscriberStore';
+import { useUserStore } from '@/stores/userStore';
 import { useRoute, useRouter } from 'vue-router';
 import { appRoutes } from '@/main';
+import { ref } from 'vue';
 
 export interface CandidateCardProps {
   order: number;
@@ -20,7 +22,7 @@ export interface CandidateCardProps {
 }
 const props = defineProps<CandidateCardProps>();
 const store = useElectionStore();
-const subscriberStore = useSubscriberStore();
+const userStore = useUserStore();
 const candidate = store.calculator?.candidates.find(
   (x) => x.id === props.canidateId
 );
@@ -30,13 +32,15 @@ const route = useRoute();
 
 const handleVote = (candidateId: string | null) => {
   if (!candidateId) return;
-  subscriberStore.saveVote(candidateId);
+  userStore.saveVote(candidateId);
   router.push({
-    name: appRoutes.emailCollection.name,
+    name: appRoutes.result.name,
     params: { ...route.params },
     query: { ...route.query },
   });
 };
+
+const hovered = ref(false);
 
 </script>
 <template>
@@ -90,17 +94,29 @@ const handleVote = (candidateId: string | null) => {
     <ButtonComponent
         v-show="true"
         class="vote-button"
-        kind="answer"
-        color="primary"
+        kind="outlined"
+        color="neutral"
         size="small"
         selected
-        @click="handleVote(candidate?.id)"
+        @click="handleVote(candidate?.id ?? null)"
+        @mouseover="hovered = true"
+        @mouseleave="hovered = false"
       >
         <template #icon>
-          <IconComponent
-            :icon="vkiLogoInFavour"
-            title="vote"
-          />
+          <ResponsiveWrapper medium large extra-large huge>
+            <IconComponent
+              :icon="vkiLogoAgainst"
+              :color="hovered ? 'neutral' : 'white'"
+              title="vote"
+            />
+          </ResponsiveWrapper>
+          <ResponsiveWrapper extra-small small>
+            <IconComponent
+              :icon="vkiLogoAgainst"
+              color="#ccc"
+              title="vote"
+            />
+          </ResponsiveWrapper>
         </template>
     </ButtonComponent>
   </CardComponent>

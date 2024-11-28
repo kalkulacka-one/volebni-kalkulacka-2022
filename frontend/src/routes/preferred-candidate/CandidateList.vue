@@ -5,7 +5,6 @@ import { computed, ref } from 'vue';
 import CandidateCard from './CandidateCard.vue';
 import StackComponent from '../../components/design-system/layout/StackComponent.vue';
 import { useElectionStore } from '@/stores/electionStore';
-import BodyText from '@/components/design-system/typography/BodyText.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
 import DividerComponent from '@/components/design-system/containers/DividerComponent.vue';
 import { useSubscriberStore } from '@/stores/subscriberStore';
@@ -13,7 +12,7 @@ import { appRoutes } from '@/main';
 import { useRoute, useRouter } from 'vue-router';
 import { mdiArrowRight } from '@mdi/js';
 
-export interface ResultCategoryProps {
+export interface CandidateList {
   category: TTopics;
   title?: string;
 }
@@ -22,7 +21,7 @@ const router = useRouter();
 const route = useRoute();
 
 const electionStore = useElectionStore();
-const candidates = computed(() => randomize(electionStore.calculator.candidates));
+const candidates = computed(() => randomize(electionStore.calculator!.candidates));
 
 const subscriberStore = useSubscriberStore();
 
@@ -38,7 +37,7 @@ const handleVote = (option: string | null) => {
     subscriberStore.saveVote('did-not-answer');
   } 
   router.push({
-    name: appRoutes.emailCollection.name,
+    name: appRoutes.result.name,
     params: { ...route.params },
     query: { ...route.query },
   });
@@ -62,7 +61,7 @@ const handleVote = (option: string | null) => {
       <ButtonComponent
         kind="outlined"
         color="neutral"
-        @click="handleVote('no-vote')"
+        @click="handleVote('no-answer')"
       >
         Nu știu
         <template>
@@ -72,7 +71,7 @@ const handleVote = (option: string | null) => {
       <ButtonComponent
         kind="outlined"
         color="neutral"
-        @click="handleVote('no-answer')"
+        @click="handleVote('no-vote')"
       >
         Nu aș merge la vot
         <template>
