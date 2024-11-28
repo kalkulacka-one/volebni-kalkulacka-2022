@@ -22,16 +22,16 @@ export const deprecatedFetchCalculator = async (key: string) => {
   deprecatedCalculator.key = key;
   deprecatedCalculator.district_code = calculator.variant.key;
   deprecatedCalculator.show_district_code = false;
-  deprecatedCalculator.name = 'Kalkulačka';
+  deprecatedCalculator.name = 'Kalkulatori';
   deprecatedCalculator.description =
-    'Volební kalkulačka';
+    'Kalkulatori zgjedhor';
   deprecatedCalculator.intro = calculator.intro;
   deprecatedCalculator.election = {
-    id: '582b96d3-89ad-4f5c-8906-c9c03bb3a8bf',
-    key: 'evropske-2024',
-    name: 'Evropské volby 2024',
+    id: '412d0370-7c88-4184-ae7e-befabc4f6ebf',
+    key: 'parlamentare-2025',
+    name: 'Zgjedhjet parlamentare 2025',
     description:
-      'Volby do Evropského parlamentu v Česku 2024',
+      'Zgjedhjet parlamentare në Kosovë 2025',
   };
 
   // Load questions and map them to deprecated structure
@@ -103,7 +103,7 @@ export const deprecatedFetchCalculator = async (key: string) => {
       }
       
       if (candidate.images) {
-        transformedCandidate.img_url = `/data/instance/volebnikalkulacka.cz/${key}/images/candidates/${candidate.id}.webp`;
+        transformedCandidate.img_url = `/data/instance/kalkulatorizgjedhor.org/${key}/images/candidates/${candidate.id}.webp`;
       }
     } else if (candidate.reference.type == 'organization') {
       const organization =
@@ -123,7 +123,7 @@ export const deprecatedFetchCalculator = async (key: string) => {
       transformedCandidate.party = organization.party;
       transformedCandidate.group = organization.group;
       if (candidate.images) {
-        transformedCandidate.img_url = `/data/instance/volebnikalkulacka.cz/${key}/images/candidates/${candidate.id}.webp`;
+        transformedCandidate.img_url = `/data/instance/kalkulatorizgjedhor.org/${key}/images/candidates/${candidate.id}.webp`;
       }
     }
     return transformedCandidate;
@@ -226,7 +226,7 @@ type CalculatorFileToType<T extends CalculatorFile> =
 const fetchCalculatorFile = async <T extends CalculatorFile>({
   key,
   file,
-  instance = 'volebnikalkulacka.cz',
+  instance = 'kalkulatorizgjedhor.org',
   baseUrl = '/data/instance',
 }: {
   key: string;
