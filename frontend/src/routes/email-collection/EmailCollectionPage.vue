@@ -52,7 +52,7 @@ const message = ref();
 
 const handlePreviousClick = () => {
   router.push({
-    name: appRoutes.preferredCandidate.name,
+    name: appRoutes.recap.name,
     params: { ...route.params },
     query: { ...route.query },
   });
@@ -82,22 +82,20 @@ const onSubmit = async () => {
     success.value = true;
     message.value = 'Sikeres feliratkozás!';
 
-    const subscriber = await response.json() as Subscriber;
+    const subscriber = (await response.json()) as Subscriber;
 
     subscriberStore.setSubscriber({
       id: subscriber.id,
       email: subscriber.email,
-    })
+    });
 
     router.push({
       name: appRoutes.result.name,
       query: { ...route.query },
     });
   } else {
-    if (response.status === 500) [
-      emailError.value = 'Internal server error',
-      onRefuse()
-    ]
+    if (response.status === 500)
+      [(emailError.value = 'Internal server error'), onRefuse()];
     const error = await response.json();
 
     posting.value = false;
@@ -110,7 +108,7 @@ const onRefuse = async () => {
   subscriberStore.setSubscriber({
     id: undefined,
     email: undefined,
-  })
+  });
   router.push({
     name: appRoutes.result.name,
     query: { ...route.query },
@@ -130,19 +128,19 @@ const onRefuse = async () => {
                 <ButtonComponent
                   kind="link"
                   @click="
-                      router.push({
-                        name: appRoutes.index.name,
-                        query: { ...route.query },
-                      })
-                    "
-                  >
+                    router.push({
+                      name: appRoutes.index.name,
+                      query: { ...route.query },
+                    })
+                  "
+                >
                   <template #icon>
                     <IconComponent
-                    :icon="mdiCloseCircleOutline"
-                    title="Pagina Principală"
+                      :icon="mdiCloseCircleOutline"
+                      title="Pagina Principală"
                     />
                   </template>
-              </ButtonComponent>
+                </ButtonComponent>
               </ResponsiveWrapper>
               <ResponsiveWrapper medium large extra-large huge>
                 <ButtonComponent
@@ -172,7 +170,9 @@ const onRefuse = async () => {
                 <IconComponent :icon="mdiArrowLeft" title="Recapitulare" />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="medium">Lasă-ne adresa ta de email</TitleText>
+            <TitleText tag="h2" size="medium"
+              >Lasă-ne adresa ta de email</TitleText
+            >
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
         <ResponsiveWrapper medium large extra-large huge>
@@ -182,7 +182,9 @@ const onRefuse = async () => {
                 <IconComponent :icon="mdiArrowLeft" title="Recapitulare" />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="large">Lasă-ne adresa ta de email</TitleText>
+            <TitleText tag="h2" size="large"
+              >Lasă-ne adresa ta de email</TitleText
+            >
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
       </template>
@@ -191,13 +193,21 @@ const onRefuse = async () => {
           <template #before />
           <StackComponent spacing="small">
             <BodyText size="medium">
-              Ne-am bucura să ne spui ce crezi despre TestVot sau despre alegeri. Poți să ne scrii la <a target="_blank" href="mailto:portal@medianresearch.ro">portal@medianresearch.ro</a>.
+              Ne-am bucura să ne spui ce crezi despre TestVot sau despre
+              alegeri. Poți să ne scrii la
+              <a target="_blank" href="mailto:portal@medianresearch.ro"
+                >portal@medianresearch.ro</a
+              >.
             </BodyText>
             <BodyText size="medium">
-              Te invităm să faci parte dintr-un grup de cetățeni pe care îi vom contacta din nou cu întrebări despre problemele, nevoile și opiniile lor. Eventualele tale răspunsuri vor fi folosite doar în formă anonimizată. 
+              Te invităm să faci parte dintr-un grup de cetățeni pe care îi vom
+              contacta din nou cu întrebări despre problemele, nevoile și
+              opiniile lor. Eventualele tale răspunsuri vor fi folosite doar în
+              formă anonimizată.
             </BodyText>
             <BodyText size="medium">
-              Iți vom trimite pe același email și un rezumat a ceea ce a reieșit din analiza statistică a răspunsurilor la TestVot.
+              Iți vom trimite pe același email și un rezumat a ceea ce a reieșit
+              din analiza statistică a răspunsurilor la TestVot.
             </BodyText>
           </StackComponent>
           <template #after />
@@ -206,14 +216,12 @@ const onRefuse = async () => {
           <ResponsiveWrapper medium large extra-large huge>
             <StackComponent class="bottom-bar" spacing="small">
               <BodyText size="small">
-                Prin furnizarea adresei dvs. de e-mail, sunteți de acord cu <a href="" target="_blank">politica de confidențialitate</a> aplicabilă.
+                Prin furnizarea adresei dvs. de e-mail, sunteți de acord cu
+                <a href="" target="_blank">politica de confidențialitate</a>
+                aplicabilă.
               </BodyText>
               <form v-if="!success">
-                <StackComponent
-                  horizontal
-                  stretched
-                  spacing="small"
-                >
+                <StackComponent horizontal stretched spacing="small">
                   <TextInputComponent
                     v-model="email"
                     required
@@ -238,26 +246,24 @@ const onRefuse = async () => {
                 </StackComponent>
               </form>
               <ButtonComponent
-                  kind="outlined"
-                  color="neutral"
-                  :loading="posting"
-                  @click.prevent="onRefuse"
-                >
-                  Nu ofer adresa de email
-                </ButtonComponent>
+                kind="outlined"
+                color="neutral"
+                :loading="posting"
+                @click.prevent="onRefuse"
+              >
+                Nu ofer adresa de email
+              </ButtonComponent>
             </StackComponent>
           </ResponsiveWrapper>
           <ResponsiveWrapper extra-small small>
             <BottomBar class="bottom-bar" spacing="small">
               <BodyText size="small">
-                Prin furnizarea adresei dvs. de e-mail, sunteți de acord cu <a href="" target="_blank">politica de confidențialitate</a> aplicabilă.
+                Prin furnizarea adresei dvs. de e-mail, sunteți de acord cu
+                <a href="" target="_blank">politica de confidențialitate</a>
+                aplicabilă.
               </BodyText>
               <form v-if="!success">
-                <StackComponent
-                  horizontal
-                  stretched
-                  spacing="small"
-                >
+                <StackComponent horizontal stretched spacing="small">
                   <TextInputComponent
                     v-model="email"
                     required
@@ -281,13 +287,13 @@ const onRefuse = async () => {
                 </StackComponent>
               </form>
               <ButtonComponent
-                  kind="outlined"
-                  color="neutral"
-                  :loading="posting"
-                  @click.prevent="onRefuse"
-                >
-                  Nu ofer adresa de email
-                </ButtonComponent>
+                kind="outlined"
+                color="neutral"
+                :loading="posting"
+                @click.prevent="onRefuse"
+              >
+                Nu ofer adresa de email
+              </ButtonComponent>
             </BottomBar>
           </ResponsiveWrapper>
         </template>

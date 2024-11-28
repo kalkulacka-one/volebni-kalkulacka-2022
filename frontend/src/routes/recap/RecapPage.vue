@@ -65,9 +65,17 @@ const handlePreviousClick = () => {
 //   });
 // };
 
-const goToResultPage = () => {
+// const goToResultPage = () => {
+//   router.push({
+//     name: appRoutes.result.name,
+//     params: { ...route.params },
+//     query: { ...route.query },
+//   });
+// };
+
+const goToEmailCollection = () => {
   router.push({
-    name: appRoutes.result.name,
+    name: appRoutes.emailCollection.name,
     params: { ...route.params },
     query: { ...route.query },
   });
@@ -166,7 +174,7 @@ const isCardHidden = (index: number) => {
                 class="desktop"
                 kind="filled"
                 color="primary"
-                @click="goToResultPage"
+                @click="goToEmailCollection"
               >
                 <template #icon>
                   <IconComponent :icon="vkiLogoPercent" />
@@ -209,7 +217,7 @@ const isCardHidden = (index: number) => {
                 <ButtonComponent
                   kind="filled"
                   color="primary"
-                  @click="goToResultPage"
+                  @click="goToEmailCollection"
                 >
                   Spre rezultatele
                   <template #iconAfter>
