@@ -139,7 +139,7 @@ export const useElectionStore = defineStore('election', {
       embedName: string | undefined;
       user: User | null | undefined;
     }) {
-      if (user) {
+      if (user && !!user.authProvider) {
         const res = await fetch('/api/answers');
         const answers = await res.json();
         const calculatorAnswers = answers.filter(
