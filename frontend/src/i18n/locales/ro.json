@@ -1,0 +1,136 @@
+{
+  "components": {
+    "FooterMultiWord": {
+      "body-about-voting-calculator": "Despre proiect",
+      "body-created-by-ngos": "Creat printr-o colaborare a organizațiilor non-profit",
+      "body-data-protection": "Protecția datelor",
+      "body-methodoogy": "Un proiect al Median Research Centre (MRC)",
+      "body-who-to-vote": "TestVot este o aplicație imparțială care poate ajuta la a decide pe cine să votezi",
+      "title-data-protection": "Legături (Datele cu caracter personal)"
+    }
+  },
+  "routes": {
+    "comparison": {
+      "ComparisonGrid": {
+        "answers": "Răspunsurile mele",
+        "my": "Răspunsurile mele"
+      },
+      "ComparisonPage": {
+        "back-to-main-page": "Înapoi la pagina principală",
+        "comparison": "Comparaţie",
+        "my-match": "Potrivirea mea"
+      }
+    },
+    "data-protection": {
+      "DataProtectionPage": {
+        "title": "Protecția datelor"
+      }
+    },
+    "error": {
+      "ErrorPage": {
+        "go-to-main-page": "Înapoi la pagina principală",
+        "this-page-does-not-exist": "Pagină inexistentă",
+        "unknown-error": "Eroare necunoscută"
+      }
+    },
+    "guide": {
+      "GuidePage": {
+        "agree": "Sunt de acord",
+        "back-to-main-page": "Înapoi la pagina principală",
+        "disagree": "Nu sunt de acord",
+        "double-weight": "Răspunsul va avea apoi o pondere dublă în calcularea scorului.",
+        "first-question": "Prima afirmație",
+        "guide": "Cum funcționează TestVot (instrucţiuni)",
+        "important": "Important pentru mine",
+        "next-step": "Pasul următor",
+        "not-included": "Această întrebare nu contează la calculul scorului.",
+        "previous-step": "Pasul anterior",
+        "skip": "următoarea",
+        "skip-guide": "Sari peste instrucțiuni",
+        "skip-question": "Dacă nu ai o opinie, nu ești sigur(ă) sau nu vrei să răspunzi din alt motiv, poți sări peste o întrebare.",
+        "text-0": "Dacă candidatul sau partidul nu a răspuns la întrebare, se vor număra 0 puncte.",
+        "text-answer-button": "Versiunea pentru alegerile parlamentare din 2024 are TBD de afirmații cu 2 variante de răspuns (sunt de acord / nu sunt de acord).",
+        "text-important": "Dacă o întrebare este deosebit de importantă pentru tine, poți bifa această steluță, care îi va da o pondere mai mare.",
+        "text-method": "Când ești de acord cu un politician sau un partid într-un răspuns, acesta primește 1 punct în calculul acordului. În caz contrar, se va pierde 1 punct. Dacă candidatul sau partidul nu a răspuns la întrebare, se vor număra 0 puncte."
+      }
+    },
+    "index": {
+      "IndexPage": {
+        "czech-version": {
+          "link": "XXX Alegeri parlamentare în România 2024 — calculator",
+          "prefix": "XXX In the meantime you can check out",
+          "suffix": "TestVot 2024"
+        },
+        "disclaimer": "Prin continuare, îți dai acordul să primești informații despre TestVot.",
+        "empty-email-error": "Câmpul nu trebuie să fie gol",
+        "error": "Ceva a mers prost :( Te rugăm să încerci din nou.",
+        "input-label": "E-mail",
+        "primary-text": "XXX We are preparing an election calculator for the elections to the Slovak National Council in 2023.",
+        "secondary-text": "XXX Leave us your email and we'll let you know when we launch the calculator.",
+        "success": "XXX We will let you know!",
+        "title": "TestVot 2024"
+      }
+    },
+    "question": {
+      "QuestionBottomBar": {
+        "important-for-me": "Important pentru mine",
+        "no": "Nu",
+        "yes": "Da"
+      },
+      "QuestionPage": {
+        "back-to-main-page": "Pagina principală",
+        "instructions-long": "Instrucțiuni",
+        "instructions-short": "Instrucțiuni",
+        "next-question-long": "Sari peste întrebare",
+        "next-question-short": "Sari peste",
+        "previous-question-long": "Întrebarea anterioră",
+        "previous-question-short": "Anterior",
+        "recapitulation-long": "Rekapitulace",
+        "recapitulation-short": "Rekapitulace",
+        "skip-question-long": "Sari peste întrebare",
+        "skip-question-short": "Sari peste"
+      }
+    },
+    "recap": {
+      "RecapPage": {
+        "back-to-main-page": "Înapoi la pagina principală",
+        "display-results": "Arată rezultatele",
+        "hint-text": "Aici poți verifica și ajusta răspunsurile și greutatea lor, dacă este necesar.",
+        "questions": "Întrebări",
+        "recapitulation": "Recapitulare"
+      },
+      "RecapQuestionCard": {
+        "display-details": "Vezi detalii",
+        "important-for-me": "Important pentru mine",
+        "no": "Nu",
+        "without-answer": "Nici un răspuns",
+        "yes": "Da"
+      }
+    },
+    "result": {
+      "ResultCategory": {
+        "hide-candidates": "Ascunde partidele",
+        "show-all-candidates": "Arată toate partidele"
+      },
+      "ResultPage": {
+        "back-to-main-page": "Înapoi la pagina principală",
+        "back-to-start": "Revino la început",
+        "candidates-answers": "Răspunsurile partidelor",
+        "compare-answers": "Compară răspunsurile",
+        "display-not-advancing-candidates": "XXX View non-advancing candidates",
+        "fill-calc": "Completează TestVot 2024",
+        "my-match": "Răspunsurile mele",
+        "recapitulation": "Recapitulare",
+        "something-went-wrong": "Ceva a mers prost",
+        "something-went-wrong-text": "Din păcate, nu este posibilă distribuirea momentan, vă rugăm să încercați din nou mai târziu.",
+        "text-and-answer": "Raspunde la cel putin o intrebare",
+        "text-at-least-one-answer": "Pentru a vizualiza rezultatul, trebuie să răspundeți la cel puțin o întrebare",
+        "text-display-answers": "Consultați această comparație a răspunsurilor părților",
+        "text-in-time": "XXX Urmărește cum opiniile și rezultatele tale (nu se schimbă) în timp.",
+        "text-save-calc": "XXX Salvați aceste rezultate și completați-l TestVot de mai multe ori pentru a vedea cum fiecare alegere duce la un rezultat diferit.",
+        "text-table": "Poți găsi o prezentare completă a partidelor și răspunsurilor acestora.",
+        "you-may": "Poţi"
+      }
+    }
+  }
+}
