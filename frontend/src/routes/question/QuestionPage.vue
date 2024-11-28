@@ -73,9 +73,9 @@ const currentQuestionNr = computed(
 
 const previousButtonTitle = computed(() => {
   if (currentQuestionNr.value === 0) {
-    return { long: 'Návod', short: 'Návod' };
+    return { long: 'Instrucţiuni', short: 'Instrucţiuni' };
   } else {
-    return { long: 'Předchozí otázka', short: 'Předchozí' };
+    return { long: 'Întrebarea anterioară', short: 'Anterior' };
   }
 });
 
@@ -85,12 +85,12 @@ const nextButtonTitle = computed(() => {
       electionStore.answers[currentQuestionNr.value].answer ===
       UserAnswerEnum.skip
     ) {
-      return { long: 'Přeskočit otázku', short: 'Přeskočit' };
+      return { long: 'Sari peste întrebare', short: 'Sari peste' };
     } else {
-      return { long: 'Další otázka', short: 'Další' };
+      return { long: 'Întrebarea următoare', short: 'Următor' };
     }
   } else {
-    return { long: 'Rekapitulace', short: 'Rekapitulace' };
+    return { long: 'Recapitulare', short: 'Recapitulare' };
   }
 });
 
@@ -164,7 +164,7 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
                   })
                 "
               >
-                Zpět na hlavní stránku
+                Pagina Principală
                 <template #iconAfter>
                   <IconComponent :icon="mdiCloseCircleOutline" />
                 </template>
@@ -183,7 +183,7 @@ const handleAnswerClick = (answer: UserAnswerEnum) => {
                 <template #icon>
                   <IconComponent
                     :icon="mdiCloseCircleOutline"
-                    title="Zpět na hlavní stránku"
+                    title="Pagina Principală"
                   />
                 </template>
               </ButtonComponent>

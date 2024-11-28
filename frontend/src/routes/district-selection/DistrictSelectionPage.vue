@@ -89,7 +89,7 @@ const onSubmit = () => {
                     })
                   "
                 >
-                  Zpět na hlavní stránku
+                  Pagina Principală
                   <template #iconAfter>
                     <IconComponent :icon="mdiCloseCircleOutline" />
                   </template>
@@ -108,7 +108,7 @@ const onSubmit = () => {
                   <template #icon>
                     <IconComponent
                       :icon="mdiCloseCircleOutline"
-                      title="Zpět na hlavní stránku"
+                      title="Pagina Principală"
                     />
                   </template>
                 </ButtonComponent>

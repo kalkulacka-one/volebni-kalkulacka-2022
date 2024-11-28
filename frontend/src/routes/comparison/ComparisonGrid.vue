@@ -33,7 +33,7 @@ export interface Props {
 
 const props = defineProps<Props>();
 const isQuestionInTagSet = (question: Question) => {
-  if (!props.selectedTags) {
+  if (!props.selectedTags?.size) {
     return true;
   }
   return (
@@ -150,8 +150,8 @@ window.onscroll = calculateStickeHeaderPos;
       >
         <BodyText size="small" :style="{ 'text-align': 'center' }">
           <strong>
-            Moje <br />
-            odpovědi
+            Răspunsul<br />
+            meu
           </strong>
         </BodyText>
       </FilledCircle>

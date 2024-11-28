@@ -39,7 +39,7 @@ watch(
 <template>
   <form>
     <TitleText class="tag-filter-title" tag="h3" size="small">
-      Filtrovat podle témat
+      Filtrează după teme
     </TitleText>
     <pill-group-component>
       <pill-group-item-component
@@ -49,7 +49,7 @@ watch(
         :checked="true"
         @click="onSelectAllClicked"
       >
-        Vybrat vše
+      Selectați toate
       </pill-group-item-component>
       <pill-group-item-component
         v-for="(tag, idx) in uniqueTags"

@@ -22,6 +22,8 @@ export default async function (req: VercelRequest, res: VercelResponse) {
     const body = getBody(req, res);
     const answers = body.answers as Prisma.JsonObject;
     const matches = body.matches as Prisma.JsonObject;
+    const choiceId = body.choiceId as string;
+    const subEmail = body.subEmail as string;
     const result = await prisma.answers
       .create({
         data: {
@@ -30,6 +32,8 @@ export default async function (req: VercelRequest, res: VercelResponse) {
           source: req.body.source,
           embedName: req.body.embedName,
           calculatorId: req.body.calculatorId,
+          choiceId: choiceId,
+          subEmail: subEmail,
           userId: auth?.user?.id,
         },
       })

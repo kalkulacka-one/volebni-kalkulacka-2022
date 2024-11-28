@@ -1,6 +1,6 @@
 <script setup lang="ts">
 export interface Props {
-  color?: 'blue' | 'red';
+  color?: 'blue' | 'yellow' | 'red';
   // TODO: add responsivity
 }
 
@@ -15,6 +15,13 @@ const props = withDefaults(defineProps<Props>(), {
       src="@/assets/background/blue-blob.svg"
       class="blob"
       :alt="'blue background blob'"
+    />
+  </template>
+  <template v-else-if="props.color == 'yellow'">
+    <img
+      src="@/assets/background/yellow-blob.svg"
+      class="blob"
+      :alt="'yellow background blob'"
     />
   </template>
   <template v-else>

@@ -42,7 +42,6 @@ import ResultShareModal from './ResultShareModal.vue';
 import { getDistrictCode } from '@/common/utils';
 import BodyText from '../../components/design-system/typography/BodyText.vue';
 import ErrorModal from '../../components/ErrorModal.vue';
-import DonateBlock from '../../components/DonateBlock.vue';
 import CheckboxComponent from '../../components/design-system/input/CheckboxComponent.vue';
 import { inject } from 'vue';
 import { EmbedKey } from '@/components/utilities/embedding/EmbedKey';
@@ -74,7 +73,7 @@ const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
 
 const handlePreviousClick = () => {
   router.push({
-    name: appRoutes.recap.name,
+    name: appRoutes.emailCollection.name,
     params: { ...route.params },
     query: { ...route.query },
   });
@@ -96,11 +95,8 @@ const handleShowComparsionClick = () => {
   });
 };
 
-const handleShareClick = () => {
-  shareModal.value?.open();
-};
 onBeforeMount(async () => {
-  if (election.key === 'prezidentske-2023') {
+  if (election.key === 'parliamentary-2024') {
     if (userStore.user || userStore.user === null) {
       const res = await electionStore.saveResults({
         embedName: currentEmbed,
@@ -201,7 +197,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                     })
                   "
                 >
-                  Zpět na hlavní stránku
+                  Pagina Principală
                   <template #iconAfter>
                     <IconComponent :icon="mdiCloseCircleOutline" />
                   </template>
@@ -220,7 +216,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   <template #icon>
                     <IconComponent
                       :icon="mdiCloseCircleOutline"
-                      title="Zpět na hlavní stránku"
+                      title="Pagina Principală"
                     />
                   </template>
                 </ButtonComponent>
@@ -234,55 +230,29 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           <SecondaryNavigationBar centered-title>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Rekapitulace" />
+                <IconComponent :icon="mdiArrowLeft" title="Adresa de contact" />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="medium">Moje shoda</TitleText>
-            <template v-if="election.key === 'prezidentske-2023'" #after>
-              <ButtonComponent
-                kind="link"
-                color="primary"
-                @click="handleShareClick"
-              >
-                <template #icon>
-                  <IconComponent :icon="mdiShareVariantOutline" />
-                </template>
-                Sdílet
-              </ButtonComponent>
-            </template>
+            <TitleText tag="h2" size="medium">Potrivirea mea</TitleText>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
         <ResponsiveWrapper medium large extra-large huge>
           <SecondaryNavigationBar>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Rekapitulace" />
+                <IconComponent :icon="mdiArrowLeft" title="Adresa de contact" />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="large">Moje shoda</TitleText>
+            <TitleText tag="h2" size="large">Potrivirea mea</TitleText>
             <template #after>
               <div class="navbar-btn-wrapper">
                 <ButtonComponent
-                  v-if="election.key === 'prezidentske-2023'"
-                  kind="link"
-                  color="primary"
-                  @click="handleShareClick"
-                >
-                  <template #icon>
-                    <IconComponent :icon="mdiShareVariantOutline" />
-                  </template>
-                  Sdílet
-                </ButtonComponent>
-                <ButtonComponent
-                  class="desktop"
-                  kind="filled"
+                  v-if="election.key === 'parliamentary-2024'"
+                  kind="outlined"
                   color="primary"
                   @click="handleShowComparsionClick"
                 >
-                  Porovnat odpovědi
-                  <template #iconAfter>
-                    <IconComponent :icon="mdiArrowRight" />
-                  </template>
+                  Compară răspunsurile
                 </ButtonComponent>
               </div>
             </template>
@@ -307,68 +277,15 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
             category="general"
             :max-visible-candidates="5"
           />
-          <CardComponent
-            v-if="!user && election.key === 'prezidentske-2023'"
-            corner="bottom-left"
-            style="max-width: 32rem; justify-self: center"
-          >
-            <StackComponent centered spacing="medium">
-              <StackComponent spacing="medium">
-                <TitleText tag="p" size="medium">
-                  Sledujte, jak se Vaše názory a výsledky (ne)mění v čase.
-                </TitleText>
-                <BodyText tag="p" size="medium">
-                  Uložte si kalkulačku a vyplňte ji klidně vícekrát, a to pro
-                  každé volby.
-                </BodyText>
-              </StackComponent>
-              <ButtonComponent
-                kind="outlined"
-                color="primary"
-                :href="signUpPath"
-                target="_blank"
-              >
-                <template #icon>
-                  <IconComponent :icon="mdiAccountCircleOutline" />
-                </template>
-                Vytvořit profil
-              </ButtonComponent>
-            </StackComponent>
-          </CardComponent>
-          <DonateBlock />
         </StackComponent>
         <StackComponent v-else class="main" spacing="medium">
           <CardComponent corner="bottom-left">
             <StackComponent spacing="medium">
               <TitleText tag="p" size="medium">
-                Pro zobrazení výsledku je nutné odpovědět alespoň na 1 otázku
+                Pentru a vedea rezultatul, trebuie să răspundeți la cel puțin o întrebare.
               </TitleText>
               <BodyText tag="p" size="medium">
-                Můžete se
-                <a
-                  :href="
-                    router.resolve({
-                      name: appRoutes.question.name,
-                      params: { ...route.params, nr: 1 },
-                      query: { ...route.query },
-                    }).path
-                  "
-                  @click.prevent="handleStartClick"
-                  >vrátit na začátek</a
-                >
-                a odpovědět na minimálně 1 otázku, nebo si
-                <a
-                  :href="
-                    router.resolve({
-                      name: appRoutes.comparison.name,
-                      params: { ...route.params },
-                      query: { ...route.query },
-                    }).path
-                  "
-                  @click.prevent="handleShowComparsionClick"
-                >
-                  zobrazit porovnání odpovědí kandidátů </a
-                >.
+                Puteți reveni la început și răspunde la cel puțin o întrebare sau puteți vizualiza comparația răspunsurilor candidaților.
               </BodyText>
               <StackComponent horizontal spacing="medium">
                 <ButtonComponent
@@ -376,7 +293,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   color="primary"
                   @click="handleStartClick"
                 >
-                  Vyplnit kalkulačku
+                  Completați calculatorul
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
@@ -386,7 +303,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   color="primary"
                   @click="handleShowComparsionClick"
                 >
-                  Odpovědi kandidátů
+                  Răspunsurile candidaților
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
@@ -394,7 +311,6 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
               </StackComponent>
             </StackComponent>
           </CardComponent>
-          <DonateBlock />
         </StackComponent>
 
         <template #bottom-bar>
@@ -402,15 +318,22 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
             <BottomBar>
               <div class="bottom-bar-grid">
                 <ButtonComponent
-                  kind="filled"
+                  kind="outlined"
                   color="primary"
                   @click="handleShowComparsionClick"
                 >
-                  Porovnat odpovědi
+                  Compară răspunsurile
+                </ButtonComponent>
+                <!-- <ButtonComponent
+                  kind="filled"
+                  color="primary"
+                  @click="goToPreferredCandidate"
+                >
+                  Tovább
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
-                </ButtonComponent>
+                </ButtonComponent> -->
               </div>
             </BottomBar>
           </ResponsiveWrapper>
@@ -457,5 +380,6 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
 .bottom-bar-grid {
   display: grid;
   grid-template-columns: 1fr;
+  gap: var(--spacing-small);
 }
 </style>

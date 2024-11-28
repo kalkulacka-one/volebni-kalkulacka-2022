@@ -17,71 +17,34 @@ const router = useRouter();
       <div class="grid-wrapper">
         <div class="data-1">
           <LogoComponent size="small" text />
-          <BodyText size="small"
-            >Volební kalkulačka je nestranným pomocníkem v rozhodování Koho
-            Volit.</BodyText
-          >
-          <a href="https://www.facebook.com/KohoVolit.eu"
-            ><img :src="'/images/fb.svg'"
-          /></a>
-        </div>
-        <div class="data-2">
-          <StackComponent spacing="medium">
-            <TitleText size="small" tag="h5">Více o volbách</TitleText>
-            <StackComponent spacing="extra-small">
-              <router-link
-                :to="{
-                  name: 'o-volbach',
-                  hash: '#prezidentske',
-                }"
-                ><BodyText size="small"
-                  >Prezidentské volby</BodyText
-                ></router-link
-              >
-              <router-link
-                :to="{
-                  name: 'o-volbach',
-                  hash: '#komunalni',
-                }"
-                ><BodyText size="small">Komunální volby</BodyText></router-link
-              >
-              <router-link
-                :to="{
-                  name: 'o-volbach',
-                  hash: '#senatni',
-                }"
-                ><BodyText size="small">Senátní volby</BodyText></router-link
-              >
-            </StackComponent>
-          </StackComponent>
+          <BodyText size="small">
+            Testvot este un ajutor imparțial în a decide pe cine să voteze.
+          </BodyText>
         </div>
         <div class="data-3">
           <StackComponent spacing="medium">
-            <TitleText size="small" tag="h5">O projektu</TitleText>
+            <TitleText size="small" tag="h5">Despre proiect</TitleText>
             <StackComponent spacing="extra-small">
-              <router-link to="/o-nas"
-                ><BodyText size="small"
-                  >O volební kalkulačce</BodyText
-                ></router-link
-              >
-              <router-link to="/metodika-tvorby-otazek"
-                ><BodyText size="small"
-                  >Metodika tvorby otázek</BodyText
-                ></router-link
-              >
+              <a target="_blank" href="https://medianresearch.ro/">
+                <BodyText size="small">
+                  Un proiect al Median Research Centre (MRC)
+                </BodyText>
+              </a>
+              <a target="_blank" href="https://www.openpolitics.ro/tot-ce-ai-nevoie-sa-stii-despre-aplicatia-testvot-2024/">
+                <BodyText size="small">
+                  Metodologia proiectului
+                </BodyText>
+              </a>
             </StackComponent>
           </StackComponent>
         </div>
         <div class="data-4">
           <StackComponent spacing="medium">
-            <TitleText size="small" tag="h5">Odkazy</TitleText>
+            <TitleText size="small" tag="h5">Legături (GDPR)</TitleText>
             <StackComponent spacing="extra-small">
-              <router-link to="/ochrana-dat"
-                ><BodyText size="small">Ochrana dat</BodyText></router-link
-              >
-              <a href="https://www.darujme.cz/darovat/1200653"
-                ><BodyText size="small">Podpořit kalkulačku</BodyText></a
-              >
+              <router-link to="/protectia-datelor">
+                <BodyText size="small">Protecția datelor</BodyText>
+              </router-link>
             </StackComponent>
           </StackComponent>
         </div>
@@ -89,31 +52,23 @@ const router = useRouter();
           <StackComponent spacing="medium">
             <TitleText size="small" tag="h5">Kontakt</TitleText>
             <StackComponent spacing="extra-small">
-              <StackComponent spacing="small" centered horizontal
-                ><IconComponent :icon="mdiEmail" /><BodyText size="small"
-                  >info@kohovolit.eu</BodyText
-                ></StackComponent
-              >
-              <StackComponent spacing="small" centered horizontal
-                ><IconComponent :icon="mdiPhone" /><BodyText size="small"
-                  >+420 735 518 529</BodyText
-                ></StackComponent
-              >
+              <a href="mailto:portal@medianresearch.ro">
+                <StackComponent spacing="small" centered horizontal>
+                  <IconComponent :icon="mdiEmail" />
+                  <BodyText size="small">portal@medianresearch.ro</BodyText>
+                </StackComponent>
+              </a>
             </StackComponent>
           </StackComponent>
         </div>
       </div>
       <div class="logo">
-        <BodyText size="small"
-          >Vytvořeno spoluprací neziskových organizací</BodyText
-        >
-        <a href="https://kohovolit.eu"
-          ><img :src="'/images/logo-kohovolit.svg'"
-        /></a>
-        <BodyText size="small">a</BodyText>
-        <a href="https://cesko.digital"
-          ><img class="cd-logo" :src="'/images/logo-cd.svg'"
-        /></a>
+        <BodyText size="small">
+          Creat printr-o colaborare a organizațiilor non-profit
+        </BodyText>
+        <a target="_blank" href="https://kohovolit.eu"><img :src="'/images/logo-kohovolit.svg'"/></a>
+        <BodyText size="small">, </BodyText>
+        <a href="https://cesko.digital"><img class="cd-logo" :src="'/images/logo-cd.svg'"/></a>
       </div>
     </div>
   </div>

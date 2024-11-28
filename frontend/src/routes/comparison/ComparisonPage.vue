@@ -47,10 +47,10 @@ const showDistrictCode = electionStore.districts.filter(
 const districtNameWithCode = showDistrictCode
   ? `${districtName} (${districtCode})`
   : districtName;
-
-const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
-const selectedTags = ref(new Set<string>(electionStore.uniqueQuestionTags));
-const selectedCandidateIds = ref(new Set<string>());
+  
+  const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
+  const selectedTags = ref(new Set<string>(electionStore.uniqueQuestionTags));
+  const selectedCandidateIds = ref(new Set<string>());
 
 const handlePreviousClick = () => {
   router.push({
@@ -66,6 +66,11 @@ const questions = electionStore.calculator?.questions as Question[];
 const answers = electionStore.answers;
 const candidates = electionStore?.calculator?.candidates as Candidate[];
 const candidateAnswers = electionStore.calculator?.answers as CandidateAnswer[];
+
+for (const candidate of candidates) {
+  candidate.is_active = true;
+}
+
 </script>
 
 <template>
@@ -86,7 +91,7 @@ const candidateAnswers = electionStore.calculator?.answers as CandidateAnswer[];
                     })
                   "
                 >
-                  Zpět na hlavní stránku
+                  Pagina Principală
                   <template #iconAfter>
                     <IconComponent :icon="mdiCloseCircleOutline" />
                   </template>
@@ -105,7 +110,7 @@ const candidateAnswers = electionStore.calculator?.answers as CandidateAnswer[];
                   <template #icon>
                     <IconComponent
                       :icon="mdiCloseCircleOutline"
-                      title="Zpět na hlavní stránku"
+                      title="Pagina Principală"
                     />
                   </template>
                 </ButtonComponent>
@@ -119,20 +124,20 @@ const candidateAnswers = electionStore.calculator?.answers as CandidateAnswer[];
           <SecondaryNavigationBar centered-title>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Moje shoda" />
+                <IconComponent :icon="mdiArrowLeft" title="Potrivirea mea" />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="medium">Porovnání</TitleText>
-            <template #after>
+            <TitleText tag="h2" size="medium">Comparație</TitleText>
+            <!-- <template #after>
               <ButtonComponent
                 kind="link"
                 @click="filterMenuIsVisible = !filterMenuIsVisible"
               >
                 <template #icon>
-                  <IconComponent :icon="mdiTune" title="Nastavit porovnání" />
+                  <IconComponent :icon="mdiTune" title="Setează comparația" />
                 </template>
               </ButtonComponent>
-            </template>
+            </template> -->
           </SecondaryNavigationBar>
           <QuestionTagFilter
             v-show="filterMenuIsVisible"
@@ -149,21 +154,21 @@ const candidateAnswers = electionStore.calculator?.answers as CandidateAnswer[];
           <SecondaryNavigationBar>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Moje shoda" />
+                <IconComponent :icon="mdiArrowLeft" title="Potrivirea mea" />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="large">Porovnání</TitleText>
-            <template #after>
+            <TitleText tag="h2" size="large">Comparație</TitleText>
+            <!-- <template #after>
               <ButtonComponent
                 kind="link"
                 @click="filterMenuIsVisible = !filterMenuIsVisible"
               >
-                Nastavit porovnání
+                Setează comparația
                 <template #iconAfter>
                   <IconComponent :icon="mdiTune" />
                 </template>
               </ButtonComponent>
-            </template>
+            </template> -->
           </SecondaryNavigationBar>
           <QuestionTagFilter
             v-show="filterMenuIsVisible"

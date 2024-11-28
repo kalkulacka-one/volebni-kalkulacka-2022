@@ -62,50 +62,6 @@ const districtNameWithCode = showDistrictCode
 
 const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
 
-// TODO: Replace with data from store
-const text =
-  route.params.election === 'senatni-2022'
-    ? `
-Vítejte ve Volební kalkulačce pro volby do Senátu ČR.
-
-Čeká vás zhruba 40 otázek. Na stejné otázky nám odpověděli kandidáti. Zodpovězení otázek zabere cca 10 minut. Na konci se dozvíte, jak se kandidáti shodují s vašimi názory.
-      `
-    : route.params.election === 'prezidentske-2023' &&
-      route.params.district === 'pro-kazdeho'
-    ? `
-Vítejte ve Volební kalkulačce pro prezidentské volby 2023.
-
-Čeká vás 42 otázek. Na stejné otázky nám odpověděly kandidující osobnosti. Zodpovězení otázek zabere zhruba 10 minut. Na konci se dozvíte, jak se jednotliví kandidáti a kandidátky shodují s vašimi názory.
-    `
-    : route.params.election === 'prezidentske-2023' &&
-      route.params.district === 'pro-kazdeho-2-kolo'
-    ? `
-Vítejte ve Volební kalkulačce pro 2. kolo prezidentských voleb 2023.
-
-Vybrali jsme pro vás 20 otázek, ve kterých se postupující kandidáti – Petr Pavel a Andrej Babiš – liší. Zodpovězení otázek zabere zhruba 5 minut. Na konci se dozvíte, jak se kandidáti shodují s vašimi názory.
-    `
-    : route.params.election === 'prezidentske-2023' &&
-      route.params.district === 'pro-nadsence'
-    ? `
-Vítejte ve Volební kalkulačce pro prezidentské volby 2023.
-
-Čeká vás 98 otázek. Na stejné otázky nám odpověděly kandidující osobnosti. Zodpovězení otázek zabere zhruba 10 minut. Na konci se dozvíte, jak se jednotliví kandidáti a kandidátky shodují s vašimi názory.
-    `
-    : route.params.election === 'prezidentske-2023' &&
-      route.params.district === 'pro-mlade'
-    ? `
-Volební kalkulačka pro mladé byla vytvořena ve **spolupráci s projektem [NázoryPolitiků.cz](https://www.nazorypolitiku.cz)**.
-
-Projekt vznikl v roce 2020 jako iniciativa středoškolských studentů. Tým se z původní dvojice rozrostl na **15 studentů, kteří se snaží pomáhat voličům** orientovat se v názorech kandidátů. Za **3 roky** pomohl projekt s rozhodováním více než **100 000 voličů**.
-
-Na základě průzkumů a po konzultacích se sociology bylo vybráno **16 otázek, které mládež a prvovoliči považují za stěžejní témata** voleb. Naší vizí je přinést věcnost a přehlednost do politiky, zvýšit volební účast a podpořit tak demokracii.
-    `
-    : `
-Vítejte ve Volební kalkulačce pro komunální volby 2022.
-
-Čeká vás zhruba 40 otázek. Na stejné otázky nám odpověděly kandidující strany. Zodpovězení otázek zabere cca 10 minut. Na konci se dozvíte, jak se kandidující strany shodují s vašimi názory.
-    `;
-
 const forwardRoute = computed(
   () =>
     router.options.history.state.forward &&
@@ -140,9 +96,9 @@ const previousButtonTitle = computed(() => {
 
 const nextButtonTitle = computed(() => {
   if (currentStep.value < stepsCount) {
-    return 'Další krok';
+    return 'Pasul următor';
   } else {
-    return 'První otázka';
+    return 'Prima afirmație';
   }
 });
 const nextButtonKind = computed(() => {
@@ -234,7 +190,7 @@ const handlePreviousClick = () => {
                     })
                   "
                 >
-                  Zpět na hlavní stránku
+                  Pagina Principală
                   <template #iconAfter>
                     <IconComponent :icon="mdiCloseCircleOutline" />
                   </template>
@@ -253,7 +209,7 @@ const handlePreviousClick = () => {
                   <template #icon>
                     <IconComponent
                       :icon="mdiCloseCircleOutline"
-                      title="Zpět na hlavní stránku"
+                      title="Pagina Principală"
                     />
                   </template>
                 </ButtonComponent>
@@ -295,15 +251,22 @@ const handlePreviousClick = () => {
           </template>
           <StackComponent v-if="currentStep === 1" spacing="small">
             <HeadingComponent kind="title" size="medium">
-              {{ electionName }}
-              <template #secondary>{{ districtNameWithCode }}</template>
+              <!-- {{ electionName }}
+              <template #secondary>{{ districtNameWithCode }}</template> -->
+              Ce face TestVot
             </HeadingComponent>
             <BodyText size="medium">
-              <MarkdownIt :markdown="text" />
+              Indiferent dacă știi cu cine vei vota, din TestVot poți afla mai multe despre viziunea și pozițiile partidelor pe probleme care îi preocupa pe români.
+            </BodyText>
+            <BodyText size="medium">
+              <MarkdownIt :markdown="`Aplicația TestVot, realizată de [OpenPolitics.ro](https://www.openpolitics.ro/) și [Median Research Centre](https://www.medianresearch.ro/) (MRC), este singura de acest gen din România care a fost disponibilă la toate alegerile naționale începând cu 2008.`"/>
             </BodyText>
           </StackComponent>
           <StackComponent v-if="currentStep === 2" spacing="small">
-            <BodyText size="medium">Odpovídat můžete pomocí tlačítek:</BodyText>
+            <HeadingComponent kind="title" size="medium">
+              Cum funcționează TestVot
+            </HeadingComponent>
+            <BodyText size="medium">Versiunea pentru alegerile parlamentare din 2024 are TBD de afirmații cu 2 variante de răspuns (sunt de acord / nu sunt de acord).</BodyText>
             <CardComponent
               corner="bottom-right"
               border
@@ -315,18 +278,18 @@ const handlePreviousClick = () => {
                     :icon="vkiLogoInFavour"
                     color="rgb(var(--color-primary-fg))"
                   />
-                  <BodyText size="medium">= souhlasím</BodyText>
+                  <BodyText size="medium">= Sunt de acord</BodyText>
                 </StackComponent>
                 <StackComponent horizontal spacing="small">
                   <IconComponent
                     :icon="vkiLogoAgainst"
                     color="rgb(var(--color-secondary-fg))"
                   />
-                  <BodyText size="medium">= nesouhlasím</BodyText>
+                  <BodyText size="medium">= Nu sunt de acord</BodyText>
                 </StackComponent>
               </StackComponent>
             </CardComponent>
-            <StackComponent spacing="extra-small">
+            <!-- <StackComponent spacing="extra-small">
               <BodyText size="medium">
                 Když se s&nbsp;kandidátem nebo stranou v&nbsp;odpovědi shodnete,
                 získá ve výpočtu shody 1&nbsp;bod. V&nbsp;opačném případě
@@ -336,11 +299,11 @@ const handlePreviousClick = () => {
                 Pokud kandidát nebo strana na otázku neodpověděli, započítá se
                 ziskem 0&nbsp;bodů.
               </BodyText>
-            </StackComponent>
+            </StackComponent> -->
           </StackComponent>
           <StackComponent v-if="currentStep === 3" spacing="small">
             <BodyText size="medium">
-              Pokud vám na daném tématu zvlášť záleží, označte ho hvězdičkou:
+              Dacă o întrebare este deosebit de importantă pentru tine, poți bifa această steluță, care îi va da o pondere mai mare.
             </BodyText>
             <!-- TODO: remove inline styles -->
             <CardComponent
@@ -355,17 +318,16 @@ const handlePreviousClick = () => {
                   :icon="vkiStarFilled"
                   color="rgb(var(--palette-yellow))"
                 />
-                <BodyText size="medium">= pro mě důležité</BodyText>
+                <BodyText size="medium">= Important pentru mine</BodyText>
               </StackComponent>
             </CardComponent>
-            <BodyText size="medium">
+            <!-- <BodyText size="medium">
               Odpověď pak bude mít ve výpočtu shody dvojnásobnou váhu.
-            </BodyText>
+            </BodyText> -->
           </StackComponent>
           <StackComponent v-if="currentStep === 4" spacing="small">
             <BodyText size="medium">
-              Když nemáte názor, nejste si jisti nebo z&nbsp;jiného důvodu
-              nechcete odpovídat, můžete otázku přeskočit šipkou napravo.
+              Dacă nu ai o opinie, nu ești sigur(ă) sau nu vrei să răspunzi din alt motiv, poți sări peste o întrebare.
             </BodyText>
             <CardComponent
               corner="bottom-right"
@@ -374,11 +336,11 @@ const handlePreviousClick = () => {
             >
               <StackComponent horizontal spacing="small">
                 <IconComponent :icon="mdiArrowRight" />
-                <BodyText size="medium">= přeskočit</BodyText>
+                <BodyText size="medium">= următoarea</BodyText>
               </StackComponent>
             </CardComponent>
             <BodyText size="medium">
-              Tato otázka se do výpočtu vaší shody nezapočítá.
+              Aceasta  nu va fi luată în calcul la scorul compatibilității.
             </BodyText>
           </StackComponent>
           <template #after>
@@ -396,7 +358,7 @@ const handlePreviousClick = () => {
           <ResponsiveWrapper medium large extra-large huge>
             <BottomBar class="bottom-bar" transparent>
               <LabelText class="text">
-                Návod {{ currentStep }}&hairsp;/&hairsp;{{ stepsCount }}
+                Instrucţiuni {{ currentStep }}&hairsp;/&hairsp;{{ stepsCount }}
               </LabelText>
               <StepProgress class="progress-indicator" :current="currentStep" />
               <ButtonComponent
@@ -415,7 +377,7 @@ const handlePreviousClick = () => {
                 kind="link"
                 @click="goToQuestions"
               >
-                Přeskočit návod
+                Sari peste instrucțiuni
                 <template #iconAfter>
                   <IconComponent :icon="mdiFastForward" />
                 </template>
@@ -425,7 +387,7 @@ const handlePreviousClick = () => {
           <ResponsiveWrapper extra-small small>
             <BottomBar class="bottom-bar">
               <LabelText class="text">
-                Návod {{ currentStep }}&hairsp;/&hairsp;{{ stepsCount }}
+                Instrucţiuni {{ currentStep }}&hairsp;/&hairsp;{{ stepsCount }}
               </LabelText>
               <StepProgress class="progress-indicator" :current="currentStep" />
               <ButtonComponent
@@ -444,7 +406,7 @@ const handlePreviousClick = () => {
                 kind="link"
                 @click="goToQuestions"
               >
-                Přeskočit návod
+                Sari peste instrucțiuni
                 <template #iconAfter>
                   <IconComponent :icon="mdiFastForward" />
                 </template>

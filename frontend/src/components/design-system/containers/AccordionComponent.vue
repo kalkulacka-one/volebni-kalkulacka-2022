@@ -21,7 +21,7 @@ const toggleAccordion = () => {
       class="button"
       @click="toggleAccordion()"
     >
-      <div>{{ isOpen ? 'Skrýt detaily' : 'Zobrazit detaily' }}</div>
+      <div>{{ isOpen ? 'Ascunde detalii' : 'Arată detalii' }}</div>
       <div class="icon">
         <IconComponent
           :style="{ transform: `rotate(${isOpen ? '180deg' : '0deg'} )` }"

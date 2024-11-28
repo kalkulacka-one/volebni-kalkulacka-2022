@@ -7,6 +7,8 @@ export interface Props {
   blobsHeight?: string;
   redBlobX?: string;
   redBlobY?: string;
+  yellowBlobX?: string;
+  yellowBlobY?: string;
   blueBlobX?: string;
   blueBlobY?: string;
 
@@ -14,10 +16,12 @@ export interface Props {
 }
 const props = withDefaults(defineProps<Props>(), {
   hasBlobs: true,
-  blueBlobX: '5%',
+  blueBlobX: '-10%',
   blueBlobY: '10%',
-  redBlobX: '50%',
-  redBlobY: '20%',
+  yellowBlobX: '25%',
+  yellowBlobY: '15%',
+  redBlobX: '60%',
+  redBlobY: '0%',
   blobsHeight: '80%',
 });
 
@@ -33,6 +37,7 @@ const currentEmbed = inject(EmbedKey);
       <template v-if="props.hasBlobs">
         <div class="blobs">
           <img src="@/assets/background/blue-blob.svg" class="blue-blob" />
+          <img src="@/assets/background/yellow-blob.svg" class="yellow-blob" />
           <img src="@/assets/background/red-blob.svg" class="red-blob" />
         </div>
       </template>
@@ -55,6 +60,7 @@ const currentEmbed = inject(EmbedKey);
   z-index: -1;
 
   .blue-blob,
+  .yellow-blob,
   .red-blob {
     height: v-bind('blobsHeight');
     position: fixed;
@@ -64,6 +70,11 @@ const currentEmbed = inject(EmbedKey);
   .blue-blob {
     left: v-bind('blueBlobX');
     top: v-bind('blueBlobY');
+  }
+
+  .yellow-blob {
+    left: v-bind('yellowBlobX');
+    top: v-bind('yellowBlobY');
   }
 
   .red-blob {

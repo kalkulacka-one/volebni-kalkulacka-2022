@@ -14,10 +14,12 @@ import EmbedProviderWrapper from '@/components/utilities/embedding/EmbedProvider
 import GuidePageVue from './routes/guide/GuidePage.vue';
 import IndexPageVue from './routes/index/IndexPage.vue';
 import QuestionPageVue from './routes/question/QuestionPage.vue';
+import PreferredCandidatePageVue from './routes/preferred-candidate/PreferredCandidatePage.vue';
 import ResultPageVue from './routes/result/ResultPage.vue';
 import RecapPageVue from './routes/recap/RecapPage.vue';
 import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
+import EmailCollectionPageVue from './routes/email-collection/EmailCollectionPage.vue';
 import QuestionsMethodologyPageVue from './routes/questions-methodology/QuestionsMethodologyPageVue.vue';
 import { useElectionStore } from './stores/electionStore';
 import { useUserStore } from './stores/userStore';
@@ -30,10 +32,6 @@ import AboutElectionsPageVue from './routes/about-elections/AboutElectionsPage.v
 import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
 import { getDistrictCode } from './common/utils';
 import VueSocialSharing from 'vue-social-sharing';
-import RegisterPageVue from './routes/profile/RegisterPageVue.vue';
-import LoginPageVue from './routes/profile/LoginPageVue.vue';
-import ProfilePageVue from './routes/profile/ProfilePage.vue';
-import ProfileSettingsPageVue from './routes/profile/ProfileSettingsPage.vue';
 
 const RESULT_QUERY_NAME = 'result';
 
@@ -76,40 +74,15 @@ export const appRoutes = {
     path: '/',
     component: IndexPageVue,
     meta: {
-      title: 'Archiv volebních kalkulaček',
+      title: 'TestVot 2024',
     },
   },
-  aboutUs: {
-    name: 'o-nas',
-    path: '/o-nas',
-    component: AboutUsPageVue,
-    meta: {
-      title: 'O nás',
-    },
-  },
-  aboutElections: {
-    name: 'o-volbach',
-    path: '/o-volbach',
-    component: AboutElectionsPageVue,
-    meta: {
-      title: 'O volbách',
-    },
-  },
-  dataProtection: {
-    name: 'ochrana-dat',
-    path: '/ochrana-dat',
-    alias: ['/soukromi', '/podminky'],
+  gdpr: {
+    name: '/data-protection',
+    path: '/protectia-datelor',
     component: DataProtectionPageVue,
     meta: {
-      title: 'Ochrana dat',
-    },
-  },
-  questionsMethodology: {
-    name: 'metodika-tvorby-otazek',
-    path: '/metodika-tvorby-otazek',
-    component: QuestionsMethodologyPageVue,
-    meta: {
-      title: 'Metodika tvorby otázek',
+      title: 'Protecţia datelor - TestVot 2024',
     },
   },
   error: {
@@ -118,99 +91,75 @@ export const appRoutes = {
     props: true,
     component: ErrorPageVue,
     meta: {
-      title: 'Error - Archiv volebních kalkulaček',
+      title: 'Error - TestVot 2024',
     },
   },
   districtSelection: {
     name: 'district-selection',
-    path: '/volby/:election/vyber',
-    alias: '/volby/:election',
+    path: '/optiuni/:election/selectie',
+    alias: '/optiuni/:election',
     component: DistrictSelectionPageVue,
     meta: {
-      title: 'Archiv volebních kalkulaček',
+      title: 'TestVot 2024',
+    },
+  },
+  emailCollection: {
+    name: 'email-collection',
+    path: '/optiuni/:election/:district/email',
+    component: EmailCollectionPageVue,
+    meta: {
+      title: 'TestVot 2024',
     },
   },
   guide: {
     name: 'guide',
-    path: '/volby/:election/:district/navod/:step?',
-    alias: '/volby/:election/:district',
+    path: '/optiuni/:election/:district/intructiuni/:step?',
+    alias: '/optiuni/:election/:district',
     component: GuidePageVue,
     meta: {
-      title: 'Návod - Archiv volebních kalkulaček',
+      title: 'Instrucţiuni - TestVot 2024',
     },
   },
   question: {
     name: 'question',
-    path: '/volby/:election/:district/otazka/:nr?',
+    path: '/optiuni/:election/:district/intrebare/:nr?',
     component: QuestionPageVue,
     meta: {
-      title: 'Otázka $$ - Archiv volebních kalkulaček',
+      title: 'Întrebare $$ - TestVot 2024',
       hasNumber: true,
     },
     beforeEnter: questionGuard,
   },
+  preferredCandidate: {
+    name: 'preferred-candidate',
+    path: '/optiuni/:election/:district/intrebare/candidat',
+    component: PreferredCandidatePageVue,
+    meta: {
+      title: 'Întrebare $$ - TestVot 2024',
+    },
+  },
   recap: {
     name: 'recap',
-    path: '/volby/:election/:district/rekapitulace',
+    path: '/optiuni/:election/:district/recapitulare',
     component: RecapPageVue,
     meta: {
-      title: 'Rekapitulace - Archiv volebních kalkulaček',
+      title: 'Recapitulare - TestVot 2024',
     },
   },
   result: {
     name: 'result',
-    path: '/volby/:election/:district/vysledek',
+    path: '/optiuni/:election/:district/rezultat',
     component: ResultPageVue,
     meta: {
-      title: 'Výsledky - Archiv volebních kalkulaček',
+      title: 'Rezultat - TestVot 2024',
     },
   },
   comparison: {
     name: 'comparison',
-    path: '/volby/:election/:district/srovnani',
+    path: '/optiuni/:election/:district/comparatie',
     component: ComparisonPageVue,
     meta: {
-      title: 'Porovnaní - Archiv volebních kalkulaček',
-    },
-  },
-  share: {
-    name: 'share',
-    path: '/share/:uuid',
-    component: SharePageVue,
-    meta: {
-      title: 'Moje výsledky - Archiv volebních kalkulaček',
-    },
-  },
-  login: {
-    name: 'login',
-    path: '/prihlaseni',
-    component: LoginPageVue,
-    meta: {
-      title: 'Přihlášení - Archiv volebních kalkulaček',
-    },
-  },
-  register: {
-    name: 'register',
-    path: '/registrace',
-    component: RegisterPageVue,
-    meta: {
-      title: 'Registrace - Archiv volebních kalkulaček',
-    },
-  },
-  profile: {
-    name: 'profile',
-    path: '/muj-profil',
-    component: ProfilePageVue,
-    meta: {
-      title: 'Můj profil - Archiv volebních kalkulaček',
-    },
-  },
-  profileSettings: {
-    name: 'profile-settings',
-    path: '/nastaveni-profilu',
-    component: ProfileSettingsPageVue,
-    meta: {
-      title: 'Nastavení profilu - Archiv volebních kalkulaček',
+      title: 'Comparație - TestVot 2024',
     },
   },
   fallback: {

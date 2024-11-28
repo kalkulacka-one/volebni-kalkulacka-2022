@@ -1,18 +1,19 @@
 <script setup lang="ts">
-import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { mdiCloseCircleOutline, mdiArrowLeft, mdiArrowRight } from '@mdi/js';
+
+import {
+  mdiCloseCircleOutline,
+  mdiArrowLeft,
+  mdiArrowRight,
+} from '@mdi/js';
 
 import { appRoutes } from '@/main';
-import { useElectionStore, UserAnswerEnum } from '@/stores/electionStore';
-
+import { useElectionStore } from '@/stores/electionStore';
 import type { Election } from '@/types/election';
-import type { Question } from '@/types/question';
 
 import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
-import BodyText from '@/components/design-system/typography/BodyText.vue';
-import BottomBar from '@/components/design-system/navigation/BottomBar.vue';
 import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper.vue';
+import CardComponent from '@/components/design-system/containers/CardComponent.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
 import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
@@ -21,14 +22,13 @@ import SecondaryNavigationBar from '@/components/design-system/navigation/Second
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import TitleText from '@/components/design-system/typography/TitleText.vue';
 
-import { vkiLogoPercent } from '@/components/design-system/icons';
-
 import EmbedWrapper from '@/components/utilities/embedding/EmbedWrapper.vue';
 import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
-import RecapQuestionCard from './RecapQuestionCard.vue';
+import ResultCategory from './ResultCategory.vue';
 import { getDistrictCode } from '@/common/utils';
+import BodyText from '../../components/design-system/typography/BodyText.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -50,42 +50,28 @@ const districtNameWithCode = showDistrictCode
 const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
 
 const handlePreviousClick = () => {
+  // go to the last question
   router.push({
-    name: appRoutes.question.name,
-    params: { ...route.params, nr: 'last' },
-    query: { ...route.query },
-  });
-};
-
-const goToPreferredCandidatePage = () => {
-  router.push({
-    name: appRoutes.preferredCandidate.name,
+    name: appRoutes.recap.name,
     params: { ...route.params },
     query: { ...route.query },
   });
 };
 
-const availableTags: Set<string> = new Set(['All']);
-const selectedTag = ref('All');
-electionStore.calculator?.questions.forEach((q) =>
-  q.tags?.forEach((tag) => availableTags.add(tag))
-);
+const handleStartClick = () => {
+  router.push({
+    name: appRoutes.question.name,
+    params: { ...route.params, nr: 1 },
+    query: { ...route.query },
+  });
+};
 
-const handleStarClick = (index: number) => {
-  electionStore.flipAnswerFlag(index);
-};
-const handleAnswerClick = (index: number, answer: UserAnswerEnum) => {
-  if (electionStore.answers[index].answer === answer) {
-    electionStore.setAnswer(index, UserAnswerEnum.skip);
-  } else {
-    electionStore.setAnswer(index, answer);
-  }
-};
-const isCardHidden = (index: number) => {
-  return !(
-    selectedTag.value === 'All' ||
-    electionStore.calculator?.questions[index].tags?.includes(selectedTag.value)
-  );
+const handleShowComparsionClick = () => {
+  router.push({
+    name: appRoutes.comparison.name,
+    params: { ...route.params },
+    query: { ...route.query },
+  });
 };
 </script>
 <template>
@@ -96,6 +82,22 @@ const isCardHidden = (index: number) => {
           <template #title>{{ breadcrumbs }}</template>
           <template #right>
             <EmbedWrapper>
+              <ResponsiveWrapper medium large extra-large huge>
+                <ButtonComponent
+                  kind="link"
+                  @click="
+                    router.push({
+                      name: appRoutes.index.name,
+                      query: { ...route.query },
+                    })
+                  "
+                >
+                  Pagina Principală
+                  <template #iconAfter>
+                    <IconComponent :icon="mdiCloseCircleOutline" />
+                  </template>
+                </ButtonComponent>
+              </ResponsiveWrapper>
               <ResponsiveWrapper extra-small small>
                 <ButtonComponent
                   kind="link"
@@ -114,109 +116,118 @@ const isCardHidden = (index: number) => {
                   </template>
                 </ButtonComponent>
               </ResponsiveWrapper>
-              <ResponsiveWrapper medium large extra-large huge>
-                <ButtonComponent
-                  kind="link"
-                  @click="
-                    router.push({
-                      name: appRoutes.index.name,
-                      query: { ...route.query },
-                    })
-                  "
-                >
-                  Pagina Principală
-                  <template #iconAfter>
-                    <IconComponent :icon="mdiCloseCircleOutline" />
-                  </template>
-                </ButtonComponent>
-              </ResponsiveWrapper>
             </EmbedWrapper>
           </template>
         </NavigationBar>
       </template>
       <template #sticky-header>
         <ResponsiveWrapper extra-small small>
-          <SecondaryNavigationBar centered-title>
-            <template #before>
-              <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Întrebări" />
-              </IconButton>
-            </template>
-            <TitleText tag="h2" size="medium">Recapitulare</TitleText>
-          </SecondaryNavigationBar>
-        </ResponsiveWrapper>
-        <ResponsiveWrapper medium large extra-large huge>
           <SecondaryNavigationBar>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Întrebări" />
+                <IconComponent :icon="mdiArrowLeft" title="Recapitulare" />
               </IconButton>
             </template>
-            <TitleText tag="h2" size="large">Recapitulare</TitleText>
-            <template #after>
-              <ButtonComponent
-                class="desktop"
-                kind="filled"
-                color="primary"
-                @click="goToPreferredCandidatePage"
-              >
-                <template #icon>
-                  <IconComponent :icon="vkiLogoPercent" />
-                </template>
-                Arată rezultatele
-                <template #iconAfter>
-                  <IconComponent :icon="mdiArrowRight" />
-                </template>
-              </ButtonComponent>
+            <TitleText tag="h2" size="medium">Dacă alegerile ar fi astăzi, pe cine ai vota?</TitleText>
+          </SecondaryNavigationBar>
+        </ResponsiveWrapper>
+        <ResponsiveWrapper medium large extra-large huge>
+          <SecondaryNavigationBar centered-title>
+            <template #before>
+              <IconButton @click="handlePreviousClick">
+                <IconComponent :icon="mdiArrowLeft" title="Recapitulare" />
+              </IconButton>
             </template>
+            <TitleText tag="h2" size="large">Dacă alegerile ar fi astăzi, pe cine ai vota?</TitleText>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
       </template>
       <BottomBarWrapper>
-        <StackComponent class="main" spacing="small">
-          <BodyText size="small">
-            Aici poți verifica și ajusta răspunsurile și greutatea lor, dacă este necesar.
-          </BodyText>
-          <StackComponent class="list" spacing="small">
-            <RecapQuestionCard
-              v-for="i in [...Array(electionStore.questionCount).keys()]"
-              :key="i"
-              :hidden="isCardHidden(i)"
-              :question="(electionStore.calculator?.questions[i] as Question)"
-              :answer="electionStore.answers[i]"
-              :current-question="i + 1"
-              :question-count="electionStore.questionCount"
-              :star-click="() => handleStarClick(i)"
-              :yes-click="() => handleAnswerClick(i, UserAnswerEnum.yes)"
-              :no-click="() => handleAnswerClick(i, UserAnswerEnum.no)"
-              :skip-click="() => handleAnswerClick(i, UserAnswerEnum.skip)"
-            />
-          </StackComponent>
+        <StackComponent
+          v-if="electionStore.answerCount > 0"
+          class="main"
+          spacing="medium"
+        >
+          <ResultCategory
+            category="general"
+            :max-visible-candidates="50"
+          />
         </StackComponent>
-        <template #bottom-bar>
-          <ResponsiveWrapper extra-small small>
-            <BottomBar>
-              <div class="bottom-bar-grid">
-                <ButtonComponent
-                  kind="filled"
-                  color="primary"
-                  @click="goToPreferredCandidatePage"
+        <StackComponent v-else class="main" spacing="medium">
+          <CardComponent corner="bottom-left">
+            <StackComponent spacing="medium">
+              <TitleText tag="p" size="medium">
+                Pro zobrazení výsledku je nutné odpovědět alespoň na 1 otázku
+              </TitleText>
+              <BodyText tag="p" size="medium">
+                Můžete se
+                <a
+                  :href="
+                    router.resolve({
+                      name: appRoutes.question.name,
+                      params: { ...route.params, nr: 1 },
+                      query: { ...route.query },
+                    }).path
+                  "
+                  @click.prevent="handleStartClick"
+                  >vrátit na začátek</a
                 >
-                  Spre rezultatele
+                a odpovědět na minimálně 1 otázku, nebo si
+                <a
+                  :href="
+                    router.resolve({
+                      name: appRoutes.comparison.name,
+                      params: { ...route.params },
+                      query: { ...route.query },
+                    }).path
+                  "
+                  @click.prevent="handleShowComparsionClick"
+                >
+                  zobrazit porovnání odpovědí kandidátů </a
+                >.
+              </BodyText>
+              <StackComponent horizontal spacing="medium">
+                <ButtonComponent
+                  kind="outlined"
+                  color="primary"
+                  @click="handleStartClick"
+                >
+                  Vyplnit kalkulačku
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
                 </ButtonComponent>
-              </div>
-            </BottomBar>
-          </ResponsiveWrapper>
-        </template>
+                <ButtonComponent
+                  kind="outlined"
+                  color="primary"
+                  @click="handleShowComparsionClick"
+                >
+                  Odpovědi kandidátů
+                  <template #iconAfter>
+                    <IconComponent :icon="mdiArrowRight" />
+                  </template>
+                </ButtonComponent>
+              </StackComponent>
+            </StackComponent>
+          </CardComponent>
+        </StackComponent>
       </BottomBarWrapper>
     </StickyHeaderLayout>
   </BackgroundComponent>
 </template>
 
 <style lang="scss" scoped>
+.navbar-btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-small);
+}
+.results-header-note {
+  text-align: center;
+}
+.results-footer-note {
+  text-align: center;
+}
 .main {
   display: grid;
   grid-template-columns: clamp(32rem, 50vw, 48rem);
@@ -229,14 +240,6 @@ const isCardHidden = (index: number) => {
   .main {
     grid-template-columns: 1fr;
   }
-
-  .desktop {
-    display: none;
-  }
-}
-
-.list {
-  display: grid;
 }
 
 .bottom-bar-grid {
