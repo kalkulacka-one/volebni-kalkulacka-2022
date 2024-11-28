@@ -61,8 +61,8 @@ const buildResultData = () => {
       score: x.result.result_percent,
     };
   });
-  const choiceId = subscriberStore.vote;
-  const subEmail = subscriberStore.subscriber?.email;
+  const choiceId = subscriberStore.vote ?? '';
+  const subEmail = subscriberStore.subscriber?.email ?? '';
   const values = {
     answers: answers,
     matches: matches,
