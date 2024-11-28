@@ -27,11 +27,11 @@ export const deprecatedFetchCalculator = async (key: string) => {
     'Volební kalkulačka';
   deprecatedCalculator.intro = calculator.intro;
   deprecatedCalculator.election = {
-    id: '582b96d3-89ad-4f5c-8906-c9c03bb3a8bf',
-    key: 'evropske-2024',
-    name: 'Evropské volby 2024',
+    id: '33a20a4d-hz6b-4414-80ec-e1e270840c29',
+    key: 'parlamentare-2024',
+    name: 'Alegeri parlamentare 2024',
     description:
-      'Volby do Evropského parlamentu v Česku 2024',
+      'Alegeri parlamentare în România 2024',
   };
 
   // Load questions and map them to deprecated structure
@@ -103,7 +103,7 @@ export const deprecatedFetchCalculator = async (key: string) => {
       }
       
       if (candidate.images) {
-        transformedCandidate.img_url = `/data/instance/volebnikalkulacka.cz/${key}/images/candidates/${candidate.id}.webp`;
+        transformedCandidate.img_url = `/data/instance/testvot.eu/${key}/images/candidates/${candidate.id}.webp`;
       }
     } else if (candidate.reference.type == 'organization') {
       const organization =
@@ -123,7 +123,7 @@ export const deprecatedFetchCalculator = async (key: string) => {
       transformedCandidate.party = organization.party;
       transformedCandidate.group = organization.group;
       if (candidate.images) {
-        transformedCandidate.img_url = `/data/instance/volebnikalkulacka.cz/${key}/images/candidates/${candidate.id}.webp`;
+        transformedCandidate.img_url = `/data/instance/testvot.eu/${key}/images/candidates/${candidate.id}.webp`;
       }
     }
     return transformedCandidate;
@@ -226,7 +226,7 @@ type CalculatorFileToType<T extends CalculatorFile> =
 const fetchCalculatorFile = async <T extends CalculatorFile>({
   key,
   file,
-  instance = 'volebnikalkulacka.cz',
+  instance = 'testvot.eu',
   baseUrl = '/data/instance',
 }: {
   key: string;
