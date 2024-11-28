@@ -73,7 +73,7 @@ const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
 
 const handlePreviousClick = () => {
   router.push({
-    name: appRoutes.emailCollection.name,
+    name: appRoutes.recap.name,
     params: { ...route.params },
     query: { ...route.query },
   });
@@ -282,10 +282,12 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           <CardComponent corner="bottom-left">
             <StackComponent spacing="medium">
               <TitleText tag="p" size="medium">
-                Pentru a vedea rezultatul, trebuie să răspundeți la cel puțin o întrebare.
+                Pentru a vedea rezultatul, trebuie să răspundeți la cel puțin o
+                întrebare.
               </TitleText>
               <BodyText tag="p" size="medium">
-                Puteți reveni la început și răspunde la cel puțin o întrebare sau puteți vizualiza comparația răspunsurilor candidaților.
+                Puteți reveni la început și răspunde la cel puțin o întrebare
+                sau puteți vizualiza comparația răspunsurilor candidaților.
               </BodyText>
               <StackComponent horizontal spacing="medium">
                 <ButtonComponent

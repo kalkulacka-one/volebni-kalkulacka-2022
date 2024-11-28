@@ -57,13 +57,13 @@ const handlePreviousClick = () => {
   });
 };
 
-const goToPreferredCandidatePage = () => {
-  router.push({
-    name: appRoutes.preferredCandidate.name,
-    params: { ...route.params },
-    query: { ...route.query },
-  });
-};
+// const goToPreferredCandidatePage = () => {
+//   router.push({
+//     name: appRoutes.preferredCandidate.name,
+//     params: { ...route.params },
+//     query: { ...route.query },
+//   });
+// };
 
 const goToResultPage = () => {
   router.push({
@@ -183,7 +183,8 @@ const isCardHidden = (index: number) => {
       <BottomBarWrapper>
         <StackComponent class="main" spacing="small">
           <BodyText size="small">
-            Aici poți verifica și ajusta răspunsurile și greutatea lor, dacă este necesar.
+            Aici poți verifica și ajusta răspunsurile și greutatea lor, dacă
+            este necesar.
           </BodyText>
           <StackComponent class="list" spacing="small">
             <RecapQuestionCard
