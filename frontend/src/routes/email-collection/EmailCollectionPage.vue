@@ -74,7 +74,7 @@ const onSubmit = async () => {
   if (response.ok) {
     posting.value = false;
     success.value = true;
-    message.value = 'Sikeres feliratkozás!';
+    message.value = '';
 
     const user = (await response.json()) as User;
     userStore.setUser(user);

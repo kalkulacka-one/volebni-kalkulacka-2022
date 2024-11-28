@@ -18,7 +18,7 @@ const router = useRouter();
         <div class="data-1">
           <LogoComponent size="small" text />
           <BodyText size="small">
-            Testvot este un ajutor imparțial în a decide pe cine să voteze.
+            TestVot este o aplicație imparțială care poate ajuta în a decide pe cine să votezi.
           </BodyText>
         </div>
         <div class="data-3">
@@ -50,7 +50,7 @@ const router = useRouter();
         </div>
         <div class="data-5">
           <StackComponent spacing="medium">
-            <TitleText size="small" tag="h5">Kontakt</TitleText>
+            <TitleText size="small" tag="h5">Contact</TitleText>
             <StackComponent spacing="extra-small">
               <a href="mailto:portal@medianresearch.ro">
                 <StackComponent spacing="small" centered horizontal>
