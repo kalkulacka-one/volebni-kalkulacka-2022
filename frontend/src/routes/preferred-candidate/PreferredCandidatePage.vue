@@ -13,7 +13,6 @@ import type { Election } from '@/types/election';
 
 import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
 import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper.vue';
-import CardComponent from '@/components/design-system/containers/CardComponent.vue';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
 import IconButton from '@/components/design-system/input/IconButton.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
@@ -26,9 +25,11 @@ import EmbedWrapper from '@/components/utilities/embedding/EmbedWrapper.vue';
 import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
-import ResultCategory from './ResultCategory.vue';
+import CandidateList from './CandidateList.vue';
 import { getDistrictCode } from '@/common/utils';
-import BodyText from '../../components/design-system/typography/BodyText.vue';
+import BottomBar from '@/components/design-system/navigation/BottomBar.vue';
+import BodyText from '@/components/design-system/typography/BodyText.vue';
+import CardComponent from '@/components/design-system/containers/CardComponent.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -58,6 +59,14 @@ const handlePreviousClick = () => {
   });
 };
 
+const handleSkipClick = () => {
+  router.push({
+    name: appRoutes.result.name,
+    params: { ...route.params },
+    query: { ...route.query },
+  });
+};
+
 const handleStartClick = () => {
   router.push({
     name: appRoutes.question.name,
@@ -73,6 +82,7 @@ const handleShowComparsionClick = () => {
     query: { ...route.query },
   });
 };
+
 </script>
 <template>
   <BackgroundComponent :is-image="false">
@@ -139,6 +149,18 @@ const handleShowComparsionClick = () => {
               </IconButton>
             </template>
             <TitleText tag="h2" size="large">Dacă alegerile ar fi astăzi, pe cine ai vota?</TitleText>
+            <template #after>
+              <ButtonComponent
+                kind="outlined"
+                color="neutral"
+                @click="handleSkipClick"
+              >
+                SKIP
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </template>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
       </template>
@@ -148,7 +170,7 @@ const handleShowComparsionClick = () => {
           class="main"
           spacing="medium"
         >
-          <ResultCategory
+          <CandidateList
             category="general"
             :max-visible-candidates="50"
           />
@@ -157,34 +179,12 @@ const handleShowComparsionClick = () => {
           <CardComponent corner="bottom-left">
             <StackComponent spacing="medium">
               <TitleText tag="p" size="medium">
-                Pro zobrazení výsledku je nutné odpovědět alespoň na 1 otázku
+                Pentru a vedea rezultatul, trebuie să răspundeți la cel puțin o
+                întrebare.
               </TitleText>
               <BodyText tag="p" size="medium">
-                Můžete se
-                <a
-                  :href="
-                    router.resolve({
-                      name: appRoutes.question.name,
-                      params: { ...route.params, nr: 1 },
-                      query: { ...route.query },
-                    }).path
-                  "
-                  @click.prevent="handleStartClick"
-                  >vrátit na začátek</a
-                >
-                a odpovědět na minimálně 1 otázku, nebo si
-                <a
-                  :href="
-                    router.resolve({
-                      name: appRoutes.comparison.name,
-                      params: { ...route.params },
-                      query: { ...route.query },
-                    }).path
-                  "
-                  @click.prevent="handleShowComparsionClick"
-                >
-                  zobrazit porovnání odpovědí kandidátů </a
-                >.
+                Puteți reveni la început și răspunde la cel puțin o întrebare
+                sau puteți vizualiza comparația răspunsurilor candidaților.
               </BodyText>
               <StackComponent horizontal spacing="medium">
                 <ButtonComponent
@@ -192,7 +192,7 @@ const handleShowComparsionClick = () => {
                   color="primary"
                   @click="handleStartClick"
                 >
-                  Vyplnit kalkulačku
+                  Completați calculatorul
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
@@ -202,7 +202,7 @@ const handleShowComparsionClick = () => {
                   color="primary"
                   @click="handleShowComparsionClick"
                 >
-                  Odpovědi kandidátů
+                  Răspunsurile candidaților
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
@@ -211,6 +211,24 @@ const handleShowComparsionClick = () => {
             </StackComponent>
           </CardComponent>
         </StackComponent>
+        <template #bottom-bar>
+          <ResponsiveWrapper extra-small small>
+            <BottomBar>
+              <div class="bottom-bar-grid">
+                <ButtonComponent
+                  kind="outlined"
+                  color="neutral"
+                  @click="handleSkipClick"
+                >
+                  SKIP
+                  <template #iconAfter>
+                    <IconComponent :icon="mdiArrowRight" />
+                  </template>
+                </ButtonComponent>
+              </div>
+            </BottomBar>
+          </ResponsiveWrapper>
+        </template>
       </BottomBarWrapper>
     </StickyHeaderLayout>
   </BackgroundComponent>

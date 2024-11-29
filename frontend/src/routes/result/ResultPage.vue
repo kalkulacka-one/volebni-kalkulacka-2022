@@ -3,11 +3,9 @@ import { computed, onBeforeMount, ref, type ComputedRef, type Ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 
 import {
-  mdiShareVariantOutline,
   mdiCloseCircleOutline,
   mdiArrowLeft,
   mdiArrowRight,
-  mdiAccountCircleOutline,
 } from '@mdi/js';
 
 import { appRoutes } from '@/main';
@@ -230,7 +228,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
           <SecondaryNavigationBar centered-title>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Adresa de contact" />
+                <IconComponent :icon="mdiArrowLeft" title="Recapitulare" />
               </IconButton>
             </template>
             <TitleText tag="h2" size="medium">Potrivirea mea</TitleText>

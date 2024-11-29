@@ -5,7 +5,7 @@ import { mdiArrowLeft, mdiArrowRight, mdiCloseCircleOutline } from '@mdi/js';
 
 import { appRoutes } from '@/main';
 import { useElectionStore } from '@/stores/electionStore';
-import { Subscriber, useSubscriberStore } from '@/stores/subscriberStore';
+import { User, useUserStore } from '@/stores/userStore';
 
 import { mdiEmailOutline } from '@mdi/js';
 
@@ -18,33 +18,27 @@ import BottomBarWrapper from '@/components/design-system/layout/BottomBarWrapper
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
-import RadioButtonComponent from '@/components/design-system/input/RadioButtonComponent.vue';
 import SecondaryNavigationBar from '@/components/design-system/navigation/SecondaryNavigationBar.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import TitleText from '@/components/design-system/typography/TitleText.vue';
 
 import EmbedWrapper from '@/components/utilities/embedding/EmbedWrapper.vue';
-import MarkdownIt from '@/components/utilities/MarkdownIt.vue';
 import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
-import { stringToNormalizedHyphenated } from '@/common/utils';
 import TextInputComponent from '@/components/design-system/input/TextInputComponent.vue';
 import StepWrapper from '@/components/design-system/layout/StepWrapper.vue';
 
 const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
-const subscriberStore = useSubscriberStore();
+const userStore = useUserStore();
 
 const election = electionStore.election as Election;
 const electionName = election.name;
-const electionDescription = election.description;
 
 const breadcrumbs = electionName;
 
-const selected = ref((route.params.district as string) || null);
-
-const email = ref(subscriberStore.subscriber?.email || '');
+const email = ref(userStore.user?.email || '');
 const emailError = ref();
 const posting = ref();
 const success = ref();
@@ -82,15 +76,11 @@ const onSubmit = async () => {
     success.value = true;
     message.value = 'Sikeres feliratkozás!';
 
-    const subscriber = (await response.json()) as Subscriber;
-
-    subscriberStore.setSubscriber({
-      id: subscriber.id,
-      email: subscriber.email,
-    });
+    const user = (await response.json()) as User;
+    userStore.setUser(user);
 
     router.push({
-      name: appRoutes.result.name,
+      name: appRoutes.preferredCandidate.name,
       query: { ...route.query },
     });
   } else {
@@ -105,10 +95,6 @@ const onSubmit = async () => {
 };
 
 const onRefuse = async () => {
-  subscriberStore.setSubscriber({
-    id: undefined,
-    email: undefined,
-  });
   router.push({
     name: appRoutes.result.name,
     query: { ...route.query },
