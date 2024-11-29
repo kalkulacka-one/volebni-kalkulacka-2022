@@ -48,7 +48,7 @@ const districtNameWithCode = showDistrictCode
   ? `${districtName} (${districtCode})`
   : districtName;
 
-const breadcrumbs = `${electionName} — ${districtNameWithCode}`;
+const breadcrumbs = `${electionName} — TestVot 2024`;
 
 const handlePreviousClick = () => {
   // go to the last question
@@ -155,7 +155,7 @@ const handleShowComparsionClick = () => {
                 color="neutral"
                 @click="handleSkipClick"
               >
-                SKIP
+                Sari peste
                 <template #iconAfter>
                   <IconComponent :icon="mdiArrowRight" />
                 </template>
@@ -220,7 +220,7 @@ const handleShowComparsionClick = () => {
                   color="neutral"
                   @click="handleSkipClick"
                 >
-                  SKIP
+                  Sari peste
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>

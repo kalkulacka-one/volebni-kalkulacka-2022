@@ -105,7 +105,7 @@ const toggleClick = () => {
         <strong>{{ question.title }}</strong>
       </BodyText>
       <BodyText class="mobile" size="small">
-        {{ question.name }}
+        {{ question.title }}
       </BodyText>
       <BodyText v-show="isExpanded" class="mobile" size="medium">
         <strong>{{ question.title }}</strong>

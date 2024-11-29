@@ -66,7 +66,7 @@ watch(isInitialized, (value) => {
     const districtNameWithCode = showDistrictCode
       ? `${districtName} (${districtCode})`
       : districtName;
-    breadcrumbs.value = `${electionName} — ${districtNameWithCode}`;
+    breadcrumbs.value = `${electionName} — TestVot 2024`;
   }
 });
 const handleFillAgainClick = () => {
