@@ -170,6 +170,15 @@ const handleShowComparsionClick = () => {
           class="main"
           spacing="medium"
         >
+          <StackComponent spacing="small">
+            <BodyText size="medium">
+              De asemenea, am dori să arătăm cum cred susținătorii diferitelor partide
+              despre întrebarea de mai sus. Pentru a face acest lucru, trebuie să știm
+              cum intenționează să voteze cei care au răspuns la întrebările noastre.
+              Ne-ați spune, vă rog, pe ce partide ați vota, cel mai probabil, dacă ați
+              vota la alegerile parlamentare din acest an?
+            </BodyText>
+          </StackComponent>
           <CandidateList
             category="general"
             :max-visible-candidates="50"
