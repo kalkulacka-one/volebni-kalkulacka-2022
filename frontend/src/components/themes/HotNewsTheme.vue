@@ -4,4 +4,4 @@
   </div>
 </template>
 
-<style lang="scss" scoped src="@/components/themes/SeznamZpravyTheme.scss" />
+<style lang="scss" scoped src="@/components/themes/HotNewsTheme.scss" />
