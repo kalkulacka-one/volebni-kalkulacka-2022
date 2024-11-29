@@ -266,7 +266,7 @@ const handlePreviousClick = () => {
             <HeadingComponent kind="title" size="medium">
               Cum funcționează TestVot
             </HeadingComponent>
-            <BodyText size="medium">Versiunea pentru alegerile parlamentare din 2024 are TBD de afirmații cu 2 variante de răspuns (sunt de acord / nu sunt de acord).</BodyText>
+            <BodyText size="medium">Versiunea pentru alegerile parlamentare din 2024 are 24 de afirmații cu 2 variante de răspuns (sunt de acord / nu sunt de acord).</BodyText>
             <CardComponent
               corner="bottom-right"
               border

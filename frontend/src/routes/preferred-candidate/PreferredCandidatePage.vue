@@ -170,6 +170,15 @@ const handleShowComparsionClick = () => {
           class="main"
           spacing="medium"
         >
+          <StackComponent spacing="small">
+            <BodyText size="medium">
+              De asemenea, am dori să arătăm cum cred susținătorii diferitelor partide
+              despre întrebarea de mai sus. Pentru a face acest lucru, trebuie să știm
+              cum intenționează să voteze cei care au răspuns la întrebările noastre.
+              Ne-ați spune, vă rog, pe ce partide ați vota, cel mai probabil, dacă ați
+              vota la alegerile parlamentare din acest an?
+            </BodyText>
+          </StackComponent>
           <CandidateList
             category="general"
             :max-visible-candidates="50"
@@ -184,7 +193,7 @@ const handleShowComparsionClick = () => {
               </TitleText>
               <BodyText tag="p" size="medium">
                 Puteți reveni la început și răspunde la cel puțin o întrebare
-                sau puteți vizualiza comparația răspunsurilor candidaților.
+                sau puteți vizualiza comparația răspunsurilor părților.
               </BodyText>
               <StackComponent horizontal spacing="medium">
                 <ButtonComponent
@@ -202,7 +211,7 @@ const handleShowComparsionClick = () => {
                   color="primary"
                   @click="handleShowComparsionClick"
                 >
-                  Răspunsurile candidaților
+                  Răspunsurile părților
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
