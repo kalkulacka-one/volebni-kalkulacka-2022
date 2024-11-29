@@ -285,7 +285,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
               </TitleText>
               <BodyText tag="p" size="medium">
                 Puteți reveni la început și răspunde la cel puțin o întrebare
-                sau puteți vizualiza comparația răspunsurilor candidaților.
+                sau puteți vizualiza comparația răspunsurilor părților.
               </BodyText>
               <StackComponent horizontal spacing="medium">
                 <ButtonComponent
@@ -303,7 +303,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
                   color="primary"
                   @click="handleShowComparsionClick"
                 >
-                  Răspunsurile candidaților
+                  Răspunsurile părților
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
