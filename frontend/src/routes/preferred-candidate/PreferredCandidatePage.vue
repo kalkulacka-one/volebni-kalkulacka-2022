@@ -155,7 +155,7 @@ const handleShowComparsionClick = () => {
                 color="neutral"
                 @click="handleSkipClick"
               >
-                SKIP
+                Sari peste
                 <template #iconAfter>
                   <IconComponent :icon="mdiArrowRight" />
                 </template>
@@ -220,7 +220,7 @@ const handleShowComparsionClick = () => {
                   color="neutral"
                   @click="handleSkipClick"
                 >
-                  SKIP
+                  Sari peste
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>
