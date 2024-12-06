@@ -37,7 +37,7 @@ const handleVote = (option: string | null) => {
     userStore.saveVote('did-not-answer');
   } 
   router.push({
-    name: appRoutes.result.name,
+    name: appRoutes.emailCollection.name,
     params: { ...route.params },
     query: { ...route.query },
   });
