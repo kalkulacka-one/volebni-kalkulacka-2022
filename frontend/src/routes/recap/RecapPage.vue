@@ -57,13 +57,13 @@ const handlePreviousClick = () => {
   });
 };
 
-// const goToPreferredCandidatePage = () => {
-//   router.push({
-//     name: appRoutes.preferredCandidate.name,
-//     params: { ...route.params },
-//     query: { ...route.query },
-//   });
-// };
+ const goToPreferredCandidatePage = () => {
+   router.push({
+     name: appRoutes.preferredCandidate.name,
+     params: { ...route.params },
+     query: { ...route.query },
+   });
+ };
 
 // const goToResultPage = () => {
 //   router.push({
@@ -73,13 +73,13 @@ const handlePreviousClick = () => {
 //   });
 // };
 
-const goToEmailCollection = () => {
+/* const goToEmailCollection = () => {
   router.push({
     name: appRoutes.emailCollection.name,
     params: { ...route.params },
     query: { ...route.query },
   });
-};
+}; */
 
 const availableTags: Set<string> = new Set(['All']);
 const selectedTag = ref('All');
@@ -174,12 +174,12 @@ const isCardHidden = (index: number) => {
                 class="desktop"
                 kind="filled"
                 color="primary"
-                @click="goToEmailCollection"
+                @click="goToPreferredCandidatePage()"
               >
                 <template #icon>
                   <IconComponent :icon="vkiLogoPercent" />
                 </template>
-                Arată rezultatele
+                Întrebarea următoare
                 <template #iconAfter>
                   <IconComponent :icon="mdiArrowRight" />
                 </template>
@@ -190,9 +190,9 @@ const isCardHidden = (index: number) => {
       </template>
       <BottomBarWrapper>
         <StackComponent class="main" spacing="small">
-          <BodyText size="small">
-            Aici poți verifica și ajusta răspunsurile și greutatea lor, dacă
-            este necesar.
+          <BodyText size="medium">
+            Aici iți poți verifica și ajusta răspunsurile și
+            importanța lor, dacă ți se pare necesar.
           </BodyText>
           <StackComponent class="list" spacing="small">
             <RecapQuestionCard
@@ -217,9 +217,9 @@ const isCardHidden = (index: number) => {
                 <ButtonComponent
                   kind="filled"
                   color="primary"
-                  @click="goToEmailCollection"
+                  @click="goToPreferredCandidatePage()"
                 >
-                  Spre rezultatele
+                  Întrebarea următoare
                   <template #iconAfter>
                     <IconComponent :icon="mdiArrowRight" />
                   </template>

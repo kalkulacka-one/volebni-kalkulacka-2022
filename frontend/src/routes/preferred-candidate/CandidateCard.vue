@@ -32,9 +32,12 @@ const route = useRoute();
 
 const handleVote = (candidateId: string | null) => {
   if (!candidateId) return;
+  if (!userStore.user) {
+    userStore.setUser({ id: 'anonymous' });
+  }
   userStore.saveVote(candidateId);
   router.push({
-    name: appRoutes.result.name,
+    name: appRoutes.emailCollection.name,
     params: { ...route.params },
     query: { ...route.query },
   });
@@ -55,7 +58,7 @@ const hovered = ref(false);
   >
     <div class="avatar desktop">
       <AvatarComponent
-        size="medium"
+        size="extra-large"
         background-color="rgb(var(--palette-primary-90))"
         :background-image="
           candidate?.img_url ||
@@ -68,7 +71,7 @@ const hovered = ref(false);
     </div>
     <div class="avatar mobile">
       <AvatarComponent
-        size="medium"
+        size="large"
         :background-color="
           order === 1
             ? 'rgb(var(--palette-primary-50))'
@@ -84,11 +87,11 @@ const hovered = ref(false);
       </AvatarComponent>
     </div>
     <div class="text">
-      <BodyText class="desktop" tag="p" size="medium">
+      <BodyText class="desktop" tag="p" size="large">
         <strong>{{ candidate?.name }}</strong>
       </BodyText>
       <BodyText class="mobile" tag="p" size="medium">
-        <strong>{{ candidate?.short_name }}</strong>
+        <strong>{{ candidate?.name }}</strong>
       </BodyText>
     </div>
     <ButtonComponent
@@ -96,7 +99,7 @@ const hovered = ref(false);
         class="vote-button"
         kind="outlined"
         color="neutral"
-        size="small"
+        size="medium"
         selected
         @click="handleVote(candidate?.id ?? null)"
         @mouseover="hovered = true"
@@ -154,7 +157,7 @@ const hovered = ref(false);
   }
 
   @media (max-width: 700px) {
-    grid-template-columns: 3rem 1fr auto;
+    grid-template-columns: 4rem 1fr auto;
     column-gap: var(--responsive-spacing-extra-small);
   }
 

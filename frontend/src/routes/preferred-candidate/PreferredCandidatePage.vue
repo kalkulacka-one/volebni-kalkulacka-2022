@@ -172,11 +172,9 @@ const handleShowComparsionClick = () => {
         >
           <StackComponent spacing="small">
             <BodyText size="medium">
-              De asemenea, am dori să arătăm cum cred susținătorii diferitelor partide
-              despre întrebarea de mai sus. Pentru a face acest lucru, trebuie să știm
-              cum intenționează să voteze cei care au răspuns la întrebările noastre.
-              Ne-ați spune, vă rog, pe ce partide ați vota, cel mai probabil, dacă ați
-              vota la alegerile parlamentare din acest an?
+              Am dori să vă arătăm cum răspund susținătorii lui Georgescu și
+              Lasconi la întrebările de mai sus. Pentru a facilita acest lucru,
+              vă rugăm să ne spuneți pentru ce candidat intenționați să votați?
             </BodyText>
           </StackComponent>
           <CandidateList

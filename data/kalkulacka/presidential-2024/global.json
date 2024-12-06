@@ -1,0 +1,482 @@
+{
+    "id": "788008c2-7d94-48a6-8aec-5d6bb56ec5d0",
+    "name": "global",
+    "description": "Alegeri prezidențiale în România 2024",
+    "district_code": "global",
+    "show_district_code": false,
+    "election": {
+        "election": {
+            "id": "presidential-2024",
+            "key": "presidential-2024",
+            "name": "Alegeri prezidențiale în România 2024",
+            "description": "Alegeri prezidențiale în România 2024",
+            "instructions": {
+                "header": "presidential - header",
+                "step_1_1": "",
+                "step_1_2": "",
+                "step_1_link": "",
+                "step_2_1": ""
+            },
+            "from": "2024-12-01T00:00:00",
+            "to": "2024-12-01T14:00:00"
+        }
+    },
+    "questions": [
+        {
+            "id": "4829747e-7257-453f-b80a-e2ad40d247dd",
+            "name": "1 – Guvernare și administrație",
+            "title": "Sistemul de guvernare al României ar trebui reorganizat astfel încât să permită cetățenilor o implicare mai mare.",
+            "gist": "",
+            "detail": "Participarea cetățenilor în politică este esențială pentru tragerea la răspundere a funcționarilor publici și receptivi față de oameni. Se așteaptă să crească încrederea, să limiteze abuzul de putere și să ducă la o mai bună articulare a cererilor populare. România a fost deficitară în organizarea chiar și a acelor procese consultative cu cetățenii impuse de lege. Cei care sunt de acord cu afirmația de mai sus cred că reformele sunt necesare pentru a deschide oportunități mai largi pentru cetățeni de a-și exprima opiniile despre ceea ce ar trebui să facă guvernul la nivel local și național. Cei care nu sunt de acord cred ca astfel de reforme nu sunt esentiale. Legile existente ar trebui puse în aplicare și proiectele pilot existente luate mai în serios. Reformele radicale pot fi doar o mască pentru distrugerea democrației.",
+            "tags": []
+        },
+        {
+            "id": "6f6852f8-3460-4337-8c7d-3889fe50ff4a",
+            "name": "2 – Guvernare și administrație",
+            "title": "Parlamentul și partidele politice trebuie sa devină mai democratice, dar ele trebuie să rămână instituțiile centrale ale sistemului politic al României.",
+            "gist": "",
+            "detail": "Democrația cere ca cetățenii să poată controla aleșii și funcționarii publici. Cei care sunt de acord cu această afirmație cred că democrația românească s-ar îmbunătăți dacă partidele politice și parlamentul ar fi mai responsabile și mai receptive la nevoile și nemulțumirile cetățenilor. Cu toate acestea, fără parlament și partide politice care să joace un rol major, cetățenii ar avea și mai puțină influență asupra alesilor, funcționarilor publici și a deciziilor guvernamentale. Cei care nu sunt de acord cu afirmația de mai sus susțin că parlamentul și partidele politice nu sunt foarte utile pentru a reprezenta oamenii obișnuiți. În schimb, cetățenii ar trebui să se implice direct în activitatea efectivă a guvernului la nivel local, precum și la nivel national.",
+            "tags": []
+        },
+        {
+            "id": "8bd343e6-9c4f-45b2-9886-1ab933acaa4d",
+            "name": "3 – Politică externă",
+            "title": "România ar trebui sa sa distanteze de partenerii occidentali precum NATO și UE și să aibă o poziție mai neutră între /independenta fata de Est și Vest.",
+            "gist": "",
+            "detail": "Anul acesta se împlinesc 20 de ani de când România a aderat la NATO și 17 ani de când a aderat la Uniunea Europeană, dar poziționarea României ca aliat economic și militar al Statelor Unite și al Uniunii Europene este și mai veche. De exemplu, în anii 1990 România făcea parte dintr-o (mare) coaliție de state implicate în Războiul din Golf și, de asemenea, sa alăturat forțelor de stabilizare din Bosnia. România a fost, de asemenea, parte a coaliției conduse de SUA în războiul din Afganistan și Irak. De-a lungul anilor, România a căutat să se poziționeze ca un aliat apropiat și loial, angrenând resurse umane și materiale importante - raportate la capacitățile sale - în acest scop, uneori cu efecte ambigue privind înapoi (ca în cazul războiului din Irak sau a găzduirii de către România a black site al CIA). Însă, acestea au făcut parte dintr-un calcul conform căruia aderarea la NATO și a fi un aliat ferm era cea mai bună abordare pentru securitatea României. Susținătorii continuării pe această traiectorie afirmă că eforturile României au dat în mod clar roade, cu admiterea în NATO, mai ales - care aduce cu sine o garanție colectivă de securitate că, dacă un membru este atacat, ceilalți îl vor apăra -, staționarea de trupe americane în România și a unor capacități defensive etc. Oponenții susțin că unele dintre aceste beneficii ar fi putut fi extrase fără atâtea investiții și angajamente și că alte țări au stabilit poziții mai „neutre” asupra scena mondială prin construirea unei reputații de aliați de încredere doar în proiecte punctuale sau de „brokeri cinstiți” în disputele internaționale. În mod similar, cei care consideră că România ar trebui să pună o oarecare distanță între ea și UE văd unele beneficii potențiale în a nu ne baza prea mult pe fondurile UE - care vin cu condiții - și pe UE ca partener politic și economic, argumentând că alte piețele mari ar putea deveni parteneri comerciali și investitori mai mari în România dacă li s-ar permite. Unii pot arăta, de asemenea, către țări care au relații foarte strânse cu UE și integrare parțială în piața unică drept inspirație. Cu toate acestea, pentru toate țările din Europa, UE, ca bloc politic și comercial, rămâne un partener esențial pentru viitorul previzibil. Iar membrii non-UE din Spațiul Economic European trebuie să se angajeze în negocieri detaliate cu privire la termenii și condițiile participării lor la piața unică. Mai mult, așa cum demonstrează cazul Brexit-ului, ieșirea din UE poate fi un proces extrem de oneros. Și a fi în afara UE implică în mod evident o influență mai mică asupra procesului decizional la nivelul UE decât o au statele membre ale UE. Din aceste motive, se poate argumenta că România se află în cele din urmă într-o poziție mai bună pentru a-și urmări interesele din interiorul UE - și NATO - decât din exterior și că a-și asuma un rol activ în elaborarea politicilor la toate nivelurile - precum și în urmărirea cooperării economice cu țări din afara UE, acolo unde este benefică - este cea mai bună abordare.",
+            "tags": []
+        },
+        {
+            "id": "150b845e-b833-4307-b757-094aa67757a2",
+            "name": "4 – Guvernare și administrație",
+            "title": "Ar trebui continuată integrarea statelor membre ale Uniunii Europene, inclusiv cu cedarea unor competențe ori decizii către nivelul european.",
+            "gist": "",
+            "detail": "O integrare mai profundă a statelor membre UE ar presupune transferul unor puteri de decizie de la guvernele naționale către instituții europene precum Comisia UE, Parlamentul sau Consiliul în domenii precum politica externă, apărarea, imigrația, mediul și, într-o mică măsură, fiscalitatea. O integrare mai profundă ajută la punerea în comun a resurselor, la creșterea influenței europene pe scena mondială și la găsirea de soluții eficiente și la armonizarea intereselor naționale. În același timp, poate crea noi conflicte între statele membre și poate face ca oamenii obișnuiți să se simtă mai puțin reprezentați în deciziile care le afectează viața și protestează împotriva influenței străine.",
+            "tags": []
+        },
+        {
+            "id": "18c5110c-5b6c-4214-a3d9-84f1df86c210",
+            "name": "5 – Apărare",
+            "title": "România nu ar trebui să mai ofere asistență militară - precum muniții și echipamente - Ucrainei.",
+            "gist": "",
+            "detail": "Dupa atacarea Ucrainei de catre Rusia, statele UE inclusiv Romania au sprijinit Ucraina cu bani, bunuri și servicii atât bilateral - adică fiecare țară separat - cât și colectiv, prin mecanisme europene, precum Instrumentul European pentru Pace. Până la 31 august 2024, România a acordat sau promis în total 127 milioane EUR - sau 0,05% din PIB - pentru scopuri umanitare, financiare și militare. Ajutorul militar promis - de ex. sub formă de echipamente - este în valoare de 4 milioane EUR, sau 0,002% din PIB. Media europeană a donațiilor bilaterale executate sau promise este 3 miliarde EUR/stat membru. Cei care se opun donațiilor militare către Ucraina consideră că este mai important ca România să investească în propriile capacități de apărare și/sau să evite înrăutățirea relațiilor cu Rusia ori alimentarea conflictului. Cei care sunt pentru continuarea donațiilor afirmă că România are o datorie de a fi solidară cu o țară vecină precum și cu celelalte state membre UE care asistă Ucraina, precum și faptul că este în interesul României ca Ucraina să se poată apăra în fața agresiunii ruse.",
+            "tags": []
+        },
+        {
+            "id": "1ccecf35-902d-4eb9-9c39-218578ac4060",
+            "name": "6 – Apărare",
+            "title": "România ar trebui să aloce cel puțin 2% din PIB cheltuielilor din domeniul apărării, așa cum se cere de la toți membrii NATO.",
+            "gist": "",
+            "detail": "Doar 23 din 32 de state vor fi atins obiectivul de a cheltui cel puțin 2% din PIB pentru apărare în 2024, convenit în cadrul alianței, potrivit unei estimări de la jumătatea anului 2024. Dar cheltuielile pentru apărare ale aliaților NATO au crescut semnificativ recent. De exemplu, în 2021, doar 6 țări au atins obiectivul, în 2022, 7, iar în 2023, 10. Un argument pentru ca România să continue să cheltuiască cel puțin 2% din PIB pentru apărare în România este că suntem mai aproape de războiul din Ucraina decât majoritatea membrilor NATO. Un alt argument este că țara noastră are o nevoie mai mare de a investi în consolidarea capacităților sale de apărare în comparație cu țările care au cheltuit istoric mai mult pentru asta. În același timp, alții susțin că România are multe alte nevoi - la fel de stringente - de exemplu pentru a atenua sărăcia sau problemele cu sistemul de sănătate și educație.",
+            "tags": []
+        },
+        {
+            "id": "2cc6bf04-4723-4ed0-8d0e-60f1f8cc0689",
+            "name": "7 – Economie",
+            "title": "Companiile străine și cele din UE care activează în România contribuie la dezvoltarea economică a țării și nu trebuie să fie obligate să aibă co-acționari români dacă nu doresc acest lucru.",
+            "gist": "",
+            "detail": "Investițiile străine au contribuit semnificativ la creșterea competitivității, standardelor, produselor și serviciilor în economia românească. Legea noastră permite persoanelor fizice și entităților străine să înființeze filiale deținute integral sau să dobândească proprietatea deplină a companiilor românești existente, cu condiția ca acestea să respecte cerințele fiscale și de înregistrare locale. Impunerea de cerințe pentru companiile străine de a avea coproprietari români ar contraveni atât legilor naționale, cât și obligațiilor UE și ar putea descuraja investițiile străine și creșterea economică. Proprietatea locală poate, totuși, să ofere un control mai mare asupra resurselor strategice, să păstreze o cotă mai mare din profituri în țară, să crească oportunitățile de creștere pentru companiile românești. Normele UE permit statelor membre să păstreze anumite companii în mâini locale, dar aceste excepții trebuie să fie bine justificate și aprobate de organismele locale. Dacă sunteți de acord cu afirmația, susțineți practica existentă, în timp ce dezacordul ar susține propunerea ca România să-și schimbe abordarea și să promoveze asumarea românească și să caute energic o cale de a ocoli regulile actuale ale UE.",
+            "tags": []
+        },
+        {
+            "id": "02a31ff4-d154-4fce-a1e3-59fea12fde06",
+            "name": "8 – Economie",
+            "title": "Fondurile UE fac si mult rău nu doar bine din punctul de vedere al dezvoltării României.",
+            "gist": "",
+            "detail": "România primește mai multe fonduri UE decât contribuim la buget. Aceste fonduri au avansat sistemul de transport și standardele de viață din România, au sprijinit agricultura și îmbunătățirea educației și a sănătății. Între 2014 și 2020, fondurile structurale ale UE au contribuit cu aproximativ 15-20% la bugetul anual de investiții publice al României și au crescut PIB-ul României cu 2-3% pe an din 2007. România poate influența proiectarea lor, iar fondurile UE vizează în mod specific consolidarea capacităților, competitivitatea și reducerea inegalităților dintre regiunile Europei și ale României. Criticii susțin, totuși, că acestea încurajează dependența în loc să încurajeze creșterea economică durabilă, inovația și investițiile din surse locale (naționale, municipale și private). În unele cazuri, fondurile UE au fost prost gestionate și nu au reușit să obțină rezultate în conformitate cu prioritățile locale. Au apărut și unele cazuri de corupție, iar regiunile mai puțin dezvoltate au întâmpinat dificultăți în absorbția cu succes a fondurilor din cauza cerințelor lor de expertiză birocratică.",
+            "tags": []
+        },
+        {
+            "id": "60a9c7f3-1703-4fef-bfd9-d917f9a188f3",
+            "name": "9 – Mediu",
+            "title": "România nu ar trebui să se grăbească să respecte reglementările UE privind protecția mediului, deoarece acestea ar putea afecta creșterea noastră economică.",
+            "gist": "",
+            "detail": "Respectarea reglementărilor europene de mediu, cum ar fi reducerea dependenței de cărbune și emisiile de carbon necesită adesea investiții semnificative și schimbări operaționale. Întârzierea respectării acestora poate proteja creșterea economică a României, stabilitatea prețurilor și locurile de muncă pe termen scurt și poate lăsa mai multe resurse pentru cheltuielile pentru alte obiective. Cu toate acestea, tranziția rapidă la practici durabile va proteja mediul, va îmbunătăți accesul la fondurile UE și productivitatea agricolă, va atrage investiții străine și va spori competitivitatea. In plus Romania este parte din definierea reglementarilor europene si are o obligatie contractuala sa le indeplineasca, iar incalcarea conduce la sanctiuni financiare.",
+            "tags": []
+        },
+        {
+            "id": "cf3a6fd7-34d1-485a-965d-1ceacea74ccd",
+            "name": "10 – Energie",
+            "title": "România ar trebui să extragă și să consume ori vândă mai mult din resursele sale de gaze naturale.",
+            "gist": "",
+            "detail": "România produce marea majoritate a gazului natural pe care îl folosește (aproximativ 90%) și este producătorul nr. 2 în UE de gaz natural, după Țările Joase. Sporirea extracției de gaz pentru consum intern ar reduce nevoia de importuri iar exportul de gaze ar putea aduce venituri suplimentare la buget și ajuta la diversificarea surselor UE de gaze naturale. Însă pentru a spori capacitatea de producție, înmagazinare și transport sunt necesare investiții semnificative în infrastructură la mai multe niveluri: extracție, prelucrare, conductei, asigurarea respectării standardelor de mediu și siguranță etc. În plus, atât România cât și UE în general și-au propus să-și reducă consumul de combustibili fosili, iar consumul de gaz în Europa este în scădere. De aceea unii argumentează că ar fi mai bine ca statul să susțină inițiativele de energie regenerabilă mai mult. Nu în ultimul rând, cât beneficiază statul român de pe urma exploatării de gaze pe teritoriul țării este un aspect influențat de mai mulți factori, inclusiv detaliile contractelor încheiate cu investitori privați.",
+            "tags": []
+        },
+        {
+            "id": "ba85d2b1-e220-4505-971c-b76106eaa6ac",
+            "name": "11 – Economie",
+            "title": "Imigranții care muncesc în mod legal în România contribuie la creșterea economică și, prin urmare, ar trebui să fie bineveniți.",
+            "gist": "",
+            "detail": "Mulți oameni lucrează în afara țării lor de origine. Si in Romania, imigranții pot acoperi deficitul de forță de muncă în contextul în care țara se confruntă cu o populație în scădere și cu o forță de muncă îmbătrânită. Astfel ei contribuie la creșterea economică, diversitatea culturală, inovație și antreprenoriat. În același timp, adaptarea lor la limba și obiceiurile din România poate fi lentă, afluxul lor brusc poate suprasolicita piețele locale de locuințe și infrastructură, de exemplu școlile. Salariile mai mici și acceptarea unor condiții potențial precare la locul de muncă îi face vulnerabili, iar unele comunități locale le pot răspunde cu resentimente etnice.Imigranții care lucrează legal plătesc impozite și contribuie la sistemele de pensii și la securitatea social, dar pentru asigura ca ramin in legalitate si se pot integra, este nevoie de reglementari clare, transparente si previzibile ceea ce nu este intru totul cazul in prezent.",
+            "tags": []
+        },
+        {
+            "id": "1bd8af06-72ea-4c05-a9f2-a47ee81a2f46",
+            "name": "12 – Energie",
+            "title": "România ar trebui sa pună accentul pe folosirea resurselor energetice tradiționale, cum ar fi gazul si lemnul și să folosească energia verde doar ca soluție suplimentară/ adițională.",
+            "gist": "",
+            "detail": "Strategia energetică a Uniunii Europene acordă prioritate utilizării energiei regenerabile (cum ar fi energia eoliană și solară). Cu toate acestea, resursele tradiționale au în continuare un rol de jucat în mixul energetic al României, în special în faza de tranziție. Susținătorii utilizării mai mari a gazului și a lemnului susțin că abundența lor în România face ca utilizarea lor să fie sigură. Un program de reîmpădurire și noi tehnologii de biomasă ar putea permite gestionarea durabilă a resurselor de lemn. Oponenții unei dependențe mai mari de gaze și lemne susțin că gazul natural, deși mai curat decât cărbunele, contribuie totuși la emisiile de gaze cu efect de seră, ceea ce creează încălzirea globală și încalcă angajamentele internaționale ale României. Arderea lemnului, dacă nu este gestionată în mod durabil, produce, de asemenea, poluare a aerului, defrișări, eroziunea solului și pierderea biodiversității, în special în zonele rurale. Sectorul energiei verzi creează locuri de muncă. Costurile inițial ridicate ale tranziției către o utilizare mai largă a resurselor regenerabile ieftine pot fi acoperite din fonduri UE. Rezervele de gaze se vor epuiza, iar dependența de ele creează riscuri de securitate energetică din cauza fluctuațiilor prețurilor și a tensiunilor geopolitice.",
+            "tags": []
+        },
+        {
+            "id": "ca17dbbd-622c-4124-93db-f96322a831c9",
+            "name": "13 – Cultură",
+            "title": "Figurile istorice și organizațiile responsabile pentru uciderea oamenilor din cauza originii etnice, religiei sau convingerilor politice nu trebuie onorate și glorificate/ sau promovate și apreciate de către reprezentanții statului.",
+            "gist": "",
+            "detail": "Cetățenii români sunt liberi să-și exprime opiniile politice, dar legea noastră interzice scuzarea și onorarea persoanelor și organizațiilor care, potrivit instanțelor noastre si instanțelor penale internaționale, au comis crime împotriva păcii și umanității. Este ilegal să lăudăm, de exemplu, Garda de Fier, deoarece există o astfel de hotărâre judecătorească despre ei, iar Legea 107/2015 (privind interzicerea organizaţiilor şi simbolurilor cu caracter fascist, rasist sau xenofob şi a promovării cultului persoanelor vinovate de săvârşirea unor infracţiuni contra păcii şi omenirii) îi include în mod specific. Cei care nu sunt de acord cu afirmația de mai sus susțin că nici obiceiul, nici legea sau instanțele nu ar trebui să interzică oamenilor să exprime astfel de opinii, deoarece istoria este întotdeauna complexă și ar trebui să permitem dezbaterea publică despre orice. Unii dintre ei aprobă, de asemenea, atrocitățile pe care hotărârile judecătorești în cauză le-au sancționat. Chiar dacă cetățenilor li s-ar permite să facă acest lucru, politicienii care glorifică astfel de persoane sau organizații condamnate pentru crime impotriva umanitatii și implicit asupra poporului român, nu sunt potriviți să reprezinte statul român pentru că asta ofensează victimele, ar normaliza intoleranta si discriminarea și chiar ar incita la discriminare și la discriminare, ură naţională, rasială sau religioasă, ceea ce ar fi și un motiv de scadere a reputatiei si credibilitatii României în lume.",
+            "tags": []
+        },
+        {
+            "id": "d79db983-3c39-4a12-b14f-22b440be0811",
+            "name": "14 – Cultură",
+            "title": "Pe lângă promovarea culturii noastre naționale prin sprijin financiar si institutional, guvernul român ar trebui sa limiteze și afluxul de cultură străină prin mijloace administrative.",
+            "gist": "",
+            "detail": "Promovarea culturii naționale ajută la menținerea unui puternic sentiment de identitate și mândrie în rândul cetățenilor, promovând coeziunea socială. Protejează tradițiile, limbile și expresiile artistice.Investițiile în cultura locală pot stimula turismul și pot crea locuri de muncă în industriile creative. Sprijinirea culturii naționale și locale nu trebuie însă sa fie interpretata în opoziție cu fluxul cultural mondial și în cazul nostru european din care facem parte. De aceea, criticii unor astfel de politici arată că este dificil sau subiectiv să definești ce este \"cultura străină\" și să impui restricții administrative fără a crea cenzură și dispute comerciale.Izolarea și restricționarea fluxului cultural, în măsura în care este posibila astăzi, limitează libertățile individuale, dreptul de a accesa diverse expresii culturale și poate sărăci cultura și inovația locală.",
+            "tags": []
+        },
+        {
+            "id": "be113856-9d6f-422f-abd8-92013b2e4cac",
+            "name": "15 – Drepturi",
+            "title": "România ar trebui să adopte politici care să sprijine și să promoveze reprezentarea egală a femeilor și bărbaților în funcții de decizie.",
+            "gist": "",
+            "detail": "Mai mult echilibru de gen în pozițiile de putere - cum ar fi consiliile de administrație ale companiilor, cabinetele guvernamentale sau parlamentele - este considerat un lucru bun din o serie de motive. Studiile arată că poate duce la politici diferite (și mai bune), în special pe problemele care afectează femeile mai mult decât bărbații. De asemenea, poate da altor fete și femei un imbold pentru a urma anumite trasee educaționale și de carieră, și să îi încurajeze pe oamenii importanți din viața lor - de la părinți la educatori - să le susțină mai mult. Pentru a ajuta la atingerea unui mai bun echilibru de gen în poziții de putere, statul - precum și întreprinderile - pot adopta anumite măsuri, cum ar fi cotele de gen în listele de candidați pentru Parlament sau de candidații invitați la interviurile de angajare. Alte politici de promovare a echilibrului de gen includ finanțarea programelor menite să ajute femeile să își atingă potențialul și să depășească discriminarea. Susținătorii măsurilor de promovare a unui echilibru mai mare de gen subliniază beneficiile și importanța factorilor instituționali care pot perpetua excluderea, factori care sugerează că, și dacă am avea timp infinit, nu ar fi destul doar să așteptăm ca timpul să treacă, penru că discriminarea de gen împământenită la nivelul societății și instituționalizată nu s-ar eroda de la sine. Oponenții susțin fie că astfel de politici sunt inutile, fie că pot face mai mult rău decât bine. Unii cred că femeile sunt mai puțin potrivite pentru poziții de putere sau în sfera publică. Alții afirmă pur și simplu că măsurile pentru atingerea echilibrului de gen pot risca să consolideze discriminarea de gen prin alimentarea prejudecăților și resentimentelor.",
+            "tags": []
+        },
+        {
+            "id": "cfede536-d085-4941-ba08-cfae3ae2f221",
+            "name": "16 – Agricultură",
+            "title": "România ar trebui să se bazeze pe fermele mici și mijlocii care practică agricultura tradițională si ecologică pentru a asigura hrana/produsele alimentare și băuturile necesare populatiei.",
+            "gist": "",
+            "detail": "Agricultura din România are o structură polarizată, adică un număr foarte mare de ferme mici care practică agricultura de subzistență, pentru consumul propriu, pe suprafețe mici și doar câteva mii de companii mari. România este țara din UE cu cel mai mare număr de persoane care lucrează în agricultura (cca 23%). În plus, România are un procent mare de fermieri de peste 65 de ani (44,3%). Mecanizarea agriculturii este una din cele mai scazute, cu un tractor la fiecare 54 de hectare comparativ cu media UE de un tractor la 13 hectare. În acest context, susținătorii fermelor mici și mijlocii care practică agricultura tradițională și ecologică arată ca acestea protejează mediul prin utilizarea unor metode mai ecologice și oferă produse alimentare sănătoase, fără chimicale sau pesticide. Ele reduc dependența de importurile alimentare, sporind securitatea alimentară a țării si de asemenea contribuie la conservarea patrimoniului cultural local. Criticii acestei abordări arată însă că fermele mici sunt mai puțin productive decât agricultura industrializată, ceea ce poate duce la un deficit de produse și prețuri mai mari. Produsele ecologice sunt adesea mai scumpe, ceea ce le face inaccesibile pentru toți consumatorii, iar fermele mici au probleme legate de transport și distribuția produselor către piețe largi. Concentrandu-se pe acest tip de agricultura România riscă să fie depășită de țările care produc la scară largă și la costuri mai mici.",
+            "tags": []
+        },
+        {
+            "id": "71f3c411-b037-431d-8c91-27217b889ef8",
+            "name": "17 – Drepturi",
+            "title": "Trebuie permis parteneriatul civil între persoane de același sex.",
+            "gist": "",
+            "detail": "Parteneriatul civil e o alternativă la căsătorie care ar permite recunoașterea din punct de vedere legal a existenței unor cupluri care nu pot sau nu doresc să se căsătorească. Susținătorii parteneriatului civil argumentează că e nevoie de o metodă de a facilita accesul cuplurilor la anumite drepturi, de exemplu dreptul de a asista și vizita partenerul bolnav ori dreptul la succesiune în urma decesului partenerului. Un alt argument pro parteneriat civil este faptul că statul român trebuie să găsească o soluție legală de recunoaștere a cuplurilor de același sex, pentru a respecta legislația internațională la care a aderat. Unii se opun cu totul ideii de a recunoaște legal existența cuplurilor de același sex. Iar alții argumentează că drepturile și facilitățile oferite persoanelor căsătorite pot fi oferite cuplurilor de același sex și fără adoptarea parteneriatului civil, prin implementarea unor modificări punctuale de legislație ori procedură, unde este cazul.",
+            "tags": []
+        },
+        {
+            "id": "bef696d8-42c3-409b-8576-8f362d293ae0",
+            "name": "18 – Drepturi",
+            "title": "Căsătoria trebuie să fie permisă doar între un bărbat și o femeie",
+            "gist": "",
+            "detail": "Susținătorii căsătoriei exclusiv între un bărbat și o femeie considera că aceasta respectă tradițiile și valorile religioase ale societății românești, în special cele promovate de Biserica Ortodoxă, care consideră relațiile între persoane de același sex nepotrivite/ca un derapaj. Ei văd familia tradițională ca fiind cadrul ideal pentru creșterea copiilor și transmiterea valorilor culturale și creștine. Criticii acestei perspective afirmă că restrângerea dreptului la căsătorie încalcă drepturile omului și creeaza inegalități sociale și economice, deoarece cuplurile de același sex nu au acces la drepturi legale precum moștenirea, asigurările comune sau deciziile medicale pentru partener, de care toți ceilalți cetățeni se bucură. De asemenea, ei consideră că ignorarea diversității orientărilor sexuale contribuie la marginalizarea unei părți din societate. În opinia lor, instituțiile religioase ar trebui să fie libere să definească căsătoria conform credințelor lor, dar legile civile ar trebui să recunoască dreptul la căsătorie pentru toate persoanele, indiferent de orientarea sexuală, pentru a garanta egalitatea. În 2018, Coaliția pentru Familie a organizat un referendum pentru a defini în Constituție familia ca fiind formată doar dintr-un bărbat și o femeie. Referendumul a eșuat, întrucât doar 21% dintre cetățeni au participat. În prezent, peste 30 de țări au legalizat căsătoria între persoane de același sex.",
+            "tags": []
+        },
+        {
+            "id": "733aebf3-d7da-4a5c-958b-12d9fe37a0cd",
+            "name": "19 – Drepturi",
+            "title": "Femeile trebuie să aibă libertatea de a decide singure în ceea ce privește sănătatea reproductivă inclusiv întreruperile de sarcină. ",
+            "gist": "",
+            "detail": "Conform OMS (Organizatia Mondiala a Sanatatii), cele cinci aspecte de bază ale sănătății reproductive sunt: îmbunătățirea îngrijirii prenatale, perinatale, postpartum și nou-născuți; furnizarea de servicii de calitate pentru planificarea familială, inclusiv servicii de infertilitate; eliminarea avortului nesigur; combaterea infecțiilor cu transmitere sexuală, inclusiv HIV, infecțiile tractului reproducător, cancerul de col uterin și alte morbidități ginecologice; și promovarea sănătății sexuale. Desi relevante si pentru barbati, politicile in acest domeniu sunt direct legate de viata femeilor in mai multe aspecte in care au de luat decizii informate. Intreruperile de sarcina sunt doar un astfel de aspect. Ele pot fi necesare din motive de sănătate („terapeutic”) sau solicitat din alte motive (, „la cerere”) și poate fi efectuat ori prin administrarea unui medicament ori prin intervenție chirurgicală. În România este legală întreruperea sarcinii „la cerere” până la 14 săptămâni, aceeași regulă fiind cea mai comună în Europa, cu mici variații în calculul limitei gestaționale. Până la 6 luni, este legală întreruperea sarcinii din motive de sănătate, iar după 6 luni se poate induce un avort dacă este necesar pentru salvarea vieții mamei. La nivel global, 32% din țări permit avortul la cerere, fără să fie cerută o justificare, 82% permit avortul pentru a salva viața femeii iar 64% permit avortul pentru motive ce țin de sănătate. Printre argumentele pentru menținerea dreptului la avort „la cerere” se numără faptul că alegerea aceasta este derivată din dreptul de a dispune de propriul corp și faptul că atunci când avortul este interzis, aceste servicii continuă să fie solicitate, dar sunt prestate în condiții mult mai nesigure. Principalul contraargument este ideea că fătul ar avea un drept la viață încă din primele săptămâni de gestație, drept care pentru unele persoane, depășește ca importanță drepturile femeii sau alte considerente.",
+            "tags": []
+        },
+        {
+            "id": "462e8697-50de-4c27-b617-a56f822db8ee",
+            "name": "20 – Politică externă",
+            "title": "Președintele are ultimul cuvânt in political externă.",
+            "gist": "",
+            "detail": "Felul în care este discutată politica externă în Constituție subliniază importanța alinierii obiectivelor politicii externe și a colaborării între Președinte, Guvern și Parlament. Spre exemplu, Constituția indică faptul că președintele semnează tratatele, dar ele sunt negociate de Guvern și votate de Parlament. Ce se întâmplă dacă există un dezacord? Unii consideră că precizarea că \"președintele reprezintă statul român\" și faptul că acesta este și șeful Consiliului Suprem de Apărare a Țării înseamnă că ar trebui să aibă ultimul cuvânt. Alții amintesc că Parlamentul este organul reprezentativ suprem al poporului conform constituției și că președintele nu ar trebui să poată decide în politica externă fără susținerea parlamentului și a guvernului votat de Parlament.",
+            "tags": []
+        },
+        {
+            "id": "b1d2201c-7db2-4375-b367-9b917cd64955",
+            "name": "21 – Guvernare și administrație",
+            "title": "Rolul de mediator al presedintelui inseamna ca nu poate sa promoveze ideile sale sau ale unui partid / miscare in detrimentul guvernului sau a celorlalte partide parlamentare ",
+            "gist": "",
+            "detail": "Art. 80 alin. 2 din Constituție prevede că Preşedintele României veghează la respectarea Constituţiei şi la buna funcţionare a autorităţilor publice exercitând funcţia de mediere între puterile statului, precum şi între stat şi societate. Implicaţiile acestei prevederi sunt însă disputate. Conform unora, funcţia de mediere, împreună cu prevederea din art. 84 alin 1 conform căreia în timpul mandatului preşedintele nu poate fi membru al unui partid înseamnă că acesta trebuie să adopte o atitudine de imparţialitate faţă de partidele politice, şi să nu promoveze pe unul în detrimentul altora. Pe de altă parte, preşedintele are dreptul de exprimare a opiniilor politice, ceea ce poate include şi punctele de vedere cu privire la partidele politice, aşa cum arată verdictele Curţii Constituţionale.",
+            "tags": []
+        }
+    ],
+    "candidates": [
+        {
+            "id": "4b1587af-64ce-4847-8e83-bf5125e2bf47",
+            "name": "Călin Georgescu",
+            "type": "party",
+            "description": "Călin Georgescu",
+            "short_name": "Georgescu",
+            "is_active": true,
+            "given_name": "",
+            "family_name": "",
+            "img_url": "/data/avatars/presidential-2024/Georgescu.png",
+            "contacts": {
+                "web": []
+            },
+            "parties": [],
+            "motto": ""
+        },
+        {
+            "id": "0a1f0612-5f56-47ca-8530-832d8a875bfa",
+            "name": "Elena-Valerica Lasconi",
+            "type": "party",
+            "description": "Elena-Valerica Lasconi",
+            "short_name": "Lasconi",
+            "is_active": true,
+            "given_name": "",
+            "family_name": "",
+            "img_url": "/data/avatars/presidential-2024/Lasconi.png",
+            "contacts": {
+                "web": []
+            },
+            "parties": [],
+            "motto": ""
+        }
+    ],
+    "answers": [
+        {
+            "id": "f879126f-414f-457c-a40d-909af6e5a085",
+            "candidate_id": "4b1587af-64ce-4847-8e83-bf5125e2bf47",
+            "question_id": "4829747e-7257-453f-b80a-e2ad40d247dd",
+            "answer": "yes"
+        },
+        {
+            "id": "99c0edc2-f35f-4e80-b8f7-6bdb9c1ea4f9",
+            "candidate_id": "0a1f0612-5f56-47ca-8530-832d8a875bfa",
+            "question_id": "4829747e-7257-453f-b80a-e2ad40d247dd",
+            "answer": "yes"
+        },
+        {
+            "id": "8cfda84c-cf35-4b08-a84f-d371f3f28909",
+            "candidate_id": "4b1587af-64ce-4847-8e83-bf5125e2bf47",
+            "question_id": "6f6852f8-3460-4337-8c7d-3889fe50ff4a",
+            "answer": "no"
+        },
+        {
+            "id": "046b6a98-d90c-4ce6-98d4-d2b7c999c571",
+            "candidate_id": "0a1f0612-5f56-47ca-8530-832d8a875bfa",
+            "question_id": "6f6852f8-3460-4337-8c7d-3889fe50ff4a",
+            "answer": "yes"
+        },
+        {
+            "id": "05196f6a-ed99-4bba-bd73-da199946b7a0",
+            "candidate_id": "4b1587af-64ce-4847-8e83-bf5125e2bf47",
+            "question_id": "8bd343e6-9c4f-45b2-9886-1ab933acaa4d",
+            "answer": "yes"
+        },
+        {
+            "id": "fa519b87-4fc0-4421-9458-394106cead64",
+            "candidate_id": "0a1f0612-5f56-47ca-8530-832d8a875bfa",
+            "question_id": "8bd343e6-9c4f-45b2-9886-1ab933acaa4d",
+            "answer": "no"
+        },
+        {
+            "id": "8af2c7cb-3399-4e99-99f3-e538637ed1f9",
+            "candidate_id": "4b1587af-64ce-4847-8e83-bf5125e2bf47",
+            "question_id": "150b845e-b833-4307-b757-094aa67757a2",
+            "answer": "no"
+        },
+        {
+            "id": "8d0f23ab-6450-4366-9319-851f20340758",
+            "candidate_id": "0a1f0612-5f56-47ca-8530-832d8a875bfa",
+            "question_id": "150b845e-b833-4307-b757-094aa67757a2",
+            "answer": "yes"
+        },
+        {
+            "id": "7925450b-843d-4733-8990-3afa468bf2c5",
+            "candidate_id": "4b1587af-64ce-4847-8e83-bf5125e2bf47",
+            "question_id": "18c5110c-5b6c-4214-a3d9-84f1df86c210",
+            "answer": "no"
+        },
+        {
+            "id": "aa58f8d2-ad5d-498f-bca8-f5f0aadcc414",
+            "candidate_id": "0a1f0612-5f56-47ca-8530-832d8a875bfa",
+            "question_id": "18c5110c-5b6c-4214-a3d9-84f1df86c210",
+            "answer": "yes"
+        },
+        {
+            "id": "1868dd5d-6f49-4ccb-afab-79982bc7e760",
+            "candidate_id": "4b1587af-64ce-4847-8e83-bf5125e2bf47",
+            "question_id": "1ccecf35-902d-4eb9-9c39-218578ac4060",
+            "answer": "no"
+        },
+        {
+            "id": "f0aca43a-e5ed-4068-8453-ecb47f1f9ab7",
+            "candidate_id": "0a1f0612-5f56-47ca-8530-832d8a875bfa",
+            "question_id": "1ccecf35-902d-4eb9-9c39-218578ac4060",
+            "answer": "yes"
+        },
+        {
+            "id": "452e2f17-1c74-40d4-aa3a-4f7fed210da2",
+            "candidate_id": "4b1587af-64ce-4847-8e83-bf5125e2bf47",
+            "question_id": "2cc6bf04-4723-4ed0-8d0e-60f1f8cc0689",
+            "answer": "no"
+        },
+        {
+            "id": "342f7e62-3269-41f3-87fe-226f280cb87f",
+            "candidate_id": "0a1f0612-5f56-47ca-8530-832d8a875bfa",
+            "question_id": "2cc6bf04-4723-4ed0-8d0e-60f1f8cc0689",
+            "answer": "dont_know"
+        },
+        {
+            "id": "b36cbed6-b489-4da1-ba93-11e434443261",
+            "candidate_id": "4b1587af-64ce-4847-8e83-bf5125e2bf47",
+            "question_id": "02a31ff4-d154-4fce-a1e3-59fea12fde06",
+            "answer": "yes"
+        },
+        {
+            "id": "d36ad6f5-2191-40d7-88ef-79cd1da46cd0",
+            "candidate_id": "0a1f0612-5f56-47ca-8530-832d8a875bfa",
+            "question_id": "02a31ff4-d154-4fce-a1e3-59fea12fde06",
+            "answer": "no"
+        },
+        {
+            "id": "56ffdd71-be7b-4d56-becb-054d1bc3340e",
+            "candidate_id": "4b1587af-64ce-4847-8e83-bf5125e2bf47",
+            "question_id": "60a9c7f3-1703-4fef-bfd9-d917f9a188f3",
+            "answer": "yes"
+        },
+        {
+            "id": "6cc9f379-6d0a-4352-be09-b0d25fe5cd48",
+            "candidate_id": "0a1f0612-5f56-47ca-8530-832d8a875bfa",
+            "question_id": "60a9c7f3-1703-4fef-bfd9-d917f9a188f3",
+            "answer": "no"
+        },
+        {
+            "id": "e81d10c9-83e5-4ba1-b4ef-0bb82e81d05d",
+            "candidate_id": "4b1587af-64ce-4847-8e83-bf5125e2bf47",
+            "question_id": "cf3a6fd7-34d1-485a-965d-1ceacea74ccd",
+            "answer": "yes"
+        },
+        {
+            "id": "323eabe9-e48d-4a59-9fe2-0e09eb76151f",
+            "candidate_id": "0a1f0612-5f56-47ca-8530-832d8a875bfa",
+            "question_id": "cf3a6fd7-34d1-485a-965d-1ceacea74ccd",
+            "answer": "no"
+        },
+        {
+            "id": "76963adf-fa31-438b-9798-01b8cffcdfed",
+            "candidate_id": "4b1587af-64ce-4847-8e83-bf5125e2bf47",
+            "question_id": "ba85d2b1-e220-4505-971c-b76106eaa6ac",
+            "answer": "no"
+        },
+        {
+            "id": "3f3db9e8-468d-4795-869d-2e3e08a0d151",
+            "candidate_id": "0a1f0612-5f56-47ca-8530-832d8a875bfa",
+            "question_id": "ba85d2b1-e220-4505-971c-b76106eaa6ac",
+            "answer": "dont_know"
+        },
+        {
+            "id": "7f54916b-11c4-4fbd-aa41-74e95263e57d",
+            "candidate_id": "4b1587af-64ce-4847-8e83-bf5125e2bf47",
+            "question_id": "1bd8af06-72ea-4c05-a9f2-a47ee81a2f46",
+            "answer": "yes"
+        },
+        {
+            "id": "521ba55b-1f88-4806-90eb-673ac6634955",
+            "candidate_id": "0a1f0612-5f56-47ca-8530-832d8a875bfa",
+            "question_id": "1bd8af06-72ea-4c05-a9f2-a47ee81a2f46",
+            "answer": "dont_know"
+        },
+        {
+            "id": "f560ca98-c4bd-4fcf-ab01-978365d7c667",
+            "candidate_id": "4b1587af-64ce-4847-8e83-bf5125e2bf47",
+            "question_id": "ca17dbbd-622c-4124-93db-f96322a831c9",
+            "answer": "no"
+        },
+        {
+            "id": "308f985f-cb44-44b2-8246-2451504e9287",
+            "candidate_id": "0a1f0612-5f56-47ca-8530-832d8a875bfa",
+            "question_id": "ca17dbbd-622c-4124-93db-f96322a831c9",
+            "answer": "yes"
+        },
+        {
+            "id": "20d33bf8-5779-4e15-842b-68535408934e",
+            "candidate_id": "4b1587af-64ce-4847-8e83-bf5125e2bf47",
+            "question_id": "d79db983-3c39-4a12-b14f-22b440be0811",
+            "answer": "yes"
+        },
+        {
+            "id": "16bb1af8-61f0-4246-8925-67482d2099db",
+            "candidate_id": "0a1f0612-5f56-47ca-8530-832d8a875bfa",
+            "question_id": "d79db983-3c39-4a12-b14f-22b440be0811",
+            "answer": "no"
+        },
+        {
+            "id": "ec2478ab-0c89-432c-af48-908dd9279696",
+            "candidate_id": "4b1587af-64ce-4847-8e83-bf5125e2bf47",
+            "question_id": "be113856-9d6f-422f-abd8-92013b2e4cac",
+            "answer": "no"
+        },
+        {
+            "id": "b5550078-d777-461d-b460-6a6869c98cb8",
+            "candidate_id": "0a1f0612-5f56-47ca-8530-832d8a875bfa",
+            "question_id": "be113856-9d6f-422f-abd8-92013b2e4cac",
+            "answer": "dont_know"
+        },
+        {
+            "id": "a04f8dbe-acbf-4c42-ba80-3cc808ba69b4",
+            "candidate_id": "4b1587af-64ce-4847-8e83-bf5125e2bf47",
+            "question_id": "cfede536-d085-4941-ba08-cfae3ae2f221",
+            "answer": "yes"
+        },
+        {
+            "id": "3c22d2a3-0ecd-403c-8dcd-33d4d587a75d",
+            "candidate_id": "0a1f0612-5f56-47ca-8530-832d8a875bfa",
+            "question_id": "cfede536-d085-4941-ba08-cfae3ae2f221",
+            "answer": "no"
+        },
+        {
+            "id": "6c87237d-0324-4e30-908f-3ebfc589ffa8",
+            "candidate_id": "4b1587af-64ce-4847-8e83-bf5125e2bf47",
+            "question_id": "71f3c411-b037-431d-8c91-27217b889ef8",
+            "answer": "no"
+        },
+        {
+            "id": "366f20cb-31af-4ffd-bfe0-544787d189f3",
+            "candidate_id": "0a1f0612-5f56-47ca-8530-832d8a875bfa",
+            "question_id": "71f3c411-b037-431d-8c91-27217b889ef8",
+            "answer": "yes"
+        },
+        {
+            "id": "63f6d15b-2f7f-438b-bb00-225b7d96944a",
+            "candidate_id": "4b1587af-64ce-4847-8e83-bf5125e2bf47",
+            "question_id": "bef696d8-42c3-409b-8576-8f362d293ae0",
+            "answer": "yes"
+        },
+        {
+            "id": "422ee119-ab8a-4e48-85e6-84fc4cb7a711",
+            "candidate_id": "0a1f0612-5f56-47ca-8530-832d8a875bfa",
+            "question_id": "bef696d8-42c3-409b-8576-8f362d293ae0",
+            "answer": "yes"
+        },
+        {
+            "id": "d4691da2-58fe-4b6f-a74d-b10436476f8f",
+            "candidate_id": "4b1587af-64ce-4847-8e83-bf5125e2bf47",
+            "question_id": "733aebf3-d7da-4a5c-958b-12d9fe37a0cd",
+            "answer": "no"
+        },
+        {
+            "id": "e9c14ecc-2595-4a4a-a53b-21a6f02f5c19",
+            "candidate_id": "0a1f0612-5f56-47ca-8530-832d8a875bfa",
+            "question_id": "733aebf3-d7da-4a5c-958b-12d9fe37a0cd",
+            "answer": "yes"
+        },
+        {
+            "id": "c043d8ca-61e7-4f5f-85ca-bb4ad0ac627a",
+            "candidate_id": "4b1587af-64ce-4847-8e83-bf5125e2bf47",
+            "question_id": "462e8697-50de-4c27-b617-a56f822db8ee",
+            "answer": "yes"
+        },
+        {
+            "id": "85037ec7-e51b-407b-a313-9dd2ee95213d",
+            "candidate_id": "0a1f0612-5f56-47ca-8530-832d8a875bfa",
+            "question_id": "462e8697-50de-4c27-b617-a56f822db8ee",
+            "answer": "no"
+        },
+        {
+            "id": "3ac5fc7f-876b-4fd8-8b94-f186f2a3a906",
+            "candidate_id": "4b1587af-64ce-4847-8e83-bf5125e2bf47",
+            "question_id": "b1d2201c-7db2-4375-b367-9b917cd64955",
+            "answer": "no"
+        },
+        {
+            "id": "39518b8b-0228-452b-a6e3-76a1ff2009c2",
+            "candidate_id": "0a1f0612-5f56-47ca-8530-832d8a875bfa",
+            "question_id": "b1d2201c-7db2-4375-b367-9b917cd64955",
+            "answer": "yes"
+        }
+    ]
+}
