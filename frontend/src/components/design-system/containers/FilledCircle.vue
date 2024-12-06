@@ -31,7 +31,7 @@ const classes = computed(() => ({
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  overflow: visible;
+  overflow: hidden;
 
   &--extra-small {
     width: var(--sizing-medium);
