@@ -46,7 +46,7 @@ const message = ref();
 
 const handlePreviousClick = () => {
   router.push({
-    name: appRoutes.recap.name,
+    name: appRoutes.preferredCandidate.name,
     params: { ...route.params },
     query: { ...route.query },
   });
@@ -80,7 +80,7 @@ const onSubmit = async () => {
     userStore.setUser(user);
 
     router.push({
-      name: appRoutes.preferredCandidate.name,
+      name: appRoutes.result.name,
       query: { ...route.query },
     });
   } else {
@@ -153,7 +153,7 @@ const onRefuse = async () => {
           <SecondaryNavigationBar centered-title>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Recapitulare" />
+                <IconComponent :icon="mdiArrowLeft" title="Candidat" />
               </IconButton>
             </template>
             <TitleText tag="h2" size="medium"
@@ -165,7 +165,7 @@ const onRefuse = async () => {
           <SecondaryNavigationBar centered-title>
             <template #before>
               <IconButton @click="handlePreviousClick">
-                <IconComponent :icon="mdiArrowLeft" title="Recapitulare" />
+                <IconComponent :icon="mdiArrowLeft" title="Candidat" />
               </IconButton>
             </template>
             <TitleText tag="h2" size="large"
