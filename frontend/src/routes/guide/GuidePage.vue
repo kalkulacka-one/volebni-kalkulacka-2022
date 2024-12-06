@@ -256,7 +256,7 @@ const handlePreviousClick = () => {
               Ce face TestVot
             </HeadingComponent>
             <BodyText size="medium">
-              Indiferent dacă știi cu cine vei vota, din TestVot poți afla mai multe despre viziunea și pozițiile partidelor pe probleme care îi preocupa pe români.
+              Indiferent dacă știi cu cine vei vota, din TestVot poți afla mai multe despre viziunea și pozițiile candidaților pe probleme care îi preocupa pe români.
             </BodyText>
             <BodyText size="medium">
               <MarkdownIt :markdown="`Aplicația TestVot, realizată de [OpenPolitics.ro](https://www.openpolitics.ro/) și [Median Research Centre](https://www.medianresearch.ro/) (MRC), este singura de acest gen din România care a fost disponibilă la toate alegerile naționale începând cu 2008.`"/>
@@ -266,7 +266,7 @@ const handlePreviousClick = () => {
             <HeadingComponent kind="title" size="medium">
               Cum funcționează TestVot
             </HeadingComponent>
-            <BodyText size="medium">Versiunea pentru alegerile parlamentare din 2024 are 24 de afirmații cu 2 variante de răspuns (sunt de acord / nu sunt de acord).</BodyText>
+            <BodyText size="medium">Versiunea pentru alegerile prezidențiale din 2024 are 21 de afirmații cu 2 variante de răspuns (sunt de acord / nu sunt de acord).</BodyText>
             <CardComponent
               corner="bottom-right"
               border

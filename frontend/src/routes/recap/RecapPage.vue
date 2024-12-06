@@ -190,9 +190,9 @@ const isCardHidden = (index: number) => {
       </template>
       <BottomBarWrapper>
         <StackComponent class="main" spacing="small">
-          <BodyText size="small">
-            Aici poți verifica și ajusta răspunsurile și greutatea lor, dacă
-            este necesar.
+          <BodyText size="medium">
+            Aici iți poți verifica și ajusta răspunsurile și
+            importanța lor, dacă ți se pare necesar.
           </BodyText>
           <StackComponent class="list" spacing="small">
             <RecapQuestionCard
