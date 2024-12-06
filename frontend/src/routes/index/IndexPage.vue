@@ -70,7 +70,7 @@ const hasCheckedPrivacy = ref(false);
                     name: appRoutes.guide.name,
                     params: {
                       ...route.params,
-                      election: 'parliamentary-2024',
+                      election: 'presidential-2024',
                       district: 'global',
                     },
                     query: { ...route.query },

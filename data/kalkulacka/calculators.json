@@ -14,12 +14,37 @@
       },
       "from": "2024-12-01T00:00:00",
       "to": "2024-12-01T14:00:00"
+    },
+    {
+      "id": "presidential-2024",
+      "key": "presidential-2024",
+      "name": "Alegeri prezidențiale în România 2024",
+      "description": "Alegeri prezidențiale în România 2024",
+      "instructions": {
+        "header": "presidential - header",
+        "step_1_1": "",
+        "step_1_2": "",
+        "step_1_link": "",
+        "step_2_1": ""
+      },
+      "from": "2024-12-01T00:00:00",
+      "to": "2024-12-01T14:00:00"
     }
   ],
   "calculators": [
     {
       "calculator_id": "2e0e6853-4305-4dec-abdc-a47d458b1b95",
       "election_id": "parliamentary-2024",
+      "district_code": "global",
+      "show_district_code": false,
+      "name": "calculator",
+      "description": "[[MISSING]]",
+      "on_hp_from": "2024-12-01T00:00:00",
+      "on_hp_to": "2024-12-01T14:00:00"
+    },
+    {
+      "calculator_id": "788008c2-7d94-48a6-8aec-5d6bb56ec5d0",
+      "election_id": "presidential-2024",
       "district_code": "global",
       "show_district_code": false,
       "name": "calculator",
