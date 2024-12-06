@@ -61,7 +61,7 @@ const handlePreviousClick = () => {
 
 const handleSkipClick = () => {
   router.push({
-    name: appRoutes.result.name,
+    name: appRoutes.emailCollection.name,
     params: { ...route.params },
     query: { ...route.query },
   });
