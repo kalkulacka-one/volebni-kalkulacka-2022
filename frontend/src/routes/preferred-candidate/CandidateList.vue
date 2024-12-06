@@ -29,13 +29,20 @@ const randomize = (arr: any[]) => {
   return arr.sort(() => Math.random() - 0.5);
 };
 
-const handleVote = (option: string | null) => {
+const answerMap = {
+  'no-vote': 'will-not-vote',
+  'no-answer': 'did-not-answer',
+}
+
+const handleVote = (option: 'no-vote' | 'no-answer' | null) => {
   if (!option) return;
-  if (option === 'no-vote') {
-    userStore.saveVote('will-not-vote');
-  } else if (option === 'no-answer') {
-    userStore.saveVote('did-not-answer');
-  } 
+  
+  if (!userStore.user) {
+    userStore.setUser({ id: 'anonymous' });
+  }
+  
+  userStore.saveVote(answerMap[option]);
+  
   router.push({
     name: appRoutes.emailCollection.name,
     params: { ...route.params },
