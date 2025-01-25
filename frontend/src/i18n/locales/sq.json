@@ -1,0 +1,260 @@
+{
+  "components": {
+    "design-system": {
+      "navigation": {
+        "NavigationBar": {
+          "create-account": "Krijo llogari",
+          "login": "Hyr"
+        }
+      }
+    },
+    "DonateBlock": {
+      "body": "Ju pëlqen projekti Kalkulatori Zgjedhor? Do të ishim mirënjohës nëse na mbështetni dhe na mundësoni të vazhdojmë krijimin e tyre.",
+      "title": "Mbështetni krijimin e kalkulatorëve"
+    },
+    "FooterMultiWord": {
+      "body-about-voting-calculator": "Rreth Kalkulatorit Zgjedhor",
+      "body-comunal-voting": "Zgjedhjet Komunale",
+      "body-created-by-ngos": "Krijuar në bashkëpunim me organizata jofitimprurëse.",
+      "body-data-protection": "Mbrojtja e të dhënave",
+      "body-methodoogy": "Metodologjia e hartimit të pyetjeve",
+      "body-presidential-voting": "Zgjedhjet Presidenciale",
+      "body-senate-voting": "Zgjedhjet e Senatit",
+      "body-support-calculator": "Mbështetni kalkulatorin",
+      "body-who-to-vote": "Kalkulatori Zgjedhor është një ndihmës i paanshëm për të vendosur se për kë të votoni.",
+      "links": "Lidhje",
+      "title-more-about-elections": "Më shumë për zgjedhjet"
+    },
+    "QuestionCandidateFilter": {
+      "title-candidate-filter": "Filtro sipas kandidatëve",
+      "select-all": "Përzgjidh të gjitha"
+    },
+    "QuestionTagFilter": {
+      "title-filter-by-theme": "Filtro sipas temave",
+      "select-all": "Përzgjidh të gjitha"
+    },
+    "WantToKnowMore": {
+      "more-about-topic": "Më shumë rreth temës"
+    }
+  },
+  "routes": {
+    "comparison": {
+      "ComparisonGrid": {
+        "answers": "përgjigjet",
+        "my": "E imja"
+      },
+      "ComparisonPage": {
+        "back-to-main-page": "Kthehu në faqen kryesore",
+        "comparison": "Krahasim",
+        "my-match": "Përputhja ime",
+        "set-comparison": "Vendos krahasimin"
+      }
+    },
+    "data-protection": {
+      "DataProtectionPage": {
+        "title": "Mbrojtja e të dhënave"
+      }
+    },
+    "error": {
+      "ErrorPage": {
+        "go-to-main-page": "Shko te faqja kryesore",
+        "this-page-does-not-exist": "Kjo faqe nuk ekziston",
+        "unknown-error": "Gabim i panjohur"
+      }
+    },
+    "guide": {
+      "GuidePage": {
+        "agree": "Pajtohem",
+        "back-to-main-page": "Kthehu në faqen kryesore",
+        "disagree": "Nuk pajtohem",
+        "double-weight": "Përgjigjja do të ketë peshë të dyfishtë në llogaritje.",
+        "first-question": "Pyetja e parë",
+        "guide": "Udhëzues",
+        "important": "E rëndësishme për mua",
+        "next-step": "Hapi tjetër",
+        "not-included": "Kjo pyetje nuk do të llogaritet në përputhjen tuaj.",
+        "previous-step": "Hapi i mëparshëm",
+        "skip": "Kalo",
+        "skip-guide": "Kalo udhëzuesin",
+        "skip-question": "Nëse nuk jeni të sigurt, tema nuk ju intereson ose nuk dëshironi të përgjigjeni, mund ta kaloni pyetjen me shigjetën në të djathtë.",
+        "text-0": "Nëse kandidati ose partia nuk përgjigjet në pyetje, llogaritet me 0 pikë.",
+        "text-answer-button": "Mund të përgjigjeni duke përdorur butonat:",
+        "text-important": "Nëse kjo çështje është veçanërisht e rëndësishme për ju, shënoni atë me një yll:",
+        "text-method": "Nëse përgjigjja juaj përputhet me atë të politikanit ose partisë, fitoni 1 pikë në llogaritje. Përndryshe, humbisni 1 pikë."
+      }
+    },
+    "index": {
+      "IndexPage": {
+        "czech-version": {
+          "link": "versionin çek",
+          "prefix": "Ndërkohë mund të shikoni {0}",
+          "suffix": " të Kalkulatorit Zgjedhor."
+        },
+        "disclaimer": "Duke dërguar, pajtoheni të pranoni njoftime mbi Kalkulatorin Zgjedhor.",
+        "empty-email-error": "Fusha nuk mund të jetë bosh",
+        "error": "Diçka shkoi keq :( Provoni përsëri.",
+        "input-label": "E-mail",
+        "primary-text": "Ne po përgatisim Kalkulatorin Zgjedhor për zgjedhjet e Këshillit Kombëtar Sllovak në vitin 2023.",
+        "secondary-text": "Na lini e-mailin tuaj dhe ne do t’ju njoftojmë sapo të lancohet kalkulatori.",
+        "subscribe-button-label": "Më njoftoni",
+        "success": "Do t’ju njoftojmë!",
+        "title": "Kalkulatori Zgjedhor 2023"
+      }
+    },
+    "profile": {
+      "AuthPageVue": {
+        "create-it": "Krijoje",
+        "create-profile-email": "Krijo profil me email",
+        "link-title": "Kushtet e mbrojtjes së të dhënave personale",
+        "log-in": "Hyr",
+        "notification": "Të dhënat tuaja personale do të përpunohen për krijimin e profilit të përdoruesit, në përputhje me",
+        "opinion ": "Ndiqni zhvillimin e mendimeve në profilin tuaj",
+        "question-one": "A e keni tashmë një profil?",
+        "question-two": "Ende nuk keni profil?",
+        "registration": "Krijo profil",
+        "title-close": "Mbyll",
+        "use-email": "Përdor emailin"
+      },
+      "EmailAuthPageVue": {
+        "confirmation": "Dërgo email konfirmimi",
+        "create-profile": "Krijo profil",
+        "log-in": "Hyr",
+        "message": "Vendosni adresën tuaj të e-mailit",
+        "message-verification-first": "Ne kutinë tuaj postare do të dërgojmë një email me një link verifikimi. Regjistrimi përfundon me sukses pasi të klikoni në të.",
+        "message-verification-second": "Ne kutinë tuaj postare do t'ju dërgojmë një email me një link verifikimi.",
+        "title-close": "Mbyll"
+      },
+      "EmailFormPageVue": {
+        "about-spam": "Nëse nuk keni marrë emailin me link verifikimi, kontrolloni dosjen e spam-it ose postën e padëshiruar.",
+        "confirm-info": "Konfirmoni regjistrimin në emailin tuaj",
+        "confirm-title": "Regjistrimi pret konfirmimin tuaj",
+        "error-email": "Adresa e emailit nuk është në format të saktë",
+        "error-empty-field": "Fusha nuk mund të jetë bosh",
+        "login-info": "Ne kutinë tuaj postare do t'ju dërgojmë një email me një link verifikimi.",
+        "login-title": "Hyr",
+        "notification": "Vendosni adresën tuaj të emailit",
+        "notification-info": "Konfirmoni hyrjen në emailin tuaj",
+        "notification-title": "Hyrja pret konfirmimin tuaj",
+        "registration-info": "Ne kutinë tuaj postare do t'ju dërgojmë një email me një link verifikimi. Regjistrimi përfundon me sukses pasi të klikoni në të.",
+        "registration-title": "Krijo profil",
+        "send-confirm": "Dërgo email konfirmimi",
+        "title-back": "Kthehu",
+        "title-close": "Mbyll"
+      },
+      "ProfilePage": {
+        "main-title": "Kalkulatorët e mi",
+        "message": "Asnjë kalkulator tjetër i plotësuar në vitin 2023"
+      },
+      "ProfileSettingsPage": {
+        "button-delete": "Fshij profilin",
+        "button-delete-profile": "Fshij profilin dhe të dhënat",
+        "button-save": "Ruaj ndryshimet",
+        "button-save-profile": "Mbaj profilin dhe të dhënat",
+        "confirm-delete-profile": "A jeni i sigurt që dëshironi të fshini profilin?",
+        "log-out": "Dil",
+        "message-part-one": "Lexoni më shumë rreth kësaj në",
+        "message-part-two": "Politikat e mbrojtjes së të dhënave",
+        "notification-delete-profile": "Duke fshirë profilin, do të humbni përgjithmonë kalkulatorët e ruajtur.",
+        "title-data": "Si i trajtojmë të dhënat?",
+        "title-settings": "Cilësimet e profilit"
+      },
+      "SocialMediaConnectCompponent": {
+        "facebook": "Vazhdo përmes Facebook",
+        "google": "Vazhdo përmes Google"
+      }
+    },
+    "question": {
+      "QuestionBottomBar": {
+        "important-for-me": "E rëndësishme për mua",
+        "no": "Jo",
+        "yes": "Po"
+      },
+      "QuestionPage": {
+        "back-to-main-page": "Kthehu në faqen kryesore",
+        "instructions-long": "Udhëzues",
+        "instructions-short": "Udhëzues",
+        "next-question-long": "Pyetja tjetër",
+        "next-question-short": "Tjetër",
+        "previous-question-long": "Pyetja e kaluar",
+        "previous-question-short": "Paraprake",
+        "recapitulation-long": "Rekapitulim",
+        "recapitulation-short": "Rekapitulim",
+        "skip-question-long": "Kalo pyetjen",
+        "skip-question-short": "Kalo"
+      }
+    },
+    "questions-methodology": {
+      "QuestionsMethodologyPageVue": {
+        "title": "Metodologjia e përzgjedhjes dhe hartimit të pyetjeve"
+      }
+    },
+    "recap": {
+      "RecapPage": {
+        "back-to-main-page": "Kthehu në faqen kryesore",
+        "display-results": "Shfaq rezultatet",
+        "hint-text": "Këtu mund të rishikoni dhe, nëse dëshironi, të modifikoni përgjigjet tuaja dhe peshën e tyre.",
+        "questions": "Pyetje",
+        "recapitulation": "Rekapitulim"
+      },
+      "RecapQuestionCard": {
+        "display-details": "Shfaq detajet",
+        "important-for-me": "E rëndësishme për mua",
+        "no": "Jo",
+        "without-answer": "Pa përgjigje",
+        "yes": "Po"
+      }
+    },
+    "result": {
+      "ResultCandidateCard": {
+        "display-details": "Shfaq detajet",
+        "what-candidate-say": "Çfarë thotë kandidati/ja për veten",
+        "eu-party": "Partia Evropiane",
+        "eu-group": "Grupi Evropian"
+      },
+      "ResultCardContacts": {
+        "contacts": "Kontaktet"
+      },
+      "ResultCategory": {
+        "hide-candidates": "Fshih kandidatët",
+        "show-all-candidates": "Shfaq të gjithë kandidatët"
+      },
+      "ResultPage": {
+        "back-to-main-page": "Kthehu në faqen kryesore",
+        "back-to-start": "kthehu në fillim",
+        "candidates-answers": "Përgjigjet e kandidatëve",
+        "compare-answers": "Krahaso përgjigjet",
+        "display-not-advancing-candidates": "Shfaq kandidatët që nuk kanë ecur përpara",
+        "in-table": "në tabelë",
+        "fill-calc": "Plotëso kalkulatorin",
+        "my-match": "Përputhja ime",
+        "recapitulation": "Rekapitulim",
+        "share": "Ndaj",
+        "something-went-wrong": "Diçka shkoi keq",
+        "something-went-wrong-text": "Për fat të keq, nuk mund të ndahet tani. Ju lutemi provoni më vonë.",
+        "text-and-answer": "dhe të përgjigjeni të paktën në 1 pyetje, ose",
+        "text-at-least-one-answer": "Për të parë rezultatin, duhet t'i përgjigjeni të paktën 1 pyetjeje",
+        "text-display-answers": "shfaq krahasimin e përgjigjeve të kandidatëve",
+        "text-in-time": "Ndiqni se si (nuk) ndryshojnë mendimet dhe rezultatet tuaja me kalimin e kohës.",
+        "text-save-calc": "Ruajeni kalkulatorin dhe plotësojeni sa herë të doni, për secilat zgjedhje.",
+        "text-table": "Një pasqyrë e plotë e të gjithë kandidatëve dhe përgjigjeve të tyre mund ta gjeni",
+        "you-may": "Ju mund të"
+      },
+      "ResultShareModal": {
+        "share-facebook": "Ndaj në Facebook",
+        "share-now": "Ndaj tani...",
+        "share-title": "Kalkulatori Zgjedhor",
+        "share-twitter": "Ndaj në X / Twitter",
+        "text-copy": "...ose kliko për të kopjuar lidhjen",
+        "text-do-it-too": "Shikoni rezultatet e mia dhe plotësojeni edhe ju!",
+        "text-my-match": "Sipas Kalkulatorit Zgjedhor, përputhja ime më e madhe ishte kështu:"
+      }
+    },
+    "share": {
+      "SharePage": {
+        "fill-again": "Plotëso përsëri",
+        "my-match": "Kjo është se si më rezultoi mua",
+        "text-fill-again": "Nëse dëshironi ta plotësoni edhe ju kalkulatorin, klikoni \"Plotëso përsëri\" në këndin e sipërm të djathtë."
+      }
+    }
+  }
+}
