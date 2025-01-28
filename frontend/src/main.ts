@@ -92,7 +92,7 @@ export const appRoutes = {
     path: '/',
     component: IndexPageVue,
     meta: {
-      title: 'Volební kalkulačka',
+      title: 'Kalkulatori zgjedhor',
     },
   },
   aboutUs: {
