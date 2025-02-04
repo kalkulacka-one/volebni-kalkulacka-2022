@@ -142,7 +142,7 @@ export const appRoutes = {
     props: true,
     component: ErrorPageVue,
     meta: {
-      title: 'Error - Volební kalkulačka',
+      title: 'Error - Kalkulatori zgjedhor',
     },
   },
   districtSelection: {
@@ -174,44 +174,44 @@ export const appRoutes = {
   },
   guide: {
     name: 'guide',
-    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'navod'}/:step(\\d+)?`,
+    path: `/:type(${'kalkulatori'}|${'zgjedhjet'})/:first/:second?/:third?/:fourth?/${'udhezimet'}/:step(\\d+)?`,
     component: GuidePageVue,
     meta: {
-      title: 'Návod - Volební kalkulačka',
+      title: 'Udhëzimet - Kalkulatori zgjedhor',
     },
   },
   question: {
     name: 'question',
-    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'otazka'}/:nr(\\d+)?`,
+    path: `/:type(${'kalkulatori'}|${'zgjedhjet'})/:first/:second?/:third?/:fourth?/${'pyetja'}/:nr(\\d+)?`,
     component: QuestionPageVue,
     meta: {
-      title: 'Otázka $$ - Volební kalkulačka',
+      title: 'Pyetja $$ - Kalkulatori zgjedhor',
       hasNumber: true,
     },
     beforeEnter: questionGuard,
   },
   recap: {
     name: 'recap',
-    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'rekapitulace'}/:nr(\\d+)?`,
+    path: `/:type(${'kalkulatori'}|${'zgjedhjet'})/:first/:second?/:third?/:fourth?/${'permbledhja'}/:nr(\\d+)?`,
     component: RecapPageVue,
     meta: {
-      title: 'Rekapitulace - Volební kalkulačka',
+      title: 'Përmbledhja - Kalkulatori zgjedhor',
     },
   },
   result: {
     name: 'result',
-    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'vysledek'}`,
+    path: `/:type(${'kalkulatori'}|${'zgjedhjet'})/:first/:second?/:third?/:fourth?/${'rezultati'}`,
     component: ResultPageVue,
     meta: {
-      title: 'Výsledky - Volební kalkulačka',
+      title: 'Rezultatet - Kalkulatori zgjedhor',
     },
   },
   comparison: {
     name: 'comparison',
-    path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'porovnani'}`,
+    path: `/:type(${'kalkulatori'}|${'zgjedhjet'})/:first/:second?/:third?/:fourth?/${'krahasimi'}`,
     component: ComparisonPageVue,
     meta: {
-      title: 'Porovnání - Volební kalkulačka',
+      title: 'Krahasimi - Kalkulatori zgjedhor',
     },
   },
   share: {
@@ -219,7 +219,7 @@ export const appRoutes = {
     path: '/share/:uuid',
     component: SharePageVue,
     meta: {
-      title: 'Moje výsledky - Volební kalkulačka',
+      title: 'Rezultatet e mia" - Kalkulatori zgjedhor',
     },
   },
   login: {
