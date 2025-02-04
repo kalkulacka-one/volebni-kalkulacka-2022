@@ -626,7 +626,7 @@ onBeforeUnmount(removeExternalScript);
           <section class="subscribe">
             <StackComponent spacing="small" centered>
               <BodyText size="small" centered>
-                Nechejte nám váš e-mail a my vám dáme vědět vždy, když spustíme novou kalkulačku.
+                Na dërgoni emailin tuaj dhe ne do t'ju njoftojmë sa herë që publikojmë një kalkulator të ri.
               </BodyText>
               <BodyText v-if="success" size="small">
                 {{ message }}
@@ -655,12 +655,12 @@ onBeforeUnmount(removeExternalScript);
                     :loading="posting"
                     @click.prevent="handleSubscribe"
                   >
-                    Odeslat
+                    Dërgo
                   </ButtonComponent>
                 </StackComponent>
               </form>
               <BodyText v-if="!success" tag="p" size="small">
-                Odesláním souhlasíte se zasíláním novinek o volební kalkulačce a <a href="/ochrana-dat" target="_blank">zásadami ochrany osobních údajů</a>.
+                Me dërgimin e emailit, ju pajtoheni me pranimin e njoftimeve për kalkulatorin zgjedhor dhe <a href="/ochrana-dat" target="_blank">politikën e privatësisë</a>.
               </BodyText>
             </StackComponent>
           </section>
