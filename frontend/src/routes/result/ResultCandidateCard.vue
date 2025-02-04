@@ -148,9 +148,9 @@ const toggleClick = () => {
             ? candidate?.parties?.[0].name
             : candidate?.name
         }}</BodyText>
-        <BodyText size="medium" v-if="expert">
+        <!-- <BodyText size="medium" v-if="expert">
           <i>expertní odpovědi</i>
-        </BodyText>
+        </BodyText> -->
         <!--
         <div
           v-for="(party, i) in candidate?.parties"

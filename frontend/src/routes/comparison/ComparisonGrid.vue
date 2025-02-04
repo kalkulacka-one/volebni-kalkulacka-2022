@@ -293,7 +293,7 @@ export interface Source {
                   )[0]?.expert
                 "
               >
-                <strong>Odůvodnění</strong><br />
+                <strong>Përgjigjet e ekspertëve</strong><br />
               </template>
               {{
                 candidateAnswers.filter(
