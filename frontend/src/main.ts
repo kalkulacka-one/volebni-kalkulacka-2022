@@ -112,12 +112,12 @@ export const appRoutes = {
     },
   },
   dataProtection: {
-    name: 'ochrana-dat',
-    path: '/ochrana-dat',
+    name: 'mbrojtja-e-te-dhenave',
+    path: '/mbrojtja-e-te-dhenave',
     alias: ['/soukromi', '/podminky'],
     component: DataProtectionPageVue,
     meta: {
-      title: 'Ochrana dat',
+      title: 'Mbrojtja e të dhënave',
     },
   },
   archive: {
@@ -129,11 +129,11 @@ export const appRoutes = {
     },
   },
   questionsMethodology: {
-    name: 'metodika-tvorby-otazek',
-    path: '/metodika-tvorby-otazek',
+    name: 'metodologjia-e-hartimit-te-pyetjeve',
+    path: '/metodologjia-e-hartimit-te-pyetjeve',
     component: QuestionsMethodologyPageVue,
     meta: {
-      title: 'Metodika tvorby otázek',
+      title: 'Metodologjia e hartimit të pyetjeve',
     },
   },
   error: {

@@ -93,10 +93,29 @@ const handleSubscribe = async () => {
           Zgjedhjet parlamentare
           <span style="color: rgb(var(--color-neutral-fg))"> 2025 </span>
         </HeadlineText>
-        <BodyText size="large"
-          >Po përgatisim për ju kalkulatorin zgjedhor për zgjedhjet
-          parlamentare.
-        </BodyText>
+        <BodyText size="small"> 21 pyetje, rreth 5 minuta</BodyText>
+          <ButtonComponent
+            kind="filled"
+            color="primary"
+            @click="
+              router.push({
+                name: appRoutes.guide.name,
+                params: {
+                  ...route.params,
+                  type: `${'zgjedhjet'}`,
+                  first: 'parlamentare-2025',
+                  second: 'kalkulatori',
+                },
+                query: { ...route.query },
+              })
+            "
+          >
+            Fillo kalkulatorin zgjedhor
+            <template #iconAfter>
+              <IconComponent :icon="mdiArrowRight" />
+            </template>
+          </ButtonComponent>
+          <div style="height:100px"></div>
       </StackComponent>
     </div>
     <section class="subscribe">
@@ -183,7 +202,7 @@ const handleSubscribe = async () => {
         </BodyText>
       </StackComponent>
     </StaticContentLayout>
-    <!-- <FooterMultiWord class="section" /> -->
+    <FooterMultiWord class="section" />
   </StickyHeaderLayout>
 </template>
 

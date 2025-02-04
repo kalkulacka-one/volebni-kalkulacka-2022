@@ -23,9 +23,9 @@ const router = useRouter();
           <BodyText size="small">{{
             $t('components.FooterMultiWord.body-who-to-vote')
           }}</BodyText>
-          <a href="https://www.facebook.com/KohoVolit.eu"
+          <!-- <a href="https://www.facebook.com/KohoVolit.eu"
             ><img :src="'/images/fb.svg'"
-          /></a>
+          /></a> -->
         </div>
         <div class="data-3">
           <StackComponent spacing="medium">
@@ -33,12 +33,12 @@ const router = useRouter();
               $t('components.FooterMultiWord.body-about-voting-calculator')
             }}</TitleText>
             <StackComponent spacing="extra-small">
-              <router-link to="/o-nas"
+              <!-- <router-link to="/o-nas"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-about-voting-calculator')
                 }}</BodyText></router-link
-              >
-              <router-link to="/metodika-tvorby-otazek"
+              > -->
+              <router-link to="/metodologjia-e-hartimit-te-pyetjeve"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-methodoogy')
                 }}</BodyText></router-link
@@ -52,19 +52,19 @@ const router = useRouter();
               $t('components.FooterMultiWord.links')
             }}</TitleText>
             <StackComponent spacing="extra-small">
-              <router-link to="/ochrana-dat"
+              <router-link to="/mbrojtja-e-te-dhenave"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-data-protection')
                 }}</BodyText></router-link
               >
-              <a href="https://www.kalkulacka.one/cs/podporte-kalkulacku"
+              <!-- <a href="https://www.kalkulacka.one/cs/podporte-kalkulacku"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-support-calculator')
                 }}</BodyText></a
-              >
-              <router-link to="/archiv">
+              > -->
+              <!-- <router-link to="/archiv">
                 <BodyText size="small">Můj profil</BodyText>
-              </router-link>
+              </router-link> -->
             </StackComponent>
           </StackComponent>
         </div>
@@ -79,7 +79,7 @@ const router = useRouter();
               >
               <StackComponent spacing="small" centered horizontal
                 ><IconComponent :icon="mdiPhone" /><BodyText size="small"
-                  >+420 735 518 529</BodyText
+                  >+43 690 10263160</BodyText
                 ></StackComponent
               >
             </StackComponent>
@@ -96,6 +96,10 @@ const router = useRouter();
         <BodyText size="small"></BodyText>
         <a href="https://cesko.digital"
           ><img class="cd-logo" :src="'/images/logo-cd.svg'"
+        /></a>
+        <BodyText size="small"></BodyText>
+        <a href="https://opendatakosovo.org"
+          ><img class="cd-logo" :src="'/images/logo-odk.png'"
         /></a>
       </div>
     </div>

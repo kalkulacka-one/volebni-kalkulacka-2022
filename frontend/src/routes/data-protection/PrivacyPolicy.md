@@ -1,86 +1,86 @@
-V tomto dokumentu naleznete informace o tom, jaké informace o Vás zpracováváme my, spolek KohoVolit.eu, IČO: 22841890, se sídlem Vinice 347, Plasy, zapsaný ve spolkovém rejstříku vedeném u Krajského soudu v Plzni, spisová značka: L 5397, jako správce osobních údajů. Dozvíte se také, za jakými účely zpracováváme Vaše osobní údaje a z jakých zdrojů tyto údaje získáváme. V poslední části uvádíme, jaká máte práva při zpracování Vašich osobních údajů a jak je můžete uplatnit.
+Në këtë dokument do të gjeni informacion se cilat të dhëna tuaja i përpunojmë ne, shoqata KohoVolit.eu, NUI: 22841890, me seli në Vinice 347, Plasy, CZ, e regjistruar në regjistrin e shoqatave në Gjykatën Rajonale të Plzen, numri i dosjes: L 5397, si kontrollues i të dhënave personale. Do të mësoni gjithashtu për cilat qëllime i përpunojmë të dhënat tuaja personale dhe nga cilat burime i marrim këto të dhëna. Në pjesën e fundit, ne shpjegojmë cilat janë të drejtat tuaja në lidhje me përpunimin e të dhënave tuaja personale dhe si mund t'i ushtroni ato.
 
-## Jaké osobní údaje zpracováváme a za jakými účely?
+## Cilat të dhëna personale përpunojmë dhe për çfarë qëllimesh?
 
-**Základní verze Volební kalkulačky nepoužívá cookies ani nesbírá žádná data** o Vás. Pokud tak kalkulačku využijete anonymně, nejsou sbírány žádné osobní údaje.
+**Versioni bazë i Kalkulatorit zgjedhor nuk përdor cookies dhe nuk mbledh asnjë të dhënë** për ju. Nëse e përdorni kalkulatorin në mënyrë anonime, nuk mblidhen të dhëna personale.
 
-Pokud si ve Volební kalkulačce vytvoříte **uživatelský profil**, budou uloženy následující osobní údaje:
+Nëse krijoni një **profil përdoruesi** në Kalkulatorin zgjedhor, do të ruhen të dhënat e mëposhtme personale:
 
-- e-mailová adresa,
-- jméno a příjmení (dobrovolný údaj),
-- adresa trvalého bydliště (dobrovolný údaj),
-- údaje o Vašich odpovědích a odvozených preferencích.
+- adresa e emailit,
+- emri dhe mbiemri (të dhënë vullnetare),
+- adresa e vendbanimit të përhershëm (të dhënë vullnetare),
+- të dhëna për përgjigjet tuaja dhe preferencat e nxjerra.
 
-Tyto osobní údaje budeme zpracovávat pro splnění smlouvy, konkrétně pro vedení uživatelského profilu s Vámi, a to do okamžiku zrušení Vašeho uživatelského profilu. Údaje o Vašich odpovědích a odvozených preferencích budeme současně zpracovávat na základě Vašeho souhlasu jako výjimky pro zpracování zvláštní kategorie údajů.
+Këto të dhëna personale do t'i përpunojmë për përmbushjen e kontratës, konkretisht për mbajtjen e profilit të përdoruesit me ju, deri në momentin e anulimit të profilit tuaj të përdoruesit. Të dhënat për përgjigjet tuaja dhe preferencat e nxjerra do t'i përpunojmë njëkohësisht në bazë të pëlqimit tuaj si përjashtim për përpunimin e kategorisë së veçantë të të dhënave.
 
-V případě přihlášení přes profil na **Facebooku, Googlu a Twitteru** se uloží následující osobní údaje:
+Në rast të hyrjes përmes profilit në **Facebook, Google dhe Twitter**, do të ruhen të dhënat e mëposhtme personale:
 
-- jméno,
-- profilová fotografie,
-- adresa trvalého bydliště (dobrovolný údaj).
+- emri,
+- fotografia e profilit,
+- adresa e vendbanimit të përhershëm (të dhënë vullnetare).
 
-Tyto osobní údaje budeme zpracovávat pro splnění smlouvy, konkrétně pro umožnění přihlášení přes profil u třetích stran, a to do okamžiku zrušení Vašeho uživatelského profilu.
+Këto të dhëna personale do t'i përpunojmë për përmbushjen e kontratës, konkretisht për të mundësuar hyrjen përmes profilit te palët e treta, deri në momentin e anulimit të profilit tuaj të përdoruesit.
 
-V případě **sdílení Vašich odpovědí** budeme dále sdělovat údaje o Vašich odpovědích a odvozených preferencích. Tyto údaje budeme zpracovávat na základě Vašeho souhlasu, a to za účelem sdílení Vašich odpovědí, po dobu 1 měsíce od provedení sdílení.
+Në rast të **ndarjes së përgjigjeve tuaja**, ne do të ndajmë më tej të dhënat për përgjigjet tuaja dhe preferencat e nxjerra. Këto të dhëna do t'i përpunojmë në bazë të pëlqimit tuaj, me qëllim të ndarjes së përgjigjeve tuaja, për një periudhë prej 1 muaji nga kryerja e ndarjes.
 
-V případě udělení souhlasu pro **příležitostné zasílání propagačních sdělení** uložíme Vaši e-mailovou adresu a budeme ji zpracovávat pro tyto účely. Dozvíte se tak například o spuštění Volební kalkulačky pro nadcházející volby. Souhlas je možno kdykoliv zrušit a na uvedených kontaktech nebo přímo v zaslaném e-mailu. Osobní údaje zpracováváme do odvolání Vašeho souhlasu.
+Në rast të dhënies së pëlqimit për **dërgimin e rastësishëm të mesazheve promovuese**, ne do të ruajmë adresën tuaj të emailit dhe do ta përpunojmë atë për këto qëllime. Kështu do të mësoni, për shembull, për lansimin e Kalkulatorit zgjedhor për zgjedhjet e ardhshme. Pëlqimi mund të anulohet në çdo kohë në kontaktet e dhëna ose drejtpërdrejt në emailin e dërguar. Të dhënat personale i përpunojmë deri në tërheqjen e pëlqimit tuaj.
 
-## Z jakých zdrojů osobní údaje získáváme?
+## Nga cilat burime i marrim të dhënat personale?
 
-Osobní údaje, které zpracováváme, pocházejí především od Vás samotných, a to z Vašeho používání webu Volební kalkulačky a vyplňování údajů.
+Të dhënat personale që përpunojmë vijnë kryesisht nga vetë ju, përmes përdorimit tuaj të faqes së internetit të Kalkulatorit zgjedhor dhe plotësimit të të dhënave.
 
-Další osobní údaje získáváme v rámci naší činnosti, přičemž se jedná zejména o odvozené údaje z Vámi poskytnutých údajů, zejména údaje o Vaší předpokládané volební preferenci a shodě s preferencemi vybraného kandidáta.
+Të dhëna të tjera personale i marrim në kuadër të aktivitetit tonë, ku bëhet fjalë kryesisht për të dhëna të nxjerra nga të dhënat e ofruara nga ju, veçanërisht të dhënat për preferencën tuaj të supozuar zgjedhore dhe përputhjen me preferencat e kandidatit të zgjedhur.
 
-Další osobní údaje můžeme získávat od třetích osob, například při přihlašování do Volební kalkulačky přes služby třetích osob.
+Të dhëna të tjera personale mund të marrim nga palët e treta, për shembull gjatë hyrjes në Kalkulatorin zgjedhor përmes shërbimeve të palëve të treta.
 
-## Jaká máte práva při zpracování osobních údajů?
+## Cilat janë të drejtat tuaja gjatë përpunimit të të dhënave personale?
 
-Stejně jako my máme svá práva a povinnosti při zpracování Vašich osobních údajů, máte také Vy při zpracování vašich osobních údajů určitá práva uvedená v následujících odstavcích. Všechna tato práva, stejně jako dotazy či stížnosti, můžete uplatnit na e-mailové adrese info@kohovolit.eu. Váš požadavek vyřídíme vždy co nejdříve, nejpozději však do jednoho měsíce. Tuto lhůtu můžeme ve výjimečných případech prodloužit zejména z důvodu složitosti Vašeho požadavku o další dva měsíce, o čemž bychom Vás informovali.
+Ashtu si ne kemi të drejtat dhe detyrimet tona gjatë përpunimit të të dhënave tuaja personale, edhe ju keni të drejta të caktuara gjatë përpunimit të të dhënave tuaja personale të përmendura në paragrafët e mëposhtëm. Të gjitha këto të drejta, si dhe pyetjet apo ankesat, mund t'i ushtroni në adresën e emailit info@kohovolit.eu. Kërkesën tuaj do ta trajtojmë gjithmonë sa më shpejt të jetë e mundur, më së voni brenda një muaji. Këtë afat mund ta zgjasim në raste të jashtëzakonshme veçanërisht për shkak të kompleksitetit të kërkesës suaj për dy muaj të tjerë, për çka do t'ju informojmë.
 
-V souvislosti se zpracováním Vašich osobních údajů Vám konkrétně náleží následující práva:
+Në lidhje me përpunimin e të dhënave tuaja personale, konkretisht ju takojnë të drejtat e mëposhtme:
 
-1. Právo odvolat souhlas
+1. E drejta për të tërhequr pëlqimin
 
-   Máte právo kdykoli odvolat souhlas se zpracováním osobních údajů. Toto můžete učinit odesláním e-mailu na naši adresu. Odvolání souhlasu však nemá vliv na oprávněnost zpracování před udělením takového souhlasu.
+   Keni të drejtë të tërhiqni pëlqimin për përpunimin e të dhënave personale në çdo kohë. Këtë mund ta bëni duke dërguar një email në adresën tonë. Megjithatë, tërheqja e pëlqimit nuk ndikon në ligjshmërinë e përpunimit para dhënies së një pëlqimi të tillë.
 
-2. Právo na přístup
+2. E drejta për qasje
 
-   Máte právo získat od nás potvrzení, zda zpracováváme Vaše osobní údaje či nikoli.
+   Keni të drejtë të merrni konfirmim nga ne nëse po përpunojmë të dhënat tuaja personale apo jo.
 
-   Pokud Vaše osobní údaje zpracováváme, máte současně právo požadovat přístup k informacím o účelu a rozsahu zpracování, příjemcích údajů, době zpracování, právu na opravu, výmaz, omezení zpracování a podání námitky proti zpracování, právu podat stížnost u dozorového úřadu a o zdrojích osobních údajů (tyto informace již jsou uvedeny v tomto dokumentu).
+   Nëse përpunojmë të dhënat tuaja personale, keni gjithashtu të drejtë të kërkoni qasje në informacionin për qëllimin dhe fushëveprimin e përpunimit, marrësit e të dhënave, periudhën e përpunimit, të drejtën për korrigjim, fshirje, kufizim të përpunimit dhe kundërshtim ndaj përpunimit, të drejtën për të paraqitur ankesë te autoriteti mbikëqyrës dhe për burimet e të dhënave personale (ky informacion është dhënë tashmë në këtë dokument).
 
-   Stejně tak nás můžete požádat o kopii zpracovávaných osobních údajů. První kopii poskytujeme bezplatně, další již mohou být zpoplatněny. Rozsah poskytnutých údajů může být omezen tak, aby nedošlo k zásahu do práv a svobod jiných osob.
+   Gjithashtu mund të na kërkoni një kopje të të dhënave personale që përpunohen. Kopjen e parë e ofrojmë pa pagesë, të tjerat mund të jenë me pagesë. Fushëveprimi i të dhënave të ofruara mund të kufizohet në mënyrë që të mos ndërhyjë në të drejtat dhe liritë e personave të tjerë.
 
-3. Právo na opravu
+3. E drejta për korrigjim
 
-   Máte právo požadovat od nás opravu nepřesných osobních údajů, které se Vás týkají. Podle účelu zpracování můžete mít také právo na doplnění neúplných osobních údajů, a to i poskytnutím dodatečného prohlášení.
+   Keni të drejtë të kërkoni nga ne korrigjimin e të dhënave të pasakta personale që ju përkasin. Në varësi të qëllimit të përpunimit, mund të keni gjithashtu të drejtë të plotësoni të dhënat e paplota personale, duke përfshirë edhe dhënien e një deklarate shtesë.
 
-4. Právo na výmaz
+4. E drejta për fshirje
 
-   Máte právo požadovat výmaz Vašich osobních údajů, a to v případech, kdy:  
-   Vaše osobní údaje již nepotřebujeme pro účely, pro které byly získány či zpracovávány;  
-   odvoláte souhlas, na základě kterého byly osobní údaje zpracovány, a neexistuje žádný další důvod pro jejich zpracování;
-   vznesete námitku proti zpracování a neexistují další převažující důvody pro zpracování, popř. vznesete námitku proti zpracování za účelem přímého marketingu;
-   osobní údaje jsou zpracovávány v rozporu s právními předpisy.
+   Keni të drejtë të kërkoni fshirjen e të dhënave tuaja personale, në rastet kur:  
+   të dhënat tuaja personale nuk na nevojiten më për qëllimet për të cilat u mblodhën ose u përpunuan;  
+   tërhiqni pëlqimin në bazë të të cilit u përpunuan të dhënat personale, dhe nuk ekziston asnjë arsye tjetër për përpunimin e tyre;  
+   paraqisni kundërshtim ndaj përpunimit dhe nuk ka arsye të tjera mbizotëruese për përpunim, ose paraqisni kundërshtim ndaj përpunimit për qëllime të marketingut të drejtpërdrejtë;  
+   të dhënat personale përpunohen në kundërshtim me dispozitat ligjore.
 
-   Toto právo však nemůžete uplatnit v případě, kdy je zpracování potřebné pro splnění našich právních povinností či nám svěřených úkolů ve veřejném zájmu nebo pro určení, výkon či obhajobu právních nároků.
+   Megjithatë, këtë të drejtë nuk mund ta ushtroni në rastet kur përpunimi është i nevojshëm për përmbushjen e detyrimeve tona ligjore ose detyrave të besuara në interes publik ose për përcaktimin, ushtrimin ose mbrojtjen e pretendimeve ligjore.
 
-5. Právo na omezení zpracování
+5. E drejta për kufizimin e përpunimit
 
-   Máte právo požadovat omezení zpracování Vašich osobních údajů, a to v případech, kdy:  
-   popíráte přesnost Vašich osobních údajů; v takovém případě můžete požadovat omezení zpracování do doby ověření přesnosti osobních údajů;  
-   zpracování je v rozporu s právními předpisy a místo výmazu budete požadovat omezení zpracování osobních údajů;  
-   Vaše osobní údaje již nepotřebujeme pro účely, pro které byly získány či zpracovávány, avšak Vy je požadujete pro určení, výkon nebo obhajobu právních nároků;  
-   vznesli jste námitku proti zpracování osobních údajů; v takovém případě můžete požadovat omezení zpracování do doby ověření, zda naše oprávněné zájmy převažují.
+   Keni të drejtë të kërkoni kufizimin e përpunimit të të dhënave tuaja personale, në rastet kur:  
+   mohoni saktësinë e të dhënave tuaja personale; në një rast të tillë mund të kërkoni kufizimin e përpunimit deri në verifikimin e saktësisë së të dhënave personale;  
+   përpunimi është në kundërshtim me dispozitat ligjore dhe në vend të fshirjes do të kërkoni kufizimin e përpunimit të të dhënave personale;  
+   të dhënat tuaja personale nuk na nevojiten më për qëllimet për të cilat u mblodhën ose u përpunuan, por ju i kërkoni ato për përcaktimin, ushtrimin ose mbrojtjen e pretendimeve ligjore;  
+   keni paraqitur kundërshtim ndaj përpunimit të të dhënave personale; në një rast të tillë mund të kërkoni kufizimin e përpunimit deri në verifikimin nëse interesat tona të ligjshme mbizotërojnë.
 
-6. Právo na přenositelnost
+6. E drejta e bartjes
 
-   Máte právo získat kopii Vašich osobních údajů, které zpracováváme automatizovaně na základě Vašeho souhlasu nebo pro splnění smlouvy. Tyto údaje předáme v běžně používaném a strojově čitelném formátu Vám či Vámi určenému správci, pokud to je technicky proveditelné. Rozsah poskytnutých údajů může být omezen tak, aby nedošlo k zásahu do práv a svobod jiných osob.
+   Keni të drejtë të merrni një kopje të të dhënave tuaja personale që i përpunojmë në mënyrë të automatizuar në bazë të pëlqimit tuaj ose për përmbushjen e kontratës. Këto të dhëna do t'i transferojmë në një format të zakonshëm dhe të lexueshëm nga makina te ju ose te kontrolluesi i caktuar nga ju, nëse kjo është teknikisht e realizueshme. Fushëveprimi i të dhënave të ofruara mund të kufizohet në mënyrë që të mos ndërhyjë në të drejtat dhe liritë e personave të tjerë.
 
-7. Právo vznést námitku proti zpracování
+7. E drejta për të kundërshtuar përpunimin
 
-   Máte právo vznést námitku proti zpracování Vašich osobních údajů, které zpracováváme na základě našeho oprávněného zájmu. Vaše údaje přestaneme zpracovávat, pokud neexistují další převažující důvody pro zpracování či pokud není zpracování potřebné pro určení, výkon nebo obhajobu právních nároků, popř. pokud vznesete námitku proti zpracování za účelem přímého marketingu.
+   Keni të drejtë të kundërshtoni përpunimin e të dhënave tuaja personale që i përpunojmë në bazë të interesit tonë të ligjshëm. Do të ndalojmë përpunimin e të dhënave tuaja, përveç nëse ekzistojnë arsye të tjera mbizotëruese për përpunim ose nëse përpunimi është i nevojshëm për përcaktimin, ushtrimin ose mbrojtjen e pretendimeve ligjore, ose nëse paraqisni kundërshtim ndaj përpunimit për qëllime të marketingut të drejtpërdrejtë.
 
-8. Právo podat stížnost
+8. E drejta për të paraqitur ankesë
 
-   Vedle možnosti uplatnění práv uvedené výše také můžete podat stížnost u příslušného dozorového úřadu, kterým je Úřadu pro ochranu osobních údajů sídlící na adrese Pplk. Sochora 27, 170 00 Praha 7.
+   Përveç mundësisë për të ushtruar të drejtat e përmendura më lart, ju gjithashtu mund të paraqisni ankesë te autoriteti mbikëqyrës përkatës, i cili është Zyra për Mbrojtjen e të Dhënave Personale me seli në adresën Pplk. Sochora 27, 170 00 Pragë 7.
