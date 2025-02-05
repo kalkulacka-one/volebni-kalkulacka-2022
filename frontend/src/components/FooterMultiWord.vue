@@ -33,11 +33,11 @@ const router = useRouter();
               $t('components.FooterMultiWord.body-about-voting-calculator')
             }}</TitleText>
             <StackComponent spacing="extra-small">
-              <!-- <router-link to="/o-nas"
+              <router-link to="/rreth-kalkulatorit-zgjedhor"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-about-voting-calculator')
                 }}</BodyText></router-link
-              > -->
+              >
               <router-link to="/metodologjia-e-hartimit-te-pyetjeve"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-methodoogy')
@@ -99,7 +99,15 @@ const router = useRouter();
         /></a>
         <BodyText size="small"></BodyText>
         <a href="https://opendatakosovo.org"
-          ><img class="cd-logo" :src="'/images/logo-odk.png'"
+          ><img class="cd-logo" :src="'/images/logo-odk.webp'"
+        /></a>
+        <BodyText size="small"></BodyText>
+        <a href="https://polcon-ks.com/"
+          ><img class="cd-logo" :src="'/images/logo-polcon.webp'"
+        /></a>
+        <BodyText size="small"></BodyText>
+        <a href="https://www.visegradfund.org/"
+          ><img class="cd-logo" :src="'/images/logo-visegrad.svg'"
         /></a>
       </div>
     </div>

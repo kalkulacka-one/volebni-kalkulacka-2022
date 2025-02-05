@@ -96,11 +96,11 @@ export const appRoutes = {
     },
   },
   aboutUs: {
-    name: 'o-nas',
-    path: '/o-nas',
+    name: 'rreth-kalkulatorit-zgjedhor',
+    path: '/rreth-kalkulatorit-zgjedhor',
     component: AboutUsPageVue,
     meta: {
-      title: 'O kalkulačce',
+      title: 'Rreth Kalkulatorit Zgjedhor',
     },
   },
   aboutElections: {

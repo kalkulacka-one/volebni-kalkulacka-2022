@@ -37,269 +37,103 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
     </StickyHeaderLayout>
     <StaticContentLayout>
       <StackComponent spacing="large" class="section">
-        <HeadlineText tag="h1" size="large">O kalkulačce</HeadlineText>
+        <HeadlineText tag="h1" size="large">Rreth Kalkulatorit Zgjedhor</HeadlineText>
         <BodyText size="large">
-          Co je vlastně volební kalkulačka? Jak ji lze použít a jak funguje? Kdo
-          za ní stojí? Jak se tvoří a vyhodnocují otázky? O tom všem se dozvíte
-          níže.
+          Udhëzuesi për votuesit në Kosovë
         </BodyText>
 
-        <TitleText size="large" tag="h2"> Co je volební kalkulačka </TitleText>
+        <TitleText size="large" tag="h2"> Misioni </TitleText>
         <BodyText size="large">
-          Volební kalkulačka® (anglicky voting advice application) je
-          jednoduchý, zpravidla internetový test porovnávající Vaše politické
-          postoje s postoji politických stran či osob (zákonodárců, kandidátů ve
-          volbách atd.). Více o historii volebních kalkulaček a o úspěšných
-          příkladech ze světa se můžete dočíst na Wikipedii.
-        </BodyText>
-
-        <TitleText size="large" tag="h2">
-          Kdo a jak volební kalkulačku tvoří
-        </TitleText>
-        <BodyText size="large">
-          Českou a slovenskou Volební kalkulačku vyvíjí a provozuje spolek
-          <a href="https://kohovolit.eu/">KohoVolit.eu</a>
-          již od roku 2006. Celkem jsme vytvořili již přes 100 volebních
-          kalkulaček pro všechny druhy voleb (evropské, prezidentské,
-          parlamentní, regionální i komunální). Pravidelně také pomáháme tvořit
-          kalkulačky v Maďarsku a v dalších zemích. Zatím nejúspěšnější
-          kalkulačku před prvním kolem prezidentských voleb v ČR v roce 2018
-          použil více než 1,25 milionu voličů.
+          Demokracia e Austrisë ka nevojë për një mbështetje të paanshme, të 
+          ekuilibruar, të aksesueshme dhe të bazuar shkencërisht për votuesit. 
+          Veçanërisht, votuesit për herë të parë kanë nevojë për udhëzime 
+          orientuese.
         </BodyText>
         <BodyText size="large">
-          <a href="https://kohovolit.eu/">KohoVolit.eu</a> vytváří dva druhy
-          kalkulaček:
+          Për këtë qëllim, organizatat e mëposhtme nga shoqëria civile dhe 
+          akademia janë bashkuar për të zhvilluar një udhëzues të ri për 
+          votuesit në Kosovë (Voting Advice Application, VAA):
         </BodyText>
-        <BodyText size="large">
-          Volební kalkulačka (názorový test) porovnává Vaše odpovědi s
-          odpověďmi, které nám poskytly samotné politické strany či kandidáti ve
-          volbách. Pokud některá strana či kandidát v názorovém testu chybí, je
-          to vždy proto, že jsme neobdrželi odpovědi.
-        </BodyText>
-        <BodyText size="large">
-          Inventura hlasování porovnává Vaše odpovědi s reálnými hlasováními v
-          zákonodárném sboru za uplynulé funkční období.
-        </BodyText>
-
-        <TitleText size="large" tag="h2"> Jak tvoříme otázky </TitleText>
-        <BodyText size="large">
-          Obzvláště v názorovém testu ("volební kalkulačce") je výběr a
-          formulace otázek klíčovým místem tvorby kalkulačky. Z důvodu
-          tranpsarentnosti zde uvádíme náš dokument, kterým se při tvorbě otázek
-          řídíme:
-          <router-link to="/metodika-tvorby-otazek">
-            Metodika výběru témat a tvorby otázek
-          </router-link></BodyText
-        ><BodyText size="large">
-          V naprosté většině případů názorového testu ("volební kalkulačky")
-          stranám nebo kandidátům posíláme více otázek, než kolik se použije ve
-          výsledné kalkulačce. Obvykle se vyřadí otázky, kde je u kandidátů
-          shoda (tj. takové otázky nerozdělují kandidáty). Potom otázky, které
-          se nepovedly (kandidáti správně upozorní na nějaký problém s otázkou,
-          příp. na něj přijdeme sami až po odeslání), a otázky, které jsou
-          podobné jako jiné.
-        </BodyText>
-
-        <TitleText size="large" tag="h2"> Jak vyhodnocujeme shodu </TitleText>
-        <BodyText size="large">
-          Otázka, u níž neodpovíte „Ano“ či „Ne“, se do výpočtu nezahrnuje.
-          Pokud na otázku odpovíte „Ano“, strany či kandidáti, kteří rovněž
-          odpověděli „Ano“, získávají jeden bod. Strany či kandidáti, kteří
-          odpověděli „Ne“, jeden bod ztrácejí. Pokud odpovíte „Ne“, získávají
-          jeden bod strany či kandidáti, kteří rovněž odpověděli „Ne“. Ti, kteří
-          odpověděli „Ano“, naopak jeden bod ztrácejí. Strany či kandidáti,
-          kteří na otázku neodpověděli „Ano“ ani „Ne“, nezískávají ani neztrácí
-          žádné body.
-        </BodyText>
-        <BodyText size="large">
-          Následně se každé straně či kandidátovi sečtou body za všechny otázky,
-          u nichž jste odpověděli „Ano“ či „Ne“, a výsledek se vydělí počtem
-          takových otázek. Tím je získána shoda v rozmezí -100 % až 100 %. Pro
-          větší názornost se shoda převádí na rozmezí 0 % až 100 % tak, že se
-          vydělí dvěma a přičte se k ní 50 % (u kalkulaček od poloviny roku
-          2013).
-        </BodyText>
-
-        <TitleText size="large" tag="h2">
-          Důležitost otázek a hlasování
-        </TitleText>
-        <BodyText size="large">
-          U každé otázky či hlasování máte možnost nastavit, jakou pro Vás má
-          shoda důležitost, tedy váhu s jakou se má zahrnout do celkového součtu
-          shody. Každé ze dvou úrovní důležitosti (normální, vysoká) odpovídá
-          jistá váha a celková shoda je pak váženým průměrem shody v
-          jednotlivých otázkách či hlasováních. Ve skutečnosti se tedy místo
-          jednoho bodu ke shodě přičte, resp. odečte váha příslušné otázky či
-          hlasování a na konci se dělí nikoli počtem otázek či hlasování, ale
-          součtem absolutních hodnot jejich vah. Nastavení vah je takové, že
-          vysoká důležitost má oproti normální důležitosti dvojnásobnou váhu.
-          Zobrazení výsledné shody
-        </BodyText>
-        <BodyText size="large">
-          Může se stát, že Vám vyjde stejná shoda se dvěma nebo více stranami či
-          osobami. V tom případě je pořadí stran či osob při zobrazení výsledné
-          shody určeno náhodně.
-        </BodyText>
-        <TitleText size="large" tag="h2">
-          Současnou Volební kalkulačku připravili
-        </TitleText>
         <BodyText size="large">
           <ul>
-            <li>
-              <a
-                href="https://www.seznamzpravy.cz/autor/michal-skop-1250/"
-                target="_blank"
-                >Michal Škop</a
-              >
-              - KohoVolit.eu
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/krystofk/" target="_blank"
-                >Kryštof Korb</a
-              >
-              - Tech Lead
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/lucie-zatorska-81714350/"
-                target="_blank"
-                >Lucie Zátorská</a
-              >
-              - Scrum Master
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/mwenisch/" target="_blank"
-                >Martin Wenisch</a
-              >
-              - mentor Česko.Digital
-            </li>
-            <li>
-              <a
-                href="https://www.seznamzpravy.cz/autor/katerina-mahdalova-815"
-                target="_blank"
-                >Kateřina Mahdalová</a
-              >
-              - obsah a komunikace
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/mwenisch/" target="_blank"
-                >Gabriela Chladilová</a
-              >
-              - Support Česko.Digital
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/klara-scholleova/"
-                target="_blank"
-                >Klára Schoelleová</a
-              >
-              - UX/UI
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/natalia-bebjakova/"
-                target="_blank"
-                >Natália Bebjaková</a
-              >
-              - UX/UI
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/ondrej-kyjanek-b24832a3/"
-                target="_blank"
-                >Ondřej Kyjánek</a
-              >
-              - Tech Team
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/pavel-vojacek-14420713/"
-                target="_blank"
-                >Pavel Vojáček</a
-              >
-              - Tech Team
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/martin-ladeck%C3%BD-9366ba5/"
-                target="_blank"
-                >Martin Ladecký</a
-              >
-              - Tech Team
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/martinmajlis/"
-                target="_blank"
-                >Martin Majliš</a
-              >
-              - Tech Team
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/tiborkulcar/" target="_blank"
-                >Tibur Kulčár</a
-              >
-              - Tech Team
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/lukasprikryl/"
-                target="_blank"
-                >Lukáš Přikryl</a
-              >
-              - Marketing Lead
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/pavla-radkova/"
-                target="_blank"
-                >Pavla Řádková</a
-              >
-              - UX Research
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/klara-vostinakova/"
-                target="_blank"
-                >Klára Vostiňáková</a
-              >
-              - komunikace
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/doroteja-stamenova-03a50924/"
-                target="_blank"
-                >Doroteja Stamenova</a
-              >
-              - UX/UI
-            </li>
+            <li>KohoVolit.eu</li>
+            <li>Open Data Kosovo</li>
+            <li>Polcon</li>
           </ul>
         </BodyText>
-
+        <TitleText size="large" tag="h2">
+          Si funksionon Kalkulatori Zgjedhor?
+        </TitleText>
         <BodyText size="large">
-          Na přípravě současné volební kalkulačky jsme spolupracovali s <a href="https://europeum.cz/">Europeum</a> a <a href="https://dikyzemuzem.cz/">Díky, že můžem</a>, používali informace z <a href="https://www.europarl.europa.eu/portal/cs">Evropského parlamentu</a> a <a href="https://twitter.com/ep_prehledne">Europarlament přehledně</a>. Ti měli další podporu:
+          Kalkulatori Zgjedhor është një mjet interaktiv online me qëllim 
+          informimin e përdoruesve mbi çështjet më të rëndësishme (shoqërore
+           dhe politike) të periudhës aktuale zgjedhore dhe ofrimin e një 
+           udhëzuesi mbi qëndrimet e partive. 
         </BodyText>
         <BodyText size="large">
-          <img
-            src="https://michalskop-github-io.azureedge.net/documents/volebni-kalkulacka/images/partners/2024/europeum.png"
-            alt="Europeum"
-            style="width: 480px"
-          />
-          <br />
-          <img
-            src="https://michalskop-github-io.azureedge.net/documents/volebni-kalkulacka/images/partners/2024/CS_spolufinancovano_EU.png"
-            alt="EU"
-            style="width: 480px"
-          />
-          <br />
-          <img
-            src="https://michalskop-github-io.azureedge.net/documents/volebni-kalkulacka/images/partners/2022/ACF_slogan_1.png"
-            alt="Active Citizens Fund"
-            style="width: 100%"
-          />
+          Kalkulatori Zgjedhor u paraqet përdoruesve rreth 20 pyetje, të 
+          cilave ata mund t'u përgjigjen me 'Po' ose 'Jo'. Përveç kësaj,
+           mund të zgjidhet edhe opsioni 'Nuk e di/Vazhdo'. Të dhënat e 
+           përdoruesve krahasohen me qëndrimet e partive dhe ata marrin një 
+           rezultat që tregon sa përputhen përgjigjet e tyre me ato të partive. 
+        </BodyText>
+        <TitleText size="large" tag="h2">
+          Si e garanton Kalkulatori Zgjedhor pavarësinë dhe balancën e tij politike?
+        </TitleText>
+        <BodyText size="large">
+          Programi nuk ruan të dhëna personale, duke siguruar kështu anonimitetin
+           e përdoruesve. Bazuar në përgjigjet 'Po/Jo' ose 'Nuk e di/Vazhdo', 
+           përdoruesit mund të krahasojnë përputhshmërinë ose mospërputhshmërinë 
+           përqindësisht midis qëndrimeve të tyre dhe atyre të partive, të 
+           cilat pas plotësimit të pyetësorit përmblidhen në një diagram me 
+           përqindje dhe një renditje. Programi llogarit shkallën e 
+           përputhshmërisë ose mospërputhshmërisë duke përdorur një ekuacion 
+           matematikor.
+        </BodyText>
+        <BodyText size="large">
+          Në varësi të përgjigjeve, gjenerohen vlera të ndryshme. Vlera është 
+          1 nëse përgjigjet e partive dhe të përdoruesve janë identike dhe -1 
+          nëse përgjigjet janë të ndryshme. Përgjigjet 'Nuk e di/Vazhdo' dhe 
+          kalimi i pyetjeve, pra nëse përdoruesit nuk zgjedhin asnjë nga 
+          opsionet e përgjigjeve për një ose më shumë pyetje, këto pyetje nuk 
+          përfshihen në përllogaritje. Në fund, programi i njofton përdoruesit 
+          se rezultati është llogaritur bazuar në pyetjet e përgjigjura me 
+          'Po' ose 'Jo'.
+        </BodyText>
+        <BodyText size="large">
+          Për zhvilluesit e Kalkulatorit Zgjedhor, detyra e parë dhe më e 
+          rëndësishme ishte përcaktimi i parimeve dhe objektivave të 
+          programit, përkatësisht shkencorësia, objektiviteti dhe 
+          neutraliteti politik.
+        </BodyText>
+        <TitleText size="large" tag="h2">
+          Si financohet Kalkulatori Zgjedhor?
+        </TitleText>
+        <BodyText size="large">
+          Kalkulatori Zgjedhor financohet nga disa burime: një grant nga 
+          Visegrad Fund, organizatat pjesëmarrëse dhe crowdfunding-u.
+        </BodyText>
+        <TitleText size="large" tag="h2">
+          Si llogaritet përputhshmëria?
+        </TitleText>
+        <BodyText size="large">
+          Një shembull:<br />
+          Nëse përgjigjeni me ✅ "Për" në 42 pyetje dhe një parti ka votuar 
+          ✅ "Për" 37 herë, është shprehur neutrale 2 herë dhe ka votuar 
+          ❌ "Kundër" 3 herë, llogaritja është si më poshtë:<br />
+          37x Përputhje (Ju keni zgjedhur ✅ "Për", partia gjithashtu ✅ "Për") = 37 pikë<br />
+          2x Neutralitet (Ju keni zgjedhur ✅ "Për", partia është neutrale) = 0 pikë<br />
+          3x Mospërputhje (Ju keni zgjedhur ✅ "Për", partia ❌ "Kundër") = -3 pikë<br />
+
+          Rezultati për këtë parti: 34 pikë<br />
+          Numri i pyetjeve të përgjigjura: 42<br />
+
+          Kalkulatori e shndërron këtë rezultat në një përqindje (0% - 100%) duke përdorur formulën:<br />
+          ((34 / 42) + 1) / 2 ∗ 100% = <strong>90 %</strong><br />
         </BodyText>
       </StackComponent>
       <DonateBlock />
+      <img class="v4-logo" :src="'/images/logo-visegrad.svg'">
       <FooterMultiWord />
     </StaticContentLayout>
   </BackgroundComponent>
@@ -308,5 +142,9 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
 <style lang="scss" scoped>
 .section {
   padding: 40px 0;
+}
+.v4-logo {
+  height: 130px;
+  width: 290px;
 }
 </style>
