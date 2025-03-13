@@ -49,7 +49,7 @@ const handleClick = () => {
         />
         <path
           d="M126.768 0.283997L74.8308 52.3007L86.7762 64.2647L138.713 12.248L126.768 0.283997Z"
-          :fill="props.monochromatic || 'rgb(var(--color-neutral-fg-strong))'"
+          :fill="props.monochromatic || 'rgb(var(--color-neutral-fg-muted))'"
         />
         <path
           d="M207.144 0.000134698L219.089 11.9641L199.093 31.9906L219.089 52.0171L207.143 63.981L187.148 43.9544L167.152 63.9809L155.207 52.0169L175.202 31.9905L155.207 11.9639L167.152 1.38557e-05L187.148 20.0267L207.144 0.000134698Z"
@@ -61,7 +61,7 @@ const handleClick = () => {
         />
         <path
           d="M288.036 0.28401L236.099 52.3007L248.044 64.2647L299.981 12.248L288.036 0.28401Z"
-          :fill="props.monochromatic || 'rgb(var(--color-neutral-fg-strong))'"
+          :fill="props.monochromatic || 'rgb(var(--color-neutral-fg-muted))'"
         />
         <path
           d="M300 54.4368C300 59.7184 295.725 64 290.452 64C285.178 64 280.903 59.7184 280.903 54.4368C280.903 49.1552 285.178 44.8736 290.452 44.8736C295.725 44.8736 300 49.1552 300 54.4368Z"
