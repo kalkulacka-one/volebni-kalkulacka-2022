@@ -81,124 +81,25 @@ const handleSubscribe = async () => {
       <NavigationBar transparent with-account :user="user" />
     </template>
     <div class="prezident-hero">
-      <BlobComponent color="blue" class="blob1" />
+      
       <BlobComponent color="red" class="blob2" />
       <StackComponent spacing="medium" centered class="calc-main">
         <StackComponent spacing="large" centered space-between>
           <BodyText size="medium" tag="h1" color="fg-strong">
-            29. September 2024
+            27. April 2025
             <br />
           </BodyText>
           <HeadlineText tag="p" size="small">
-            Nationalratswahl
-            <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
+            WienWahl
+            <span style="color: rgb(var(--color-neutral-fg))"> 2025 </span>
           </HeadlineText>
-          <BodyText size="small"> 42 Fragen, ca. 10 Minuten</BodyText>
-          <ButtonComponent
-            kind="filled"
-            color="primary"
-            @click="
-              router.push({
-                name: appRoutes.guide.name,
-                params: {
-                  ...route.params,
-                  type: `${'wahlen'}`,
-                  first: 'nationalratswahl-2024',
-                  second: 'wahlrechner',
-                },
-                query: { ...route.query },
-              })
-            "
-          >
-            Start des Wahlrechners
-            <template #iconAfter>
-              <IconComponent :icon="mdiArrowRight" />
-            </template>
-          </ButtonComponent>
+          
         </StackComponent>
         <BodyText size="large">—</BodyText>
         <StackComponent horizontal spacing="large" wrap style="justify-content: center;">
-          <CardComponent
-            corner="bottom-left"
-            padding="large"
-            border
-            border-radius="large"
-            shadow
-            class="other-calc-card calc-youth"
-          >
-            <StackComponent spacing="large" centered>
-              <StackComponent spacing="small" centered space-between>
-                <BodyText size="medium" tag="h2" color="fg-strong">
-                  <strong>Wahlrechner express</strong>
-                </BodyText>
-                <BodyText size="small">
-                  25 Fragen für alle, besonders junge Wähler:innen!
-                </BodyText>
-                <ButtonComponent
-                  kind="outlined"
-                  color="primary"
-                  @click="
-                    router.push({
-                      name: appRoutes.guide.name,
-                      params: {
-                        ...route.params,
-                        type: `${'wahlen'}`,
-                        first: 'nationalratswahl-2024',
-                        second: 'express',
-                      },
-                      query: { ...route.query },
-                    })
-                  "
-                >
-                Start des Wahlrechners Express
-                  <template #iconAfter>
-                    <IconComponent :icon="mdiArrowRight" />
-                  </template>
-                </ButtonComponent>
-              </StackComponent>
-            </StackComponent>
-          </CardComponent>
-          <CardComponent
-            corner="bottom-left"
-            padding="large"
-            border
-            border-radius="large"
-            shadow
-            class="other-calc-card calc-youth"
-          >
-            <StackComponent spacing="large" centered>
-              <StackComponent spacing="small" centered space-between>
-                <BodyText size="medium" tag="h2" color="fg-strong">
-                  <strong>Abstimmungsrechner</strong>
-                  <span style="color: rgb(var(--color-neutral-fg))"> Experimentell </span>
-                </BodyText>
-                <BodyText size="small">
-                  33 echte Abstimmungsfragen aus dem Nationalrat
-                </BodyText>
-                <ButtonComponent
-                  kind="outlined"
-                  color="primary"
-                  @click="
-                    router.push({
-                      name: appRoutes.guide.name,
-                      params: {
-                        ...route.params,
-                        type: `${'wahlen'}`,
-                        first: 'nationalratswahl-2024',
-                        second: 'abstimmungsrechner',
-                      },
-                      query: { ...route.query },
-                    })
-                  "
-                >
-                Start des Abstimmungsrechners
-                  <template #iconAfter>
-                    <IconComponent :icon="mdiArrowRight" />
-                  </template>
-                </ButtonComponent>
-              </StackComponent>
-            </StackComponent>
-          </CardComponent>
+          <TitleText style="color: rgb(var(--color-neutral-fg))" tag="h3">
+            Wahlrechner ist Teil des größten europäischen Netzwerks für Wahl-Entscheidungshilfen.
+          </TitleText>
         </StackComponent>
       </StackComponent>
     </div>
@@ -252,12 +153,12 @@ const handleSubscribe = async () => {
           >Wer steht hinter dem Wahlrechner?</TitleText
         >
         <BodyText size="medium"
-          >Wahlrechner.at ist eine zivilgesellschaftliche Initiative der Organisationen KohoVolit.eu, wahlbeobachtung.org, PolEdu - Politics, Education und BIZEPS - Zentrum für selbstbestimmtes Leben & Meine Abgeordneten. Es handelt sich um ein überparteiliches Instrument, das Wählerinnen und Wählern dabei helfen soll, sich vor der Nationalratswahl 2024 umfassend über die Positionen der kandidierenden Parteien zu informieren.</BodyText
+          >Wahlrechner.at ist eine zivilgesellschaftliche Initiative der Organisationen <i>KohoVolit.eu</i> und <i>PolEdu – Politics, Education</i> in Kooperation mit <i>Puls 4</i>. Es handelt sich um ein überparteiliches Instrument, das Wählerinnen und Wählern dabei helfen soll, sich vor der Wien-Wahl 2025 umfassend über die Positionen der kandidierenden Parteien zu informieren.</BodyText
         >
         <div class="info-bubbles-grid section">
           <InfoBubble image="info-1.png">
             <BodyText size="small"
-              >Wir stellen etwa 50 Fragen zu aktuellen politischen Themen..
+              >Wir stellen etwa 50 Fragen zu aktuellen politischen Themen.
             </BodyText>
           </InfoBubble>
           <InfoBubble image="info-2.png">
@@ -294,6 +195,105 @@ const handleSubscribe = async () => {
           Wahlrechner für bereits abgehaltene Wahlen
         </TitleText>
         <MasonryGrid style="align-self: stretch">
+          <CardComponent corner="top-right" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium"
+                  >Nationalratswahl 2024</TitleText
+                >
+                <BodyText size="medium"
+                  >Die Nationalratswahl 2024, 42 Fragen, ca. 10 Minuten</BodyText
+                >
+              </div>
+              <ButtonComponent
+                kind="filled"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      type: `${'wahlen'}`,
+                      first: 'nationalratswahl-2024',
+                      second: 'wahlrechner',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+              Start des Wahlrechners
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
+          <CardComponent corner="top-right" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium"
+                  >Nationalratswahl 2024: Express</TitleText
+                >
+                <BodyText size="medium"
+                  >25 Fragen für alle, besonders junge Wähler:innen!</BodyText
+                >
+              </div>
+              <ButtonComponent
+                kind="outlined"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      type: `${'wahlen'}`,
+                      first: 'nationalratswahl-2024',
+                      second: 'express',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+              Start des Wahlrechners
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
+          <CardComponent corner="top-right" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium"
+                  >Nationalratswahl 2024: Abstimmungsrechner</TitleText
+                >
+                <BodyText size="medium"
+                  >33 echte Abstimmungsfragen aus dem Nationalrat</BodyText
+                >
+              </div>
+              <ButtonComponent
+                kind="outlined"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      type: `${'wahlen'}`,
+                      first: 'nationalratswahl-2024',
+                      second: 'abstimmungsrechner',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+              Start des abstimmungsrechners
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
           <CardComponent corner="top-right" padding="medium" border shadow>
             <div class="card-content">
               <div class="card-content-text">

@@ -41,6 +41,9 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
         <BodyText size="large">
           Die Orientierungshilfe für Wähler:innen in Österreich
         </BodyText>
+        <BodyText size="large">
+          Wahlrechner.at ist Teil des größten europäischen Netzwerks für Wahl-Entscheidungshilfen. Seit 2006 entwickeln wir unabhängige Online-Tools zur politischen Orientierung – aktuell in sieben Ländern und darüber hinaus. Mit über 100 Wahl-Tools und mehreren zehn Millionen Nutzer:innen haben wir Wählerinnen und Wählern in ganz Europa geholfen, informierte Entscheidungen zu treffen.
+        </BodyText>
         <TitleText size="large" tag="h2">Mission</TitleText>
         <BodyText size="large">
           Österreichs Demokratie braucht eine überparteiliche, ausgewogene,
@@ -57,47 +60,33 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
         <BodyText size="large">
           <ul>
             <li>KohoVolit.eu</li>
-            <li>wahlbeobachtung.org</li>
             <li>PolEdu - Politics & Education</li>
-            <li>BIZEPS - Zentrum für selbstbestimmtes Leben</li>
-            <li>Meine Abgeordneten - So tickt Österreichs Politik</li>
+            <li>Puls 4</li>
           </ul>
         </BodyText>
         <TitleText size="large" tag="h2"
           >Wie funktioniert wahlrechner.at?
         </TitleText>
         <BodyText size="large">
-          Wahlrechner ist ein interaktives Online-Tool mit dem Ziel, die
-          Nutzer:innen über die wichtigsten (gesellschafts-)politischen Fragen
-          der aktuellen Wahlperiode zu informieren und ihnen eine
-          Orientierungshilfe über die Positionen der Parteien anzubieten. </BodyText
-        ><BodyText size="large">
-          Der Wahlrechner stellt den Nutzer:innen rund 40 Fragen, die mit Dafür
-          oder Dagegen beantwortet werden können. Zusätzlich kann Weiß
-          nicht/Weiter ausgewählt werden. Die Angaben der Nutzer:innen werden
-          mit den Angaben der Parteien verglichen und die Nutzer:innen bekommen
-          ein Ergebnis, wie ihre Angaben mit jenen der Parteien übereinstimmen. </BodyText
-        ><BodyText size="large">
-          Der österreichische Wahlrechner kooperiert auf europäischer Ebene mit
-          VoteMatch.eu, so können die Nutzer:innen ihre Antworten mit denen von
-          Parteien aus anderen EU- Ländern vergleichen. </BodyText
-        ><BodyText size="large">
-          15 Fragen aus dem europäischen Katalog übernehmen alle
-          Wahlorientierungshilfen, die an VoteMatch.eu teilnehmen. 25 weitere
-          Fragen werden nach nationalen Themenlagen erarbeitet. So ergibt sich
-          ein Fragenkatalog von 40 Fragen.
+            Wahlrechner ist ein interaktives Online-Tool mit dem Ziel, die Nutzer:innen über die wichtigsten (gesellschafts-)politischen Fragen einer Wahl zu informieren und ihnen eine Orientierungshilfe über die Positionen der Parteien anzubieten. Wahlrechner wird für verschiedene Wahlen in Österreich angeboten und ermöglicht eine fundierte Entscheidungshilfe für Wähler:innen.
+        </BodyText>
+        <BodyText size="large">
+            Der Wahlrechner stellt den Nutzer:innen rund 20-40 Fragen, die mit Dafür oder Dagegen beantwortet werden können. Zusätzlich kann Weiß nicht/Weiter ausgewählt werden. Die Angaben der Nutzer:innen werden mit den Positionen der Parteien verglichen, sodass eine individuelle Übereinstimmung berechnet wird.
+        </BodyText>
+        <BodyText size="large">
+            Der österreichische Wahlrechner ist Teil eines internationalen Netzwerks und kooperiert auf europäischer Ebene mit VoteMatch.eu. Dies ermöglicht es den Nutzer:innen, ihre Antworten nicht nur mit österreichischen Parteien, sondern bei entsprechenden Wahlen auch mit Parteien aus anderen EU-Ländern zu vergleichen.
+        </BodyText>
+        <BodyText size="large">
+            Ein besonderes Beispiel ist die Europawahl, bei der 15 Fragen aus dem gemeinsamen europäischen Fragenkatalog übernommen werden. Zusätzlich werden bis zu 25 weitere Fragen speziell zu österreichischen Themen erarbeitet, um eine umfassende Wahlhilfe mit bis zu 40 Fragen zu bieten.
         </BodyText>
         <TitleText size="large" tag="h2"
           >Wer soll angesprochen werden?
         </TitleText>
         <BodyText size="large">
-          Zielgruppe ist eine möglichst breite Öffentlichkeit, die sich vor der
-          Europawahl informieren will. Wie die Zahlen aus anderen Ländern
-          zeigen, werden Online-Wahlhilfen von Jahr zu Jahr beliebter. Die
-          Online-Wahlhilfe des Projektpartners KohoVolit.eu aus Tschechien
-          erreichte bei den Präsidentschaftswahlen 2023 40 Prozent der
-          Wähler:innen. In Deutschland wurde der Wahl-O-Mat im Vorfeld der
-          letzten Bundestagswahl 2021 21,3 Millionen Mal aufgerufen.
+          Zielgruppe ist eine möglichst breite Öffentlichkeit, die sich vor Wahlen in Österreich informieren möchte. Wie die Zahlen aus anderen Ländern zeigen, werden Online-Wahlhilfen von Jahr zu Jahr beliebter. Die Online-Wahlhilfe des Projektpartners KohoVolit.eu aus Tschechien erreichte bei den Präsidentschaftswahlen 2023 40 Prozent der Wähler:innen. In Deutschland wurde der Wahl-O-Mat im Vorfeld der letzten Bundestagswahl 2021 21,3 Millionen Mal aufgerufen.
+        </BodyText>
+        <BodyText size="large">
+          Auch in Österreich steigt die Nutzung kontinuierlich: Bei der Europawahl 2024 war unser Wahlrechner die meistgenutzte Wahlhilfe im Land.
         </BodyText>
         <TitleText size="large" tag="h2">
           Wie gewährleistet wahlrechner.at seine politische Unabhängigkeit und
@@ -150,21 +139,18 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
               </p>
             </li>
             <li>
-              <strong>wahbeobachtung.org </strong>
-              <p>
-                Wahlbeobachtung.org ist eine unparteiische Arbeitsgemeinschaft
-                internationaler Wahlbeobachter:innen, mit dem Ziel der
-                Verbesserung österreichischer Wahlprozesse und einem besseren
-                Verständnis für Wahlen speziell bei Jungwähler:innen.
-              </p>
-            </li>
-            <li>
               <strong>PolEdu - Politics & Education </strong>
               <p>
                 PolEdu ist ein parteiunabhängiger Verein für politische Bildung
                 mit Sitz in Wien. Für Wahlrechner.at wird PolEdu den Kontakt zu
                 jungen Menschen herstellen und die politischen Inhalte in eine
                 jugendgerechte Sprache bringen.
+              </p>
+            </li>
+            <li>
+              <strong>Puls 4</strong>
+              <p>
+                Puls 4 ist eine der führenden privaten Fernsehsendergruppen in Österreich und bekannt für ihre politischen Berichterstattungen und Diskussionsformate. Im Rahmen von Wahlrechner.at beteiligt sich Puls 4 aktiv an der Erstellung der Wahlhilfe und unterstützt das Projekt zudem als Medienpartner, um eine breite Öffentlichkeit zu erreichen und die politische Meinungsbildung zu fördern.
               </p>
             </li>
           </ul>
@@ -174,7 +160,7 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
         </TitleText>
         <BodyText size="large">
           Wahlrechner.at soll ein Projekt aus der Zivilgesellschaft für die
-          Zivilgesellschaft sein.Das Pilotprojekt wurde durch ehrenamtliche Tätigkeit umgesetzt,
+          Zivilgesellschaft sein. Das Pilotprojekt wurde durch ehrenamtliche Tätigkeit umgesetzt,
           für die Zukunft ist das Projekt auf Unterstützung durch Spenden angewiesen. 
           Weiters werden Spenden zur Unterstützung des Projektes gesammelt.
         </BodyText>
@@ -191,6 +177,15 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
           Anzahl der beantworteten Fragen: 42<br />
           Der Rechner überträgt dieses Ergebnis so in eine Prozentangabe (0 % - 100 %):<br />
           ((34 / 42) + 1) / 2 *100 % = <strong>90 %</strong><br />
+        </BodyText>
+        <TitleText size="large" tag="h2">Nationalratswahl 2024</TitleText>
+        <BodyText size="large">
+          Die folgende Organisationen haben auch an der Entwicklung des Wahlrechners für die Nationalratswahl 2024 beteiligt:<br/>
+          <ul>
+            <li>wahlbeobachtung.org</li>
+            <li>BIZEPS - Zentrum für selbstbestimmtes Leben</li>
+            <li>Meine Abgeordneten - So tickt Österreichs Politik</li>
+          </ul>
         </BodyText>
         <TitleText size="large" tag="h2">Europawahl 2024</TitleText>
         <BodyText size="large">

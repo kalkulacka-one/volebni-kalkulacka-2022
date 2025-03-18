@@ -39,14 +39,14 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
       <StackComponent spacing="large" class="section">
         <HeadlineText tag="h1" size="large">Impressum</HeadlineText>
         <BodyText size="large">
-          Wahlrechner.at ist eine zivilgesellschaftliche Initiative der Organisationen KohoVolit.eu, wahlbeobachtung.org, PolEdu - Politics, Education und BIZEPS - Zentrum für selbstbestimmtes Leben &amp; Meine Abgeordneten.
+          Wahlrechner.at ist eine zivilgesellschaftliche Initiative der Organisationen <i>KohoVolit.eu</i> und <i>PolEdu – Politics, Education</i> in Kooperation mit <i>Puls 4</i>.
         </BodyText>
         <BodyText size="large">
           Es ist ein überparteiliches Instrument, das Wähler:innen hilft, sich vor der Wahl umfassend über die Positionen der kandidierenden Parteien zu informieren.
         </BodyText>
         <TitleText size="large" tag="h2">Inhaberin der Website</TitleText>
         <BodyText size="large">
-          KohoVolit.eu, ID 22841890 (Tschechische Republik)<br />
+          KohoVolit.eu, ID 22841890 (CZ)<br />
           www.kohovolit.eu<br />
           +43 690 10 26 31 60 (Michal Škop)<br />
           info@kohovolit.eu<br />
@@ -55,11 +55,10 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
         <TitleText size="large" tag="h2">Für den Inhalt verantwortlich</TitleText>
         <BodyText size="large">
           <ul>
-            <li>Paul Grohma</li>
             <li>Manuel Köllner</li>
             <li>Kateřina Mahdalová</li>
             <li>Christian Pöltl-Dienst</li>
-            <li>Armin Rabitsch</li>
+            <li>Andreas Rossmeissl</li>
             <li>Michal Škop</li>
           </ul>
         </BodyText>

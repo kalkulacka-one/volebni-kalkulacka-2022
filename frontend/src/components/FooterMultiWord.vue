@@ -98,14 +98,11 @@ const router = useRouter();
         <a href="https://cesko.digital"
           ><img class="cd-logo" :src="'/images/logo-cd.svg'"
         /></a>
-        <a href="https://wahlbeobachtung.org"
-          ><img class="wahlbeobachtung-logo" :src="'/images/logo-wb.jpg'"
-        /></a>
         <a href="https://poledu.at"
           ><img class="poledu-logo" :src="'/images/logo-poledu.svg'"
         /></a>
-        <a href="https://www.meineabgeordneten.at/"
-          ><img class="meineabgeordneten-logo" :src="'/images/logo-meineabgeordneten.png'"
+        <a href="https://www.puls4.at/"
+          ><img class="puls4-logo" :src="'/images/logo-puls4.svg'"
         /></a>
       </div>
     </div>
@@ -229,28 +226,11 @@ a:after {
   height: 20px;
 }
 
-.memo-logo {
-  height: 20px;
-  filter: invert(100%);
-}
-
-.od-logo {
-  height: 80px;
-}
-
-.andrassy-logo {
-  height: 40px;
-}
-
-.netpol-logo {
-  height: 20px;
-}
-
-.wahlbeobachtung-logo {
-  height: 40px;
+.puls4-logo {
+  height: 30px;
 }
 
 .poledu-logo {
-  height: 80px;
+  height: 40px;
 }
 </style>
