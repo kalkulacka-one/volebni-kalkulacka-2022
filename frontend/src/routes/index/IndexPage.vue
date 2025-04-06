@@ -90,10 +90,31 @@ const handleSubscribe = async () => {
             <br />
           </BodyText>
           <HeadlineText tag="p" size="small">
-            WienWahl
+            Wien-Wahl
             <span style="color: rgb(var(--color-neutral-fg))"> 2025 </span>
           </HeadlineText>
-          
+          <BodyText size="small"> 23 Fragen, weil Wien 23 Bezirke hat<br />ca. 5-10 Minuten</BodyText>
+          <ButtonComponent
+            kind="filled"
+            color="primary"
+            @click="
+              router.push({
+                name: appRoutes.guide.name,
+                params: {
+                  ...route.params,
+                  type: `${'wahlen'}`,
+                  first: 'wien-wahl-2025',
+                  second: 'wahlrechner',
+                },
+                query: { ...route.query },
+              })
+            "
+          >
+            Start des Wahlrechners
+            <template #iconAfter>
+              <IconComponent :icon="mdiArrowRight" />
+            </template>
+          </ButtonComponent>
         </StackComponent>
         <BodyText size="large">—</BodyText>
         <StackComponent horizontal spacing="large" wrap style="justify-content: center;">
@@ -104,6 +125,47 @@ const handleSubscribe = async () => {
       </StackComponent>
     </div>
     <StaticContentLayout>
+      
+      <StackComponent class="section" spacing="small" centered>
+        <TitleText size="large" tag="h2"
+          >Wer steht hinter dem Wahlrechner?</TitleText
+        >
+        <BodyText size="medium"
+          >Wahlrechner.at ist eine zivilgesellschaftliche Initiative der Organisationen <i>KohoVolit.eu</i> und <i>PolEdu – Politics, Education</i> in Kooperation mit <i>Puls 4</i>. Es handelt sich um ein überparteiliches Instrument, das Wählerinnen und Wählern dabei helfen soll, sich vor der Wien-Wahl 2025 umfassend über die Positionen der kandidierenden Parteien zu informieren.</BodyText
+        >
+        <div class="info-bubbles-grid section">
+          <InfoBubble image="info-1.png">
+            <BodyText size="small"
+              >Wir stellen etwa 50 Fragen zu aktuellen politischen Themen.
+            </BodyText>
+          </InfoBubble>
+          <InfoBubble image="info-2.png">
+            <BodyText size="small"
+              >Wir befragen die wahlwerbenden Parteien.
+            </BodyText>
+          </InfoBubble>
+          <InfoBubble image="info-3.png">
+            <BodyText size="small"
+              >Und die Parteien antworten.
+            </BodyText>
+          </InfoBubble>
+          <InfoBubble image="info-4.png">
+            <BodyText size="small"
+              >Der Wahlrechner berechnet die Übereinstimmung mit Ihren Antworten.</BodyText
+            >
+          </InfoBubble>
+        </div>
+      </StackComponent>
+      <StackComponent class="section" spacing="large" centered>
+        <BodyText size="medium"
+          >Der Wahlrechner ist ein reiner Informationsdienst und dient nicht dazu, konkrete Wahlempfehlungen abzugeben.
+        </BodyText>
+        <ButtonComponent kind="link" @click="router.push('/uber-den-wahlrechner')">
+          <div class="button-content">
+            Mehr herausfinden<IconComponent :icon="mdiArrowRight"></IconComponent>
+          </div>
+        </ButtonComponent>
+      </StackComponent>
       <section class="subscribe">
         <StackComponent spacing="small" centered>
           <TitleText size="large" tag="h2">
@@ -148,46 +210,6 @@ const handleSubscribe = async () => {
           }}</BodyText>
         </StackComponent>
       </section>
-      <StackComponent class="section" spacing="small" centered>
-        <TitleText size="large" tag="h2"
-          >Wer steht hinter dem Wahlrechner?</TitleText
-        >
-        <BodyText size="medium"
-          >Wahlrechner.at ist eine zivilgesellschaftliche Initiative der Organisationen <i>KohoVolit.eu</i> und <i>PolEdu – Politics, Education</i> in Kooperation mit <i>Puls 4</i>. Es handelt sich um ein überparteiliches Instrument, das Wählerinnen und Wählern dabei helfen soll, sich vor der Wien-Wahl 2025 umfassend über die Positionen der kandidierenden Parteien zu informieren.</BodyText
-        >
-        <div class="info-bubbles-grid section">
-          <InfoBubble image="info-1.png">
-            <BodyText size="small"
-              >Wir stellen etwa 50 Fragen zu aktuellen politischen Themen.
-            </BodyText>
-          </InfoBubble>
-          <InfoBubble image="info-2.png">
-            <BodyText size="small"
-              >Wir befragen die wahlwerbenden Parteien.
-            </BodyText>
-          </InfoBubble>
-          <InfoBubble image="info-3.png">
-            <BodyText size="small"
-              >Und die Parteien antworten.
-            </BodyText>
-          </InfoBubble>
-          <InfoBubble image="info-4.png">
-            <BodyText size="small"
-              >Der Wahlrechner berechnet die Übereinstimmung mit Ihren Antworten.</BodyText
-            >
-          </InfoBubble>
-        </div>
-      </StackComponent>
-      <StackComponent class="section" spacing="large" centered>
-        <BodyText size="medium"
-          >Der Wahlrechner ist ein reiner Informationsdienst und dient nicht dazu, konkrete Wahlempfehlungen abzugeben.
-        </BodyText>
-        <ButtonComponent kind="link" @click="router.push('/uber-den-wahlrechner')">
-          <div class="button-content">
-            Mehr herausfinden<IconComponent :icon="mdiArrowRight"></IconComponent>
-          </div>
-        </ButtonComponent>
-      </StackComponent>
       <DonateBlock />
       <StackComponent spacing="large">
         <div ref="info"></div>

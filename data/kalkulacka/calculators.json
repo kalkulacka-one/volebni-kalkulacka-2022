@@ -11,6 +11,12 @@
       "key": "nationalratswahl-2024",
       "name": "Nationalratswahl 2024",
       "description": "Nationalratswahl 2024"
+    },
+    {
+      "id": "aa90257e-8123-46a6-98c6-fd8bccffaa71",
+      "key": "wien-wahl-2025",
+      "name": "Wien-Wahl 2025",
+      "description": "Wien-Wahl 2025"
     }
   ],
   "calculators": [
@@ -58,6 +64,15 @@
       "name": "Abstimmungsrechner",
       "description": "Nationalratswahl 2024",
       "key": "nationalratswahl-2024/abstimmunsgrechner"
+    },
+    {
+      "calculator_id": "77cda73f-edfd-4659-99e5-caac2b9ff8ac",
+      "election_id": "aa90257e-8123-46a6-98c6-fd8bccffaa71",
+      "district_code": "wahlrechner",
+      "show_district_code": false,
+      "name": "Wahlrechner",
+      "description": "Wien-Wahl 2025",
+      "key": "wien-wahl-2025/wahlrechner"
     }
   ]
 }

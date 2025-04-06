@@ -1,0 +1,17 @@
+{
+  "id": "379cac18-71b1-438d-833c-9d0334ed08b5",
+  "key": "wien-wahl-2025",
+  "createdAt": "2021-01-01T00:00:00+01:00",
+  "election": {
+    "id": "aa90257e-8123-46a6-98c6-fd8bccffaa71",
+    "key": "wien-wahl-2025"
+  },
+  "calculators": [
+    {
+      "id": "77cda73f-edfd-4659-99e5-caac2b9ff8ac",
+      "variant": {
+        "key": "wahlrechner"
+      }
+    }
+  ]
+}
