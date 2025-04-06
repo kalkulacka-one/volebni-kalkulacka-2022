@@ -192,6 +192,8 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
           Der Wahlrechner für die Europawahl 2024 wurde im Rahmen des VoteMatch.eu-Netzwerks erstellt.<br/>
           Dabei haben auch folgende Organisationen mitgewirkt:<br/>
           <ul>
+            <li>wahlbeobachtung.org</li>
+            <li>BIZEPS - Zentrum für selbstbestimmtes Leben</li>
             <li>Gründungsverein Österreichische Demokratiestiftung</li>
             <li>Vokskabin.hu/Andrássy Universität Budapest</li>
           </ul>
