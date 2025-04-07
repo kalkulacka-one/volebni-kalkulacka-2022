@@ -131,7 +131,7 @@ const handleSubscribe = async () => {
           >Wer steht hinter dem Wahlrechner?</TitleText
         >
         <BodyText size="medium"
-          >Wahlrechner.at ist eine zivilgesellschaftliche Initiative der Organisationen <i>KohoVolit.eu</i> und <i>PolEdu – Politics, Education</i> in Kooperation mit <i>Puls 4</i>. Es handelt sich um ein überparteiliches Instrument, das Wählerinnen und Wählern dabei helfen soll, sich vor der Wien-Wahl 2025 umfassend über die Positionen der kandidierenden Parteien zu informieren.</BodyText
+          >Wahlrechner.at ist eine zivilgesellschaftliche Initiative der Organisationen <i>KohoVolit.eu</i> und <i>PolEdu – Politics, Education</i> in Kooperation mit <i>24</i>. Es handelt sich um ein überparteiliches Instrument, das Wählerinnen und Wählern dabei helfen soll, sich vor der Wien-Wahl 2025 umfassend über die Positionen der kandidierenden Parteien zu informieren.</BodyText
         >
         <div class="info-bubbles-grid section">
           <InfoBubble image="info-1.png">

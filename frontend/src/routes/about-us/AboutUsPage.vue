@@ -61,7 +61,7 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
           <ul>
             <li>KohoVolit.eu</li>
             <li>PolEdu - Politics & Education</li>
-            <li>Puls 4</li>
+            <li>Puls 24</li>
           </ul>
         </BodyText>
         <TitleText size="large" tag="h2"
@@ -148,9 +148,9 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
               </p>
             </li>
             <li>
-              <strong>Puls 4</strong>
+              <strong>Puls 24</strong>
               <p>
-                Puls 4 ist eine der führenden privaten Fernsehsendergruppen in Österreich und bekannt für ihre politischen Berichterstattungen und Diskussionsformate. Im Rahmen von Wahlrechner.at beteiligt sich Puls 4 aktiv an der Erstellung der Wahlhilfe und unterstützt das Projekt zudem als Medienpartner, um eine breite Öffentlichkeit zu erreichen und die politische Meinungsbildung zu fördern.
+                Puls 24 ist ein führender privater Nachrichtensender in Österreich, der für seine umfassende Live-Berichterstattung und politischen Diskussionsformate bekannt ist. Im Rahmen von Wahlrechner.at beteiligt sich Puls 24 aktiv an der Erstellung der Wahlhilfe und unterstützt das Projekt zudem als Medienpartner, um eine breite Öffentlichkeit zu erreichen und die politische Meinungsbildung zu fördern.
               </p>
             </li>
           </ul>
