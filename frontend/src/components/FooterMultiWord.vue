@@ -101,8 +101,8 @@ const router = useRouter();
         <a href="https://poledu.at"
           ><img class="poledu-logo" :src="'/images/logo-poledu.svg'"
         /></a>
-        <a href="https://www.puls4.at/"
-          ><img class="puls4-logo" :src="'/images/logo-puls4.svg'"
+        <a href="https://www.puls24.at/"
+          ><img class="puls24-logo" :src="'/images/logo-puls24.svg'"
         /></a>
       </div>
     </div>
@@ -226,7 +226,7 @@ a:after {
   height: 20px;
 }
 
-.puls4-logo {
+.puls24-logo {
   height: 30px;
 }
 
