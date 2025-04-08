@@ -39,7 +39,7 @@ import LogoComponent from '@/components/design-system/style/LogoComponent.vue';
       <StackComponent spacing="large" class="section">
         <HeadlineText tag="h1" size="large">Impressum</HeadlineText>
         <BodyText size="large">
-          Wahlrechner.at ist eine zivilgesellschaftliche Initiative der Organisationen <i>KohoVolit.eu</i> und <i>PolEdu – Politics, Education</i> in Kooperation mit <i>Puls 4</i>.
+          Wahlrechner.at ist eine zivilgesellschaftliche Initiative der Organisationen <i>KohoVolit.eu</i> und <i>PolEdu – Politics, Education</i> in Kooperation mit <i>Puls 24</i>.
         </BodyText>
         <BodyText size="large">
           Es ist ein überparteiliches Instrument, das Wähler:innen hilft, sich vor der Wahl umfassend über die Positionen der kandidierenden Parteien zu informieren.
