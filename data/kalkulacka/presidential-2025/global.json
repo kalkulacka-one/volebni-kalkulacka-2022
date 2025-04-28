@@ -1,0 +1,2648 @@
+{
+    "id": "c83ae2dd-e3c1-428f-a0a1-5afa92e93625",
+    "name": "global",
+    "description": "Alegeri prezidențiale în România 2025",
+    "district_code": "global",
+    "show_district_code": false,
+    "election": {
+        "election": {
+            "id": "presidential-2025",
+            "key": "presidential-2025",
+            "name": "Alegeri prezidențiale în România 2025",
+            "description": "Alegeri prezidențiale în România 2025",
+            "instructions": {
+                "header": "presidential - header",
+                "step_1_1": "",
+                "step_1_2": "",
+                "step_1_link": "",
+                "step_2_1": ""
+            },
+            "from": "2025-05-04T00:00:00",
+            "to": "2025-05-018T23:59:59"
+        }
+    },
+    "questions": [
+        {
+            "id": "f92d5689-d18d-459c-a6bc-f6efa8dd7653",
+            "name": "1 – POLITICĂ EXTERNĂ",
+            "title": "Este mai important să sporim influența politică și economică a României decât să menținem relații apropiate cu partenerii din Uniunea Europeană",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "08deb909-63eb-473c-a917-ae35edb83efd",
+            "name": "2 – POLITICĂ EXTERNĂ",
+            "title": "România nu ar trebui să mai ofere asistență militară - precum muniții și echipamente - Ucrainei",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "b084c2e7-2515-499a-ad34-1ca02c84a11f",
+            "name": "3 – POLITICĂ EXTERNĂ",
+            "title": "România trebuie să susțină încheierea unui acord de pace între Rusia și Ucraina cât mai curând, chiar dacă va necesita ca Ucraina să cedeze părți semnificative din teritoriul său către Rusia",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "970c2a3a-687f-4bc2-8370-3015af2b1f79",
+            "name": "4 – POLITICĂ EXTERNĂ",
+            "title": "Ar trebui continuată integrarea statelor membre ale Uniunii Europene, inclusiv cu cedarea unor competențe ori decizii către nivelul european",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "3413ed2b-2ac7-4d0d-ba9d-4273a3812b6b",
+            "name": "5 – ECONOMIE",
+            "title": "Creșterea economică poate fi încurajată mai degrabă prin taxe și impozite mici și o mai bună utilizare a fondurilor europene, decât prin programe de investiții finanțate de stat",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "cb08e2f6-ce0d-4dd7-b551-72a1f2fb983c",
+            "name": "6 – ECONOMIE",
+            "title": "Imigranții care muncesc în mod legal în România contribuie la creșterea economică și, prin urmare, ar trebui să fie bineveniți",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "2d15df81-2dcd-4d77-8754-026c39f7f3a9",
+            "name": "7 – ENERGIE",
+            "title": "Este nevoie să naționalizăm unele companii din domeniul exploatarii resurselor pentru a spori rezervele și aportul energetic al României",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "afcad035-9228-41cf-82f5-98082f1e0b2d",
+            "name": "8 – ENERGIE",
+            "title": "Nivelul prețurilor și investițiile în sectorul energiei trebuie să fie determinate de cerere, costurile reale și de ofertă",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "23d44d57-c7f1-40da-b50e-c814d1f80767",
+            "name": "9 – ENERGIE",
+            "title": "România ar trebui să facă mai mult pentru a combate schimbările climatice, dar în același timp trebuie implementate politici care sprijină dezvoltarea economică, precum sistemele de irigație și tranziția ecologică inteligentă",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "a1f103ff-c2ee-44b9-947c-be8189ddda41",
+            "name": "10 – ENERGIE",
+            "title": "România ar trebui să extragă și să consume ori vândă mai mult din resursele sale de gaze naturale",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "cbce672d-b4a0-42f0-b54b-f9437928eaf4",
+            "name": "11 – MEDIU",
+            "title": "România nu ar trebui să se grăbească să respecte reglementările UE privind protecția mediului, deoarece acestea ar putea afecta creșterea noastră economică",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "e0e12d15-f220-49a0-91ec-704a18054296",
+            "name": "12 – INSTITUȚII",
+            "title": "Reforma instituțiilor de stat / birocrației ar trebui să se concentreze pe cresterea eficienței și transparenței, nu pe reducerea costurilor",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "0d413c56-cdfd-40bb-9027-94870d2880a3",
+            "name": "13 – INSTITUȚII",
+            "title": "Ar trebui folosite mai des referendumurile pentru a lua decizii importante pentru România",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "e4169dd5-d6a9-450e-8634-8531e6d723c6",
+            "name": "14 – INSTITUȚII",
+            "title": "Figurile istorice și organizațiile responsabile pentru uciderea oamenilor din cauza originii etnice, religiei sau convingerilor politice nu trebuie onorate și glorificate/ sau promovate și apreciate de către reprezentanții statului",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "c42e93d6-6919-4d68-9905-9871b736893b",
+            "name": "15 – INSTITUȚII",
+            "title": "Ar trebui schimbat radical felul în care sunt selectați membrii guvernului în România",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "d2a75898-5e0c-4b5a-9930-f08ef8771ab3",
+            "name": "16 – INSTITUȚII",
+            "title": "Sistemul de guvernare al României ar trebui reorganizat astfel încât să permită cetățenilor o implicare mai mare",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "c27e45fb-12bb-4ac4-b320-17d3d24782ed",
+            "name": "17 – INSTITUȚII",
+            "title": "România ar trebui să adopte politici care să sprijine și să promoveze reprezentarea egală a femeilor și bărbaților în funcții de decizie",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "ad1237c3-5d88-4358-96d9-2d43365d2f49",
+            "name": "18 – INSTITUȚII",
+            "title": "Rolul de mediator al președintelui înseamnă ca nu poate sa promoveze ideile sale sau ale unui partid / mișcare în detrimentul guvernului sau a celorlalte partide parlamentare",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "af8b5891-7deb-49a6-bf17-bb59a1562e4c",
+            "name": "19 – INSTITUȚII",
+            "title": "Decizia CCR de reluare a ambelor tururi a alegerilor prezidențiale a fost cel mai probabil un lucru pozitiv pentru democrația din România",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "a7954761-6ac0-4054-b028-cb14377376a9",
+            "name": "20 – JUSTIȚIE",
+            "title": "Codul Penal și deciziile instanțelor ar trebui să prevadă pedepse mult mai mari pentru unele infracțiuni",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "4e37e586-1ac0-4b04-9426-57060a94f137",
+            "name": "21 – JUSTIȚIE",
+            "title": "Traficul de droguri, crima organizată și migrația ilegală pot fi combătute mai eficient prin sporirea vitezei și consecvenței / coerenței acțiunilor poliției și instanțelor",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "126906c6-65fe-41b2-85ea-58ac64ce2a75",
+            "name": "22 – JUSTIȚIE",
+            "title": "Expertiza juridică ar trebui să conteze mai mult decât afinitățile politice în numirea procurorilor și judecătorilor, inclusiv la DNA și CCR",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "31c69ef7-280a-45e7-9231-9f53ba98440f",
+            "name": "23 – JUSTIȚIE",
+            "title": "Cetățenii în situații precare ar trebui să fie scutiți de plata cheltuielilor de judecată",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "a5efd13a-6ffb-488d-beda-044ee944c359",
+            "name": "24 – DREPTURI",
+            "title": "Trebuie permis parteneriatul civil între persoane de același sex",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "e75d440d-fffa-4a91-aeaf-2c35a3f2be39",
+            "name": "25 – DREPTURI",
+            "title": "Căsătoria trebuie să fie permisă doar între un bărbat și o femeie",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "c15e0527-6eb8-49ad-8475-6d42ebee4816",
+            "name": "26 – DREPTURI",
+            "title": "Femeile trebuie să aibă libertatea de a decide singure în ceea ce privește sănătatea reproductivă inclusiv întreruperile de sarcină",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "528e89fa-d5c1-43e8-885c-c566da6e3663",
+            "name": "27 – SERVICII ȘI FACILITĂȚI PUBLICE",
+            "title": "Ar trebui stabilit un standard minim de calitate aplicabil în toată țara pentru serviciile de sănătate și asistență socială disponibile",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "bb899e73-7d2b-4833-bc08-3125ee9156dd",
+            "name": "28 – SERVICII ȘI FACILITĂȚI PUBLICE",
+            "title": "Statul ar trebui să investească mai mult în sănătate și servicii sociale pentru cei care suferă de dependența de droguri",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "f00bee1a-77ad-4fbd-b159-deacbc0e2a58",
+            "name": "29 – EDUCAȚIE",
+            "title": "Îmbunătățirea sistemului de educație trebuie făcută dând mai multe opțiuni și mai multă putere părinților, cadrelor didactice și școlilor, în dauna inspectoratelor și a ministerului",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "5e43afb6-53ad-401d-85e0-a417237721ed",
+            "name": "30 – EDUCAȚIE",
+            "title": "Educația ar trebui să pună mai mult accent pe valorile tradiționale și creștine și identitatea națională",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "7ed042a7-7a10-44c8-8700-93a14b488cd1",
+            "name": "31 – EDUCAȚIE",
+            "title": "Părinții ar trebui să aibă libertatea de a alege școala generală la care sunt înscriși copiii lor, în loc să fie arondați conform adresei",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "327882e0-7847-4ce2-8824-3ecf6d002cde",
+            "name": "32 – EDUCAȚIE",
+            "title": "Mamele care lucrează în afara căminului ar trebui să plătească taxe mai mici decât celelalte persoane cu venituri similare",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        },
+        {
+            "id": "5bc7d5c4-64d4-4fb2-9d23-51089919a16b",
+            "name": "33 – EDUCAȚIE",
+            "title": "Măsura de mărire a impozitului pe venit și a contribuțiilor obligatorii la sănătate (CASS) pentru cei din anumite profesii sau industrii care aveau înainte anumite scutiri speciale a fost un lucru bun și ar trebui să fie menținută",
+            "gist": "",
+            "detail": "",
+            "tags": []
+        }
+    ],
+    "candidates": [
+        {
+            "id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "name": "Dan Nicușor-Daniel",
+            "type": "party",
+            "description": "Dan Nicușor-Daniel",
+            "short_name": "Nicușor-Daniel",
+            "is_active": true,
+            "given_name": "",
+            "family_name": "",
+            "img_url": "/data/avatars/presidential-2025/Nicusor-Daniel.webp",
+            "contacts": {
+                "web": []
+            },
+            "parties": [],
+            "motto": ""
+        },
+        {
+            "id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "name": "Antonescu George-Crin-Laurențiu",
+            "type": "party",
+            "description": "Antonescu George-Crin-Laurențiu",
+            "short_name": "George-Crin-Laurențiu",
+            "is_active": true,
+            "given_name": "",
+            "family_name": "",
+            "img_url": "/data/avatars/presidential-2025/George-Crin-Laurentiu.jpg",
+            "contacts": {
+                "web": []
+            },
+            "parties": [],
+            "motto": ""
+        },
+        {
+            "id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "name": "Ponta Victor-Viorel",
+            "type": "party",
+            "description": "Ponta Victor-Viorel",
+            "short_name": "Victor-Viorel",
+            "is_active": true,
+            "given_name": "",
+            "family_name": "",
+            "img_url": "/data/avatars/presidential-2025/Victor-Viorel.jpg",
+            "contacts": {
+                "web": []
+            },
+            "parties": [],
+            "motto": ""
+        },
+        {
+            "id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "name": "Lasconi Elena-Valerica",
+            "type": "party",
+            "description": "Lasconi Elena-Valerica",
+            "short_name": "Elena-Valerica",
+            "is_active": true,
+            "given_name": "",
+            "family_name": "",
+            "img_url": "/data/avatars/presidential-2025/Elena-Valerica.png",
+            "contacts": {
+                "web": []
+            },
+            "parties": [],
+            "motto": ""
+        },
+        {
+            "id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "name": "Terheș Cristian-Vasile",
+            "type": "party",
+            "description": "Terheș Cristian-Vasile",
+            "short_name": "Cristian-Vasile",
+            "is_active": true,
+            "given_name": "",
+            "family_name": "",
+            "img_url": "/data/avatars/presidential-2025/Cristian-Vasile.jpg",
+            "contacts": {
+                "web": []
+            },
+            "parties": [],
+            "motto": ""
+        },
+        {
+            "id": "db179e69-b351-4dca-a509-61ef57552862",
+            "name": "Șandru Marcela-Lavinia",
+            "type": "party",
+            "description": "Șandru Marcela-Lavinia",
+            "short_name": "Marcela-Lavinia",
+            "is_active": true,
+            "given_name": "",
+            "family_name": "",
+            "img_url": "/data/avatars/presidential-2025/Marcela-Lavinia.jpg",
+            "contacts": {
+                "web": []
+            },
+            "parties": [],
+            "motto": ""
+        },
+        {
+            "id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "name": "Simion George-Nicolae",
+            "type": "party",
+            "description": "Simion George-Nicolae",
+            "short_name": "George-Nicolae",
+            "is_active": true,
+            "given_name": "",
+            "family_name": "",
+            "img_url": "/data/avatars/presidential-2025/George-Nicolae.jpg",
+            "contacts": {
+                "web": []
+            },
+            "parties": [],
+            "motto": ""
+        },
+        {
+            "id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "name": "Banu-Muscel John-Ion",
+            "type": "party",
+            "description": "Banu-Muscel John-Ion",
+            "short_name": "John-Ion",
+            "is_active": true,
+            "given_name": "",
+            "family_name": "",
+            "img_url": "/data/avatars/presidential-2025/John-Ion.jpg",
+            "contacts": {
+                "web": []
+            },
+            "parties": [],
+            "motto": ""
+        },
+        {
+            "id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "name": "Predoiu Silviu",
+            "type": "party",
+            "description": "Predoiu Silviu",
+            "short_name": "Silviu",
+            "is_active": true,
+            "given_name": "",
+            "family_name": "",
+            "img_url": "/data/avatars/presidential-2025/Silviu.webp",
+            "contacts": {
+                "web": []
+            },
+            "parties": [],
+            "motto": ""
+        },
+        {
+            "id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "name": "Funeriu Petru-Daniel",
+            "type": "party",
+            "description": "Funeriu Petru-Daniel",
+            "short_name": "Petru-Daniel",
+            "is_active": true,
+            "given_name": "",
+            "family_name": "",
+            "img_url": "/data/avatars/presidential-2025/Petru-Daniel.jpg",
+            "contacts": {
+                "web": []
+            },
+            "parties": [],
+            "motto": ""
+        },
+        {
+            "id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "name": "Popescu Sebastian-Constantin",
+            "type": "party",
+            "description": "Popescu Sebastian-Constantin",
+            "short_name": "Sebastian-Constantin",
+            "is_active": true,
+            "given_name": "",
+            "family_name": "",
+            "img_url": "/data/avatars/presidential-2025/Sebastian-Constantin.jpg",
+            "contacts": {
+                "web": []
+            },
+            "parties": [],
+            "motto": ""
+        }
+    ],
+    "answers": [
+        {
+            "id": "3d13f204-f5a8-44cd-8d3c-fff8dfa1af14",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "f92d5689-d18d-459c-a6bc-f6efa8dd7653",
+            "answer": "no"
+        },
+        {
+            "id": "9866ac69-8aa9-4e77-a6cb-13d20b0ad66a",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "f92d5689-d18d-459c-a6bc-f6efa8dd7653",
+            "answer": "yes"
+        },
+        {
+            "id": "5a8de9c6-c7c3-4a67-b78e-2e883b84a68a",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "f92d5689-d18d-459c-a6bc-f6efa8dd7653",
+            "answer": "yes"
+        },
+        {
+            "id": "b69dd553-cee3-4177-abeb-dd046215f30b",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "f92d5689-d18d-459c-a6bc-f6efa8dd7653",
+            "answer": "dont_know"
+        },
+        {
+            "id": "ef51aa94-b18b-4e3f-8f9c-a6be23e0edeb",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "f92d5689-d18d-459c-a6bc-f6efa8dd7653",
+            "answer": "dont_know"
+        },
+        {
+            "id": "9e9de5bc-7e83-4717-a55c-fae675c2bda3",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "f92d5689-d18d-459c-a6bc-f6efa8dd7653",
+            "answer": "dont_know"
+        },
+        {
+            "id": "ba1acc98-eff3-4efd-b527-5433a7030cfe",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "f92d5689-d18d-459c-a6bc-f6efa8dd7653",
+            "answer": "dont_know"
+        },
+        {
+            "id": "73bf052a-3b80-4662-8077-45f413026f35",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "f92d5689-d18d-459c-a6bc-f6efa8dd7653",
+            "answer": "dont_know"
+        },
+        {
+            "id": "51aecc4b-ca2e-4014-a1f3-aa138178a878",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "f92d5689-d18d-459c-a6bc-f6efa8dd7653",
+            "answer": "dont_know"
+        },
+        {
+            "id": "31ec8e68-428b-4b46-bfd0-cc6f80f27f95",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "f92d5689-d18d-459c-a6bc-f6efa8dd7653",
+            "answer": "dont_know"
+        },
+        {
+            "id": "934cd0c6-6034-4a5c-a437-ed5558b365be",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "f92d5689-d18d-459c-a6bc-f6efa8dd7653",
+            "answer": "dont_know"
+        },
+        {
+            "id": "304efdc4-0754-46b5-97c2-87f413e3854f",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "08deb909-63eb-473c-a917-ae35edb83efd",
+            "answer": "no"
+        },
+        {
+            "id": "4c750130-1437-453a-b109-7faecf8daf20",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "08deb909-63eb-473c-a917-ae35edb83efd",
+            "answer": "yes"
+        },
+        {
+            "id": "07b96600-28ed-4fe2-89bf-4814cc72a068",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "08deb909-63eb-473c-a917-ae35edb83efd",
+            "answer": "yes"
+        },
+        {
+            "id": "3c2ef4f1-369e-4954-8d9d-f30d80b90f07",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "08deb909-63eb-473c-a917-ae35edb83efd",
+            "answer": "dont_know"
+        },
+        {
+            "id": "3a277635-7da9-47ea-9be8-fe95119aa5ae",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "08deb909-63eb-473c-a917-ae35edb83efd",
+            "answer": "dont_know"
+        },
+        {
+            "id": "96363453-946b-477e-a6f0-e5bf3a7b6dc3",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "08deb909-63eb-473c-a917-ae35edb83efd",
+            "answer": "dont_know"
+        },
+        {
+            "id": "2bc91c0c-7d7b-4a79-a457-46a3d725cbb6",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "08deb909-63eb-473c-a917-ae35edb83efd",
+            "answer": "dont_know"
+        },
+        {
+            "id": "3af00891-7d38-42d1-a3a0-ab1580e11e9f",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "08deb909-63eb-473c-a917-ae35edb83efd",
+            "answer": "dont_know"
+        },
+        {
+            "id": "f7295073-09d2-4543-b6dc-88029ce242b8",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "08deb909-63eb-473c-a917-ae35edb83efd",
+            "answer": "dont_know"
+        },
+        {
+            "id": "a0d262bd-899a-44db-8266-94c8e75862a5",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "08deb909-63eb-473c-a917-ae35edb83efd",
+            "answer": "dont_know"
+        },
+        {
+            "id": "61b84a3b-5397-4f81-b77f-f153bad65752",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "08deb909-63eb-473c-a917-ae35edb83efd",
+            "answer": "dont_know"
+        },
+        {
+            "id": "c64e82d1-8baa-4a9d-b43a-79ce6a14a1f6",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "b084c2e7-2515-499a-ad34-1ca02c84a11f",
+            "answer": "no"
+        },
+        {
+            "id": "1b893c10-8691-4aca-872a-272dc7b688d2",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "b084c2e7-2515-499a-ad34-1ca02c84a11f",
+            "answer": "yes"
+        },
+        {
+            "id": "c81ecaba-e7a0-4808-a887-9d89166a8edf",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "b084c2e7-2515-499a-ad34-1ca02c84a11f",
+            "answer": "yes"
+        },
+        {
+            "id": "105f00fe-87a9-4258-a1d6-3c7dbf6959ff",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "b084c2e7-2515-499a-ad34-1ca02c84a11f",
+            "answer": "dont_know"
+        },
+        {
+            "id": "f641b6ea-3448-40ad-8a02-b2efc3450071",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "b084c2e7-2515-499a-ad34-1ca02c84a11f",
+            "answer": "dont_know"
+        },
+        {
+            "id": "703aca63-d8f4-40fb-bbaa-72edb6fc6473",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "b084c2e7-2515-499a-ad34-1ca02c84a11f",
+            "answer": "dont_know"
+        },
+        {
+            "id": "e065f225-5d20-4bb0-81cf-f6f8bf55ee06",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "b084c2e7-2515-499a-ad34-1ca02c84a11f",
+            "answer": "dont_know"
+        },
+        {
+            "id": "e21c8ea2-0ff5-4e07-9493-9e560a48e5b5",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "b084c2e7-2515-499a-ad34-1ca02c84a11f",
+            "answer": "dont_know"
+        },
+        {
+            "id": "527242d7-d2bb-4c0a-ad4f-28461c307bce",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "b084c2e7-2515-499a-ad34-1ca02c84a11f",
+            "answer": "dont_know"
+        },
+        {
+            "id": "a626b453-ec67-4fb5-8d84-b0f9fadac725",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "b084c2e7-2515-499a-ad34-1ca02c84a11f",
+            "answer": "no"
+        },
+        {
+            "id": "bd000dab-86c0-468a-957d-13560298c26e",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "b084c2e7-2515-499a-ad34-1ca02c84a11f",
+            "answer": "dont_know"
+        },
+        {
+            "id": "6596beb3-90af-418b-befe-71ea234775ab",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "970c2a3a-687f-4bc2-8370-3015af2b1f79",
+            "answer": "no"
+        },
+        {
+            "id": "a02319ba-4a46-47a8-9d10-5311f663457e",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "970c2a3a-687f-4bc2-8370-3015af2b1f79",
+            "answer": "yes"
+        },
+        {
+            "id": "86c5a46c-cc7b-4a1d-a10e-c498485e2653",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "970c2a3a-687f-4bc2-8370-3015af2b1f79",
+            "answer": "yes"
+        },
+        {
+            "id": "225d36c5-1d97-4220-a874-5e2bc0316228",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "970c2a3a-687f-4bc2-8370-3015af2b1f79",
+            "answer": "dont_know"
+        },
+        {
+            "id": "6b10b89d-f3b9-4e2c-86df-5c2ed09bb7b9",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "970c2a3a-687f-4bc2-8370-3015af2b1f79",
+            "answer": "dont_know"
+        },
+        {
+            "id": "885e1a28-3222-4d90-a5a8-816e4541344a",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "970c2a3a-687f-4bc2-8370-3015af2b1f79",
+            "answer": "dont_know"
+        },
+        {
+            "id": "c99ea957-0763-4e74-bbce-e6515d28868a",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "970c2a3a-687f-4bc2-8370-3015af2b1f79",
+            "answer": "dont_know"
+        },
+        {
+            "id": "5282cf64-456c-45b8-a676-f36eb5bd7888",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "970c2a3a-687f-4bc2-8370-3015af2b1f79",
+            "answer": "dont_know"
+        },
+        {
+            "id": "12da0309-b031-4393-b7d7-a2b8e2039d2d",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "970c2a3a-687f-4bc2-8370-3015af2b1f79",
+            "answer": "dont_know"
+        },
+        {
+            "id": "60ef90e1-ca48-45e2-952a-8ab80ff1fa4d",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "970c2a3a-687f-4bc2-8370-3015af2b1f79",
+            "answer": "no"
+        },
+        {
+            "id": "8c2edb4a-2a1a-46a9-904c-663d6f9d255b",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "970c2a3a-687f-4bc2-8370-3015af2b1f79",
+            "answer": "dont_know"
+        },
+        {
+            "id": "66eec7b0-7a17-4f8e-9151-4cf9eb8eba3a",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "3413ed2b-2ac7-4d0d-ba9d-4273a3812b6b",
+            "answer": "no"
+        },
+        {
+            "id": "5bff2d42-4805-48bb-8676-f2c73f6296f6",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "3413ed2b-2ac7-4d0d-ba9d-4273a3812b6b",
+            "answer": "yes"
+        },
+        {
+            "id": "5996c798-2ca2-4ed7-a813-ed81dc75d364",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "3413ed2b-2ac7-4d0d-ba9d-4273a3812b6b",
+            "answer": "dont_know"
+        },
+        {
+            "id": "68978580-1fc1-43d2-b7c9-c09f5043cfd1",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "3413ed2b-2ac7-4d0d-ba9d-4273a3812b6b",
+            "answer": "yes"
+        },
+        {
+            "id": "5d315a00-ccd4-4428-b70c-c35ee7e8b3f5",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "3413ed2b-2ac7-4d0d-ba9d-4273a3812b6b",
+            "answer": "dont_know"
+        },
+        {
+            "id": "2493add0-3e06-4f16-bc07-cd7fd0c46267",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "3413ed2b-2ac7-4d0d-ba9d-4273a3812b6b",
+            "answer": "dont_know"
+        },
+        {
+            "id": "9d827e75-7f0e-4fd7-8ef9-1b6156663f22",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "3413ed2b-2ac7-4d0d-ba9d-4273a3812b6b",
+            "answer": "dont_know"
+        },
+        {
+            "id": "c419a4ec-c1df-4b08-b377-e8ce34a4c1d0",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "3413ed2b-2ac7-4d0d-ba9d-4273a3812b6b",
+            "answer": "dont_know"
+        },
+        {
+            "id": "b05cf0e5-be8f-4ae1-a4db-e236bc4a54db",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "3413ed2b-2ac7-4d0d-ba9d-4273a3812b6b",
+            "answer": "dont_know"
+        },
+        {
+            "id": "2b9b4d3b-0689-4ffe-abf8-e2cc583e6901",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "3413ed2b-2ac7-4d0d-ba9d-4273a3812b6b",
+            "answer": "no"
+        },
+        {
+            "id": "ecfc7a59-7f9b-48ce-8771-a453c38cfac4",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "3413ed2b-2ac7-4d0d-ba9d-4273a3812b6b",
+            "answer": "dont_know"
+        },
+        {
+            "id": "a9b4ffd3-1cf6-4c32-a542-11d503f59122",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "cb08e2f6-ce0d-4dd7-b551-72a1f2fb983c",
+            "answer": "no"
+        },
+        {
+            "id": "543f5188-3989-419f-800d-27112992898e",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "cb08e2f6-ce0d-4dd7-b551-72a1f2fb983c",
+            "answer": "yes"
+        },
+        {
+            "id": "1f160159-e6f2-416e-a4db-7d85b6bd8f83",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "cb08e2f6-ce0d-4dd7-b551-72a1f2fb983c",
+            "answer": "dont_know"
+        },
+        {
+            "id": "9e8153dd-6eb8-4d4e-b063-b3f1d0c66685",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "cb08e2f6-ce0d-4dd7-b551-72a1f2fb983c",
+            "answer": "yes"
+        },
+        {
+            "id": "1376e156-0e92-488c-bdaa-39b78146932a",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "cb08e2f6-ce0d-4dd7-b551-72a1f2fb983c",
+            "answer": "dont_know"
+        },
+        {
+            "id": "4a0d66fb-38a7-4455-b165-df284f730045",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "cb08e2f6-ce0d-4dd7-b551-72a1f2fb983c",
+            "answer": "dont_know"
+        },
+        {
+            "id": "4946c317-2f14-4c9c-a183-755e46d1bf9d",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "cb08e2f6-ce0d-4dd7-b551-72a1f2fb983c",
+            "answer": "dont_know"
+        },
+        {
+            "id": "b05a3eba-ecee-4c3d-8599-d854d31f185c",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "cb08e2f6-ce0d-4dd7-b551-72a1f2fb983c",
+            "answer": "dont_know"
+        },
+        {
+            "id": "f1955b89-4b27-4ab0-be40-1d3b033e42e6",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "cb08e2f6-ce0d-4dd7-b551-72a1f2fb983c",
+            "answer": "dont_know"
+        },
+        {
+            "id": "ed0dc660-f53f-4ed6-94db-19f2211fb3c3",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "cb08e2f6-ce0d-4dd7-b551-72a1f2fb983c",
+            "answer": "no"
+        },
+        {
+            "id": "247afe1b-a7a5-4072-8088-4d9a1dd2fc71",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "cb08e2f6-ce0d-4dd7-b551-72a1f2fb983c",
+            "answer": "dont_know"
+        },
+        {
+            "id": "bdb8eaab-9001-485f-9cb2-cba5dd2bf320",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "2d15df81-2dcd-4d77-8754-026c39f7f3a9",
+            "answer": "no"
+        },
+        {
+            "id": "75238e97-f1e7-40a3-937a-8968ad188cd7",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "2d15df81-2dcd-4d77-8754-026c39f7f3a9",
+            "answer": "yes"
+        },
+        {
+            "id": "49dc8bd4-f9bd-4a3b-8ac3-50597ad061f3",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "2d15df81-2dcd-4d77-8754-026c39f7f3a9",
+            "answer": "dont_know"
+        },
+        {
+            "id": "9c3b2621-4c77-4ce0-a5b0-35d11a975ed8",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "2d15df81-2dcd-4d77-8754-026c39f7f3a9",
+            "answer": "yes"
+        },
+        {
+            "id": "dabdca8e-2c04-4d91-8de2-bc67a3b7763d",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "2d15df81-2dcd-4d77-8754-026c39f7f3a9",
+            "answer": "dont_know"
+        },
+        {
+            "id": "c94fe001-9cc0-4e03-b3b7-2fa142b81d9b",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "2d15df81-2dcd-4d77-8754-026c39f7f3a9",
+            "answer": "dont_know"
+        },
+        {
+            "id": "fc81f803-9623-4b7b-bf42-64c93476cb6b",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "2d15df81-2dcd-4d77-8754-026c39f7f3a9",
+            "answer": "dont_know"
+        },
+        {
+            "id": "9c8ecf75-0779-46c7-bff9-bcf319187dc6",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "2d15df81-2dcd-4d77-8754-026c39f7f3a9",
+            "answer": "dont_know"
+        },
+        {
+            "id": "1e99ad32-a532-4d4f-bd5d-0d759cc9ea92",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "2d15df81-2dcd-4d77-8754-026c39f7f3a9",
+            "answer": "dont_know"
+        },
+        {
+            "id": "cab9bfa3-2d97-40b0-8608-3a37a9ac26e7",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "2d15df81-2dcd-4d77-8754-026c39f7f3a9",
+            "answer": "no"
+        },
+        {
+            "id": "4b5e0a33-4ad5-4861-8778-0b1704356423",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "2d15df81-2dcd-4d77-8754-026c39f7f3a9",
+            "answer": "dont_know"
+        },
+        {
+            "id": "560626db-db99-4c05-a6f0-34c62fd4a400",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "afcad035-9228-41cf-82f5-98082f1e0b2d",
+            "answer": "no"
+        },
+        {
+            "id": "bd0040f1-5242-42c4-9b64-082215c39473",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "afcad035-9228-41cf-82f5-98082f1e0b2d",
+            "answer": "yes"
+        },
+        {
+            "id": "8adc47c4-e805-4adf-aabd-c996f54616d4",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "afcad035-9228-41cf-82f5-98082f1e0b2d",
+            "answer": "dont_know"
+        },
+        {
+            "id": "626614a0-700f-4561-975c-59af6b37f0c4",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "afcad035-9228-41cf-82f5-98082f1e0b2d",
+            "answer": "yes"
+        },
+        {
+            "id": "134f107d-f469-4c89-9f87-5ab6cd03a739",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "afcad035-9228-41cf-82f5-98082f1e0b2d",
+            "answer": "dont_know"
+        },
+        {
+            "id": "1063d916-a342-4338-ba6f-3c8f07b5e02c",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "afcad035-9228-41cf-82f5-98082f1e0b2d",
+            "answer": "dont_know"
+        },
+        {
+            "id": "820ea0c3-4c7c-4559-8855-43d5cd9280f9",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "afcad035-9228-41cf-82f5-98082f1e0b2d",
+            "answer": "dont_know"
+        },
+        {
+            "id": "5ecb6e13-9be0-4b03-99ae-29edf265e9f6",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "afcad035-9228-41cf-82f5-98082f1e0b2d",
+            "answer": "no"
+        },
+        {
+            "id": "4fa18bd0-e709-45f9-b990-2cc444aca4d0",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "afcad035-9228-41cf-82f5-98082f1e0b2d",
+            "answer": "dont_know"
+        },
+        {
+            "id": "cc66fde3-2cd1-41d8-89d4-37c8424e3b66",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "afcad035-9228-41cf-82f5-98082f1e0b2d",
+            "answer": "no"
+        },
+        {
+            "id": "0bd1fddf-fbbf-42c0-b805-2107663d6395",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "afcad035-9228-41cf-82f5-98082f1e0b2d",
+            "answer": "dont_know"
+        },
+        {
+            "id": "6744f721-fa30-46f2-8f39-cda584f63edf",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "23d44d57-c7f1-40da-b50e-c814d1f80767",
+            "answer": "no"
+        },
+        {
+            "id": "f03b0a75-d295-4314-9619-7447eacc3175",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "23d44d57-c7f1-40da-b50e-c814d1f80767",
+            "answer": "yes"
+        },
+        {
+            "id": "bd5d43b7-1af5-4fde-bbbb-891213a40ca1",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "23d44d57-c7f1-40da-b50e-c814d1f80767",
+            "answer": "dont_know"
+        },
+        {
+            "id": "11648e99-7862-4426-afc7-442d8d4b9434",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "23d44d57-c7f1-40da-b50e-c814d1f80767",
+            "answer": "yes"
+        },
+        {
+            "id": "d8dc93ea-09ec-4a62-bcce-834c943f3d74",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "23d44d57-c7f1-40da-b50e-c814d1f80767",
+            "answer": "dont_know"
+        },
+        {
+            "id": "602ebf1b-887a-48c9-b14c-7164a0d3885e",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "23d44d57-c7f1-40da-b50e-c814d1f80767",
+            "answer": "dont_know"
+        },
+        {
+            "id": "5ee2043f-2a74-495d-b30c-3643cd6807b0",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "23d44d57-c7f1-40da-b50e-c814d1f80767",
+            "answer": "dont_know"
+        },
+        {
+            "id": "73baded1-f171-420d-adc6-66ef88c031cd",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "23d44d57-c7f1-40da-b50e-c814d1f80767",
+            "answer": "no"
+        },
+        {
+            "id": "54f581ad-8bbf-4d49-8e62-d7788016554a",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "23d44d57-c7f1-40da-b50e-c814d1f80767",
+            "answer": "dont_know"
+        },
+        {
+            "id": "d8847b5b-60f2-43e3-952b-4433274445b5",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "23d44d57-c7f1-40da-b50e-c814d1f80767",
+            "answer": "no"
+        },
+        {
+            "id": "900d5031-f3f8-4b09-9864-b70c4234411b",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "23d44d57-c7f1-40da-b50e-c814d1f80767",
+            "answer": "dont_know"
+        },
+        {
+            "id": "556272b8-c951-4743-ac99-a79b8c4d53a0",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "a1f103ff-c2ee-44b9-947c-be8189ddda41",
+            "answer": "no"
+        },
+        {
+            "id": "bf5a8232-afda-4e32-9678-225527ef208f",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "a1f103ff-c2ee-44b9-947c-be8189ddda41",
+            "answer": "yes"
+        },
+        {
+            "id": "9c0c00c5-9c83-4313-8ed2-913f04f87438",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "a1f103ff-c2ee-44b9-947c-be8189ddda41",
+            "answer": "dont_know"
+        },
+        {
+            "id": "0198fca2-2170-4696-9a9d-44904e9c1cfc",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "a1f103ff-c2ee-44b9-947c-be8189ddda41",
+            "answer": "yes"
+        },
+        {
+            "id": "6b243cca-0e2b-4f76-87da-ba584cb6348e",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "a1f103ff-c2ee-44b9-947c-be8189ddda41",
+            "answer": "dont_know"
+        },
+        {
+            "id": "2a5340f8-77fd-4313-a2a6-ebd095da2aac",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "a1f103ff-c2ee-44b9-947c-be8189ddda41",
+            "answer": "dont_know"
+        },
+        {
+            "id": "ca6daacc-0f30-41e7-abe0-6b0f80db30d4",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "a1f103ff-c2ee-44b9-947c-be8189ddda41",
+            "answer": "dont_know"
+        },
+        {
+            "id": "95288ac3-3f2c-49d7-b8f8-bee89ad73564",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "a1f103ff-c2ee-44b9-947c-be8189ddda41",
+            "answer": "no"
+        },
+        {
+            "id": "780914f3-f834-4925-b3d2-0b4c66c7d18c",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "a1f103ff-c2ee-44b9-947c-be8189ddda41",
+            "answer": "dont_know"
+        },
+        {
+            "id": "4fef723b-62b0-470a-9e36-62f545757e05",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "a1f103ff-c2ee-44b9-947c-be8189ddda41",
+            "answer": "no"
+        },
+        {
+            "id": "3b58d738-ec21-4fdd-a81d-b7a5f814edba",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "a1f103ff-c2ee-44b9-947c-be8189ddda41",
+            "answer": "dont_know"
+        },
+        {
+            "id": "8b358d6c-f29b-4e04-8e0b-dc8e21bf9de3",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "cbce672d-b4a0-42f0-b54b-f9437928eaf4",
+            "answer": "no"
+        },
+        {
+            "id": "1030c60b-dd23-4ce5-8b1d-22986d37c157",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "cbce672d-b4a0-42f0-b54b-f9437928eaf4",
+            "answer": "yes"
+        },
+        {
+            "id": "11c7c47e-014c-41f4-a3ac-ec5901722782",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "cbce672d-b4a0-42f0-b54b-f9437928eaf4",
+            "answer": "dont_know"
+        },
+        {
+            "id": "25f9ab39-9ca1-4229-84ef-a803fb52a52e",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "cbce672d-b4a0-42f0-b54b-f9437928eaf4",
+            "answer": "dont_know"
+        },
+        {
+            "id": "68af4451-135f-4bb5-941c-bd53cd6e39d2",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "cbce672d-b4a0-42f0-b54b-f9437928eaf4",
+            "answer": "yes"
+        },
+        {
+            "id": "ba031b78-54c1-4415-8387-fecdc186f0ed",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "cbce672d-b4a0-42f0-b54b-f9437928eaf4",
+            "answer": "dont_know"
+        },
+        {
+            "id": "135b58b1-ff4b-44e7-8121-951c4dabc0ff",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "cbce672d-b4a0-42f0-b54b-f9437928eaf4",
+            "answer": "dont_know"
+        },
+        {
+            "id": "4a82d944-0f1e-4f97-94a5-16b03f7ce776",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "cbce672d-b4a0-42f0-b54b-f9437928eaf4",
+            "answer": "no"
+        },
+        {
+            "id": "c343f5fd-8163-45b2-b13c-33f7fb7856c1",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "cbce672d-b4a0-42f0-b54b-f9437928eaf4",
+            "answer": "dont_know"
+        },
+        {
+            "id": "bc0da542-2a02-4967-a549-804a75f83169",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "cbce672d-b4a0-42f0-b54b-f9437928eaf4",
+            "answer": "no"
+        },
+        {
+            "id": "c1232b7e-9065-4ba7-b112-09afb4157846",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "cbce672d-b4a0-42f0-b54b-f9437928eaf4",
+            "answer": "no"
+        },
+        {
+            "id": "905b5973-9674-4785-904f-65d3f78fb4f2",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "e0e12d15-f220-49a0-91ec-704a18054296",
+            "answer": "no"
+        },
+        {
+            "id": "28babbeb-a23b-4557-94fb-c9325d9f3c3d",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "e0e12d15-f220-49a0-91ec-704a18054296",
+            "answer": "yes"
+        },
+        {
+            "id": "f6d29585-3aa6-4ba9-9390-711c3f406726",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "e0e12d15-f220-49a0-91ec-704a18054296",
+            "answer": "no"
+        },
+        {
+            "id": "af53a0b3-138c-49bf-b7bd-14d8ef6c3bd1",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "e0e12d15-f220-49a0-91ec-704a18054296",
+            "answer": "dont_know"
+        },
+        {
+            "id": "ba89140d-fe97-4dba-9f68-8e9892fcec9a",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "e0e12d15-f220-49a0-91ec-704a18054296",
+            "answer": "yes"
+        },
+        {
+            "id": "cb7f26c9-fafc-4606-8e51-cd34f49faf89",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "e0e12d15-f220-49a0-91ec-704a18054296",
+            "answer": "dont_know"
+        },
+        {
+            "id": "58ed8dee-14a7-4887-b1d3-e55d12a03254",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "e0e12d15-f220-49a0-91ec-704a18054296",
+            "answer": "dont_know"
+        },
+        {
+            "id": "72bb7a0b-1208-4ac2-8310-1256dd1b6dbf",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "e0e12d15-f220-49a0-91ec-704a18054296",
+            "answer": "no"
+        },
+        {
+            "id": "eb5f8635-40c8-4dce-a4a7-3f3df3ebd1d3",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "e0e12d15-f220-49a0-91ec-704a18054296",
+            "answer": "dont_know"
+        },
+        {
+            "id": "e7171c57-a79a-4564-af7b-37e258aa9baf",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "e0e12d15-f220-49a0-91ec-704a18054296",
+            "answer": "no"
+        },
+        {
+            "id": "2f712072-7112-4ffb-9144-7689358dd7e9",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "e0e12d15-f220-49a0-91ec-704a18054296",
+            "answer": "no"
+        },
+        {
+            "id": "fd7d20db-6d9b-4c56-b682-e043c785e51a",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "0d413c56-cdfd-40bb-9027-94870d2880a3",
+            "answer": "no"
+        },
+        {
+            "id": "c5ce7d57-7b84-49bd-8d26-f0df5aa65ee9",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "0d413c56-cdfd-40bb-9027-94870d2880a3",
+            "answer": "yes"
+        },
+        {
+            "id": "be6d71dd-e46b-4020-895e-a8bd03122f07",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "0d413c56-cdfd-40bb-9027-94870d2880a3",
+            "answer": "no"
+        },
+        {
+            "id": "65c4079d-4dac-4d7b-81c2-da5c60779be7",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "0d413c56-cdfd-40bb-9027-94870d2880a3",
+            "answer": "dont_know"
+        },
+        {
+            "id": "2b64afb7-8c4d-41a6-a84c-2c7b3de7638a",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "0d413c56-cdfd-40bb-9027-94870d2880a3",
+            "answer": "yes"
+        },
+        {
+            "id": "e2e576c6-09fd-435e-bc3b-f282933b189c",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "0d413c56-cdfd-40bb-9027-94870d2880a3",
+            "answer": "dont_know"
+        },
+        {
+            "id": "b6db611b-36fa-4940-8e6b-be88950ccdcd",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "0d413c56-cdfd-40bb-9027-94870d2880a3",
+            "answer": "dont_know"
+        },
+        {
+            "id": "83bdcf42-c208-42b2-87c2-863970f2a4e6",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "0d413c56-cdfd-40bb-9027-94870d2880a3",
+            "answer": "no"
+        },
+        {
+            "id": "76eaa5a9-d39d-4b36-a3b7-6299b8a93313",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "0d413c56-cdfd-40bb-9027-94870d2880a3",
+            "answer": "dont_know"
+        },
+        {
+            "id": "735e85c5-ebdf-4f0f-8e21-49f80229956b",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "0d413c56-cdfd-40bb-9027-94870d2880a3",
+            "answer": "no"
+        },
+        {
+            "id": "3f48d523-28ce-4862-bbe5-2a9de5f17385",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "0d413c56-cdfd-40bb-9027-94870d2880a3",
+            "answer": "no"
+        },
+        {
+            "id": "fcba1bea-a66c-4957-bd62-b1e068718aec",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "e4169dd5-d6a9-450e-8634-8531e6d723c6",
+            "answer": "no"
+        },
+        {
+            "id": "a1ba5e2a-58e7-45f8-8f13-63de15808d1c",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "e4169dd5-d6a9-450e-8634-8531e6d723c6",
+            "answer": "yes"
+        },
+        {
+            "id": "15d68de8-7b4e-471e-94b1-f0e832a2d736",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "e4169dd5-d6a9-450e-8634-8531e6d723c6",
+            "answer": "no"
+        },
+        {
+            "id": "8f5703aa-220f-41d6-a953-f4652f5ed914",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "e4169dd5-d6a9-450e-8634-8531e6d723c6",
+            "answer": "dont_know"
+        },
+        {
+            "id": "e51b4cf1-c333-458b-bf99-f5ad8c9cf8a6",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "e4169dd5-d6a9-450e-8634-8531e6d723c6",
+            "answer": "yes"
+        },
+        {
+            "id": "f30afcc8-b3b6-41d4-bae8-f4d55873997f",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "e4169dd5-d6a9-450e-8634-8531e6d723c6",
+            "answer": "dont_know"
+        },
+        {
+            "id": "6fe6da2f-a167-4c6a-9229-af1969ca4b1d",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "e4169dd5-d6a9-450e-8634-8531e6d723c6",
+            "answer": "dont_know"
+        },
+        {
+            "id": "4a9b5c2b-4374-4202-82d3-51852119d613",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "e4169dd5-d6a9-450e-8634-8531e6d723c6",
+            "answer": "no"
+        },
+        {
+            "id": "e0879ab8-7a25-41b8-b7a4-a39d7d3e81c3",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "e4169dd5-d6a9-450e-8634-8531e6d723c6",
+            "answer": "dont_know"
+        },
+        {
+            "id": "1d3ad13a-4f32-41a4-8830-e579e03d581b",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "e4169dd5-d6a9-450e-8634-8531e6d723c6",
+            "answer": "no"
+        },
+        {
+            "id": "c9fc9b84-6518-4d6a-87f8-11904319f1ed",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "e4169dd5-d6a9-450e-8634-8531e6d723c6",
+            "answer": "no"
+        },
+        {
+            "id": "02fc54a5-2d4d-41a8-8246-4e8ba9e00744",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "c42e93d6-6919-4d68-9905-9871b736893b",
+            "answer": "no"
+        },
+        {
+            "id": "72d2c207-68ac-4ccd-b965-65addbc30fbb",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "c42e93d6-6919-4d68-9905-9871b736893b",
+            "answer": "yes"
+        },
+        {
+            "id": "d940cdc0-c847-4742-b076-1b793c307d02",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "c42e93d6-6919-4d68-9905-9871b736893b",
+            "answer": "no"
+        },
+        {
+            "id": "ea049062-1212-4f87-81c7-9a093f42d5c0",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "c42e93d6-6919-4d68-9905-9871b736893b",
+            "answer": "no"
+        },
+        {
+            "id": "eff16c44-2bb2-4c09-8f44-513991eb0f56",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "c42e93d6-6919-4d68-9905-9871b736893b",
+            "answer": "yes"
+        },
+        {
+            "id": "626643b8-1e31-4fed-8e27-d433a5a018fa",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "c42e93d6-6919-4d68-9905-9871b736893b",
+            "answer": "dont_know"
+        },
+        {
+            "id": "85a33c72-7f5e-406e-bb39-a39f52d9cafb",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "c42e93d6-6919-4d68-9905-9871b736893b",
+            "answer": "dont_know"
+        },
+        {
+            "id": "90822fa1-0dab-4742-adaf-dcd59bcedf36",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "c42e93d6-6919-4d68-9905-9871b736893b",
+            "answer": "no"
+        },
+        {
+            "id": "a2d742c7-bb2c-4ffc-92e5-82dedc9c66c4",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "c42e93d6-6919-4d68-9905-9871b736893b",
+            "answer": "dont_know"
+        },
+        {
+            "id": "336777fa-455d-4ce9-8a2f-1f7e9aea5a01",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "c42e93d6-6919-4d68-9905-9871b736893b",
+            "answer": "no"
+        },
+        {
+            "id": "e8d9a91f-0a06-4645-8aed-24ba66ad08b5",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "c42e93d6-6919-4d68-9905-9871b736893b",
+            "answer": "no"
+        },
+        {
+            "id": "914639d7-ab93-434a-8cc2-5151ac4fcfbe",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "d2a75898-5e0c-4b5a-9930-f08ef8771ab3",
+            "answer": "no"
+        },
+        {
+            "id": "46c899dd-1983-4e14-8d52-a87de586b9f6",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "d2a75898-5e0c-4b5a-9930-f08ef8771ab3",
+            "answer": "yes"
+        },
+        {
+            "id": "a349b7c0-e232-40bb-abd9-6b4b12bf403a",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "d2a75898-5e0c-4b5a-9930-f08ef8771ab3",
+            "answer": "no"
+        },
+        {
+            "id": "75d1e865-a85f-4ef9-893c-b7f9b31523eb",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "d2a75898-5e0c-4b5a-9930-f08ef8771ab3",
+            "answer": "no"
+        },
+        {
+            "id": "8e321a09-3307-471a-a4e5-7337dd91c232",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "d2a75898-5e0c-4b5a-9930-f08ef8771ab3",
+            "answer": "yes"
+        },
+        {
+            "id": "35829987-6ba4-4ca0-b4f8-0ec000585c91",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "d2a75898-5e0c-4b5a-9930-f08ef8771ab3",
+            "answer": "dont_know"
+        },
+        {
+            "id": "86fb3e1c-5a2f-4a70-b8cf-3527108a948e",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "d2a75898-5e0c-4b5a-9930-f08ef8771ab3",
+            "answer": "dont_know"
+        },
+        {
+            "id": "1563211c-3c22-4934-a7c3-0f3d6b0be977",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "d2a75898-5e0c-4b5a-9930-f08ef8771ab3",
+            "answer": "no"
+        },
+        {
+            "id": "59359639-8122-45fd-bf65-b874d9bd48cf",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "d2a75898-5e0c-4b5a-9930-f08ef8771ab3",
+            "answer": "dont_know"
+        },
+        {
+            "id": "4d0fa606-551f-49ab-8ab2-fbd53edb65d6",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "d2a75898-5e0c-4b5a-9930-f08ef8771ab3",
+            "answer": "no"
+        },
+        {
+            "id": "e9210d9e-5da3-45d5-8e88-531a8a2f5d71",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "d2a75898-5e0c-4b5a-9930-f08ef8771ab3",
+            "answer": "no"
+        },
+        {
+            "id": "65f67e72-596b-41cd-a15d-2aeec0643520",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "c27e45fb-12bb-4ac4-b320-17d3d24782ed",
+            "answer": "no"
+        },
+        {
+            "id": "85a45e51-ec09-41f8-9942-45cbdcc36760",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "c27e45fb-12bb-4ac4-b320-17d3d24782ed",
+            "answer": "yes"
+        },
+        {
+            "id": "a9044d41-a0cc-4b0a-8a07-1b7c7c71b2a7",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "c27e45fb-12bb-4ac4-b320-17d3d24782ed",
+            "answer": "no"
+        },
+        {
+            "id": "92e90f6a-4297-4183-945f-c7e04a702c1f",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "c27e45fb-12bb-4ac4-b320-17d3d24782ed",
+            "answer": "no"
+        },
+        {
+            "id": "3d47123e-86ae-4173-b09a-8560ef855c3c",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "c27e45fb-12bb-4ac4-b320-17d3d24782ed",
+            "answer": "yes"
+        },
+        {
+            "id": "18a4b724-8e0a-47ec-848a-7cae49456e50",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "c27e45fb-12bb-4ac4-b320-17d3d24782ed",
+            "answer": "dont_know"
+        },
+        {
+            "id": "f28ad994-ed65-4dbd-8ed3-3f0862b1a5ef",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "c27e45fb-12bb-4ac4-b320-17d3d24782ed",
+            "answer": "dont_know"
+        },
+        {
+            "id": "5742e278-eca0-42d4-8fff-825cb293183d",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "c27e45fb-12bb-4ac4-b320-17d3d24782ed",
+            "answer": "no"
+        },
+        {
+            "id": "fb675638-dab4-49bc-a4ac-c628da16a5fb",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "c27e45fb-12bb-4ac4-b320-17d3d24782ed",
+            "answer": "dont_know"
+        },
+        {
+            "id": "a497ed0c-9778-43e0-8a83-7b1bf3d86dd6",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "c27e45fb-12bb-4ac4-b320-17d3d24782ed",
+            "answer": "no"
+        },
+        {
+            "id": "1c01cd58-8dd3-4b90-9dd0-4323dc7498de",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "c27e45fb-12bb-4ac4-b320-17d3d24782ed",
+            "answer": "no"
+        },
+        {
+            "id": "a844e979-8b42-4acb-83d0-69b9e7b4a710",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "ad1237c3-5d88-4358-96d9-2d43365d2f49",
+            "answer": "no"
+        },
+        {
+            "id": "b619045a-d314-411e-908b-2a891e691311",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "ad1237c3-5d88-4358-96d9-2d43365d2f49",
+            "answer": "yes"
+        },
+        {
+            "id": "0e4f8e28-882f-4c12-b646-97ddf6e4db6a",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "ad1237c3-5d88-4358-96d9-2d43365d2f49",
+            "answer": "no"
+        },
+        {
+            "id": "97e4728c-4e66-44ca-8f02-4e78b97d10ac",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "ad1237c3-5d88-4358-96d9-2d43365d2f49",
+            "answer": "no"
+        },
+        {
+            "id": "029886e3-a80c-496e-836d-aba7cb0aa54b",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "ad1237c3-5d88-4358-96d9-2d43365d2f49",
+            "answer": "yes"
+        },
+        {
+            "id": "17a77636-6b66-4366-8c9c-615e84784778",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "ad1237c3-5d88-4358-96d9-2d43365d2f49",
+            "answer": "dont_know"
+        },
+        {
+            "id": "598b31a7-898c-4859-bffd-dcf6bc50090a",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "ad1237c3-5d88-4358-96d9-2d43365d2f49",
+            "answer": "no"
+        },
+        {
+            "id": "2fff686e-e01c-4fcc-a0d4-2905a67613fc",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "ad1237c3-5d88-4358-96d9-2d43365d2f49",
+            "answer": "no"
+        },
+        {
+            "id": "b4848170-94e9-406f-8817-ef095c2537c4",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "ad1237c3-5d88-4358-96d9-2d43365d2f49",
+            "answer": "dont_know"
+        },
+        {
+            "id": "98de68d2-b09d-4ccb-b767-aec55c8343bf",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "ad1237c3-5d88-4358-96d9-2d43365d2f49",
+            "answer": "no"
+        },
+        {
+            "id": "7b56ddc0-a6cb-4c2f-a594-2690818531cf",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "ad1237c3-5d88-4358-96d9-2d43365d2f49",
+            "answer": "no"
+        },
+        {
+            "id": "54c64aed-8344-4aa2-abb7-42a221cf7c6d",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "af8b5891-7deb-49a6-bf17-bb59a1562e4c",
+            "answer": "no"
+        },
+        {
+            "id": "6cfb83bb-3950-4e0f-8512-1802d423be3d",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "af8b5891-7deb-49a6-bf17-bb59a1562e4c",
+            "answer": "yes"
+        },
+        {
+            "id": "75c23753-fb24-48a1-ab6e-2e23baa250a7",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "af8b5891-7deb-49a6-bf17-bb59a1562e4c",
+            "answer": "no"
+        },
+        {
+            "id": "6ed79e0c-63fe-4f8a-848e-983ffca18838",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "af8b5891-7deb-49a6-bf17-bb59a1562e4c",
+            "answer": "no"
+        },
+        {
+            "id": "7cca87d5-a529-4ce5-92b6-6d9d072745cc",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "af8b5891-7deb-49a6-bf17-bb59a1562e4c",
+            "answer": "dont_know"
+        },
+        {
+            "id": "ab75abe5-44a5-4b6d-b56b-4dba9e09cf5e",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "af8b5891-7deb-49a6-bf17-bb59a1562e4c",
+            "answer": "yes"
+        },
+        {
+            "id": "ef3930d8-12e6-4cee-a16e-2494591f9802",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "af8b5891-7deb-49a6-bf17-bb59a1562e4c",
+            "answer": "no"
+        },
+        {
+            "id": "09f5783f-5055-4da0-a443-9359896e762d",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "af8b5891-7deb-49a6-bf17-bb59a1562e4c",
+            "answer": "no"
+        },
+        {
+            "id": "4fc394eb-3e7c-46c7-8ed6-09e76e8d64d1",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "af8b5891-7deb-49a6-bf17-bb59a1562e4c",
+            "answer": "no"
+        },
+        {
+            "id": "db0954ee-f268-449a-ba9f-979012770182",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "af8b5891-7deb-49a6-bf17-bb59a1562e4c",
+            "answer": "no"
+        },
+        {
+            "id": "23a37169-e99f-4430-984d-9c7305cc4c53",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "af8b5891-7deb-49a6-bf17-bb59a1562e4c",
+            "answer": "dont_know"
+        },
+        {
+            "id": "0a2a2639-7bad-4b2e-86be-a63abc333303",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "a7954761-6ac0-4054-b028-cb14377376a9",
+            "answer": "no"
+        },
+        {
+            "id": "e7cc0831-98fd-42aa-9004-53bd79f62bef",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "a7954761-6ac0-4054-b028-cb14377376a9",
+            "answer": "yes"
+        },
+        {
+            "id": "f84cc69d-85d1-4acc-a281-7f0fff42fc8e",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "a7954761-6ac0-4054-b028-cb14377376a9",
+            "answer": "dont_know"
+        },
+        {
+            "id": "798a0a39-e15d-46b6-8b60-8fa8e0ba3d37",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "a7954761-6ac0-4054-b028-cb14377376a9",
+            "answer": "no"
+        },
+        {
+            "id": "18a7f0d4-983c-4a10-9608-caceda5117f3",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "a7954761-6ac0-4054-b028-cb14377376a9",
+            "answer": "dont_know"
+        },
+        {
+            "id": "3e982df3-05a1-4f35-b22a-c60fcb9d9084",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "a7954761-6ac0-4054-b028-cb14377376a9",
+            "answer": "yes"
+        },
+        {
+            "id": "5157e45b-bcca-41f0-af87-b9ab0c7c1bf4",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "a7954761-6ac0-4054-b028-cb14377376a9",
+            "answer": "no"
+        },
+        {
+            "id": "2516dd1d-3216-4fa4-bedb-f12b464ffeed",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "a7954761-6ac0-4054-b028-cb14377376a9",
+            "answer": "dont_know"
+        },
+        {
+            "id": "dc7dcf1d-ed3f-4fba-9fa7-f5323a586c4c",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "a7954761-6ac0-4054-b028-cb14377376a9",
+            "answer": "no"
+        },
+        {
+            "id": "e445b375-e847-4569-a895-e95b034f0781",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "a7954761-6ac0-4054-b028-cb14377376a9",
+            "answer": "no"
+        },
+        {
+            "id": "64e70cfa-7cf3-4054-91ae-a0e8a5084862",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "a7954761-6ac0-4054-b028-cb14377376a9",
+            "answer": "dont_know"
+        },
+        {
+            "id": "5acf63da-6061-4654-9aec-49be898e5807",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "4e37e586-1ac0-4b04-9426-57060a94f137",
+            "answer": "no"
+        },
+        {
+            "id": "8b3ba7fd-396c-4e14-80a4-bdcbae71962b",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "4e37e586-1ac0-4b04-9426-57060a94f137",
+            "answer": "yes"
+        },
+        {
+            "id": "303afff8-006a-4f46-85e1-b20f6b2aecbf",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "4e37e586-1ac0-4b04-9426-57060a94f137",
+            "answer": "dont_know"
+        },
+        {
+            "id": "d7be70f0-9c86-4c28-81f1-e4a289a2c9f8",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "4e37e586-1ac0-4b04-9426-57060a94f137",
+            "answer": "no"
+        },
+        {
+            "id": "e00a9d5c-b657-42f7-acab-dd14528e3171",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "4e37e586-1ac0-4b04-9426-57060a94f137",
+            "answer": "dont_know"
+        },
+        {
+            "id": "0a22b7bb-14a7-4444-84d3-b54263f82451",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "4e37e586-1ac0-4b04-9426-57060a94f137",
+            "answer": "yes"
+        },
+        {
+            "id": "af5d58d0-c6c0-4d4d-838c-a084aaf741a6",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "4e37e586-1ac0-4b04-9426-57060a94f137",
+            "answer": "no"
+        },
+        {
+            "id": "e3892357-faa9-4ba3-8527-032decb105e1",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "4e37e586-1ac0-4b04-9426-57060a94f137",
+            "answer": "dont_know"
+        },
+        {
+            "id": "3d68fce0-2e7f-4c8e-afdf-3e5d1cec55d8",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "4e37e586-1ac0-4b04-9426-57060a94f137",
+            "answer": "no"
+        },
+        {
+            "id": "b1acd02a-62bb-470e-a62a-0ecc2458a37c",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "4e37e586-1ac0-4b04-9426-57060a94f137",
+            "answer": "dont_know"
+        },
+        {
+            "id": "a0019ccc-fda0-45d9-ad8d-80d71a911e55",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "4e37e586-1ac0-4b04-9426-57060a94f137",
+            "answer": "dont_know"
+        },
+        {
+            "id": "d501f1d9-d4b8-4027-875c-52186c383a9f",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "126906c6-65fe-41b2-85ea-58ac64ce2a75",
+            "answer": "no"
+        },
+        {
+            "id": "8ed4b7b8-0e82-489f-85c3-9cff5b8c29de",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "126906c6-65fe-41b2-85ea-58ac64ce2a75",
+            "answer": "yes"
+        },
+        {
+            "id": "bb89cab7-2909-44f7-adad-2961a250f56c",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "126906c6-65fe-41b2-85ea-58ac64ce2a75",
+            "answer": "dont_know"
+        },
+        {
+            "id": "f5b674a0-b4c3-470e-9a92-89b44d65350c",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "126906c6-65fe-41b2-85ea-58ac64ce2a75",
+            "answer": "no"
+        },
+        {
+            "id": "0de36087-30b4-40d9-8289-9f01b14c39d1",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "126906c6-65fe-41b2-85ea-58ac64ce2a75",
+            "answer": "dont_know"
+        },
+        {
+            "id": "697ee58b-56b5-40c5-b8c9-b716f0bf4808",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "126906c6-65fe-41b2-85ea-58ac64ce2a75",
+            "answer": "yes"
+        },
+        {
+            "id": "577b2986-93b4-48ed-9d65-22e1c0e5f17e",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "126906c6-65fe-41b2-85ea-58ac64ce2a75",
+            "answer": "no"
+        },
+        {
+            "id": "82d49d13-5322-49f2-b487-0983360b9c15",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "126906c6-65fe-41b2-85ea-58ac64ce2a75",
+            "answer": "dont_know"
+        },
+        {
+            "id": "81ed031a-aab4-4b05-ac26-755a5aee60ee",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "126906c6-65fe-41b2-85ea-58ac64ce2a75",
+            "answer": "no"
+        },
+        {
+            "id": "b0a33793-65ab-44fb-b9de-d1e7f7ac75ae",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "126906c6-65fe-41b2-85ea-58ac64ce2a75",
+            "answer": "dont_know"
+        },
+        {
+            "id": "05812362-ce96-4d82-8af3-4bfb1d0fd3c4",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "126906c6-65fe-41b2-85ea-58ac64ce2a75",
+            "answer": "dont_know"
+        },
+        {
+            "id": "cda5ef52-64df-4ad8-b3b5-31188e0e5bcc",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "31c69ef7-280a-45e7-9231-9f53ba98440f",
+            "answer": "no"
+        },
+        {
+            "id": "8a1f5d39-24e3-4ba6-b746-bf977b5a3966",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "31c69ef7-280a-45e7-9231-9f53ba98440f",
+            "answer": "yes"
+        },
+        {
+            "id": "9a4a6f00-883f-4f83-b1ef-ca85ac15274d",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "31c69ef7-280a-45e7-9231-9f53ba98440f",
+            "answer": "dont_know"
+        },
+        {
+            "id": "3c647444-5efc-4dff-be09-4efbe12c566a",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "31c69ef7-280a-45e7-9231-9f53ba98440f",
+            "answer": "no"
+        },
+        {
+            "id": "d4461d23-9da5-4bd4-ba01-a0eff6ecf7ad",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "31c69ef7-280a-45e7-9231-9f53ba98440f",
+            "answer": "dont_know"
+        },
+        {
+            "id": "c7c12fc6-6b0e-43b7-a6e9-0316c1ad44c5",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "31c69ef7-280a-45e7-9231-9f53ba98440f",
+            "answer": "yes"
+        },
+        {
+            "id": "c8f64cf0-e786-45e9-b913-09b1da09e9d9",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "31c69ef7-280a-45e7-9231-9f53ba98440f",
+            "answer": "no"
+        },
+        {
+            "id": "acd1d364-2572-4efd-8487-c586aaf298c9",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "31c69ef7-280a-45e7-9231-9f53ba98440f",
+            "answer": "dont_know"
+        },
+        {
+            "id": "eb33303e-cc52-4019-bbd7-6a81a1498ee3",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "31c69ef7-280a-45e7-9231-9f53ba98440f",
+            "answer": "no"
+        },
+        {
+            "id": "388a9b82-ac58-4820-afec-f2e82e49ad1e",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "31c69ef7-280a-45e7-9231-9f53ba98440f",
+            "answer": "dont_know"
+        },
+        {
+            "id": "f976ed56-b2ad-4df2-b79b-8da8ca9bb37e",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "31c69ef7-280a-45e7-9231-9f53ba98440f",
+            "answer": "dont_know"
+        },
+        {
+            "id": "9b18a6c5-7021-45d8-a2e3-98ad8707ef6b",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "a5efd13a-6ffb-488d-beda-044ee944c359",
+            "answer": "no"
+        },
+        {
+            "id": "917bddbd-904b-47b1-a7a4-453f5e1b6341",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "a5efd13a-6ffb-488d-beda-044ee944c359",
+            "answer": "yes"
+        },
+        {
+            "id": "bd32837e-53b7-4d13-b704-935609639ac9",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "a5efd13a-6ffb-488d-beda-044ee944c359",
+            "answer": "dont_know"
+        },
+        {
+            "id": "3b5a1bee-1d21-4ec0-a760-559fd8e7bd50",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "a5efd13a-6ffb-488d-beda-044ee944c359",
+            "answer": "no"
+        },
+        {
+            "id": "236b6d3a-5176-4976-b8cb-87859eca5ff7",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "a5efd13a-6ffb-488d-beda-044ee944c359",
+            "answer": "no"
+        },
+        {
+            "id": "3cfa62d3-f88f-4d6a-9a27-fba5c6ce37a9",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "a5efd13a-6ffb-488d-beda-044ee944c359",
+            "answer": "yes"
+        },
+        {
+            "id": "ea8cc55f-5d30-4a6a-bd0c-d5f8e67117cf",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "a5efd13a-6ffb-488d-beda-044ee944c359",
+            "answer": "no"
+        },
+        {
+            "id": "9e52a453-761f-490d-ab1c-83cc24fbda16",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "a5efd13a-6ffb-488d-beda-044ee944c359",
+            "answer": "dont_know"
+        },
+        {
+            "id": "623c84b3-7b0d-4cab-aad6-3a0cc623ba3d",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "a5efd13a-6ffb-488d-beda-044ee944c359",
+            "answer": "no"
+        },
+        {
+            "id": "6ef7c7e6-5b06-4d7b-a6a8-bcd04cefbd53",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "a5efd13a-6ffb-488d-beda-044ee944c359",
+            "answer": "dont_know"
+        },
+        {
+            "id": "f955e3be-39a8-46f0-8c07-1304638575cc",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "a5efd13a-6ffb-488d-beda-044ee944c359",
+            "answer": "dont_know"
+        },
+        {
+            "id": "e816fbde-5bcb-4f6d-9e45-9c7ab73c0766",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "e75d440d-fffa-4a91-aeaf-2c35a3f2be39",
+            "answer": "no"
+        },
+        {
+            "id": "f42a13ea-a664-463d-8780-c63341120ea2",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "e75d440d-fffa-4a91-aeaf-2c35a3f2be39",
+            "answer": "yes"
+        },
+        {
+            "id": "276cca5b-264d-470d-9746-144390631f97",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "e75d440d-fffa-4a91-aeaf-2c35a3f2be39",
+            "answer": "dont_know"
+        },
+        {
+            "id": "3105f2d1-ceda-41f0-a739-a4fa9effd4de",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "e75d440d-fffa-4a91-aeaf-2c35a3f2be39",
+            "answer": "no"
+        },
+        {
+            "id": "eb835a47-88bd-4f9e-96f3-190285677a34",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "e75d440d-fffa-4a91-aeaf-2c35a3f2be39",
+            "answer": "no"
+        },
+        {
+            "id": "3a5aba10-3091-468f-8c0a-0b21296dc84c",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "e75d440d-fffa-4a91-aeaf-2c35a3f2be39",
+            "answer": "yes"
+        },
+        {
+            "id": "cf8fbfb9-8461-4c25-8f50-ace37e068b59",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "e75d440d-fffa-4a91-aeaf-2c35a3f2be39",
+            "answer": "no"
+        },
+        {
+            "id": "f3120c32-44cb-46e9-b6fa-35ffcab6cddc",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "e75d440d-fffa-4a91-aeaf-2c35a3f2be39",
+            "answer": "dont_know"
+        },
+        {
+            "id": "b65ba4ca-a5bc-4a40-a330-ba8e902b6531",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "e75d440d-fffa-4a91-aeaf-2c35a3f2be39",
+            "answer": "dont_know"
+        },
+        {
+            "id": "1519ae75-a84b-4f01-9d83-58f003828d75",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "e75d440d-fffa-4a91-aeaf-2c35a3f2be39",
+            "answer": "dont_know"
+        },
+        {
+            "id": "9e8077ef-2b15-44fe-864b-6d9c2d043a76",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "e75d440d-fffa-4a91-aeaf-2c35a3f2be39",
+            "answer": "dont_know"
+        },
+        {
+            "id": "c0fe88ac-aedb-41d5-827f-953028daa0af",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "c15e0527-6eb8-49ad-8475-6d42ebee4816",
+            "answer": "no"
+        },
+        {
+            "id": "8db42e8f-8187-4cf2-a762-e27cc5935481",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "c15e0527-6eb8-49ad-8475-6d42ebee4816",
+            "answer": "yes"
+        },
+        {
+            "id": "7be06649-8b1b-47a2-910f-9efe3d41bae1",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "c15e0527-6eb8-49ad-8475-6d42ebee4816",
+            "answer": "dont_know"
+        },
+        {
+            "id": "9a3de0d5-2af8-4cb2-ba0d-7406216d9bba",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "c15e0527-6eb8-49ad-8475-6d42ebee4816",
+            "answer": "no"
+        },
+        {
+            "id": "fad241d0-7769-43ba-bf32-37272f718f07",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "c15e0527-6eb8-49ad-8475-6d42ebee4816",
+            "answer": "no"
+        },
+        {
+            "id": "bc34e280-005b-4452-8a65-7f69419c7c25",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "c15e0527-6eb8-49ad-8475-6d42ebee4816",
+            "answer": "yes"
+        },
+        {
+            "id": "c7efdd89-eef2-457c-8b98-266cd99f5c3d",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "c15e0527-6eb8-49ad-8475-6d42ebee4816",
+            "answer": "dont_know"
+        },
+        {
+            "id": "68537ff2-cbfb-4e73-b92f-608912effe79",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "c15e0527-6eb8-49ad-8475-6d42ebee4816",
+            "answer": "dont_know"
+        },
+        {
+            "id": "c8b36760-1850-44b3-ad67-b46b18cc0fd2",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "c15e0527-6eb8-49ad-8475-6d42ebee4816",
+            "answer": "dont_know"
+        },
+        {
+            "id": "0581cb49-b2a5-42f7-a960-6d26ffa6222b",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "c15e0527-6eb8-49ad-8475-6d42ebee4816",
+            "answer": "dont_know"
+        },
+        {
+            "id": "cc4e6f62-ca10-42a7-bf17-088a1c3d14e3",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "c15e0527-6eb8-49ad-8475-6d42ebee4816",
+            "answer": "yes"
+        },
+        {
+            "id": "2f49c031-5251-40ab-9369-dffcafda74cb",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "528e89fa-d5c1-43e8-885c-c566da6e3663",
+            "answer": "no"
+        },
+        {
+            "id": "18014a2f-14c9-4035-ad06-fd5eb5ddfbb4",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "528e89fa-d5c1-43e8-885c-c566da6e3663",
+            "answer": "yes"
+        },
+        {
+            "id": "41ffe396-d473-4ccc-a711-44f002127c4c",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "528e89fa-d5c1-43e8-885c-c566da6e3663",
+            "answer": "dont_know"
+        },
+        {
+            "id": "dcab0418-5909-4e96-b032-5026477a655d",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "528e89fa-d5c1-43e8-885c-c566da6e3663",
+            "answer": "dont_know"
+        },
+        {
+            "id": "85acf167-9315-43d0-9fae-81c4dfe2ce6d",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "528e89fa-d5c1-43e8-885c-c566da6e3663",
+            "answer": "no"
+        },
+        {
+            "id": "08fd9e16-18ef-4299-bf09-904089606d42",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "528e89fa-d5c1-43e8-885c-c566da6e3663",
+            "answer": "dont_know"
+        },
+        {
+            "id": "232a558a-5a56-41e2-835a-543c61e835c7",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "528e89fa-d5c1-43e8-885c-c566da6e3663",
+            "answer": "yes"
+        },
+        {
+            "id": "fcb546c9-3863-4c89-a038-93061fd7b30e",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "528e89fa-d5c1-43e8-885c-c566da6e3663",
+            "answer": "dont_know"
+        },
+        {
+            "id": "40b9acda-07ce-4b43-8844-f7e12e2414ce",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "528e89fa-d5c1-43e8-885c-c566da6e3663",
+            "answer": "dont_know"
+        },
+        {
+            "id": "14feaff4-bd93-43b7-bb0d-e7c5335c208f",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "528e89fa-d5c1-43e8-885c-c566da6e3663",
+            "answer": "dont_know"
+        },
+        {
+            "id": "7f4c0453-b59e-4945-ab9a-b1da84838c8d",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "528e89fa-d5c1-43e8-885c-c566da6e3663",
+            "answer": "yes"
+        },
+        {
+            "id": "cbc83b4e-32e4-4308-b4c8-52aa274412d6",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "bb899e73-7d2b-4833-bc08-3125ee9156dd",
+            "answer": "no"
+        },
+        {
+            "id": "53c96559-edc1-4053-94ef-2e398695badd",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "bb899e73-7d2b-4833-bc08-3125ee9156dd",
+            "answer": "yes"
+        },
+        {
+            "id": "a8727788-ce95-433f-b432-df7dcd1f8f3d",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "bb899e73-7d2b-4833-bc08-3125ee9156dd",
+            "answer": "dont_know"
+        },
+        {
+            "id": "8b26e74c-b550-44b5-9e75-7d1ac5533ed5",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "bb899e73-7d2b-4833-bc08-3125ee9156dd",
+            "answer": "dont_know"
+        },
+        {
+            "id": "9cd2b6fa-7de1-4206-bf50-e8657f8cc4c3",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "bb899e73-7d2b-4833-bc08-3125ee9156dd",
+            "answer": "no"
+        },
+        {
+            "id": "572b6aac-cd8f-4ac3-ab06-1c70c5188390",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "bb899e73-7d2b-4833-bc08-3125ee9156dd",
+            "answer": "no"
+        },
+        {
+            "id": "2086b6c5-d70b-49fe-8508-5abc376db777",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "bb899e73-7d2b-4833-bc08-3125ee9156dd",
+            "answer": "yes"
+        },
+        {
+            "id": "d4c57e98-c4a5-430b-86e7-ec89951434ec",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "bb899e73-7d2b-4833-bc08-3125ee9156dd",
+            "answer": "dont_know"
+        },
+        {
+            "id": "b70a6ddf-223d-471e-bd07-47692df409c7",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "bb899e73-7d2b-4833-bc08-3125ee9156dd",
+            "answer": "dont_know"
+        },
+        {
+            "id": "dd90cf2e-392f-42c9-bf14-2f3673612d3a",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "bb899e73-7d2b-4833-bc08-3125ee9156dd",
+            "answer": "dont_know"
+        },
+        {
+            "id": "72b43705-292c-40eb-820a-c8b8ade2ac7e",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "bb899e73-7d2b-4833-bc08-3125ee9156dd",
+            "answer": "yes"
+        },
+        {
+            "id": "8f20a895-2881-45ba-9d72-18838203d180",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "f00bee1a-77ad-4fbd-b159-deacbc0e2a58",
+            "answer": "no"
+        },
+        {
+            "id": "9bd61300-8b34-4e14-abf5-9d5f897fa3d4",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "f00bee1a-77ad-4fbd-b159-deacbc0e2a58",
+            "answer": "yes"
+        },
+        {
+            "id": "8aa61aec-36ab-4011-9838-459afa222236",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "f00bee1a-77ad-4fbd-b159-deacbc0e2a58",
+            "answer": "dont_know"
+        },
+        {
+            "id": "14407989-c545-46c4-8a3a-e6052c31d835",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "f00bee1a-77ad-4fbd-b159-deacbc0e2a58",
+            "answer": "dont_know"
+        },
+        {
+            "id": "cf891636-7cf4-4b2d-82a6-3cb4e1fe6357",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "f00bee1a-77ad-4fbd-b159-deacbc0e2a58",
+            "answer": "dont_know"
+        },
+        {
+            "id": "8a913325-935d-4ed9-a64b-5d0971614f0d",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "f00bee1a-77ad-4fbd-b159-deacbc0e2a58",
+            "answer": "no"
+        },
+        {
+            "id": "00ea4a91-b813-4ecd-a3f9-555950d5c51a",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "f00bee1a-77ad-4fbd-b159-deacbc0e2a58",
+            "answer": "yes"
+        },
+        {
+            "id": "385961e5-08e2-49cf-9cc3-769f2b9b02bb",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "f00bee1a-77ad-4fbd-b159-deacbc0e2a58",
+            "answer": "dont_know"
+        },
+        {
+            "id": "2c517652-221a-4bc1-b18f-e3fafd094e1f",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "f00bee1a-77ad-4fbd-b159-deacbc0e2a58",
+            "answer": "dont_know"
+        },
+        {
+            "id": "dafe32c0-0dbf-4802-b249-4a03049fb9b0",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "f00bee1a-77ad-4fbd-b159-deacbc0e2a58",
+            "answer": "dont_know"
+        },
+        {
+            "id": "08349422-87c3-4d4b-964b-427f133ba02c",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "f00bee1a-77ad-4fbd-b159-deacbc0e2a58",
+            "answer": "yes"
+        },
+        {
+            "id": "275b20aa-df9a-4e65-a78a-a4385b161c8a",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "5e43afb6-53ad-401d-85e0-a417237721ed",
+            "answer": "no"
+        },
+        {
+            "id": "4fc8c979-f582-448b-90a8-e2eb7bcee1fb",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "5e43afb6-53ad-401d-85e0-a417237721ed",
+            "answer": "yes"
+        },
+        {
+            "id": "09c057d9-c95c-4a62-b819-5bebe33d871b",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "5e43afb6-53ad-401d-85e0-a417237721ed",
+            "answer": "dont_know"
+        },
+        {
+            "id": "86705738-1a70-4fdc-8289-7934c8a7ee0c",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "5e43afb6-53ad-401d-85e0-a417237721ed",
+            "answer": "dont_know"
+        },
+        {
+            "id": "1179a03b-9da0-4cac-b984-cd6271b42b31",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "5e43afb6-53ad-401d-85e0-a417237721ed",
+            "answer": "dont_know"
+        },
+        {
+            "id": "9caabf9b-3ad6-479c-8693-0aacf4955511",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "5e43afb6-53ad-401d-85e0-a417237721ed",
+            "answer": "no"
+        },
+        {
+            "id": "e2aded71-fde9-43dd-90c1-b9d48927f36b",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "5e43afb6-53ad-401d-85e0-a417237721ed",
+            "answer": "yes"
+        },
+        {
+            "id": "ea4b678e-f7ea-4094-b904-939d3c4c87b5",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "5e43afb6-53ad-401d-85e0-a417237721ed",
+            "answer": "dont_know"
+        },
+        {
+            "id": "5d39ca04-7082-43c3-8908-c7ffabb109f7",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "5e43afb6-53ad-401d-85e0-a417237721ed",
+            "answer": "dont_know"
+        },
+        {
+            "id": "7ca3ba48-4e95-46c8-8e0b-955bc7703a7e",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "5e43afb6-53ad-401d-85e0-a417237721ed",
+            "answer": "dont_know"
+        },
+        {
+            "id": "e75179a8-65cf-4d7f-88d5-49b181f827d0",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "5e43afb6-53ad-401d-85e0-a417237721ed",
+            "answer": "yes"
+        },
+        {
+            "id": "e469584d-1a9e-4556-bc66-1a8c26e86f33",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "7ed042a7-7a10-44c8-8700-93a14b488cd1",
+            "answer": "no"
+        },
+        {
+            "id": "a683e81c-c238-4e17-8e83-570a833c58fa",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "7ed042a7-7a10-44c8-8700-93a14b488cd1",
+            "answer": "yes"
+        },
+        {
+            "id": "a5866d85-1133-40b7-850b-c5d99adfdecc",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "7ed042a7-7a10-44c8-8700-93a14b488cd1",
+            "answer": "dont_know"
+        },
+        {
+            "id": "237f7bf0-81f8-42bc-82c8-ba40c9eaeecf",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "7ed042a7-7a10-44c8-8700-93a14b488cd1",
+            "answer": "dont_know"
+        },
+        {
+            "id": "6f450c27-2288-49a5-bd7f-825b87dd4984",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "7ed042a7-7a10-44c8-8700-93a14b488cd1",
+            "answer": "dont_know"
+        },
+        {
+            "id": "c5b2c94a-494b-4025-8c7f-8e1bdedceeb2",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "7ed042a7-7a10-44c8-8700-93a14b488cd1",
+            "answer": "no"
+        },
+        {
+            "id": "2c712b95-d915-4279-b09d-bd49c5849e81",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "7ed042a7-7a10-44c8-8700-93a14b488cd1",
+            "answer": "dont_know"
+        },
+        {
+            "id": "af52b50c-38de-446c-bf25-00f7aad850d1",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "7ed042a7-7a10-44c8-8700-93a14b488cd1",
+            "answer": "yes"
+        },
+        {
+            "id": "3622a55c-8aa1-4d74-b459-2576299886f8",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "7ed042a7-7a10-44c8-8700-93a14b488cd1",
+            "answer": "dont_know"
+        },
+        {
+            "id": "1e6ae9d5-36ce-4c89-9a44-bb78fe958ebd",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "7ed042a7-7a10-44c8-8700-93a14b488cd1",
+            "answer": "dont_know"
+        },
+        {
+            "id": "61792e73-e84b-4dcb-84cb-0751eb33333e",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "7ed042a7-7a10-44c8-8700-93a14b488cd1",
+            "answer": "yes"
+        },
+        {
+            "id": "49914827-4a84-47b1-8065-b121eca44c77",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "327882e0-7847-4ce2-8824-3ecf6d002cde",
+            "answer": "no"
+        },
+        {
+            "id": "ce1c9567-f7f5-4d6c-a564-32f8ca9ee4c3",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "327882e0-7847-4ce2-8824-3ecf6d002cde",
+            "answer": "yes"
+        },
+        {
+            "id": "db0cf0cc-66fa-4259-a261-30a7c25cd1fe",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "327882e0-7847-4ce2-8824-3ecf6d002cde",
+            "answer": "dont_know"
+        },
+        {
+            "id": "b96f33e9-a3a3-40e1-a210-f32162a596eb",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "327882e0-7847-4ce2-8824-3ecf6d002cde",
+            "answer": "dont_know"
+        },
+        {
+            "id": "525ecaff-d658-4d69-9ae2-e3d60aa37a23",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "327882e0-7847-4ce2-8824-3ecf6d002cde",
+            "answer": "dont_know"
+        },
+        {
+            "id": "69c27f39-e883-4eae-8860-03cc828161a9",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "327882e0-7847-4ce2-8824-3ecf6d002cde",
+            "answer": "no"
+        },
+        {
+            "id": "b3ad1213-48fb-42f4-b0ae-52306351bdf6",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "327882e0-7847-4ce2-8824-3ecf6d002cde",
+            "answer": "dont_know"
+        },
+        {
+            "id": "781b4228-e46d-4d21-b3b1-2ea1621c1636",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "327882e0-7847-4ce2-8824-3ecf6d002cde",
+            "answer": "dont_know"
+        },
+        {
+            "id": "16f1ebab-3d07-44b3-af27-6cb9d336970a",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "327882e0-7847-4ce2-8824-3ecf6d002cde",
+            "answer": "yes"
+        },
+        {
+            "id": "1dc9c7ed-b9fa-4302-a3be-ddd6ad04edfa",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "327882e0-7847-4ce2-8824-3ecf6d002cde",
+            "answer": "dont_know"
+        },
+        {
+            "id": "cac23359-7c22-4a79-8c1a-8565b5e76c26",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "327882e0-7847-4ce2-8824-3ecf6d002cde",
+            "answer": "yes"
+        },
+        {
+            "id": "01725a1c-c945-4883-84ff-d3c2e1320c6e",
+            "candidate_id": "8775dfdd-757b-4cd0-aef6-8573a9779327",
+            "question_id": "5bc7d5c4-64d4-4fb2-9d23-51089919a16b",
+            "answer": "no"
+        },
+        {
+            "id": "94b7191c-db44-48dd-b2c4-c9297585b219",
+            "candidate_id": "9af935f0-e879-430c-a498-ba249d8c5437",
+            "question_id": "5bc7d5c4-64d4-4fb2-9d23-51089919a16b",
+            "answer": "yes"
+        },
+        {
+            "id": "5d7e6af1-080a-4188-80c3-faba9aff8da4",
+            "candidate_id": "271e1d2c-b0a6-4bd4-b363-8b3d848c57e3",
+            "question_id": "5bc7d5c4-64d4-4fb2-9d23-51089919a16b",
+            "answer": "dont_know"
+        },
+        {
+            "id": "638b66f4-a831-4209-976e-5b8a30585a5b",
+            "candidate_id": "69914fcd-4db6-470e-b958-5a40deca685a",
+            "question_id": "5bc7d5c4-64d4-4fb2-9d23-51089919a16b",
+            "answer": "dont_know"
+        },
+        {
+            "id": "74a0cd3b-033a-4f52-9d45-b25f506ebf24",
+            "candidate_id": "5e44e4bf-d54f-49b9-9f02-a50118fa03f6",
+            "question_id": "5bc7d5c4-64d4-4fb2-9d23-51089919a16b",
+            "answer": "dont_know"
+        },
+        {
+            "id": "341270bf-9f1f-44b5-8846-7b9fb72e137e",
+            "candidate_id": "db179e69-b351-4dca-a509-61ef57552862",
+            "question_id": "5bc7d5c4-64d4-4fb2-9d23-51089919a16b",
+            "answer": "no"
+        },
+        {
+            "id": "ea462a89-091d-41ff-a20c-622e056e9f31",
+            "candidate_id": "9fdde4fc-e11a-497f-92b9-ec5a7f3cbdac",
+            "question_id": "5bc7d5c4-64d4-4fb2-9d23-51089919a16b",
+            "answer": "dont_know"
+        },
+        {
+            "id": "0be5184d-8448-4964-ad04-9a1713bee6d8",
+            "candidate_id": "6417d90c-fd9b-4060-a946-3c8db3a49faa",
+            "question_id": "5bc7d5c4-64d4-4fb2-9d23-51089919a16b",
+            "answer": "dont_know"
+        },
+        {
+            "id": "b3c96946-22ef-4865-8079-3063bfc956d3",
+            "candidate_id": "6fccd2d3-60f8-4784-be28-dcc23ff3c020",
+            "question_id": "5bc7d5c4-64d4-4fb2-9d23-51089919a16b",
+            "answer": "dont_know"
+        },
+        {
+            "id": "e7aed0e0-5b12-4bef-ba3c-c1e457712251",
+            "candidate_id": "e672f6a1-a035-4fd4-b8c6-bf519e5ce61c",
+            "question_id": "5bc7d5c4-64d4-4fb2-9d23-51089919a16b",
+            "answer": "yes"
+        },
+        {
+            "id": "3115a4fb-577f-465e-835e-4139bc718098",
+            "candidate_id": "5fef19e1-ce81-42da-a534-7553f822f7e5",
+            "question_id": "5bc7d5c4-64d4-4fb2-9d23-51089919a16b",
+            "answer": "dont_know"
+        }
+    ]
+}
