@@ -60,7 +60,7 @@ const districtNameWithCode = showDistrictCode
   ? `${districtName} (${districtCode})`
   : districtName;
 
-const breadcrumbs = `${electionName} — TestVot 2024`;
+const breadcrumbs = `${electionName} — TestVot 2025`;
 
 const forwardRoute = computed(
   () =>
@@ -266,7 +266,7 @@ const handlePreviousClick = () => {
             <HeadingComponent kind="title" size="medium">
               Cum funcționează TestVot
             </HeadingComponent>
-            <BodyText size="medium">Versiunea pentru alegerile prezidențiale din 2024 are 21 de afirmații cu 2 variante de răspuns (sunt de acord / nu sunt de acord).</BodyText>
+            <BodyText size="medium">Versiunea pentru alegerile prezidențiale din 2024 are 21 de afirmații cu 2 variante de răspuns (sunt de acord / nu sunt de acord).</BodyText> <!-- TODO25 new text? -->
             <CardComponent
               corner="bottom-right"
               border

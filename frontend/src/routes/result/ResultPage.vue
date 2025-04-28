@@ -67,7 +67,7 @@ const districtNameWithCode = showDistrictCode
   ? `${districtName} (${districtCode})`
   : districtName;
 
-const breadcrumbs = `${electionName} — TestVot 2024`;
+const breadcrumbs = `${electionName} — TestVot 2025`;
 
 const handlePreviousClick = () => {
   router.push({
@@ -94,7 +94,7 @@ const handleShowComparsionClick = () => {
 };
 
 onBeforeMount(async () => {
-  if (election.key === 'presidential-2024') {
+  if (election.key === 'presidential-2025') {
     if (userStore.user || userStore.user === null) {
       const res = await electionStore.saveResults({
         embedName: currentEmbed,
@@ -245,7 +245,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
             <template #after>
               <div class="navbar-btn-wrapper">
                 <ButtonComponent
-                  v-if="election.key === 'presidential-2024'"
+                  v-if="election.key === 'presidential-2025'"
                   kind="outlined"
                   color="primary"
                   @click="handleShowComparsionClick"
