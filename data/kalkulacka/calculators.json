@@ -1,19 +1,19 @@
 {
   "elections": [
     {
-      "id": "parliamentary-2024",
-      "key": "parliamentary-2024",
-      "name": "Alegeri parlamentare în România 2024",
-      "description": "Alegeri parlamentare în România 2024",
+      "id": "presidential-2025",
+      "key": "presidential-2025",
+      "name": "Alegeri prezidențiale în România 2025",
+      "description": "Alegeri prezidențiale în România 2025",
       "instructions": {
-        "header": "parliamentary - header",
+        "header": "presidential-2025 - header",
         "step_1_1": "",
         "step_1_2": "",
         "step_1_link": "",
         "step_2_1": ""
       },
-      "from": "2024-12-01T00:00:00",
-      "to": "2024-12-01T14:00:00"
+      "from": "2025-05-04T00:00:00",
+      "to": "2025-05-018T23:59:59"
     },
     {
       "id": "presidential-2024",
@@ -33,14 +33,14 @@
   ],
   "calculators": [
     {
-      "calculator_id": "2e0e6853-4305-4dec-abdc-a47d458b1b95",
-      "election_id": "parliamentary-2024",
+      "calculator_id": "c83ae2dd-e3c1-428f-a0a1-5afa92e93625",
+      "election_id": "presidential-2025",
       "district_code": "global",
       "show_district_code": false,
       "name": "calculator",
       "description": "[[MISSING]]",
-      "on_hp_from": "2024-12-01T00:00:00",
-      "on_hp_to": "2024-12-01T14:00:00"
+      "on_hp_from": "2025-05-04T00:00:00",
+      "on_hp_to": "2025-05-018T23:59:59"
     },
     {
       "calculator_id": "788008c2-7d94-48a6-8aec-5d6bb56ec5d0",

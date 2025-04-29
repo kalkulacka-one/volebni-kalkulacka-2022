@@ -48,7 +48,7 @@ const hasCheckedPrivacy = ref(false);
             <div class="card-content">
               <div class="card-content-text">
                 <TitleText tag="h3" size="medium">
-                  TestVot 2024 alegeri prezidențiale
+                  TestVot 2025 alegeri prezidențiale
                 </TitleText>
                 <BodyText size="medium">
                   Pentru a folosi aplicația trebuie să fii de acord cu <router-link to="/protectia-datelor">politica de confidențialitate</router-link> a datelor.
@@ -70,7 +70,7 @@ const hasCheckedPrivacy = ref(false);
                     name: appRoutes.guide.name,
                     params: {
                       ...route.params,
-                      election: 'presidential-2024',
+                      election: 'presidential-2025',
                       district: 'global',
                     },
                     query: { ...route.query },
