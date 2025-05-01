@@ -117,10 +117,10 @@ const toggleClick = () => {
     </div>
     <div class="text">
       <TitleText class="desktop" tag="p" :size="strong ? 'medium' : 'small'">
-        {{ candidate?.short_name }}
+        {{ candidate?.name }}
       </TitleText>
-      <BodyText class="mobile" tag="p" :size="strong ? 'medium' : 'small'">
-        <strong>{{ candidate?.short_name }}</strong>
+      <BodyText class="mobile" tag="p" :size="'medium'">
+        <strong>{{ candidate?.name }}</strong>
       </BodyText>
     </div>
     <div class="progress-bar">
@@ -135,7 +135,7 @@ const toggleClick = () => {
     </div>
     <div class="secondary-text">
       <div class="party-wrapper">
-        <BodyText size="medium">{{
+        <BodyText size="small">{{
           candidate?.type == 'person' &&
           candidate?.parties &&
           candidate?.parties.length > 0
