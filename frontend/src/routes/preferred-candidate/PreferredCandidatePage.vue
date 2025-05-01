@@ -172,8 +172,8 @@ const handleShowComparsionClick = () => {
         >
           <StackComponent spacing="small">
             <BodyText size="medium">
-              Am dori să vă arătăm cum răspund susținătorii lui Georgescu și
-              Lasconi la întrebările de mai sus. Pentru a facilita acest lucru,
+              Am dori să vă arătăm cum răspund susținătorii diferiților candidați
+              la întrebările de mai sus. Pentru a facilita acest lucru,
               vă rugăm să ne spuneți pentru ce candidat intenționați să votați?
             </BodyText>
           </StackComponent>

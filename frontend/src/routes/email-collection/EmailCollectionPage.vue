@@ -157,7 +157,7 @@ const onRefuse = async () => {
               </IconButton>
             </template>
             <TitleText tag="h2" size="medium"
-              >Lasă-ne adresa ta de email</TitleText
+              >Lăsați-ne adresa ta de email</TitleText
             >
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
@@ -169,7 +169,7 @@ const onRefuse = async () => {
               </IconButton>
             </template>
             <TitleText tag="h2" size="large"
-              >Lasă-ne adresa ta de email</TitleText
+              >Lăsați-ne adresa ta de email</TitleText
             >
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
