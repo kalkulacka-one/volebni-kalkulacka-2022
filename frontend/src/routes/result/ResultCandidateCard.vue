@@ -90,7 +90,7 @@ const toggleClick = () => {
     </div>
     <div class="avatar mobile">
       <AvatarComponent
-        :size="order === 1 ? 'medium' : 'small'"
+        :size="'medium'"
         :background-color="
           order === 1
             ? 'rgb(var(--palette-primary-50))'
@@ -136,10 +136,8 @@ const toggleClick = () => {
     <div class="secondary-text">
       <div class="party-wrapper">
         <BodyText size="small">{{
-          candidate?.type == 'person' &&
-          candidate?.parties &&
           candidate?.parties.length > 0
-            ? candidate?.parties?.[0].name
+            ? candidate?.parties[0]
             : candidate?.name
         }}</BodyText>
         <!--
