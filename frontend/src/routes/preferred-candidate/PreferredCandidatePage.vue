@@ -172,9 +172,10 @@ const handleShowComparsionClick = () => {
         >
           <StackComponent spacing="small">
             <BodyText size="medium">
-              Am dori să vă arătăm cum răspund susținătorii diferiților candidați
-              la întrebările de mai sus. Pentru a facilita acest lucru,
-              vă rugăm să ne spuneți pentru ce candidat intenționați să votați?
+              Am dori să îți arătăm cum răspund susținătorii diferiților
+              candidați la întrebările de mai sus. Pentru a facilita acest
+              lucru, te rugăm să ne spui pentru ce candidat intenționezi
+              să votezi?
             </BodyText>
           </StackComponent>
           <CandidateList

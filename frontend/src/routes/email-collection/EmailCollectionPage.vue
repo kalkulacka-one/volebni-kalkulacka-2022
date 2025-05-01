@@ -157,7 +157,7 @@ const onRefuse = async () => {
               </IconButton>
             </template>
             <TitleText tag="h2" size="medium"
-              >Lăsați-ne adresa ta de email</TitleText
+              >Lasă-ne adresa ta de email</TitleText
             >
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
@@ -169,7 +169,7 @@ const onRefuse = async () => {
               </IconButton>
             </template>
             <TitleText tag="h2" size="large"
-              >Lăsați-ne adresa ta de email</TitleText
+              >Lasă-ne adresa ta de email</TitleText
             >
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
@@ -196,12 +196,11 @@ const onRefuse = async () => {
               reieșit din analiza statistică a răspunsurilor la TestVot.
             </BodyText> -->
             <BodyText size="medium">
-              Am dori să vă trimitem prin e-mail analiza noastră statistică
-              a răspunsurilor alegătorilor la TestVot. Ne puteți da adresa
-              dumneavoastră aici? Vă reamintim că răspunsurile dumneavoastră
-              vor fi folosite doar în formă anonimă și nu vom oferi datele
-              dumneavoastră nimănui, doar vă vom întreba despre TestVot și
-              problemele din alegeri.
+              Am dori să îți trimitem prin e-mail analiza noastră statistică
+              a răspunsurilor alegătorilor la TestVot. Ne poți lăsa adresa
+              ta aici? Îți reamintim că răspunsurile tale vor fi folosite doar
+              în formă anonimă și nu vom oferi datele tale nimănui, doar vă vom
+              întreba despre TestVot și problemele din alegeri.
             </BodyText>
           </StackComponent>
           <template #after />
