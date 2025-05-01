@@ -21,7 +21,7 @@ const router = useRouter();
 const route = useRoute();
 
 const electionStore = useElectionStore();
-const candidates = computed(() => randomize(electionStore.calculator!.candidates));
+const candidates = computed(() => electionStore.calculator!.candidates.sort((a, b) => a.name.localeCompare(b.name, new Intl.Locale('ro'))));
 
 const userStore = useUserStore();
 
