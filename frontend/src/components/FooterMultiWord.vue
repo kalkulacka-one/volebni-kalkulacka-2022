@@ -98,13 +98,10 @@ const router = useRouter();
           ><img class="cd-logo" :src="'/images/logo-cd.svg'"
         /></a>
         <BodyText size="small"></BodyText>
-        <a href="https://opendatakosovo.org"
-          ><img class="cd-logo" :src="'/images/logo-odk.webp'"
+        <a href="https://faktoje.al"
+          ><img class="faktoje-logo" :src="'/images/logo-faktoje.webp'"
         /></a>
         <BodyText size="small"></BodyText>
-        <a href="https://polcon-ks.com/"
-          ><img class="cd-logo" :src="'/images/logo-polcon.webp'"
-        /></a>
         <BodyText size="small"></BodyText>
         <a href="https://www.visegradfund.org/"
           ><img class="cd-logo" :src="'/images/logo-visegrad.svg'"
@@ -234,5 +231,9 @@ a:after {
 .memo-logo {
   height: 20px;
   filter: invert(100%);
+}
+
+.faktoje-logo {
+  height: 25px;
 }
 </style>
