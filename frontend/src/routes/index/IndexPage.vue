@@ -98,7 +98,7 @@ const handleSubscribe = async () => {
           Zgjedhjet kuvendore
           <span style="color: rgb(var(--color-neutral-fg))"> 2025 </span>
         </HeadlineText>
-        <BodyText size="small"> 21 pyetje, rreth 5 minuta</BodyText>
+        <BodyText size="small"> 30 pyetje, rreth 5 minuta</BodyText>
           <ButtonComponent
             kind="filled"
             color="primary"
