@@ -55,22 +55,27 @@ const handleSubscribe = async () => {
 
   posting.value = true;
 
-  const response = await fetch('/api/subscriptions', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ email: email.value }),
-  });
+  try {
+    const formData = new FormData();
+    formData.append('email', email.value);
 
-  if (response.ok) {
-    posting.value = false;
-    success.value = true;
-    message.value = t('routes.index.IndexPage.success');
-  } else {
-    posting.value = false;
+    const response = await fetch('https://kalkulackaone.ecomailapp.cz/public/subscribe/6/3fdfd544852ed7431aa64f3b9481afb9', {
+      method: 'POST',
+      body: formData,
+    });
+
+    if (response.ok) {
+      success.value = true;
+      message.value = t('routes.index.IndexPage.success');
+    } else {
+      success.value = false;
+      message.value = t('routes.index.IndexPage.error');
+    }
+  } catch (err) {
     success.value = false;
     message.value = t('routes.index.IndexPage.error');
+  } finally {
+    posting.value = false;
   }
 };
 </script>
