@@ -1,21 +1,21 @@
 {
   "elections": [
     {
-      "id": "412d0370-7c88-4184-ae7e-befabc4f6ebf",
-      "key": "parlamentare-2025",
-      "name": "Zgjedhjet parlamentare 2025",
-      "description": "Zgjedhjet parlamentare në Kosovë 2025"
+      "id": "19cb5123-900d-4f7f-a65f-66d9126b578f",
+      "key": "kuvendore-2025",
+      "name": "Zgjedhjet kuvendore 2025",
+      "description": "Zgjedhjet kuvendore në Shqipëri 2025"
     }
   ],
   "calculators": [
     {
-      "calculator_id": "5a829796-faf3-4f8c-84cc-3e9d7aef2f9e",
-      "election_id": "412d0370-7c88-4184-ae7e-befabc4f6ebf",
+      "calculator_id": "d24dc283-c3d8-4511-add0-79d868742c93",
+      "election_id": "19cb5123-900d-4f7f-a65f-66d9126b578f",
       "district_code": "kalkulatori",
       "show_district_code": false,
       "name": "Kalkulatori",
       "description": "Kalkulatori zgjedhor",
-      "key": "parlamentare-2025/kalkulatori"
+      "key": "kuvendore-2025/kalkulatori"
     }
   ]
 }

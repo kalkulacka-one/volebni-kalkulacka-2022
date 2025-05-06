@@ -27,11 +27,11 @@ export const deprecatedFetchCalculator = async (key: string) => {
     'Kalkulatori zgjedhor';
   deprecatedCalculator.intro = calculator.intro;
   deprecatedCalculator.election = {
-    id: '412d0370-7c88-4184-ae7e-befabc4f6ebf',
-    key: 'parlamentare-2025',
-    name: 'Zgjedhjet parlamentare 2025',
+    id: '19cb5123-900d-4f7f-a65f-66d9126b578f',
+    key: 'kuvendore-2025',
+    name: 'Zgjedhjet kuvendore 2025',
     description:
-      'Zgjedhjet parlamentare në Kosovë 2025',
+      'Zgjedhjet kuvendore në Shqipëri 2025',
   };
 
   // Load questions and map them to deprecated structure

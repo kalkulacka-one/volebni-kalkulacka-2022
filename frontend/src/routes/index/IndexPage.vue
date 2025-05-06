@@ -103,7 +103,7 @@ const handleSubscribe = async () => {
                 params: {
                   ...route.params,
                   type: `${'zgjedhjet'}`,
-                  first: 'parlamentare-2025',
+                  first: 'kuvendore-2025',
                   second: 'kalkulatori',
                 },
                 query: { ...route.query },
