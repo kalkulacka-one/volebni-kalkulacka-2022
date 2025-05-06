@@ -98,7 +98,7 @@ const handleSubscribe = async () => {
           Zgjedhjet kuvendore
           <span style="color: rgb(var(--color-neutral-fg))"> 2025 </span>
         </HeadlineText>
-        <BodyText size="small"> 21 pyetje, rreth 5 minuta</BodyText>
+        <BodyText size="small"> 30 pyetje, rreth 5 minuta</BodyText>
           <ButtonComponent
             kind="filled"
             color="primary"
@@ -173,7 +173,7 @@ const handleSubscribe = async () => {
         <TitleText size="large" tag="h2">Si krijohet kalkulatori?</TitleText>
         <BodyText size="medium"
           >Kalkulatori zgjedhor është një projekt i organizatës jofitimprurëse
-          KohoVolit.eu, në bashkëpunim me Open Data Kosovo, dhe është një
+          KohoVolit.eu, në bashkëpunim me Faktoje, dhe është një
           ndihmës i paanshëm në vendimin tuaj se kë të votoni.</BodyText
         >
         <div class="info-bubbles-grid section">

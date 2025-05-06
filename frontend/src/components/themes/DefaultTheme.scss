@@ -160,19 +160,18 @@
 
   // Primary colors
 
-  --palette-primary-10: 7, 15, 41;
-  --palette-primary-30: 21, 44, 103;
-  --palette-primary-50: 36, 74, 165;
-  --palette-primary-70: 83, 134, 213;
-  --palette-primary-90: 218, 228, 246;
+  --palette-primary-10: 0, 0, 0;         // Pure black
+  --palette-primary-30: 25, 25, 25;      // Very dark gray
+  --palette-primary-50: 40, 40, 40;      // Dark gray
+  --palette-primary-70: 128, 128, 128;   // Medium gray
+  --palette-primary-90: 230, 230, 230;   // Light gray
 
   // Secondary colors
-
-  --palette-secondary-10: 46, 37, 10;
-  --palette-secondary-30: 130, 104, 20;
-  --palette-secondary-50: 208, 166, 80;
-  --palette-secondary-70: 246, 214, 133;
-  --palette-secondary-90: 255, 251, 244;
+  --palette-secondary-10: 110, 20, 14;    // Darker red
+  --palette-secondary-30: 180, 32, 22;    // Dark red
+  --palette-secondary-50: 218, 41, 28;    // DA291C - Main red
+  --palette-secondary-70: 231, 108, 99;   // Light red
+  --palette-secondary-90: 252, 235, 234;  // Very light red
 
   // Direct colors
   --palette-yellow: 242, 184, 7;
