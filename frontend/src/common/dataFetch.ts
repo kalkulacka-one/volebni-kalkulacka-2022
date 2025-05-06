@@ -103,7 +103,7 @@ export const deprecatedFetchCalculator = async (key: string) => {
       }
       
       if (candidate.images) {
-        transformedCandidate.img_url = `/data/instance/kalkulatorizgjedhor.org/${key}/images/candidates/${candidate.id}.webp`;
+        transformedCandidate.img_url = `/data/instance/kalkulatorizgjedhor.al/${key}/images/candidates/${candidate.id}.webp`;
       }
     } else if (candidate.reference.type == 'organization') {
       const organization =
@@ -123,7 +123,7 @@ export const deprecatedFetchCalculator = async (key: string) => {
       transformedCandidate.party = organization.party;
       transformedCandidate.group = organization.group;
       if (candidate.images) {
-        transformedCandidate.img_url = `/data/instance/kalkulatorizgjedhor.org/${key}/images/candidates/${candidate.id}.webp`;
+        transformedCandidate.img_url = `/data/instance/kalkulatorizgjedhor.al/${key}/images/candidates/${candidate.id}.webp`;
       }
     }
     return transformedCandidate;
@@ -226,7 +226,7 @@ type CalculatorFileToType<T extends CalculatorFile> =
 const fetchCalculatorFile = async <T extends CalculatorFile>({
   key,
   file,
-  instance = 'kalkulatorizgjedhor.org',
+  instance = 'kalkulatorizgjedhor.al',
   baseUrl = '/data/instance',
 }: {
   key: string;
