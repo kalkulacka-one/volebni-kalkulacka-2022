@@ -90,12 +90,12 @@ const handleSubscribe = async () => {
       <BlobComponent color="red" class="blob2" />
       <StackComponent spacing="medium" centered class="calc-main">
         <BodyText size="medium" tag="h1" color="fg-strong">
-          <strong>Zgjedhjet parlamentare në Kosovë 2025</strong><br />
-          9 shkurt 2025
+          <strong>Zgjedhjet kuvendore në Shqipëri 2025</strong><br />
+          11 maj 2025
           <br />
         </BodyText>
         <HeadlineText tag="p" size="small">
-          Zgjedhjet parlamentare
+          Zgjedhjet kuvendore
           <span style="color: rgb(var(--color-neutral-fg))"> 2025 </span>
         </HeadlineText>
         <BodyText size="small"> 21 pyetje, rreth 5 minuta</BodyText>
