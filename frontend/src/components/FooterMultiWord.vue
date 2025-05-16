@@ -30,7 +30,7 @@ const router = useRouter();
                   Un proiect al Median Research Centre (MRC)
                 </BodyText>
               </a>
-              <a target="_blank" href="https://www.openpolitics.ro/testvot-pentru-alegerile-prezidentiale-2025/">
+              <a target="_blank" href="https://www.openpolitics.ro/testvot-pentru-turul-ii-al-alegerilor-prezidentiale/">
                 <BodyText size="small">
                   Metodologia proiectului
                 </BodyText>
