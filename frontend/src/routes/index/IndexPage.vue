@@ -86,74 +86,27 @@ const handleSubscribe = async () => {
       <StackComponent spacing="medium" centered class="calc-main">
           <StackComponent spacing="large" centered space-between>
             <BodyText size="medium" tag="h1" color="fg-strong">
-            <strong>Volby do Senátu a zastupitelstev krajů 2024</strong
+            <strong>Volby do Poslanecké sněmovny Parlamentu České republiky 2025</strong
             ><br />
-            20. a 21. září 2024
+            3. a 4. října 2025
             <br />
           </BodyText>
           <HeadlineText tag="p" size="small">
-            Krajské a senátní volby
-            <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
+            Sněmovní volby
+            <span style="color: rgb(var(--color-neutral-fg))"> 2025 </span>
           </HeadlineText>
-          <StackComponent horizontal spacing="large" wrap style="justify-content: center;">
-            <StackComponent vertical spacing="small" centered>
-              <ButtonComponent
-                kind="filled"
-                color="primary"
-                @click="
-                  router.push({
-                    name: appRoutes.districtSelectionHackRegion.name,
-                    params: { ...route.params },
-                    query: { ...route.query },
-                  })
-                "
-              >
-                Vybrat kraj
-                <template #iconAfter>
-                  <IconComponent :icon="mdiArrowRight" />
-                </template>
-              </ButtonComponent>
-              <BodyText size="small"> 25 otázek, 5–10 minut</BodyText>
-            </StackComponent>
-            <StackComponent vertical spacing="small" centered>
-              <ButtonComponent
-                kind="filled"
-                color="primary"
-                @click="
-                  router.push({
-                    name: appRoutes.districtSelectionHackSenate.name,
-                    params: { ...route.params },
-                    query: { ...route.query },
-                  })
-                "
-              >
-                Vybrat senátní obvod
-                <template #iconAfter>
-                  <IconComponent :icon="mdiArrowRight" />
-                </template>
-              </ButtonComponent>
-              <BodyText size="small"> 35 otázek, cca 10 minut </BodyText>
-            </StackComponent>
-          </StackComponent>
         </StackComponent>
-        <StackComponent class="section" spacing="large" centered>
-          <ButtonComponent kind="link" @click="scrollDown">
-            <div class="button-content">
-              Starší kalkulačky<IconComponent
-                :icon="mdiArrowDown"
-              ></IconComponent>
-            </div>
-          </ButtonComponent>
-        </StackComponent>
-      </StackComponent>
-    </div>
+
     <section class="subscribe">
       <StackComponent spacing="small" centered>
-        <TitleText size="large" tag="h2">
-          Chcete vědět o nových kalkulačkách?
-        </TitleText>
+
+          <BodyText size="medium" tag="h1" color="fg-strong">
+            Ta pravá <strong>Volební kalkulačka 2025</strong> pro sněmovní volby odstartuje v září.
+          </BodyText>
         <BodyText size="small" centered>
-          Nechejte nám váš e-mail a my vám dáme vědět vždy, když spustíme novou kalkulačku.
+          Nechejte nám váš e-mail a my vám dáme vědět, až ji spustíme!
+          <br />
+          A chystáme i speciální kalkulačky, třeba pro mladé nebo inventuru hlasování.
         </BodyText>
         <BodyText v-if="success" size="small">
           {{ message }}
@@ -191,6 +144,18 @@ const handleSubscribe = async () => {
         }}</BodyText>
       </StackComponent>
     </section>
+
+        <StackComponent class="section" spacing="large" centered>
+          <ButtonComponent kind="link" @click="scrollDown">
+            <div class="button-content">
+              Starší kalkulačky<IconComponent
+                :icon="mdiArrowDown"
+              ></IconComponent>
+            </div>
+          </ButtonComponent>
+        </StackComponent>
+      </StackComponent>
+    </div>
     <StaticContentLayout>
       <StackComponent class="section" spacing="small" centered>
         <TitleText size="large" tag="h2">Jak vzniká kalkulačka?</TitleText>
@@ -240,10 +205,62 @@ const handleSubscribe = async () => {
           Volební kalkulačky k už proběhlým volbám
         </TitleText>
         <MasonryGrid style="align-self: stretch">
-
-
-
-
+          <CardComponent corner="top-right" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium"
+                  >Krajské volby 2024</TitleText
+                >
+                <BodyText size="medium"
+                  >Krajské volby 2024, 25 otázek, 5–10 minut</BodyText
+                >
+              </div>
+              <ButtonComponent
+                kind="filled"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.districtSelectionHackRegion.name,
+                    params: { ...route.params },
+                    query: { ...route.query },
+                  })
+                "
+              >
+                Spustit kalkulačku
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
+          <CardComponent corner="top-right" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium"
+                  >Senátní volby 2024</TitleText
+                >
+                <BodyText size="medium"
+                  >Volby do Senátu Parlamentu České republiky, 35 otázek, cca 10 minut</BodyText
+                >
+              </div>
+              <ButtonComponent
+                kind="filled"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.districtSelectionHackSenate.name,
+                    params: { ...route.params },
+                    query: { ...route.query },
+                  })
+                "
+              >
+                Spustit kalkulačku
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
           <CardComponent corner="top-right" padding="medium" border shadow>
             <div class="card-content">
               <div class="card-content-text">
