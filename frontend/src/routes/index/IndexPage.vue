@@ -5,7 +5,7 @@ import { useI18n } from 'vue-i18n';
 
 import { appRoutes } from '@/main';
 
-import { mdiArrowDown, mdiArrowRight, mdiEmailOutline } from '@mdi/js';
+import { mdiArrowDown, mdiArrowRight, mdiEmailOutline, mdiInstagram, mdiTwitter } from '@mdi/js';
 
 import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
 import BlobComponent from '@/components/design-system/style/BlobComponent.vue';
@@ -142,6 +142,57 @@ const handleSubscribe = async () => {
         <BodyText v-if="!success" tag="p" size="small">{{
           $t('routes.index.IndexPage.disclaimer')
         }}</BodyText>
+    <section class="social-follow" aria-label="Sledujte nás na sociálních sítích" v-if="!success">
+      <div class="follow-card">
+<StackComponent vertical spacing="small" justify="center" align="center" class="subscribe">
+        <BodyText size="medium" tag="h3" class="follow-title">
+          Sledujte Volební kalkulačku i na <a href="https://www.instagram.com/volebnikalk" target="_blank" rel="noopener noreferrer">Instagramu</a> a  <a href="https://twitter.com/volebnikalk" target="_blank" rel="noopener noreferrer">X</a>!
+        </BodyText>
+
+
+          <ButtonComponent
+            kind="outlined"
+            color="neutral"
+            size="small"
+            tag="a"
+            href="https://www.instagram.com/volebnikalk"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            aria-label="Sledujte nás na Instagramu"
+          >
+            @volebnikalk na Instagramu
+            <template #iconAfter>
+              <IconComponent
+                :icon="mdiInstagram"
+                color="rgb(var(--color-neutral-fg))"
+              />
+            </template>
+          </ButtonComponent>
+
+          <ButtonComponent
+            kind="outlined"
+            color="neutral"
+            size="small"
+            tag="a"
+            href="https://twitter.com/volebnikalk"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            aria-label="Sledujte nás na X"
+          >
+              @volebnikalk na X
+
+            <template #iconAfter>
+              <IconComponent
+                :icon="mdiTwitter"
+                color="rgb(var(--color-neutral-fg))"
+              />
+            </template>
+          </ButtonComponent>
+          </StackComponent>
+      </div>
+    </section>
       </StackComponent>
     </section>
 
