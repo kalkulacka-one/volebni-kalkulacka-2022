@@ -3,17 +3,13 @@ import { computed, onBeforeMount, onMounted, onBeforeUnmount, ref, type Computed
 import { useRoute, useRouter } from 'vue-router';
 
 import {
-  mdiShareVariantOutline,
   mdiCloseCircleOutline,
   mdiArrowLeft,
   mdiArrowRight,
-  mdiAccountCircleOutline,
-  mdiEmailOutline,
 } from '@mdi/js';
 
 import { appRoutes } from '@/main';
 import { useElectionStore } from '@/stores/electionStore';
-import { useUserStore, type User } from '@/stores/userStore';
 import {
   calculateRelativeAgreement,
   encodeResults,
@@ -40,7 +36,6 @@ import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
 import ResultCategory from './ResultCategory.vue';
-import ResultShareModal from './ResultShareModal.vue';
 import { getDistrictCode } from '@/common/utils';
 import BodyText from '../../components/design-system/typography/BodyText.vue';
 import ErrorModal from '../../components/ErrorModal.vue';
@@ -59,9 +54,6 @@ const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
 
-const userStore = useUserStore();
-
-const user = computed(() => userStore.user);
 
 const election = electionStore.election as DeprecatedElection;
 const electionName = election.name;
@@ -102,55 +94,7 @@ const handleShowComparsionClick = () => {
   });
 };
 
-const handleShareClick = () => {
-  shareModal.value?.open();
-};
-onBeforeMount(async () => {
-  // if (userStore.user || userStore.user === null) {
-  //   const res = await electionStore.saveResults({
-  //     embedName: currentEmbed,
-  //     user: userStore.user as User | null | undefined,
-  //   });
-  //   console.debug(res);
-  // } else {
-  //   userStore.$subscribe(async (mutation, state) => {
-  //     const res = await electionStore.saveResults({
-  //       embedName: currentEmbed,
-  //       user: state.user as User | null | undefined,
-  //     });
-  //     console.debug(res);
-  //   });
-  // }
 
-  const res = await electionStore.saveResults({
-    embedName: currentEmbed,
-    user: userStore.user as User | null | undefined,
-  });
-  console.debug(res);
-});
-
-const signUpParams = computed(() => {
-  const returnPath = router.resolve({
-    name: appRoutes.share.name,
-    params: { uuid: electionStore.resultsId },
-  }).path;
-
-  return {
-    name: appRoutes.register.name,
-    params: {
-      ...route.params,
-    },
-    query: {
-      returnPath,
-      answerId: electionStore.resultsId,
-      updateToken: electionStore.resultsUpdateToken,
-    },
-  };
-});
-
-const signUpPath = computed(() => {
-  return router.resolve(signUpParams.value).fullPath;
-});
 
 console.debug(encodeResults(electionStore.answers));
 
@@ -192,43 +136,8 @@ const resultsGeneral = computed(() => {
   );
   return ra;
 });
-const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
 
-// Temporary subscribe
-const email = ref('');
-const emailError = ref();
-const posting = ref();
-const success = ref();
-const message = ref();
 
-const handleSubscribe = async () => {
-  if (email.value === '') {
-    emailError.value = t('routes.index.IndexPage.empty-email-error');
-    return;
-  } else {
-    emailError.value = undefined;
-  }
-
-  posting.value = true;
-
-  const response = await fetch('/api/subscriptions', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ email: email.value }),
-  });
-
-  if (response.ok) {
-    posting.value = false;
-    success.value = true;
-    message.value = t('routes.index.IndexPage.success');
-  } else {
-    posting.value = false;
-    success.value = false;
-    message.value = t('routes.index.IndexPage.error');
-  }
-};
 
 // VoteMatch integration
 
@@ -433,16 +342,6 @@ onBeforeUnmount(removeExternalScript);
               $t('routes.result.ResultPage.my-match')
             }}</TitleText>
             <template #after>
-              <ButtonComponent
-                kind="link"
-                color="primary"
-                @click="handleShareClick"
-              >
-                <template #icon>
-                  <IconComponent :icon="mdiShareVariantOutline" />
-                </template>
-                Sdílet
-              </ButtonComponent>
             </template>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
@@ -461,16 +360,6 @@ onBeforeUnmount(removeExternalScript);
             }}</TitleText>
             <template #after>
               <div class="navbar-btn-wrapper">
-                <ButtonComponent
-                  kind="link"
-                  color="primary"
-                  @click="handleShareClick"
-                >
-                  <template #icon>
-                    <IconComponent :icon="mdiShareVariantOutline" />
-                  </template>
-                  {{ $t('routes.result.ResultPage.share') }}
-                </ButtonComponent>
                 <ButtonComponent
                   class="desktop"
                   kind="filled"

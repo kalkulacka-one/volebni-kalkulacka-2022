@@ -26,7 +26,8 @@
       "title-more-about-elections": "Viac o voľbách"
     },
     "QuestionCandidateFilter": {
-      "title-candidate-filter": "Filtrovať podľa kandidujúcich"
+      "title-candidate-filter": "Filtrovať podľa kandidujúcich",
+      "select-all": "Vybrať všetko"
     },
     "QuestionTagFilter": {
       "title-filter-by-theme": "Filtrovať podľa tém",
@@ -206,7 +207,9 @@
     "result": {
       "ResultCandidateCard": {
         "display-details": "Zobraziť detaily",
-        "what-candidate-say": "Čo o sobe kandidát/ka hovorí"
+        "what-candidate-say": "Čo o sebe kandidát/ka hovorí",
+        "eu-party": "Európska strana",
+        "eu-group": "Európska frakcia"
       },
       "ResultCardContacts": {
         "contacts": "Kontakty"

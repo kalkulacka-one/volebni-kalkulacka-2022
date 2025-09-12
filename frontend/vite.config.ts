@@ -61,11 +61,11 @@ export default defineConfig(({ command, mode }) => {
             }
           : undefined,
         '/image': {
-          target: 'https://www.volebnikalkulacka.cz',
+          target: 'https://archiv-2024.volebnikalkulacka.cz',
           changeOrigin: true,
         },
         '/js/script.outbound-links.js': {
-          target: 'https://www.volebnikalkulacka.cz',
+          target: 'https://archiv-2024.volebnikalkulacka.cz',
           changeOrigin: true,
         },
       },
