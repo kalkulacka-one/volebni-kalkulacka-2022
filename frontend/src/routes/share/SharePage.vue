@@ -80,8 +80,8 @@ const handleFillAgainClick = () => {
       params: {
         ...route.params,
         type: `${'volby'}`,
-        first: electionStore?.calculator?.key.split("/")[0],
-        second: electionStore?.calculator?.key.split("/")[1],
+        first: (electionStore?.calculator?.key as string)?.split("/")[0],
+        second: (electionStore?.calculator?.key as string)?.split("/")[1],
       },
       query: { ...route.query },
     })
