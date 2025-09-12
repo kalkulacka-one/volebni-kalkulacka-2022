@@ -15,7 +15,6 @@ import ButtonComponent from '@/components/design-system/input/ButtonComponent.vu
 import CardComponent from '@/components/design-system/containers/CardComponent.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
-import ResultShareModal from '@/routes/result/ResultShareModal.vue';
 import StackComponent from '@/components/design-system/layout/StackComponent.vue';
 import SimpleProgress from '@/components/design-system/indicators/SimpleProgress.vue';
 import TitleText from '@/components/design-system/typography/TitleText.vue';
@@ -24,7 +23,6 @@ import {
   mdiArrowRight,
   mdiPlusBoxOutline,
   mdiReload,
-  mdiShareVariantOutline,
 } from '@mdi/js';
 
 export interface Candidate {
@@ -77,16 +75,6 @@ const getDurationDate = (from: string, to: string) => {
 const router = useRouter();
 const route = useRoute();
 
-const handleResultsClick = () => {
-  router.push({
-    name: appRoutes.share.name,
-    params: {
-      ...route.params,
-      uuid: props.uuid,
-    },
-    query: { ...route.query },
-  });
-};
 
 const handleVoteClick = () => {
   router.push({
@@ -109,9 +97,6 @@ const candidateAnswers: DeprecatedCandidateAnswer[] =
 const filteredCandidateAnswers: Ref<DeprecatedCandidateAnswer[]> =
   ref(candidateAnswers);
 
-const handleShareClick = () => {
-  shareModal.value?.open();
-};
 const resultsGeneral = computed(() => {
   const ra = calculateRelativeAgreement(
     filteredCandidateAnswers.value,
@@ -120,7 +105,6 @@ const resultsGeneral = computed(() => {
   return ra;
 });
 
-const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
 const getReducedCandidates = () => {
   const { candidates, candidatesCount } = props;
   const reducedCandidates = candidates

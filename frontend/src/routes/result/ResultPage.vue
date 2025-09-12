@@ -3,17 +3,13 @@ import { computed, onBeforeMount, onMounted, onBeforeUnmount, ref, type Computed
 import { useRoute, useRouter } from 'vue-router';
 
 import {
-  mdiShareVariantOutline,
   mdiCloseCircleOutline,
   mdiArrowLeft,
   mdiArrowRight,
-  mdiAccountCircleOutline,
-  mdiEmailOutline,
 } from '@mdi/js';
 
 import { appRoutes } from '@/main';
 import { useElectionStore } from '@/stores/electionStore';
-import { useUserStore, type User } from '@/stores/userStore';
 import {
   calculateRelativeAgreement,
   encodeResults,
@@ -40,7 +36,6 @@ import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
 import ResultCategory from './ResultCategory.vue';
-import ResultShareModal from './ResultShareModal.vue';
 import { getDistrictCode } from '@/common/utils';
 import BodyText from '../../components/design-system/typography/BodyText.vue';
 import ErrorModal from '../../components/ErrorModal.vue';
@@ -59,9 +54,6 @@ const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
 
-const userStore = useUserStore();
-
-const user = computed(() => userStore.user);
 
 const election = electionStore.election as DeprecatedElection;
 const electionName = election.name;
@@ -101,59 +93,6 @@ const handleShowComparsionClick = () => {
     query: { ...route.query },
   });
 };
-
-const handleShareClick = () => {
-  shareModal.value?.open();
-};
-onBeforeMount(async () => {
-  if (election.key === 'nrsr-2023' || election.key === 'prezidentske-2024' || election.key === 'europske-2024') {
-    // if (userStore.user || userStore.user === null) {
-    //   const res = await electionStore.saveResults({
-    //     embedName: currentEmbed,
-    //     user: userStore.user as User | null | undefined,
-    //   });
-    //   console.debug(res);
-    // } else {
-    //   userStore.$subscribe(async (mutation, state) => {
-    //     const res = await electionStore.saveResults({
-    //       embedName: currentEmbed,
-    //       user: state.user as User | null | undefined,
-    //     });
-    //     console.debug(res);
-    //   });
-    // }
-
-    const res = await electionStore.saveResults({
-      embedName: currentEmbed,
-      user: userStore.user as User | null | undefined,
-    });
-    console.debug(res);
-    }
-  }
-});
-
-const signUpParams = computed(() => {
-  const returnPath = router.resolve({
-    name: appRoutes.share.name,
-    params: { uuid: electionStore.resultsId },
-  }).path;
-
-  return {
-    name: appRoutes.register.name,
-    params: {
-      ...route.params,
-    },
-    query: {
-      returnPath,
-      answerId: electionStore.resultsId,
-      updateToken: electionStore.resultsUpdateToken,
-    },
-  };
-});
-
-const signUpPath = computed(() => {
-  return router.resolve(signUpParams.value).fullPath;
-});
 
 console.debug(encodeResults(electionStore.answers));
 
@@ -195,43 +134,8 @@ const resultsGeneral = computed(() => {
   );
   return ra;
 });
-const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
 
-// Temporary subscribe
-const email = ref('');
-const emailError = ref();
-const posting = ref();
-const success = ref();
-const message = ref();
 
-const handleSubscribe = async () => {
-  if (email.value === '') {
-    emailError.value = t('routes.index.IndexPage.empty-email-error');
-    return;
-  } else {
-    emailError.value = undefined;
-  }
-
-  posting.value = true;
-
-  const response = await fetch('/api/subscriptions', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ email: email.value }),
-  });
-
-  if (response.ok) {
-    posting.value = false;
-    success.value = true;
-    message.value = t('routes.index.IndexPage.success');
-  } else {
-    posting.value = false;
-    success.value = false;
-    message.value = t('routes.index.IndexPage.error');
-  }
-};
 
 // VoteMatch integration
 
@@ -429,17 +333,7 @@ onBeforeUnmount(removeExternalScript);
             <TitleText tag="h2" size="medium">{{
               $t('routes.result.ResultPage.my-match')
             }}</TitleText>
-            <template v-if="election.key === 'nrsr-2023' || election.key === 'prezidentske-2024' || election.key === 'europske-2024'" #after>
-              <ButtonComponent
-                kind="link"
-                color="primary"
-                @click="handleShareClick"
-              >
-                <template #icon>
-                  <IconComponent :icon="mdiShareVariantOutline" />
-                </template>
-                Sdílet
-              </ButtonComponent>
+            <template #after>
             </template>
           </SecondaryNavigationBar>
         </ResponsiveWrapper>
@@ -459,23 +353,6 @@ onBeforeUnmount(removeExternalScript);
             <template #after>
               <div class="navbar-btn-wrapper">
                 <ButtonComponent
-                  v-if="election.key === 'nrsr-2023' || election.key === 'prezidentske-2024' || election.key === 'europske-2024'"
-                  kind="link"
-                  color="primary"
-                  @click="handleShareClick"
-                >
-                  <template #icon>
-                    <IconComponent :icon="mdiShareVariantOutline" />
-                  </template>
-                  {{ $t('routes.result.ResultPage.share') }}
-                </ButtonComponent>
-                <ButtonComponent
-                  v-if="
-                    !(
-                      route.params.first === 'nrsr-2023' &&
-                      route.params.second === 'inventura-2020-2023'
-                    )
-                  "
                   class="desktop"
                   kind="filled"
                   color="primary"
@@ -550,48 +427,6 @@ onBeforeUnmount(removeExternalScript);
             category="general"
             :max-visible-candidates="5"
           />
-          <section class="subscribe">
-            <StackComponent spacing="small" centered>
-              <BodyText size="small" centered>
-                Zanechajte nám váš e-mail a dáme vám vedieť vždy, keď spustíme
-                novú kalkulačku.
-              </BodyText>
-              <BodyText v-if="success" size="small">
-                {{ message }}
-              </BodyText>
-              <form v-if="!success">
-                <StackComponent
-                  horizontal
-                  spacing="small"
-                  stretched
-                  wrap
-                  style="justify-content: center"
-                >
-                  <TextInputComponent
-                    v-model="email"
-                    required
-                    type="email"
-                    :placeholder="t('routes.index.IndexPage.input-label')"
-                    :value="email"
-                    :icon="mdiEmailOutline"
-                    :disabled="posting"
-                    :error="emailError"
-                  />
-                  <ButtonComponent
-                    kind="filled"
-                    color="primary"
-                    :loading="posting"
-                    @click.prevent="handleSubscribe"
-                  >
-                    Informujte ma o nových kalkulačkách
-                  </ButtonComponent>
-                </StackComponent>
-              </form>
-              <BodyText v-if="!success" tag="p" size="small">{{
-                $t('routes.index.IndexPage.disclaimer')
-              }}</BodyText>
-            </StackComponent>
-          </section>
           <!-- <CardComponent
             v-if="!user && election.key === 'prezidentske-2023'"
             corner="bottom-left"
@@ -726,18 +561,6 @@ onBeforeUnmount(removeExternalScript);
       </BottomBarWrapper>
     </StickyHeaderLayout>
   </BackgroundComponent>
-  <ResultShareModal
-    v-if="electionStore.resultsId"
-    ref="shareModal"
-    :relative-agreement="resultsGeneral"
-  />
-  <ErrorModal
-    v-else
-    ref="shareModal"
-    :title="$t('routes.result.ResultPage.something-went-wrong')"
-  >
-    {{ $t('routes.result.ResultPage.something-went-wrong-text') }}
-  </ErrorModal>
 </template>
 
 <style lang="scss" scoped>
