@@ -5,7 +5,7 @@ import { useI18n } from 'vue-i18n';
 
 import { appRoutes } from '@/main';
 
-import { mdiArrowDown, mdiArrowRight, mdiEmailOutline, mdiInstagram, mdiTwitter } from '@mdi/js';
+import { mdiArrowDown, mdiArrowRight } from '@mdi/js';
 
 import BackgroundComponent from '@/components/design-system/style/BackgroundComponent.vue';
 import BlobComponent from '@/components/design-system/style/BlobComponent.vue';
@@ -14,7 +14,6 @@ import ButtonComponent from '../../components/design-system/input/ButtonComponen
 import CardComponent from '@/components/design-system/containers/CardComponent.vue';
 import DonateBlock from '@/components/DonateBlock.vue';
 import FooterMultiWord from '@/components/FooterMultiWord.vue';
-import FormComponent from '@/components/design-system/input/FormComponent.vue';
 import HeadlineText from '@/components/design-system/typography/HeadlineText.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import InfoBubble from '@/components/InfoBubble.vue';
@@ -23,7 +22,6 @@ import NavigationBar from '@/components/design-system/navigation/NavigationBar.v
 import StackComponent from '../../components/design-system/layout/StackComponent.vue';
 import StaticContentLayout from '@/components/layouts/StaticContentLayout.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
-import TextInputComponent from '@/components/design-system/input/TextInputComponent.vue';
 import TitleText from '@/components/design-system/typography/TitleText.vue';
 
 
@@ -39,7 +37,7 @@ const { t, locale } = useI18n();
 <template>
   <StickyHeaderLayout>
     <template #header>
-      <NavigationBar transparent with-account :user="user" />
+      <NavigationBar transparent />
     </template>
     <div class="prezident-hero">
       <BlobComponent color="blue" class="blob1" />
@@ -47,113 +45,46 @@ const { t, locale } = useI18n();
       <StackComponent spacing="medium" centered class="calc-main">
           <StackComponent spacing="large" centered space-between>
             <BodyText size="medium" tag="h1" color="fg-strong">
-            <strong>Volby do Poslanecké sněmovny Parlamentu České republiky 2025</strong
+            <strong>Archiv Volební kalkulačky 2024</strong
             ><br />
-            3. a 4. října 2025
+            Krajské a senátní volby
             <br />
           </BodyText>
           <HeadlineText tag="p" size="small">
-            Sněmovní volby
-            <span style="color: rgb(var(--color-neutral-fg))"> 2025 </span>
+            Archiv
+            <span style="color: rgb(var(--color-neutral-fg))"> 2024 </span>
           </HeadlineText>
         </StackComponent>
 
-    <section class="subscribe">
-      <StackComponent spacing="small" centered>
-
-          <BodyText size="medium" tag="h1" color="fg-strong">
-            Ta pravá <strong>Volební kalkulačka 2025</strong> pro sněmovní volby odstartuje v září.
-          </BodyText>
-        <BodyText size="small" centered>
-          Nechejte nám váš e-mail a my vám dáme vědět, až ji spustíme!
-          <br />
-          A chystáme i speciální kalkulačky, třeba pro mladé nebo inventuru hlasování.
-        </BodyText>
-        <BodyText v-if="success" size="small">
-          {{ message }}
-        </BodyText>
-        <form v-if="!success">
-          <StackComponent
-            horizontal
-            spacing="small"
-            stretched
-            wrap
-            style="justify-content: center"
-          >
-            <TextInputComponent
-              v-model="email"
-              required
-              type="email"
-              :placeholder="t('routes.index.IndexPage.input-label')"
-              :value="email"
-              :icon="mdiEmailOutline"
-              :disabled="posting"
-              :error="emailError"
-            />
+    <section class="current-version-hero">
+      <StackComponent spacing="medium" centered>
+        <CardComponent style="max-width: 48rem; text-align: center;">
+          <StackComponent spacing="medium" centered>
+            <HeadlineText tag="h1" size="medium" color="fg-strong">
+              Archiv Volební kalkulačky 2024
+            </HeadlineText>
+            <BodyText size="medium" centered>
+              Toto je archiv kalkulaček z roku 2024. <strong>Aktuální Volební kalkulačka pro sněmovní volby 2025</strong> je nyní dostupná na hlavní stránce.
+            </BodyText>
             <ButtonComponent
-              kind="outlined"
+              kind="filled"
               color="primary"
-              :loading="posting"
-              @click.prevent="handleSubscribe"
+              size="medium"
+              tag="a"
+              href="https://www.volebnikalkulacka.cz"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Odeslat
+              <template #icon>
+                <IconComponent :icon="mdiArrowRight" />
+              </template>
+              Přejít na aktuální Volební kalkulačku 2025
             </ButtonComponent>
+            <BodyText size="small" color="fg-muted" centered>
+              Na této archivní stránce najdete kalkulačky pro krajské a senátní volby 2024
+            </BodyText>
           </StackComponent>
-        </form>
-        <BodyText v-if="!success" tag="p" size="small">{{
-          $t('routes.index.IndexPage.disclaimer')
-        }}</BodyText>
-    <section class="social-follow" aria-label="Sledujte nás na sociálních sítích" v-if="!success">
-      <div class="follow-card">
-<StackComponent vertical spacing="small" justify="center" align="center" class="subscribe">
-        <BodyText size="medium" tag="h3" class="follow-title">
-          Sledujte Volební kalkulačku i na <a href="https://www.instagram.com/volebnikalk" target="_blank" rel="noopener noreferrer">Instagramu</a> a  <a href="https://twitter.com/volebnikalk" target="_blank" rel="noopener noreferrer">X</a>!
-        </BodyText>
-
-
-          <ButtonComponent
-            kind="outlined"
-            color="neutral"
-            size="small"
-            tag="a"
-            href="https://www.instagram.com/volebnikalk"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-link"
-            aria-label="Sledujte nás na Instagramu"
-          >
-            @volebnikalk na Instagramu
-            <template #iconAfter>
-              <IconComponent
-                :icon="mdiInstagram"
-                color="rgb(var(--color-neutral-fg))"
-              />
-            </template>
-          </ButtonComponent>
-
-          <ButtonComponent
-            kind="outlined"
-            color="neutral"
-            size="small"
-            tag="a"
-            href="https://twitter.com/volebnikalk"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-link"
-            aria-label="Sledujte nás na X"
-          >
-              @volebnikalk na X
-
-            <template #iconAfter>
-              <IconComponent
-                :icon="mdiTwitter"
-                color="rgb(var(--color-neutral-fg))"
-              />
-            </template>
-          </ButtonComponent>
-          </StackComponent>
-      </div>
-    </section>
+        </CardComponent>
       </StackComponent>
     </section>
 

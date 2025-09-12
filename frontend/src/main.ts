@@ -76,7 +76,7 @@ export const appRoutes = {
     path: '/',
     component: IndexPageVue,
     meta: {
-      title: 'Volební kalkulačka',
+      title: 'Archiv Volební kalkulačky 2024',
     },
   },
   aboutUs: {
@@ -84,7 +84,7 @@ export const appRoutes = {
     path: '/o-nas',
     component: AboutUsPageVue,
     meta: {
-      title: 'O kalkulačce',
+      title: 'O kalkulačce - Archiv 2024',
     },
   },
   aboutElections: {
@@ -92,7 +92,7 @@ export const appRoutes = {
     path: '/o-volbach',
     component: AboutElectionsPageVue,
     meta: {
-      title: 'O volbách',
+      title: 'O volbách - Archiv 2024',
     },
   },
   dataProtection: {
@@ -101,7 +101,7 @@ export const appRoutes = {
     alias: ['/soukromi', '/podminky'],
     component: DataProtectionPageVue,
     meta: {
-      title: 'Ochrana dat',
+      title: 'Ochrana dat - Archiv 2024',
     },
   },
   archive: {
@@ -109,7 +109,7 @@ export const appRoutes = {
     path: '/archiv',
     component: ArchivePage,
     meta: {
-      title: 'Archiv',
+      title: 'Archiv - Archiv 2024',
     },
   },
   questionsMethodology: {
@@ -117,7 +117,7 @@ export const appRoutes = {
     path: '/metodika-tvorby-otazek',
     component: QuestionsMethodologyPageVue,
     meta: {
-      title: 'Metodika tvorby otázek',
+      title: 'Metodika tvorby otázek - Archiv 2024',
     },
   },
   error: {
