@@ -1,11 +1,3 @@
 {
-  "rewrites": [
-    { "source": "/api/auth/(.*)", "destination": "/api/auth" },
-    {
-      "source": "/((?!api).*)",
-      "destination": "/"
-    }
-  ],
-  "trailingSlash": false,
-  "ignoreCommand": "bash ignored-build-step.sh"
+  "trailingSlash": false
 }
