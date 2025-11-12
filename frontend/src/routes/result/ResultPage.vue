@@ -690,13 +690,7 @@ onBeforeUnmount(removeExternalScript);
         </template>
       </BottomBarWrapper>
     </StickyHeaderLayout>
-  </BackgroundComponent><ErrorModal
-    v-else
-    ref="shareModal"
-    :title="$t('routes.result.ResultPage.something-went-wrong')"
-  >
-    {{ $t('routes.result.ResultPage.something-went-wrong-text') }}
-  </ErrorModal>
+  </BackgroundComponent>
 </template>
 
 <style lang="scss" scoped>
