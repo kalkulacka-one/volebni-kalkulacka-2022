@@ -33,15 +33,15 @@ const router = useRouter();
               $t('components.FooterMultiWord.body-about-voting-calculator')
             }}</TitleText>
             <StackComponent spacing="extra-small">
-              <router-link to="/rreth-kalkulatorit-zgjedhor"
+              <a href="/rreth-kalkulatorit-zgjedhor"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-about-voting-calculator')
-                }}</BodyText></router-link
+                }}</BodyText></a
               >
-              <router-link to="/metodologjia-e-hartimit-te-pyetjeve"
+              <a href="/metodologjia-e-hartimit-te-pyetjeve"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-methodoogy')
-                }}</BodyText></router-link
+                }}</BodyText></a
               >
             </StackComponent>
           </StackComponent>
@@ -52,10 +52,10 @@ const router = useRouter();
               $t('components.FooterMultiWord.links')
             }}</TitleText>
             <StackComponent spacing="extra-small">
-              <router-link to="/mbrojtja-e-te-dhenave"
+              <a href="/mbrojtja-e-te-dhenave"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-data-protection')
-                }}</BodyText></router-link
+                }}</BodyText></a
               >
               <!-- <a href="https://www.kalkulacka.one/cs/podporte-kalkulacku"
                 ><BodyText size="small">{{
@@ -98,13 +98,10 @@ const router = useRouter();
           ><img class="cd-logo" :src="'/images/logo-cd.svg'"
         /></a>
         <BodyText size="small"></BodyText>
-        <a href="https://opendatakosovo.org"
-          ><img class="cd-logo" :src="'/images/logo-odk.webp'"
+        <a href="https://faktoje.al"
+          ><img class="faktoje-logo" :src="'/images/logo-faktoje.webp'"
         /></a>
         <BodyText size="small"></BodyText>
-        <a href="https://polcon-ks.com/"
-          ><img class="cd-logo" :src="'/images/logo-polcon.webp'"
-        /></a>
         <BodyText size="small"></BodyText>
         <a href="https://www.visegradfund.org/"
           ><img class="cd-logo" :src="'/images/logo-visegrad.svg'"
@@ -234,5 +231,9 @@ a:after {
 .memo-logo {
   height: 20px;
   filter: invert(100%);
+}
+
+.faktoje-logo {
+  height: 25px;
 }
 </style>

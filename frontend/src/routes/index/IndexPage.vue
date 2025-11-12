@@ -40,59 +40,63 @@ const { t, locale } = useI18n();
     <template #header>
       <NavigationBar transparent />
     </template>
-    <section class="current-version-hero">
-      <CardComponent style="max-width: 48rem; text-align: center;">
-        <StackComponent spacing="medium" centered>
-          <HeadlineText tag="h1" size="medium" color="fg-strong">
-            Kalkulatori i ri zgjedhor është i disponueshëm!
-          </HeadlineText>
-          <BodyText size="medium" centered>
-            Ky është një arkiv i Kalkulatorit zgjedhor për zgjedhjet kuvendore në Shqipëri 2025.
-            <strong>Kalkulatorin aktual mund ta gjeni në
-            <a href="https://www.kalkulatorizgjedhor.org">www.kalkulatorizgjedhor.org</a></strong>
-          </BodyText>
-          <ButtonComponent kind="filled" tag="a" href="https://www.kalkulatorizgjedhor.org">
-            Kalo te kalkulatori aktual
-          </ButtonComponent>
-        </StackComponent>
-      </CardComponent>
-    </section>
     <div class="prezident-hero">
       <BlobComponent color="blue" class="blob1" />
       <BlobComponent color="red" class="blob2" />
       <StackComponent spacing="medium" centered class="calc-main">
-        <BodyText size="medium" tag="h1" color="fg-strong">
-          <strong>Zgjedhjet kuvendore në Shqipëri 2025</strong><br />
-          11 maj 2025
-          <br />
-        </BodyText>
-        <HeadlineText tag="p" size="small">
-          Zgjedhjet kuvendore
-          <span style="color: rgb(var(--color-neutral-fg))"> 2025 </span>
-        </HeadlineText>
-        <BodyText size="small"> 30 pyetje, rreth 5 minuta</BodyText>
-          <ButtonComponent
-            kind="outlined"
-            color="primary"
-            @click="
-              router.push({
-                name: appRoutes.guide.name,
-                params: {
-                  ...route.params,
-                  type: `${'zgjedhjet'}`,
-                  first: 'kuvendore-2025',
-                  second: 'kalkulatori',
-                },
-                query: { ...route.query },
-              })
-            "
-          >
-            Fillo versionin e arkivuar
-            <template #iconAfter>
-              <IconComponent :icon="mdiArrowRight" />
-            </template>
+        <StackComponent spacing="large" centered space-between>
+          <BodyText size="medium" tag="h1" color="fg-strong">
+            <strong>Arkiv i Kalkulatorit zgjedhor 2025</strong><br />
+            Zgjedhjet kuvendore në Kosovë
+            <br />
+          </BodyText>
+          <HeadlineText tag="p" size="small">
+            Arkiv
+            <span style="color: rgb(var(--color-neutral-fg))"> 2025 </span>
+          </HeadlineText>
+        </StackComponent>
+
+        <section class="current-version-hero">
+          <StackComponent spacing="medium" centered>
+            <CardComponent style="max-width: 48rem; text-align: center;">
+              <StackComponent spacing="medium" centered>
+                <HeadlineText tag="h1" size="medium" color="fg-strong">
+                  Kalkulatori i ri zgjedhor është i disponueshëm!
+                </HeadlineText>
+                <BodyText size="medium" centered>
+                  Ky është një arkiv i Kalkulatorit zgjedhor për zgjedhjet kuvendore në Kosovë 2025. <strong>Kalkulatorin aktual mund ta gjeni në <a href="https://www.kalkulatorizgjedhor.org" target="_blank" rel="noopener noreferrer">www.kalkulatorizgjedhor.org</a></strong>
+                </BodyText>
+                <ButtonComponent
+                  kind="filled"
+                  color="primary"
+                  size="medium"
+                  tag="a"
+                  href="https://www.kalkulatorizgjedhor.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <template #icon>
+                    <IconComponent :icon="mdiArrowRight" />
+                  </template>
+                  Kalo te kalkulatori aktual
+                </ButtonComponent>
+                <BodyText size="small" color="fg-muted" centered>
+                  Në këtë faqe arkivi do të gjeni kalkulatorin për zgjedhjet kuvendore 2025
+                </BodyText>
+              </StackComponent>
+            </CardComponent>
+          </StackComponent>
+        </section>
+
+        <StackComponent class="section" spacing="large" centered>
+          <ButtonComponent kind="link" @click="scrollDown">
+            <div class="button-content">
+              Shfaq kalkulatorë të arkivuar<IconComponent
+                :icon="mdiArrowDown"
+              ></IconComponent>
+            </div>
           </ButtonComponent>
-          <div style="height:100px"></div>
+        </StackComponent>
       </StackComponent>
     </div>
     <StaticContentLayout>
@@ -132,6 +136,53 @@ const { t, locale } = useI18n();
           >Kalkulatori zgjedhor është vetëm një shërbim informues dhe nuk ka për
           qëllim të japë rekomandime të drejtpërdrejta për zgjedhje.
         </BodyText>
+        <ButtonComponent kind="link" tag="a" href="/rreth-kalkulatorit-zgjedhor">
+          <div class="button-content">
+            Mësoni më shumë<IconComponent :icon="mdiArrowRight"></IconComponent>
+          </div>
+        </ButtonComponent>
+      </StackComponent>
+      <DonateBlock />
+      <StackComponent spacing="large">
+        <div ref="info"></div>
+        <TitleText size="large" tag="h2">
+          Kalkulatorë të arkivuar zgjedhor
+        </TitleText>
+        <MasonryGrid style="align-self: stretch">
+          <CardComponent corner="top-right" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium">
+                  Zgjedhjet kuvendore 2025
+                </TitleText>
+                <BodyText size="medium"
+                  >Zgjedhjet kuvendore në Kosovë, 12 shkurt 2025, 30 pyetje, rreth 5 minuta</BodyText
+                >
+              </div>
+              <ButtonComponent
+                kind="filled"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      type: `${'zgjedhjet'}`,
+                      first: 'kuvendore-2025',
+                      second: 'kalkulatori',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+                Nis kalkulatorin
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
+        </MasonryGrid>
       </StackComponent>
     </StaticContentLayout>
     <FooterMultiWord class="section" />
@@ -139,6 +190,50 @@ const { t, locale } = useI18n();
 </template>
 
 <style scoped lang="scss">
+.button-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.section {
+  padding: 40px 0;
+}
+
+.info-bubbles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.current-version-hero {
+  padding: 40px 0;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .prezident-hero {
   box-sizing: border-box;
   position: relative;
