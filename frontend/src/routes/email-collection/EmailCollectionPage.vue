@@ -5,7 +5,6 @@ import { mdiArrowLeft, mdiArrowRight, mdiCloseCircleOutline } from '@mdi/js';
 
 import { appRoutes } from '@/main';
 import { useElectionStore } from '@/stores/electionStore';
-import { User, useUserStore } from '@/stores/userStore';
 
 import { mdiEmailOutline } from '@mdi/js';
 
@@ -31,14 +30,13 @@ import StepWrapper from '@/components/design-system/layout/StepWrapper.vue';
 const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
-const userStore = useUserStore();
 
 const election = electionStore.election as Election;
 const electionName = election.name;
 
 const breadcrumbs = electionName;
 
-const email = ref(userStore.user?.email || '');
+const email = ref('');
 const emailError = ref();
 const posting = ref();
 const success = ref();

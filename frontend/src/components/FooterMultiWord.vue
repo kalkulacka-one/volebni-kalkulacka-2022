@@ -5,10 +5,6 @@ import StackComponent from '@/components/design-system/layout/StackComponent.vue
 import TitleText from '@/components/design-system/typography/TitleText.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
 import { mdiEmail, mdiPhone } from '@mdi/js';
-import { appRoutes } from '@/main';
-import { useRouter } from 'vue-router';
-
-const router = useRouter();
 </script>
 
 <template>
@@ -42,9 +38,9 @@ const router = useRouter();
           <StackComponent spacing="medium">
             <TitleText size="small" tag="h5">Legături (GDPR)</TitleText>
             <StackComponent spacing="extra-small">
-              <router-link to="/protectia-datelor">
+              <a href="/protectia-datelor">
                 <BodyText size="small">Protecția datelor</BodyText>
-              </router-link>
+              </a>
             </StackComponent>
           </StackComponent>
         </div>

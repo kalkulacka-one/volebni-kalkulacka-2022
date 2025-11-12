@@ -1,9 +1,15 @@
 {
   "rewrites": [
-    { "source": "/api/auth/(.*)", "destination": "/api/auth" },
     {
-      "source": "/((?!api).*)",
+      "source": "/(.*)",
       "destination": "/"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/protectia-datelor",
+      "destination": "https://www.testvot.eu/protectia-datelor",
+      "permanent": true
     }
   ],
   "trailingSlash": false,

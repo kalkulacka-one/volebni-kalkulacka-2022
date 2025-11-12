@@ -7,7 +7,6 @@ import StackComponent from '../../components/design-system/layout/StackComponent
 import { useElectionStore } from '@/stores/electionStore';
 import ButtonComponent from '@/components/design-system/input/ButtonComponent.vue';
 import DividerComponent from '@/components/design-system/containers/DividerComponent.vue';
-import { useUserStore } from '@/stores/userStore';
 import { appRoutes } from '@/main';
 import { useRoute, useRouter } from 'vue-router';
 import { mdiArrowRight } from '@mdi/js';
@@ -23,7 +22,6 @@ const route = useRoute();
 const electionStore = useElectionStore();
 const candidates = computed(() => electionStore.calculator!.candidates.sort((a, b) => a.name.localeCompare(b.name, new Intl.Locale('ro'))));
 
-const userStore = useUserStore();
 
 const randomize = (arr: any[]) => {
   return arr.sort(() => Math.random() - 0.5);
