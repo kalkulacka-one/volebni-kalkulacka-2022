@@ -33,15 +33,15 @@ const router = useRouter();
               $t('components.FooterMultiWord.body-about-voting-calculator')
             }}</TitleText>
             <StackComponent spacing="extra-small">
-              <router-link to="/uber-den-wahlrechner"
+              <a href="/uber-den-wahlrechner"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-about-voting-calculator')
-                }}</BodyText></router-link
+                }}</BodyText></a
               >
-              <router-link to="/methodologie-der-fragenentwicklung"
+              <a href="/methodologie-der-fragenentwicklung"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-methodoogy')
-                }}</BodyText></router-link
+                }}</BodyText></a
               >
             </StackComponent>
           </StackComponent>
@@ -52,15 +52,15 @@ const router = useRouter();
               $t('components.FooterMultiWord.links')
             }}</TitleText>
             <StackComponent spacing="extra-small">
-              <router-link to="/impressum"
+              <a href="/impressum"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.imprint')
-                }}</BodyText></router-link
+                }}</BodyText></a
               >
-              <router-link to="/datenschutz"
+              <a href="/datenschutz"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-data-protection')
-                }}</BodyText></router-link
+                }}</BodyText></a
               >
               <a href="https://www.darujme.cz/darovat/1209495"
                 ><BodyText size="small">{{

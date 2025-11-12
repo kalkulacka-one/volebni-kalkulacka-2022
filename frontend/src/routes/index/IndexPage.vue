@@ -41,17 +41,18 @@ const { t, locale } = useI18n();
       <NavigationBar transparent />
     </template>
     <div class="prezident-hero">
-
+      <BlobComponent color="blue" class="blob1" />
       <BlobComponent color="red" class="blob2" />
       <StackComponent spacing="medium" centered class="calc-main">
-        <StackComponent spacing="large" centered>
+        <StackComponent spacing="large" centered space-between>
           <BodyText size="medium" tag="h1" color="fg-strong">
-            <strong>Archiv des Wahlrechners 2025</strong><br />
+            <strong>Archiv des Wahlrechners 2024–2025</strong><br />
             Wien-Wahl am 27. April 2025
+            <br />
           </BodyText>
           <HeadlineText tag="p" size="small">
             Archiv
-            <span style="color: rgb(var(--color-neutral-fg))"> 2025 </span>
+            <span style="color: rgb(var(--color-neutral-fg))"> 2024–2025 </span>
           </HeadlineText>
         </StackComponent>
 
@@ -94,38 +95,14 @@ const { t, locale } = useI18n();
           </StackComponent>
         </section>
 
-        <BodyText size="large">—</BodyText>
-
-        <StackComponent spacing="large" centered>
-          <BodyText size="small">23 Fragen, weil Wien 23 Bezirke hat<br />ca. 5-10 Minuten</BodyText>
-          <ButtonComponent
-            kind="outlined"
-            color="primary"
-            @click="
-              router.push({
-                name: appRoutes.guide.name,
-                params: {
-                  ...route.params,
-                  type: `${'wahlen'}`,
-                  first: 'wien-wahl-2025',
-                  second: 'wahlrechner',
-                },
-                query: { ...route.query },
-              })
-            "
-          >
-            Archivierte Version starten
-            <template #iconAfter>
-              <IconComponent :icon="mdiArrowRight" />
-            </template>
+        <StackComponent class="section" spacing="large" centered>
+          <ButtonComponent kind="link" @click="scrollDown">
+            <div class="button-content">
+              Archivierte Wahlrechner anzeigen<IconComponent
+                :icon="mdiArrowDown"
+              ></IconComponent>
+            </div>
           </ButtonComponent>
-        </StackComponent>
-
-        <BodyText size="large">—</BodyText>
-        <StackComponent horizontal spacing="large" wrap style="justify-content: center;">
-          <TitleText style="color: rgb(var(--color-neutral-fg))" tag="h3">
-            Wahlrechner ist Teil des größten europäischen Netzwerks für Wahl-Entscheidungshilfen.
-          </TitleText>
         </StackComponent>
       </StackComponent>
     </div>
@@ -165,63 +142,52 @@ const { t, locale } = useI18n();
         <BodyText size="medium"
           >Der Wahlrechner ist ein reiner Informationsdienst und dient nicht dazu, konkrete Wahlempfehlungen abzugeben.
         </BodyText>
-        <ButtonComponent kind="link" @click="router.push('/uber-den-wahlrechner')">
+        <ButtonComponent kind="link" tag="a" href="/uber-den-wahlrechner">
           <div class="button-content">
-            Mehr herausfinden<IconComponent :icon="mdiArrowRight"></IconComponent>
+            Mehr erfahren<IconComponent :icon="mdiArrowRight"></IconComponent>
           </div>
         </ButtonComponent>
       </StackComponent>
-      <section class="subscribe">
-        <StackComponent spacing="small" centered>
-          <TitleText size="large" tag="h2">
-            Möchten Sie über neue Rechner informiert werden?
-          </TitleText>
-          <BodyText size="small" centered>
-            Hinterlassen Sie uns Ihre E-Mail-Adresse und wir informieren Sie immer, wenn wir einen neuen Rechner starten.
-          </BodyText>
-          <BodyText v-if="success" size="small">
-            {{ message }}
-          </BodyText>
-          <form v-if="!success">
-            <StackComponent
-              horizontal
-              spacing="small"
-              stretched
-              wrap
-              style="justify-content: center"
-            >
-              <TextInputComponent
-                v-model="email"
-                required
-                type="email"
-                :placeholder="t('routes.index.IndexPage.input-label')"
-                :value="email"
-                :icon="mdiEmailOutline"
-                :disabled="posting"
-                :error="emailError"
-              />
-              <ButtonComponent
-                kind="outlined"
-                color="primary"
-                :loading="posting"
-                @click.prevent="handleSubscribe"
-              >
-                Senden
-              </ButtonComponent>
-            </StackComponent>
-          </form>
-          <BodyText v-if="!success" tag="p" size="small">{{
-            $t('routes.index.IndexPage.disclaimer')
-          }}</BodyText>
-        </StackComponent>
-      </section>
       <DonateBlock />
       <StackComponent spacing="large">
         <div ref="info"></div>
         <TitleText size="large" tag="h2">
-          Wahlrechner für bereits abgehaltene Wahlen
+          Archivierte Wahlrechner
         </TitleText>
         <MasonryGrid style="align-self: stretch">
+          <CardComponent corner="top-right" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium">
+                  Wien-Wahl 2025
+                </TitleText>
+                <BodyText size="medium"
+                  >Wien-Wahl am 27. April 2025, 23 Fragen, ca. 5-10 Minuten</BodyText
+                >
+              </div>
+              <ButtonComponent
+                kind="filled"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      type: `${'wahlen'}`,
+                      first: 'wien-wahl-2025',
+                      second: 'wahlrechner',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+                Wahlrechner starten
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
           <CardComponent corner="top-right" padding="medium" border shadow>
             <div class="card-content">
               <div class="card-content-text">
@@ -248,7 +214,7 @@ const { t, locale } = useI18n();
                   })
                 "
               >
-              Start des Wahlrechners
+                Wahlrechner starten
                 <template #iconAfter>
                   <IconComponent :icon="mdiArrowRight" />
                 </template>
@@ -281,7 +247,7 @@ const { t, locale } = useI18n();
                   })
                 "
               >
-              Start des Wahlrechners
+              Wahlrechner starten
                 <template #iconAfter>
                   <IconComponent :icon="mdiArrowRight" />
                 </template>
@@ -314,7 +280,7 @@ const { t, locale } = useI18n();
                   })
                 "
               >
-              Start des abstimmungsrechners
+              Abstimmungsrechner starten
                 <template #iconAfter>
                   <IconComponent :icon="mdiArrowRight" />
                 </template>
@@ -347,7 +313,7 @@ const { t, locale } = useI18n();
                   })
                 "
               >
-              Start des Wahlrechners
+              Wahlrechner starten
                 <template #iconAfter>
                   <IconComponent :icon="mdiArrowRight" />
                 </template>
@@ -380,7 +346,7 @@ const { t, locale } = useI18n();
                   })
                 "
               >
-              Start des Wahlrechners
+              Wahlrechner starten
                 <template #iconAfter>
                   <IconComponent :icon="mdiArrowRight" />
                 </template>
