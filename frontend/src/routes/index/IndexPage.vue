@@ -26,76 +26,53 @@ import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import TextInputComponent from '@/components/design-system/input/TextInputComponent.vue';
 import TitleText from '@/components/design-system/typography/TitleText.vue';
 
-import { useUserStore } from '@/stores/userStore';
-
 const router = useRouter();
 const route = useRoute();
-const userStore = useUserStore();
-
-const user = computed(() => userStore.user);
 const info = ref<HTMLElement | null>(null);
 const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
 
 const { t, locale } = useI18n();
 
-const email = ref('');
-const emailError = ref();
-const posting = ref();
-const success = ref();
-const message = ref();
-
-const handleSubscribe = async () => {
-  console.log('handleSubmit');
-  if (email.value === '') {
-    emailError.value = t('routes.index.IndexPage.empty-email-error');
-    return;
-  } else {
-    emailError.value = undefined;
-  }
-
-  posting.value = true;
-
-  const response = await fetch('/api/subscriptions', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ email: email.value }),
-  });
-
-  if (response.ok) {
-    posting.value = false;
-    success.value = true;
-    message.value = t('routes.index.IndexPage.success');
-  } else {
-    posting.value = false;
-    success.value = false;
-    message.value = t('routes.index.IndexPage.error');
-  }
-};
 </script>
 
 <template>
   <StickyHeaderLayout>
     <template #header>
-      <NavigationBar transparent with-account :user="user" />
+      <NavigationBar transparent />
     </template>
+    <section class="current-version-hero">
+      <CardComponent style="max-width: 48rem; text-align: center;">
+        <StackComponent spacing="medium" centered>
+          <HeadlineText tag="h1" size="medium" color="fg-strong">
+            Kalkulatori i ri zgjedhor është i disponueshëm!
+          </HeadlineText>
+          <BodyText size="medium" centered>
+            Ky është një arkiv i Kalkulatorit zgjedhor për zgjedhjet kuvendore në Shqipëri 2025.
+            <strong>Kalkulatorin aktual mund ta gjeni në
+            <a href="https://www.kalkulatorizgjedhor.org">www.kalkulatorizgjedhor.org</a></strong>
+          </BodyText>
+          <ButtonComponent kind="filled" tag="a" href="https://www.kalkulatorizgjedhor.org">
+            Kalo te kalkulatori aktual
+          </ButtonComponent>
+        </StackComponent>
+      </CardComponent>
+    </section>
     <div class="prezident-hero">
       <BlobComponent color="blue" class="blob1" />
       <BlobComponent color="red" class="blob2" />
       <StackComponent spacing="medium" centered class="calc-main">
         <BodyText size="medium" tag="h1" color="fg-strong">
-          <strong>Zgjedhjet parlamentare në Kosovë 2025</strong><br />
-          9 shkurt 2025
+          <strong>Zgjedhjet kuvendore në Shqipëri 2025</strong><br />
+          11 maj 2025
           <br />
         </BodyText>
         <HeadlineText tag="p" size="small">
-          Zgjedhjet parlamentare
+          Zgjedhjet kuvendore
           <span style="color: rgb(var(--color-neutral-fg))"> 2025 </span>
         </HeadlineText>
-        <BodyText size="small"> 21 pyetje, rreth 5 minuta</BodyText>
+        <BodyText size="small"> 30 pyetje, rreth 5 minuta</BodyText>
           <ButtonComponent
-            kind="filled"
+            kind="outlined"
             color="primary"
             @click="
               router.push({
@@ -103,14 +80,14 @@ const handleSubscribe = async () => {
                 params: {
                   ...route.params,
                   type: `${'zgjedhjet'}`,
-                  first: 'parlamentare-2025',
+                  first: 'kuvendore-2025',
                   second: 'kalkulatori',
                 },
                 query: { ...route.query },
               })
             "
           >
-            Fillo kalkulatorin zgjedhor
+            Fillo versionin e arkivuar
             <template #iconAfter>
               <IconComponent :icon="mdiArrowRight" />
             </template>
@@ -118,57 +95,12 @@ const handleSubscribe = async () => {
           <div style="height:100px"></div>
       </StackComponent>
     </div>
-    <section class="subscribe">
-      <StackComponent spacing="small" centered>
-        <TitleText size="large" tag="h2">
-          Dëshironi të dini për kalkulatorët e rinj?
-        </TitleText>
-        <BodyText size="small" centered>
-          Na lini email-in tuaj dhe ne do t’ju njoftojmë sa herë që të lançojmë
-          një kalkulator të ri.
-        </BodyText>
-        <BodyText v-if="success" size="small">
-          {{ message }}
-        </BodyText>
-        <form v-if="!success">
-          <StackComponent
-            horizontal
-            spacing="small"
-            stretched
-            wrap
-            style="justify-content: center"
-          >
-            <TextInputComponent
-              v-model="email"
-              required
-              type="email"
-              :placeholder="t('routes.index.IndexPage.input-label')"
-              :value="email"
-              :icon="mdiEmailOutline"
-              :disabled="posting"
-              :error="emailError"
-            />
-            <ButtonComponent
-              kind="outlined"
-              color="primary"
-              :loading="posting"
-              @click.prevent="handleSubscribe"
-            >
-              Dërgo
-            </ButtonComponent>
-          </StackComponent>
-        </form>
-        <BodyText v-if="!success" tag="p" size="small">{{
-          $t('routes.index.IndexPage.disclaimer')
-        }}</BodyText>
-      </StackComponent>
-    </section>
     <StaticContentLayout>
       <StackComponent class="section" spacing="small" centered>
         <TitleText size="large" tag="h2">Si krijohet kalkulatori?</TitleText>
         <BodyText size="medium"
           >Kalkulatori zgjedhor është një projekt i organizatës jofitimprurëse
-          KohoVolit.eu, në bashkëpunim me Open Data Kosovo, dhe është një
+          KohoVolit.eu, në bashkëpunim me Faktoje, dhe është një
           ndihmës i paanshëm në vendimin tuaj se kë të votoni.</BodyText
         >
         <div class="info-bubbles-grid section">
@@ -373,10 +305,11 @@ const handleSubscribe = async () => {
   }
 }
 
-.subscribe {
-  padding-top: 40px;
+.current-version-hero {
+  padding: 40px 24px;
   display: grid;
   align-content: center;
   justify-content: center;
+  background: rgb(var(--color-primary-bg-container));
 }
 </style>
