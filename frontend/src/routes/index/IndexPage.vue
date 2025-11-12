@@ -208,7 +208,7 @@ const { t, locale } = useI18n();
           >Volebná kalkulačka je len informačnou službou a jej cieľom nie je
           poskytovať konkrétne volebné odporúčania.
         </BodyText>
-        <ButtonComponent kind="link" @click="router.push('/o-nas')">
+        <ButtonComponent kind="link" tag="a" href="/o-nas">
           <div class="button-content">
             Zistiť viac<IconComponent :icon="mdiArrowRight"></IconComponent>
           </div>

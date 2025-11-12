@@ -25,11 +25,8 @@ import ResultPageVue from './routes/result/ResultPage.vue';
 import RecapPageVue from './routes/recap/RecapPage.vue';
 import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
-import QuestionsMethodologyPageVue from './routes/questions-methodology/QuestionsMethodologyPageVue.vue';
 import ErrorPageVue, { ErrorPageEnum } from './routes/error/ErrorPage.vue';
-import AboutUsPageVue from './routes/about-us/AboutUsPage.vue';
 import AboutElectionsPageVue from './routes/about-elections/AboutElectionsPage.vue';
-import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
 
 const RESULT_QUERY_NAME = 'result';
 
@@ -76,37 +73,12 @@ export const appRoutes = {
       title: 'Volebná kalkulačka',
     },
   },
-  aboutUs: {
-    name: 'o-nas',
-    path: '/o-nas',
-    component: AboutUsPageVue,
-    meta: {
-      title: 'O kalkulačke',
-    },
-  },
   aboutElections: {
     name: 'o-volbach',
     path: '/o-volbach',
     component: AboutElectionsPageVue,
     meta: {
       title: 'O volbách',
-    },
-  },
-  dataProtection: {
-    name: 'ochrana-dat',
-    path: '/ochrana-dat',
-    alias: ['/soukromi', '/podminky'],
-    component: DataProtectionPageVue,
-    meta: {
-      title: 'Ochrana dát',
-    },
-  },
-  questionsMethodology: {
-    name: 'metodika-tvorby-otazok',
-    path: '/metodika-tvorby-otazok',
-    component: QuestionsMethodologyPageVue,
-    meta: {
-      title: 'Metodika tvorby otázok',
     },
   },
   error: {
