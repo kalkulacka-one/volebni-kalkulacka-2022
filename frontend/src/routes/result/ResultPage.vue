@@ -58,7 +58,6 @@ const route = useRoute();
 const electionStore = useElectionStore();
 
 
-const user = computed(() => userStore.user);
 
 const election = electionStore.election as DeprecatedElection;
 const electionName = election.name;
