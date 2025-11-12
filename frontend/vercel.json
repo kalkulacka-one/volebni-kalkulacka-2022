@@ -1,3 +1,9 @@
 {
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ],
   "trailingSlash": false
 }
