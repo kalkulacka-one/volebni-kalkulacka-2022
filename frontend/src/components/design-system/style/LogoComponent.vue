@@ -73,7 +73,7 @@ const handleClick = () => {
       v-if="props.text"
       :class="['logo--text', `logo--text-${props.size}`, logoMonochromatic]"
     >
-      TestVot 2025
+      TestVot Arhivă
     </div>
   </div>
 </template>
