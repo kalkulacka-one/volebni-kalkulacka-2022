@@ -14,7 +14,6 @@ import App from './App.vue';
 import { getDistrictCode } from './common/utils';
 import { decodeResults, encodeResults } from './common/resultParser';
 import { useElectionStore } from './stores/electionStore';
-import { useUserStore } from '@/stores/userStore';
 import EmbedProviderWrapper from '@/components/utilities/embedding/EmbedProviderWrapper.vue';
 import './assets/main.css';
 
@@ -28,14 +27,9 @@ import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
 import QuestionsMethodologyPageVue from './routes/questions-methodology/QuestionsMethodologyPageVue.vue';
 import ErrorPageVue, { ErrorPageEnum } from './routes/error/ErrorPage.vue';
-import SharePageVue from './routes/share/SharePage.vue';
 import AboutUsPageVue from './routes/about-us/AboutUsPage.vue';
 import AboutElectionsPageVue from './routes/about-elections/AboutElectionsPage.vue';
 import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
-import AuthPageVue from './routes/profile/AuthPageVue.vue';
-import EmailFormPageVue from './routes/profile/EmailFormPageVue.vue';
-import ProfilePageVue from './routes/profile/ProfilePage.vue';
-import ProfileSettingsPageVue from './routes/profile/ProfileSettingsPage.vue';
 
 const RESULT_QUERY_NAME = 'result';
 
@@ -60,16 +54,6 @@ export const questionGuard = (
   }
 };
 
-export const authGuard = async (
-  to: RouteLocationNormalized,
-  _from: RouteLocationNormalized,
-  next: NavigationGuardNext,
-) => {
-  const userStore = useUserStore();
-  await userStore.fetchUser();
-  if (userStore.user) next();
-  else next(appRoutes.login);
-};
 
 const resultsProcessor = (
   to: RouteLocationNormalized,
@@ -183,70 +167,6 @@ export const appRoutes = {
     meta: {
       title: 'Összehasonlítás - Voksmonitor',
     },
-  },
-  share: {
-    name: 'share',
-    path: '/share/:uuid',
-    component: SharePageVue,
-    meta: {
-      title: 'Egyezéseim - Voksmonitor',
-    },
-  },
-  login: {
-    name: 'login',
-    path: '/prihlaseni',
-    component: AuthPageVue,
-    props: { type: 'login' },
-    meta: {
-      title: 'Přihlášení - Voksmonitor',
-    },
-  },
-  loginForm: {
-    name: 'login-form',
-    path: '/prihlaseni-emailem',
-    component: EmailFormPageVue,
-    props: { type: 'login' },
-    meta: {
-      title: 'Přihlášení - Voksmonitor',
-    },
-  },
-
-  register: {
-    name: 'register',
-    path: '/registrace',
-    component: AuthPageVue,
-    props: { type: 'registration' },
-    meta: {
-      title: 'Registrace - Voksmonitor',
-    },
-  },
-  registerForm: {
-    name: 'register-form',
-    path: '/registracni-formular',
-    component: EmailFormPageVue,
-    props: { type: 'registration' },
-    meta: {
-      title: 'Registrační formulář - Voksmonitor',
-    },
-  },
-
-  profile: {
-    name: 'profile',
-    path: '/muj-profil',
-    component: ProfilePageVue,
-    meta: {
-      title: 'Můj profil - Voksmonitor',
-    },
-    beforeEnter: authGuard,
-  },
-  profileSettings: {
-    name: 'profile-settings',
-    path: '/nastaveni-profilu',
-    component: ProfileSettingsPageVue,
-    meta: {
-      title: 'Nastavení profilu - Voksmonitor',
-    },
-    beforeEnter: authGuard,
   },
   fallback: {
     path: '/:catchAll(.*)',
