@@ -18,22 +18,12 @@ import ResultPageVue from './routes/result/ResultPage.vue';
 import RecapPageVue from './routes/recap/RecapPage.vue';
 import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
-import QuestionsMethodologyPageVue from './routes/questions-methodology/QuestionsMethodologyPageVue.vue';
 import { useElectionStore } from './stores/electionStore';
-import { useUserStore } from './stores/userStore';
 import { createPinia } from 'pinia';
 import ErrorPageVue, { ErrorPageEnum } from './routes/error/ErrorPage.vue';
 import { decodeResults, encodeResults } from './common/resultParser';
-import SharePageVue from './routes/share/SharePage.vue';
-import AboutUsPageVue from './routes/about-us/AboutUsPage.vue';
 import AboutElectionsPageVue from './routes/about-elections/AboutElectionsPage.vue';
-import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
 import { getDistrictCode } from './common/utils';
-import VueSocialSharing from 'vue-social-sharing';
-import RegisterPageVue from './routes/profile/RegisterPageVue.vue';
-import LoginPageVue from './routes/profile/LoginPageVue.vue';
-import ProfilePageVue from './routes/profile/ProfilePage.vue';
-import ProfileSettingsPageVue from './routes/profile/ProfileSettingsPage.vue';
 
 const RESULT_QUERY_NAME = 'result';
 
@@ -79,37 +69,12 @@ export const appRoutes = {
       title: 'Archiv volebních kalkulaček',
     },
   },
-  aboutUs: {
-    name: 'o-nas',
-    path: '/o-nas',
-    component: AboutUsPageVue,
-    meta: {
-      title: 'O nás',
-    },
-  },
   aboutElections: {
     name: 'o-volbach',
     path: '/o-volbach',
     component: AboutElectionsPageVue,
     meta: {
       title: 'O volbách',
-    },
-  },
-  dataProtection: {
-    name: 'ochrana-dat',
-    path: '/ochrana-dat',
-    alias: ['/soukromi', '/podminky'],
-    component: DataProtectionPageVue,
-    meta: {
-      title: 'Ochrana dat',
-    },
-  },
-  questionsMethodology: {
-    name: 'metodika-tvorby-otazek',
-    path: '/metodika-tvorby-otazek',
-    component: QuestionsMethodologyPageVue,
-    meta: {
-      title: 'Metodika tvorby otázek',
     },
   },
   error: {
@@ -173,46 +138,6 @@ export const appRoutes = {
       title: 'Porovnaní - Archiv volebních kalkulaček',
     },
   },
-  share: {
-    name: 'share',
-    path: '/share/:uuid',
-    component: SharePageVue,
-    meta: {
-      title: 'Moje výsledky - Archiv volebních kalkulaček',
-    },
-  },
-  login: {
-    name: 'login',
-    path: '/prihlaseni',
-    component: LoginPageVue,
-    meta: {
-      title: 'Přihlášení - Archiv volebních kalkulaček',
-    },
-  },
-  register: {
-    name: 'register',
-    path: '/registrace',
-    component: RegisterPageVue,
-    meta: {
-      title: 'Registrace - Archiv volebních kalkulaček',
-    },
-  },
-  profile: {
-    name: 'profile',
-    path: '/muj-profil',
-    component: ProfilePageVue,
-    meta: {
-      title: 'Můj profil - Archiv volebních kalkulaček',
-    },
-  },
-  profileSettings: {
-    name: 'profile-settings',
-    path: '/nastaveni-profilu',
-    component: ProfileSettingsPageVue,
-    meta: {
-      title: 'Nastavení profilu - Archiv volebních kalkulaček',
-    },
-  },
   fallback: {
     path: '/:catchAll(.*)',
     redirect: '/error/not-found',
@@ -229,10 +154,6 @@ export const wrappedRoutes = [
 
 //APP creation
 const app = createApp(App);
-//social sharing
-app.use(VueSocialSharing, {
-  /* optional options */
-});
 
 const pinia = createPinia();
 app.use(pinia);

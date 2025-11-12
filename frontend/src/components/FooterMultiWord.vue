@@ -82,6 +82,9 @@ const router = useRouter();
               <a href="https://www.darujme.cz/darovat/1200653"
                 ><BodyText size="small">Podpořit kalkulačku</BodyText></a
               >
+              <router-link to="/archiv">
+                <BodyText size="small">O archivu & můj profil</BodyText>
+              </router-link>
             </StackComponent>
           </StackComponent>
         </div>

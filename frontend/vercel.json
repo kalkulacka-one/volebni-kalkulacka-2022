@@ -1,11 +1,25 @@
 {
-  "rewrites": [
-    { "source": "/api/auth/(.*)", "destination": "/api/auth" },
+  "redirects": [
     {
-      "source": "/((?!api).*)",
-      "destination": "/"
+      "source": "/o-nas",
+      "destination": "https://www.volebnikalkulacka.cz/o-nas",
+      "permanent": true
+    },
+    {
+      "source": "/metodika-tvorby-otazek",
+      "destination": "https://www.volebnikalkulacka.cz/metodika",
+      "permanent": true
+    },
+    {
+      "source": "/ochrana-dat",
+      "destination": "https://www.volebnikalkulacka.cz/soukromi",
+      "permanent": true
+    },
+    {
+      "source": "/archiv",
+      "destination": "https://archiv-2024.volebnikalkulacka.cz/archiv",
+      "permanent": true
     }
   ],
-  "trailingSlash": false,
-  "ignoreCommand": "bash ignored-build-step.sh"
+  "trailingSlash": false
 }
