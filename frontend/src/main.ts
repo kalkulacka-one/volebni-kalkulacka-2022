@@ -27,11 +27,8 @@ import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
 import DistrictSelectionHackSenatePageVue from './routes/district-selection/DistrictSelectionHackSenatePage.vue';
 import DistrictSelectionHackRegionPageVue from './routes/district-selection/DistrictSelectionHackRegionPage.vue';
-import QuestionsMethodologyPageVue from './routes/questions-methodology/QuestionsMethodologyPageVue.vue';
 import ErrorPageVue, { ErrorPageEnum } from './routes/error/ErrorPage.vue';
-import AboutUsPageVue from './routes/about-us/AboutUsPage.vue';
 import AboutElectionsPageVue from './routes/about-elections/AboutElectionsPage.vue';
-import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
 import ArchivePage from './routes/archive/ArchivePage.vue';
 
 const RESULT_QUERY_NAME = 'result';
@@ -79,14 +76,6 @@ export const appRoutes = {
       title: 'Archiv Volební kalkulačky 2024',
     },
   },
-  aboutUs: {
-    name: 'o-nas',
-    path: '/o-nas',
-    component: AboutUsPageVue,
-    meta: {
-      title: 'O kalkulačce - Archiv 2024',
-    },
-  },
   aboutElections: {
     name: 'o-volbach',
     path: '/o-volbach',
@@ -95,29 +84,12 @@ export const appRoutes = {
       title: 'O volbách - Archiv 2024',
     },
   },
-  dataProtection: {
-    name: 'ochrana-dat',
-    path: '/ochrana-dat',
-    alias: ['/soukromi', '/podminky'],
-    component: DataProtectionPageVue,
-    meta: {
-      title: 'Ochrana dat - Archiv 2024',
-    },
-  },
   archive: {
     name: 'archiv',
     path: '/archiv',
     component: ArchivePage,
     meta: {
       title: 'Archiv - Archiv 2024',
-    },
-  },
-  questionsMethodology: {
-    name: 'metodika-tvorby-otazek',
-    path: '/metodika-tvorby-otazek',
-    component: QuestionsMethodologyPageVue,
-    meta: {
-      title: 'Metodika tvorby otázek - Archiv 2024',
     },
   },
   error: {
