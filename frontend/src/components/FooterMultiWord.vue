@@ -59,15 +59,15 @@ const router = useRouter();
           <StackComponent spacing="medium">
             <TitleText size="small" tag="h5">O projektu</TitleText>
             <StackComponent spacing="extra-small">
-              <router-link to="/o-nas"
+              <a href="/o-nas"
                 ><BodyText size="small"
                   >O volební kalkulačce</BodyText
-                ></router-link
+                ></a
               >
-              <router-link to="/metodika-tvorby-otazek"
+              <a href="/metodika-tvorby-otazek"
                 ><BodyText size="small"
                   >Metodika tvorby otázek</BodyText
-                ></router-link
+                ></a
               >
             </StackComponent>
           </StackComponent>
@@ -76,15 +76,15 @@ const router = useRouter();
           <StackComponent spacing="medium">
             <TitleText size="small" tag="h5">Odkazy</TitleText>
             <StackComponent spacing="extra-small">
-              <router-link to="/ochrana-dat"
-                ><BodyText size="small">Ochrana dat</BodyText></router-link
+              <a href="/ochrana-dat"
+                ><BodyText size="small">Ochrana dat</BodyText></a
               >
               <a href="https://www.darujme.cz/darovat/1200653"
                 ><BodyText size="small">Podpořit kalkulačku</BodyText></a
               >
-              <router-link to="/archiv">
+              <a href="/archiv">
                 <BodyText size="small">O archivu & můj profil</BodyText>
-              </router-link>
+              </a>
             </StackComponent>
           </StackComponent>
         </div>
