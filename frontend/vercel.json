@@ -1,4 +1,10 @@
 {
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ],
   "redirects": [
     {
       "source": "/o-nas",
@@ -21,11 +27,5 @@
       "permanent": true
     }
   ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/"
-    }
-  ],
-  "trailingSlash": false,
+  "trailingSlash": false
 }
