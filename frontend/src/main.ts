@@ -22,7 +22,6 @@ import DistrictSelectionPageVue from './routes/district-selection/DistrictSelect
 import EmailCollectionPageVue from './routes/email-collection/EmailCollectionPage.vue';
 import QuestionsMethodologyPageVue from './routes/questions-methodology/QuestionsMethodologyPageVue.vue';
 import { useElectionStore } from './stores/electionStore';
-import { useUserStore } from './stores/userStore';
 import { createPinia } from 'pinia';
 import ErrorPageVue, { ErrorPageEnum } from './routes/error/ErrorPage.vue';
 import { decodeResults, encodeResults } from './common/resultParser';
