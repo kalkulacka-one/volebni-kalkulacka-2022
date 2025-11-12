@@ -45,7 +45,7 @@ const { t, locale } = useI18n();
       <StackComponent spacing="medium" centered class="calc-main">
           <StackComponent spacing="large" centered space-between>
             <BodyText size="medium" tag="h1" color="fg-strong">
-            <strong>Volební kalkulačka Archiv 2024</strong
+            <strong>Archiv Volebních kalkulaček z roku 2024</strong
             ><br />
             Evropské, krajské a senátní volby
             <br />
@@ -64,7 +64,7 @@ const { t, locale } = useI18n();
               Nová Volební kalkulačka je tady!
             </HeadlineText>
             <BodyText size="medium" centered>
-              Toto je archiv kalkulaček z roku 2024. <strong>Aktuální Volební kalkulačka pro sněmovní volby 2025</strong> je nyní dostupná na hlavní stránce.
+              Toto je archiv kalkulaček z roku 2024. <strong>Aktuální kalkulačku najdete na <a href="https://www.volebnikalkulacka.cz" target="_blank" rel="noopener noreferrer">www.volebnikalkulacka.cz</a></strong>
             </BodyText>
             <ButtonComponent
               kind="filled"
@@ -78,7 +78,7 @@ const { t, locale } = useI18n();
               <template #icon>
                 <IconComponent :icon="mdiArrowRight" />
               </template>
-              Přejít na aktuální Volební kalkulačku 2025
+              Přejít na aktuální Volební kalkulačku
             </ButtonComponent>
             <BodyText size="small" color="fg-muted" centered>
               Na této archivní stránce najdete kalkulačky pro evropské, krajské a senátní volby 2024
