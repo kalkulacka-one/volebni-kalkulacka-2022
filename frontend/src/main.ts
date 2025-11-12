@@ -87,7 +87,7 @@ export const appRoutes = {
     props: true,
     component: ErrorPageVue,
     meta: {
-      title: 'Error - Voksmonitor',
+      title: 'Error - Voksmonitor Archívum',
     },
   },
   districtSelection: {
@@ -96,7 +96,7 @@ export const appRoutes = {
     alias: '/valasztasok/:election',
     component: DistrictSelectionPageVue,
     meta: {
-      title: 'Voksmonitor',
+      title: 'Voksmonitor Archívum',
     },
   },
   guide: {
@@ -104,7 +104,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'valasztasok'})/:first/:second?/:third?/:fourth?/${'utmutato'}/:step(\\d+)?`,
     component: GuidePageVue,
     meta: {
-      title: 'Útmutató - Voksmonitor',
+      title: 'Útmutató - Voksmonitor Archívum',
     },
   },
   question: {
@@ -112,7 +112,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'valasztasok'})/:first/:second?/:third?/:fourth?/${'kerdes'}/:nr(\\d+)?`,
     component: QuestionPageVue,
     meta: {
-      title: 'Kérdés $$ - Voksmonitor',
+      title: 'Kérdés $$ - Voksmonitor Archívum',
       hasNumber: true,
     },
     beforeEnter: questionGuard,
@@ -122,7 +122,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'valasztasok'})/:first/:second?/:third?/:fourth?/${'osszegzes'}/:nr(\\d+)?`,
     component: RecapPageVue,
     meta: {
-      title: 'Összegzés - Voksmonitor',
+      title: 'Összegzés - Voksmonitor Archívum',
     },
   },
   result: {
@@ -130,7 +130,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'valasztasok'})/:first/:second?/:third?/:fourth?/${'egyezeseim'}`,
     component: ResultPageVue,
     meta: {
-      title: 'Egyezéseim - Voksmonitor',
+      title: 'Egyezéseim - Voksmonitor Archívum',
     },
   },
   comparison: {
@@ -138,7 +138,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'valasztasok'})/:first/:second?/:third?/:fourth?/${'osszehasonlitas'}`,
     component: ComparisonPageVue,
     meta: {
-      title: 'Összehasonlítás - Voksmonitor',
+      title: 'Összehasonlítás - Voksmonitor Archívum',
     },
   },
   fallback: {
