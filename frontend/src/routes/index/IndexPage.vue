@@ -36,18 +36,49 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
       <BlobComponent color="blue" class="blob1" />
       <BlobComponent color="red" class="blob2" />
       <StackComponent spacing="medium" centered class="calc-main">
-        <HeadlineText tag="p" size="small">
-          Archiv volebních kalkulaček
-        </HeadlineText>
-        <StackComponent class="section" spacing="large" centered>
-          <ButtonComponent kind="link" href="https://www.volebnikalkulacka.cz">
-            <div class="button-content">
-              Kalkulačka pro Evropské volby<IconComponent
-                :icon="mdiArrowRight"
-              ></IconComponent>
-            </div>
-          </ButtonComponent>
+        <StackComponent spacing="large" centered space-between>
+          <BodyText size="medium" tag="h1" color="fg-strong">
+            <strong>Archiv Volebních kalkulaček z let 2022–2023</strong><br />
+            Prezidentské, komunální a senátní volby
+            <br />
+          </BodyText>
+          <HeadlineText tag="p" size="small">
+            Archiv
+            <span style="color: rgb(var(--color-neutral-fg))"> 2022–2023 </span>
+          </HeadlineText>
         </StackComponent>
+
+        <section class="current-version-hero">
+          <StackComponent spacing="medium" centered>
+            <CardComponent style="max-width: 48rem; text-align: center;">
+              <StackComponent spacing="medium" centered>
+                <HeadlineText tag="h1" size="medium" color="fg-strong">
+                  Nová Volební kalkulačka je tady!
+                </HeadlineText>
+                <BodyText size="medium" centered>
+                  Toto je archiv kalkulaček z let 2022–2023. <strong>Aktuální kalkulačku najdete na <a href="https://www.volebnikalkulacka.cz" target="_blank" rel="noopener noreferrer">www.volebnikalkulacka.cz</a></strong>
+                </BodyText>
+                <ButtonComponent
+                  kind="filled"
+                  color="primary"
+                  size="medium"
+                  tag="a"
+                  href="https://www.volebnikalkulacka.cz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <template #icon>
+                    <IconComponent :icon="mdiArrowRight" />
+                  </template>
+                  Přejít na aktuální Volební kalkulačku
+                </ButtonComponent>
+                <BodyText size="small" color="fg-muted" centered>
+                  Na této archivní stránce najdete kalkulačky pro prezidentské, komunální a senátní volby 2022–2023
+                </BodyText>
+              </StackComponent>
+            </CardComponent>
+          </StackComponent>
+        </section>
       </StackComponent>
     </div>
     <StaticContentLayout>
