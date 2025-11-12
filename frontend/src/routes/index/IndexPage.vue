@@ -2,21 +2,31 @@
 import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { appRoutes } from '@/main';
-import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
-import CardComponent from '@/components/design-system/containers/CardComponent.vue';
-import StackComponent from '../../components/design-system/layout/StackComponent.vue';
+
+import { mdiArrowDown, mdiArrowRight } from '@mdi/js';
+
+import BlobComponent from '@/components/design-system/style/BlobComponent.vue';
+import BodyText from '../../components/design-system/typography/BodyText.vue';
 import ButtonComponent from '../../components/design-system/input/ButtonComponent.vue';
-import TitleText from '@/components/design-system/typography/TitleText.vue';
+import CardComponent from '@/components/design-system/containers/CardComponent.vue';
+import CheckboxComponent from '@/components/design-system/input/CheckboxComponent.vue';
+import FooterMultiWord from '@/components/FooterMultiWord.vue';
 import HeadlineText from '@/components/design-system/typography/HeadlineText.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
-import { mdiArrowRight } from '@mdi/js';
-import FooterMultiWord from '@/components/FooterMultiWord.vue';
+import InfoBubble from '@/components/InfoBubble.vue';
+import MasonryGrid from '@/components/design-system/layout/MasonryGrid.vue';
 import NavigationBar from '@/components/design-system/navigation/NavigationBar.vue';
-import BlobComponent from '@/components/design-system/style/BlobComponent.vue';
-import BodyText from '@/components/design-system/typography/BodyText.vue';
+import StackComponent from '../../components/design-system/layout/StackComponent.vue';
+import StaticContentLayout from '@/components/layouts/StaticContentLayout.vue';
+import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
+import TitleText from '@/components/design-system/typography/TitleText.vue';
 
 const router = useRouter();
 const route = useRoute();
+const info = ref<HTMLElement | null>(null);
+const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
+const hasCheckedPrivacy = ref(false);
+
 </script>
 
 <template>
@@ -24,43 +34,133 @@ const route = useRoute();
     <template #header>
       <NavigationBar transparent />
     </template>
-    <section class="current-version-hero">
-      <CardComponent style="max-width: 48rem; text-align: center;">
-        <StackComponent spacing="medium" centered>
-          <HeadlineText tag="h1" size="medium" color="fg-strong">
-            TestVot-ul nou este disponibil!
-          </HeadlineText>
-          <BodyText size="medium" centered>
-            Aceasta este o arhivă a TestVot pentru alegerile prezidențiale 2025.
-            <strong>TestVot-ul actual îl găsiți la
-            <a href="https://www.testvot.eu">www.testvot.eu</a></strong>
-          </BodyText>
-          <ButtonComponent kind="filled" tag="a" href="https://www.testvot.eu">
-            Mergi la TestVot-ul actual
-          </ButtonComponent>
-        </StackComponent>
-      </CardComponent>
-    </section>
     <div class="prezident-hero">
       <BlobComponent color="blue" class="blob1" />
-      <BlobComponent color="yellow" class="blob2" />
-      <BlobComponent color="red" class="blob3" />
-      <StackComponent spacing="small" centered class="calc-main">
-        <HeadlineText tag="p" size="small">
-          Testează-ți votul!
-        </HeadlineText>
+      <BlobComponent color="red" class="blob2" />
+      <StackComponent spacing="medium" centered class="calc-main">
+        <StackComponent spacing="large" centered space-between>
+          <BodyText size="medium" tag="h1" color="fg-strong">
+            <strong>Arhiva TestVot 2025</strong><br />
+            Alegeri prezidențiale în România
+            <br />
+          </BodyText>
+          <HeadlineText tag="p" size="small">
+            Arhivă
+            <span style="color: rgb(var(--color-neutral-fg))"> 2025 </span>
+          </HeadlineText>
+        </StackComponent>
+
+        <section class="current-version-hero">
+          <StackComponent spacing="medium" centered>
+            <CardComponent style="max-width: 48rem; text-align: center;">
+              <StackComponent spacing="medium" centered>
+                <HeadlineText tag="h1" size="medium" color="fg-strong">
+                  TestVot-ul nou este disponibil!
+                </HeadlineText>
+                <BodyText size="medium" centered>
+                  Aceasta este o arhivă a TestVot pentru alegerile prezidențiale 2025. <strong>TestVot-ul actual îl găsiți la <a href="https://www.testvot.eu" target="_blank" rel="noopener noreferrer">www.testvot.eu</a></strong>
+                </BodyText>
+                <ButtonComponent
+                  kind="filled"
+                  color="primary"
+                  size="medium"
+                  tag="a"
+                  href="https://www.testvot.eu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <template #icon>
+                    <IconComponent :icon="mdiArrowRight" />
+                  </template>
+                  Mergi la TestVot-ul actual
+                </ButtonComponent>
+                <BodyText size="small" color="fg-muted" centered>
+                  Pe această pagină de arhivă veți găsi TestVot pentru alegerile prezidențiale 2025
+                </BodyText>
+              </StackComponent>
+            </CardComponent>
+          </StackComponent>
+        </section>
+
         <StackComponent class="section" spacing="large" centered>
+          <ButtonComponent kind="link" @click="scrollDown">
+            <div class="button-content">
+              Arată calculatoare arhivate<IconComponent
+                :icon="mdiArrowDown"
+              ></IconComponent>
+            </div>
+          </ButtonComponent>
+        </StackComponent>
+      </StackComponent>
+    </div>
+    <StaticContentLayout>
+      <StackComponent class="section" spacing="small" centered>
+        <TitleText size="large" tag="h2">Cum se creează calculatorul?</TitleText>
+        <BodyText size="medium"
+          >TestVot este un proiect al organizației non-profit Median Research Centre (MRC),
+          în colaborare cu Open Politics, și este un asistent imparțial în decizia ta de vot.</BodyText
+        >
+        <div class="info-bubbles-grid section">
+          <InfoBubble image="info-1.png">
+            <BodyText size="small"
+              >Pregătim întrebări despre teme politice actuale.
+            </BodyText>
+          </InfoBubble>
+          <InfoBubble image="info-2.png">
+            <BodyText size="small"
+              >Întrebările sunt adresate tuturor candidaților / partidelor.
+            </BodyText>
+          </InfoBubble>
+          <InfoBubble image="info-3.png">
+            <BodyText size="small"
+              >Primim răspunsuri de la majoritatea acestora.
+            </BodyText>
+          </InfoBubble>
+          <InfoBubble image="info-4.png">
+            <BodyText size="small"
+              >TestVot calculează concordanța ta cu aceștia.</BodyText
+            >
+          </InfoBubble>
+        </div>
+      </StackComponent>
+      <StackComponent class="section" spacing="large" centered>
+        <BodyText size="medium"
+          >TestVot este doar un serviciu informativ și nu are scopul de a oferi
+          recomandări directe pentru alegeri.
+        </BodyText>
+        <ButtonComponent kind="link" tag="a" href="https://medianresearch.ro/">
+          <div class="button-content">
+            Aflați mai multe<IconComponent :icon="mdiArrowRight"></IconComponent>
+          </div>
+        </ButtonComponent>
+      </StackComponent>
+      <StackComponent spacing="large">
+        <div ref="info"></div>
+        <TitleText size="large" tag="h2">
+          Calculatoare arhivate
+        </TitleText>
+        <MasonryGrid style="align-self: stretch">
           <CardComponent corner="top-right" padding="medium" border shadow>
             <div class="card-content">
               <div class="card-content-text">
                 <TitleText tag="h3" size="medium">
                   TestVot 2025 alegeri prezidențiale
                 </TitleText>
+                <BodyText size="medium">
+                  Pentru a folosi aplicația trebuie să fii de acord cu <a href="/protectia-datelor">politica de confidențialitate</a> a datelor.
+                </BodyText>
+                <CheckboxComponent groupName="privacy" label="Sunt de acord cu politica de confidențialitate" @update:check="checked => hasCheckedPrivacy = checked">
+                  Sunt de acord
+                </CheckboxComponent>
               </div>
               <ButtonComponent
-                kind="outlined"
-                color="primary"
+                :kind="hasCheckedPrivacy ? 'filled' : 'outlined'"
+                :color="hasCheckedPrivacy ? 'primary' : 'primary'"
+                :readOnly="!hasCheckedPrivacy"
+                tag="a"
                 @click="() => {
+                  if (!hasCheckedPrivacy) return;
+
                   router.push({
                     name: appRoutes.guide.name,
                     params: {
@@ -72,21 +172,65 @@ const route = useRoute();
                   })
                 }"
               >
-                Pornește versiunea arhivată
+                Continuă
                 <template #iconAfter>
                   <IconComponent :icon="mdiArrowRight" />
                 </template>
               </ButtonComponent>
             </div>
           </CardComponent>
-        </StackComponent>
+        </MasonryGrid>
       </StackComponent>
-    </div>
+    </StaticContentLayout>
     <FooterMultiWord class="section" />
   </StickyHeaderLayout>
 </template>
 
 <style scoped lang="scss">
+.button-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.section {
+  padding: 40px 0;
+}
+
+.info-bubbles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.current-version-hero {
+  padding: 40px 0;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .prezident-hero {
   box-sizing: border-box;
   position: relative;
@@ -108,11 +252,6 @@ const route = useRoute();
 
   .blob2 {
     position: absolute;
-    right: 35%;
-  }
-
-  .blob3 {
-    position: absolute;
     right: 10%;
     top: 10%;
   }
@@ -123,34 +262,21 @@ const route = useRoute();
 
     .calc-main {
       grid-row: 1/6;
-      grid-column: 4/10;
+      grid-column: 2/12;
       margin-bottom: 16px;
     }
   }
-}
 
-.section {
-  padding: 40px 0;
-}
+  @media (min-width: 992px) {
+    .calc-main {
+      grid-column: 3/11;
+    }
+  }
 
-.card-content {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.card-content-text {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  max-width: 400px;
-}
-
-.current-version-hero {
-  padding: 40px 24px;
-  display: grid;
-  align-content: center;
-  justify-content: center;
-  background: rgb(var(--color-primary-bg-container));
+  @media (min-width: 1200px) {
+    .calc-main {
+      grid-column: 4/10;
+    }
+  }
 }
 </style>
