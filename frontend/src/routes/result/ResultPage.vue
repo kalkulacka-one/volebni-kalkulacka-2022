@@ -13,7 +13,6 @@ import {
 
 import { appRoutes } from '@/main';
 import { useElectionStore } from '@/stores/electionStore';
-import { useUserStore, type User } from '@/stores/userStore';
 import {
   calculateRelativeAgreement,
   encodeResults,
@@ -40,7 +39,6 @@ import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 
 import ResultCategory from './ResultCategory.vue';
-import ResultShareModal from './ResultShareModal.vue';
 import { getDistrictCode } from '@/common/utils';
 import BodyText from '../../components/design-system/typography/BodyText.vue';
 import ErrorModal from '../../components/ErrorModal.vue';
@@ -59,9 +57,7 @@ const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
 
-const userStore = useUserStore();
 
-const user = computed(() => userStore.user);
 
 const election = electionStore.election as DeprecatedElection;
 const electionName = election.name;
@@ -697,18 +693,6 @@ onBeforeUnmount(removeExternalScript);
       </BottomBarWrapper>
     </StickyHeaderLayout>
   </BackgroundComponent>
-  <ResultShareModal
-    v-if="electionStore.resultsId"
-    ref="shareModal"
-    :relative-agreement="resultsGeneral"
-  />
-  <ErrorModal
-    v-else
-    ref="shareModal"
-    :title="$t('routes.result.ResultPage.something-went-wrong')"
-  >
-    {{ $t('routes.result.ResultPage.something-went-wrong-text') }}
-  </ErrorModal>
 </template>
 
 <style lang="scss" scoped>
