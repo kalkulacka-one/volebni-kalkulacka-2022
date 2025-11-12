@@ -105,12 +105,12 @@ export const useElectionStore = defineStore('election', {
         // new Error('Election data are undefined!');
       }
     },
-    async loadCalculator(key: string) {
+    async loadCalculator(electionId: string, districtId: string) {
       this.calculator = undefined;
       this.uniqueQuestionTags.clear();
       let calculator = undefined;
       try {
-        calculator = await fetchCalculator(key);
+        calculator = await fetchCalculator(electionId, districtId);
       } catch (error) {
         console.error(error);
       }
