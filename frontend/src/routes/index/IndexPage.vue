@@ -109,16 +109,19 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
               <ButtonComponent
                 kind="filled"
                 color="primary"
+                tag="a"
                 @click="
-                  router.push({
-                    name: appRoutes.guide.name,
-                    params: {
-                      ...route.params,
-                      election: 'presidential-2025',
-                      district: 'global',
-                    },
-                    query: { ...route.query },
-                  })
+                  () => {
+                    router.push({
+                      name: appRoutes.guide.name,
+                      params: {
+                        ...route.params,
+                        election: 'presidential-2025',
+                        district: 'global',
+                      },
+                      query: { ...route.query },
+                    })
+                  }
                 "
               >
                 Pornește calculatorul
