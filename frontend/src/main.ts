@@ -25,11 +25,8 @@ import ResultPageVue from './routes/result/ResultPage.vue';
 import RecapPageVue from './routes/recap/RecapPage.vue';
 import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
-import QuestionsMethodologyPageVue from './routes/questions-methodology/QuestionsMethodologyPageVue.vue';
 import ErrorPageVue, { ErrorPageEnum } from './routes/error/ErrorPage.vue';
-import AboutUsPageVue from './routes/about-us/AboutUsPage.vue';
 import AboutElectionsPageVue from './routes/about-elections/AboutElectionsPage.vue';
-import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
 
 const RESULT_QUERY_NAME = 'result';
 
@@ -76,36 +73,12 @@ export const appRoutes = {
       title: 'Voksmonitor',
     },
   },
-  aboutUs: {
-    name: 'a-voksmonitorrol',
-    path: '/a-voksmonitorrol',
-    component: AboutUsPageVue,
-    meta: {
-      title: 'A Voksmonitorról',
-    },
-  },
   aboutElections: {
     name: 'o-volbach',
     path: '/o-volbach',
     component: AboutElectionsPageVue,
     meta: {
       title: 'O volbách',
-    },
-  },
-  dataProtection: {
-    name: 'adatvedelem',
-    path: '/adatvedelem',
-    component: DataProtectionPageVue,
-    meta: {
-      title: 'Adat védelem',
-    },
-  },
-  questionsMethodology: {
-    name: 'a-voksmonitor-modszertana',
-    path: '/a-voksmonitor-modszertana',
-    component: QuestionsMethodologyPageVue,
-    meta: {
-      title: 'A Voksmonitor módszertana',
     },
   },
   error: {

@@ -430,7 +430,7 @@ const { t, locale } = useI18n();
         <BodyText size="medium"
           >A Voksmonitor célja a tájékoztatás és a választói mérlegelés segítése. A végső döntést a szavazófülkében Ön hozza meg.
         </BodyText>
-        <ButtonComponent kind="link" @click="router.push('/a-voksmonitorrol')">
+        <ButtonComponent kind="link" tag="a" href="/a-voksmonitorrol">
           <div class="button-content">
             Tudjon meg többet!<IconComponent :icon="mdiArrowRight"></IconComponent>
           </div>
