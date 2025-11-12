@@ -70,7 +70,7 @@ export const appRoutes = {
     path: '/',
     component: IndexPageVue,
     meta: {
-      title: 'Wahlrechner',
+      title: 'Wahlrechner Archiv 2025',
     },
   },
   aboutElections: {
@@ -95,7 +95,7 @@ export const appRoutes = {
     props: true,
     component: ErrorPageVue,
     meta: {
-      title: 'Error - Wahlrechner',
+      title: 'Error - Wahlrechner Archiv',
     },
   },
   districtSelection: {
@@ -104,7 +104,7 @@ export const appRoutes = {
     alias: '/wahlen/:election',
     component: DistrictSelectionPageVue,
     meta: {
-      title: 'Wahlrechner',
+      title: 'Wahlrechner Archiv 2025',
     },
   },
   guide: {
@@ -112,7 +112,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'wahlen'})/:first/:second?/:third?/:fourth?/${'anleitung'}/:step(\\d+)?`,
     component: GuidePageVue,
     meta: {
-      title: 'Anleitung - Wahlrechner',
+      title: 'Anleitung - Wahlrechner Archiv',
     },
   },
   question: {
@@ -120,7 +120,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'wahlen'})/:first/:second?/:third?/:fourth?/${'frage'}/:nr(\\d+)?`,
     component: QuestionPageVue,
     meta: {
-      title: 'Frage $$ - Wahlrechner',
+      title: 'Frage $$ - Wahlrechner Archiv',
       hasNumber: true,
     },
     beforeEnter: questionGuard,
@@ -130,7 +130,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'wahlen'})/:first/:second?/:third?/:fourth?/${'zusammenfassung'}/:nr(\\d+)?`,
     component: RecapPageVue,
     meta: {
-      title: 'Zusammenfassung - Wahlrechner',
+      title: 'Zusammenfassung - Wahlrechner Archiv',
     },
   },
   result: {
@@ -138,7 +138,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'wahlen'})/:first/:second?/:third?/:fourth?/${'ergebnisse'}`,
     component: ResultPageVue,
     meta: {
-      title: 'Ergebnisse - Wahlrechner',
+      title: 'Ergebnisse - Wahlrechner Archiv',
     },
   },
   comparison: {
@@ -146,7 +146,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'wahlen'})/:first/:second?/:third?/:fourth?/${'vergleich'}`,
     component: ComparisonPageVue,
     meta: {
-      title: 'Vergleich - Wahlrechner',
+      title: 'Vergleich - Wahlrechner Archiv',
     },
   },
   fallback: {
