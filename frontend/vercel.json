@@ -1,11 +1,26 @@
 {
   "rewrites": [
-    { "source": "/api/auth/(.*)", "destination": "/api/auth" },
     {
-      "source": "/((?!api).*)",
+      "source": "/(.*)",
       "destination": "/"
     }
   ],
-  "trailingSlash": false,
-  "ignoreCommand": "bash ignored-build-step.sh"
+  "redirects": [
+    {
+      "source": "/uber-den-wahlrechner",
+      "destination": "https://www.wahlrechner.at/uber-den-wahlrechner",
+      "permanent": true
+    },
+    {
+      "source": "/methodologie-der-fragenentwicklung",
+      "destination": "https://www.wahlrechner.at/methodologie-der-fragenentwicklung",
+      "permanent": true
+    },
+    {
+      "source": "/datenschutz",
+      "destination": "https://www.wahlrechner.at/datenschutz",
+      "permanent": true
+    }
+  ],
+  "trailingSlash": false
 }

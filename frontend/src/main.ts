@@ -25,11 +25,8 @@ import ResultPageVue from './routes/result/ResultPage.vue';
 import RecapPageVue from './routes/recap/RecapPage.vue';
 import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
-import QuestionsMethodologyPageVue from './routes/questions-methodology/QuestionsMethodologyPageVue.vue';
 import ErrorPageVue, { ErrorPageEnum } from './routes/error/ErrorPage.vue';
-import AboutUsPageVue from './routes/about-us/AboutUsPage.vue';
 import AboutElectionsPageVue from './routes/about-elections/AboutElectionsPage.vue';
-import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
 import ImprintPageVue from './routes/imprint/ImprintPage.vue';
 
 const RESULT_QUERY_NAME = 'result';
@@ -76,14 +73,6 @@ export const appRoutes = {
       title: 'Wahlrechner',
     },
   },
-  aboutUs: {
-    name: 'uber-den-wahlrechner',
-    path: '/uber-den-wahlrechner',
-    component: AboutUsPageVue,
-    meta: {
-      title: 'Über den Wahlrechner',
-    },
-  },
   aboutElections: {
     name: 'o-volbach',
     path: '/o-volbach',
@@ -92,28 +81,12 @@ export const appRoutes = {
       title: 'O volbách',
     },
   },
-  dataProtection: {
-    name: 'datenschutz',
-    path: '/datenschutz',
-    component: DataProtectionPageVue,
-    meta: {
-      title: 'Datenschutz',
-    },
-  },
   imprint: {
     name: 'impressum',
     path: '/impressum',
     component: ImprintPageVue,
     meta: {
       title: 'Impressum',
-    },
-  },
-  questionsMethodology: {
-    name: 'methodologie-der-fragenentwicklung',
-    path: '/methodologie-der-fragenentwicklung',
-    component: QuestionsMethodologyPageVue,
-    meta: {
-      title: 'Methodologie der Fragenentwicklung',
     },
   },
   error: {
