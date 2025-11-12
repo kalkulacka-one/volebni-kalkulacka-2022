@@ -339,9 +339,7 @@ const shareModal = ref<InstanceType<typeof ResultShareModal> | null>(null);
         </template>
       </BottomBarWrapper>
     </StickyHeaderLayout>
-  </BackgroundComponent><ErrorModal v-else ref="shareModal" title="Něco se pokazilo">
-    Bohužel momentálně nelze sdílet, zkuste to prosím později.
-  </ErrorModal>
+  </BackgroundComponent>
 </template>
 
 <style lang="scss" scoped>
