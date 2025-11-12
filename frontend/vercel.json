@@ -21,5 +21,11 @@
       "permanent": true
     }
   ],
-  "trailingSlash": false
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ],
+  "trailingSlash": false,
 }
