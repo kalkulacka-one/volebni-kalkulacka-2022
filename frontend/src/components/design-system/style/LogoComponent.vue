@@ -73,7 +73,7 @@ const handleClick = () => {
       v-if="props.text"
       :class="['logo--text', `logo--text-${props.size}`, logoMonochromatic]"
     >
-      Archiv volebních kalkulaček
+      Volební kalkulačka archiv 2022–2023
     </div>
   </div>
 </template>
