@@ -1,12 +1,26 @@
 {
   "rewrites": [
-    { "source": "/api/auth/(.*)", "destination": "/api/auth" },
     {
-      "source": "/((?!api).*)",
+      "source": "/(.*)",
       "destination": "/"
     }
   ],
   "redirects": [
+    {
+      "source": "/o-nas",
+      "destination": "https://www.volebnikalkulacka.cz/o-nas",
+      "permanent": true
+    },
+    {
+      "source": "/metodika-tvorby-otazek",
+      "destination": "https://www.volebnikalkulacka.cz/metodika",
+      "permanent": true
+    },
+    {
+      "source": "/ochrana-dat",
+      "destination": "https://www.volebnikalkulacka.cz/soukromi",
+      "permanent": true
+    },
     {
       "source": "/volby/prezidentske-2023/:path*",
       "destination": "https://archiv.volebnikalkulacka.cz/volby/prezidentske-2023/:path*",
