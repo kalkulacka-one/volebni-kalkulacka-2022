@@ -20,6 +20,7 @@ import RecapPageVue from './routes/recap/RecapPage.vue';
 import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
 import EmailCollectionPageVue from './routes/email-collection/EmailCollectionPage.vue';
+import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
 import { useElectionStore } from './stores/electionStore';
 import { createPinia } from 'pinia';
 import ErrorPageVue, { ErrorPageEnum } from './routes/error/ErrorPage.vue';
