@@ -40,7 +40,7 @@ const { t } = useI18n();
     <StaticContentLayout>
       <StackComponent spacing="large" class="section">
         <HeadlineText tag="h1" size="large">
-          Kde najdu svůj profil a staré kalkilačky?
+          Kde najdu svůj profil a staré kalkulačky?
         </HeadlineText>
         <BodyText size="medium">
           <Archive />

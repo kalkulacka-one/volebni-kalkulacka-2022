@@ -21,15 +21,27 @@ import TextInputComponent from '@/components/design-system/input/TextInputCompon
 import TitleText from '@/components/design-system/typography/TitleText.vue';
 </script>
 
-Poslední volby se v Česku konaly před rokem a půl – prezidentské v lednu 2023. A tedy i prezidentská kalkulačka byla až do teď ta poslední.
+Tato stránka slouží jako archiv starších volebních kalkulaček. Aktuální kalkulačku vždy najdete na hlavní adrese [www.volebnikalkulacka.cz](https://www.volebnikalkulacka.cz).
 
-Ale spustili jsme od té doby spoustu kalkulaček [na Slovensku](https://volebnakalkulacka.sk), [v Rakousku](https://wahlrechner.at) a [Maďarsku](https://voksmonitor.hu).
 
-Společně s prezidentskou kalkulačkou jsme chtěli přidat funkci profilu, abyste se mohli k výsledkům svých kalkulaček vracet. Bohužel jsme v tom trochu přecenili síly a tak jsme pro evropské volby museli udělat malý krok zpět a spustit evropskou kalkulačku odděleně, bez profilu.
 
-Možnost **přihlásit se** do svého profilu a **prezidentskou, senátní a komunální** kalkulačku tak teď najdete v **[archivu](https://archiv.volebnikalkulacka.cz)** na adrese [archiv.volebnikalkulacka.cz](https://archiv.volebnikalkulacka.cz).
+Archivní kalkulačky jsou stále plně funkční a můžete si je kdykoliv vyzkoušet a podívat se, s jakými kandidáty nebo stranami byste se shodli v minulých volbách.
 
-Máme v plánu kalkulačky zase sloučit a pro krajské a senátní, ale hlavně parlamentní volby příští rok chystáme další vylepšení, aby kalkulačka byla ještě lepší, než kdy dřív. Nechcete nám s tím pomoct? Pokud byste chtěli pomoct jako dobrovolník, ozvěte se nám na [info@kohovolit.eu](mailto:info@kohovolit.eu) nebo budeme rádi, když nás [podpoříte](https://www.darujme.cz/darovat/1200653) finančně.
+
+
+**Archiv 2022–2023:** Kalkulačky z prezidentských, komunálních a senátních voleb najdete na [archiv.volebnikalkulacka.cz](https://archiv.volebnikalkulacka.cz).
+
+
+
+**Co se stalo s profily?** Funkci profilů jsme zrušili. Pokud jste měli vytvořený profil, automaticky jsme vás přihlásili k odběru našeho newsletteru, abyste zůstali v kontaktu a informovali se o nových kalkulačkách.
+
+
+
+Kromě českých kalkulaček tvoříme kalkulačky i [na Slovensku](https://volebnakalkulacka.sk), [v Rakousku](https://wahlrechner.at) a [Maďarsku](https://voksmonitor.hu).
+
+
+
+Chcete nám pomoct? Pokud byste chtěli pomoct jako dobrovolník, ozvěte se nám na [info@kohovolit.eu](mailto:info@kohovolit.eu) nebo budeme rádi, když nás [podpoříte](https://www.darujme.cz/darovat/1200653) finančně.
 
 <br />
 

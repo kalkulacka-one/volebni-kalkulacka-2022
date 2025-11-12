@@ -63,7 +63,7 @@ const router = useRouter();
                 }}</BodyText></a
               >
               <router-link to="/archiv">
-                <BodyText size="small">Můj profil</BodyText>
+                <BodyText size="small">O archivu & můj profil</BodyText>
               </router-link>
             </StackComponent>
           </StackComponent>
