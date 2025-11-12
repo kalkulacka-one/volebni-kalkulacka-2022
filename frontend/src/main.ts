@@ -66,7 +66,7 @@ export const appRoutes = {
     path: '/',
     component: IndexPageVue,
     meta: {
-      title: 'Archiv volebních kalkulaček',
+      title: 'Volební kalkulačka archiv 2022–2023',
     },
   },
   aboutElections: {
@@ -83,7 +83,7 @@ export const appRoutes = {
     props: true,
     component: ErrorPageVue,
     meta: {
-      title: 'Error - Archiv volebních kalkulaček',
+      title: 'Error - Volební kalkulačka archiv 2022–2023',
     },
   },
   districtSelection: {
@@ -92,7 +92,7 @@ export const appRoutes = {
     alias: '/volby/:election',
     component: DistrictSelectionPageVue,
     meta: {
-      title: 'Archiv volebních kalkulaček',
+      title: 'Volební kalkulačka archiv 2022–2023',
     },
   },
   guide: {
@@ -101,7 +101,7 @@ export const appRoutes = {
     alias: '/volby/:election/:district',
     component: GuidePageVue,
     meta: {
-      title: 'Návod - Archiv volebních kalkulaček',
+      title: 'Návod - Volební kalkulačka archiv 2022–2023',
     },
   },
   question: {
@@ -109,7 +109,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/otazka/:nr?',
     component: QuestionPageVue,
     meta: {
-      title: 'Otázka $$ - Archiv volebních kalkulaček',
+      title: 'Otázka $$ - Volební kalkulačka archiv 2022–2023',
       hasNumber: true,
     },
     beforeEnter: questionGuard,
@@ -119,7 +119,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/rekapitulace',
     component: RecapPageVue,
     meta: {
-      title: 'Rekapitulace - Archiv volebních kalkulaček',
+      title: 'Rekapitulace - Volební kalkulačka archiv 2022–2023',
     },
   },
   result: {
@@ -127,7 +127,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/vysledek',
     component: ResultPageVue,
     meta: {
-      title: 'Výsledky - Archiv volebních kalkulaček',
+      title: 'Výsledky - Volební kalkulačka archiv 2022–2023',
     },
   },
   comparison: {
@@ -135,7 +135,7 @@ export const appRoutes = {
     path: '/volby/:election/:district/srovnani',
     component: ComparisonPageVue,
     meta: {
-      title: 'Porovnaní - Archiv volebních kalkulaček',
+      title: 'Porovnaní - Volební kalkulačka archiv 2022–2023',
     },
   },
   fallback: {
