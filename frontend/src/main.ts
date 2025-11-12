@@ -20,15 +20,10 @@ import RecapPageVue from './routes/recap/RecapPage.vue';
 import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
 import EmailCollectionPageVue from './routes/email-collection/EmailCollectionPage.vue';
-import QuestionsMethodologyPageVue from './routes/questions-methodology/QuestionsMethodologyPageVue.vue';
 import { useElectionStore } from './stores/electionStore';
 import { createPinia } from 'pinia';
 import ErrorPageVue, { ErrorPageEnum } from './routes/error/ErrorPage.vue';
 import { decodeResults, encodeResults } from './common/resultParser';
-import SharePageVue from './routes/share/SharePage.vue';
-import AboutUsPageVue from './routes/about-us/AboutUsPage.vue';
-import AboutElectionsPageVue from './routes/about-elections/AboutElectionsPage.vue';
-import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
 import { getDistrictCode } from './common/utils';
 import VueSocialSharing from 'vue-social-sharing';
 

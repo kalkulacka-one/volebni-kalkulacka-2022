@@ -11,7 +11,6 @@ import ResponsiveWrapper from '@/components/utilities/ResponsiveWrapper.vue';
 import {
   vkiLogoAgainst,
 } from '@/components/design-system/icons';
-import { useUserStore } from '@/stores/userStore';
 import { useRoute, useRouter } from 'vue-router';
 import { appRoutes } from '@/main';
 import { ref } from 'vue';
@@ -22,7 +21,6 @@ export interface CandidateCardProps {
 }
 const props = defineProps<CandidateCardProps>();
 const store = useElectionStore();
-const userStore = useUserStore();
 const candidate = store.calculator?.candidates.find(
   (x) => x.id === props.canidateId
 );
