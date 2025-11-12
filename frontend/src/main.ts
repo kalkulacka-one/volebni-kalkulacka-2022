@@ -70,7 +70,7 @@ export const appRoutes = {
     path: '/',
     component: IndexPageVue,
     meta: {
-      title: 'Voksmonitor',
+      title: 'Voksmonitor Archívum 2024',
     },
   },
   aboutElections: {
