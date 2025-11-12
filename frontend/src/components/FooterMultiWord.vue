@@ -33,15 +33,15 @@ const router = useRouter();
               $t('components.FooterMultiWord.body-about-voting-calculator')
             }}</TitleText>
             <StackComponent spacing="extra-small">
-              <router-link to="/o-nas"
+              <a href="/o-nas"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-about-voting-calculator')
-                }}</BodyText></router-link
+                }}</BodyText></a
               >
-              <router-link to="/metodika-tvorby-otazek"
+              <a href="/metodika-tvorby-otazek"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-methodoogy')
-                }}</BodyText></router-link
+                }}</BodyText></a
               >
             </StackComponent>
           </StackComponent>
@@ -52,10 +52,10 @@ const router = useRouter();
               $t('components.FooterMultiWord.links')
             }}</TitleText>
             <StackComponent spacing="extra-small">
-              <router-link to="/ochrana-dat"
+              <a href="/ochrana-dat"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-data-protection')
-                }}</BodyText></router-link
+                }}</BodyText></a
               >
               <a href="https://www.kalkulacka.one/cs/podporte-kalkulacku"
                 ><BodyText size="small">{{
