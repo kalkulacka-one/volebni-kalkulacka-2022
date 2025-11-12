@@ -168,7 +168,7 @@ const { t, locale } = useI18n();
                     params: {
                       ...route.params,
                       type: `${'zgjedhjet'}`,
-                      first: 'kuvendore-2025',
+                      first: 'parlamentare-2025',
                       second: 'kalkulatori',
                     },
                     query: { ...route.query },
