@@ -74,7 +74,7 @@ export const appRoutes = {
     path: '/',
     component: IndexPageVue,
     meta: {
-      title: 'TestVot 2025',
+      title: 'TestVot Arhivă 2025',
     },
   },
   gdpr: {
@@ -82,7 +82,7 @@ export const appRoutes = {
     path: '/protectia-datelor',
     component: DataProtectionPageVue,
     meta: {
-      title: 'Protecţia datelor - TestVot 2025',
+      title: 'Protecţia datelor - TestVot Arhivă 2025',
     },
   },
   error: {
@@ -91,7 +91,7 @@ export const appRoutes = {
     props: true,
     component: ErrorPageVue,
     meta: {
-      title: 'Error - TestVot 2025',
+      title: 'Error - TestVot Arhivă 2025',
     },
   },
   districtSelection: {
@@ -100,7 +100,7 @@ export const appRoutes = {
     alias: '/optiuni/:election',
     component: DistrictSelectionPageVue,
     meta: {
-      title: 'TestVot 2025',
+      title: 'TestVot Arhivă 2025',
     },
   },
   emailCollection: {
@@ -108,7 +108,7 @@ export const appRoutes = {
     path: '/optiuni/:election/:district/email',
     component: EmailCollectionPageVue,
     meta: {
-      title: 'TestVot 2025',
+      title: 'TestVot Arhivă 2025',
     },
   },
   guide: {
@@ -117,7 +117,7 @@ export const appRoutes = {
     alias: '/optiuni/:election/:district',
     component: GuidePageVue,
     meta: {
-      title: 'Instrucţiuni - TestVot 2025',
+      title: 'Instrucţiuni - TestVot Arhivă 2025',
     },
   },
   question: {
@@ -125,7 +125,7 @@ export const appRoutes = {
     path: '/optiuni/:election/:district/intrebare/:nr?',
     component: QuestionPageVue,
     meta: {
-      title: 'Întrebare $$ - TestVot 2025',
+      title: 'Întrebare $$ - TestVot Arhivă 2025',
       hasNumber: true,
     },
     beforeEnter: questionGuard,
@@ -135,7 +135,7 @@ export const appRoutes = {
     path: '/optiuni/:election/:district/intrebare/candidat',
     component: PreferredCandidatePageVue,
     meta: {
-      title: 'Întrebare $$ - TestVot 2025',
+      title: 'Întrebare $$ - TestVot Arhivă 2025',
     },
   },
   recap: {
@@ -143,7 +143,7 @@ export const appRoutes = {
     path: '/optiuni/:election/:district/recapitulare',
     component: RecapPageVue,
     meta: {
-      title: 'Recapitulare - TestVot 2025',
+      title: 'Recapitulare - TestVot Arhivă 2025',
     },
   },
   result: {
@@ -151,7 +151,7 @@ export const appRoutes = {
     path: '/optiuni/:election/:district/rezultat',
     component: ResultPageVue,
     meta: {
-      title: 'Rezultat - TestVot 2025',
+      title: 'Rezultat - TestVot Arhivă 2025',
     },
   },
   comparison: {
@@ -159,7 +159,7 @@ export const appRoutes = {
     path: '/optiuni/:election/:district/comparatie',
     component: ComparisonPageVue,
     meta: {
-      title: 'Comparație - TestVot 2025',
+      title: 'Comparație - TestVot Arhivă 2025',
     },
   },
   fallback: {

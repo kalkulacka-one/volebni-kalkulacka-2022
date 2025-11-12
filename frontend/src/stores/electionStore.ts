@@ -1,10 +1,10 @@
-import { fetchCalculator, fetchElectionData } from '@/common/dataFetch';
-import { patchResults, postResults } from '@/common/restApi';
-import { encodeResults } from '@/common/resultParser';
+import {
+  fetchCalculator,
+  fetchElectionData,
+} from '@/common/dataFetch';
 import type { Calculator } from '@/types/calculator';
 import type { Calculators } from '@/types/calculators';
 import type { Election } from '@/types/election';
-import type { User } from '@/stores/userStore';
 import { defineStore } from 'pinia';
 
 export enum UserAnswerEnum {
@@ -14,7 +14,7 @@ export enum UserAnswerEnum {
 }
 
 export const convertAnswerToBool = (
-  answer: UserAnswerEnum
+  answer: UserAnswerEnum,
 ): boolean | undefined => {
   switch (answer) {
     case UserAnswerEnum.yes:
@@ -27,7 +27,7 @@ export const convertAnswerToBool = (
 };
 
 export const convertBoolToAnswer = (
-  answer: boolean | undefined
+  answer: boolean | undefined,
 ): UserAnswerEnum => {
   switch (answer) {
     case true:
@@ -105,12 +105,12 @@ export const useElectionStore = defineStore('election', {
         // new Error('Election data are undefined!');
       }
     },
-    async loadCalculator(electionId: string, districtId: string) {
+    async loadCalculator(key: string) {
       this.calculator = undefined;
       this.uniqueQuestionTags.clear();
       let calculator = undefined;
       try {
-        calculator = await fetchCalculator(electionId, districtId);
+        calculator = await fetchCalculator(key);
       } catch (error) {
         console.error(error);
       }
@@ -131,85 +131,6 @@ export const useElectionStore = defineStore('election', {
       } else {
         console.warn('District data are undefined!');
       }
-    },
-    async saveResults({
-      embedName,
-      user,
-    }: {
-      embedName: string | undefined;
-      user: User | null | undefined;
-    }) {
-      if (user && !!user.authProvider) {
-        const res = await fetch('/api/answers');
-        const answers = await res.json();
-        const calculatorAnswers = answers.filter(
-          (answer: any) => answer.calculatorId === this.calculator?.id
-        );
-        if (calculatorAnswers.length > 0) {
-          this.resultsId = calculatorAnswers[0].id;
-        }
-      }
-
-      //if results already saved do not save them again
-      const newEncodedResults = encodeResults(this.answers);
-      //return if results already saved and answers are the same
-      const response = {
-        action: 'unknown',
-        response: null as any,
-      };
-      const answersCount = this.answers.length;
-      const answeredAnswersCount = this.answers.filter(
-        (answer) => answer.answer === UserAnswerEnum.skip
-      ).length;
-      if (answersCount === answeredAnswersCount) {
-        response.action = 'no-action';
-        console.debug('No question answered.');
-      } else if (newEncodedResults === this.encodedResults && this.resultsId) {
-        response.action = 'no-action';
-        console.debug('Results already saved.');
-      }
-      //patch if results already saved and user is logged in
-      else if (this.resultsId && user) {
-        console.debug('Results changed. Patching signed in user...');
-        const res = await patchResults({
-          resultId: this.resultsId,
-        });
-        this.resultsId = res?.id ? (res.id as string) : null;
-        this.resultsUpdateToken = res?.updateToken
-          ? (res.updateToken as string)
-          : null;
-        response.action = 'update';
-        response.response = res;
-      }
-      //patch if results already saved but answers differ
-      else if (this.resultsId && this.resultsUpdateToken) {
-        console.debug('Results changed. Patching...');
-        const res = await patchResults({
-          resultId: this.resultsId,
-          updateToken: this.resultsUpdateToken,
-        });
-        this.resultsId = res?.id ? (res.id as string) : null;
-        this.resultsUpdateToken = res?.updateToken
-          ? (res.updateToken as string)
-          : null;
-        response.action = 'update';
-        response.response = res;
-      }
-      //post new reults if results not yet saved
-      else {
-        console.debug('Results not saved. Posting...');
-        this.resultsId = null;
-        this.resultsUpdateToken = null;
-        const res = await postResults({ embedName });
-        this.resultsId = res?.id ? (res.id as string) : null;
-        this.resultsUpdateToken = res?.updateToken
-          ? (res.updateToken as string)
-          : null;
-        response.action = 'save';
-        response.response = res;
-      }
-      this.encodedResults = newEncodedResults;
-      return response;
     },
     init() {
       console.debug('Initializing store ...');
