@@ -33,15 +33,15 @@ const router = useRouter();
               $t('components.FooterMultiWord.body-about-voting-calculator')
             }}</TitleText>
             <StackComponent spacing="extra-small">
-              <router-link to="/a-voksmonitorrol"
+              <a href="/a-voksmonitorrol"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-about-voting-calculator')
-                }}</BodyText></router-link
+                }}</BodyText></a
               >
-              <router-link to="/a-voksmonitor-modszertana"
+              <a href="/a-voksmonitor-modszertana"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-methodoogy')
-                }}</BodyText></router-link
+                }}</BodyText></a
               >
             </StackComponent>
           </StackComponent>
@@ -52,10 +52,10 @@ const router = useRouter();
               $t('components.FooterMultiWord.links')
             }}</TitleText>
             <StackComponent spacing="extra-small">
-              <router-link to="/adatvedelem"
+              <a href="/adatvedelem"
                 ><BodyText size="small">{{
                   $t('components.FooterMultiWord.body-data-protection')
-                }}</BodyText></router-link
+                }}</BodyText></a
               >
               <a href="https://www.darujme.cz/darovat/1209551"
                 ><BodyText size="small">{{

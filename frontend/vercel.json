@@ -5,5 +5,22 @@
       "destination": "/"
     }
   ],
+  "redirects": [
+    {
+      "source": "/a-voksmonitorrol",
+      "destination": "https://www.voksmonitor.hu/rolunk",
+      "permanent": true
+    },
+    {
+      "source": "/kerdesek-modszertana",
+      "destination": "https://www.voksmonitor.hu/modszertanunk",
+      "permanent": true
+    },
+    {
+      "source": "/adatvedelem",
+      "destination": "https://www.voksmonitor.hu/adatvedelem",
+      "permanent": true
+    }
+  ],
   "trailingSlash": false
 }

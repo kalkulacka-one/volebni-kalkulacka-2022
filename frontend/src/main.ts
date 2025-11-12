@@ -25,11 +25,8 @@ import ResultPageVue from './routes/result/ResultPage.vue';
 import RecapPageVue from './routes/recap/RecapPage.vue';
 import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
-import QuestionsMethodologyPageVue from './routes/questions-methodology/QuestionsMethodologyPageVue.vue';
 import ErrorPageVue, { ErrorPageEnum } from './routes/error/ErrorPage.vue';
-import AboutUsPageVue from './routes/about-us/AboutUsPage.vue';
 import AboutElectionsPageVue from './routes/about-elections/AboutElectionsPage.vue';
-import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
 
 const RESULT_QUERY_NAME = 'result';
 
@@ -73,15 +70,7 @@ export const appRoutes = {
     path: '/',
     component: IndexPageVue,
     meta: {
-      title: 'Voksmonitor',
-    },
-  },
-  aboutUs: {
-    name: 'a-voksmonitorrol',
-    path: '/a-voksmonitorrol',
-    component: AboutUsPageVue,
-    meta: {
-      title: 'A Voksmonitorról',
+      title: 'Voksmonitor Archívum 2024',
     },
   },
   aboutElections: {
@@ -92,29 +81,13 @@ export const appRoutes = {
       title: 'O volbách',
     },
   },
-  dataProtection: {
-    name: 'adatvedelem',
-    path: '/adatvedelem',
-    component: DataProtectionPageVue,
-    meta: {
-      title: 'Adat védelem',
-    },
-  },
-  questionsMethodology: {
-    name: 'a-voksmonitor-modszertana',
-    path: '/a-voksmonitor-modszertana',
-    component: QuestionsMethodologyPageVue,
-    meta: {
-      title: 'A Voksmonitor módszertana',
-    },
-  },
   error: {
     name: 'error',
     path: '/error/:case',
     props: true,
     component: ErrorPageVue,
     meta: {
-      title: 'Error - Voksmonitor',
+      title: 'Error - Voksmonitor Archívum',
     },
   },
   districtSelection: {
@@ -123,7 +96,7 @@ export const appRoutes = {
     alias: '/valasztasok/:election',
     component: DistrictSelectionPageVue,
     meta: {
-      title: 'Voksmonitor',
+      title: 'Voksmonitor Archívum',
     },
   },
   guide: {
@@ -131,7 +104,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'valasztasok'})/:first/:second?/:third?/:fourth?/${'utmutato'}/:step(\\d+)?`,
     component: GuidePageVue,
     meta: {
-      title: 'Útmutató - Voksmonitor',
+      title: 'Útmutató - Voksmonitor Archívum',
     },
   },
   question: {
@@ -139,7 +112,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'valasztasok'})/:first/:second?/:third?/:fourth?/${'kerdes'}/:nr(\\d+)?`,
     component: QuestionPageVue,
     meta: {
-      title: 'Kérdés $$ - Voksmonitor',
+      title: 'Kérdés $$ - Voksmonitor Archívum',
       hasNumber: true,
     },
     beforeEnter: questionGuard,
@@ -149,7 +122,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'valasztasok'})/:first/:second?/:third?/:fourth?/${'osszegzes'}/:nr(\\d+)?`,
     component: RecapPageVue,
     meta: {
-      title: 'Összegzés - Voksmonitor',
+      title: 'Összegzés - Voksmonitor Archívum',
     },
   },
   result: {
@@ -157,7 +130,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'valasztasok'})/:first/:second?/:third?/:fourth?/${'egyezeseim'}`,
     component: ResultPageVue,
     meta: {
-      title: 'Egyezéseim - Voksmonitor',
+      title: 'Egyezéseim - Voksmonitor Archívum',
     },
   },
   comparison: {
@@ -165,7 +138,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'valasztasok'})/:first/:second?/:third?/:fourth?/${'osszehasonlitas'}`,
     component: ComparisonPageVue,
     meta: {
-      title: 'Összehasonlítás - Voksmonitor',
+      title: 'Összehasonlítás - Voksmonitor Archívum',
     },
   },
   fallback: {
