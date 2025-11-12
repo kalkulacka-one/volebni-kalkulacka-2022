@@ -1,4 +1,21 @@
 {
+  "redirects": [
+    {
+      "source": "/o-nas",
+      "destination": "https://www.volebnikalkulacka.cz/o-nas",
+      "permanent": true
+    },
+    {
+      "source": "/metodika-tvorby-otazek",
+      "destination": "https://www.volebnikalkulacka.cz/metodika",
+      "permanent": true
+    },
+    {
+      "source": "/ochrana-dat",
+      "destination": "https://www.volebnikalkulacka.cz/soukromi",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
