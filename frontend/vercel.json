@@ -14,6 +14,11 @@
       "source": "/ochrana-dat",
       "destination": "https://www.volebnikalkulacka.cz/soukromi",
       "permanent": true
+    },
+    {
+      "source": "/archiv",
+      "destination": "https://archiv-2024.volebnikalkulacka.cz/archiv",
+      "permanent": true
     }
   ],
   "trailingSlash": false
