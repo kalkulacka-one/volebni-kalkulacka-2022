@@ -10,7 +10,6 @@ import {
 
 import { appRoutes } from '@/main';
 import { useElectionStore } from '@/stores/electionStore';
-import { useUserStore, type User } from '@/stores/userStore';
 import {
   calculateRelativeAgreement,
   encodeResults,
@@ -49,7 +48,6 @@ const router = useRouter();
 const route = useRoute();
 const electionStore = useElectionStore();
 
-const userStore = useUserStore();
 
 const user = computed(() => userStore.user);
 
