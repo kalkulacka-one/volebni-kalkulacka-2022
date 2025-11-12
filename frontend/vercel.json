@@ -1,26 +1,25 @@
 {
   "rewrites": [
-    { "source": "/api/auth/(.*)", "destination": "/api/auth" },
     {
-      "source": "/((?!api).*)",
+      "source": "/(.*)",
       "destination": "/"
     }
   ],
   "redirects": [
     {
-      "source": "/volby/prezidentske-2023/:path*",
-      "destination": "https://archiv.volebnikalkulacka.cz/volby/prezidentske-2023/:path*",
-      "permanent": false
+      "source": "/rreth-kalkulatorit-zgjedhor",
+      "destination": "https://www.kalkulatorizgjedhor.org/rreth-kalkulatorit-zgjedhor",
+      "permanent": true
     },
     {
-      "source": "/volby/senatni-2022/:path*",
-      "destination": "https://archiv.volebnikalkulacka.cz/volby/senatni-2022/:path*",
-      "permanent": false
+      "source": "/metodologjia-e-hartimit-te-pyetjeve",
+      "destination": "https://www.kalkulatorizgjedhor.org/metodologjia-e-hartimit-te-pyetjeve",
+      "permanent": true
     },
     {
-      "source": "/volby/komunalni-2022/:path*",
-      "destination": "https://archiv.volebnikalkulacka.cz/volby/komunalni-2022/:path*",
-      "permanent": false
+      "source": "/mbrojtja-e-te-dhenave",
+      "destination": "https://www.kalkulatorizgjedhor.org/mbrojtja-e-te-dhenave",
+      "permanent": true
     }
   ],
   "trailingSlash": false,

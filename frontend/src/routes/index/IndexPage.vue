@@ -26,149 +26,85 @@ import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import TextInputComponent from '@/components/design-system/input/TextInputComponent.vue';
 import TitleText from '@/components/design-system/typography/TitleText.vue';
 
-import { useUserStore } from '@/stores/userStore';
-
 const router = useRouter();
 const route = useRoute();
-const userStore = useUserStore();
-
-const user = computed(() => userStore.user);
 const info = ref<HTMLElement | null>(null);
 const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
 
 const { t, locale } = useI18n();
 
-const email = ref('');
-const emailError = ref();
-const posting = ref();
-const success = ref();
-const message = ref();
-
-const handleSubscribe = async () => {
-  console.log('handleSubmit');
-  if (email.value === '') {
-    emailError.value = t('routes.index.IndexPage.empty-email-error');
-    return;
-  } else {
-    emailError.value = undefined;
-  }
-
-  posting.value = true;
-
-  const response = await fetch('/api/subscriptions', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ email: email.value }),
-  });
-
-  if (response.ok) {
-    posting.value = false;
-    success.value = true;
-    message.value = t('routes.index.IndexPage.success');
-  } else {
-    posting.value = false;
-    success.value = false;
-    message.value = t('routes.index.IndexPage.error');
-  }
-};
 </script>
 
 <template>
   <StickyHeaderLayout>
     <template #header>
-      <NavigationBar transparent with-account :user="user" />
+      <NavigationBar transparent />
     </template>
     <div class="prezident-hero">
       <BlobComponent color="blue" class="blob1" />
       <BlobComponent color="red" class="blob2" />
       <StackComponent spacing="medium" centered class="calc-main">
-        <BodyText size="medium" tag="h1" color="fg-strong">
-          <strong>Zgjedhjet parlamentare në Kosovë 2025</strong><br />
-          9 shkurt 2025
-          <br />
-        </BodyText>
-        <HeadlineText tag="p" size="small">
-          Zgjedhjet parlamentare
-          <span style="color: rgb(var(--color-neutral-fg))"> 2025 </span>
-        </HeadlineText>
-        <BodyText size="small"> 21 pyetje, rreth 5 minuta</BodyText>
-          <ButtonComponent
-            kind="filled"
-            color="primary"
-            @click="
-              router.push({
-                name: appRoutes.guide.name,
-                params: {
-                  ...route.params,
-                  type: `${'zgjedhjet'}`,
-                  first: 'parlamentare-2025',
-                  second: 'kalkulatori',
-                },
-                query: { ...route.query },
-              })
-            "
-          >
-            Fillo kalkulatorin zgjedhor
-            <template #iconAfter>
-              <IconComponent :icon="mdiArrowRight" />
-            </template>
+        <StackComponent spacing="large" centered space-between>
+          <BodyText size="medium" tag="h1" color="fg-strong">
+            <strong>Arkiv i Kalkulatorit zgjedhor 2025</strong><br />
+            Zgjedhjet kuvendore në Kosovë
+            <br />
+          </BodyText>
+          <HeadlineText tag="p" size="small">
+            Arkiv
+            <span style="color: rgb(var(--color-neutral-fg))"> 2025 </span>
+          </HeadlineText>
+        </StackComponent>
+
+        <section class="current-version-hero">
+          <StackComponent spacing="medium" centered>
+            <CardComponent style="max-width: 48rem; text-align: center;">
+              <StackComponent spacing="medium" centered>
+                <HeadlineText tag="h1" size="medium" color="fg-strong">
+                  Kalkulatori i ri zgjedhor është i disponueshëm!
+                </HeadlineText>
+                <BodyText size="medium" centered>
+                  Ky është një arkiv i Kalkulatorit zgjedhor për zgjedhjet kuvendore në Kosovë 2025. <strong>Kalkulatorin aktual mund ta gjeni në <a href="https://www.kalkulatorizgjedhor.org" target="_blank" rel="noopener noreferrer">www.kalkulatorizgjedhor.org</a></strong>
+                </BodyText>
+                <ButtonComponent
+                  kind="filled"
+                  color="primary"
+                  size="medium"
+                  tag="a"
+                  href="https://www.kalkulatorizgjedhor.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <template #icon>
+                    <IconComponent :icon="mdiArrowRight" />
+                  </template>
+                  Kalo te kalkulatori aktual
+                </ButtonComponent>
+                <BodyText size="small" color="fg-muted" centered>
+                  Në këtë faqe arkivi do të gjeni kalkulatorin për zgjedhjet kuvendore 2025
+                </BodyText>
+              </StackComponent>
+            </CardComponent>
+          </StackComponent>
+        </section>
+
+        <StackComponent class="section" spacing="large" centered>
+          <ButtonComponent kind="link" @click="scrollDown">
+            <div class="button-content">
+              Shfaq kalkulatorë të arkivuar<IconComponent
+                :icon="mdiArrowDown"
+              ></IconComponent>
+            </div>
           </ButtonComponent>
-          <div style="height:100px"></div>
+        </StackComponent>
       </StackComponent>
     </div>
-    <section class="subscribe">
-      <StackComponent spacing="small" centered>
-        <TitleText size="large" tag="h2">
-          Dëshironi të dini për kalkulatorët e rinj?
-        </TitleText>
-        <BodyText size="small" centered>
-          Na lini email-in tuaj dhe ne do t’ju njoftojmë sa herë që të lançojmë
-          një kalkulator të ri.
-        </BodyText>
-        <BodyText v-if="success" size="small">
-          {{ message }}
-        </BodyText>
-        <form v-if="!success">
-          <StackComponent
-            horizontal
-            spacing="small"
-            stretched
-            wrap
-            style="justify-content: center"
-          >
-            <TextInputComponent
-              v-model="email"
-              required
-              type="email"
-              :placeholder="t('routes.index.IndexPage.input-label')"
-              :value="email"
-              :icon="mdiEmailOutline"
-              :disabled="posting"
-              :error="emailError"
-            />
-            <ButtonComponent
-              kind="outlined"
-              color="primary"
-              :loading="posting"
-              @click.prevent="handleSubscribe"
-            >
-              Dërgo
-            </ButtonComponent>
-          </StackComponent>
-        </form>
-        <BodyText v-if="!success" tag="p" size="small">{{
-          $t('routes.index.IndexPage.disclaimer')
-        }}</BodyText>
-      </StackComponent>
-    </section>
     <StaticContentLayout>
       <StackComponent class="section" spacing="small" centered>
         <TitleText size="large" tag="h2">Si krijohet kalkulatori?</TitleText>
         <BodyText size="medium"
           >Kalkulatori zgjedhor është një projekt i organizatës jofitimprurëse
-          KohoVolit.eu, në bashkëpunim me Open Data Kosovo, dhe është një
+          KohoVolit.eu, në bashkëpunim me Faktoje, dhe është një
           ndihmës i paanshëm në vendimin tuaj se kë të votoni.</BodyText
         >
         <div class="info-bubbles-grid section">
@@ -200,6 +136,53 @@ const handleSubscribe = async () => {
           >Kalkulatori zgjedhor është vetëm një shërbim informues dhe nuk ka për
           qëllim të japë rekomandime të drejtpërdrejta për zgjedhje.
         </BodyText>
+        <ButtonComponent kind="link" tag="a" href="/rreth-kalkulatorit-zgjedhor">
+          <div class="button-content">
+            Mësoni më shumë<IconComponent :icon="mdiArrowRight"></IconComponent>
+          </div>
+        </ButtonComponent>
+      </StackComponent>
+      <DonateBlock />
+      <StackComponent spacing="large">
+        <div ref="info"></div>
+        <TitleText size="large" tag="h2">
+          Kalkulatorë të arkivuar zgjedhor
+        </TitleText>
+        <MasonryGrid style="align-self: stretch">
+          <CardComponent corner="top-right" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium">
+                  Zgjedhjet kuvendore 2025
+                </TitleText>
+                <BodyText size="medium"
+                  >Zgjedhjet kuvendore në Kosovë, 12 shkurt 2025, 30 pyetje, rreth 5 minuta</BodyText
+                >
+              </div>
+              <ButtonComponent
+                kind="filled"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      type: `${'zgjedhjet'}`,
+                      first: 'parlamentare-2025',
+                      second: 'kalkulatori',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+                Nis kalkulatorin
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
+        </MasonryGrid>
       </StackComponent>
     </StaticContentLayout>
     <FooterMultiWord class="section" />
@@ -207,6 +190,50 @@ const handleSubscribe = async () => {
 </template>
 
 <style scoped lang="scss">
+.button-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.section {
+  padding: 40px 0;
+}
+
+.info-bubbles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.current-version-hero {
+  padding: 40px 0;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .prezident-hero {
   box-sizing: border-box;
   position: relative;
@@ -373,10 +400,11 @@ const handleSubscribe = async () => {
   }
 }
 
-.subscribe {
-  padding-top: 40px;
+.current-version-hero {
+  padding: 40px 24px;
   display: grid;
   align-content: center;
   justify-content: center;
+  background: rgb(var(--color-primary-bg-container));
 }
 </style>
