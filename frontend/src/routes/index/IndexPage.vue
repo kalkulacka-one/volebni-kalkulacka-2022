@@ -101,20 +101,6 @@ const route = useRoute();
     padding: 24px;
   }
 
-  .other-calcs {
-    width: 100%;
-    padding: 24px;
-    text-align: center;
-    display: grid;
-    gap: 24px;
-  }
-
-  .other-calcs > * {
-    width: 100%;
-    padding: 16px;
-    display: grid;
-  }
-
   .blob1 {
     position: absolute;
     left: 10%;
@@ -140,58 +126,11 @@ const route = useRoute();
       grid-column: 4/10;
       margin-bottom: 16px;
     }
-
-    .other-calcs {
-      grid-row: 6;
-      grid-column: 2/12;
-      grid-template-columns: 1fr 1fr;
-      padding: 0;
-    }
-  }
-
-  @media (min-width: 992px) {
-    .other-calcs {
-      grid-column: 3/11;
-    }
-  }
-
-  @media (min-width: 1200px) {
-    .other-calcs {
-      grid-column: 4/10;
-    }
-  }
-}
-
-.section-header {
-  display: grid;
-  grid-template-columns: 1.2fr repeat(1, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-
-  @media (max-width: 767px) {
-    grid-template-columns: 1fr;
   }
 }
 
 .section {
   padding: 40px 0;
-}
-
-.wrapper {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  padding: var(--spacing-large);
-}
-
-.card {
-  max-width: 60rem;
-}
-
-.card-election {
-  width: 100%;
-  max-width: 600px;
 }
 
 .card-content {
@@ -205,62 +144,6 @@ const route = useRoute();
   flex-direction: column;
   gap: 8px;
   max-width: 400px;
-}
-
-.card-content-text h3 {
-  padding-bottom: 8px;
-}
-
-.divider {
-  width: 100%;
-  height: 2px;
-  background-color: rgb(var(--color-neutral-bg));
-}
-
-.button-content {
-  display: flex;
-  flex-direction: row;
-  gap: 4px;
-}
-
-.info-bubbles-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 32px;
-  grid-row-gap: 32px;
-
-  @media (max-width: 767px) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
-
-  @media (max-width: 478px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
-  }
-}
-
-.navigation-bar {
-  .grid {
-    display: grid;
-    align-items: center;
-    grid-template-columns: auto auto 1fr;
-
-    @media (max-width: 700px) {
-      grid-template-columns: 1fr auto 1fr;
-    }
-
-    .title {
-      justify-self: center;
-      margin-left: var(--spacing-medium);
-      margin-right: var(--spacing-medium);
-    }
-
-    .right {
-      justify-content: end;
-    }
-  }
 }
 
 .current-version-hero {
