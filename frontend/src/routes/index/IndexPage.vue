@@ -8,6 +8,7 @@ import BlobComponent from '@/components/design-system/style/BlobComponent.vue';
 import BodyText from '../../components/design-system/typography/BodyText.vue';
 import ButtonComponent from '../../components/design-system/input/ButtonComponent.vue';
 import CardComponent from '@/components/design-system/containers/CardComponent.vue';
+import CheckboxComponent from '@/components/design-system/input/CheckboxComponent.vue';
 import FooterMultiWord from '@/components/FooterMultiWord.vue';
 import HeadlineText from '@/components/design-system/typography/HeadlineText.vue';
 import IconComponent from '@/components/design-system/icons/IconComponent.vue';
@@ -22,6 +23,7 @@ const router = useRouter();
 const route = useRoute();
 const info = ref<HTMLElement | null>(null);
 const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
+const hasCheckedPrivacy = ref(false);
 
 </script>
 
@@ -100,18 +102,24 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
             <div class="card-content">
               <div class="card-content-text">
                 <TitleText tag="h3" size="medium">
-                  Alegeri prezidențiale 2025
+                  TestVot 2025 alegeri prezidențiale
                 </TitleText>
-                <BodyText size="medium"
-                  >Alegeri prezidențiale în România, 2025</BodyText
-                >
+                <BodyText size="medium">
+                  Pentru a folosi aplicația trebuie să fii de acord cu <a href="/protectia-datelor">politica de confidențialitate</a> a datelor.
+                </BodyText>
+                <CheckboxComponent groupName="privacy" label="Sunt de acord cu politica de confidențialitate" @update:check="checked => hasCheckedPrivacy = checked">
+                  Sunt de acord
+                </CheckboxComponent>
               </div>
               <ButtonComponent
-                kind="filled"
-                color="primary"
+                :kind="hasCheckedPrivacy ? 'filled' : 'outlined'"
+                :color="hasCheckedPrivacy ? 'primary' : 'primary'"
+                :readOnly="!hasCheckedPrivacy"
                 tag="a"
                 @click="
                   () => {
+                    if (!hasCheckedPrivacy) return;
+
                     router.push({
                       name: appRoutes.guide.name,
                       params: {
@@ -124,7 +132,7 @@ const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
                   }
                 "
               >
-                Pornește calculatorul
+                Continuă
                 <template #iconAfter>
                   <IconComponent :icon="mdiArrowRight" />
                 </template>
