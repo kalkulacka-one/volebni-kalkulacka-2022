@@ -5,5 +5,22 @@
       "destination": "/"
     }
   ],
+  "redirects": [
+    {
+      "source": "/o-nas",
+      "destination": "https://www.volebnakalkulacka.sk/o-nas",
+      "permanent": true
+    },
+    {
+      "source": "/metodika-tvorby-otazok",
+      "destination": "https://www.volebnakalkulacka.sk/metodika",
+      "permanent": true
+    },
+    {
+      "source": "/ochrana-dat",
+      "destination": "https://www.volebnakalkulacka.sk/sukromie",
+      "permanent": true
+    }
+  ],
   "trailingSlash": false
 }

@@ -25,11 +25,8 @@ import ResultPageVue from './routes/result/ResultPage.vue';
 import RecapPageVue from './routes/recap/RecapPage.vue';
 import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
-import QuestionsMethodologyPageVue from './routes/questions-methodology/QuestionsMethodologyPageVue.vue';
 import ErrorPageVue, { ErrorPageEnum } from './routes/error/ErrorPage.vue';
-import AboutUsPageVue from './routes/about-us/AboutUsPage.vue';
 import AboutElectionsPageVue from './routes/about-elections/AboutElectionsPage.vue';
-import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
 
 const RESULT_QUERY_NAME = 'result';
 
@@ -73,15 +70,7 @@ export const appRoutes = {
     path: '/',
     component: IndexPageVue,
     meta: {
-      title: 'Volebná kalkulačka',
-    },
-  },
-  aboutUs: {
-    name: 'o-nas',
-    path: '/o-nas',
-    component: AboutUsPageVue,
-    meta: {
-      title: 'O kalkulačke',
+      title: 'Volebná kalkulačka Archív 2023–2024',
     },
   },
   aboutElections: {
@@ -92,30 +81,13 @@ export const appRoutes = {
       title: 'O volbách',
     },
   },
-  dataProtection: {
-    name: 'ochrana-dat',
-    path: '/ochrana-dat',
-    alias: ['/soukromi', '/podminky'],
-    component: DataProtectionPageVue,
-    meta: {
-      title: 'Ochrana dát',
-    },
-  },
-  questionsMethodology: {
-    name: 'metodika-tvorby-otazok',
-    path: '/metodika-tvorby-otazok',
-    component: QuestionsMethodologyPageVue,
-    meta: {
-      title: 'Metodika tvorby otázok',
-    },
-  },
   error: {
     name: 'error',
     path: '/error/:case',
     props: true,
     component: ErrorPageVue,
     meta: {
-      title: 'Error - Volebná kalkulačka',
+      title: 'Error - Volebná kalkulačka Archív',
     },
   },
   districtSelection: {
@@ -124,7 +96,7 @@ export const appRoutes = {
     alias: '/volby/:election',
     component: DistrictSelectionPageVue,
     meta: {
-      title: 'Volebná kalkulačka',
+      title: 'Volebná kalkulačka Archív',
     },
   },
   guide: {
@@ -132,7 +104,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'navod'}/:step(\\d+)?`,
     component: GuidePageVue,
     meta: {
-      title: 'Návod - Volebná kalkulačka',
+      title: 'Návod - Volebná kalkulačka Archív',
     },
   },
   question: {
@@ -140,7 +112,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'otazka'}/:nr(\\d+)?`,
     component: QuestionPageVue,
     meta: {
-      title: 'Otázka $$ - Volebná kalkulačka',
+      title: 'Otázka $$ - Volebná kalkulačka Archív',
       hasNumber: true,
     },
     beforeEnter: questionGuard,
@@ -150,7 +122,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'rekapitulacia'}/:nr(\\d+)?`,
     component: RecapPageVue,
     meta: {
-      title: 'Rekapitulácia - Volebná kalkulačka',
+      title: 'Rekapitulácia - Volebná kalkulačka Archív',
     },
   },
   result: {
@@ -158,7 +130,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'vysledok'}`,
     component: ResultPageVue,
     meta: {
-      title: 'Výsledok - Volebná kalkulačka',
+      title: 'Výsledok - Volebná kalkulačka Archív',
     },
   },
   comparison: {
@@ -166,7 +138,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'volby'})/:first/:second?/:third?/:fourth?/${'porovnanie'}`,
     component: ComparisonPageVue,
     meta: {
-      title: 'Porovnanie - Volebná kalkulačka',
+      title: 'Porovnanie - Volebná kalkulačka Archív',
     },
   },
   fallback: {
