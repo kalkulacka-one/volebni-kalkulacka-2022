@@ -70,7 +70,7 @@ export const appRoutes = {
     path: '/',
     component: IndexPageVue,
     meta: {
-      title: 'Volebná kalkulačka',
+      title: 'Volebná kalkulačka Archív 2023–2024',
     },
   },
   aboutElections: {
