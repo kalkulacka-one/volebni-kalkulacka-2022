@@ -45,13 +45,8 @@ const { t, locale } = useI18n();
       <BlobComponent color="red" class="blob2" />
       <StackComponent spacing="medium" centered class="calc-main">
         <StackComponent spacing="large" centered space-between>
-          <BodyText size="medium" tag="h1" color="fg-strong">
-            <strong>Archiv des Wahlrechners 2024–2025</strong><br />
-            Wien-Wahl am 27. April 2025
-            <br />
-          </BodyText>
-          <HeadlineText tag="p" size="small">
-            Archiv
+          <HeadlineText tag="h1" size="small">
+            Archiv des Wahlrechners
             <span style="color: rgb(var(--color-neutral-fg))"> 2024–2025 </span>
           </HeadlineText>
         </StackComponent>
