@@ -17,6 +17,11 @@
       "permanent": true
     },
     {
+      "source": "/impressum",
+      "destination": "https://www.wahlrechner.at/impressum",
+      "permanent": true
+    },
+    {
       "source": "/datenschutz",
       "destination": "https://www.wahlrechner.at/datenschutz",
       "permanent": true
