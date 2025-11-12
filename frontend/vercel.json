@@ -5,6 +5,13 @@
       "destination": "/"
     }
   ],
+  "redirects": [
+    {
+      "source": "/protectia-datelor",
+      "destination": "https://www.testvot.eu/protectia-datelor",
+      "permanent": true
+    }
+  ],
   "trailingSlash": false,
   "ignoreCommand": "bash ignored-build-step.sh"
 }
