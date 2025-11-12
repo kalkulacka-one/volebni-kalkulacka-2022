@@ -26,76 +26,80 @@ import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import TextInputComponent from '@/components/design-system/input/TextInputComponent.vue';
 import TitleText from '@/components/design-system/typography/TitleText.vue';
 
-import { useUserStore } from '@/stores/userStore';
-
 const router = useRouter();
 const route = useRoute();
-const userStore = useUserStore();
 
-const user = computed(() => userStore.user);
 const info = ref<HTMLElement | null>(null);
 const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
 
 const { t, locale } = useI18n();
-
-const email = ref('');
-const emailError = ref();
-const posting = ref();
-const success = ref();
-const message = ref();
-
-const handleSubscribe = async () => {
-  console.log('handleSubmit');
-  if (email.value === '') {
-    emailError.value = t('routes.index.IndexPage.empty-email-error');
-    return;
-  } else {
-    emailError.value = undefined;
-  }
-
-  posting.value = true;
-
-  const response = await fetch('/api/subscriptions', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ email: email.value }),
-  });
-
-  if (response.ok) {
-    posting.value = false;
-    success.value = true;
-    message.value = t('routes.index.IndexPage.success');
-  } else {
-    posting.value = false;
-    success.value = false;
-    message.value = t('routes.index.IndexPage.error');
-  }
-};
 </script>
 
 <template>
   <StickyHeaderLayout>
     <template #header>
-      <NavigationBar transparent with-account :user="user" />
+      <NavigationBar transparent />
     </template>
     <div class="prezident-hero">
-      
+
       <BlobComponent color="red" class="blob2" />
       <StackComponent spacing="medium" centered class="calc-main">
-        <StackComponent spacing="large" centered space-between>
+        <StackComponent spacing="large" centered>
           <BodyText size="medium" tag="h1" color="fg-strong">
-            27. April 2025
-            <br />
+            <strong>Archiv des Wahlrechners 2025</strong><br />
+            Wien-Wahl am 27. April 2025
           </BodyText>
           <HeadlineText tag="p" size="small">
-            Wien-Wahl
+            Archiv
             <span style="color: rgb(var(--color-neutral-fg))"> 2025 </span>
           </HeadlineText>
-          <BodyText size="small"> 23 Fragen, weil Wien 23 Bezirke hat<br />ca. 5-10 Minuten</BodyText>
+        </StackComponent>
+
+        <section class="current-version-hero">
+          <StackComponent spacing="medium" centered>
+            <CardComponent style="max-width: 48rem; text-align: center;">
+              <StackComponent spacing="medium" centered>
+                <HeadlineText tag="h1" size="medium" color="fg-strong">
+                  Neuer Wahlrechner ist verfügbar!
+                </HeadlineText>
+
+                <BodyText size="medium" centered>
+                  Dies ist ein Archiv des Wahlrechners für die Wien-Wahl 2025.
+                  <strong>Den aktuellen Wahlrechner finden Sie auf
+                  <a href="https://www.wahlrechner.at" target="_blank" rel="noopener noreferrer">
+                    www.wahlrechner.at
+                  </a></strong>
+                </BodyText>
+
+                <ButtonComponent
+                  kind="filled"
+                  color="primary"
+                  size="medium"
+                  tag="a"
+                  href="https://www.wahlrechner.at"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <template #icon>
+                    <IconComponent :icon="mdiArrowRight" />
+                  </template>
+                  Zum aktuellen Wahlrechner
+                </ButtonComponent>
+
+                <BodyText size="small" color="fg-muted" centered>
+                  Auf dieser Archiv-Seite finden Sie den Wahlrechner für die Wien-Wahl 2025
+                </BodyText>
+              </StackComponent>
+            </CardComponent>
+          </StackComponent>
+        </section>
+
+        <BodyText size="large">—</BodyText>
+
+        <StackComponent spacing="large" centered>
+          <BodyText size="small">23 Fragen, weil Wien 23 Bezirke hat<br />ca. 5-10 Minuten</BodyText>
           <ButtonComponent
-            kind="filled"
+            kind="outlined"
             color="primary"
             @click="
               router.push({
@@ -110,12 +114,13 @@ const handleSubscribe = async () => {
               })
             "
           >
-            Start des Wahlrechners
+            Archivierte Version starten
             <template #iconAfter>
               <IconComponent :icon="mdiArrowRight" />
             </template>
           </ButtonComponent>
         </StackComponent>
+
         <BodyText size="large">—</BodyText>
         <StackComponent horizontal spacing="large" wrap style="justify-content: center;">
           <TitleText style="color: rgb(var(--color-neutral-fg))" tag="h3">
