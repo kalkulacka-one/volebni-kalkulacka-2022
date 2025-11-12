@@ -14,7 +14,6 @@ import App from './App.vue';
 import { getDistrictCode } from './common/utils';
 import { decodeResults, encodeResults } from './common/resultParser';
 import { useElectionStore } from './stores/electionStore';
-import { useUserStore } from '@/stores/userStore';
 import EmbedProviderWrapper from '@/components/utilities/embedding/EmbedProviderWrapper.vue';
 import './assets/main.css';
 
@@ -26,17 +25,9 @@ import ResultPageVue from './routes/result/ResultPage.vue';
 import RecapPageVue from './routes/recap/RecapPage.vue';
 import ComparisonPageVue from './routes/comparison/ComparisonPage.vue';
 import DistrictSelectionPageVue from './routes/district-selection/DistrictSelectionPage.vue';
-import QuestionsMethodologyPageVue from './routes/questions-methodology/QuestionsMethodologyPageVue.vue';
 import ErrorPageVue, { ErrorPageEnum } from './routes/error/ErrorPage.vue';
-import SharePageVue from './routes/share/SharePage.vue';
-import AboutUsPageVue from './routes/about-us/AboutUsPage.vue';
 import AboutElectionsPageVue from './routes/about-elections/AboutElectionsPage.vue';
-import DataProtectionPageVue from './routes/data-protection/DataProtectionPage.vue';
 import ImprintPageVue from './routes/imprint/ImprintPage.vue';
-import AuthPageVue from './routes/profile/AuthPageVue.vue';
-import EmailFormPageVue from './routes/profile/EmailFormPageVue.vue';
-import ProfilePageVue from './routes/profile/ProfilePage.vue';
-import ProfileSettingsPageVue from './routes/profile/ProfileSettingsPage.vue';
 
 const RESULT_QUERY_NAME = 'result';
 
@@ -61,17 +52,6 @@ export const questionGuard = (
   }
 };
 
-export const authGuard = async (
-  to: RouteLocationNormalized,
-  _from: RouteLocationNormalized,
-  next: NavigationGuardNext,
-) => {
-  const userStore = useUserStore();
-  await userStore.fetchUser();
-  if (userStore.user) next();
-  else next(appRoutes.login);
-};
-
 const resultsProcessor = (
   to: RouteLocationNormalized,
   _from: RouteLocationNormalized,
@@ -90,15 +70,7 @@ export const appRoutes = {
     path: '/',
     component: IndexPageVue,
     meta: {
-      title: 'Wahlrechner',
-    },
-  },
-  aboutUs: {
-    name: 'uber-den-wahlrechner',
-    path: '/uber-den-wahlrechner',
-    component: AboutUsPageVue,
-    meta: {
-      title: 'Über den Wahlrechner',
+      title: 'Wahlrechner Archiv 2025',
     },
   },
   aboutElections: {
@@ -109,14 +81,6 @@ export const appRoutes = {
       title: 'O volbách',
     },
   },
-  dataProtection: {
-    name: 'datenschutz',
-    path: '/datenschutz',
-    component: DataProtectionPageVue,
-    meta: {
-      title: 'Datenschutz',
-    },
-  },
   imprint: {
     name: 'impressum',
     path: '/impressum',
@@ -125,21 +89,13 @@ export const appRoutes = {
       title: 'Impressum',
     },
   },
-  questionsMethodology: {
-    name: 'methodologie-der-fragenentwicklung',
-    path: '/methodologie-der-fragenentwicklung',
-    component: QuestionsMethodologyPageVue,
-    meta: {
-      title: 'Methodologie der Fragenentwicklung',
-    },
-  },
   error: {
     name: 'error',
     path: '/error/:case',
     props: true,
     component: ErrorPageVue,
     meta: {
-      title: 'Error - Wahlrechner',
+      title: 'Error - Wahlrechner Archiv',
     },
   },
   districtSelection: {
@@ -148,7 +104,7 @@ export const appRoutes = {
     alias: '/wahlen/:election',
     component: DistrictSelectionPageVue,
     meta: {
-      title: 'Wahlrechner',
+      title: 'Wahlrechner Archiv 2025',
     },
   },
   guide: {
@@ -156,7 +112,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'wahlen'})/:first/:second?/:third?/:fourth?/${'anleitung'}/:step(\\d+)?`,
     component: GuidePageVue,
     meta: {
-      title: 'Anleitung - Wahlrechner',
+      title: 'Anleitung - Wahlrechner Archiv',
     },
   },
   question: {
@@ -164,7 +120,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'wahlen'})/:first/:second?/:third?/:fourth?/${'frage'}/:nr(\\d+)?`,
     component: QuestionPageVue,
     meta: {
-      title: 'Frage $$ - Wahlrechner',
+      title: 'Frage $$ - Wahlrechner Archiv',
       hasNumber: true,
     },
     beforeEnter: questionGuard,
@@ -174,7 +130,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'wahlen'})/:first/:second?/:third?/:fourth?/${'zusammenfassung'}/:nr(\\d+)?`,
     component: RecapPageVue,
     meta: {
-      title: 'Zusammenfassung - Wahlrechner',
+      title: 'Zusammenfassung - Wahlrechner Archiv',
     },
   },
   result: {
@@ -182,7 +138,7 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'wahlen'})/:first/:second?/:third?/:fourth?/${'ergebnisse'}`,
     component: ResultPageVue,
     meta: {
-      title: 'Ergebnisse - Wahlrechner',
+      title: 'Ergebnisse - Wahlrechner Archiv',
     },
   },
   comparison: {
@@ -190,72 +146,8 @@ export const appRoutes = {
     path: `/:type(${'kalkulacka'}|${'wahlen'})/:first/:second?/:third?/:fourth?/${'vergleich'}`,
     component: ComparisonPageVue,
     meta: {
-      title: 'Vergleich - Wahlrechner',
+      title: 'Vergleich - Wahlrechner Archiv',
     },
-  },
-  share: {
-    name: 'share',
-    path: '/share/:uuid',
-    component: SharePageVue,
-    meta: {
-      title: 'Meine Ergebnisse - Wahlrechner',
-    },
-  },
-  login: {
-    name: 'login',
-    path: '/prihlaseni',
-    component: AuthPageVue,
-    props: { type: 'login' },
-    meta: {
-      title: 'Přihlášení - Wahlrechner',
-    },
-  },
-  loginForm: {
-    name: 'login-form',
-    path: '/prihlaseni-emailem',
-    component: EmailFormPageVue,
-    props: { type: 'login' },
-    meta: {
-      title: 'Přihlášení - Wahlrechner',
-    },
-  },
-
-  register: {
-    name: 'register',
-    path: '/registrace',
-    component: AuthPageVue,
-    props: { type: 'registration' },
-    meta: {
-      title: 'Registrace - Wahlrechner',
-    },
-  },
-  registerForm: {
-    name: 'register-form',
-    path: '/registracni-formular',
-    component: EmailFormPageVue,
-    props: { type: 'registration' },
-    meta: {
-      title: 'Registrační formulář - Wahlrechner',
-    },
-  },
-
-  profile: {
-    name: 'profile',
-    path: '/muj-profil',
-    component: ProfilePageVue,
-    meta: {
-      title: 'Můj profil - Wahlrechner',
-    },
-    beforeEnter: authGuard,
-  },
-  profileSettings: {
-    name: 'profile-settings',
-    path: '/nastaveni-profilu',
-    component: ProfileSettingsPageVue,
-    meta: {
-      title: 'Nastavení profilu - Wahlrechner',
-    },
-    beforeEnter: authGuard,
   },
   fallback: {
     path: '/:catchAll(.*)',

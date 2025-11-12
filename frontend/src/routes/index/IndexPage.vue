@@ -26,101 +26,78 @@ import StickyHeaderLayout from '@/components/layouts/StickyHeaderLayout.vue';
 import TextInputComponent from '@/components/design-system/input/TextInputComponent.vue';
 import TitleText from '@/components/design-system/typography/TitleText.vue';
 
-import { useUserStore } from '@/stores/userStore';
-
 const router = useRouter();
 const route = useRoute();
-const userStore = useUserStore();
 
-const user = computed(() => userStore.user);
 const info = ref<HTMLElement | null>(null);
 const scrollDown = () => info.value?.scrollIntoView({ behavior: 'smooth' });
 
 const { t, locale } = useI18n();
-
-const email = ref('');
-const emailError = ref();
-const posting = ref();
-const success = ref();
-const message = ref();
-
-const handleSubscribe = async () => {
-  console.log('handleSubmit');
-  if (email.value === '') {
-    emailError.value = t('routes.index.IndexPage.empty-email-error');
-    return;
-  } else {
-    emailError.value = undefined;
-  }
-
-  posting.value = true;
-
-  const response = await fetch('/api/subscriptions', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ email: email.value }),
-  });
-
-  if (response.ok) {
-    posting.value = false;
-    success.value = true;
-    message.value = t('routes.index.IndexPage.success');
-  } else {
-    posting.value = false;
-    success.value = false;
-    message.value = t('routes.index.IndexPage.error');
-  }
-};
 </script>
 
 <template>
   <StickyHeaderLayout>
     <template #header>
-      <NavigationBar transparent with-account :user="user" />
+      <NavigationBar transparent />
     </template>
     <div class="prezident-hero">
-      
+      <BlobComponent color="blue" class="blob1" />
       <BlobComponent color="red" class="blob2" />
       <StackComponent spacing="medium" centered class="calc-main">
         <StackComponent spacing="large" centered space-between>
-          <BodyText size="medium" tag="h1" color="fg-strong">
-            27. April 2025
-            <br />
-          </BodyText>
-          <HeadlineText tag="p" size="small">
-            Wien-Wahl
-            <span style="color: rgb(var(--color-neutral-fg))"> 2025 </span>
+          <HeadlineText tag="h1" size="small">
+            Archiv des Wahlrechners
+            <span style="color: rgb(var(--color-neutral-fg))"> 2024–2025 </span>
           </HeadlineText>
-          <BodyText size="small"> 23 Fragen, weil Wien 23 Bezirke hat<br />ca. 5-10 Minuten</BodyText>
-          <ButtonComponent
-            kind="filled"
-            color="primary"
-            @click="
-              router.push({
-                name: appRoutes.guide.name,
-                params: {
-                  ...route.params,
-                  type: `${'wahlen'}`,
-                  first: 'wien-wahl-2025',
-                  second: 'wahlrechner',
-                },
-                query: { ...route.query },
-              })
-            "
-          >
-            Start des Wahlrechners
-            <template #iconAfter>
-              <IconComponent :icon="mdiArrowRight" />
-            </template>
-          </ButtonComponent>
         </StackComponent>
-        <BodyText size="large">—</BodyText>
-        <StackComponent horizontal spacing="large" wrap style="justify-content: center;">
-          <TitleText style="color: rgb(var(--color-neutral-fg))" tag="h3">
-            Wahlrechner ist Teil des größten europäischen Netzwerks für Wahl-Entscheidungshilfen.
-          </TitleText>
+
+        <section class="current-version-hero">
+          <StackComponent spacing="medium" centered>
+            <CardComponent style="max-width: 48rem; text-align: center;">
+              <StackComponent spacing="medium" centered>
+                <HeadlineText tag="h1" size="medium" color="fg-strong">
+                  Neuer Wahlrechner ist verfügbar!
+                </HeadlineText>
+
+                <BodyText size="medium" centered>
+                  Dies ist ein Archiv des Wahlrechners für die Wien-Wahl 2025.
+                  <strong>Den aktuellen Wahlrechner finden Sie auf
+                  <a href="https://www.wahlrechner.at" target="_blank" rel="noopener noreferrer">
+                    www.wahlrechner.at
+                  </a></strong>
+                </BodyText>
+
+                <ButtonComponent
+                  kind="filled"
+                  color="primary"
+                  size="medium"
+                  tag="a"
+                  href="https://www.wahlrechner.at"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <template #icon>
+                    <IconComponent :icon="mdiArrowRight" />
+                  </template>
+                  Zum aktuellen Wahlrechner
+                </ButtonComponent>
+
+                <BodyText size="small" color="fg-muted" centered>
+                  Auf dieser Archiv-Seite finden Sie den Wahlrechner für die Wien-Wahl 2025
+                </BodyText>
+              </StackComponent>
+            </CardComponent>
+          </StackComponent>
+        </section>
+
+        <StackComponent class="section" spacing="large" centered>
+          <ButtonComponent kind="link" @click="scrollDown">
+            <div class="button-content">
+              Archivierte Wahlrechner anzeigen<IconComponent
+                :icon="mdiArrowDown"
+              ></IconComponent>
+            </div>
+          </ButtonComponent>
         </StackComponent>
       </StackComponent>
     </div>
@@ -160,63 +137,52 @@ const handleSubscribe = async () => {
         <BodyText size="medium"
           >Der Wahlrechner ist ein reiner Informationsdienst und dient nicht dazu, konkrete Wahlempfehlungen abzugeben.
         </BodyText>
-        <ButtonComponent kind="link" @click="router.push('/uber-den-wahlrechner')">
+        <ButtonComponent kind="link" tag="a" href="/uber-den-wahlrechner">
           <div class="button-content">
-            Mehr herausfinden<IconComponent :icon="mdiArrowRight"></IconComponent>
+            Mehr erfahren<IconComponent :icon="mdiArrowRight"></IconComponent>
           </div>
         </ButtonComponent>
       </StackComponent>
-      <section class="subscribe">
-        <StackComponent spacing="small" centered>
-          <TitleText size="large" tag="h2">
-            Möchten Sie über neue Rechner informiert werden?
-          </TitleText>
-          <BodyText size="small" centered>
-            Hinterlassen Sie uns Ihre E-Mail-Adresse und wir informieren Sie immer, wenn wir einen neuen Rechner starten.
-          </BodyText>
-          <BodyText v-if="success" size="small">
-            {{ message }}
-          </BodyText>
-          <form v-if="!success">
-            <StackComponent
-              horizontal
-              spacing="small"
-              stretched
-              wrap
-              style="justify-content: center"
-            >
-              <TextInputComponent
-                v-model="email"
-                required
-                type="email"
-                :placeholder="t('routes.index.IndexPage.input-label')"
-                :value="email"
-                :icon="mdiEmailOutline"
-                :disabled="posting"
-                :error="emailError"
-              />
-              <ButtonComponent
-                kind="outlined"
-                color="primary"
-                :loading="posting"
-                @click.prevent="handleSubscribe"
-              >
-                Senden
-              </ButtonComponent>
-            </StackComponent>
-          </form>
-          <BodyText v-if="!success" tag="p" size="small">{{
-            $t('routes.index.IndexPage.disclaimer')
-          }}</BodyText>
-        </StackComponent>
-      </section>
       <DonateBlock />
       <StackComponent spacing="large">
         <div ref="info"></div>
         <TitleText size="large" tag="h2">
-          Wahlrechner für bereits abgehaltene Wahlen
+          Archivierte Wahlrechner
         </TitleText>
         <MasonryGrid style="align-self: stretch">
+          <CardComponent corner="top-right" padding="medium" border shadow>
+            <div class="card-content">
+              <div class="card-content-text">
+                <TitleText tag="h3" size="medium">
+                  Wien-Wahl 2025
+                </TitleText>
+                <BodyText size="medium"
+                  >Wien-Wahl am 27. April 2025, 23 Fragen, ca. 5-10 Minuten</BodyText
+                >
+              </div>
+              <ButtonComponent
+                kind="filled"
+                color="primary"
+                @click="
+                  router.push({
+                    name: appRoutes.guide.name,
+                    params: {
+                      ...route.params,
+                      type: `${'wahlen'}`,
+                      first: 'wien-wahl-2025',
+                      second: 'wahlrechner',
+                    },
+                    query: { ...route.query },
+                  })
+                "
+              >
+                Wahlrechner starten
+                <template #iconAfter>
+                  <IconComponent :icon="mdiArrowRight" />
+                </template>
+              </ButtonComponent>
+            </div>
+          </CardComponent>
           <CardComponent corner="top-right" padding="medium" border shadow>
             <div class="card-content">
               <div class="card-content-text">
@@ -243,7 +209,7 @@ const handleSubscribe = async () => {
                   })
                 "
               >
-              Start des Wahlrechners
+                Wahlrechner starten
                 <template #iconAfter>
                   <IconComponent :icon="mdiArrowRight" />
                 </template>
@@ -276,7 +242,7 @@ const handleSubscribe = async () => {
                   })
                 "
               >
-              Start des Wahlrechners
+              Wahlrechner starten
                 <template #iconAfter>
                   <IconComponent :icon="mdiArrowRight" />
                 </template>
@@ -309,7 +275,7 @@ const handleSubscribe = async () => {
                   })
                 "
               >
-              Start des abstimmungsrechners
+              Abstimmungsrechner starten
                 <template #iconAfter>
                   <IconComponent :icon="mdiArrowRight" />
                 </template>
@@ -342,7 +308,7 @@ const handleSubscribe = async () => {
                   })
                 "
               >
-              Start des Wahlrechners
+              Wahlrechner starten
                 <template #iconAfter>
                   <IconComponent :icon="mdiArrowRight" />
                 </template>
@@ -375,7 +341,7 @@ const handleSubscribe = async () => {
                   })
                 "
               >
-              Start des Wahlrechners
+              Wahlrechner starten
                 <template #iconAfter>
                   <IconComponent :icon="mdiArrowRight" />
                 </template>

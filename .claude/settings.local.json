@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git checkout:*)",
+      "Bash(nvm:*)",
+      "Bash(npm run build:*)",
+      "Bash(timeout 10 npm run dev)",
+      "Bash(npm run type-check:*)",
+      "Bash(node:*)",
+      "Bash(npm:*)",
+      "Bash(timeout 5 npm run dev)",
+      "Bash(npx prisma generate:*)",
+      "Bash(sed:*)",
+      "Bash(grep:*)",
+      "WebFetch(domain:www.volebnikalkulacka.cz)",
+      "WebFetch(domain:archiv.volebnikalkulacka.cz)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
